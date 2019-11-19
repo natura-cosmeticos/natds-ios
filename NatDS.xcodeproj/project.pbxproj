@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A96E7CC723842ACB005EB150 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96E7CC623842ACB005EB150 /* Colors.swift */; };
+		A96E7CCB23842B14005EB150 /* ColorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96E7CC923842B11005EB150 /* ColorsTests.swift */; };
 		A9B71E8D237B559A00A2BF51 /* NatDS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9B71E83237B559A00A2BF51 /* NatDS.framework */; };
 		A9B71E94237B559A00A2BF51 /* NatDS.h in Headers */ = {isa = PBXBuildFile; fileRef = A9B71E86237B559A00A2BF51 /* NatDS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -22,6 +24,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A96E7CC623842ACB005EB150 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		A96E7CC923842B11005EB150 /* ColorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsTests.swift; sourceTree = "<group>"; };
 		A9B71E83237B559A00A2BF51 /* NatDS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NatDS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9B71E86237B559A00A2BF51 /* NatDS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NatDS.h; sourceTree = "<group>"; };
 		A9B71E87237B559A00A2BF51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -48,6 +52,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A96E7CC523842ABB005EB150 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				A96E7CC623842ACB005EB150 /* Colors.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		A96E7CC823842B05005EB150 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				A96E7CC923842B11005EB150 /* ColorsTests.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
 		A9B71E79237B559A00A2BF51 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +89,7 @@
 		A9B71E85237B559A00A2BF51 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				A96E7CC523842ABB005EB150 /* Colors */,
 				A9B71E86237B559A00A2BF51 /* NatDS.h */,
 				A9B71E87237B559A00A2BF51 /* Info.plist */,
 			);
@@ -78,6 +99,7 @@
 		A9B71E90237B559A00A2BF51 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				A96E7CC823842B05005EB150 /* Colors */,
 				A9B71E93237B559A00A2BF51 /* Info.plist */,
 			);
 			path = Tests;
@@ -101,6 +123,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A9B71E97237B559A00A2BF51 /* Build configuration list for PBXNativeTarget "NatDS" */;
 			buildPhases = (
+				A96E7CCC2384560F005EB150 /* Run Lint */,
 				A9B71E7E237B559A00A2BF51 /* Headers */,
 				A9B71E7F237B559A00A2BF51 /* Sources */,
 				A9B71E80237B559A00A2BF51 /* Frameworks */,
@@ -144,7 +167,7 @@
 				TargetAttributes = {
 					A9B71E82237B559A00A2BF51 = {
 						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1110;
 					};
 					A9B71E8B237B559A00A2BF51 = {
 						CreatedOnToolsVersion = 10.1;
@@ -187,11 +210,33 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A96E7CCC2384560F005EB150 /* Run Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Lint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A9B71E7F237B559A00A2BF51 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A96E7CC723842ACB005EB150 /* Colors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A96E7CCB23842B14005EB150 /* ColorsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +316,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -326,7 +372,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -356,7 +402,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -383,7 +429,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.natura.NatDS;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -391,6 +437,7 @@
 		A9B71E9B237B559A00A2BF51 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
@@ -404,7 +451,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -412,6 +459,7 @@
 		A9B71E9C237B559A00A2BF51 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
@@ -424,7 +472,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.natura.NatDSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

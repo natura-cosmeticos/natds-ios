@@ -10,6 +10,6 @@ Pod::Spec.new do |s|
   s.author        = { "Vivian Soares" => "vcsoares@thoughtworks.com" }
   s.source        = { :git => "https://github.com/natura-cosmeticos/natds-ios.git", :tag => s.version }
   s.source_files  = "Sources/**/*.{swift,h,m}"
-  s.swift_version = "4.2" 
+  s.swift_version = "5.0" 
   s.platform     = :ios, "9.0"
 end
