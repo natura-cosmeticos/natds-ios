@@ -39,3 +39,6 @@ Pods/
 ### Idea (for Appcode users) ###
 .idea/
 .DS_Store
+
+### Snapshot FailureDiffs ###
+Tests/FailureDiffs
