@@ -1,0 +1,5 @@
+language: swift
+osx_image: xcode11.1
+xcode_project: NatDS.xcodeproj
+xcode_scheme: NatDS
+xcode_destination: platform=iOS Simulator,OS=13.1,name=iPhone 8
