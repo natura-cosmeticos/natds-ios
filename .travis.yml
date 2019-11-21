@@ -1,6 +1,13 @@
 language: swift
 osx_image: xcode11.1
+xcode_workspace: NatDS.xcworkspace
+xcode_scheme: NatDS
+xcode_destination: platform=iOS Simulator,OS=13.1,name=iPhone 8
+xcode_sdk: iphonesimulator13.1
 
-script:
+before_install:
+  - brew install git-lfs
+
+before_script:
+  - git lfs pull
   - pod install
-  - set -o pipefail && xcodebuild -workspace NatDS.xcworkspace -scheme NatDS -destination platform\=iOS\ Simulator,OS\=13.1,name\=iPhone\ 8 build test | xcpretty
