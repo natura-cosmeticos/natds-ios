@@ -1,4 +1,4 @@
 @objcMembers
 public class Colors: NSObject {
-    public static let primary: UIColor = .orange
+    public static let primary: UIColor = ColorsNatura.Primary.orange
 }
