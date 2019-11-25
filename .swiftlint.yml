@@ -1,2 +1,6 @@
 excluded:
   - Pods
+
+type_name:
+    min_length: 1
+    max_length: 40
