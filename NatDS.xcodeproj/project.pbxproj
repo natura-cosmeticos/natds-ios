@@ -12,7 +12,6 @@
 		A96E7CCB23842B14005EB150 /* ColorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96E7CC923842B11005EB150 /* ColorsTests.swift */; };
 		A9B71E8D237B559A00A2BF51 /* NatDS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9B71E83237B559A00A2BF51 /* NatDS.framework */; };
 		A9B71E94237B559A00A2BF51 /* NatDS.h in Headers */ = {isa = PBXBuildFile; fileRef = A9B71E86237B559A00A2BF51 /* NatDS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A9CAD6FD2384D4A1003BF33B /* ExampleSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CAD6FB2384D452003BF33B /* ExampleSnapshotTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +34,6 @@
 		A9B71E87237B559A00A2BF51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9B71E8C237B559A00A2BF51 /* NatDSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NatDSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9B71E93237B559A00A2BF51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A9CAD6FB2384D452003BF33B /* ExampleSnapshotTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleSnapshotTests.swift; sourceTree = "<group>"; };
 		B496A6BAA901771980AF5E95 /* Pods_NatDSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NatDSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -117,7 +115,6 @@
 			isa = PBXGroup;
 			children = (
 				A96E7CC823842B05005EB150 /* Colors */,
-				A9CAD6FB2384D452003BF33B /* ExampleSnapshotTests.swift */,
 				A9B71E93237B559A00A2BF51 /* Info.plist */,
 			);
 			path = Tests;
@@ -312,7 +309,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9CAD6FD2384D4A1003BF33B /* ExampleSnapshotTests.swift in Sources */,
 				A96E7CCB23842B14005EB150 /* ColorsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
