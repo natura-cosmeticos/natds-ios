@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		117FE015238D9AEB0032E2AC /* ColorsNaturaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117FE00F238D9AEB0032E2AC /* ColorsNaturaTests.swift */; };
+		117FE016238D9AEB0032E2AC /* ColorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117FE010238D9AEB0032E2AC /* ColorsTests.swift */; };
+		117FE017238D9AEB0032E2AC /* FontsNaturaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117FE013238D9AEB0032E2AC /* FontsNaturaTests.swift */; };
+		117FE018238D9AEB0032E2AC /* FontsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117FE014238D9AEB0032E2AC /* FontsTests.swift */; };
+		117FE023238D9B070032E2AC /* ColorsNatura.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117FE01D238D9B070032E2AC /* ColorsNatura.swift */; };
+		117FE024238D9B070032E2AC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117FE01E238D9B070032E2AC /* Colors.swift */; };
+		117FE025238D9B070032E2AC /* FontsNatura.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117FE021238D9B070032E2AC /* FontsNatura.swift */; };
+		117FE026238D9B070032E2AC /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117FE022238D9B070032E2AC /* Fonts.swift */; };
 		428277050E055F4A92D2A29F /* Pods_NatDSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B496A6BAA901771980AF5E95 /* Pods_NatDSTests.framework */; };
-		A96E7CC723842ACB005EB150 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96E7CC623842ACB005EB150 /* Colors.swift */; };
-		A96E7CCB23842B14005EB150 /* ColorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96E7CC923842B11005EB150 /* ColorsTests.swift */; };
-		A9881998238C59140008230F /* ColorsNatura.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9881997238C59140008230F /* ColorsNatura.swift */; };
 		A988199B238C5AAF0008230F /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A988199A238C5AAF0008230F /* UIColor+hex.swift */; };
 		A9B71E8D237B559A00A2BF51 /* NatDS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9B71E83237B559A00A2BF51 /* NatDS.framework */; };
 		A9B71E94237B559A00A2BF51 /* NatDS.h in Headers */ = {isa = PBXBuildFile; fileRef = A9B71E86237B559A00A2BF51 /* NatDS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9D3454B238C69480013398C /* UIColor+hexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D3454A238C69480013398C /* UIColor+hexTests.swift */; };
-		A9D3454E238C73A50013398C /* ColorsNaturaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D3454D238C73A50013398C /* ColorsNaturaTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,11 +33,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		117FE00F238D9AEB0032E2AC /* ColorsNaturaTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsNaturaTests.swift; sourceTree = "<group>"; };
+		117FE010238D9AEB0032E2AC /* ColorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsTests.swift; sourceTree = "<group>"; };
+		117FE013238D9AEB0032E2AC /* FontsNaturaTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontsNaturaTests.swift; sourceTree = "<group>"; };
+		117FE014238D9AEB0032E2AC /* FontsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontsTests.swift; sourceTree = "<group>"; };
+		117FE01D238D9B070032E2AC /* ColorsNatura.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsNatura.swift; sourceTree = "<group>"; };
+		117FE01E238D9B070032E2AC /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		117FE021238D9B070032E2AC /* FontsNatura.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontsNatura.swift; sourceTree = "<group>"; };
+		117FE022238D9B070032E2AC /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		9A46395C038D4497A880A6FF /* Pods-NatDSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatDSTests.release.xcconfig"; path = "Target Support Files/Pods-NatDSTests/Pods-NatDSTests.release.xcconfig"; sourceTree = "<group>"; };
 		A8B18363274C7A70CF4443A3 /* Pods-NatDSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatDSTests.debug.xcconfig"; path = "Target Support Files/Pods-NatDSTests/Pods-NatDSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		A96E7CC623842ACB005EB150 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
-		A96E7CC923842B11005EB150 /* ColorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsTests.swift; sourceTree = "<group>"; };
-		A9881997238C59140008230F /* ColorsNatura.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsNatura.swift; sourceTree = "<group>"; };
 		A988199A238C5AAF0008230F /* UIColor+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hex.swift"; sourceTree = "<group>"; };
 		A9B71E83237B559A00A2BF51 /* NatDS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NatDS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9B71E86237B559A00A2BF51 /* NatDS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NatDS.h; sourceTree = "<group>"; };
@@ -41,7 +50,6 @@
 		A9B71E8C237B559A00A2BF51 /* NatDSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NatDSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9B71E93237B559A00A2BF51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9D3454A238C69480013398C /* UIColor+hexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hexTests.swift"; sourceTree = "<group>"; };
-		A9D3454D238C73A50013398C /* ColorsNaturaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsNaturaTests.swift; sourceTree = "<group>"; };
 		B496A6BAA901771980AF5E95 /* Pods_NatDSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NatDSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -65,6 +73,92 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		117FE00C238D9AEB0032E2AC /* DesignTokens */ = {
+			isa = PBXGroup;
+			children = (
+				117FE00D238D9AEB0032E2AC /* Colors */,
+				117FE011238D9AEB0032E2AC /* Fonts */,
+			);
+			path = DesignTokens;
+			sourceTree = "<group>";
+		};
+		117FE00D238D9AEB0032E2AC /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				117FE00E238D9AEB0032E2AC /* Branding */,
+				117FE010238D9AEB0032E2AC /* ColorsTests.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		117FE00E238D9AEB0032E2AC /* Branding */ = {
+			isa = PBXGroup;
+			children = (
+				117FE00F238D9AEB0032E2AC /* ColorsNaturaTests.swift */,
+			);
+			path = Branding;
+			sourceTree = "<group>";
+		};
+		117FE011238D9AEB0032E2AC /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				117FE012238D9AEB0032E2AC /* Branding */,
+				117FE014238D9AEB0032E2AC /* FontsTests.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		117FE012238D9AEB0032E2AC /* Branding */ = {
+			isa = PBXGroup;
+			children = (
+				117FE013238D9AEB0032E2AC /* FontsNaturaTests.swift */,
+			);
+			path = Branding;
+			sourceTree = "<group>";
+		};
+		117FE01A238D9B070032E2AC /* DesignTokens */ = {
+			isa = PBXGroup;
+			children = (
+				117FE01B238D9B070032E2AC /* Colors */,
+				117FE01F238D9B070032E2AC /* Fonts */,
+			);
+			path = DesignTokens;
+			sourceTree = "<group>";
+		};
+		117FE01B238D9B070032E2AC /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				117FE01C238D9B070032E2AC /* Branding */,
+				117FE01E238D9B070032E2AC /* Colors.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		117FE01C238D9B070032E2AC /* Branding */ = {
+			isa = PBXGroup;
+			children = (
+				117FE01D238D9B070032E2AC /* ColorsNatura.swift */,
+			);
+			path = Branding;
+			sourceTree = "<group>";
+		};
+		117FE01F238D9B070032E2AC /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				117FE020238D9B070032E2AC /* Branding */,
+				117FE022238D9B070032E2AC /* Fonts.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		117FE020238D9B070032E2AC /* Branding */ = {
+			isa = PBXGroup;
+			children = (
+				117FE021238D9B070032E2AC /* FontsNatura.swift */,
+			);
+			path = Branding;
+			sourceTree = "<group>";
+		};
 		7F7C949F669E1B554E52BEF2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -73,38 +167,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A96E7CC523842ABB005EB150 /* Colors */ = {
-			isa = PBXGroup;
-			children = (
-				A988199C238C61600008230F /* Branding */,
-				A96E7CC623842ACB005EB150 /* Colors.swift */,
-			);
-			path = Colors;
-			sourceTree = "<group>";
-		};
-		A96E7CC823842B05005EB150 /* Colors */ = {
-			isa = PBXGroup;
-			children = (
-				A9D3454C238C73970013398C /* Branding */,
-				A96E7CC923842B11005EB150 /* ColorsTests.swift */,
-			);
-			path = Colors;
-			sourceTree = "<group>";
-		};
 		A9881999238C5A8E0008230F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				A988199A238C5AAF0008230F /* UIColor+hex.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		A988199C238C61600008230F /* Branding */ = {
-			isa = PBXGroup;
-			children = (
-				A9881997238C59140008230F /* ColorsNatura.swift */,
-			);
-			path = Branding;
 			sourceTree = "<group>";
 		};
 		A988199D238C61780008230F /* Extensions */ = {
@@ -138,8 +206,8 @@
 		A9B71E85237B559A00A2BF51 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				117FE01A238D9B070032E2AC /* DesignTokens */,
 				A9881999238C5A8E0008230F /* Extensions */,
-				A96E7CC523842ABB005EB150 /* Colors */,
 				A9B71E86237B559A00A2BF51 /* NatDS.h */,
 				A9B71E87237B559A00A2BF51 /* Info.plist */,
 			);
@@ -149,19 +217,11 @@
 		A9B71E90237B559A00A2BF51 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				117FE00C238D9AEB0032E2AC /* DesignTokens */,
 				A988199D238C61780008230F /* Extensions */,
-				A96E7CC823842B05005EB150 /* Colors */,
 				A9B71E93237B559A00A2BF51 /* Info.plist */,
 			);
 			path = Tests;
-			sourceTree = "<group>";
-		};
-		A9D3454C238C73970013398C /* Branding */ = {
-			isa = PBXGroup;
-			children = (
-				A9D3454D238C73A50013398C /* ColorsNaturaTests.swift */,
-			);
-			path = Branding;
 			sourceTree = "<group>";
 		};
 		B59DC9FA54CA6649D4077030 /* Pods */ = {
@@ -345,9 +405,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				117FE023238D9B070032E2AC /* ColorsNatura.swift in Sources */,
+				117FE026238D9B070032E2AC /* Fonts.swift in Sources */,
+				117FE025238D9B070032E2AC /* FontsNatura.swift in Sources */,
+				117FE024238D9B070032E2AC /* Colors.swift in Sources */,
 				A988199B238C5AAF0008230F /* UIColor+hex.swift in Sources */,
-				A96E7CC723842ACB005EB150 /* Colors.swift in Sources */,
-				A9881998238C59140008230F /* ColorsNatura.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,9 +417,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				117FE018238D9AEB0032E2AC /* FontsTests.swift in Sources */,
 				A9D3454B238C69480013398C /* UIColor+hexTests.swift in Sources */,
-				A9D3454E238C73A50013398C /* ColorsNaturaTests.swift in Sources */,
-				A96E7CCB23842B14005EB150 /* ColorsTests.swift in Sources */,
+				117FE017238D9AEB0032E2AC /* FontsNaturaTests.swift in Sources */,
+				117FE016238D9AEB0032E2AC /* ColorsTests.swift in Sources */,
+				117FE015238D9AEB0032E2AC /* ColorsNaturaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
