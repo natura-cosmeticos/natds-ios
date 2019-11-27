@@ -28,7 +28,7 @@ public class NavigationDrawerSubmenuItem: UIView {
         let view = UIView()
         view.alpha = 0.16
         view.backgroundColor = Colors.primary
-        view.layer.cornerRadius = 5.0
+        view.layer.cornerRadius = 4.0
         return view
     }()
 
