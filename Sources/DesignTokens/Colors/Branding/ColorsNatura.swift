@@ -5,6 +5,7 @@ struct ColorsNatura {
 
     struct PB {
         static let gray: UIColor = UIColor.hexColorOrDefault("#333333")
+        static let gray2: UIColor = UIColor.hexColorOrDefault("#BBBBBB")
         static let gray3: UIColor = UIColor.hexColorOrDefault("#EEEEEE")
     }
 

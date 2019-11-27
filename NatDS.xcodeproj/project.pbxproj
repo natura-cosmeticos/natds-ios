@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11581A9B238EC15E003E45D7 /* NavigationDrawerItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11581A9A238EC15E003E45D7 /* NavigationDrawerItemTests.swift */; };
+		11581A9D238EC256003E45D7 /* NavigationDrawerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11581A9C238EC256003E45D7 /* NavigationDrawerItem.swift */; };
 		117FE015238D9AEB0032E2AC /* ColorsNaturaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117FE00F238D9AEB0032E2AC /* ColorsNaturaTests.swift */; };
 		117FE016238D9AEB0032E2AC /* ColorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117FE010238D9AEB0032E2AC /* ColorsTests.swift */; };
 		117FE017238D9AEB0032E2AC /* FontsNaturaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117FE013238D9AEB0032E2AC /* FontsNaturaTests.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11581A9A238EC15E003E45D7 /* NavigationDrawerItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerItemTests.swift; sourceTree = "<group>"; };
+		11581A9C238EC256003E45D7 /* NavigationDrawerItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerItem.swift; sourceTree = "<group>"; };
 		117FE00F238D9AEB0032E2AC /* ColorsNaturaTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsNaturaTests.swift; sourceTree = "<group>"; };
 		117FE010238D9AEB0032E2AC /* ColorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsTests.swift; sourceTree = "<group>"; };
 		117FE013238D9AEB0032E2AC /* FontsNaturaTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontsNaturaTests.swift; sourceTree = "<group>"; };
@@ -183,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				117FE02B238DA53E0032E2AC /* NavigationDrawerSubmenuItem.swift */,
+				11581A9C238EC256003E45D7 /* NavigationDrawerItem.swift */,
 			);
 			path = NavigationDrawer;
 			sourceTree = "<group>";
@@ -191,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				117FE028238DA4B70032E2AC /* NavigationDrawerSubmenuItemTests.swift */,
+				11581A9A238EC15E003E45D7 /* NavigationDrawerItemTests.swift */,
 			);
 			path = NavigationDrawer;
 			sourceTree = "<group>";
@@ -443,6 +449,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11581A9D238EC256003E45D7 /* NavigationDrawerItem.swift in Sources */,
 				117FE023238D9B070032E2AC /* ColorsNatura.swift in Sources */,
 				117FE026238D9B070032E2AC /* Fonts.swift in Sources */,
 				117FE025238D9B070032E2AC /* FontsNatura.swift in Sources */,
@@ -457,6 +464,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				117FE018238D9AEB0032E2AC /* FontsTests.swift in Sources */,
+				11581A9B238EC15E003E45D7 /* NavigationDrawerItemTests.swift in Sources */,
 				A9D3454B238C69480013398C /* UIColor+hexTests.swift in Sources */,
 				117FE017238D9AEB0032E2AC /* FontsNaturaTests.swift in Sources */,
 				117FE016238D9AEB0032E2AC /* ColorsTests.swift in Sources */,
