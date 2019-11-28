@@ -7,6 +7,7 @@ xcode_sdk: iphonesimulator13.1
 
 before_install:
   - brew install git-lfs
+  - git lfs install
 
 before_script:
   - git lfs pull
