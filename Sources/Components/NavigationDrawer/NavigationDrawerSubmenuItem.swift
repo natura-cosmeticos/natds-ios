@@ -27,7 +27,7 @@ public class NavigationDrawerSubmenuItem: UIView {
     private lazy var highlightSelectedView: UIView = {
         let view = UIView()
         view.alpha = 0.16
-        view.backgroundColor = Colors.primary
+        view.backgroundColor = Colors.secondary
         view.layer.cornerRadius = 4.0
         return view
     }()
