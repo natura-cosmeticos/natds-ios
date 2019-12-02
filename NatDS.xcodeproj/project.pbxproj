@@ -28,7 +28,6 @@
 		A988199B238C5AAF0008230F /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A988199A238C5AAF0008230F /* UIColor+hex.swift */; };
 		A9B71E8D237B559A00A2BF51 /* NatDS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9B71E83237B559A00A2BF51 /* NatDS.framework */; };
 		A9B71E94237B559A00A2BF51 /* NatDS.h in Headers */ = {isa = PBXBuildFile; fileRef = A9B71E86237B559A00A2BF51 /* NatDS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A9CAD6FD2384D4A1003BF33B /* ExampleSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CAD6FB2384D452003BF33B /* ExampleSnapshotTests.swift */; };
 		A9D3454B238C69480013398C /* UIColor+hexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D3454A238C69480013398C /* UIColor+hexTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,7 +67,6 @@
 		A9B71E87237B559A00A2BF51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9B71E8C237B559A00A2BF51 /* NatDSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NatDSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9B71E93237B559A00A2BF51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A9CAD6FB2384D452003BF33B /* ExampleSnapshotTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleSnapshotTests.swift; sourceTree = "<group>"; };
 		A9D3454A238C69480013398C /* UIColor+hexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hexTests.swift"; sourceTree = "<group>"; };
 		B496A6BAA901771980AF5E95 /* Pods_NatDSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NatDSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -320,7 +318,6 @@
 				117FE027238DA4760032E2AC /* Components */,
 				117FE00C238D9AEB0032E2AC /* DesignTokens */,
 				A988199D238C61780008230F /* Extensions */,
-				A9CAD6FB2384D452003BF33B /* ExampleSnapshotTests.swift */,
 				A9B71E93237B559A00A2BF51 /* Info.plist */,
 			);
 			path = Tests;
@@ -531,7 +528,6 @@
 				117FE016238D9AEB0032E2AC /* ColorsTests.swift in Sources */,
 				117FE029238DA4B70032E2AC /* NavigationDrawerSubmenuItemTests.swift in Sources */,
 				11581AA8238F037D003E45D7 /* AssetsHelperTests.swift in Sources */,
-				A9CAD6FD2384D4A1003BF33B /* ExampleSnapshotTests.swift in Sources */,
 				11581AA3238F013A003E45D7 /* OutlinedIconsTests.swift in Sources */,
 				117FE015238D9AEB0032E2AC /* ColorsNaturaTests.swift in Sources */,
 			);

@@ -1,6 +1,7 @@
+@objcMembers
 public class NavigationDrawerItem: UIView {
 
-    public enum State {
+    public enum State: Int {
         case normal
         case disabled
         case selected
@@ -136,7 +137,7 @@ private extension NavigationDrawerItem {
 
     func updateState() {
         highlightSelectedView.isHidden = state != .selected
-        highlightSelectedView.backgroundColor = hasSubItems ? Colors.lowEmphasis : Colors.primary
+        highlightSelectedView.backgroundColor = hasSubItems ? Colors.lowEmphasis : Colors.secondary
         alpha = state == .disabled ? 0.48 : 1.0
     }
 
