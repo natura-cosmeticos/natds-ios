@@ -9,11 +9,6 @@ class NavigationDrawerItemTests: FBSnapshotTestCase {
         super.setUp()
         sut = NavigationDrawerItem()
         sut.frame = CGRect(x: 0, y: 0, width: 320, height: 48)
-        if #available(iOS 13.0, *) {
-            sut.icon = UIImage(systemName: "checkmark")
-        } else {
-            // Fallback on earlier versions
-        }
         sut.text = "Menu Item"
     }
 
