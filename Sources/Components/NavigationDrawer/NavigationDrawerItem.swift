@@ -42,7 +42,8 @@ public class NavigationDrawerItem: UIView {
 
     private lazy var arrowImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .orange
+        imageView.image = OutlinedIcons.Navigation.arrowDown
+        imageView.tintColor = Colors.highEmphasis
         return imageView
     }()
 
