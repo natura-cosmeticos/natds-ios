@@ -18,11 +18,6 @@ public class NavigationDrawerItem: UIView {
         set { label.text = newValue }
     }
 
-    public var icon: UIImage? {
-        get { return iconImageView.image }
-        set { iconImageView.image = newValue?.withRenderingMode(.alwaysTemplate) }
-    }
-
     public var hasSubItems: Bool = false {
         didSet {
             updateState()
@@ -36,13 +31,6 @@ public class NavigationDrawerItem: UIView {
         view.alpha = 0.16
         view.layer.cornerRadius = 4.0
         return view
-    }()
-
-    private lazy var iconImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.tintColor = .black
-        imageView.contentMode = .scaleAspectFit
-        return imageView
     }()
 
     private lazy var label: UILabel = {
@@ -81,7 +69,6 @@ private extension NavigationDrawerItem {
     func setup() {
         backgroundColor = .white
         addHighlightSelectedView()
-        addIconImageView()
         addLabel()
         addArrowImageView()
     }
@@ -97,17 +84,6 @@ private extension NavigationDrawerItem {
         ])
     }
 
-    func addIconImageView() {
-        addSubview(iconImageView)
-        iconImageView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            iconImageView.centerYAnchor.constraint(equalTo: highlightSelectedView.centerYAnchor),
-            iconImageView.leadingAnchor.constraint(equalTo: highlightSelectedView.leadingAnchor, constant: 8.0),
-            iconImageView.widthAnchor.constraint(equalToConstant: 24.0),
-            iconImageView.heightAnchor.constraint(equalToConstant: 24.0)
-        ])
-    }
-
     func addLabel() {
         addSubview(label)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -115,7 +91,7 @@ private extension NavigationDrawerItem {
         NSLayoutConstraint.activate([
             label.topAnchor.constraint(equalTo: highlightSelectedView.topAnchor, constant: 12.0),
             label.bottomAnchor.constraint(equalTo: highlightSelectedView.bottomAnchor, constant: -12.0),
-            label.leadingAnchor.constraint(equalTo: iconImageView.trailingAnchor, constant: 24.0),
+            label.leadingAnchor.constraint(equalTo: highlightSelectedView.leadingAnchor, constant: 8.0),
             constraint
         ])
         labelToHighlightConstraint = constraint
