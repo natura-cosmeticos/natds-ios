@@ -4,14 +4,17 @@ public protocol NavigationDrawerDelegate: AnyObject {
     func didSelectItem(_ item: Int)
 }
 
-public class NavigationDrawer: UITableView {
-    public weak var navigationDrawerDelegate: NavigationDrawerDelegate?
+public class NavigationDrawer: UIView {
+    public weak var delegate: NavigationDrawerDelegate?
 
     private let cellID = "cellID"
     private var expandedItems: Set<Int> = []
 
-    override init(frame: CGRect, style: UITableView.Style) {
-        super.init(frame: frame, style: style)
+    private var tableView: UITableView
+
+    init(tableView: UITableView = UITableView()) {
+        self.tableView = tableView
+        super.init(frame: .zero)
         setup()
     }
 
@@ -21,12 +24,25 @@ public class NavigationDrawer: UITableView {
     }
 
     private func setup() {
-        register(UITableViewCell.self, forCellReuseIdentifier: cellID)
-        rowHeight = UITableView.automaticDimension
-        estimatedRowHeight = 48.0
-        separatorStyle = .none
-        dataSource = self
-        delegate = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 48.0
+        tableView.separatorStyle = .none
+        tableView.dataSource = self
+        tableView.delegate = self
+
+        addTableView()
+    }
+
+    private func addTableView() {
+        addSubview(tableView)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: topAnchor),
+            tableView.rightAnchor.constraint(equalTo: rightAnchor),
+            tableView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            tableView.leftAnchor.constraint(equalTo: leftAnchor)
+        ])
     }
 
     private func isExpanded(item: Int) -> Bool {
@@ -45,13 +61,13 @@ public class NavigationDrawer: UITableView {
 extension NavigationDrawer: UITableViewDataSource {
 
     public func numberOfSections(in tableView: UITableView) -> Int {
-        return navigationDrawerDelegate?.numberOfItems() ?? 0
+        return delegate?.numberOfItems() ?? 0
     }
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let numberOfRowsForCollapsedItem = 1
         if isExpanded(item: section) {
-            let numberOfSubitems = navigationDrawerDelegate?.numberOfSubitems(at: section) ?? 0
+            let numberOfSubitems = delegate?.numberOfSubitems(at: section) ?? 0
             return numberOfSubitems + numberOfRowsForCollapsedItem
         }
         return numberOfRowsForCollapsedItem
@@ -64,7 +80,7 @@ extension NavigationDrawer: UITableViewDataSource {
 
 extension NavigationDrawer: UITableViewDelegate {
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let delegate = navigationDrawerDelegate else { return }
+        guard let delegate = delegate else { return }
 
         let numberOfSubitems = delegate.numberOfSubitems(at: indexPath.section)
         if numberOfSubitems > 0 {

@@ -3,36 +3,37 @@ import FBSnapshotTestCase
 
 class NavigationDrawerTests: FBSnapshotTestCase {
 
+    var tableView: UITableView!
     var sut: NavigationDrawer!
     var delegateMock: NavigationDrawerDelegateMock!
 
     override func setUp() {
         super.setUp()
+        tableView = UITableView()
         delegateMock = NavigationDrawerDelegateMock()
 
-        sut = NavigationDrawer()
-        sut.navigationDrawerDelegate = delegateMock
+        sut = NavigationDrawer(tableView: tableView)
+        sut.delegate = delegateMock
         sut.frame = CGRect(x: 0, y: 0, width: 320, height: 568)
     }
 
     func test_numberOfSections_callsDelegateNumberOfItems() {
-        _ = sut.numberOfSections
+        _ = sut.numberOfSections(in: tableView)
 
         XCTAssertEqual(delegateMock.invokedNumberOfItems, 1)
     }
 
     func test_numberRowsInSection_whenItemIsCollapsed_returnsOne() {
-        let numberOfRows = sut.numberOfRows(inSection: 0)
+        let numberOfRows = sut.tableView(tableView, numberOfRowsInSection: 0)
 
         XCTAssertEqual(numberOfRows, 1)
     }
 
     func test_numberOfRowsInSection_whenItemIsExpanded_callsDelegateNumberOfSubitems() {
         let section = 0
-        sut.tableView(sut, didSelectRowAt: IndexPath(row: 0, section: section))
-        sut.reloadData()
+        sut.tableView(tableView, didSelectRowAt: IndexPath(row: 0, section: section))
 
-        _ = sut.numberOfRows(inSection: section)
+        _ = sut.tableView(tableView, numberOfRowsInSection: section)
 
         XCTAssertEqual(delegateMock.invokedNumberOfSubitems.count, 2)
         XCTAssertEqual(delegateMock.invokedNumberOfSubitems.parameters[0], section)
@@ -42,10 +43,8 @@ class NavigationDrawerTests: FBSnapshotTestCase {
         let numberOfSubItems = 2
         let expectedNumberOfRows = 1 + numberOfSubItems
 
-        sut.tableView(sut, didSelectRowAt: IndexPath(row: 0, section: 0))
-        sut.reloadData()
-
-        let numberOfRows = sut.numberOfRows(inSection: 0)
+        sut.tableView(tableView, didSelectRowAt: IndexPath(row: 0, section: 0))
+        let numberOfRows = sut.tableView(tableView, numberOfRowsInSection: 0)
 
         XCTAssertEqual(numberOfRows, expectedNumberOfRows)
     }
@@ -54,7 +53,7 @@ class NavigationDrawerTests: FBSnapshotTestCase {
         delegateMock.numberOfSubitems = 0
 
         let section = 0
-        sut.tableView(sut, didSelectRowAt: IndexPath(row: 0, section: section))
+        sut.tableView(tableView, didSelectRowAt: IndexPath(row: 0, section: section))
 
         XCTAssertEqual(delegateMock.invokedDidSelectItem.count, 1)
         XCTAssertEqual(delegateMock.invokedDidSelectItem.parameters[0], section)
@@ -63,8 +62,8 @@ class NavigationDrawerTests: FBSnapshotTestCase {
     func test_didSelectRowAt_whenItIsAnCollapsedItem_callsDelegateNumberOfSubitems() {
         let section = 0
 
-        sut.tableView(sut, didSelectRowAt: IndexPath(row: 0, section: section))
-        sut.reloadData()
+        sut.tableView(tableView, didSelectRowAt: IndexPath(row: 0, section: section))
+        tableView.reloadData()
 
         XCTAssertEqual(delegateMock.invokedNumberOfSubitems.count, 2)
         XCTAssertEqual(delegateMock.invokedNumberOfSubitems.parameters[0], section)
@@ -73,12 +72,12 @@ class NavigationDrawerTests: FBSnapshotTestCase {
 
     func test_didSelectRowAt_whenItIsAnExpandedItem_numberOfRowsInSectionReturnsOne() {
         let section = 0
-        sut.tableView(sut, didSelectRowAt: IndexPath(row: 0, section: section))
-        sut.reloadData()
-        sut.tableView(sut, didSelectRowAt: IndexPath(row: 0, section: section))
-        sut.reloadData()
+        sut.tableView(tableView, didSelectRowAt: IndexPath(row: 0, section: section))
+        tableView.reloadData()
+        sut.tableView(tableView, didSelectRowAt: IndexPath(row: 0, section: section))
+        tableView.reloadData()
 
-        let numberOfRows = sut.numberOfRows(inSection: section)
+        let numberOfRows = sut.tableView(tableView, numberOfRowsInSection: section)
 
         XCTAssertEqual(numberOfRows, 1)
     }
