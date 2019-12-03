@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		11518B5E23968BD300220570 /* NavigationDrawerTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11518B5D23968BD300220570 /* NavigationDrawerTableView.swift */; };
+		11518B682396C00700220570 /* NavigationDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11518B662396BFAE00220570 /* NavigationDrawer.swift */; };
+		11518B6C2396C4AB00220570 /* NavigationDrawerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11518B6B2396C4AB00220570 /* NavigationDrawerTests.swift */; };
 		11581A9B238EC15E003E45D7 /* NavigationDrawerItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11581A9A238EC15E003E45D7 /* NavigationDrawerItemTests.swift */; };
 		11581A9D238EC256003E45D7 /* NavigationDrawerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11581A9C238EC256003E45D7 /* NavigationDrawerItem.swift */; };
 		11581AA0238EFE7A003E45D7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11581A9F238EFE7A003E45D7 /* Images.xcassets */; };
@@ -43,7 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		11518B5D23968BD300220570 /* NavigationDrawerTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerTableView.swift; sourceTree = "<group>"; };
+		11518B662396BFAE00220570 /* NavigationDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawer.swift; sourceTree = "<group>"; };
+		11518B6B2396C4AB00220570 /* NavigationDrawerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerTests.swift; sourceTree = "<group>"; };
 		11581A9A238EC15E003E45D7 /* NavigationDrawerItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerItemTests.swift; sourceTree = "<group>"; };
 		11581A9C238EC256003E45D7 /* NavigationDrawerItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerItem.swift; sourceTree = "<group>"; };
 		11581A9F238EFE7A003E45D7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -93,14 +95,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		11518B5C23968BB200220570 /* List */ = {
-			isa = PBXGroup;
-			children = (
-				11518B5D23968BD300220570 /* NavigationDrawerTableView.swift */,
-			);
-			path = List;
-			sourceTree = "<group>";
-		};
 		11581A9E238EFE43003E45D7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,7 +233,6 @@
 		117FE02A238DA52D0032E2AC /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				11518B5C23968BB200220570 /* List */,
 				11581AA4238F030C003E45D7 /* Icons */,
 				117FE02D238DD53D0032E2AC /* NavigationDrawer */,
 			);
@@ -251,6 +244,7 @@
 			children = (
 				117FE02B238DA53E0032E2AC /* NavigationDrawerSubmenuItem.swift */,
 				11581A9C238EC256003E45D7 /* NavigationDrawerItem.swift */,
+				11518B662396BFAE00220570 /* NavigationDrawer.swift */,
 			);
 			path = NavigationDrawer;
 			sourceTree = "<group>";
@@ -260,6 +254,7 @@
 			children = (
 				117FE028238DA4B70032E2AC /* NavigationDrawerSubmenuItemTests.swift */,
 				11581A9A238EC15E003E45D7 /* NavigationDrawerItemTests.swift */,
+				11518B6B2396C4AB00220570 /* NavigationDrawerTests.swift */,
 			);
 			path = NavigationDrawer;
 			sourceTree = "<group>";
@@ -522,9 +517,9 @@
 				117FE026238D9B070032E2AC /* Fonts.swift in Sources */,
 				117FE025238D9B070032E2AC /* FontsNatura.swift in Sources */,
 				11DEC636239181E2003CCF57 /* OutlinedIcons.swift in Sources */,
+				11518B682396C00700220570 /* NavigationDrawer.swift in Sources */,
 				117FE02C238DA53E0032E2AC /* NavigationDrawerSubmenuItem.swift in Sources */,
 				117FE024238D9B070032E2AC /* Colors.swift in Sources */,
-				11518B5E23968BD300220570 /* NavigationDrawerTableView.swift in Sources */,
 				A988199B238C5AAF0008230F /* UIColor+hex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -535,6 +530,7 @@
 			files = (
 				117FE018238D9AEB0032E2AC /* FontsTests.swift in Sources */,
 				11581A9B238EC15E003E45D7 /* NavigationDrawerItemTests.swift in Sources */,
+				11518B6C2396C4AB00220570 /* NavigationDrawerTests.swift in Sources */,
 				A9D3454B238C69480013398C /* UIColor+hexTests.swift in Sources */,
 				117FE017238D9AEB0032E2AC /* FontsNaturaTests.swift in Sources */,
 				117FE016238D9AEB0032E2AC /* ColorsTests.swift in Sources */,
