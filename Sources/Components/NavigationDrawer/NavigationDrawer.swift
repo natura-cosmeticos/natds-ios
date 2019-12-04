@@ -3,16 +3,14 @@ public protocol NavigationDrawerDelegate: AnyObject {
     func numberOfSubitems(at item: Int) -> Int
     func didSelectItem(_ item: Int)
     func didSelectSubitem(_ index: NavigationDrawer.IndexMenu)
-    func configureItem(_ item: UITableViewCell, at index: Int)
-    func configureSubitem(_ item: UITableViewCell, at index: NavigationDrawer.IndexMenu)
+    func configureItem(_ item: NavigationDrawerItemCell, at index: Int)
+    func configureSubitem(_ subitem: NavigationDrawerSubitemCell, at index: NavigationDrawer.IndexMenu)
 }
 
 public class NavigationDrawer: UIView {
     public weak var delegate: NavigationDrawerDelegate?
 
-    private let cellID = "cellID"
     private var expandedItems: Set<Int> = []
-
     private var tableView: UITableView
 
     init(tableView: UITableView = UITableView()) {
@@ -27,7 +25,8 @@ public class NavigationDrawer: UIView {
     }
 
     private func setup() {
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
+        tableView.register(NavigationDrawerItemCell.self)
+        tableView.register(NavigationDrawerSubitemCell.self)
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 48.0
         tableView.separatorStyle = .none
@@ -81,13 +80,15 @@ extension NavigationDrawer: UITableViewDataSource {
     }
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
         if isItem(at: indexPath) {
+            let cell: NavigationDrawerItemCell = tableView.dequeueReusableCell(for: indexPath)
             delegate?.configureItem(cell, at: indexPath.section)
+            return cell
         } else {
+            let cell: NavigationDrawerSubitemCell = tableView.dequeueReusableCell(for: indexPath)
             delegate?.configureSubitem(cell, at: IndexMenu(indexPath))
+            return cell
         }
-        return cell
     }
 }
 

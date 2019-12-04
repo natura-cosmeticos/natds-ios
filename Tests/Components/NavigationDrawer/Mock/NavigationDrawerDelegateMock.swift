@@ -7,8 +7,10 @@ class NavigationDrawerDelegateMock: NavigationDrawerDelegate {
     var invokedNumberOfSubitems: (count: Int, parameters: [Int])
     var invokedDidSelectItem: (count: Int, parameters: [Int])
     var invokedDidSelectSubitem: (count: Int, parameters: [NavigationDrawer.IndexMenu])
-    var invokedConfigureItem: (count: Int, parameters: [(item: UITableViewCell, index: Int)])
-    var invokedConfigureSubitem: (count: Int, parameters: [(item: UITableViewCell, index: NavigationDrawer.IndexMenu)])
+    var invokedConfigureItem: (count: Int, parameters: [(item: NavigationDrawerItemCell, index: Int)])
+    var invokedConfigureSubitem: (count: Int,
+                                  parameters: [(item: NavigationDrawerSubitemCell,
+                                                index: NavigationDrawer.IndexMenu)])
 
     init() {
         invokedNumberOfSubitems = (0, [])
@@ -39,13 +41,13 @@ class NavigationDrawerDelegateMock: NavigationDrawerDelegate {
         invokedDidSelectSubitem.parameters.append(index)
     }
 
-    func configureItem(_ item: UITableViewCell, at index: Int) {
+    func configureItem(_ item: NavigationDrawerItemCell, at index: Int) {
         invokedConfigureItem.count += 1
         invokedConfigureItem.parameters.append((item, index))
     }
 
-    func configureSubitem(_ item: UITableViewCell, at index: NavigationDrawer.IndexMenu) {
+    func configureSubitem(_ subitem: NavigationDrawerSubitemCell, at index: NavigationDrawer.IndexMenu) {
         invokedConfigureSubitem.count += 1
-        invokedConfigureSubitem.parameters.append((item, index))
+        invokedConfigureSubitem.parameters.append((subitem, index))
     }
 }
