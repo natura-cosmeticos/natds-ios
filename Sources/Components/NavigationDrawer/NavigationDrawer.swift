@@ -1,8 +1,8 @@
 public protocol NavigationDrawerDelegate: AnyObject {
     func numberOfItems() -> Int
-    func numberOfSubitems(at item: Int) -> Int
-    func didSelectItem(_ item: Int)
-    func didSelectSubitem(_ index: NavigationDrawer.IndexMenu)
+    func numberOfSubitems(in item: Int) -> Int
+    func didSelectItem(at index: Int)
+    func didSelectSubitem(at index: NavigationDrawer.IndexMenu)
     func configureItem(_ item: NavigationDrawerItemCell, at index: Int)
     func configureSubitem(_ subitem: NavigationDrawerSubitemCell, at index: NavigationDrawer.IndexMenu)
 }
@@ -64,7 +64,7 @@ public class NavigationDrawer: UIView {
     }
 
     private func hasSubitems(in item: Int) -> Bool {
-        let numberOfSubitems = delegate?.numberOfSubitems(at: item) ?? 0
+        let numberOfSubitems = delegate?.numberOfSubitems(in: item) ?? 0
         return numberOfSubitems > 0
     }
 
@@ -79,7 +79,7 @@ extension NavigationDrawer: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let numberOfRowsForCollapsedItem = 1
         if isExpanded(item: section) {
-            let numberOfSubitems = delegate?.numberOfSubitems(at: section) ?? 0
+            let numberOfSubitems = delegate?.numberOfSubitems(in: section) ?? 0
             return numberOfSubitems + numberOfRowsForCollapsedItem
         }
         return numberOfRowsForCollapsedItem
@@ -103,7 +103,7 @@ extension NavigationDrawer: UITableViewDelegate {
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let delegate = delegate else { return }
         guard isItem(at: indexPath) else {
-            delegate.didSelectSubitem(IndexMenu(indexPath))
+            delegate.didSelectSubitem(at: IndexMenu(indexPath))
             return
         }
 
@@ -113,7 +113,7 @@ extension NavigationDrawer: UITableViewDelegate {
             let indexSet = IndexSet(integer: indexPath.section)
             tableView.reloadSections(indexSet, with: .automatic)
         } else {
-            delegate.didSelectItem(indexPath.section)
+            delegate.didSelectItem(at: indexPath.section)
         }
     }
 }

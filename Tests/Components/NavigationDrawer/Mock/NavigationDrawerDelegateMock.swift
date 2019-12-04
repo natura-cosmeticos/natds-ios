@@ -26,18 +26,18 @@ class NavigationDrawerDelegateMock: NavigationDrawerDelegate {
         return mockNumberOfItems
     }
 
-    func numberOfSubitems(at item: Int) -> Int {
+    func numberOfSubitems(in item: Int) -> Int {
         invokedNumberOfSubitems.count += 1
         invokedNumberOfSubitems.parameters.append(item)
         return mockNumberOfSubitems
     }
 
-    func didSelectItem(_ item: Int) {
+    func didSelectItem(at index: Int) {
         invokedDidSelectItem.count += 1
-        invokedDidSelectItem.parameters.append(item)
+        invokedDidSelectItem.parameters.append(index)
     }
 
-    func didSelectSubitem(_ index: NavigationDrawer.IndexMenu) {
+    func didSelectSubitem(at index: NavigationDrawer.IndexMenu) {
         invokedDidSelectSubitem.count += 1
         invokedDidSelectSubitem.parameters.append(index)
     }
