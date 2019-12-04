@@ -2,6 +2,9 @@ public protocol NavigationDrawerDelegate: AnyObject {
     func numberOfItems() -> Int
     func numberOfSubitems(at item: Int) -> Int
     func didSelectItem(_ item: Int)
+    func didSelectSubitem(_ index: NavigationDrawer.IndexMenu)
+    func configureItem(_ item: UITableViewCell, at index: Int)
+    func configureSubitem(_ item: UITableViewCell, at index: NavigationDrawer.IndexMenu)
 }
 
 public class NavigationDrawer: UIView {
@@ -49,6 +52,10 @@ public class NavigationDrawer: UIView {
         return expandedItems.contains(item)
     }
 
+    private func isItem(at indexPath: IndexPath) -> Bool {
+        return indexPath.row == 0
+    }
+
     private func toggleExpandedItem(_ item: Int) {
         if isExpanded(item: item) {
             expandedItems.remove(item)
@@ -74,13 +81,23 @@ extension NavigationDrawer: UITableViewDataSource {
     }
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
+        if isItem(at: indexPath) {
+            delegate?.configureItem(cell, at: indexPath.section)
+        } else {
+            delegate?.configureSubitem(cell, at: IndexMenu(indexPath))
+        }
+        return cell
     }
 }
 
 extension NavigationDrawer: UITableViewDelegate {
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let delegate = delegate else { return }
+        guard isItem(at: indexPath) else {
+            delegate.didSelectSubitem(IndexMenu(indexPath))
+            return
+        }
 
         let numberOfSubitems = delegate.numberOfSubitems(at: indexPath.section)
         if numberOfSubitems > 0 {

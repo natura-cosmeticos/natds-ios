@@ -27,6 +27,9 @@
 		117FE02C238DA53E0032E2AC /* NavigationDrawerSubmenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117FE02B238DA53E0032E2AC /* NavigationDrawerSubmenuItem.swift */; };
 		11DEC636239181E2003CCF57 /* OutlinedIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DEC635239181E2003CCF57 /* OutlinedIcons.swift */; };
 		428277050E055F4A92D2A29F /* Pods_NatDSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B496A6BAA901771980AF5E95 /* Pods_NatDSTests.framework */; };
+		A971BE6F2398171C00A0D509 /* NavigationDrawerDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A971BE6E2398171C00A0D509 /* NavigationDrawerDelegateMock.swift */; };
+		A971BE712398306300A0D509 /* NavigationDrawer+IndexMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A971BE702398306300A0D509 /* NavigationDrawer+IndexMenu.swift */; };
+		A971BE73239831F200A0D509 /* NavigationDrawer+IndexMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A971BE72239831F200A0D509 /* NavigationDrawer+IndexMenuTests.swift */; };
 		A988199B238C5AAF0008230F /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A988199A238C5AAF0008230F /* UIColor+hex.swift */; };
 		A9B71E8D237B559A00A2BF51 /* NatDS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9B71E83237B559A00A2BF51 /* NatDS.framework */; };
 		A9B71E94237B559A00A2BF51 /* NatDS.h in Headers */ = {isa = PBXBuildFile; fileRef = A9B71E86237B559A00A2BF51 /* NatDS.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -65,6 +68,9 @@
 		11DEC635239181E2003CCF57 /* OutlinedIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlinedIcons.swift; sourceTree = "<group>"; };
 		9A46395C038D4497A880A6FF /* Pods-NatDSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatDSTests.release.xcconfig"; path = "Target Support Files/Pods-NatDSTests/Pods-NatDSTests.release.xcconfig"; sourceTree = "<group>"; };
 		A8B18363274C7A70CF4443A3 /* Pods-NatDSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatDSTests.debug.xcconfig"; path = "Target Support Files/Pods-NatDSTests/Pods-NatDSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A971BE6E2398171C00A0D509 /* NavigationDrawerDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerDelegateMock.swift; sourceTree = "<group>"; };
+		A971BE702398306300A0D509 /* NavigationDrawer+IndexMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationDrawer+IndexMenu.swift"; sourceTree = "<group>"; };
+		A971BE72239831F200A0D509 /* NavigationDrawer+IndexMenuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationDrawer+IndexMenuTests.swift"; sourceTree = "<group>"; };
 		A988199A238C5AAF0008230F /* UIColor+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hex.swift"; sourceTree = "<group>"; };
 		A9B71E83237B559A00A2BF51 /* NatDS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NatDS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9B71E86237B559A00A2BF51 /* NatDS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NatDS.h; sourceTree = "<group>"; };
@@ -245,6 +251,7 @@
 				117FE02B238DA53E0032E2AC /* NavigationDrawerSubmenuItem.swift */,
 				11581A9C238EC256003E45D7 /* NavigationDrawerItem.swift */,
 				11518B662396BFAE00220570 /* NavigationDrawer.swift */,
+				A971BE702398306300A0D509 /* NavigationDrawer+IndexMenu.swift */,
 			);
 			path = NavigationDrawer;
 			sourceTree = "<group>";
@@ -252,9 +259,11 @@
 		117FE02E238DD5540032E2AC /* NavigationDrawer */ = {
 			isa = PBXGroup;
 			children = (
+				A971BE6D2398170B00A0D509 /* Mock */,
 				117FE028238DA4B70032E2AC /* NavigationDrawerSubmenuItemTests.swift */,
 				11581A9A238EC15E003E45D7 /* NavigationDrawerItemTests.swift */,
 				11518B6B2396C4AB00220570 /* NavigationDrawerTests.swift */,
+				A971BE72239831F200A0D509 /* NavigationDrawer+IndexMenuTests.swift */,
 			);
 			path = NavigationDrawer;
 			sourceTree = "<group>";
@@ -265,6 +274,14 @@
 				B496A6BAA901771980AF5E95 /* Pods_NatDSTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A971BE6D2398170B00A0D509 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				A971BE6E2398171C00A0D509 /* NavigationDrawerDelegateMock.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		A9881999238C5A8E0008230F /* Extensions */ = {
@@ -519,6 +536,7 @@
 				11DEC636239181E2003CCF57 /* OutlinedIcons.swift in Sources */,
 				11518B682396C00700220570 /* NavigationDrawer.swift in Sources */,
 				117FE02C238DA53E0032E2AC /* NavigationDrawerSubmenuItem.swift in Sources */,
+				A971BE712398306300A0D509 /* NavigationDrawer+IndexMenu.swift in Sources */,
 				117FE024238D9B070032E2AC /* Colors.swift in Sources */,
 				A988199B238C5AAF0008230F /* UIColor+hex.swift in Sources */,
 			);
@@ -530,7 +548,9 @@
 			files = (
 				117FE018238D9AEB0032E2AC /* FontsTests.swift in Sources */,
 				11581A9B238EC15E003E45D7 /* NavigationDrawerItemTests.swift in Sources */,
+				A971BE6F2398171C00A0D509 /* NavigationDrawerDelegateMock.swift in Sources */,
 				11518B6C2396C4AB00220570 /* NavigationDrawerTests.swift in Sources */,
+				A971BE73239831F200A0D509 /* NavigationDrawer+IndexMenuTests.swift in Sources */,
 				A9D3454B238C69480013398C /* UIColor+hexTests.swift in Sources */,
 				117FE017238D9AEB0032E2AC /* FontsNaturaTests.swift in Sources */,
 				117FE016238D9AEB0032E2AC /* ColorsTests.swift in Sources */,

@@ -82,35 +82,34 @@ class NavigationDrawerTests: FBSnapshotTestCase {
         XCTAssertEqual(numberOfRows, 1)
     }
 
-}
+    func test_didSelectRowAt_whenItIsASubitem_callsDelegateDidSelectSubitem() {
+        let row = 1
+        let section = 0
 
-class NavigationDrawerDelegateMock: NavigationDrawerDelegate {
+        sut.tableView(tableView, didSelectRowAt: IndexPath(row: row, section: section))
 
-    var numberOfSubitems = 2
-
-    var invokedNumberOfItems = 0
-    var invokedNumberOfSubitems: (count: Int, parameters: [Int])
-    var invokedDidSelectItem: (count: Int, parameters: [Int])
-
-    init() {
-        invokedNumberOfSubitems = (0, [])
-        invokedDidSelectItem = (0, [])
+        XCTAssertEqual(delegateMock.invokedDidSelectSubitem.count, 1)
+        XCTAssertEqual(delegateMock.invokedDidSelectSubitem.parameters[0].item, section)
+        XCTAssertEqual(delegateMock.invokedDidSelectSubitem.parameters[0].subitem, row)
     }
 
-    func numberOfItems() -> Int {
-        invokedNumberOfItems += 1
-        return 1
+    func test_cellForRowAt_whenItIsAnItem_callsDelegateViewForItem() {
+        let section = 0
+
+        _ = sut.tableView(tableView, cellForRowAt: IndexPath(row: 0, section: section))
+
+        XCTAssertEqual(delegateMock.invokedConfigureItem.count, 1)
+        XCTAssertEqual(delegateMock.invokedConfigureItem.parameters[0].index, section)
     }
 
-    func numberOfSubitems(at item: Int) -> Int {
-        invokedNumberOfSubitems.count += 1
-        invokedNumberOfSubitems.parameters.append(item)
-        return numberOfSubitems
-    }
+    func test_cellForRowAt_whenItIsASubitem_callsDelegateViewForSubitem() {
+        let section = 0
+        let row = 1
 
-    func didSelectItem(_ item: Int) {
-        invokedDidSelectItem.count += 1
-        invokedDidSelectItem.parameters.append(item)
-    }
+        _ = sut.tableView(tableView, cellForRowAt: IndexPath(row: row, section: section))
 
+        XCTAssertEqual(delegateMock.invokedConfigureSubitem.count, 1)
+        XCTAssertEqual(delegateMock.invokedConfigureSubitem.parameters[0].index.item, section)
+        XCTAssertEqual(delegateMock.invokedConfigureSubitem.parameters[0].index.subitem, row)
+    }
 }
