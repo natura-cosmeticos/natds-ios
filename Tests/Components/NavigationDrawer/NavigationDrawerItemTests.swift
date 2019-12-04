@@ -9,11 +9,11 @@ class NavigationDrawerItemTests: FBSnapshotTestCase {
         super.setUp()
         sut = NavigationDrawerItem()
         sut.frame = CGRect(x: 0, y: 0, width: 320, height: 48)
-        sut.text = "Menu Item"
+        sut.title = "Menu Item"
     }
 
     func test_largeText_textHasNoLineBreak() {
-        sut.text = "Menu Item lorem ipsum segum dolor et octum"
+        sut.title = "Menu Item lorem ipsum segum dolor et octum"
 
         FBSnapshotVerifyView(sut)
     }
