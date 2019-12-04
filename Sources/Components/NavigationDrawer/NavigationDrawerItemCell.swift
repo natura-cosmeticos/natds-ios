@@ -1,5 +1,5 @@
 @objcMembers
-public class NavigationDrawerItem: UITableViewCell {
+public class NavigationDrawerItemCell: UITableViewCell {
 
     public enum State: Int {
         case normal
@@ -65,13 +65,13 @@ public class NavigationDrawerItem: UITableViewCell {
 
 }
 
-private extension NavigationDrawerItem {
+private extension NavigationDrawerItemCell {
 
     func setup() {
         selectionStyle = .none
         backgroundColor = .white
         addHighlightSelectedView()
-        addLabel()
+        addTitleLabel()
         addArrowImageView()
     }
 
@@ -86,7 +86,7 @@ private extension NavigationDrawerItem {
         ])
     }
 
-    func addLabel() {
+    func addTitleLabel() {
         addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         let constraint = titleLabel.trailingAnchor.constraint(equalTo: highlightSelectedView.trailingAnchor,

@@ -1,4 +1,4 @@
-public class NavigationDrawerSubmenuItem: UIView {
+public class NavigationDrawerSubitemCell: UITableViewCell {
 
     public enum State {
         case normal
@@ -9,13 +9,13 @@ public class NavigationDrawerSubmenuItem: UIView {
     public var state: State = .normal {
         didSet {
             highlightSelectedView.isHidden = state != .selected
-            label.alpha = state == .disabled ? 0.48 : 1.0
+            titleLabel.alpha = state == .disabled ? 0.48 : 1.0
         }
     }
 
-    public var text: String? {
-        get { return label.text }
-        set { label.text = newValue }
+    public var title: String? {
+        get { return titleLabel.text }
+        set { titleLabel.text = newValue }
     }
 
     private lazy var verticalLineView: UIView = {
@@ -32,15 +32,15 @@ public class NavigationDrawerSubmenuItem: UIView {
         return view
     }()
 
-    private lazy var label: UILabel = {
+    private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = Colors.highEmphasis
         label.font = Fonts.body2
         return label
     }()
 
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
+    public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         defer { state = .normal }
         setup()
     }
@@ -52,13 +52,14 @@ public class NavigationDrawerSubmenuItem: UIView {
 
 }
 
-private extension NavigationDrawerSubmenuItem {
+private extension NavigationDrawerSubitemCell {
 
     func setup() {
+        selectionStyle = .none
         backgroundColor = .white
         addVerticalLineView()
         addHighlightSelectedView()
-        addLabel()
+        addTitleLabel()
     }
 
     func addVerticalLineView() {
@@ -83,14 +84,14 @@ private extension NavigationDrawerSubmenuItem {
         ])
     }
 
-    func addLabel() {
-        addSubview(label)
-        label.translatesAutoresizingMaskIntoConstraints = false
+    func addTitleLabel() {
+        addSubview(titleLabel)
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            label.topAnchor.constraint(equalTo: highlightSelectedView.topAnchor, constant: 12.0),
-            label.bottomAnchor.constraint(equalTo: highlightSelectedView.bottomAnchor, constant: -12.0),
-            label.leadingAnchor.constraint(equalTo: highlightSelectedView.leadingAnchor, constant: 8.0),
-            label.trailingAnchor.constraint(equalTo: highlightSelectedView.trailingAnchor, constant: -8.0)
+            titleLabel.topAnchor.constraint(equalTo: highlightSelectedView.topAnchor, constant: 12.0),
+            titleLabel.bottomAnchor.constraint(equalTo: highlightSelectedView.bottomAnchor, constant: -12.0),
+            titleLabel.leadingAnchor.constraint(equalTo: highlightSelectedView.leadingAnchor, constant: 8.0),
+            titleLabel.trailingAnchor.constraint(equalTo: highlightSelectedView.trailingAnchor, constant: -8.0)
         ])
     }
 
