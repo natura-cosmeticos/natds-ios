@@ -50,7 +50,7 @@ class NavigationDrawerTests: FBSnapshotTestCase {
     }
 
     func test_didSelectRowAt_whenItIsAnItemWithoutSubitem_callsDelegateDidSelectItem() {
-        delegateMock.numberOfSubitems = 0
+        delegateMock.mockNumberOfSubitems = 0
 
         let section = 0
         sut.tableView(tableView, didSelectRowAt: IndexPath(row: 0, section: section))
@@ -59,7 +59,7 @@ class NavigationDrawerTests: FBSnapshotTestCase {
         XCTAssertEqual(delegateMock.invokedDidSelectItem.parameters[0], section)
     }
 
-    func test_didSelectRowAt_whenItIsAnCollapsedItem_callsDelegateNumberOfSubitems() {
+    func test_didSelectRowAt_whenItIsACollapsedItem_callsDelegateNumberOfSubitems() {
         let section = 0
 
         sut.tableView(tableView, didSelectRowAt: IndexPath(row: 0, section: section))
@@ -112,4 +112,31 @@ class NavigationDrawerTests: FBSnapshotTestCase {
         XCTAssertEqual(delegateMock.invokedConfigureSubitem.parameters[0].index.item, section)
         XCTAssertEqual(delegateMock.invokedConfigureSubitem.parameters[0].index.subitem, row)
     }
+
+    func test_cellForRowAt_whenItIsAnItem_hasValidSnapshot() {
+        delegateMock.mockNumberOfItems = 10
+        delegateMock.mockNumberOfSubitems = 0
+        tableView.reloadData()
+
+        FBSnapshotVerifyView(sut)
+    }
+
+    func test_cellForRowAt_whenItIsACollapsedItem_hasValidSnapshot() {
+        delegateMock.mockNumberOfItems = 10
+        delegateMock.mockNumberOfSubitems = 2
+        tableView.reloadData()
+
+        FBSnapshotVerifyView(sut)
+    }
+
+    func test_cellForRowAt_whenItIsAnExpandedItem_hasValidSnapshot() {
+        delegateMock.mockNumberOfItems = 10
+        delegateMock.mockNumberOfSubitems = 2
+        sut.tableView(tableView, didSelectRowAt: IndexPath(row: 0, section: 0))
+        sut.tableView(tableView, didSelectRowAt: IndexPath(row: 0, section: 4))
+        tableView.reloadData()
+
+        FBSnapshotVerifyView(sut)
+    }
+
 }

@@ -62,6 +62,12 @@ public class NavigationDrawer: UIView {
             expandedItems.insert(item)
         }
     }
+
+    private func hasSubitems(in item: Int) -> Bool {
+        let numberOfSubitems = delegate?.numberOfSubitems(at: item) ?? 0
+        return numberOfSubitems > 0
+    }
+
 }
 
 extension NavigationDrawer: UITableViewDataSource {
@@ -82,6 +88,7 @@ extension NavigationDrawer: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if isItem(at: indexPath) {
             let cell: NavigationDrawerItemCell = tableView.dequeueReusableCell(for: indexPath)
+            cell.hasSubItems = hasSubitems(in: indexPath.section)
             delegate?.configureItem(cell, at: indexPath.section)
             return cell
         } else {
@@ -100,8 +107,7 @@ extension NavigationDrawer: UITableViewDelegate {
             return
         }
 
-        let numberOfSubitems = delegate.numberOfSubitems(at: indexPath.section)
-        if numberOfSubitems > 0 {
+        if hasSubitems(in: indexPath.section) {
             toggleExpandedItem(indexPath.section)
 
             let indexSet = IndexSet(integer: indexPath.section)

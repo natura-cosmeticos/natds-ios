@@ -1,7 +1,8 @@
 @testable import NatDS
 
 class NavigationDrawerDelegateMock: NavigationDrawerDelegate {
-    var numberOfSubitems = 2
+    var mockNumberOfItems = 1
+    var mockNumberOfSubitems = 2
 
     var invokedNumberOfItems = 0
     var invokedNumberOfSubitems: (count: Int, parameters: [Int])
@@ -22,13 +23,13 @@ class NavigationDrawerDelegateMock: NavigationDrawerDelegate {
 
     func numberOfItems() -> Int {
         invokedNumberOfItems += 1
-        return 1
+        return mockNumberOfItems
     }
 
     func numberOfSubitems(at item: Int) -> Int {
         invokedNumberOfSubitems.count += 1
         invokedNumberOfSubitems.parameters.append(item)
-        return numberOfSubitems
+        return mockNumberOfSubitems
     }
 
     func didSelectItem(_ item: Int) {
@@ -44,10 +45,12 @@ class NavigationDrawerDelegateMock: NavigationDrawerDelegate {
     func configureItem(_ item: NavigationDrawerItemCell, at index: Int) {
         invokedConfigureItem.count += 1
         invokedConfigureItem.parameters.append((item, index))
+        item.title = "Item #\(index)"
     }
 
     func configureSubitem(_ subitem: NavigationDrawerSubitemCell, at index: NavigationDrawer.IndexMenu) {
         invokedConfigureSubitem.count += 1
         invokedConfigureSubitem.parameters.append((subitem, index))
+        subitem.title = "Subitem #\(index.subitem)"
     }
 }
