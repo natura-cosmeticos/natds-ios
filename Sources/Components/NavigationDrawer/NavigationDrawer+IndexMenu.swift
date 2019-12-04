@@ -1,11 +1,11 @@
 public extension NavigationDrawer {
     class IndexMenu: NSObject {
-        let item: Int
-        let subitem: Int
+        public let item: Int
+        public let subitem: Int
 
-        init(_ indexPath: IndexPath) {
-            self.item = indexPath.section
-            self.subitem = indexPath.row
+        init(item: Int, subitem: Int) {
+            self.item = item
+            self.subitem = subitem
         }
     }
 }

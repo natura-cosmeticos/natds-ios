@@ -83,14 +83,15 @@ class NavigationDrawerTests: FBSnapshotTestCase {
     }
 
     func test_didSelectRowAt_whenItIsASubitem_callsDelegateDidSelectSubitem() {
-        let row = 1
-        let section = 0
+        let expectedItem = 0
+        let expectedSubitem = 0
 
-        sut.tableView(tableView, didSelectRowAt: IndexPath(row: row, section: section))
+        let indexPath = IndexPath(row: 1, section: 0)
+        sut.tableView(tableView, didSelectRowAt: indexPath)
 
         XCTAssertEqual(delegateMock.invokedDidSelectSubitem.count, 1)
-        XCTAssertEqual(delegateMock.invokedDidSelectSubitem.parameters[0].item, section)
-        XCTAssertEqual(delegateMock.invokedDidSelectSubitem.parameters[0].subitem, row)
+        XCTAssertEqual(delegateMock.invokedDidSelectSubitem.parameters[0].item, expectedItem)
+        XCTAssertEqual(delegateMock.invokedDidSelectSubitem.parameters[0].subitem, expectedSubitem)
     }
 
     func test_cellForRowAt_whenItIsAnItem_callsDelegateViewForItem() {
@@ -103,14 +104,15 @@ class NavigationDrawerTests: FBSnapshotTestCase {
     }
 
     func test_cellForRowAt_whenItIsASubitem_callsDelegateViewForSubitem() {
-        let section = 0
-        let row = 1
+        let expectedItem = 0
+        let expectedSubitem = 0
 
-        _ = sut.tableView(tableView, cellForRowAt: IndexPath(row: row, section: section))
+        let indexPath = IndexPath(row: 1, section: 0)
+        _ = sut.tableView(tableView, cellForRowAt: indexPath)
 
         XCTAssertEqual(delegateMock.invokedConfigureSubitem.count, 1)
-        XCTAssertEqual(delegateMock.invokedConfigureSubitem.parameters[0].index.item, section)
-        XCTAssertEqual(delegateMock.invokedConfigureSubitem.parameters[0].index.subitem, row)
+        XCTAssertEqual(delegateMock.invokedConfigureSubitem.parameters[0].index.item, expectedItem)
+        XCTAssertEqual(delegateMock.invokedConfigureSubitem.parameters[0].index.subitem, expectedSubitem)
     }
 
     func test_cellForRowAt_whenItIsAnItem_hasValidSnapshot() {

@@ -18,7 +18,7 @@ public class NavigationDrawerItemCell: UITableViewCell {
         set { titleLabel.text = newValue }
     }
 
-    public var hasSubItems: Bool = false {
+    var hasSubItems: Bool = false {
         didSet {
             updateState()
             arrowImageView.isHidden = !hasSubItems

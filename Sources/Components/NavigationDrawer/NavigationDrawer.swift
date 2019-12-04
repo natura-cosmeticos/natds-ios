@@ -13,7 +13,7 @@ public class NavigationDrawer: UIView {
     private var expandedItems: Set<Int> = []
     private var tableView: UITableView
 
-    init(tableView: UITableView = UITableView()) {
+    public init(tableView: UITableView = UITableView()) {
         self.tableView = tableView
         super.init(frame: .zero)
         setup()
@@ -68,6 +68,12 @@ public class NavigationDrawer: UIView {
         return numberOfSubitems > 0
     }
 
+    private func buildIndexExcludingItem(from indexPath: IndexPath) -> IndexMenu {
+        let numberOfItemInSection = 1
+        let item = indexPath.section
+        let subitem = indexPath.row - numberOfItemInSection
+        return IndexMenu(item: item, subitem: subitem)
+    }
 }
 
 extension NavigationDrawer: UITableViewDataSource {
@@ -92,8 +98,10 @@ extension NavigationDrawer: UITableViewDataSource {
             delegate?.configureItem(cell, at: indexPath.section)
             return cell
         } else {
+            let indexMenu = buildIndexExcludingItem(from: indexPath)
+
             let cell: NavigationDrawerSubitemCell = tableView.dequeueReusableCell(for: indexPath)
-            delegate?.configureSubitem(cell, at: IndexMenu(indexPath))
+            delegate?.configureSubitem(cell, at: indexMenu)
             return cell
         }
     }
@@ -103,7 +111,8 @@ extension NavigationDrawer: UITableViewDelegate {
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let delegate = delegate else { return }
         guard isItem(at: indexPath) else {
-            delegate.didSelectSubitem(at: IndexMenu(indexPath))
+            let indexMenu = buildIndexExcludingItem(from: indexPath)
+            delegate.didSelectSubitem(at: indexMenu)
             return
         }
 
@@ -111,7 +120,7 @@ extension NavigationDrawer: UITableViewDelegate {
             toggleExpandedItem(indexPath.section)
 
             let indexSet = IndexSet(integer: indexPath.section)
-            tableView.reloadSections(indexSet, with: .automatic)
+            tableView.reloadSections(indexSet, with: .none)
         } else {
             delegate.didSelectItem(at: indexPath.section)
         }
