@@ -1,5 +1,5 @@
 @objcMembers
-public class NavigationDrawerItem: UIView {
+public class NavigationDrawerItemCell: UITableViewCell {
 
     public enum State: Int {
         case normal
@@ -13,12 +13,12 @@ public class NavigationDrawerItem: UIView {
         }
     }
 
-    public var text: String? {
-        get { return label.text }
-        set { label.text = newValue }
+    public var title: String? {
+        get { return titleLabel.text }
+        set { titleLabel.text = newValue }
     }
 
-    public var hasSubItems: Bool = false {
+    var hasSubItems: Bool = false {
         didSet {
             updateState()
             arrowImageView.isHidden = !hasSubItems
@@ -33,7 +33,7 @@ public class NavigationDrawerItem: UIView {
         return view
     }()
 
-    private lazy var label: UILabel = {
+    private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = Colors.highEmphasis
         label.font = Fonts.body2
@@ -49,8 +49,8 @@ public class NavigationDrawerItem: UIView {
 
     private var labelToHighlightConstraint: NSLayoutConstraint?
 
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
+    public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         defer {
             state = .normal
             hasSubItems = false
@@ -65,12 +65,13 @@ public class NavigationDrawerItem: UIView {
 
 }
 
-private extension NavigationDrawerItem {
+private extension NavigationDrawerItemCell {
 
     func setup() {
+        selectionStyle = .none
         backgroundColor = .white
         addHighlightSelectedView()
-        addLabel()
+        addTitleLabel()
         addArrowImageView()
     }
 
@@ -85,14 +86,15 @@ private extension NavigationDrawerItem {
         ])
     }
 
-    func addLabel() {
-        addSubview(label)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        let constraint = label.trailingAnchor.constraint(equalTo: highlightSelectedView.trailingAnchor, constant: -8.0)
+    func addTitleLabel() {
+        addSubview(titleLabel)
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        let constraint = titleLabel.trailingAnchor.constraint(equalTo: highlightSelectedView.trailingAnchor,
+                                                              constant: -8.0)
         NSLayoutConstraint.activate([
-            label.topAnchor.constraint(equalTo: highlightSelectedView.topAnchor, constant: 12.0),
-            label.bottomAnchor.constraint(equalTo: highlightSelectedView.bottomAnchor, constant: -12.0),
-            label.leadingAnchor.constraint(equalTo: highlightSelectedView.leadingAnchor, constant: 8.0),
+            titleLabel.topAnchor.constraint(equalTo: highlightSelectedView.topAnchor, constant: 12.0),
+            titleLabel.bottomAnchor.constraint(equalTo: highlightSelectedView.bottomAnchor, constant: -12.0),
+            titleLabel.leadingAnchor.constraint(equalTo: highlightSelectedView.leadingAnchor, constant: 8.0),
             constraint
         ])
         labelToHighlightConstraint = constraint
@@ -101,7 +103,7 @@ private extension NavigationDrawerItem {
     func addArrowImageView() {
         addSubview(arrowImageView)
         arrowImageView.translatesAutoresizingMaskIntoConstraints = false
-        let constraint = arrowImageView.leadingAnchor.constraint(equalTo: label.trailingAnchor, constant: 8.0)
+        let constraint = arrowImageView.leadingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: 8.0)
         constraint.priority = .defaultHigh
         NSLayoutConstraint.activate([
             arrowImageView.centerYAnchor.constraint(equalTo: highlightSelectedView.centerYAnchor),

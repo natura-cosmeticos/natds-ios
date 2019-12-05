@@ -1,19 +1,19 @@
 import FBSnapshotTestCase
 @testable import NatDS
 
-class NavigationDrawerItemTests: FBSnapshotTestCase {
+class NavigationDrawerItemCellTests: FBSnapshotTestCase {
 
-    var sut: NavigationDrawerItem!
+    var sut: NavigationDrawerItemCell!
 
     override func setUp() {
         super.setUp()
-        sut = NavigationDrawerItem()
+        sut = NavigationDrawerItemCell()
         sut.frame = CGRect(x: 0, y: 0, width: 320, height: 48)
-        sut.text = "Menu Item"
+        sut.title = "Menu Item"
     }
 
     func test_largeText_textHasNoLineBreak() {
-        sut.text = "Menu Item lorem ipsum segum dolor et octum"
+        sut.title = "Menu Item lorem ipsum segum dolor et octum"
 
         FBSnapshotVerifyView(sut)
     }
@@ -59,6 +59,10 @@ class NavigationDrawerItemTests: FBSnapshotTestCase {
         sut.hasSubItems = true
 
         FBSnapshotVerifyView(sut)
+    }
+
+    func test_init_hasSelectionStyleAsNone() {
+        XCTAssertEqual(sut.selectionStyle, .none)
     }
 
     private func createContainerView(for view: UIView) -> UIView {

@@ -1,14 +1,14 @@
 import FBSnapshotTestCase
 @testable import NatDS
 
-class NavigationDrawerSubmenuItemTests: FBSnapshotTestCase {
-    var sut: NavigationDrawerSubmenuItem!
+class NavigationDrawerSubitemCellTests: FBSnapshotTestCase {
+    var sut: NavigationDrawerSubitemCell!
 
     override func setUp() {
         super.setUp()
-        sut = NavigationDrawerSubmenuItem()
+        sut = NavigationDrawerSubitemCell()
         sut.frame = CGRect(x: 0, y: 0, width: 320, height: 48)
-        sut.text = "Sub Menu Item"
+        sut.title = "Sub Menu Item"
     }
 
     func test_normalState_hasNormalSnapshot() {
@@ -25,4 +25,9 @@ class NavigationDrawerSubmenuItemTests: FBSnapshotTestCase {
         sut.state = .disabled
         FBSnapshotVerifyView(sut)
     }
+
+    func test_init_hasSelectionStyleAsNone() {
+        XCTAssertEqual(sut.selectionStyle, .none)
+    }
+
 }

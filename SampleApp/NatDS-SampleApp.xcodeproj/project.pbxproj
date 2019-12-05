@@ -31,7 +31,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A9D71BBE2386DFEE00CDEC1D /* NadDS-SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NadDS-SampleApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9D71BBE2386DFEE00CDEC1D /* NatDS-SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NatDS-SampleApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9D71BC12386DFEE00CDEC1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9D71BC32386DFEE00CDEC1D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A9D71BC52386DFEE00CDEC1D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 		A9D71BBF2386DFEE00CDEC1D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A9D71BBE2386DFEE00CDEC1D /* NadDS-SampleApp.app */,
+				A9D71BBE2386DFEE00CDEC1D /* NatDS-SampleApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,9 +102,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A9D71BBD2386DFEE00CDEC1D /* NadDS-SampleApp */ = {
+		A9D71BBD2386DFEE00CDEC1D /* NatDS-SampleApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A9D71BD22386DFF200CDEC1D /* Build configuration list for PBXNativeTarget "NadDS-SampleApp" */;
+			buildConfigurationList = A9D71BD22386DFF200CDEC1D /* Build configuration list for PBXNativeTarget "NatDS-SampleApp" */;
 			buildPhases = (
 				A9D71BBA2386DFEE00CDEC1D /* Sources */,
 				A9D71BBB2386DFEE00CDEC1D /* Frameworks */,
@@ -115,9 +115,9 @@
 			);
 			dependencies = (
 			);
-			name = "NadDS-SampleApp";
-			productName = "NadDS-SampleApp";
-			productReference = A9D71BBE2386DFEE00CDEC1D /* NadDS-SampleApp.app */;
+			name = "NatDS-SampleApp";
+			productName = "NatDS-SampleApp";
+			productReference = A9D71BBE2386DFEE00CDEC1D /* NatDS-SampleApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -135,7 +135,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A9D71BB92386DFEE00CDEC1D /* Build configuration list for PBXProject "NadDS-SampleApp" */;
+			buildConfigurationList = A9D71BB92386DFEE00CDEC1D /* Build configuration list for PBXProject "NatDS-SampleApp" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -148,7 +148,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A9D71BBD2386DFEE00CDEC1D /* NadDS-SampleApp */,
+				A9D71BBD2386DFEE00CDEC1D /* NatDS-SampleApp */,
 			);
 		};
 /* End PBXProject section */
@@ -314,7 +314,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Natura.NadDS-SampleApp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Natura.NatDS-SampleApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -331,7 +331,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Natura.NadDS-SampleApp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Natura.NatDS-SampleApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -341,7 +341,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A9D71BB92386DFEE00CDEC1D /* Build configuration list for PBXProject "NadDS-SampleApp" */ = {
+		A9D71BB92386DFEE00CDEC1D /* Build configuration list for PBXProject "NatDS-SampleApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A9D71BD02386DFF200CDEC1D /* Debug */,
@@ -350,7 +350,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A9D71BD22386DFF200CDEC1D /* Build configuration list for PBXNativeTarget "NadDS-SampleApp" */ = {
+		A9D71BD22386DFF200CDEC1D /* Build configuration list for PBXNativeTarget "NatDS-SampleApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A9D71BD32386DFF200CDEC1D /* Debug */,
