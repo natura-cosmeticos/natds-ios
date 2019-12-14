@@ -11,4 +11,11 @@ class OutlinedIconsTests: XCTestCase {
         XCTAssertNotNil(image)
     }
 
+    func test_outlinedNavigationArrowUp_returnsExpectedImage() {
+        let expectedImage = AssetsHelper.image(from: "Outlined/Navigation/ArrowUp")
+        let image = OutlinedIcons.Navigation.arrowUp
+
+        XCTAssertEqual(image, expectedImage)
+        XCTAssertNotNil(image)
+    }
 }

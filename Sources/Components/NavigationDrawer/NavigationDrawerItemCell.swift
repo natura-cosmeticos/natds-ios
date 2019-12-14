@@ -42,7 +42,6 @@ public class NavigationDrawerItemCell: UITableViewCell {
 
     private lazy var arrowImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = OutlinedIcons.Navigation.arrowDown
         imageView.tintColor = Colors.highEmphasis
         return imageView
     }()
@@ -115,8 +114,12 @@ private extension NavigationDrawerItemCell {
     }
 
     func updateState() {
+        arrowImageView.image = state == .selected ? OutlinedIcons.Navigation.arrowUp
+            : OutlinedIcons.Navigation.arrowDown
+
         highlightSelectedView.isHidden = state != .selected
         highlightSelectedView.backgroundColor = hasSubItems ? Colors.lowEmphasis : Colors.secondary
+
         alpha = state == .disabled ? 0.48 : 1.0
     }
 

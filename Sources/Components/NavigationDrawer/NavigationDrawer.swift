@@ -95,6 +95,7 @@ extension NavigationDrawer: UITableViewDataSource {
         if isItem(at: indexPath) {
             let cell: NavigationDrawerItemCell = tableView.dequeueReusableCell(for: indexPath)
             cell.hasSubItems = hasSubitems(in: indexPath.section)
+            cell.state = isExpanded(item: indexPath.section) ? .selected : .normal
             delegate?.configureItem(cell, at: indexPath.section)
             return cell
         } else {
