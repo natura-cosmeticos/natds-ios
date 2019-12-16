@@ -14,6 +14,3 @@ Pod::Spec.new do |s|
   s.swift_version = "5.0" 
   s.platform     = :ios, "9.0"
 end
-
-
-Factory().with().with().build()
