@@ -78,18 +78,18 @@ private extension NavigationDrawerItemCell {
     }
 
     func addHighlightSelectedView() {
-        addSubview(highlightSelectedView)
+        contentView.addSubview(highlightSelectedView)
         highlightSelectedView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            highlightSelectedView.topAnchor.constraint(equalTo: topAnchor, constant: 4.0),
-            highlightSelectedView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -4.0),
-            highlightSelectedView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8.0),
-            highlightSelectedView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8.0)
+            highlightSelectedView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 4.0),
+            highlightSelectedView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -4.0),
+            highlightSelectedView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8.0),
+            highlightSelectedView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8.0)
         ])
     }
 
     func addTitleLabel() {
-        addSubview(titleLabel)
+        contentView.addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         let constraint = titleLabel.trailingAnchor.constraint(equalTo: highlightSelectedView.trailingAnchor,
                                                               constant: -8.0)
@@ -103,7 +103,7 @@ private extension NavigationDrawerItemCell {
     }
 
     func addArrowImageView() {
-        addSubview(arrowImageView)
+        contentView.addSubview(arrowImageView)
         arrowImageView.translatesAutoresizingMaskIntoConstraints = false
         let constraint = arrowImageView.leadingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: 8.0)
         constraint.priority = .defaultHigh
@@ -122,7 +122,7 @@ private extension NavigationDrawerItemCell {
         highlightSelectedView.isHidden = state != .selected
         highlightSelectedView.backgroundColor = hasSubItems ? Colors.lowEmphasis : Colors.secondary
 
-        alpha = state == .disabled ? 0.48 : 1.0
+        contentView.alpha = state == .disabled ? 0.48 : 1.0
     }
 
 }
