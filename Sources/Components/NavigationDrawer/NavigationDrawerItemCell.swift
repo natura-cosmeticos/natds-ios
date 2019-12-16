@@ -18,6 +18,9 @@ public class NavigationDrawerItemCell: UITableViewCell {
         set { titleLabel.text = newValue }
     }
 
+    public var expandedIcon: UIImage? = OutlinedIcons.Navigation.arrowUp
+    public var collapsedIcon: UIImage? = OutlinedIcons.Navigation.arrowDown
+
     var hasSubItems: Bool = false {
         didSet {
             updateState()
@@ -114,8 +117,7 @@ private extension NavigationDrawerItemCell {
     }
 
     func updateState() {
-        arrowImageView.image = state == .selected ? OutlinedIcons.Navigation.arrowUp
-            : OutlinedIcons.Navigation.arrowDown
+        arrowImageView.image = state == .selected ? expandedIcon : collapsedIcon
 
         highlightSelectedView.isHidden = state != .selected
         highlightSelectedView.backgroundColor = hasSubItems ? Colors.lowEmphasis : Colors.secondary
