@@ -11,6 +11,7 @@ public class NavigationDrawer: UIView {
     public weak var delegate: NavigationDrawerDelegate?
 
     private var expandedItems: Set<Int> = []
+    private var isDisabledAtIndexPath = [IndexPath: Bool]()
     private var tableView: UITableView
 
     public var expandedIcon: UIImage? = OutlinedIcons.Navigation.arrowUp
@@ -58,6 +59,11 @@ public class NavigationDrawer: UIView {
         return indexPath.row == 0
     }
 
+    private func isDisabled(indexPath: IndexPath) -> Bool {
+        let isDisabled = isDisabledAtIndexPath[indexPath]
+        return isDisabled ?? false
+    }
+
     private func toggleExpandedItem(_ item: Int) {
         if isExpanded(item: item) {
             expandedItems.remove(item)
@@ -101,13 +107,18 @@ extension NavigationDrawer: UITableViewDataSource {
             cell.expandedIcon = expandedIcon
             cell.collapsedIcon = collapsedIcon
             cell.state = isExpanded(item: indexPath.section) ? .selected : .normal
+
             delegate?.configureItem(cell, at: indexPath.section)
+            isDisabledAtIndexPath[indexPath] = cell.state == .disabled
             return cell
         } else {
             let indexMenu = buildIndexExcludingItem(from: indexPath)
 
             let cell: NavigationDrawerSubitemCell = tableView.dequeueReusableCell(for: indexPath)
+            cell.state = .normal
+
             delegate?.configureSubitem(cell, at: indexMenu)
+            isDisabledAtIndexPath[indexPath] = cell.state == .disabled
             return cell
         }
     }
@@ -115,7 +126,7 @@ extension NavigationDrawer: UITableViewDataSource {
 
 extension NavigationDrawer: UITableViewDelegate {
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let delegate = delegate else { return }
+        guard let delegate = delegate, !isDisabled(indexPath: indexPath) else { return }
         guard isItem(at: indexPath) else {
             let indexMenu = buildIndexExcludingItem(from: indexPath)
             delegate.didSelectSubitem(at: indexMenu)
