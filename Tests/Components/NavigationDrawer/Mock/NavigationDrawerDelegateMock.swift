@@ -3,6 +3,8 @@
 class NavigationDrawerDelegateMock: NavigationDrawerDelegate {
     var mockNumberOfItems = 1
     var mockNumberOfSubitems = 2
+    var mockDisabledItemState = false
+    var mockDisabledSubitemState = false
 
     var invokedNumberOfItems = 0
     var invokedNumberOfSubitems: (count: Int, parameters: [Int])
@@ -46,11 +48,17 @@ class NavigationDrawerDelegateMock: NavigationDrawerDelegate {
         invokedConfigureItem.count += 1
         invokedConfigureItem.parameters.append((item, index))
         item.title = "Item #\(index)"
+        if mockDisabledItemState {
+            item.state = .disabled
+        }
     }
 
     func configureSubitem(_ subitem: NavigationDrawerSubitemCell, at index: NavigationDrawer.IndexMenu) {
         invokedConfigureSubitem.count += 1
         invokedConfigureSubitem.parameters.append((subitem, index))
         subitem.title = "Subitem #\(index.subitem)"
+        if mockDisabledSubitemState {
+            subitem.state = .disabled
+        }
     }
 }
