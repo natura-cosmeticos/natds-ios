@@ -28,6 +28,10 @@ public class NavigationDrawer: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
+    public func reloadData() {
+        tableView.reloadData()
+    }
+
     private func setup() {
         tableView.register(NavigationDrawerItemCell.self)
         tableView.register(NavigationDrawerSubitemCell.self)
