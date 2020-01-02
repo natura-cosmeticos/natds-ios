@@ -9,6 +9,13 @@ class ColorsNaturaTests: XCTestCase {
         XCTAssertEqual(color, expectedColor)
     }
 
+    func test_primaryYellow_returnsExpectedColor() {
+        let expectedColor = UIColor(hex: "#F4AB34")
+        let color = ColorsNatura.Primary.yellow
+
+        XCTAssertEqual(color, expectedColor)
+    }
+
     func test_pbGray_returnsExpectedColor() {
         let expectedColor = UIColor(hex: "#333333")
         let color = ColorsNatura.PB.gray

@@ -17,4 +17,11 @@ class FontsNaturaTests: XCTestCase {
         XCTAssertEqual(font, expectedFont)
     }
 
+    func test_button_returnsExpectedFont() {
+        let expectedFont = UIFont.systemFont(ofSize: 14, weight: .medium)
+        let font = FontsNatura.button
+
+        XCTAssertEqual(font, expectedFont)
+    }
+
 }

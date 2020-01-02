@@ -2,6 +2,13 @@ import XCTest
 @testable import NatDS
 
 class ColorsTests: XCTestCase {
+    func test_primary_returnsExpectedColor() {
+        let expectedColor = ColorsNatura.Primary.yellow
+        let color = Colors.primary
+
+        XCTAssertEqual(color, expectedColor)
+    }
+
     func test_secondary_returnsExpectedColor() {
         let expectedColor = ColorsNatura.Primary.orange
         let color = Colors.secondary
