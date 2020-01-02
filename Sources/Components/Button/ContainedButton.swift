@@ -20,6 +20,7 @@ public class ContainedButton: UIButton {
         titleLabel?.font = Fonts.button
         layer.cornerRadius = 4.0
         titleEdgeInsets = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+        BoxShadow.setBoxShadow02(layer)
     }
 
 }
