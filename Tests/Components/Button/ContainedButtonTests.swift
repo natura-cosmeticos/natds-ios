@@ -4,7 +4,7 @@ import FBSnapshotTestCase
 class ContainedButtonTests: FBSnapshotTestCase {
 
     var sut: ContainedButton!
-    var view: UIView!
+    var superview: UIView!
 
     override func setUp() {
         super.setUp()
@@ -12,13 +12,13 @@ class ContainedButtonTests: FBSnapshotTestCase {
         sut = ContainedButton(frame: CGRect(x: 8, y: 58, width: 144, height: 44))
         sut.setTitle("DEFAULT")
 
-        view = UIView(frame: CGRect(x: 0, y: 0, width: 160, height: 160))
-        view.backgroundColor = .white
-        view.addSubview(sut)
+        superview = UIView(frame: CGRect(x: 0, y: 0, width: 160, height: 160))
+        superview.backgroundColor = .white
+        superview.addSubview(sut)
     }
 
     func test_init_hasValidSnapshot() {
-        FBSnapshotVerifyView(view)
+        FBSnapshotVerifyView(superview)
     }
 
 }
