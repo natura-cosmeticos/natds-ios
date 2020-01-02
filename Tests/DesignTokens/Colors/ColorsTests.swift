@@ -37,4 +37,11 @@ class ColorsTests: XCTestCase {
         XCTAssertEqual(color, expectedColor)
     }
 
+    func test_highlight_returnsExpectedColor() {
+        let expectedColor = ColorsNatura.PB.black
+        let color = Colors.highlight
+
+        XCTAssertEqual(color, expectedColor)
+    }
+
 }

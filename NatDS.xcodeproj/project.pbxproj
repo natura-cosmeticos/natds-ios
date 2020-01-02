@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		110F55B323BE5A3F00B9937A /* ContainedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110F55B223BE5A3F00B9937A /* ContainedButton.swift */; };
 		110F55B623BE643A00B9937A /* ContainedButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110F55B523BE643A00B9937A /* ContainedButtonTests.swift */; };
-		110F55B923BE852C00B9937A /* BoxShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110F55B823BE852C00B9937A /* BoxShadow.swift */; };
 		112BAC23239843CB009001A7 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112BAC22239843CB009001A7 /* ReusableView.swift */; };
 		112BAC2523984416009001A7 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112BAC2423984416009001A7 /* UITableView+Reusable.swift */; };
 		112BAC2723984476009001A7 /* ReusableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112BAC2623984476009001A7 /* ReusableViewTests.swift */; };
@@ -56,7 +55,6 @@
 /* Begin PBXFileReference section */
 		110F55B223BE5A3F00B9937A /* ContainedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainedButton.swift; sourceTree = "<group>"; };
 		110F55B523BE643A00B9937A /* ContainedButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainedButtonTests.swift; sourceTree = "<group>"; };
-		110F55B823BE852C00B9937A /* BoxShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxShadow.swift; sourceTree = "<group>"; };
 		112BAC22239843CB009001A7 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		112BAC2423984416009001A7 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
 		112BAC2623984476009001A7 /* ReusableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewTests.swift; sourceTree = "<group>"; };
@@ -129,14 +127,6 @@
 				110F55B523BE643A00B9937A /* ContainedButtonTests.swift */,
 			);
 			path = Button;
-			sourceTree = "<group>";
-		};
-		110F55B723BE850600B9937A /* BoxShadow */ = {
-			isa = PBXGroup;
-			children = (
-				110F55B823BE852C00B9937A /* BoxShadow.swift */,
-			);
-			path = BoxShadow;
 			sourceTree = "<group>";
 		};
 		11581A9E238EFE43003E45D7 /* Resources */ = {
@@ -227,7 +217,6 @@
 		117FE01A238D9B070032E2AC /* DesignTokens */ = {
 			isa = PBXGroup;
 			children = (
-				110F55B723BE850600B9937A /* BoxShadow */,
 				117FE01B238D9B070032E2AC /* Colors */,
 				117FE01F238D9B070032E2AC /* Fonts */,
 			);
@@ -583,7 +572,6 @@
 				117FE025238D9B070032E2AC /* FontsNatura.swift in Sources */,
 				11DEC636239181E2003CCF57 /* OutlinedIcons.swift in Sources */,
 				11518B682396C00700220570 /* NavigationDrawer.swift in Sources */,
-				110F55B923BE852C00B9937A /* BoxShadow.swift in Sources */,
 				117FE02C238DA53E0032E2AC /* NavigationDrawerSubitemCell.swift in Sources */,
 				A971BE712398306300A0D509 /* NavigationDrawer+IndexMenu.swift in Sources */,
 				117FE024238D9B070032E2AC /* Colors.swift in Sources */,

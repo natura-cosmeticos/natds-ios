@@ -20,7 +20,17 @@ public class ContainedButton: UIButton {
         titleLabel?.font = Fonts.button
         layer.cornerRadius = 4.0
         titleEdgeInsets = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
-        BoxShadow.setBoxShadow02(layer)
+        setShadow()
     }
 
+}
+
+private extension ContainedButton {
+    private func setShadow() {
+        layer.shadowColor = Colors.highlight.withAlphaComponent(0.14).cgColor
+        layer.shadowOffset = CGSize(width: 0, height: 2)
+        layer.shadowRadius = 2.0
+        layer.shadowOpacity = 1.0
+        layer.masksToBounds = false
+    }
 }

@@ -37,4 +37,11 @@ class ColorsNaturaTests: XCTestCase {
         XCTAssertEqual(color, expectedColor)
     }
 
+    func test_pbBlack_returnsExpectedColor() {
+        let expectedColor = UIColor(hex: "#000000")
+        let color = ColorsNatura.PB.black
+
+        XCTAssertEqual(color, expectedColor)
+    }
+
 }
