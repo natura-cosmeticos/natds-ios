@@ -10,8 +10,8 @@ public class ContainedButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
 
-    public func setTitle(_ title: String) {
-        setTitle(title.uppercased(), for: .normal)
+    public override func setTitle(_ title: String?, for state: UIControl.State) {
+        super.setTitle(title?.uppercased(), for: state)
     }
 
     private func setup() {
