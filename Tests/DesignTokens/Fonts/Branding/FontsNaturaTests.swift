@@ -3,6 +3,13 @@ import XCTest
 
 class FontsNaturaTests: XCTestCase {
 
+    func test_h5_returnsExpectedFont() {
+        let expectedFont = UIFont.systemFont(ofSize: 24, weight: .regular)
+        let font = FontsNatura.h5
+
+        XCTAssertEqual(font, expectedFont)
+    }
+
     func test_h6_returnsExpectedFont() {
         let expectedFont = UIFont.systemFont(ofSize: 20, weight: .medium)
         let font = FontsNatura.h6

@@ -3,6 +3,13 @@ import XCTest
 
 class FontsTests: XCTestCase {
 
+    func test_h5_returnsExpectedFont() {
+        let expectedFont = FontsNatura.h5
+        let font = Fonts.h5
+
+        XCTAssertEqual(font, expectedFont)
+    }
+
     func test_h6_returnsExpectedFont() {
         let expectedFont = FontsNatura.h6
         let font = Fonts.h6
