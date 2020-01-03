@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		110F55B323BE5A3F00B9937A /* ContainedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110F55B223BE5A3F00B9937A /* ContainedButton.swift */; };
+		110F55B623BE643A00B9937A /* ContainedButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110F55B523BE643A00B9937A /* ContainedButtonTests.swift */; };
 		112BAC23239843CB009001A7 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112BAC22239843CB009001A7 /* ReusableView.swift */; };
 		112BAC2523984416009001A7 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112BAC2423984416009001A7 /* UITableView+Reusable.swift */; };
 		112BAC2723984476009001A7 /* ReusableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112BAC2623984476009001A7 /* ReusableViewTests.swift */; };
@@ -51,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		110F55B223BE5A3F00B9937A /* ContainedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainedButton.swift; sourceTree = "<group>"; };
+		110F55B523BE643A00B9937A /* ContainedButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainedButtonTests.swift; sourceTree = "<group>"; };
 		112BAC22239843CB009001A7 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		112BAC2423984416009001A7 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
 		112BAC2623984476009001A7 /* ReusableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewTests.swift; sourceTree = "<group>"; };
@@ -109,6 +113,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		110F55B123BE5A1E00B9937A /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				110F55B223BE5A3F00B9937A /* ContainedButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		110F55B423BE642200B9937A /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				110F55B523BE643A00B9937A /* ContainedButtonTests.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
 		11581A9E238EFE43003E45D7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +260,7 @@
 		117FE027238DA4760032E2AC /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				110F55B423BE642200B9937A /* Button */,
 				11581AA1238F00EA003E45D7 /* Icons */,
 				117FE02E238DD5540032E2AC /* NavigationDrawer */,
 			);
@@ -249,6 +270,7 @@
 		117FE02A238DA52D0032E2AC /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				110F55B123BE5A1E00B9937A /* Button */,
 				11581AA4238F030C003E45D7 /* Icons */,
 				117FE02D238DD53D0032E2AC /* NavigationDrawer */,
 			);
@@ -543,6 +565,7 @@
 				11581AAA238F04D8003E45D7 /* AssetsHelper.swift in Sources */,
 				11581A9D238EC256003E45D7 /* NavigationDrawerItemCell.swift in Sources */,
 				112BAC2523984416009001A7 /* UITableView+Reusable.swift in Sources */,
+				110F55B323BE5A3F00B9937A /* ContainedButton.swift in Sources */,
 				117FE023238D9B070032E2AC /* ColorsNatura.swift in Sources */,
 				112BAC23239843CB009001A7 /* ReusableView.swift in Sources */,
 				117FE026238D9B070032E2AC /* Fonts.swift in Sources */,
@@ -565,6 +588,7 @@
 				A971BE6F2398171C00A0D509 /* NavigationDrawerDelegateMock.swift in Sources */,
 				11518B6C2396C4AB00220570 /* NavigationDrawerTests.swift in Sources */,
 				A971BE73239831F200A0D509 /* NavigationDrawer+IndexMenuTests.swift in Sources */,
+				110F55B623BE643A00B9937A /* ContainedButtonTests.swift in Sources */,
 				A9D3454B238C69480013398C /* UIColor+HexTests.swift in Sources */,
 				117FE017238D9AEB0032E2AC /* FontsNaturaTests.swift in Sources */,
 				117FE016238D9AEB0032E2AC /* ColorsTests.swift in Sources */,

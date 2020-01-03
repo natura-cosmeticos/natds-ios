@@ -17,4 +17,11 @@ class FontsTests: XCTestCase {
         XCTAssertEqual(font, expectedFont)
     }
 
+    func test_button_returnsExpectedFont() {
+        let expectedFont = FontsNatura.button
+        let font = Fonts.button
+
+        XCTAssertEqual(font, expectedFont)
+    }
+
 }
