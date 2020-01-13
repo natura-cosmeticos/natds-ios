@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A9D71BC22386DFEE00CDEC1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D71BC12386DFEE00CDEC1D /* AppDelegate.swift */; };
-		A9D71BC42386DFEE00CDEC1D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D71BC32386DFEE00CDEC1D /* SceneDelegate.swift */; };
 		A9D71BC62386DFEE00CDEC1D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D71BC52386DFEE00CDEC1D /* MainViewController.swift */; };
 		A9D71BCB2386DFF200CDEC1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9D71BCA2386DFF200CDEC1D /* Assets.xcassets */; };
 		A9D71BCE2386DFF200CDEC1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9D71BCC2386DFF200CDEC1D /* LaunchScreen.storyboard */; };
@@ -33,7 +32,6 @@
 /* Begin PBXFileReference section */
 		A9D71BBE2386DFEE00CDEC1D /* NatDS-SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NatDS-SampleApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9D71BC12386DFEE00CDEC1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A9D71BC32386DFEE00CDEC1D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A9D71BC52386DFEE00CDEC1D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A9D71BCA2386DFF200CDEC1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9D71BCD2386DFF200CDEC1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -74,7 +72,6 @@
 			isa = PBXGroup;
 			children = (
 				A9D71BC12386DFEE00CDEC1D /* AppDelegate.swift */,
-				A9D71BC32386DFEE00CDEC1D /* SceneDelegate.swift */,
 				A9D71BC52386DFEE00CDEC1D /* MainViewController.swift */,
 				A9D71BDA2386F53400CDEC1D /* Supporting Files */,
 			);
@@ -172,7 +169,6 @@
 			files = (
 				A9D71BC62386DFEE00CDEC1D /* MainViewController.swift in Sources */,
 				A9D71BC22386DFEE00CDEC1D /* AppDelegate.swift in Sources */,
-				A9D71BC42386DFEE00CDEC1D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +236,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -294,7 +290,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -308,14 +304,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Sources/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Natura.NatDS-SampleApp";
+				PRODUCT_BUNDLE_IDENTIFIER = net.natura.NatDS.SampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -325,14 +323,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Sources/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Natura.NatDS-SampleApp";
+				PRODUCT_BUNDLE_IDENTIFIER = net.natura.NatDS.SampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
