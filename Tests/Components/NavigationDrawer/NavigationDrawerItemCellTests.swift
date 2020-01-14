@@ -10,7 +10,6 @@ class NavigationDrawerItemCellTests: FBSnapshotTestCase {
         sut = NavigationDrawerItemCell()
         sut.frame = CGRect(x: 0, y: 0, width: 320, height: 48)
         sut.title = "Menu Item"
-        sut.icon = .outlinedNavigationArrowleft
     }
 
     func test_largeText_textHasNoLineBreak() {
@@ -60,6 +59,16 @@ class NavigationDrawerItemCellTests: FBSnapshotTestCase {
         sut.hasSubItems = true
 
         FBSnapshotVerifyView(sut)
+    }
+
+    func test_setIcon_hasSnapshotWithCustomIcon() {
+        sut.icon = .filledActionAdd
+
+        FBSnapshotVerifyView(sut)
+    }
+
+    func test_init_hasIconAsOutlinedNavigationArrowLeft() {
+        XCTAssertEqual(sut.icon, .outlinedNavigationArrowleft)
     }
 
     func test_init_hasSelectionStyleAsNone() {

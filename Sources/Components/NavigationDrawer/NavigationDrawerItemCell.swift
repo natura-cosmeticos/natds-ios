@@ -18,9 +18,10 @@ public class NavigationDrawerItemCell: UITableViewCell {
         set { titleLabel.text = newValue }
     }
 
-    public var icon: Icon? {
-        get { return iconView.icon }
-        set { iconView.icon = newValue }
+    public var icon: Icon = .outlinedNavigationArrowleft {
+        didSet {
+            iconView.icon = icon
+        }
     }
 
     public var expandedIcon: UIImage? = OutlinedIcons.Navigation.arrowUp
@@ -63,6 +64,7 @@ public class NavigationDrawerItemCell: UITableViewCell {
         defer {
             state = .normal
             hasSubItems = false
+            icon = .outlinedNavigationArrowleft
         }
         setup()
     }

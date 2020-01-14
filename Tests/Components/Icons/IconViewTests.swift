@@ -12,7 +12,7 @@ class IconViewTests: FBSnapshotTestCase {
     }
 
     func test_hasValidSnapshot() {
-        sut.icon = Icon.filledActionAdd
+        sut.icon = .filledActionAdd
 
         FBSnapshotVerifyView(sut)
     }

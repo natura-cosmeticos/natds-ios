@@ -1,8 +1,9 @@
 class IconView: UIView {
 
     var icon: Icon? {
-        get { return Icon(rawValue: iconLabel.text ?? "") }
-        set { iconLabel.text = newValue?.rawValue }
+        didSet {
+            iconLabel.text = icon?.rawValue
+        }
     }
 
     private lazy var iconLabel: UILabel = {

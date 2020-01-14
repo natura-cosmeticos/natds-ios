@@ -39,7 +39,8 @@
 		A988199B238C5AAF0008230F /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A988199A238C5AAF0008230F /* UIColor+Hex.swift */; };
 		A9B71E8D237B559A00A2BF51 /* NatDS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9B71E83237B559A00A2BF51 /* NatDS.framework */; };
 		A9B71E94237B559A00A2BF51 /* NatDS.h in Headers */ = {isa = PBXBuildFile; fileRef = A9B71E86237B559A00A2BF51 /* NatDS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A9CCF8D823CCDAC900000FC0 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CCF8D723CCDAC900000FC0 /* Icons.swift */; };
+		A9CBAD8523CE535300A46CB2 /* IconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CBAD8423CE535300A46CB2 /* IconTests.swift */; };
+		A9CCF8D823CCDAC900000FC0 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CCF8D723CCDAC900000FC0 /* Icon.swift */; };
 		A9CCF8DA23CCDDF700000FC0 /* UIFont+Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CCF8D923CCDDF700000FC0 /* UIFont+Icon.swift */; };
 		A9CCF8DC23CCDF0100000FC0 /* FontIconStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CCF8DB23CCDF0100000FC0 /* FontIconStyle.swift */; };
 		A9CCF8DD23CCE0F700000FC0 /* natds-icons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A9D451B823C7E08F001D73B0 /* natds-icons.ttf */; };
@@ -98,7 +99,8 @@
 		A9B71E87237B559A00A2BF51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9B71E8C237B559A00A2BF51 /* NatDSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NatDSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9B71E93237B559A00A2BF51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A9CCF8D723CCDAC900000FC0 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
+		A9CBAD8423CE535300A46CB2 /* IconTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTests.swift; sourceTree = "<group>"; };
+		A9CCF8D723CCDAC900000FC0 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
 		A9CCF8D923CCDDF700000FC0 /* UIFont+Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Icon.swift"; sourceTree = "<group>"; };
 		A9CCF8DB23CCDF0100000FC0 /* FontIconStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontIconStyle.swift; sourceTree = "<group>"; };
 		A9CCF8DE23CCE1CE00000FC0 /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				11581AA2238F013A003E45D7 /* OutlinedIconsTests.swift */,
+				A9CBAD8423CE535300A46CB2 /* IconTests.swift */,
 				A9CCF8E023CCE39800000FC0 /* IconViewTests.swift */,
 			);
 			path = Icons;
@@ -169,7 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				11DEC635239181E2003CCF57 /* OutlinedIcons.swift */,
-				A9CCF8D723CCDAC900000FC0 /* Icons.swift */,
+				A9CCF8D723CCDAC900000FC0 /* Icon.swift */,
 				A9CCF8DE23CCE1CE00000FC0 /* IconView.swift */,
 			);
 			path = Icons;
@@ -634,7 +637,7 @@
 				117FE026238D9B070032E2AC /* Fonts.swift in Sources */,
 				A9CCF8DC23CCDF0100000FC0 /* FontIconStyle.swift in Sources */,
 				117FE025238D9B070032E2AC /* FontsNatura.swift in Sources */,
-				A9CCF8D823CCDAC900000FC0 /* Icons.swift in Sources */,
+				A9CCF8D823CCDAC900000FC0 /* Icon.swift in Sources */,
 				11DEC636239181E2003CCF57 /* OutlinedIcons.swift in Sources */,
 				11518B682396C00700220570 /* NavigationDrawer.swift in Sources */,
 				A9CCF8DF23CCE1CE00000FC0 /* IconView.swift in Sources */,
@@ -661,6 +664,7 @@
 				A9CCF8EA23CCF16400000FC0 /* UIFont+IconTests.swift in Sources */,
 				A9CCF8E823CCF03500000FC0 /* FontIconStyleTests.swift in Sources */,
 				117FE016238D9AEB0032E2AC /* ColorsTests.swift in Sources */,
+				A9CBAD8523CE535300A46CB2 /* IconTests.swift in Sources */,
 				117FE029238DA4B70032E2AC /* NavigationDrawerSubitemCellTests.swift in Sources */,
 				112BAC2723984476009001A7 /* ReusableViewTests.swift in Sources */,
 				112BAC2923984562009001A7 /* UITableView+ReusableTests.swift in Sources */,
