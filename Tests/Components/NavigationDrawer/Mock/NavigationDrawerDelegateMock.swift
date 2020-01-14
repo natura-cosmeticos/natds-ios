@@ -48,6 +48,7 @@ class NavigationDrawerDelegateMock: NavigationDrawerDelegate {
         invokedConfigureItem.count += 1
         invokedConfigureItem.parameters.append((item, index))
         item.title = "Item #\(index)"
+        item.icon = .outlinedNavigationArrowleft
         if mockDisabledItemState {
             item.state = .disabled
         }

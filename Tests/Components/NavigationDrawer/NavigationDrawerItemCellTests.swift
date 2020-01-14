@@ -10,6 +10,7 @@ class NavigationDrawerItemCellTests: FBSnapshotTestCase {
         sut = NavigationDrawerItemCell()
         sut.frame = CGRect(x: 0, y: 0, width: 320, height: 48)
         sut.title = "Menu Item"
+        sut.icon = .outlinedNavigationArrowleft
     }
 
     func test_largeText_textHasNoLineBreak() {

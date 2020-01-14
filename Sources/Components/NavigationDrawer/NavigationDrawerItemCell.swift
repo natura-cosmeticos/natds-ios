@@ -18,6 +18,11 @@ public class NavigationDrawerItemCell: UITableViewCell {
         set { titleLabel.text = newValue }
     }
 
+    public var icon: Icon? {
+        get { return iconView.icon }
+        set { iconView.icon = newValue }
+    }
+
     public var expandedIcon: UIImage? = OutlinedIcons.Navigation.arrowUp
     public var collapsedIcon: UIImage? = OutlinedIcons.Navigation.arrowDown
 
@@ -42,6 +47,8 @@ public class NavigationDrawerItemCell: UITableViewCell {
         label.font = Fonts.body2
         return label
     }()
+
+    private let iconView: IconView = IconView()
 
     private lazy var arrowImageView: UIImageView = {
         let imageView = UIImageView()
@@ -73,6 +80,7 @@ private extension NavigationDrawerItemCell {
         selectionStyle = .none
         backgroundColor = .white
         addHighlightSelectedView()
+        addIconView()
         addTitleLabel()
         addArrowImageView()
     }
@@ -96,10 +104,21 @@ private extension NavigationDrawerItemCell {
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: highlightSelectedView.topAnchor, constant: 12.0),
             titleLabel.bottomAnchor.constraint(equalTo: highlightSelectedView.bottomAnchor, constant: -12.0),
-            titleLabel.leadingAnchor.constraint(equalTo: highlightSelectedView.leadingAnchor, constant: 8.0),
+            titleLabel.leadingAnchor.constraint(equalTo: iconView.trailingAnchor, constant: 24.0),
             constraint
         ])
         labelToHighlightConstraint = constraint
+    }
+
+    func addIconView() {
+        contentView.addSubview(iconView)
+        iconView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            iconView.centerYAnchor.constraint(equalTo: highlightSelectedView.centerYAnchor),
+            iconView.leadingAnchor.constraint(equalTo: highlightSelectedView.leadingAnchor, constant: 8.0),
+            iconView.widthAnchor.constraint(equalToConstant: 24.0),
+            iconView.heightAnchor.constraint(equalToConstant: 24.0)
+        ])
     }
 
     func addArrowImageView() {
