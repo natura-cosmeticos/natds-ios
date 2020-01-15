@@ -32,6 +32,8 @@
 		117FE029238DA4B70032E2AC /* NavigationDrawerSubitemCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117FE028238DA4B70032E2AC /* NavigationDrawerSubitemCellTests.swift */; };
 		117FE02C238DA53E0032E2AC /* NavigationDrawerSubitemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117FE02B238DA53E0032E2AC /* NavigationDrawerSubitemCell.swift */; };
 		11DEC636239181E2003CCF57 /* OutlinedIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DEC635239181E2003CCF57 /* OutlinedIcons.swift */; };
+		11FC55BE23C64E8800C91014 /* IllustrationIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FC55BD23C64E8800C91014 /* IllustrationIcons.swift */; };
+		11FC55C023C64EA800C91014 /* IllustrationIconsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FC55BF23C64EA800C91014 /* IllustrationIconsTests.swift */; };
 		428277050E055F4A92D2A29F /* Pods_NatDSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B496A6BAA901771980AF5E95 /* Pods_NatDSTests.framework */; };
 		A971BE6F2398171C00A0D509 /* NavigationDrawerDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A971BE6E2398171C00A0D509 /* NavigationDrawerDelegateMock.swift */; };
 		A971BE712398306300A0D509 /* NavigationDrawer+IndexMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A971BE702398306300A0D509 /* NavigationDrawer+IndexMenu.swift */; };
@@ -88,6 +90,8 @@
 		117FE028238DA4B70032E2AC /* NavigationDrawerSubitemCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerSubitemCellTests.swift; sourceTree = "<group>"; };
 		117FE02B238DA53E0032E2AC /* NavigationDrawerSubitemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerSubitemCell.swift; sourceTree = "<group>"; };
 		11DEC635239181E2003CCF57 /* OutlinedIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlinedIcons.swift; sourceTree = "<group>"; };
+		11FC55BD23C64E8800C91014 /* IllustrationIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllustrationIcons.swift; sourceTree = "<group>"; };
+		11FC55BF23C64EA800C91014 /* IllustrationIconsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllustrationIconsTests.swift; sourceTree = "<group>"; };
 		9A46395C038D4497A880A6FF /* Pods-NatDSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatDSTests.release.xcconfig"; path = "Target Support Files/Pods-NatDSTests/Pods-NatDSTests.release.xcconfig"; sourceTree = "<group>"; };
 		A8B18363274C7A70CF4443A3 /* Pods-NatDSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatDSTests.debug.xcconfig"; path = "Target Support Files/Pods-NatDSTests/Pods-NatDSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A971BE6E2398171C00A0D509 /* NavigationDrawerDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerDelegateMock.swift; sourceTree = "<group>"; };
@@ -164,6 +168,7 @@
 				11581AA2238F013A003E45D7 /* OutlinedIconsTests.swift */,
 				A9CBAD8423CE535300A46CB2 /* IconTests.swift */,
 				A9CCF8E023CCE39800000FC0 /* IconViewTests.swift */,
+				11FC55BF23C64EA800C91014 /* IllustrationIconsTests.swift */,
 			);
 			path = Icons;
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 				11DEC635239181E2003CCF57 /* OutlinedIcons.swift */,
 				A9CCF8D723CCDAC900000FC0 /* Icon.swift */,
 				A9CCF8DE23CCE1CE00000FC0 /* IconView.swift */,
+				11FC55BD23C64E8800C91014 /* IllustrationIcons.swift */,
 			);
 			path = Icons;
 			sourceTree = "<group>";
@@ -630,6 +636,7 @@
 				11581A9D238EC256003E45D7 /* NavigationDrawerItemCell.swift in Sources */,
 				A9CCF8E523CCEC5400000FC0 /* FontStyle.swift in Sources */,
 				112BAC2523984416009001A7 /* UITableView+Reusable.swift in Sources */,
+				11FC55BE23C64E8800C91014 /* IllustrationIcons.swift in Sources */,
 				110F55B323BE5A3F00B9937A /* ContainedButton.swift in Sources */,
 				117FE023238D9B070032E2AC /* ColorsNatura.swift in Sources */,
 				A9CCF8DA23CCDDF700000FC0 /* UIFont+Icon.swift in Sources */,
@@ -652,6 +659,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11FC55C023C64EA800C91014 /* IllustrationIconsTests.swift in Sources */,
 				117FE018238D9AEB0032E2AC /* FontsTests.swift in Sources */,
 				11581A9B238EC15E003E45D7 /* NavigationDrawerItemCellTests.swift in Sources */,
 				A971BE6F2398171C00A0D509 /* NavigationDrawerDelegateMock.swift in Sources */,
