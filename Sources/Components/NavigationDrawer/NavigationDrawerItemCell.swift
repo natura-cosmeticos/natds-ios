@@ -24,13 +24,10 @@ public class NavigationDrawerItemCell: UITableViewCell {
         }
     }
 
-    public var expandedIcon: UIImage? = OutlinedIcons.Navigation.arrowUp
-    public var collapsedIcon: UIImage? = OutlinedIcons.Navigation.arrowDown
-
     var hasSubItems: Bool = false {
         didSet {
             updateState()
-            arrowImageView.isHidden = !hasSubItems
+            arrowView.isHidden = !hasSubItems
             labelToHighlightConstraint?.isActive = !hasSubItems
         }
     }
@@ -55,10 +52,10 @@ public class NavigationDrawerItemCell: UITableViewCell {
         return iconView
     }()
 
-    private lazy var arrowImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.tintColor = Colors.highEmphasis
-        return imageView
+    private lazy var arrowView: IconView = {
+        let iconView = IconView()
+        iconView.tintColor = Colors.highEmphasis
+        return iconView
     }()
 
     private var labelToHighlightConstraint: NSLayoutConstraint?
@@ -128,21 +125,21 @@ private extension NavigationDrawerItemCell {
     }
 
     func addArrowImageView() {
-        contentView.addSubview(arrowImageView)
-        arrowImageView.translatesAutoresizingMaskIntoConstraints = false
-        let constraint = arrowImageView.leadingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: 8.0)
+        contentView.addSubview(arrowView)
+        arrowView.translatesAutoresizingMaskIntoConstraints = false
+        let constraint = arrowView.leadingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: 8.0)
         constraint.priority = .defaultHigh
         NSLayoutConstraint.activate([
-            arrowImageView.centerYAnchor.constraint(equalTo: highlightSelectedView.centerYAnchor),
-            arrowImageView.trailingAnchor.constraint(equalTo: highlightSelectedView.trailingAnchor, constant: -8.0),
-            arrowImageView.widthAnchor.constraint(equalToConstant: 24.0),
-            arrowImageView.heightAnchor.constraint(equalToConstant: 24.0),
+            arrowView.centerYAnchor.constraint(equalTo: highlightSelectedView.centerYAnchor),
+            arrowView.trailingAnchor.constraint(equalTo: highlightSelectedView.trailingAnchor, constant: -8.0),
+            arrowView.widthAnchor.constraint(equalToConstant: 24.0),
+            arrowView.heightAnchor.constraint(equalToConstant: 24.0),
             constraint
         ])
     }
 
     func updateState() {
-        arrowImageView.image = state == .selected ? expandedIcon : collapsedIcon
+        arrowView.icon = state == .selected ? .outlinedNavigationArrowtop : .outlinedNavigationArrowbottom
 
         highlightSelectedView.isHidden = state != .selected
         highlightSelectedView.backgroundColor = hasSubItems ? Colors.lowEmphasis : Colors.secondary

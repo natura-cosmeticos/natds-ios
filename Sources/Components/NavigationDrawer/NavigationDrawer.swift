@@ -14,9 +14,6 @@ public class NavigationDrawer: UIView {
     private var isDisabledAtIndexPath = [IndexPath: Bool]()
     private var tableView: UITableView
 
-    public var expandedIcon: UIImage? = OutlinedIcons.Navigation.arrowUp
-    public var collapsedIcon: UIImage? = OutlinedIcons.Navigation.arrowDown
-
     public init(tableView: UITableView = UITableView()) {
         self.tableView = tableView
         super.init(frame: .zero)
@@ -108,8 +105,6 @@ extension NavigationDrawer: UITableViewDataSource {
         if isItem(at: indexPath) {
             let cell: NavigationDrawerItemCell = tableView.dequeueReusableCell(for: indexPath)
             cell.hasSubItems = hasSubitems(in: indexPath.section)
-            cell.expandedIcon = expandedIcon
-            cell.collapsedIcon = collapsedIcon
             cell.state = isExpanded(item: indexPath.section) ? .selected : .normal
 
             delegate?.configureItem(cell, at: indexPath.section)

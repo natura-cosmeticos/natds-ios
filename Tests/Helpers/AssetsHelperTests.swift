@@ -4,7 +4,7 @@ import XCTest
 class AssetsHelperTests: XCTestCase {
 
     func test_imageFromName_returnsNonNullImage() {
-        let image = AssetsHelper.image(from: "Outlined/Navigation/ArrowDown")
+        let image = AssetsHelper.image(from: "Illustration/Lined/Sad")
         XCTAssertNotNil(image)
     }
 
