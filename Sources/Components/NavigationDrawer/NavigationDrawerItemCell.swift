@@ -49,7 +49,11 @@ public class NavigationDrawerItemCell: UITableViewCell {
         return label
     }()
 
-    private let iconView: IconView = IconView()
+    private lazy var iconView: IconView = {
+        let iconView = IconView()
+        iconView.tintColor = Colors.highEmphasis
+        return iconView
+    }()
 
     private lazy var arrowImageView: UIImageView = {
         let imageView = UIImageView()

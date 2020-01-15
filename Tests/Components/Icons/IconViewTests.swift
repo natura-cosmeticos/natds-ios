@@ -11,8 +11,15 @@ class IconViewTests: FBSnapshotTestCase {
         sut.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
     }
 
-    func test_hasValidSnapshot() {
+    func test_init_hasValidSnapshot() {
         sut.icon = .filledActionAdd
+
+        FBSnapshotVerifyView(sut)
+    }
+
+    func test_tintColor_hasSnapshotWithCustomColor() {
+        sut.icon = .filledActionAdd
+        sut.tintColor = .red
 
         FBSnapshotVerifyView(sut)
     }

@@ -22,6 +22,11 @@ class IconView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
+    override func tintColorDidChange() {
+        super.tintColorDidChange()
+        iconLabel.textColor = tintColor
+    }
+
     private func setup() {
         addSubview(iconLabel)
         iconLabel.translatesAutoresizingMaskIntoConstraints = false
