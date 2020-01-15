@@ -47,6 +47,7 @@ extension MainViewController: NavigationDrawerDelegate {
 
     func configureItem(_ item: NavigationDrawerItemCell, at index: Int) {
         item.title = items[index].label
+        item.icon = .outlinedNavigationArrowleft
     }
 
     func configureSubitem(_ subitem: NavigationDrawerSubitemCell, at index: NavigationDrawer.IndexMenu) {

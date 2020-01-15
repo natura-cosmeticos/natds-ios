@@ -4,7 +4,7 @@ import XCTest
 class AssetsHelperTests: XCTestCase {
 
     func test_imageFromName_returnsNonNullImage() {
-        let image = AssetsHelper.image(from: "Outlined/Navigation/ArrowDown")
+        let image = AssetsHelper.image(from: "Illustration/Lined/Sad")
         XCTAssertNotNil(image)
     }
 
@@ -13,4 +13,12 @@ class AssetsHelperTests: XCTestCase {
         XCTAssertNil(image)
     }
 
+    func test_loadFont_whenIsFontIconStyle_loadFontSuccessfully() {
+        let iconsFont = FontIconStyle.standard
+        AssetsHelper.loadFont(iconsFont)
+
+        let font = UIFont(name: iconsFont.name, size: 24)
+        XCTAssertEqual(font?.fontName, iconsFont.name)
+        XCTAssertEqual(font?.familyName, iconsFont.familyName)
+    }
 }

@@ -18,7 +18,6 @@
 		11581A9B238EC15E003E45D7 /* NavigationDrawerItemCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11581A9A238EC15E003E45D7 /* NavigationDrawerItemCellTests.swift */; };
 		11581A9D238EC256003E45D7 /* NavigationDrawerItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11581A9C238EC256003E45D7 /* NavigationDrawerItemCell.swift */; };
 		11581AA0238EFE7A003E45D7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11581A9F238EFE7A003E45D7 /* Images.xcassets */; };
-		11581AA3238F013A003E45D7 /* OutlinedIconsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11581AA2238F013A003E45D7 /* OutlinedIconsTests.swift */; };
 		11581AA8238F037D003E45D7 /* AssetsHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11581AA7238F037D003E45D7 /* AssetsHelperTests.swift */; };
 		11581AAA238F04D8003E45D7 /* AssetsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11581AA9238F04D8003E45D7 /* AssetsHelper.swift */; };
 		117FE015238D9AEB0032E2AC /* ColorsNaturaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117FE00F238D9AEB0032E2AC /* ColorsNaturaTests.swift */; };
@@ -31,7 +30,6 @@
 		117FE026238D9B070032E2AC /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117FE022238D9B070032E2AC /* Fonts.swift */; };
 		117FE029238DA4B70032E2AC /* NavigationDrawerSubitemCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117FE028238DA4B70032E2AC /* NavigationDrawerSubitemCellTests.swift */; };
 		117FE02C238DA53E0032E2AC /* NavigationDrawerSubitemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117FE02B238DA53E0032E2AC /* NavigationDrawerSubitemCell.swift */; };
-		11DEC636239181E2003CCF57 /* OutlinedIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DEC635239181E2003CCF57 /* OutlinedIcons.swift */; };
 		11FC55BE23C64E8800C91014 /* IllustrationIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FC55BD23C64E8800C91014 /* IllustrationIcons.swift */; };
 		11FC55C023C64EA800C91014 /* IllustrationIconsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FC55BF23C64EA800C91014 /* IllustrationIconsTests.swift */; };
 		428277050E055F4A92D2A29F /* Pods_NatDSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B496A6BAA901771980AF5E95 /* Pods_NatDSTests.framework */; };
@@ -41,6 +39,16 @@
 		A988199B238C5AAF0008230F /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A988199A238C5AAF0008230F /* UIColor+Hex.swift */; };
 		A9B71E8D237B559A00A2BF51 /* NatDS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9B71E83237B559A00A2BF51 /* NatDS.framework */; };
 		A9B71E94237B559A00A2BF51 /* NatDS.h in Headers */ = {isa = PBXBuildFile; fileRef = A9B71E86237B559A00A2BF51 /* NatDS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9CBAD8523CE535300A46CB2 /* IconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CBAD8423CE535300A46CB2 /* IconTests.swift */; };
+		A9CCF8D823CCDAC900000FC0 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CCF8D723CCDAC900000FC0 /* Icon.swift */; };
+		A9CCF8DA23CCDDF700000FC0 /* UIFont+Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CCF8D923CCDDF700000FC0 /* UIFont+Icon.swift */; };
+		A9CCF8DC23CCDF0100000FC0 /* FontIconStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CCF8DB23CCDF0100000FC0 /* FontIconStyle.swift */; };
+		A9CCF8DD23CCE0F700000FC0 /* natds-icons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A9D451B823C7E08F001D73B0 /* natds-icons.ttf */; };
+		A9CCF8DF23CCE1CE00000FC0 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CCF8DE23CCE1CE00000FC0 /* IconView.swift */; };
+		A9CCF8E123CCE39800000FC0 /* IconViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CCF8E023CCE39800000FC0 /* IconViewTests.swift */; };
+		A9CCF8E523CCEC5400000FC0 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CCF8E323CCEBD600000FC0 /* FontStyle.swift */; };
+		A9CCF8E823CCF03500000FC0 /* FontIconStyleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CCF8E723CCF03500000FC0 /* FontIconStyleTests.swift */; };
+		A9CCF8EA23CCF16400000FC0 /* UIFont+IconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CCF8E923CCF16400000FC0 /* UIFont+IconTests.swift */; };
 		A9D3454B238C69480013398C /* UIColor+HexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D3454A238C69480013398C /* UIColor+HexTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,7 +74,6 @@
 		11581A9A238EC15E003E45D7 /* NavigationDrawerItemCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerItemCellTests.swift; sourceTree = "<group>"; };
 		11581A9C238EC256003E45D7 /* NavigationDrawerItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerItemCell.swift; sourceTree = "<group>"; };
 		11581A9F238EFE7A003E45D7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		11581AA2238F013A003E45D7 /* OutlinedIconsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlinedIconsTests.swift; sourceTree = "<group>"; };
 		11581AA7238F037D003E45D7 /* AssetsHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsHelperTests.swift; sourceTree = "<group>"; };
 		11581AA9238F04D8003E45D7 /* AssetsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsHelper.swift; sourceTree = "<group>"; };
 		117FE00F238D9AEB0032E2AC /* ColorsNaturaTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsNaturaTests.swift; sourceTree = "<group>"; };
@@ -79,7 +86,6 @@
 		117FE022238D9B070032E2AC /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		117FE028238DA4B70032E2AC /* NavigationDrawerSubitemCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerSubitemCellTests.swift; sourceTree = "<group>"; };
 		117FE02B238DA53E0032E2AC /* NavigationDrawerSubitemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerSubitemCell.swift; sourceTree = "<group>"; };
-		11DEC635239181E2003CCF57 /* OutlinedIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlinedIcons.swift; sourceTree = "<group>"; };
 		11FC55BD23C64E8800C91014 /* IllustrationIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllustrationIcons.swift; sourceTree = "<group>"; };
 		11FC55BF23C64EA800C91014 /* IllustrationIconsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllustrationIconsTests.swift; sourceTree = "<group>"; };
 		9A46395C038D4497A880A6FF /* Pods-NatDSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatDSTests.release.xcconfig"; path = "Target Support Files/Pods-NatDSTests/Pods-NatDSTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -93,7 +99,17 @@
 		A9B71E87237B559A00A2BF51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9B71E8C237B559A00A2BF51 /* NatDSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NatDSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9B71E93237B559A00A2BF51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9CBAD8423CE535300A46CB2 /* IconTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTests.swift; sourceTree = "<group>"; };
+		A9CCF8D723CCDAC900000FC0 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
+		A9CCF8D923CCDDF700000FC0 /* UIFont+Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Icon.swift"; sourceTree = "<group>"; };
+		A9CCF8DB23CCDF0100000FC0 /* FontIconStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontIconStyle.swift; sourceTree = "<group>"; };
+		A9CCF8DE23CCE1CE00000FC0 /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
+		A9CCF8E023CCE39800000FC0 /* IconViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconViewTests.swift; sourceTree = "<group>"; };
+		A9CCF8E323CCEBD600000FC0 /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
+		A9CCF8E723CCF03500000FC0 /* FontIconStyleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontIconStyleTests.swift; sourceTree = "<group>"; };
+		A9CCF8E923CCF16400000FC0 /* UIFont+IconTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+IconTests.swift"; sourceTree = "<group>"; };
 		A9D3454A238C69480013398C /* UIColor+HexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HexTests.swift"; sourceTree = "<group>"; };
+		A9D451B823C7E08F001D73B0 /* natds-icons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "natds-icons.ttf"; sourceTree = "<group>"; };
 		B496A6BAA901771980AF5E95 /* Pods_NatDSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NatDSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -136,6 +152,7 @@
 		11581A9E238EFE43003E45D7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A9D451B823C7E08F001D73B0 /* natds-icons.ttf */,
 				11581A9F238EFE7A003E45D7 /* Images.xcassets */,
 			);
 			path = Resources;
@@ -144,7 +161,8 @@
 		11581AA1238F00EA003E45D7 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
-				11581AA2238F013A003E45D7 /* OutlinedIconsTests.swift */,
+				A9CBAD8423CE535300A46CB2 /* IconTests.swift */,
+				A9CCF8E023CCE39800000FC0 /* IconViewTests.swift */,
 				11FC55BF23C64EA800C91014 /* IllustrationIconsTests.swift */,
 			);
 			path = Icons;
@@ -153,7 +171,8 @@
 		11581AA4238F030C003E45D7 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
-				11DEC635239181E2003CCF57 /* OutlinedIcons.swift */,
+				A9CCF8D723CCDAC900000FC0 /* Icon.swift */,
+				A9CCF8DE23CCE1CE00000FC0 /* IconView.swift */,
 				11FC55BD23C64E8800C91014 /* IllustrationIcons.swift */,
 			);
 			path = Icons;
@@ -206,8 +225,9 @@
 		117FE011238D9AEB0032E2AC /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				117FE012238D9AEB0032E2AC /* Branding */,
 				117FE014238D9AEB0032E2AC /* FontsTests.swift */,
+				117FE012238D9AEB0032E2AC /* Branding */,
+				A9CCF8E623CCEFEB00000FC0 /* Style */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -249,8 +269,9 @@
 		117FE01F238D9B070032E2AC /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				117FE020238D9B070032E2AC /* Branding */,
 				117FE022238D9B070032E2AC /* Fonts.swift */,
+				117FE020238D9B070032E2AC /* Branding */,
+				A9CCF8E223CCEBB700000FC0 /* Style */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -327,6 +348,7 @@
 			children = (
 				A988199A238C5AAF0008230F /* UIColor+Hex.swift */,
 				112BAC2423984416009001A7 /* UITableView+Reusable.swift */,
+				A9CCF8D923CCDDF700000FC0 /* UIFont+Icon.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -336,6 +358,7 @@
 			children = (
 				A9D3454A238C69480013398C /* UIColor+HexTests.swift */,
 				112BAC2823984562009001A7 /* UITableView+ReusableTests.swift */,
+				A9CCF8E923CCF16400000FC0 /* UIFont+IconTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -363,13 +386,12 @@
 		A9B71E85237B559A00A2BF51 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				11581AA5238F0315003E45D7 /* Helpers */,
 				117FE02A238DA52D0032E2AC /* Components */,
 				117FE01A238D9B070032E2AC /* DesignTokens */,
 				A9881999238C5A8E0008230F /* Extensions */,
-				A9B71E87237B559A00A2BF51 /* Info.plist */,
-				A9B71E86237B559A00A2BF51 /* NatDS.h */,
+				11581AA5238F0315003E45D7 /* Helpers */,
 				11581A9E238EFE43003E45D7 /* Resources */,
+				A9CCF8D123CCD43700000FC0 /* Supporting Files */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -377,13 +399,48 @@
 		A9B71E90237B559A00A2BF51 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				11581AA6238F0348003E45D7 /* Helpers */,
 				117FE027238DA4760032E2AC /* Components */,
 				117FE00C238D9AEB0032E2AC /* DesignTokens */,
 				A988199D238C61780008230F /* Extensions */,
-				A9B71E93237B559A00A2BF51 /* Info.plist */,
+				11581AA6238F0348003E45D7 /* Helpers */,
+				A9CCF8D423CCD4E400000FC0 /* Supporting Files */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		A9CCF8D123CCD43700000FC0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A9B71E87237B559A00A2BF51 /* Info.plist */,
+				A9B71E86237B559A00A2BF51 /* NatDS.h */,
+			);
+			name = "Supporting Files";
+			path = "../Supporting Files";
+			sourceTree = "<group>";
+		};
+		A9CCF8D423CCD4E400000FC0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A9B71E93237B559A00A2BF51 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A9CCF8E223CCEBB700000FC0 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				A9CCF8DB23CCDF0100000FC0 /* FontIconStyle.swift */,
+				A9CCF8E323CCEBD600000FC0 /* FontStyle.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		A9CCF8E623CCEFEB00000FC0 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				A9CCF8E723CCF03500000FC0 /* FontIconStyleTests.swift */,
+			);
+			path = Style;
 			sourceTree = "<group>";
 		};
 		B59DC9FA54CA6649D4077030 /* Pods */ = {
@@ -490,6 +547,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9CCF8DD23CCE0F700000FC0 /* natds-icons.ttf in Resources */,
 				11581AA0238EFE7A003E45D7 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -570,15 +628,19 @@
 			files = (
 				11581AAA238F04D8003E45D7 /* AssetsHelper.swift in Sources */,
 				11581A9D238EC256003E45D7 /* NavigationDrawerItemCell.swift in Sources */,
+				A9CCF8E523CCEC5400000FC0 /* FontStyle.swift in Sources */,
 				112BAC2523984416009001A7 /* UITableView+Reusable.swift in Sources */,
 				11FC55BE23C64E8800C91014 /* IllustrationIcons.swift in Sources */,
 				110F55B323BE5A3F00B9937A /* ContainedButton.swift in Sources */,
 				117FE023238D9B070032E2AC /* ColorsNatura.swift in Sources */,
+				A9CCF8DA23CCDDF700000FC0 /* UIFont+Icon.swift in Sources */,
 				112BAC23239843CB009001A7 /* ReusableView.swift in Sources */,
 				117FE026238D9B070032E2AC /* Fonts.swift in Sources */,
+				A9CCF8DC23CCDF0100000FC0 /* FontIconStyle.swift in Sources */,
 				117FE025238D9B070032E2AC /* FontsNatura.swift in Sources */,
-				11DEC636239181E2003CCF57 /* OutlinedIcons.swift in Sources */,
+				A9CCF8D823CCDAC900000FC0 /* Icon.swift in Sources */,
 				11518B682396C00700220570 /* NavigationDrawer.swift in Sources */,
+				A9CCF8DF23CCE1CE00000FC0 /* IconView.swift in Sources */,
 				117FE02C238DA53E0032E2AC /* NavigationDrawerSubitemCell.swift in Sources */,
 				A971BE712398306300A0D509 /* NavigationDrawer+IndexMenu.swift in Sources */,
 				117FE024238D9B070032E2AC /* Colors.swift in Sources */,
@@ -596,15 +658,18 @@
 				A971BE6F2398171C00A0D509 /* NavigationDrawerDelegateMock.swift in Sources */,
 				11518B6C2396C4AB00220570 /* NavigationDrawerTests.swift in Sources */,
 				A971BE73239831F200A0D509 /* NavigationDrawer+IndexMenuTests.swift in Sources */,
+				A9CCF8E123CCE39800000FC0 /* IconViewTests.swift in Sources */,
 				110F55B623BE643A00B9937A /* ContainedButtonTests.swift in Sources */,
 				A9D3454B238C69480013398C /* UIColor+HexTests.swift in Sources */,
 				117FE017238D9AEB0032E2AC /* FontsNaturaTests.swift in Sources */,
+				A9CCF8EA23CCF16400000FC0 /* UIFont+IconTests.swift in Sources */,
+				A9CCF8E823CCF03500000FC0 /* FontIconStyleTests.swift in Sources */,
 				117FE016238D9AEB0032E2AC /* ColorsTests.swift in Sources */,
+				A9CBAD8523CE535300A46CB2 /* IconTests.swift in Sources */,
 				117FE029238DA4B70032E2AC /* NavigationDrawerSubitemCellTests.swift in Sources */,
 				112BAC2723984476009001A7 /* ReusableViewTests.swift in Sources */,
 				112BAC2923984562009001A7 /* UITableView+ReusableTests.swift in Sources */,
 				11581AA8238F037D003E45D7 /* AssetsHelperTests.swift in Sources */,
-				11581AA3238F013A003E45D7 /* OutlinedIconsTests.swift in Sources */,
 				117FE015238D9AEB0032E2AC /* ColorsNaturaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -751,7 +816,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Sources/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -759,7 +824,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.natura.NatDS;
+				PRODUCT_BUNDLE_IDENTIFIER = net.natura.NatDS;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -779,7 +844,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Sources/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -787,7 +852,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.natura.NatDS;
+				PRODUCT_BUNDLE_IDENTIFIER = net.natura.NatDS;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -803,13 +868,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.natura.NatDSTests;
+				PRODUCT_BUNDLE_IDENTIFIER = net.natura.NatDSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -826,13 +891,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.natura.NatDSTests;
+				PRODUCT_BUNDLE_IDENTIFIER = net.natura.NatDSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
