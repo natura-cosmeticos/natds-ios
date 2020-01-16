@@ -69,7 +69,7 @@ private extension NavigationDrawerSubitemCell {
             verticalLineView.topAnchor.constraint(equalTo: topAnchor),
             verticalLineView.bottomAnchor.constraint(equalTo: bottomAnchor),
             verticalLineView.widthAnchor.constraint(equalToConstant: 1.0),
-            verticalLineView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16.0)
+            verticalLineView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 47.0)
         ])
     }
 
