@@ -33,4 +33,4 @@ For use this repository, you need to install:
 - Run `pod install` to install the app dependencies
 
 ### Automated Tests
-- We are using screenshot tests with [iOSSnapshotTestCase](ttps://github.com/uber/ios-snapshot-test-case) to validate our built components state, color and behavior.
+- We are using screenshot tests with [iOSSnapshotTestCase](https://github.com/uber/ios-snapshot-test-case) to validate our built components state, color and behavior.
