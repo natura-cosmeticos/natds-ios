@@ -10,8 +10,7 @@ Library with iOS components defined by [Natura Group Design System Team](https:/
 
 ### Using CocoaPods
 
-Add the following lines to your Podfile:
-
+Add the following line to your Podfile:
 ```ruby
   pod 'NatDS'
 ```
@@ -30,11 +29,8 @@ For use this repository, you need to install:
 - [Git-LFS](https://git-lfs.github.com/)
 
 ### Installing
-- Clone this repo
-- run `pod install` on your project's root directory
+- Clone the repo
+- Run `pod install` to install the app dependencies
 
-### Dependencies
-- [Swiftlint](https://github.com/realm/SwiftLint): 
-
-### Testing
-We are using [Screenshot Tests](https://github.com/uber/ios-snapshot-test-case) for iOS to validate our built components state, color and behavior.
+### Automated Tests
+- We are using screenshot tests with [iOSSnapshotTestCase](ttps://github.com/uber/ios-snapshot-test-case) to validate our built components state, color and behavior.
