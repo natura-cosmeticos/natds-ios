@@ -33,7 +33,8 @@ extension Divider {
             lineView.topAnchor.constraint(equalTo: topAnchor),
             lineView.leadingAnchor.constraint(equalTo: leadingAnchor),
             lineView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            lineView.bottomAnchor.constraint(equalTo: bottomAnchor)
+            lineView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            lineView.heightAnchor.constraint(equalToConstant: frame.size.height)
         ]
 
         NSLayoutConstraint.activate(constrains)

@@ -11,4 +11,8 @@ struct ColorsNatura {
         static let black: UIColor = UIColor.hexColorOrDefault("#000000")
     }
 
+    enum Content {
+        static let mediumEmphasis = UIColor.hexColorOrDefault("#777777")
+    }
+
 }
