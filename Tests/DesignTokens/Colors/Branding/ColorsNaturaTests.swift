@@ -44,4 +44,10 @@ class ColorsNaturaTests: XCTestCase {
         XCTAssertEqual(color, expectedColor)
     }
 
+    func test_content_whenIsMediumEmphasis_returnsExpectedColor() {
+        let expectedColor = UIColor(hex: "#777777")
+        let color = ColorsNatura.Content.mediumEmphasis
+
+        XCTAssertEqual(color, expectedColor)
+    }
 }

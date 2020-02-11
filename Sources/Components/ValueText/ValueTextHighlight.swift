@@ -10,7 +10,7 @@ class ValueTextHighlight: UIView {
         return Divider()
     }()
 
-    private lazy var valueDescriptionLabel: UILabel = {
+    private(set) lazy var valueDescriptionLabel: UILabel = {
         let label = UILabel()
         label.font = Fonts.body2
         label.textColor = Colors.Content.mediumEmphasis
@@ -19,7 +19,7 @@ class ValueTextHighlight: UIView {
         return label
     }()
 
-    private lazy var valueLabel: UILabel = {
+    private(set) lazy var valueLabel: UILabel = {
         let label = UILabel()
         label.font = Fonts.h5
         label.textColor = Colors.highlight
@@ -41,6 +41,7 @@ class ValueTextHighlight: UIView {
 }
 
 extension ValueTextHighlight {
+
     var valueDescription: String? {
         get { return valueDescriptionLabel.text }
         set { valueDescriptionLabel.text = newValue }
