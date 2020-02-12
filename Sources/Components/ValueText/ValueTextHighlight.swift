@@ -1,6 +1,6 @@
 import Foundation
 
-class ValueTextHighlight: UIView {
+public class ValueTextHighlight: UIView {
 
     public var valueDescription: String? {
         get { return valueDescriptionLabel.text }
@@ -38,7 +38,7 @@ class ValueTextHighlight: UIView {
         return label
     }()
 
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
     }

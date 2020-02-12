@@ -1,4 +1,4 @@
-class Divider: UIView {
+public class Divider: UIView {
 
     private lazy var lineView: UIView = {
         let view = UIView()
@@ -6,7 +6,7 @@ class Divider: UIView {
         return view
     }()
 
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         let dividerFrame = CGRect(x: frame.origin.x, y: frame.origin.y, width: frame.size.width, height: 1)
         super.init(frame: dividerFrame)
         setup()
