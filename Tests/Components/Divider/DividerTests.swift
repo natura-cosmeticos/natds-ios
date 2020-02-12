@@ -8,10 +8,20 @@ class DividerTests: FBSnapshotTestCase {
 
     override func setUp() {
         super.setUp()
-        superview = UIView(frame: CGRect(x: 0, y: 0, width: 160, height: 160))
-        sut = Divider(frame: CGRect(x: 0, y: superview.frame.size.height/2, width: 160, height: 0))
+
+        sut = Divider()
+
+        superview = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 3))
         superview.backgroundColor = .white
         superview.addSubview(sut)
+
+        let contraints = [
+            sut.topAnchor.constraint(equalTo: self.superview.topAnchor, constant: 1),
+            sut.leadingAnchor.constraint(equalTo: self.superview.leadingAnchor),
+            sut.trailingAnchor.constraint(equalTo: self.superview.trailingAnchor)
+        ]
+
+        NSLayoutConstraint.activate(contraints)
     }
 
     func test_init_hasValidSnapshot() {
