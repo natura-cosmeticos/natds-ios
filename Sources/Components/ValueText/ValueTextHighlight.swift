@@ -2,6 +2,16 @@ import Foundation
 
 class ValueTextHighlight: UIView {
 
+    public var valueDescription: String? {
+        get { return valueDescriptionLabel.text }
+        set { valueDescriptionLabel.text = newValue }
+    }
+
+    public var value: String? {
+        get { return valueLabel.text }
+        set { valueLabel.text = newValue }
+    }
+
     private lazy var topDivider: Divider = {
         return Divider()
     }()
@@ -38,19 +48,6 @@ class ValueTextHighlight: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-}
-
-extension ValueTextHighlight {
-
-    var valueDescription: String? {
-        get { return valueDescriptionLabel.text }
-        set { valueDescriptionLabel.text = newValue }
-    }
-
-    var value: String? {
-        get { return valueLabel.text }
-        set { valueLabel.text = newValue }
-    }
 }
 
 extension ValueTextHighlight {
