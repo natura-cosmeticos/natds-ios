@@ -153,7 +153,7 @@ extension TextField {
             textField.borderWidth = 2
             textField.borderColor = Colors.Feedback.alert
             infoLabel.textColor = Colors.Feedback.alert
-            helperLabel.textColor = .red
+            helperLabel.textColor = Colors.Feedback.alert
             helperLabel.attributedText = text?.withIcon(Icon.outlinedActionCancel.rawValue)
         }
     }
