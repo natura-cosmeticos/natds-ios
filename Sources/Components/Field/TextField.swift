@@ -168,13 +168,12 @@ extension TextField {
             return
         }
 
-        var fullText: String
+        let fullText = message
 
-        //        if let icon = icon {
-        //            fullText = "\(icon) \(message)"
-        //        } else {
-        fullText = message
-        //        }
+        /*
+        if let icon = icon {
+            fullText = "\(icon) \(message)"
+        }*/
 
         let messageRange = (fullText as NSString).range(of: message)
 
@@ -188,15 +187,15 @@ extension TextField {
         attrText.addAttributes(textAttr, range: messageRange)
 
         /*
-        if let icon = icon {
-            let iconRange = (fullText as NSString).range(of: icon)
+         if let icon = icon {
+         let iconRange = (fullText as NSString).range(of: icon)
 
-            let iconAttr: [NSAttributedString.Key: Any] = [
-                .font: UIFont.iconFont(ofSize: Fonts.caption.lineHeight),
-                .foregroundColor: color
-            ]
-            attrText.addAttributes(iconAttr, range: iconRange)
-        }*/
+         let iconAttr: [NSAttributedString.Key: Any] = [
+         .font: UIFont.iconFont(ofSize: Fonts.caption.lineHeight),
+         .foregroundColor: color
+         ]
+         attrText.addAttributes(iconAttr, range: iconRange)
+         }*/
 
         helperLabel.attributedText = attrText
     }
