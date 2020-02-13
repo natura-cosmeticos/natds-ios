@@ -170,21 +170,23 @@ extension TextField {
         let fullMessage = "\(icon) \(message)"
         let messageLenght = message.count
         let iconLenght = 1
-        
+
         let attributedString = NSMutableAttributedString(string: fullMessage)
-        
+
         attributedString.addAttribute(NSAttributedString.Key.font,
-                                      value: Fonts.caption,
+                                      value: UIFont.iconFont(ofSize: 20),
                                       range: NSMakeRange(0, iconLenght))
-        
+
         attributedString.addAttribute(NSAttributedString.Key.font,
                                       value: Fonts.button,
                                       range: NSMakeRange(2, messageLenght))
-        
+
         attributedString.addAttribute(NSAttributedString.Key.baselineOffset,
-                                      value: 1.5,
-                                      range: NSMakeRange(0, iconLenght))
-        
+                                      value: 5,
+                                      range: NSMakeRange(2, messageLenght))
+
+        a
+
         helperLabel.textColor = color
         helperLabel.attributedText = attributedString
     }
