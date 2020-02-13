@@ -33,14 +33,15 @@
 		11FC55BE23C64E8800C91014 /* IllustrationIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FC55BD23C64E8800C91014 /* IllustrationIcons.swift */; };
 		11FC55C023C64EA800C91014 /* IllustrationIconsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FC55BF23C64EA800C91014 /* IllustrationIconsTests.swift */; };
 		428277050E055F4A92D2A29F /* Pods_NatDSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B496A6BAA901771980AF5E95 /* Pods_NatDSTests.framework */; };
+		4378068723F33A66004A9998 /* ValueTextHighlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4378068623F33A66004A9998 /* ValueTextHighlight.swift */; };
+		4378068A23F3442D004A9998 /* ValueTextHighlightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4378068923F3442D004A9998 /* ValueTextHighlightTests.swift */; };
 		6404360523F45FF00088B20D /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6404360423F45FF00088B20D /* TextField.swift */; };
 		6404360823F462C30088B20D /* TextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6404360723F462C30088B20D /* TextFieldTests.swift */; };
 		6404360B23F4658D0088B20D /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6404360A23F4658D0088B20D /* Field.swift */; };
 		6404360E23F471AB0088B20D /* FieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6404360D23F471AB0088B20D /* FieldTests.swift */; };
-		4378068723F33A66004A9998 /* ValueTextHighlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4378068623F33A66004A9998 /* ValueTextHighlight.swift */; };
-		4378068A23F3442D004A9998 /* ValueTextHighlightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4378068923F3442D004A9998 /* ValueTextHighlightTests.swift */; };
 		64A1125A23F32EF300119CE4 /* Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A1125923F32EF300119CE4 /* Divider.swift */; };
 		64A1125E23F331CA00119CE4 /* DividerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A1125C23F331C500119CE4 /* DividerTests.swift */; };
+		64D84FCE23F5F574004DD910 /* String+Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D84FCD23F5F574004DD910 /* String+Icon.swift */; };
 		A971BE6F2398171C00A0D509 /* NavigationDrawerDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A971BE6E2398171C00A0D509 /* NavigationDrawerDelegateMock.swift */; };
 		A971BE712398306300A0D509 /* NavigationDrawer+IndexMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A971BE702398306300A0D509 /* NavigationDrawer+IndexMenu.swift */; };
 		A971BE73239831F200A0D509 /* NavigationDrawer+IndexMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A971BE72239831F200A0D509 /* NavigationDrawer+IndexMenuTests.swift */; };
@@ -96,14 +97,15 @@
 		117FE02B238DA53E0032E2AC /* NavigationDrawerSubitemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerSubitemCell.swift; sourceTree = "<group>"; };
 		11FC55BD23C64E8800C91014 /* IllustrationIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllustrationIcons.swift; sourceTree = "<group>"; };
 		11FC55BF23C64EA800C91014 /* IllustrationIconsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllustrationIconsTests.swift; sourceTree = "<group>"; };
+		4378068623F33A66004A9998 /* ValueTextHighlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueTextHighlight.swift; sourceTree = "<group>"; };
+		4378068923F3442D004A9998 /* ValueTextHighlightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueTextHighlightTests.swift; sourceTree = "<group>"; };
 		6404360423F45FF00088B20D /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		6404360723F462C30088B20D /* TextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTests.swift; sourceTree = "<group>"; };
 		6404360A23F4658D0088B20D /* Field.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
 		6404360D23F471AB0088B20D /* FieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldTests.swift; sourceTree = "<group>"; };
-		4378068623F33A66004A9998 /* ValueTextHighlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueTextHighlight.swift; sourceTree = "<group>"; };
-		4378068923F3442D004A9998 /* ValueTextHighlightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueTextHighlightTests.swift; sourceTree = "<group>"; };
 		64A1125923F32EF300119CE4 /* Divider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Divider.swift; sourceTree = "<group>"; };
 		64A1125C23F331C500119CE4 /* DividerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerTests.swift; sourceTree = "<group>"; };
+		64D84FCD23F5F574004DD910 /* String+Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Icon.swift"; sourceTree = "<group>"; };
 		9A46395C038D4497A880A6FF /* Pods-NatDSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatDSTests.release.xcconfig"; path = "Target Support Files/Pods-NatDSTests/Pods-NatDSTests.release.xcconfig"; sourceTree = "<group>"; };
 		A8B18363274C7A70CF4443A3 /* Pods-NatDSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatDSTests.debug.xcconfig"; path = "Target Support Files/Pods-NatDSTests/Pods-NatDSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A971BE6E2398171C00A0D509 /* NavigationDrawerDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerDelegateMock.swift; sourceTree = "<group>"; };
@@ -349,6 +351,22 @@
 			path = NavigationDrawer;
 			sourceTree = "<group>";
 		};
+		4378068523F33A50004A9998 /* ValueText */ = {
+			isa = PBXGroup;
+			children = (
+				4378068623F33A66004A9998 /* ValueTextHighlight.swift */,
+			);
+			path = ValueText;
+			sourceTree = "<group>";
+		};
+		4378068823F343E8004A9998 /* ValueText */ = {
+			isa = PBXGroup;
+			children = (
+				4378068923F3442D004A9998 /* ValueTextHighlightTests.swift */,
+			);
+			path = ValueText;
+			sourceTree = "<group>";
+		};
 		6404360323F45FC30088B20D /* Field */ = {
 			isa = PBXGroup;
 			children = (
@@ -381,22 +399,6 @@
 				6404360D23F471AB0088B20D /* FieldTests.swift */,
 			);
 			path = UIKit;
-            sourceTree = "<group>";
-        };
-		4378068523F33A50004A9998 /* ValueText */ = {
-			isa = PBXGroup;
-			children = (
-				4378068623F33A66004A9998 /* ValueTextHighlight.swift */,
-			);
-			path = ValueText;
-			sourceTree = "<group>";
-		};
-		4378068823F343E8004A9998 /* ValueText */ = {
-			isa = PBXGroup;
-			children = (
-				4378068923F3442D004A9998 /* ValueTextHighlightTests.swift */,
-			);
-			path = ValueText;
 			sourceTree = "<group>";
 		};
 		64A1125823F32E6A00119CE4 /* Divider */ = {
@@ -437,6 +439,7 @@
 				A988199A238C5AAF0008230F /* UIColor+Hex.swift */,
 				112BAC2423984416009001A7 /* UITableView+Reusable.swift */,
 				A9CCF8D923CCDDF700000FC0 /* UIFont+Icon.swift */,
+				64D84FCD23F5F574004DD910 /* String+Icon.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -599,7 +602,7 @@
 		A9B71E7A237B559A00A2BF51 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = Natura;
 				TargetAttributes = {
 					A9B71E82237B559A00A2BF51 = {
@@ -618,6 +621,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = A9B71E79237B559A00A2BF51;
 			productRefGroup = A9B71E84237B559A00A2BF51 /* Products */;
@@ -737,6 +741,7 @@
 				A971BE712398306300A0D509 /* NavigationDrawer+IndexMenu.swift in Sources */,
 				117FE024238D9B070032E2AC /* Colors.swift in Sources */,
 				A988199B238C5AAF0008230F /* UIColor+Hex.swift in Sources */,
+				64D84FCE23F5F574004DD910 /* String+Icon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -894,6 +899,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";

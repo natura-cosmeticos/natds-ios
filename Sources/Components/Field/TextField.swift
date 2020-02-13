@@ -1,15 +1,9 @@
 public class TextField: UIView {
 
-    public enum State {
+    enum State {
         case enable
         case active
-        case error(String?)
-    }
-
-    public var state: State = .enable {
-        didSet {
-            handleState()
-        }
+        case error
     }
 
     public var info: String? {
@@ -33,6 +27,18 @@ public class TextField: UIView {
         }
     }
 
+    public var error: String? {
+        didSet {
+            handleError()
+        }
+    }
+
+    private var state: State = .enable {
+        didSet {
+            handleState()
+        }
+    }
+
     private lazy var infoLabel: UILabel = {
         let label = UILabel()
         label.font = Fonts.button
@@ -50,6 +56,8 @@ public class TextField: UIView {
         return label
     }()
 
+    private var isActive = false
+
     public override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -58,6 +66,19 @@ public class TextField: UIView {
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+}
+
+public extension TextField {
+
+    @discardableResult
+    override func becomeFirstResponder() -> Bool {
+        return textField.becomeFirstResponder()
+    }
+
+    @discardableResult
+    override func resignFirstResponder() -> Bool {
+        return textField.resignFirstResponder()
     }
 }
 
@@ -127,10 +148,12 @@ extension TextField {
     }
 
     @objc func handleEditingDidBegin() {
+        self.isActive = true
         self.state = .active
     }
 
     @objc func handleEditingDidEnd() {
+        self.isActive = false
         self.state = .enable
     }
 
@@ -146,46 +169,26 @@ extension TextField {
         case .active:
             textField.borderWidth = 2
             textField.borderColor = Colors.primary
+            textField.tintColor = Colors.primary
             infoLabel.textColor = Colors.Content.mediumEmphasis
             helperLabel.textColor = Colors.Content.mediumEmphasis
+            helperLabel.text = helper
 
-        case .error(let text):
+        case .error:
             textField.borderWidth = 2
             textField.borderColor = Colors.Feedback.alert
+            textField.tintColor = Colors.Feedback.alert
             infoLabel.textColor = Colors.Feedback.alert
             helperLabel.textColor = Colors.Feedback.alert
-            helperLabel.attributedText = text?.withIcon(Icon.outlinedActionCancel.rawValue)
+            helperLabel.attributedText = error?.withIcon(Icon.outlinedActionCancel.rawValue)
         }
     }
-}
 
-extension String {
-
-    func withIcon(_ icon: String) -> NSAttributedString {
-        let fullText = "\(icon) \(self)"
-
-        let attrText = NSMutableAttributedString(string: fullText)
-
-        let messageRange = (fullText as NSString).range(of: self)
-        let messageAttr: [NSAttributedString.Key: Any] = [
-            .font: Fonts.caption,
-            .baselineOffset: 1
-        ]
-
-        attrText.addAttributes(messageAttr, range: messageRange)
-
-        let iconParagraphStyle = NSMutableParagraphStyle()
-        iconParagraphStyle.maximumLineHeight = Fonts.caption.lineHeight
-
-        let iconRange = (fullText as NSString).range(of: icon)
-        let iconAttr: [NSAttributedString.Key: Any] = [
-            .font: UIFont.iconFont(ofSize: Fonts.caption.lineHeight),
-            .paragraphStyle: iconParagraphStyle,
-            .baselineOffset: -2
-        ]
-
-        attrText.addAttributes(iconAttr, range: iconRange)
-
-        return attrText
+    private func handleError() {
+        if error != nil {
+            state = .error
+        } else {
+            state = isActive ? .active : .enable
+        }
     }
 }

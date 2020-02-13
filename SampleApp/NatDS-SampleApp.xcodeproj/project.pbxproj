@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64D84FD123F5FC7D004DD910 /* ValueTextHighlightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D84FD023F5FC7D004DD910 /* ValueTextHighlightViewController.swift */; };
+		64D84FD423F600C5004DD910 /* TextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D84FD323F600C5004DD910 /* TextFieldViewController.swift */; };
 		A9D71BC22386DFEE00CDEC1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D71BC12386DFEE00CDEC1D /* AppDelegate.swift */; };
 		A9D71BC62386DFEE00CDEC1D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D71BC52386DFEE00CDEC1D /* MainViewController.swift */; };
 		A9D71BCB2386DFF200CDEC1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9D71BCA2386DFF200CDEC1D /* Assets.xcassets */; };
@@ -30,6 +32,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		64D84FD023F5FC7D004DD910 /* ValueTextHighlightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueTextHighlightViewController.swift; sourceTree = "<group>"; };
+		64D84FD323F600C5004DD910 /* TextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldViewController.swift; sourceTree = "<group>"; };
 		A9D71BBE2386DFEE00CDEC1D /* NatDS-SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NatDS-SampleApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9D71BC12386DFEE00CDEC1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9D71BC52386DFEE00CDEC1D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +55,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		64D84FCF23F5FC62004DD910 /* ValueText */ = {
+			isa = PBXGroup;
+			children = (
+				64D84FD023F5FC7D004DD910 /* ValueTextHighlightViewController.swift */,
+			);
+			path = ValueText;
+			sourceTree = "<group>";
+		};
+		64D84FD223F600B4004DD910 /* Field */ = {
+			isa = PBXGroup;
+			children = (
+				64D84FD323F600C5004DD910 /* TextFieldViewController.swift */,
+			);
+			path = Field;
+			sourceTree = "<group>";
+		};
 		A9D71BB52386DFEE00CDEC1D = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +91,8 @@
 		A9D71BC02386DFEE00CDEC1D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				64D84FD223F600B4004DD910 /* Field */,
+				64D84FCF23F5FC62004DD910 /* ValueText */,
 				A9D71BC12386DFEE00CDEC1D /* AppDelegate.swift */,
 				A9D71BC52386DFEE00CDEC1D /* MainViewController.swift */,
 				A9D71BDA2386F53400CDEC1D /* Supporting Files */,
@@ -167,6 +189,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64D84FD423F600C5004DD910 /* TextFieldViewController.swift in Sources */,
+				64D84FD123F5FC7D004DD910 /* ValueTextHighlightViewController.swift in Sources */,
 				A9D71BC62386DFEE00CDEC1D /* MainViewController.swift in Sources */,
 				A9D71BC22386DFEE00CDEC1D /* AppDelegate.swift in Sources */,
 			);

@@ -4,7 +4,7 @@ class Field: UITextField {
         didSet {
             let attr: [NSAttributedString.Key: Any] = [
                 .font: Fonts.body1,
-                .foregroundColor: Colors.lowEmphasis //TODO Change to mediumEmphasis
+                .foregroundColor: Colors.Content.mediumEmphasis
             ]
             attributedPlaceholder = NSAttributedString(string: placeholder ?? "", attributes: attr)
         }
