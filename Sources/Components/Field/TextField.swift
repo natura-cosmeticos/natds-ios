@@ -154,7 +154,9 @@ extension TextField {
             textField.borderWidth = 2
             textField.borderColor = .red //TODO change to alert color
             infoLabel.textColor = .red //TODO change to alert color
-            setHelperAttrTextWith(icon: Icon.outlinedActionCancel.rawValue, message: text, color: .red) //TODO change to alert color
+            setHelperAttrTextWith(icon: Icon.outlinedActionCancel.rawValue,
+                                  message: text,
+                                  color: .red) //TODO change to alert color
         }
     }
 }
@@ -175,17 +177,15 @@ extension TextField {
 
         attributedString.addAttribute(NSAttributedString.Key.font,
                                       value: UIFont.iconFont(ofSize: 20),
-                                      range: NSMakeRange(0, iconLenght))
+                                      range: NSRange(location: 0, length: iconLenght))
 
         attributedString.addAttribute(NSAttributedString.Key.font,
                                       value: Fonts.button,
-                                      range: NSMakeRange(2, messageLenght))
+                                      range: NSRange(location: 2, length: messageLenght))
 
         attributedString.addAttribute(NSAttributedString.Key.baselineOffset,
                                       value: 5,
-                                      range: NSMakeRange(2, messageLenght))
-
-        a
+                                      range: NSRange(location: 2, length: messageLenght))
 
         helperLabel.textColor = color
         helperLabel.attributedText = attributedString
