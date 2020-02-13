@@ -141,28 +141,33 @@ extension TextField {
             textField.borderColor = Colors.lowEmphasis
 
             infoLabel.textColor = Colors.highEmphasis //TODO Change to mediumEmphasis
-            setHelperAttrTextWith(message: helper, color: Colors.lowEmphasis) //TODO Change to mediumEmphasis
+            //setHelperAttrTextWith(message: helper, color: Colors.lowEmphasis) //TODO Change to mediumEmphasis
+            helperLabel.text = helper
 
         case .active:
             textField.borderWidth = 2
             textField.borderColor = Colors.primary
 
             infoLabel.textColor = Colors.highEmphasis //TODO Change to mediumEmphasis
-            setHelperAttrTextWith(message: helper, color: Colors.lowEmphasis) //TODO Change to mediumEmphasis
+            //setHelperAttrTextWith(message: helper, color: Colors.lowEmphasis) //TODO Change to mediumEmphasis
+            helperLabel.text = helper
 
         case .error(let text):
             textField.borderWidth = 2
             textField.borderColor = .red //TODO change to alert color
             infoLabel.textColor = .red //TODO change to alert color
+            helperLabel.attributedText = text?.withIcon(icon: Icon.outlinedActionCancel.rawValue)
+            /*
             setHelperAttrTextWith(icon: Icon.outlinedActionCancel.rawValue,
                                   message: text,
                                   color: .red) //TODO change to alert color
+             */
         }
     }
 }
 
+/*
 extension TextField {
-
     private func setHelperAttrTextWith(icon: String? = nil, message: String?, color: UIColor) {
         guard let message = message, let icon = icon else {
             helperLabel.attributedText = nil
@@ -190,4 +195,31 @@ extension TextField {
         helperLabel.textColor = color
         helperLabel.attributedText = attributedString
     }
+}
+*/
+
+extension String {
+
+    public func withIcon(icon: String) -> NSAttributedString {
+        let fullMessage = "\(icon) \(self)"
+        let messageLenght = self.count
+        let iconLenght = 1
+
+        let attributedString = NSMutableAttributedString(string: fullMessage)
+
+        attributedString.addAttribute(NSAttributedString.Key.font,
+                                      value: UIFont.iconFont(ofSize: 20),
+                                      range: NSRange(location: 0, length: iconLenght))
+
+        attributedString.addAttribute(NSAttributedString.Key.font,
+                                      value: Fonts.button,
+                                      range: NSRange(location: 2, length: messageLenght))
+
+        attributedString.addAttribute(NSAttributedString.Key.baselineOffset,
+                                      value: 5,
+                                      range: NSRange(location: 2, length: messageLenght))
+
+        return attributedString
+    }
+
 }
