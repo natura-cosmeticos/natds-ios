@@ -10,7 +10,6 @@ class FieldTests: FBSnapshotTestCase {
 
         sut = Field(frame: CGRect(x: 0, y: 0, width: 328, height: 56))
         sut.backgroundColor = .white
-        //recordMode = true
     }
 
     func test_init_hasNormalSnapshot() {

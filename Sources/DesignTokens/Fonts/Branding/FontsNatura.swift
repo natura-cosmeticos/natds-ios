@@ -5,5 +5,4 @@ struct FontsNatura {
     static let body2: UIFont = UIFont.systemFont(ofSize: 14, weight: .regular)
     static let button: UIFont = UIFont.systemFont(ofSize: 14, weight: .medium)
     static let caption: UIFont = UIFont.systemFont(ofSize: 12, weight: .regular)
-
 }

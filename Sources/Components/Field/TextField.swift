@@ -139,20 +139,20 @@ extension TextField {
         case .enable:
             textField.borderWidth = 1
             textField.borderColor = Colors.lowEmphasis
-            infoLabel.textColor = Colors.highEmphasis //TODO Change to mediumEmphasis
-            helperLabel.textColor = Colors.lowEmphasis //TODO Change to mediumEmphasis
+            infoLabel.textColor = Colors.Content.mediumEmphasis
+            helperLabel.textColor = Colors.Content.mediumEmphasis
             helperLabel.text = helper
 
         case .active:
             textField.borderWidth = 2
             textField.borderColor = Colors.primary
-            infoLabel.textColor = Colors.highEmphasis //TODO Change to mediumEmphasis
-            helperLabel.textColor = Colors.lowEmphasis //TODO Change to mediumEmphasis
+            infoLabel.textColor = Colors.Content.mediumEmphasis
+            helperLabel.textColor = Colors.Content.mediumEmphasis
 
         case .error(let text):
             textField.borderWidth = 2
-            textField.borderColor = .red //TODO change to alert color
-            infoLabel.textColor = .red //TODO change to alert color
+            textField.borderColor = Colors.Feedback.alert
+            infoLabel.textColor = Colors.Feedback.alert
             helperLabel.textColor = .red
             helperLabel.attributedText = text?.withIcon(Icon.outlinedActionCancel.rawValue)
         }
@@ -189,7 +189,6 @@ extension String {
         return attrText
     }
 }
-*/
 
 extension String {
 

@@ -10,4 +10,9 @@ public class Colors: NSObject {
     public class Content {
         public static let mediumEmphasis = ColorsNatura.Content.mediumEmphasis
     }
+
+    public class Feedback {
+        public static let alert = ColorsNatura.Feedback.alert
+    }
+
 }
