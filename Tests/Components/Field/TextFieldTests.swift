@@ -19,17 +19,17 @@ class TextFieldTests: FBSnapshotTestCase {
     }
 
     func test_enableState_hasEnableSnapshot() {
-        sut.state = .enable
+        sut.handleEditingDidEnd()
         FBSnapshotVerifyView(sut)
     }
 
     func test_activeState_hasActiveSnapshot() {
-        sut.state = .active
+        sut.handleEditingDidBegin()
         FBSnapshotVerifyView(sut)
     }
 
     func test_errorState_hasErrorSnapshot() {
-        sut.state = .error("Error: Has an error")
+        sut.error = "Error: Has an error"
         FBSnapshotVerifyView(sut)
     }
 }
