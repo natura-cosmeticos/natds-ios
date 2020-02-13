@@ -189,29 +189,3 @@ extension String {
         return attrText
     }
 }
-
-extension String {
-
-    public func withIcon(icon: String) -> NSAttributedString {
-        let fullMessage = "\(icon) \(self)"
-        let messageLenght = self.count
-        let iconLenght = 1
-
-        let attributedString = NSMutableAttributedString(string: fullMessage)
-
-        attributedString.addAttribute(NSAttributedString.Key.font,
-                                      value: UIFont.iconFont(ofSize: 20),
-                                      range: NSRange(location: 0, length: iconLenght))
-
-        attributedString.addAttribute(NSAttributedString.Key.font,
-                                      value: Fonts.button,
-                                      range: NSRange(location: 2, length: messageLenght))
-
-        attributedString.addAttribute(NSAttributedString.Key.baselineOffset,
-                                      value: 5,
-                                      range: NSRange(location: 2, length: messageLenght))
-
-        return attributedString
-    }
-
-}
