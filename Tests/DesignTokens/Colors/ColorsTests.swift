@@ -44,4 +44,10 @@ class ColorsTests: XCTestCase {
         XCTAssertEqual(color, expectedColor)
     }
 
+    func test_content_whenIsMediumEmphasis_returnsExpectedColor() {
+        let expectedColor = ColorsNatura.Content.mediumEmphasis
+        let color = Colors.Content.mediumEmphasis
+
+        XCTAssertEqual(color, expectedColor)
+    }
 }

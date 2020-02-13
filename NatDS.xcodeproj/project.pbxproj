@@ -37,6 +37,10 @@
 		6404360823F462C30088B20D /* TextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6404360723F462C30088B20D /* TextFieldTests.swift */; };
 		6404360B23F4658D0088B20D /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6404360A23F4658D0088B20D /* Field.swift */; };
 		6404360E23F471AB0088B20D /* FieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6404360D23F471AB0088B20D /* FieldTests.swift */; };
+		4378068723F33A66004A9998 /* ValueTextHighlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4378068623F33A66004A9998 /* ValueTextHighlight.swift */; };
+		4378068A23F3442D004A9998 /* ValueTextHighlightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4378068923F3442D004A9998 /* ValueTextHighlightTests.swift */; };
+		64A1125A23F32EF300119CE4 /* Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A1125923F32EF300119CE4 /* Divider.swift */; };
+		64A1125E23F331CA00119CE4 /* DividerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A1125C23F331C500119CE4 /* DividerTests.swift */; };
 		A971BE6F2398171C00A0D509 /* NavigationDrawerDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A971BE6E2398171C00A0D509 /* NavigationDrawerDelegateMock.swift */; };
 		A971BE712398306300A0D509 /* NavigationDrawer+IndexMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A971BE702398306300A0D509 /* NavigationDrawer+IndexMenu.swift */; };
 		A971BE73239831F200A0D509 /* NavigationDrawer+IndexMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A971BE72239831F200A0D509 /* NavigationDrawer+IndexMenuTests.swift */; };
@@ -96,6 +100,10 @@
 		6404360723F462C30088B20D /* TextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTests.swift; sourceTree = "<group>"; };
 		6404360A23F4658D0088B20D /* Field.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
 		6404360D23F471AB0088B20D /* FieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldTests.swift; sourceTree = "<group>"; };
+		4378068623F33A66004A9998 /* ValueTextHighlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueTextHighlight.swift; sourceTree = "<group>"; };
+		4378068923F3442D004A9998 /* ValueTextHighlightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueTextHighlightTests.swift; sourceTree = "<group>"; };
+		64A1125923F32EF300119CE4 /* Divider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Divider.swift; sourceTree = "<group>"; };
+		64A1125C23F331C500119CE4 /* DividerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerTests.swift; sourceTree = "<group>"; };
 		9A46395C038D4497A880A6FF /* Pods-NatDSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatDSTests.release.xcconfig"; path = "Target Support Files/Pods-NatDSTests/Pods-NatDSTests.release.xcconfig"; sourceTree = "<group>"; };
 		A8B18363274C7A70CF4443A3 /* Pods-NatDSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatDSTests.debug.xcconfig"; path = "Target Support Files/Pods-NatDSTests/Pods-NatDSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A971BE6E2398171C00A0D509 /* NavigationDrawerDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerDelegateMock.swift; sourceTree = "<group>"; };
@@ -296,6 +304,8 @@
 			isa = PBXGroup;
 			children = (
 				6404360623F462A20088B20D /* Field */,
+				4378068823F343E8004A9998 /* ValueText */,
+				64A1125B23F331A000119CE4 /* Divider */,
 				110F55B423BE642200B9937A /* Button */,
 				11581AA1238F00EA003E45D7 /* Icons */,
 				117FE02E238DD5540032E2AC /* NavigationDrawer */,
@@ -307,6 +317,8 @@
 			isa = PBXGroup;
 			children = (
 				6404360323F45FC30088B20D /* Field */,
+				4378068523F33A50004A9998 /* ValueText */,
+				64A1125823F32E6A00119CE4 /* Divider */,
 				110F55B123BE5A1E00B9937A /* Button */,
 				11581AA4238F030C003E45D7 /* Icons */,
 				117FE02D238DD53D0032E2AC /* NavigationDrawer */,
@@ -369,6 +381,38 @@
 				6404360D23F471AB0088B20D /* FieldTests.swift */,
 			);
 			path = UIKit;
+            sourceTree = "<group>";
+        };
+		4378068523F33A50004A9998 /* ValueText */ = {
+			isa = PBXGroup;
+			children = (
+				4378068623F33A66004A9998 /* ValueTextHighlight.swift */,
+			);
+			path = ValueText;
+			sourceTree = "<group>";
+		};
+		4378068823F343E8004A9998 /* ValueText */ = {
+			isa = PBXGroup;
+			children = (
+				4378068923F3442D004A9998 /* ValueTextHighlightTests.swift */,
+			);
+			path = ValueText;
+			sourceTree = "<group>";
+		};
+		64A1125823F32E6A00119CE4 /* Divider */ = {
+			isa = PBXGroup;
+			children = (
+				64A1125923F32EF300119CE4 /* Divider.swift */,
+			);
+			path = Divider;
+			sourceTree = "<group>";
+		};
+		64A1125B23F331A000119CE4 /* Divider */ = {
+			isa = PBXGroup;
+			children = (
+				64A1125C23F331C500119CE4 /* DividerTests.swift */,
+			);
+			path = Divider;
 			sourceTree = "<group>";
 		};
 		7F7C949F669E1B554E52BEF2 /* Frameworks */ = {
@@ -678,9 +722,11 @@
 				11FC55BE23C64E8800C91014 /* IllustrationIcons.swift in Sources */,
 				110F55B323BE5A3F00B9937A /* ContainedButton.swift in Sources */,
 				117FE023238D9B070032E2AC /* ColorsNatura.swift in Sources */,
+				64A1125A23F32EF300119CE4 /* Divider.swift in Sources */,
 				A9CCF8DA23CCDDF700000FC0 /* UIFont+Icon.swift in Sources */,
 				112BAC23239843CB009001A7 /* ReusableView.swift in Sources */,
 				6404360B23F4658D0088B20D /* Field.swift in Sources */,
+				4378068723F33A66004A9998 /* ValueTextHighlight.swift in Sources */,
 				117FE026238D9B070032E2AC /* Fonts.swift in Sources */,
 				A9CCF8DC23CCDF0100000FC0 /* FontIconStyle.swift in Sources */,
 				117FE025238D9B070032E2AC /* FontsNatura.swift in Sources */,
@@ -715,7 +761,9 @@
 				117FE016238D9AEB0032E2AC /* ColorsTests.swift in Sources */,
 				A9CBAD8523CE535300A46CB2 /* IconTests.swift in Sources */,
 				117FE029238DA4B70032E2AC /* NavigationDrawerSubitemCellTests.swift in Sources */,
+				64A1125E23F331CA00119CE4 /* DividerTests.swift in Sources */,
 				112BAC2723984476009001A7 /* ReusableViewTests.swift in Sources */,
+				4378068A23F3442D004A9998 /* ValueTextHighlightTests.swift in Sources */,
 				112BAC2923984562009001A7 /* UITableView+ReusableTests.swift in Sources */,
 				11581AA8238F037D003E45D7 /* AssetsHelperTests.swift in Sources */,
 				117FE015238D9AEB0032E2AC /* ColorsNaturaTests.swift in Sources */,
