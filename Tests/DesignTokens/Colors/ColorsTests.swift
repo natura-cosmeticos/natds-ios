@@ -16,7 +16,7 @@ class ColorsTests: XCTestCase {
         XCTAssertEqual(color, expectedColor)
     }
 
-    func test_pb_highEmphasis_returnsExpectedColor() {
+    func test_highEmphasis_returnsExpectedColor() {
         let expectedColor = ColorsNatura.PB.gray
         let color = Colors.highEmphasis
 
