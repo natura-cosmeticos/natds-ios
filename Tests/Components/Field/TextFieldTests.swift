@@ -15,7 +15,7 @@ class TextFieldTests: FBSnapshotTestCase {
         sut.placeholder = "Placeholder"
         sut.helper = "Helper Text"
 
-        //recordMode = true
+        recordMode = true
     }
 
     func test_enableState_hasEnableSnapshot() {

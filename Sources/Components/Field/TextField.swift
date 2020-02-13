@@ -153,7 +153,6 @@ extension TextField {
         case .error(let text):
             textField.borderWidth = 2
             textField.borderColor = .red //TODO change to alert color
-
             infoLabel.textColor = .red //TODO change to alert color
             setHelperAttrTextWith(icon: Icon.outlinedActionCancel.rawValue, message: text, color: .red) //TODO change to alert color
         }
@@ -163,41 +162,30 @@ extension TextField {
 extension TextField {
 
     private func setHelperAttrTextWith(icon: String? = nil, message: String?, color: UIColor) {
-        guard let message = message else {
+        guard let message = message, let icon = icon else {
             helperLabel.attributedText = nil
             return
         }
 
-        var fullText: String
-
-        //        if let icon = icon {
-        //            fullText = "\(icon) \(message)"
-        //        } else {
-        fullText = message
-        //        }
-
-        let messageRange = (fullText as NSString).range(of: message)
-
-        let attrText = NSMutableAttributedString(string: fullText)
-
-        let textAttr: [NSAttributedString.Key: Any] = [
-            .font: Fonts.caption,
-            .foregroundColor: color
-        ]
-
-        attrText.addAttributes(textAttr, range: messageRange)
-
-        /*
-        if let icon = icon {
-            let iconRange = (fullText as NSString).range(of: icon)
-
-            let iconAttr: [NSAttributedString.Key: Any] = [
-                .font: UIFont.iconFont(ofSize: Fonts.caption.lineHeight),
-                .foregroundColor: color
-            ]
-            attrText.addAttributes(iconAttr, range: iconRange)
-        }*/
-
-        helperLabel.attributedText = attrText
+        let fullMessage = "\(icon) \(message)"
+        let messageLenght = message.count
+        let iconLenght = 1
+        
+        let attributedString = NSMutableAttributedString(string: fullMessage)
+        
+        attributedString.addAttribute(NSAttributedString.Key.font,
+                                      value: Fonts.caption,
+                                      range: NSMakeRange(0, iconLenght))
+        
+        attributedString.addAttribute(NSAttributedString.Key.font,
+                                      value: Fonts.button,
+                                      range: NSMakeRange(2, messageLenght))
+        
+        attributedString.addAttribute(NSAttributedString.Key.baselineOffset,
+                                      value: 1.5,
+                                      range: NSMakeRange(0, iconLenght))
+        
+        helperLabel.textColor = color
+        helperLabel.attributedText = attributedString
     }
 }
