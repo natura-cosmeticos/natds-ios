@@ -29,7 +29,7 @@ public class TextField: UIView {
 
     public var helper: String? {
         didSet {
-            setHelperAttrTextWith(message: helper, color: Colors.lowEmphasis) //TODO Change to mediumEmphasis
+            helperLabel.text = helper
         }
     }
 
@@ -139,64 +139,53 @@ extension TextField {
         case .enable:
             textField.borderWidth = 1
             textField.borderColor = Colors.lowEmphasis
-
             infoLabel.textColor = Colors.highEmphasis //TODO Change to mediumEmphasis
-            setHelperAttrTextWith(message: helper, color: Colors.lowEmphasis) //TODO Change to mediumEmphasis
+            helperLabel.textColor = Colors.lowEmphasis //TODO Change to mediumEmphasis
+            helperLabel.text = helper
 
         case .active:
             textField.borderWidth = 2
             textField.borderColor = Colors.primary
-
             infoLabel.textColor = Colors.highEmphasis //TODO Change to mediumEmphasis
-            setHelperAttrTextWith(message: helper, color: Colors.lowEmphasis) //TODO Change to mediumEmphasis
+            helperLabel.textColor = Colors.lowEmphasis //TODO Change to mediumEmphasis
 
         case .error(let text):
             textField.borderWidth = 2
             textField.borderColor = .red //TODO change to alert color
-
             infoLabel.textColor = .red //TODO change to alert color
-            setHelperAttrTextWith(icon: Icon.outlinedActionCancel.rawValue, message: text, color: .red) //TODO change to alert color
+            helperLabel.textColor = .red
+            helperLabel.attributedText = text?.withIcon(Icon.outlinedActionCancel.rawValue)
         }
     }
 }
 
-extension TextField {
+extension String {
 
-    private func setHelperAttrTextWith(icon: String? = nil, message: String?, color: UIColor) {
-        guard let message = message else {
-            helperLabel.attributedText = nil
-            return
-        }
-
-        let fullText = message
-
-        /*
-        if let icon = icon {
-            fullText = "\(icon) \(message)"
-        }*/
-
-        let messageRange = (fullText as NSString).range(of: message)
+    func withIcon(_ icon: String) -> NSAttributedString {
+        let fullText = "\(icon) \(self)"
 
         let attrText = NSMutableAttributedString(string: fullText)
 
-        let textAttr: [NSAttributedString.Key: Any] = [
+        let messageRange = (fullText as NSString).range(of: self)
+        let messageAttr: [NSAttributedString.Key: Any] = [
             .font: Fonts.caption,
-            .foregroundColor: color
+            .baselineOffset: 1
         ]
 
-        attrText.addAttributes(textAttr, range: messageRange)
+        attrText.addAttributes(messageAttr, range: messageRange)
 
-        /*
-         if let icon = icon {
-         let iconRange = (fullText as NSString).range(of: icon)
+        let iconParagraphStyle = NSMutableParagraphStyle()
+        iconParagraphStyle.maximumLineHeight = Fonts.caption.lineHeight
 
-         let iconAttr: [NSAttributedString.Key: Any] = [
-         .font: UIFont.iconFont(ofSize: Fonts.caption.lineHeight),
-         .foregroundColor: color
-         ]
-         attrText.addAttributes(iconAttr, range: iconRange)
-         }*/
+        let iconRange = (fullText as NSString).range(of: icon)
+        let iconAttr: [NSAttributedString.Key: Any] = [
+            .font: UIFont.iconFont(ofSize: Fonts.caption.lineHeight),
+            .paragraphStyle: iconParagraphStyle,
+            .baselineOffset: -2
+        ]
 
-        helperLabel.attributedText = attrText
+        attrText.addAttributes(iconAttr, range: iconRange)
+
+        return attrText
     }
 }
