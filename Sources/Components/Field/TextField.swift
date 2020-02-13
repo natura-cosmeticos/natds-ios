@@ -29,7 +29,7 @@ public class TextField: UIView {
 
     public var helper: String? {
         didSet {
-            setHelperAttrTextWith(message: helper, color: Colors.lowEmphasis) //TODO Change to mediumEmphasis
+            helperLabel.text = helper
         }
     }
 
@@ -139,61 +139,54 @@ extension TextField {
         case .enable:
             textField.borderWidth = 1
             textField.borderColor = Colors.lowEmphasis
-
             infoLabel.textColor = Colors.highEmphasis //TODO Change to mediumEmphasis
-            //setHelperAttrTextWith(message: helper, color: Colors.lowEmphasis) //TODO Change to mediumEmphasis
+            helperLabel.textColor = Colors.lowEmphasis //TODO Change to mediumEmphasis
             helperLabel.text = helper
 
         case .active:
             textField.borderWidth = 2
             textField.borderColor = Colors.primary
-
             infoLabel.textColor = Colors.highEmphasis //TODO Change to mediumEmphasis
-            //setHelperAttrTextWith(message: helper, color: Colors.lowEmphasis) //TODO Change to mediumEmphasis
-            helperLabel.text = helper
+            helperLabel.textColor = Colors.lowEmphasis //TODO Change to mediumEmphasis
 
         case .error(let text):
             textField.borderWidth = 2
             textField.borderColor = .red //TODO change to alert color
             infoLabel.textColor = .red //TODO change to alert color
-            helperLabel.attributedText = text?.withIcon(icon: Icon.outlinedActionCancel.rawValue)
-            /*
-            setHelperAttrTextWith(icon: Icon.outlinedActionCancel.rawValue,
-                                  message: text,
-                                  color: .red) //TODO change to alert color
-             */
+            helperLabel.textColor = .red
+            helperLabel.attributedText = text?.withIcon(Icon.outlinedActionCancel.rawValue)
         }
     }
 }
 
-/*
-extension TextField {
-    private func setHelperAttrTextWith(icon: String? = nil, message: String?, color: UIColor) {
-        guard let message = message, let icon = icon else {
-            helperLabel.attributedText = nil
-            return
-        }
+extension String {
 
-        let fullMessage = "\(icon) \(message)"
-        let messageLenght = message.count
-        let iconLenght = 1
+    func withIcon(_ icon: String) -> NSAttributedString {
+        let fullText = "\(icon) \(self)"
 
-        let attributedString = NSMutableAttributedString(string: fullMessage)
+        let attrText = NSMutableAttributedString(string: fullText)
 
-        attributedString.addAttribute(NSAttributedString.Key.font,
-                                      value: UIFont.iconFont(ofSize: 20),
-                                      range: NSRange(location: 0, length: iconLenght))
+        let messageRange = (fullText as NSString).range(of: self)
+        let messageAttr: [NSAttributedString.Key: Any] = [
+            .font: Fonts.caption,
+            .baselineOffset: 1
+        ]
 
-        attributedString.addAttribute(NSAttributedString.Key.font,
-                                      value: Fonts.button,
-                                      range: NSRange(location: 2, length: messageLenght))
+        attrText.addAttributes(messageAttr, range: messageRange)
 
-        attributedString.addAttribute(NSAttributedString.Key.baselineOffset,
-                                      value: 5,
-                                      range: NSRange(location: 2, length: messageLenght))
+        let iconParagraphStyle = NSMutableParagraphStyle()
+        iconParagraphStyle.maximumLineHeight = Fonts.caption.lineHeight
 
-        helperLabel.textColor = color
-        helperLabel.attributedText = attributedString
+        let iconRange = (fullText as NSString).range(of: icon)
+        let iconAttr: [NSAttributedString.Key: Any] = [
+            .font: UIFont.iconFont(ofSize: Fonts.caption.lineHeight),
+            .paragraphStyle: iconParagraphStyle,
+            .baselineOffset: -2
+        ]
+
+        attrText.addAttributes(iconAttr, range: iconRange)
+
+        return attrText
     }
 }
 */
