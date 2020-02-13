@@ -6,4 +6,8 @@ public class Colors: NSObject {
     public static let lowEmphasis: UIColor = ColorsNatura.PB.gray2
     public static let surfaceDark: UIColor = ColorsNatura.PB.gray3
     public static let highlight: UIColor = ColorsNatura.PB.black
+
+    public class Content {
+        public static let mediumEmphasis = ColorsNatura.Content.mediumEmphasis
+    }
 }
