@@ -3,14 +3,14 @@ import XCTest
 
 class ColorsNaturaTests: XCTestCase {
 
-    func test_primaryOrange_returnsExpectedColor() {
+    func test_primary_orange_returnsExpectedColor() {
         let expectedColor = UIColor(hex: "#FF6B0B")
         let color = ColorsNatura.Primary.orange
 
         XCTAssertEqual(color, expectedColor)
     }
 
-    func test_primaryYellow_returnsExpectedColor() {
+    func test_primary_yellow_returnsExpectedColor() {
         let expectedColor = UIColor(hex: "#F4AB34")
         let color = ColorsNatura.Primary.yellow
 
