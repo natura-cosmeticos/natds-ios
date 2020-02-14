@@ -16,6 +16,11 @@ public class TextField: UIView {
         set { infoLabel.text = newValue }
     }
 
+    public var text: String? {
+        get { textField.text }
+        set { textField.text = newValue }
+    }
+
     public var placeholder: String? {
         get { textField.placeholder }
         set { textField.placeholder = newValue}

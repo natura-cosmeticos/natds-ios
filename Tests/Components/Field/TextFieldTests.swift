@@ -33,6 +33,11 @@ class TextFieldTests: FBSnapshotTestCase {
         FBSnapshotVerifyView(sut)
     }
 
+    func test_text_whenTextIsSet_expectedTextFieldIsFilledSnapshot() {
+        sut.text = "999.999.999-99"
+        FBSnapshotVerifyView(sut)
+    }
+
     func test_error_whenHasString_expectedStateError() {
         sut.error = "Error: Has an error"
         XCTAssertEqual(sut.state, TextField.State.error)
