@@ -68,13 +68,15 @@ extension TextFieldViewController: UITextFieldDelegate {
                    shouldChangeCharactersIn range: NSRange,
                    replacementString string: String) -> Bool {
 
-        let expectedText = (textField.text ?? "")
-        let text = expectedText.filter { !"0123456789".contains($0) }
+        if numberTextField.equals(textField: textField) {
+            let expectedText = (textField.text ?? "")
+            let text = expectedText.filter { !"0123456789".contains($0) }
 
-        if !text.isEmpty {
-            self.textField.error = "Opss... somente números são aceitos"
-        } else {
-            self.textField.error = nil
+            if !text.isEmpty {
+                self.numberTextField.error = "Opss... somente números são aceitos"
+            } else {
+                self.numberTextField.error = nil
+            }
         }
 
         return true

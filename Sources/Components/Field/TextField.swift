@@ -91,6 +91,10 @@ public extension TextField {
     override func resignFirstResponder() -> Bool {
         return textField.resignFirstResponder()
     }
+
+    func equals(textField: UITextField) -> Bool {
+        return self.textField == textField
+    }
 }
 
 extension TextField {
@@ -162,12 +166,16 @@ extension TextField {
 
     @objc func handleEditingDidBegin() {
         self.isActive = true
-        self.state = .active
+        if error == nil {
+            self.state = .active
+        }
     }
 
     @objc func handleEditingDidEnd() {
         self.isActive = false
-        self.state = .enable
+        if error == nil {
+            self.state = .enable
+        }
     }
 
     private func handleState() {

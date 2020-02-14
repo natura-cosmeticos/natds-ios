@@ -64,4 +64,14 @@ class TextFieldTests: FBSnapshotTestCase {
         XCTAssertEqual(sut.textField.autocorrectionType, UITextAutocorrectionType.no)
     }
 
+    func test_equals_whenTextFieldIsEqual_expectedTrue() {
+        let textField = sut.textField
+        XCTAssertTrue(sut.equals(textField: textField))
+    }
+
+    func test_equals_whenTextFieldNotEqual_expectedFalse() {
+        let textField = UITextField()
+        XCTAssertFalse(sut.equals(textField: textField))
+    }
+
 }
