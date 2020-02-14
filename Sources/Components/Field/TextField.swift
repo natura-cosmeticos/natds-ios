@@ -33,7 +33,7 @@ public class TextField: UIView {
         }
     }
 
-    private var state: State = .enable {
+    private(set) var state: State = .enable {
         didSet {
             handleState()
         }
@@ -144,7 +144,7 @@ extension TextField {
 extension TextField {
 
     @objc func handleTap() {
-        _ = textField.becomeFirstResponder()
+        becomeFirstResponder()
     }
 
     @objc func handleEditingDidBegin() {
