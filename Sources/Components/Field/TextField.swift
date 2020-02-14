@@ -6,6 +6,11 @@ public class TextField: UIView {
         case error
     }
 
+    public enum TextFieldType {
+        case text
+        case number
+    }
+
     public var info: String? {
         get { infoLabel.text }
         set { infoLabel.text = newValue }
@@ -33,6 +38,12 @@ public class TextField: UIView {
         }
     }
 
+    public var type: TextFieldType = .text {
+        didSet {
+            handleTextFieldType()
+        }
+    }
+
     private(set) var state: State = .enable {
         didSet {
             handleState()
@@ -45,7 +56,7 @@ public class TextField: UIView {
         return label
     }()
 
-    private lazy var textField: Field = {
+    private(set) lazy var textField: Field = {
         let field = Field()
         return field
     }()
@@ -86,6 +97,7 @@ extension TextField {
 
     private func setup() {
         backgroundColor = .clear
+
         addInfoLabel()
         addTextField()
         addHelperLabel()
@@ -97,6 +109,7 @@ extension TextField {
         addGestureRecognizer(tapRecognizer)
 
         handleState()
+        handleTextFieldType()
     }
 
     private func addInfoLabel() {
@@ -189,6 +202,20 @@ extension TextField {
             state = .error
         } else {
             state = isActive ? .active : .enable
+        }
+    }
+
+    private func handleTextFieldType() {
+        switch self.type {
+        case .text:
+            self.textField.autocapitalizationType = .none
+            self.textField.keyboardType = .default
+            self.textField.autocorrectionType = .yes
+
+        case .number:
+            self.textField.autocapitalizationType = .none
+            self.textField.keyboardType = .numberPad
+            self.textField.autocorrectionType = .no
         }
     }
 }

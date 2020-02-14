@@ -5,6 +5,8 @@ class TextFieldViewController: UIViewController {
 
     private let textField = TextField()
 
+    private let numberTextField = TextField()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -19,13 +21,19 @@ class TextFieldViewController: UIViewController {
         view.backgroundColor = .white
         addTextField()
 
-        textField.info = "CPF"
-        textField.placeholder = "Digite o nº do CPF"
-        textField.helper = "Digite apenas os números"
+        textField.info = "Nome"
+        textField.placeholder = "Digite seu nome"
         textField.delegate = self
+
+        numberTextField.info = "CPF"
+        numberTextField.placeholder = "Digite o nº do CPF"
+        numberTextField.helper = "Digite apenas os números"
+        numberTextField.type = .number
+        numberTextField.delegate = self
     }
 
     private func addTextField() {
+
         view.addSubview(textField)
         textField.translatesAutoresizingMaskIntoConstraints = false
 
@@ -36,10 +44,21 @@ class TextFieldViewController: UIViewController {
         ]
 
         NSLayoutConstraint.activate(constraints)
+
+        view.addSubview(numberTextField)
+        numberTextField.translatesAutoresizingMaskIntoConstraints = false
+
+        let numberTextFieldConstraints = [
+            numberTextField.topAnchor.constraint(equalTo: textField.bottomAnchor, constant: 16),
+            numberTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            numberTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
+        ]
+
+        NSLayoutConstraint.activate(numberTextFieldConstraints)
     }
 
     @objc func didTapView() {
-        textField.resignFirstResponder()
+        view.endEditing(true)
     }
 }
 
