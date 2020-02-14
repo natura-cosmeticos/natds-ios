@@ -1,4 +1,4 @@
-public enum Icon: String {
+public enum Icon: String, CaseIterable {
     case filledActionAdd = "\u{EA01}"
     case filledActionCancel = "\u{EA02}"
     case filledActionCheck = "\u{EA03}"

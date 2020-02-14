@@ -1,6 +1,5 @@
-class IconView: UIView {
-
-    var icon: Icon? {
+public class IconView: UIView {
+    public var icon: Icon? {
         didSet {
             iconLabel.text = icon?.rawValue
         }
@@ -8,11 +7,12 @@ class IconView: UIView {
 
     private lazy var iconLabel: UILabel = {
         let label = UILabel()
+        label.textAlignment = .center
         label.font = .iconFont()
         return label
     }()
 
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
     }
@@ -22,7 +22,7 @@ class IconView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func tintColorDidChange() {
+    public override func tintColorDidChange() {
         super.tintColorDidChange()
         iconLabel.textColor = tintColor
     }
