@@ -172,14 +172,14 @@ extension TextField {
     @objc func handleEditingDidBegin() {
         self.isActive = true
         if error == nil {
-            self.state = .active
+           handleTextFieldState(state: .active)
         }
     }
 
     @objc func handleEditingDidEnd() {
         self.isActive = false
         if error == nil {
-            self.state = .enable
+            handleTextFieldState(state: .enable)
         }
     }
 
@@ -212,9 +212,11 @@ extension TextField {
 
     private func handleError() {
         if error != nil {
-            state = .error
+            handleTextFieldState(state: .error)
         } else {
-            state = isActive ? .active : .enable
+            isActive
+                ? handleTextFieldState(state: .active)
+                : handleTextFieldState(state: .enable)
         }
     }
 
@@ -230,5 +232,9 @@ extension TextField {
             self.textField.keyboardType = .numberPad
             self.textField.autocorrectionType = .no
         }
+    }
+
+    private func handleTextFieldState(state: State) {
+        self.state = state
     }
 }
