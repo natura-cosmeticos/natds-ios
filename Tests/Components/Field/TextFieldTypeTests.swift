@@ -15,6 +15,18 @@ class TextFieldTypeTests: XCTestCase {
         XCTAssertEqual(sut.capitalization, expectedCaptalization)
     }
 
+    func test_name_returnsExpectedKeyboardAndTextSettings() {
+        let expectedKeyboard = UIKeyboardType.default
+        let expectedAutocorrection = UITextAutocorrectionType.no
+        let expectedCaptalization = UITextAutocapitalizationType.words
+
+        let sut = TextFieldType.name
+
+        XCTAssertEqual(sut.keyboard, expectedKeyboard)
+        XCTAssertEqual(sut.autoCorrection, expectedAutocorrection)
+        XCTAssertEqual(sut.capitalization, expectedCaptalization)
+    }
+
     func test_number_returnsExpectedKeyboardAndTextSettings() {
         let expectedKeyboard = UIKeyboardType.numberPad
         let expectedAutocorrection = UITextAutocorrectionType.no

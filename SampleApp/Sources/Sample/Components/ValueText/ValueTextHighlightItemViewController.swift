@@ -1,22 +1,20 @@
 import UIKit
 import NatDS
 
-class ValueTextHighlightViewController: UIViewController {
+class ValueTextHighlightItemViewController: UIViewController, SampleItem {
+
+    static var name: String = "Value Text Highlight"
 
     private let valueTextHighlight = ValueTextHighlight()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        title = "Value Text Highlight"
     }
 
     private func setup() {
+        title = Self.name
         view.backgroundColor = .white
-
-        let backButton = UIBarButtonItem()
-        backButton.title = "Sample App"
-        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
 
         addValueTextHighlight()
 
@@ -29,7 +27,8 @@ class ValueTextHighlightViewController: UIViewController {
         valueTextHighlight.translatesAutoresizingMaskIntoConstraints = false
 
         let constraints = [
-            valueTextHighlight.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
+            valueTextHighlight.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            valueTextHighlight.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             valueTextHighlight.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             valueTextHighlight.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
         ]

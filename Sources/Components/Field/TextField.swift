@@ -205,22 +205,21 @@ extension TextField: UITextFieldDelegate {
 
     public func textFieldDidBeginEditing(_ textField: UITextField) {
         self.isEditing = true
-        delegate?.textFieldDidBeginEditing(self)
+        delegate?.textFieldDidBeginEditing?(self)
     }
 
     public func textFieldDidEndEditing(_ textField: UITextField) {
         self.isEditing = false
-        delegate?.textFieldDidEndEditing(self)
+        delegate?.textFieldDidEndEditing?(self)
     }
 
     public func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        return delegate?.textFieldShouldBeginEditing(self) ?? true
+        return delegate?.textFieldShouldBeginEditing?(self) ?? true
     }
 
     public func textField(_ textField: UITextField,
                           shouldChangeCharactersIn range: NSRange,
                           replacementString string: String) -> Bool {
-
-        return delegate?.textField(self, changeCharInRange: range, string: string) ?? true
+        return delegate?.textField?(self, changeCharInRange: range, string: string) ?? true
     }
 }

@@ -36,17 +36,12 @@ class TextFieldTests: FBSnapshotTestCase {
         FBSnapshotVerifyView(sut)
     }
 
-    func test_textFieldType_whenTypeIsText_expectedTextKeyboard() {
-        sut.type = TextFieldType.text
-        XCTAssertEqual(sut.textField.autocapitalizationType, UITextAutocapitalizationType.none)
-        XCTAssertEqual(sut.textField.keyboardType, UIKeyboardType.default)
-        XCTAssertEqual(sut.textField.autocorrectionType, UITextAutocorrectionType.yes)
-    }
+    func test_type_whenTypeIsText_expectedTypeSetup() {
+        let expectedType = TextFieldType.text
+        sut.type = expectedType
 
-//    func test_textFieldType_whenTypeIsNumber_expectedNumberKeyboard() {
-//        sut.type = TextField.TextFieldType.number
-//        XCTAssertEqual(sut.textField.autocapitalizationType, UITextAutocapitalizationType.none)
-//        XCTAssertEqual(sut.textField.keyboardType, UIKeyboardType.numberPad)
-//        XCTAssertEqual(sut.textField.autocorrectionType, UITextAutocorrectionType.no)
-//    }
+        XCTAssertEqual(sut.textField.keyboardType, expectedType.keyboard)
+        XCTAssertEqual(sut.textField.autocorrectionType, expectedType.autoCorrection)
+        XCTAssertEqual(sut.textField.autocapitalizationType, expectedType.capitalization)
+    }
 }
