@@ -11,46 +11,30 @@ class TextFieldTests: FBSnapshotTestCase {
         sut = TextField(frame: CGRect(x: 0, y: 0, width: 328, height: 99))
         sut.backgroundColor = .white
 
-        sut.info = "Label"
+        sut.title = "Label"
         sut.placeholder = "Placeholder"
         sut.helper = "Helper Text"
     }
 
-    func test_enableState_hasEnableSnapshot() {
+    func test_enableState_whenHasNoFocus_returnEnableStateSnapshot() {
         sut.handleEditingDidEnd()
         FBSnapshotVerifyView(sut)
     }
 
-    func test_activeState_hasActiveSnapshot() {
+    func test_activeState_whenHasFocus_returnActiveStateSnapshot() {
         sut.handleEditingDidBegin()
         FBSnapshotVerifyView(sut)
     }
 
-    func test_errorState_hasErrorSnapshot() {
+    func test_enableState_whenHasError_returnErrorStateSnapshot() {
         sut.error = "Error: Has an error"
+        XCTAssertEqual(sut.state, TextField.State.error)
         FBSnapshotVerifyView(sut)
     }
 
     func test_text_whenTextIsSet_expectedTextFieldIsFilledSnapshot() {
         sut.text = "999.999.999-99"
         FBSnapshotVerifyView(sut)
-    }
-
-    func test_error_whenHasString_expectedStateError() {
-        sut.error = "Error: Has an error"
-        XCTAssertEqual(sut.state, TextField.State.error)
-    }
-
-    func test_error_whenStringIsNil_expectedStateActive() {
-        sut.handleEditingDidBegin()
-        sut.error = nil
-        XCTAssertEqual(sut.state, TextField.State.active)
-    }
-
-    func test_error_whenHasString_expectedStateEnable() {
-        sut.handleEditingDidEnd()
-        sut.error = nil
-        XCTAssertEqual(sut.state, TextField.State.enable)
     }
 
     func test_textFieldType_whenTypeIsText_expectedTextKeyboard() {

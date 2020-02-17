@@ -20,8 +20,8 @@ class ValueTextHighlightViewController: UIViewController {
 
         addValueTextHighlight()
 
-        valueTextHighlight.valueDescription = "Valor trânsferido"
-        valueTextHighlight.value = "R$40,00"
+        valueTextHighlight.valueDescription = "Amout value"
+        valueTextHighlight.value = "$40,00"
     }
 
     private func addValueTextHighlight() {

@@ -26,13 +26,13 @@ class TextFieldViewController: UIViewController {
 
         addTextField()
 
-        textField.info = "Nome"
-        textField.placeholder = "Digite seu nome"
+        textField.title = "Name"
+        textField.placeholder = "Type your name"
         textField.delegate = self
 
-        numberTextField.info = "CPF"
-        numberTextField.placeholder = "Digite o nº do CPF"
-        numberTextField.helper = "Digite apenas os números"
+        numberTextField.title = "Document Id"
+        numberTextField.placeholder = "Type your document id"
+        numberTextField.helper = "Only numbers."
         numberTextField.type = .number
         numberTextField.delegate = self
     }
@@ -78,7 +78,7 @@ extension TextFieldViewController: UITextFieldDelegate {
             let text = expectedText.filter { !"0123456789".contains($0) }
 
             if !text.isEmpty {
-                self.numberTextField.error = "Opss... somente números são aceitos"
+                self.numberTextField.error = "Opss... only numbers are accepted."
             } else {
                 self.numberTextField.error = nil
             }

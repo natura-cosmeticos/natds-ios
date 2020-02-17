@@ -11,9 +11,9 @@ public class TextField: UIView {
         case number
     }
 
-    public var info: String? {
-        get { infoLabel.text }
-        set { infoLabel.text = newValue }
+    public var title: String? {
+        get { titleLabel.text }
+        set { titleLabel.text = newValue }
     }
 
     public var text: String? {
@@ -55,13 +55,13 @@ public class TextField: UIView {
         }
     }
 
-    private var isActive: Bool = false {
+    private var isEditing: Bool = false {
         didSet {
             changeState()
         }
     }
 
-    private lazy var infoLabel: UILabel = {
+    private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.font = Fonts.button
         return label
@@ -111,7 +111,7 @@ extension TextField {
     private func setup() {
         backgroundColor = .clear
 
-        addInfoLabel()
+        addTitleLabel()
         addTextField()
         addHelperLabel()
 
@@ -125,14 +125,14 @@ extension TextField {
         handleTextFieldType()
     }
 
-    private func addInfoLabel() {
-        addSubview(infoLabel)
-        infoLabel.translatesAutoresizingMaskIntoConstraints = false
+    private func addTitleLabel() {
+        addSubview(titleLabel)
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
 
         let constraints = [
-            infoLabel.topAnchor.constraint(equalTo: topAnchor),
-            infoLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
-            infoLabel.trailingAnchor.constraint(equalTo: trailingAnchor)
+            titleLabel.topAnchor.constraint(equalTo: topAnchor),
+            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
+            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor)
         ]
 
         NSLayoutConstraint.activate(constraints)
@@ -143,7 +143,7 @@ extension TextField {
         textField.translatesAutoresizingMaskIntoConstraints = false
 
         let constraints = [
-            textField.topAnchor.constraint(equalTo: infoLabel.bottomAnchor, constant: 4),
+            textField.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 4),
             textField.leadingAnchor.constraint(equalTo: leadingAnchor),
             textField.trailingAnchor.constraint(equalTo: trailingAnchor),
             textField.heightAnchor.constraint(equalToConstant: 56)
@@ -169,16 +169,16 @@ extension TextField {
 
 extension TextField {
 
-    @objc func handleTap() {
+    @objc private func handleTap() {
         becomeFirstResponder()
     }
 
     @objc func handleEditingDidBegin() {
-        self.isActive = true
+        self.isEditing = true
     }
 
     @objc func handleEditingDidEnd() {
-        self.isActive = false
+        self.isEditing = false
     }
 
     private func handleState() {
@@ -186,7 +186,7 @@ extension TextField {
         case .enable:
             textField.borderWidth = 1
             textField.borderColor = Colors.lowEmphasis
-            infoLabel.textColor = Colors.Content.mediumEmphasis
+            titleLabel.textColor = Colors.Content.mediumEmphasis
             helperLabel.textColor = Colors.Content.mediumEmphasis
             helperLabel.text = helper
 
@@ -194,7 +194,7 @@ extension TextField {
             textField.borderWidth = 2
             textField.borderColor = Colors.primary
             textField.tintColor = Colors.primary
-            infoLabel.textColor = Colors.Content.mediumEmphasis
+            titleLabel.textColor = Colors.Content.mediumEmphasis
             helperLabel.textColor = Colors.Content.mediumEmphasis
             helperLabel.text = helper
 
@@ -202,7 +202,7 @@ extension TextField {
             textField.borderWidth = 2
             textField.borderColor = Colors.Feedback.alert
             textField.tintColor = Colors.Feedback.alert
-            infoLabel.textColor = Colors.Feedback.alert
+            titleLabel.textColor = Colors.Feedback.alert
             helperLabel.textColor = Colors.Feedback.alert
             helperLabel.attributedText = error?.withIcon(Icon.outlinedActionCancel.rawValue)
         }
@@ -226,9 +226,7 @@ extension TextField {
         if error != nil {
             self.state = .error
         } else {
-            self.state = isActive
-                ? .active
-                : .enable
+            self.state = isEditing ? .active : .enable
         }
     }
 }
