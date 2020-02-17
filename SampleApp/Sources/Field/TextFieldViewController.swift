@@ -19,6 +19,11 @@ class TextFieldViewController: UIViewController {
 
     private func setup() {
         view.backgroundColor = .white
+
+        let backButton = UIBarButtonItem()
+        backButton.title = "Sample App"
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+
         addTextField()
 
         textField.info = "Nome"

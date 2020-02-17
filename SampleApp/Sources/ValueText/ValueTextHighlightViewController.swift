@@ -8,12 +8,16 @@ class ValueTextHighlightViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-
         title = "Value Text Highlight"
     }
 
     private func setup() {
         view.backgroundColor = .white
+
+        let backButton = UIBarButtonItem()
+        backButton.title = "Sample App"
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+
         addValueTextHighlight()
 
         valueTextHighlight.valueDescription = "Valor trânsferido"

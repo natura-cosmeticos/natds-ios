@@ -39,7 +39,7 @@ public class TextField: UIView {
 
     public var error: String? {
         didSet {
-            handleError()
+            changeState()
         }
     }
 
@@ -52,6 +52,12 @@ public class TextField: UIView {
     private(set) var state: State = .enable {
         didSet {
             handleState()
+        }
+    }
+
+    private var isActive: Bool = false {
+        didSet {
+            changeState()
         }
     }
 
@@ -71,8 +77,6 @@ public class TextField: UIView {
         label.font = Fonts.caption
         return label
     }()
-
-    private var isActive = false
 
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -171,16 +175,10 @@ extension TextField {
 
     @objc func handleEditingDidBegin() {
         self.isActive = true
-        if error == nil {
-           handleTextFieldState(state: .active)
-        }
     }
 
     @objc func handleEditingDidEnd() {
         self.isActive = false
-        if error == nil {
-            handleTextFieldState(state: .enable)
-        }
     }
 
     private func handleState() {
@@ -210,16 +208,6 @@ extension TextField {
         }
     }
 
-    private func handleError() {
-        if error != nil {
-            handleTextFieldState(state: .error)
-        } else {
-            isActive
-                ? handleTextFieldState(state: .active)
-                : handleTextFieldState(state: .enable)
-        }
-    }
-
     private func handleTextFieldType() {
         switch self.type {
         case .text:
@@ -234,7 +222,13 @@ extension TextField {
         }
     }
 
-    private func handleTextFieldState(state: State) {
-        self.state = state
+    private func changeState() {
+        if error != nil {
+            self.state = .error
+        } else {
+            self.state = isActive
+                ? .active
+                : .enable
+        }
     }
 }
