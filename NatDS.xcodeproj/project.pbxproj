@@ -48,6 +48,8 @@
 		64DF47E123FB490200DAF441 /* TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DF47E023FB490200DAF441 /* TextFieldDelegate.swift */; };
 		64DF47E323FB492100DAF441 /* TextFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DF47E223FB492100DAF441 /* TextFieldType.swift */; };
 		64DF47E523FB4A5600DAF441 /* TextFieldTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DF47E423FB4A5600DAF441 /* TextFieldTypeTests.swift */; };
+		A9325A6623FB34EC0023979C /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9325A6523FB34EC0023979C /* UICollectionView+Reusable.swift */; };
+		A9325A6A23FB35C50023979C /* UICollectionView+ReusableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9325A6723FB35450023979C /* UICollectionView+ReusableTests.swift */; };
 		A971BE6F2398171C00A0D509 /* NavigationDrawerDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A971BE6E2398171C00A0D509 /* NavigationDrawerDelegateMock.swift */; };
 		A971BE712398306300A0D509 /* NavigationDrawer+IndexMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A971BE702398306300A0D509 /* NavigationDrawer+IndexMenu.swift */; };
 		A971BE73239831F200A0D509 /* NavigationDrawer+IndexMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A971BE72239831F200A0D509 /* NavigationDrawer+IndexMenuTests.swift */; };
@@ -120,6 +122,8 @@
 		64DF47E423FB4A5600DAF441 /* TextFieldTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTypeTests.swift; sourceTree = "<group>"; };
 		9A46395C038D4497A880A6FF /* Pods-NatDSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatDSTests.release.xcconfig"; path = "Target Support Files/Pods-NatDSTests/Pods-NatDSTests.release.xcconfig"; sourceTree = "<group>"; };
 		A8B18363274C7A70CF4443A3 /* Pods-NatDSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatDSTests.debug.xcconfig"; path = "Target Support Files/Pods-NatDSTests/Pods-NatDSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A9325A6523FB34EC0023979C /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
+		A9325A6723FB35450023979C /* UICollectionView+ReusableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+ReusableTests.swift"; sourceTree = "<group>"; };
 		A971BE6E2398171C00A0D509 /* NavigationDrawerDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerDelegateMock.swift; sourceTree = "<group>"; };
 		A971BE702398306300A0D509 /* NavigationDrawer+IndexMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationDrawer+IndexMenu.swift"; sourceTree = "<group>"; };
 		A971BE72239831F200A0D509 /* NavigationDrawer+IndexMenuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationDrawer+IndexMenuTests.swift"; sourceTree = "<group>"; };
@@ -437,6 +441,7 @@
 			children = (
 				A988199A238C5AAF0008230F /* UIColor+Hex.swift */,
 				112BAC2423984416009001A7 /* UITableView+Reusable.swift */,
+				A9325A6523FB34EC0023979C /* UICollectionView+Reusable.swift */,
 				A9CCF8D923CCDDF700000FC0 /* UIFont+Icon.swift */,
 				64D84FCD23F5F574004DD910 /* String+Icon.swift */,
 				43C02A3423FAFDDD0057A31C /* NSMutableAttributedString+Builder.swift */,
@@ -449,6 +454,7 @@
 			children = (
 				A9D3454A238C69480013398C /* UIColor+HexTests.swift */,
 				112BAC2823984562009001A7 /* UITableView+ReusableTests.swift */,
+				A9325A6723FB35450023979C /* UICollectionView+ReusableTests.swift */,
 				A9CCF8E923CCF16400000FC0 /* UIFont+IconTests.swift */,
 				64DF47DE23FB2C7D00DAF441 /* String+IconTests.swift */,
 				43C02A3623FAFE290057A31C /* NSAttributedString+BuilderTests.swift */,
@@ -736,6 +742,7 @@
 				4378068723F33A66004A9998 /* ValueTextHighlight.swift in Sources */,
 				117FE026238D9B070032E2AC /* Fonts.swift in Sources */,
 				A9CCF8DC23CCDF0100000FC0 /* FontIconStyle.swift in Sources */,
+				A9325A6623FB34EC0023979C /* UICollectionView+Reusable.swift in Sources */,
 				117FE025238D9B070032E2AC /* FontsNatura.swift in Sources */,
 				A9CCF8D823CCDAC900000FC0 /* Icon.swift in Sources */,
 				11518B682396C00700220570 /* NavigationDrawer.swift in Sources */,
@@ -776,6 +783,7 @@
 				117FE029238DA4B70032E2AC /* NavigationDrawerSubitemCellTests.swift in Sources */,
 				64A1125E23F331CA00119CE4 /* DividerTests.swift in Sources */,
 				112BAC2723984476009001A7 /* ReusableViewTests.swift in Sources */,
+				A9325A6A23FB35C50023979C /* UICollectionView+ReusableTests.swift in Sources */,
 				4378068A23F3442D004A9998 /* ValueTextHighlightTests.swift in Sources */,
 				112BAC2923984562009001A7 /* UITableView+ReusableTests.swift in Sources */,
 				11581AA8238F037D003E45D7 /* AssetsHelperTests.swift in Sources */,
