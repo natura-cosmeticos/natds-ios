@@ -2,7 +2,6 @@ import NatDS
 
 class IconographyItemViewController: UIViewController, SampleItem {
     static var name = "Iconography"
-    var cellID = "CellID"
 
     private let icons: [Icon] = Icon.allCases
 
@@ -14,7 +13,7 @@ class IconographyItemViewController: UIViewController, SampleItem {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.collectionViewLayout = layout
         collectionView.dataSource = self
-        collectionView.register(IconCollectioViewCell.self, forCellWithReuseIdentifier: cellID)
+        collectionView.register(IconCollectioViewCell.self)
         collectionView.backgroundColor = .white
         return collectionView
     }()
@@ -44,10 +43,7 @@ extension IconographyItemViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let view = collectionView.dequeueReusableCell(withReuseIdentifier: cellID,
-                                                            for: indexPath) as? IconCollectioViewCell else {
-                                                                return UICollectionViewCell()
-        }
+        let view = collectionView.dequeueReusableCell(for: indexPath, cellType: IconCollectioViewCell.self)
         view.icon = icons[indexPath.row]
         return view
     }

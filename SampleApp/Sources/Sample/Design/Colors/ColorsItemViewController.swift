@@ -2,7 +2,6 @@ import NatDS
 
 class ColorsItemViewController: UIViewController, SampleItem {
     static var name = "Colors"
-    var cellID = "CellID"
 
     private let colors: [DSColor] = [
         ("Primary", Colors.primary),
@@ -26,7 +25,7 @@ class ColorsItemViewController: UIViewController, SampleItem {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.collectionViewLayout = layout
         collectionView.dataSource = self
-        collectionView.register(ColorCollectionViewCell.self, forCellWithReuseIdentifier: cellID)
+        collectionView.register(ColorCollectionViewCell.self)
         collectionView.backgroundColor = .white
         return collectionView
     }()
@@ -56,10 +55,7 @@ extension ColorsItemViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let view = collectionView.dequeueReusableCell(withReuseIdentifier: cellID,
-                                                            for: indexPath) as? ColorCollectionViewCell else {
-                                                                return UICollectionViewCell()
-        }
+        let view = collectionView.dequeueReusableCell(for: indexPath, cellType: ColorCollectionViewCell.self)
         view.color = colors[indexPath.row]
         return view
     }

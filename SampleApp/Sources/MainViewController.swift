@@ -3,12 +3,11 @@ import UIKit
 class MainViewController: UITableViewController {
 
     let dataSource = MainDataSource()
-    let cellID = "SectionCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Sample App"
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
+        tableView.register(UITableViewCell.self)
         tableView.showsVerticalScrollIndicator = false
         tableView.separatorStyle = .none
     }
@@ -27,7 +26,7 @@ class MainViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = dataSource.sections[indexPath.section].items[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
+        let cell = tableView.dequeueReusableCell(for: indexPath, cellType: UITableViewCell.self)
         cell.textLabel?.text = item.name
         cell.selectionStyle = .none
         return cell
