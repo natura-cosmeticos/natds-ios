@@ -8,18 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		A904ECBA23D607D800709B43 /* ComponentsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A904ECB923D607D800709B43 /* ComponentsSection.swift */; };
-		A904ECBC23D6088600709B43 /* ButtonsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A904ECBB23D6088600709B43 /* ButtonsItem.swift */; };
+		A904ECBC23D6088600709B43 /* ButtonsItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A904ECBB23D6088600709B43 /* ButtonsItemViewController.swift */; };
 		A904ECC023D760C400709B43 /* DesignSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A904ECBF23D760C400709B43 /* DesignSection.swift */; };
-		A904ECC323D761BE00709B43 /* IconographyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A904ECC223D761BE00709B43 /* IconographyItem.swift */; };
+		A904ECC323D761BE00709B43 /* IconographyItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A904ECC223D761BE00709B43 /* IconographyItemViewController.swift */; };
 		A904ECC623D7628000709B43 /* IconCollectioViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A904ECC523D7628000709B43 /* IconCollectioViewCell.swift */; };
 		A97328BD23CFA2F500ADC5C2 /* MainDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97328BC23CFA2F500ADC5C2 /* MainDataSource.swift */; };
 		A97328BF23CFA32900ADC5C2 /* SampleSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97328BE23CFA32900ADC5C2 /* SampleSection.swift */; };
 		A97328C123CFA33800ADC5C2 /* SampleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97328C023CFA33800ADC5C2 /* SampleItem.swift */; };
 		A97328C323CFA35800ADC5C2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97328C223CFA35800ADC5C2 /* MainViewController.swift */; };
-		A97328C823CFA3DC00ADC5C2 /* ColorsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97328C723CFA3DC00ADC5C2 /* ColorsItem.swift */; };
+		A97328C823CFA3DC00ADC5C2 /* ColorsItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97328C723CFA3DC00ADC5C2 /* ColorsItemViewController.swift */; };
 		A9B8A4DA23D0FCD50055E8A3 /* ColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B8A4D923D0FCD50055E8A3 /* ColorCollectionViewCell.swift */; };
 		A9D71BC22386DFEE00CDEC1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D71BC12386DFEE00CDEC1D /* AppDelegate.swift */; };
-		A9D71BC62386DFEE00CDEC1D /* NavigationDrawerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D71BC52386DFEE00CDEC1D /* NavigationDrawerItem.swift */; };
+		A9D71BC62386DFEE00CDEC1D /* NavigationDrawerItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D71BC52386DFEE00CDEC1D /* NavigationDrawerItemViewController.swift */; };
 		A9D71BCB2386DFF200CDEC1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9D71BCA2386DFF200CDEC1D /* Assets.xcassets */; };
 		A9D71BCE2386DFF200CDEC1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9D71BCC2386DFF200CDEC1D /* LaunchScreen.storyboard */; };
 		A9D71BD72386E12600CDEC1D /* NatDS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D71BD62386E12600CDEC1D /* NatDS.framework */; };
@@ -42,19 +42,19 @@
 
 /* Begin PBXFileReference section */
 		A904ECB923D607D800709B43 /* ComponentsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentsSection.swift; sourceTree = "<group>"; };
-		A904ECBB23D6088600709B43 /* ButtonsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsItem.swift; sourceTree = "<group>"; };
+		A904ECBB23D6088600709B43 /* ButtonsItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsItemViewController.swift; sourceTree = "<group>"; };
 		A904ECBF23D760C400709B43 /* DesignSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSection.swift; sourceTree = "<group>"; };
-		A904ECC223D761BE00709B43 /* IconographyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconographyItem.swift; sourceTree = "<group>"; };
+		A904ECC223D761BE00709B43 /* IconographyItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconographyItemViewController.swift; sourceTree = "<group>"; };
 		A904ECC523D7628000709B43 /* IconCollectioViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCollectioViewCell.swift; sourceTree = "<group>"; };
 		A97328BC23CFA2F500ADC5C2 /* MainDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDataSource.swift; sourceTree = "<group>"; };
 		A97328BE23CFA32900ADC5C2 /* SampleSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleSection.swift; sourceTree = "<group>"; };
 		A97328C023CFA33800ADC5C2 /* SampleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleItem.swift; sourceTree = "<group>"; };
 		A97328C223CFA35800ADC5C2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		A97328C723CFA3DC00ADC5C2 /* ColorsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsItem.swift; sourceTree = "<group>"; };
+		A97328C723CFA3DC00ADC5C2 /* ColorsItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsItemViewController.swift; sourceTree = "<group>"; };
 		A9B8A4D923D0FCD50055E8A3 /* ColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCollectionViewCell.swift; sourceTree = "<group>"; };
 		A9D71BBE2386DFEE00CDEC1D /* NatDS-SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NatDS-SampleApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9D71BC12386DFEE00CDEC1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A9D71BC52386DFEE00CDEC1D /* NavigationDrawerItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerItem.swift; sourceTree = "<group>"; };
+		A9D71BC52386DFEE00CDEC1D /* NavigationDrawerItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerItemViewController.swift; sourceTree = "<group>"; };
 		A9D71BCA2386DFF200CDEC1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9D71BCD2386DFF200CDEC1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9D71BCF2386DFF200CDEC1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,7 +76,7 @@
 		A904ECB823D607BD00709B43 /* Button */ = {
 			isa = PBXGroup;
 			children = (
-				A904ECBB23D6088600709B43 /* ButtonsItem.swift */,
+				A904ECBB23D6088600709B43 /* ButtonsItemViewController.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -105,7 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				A904ECC423D761D300709B43 /* Helper */,
-				A904ECC223D761BE00709B43 /* IconographyItem.swift */,
+				A904ECC223D761BE00709B43 /* IconographyItemViewController.swift */,
 			);
 			path = Iconography;
 			sourceTree = "<group>";
@@ -133,7 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				A9B8A4DB23D0FD680055E8A3 /* Helper */,
-				A97328C723CFA3DC00ADC5C2 /* ColorsItem.swift */,
+				A97328C723CFA3DC00ADC5C2 /* ColorsItemViewController.swift */,
 			);
 			path = Colors;
 			sourceTree = "<group>";
@@ -141,7 +141,7 @@
 		A97328C623CFA3B600ADC5C2 /* NavigationDrawer */ = {
 			isa = PBXGroup;
 			children = (
-				A9D71BC52386DFEE00CDEC1D /* NavigationDrawerItem.swift */,
+				A9D71BC52386DFEE00CDEC1D /* NavigationDrawerItemViewController.swift */,
 			);
 			path = NavigationDrawer;
 			sourceTree = "<group>";
@@ -273,17 +273,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				A904ECC623D7628000709B43 /* IconCollectioViewCell.swift in Sources */,
-				A9D71BC62386DFEE00CDEC1D /* NavigationDrawerItem.swift in Sources */,
-				A904ECBC23D6088600709B43 /* ButtonsItem.swift in Sources */,
+				A9D71BC62386DFEE00CDEC1D /* NavigationDrawerItemViewController.swift in Sources */,
+				A904ECBC23D6088600709B43 /* ButtonsItemViewController.swift in Sources */,
 				A904ECBA23D607D800709B43 /* ComponentsSection.swift in Sources */,
 				A97328BF23CFA32900ADC5C2 /* SampleSection.swift in Sources */,
 				A904ECC023D760C400709B43 /* DesignSection.swift in Sources */,
 				A9D71BC22386DFEE00CDEC1D /* AppDelegate.swift in Sources */,
-				A904ECC323D761BE00709B43 /* IconographyItem.swift in Sources */,
+				A904ECC323D761BE00709B43 /* IconographyItemViewController.swift in Sources */,
 				A97328C323CFA35800ADC5C2 /* MainViewController.swift in Sources */,
 				A97328BD23CFA2F500ADC5C2 /* MainDataSource.swift in Sources */,
 				A9B8A4DA23D0FCD50055E8A3 /* ColorCollectionViewCell.swift in Sources */,
-				A97328C823CFA3DC00ADC5C2 /* ColorsItem.swift in Sources */,
+				A97328C823CFA3DC00ADC5C2 /* ColorsItemViewController.swift in Sources */,
 				A97328C123CFA33800ADC5C2 /* SampleItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

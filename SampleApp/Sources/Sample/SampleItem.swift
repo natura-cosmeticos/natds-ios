@@ -1,5 +1,5 @@
 import UIKit
 
 protocol SampleItem: UIViewController {
-    var name: String { get }
+    static var name: String { get }
 }

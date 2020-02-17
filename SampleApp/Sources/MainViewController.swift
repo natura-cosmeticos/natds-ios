@@ -35,6 +35,7 @@ class MainViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = dataSource.sections[indexPath.section].items[indexPath.row]
-        navigationController?.pushViewController(item, animated: true)
+        let vc = item.init()
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

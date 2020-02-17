@@ -1,14 +1,14 @@
 import NatDS
 
-class NavigationDrawerItem: UIViewController, SampleItem {
-    var name = "Navigation Drawer"
+class NavigationDrawerItemViewController: UIViewController, SampleItem {
+    static var name = "Navigation Drawer"
 
     private let navigationDrawer = NavigationDrawer()
     private var items: [Item] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = name
+        title = Self.name
         setup()
         items = ItemFactory.build()
     }
@@ -30,7 +30,7 @@ class NavigationDrawerItem: UIViewController, SampleItem {
     }
 }
 
-extension NavigationDrawerItem: NavigationDrawerDelegate {
+extension NavigationDrawerItemViewController: NavigationDrawerDelegate {
     func numberOfItems() -> Int {
         return items.count
     }
@@ -65,7 +65,7 @@ extension NavigationDrawerItem: NavigationDrawerDelegate {
     }
 }
 
-private extension NavigationDrawerItem {
+private extension NavigationDrawerItemViewController {
     struct ItemFactory {
         static func build() -> [Item] {
             let items: [Item] = [

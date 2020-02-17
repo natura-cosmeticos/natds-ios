@@ -1,7 +1,7 @@
 import NatDS
 
-class ColorsItem: UIViewController, SampleItem {
-    var name = "Colors"
+class ColorsItemViewController: UIViewController, SampleItem {
+    static var name = "Colors"
     var cellID = "CellID"
 
     private let colors: [DSColor] = [
@@ -33,7 +33,7 @@ class ColorsItem: UIViewController, SampleItem {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = name
+        title = Self.name
         setup()
     }
 
@@ -49,7 +49,7 @@ class ColorsItem: UIViewController, SampleItem {
     }
 }
 
-extension ColorsItem: UICollectionViewDataSource {
+extension ColorsItemViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         colors.count
     }

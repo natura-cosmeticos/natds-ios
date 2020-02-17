@@ -1,7 +1,7 @@
 import NatDS
 
-class IconographyItem: UIViewController, SampleItem {
-    var name = "Iconography"
+class IconographyItemViewController: UIViewController, SampleItem {
+    static var name = "Iconography"
     var cellID = "CellID"
 
     private let icons: [Icon] = Icon.allCases
@@ -21,7 +21,7 @@ class IconographyItem: UIViewController, SampleItem {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = name
+        title = Self.name
         setup()
     }
 
@@ -37,7 +37,7 @@ class IconographyItem: UIViewController, SampleItem {
     }
 }
 
-extension IconographyItem: UICollectionViewDataSource {
+extension IconographyItemViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         icons.count
     }

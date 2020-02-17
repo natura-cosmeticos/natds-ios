@@ -1,7 +1,7 @@
 import NatDS
 
-class ButtonsItem: UIViewController, SampleItem {
-    var name = "Buttons"
+class ButtonsItemViewController: UIViewController, SampleItem {
+    static var name = "Buttons"
 
     private lazy var containedButton: ContainedButton = {
         let button = ContainedButton()
@@ -11,7 +11,7 @@ class ButtonsItem: UIViewController, SampleItem {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = name
+        title = Self.name
         setup()
     }
 
