@@ -1,81 +1,40 @@
-import NatDS
+import UIKit
 
-class MainViewController: UIViewController {
-    private let navigationDrawer = NavigationDrawer()
-    private var items: [Item] = []
+class MainViewController: UITableViewController {
+
+    let dataSource = MainDataSource()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Sample App"
-        setup()
-        items = ItemFactory.build()
+        tableView.register(UITableViewCell.self)
+        tableView.showsVerticalScrollIndicator = false
+        tableView.separatorStyle = .none
     }
 
-    private func setup() {
-        addNavigationDrawer()
-        navigationDrawer.delegate = self
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return dataSource.sections.count
     }
 
-    private func addNavigationDrawer() {
-        view.addSubview(navigationDrawer)
-        navigationDrawer.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            navigationDrawer.topAnchor.constraint(equalTo: view.topAnchor),
-            navigationDrawer.rightAnchor.constraint(equalTo: view.rightAnchor),
-            navigationDrawer.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            navigationDrawer.leftAnchor.constraint(equalTo: view.leftAnchor)
-        ])
-    }
-}
-
-extension MainViewController: NavigationDrawerDelegate {
-    func numberOfItems() -> Int {
-        return items.count
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataSource.sections[section].items.count
     }
 
-    func numberOfSubitems(in item: Int) -> Int {
-        return items[item].subitems.count
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return dataSource.sections[section].name
     }
 
-    func didSelectItem(at index: Int) {
-        print("didSelectItem: \(index)")
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let item = dataSource.sections[indexPath.section].items[indexPath.row]
+        let cell = tableView.dequeueReusableCell(for: indexPath, cellType: UITableViewCell.self)
+        cell.textLabel?.text = item.name
+        cell.selectionStyle = .none
+        return cell
     }
 
-    func didSelectSubitem(at index: NavigationDrawer.IndexMenu) {
-        print("didSelectSubitem: \(index.item),\(index.subitem)")
-    }
-
-    func configureItem(_ item: NavigationDrawerItemCell, at index: Int) {
-        item.title = items[index].label
-        item.icon = .outlinedNavigationArrowleft
-    }
-
-    func configureSubitem(_ subitem: NavigationDrawerSubitemCell, at index: NavigationDrawer.IndexMenu) {
-        subitem.title = items[index.item].subitems[index.subitem].label
-    }
-}
-
-private extension MainViewController {
-    struct ItemFactory {
-        static func build() -> [Item] {
-            var items = [Item]()
-            items.append(Item(label: "Item 1", subitems: []))
-            items.append(Item(label: "Item 2",
-                              subitems: [Subitem(label: "Subitem 2.1")]))
-            items.append(Item(label: "Item 3",
-                              subitems: [Subitem(label: "Subitem 3.1"), Subitem(label: "Subitem 3.2")]))
-            items.append(Item(label: "Item 4", subitems: []))
-
-            return items
-        }
-    }
-
-    struct Item {
-        let label: String
-        let subitems: [Subitem]
-    }
-
-    struct Subitem {
-        let label: String
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = dataSource.sections[indexPath.section].items[indexPath.row]
+        let vc = item.init()
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
