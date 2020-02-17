@@ -3,6 +3,7 @@ import NatDS
 typealias DSColor = (name: String, color: UIColor)
 
 class ColorCollectionViewCell: UICollectionViewCell {
+
     var color: DSColor? {
         didSet {
             colorView.backgroundColor = color?.color
@@ -10,13 +11,17 @@ class ColorCollectionViewCell: UICollectionViewCell {
             colorHexLabel.text = color?.color.hex
         }
     }
+
     private let colorView = UIView()
+
     private let colorNameLabel = UILabel()
+
     private let colorHexLabel: UILabel = {
         let label = UILabel()
         label.font = Fonts.body2
         return label
     }()
+
     private let stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.distribution = .fill
