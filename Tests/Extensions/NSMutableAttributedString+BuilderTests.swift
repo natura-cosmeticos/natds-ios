@@ -1,7 +1,7 @@
 import XCTest
 @testable import NatDS
 
-class NSAttributedStringBuilderTests: XCTestCase {
+class NSMutableAttributedStringBuilderTests: XCTestCase {
 
     var string: String!
 
