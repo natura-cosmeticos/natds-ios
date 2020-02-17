@@ -63,7 +63,7 @@ public enum Icon: String, CaseIterable {
     case outlinedCommunicationHelp = "\u{EA3E}"
     case outlinedCommunicationMessage = "\u{EA3F}"
     case outlinedCommunicationOccurrence = "\u{EA40}"
-    case outlinedCommunicationReademail = "\u{EA41}"
+    case outlinedCommunicationReadEmail = "\u{EA41}"
     case outlinedCommunicationSignal = "\u{EA42}"
     case outlinedCommunicationSpeaker = "\u{EA43}"
     case outlinedCommunicationTreatment = "\u{EA44}"

@@ -260,8 +260,8 @@ class IconTests: FBSnapshotTestCase {
         assert(icon: .outlinedCommunicationOccurrence)
     }
 
-    func test_outlinedCommunicationReademail_hasValidSnapshot() {
-        assert(icon: .outlinedCommunicationReademail)
+    func test_outlinedCommunicationReadEmail_hasValidSnapshot() {
+        assert(icon: .outlinedCommunicationReadEmail)
     }
 
     func test_outlinedCommunicationSignal_hasValidSnapshot() {
