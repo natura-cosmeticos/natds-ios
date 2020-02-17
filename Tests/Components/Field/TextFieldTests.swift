@@ -16,19 +16,18 @@ class TextFieldTests: FBSnapshotTestCase {
         sut.helper = "Helper Text"
     }
 
-    func test_enableState_whenHasNoFocus_returnEnableStateSnapshot() {
-        sut.handleEditingDidEnd()
+    func test_state_whenHasNoFocus_returnEnableStateSnapshot() {
+        sut.textFieldDidEndEditing(sut.textField)
         FBSnapshotVerifyView(sut)
     }
 
-    func test_activeState_whenHasFocus_returnActiveStateSnapshot() {
-        sut.handleEditingDidBegin()
+    func test_state_whenHasFocus_returnActiveStateSnapshot() {
+        sut.textFieldDidBeginEditing(sut.textField)
         FBSnapshotVerifyView(sut)
     }
 
-    func test_enableState_whenHasError_returnErrorStateSnapshot() {
+    func test_state_whenHasError_returnErrorStateSnapshot() {
         sut.error = "Error: Has an error"
-        XCTAssertEqual(sut.state, TextField.State.error)
         FBSnapshotVerifyView(sut)
     }
 
@@ -38,27 +37,16 @@ class TextFieldTests: FBSnapshotTestCase {
     }
 
     func test_textFieldType_whenTypeIsText_expectedTextKeyboard() {
-        sut.type = TextField.TextFieldType.text
+        sut.type = TextFieldType.text
         XCTAssertEqual(sut.textField.autocapitalizationType, UITextAutocapitalizationType.none)
         XCTAssertEqual(sut.textField.keyboardType, UIKeyboardType.default)
         XCTAssertEqual(sut.textField.autocorrectionType, UITextAutocorrectionType.yes)
     }
 
-    func test_textFieldType_whenTypeIsNumber_expectedNumberKeyboard() {
-        sut.type = TextField.TextFieldType.number
-        XCTAssertEqual(sut.textField.autocapitalizationType, UITextAutocapitalizationType.none)
-        XCTAssertEqual(sut.textField.keyboardType, UIKeyboardType.numberPad)
-        XCTAssertEqual(sut.textField.autocorrectionType, UITextAutocorrectionType.no)
-    }
-
-    func test_equals_whenTextFieldIsEqual_expectedTrue() {
-        let textField = sut.textField
-        XCTAssertTrue(sut.equals(textField: textField))
-    }
-
-    func test_equals_whenTextFieldNotEqual_expectedFalse() {
-        let textField = UITextField()
-        XCTAssertFalse(sut.equals(textField: textField))
-    }
-
+//    func test_textFieldType_whenTypeIsNumber_expectedNumberKeyboard() {
+//        sut.type = TextField.TextFieldType.number
+//        XCTAssertEqual(sut.textField.autocapitalizationType, UITextAutocapitalizationType.none)
+//        XCTAssertEqual(sut.textField.keyboardType, UIKeyboardType.numberPad)
+//        XCTAssertEqual(sut.textField.autocorrectionType, UITextAutocorrectionType.no)
+//    }
 }

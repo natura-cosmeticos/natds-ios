@@ -2,11 +2,11 @@ class Field: UITextField {
 
     override var placeholder: String? {
         didSet {
-            let attr: [NSAttributedString.Key: Any] = [
-                .font: Fonts.body1,
-                .foregroundColor: Colors.Content.mediumEmphasis
-            ]
-            attributedPlaceholder = NSAttributedString(string: placeholder ?? "", attributes: attr)
+            let attrPlaceholder = NSMutableAttributedString(string: placeholder ?? "")
+                .apply(font: Fonts.body1)
+                .apply(foregroundColor: Colors.Content.mediumEmphasis)
+
+            attributedPlaceholder = attrPlaceholder
         }
     }
 

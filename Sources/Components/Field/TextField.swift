@@ -6,11 +6,6 @@ public class TextField: UIView {
         case error
     }
 
-    public enum TextFieldType {
-        case text
-        case number
-    }
-
     public var title: String? {
         get { titleLabel.text }
         set { titleLabel.text = newValue }
@@ -24,11 +19,6 @@ public class TextField: UIView {
     public var placeholder: String? {
         get { textField.placeholder }
         set { textField.placeholder = newValue}
-    }
-
-    public var delegate: UITextFieldDelegate? {
-        get { textField.delegate }
-        set { textField.delegate = newValue }
     }
 
     public var helper: String? {
@@ -48,6 +38,8 @@ public class TextField: UIView {
             handleTextFieldType()
         }
     }
+
+    public weak var delegate: TextFieldDelegate?
 
     private(set) var state: State = .enable {
         didSet {
@@ -69,6 +61,7 @@ public class TextField: UIView {
 
     private(set) lazy var textField: Field = {
         let field = Field()
+        field.delegate = self
         return field
     }()
 
@@ -100,10 +93,6 @@ public extension TextField {
     override func resignFirstResponder() -> Bool {
         return textField.resignFirstResponder()
     }
-
-    func equals(textField: UITextField) -> Bool {
-        return self.textField == textField
-    }
 }
 
 extension TextField {
@@ -114,9 +103,6 @@ extension TextField {
         addTitleLabel()
         addTextField()
         addHelperLabel()
-
-        textField.addTarget(self, action: #selector(handleEditingDidBegin), for: .editingDidBegin)
-        textField.addTarget(self, action: #selector(handleEditingDidEnd), for: .editingDidEnd)
 
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         addGestureRecognizer(tapRecognizer)
@@ -173,14 +159,6 @@ extension TextField {
         becomeFirstResponder()
     }
 
-    @objc func handleEditingDidBegin() {
-        self.isEditing = true
-    }
-
-    @objc func handleEditingDidEnd() {
-        self.isEditing = false
-    }
-
     private func handleState() {
         switch state {
         case .enable:
@@ -209,17 +187,9 @@ extension TextField {
     }
 
     private func handleTextFieldType() {
-        switch self.type {
-        case .text:
-            self.textField.autocapitalizationType = .none
-            self.textField.keyboardType = .default
-            self.textField.autocorrectionType = .yes
-
-        case .number:
-            self.textField.autocapitalizationType = .none
-            self.textField.keyboardType = .numberPad
-            self.textField.autocorrectionType = .no
-        }
+        self.textField.keyboardType = type.keyboard
+        self.textField.autocorrectionType = type.autoCorrection
+        self.textField.autocapitalizationType = type.capitalization
     }
 
     private func changeState() {
@@ -228,5 +198,29 @@ extension TextField {
         } else {
             self.state = isEditing ? .active : .enable
         }
+    }
+}
+
+extension TextField: UITextFieldDelegate {
+
+    public func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.isEditing = true
+        delegate?.textFieldDidBeginEditing(self)
+    }
+
+    public func textFieldDidEndEditing(_ textField: UITextField) {
+        self.isEditing = false
+        delegate?.textFieldDidEndEditing(self)
+    }
+
+    public func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        return delegate?.textFieldShouldBeginEditing(self) ?? true
+    }
+
+    public func textField(_ textField: UITextField,
+                          shouldChangeCharactersIn range: NSRange,
+                          replacementString string: String) -> Bool {
+
+        return delegate?.textField(self, changeCharInRange: range, string: string) ?? true
     }
 }

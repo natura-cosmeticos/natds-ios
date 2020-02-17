@@ -67,13 +67,11 @@ class TextFieldViewController: UIViewController {
     }
 }
 
-extension TextFieldViewController: UITextFieldDelegate {
+extension TextFieldViewController: TextFieldDelegate {
 
-    func textField(_ textField: UITextField,
-                   shouldChangeCharactersIn range: NSRange,
-                   replacementString string: String) -> Bool {
+    func textField(_ textField: TextField, changeCharInRange: NSRange, string: String) -> Bool {
 
-        if numberTextField.equals(textField: textField) {
+        if numberTextField == textField {
             let expectedText = (textField.text ?? "")
             let text = expectedText.filter { !"0123456789".contains($0) }
 
