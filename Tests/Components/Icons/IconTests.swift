@@ -260,8 +260,8 @@ class IconTests: FBSnapshotTestCase {
         assert(icon: .outlinedCommunicationOccurrence)
     }
 
-    func test_outlinedCommunicationReadEmail_hasValidSnapshot() {
-        assert(icon: .outlinedCommunicationReadEmail)
+    func test_outlinedCommunicationReademail_hasValidSnapshot() {
+        assert(icon: .outlinedCommunicationReademail)
     }
 
     func test_outlinedCommunicationSignal_hasValidSnapshot() {
@@ -282,6 +282,10 @@ class IconTests: FBSnapshotTestCase {
 
     func test_outlinedContentAgility_hasValidSnapshot() {
         assert(icon: .outlinedContentAgility)
+    }
+
+    func test_outlinedContentBellringing_hasValidSnapshot() {
+        assert(icon: .outlinedContentBellringing)
     }
 
     func test_outlinedContentBook_hasValidSnapshot() {
@@ -316,6 +320,14 @@ class IconTests: FBSnapshotTestCase {
         assert(icon: .outlinedContentEducation)
     }
 
+    func test_outlinedContentExchangereports_hasValidSnapshot() {
+        assert(icon: .outlinedContentExchangereports)
+    }
+
+    func test_outlinedContentGallery_hasValidSnapshot() {
+        assert(icon: .outlinedContentGallery)
+    }
+
     func test_outlinedContentGift_hasValidSnapshot() {
         assert(icon: .outlinedContentGift)
     }
@@ -326,6 +338,10 @@ class IconTests: FBSnapshotTestCase {
 
     func test_outlinedContentHealth_hasValidSnapshot() {
         assert(icon: .outlinedContentHealth)
+    }
+
+    func test_outlinedContentHealthy_hasValidSnapshot() {
+        assert(icon: .outlinedContentHealthy)
     }
 
     func test_outlinedContentLock_hasValidSnapshot() {
@@ -346,6 +362,10 @@ class IconTests: FBSnapshotTestCase {
 
     func test_outlinedContentMirror_hasValidSnapshot() {
         assert(icon: .outlinedContentMirror)
+    }
+
+    func test_outlinedContentPlanb_hasValidSnapshot() {
+        assert(icon: .outlinedContentPlanb)
     }
 
     func test_outlinedContentProdutivity_hasValidSnapshot() {
