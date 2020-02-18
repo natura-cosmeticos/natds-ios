@@ -11,7 +11,6 @@ class UICollectionViewReusableTests: XCTestCase {
 
         XCTAssertNotNil(cell)
     }
-
 }
 
 extension UICollectionViewReusableTests: UICollectionViewDataSource {
