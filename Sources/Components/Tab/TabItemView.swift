@@ -9,15 +9,14 @@ class TabItemView: UIView {
         case normal
     }
 
+    private let index: Int
+    private let titleLabel = UILabel()
+
     private var state: State = .normal {
         didSet {
             handleState()
         }
     }
-
-    private let index: Int
-
-    private let titleLabel = UILabel()
 
     weak var delegate: TabItemViewDelegate?
 
