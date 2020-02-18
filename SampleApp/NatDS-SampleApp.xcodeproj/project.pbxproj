@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64D84FD123F5FC7D004DD910 /* ValueTextHighlightItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D84FD023F5FC7D004DD910 /* ValueTextHighlightItemViewController.swift */; };
+		64D84FD423F600C5004DD910 /* TextFieldItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D84FD323F600C5004DD910 /* TextFieldItemViewController.swift */; };
+		64FAAC7723FB5B880085F7C8 /* ColorHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FAAC7623FB5B880085F7C8 /* ColorHeaderCollectionViewCell.swift */; };
 		A904ECBA23D607D800709B43 /* ComponentsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A904ECB923D607D800709B43 /* ComponentsSection.swift */; };
 		A904ECBC23D6088600709B43 /* ButtonsItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A904ECBB23D6088600709B43 /* ButtonsItemViewController.swift */; };
 		A904ECC023D760C400709B43 /* DesignSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A904ECBF23D760C400709B43 /* DesignSection.swift */; };
@@ -41,6 +44,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		64D84FD023F5FC7D004DD910 /* ValueTextHighlightItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueTextHighlightItemViewController.swift; sourceTree = "<group>"; };
+		64D84FD323F600C5004DD910 /* TextFieldItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldItemViewController.swift; sourceTree = "<group>"; };
+		64FAAC7623FB5B880085F7C8 /* ColorHeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHeaderCollectionViewCell.swift; sourceTree = "<group>"; };
 		A904ECB923D607D800709B43 /* ComponentsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentsSection.swift; sourceTree = "<group>"; };
 		A904ECBB23D6088600709B43 /* ButtonsItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsItemViewController.swift; sourceTree = "<group>"; };
 		A904ECBF23D760C400709B43 /* DesignSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSection.swift; sourceTree = "<group>"; };
@@ -73,6 +79,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		64D84FCF23F5FC62004DD910 /* ValueText */ = {
+			isa = PBXGroup;
+			children = (
+				64D84FD023F5FC7D004DD910 /* ValueTextHighlightItemViewController.swift */,
+			);
+			path = ValueText;
+			sourceTree = "<group>";
+		};
+		64D84FD223F600B4004DD910 /* Field */ = {
+			isa = PBXGroup;
+			children = (
+				64D84FD323F600C5004DD910 /* TextFieldItemViewController.swift */,
+			);
+			path = Field;
+			sourceTree = "<group>";
+		};
 		A904ECB823D607BD00709B43 /* Button */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				A904ECB923D607D800709B43 /* ComponentsSection.swift */,
+				64D84FD223F600B4004DD910 /* Field */,
+				64D84FCF23F5FC62004DD910 /* ValueText */,
 				A904ECB823D607BD00709B43 /* Button */,
 				A904ECC123D7619B00709B43 /* Iconography */,
 				A97328C623CFA3B600ADC5C2 /* NavigationDrawer */,
@@ -132,7 +156,7 @@
 		A97328C523CFA3A400ADC5C2 /* Colors */ = {
 			isa = PBXGroup;
 			children = (
-				A9B8A4DB23D0FD680055E8A3 /* Helper */,
+				A9B8A4DB23D0FD680055E8A3 /* Cell */,
 				A97328C723CFA3DC00ADC5C2 /* ColorsItemViewController.swift */,
 			);
 			path = Colors;
@@ -146,12 +170,13 @@
 			path = NavigationDrawer;
 			sourceTree = "<group>";
 		};
-		A9B8A4DB23D0FD680055E8A3 /* Helper */ = {
+		A9B8A4DB23D0FD680055E8A3 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
 				A9B8A4D923D0FCD50055E8A3 /* ColorCollectionViewCell.swift */,
+				64FAAC7623FB5B880085F7C8 /* ColorHeaderCollectionViewCell.swift */,
 			);
-			path = Helper;
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		A9D71BB52386DFEE00CDEC1D = {
@@ -272,9 +297,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64D84FD423F600C5004DD910 /* TextFieldItemViewController.swift in Sources */,
+				64D84FD123F5FC7D004DD910 /* ValueTextHighlightItemViewController.swift in Sources */,
 				A904ECC623D7628000709B43 /* IconCollectioViewCell.swift in Sources */,
 				A9D71BC62386DFEE00CDEC1D /* NavigationDrawerItemViewController.swift in Sources */,
 				A904ECBC23D6088600709B43 /* ButtonsItemViewController.swift in Sources */,
+				64FAAC7723FB5B880085F7C8 /* ColorHeaderCollectionViewCell.swift in Sources */,
 				A904ECBA23D607D800709B43 /* ComponentsSection.swift in Sources */,
 				A97328BF23CFA32900ADC5C2 /* SampleSection.swift in Sources */,
 				A904ECC023D760C400709B43 /* DesignSection.swift in Sources */,

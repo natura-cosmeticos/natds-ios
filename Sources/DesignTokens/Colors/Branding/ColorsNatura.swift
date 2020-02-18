@@ -15,4 +15,8 @@ struct ColorsNatura {
         static let mediumEmphasis = UIColor.hexColorOrDefault("#777777")
     }
 
+    enum Feedback {
+        static let alert = UIColor.hexColorOrDefault("#E74627")
+    }
+
 }

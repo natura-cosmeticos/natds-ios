@@ -13,5 +13,4 @@ extension UICollectionView {
         }
         return cell
     }
-
 }

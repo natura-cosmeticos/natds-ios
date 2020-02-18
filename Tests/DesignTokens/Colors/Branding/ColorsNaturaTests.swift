@@ -51,4 +51,11 @@ class ColorsNaturaTests: XCTestCase {
 
         XCTAssertEqual(color, expectedColor)
     }
+
+    func test_feedback_whenIsAlert_returnsExpectedColor() {
+        let expectedColor = UIColor(hex: "#E74627")
+        let color = ColorsNatura.Feedback.alert
+
+        XCTAssertEqual(color, expectedColor)
+    }
 }
