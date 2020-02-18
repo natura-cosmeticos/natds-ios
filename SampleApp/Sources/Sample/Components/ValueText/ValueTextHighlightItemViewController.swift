@@ -18,7 +18,7 @@ class ValueTextHighlightItemViewController: UIViewController, SampleItem {
 
         addValueTextHighlight()
 
-        valueTextHighlight.valueDescription = "Amout value"
+        valueTextHighlight.valueDescription = "Amount value"
         valueTextHighlight.value = "$40,00"
     }
 
