@@ -17,11 +17,12 @@ class TabItemViewController: UIViewController, SampleItem {
 
         addTab()
 
+        tab.delegate = self
         tab.insertTab(title: "Tab 1")
         tab.insertTab(title: "Tab 2")
         tab.insertTab(title: "Tab 3")
 
-        tab.selectedIndex = 2
+        tab.selectedSegmentedIndex = 2
     }
 
     private func addTab() {
@@ -31,11 +32,18 @@ class TabItemViewController: UIViewController, SampleItem {
         let constraints = [
             tab.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             tab.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            tab.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            tab.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            tab.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tab.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tab.heightAnchor.constraint(greaterThanOrEqualToConstant: 48)
         ]
 
         NSLayoutConstraint.activate(constraints)
+    }
+}
+
+extension TabItemViewController: TabDelegate {
+
+    func didChangeSelectedSegmented(index: Int) {
+        print("selected index: \(index)")
     }
 }

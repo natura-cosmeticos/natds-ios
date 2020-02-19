@@ -4,17 +4,19 @@ import FBSnapshotTestCase
 class TabTests: FBSnapshotTestCase {
 
     var sut: Tab!
+    var superView: UIView!
 
     override func setUp() {
         super.setUp()
 
-        let frame = CGRect(x: 0, y: 0, width: 328, height: 48)
+        superView = UIView(frame: CGRect(x: 0, y: 0, width: 328, height: 60))
+        superView.backgroundColor = .white
 
         sut = Tab()
-        sut.frame = frame
         sut.backgroundColor = .white
+        sut.frame = CGRect(x: 0, y: 0, width: 328, height: 48)
 
-        //recordMode = true
+        superView.addSubview(sut)
     }
 
     func test_tab_init_whenHas3Tabs_returnsTabWith3TabItemViewsValidSnapshot() {
@@ -22,16 +24,16 @@ class TabTests: FBSnapshotTestCase {
         sut.insertTab(title: "Tab 2")
         sut.insertTab(title: "Tab 3")
 
-        FBSnapshotVerifyView(sut)
+        FBSnapshotVerifyView(superView)
     }
 
     func test_tab_whenHas2TabsAndSelectedTabIs2_returnsTabWith2SelectedValidSnapshot() {
         sut.insertTab(title: "Tab 1")
         sut.insertTab(title: "Tab 2")
 
-        sut.selectedIndex = 1
+        sut.selectedSegmentedIndex = 1
 
-        FBSnapshotVerifyView(sut)
+        FBSnapshotVerifyView(superView)
     }
 
     func test_tab_whenHas3TabsAndSelectedTabIs2_returnsTabWith2SelectedValidSnapshot() {
@@ -39,8 +41,8 @@ class TabTests: FBSnapshotTestCase {
         sut.insertTab(title: "Tab 2")
         sut.insertTab(title: "Tab 3")
 
-        sut.selectedIndex = 1
+        sut.selectedSegmentedIndex = 1
 
-        FBSnapshotVerifyView(sut)
+        FBSnapshotVerifyView(superView)
     }
 }

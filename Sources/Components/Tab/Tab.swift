@@ -1,18 +1,29 @@
 import Foundation
 
+public protocol TabDelegate: class {
+    func didChangeSelectedSegmented(index: Int)
+}
+
 public class Tab: UIView {
 
-    public var selectedIndex: Int = 0 {
+    public weak var delegate: TabDelegate?
+
+    public var selectedSegmentedIndex: Int {
+        get { selectedIndex }
+        set { selectedIndex = newValue > tabs.count - 1 ? 0 : newValue }
+    }
+
+    private var tabs: [TabItemView] = []
+
+    private var selectedIndex: Int = 0 {
         didSet {
             handleIndexChange()
         }
     }
 
-    private var tabs: [TabItemView] = []
-
     private lazy var indicatorView: UIView = {
         let view = UIView()
-        view.backgroundColor = Colors.primary
+        view.backgroundColor = Colors.secondary
         return view
     }()
 
@@ -62,9 +73,10 @@ extension Tab {
     }
 
     private func setup() {
-        backgroundColor = .clear
+        backgroundColor = .white
         addStackView()
         addIndicatorView()
+        setShadow()
     }
 
     private func addStackView() {
@@ -99,6 +111,16 @@ extension Tab {
             width: widthForSegment,
             height: originalFrame.height
         )
+
+        handleIndicatorOrigin()
+    }
+
+    private func setShadow() {
+        layer.shadowRadius = 2.0
+        layer.shadowOpacity = 0.14
+        layer.masksToBounds = false
+        layer.shadowColor = Colors.highlight.cgColor
+        layer.shadowOffset = CGSize(width: 0, height: 3)
     }
 }
 
@@ -107,6 +129,7 @@ extension Tab {
     private func handleIndexChange() {
         handleTabsState()
         handleIndicatorOrigin()
+        delegate?.didChangeSelectedSegmented(index: selectedIndex)
     }
 
     private func handleTabsState() {
