@@ -9,16 +9,17 @@ class TabItemView: UIView {
         case normal
     }
 
+    let titleLabel = UILabel()
+
+    weak var delegate: TabItemViewDelegate?
+
     private let index: Int
-    private let titleLabel = UILabel()
 
     private var state: State = .normal {
         didSet {
             handleState()
         }
     }
-
-    weak var delegate: TabItemViewDelegate?
 
     init(index: Int, title: String) {
         self.index = index
@@ -73,9 +74,9 @@ extension TabItemView {
 
 extension TabItemView {
 
-    @objc private func handleTap() {
-           delegate?.didTapTabItemAt(index: index)
-       }
+    @objc func handleTap() {
+        delegate?.didTapTabItemAt(index: index)
+    }
 
     private func handleState() {
         switch state {

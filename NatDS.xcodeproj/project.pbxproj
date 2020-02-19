@@ -44,6 +44,9 @@
 		6404360823F462C30088B20D /* TextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6404360723F462C30088B20D /* TextFieldTests.swift */; };
 		6404360B23F4658D0088B20D /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6404360A23F4658D0088B20D /* Field.swift */; };
 		6404360E23F471AB0088B20D /* FieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6404360D23F471AB0088B20D /* FieldTests.swift */; };
+		642468AB23FDC63B008EAE6B /* TabViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642468AA23FDC63B008EAE6B /* TabViewTests.swift */; };
+		642468AE23FDCAE8008EAE6B /* TabDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642468AD23FDCAE8008EAE6B /* TabDelegateSpy.swift */; };
+		642468B023FDE1AA008EAE6B /* TabItemViewDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642468AF23FDE1AA008EAE6B /* TabItemViewDelegateSpy.swift */; };
 		64A1125A23F32EF300119CE4 /* Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A1125923F32EF300119CE4 /* Divider.swift */; };
 		64A1125E23F331CA00119CE4 /* DividerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A1125C23F331C500119CE4 /* DividerTests.swift */; };
 		64D84FCE23F5F574004DD910 /* String+Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D84FCD23F5F574004DD910 /* String+Icon.swift */; };
@@ -119,6 +122,9 @@
 		6404360723F462C30088B20D /* TextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTests.swift; sourceTree = "<group>"; };
 		6404360A23F4658D0088B20D /* Field.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
 		6404360D23F471AB0088B20D /* FieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldTests.swift; sourceTree = "<group>"; };
+		642468AA23FDC63B008EAE6B /* TabViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewTests.swift; sourceTree = "<group>"; };
+		642468AD23FDCAE8008EAE6B /* TabDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabDelegateSpy.swift; sourceTree = "<group>"; };
+		642468AF23FDE1AA008EAE6B /* TabItemViewDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemViewDelegateSpy.swift; sourceTree = "<group>"; };
 		64A1125923F32EF300119CE4 /* Divider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Divider.swift; sourceTree = "<group>"; };
 		64A1125C23F331C500119CE4 /* DividerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerTests.swift; sourceTree = "<group>"; };
 		64D84FCD23F5F574004DD910 /* String+Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Icon.swift"; sourceTree = "<group>"; };
@@ -403,7 +409,9 @@
 		4395D1DD23FC71B000C7DC6F /* Tab */ = {
 			isa = PBXGroup;
 			children = (
+				642468AC23FDCAD8008EAE6B /* Spy */,
 				4395D1DE23FC71C400C7DC6F /* TabTests.swift */,
+				642468AA23FDC63B008EAE6B /* TabViewTests.swift */,
 			);
 			path = Tab;
 			sourceTree = "<group>";
@@ -427,6 +435,15 @@
 				64DF47E423FB4A5600DAF441 /* TextFieldTypeTests.swift */,
 			);
 			path = Field;
+			sourceTree = "<group>";
+		};
+		642468AC23FDCAD8008EAE6B /* Spy */ = {
+			isa = PBXGroup;
+			children = (
+				642468AD23FDCAE8008EAE6B /* TabDelegateSpy.swift */,
+				642468AF23FDE1AA008EAE6B /* TabItemViewDelegateSpy.swift */,
+			);
+			path = Spy;
 			sourceTree = "<group>";
 		};
 		64A1125823F32E6A00119CE4 /* Divider */ = {
@@ -801,11 +818,13 @@
 				64DF47DF23FB2C7D00DAF441 /* String+IconTests.swift in Sources */,
 				110F55B623BE643A00B9937A /* ContainedButtonTests.swift in Sources */,
 				A9D3454B238C69480013398C /* UIColor+HexTests.swift in Sources */,
+				642468AE23FDCAE8008EAE6B /* TabDelegateSpy.swift in Sources */,
 				117FE017238D9AEB0032E2AC /* FontsNaturaTests.swift in Sources */,
 				A9CCF8EA23CCF16400000FC0 /* UIFont+IconTests.swift in Sources */,
 				6404360823F462C30088B20D /* TextFieldTests.swift in Sources */,
 				A9CCF8E823CCF03500000FC0 /* FontIconStyleTests.swift in Sources */,
 				117FE016238D9AEB0032E2AC /* ColorsTests.swift in Sources */,
+				642468AB23FDC63B008EAE6B /* TabViewTests.swift in Sources */,
 				A9CBAD8523CE535300A46CB2 /* IconTests.swift in Sources */,
 				4395D1DF23FC71C400C7DC6F /* TabTests.swift in Sources */,
 				117FE029238DA4B70032E2AC /* NavigationDrawerSubitemCellTests.swift in Sources */,
@@ -814,6 +833,7 @@
 				A9325A6A23FB35C50023979C /* UICollectionView+ReusableTests.swift in Sources */,
 				4378068A23F3442D004A9998 /* ValueTextHighlightTests.swift in Sources */,
 				112BAC2923984562009001A7 /* UITableView+ReusableTests.swift in Sources */,
+				642468B023FDE1AA008EAE6B /* TabItemViewDelegateSpy.swift in Sources */,
 				11581AA8238F037D003E45D7 /* AssetsHelperTests.swift in Sources */,
 				117FE015238D9AEB0032E2AC /* ColorsNaturaTests.swift in Sources */,
 			);
