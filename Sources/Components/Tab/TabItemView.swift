@@ -35,7 +35,7 @@ class TabItemView: UIView {
 
 extension TabItemView {
 
-    func changeToIndex(selectedIndex: Int) {
+    func changeStateBySelectedIndex(_ selectedIndex: Int) {
         state = selectedIndex == index ? .active : .normal
     }
 }
@@ -47,11 +47,11 @@ extension TabItemView {
 
         titleLabel.font = Fonts.button
         titleLabel.textAlignment = .center
-        titleLabel.textColor = Colors.highEmphasis
 
         addLabel()
+        handleState()
 
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(tapped))
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         self.addGestureRecognizer(gesture)
     }
 
@@ -69,13 +69,13 @@ extension TabItemView {
 
         NSLayoutConstraint.activate(constraints)
     }
-
-    @objc private func tapped() {
-        delegate?.didTapTabItemAt(index: index)
-    }
 }
 
 extension TabItemView {
+
+    @objc private func handleTap() {
+           delegate?.didTapTabItemAt(index: index)
+       }
 
     private func handleState() {
         switch state {

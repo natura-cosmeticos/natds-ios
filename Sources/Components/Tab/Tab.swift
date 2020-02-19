@@ -1,9 +1,5 @@
 import Foundation
 
-public struct TabItem {
-    var title: String
-}
-
 public class Tab: UIView {
 
     public var selectedIndex: Int = 0 {
@@ -24,7 +20,6 @@ public class Tab: UIView {
         let stackView = UIStackView()
         stackView.distribution = .fillEqually
         stackView.axis = .horizontal
-
         return stackView
     }()
 
@@ -40,30 +35,21 @@ public class Tab: UIView {
 
     public override func layoutSubviews() {
         super.layoutSubviews()
-
-        let contentHeight = self.frame.size.height
-        let originalFrame = indicatorView.frame
-        indicatorView.frame = CGRect(
-            x: originalFrame.origin.x,
-            y: contentHeight - 2,
-            width: widthForSegment,
-            height: originalFrame.height
-        )
+        refreshIndicatorViewFrame()
     }
+}
 
-    public func insertTabs(tabs: [TabItem]) {
-        let views = tabs
-            .enumerated()
-            .map { (index, tab) -> TabItemView in
-                let tabView = TabItemView(index: index, title: tab.title)
-                tabView.delegate = self
-                stackView.addArrangedSubview(tabView)
+public extension Tab {
 
-                return tabView
-        }
+    func insertTab(title: String) {
+        let index = tabs.count
+        let tabView = TabItemView(index: index, title: title)
+        tabView.delegate = self
+        tabView.changeStateBySelectedIndex(selectedIndex)
 
-        self.tabs = views
-        self.selectedIndex = 0
+        stackView.addArrangedSubview(tabView)
+        tabs.append(tabView)
+        refreshIndicatorViewFrame()
     }
 }
 
@@ -72,14 +58,13 @@ extension Tab {
     private var widthForSegment: CGFloat {
         let numberOfSegments = tabs.count
         guard numberOfSegments > 0 else { return 0 }
-        return self.bounds.size.width/CGFloat(numberOfSegments)
+        return self.frame.size.width/CGFloat(numberOfSegments)
     }
 
     private func setup() {
         backgroundColor = .clear
         addStackView()
         addIndicatorView()
-        handleIndexChange()
     }
 
     private func addStackView() {
@@ -102,13 +87,48 @@ extension Tab {
         indicatorView.frame = CGRect(x: 0, y: 0, width: 0, height: 2)
         layoutIfNeeded()
     }
+
+    private func refreshIndicatorViewFrame() {
+        layoutIfNeeded()
+
+        let contentHeight = self.frame.size.height
+        let originalFrame = indicatorView.frame
+        indicatorView.frame = CGRect(
+            x: originalFrame.origin.x,
+            y: contentHeight - 2,
+            width: widthForSegment,
+            height: originalFrame.height
+        )
+    }
 }
 
 extension Tab {
 
     private func handleIndexChange() {
+        handleTabsState()
+        handleIndicatorOrigin()
+    }
+
+    private func handleTabsState() {
         for tab in tabs {
-            tab.changeToIndex(selectedIndex: selectedIndex)
+            tab.changeStateBySelectedIndex(selectedIndex)
+        }
+    }
+
+    private func handleIndicatorOrigin() {
+        let index = selectedIndex
+
+        UIView.animate(withDuration: 0.1) { [unowned self] in
+
+            if index == 0 {
+                self.indicatorView.frame.origin.x = 0
+            } else if index == self.tabs.count - 1 {
+                self.indicatorView.frame.origin.x = self.bounds.size.width - self.indicatorView.bounds.size.width
+            } else {
+                self.indicatorView.frame.origin.x = (CGFloat(index) * self.widthForSegment)
+            }
+
+            self.layoutIfNeeded()
         }
     }
 }
