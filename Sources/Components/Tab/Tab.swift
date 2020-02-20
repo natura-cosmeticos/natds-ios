@@ -10,7 +10,11 @@ public class Tab: UIView {
 
     public var selectedSegmentedIndex: Int {
         get { selectedIndex }
-        set { selectedIndex = newValue > tabs.count - 1 ? 0 : newValue }
+        set {
+            if newValue <= tabs.count - 1 {
+                selectedIndex = newValue
+            }
+        }
     }
 
     private var tabs: [TabItemView] = []
