@@ -11,7 +11,7 @@ public class Tab: UIView {
     public var selectedSegmentedIndex: Int {
         get { selectedIndex }
         set {
-            if newValue <= tabs.count - 1 {
+            if (0..<tabs.count).contains(newValue) {
                 selectedIndex = newValue
             }
         }
