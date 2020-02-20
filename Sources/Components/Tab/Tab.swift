@@ -1,6 +1,6 @@
 import Foundation
 
-public protocol TabDelegate: class {
+public protocol TabDelegate: AnyObject {
     func didChangeSelectedSegmented(index: Int)
 }
 

@@ -1,4 +1,4 @@
-@objc public protocol TextFieldDelegate: class {
+@objc public protocol TextFieldDelegate: AnyObject {
 
     @objc optional func textFieldDidBeginEditing(_ textField: TextField)
     @objc optional func textFieldDidEndEditing(_ textField: TextField)

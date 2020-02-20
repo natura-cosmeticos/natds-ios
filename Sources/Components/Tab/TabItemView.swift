@@ -5,7 +5,7 @@ protocol TabItemViewDelegate: class {
 class TabItemView: UIView {
 
     enum State {
-        case active
+        case selected
         case normal
     }
 
@@ -37,7 +37,7 @@ class TabItemView: UIView {
 extension TabItemView {
 
     func changeStateBySelectedIndex(_ selectedIndex: Int) {
-        state = selectedIndex == index ? .active : .normal
+        state = selectedIndex == index ? .selected : .normal
     }
 }
 
@@ -82,7 +82,7 @@ extension TabItemView {
         switch state {
         case .normal:
             titleLabel.textColor = Colors.Content.mediumEmphasis
-        case .active:
+        case .selected:
             titleLabel.textColor = Colors.highlight
         }
     }
