@@ -24,7 +24,7 @@ class TabTests: FBSnapshotTestCase {
         superView.addSubview(sut)
     }
 
-    func test_tab_init_whenHas3Tabs_returnsTabWith3TabItemViewsValidSnapshot() {
+    func test_init_whenHas3Tabs_returnsTabWith3TabItemViewsValidSnapshot() {
         sut.insertTab(title: "Tab 1")
         sut.insertTab(title: "Tab 2")
         sut.insertTab(title: "Tab 3")
@@ -32,7 +32,7 @@ class TabTests: FBSnapshotTestCase {
         FBSnapshotVerifyView(superView)
     }
 
-    func test_tab_whenHas2TabsAndSelectedTabIs2_returnsTabWith2SelectedValidSnapshot() {
+    func test_whenHas2TabsAndSelectedTabIs2_returnsTabWith2SelectedValidSnapshot() {
         sut.insertTab(title: "Tab 1")
         sut.insertTab(title: "Tab 2")
 
@@ -41,7 +41,7 @@ class TabTests: FBSnapshotTestCase {
         FBSnapshotVerifyView(superView)
     }
 
-    func test_tab_whenHas3TabsAndSelectedTabIs2_returnsTabWith2SelectedValidSnapshot() {
+    func test_whenHas3TabsAndSelectedTabIs2_returnsTabWith2SelectedValidSnapshot() {
         sut.insertTab(title: "Tab 1")
         sut.insertTab(title: "Tab 2")
         sut.insertTab(title: "Tab 3")
@@ -52,7 +52,31 @@ class TabTests: FBSnapshotTestCase {
     }
 
     func test_selectedSegmentedIndex_whenIndexNotExistInTabs_returnsSelectedSegmentedIndexAs0() {
+        sut.insertTab(title: "Tab 1")
+        sut.insertTab(title: "Tab 2")
+        sut.insertTab(title: "Tab 3")
         sut.selectedSegmentedIndex = 100
+
+        XCTAssertEqual(sut.selectedSegmentedIndex, 0)
+    }
+
+    func test_selectedSegmentedIndex_whenIndexNotExistInTabsAndTabsIsEmpty_returnsSelectedSegmentedIndexAs0() {
+        sut.selectedSegmentedIndex = 100
+
+        XCTAssertEqual(sut.selectedSegmentedIndex, 0)
+    }
+
+    func test_selectedSegmentedIndex_whenIndexIsNegativeValueAndTabsIsEmpty_returnsSelectedSegmentedIndexAs0() {
+        sut.selectedSegmentedIndex = -1
+
+        XCTAssertEqual(sut.selectedSegmentedIndex, 0)
+    }
+
+    func test_selectedSegmentedIndex_whenIndexIsNegativeValue_returnsSelectedSegmentedIndexAs0() {
+        sut.insertTab(title: "Tab 1")
+        sut.insertTab(title: "Tab 2")
+        sut.insertTab(title: "Tab 3")
+        sut.selectedSegmentedIndex = -1
 
         XCTAssertEqual(sut.selectedSegmentedIndex, 0)
     }

@@ -2,11 +2,11 @@
 
 class TabItemViewDelegateSpy: TabItemViewDelegate {
 
-    var selectedIndex: Int?
+    var selectedTabItem: TabItemView?
     var callDidTapTabItemAt = 0
 
-    func didTapTabItemAt(index: Int) {
-        selectedIndex = index
+    func didTapTabItem(_ tabItemView: TabItemView) {
+        selectedTabItem = tabItemView
         callDidTapTabItemAt += 1
     }
 }

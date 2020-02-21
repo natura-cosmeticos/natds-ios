@@ -1,6 +1,6 @@
 import Foundation
 
-public protocol TabDelegate: class {
+public protocol TabDelegate: AnyObject {
     func didChangeSelectedSegmented(index: Int)
 }
 
@@ -10,7 +10,11 @@ public class Tab: UIView {
 
     public var selectedSegmentedIndex: Int {
         get { selectedIndex }
-        set { selectedIndex = newValue > tabs.count - 1 ? 0 : newValue }
+        set {
+            if (0..<tabs.count).contains(newValue) {
+                selectedIndex = newValue
+            }
+        }
     }
 
     private var tabs: [TabItemView] = []
@@ -55,11 +59,11 @@ public extension Tab {
     func insertTab(title: String) {
         let tabView = TabItemView(title: title)
         tabView.delegate = self
-        tabView.changeStateBySelectedIndex(selectedIndex)
 
         stackView.addArrangedSubview(tabView)
         tabs.append(tabView)
         refreshIndicatorViewFrame()
+        handleTabsState()
     }
 }
 
@@ -133,7 +137,7 @@ extension Tab {
 
     private func handleTabsState() {
         for (index, tab) in tabs.enumerated() {
-//            tab.setState(state: index == selectedIndex ? .selected : .normal)
+            tab.setState(state: index == selectedIndex ? .selected : .normal)
         }
     }
 

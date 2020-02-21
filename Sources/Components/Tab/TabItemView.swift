@@ -5,15 +5,13 @@ protocol TabItemViewDelegate: class {
 class TabItemView: UIView {
 
     enum State {
-        case active
+        case selected
         case normal
     }
 
     let titleLabel = UILabel()
 
     weak var delegate: TabItemViewDelegate?
-
-    //private let index: Int
 
     private var state: State = .normal {
         didSet {
@@ -81,7 +79,7 @@ extension TabItemView {
         switch state {
         case .normal:
             titleLabel.textColor = Colors.Content.mediumEmphasis
-        case .active:
+        case .selected:
             titleLabel.textColor = Colors.highlight
         }
     }
