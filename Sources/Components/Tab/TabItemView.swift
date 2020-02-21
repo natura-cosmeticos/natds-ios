@@ -1,4 +1,4 @@
-protocol TabItemViewDelegate: class {
+protocol TabItemViewDelegate: AnyObject {
     func didTapTabItem(_ tabItemView: TabItemView)
 }
 
