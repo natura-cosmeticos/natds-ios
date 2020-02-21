@@ -1,5 +1,5 @@
 protocol TabItemViewDelegate: class {
-    func didTapTabItemAt(index: Int)
+    func didTapTabItem(_ tabItemView: TabItemView)
 }
 
 class TabItemView: UIView {
@@ -13,7 +13,7 @@ class TabItemView: UIView {
 
     weak var delegate: TabItemViewDelegate?
 
-    private let index: Int
+    //private let index: Int
 
     private var state: State = .normal {
         didSet {
@@ -21,8 +21,7 @@ class TabItemView: UIView {
         }
     }
 
-    init(index: Int, title: String) {
-        self.index = index
+    init(title: String) {
         super.init(frame: .zero)
         titleLabel.text = title.uppercased()
         setup()
@@ -36,8 +35,8 @@ class TabItemView: UIView {
 
 extension TabItemView {
 
-    func changeStateBySelectedIndex(_ selectedIndex: Int) {
-        state = selectedIndex == index ? .active : .normal
+    func setState(state: State) {
+        self.state = state
     }
 }
 
@@ -75,7 +74,7 @@ extension TabItemView {
 extension TabItemView {
 
     @objc func handleTap() {
-        delegate?.didTapTabItemAt(index: index)
+        delegate?.didTapTabItem(self)
     }
 
     private func handleState() {

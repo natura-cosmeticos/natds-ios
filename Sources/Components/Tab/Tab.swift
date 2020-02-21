@@ -53,8 +53,7 @@ public class Tab: UIView {
 public extension Tab {
 
     func insertTab(title: String) {
-        let index = tabs.count
-        let tabView = TabItemView(index: index, title: title)
+        let tabView = TabItemView(title: title)
         tabView.delegate = self
         tabView.changeStateBySelectedIndex(selectedIndex)
 
@@ -133,8 +132,8 @@ extension Tab {
     }
 
     private func handleTabsState() {
-        for tab in tabs {
-            tab.changeStateBySelectedIndex(selectedIndex)
+        for (index, tab) in tabs.enumerated() {
+//            tab.setState(state: index == selectedIndex ? .selected : .normal)
         }
     }
 
@@ -157,6 +156,12 @@ extension Tab {
 }
 
 extension Tab: TabItemViewDelegate {
+
+    func didTapTabItem(_ tabItemView: TabItemView) {
+        if let index = tabs.firstIndex(where: { $0 == tabItemView }) {
+            selectedIndex = index
+        }
+    }
 
     func didTapTabItemAt(index: Int) {
         selectedIndex = index
