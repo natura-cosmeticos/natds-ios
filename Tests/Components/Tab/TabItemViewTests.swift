@@ -4,15 +4,15 @@ import FBSnapshotTestCase
 class TabItemViewTests: FBSnapshotTestCase {
 
     var sut: TabItemView!
-    var delegateSpy: TabItemViewDelegateSpy!
+    var delegateMock: TabItemViewDelegateMock!
 
     override func setUp() {
         super.setUp()
 
-        delegateSpy = TabItemViewDelegateSpy()
+        delegateMock = TabItemViewDelegateMock()
 
         sut = TabItemView(title: "Tab")
-        sut.delegate = delegateSpy
+        sut.delegate = delegateMock
         sut.backgroundColor = .white
         sut.frame = CGRect(x: 0, y: 0, width: 120, height: 48)
     }
@@ -23,19 +23,19 @@ class TabItemViewTests: FBSnapshotTestCase {
     }
 
     func test_state_whenIsSelected_returnsSelectedSnapshot() {
-        sut.setState(state: .selected)
+        sut.state = .selected
         FBSnapshotVerifyView(sut)
     }
 
     func test_state_whenIsNormal_returnsNormalSnapshot() {
-        sut.setState(state: .normal)
+        sut.state = .normal
         FBSnapshotVerifyView(sut)
     }
 
     func test_handleTap_whenHasDelegate_returnsTappedItemAndCallDelagateOnce() {
         sut.handleTap()
 
-        XCTAssertEqual(delegateSpy.selectedTabItem, sut)
-        XCTAssertEqual(delegateSpy.callDidTapTabItemAt, 1)
+        XCTAssertEqual(delegateMock.invokedDidTapItem.count, 1)
+        XCTAssertEqual(delegateMock.invokedDidTapItem.tabItem, sut)
     }
 }

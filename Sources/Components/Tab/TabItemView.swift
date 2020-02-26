@@ -9,15 +9,20 @@ class TabItemView: UIView {
         case normal
     }
 
-    let titleLabel = UILabel()
-
     weak var delegate: TabItemViewDelegate?
 
-    private var state: State = .normal {
+    var state: State = .normal {
         didSet {
             handleState()
         }
     }
+
+    private(set) lazy var titleLabel: UILabel = {
+        let label = UILabel()
+        label.font = Fonts.button
+        label.textAlignment = .center
+        return label
+    }()
 
     init(title: String) {
         super.init(frame: .zero)
@@ -33,18 +38,8 @@ class TabItemView: UIView {
 
 extension TabItemView {
 
-    func setState(state: State) {
-        self.state = state
-    }
-}
-
-extension TabItemView {
-
     private func setup() {
         backgroundColor = .clear
-
-        titleLabel.font = Fonts.button
-        titleLabel.textAlignment = .center
 
         addLabel()
         handleState()

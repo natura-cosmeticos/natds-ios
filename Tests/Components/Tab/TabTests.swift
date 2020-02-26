@@ -6,19 +6,18 @@ class TabTests: FBSnapshotTestCase {
     var sut: Tab!
     var superView: UIView!
 
-    var delegateSpy: TabDelegateSpy!
+    var delegateMock: TabDelegateMock!
 
     override func setUp() {
         super.setUp()
 
-        delegateSpy = TabDelegateSpy()
+        delegateMock = TabDelegateMock()
 
         superView = UIView(frame: CGRect(x: 0, y: 0, width: 328, height: 60))
         superView.backgroundColor = .white
 
         sut = Tab()
-        sut.delegate = delegateSpy
-        sut.backgroundColor = .white
+        sut.delegate = delegateMock
         sut.frame = CGRect(x: 0, y: 0, width: 328, height: 48)
 
         superView.addSubview(sut)
@@ -89,17 +88,17 @@ class TabTests: FBSnapshotTestCase {
 
         sut.selectedSegmentedIndex = expectIndex
 
-        XCTAssertEqual(delegateSpy.selectedIndex, expectIndex)
-        XCTAssertEqual(delegateSpy.callDidChangeSelectedSegmented, 1)
+        XCTAssertEqual(delegateMock.invokedDidChangeSelectedSegmented.count, 1)
+        XCTAssertEqual(delegateMock.invokedDidChangeSelectedSegmented.index, expectIndex)
     }
 
-    func test_didTapTabItemAt_whenImplementsTabItemViewDelegate_returnsSelectedSegmentedIndexAsIndexTapped() {
+    func test_didTapTabItem_whenImplementsTabItemViewDelegate_returnsSelectedSegmentedIndexTapped() {
         let expectIndex = 1
 
         sut.insertTab(title: "Tab 1")
         sut.insertTab(title: "Tab 2")
 
-        sut.didTapTabItemAt(index: expectIndex)
+        sut.didTapTabItem(sut.tabs[1])
 
         XCTAssertEqual(sut.selectedSegmentedIndex, expectIndex)
     }

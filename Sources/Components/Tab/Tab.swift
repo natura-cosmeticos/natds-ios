@@ -17,7 +17,7 @@ public class Tab: UIView {
         }
     }
 
-    private var tabs: [TabItemView] = []
+    private(set) var tabs: [TabItemView] = []
 
     private var selectedIndex: Int = 0 {
         didSet {
@@ -38,6 +38,9 @@ public class Tab: UIView {
         return stackView
     }()
 
+    private var indicatorViewWidthConstraint: NSLayoutConstraint?
+    private var indicatorViewLeadingConstraint: NSLayoutConstraint?
+
     public init() {
         super.init(frame: .zero)
         setup()
@@ -47,11 +50,6 @@ public class Tab: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
-    public override func layoutSubviews() {
-        super.layoutSubviews()
-        refreshIndicatorViewFrame()
-    }
 }
 
 public extension Tab {
@@ -60,20 +58,15 @@ public extension Tab {
         let tabView = TabItemView(title: title)
         tabView.delegate = self
 
-        stackView.addArrangedSubview(tabView)
         tabs.append(tabView)
-        refreshIndicatorViewFrame()
-        handleTabsState()
+        stackView.addArrangedSubview(tabView)
+
+        updateTabsState()
+        addIndicatorWidthIfNeeded()
     }
 }
 
 extension Tab {
-
-    private var widthForSegment: CGFloat {
-        let numberOfSegments = tabs.count
-        guard numberOfSegments > 0 else { return 0 }
-        return self.frame.size.width/CGFloat(numberOfSegments)
-    }
 
     private func setup() {
         backgroundColor = .white
@@ -98,24 +91,33 @@ extension Tab {
 
     private func addIndicatorView() {
         addSubview(indicatorView)
+        indicatorView.translatesAutoresizingMaskIntoConstraints = false
 
-        indicatorView.frame = CGRect(x: 0, y: 0, width: 0, height: 2)
-        layoutIfNeeded()
+        let constraints = [
+            indicatorView.heightAnchor.constraint(equalToConstant: 2),
+            indicatorView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ]
+
+        NSLayoutConstraint.activate(constraints)
+        addIndicatorLeadingConstraint(leadingAnchor: leadingAnchor)
     }
 
-    private func refreshIndicatorViewFrame() {
-        layoutIfNeeded()
+    private func addIndicatorWidthIfNeeded() {
+        guard indicatorViewWidthConstraint == nil, let selectedTab = tabs.first else { return }
 
-        let contentHeight = self.frame.size.height
-        let originalFrame = indicatorView.frame
-        indicatorView.frame = CGRect(
-            x: originalFrame.origin.x,
-            y: contentHeight - 2,
-            width: widthForSegment,
-            height: originalFrame.height
-        )
+        indicatorViewWidthConstraint = indicatorView.widthAnchor.constraint(equalTo: selectedTab.widthAnchor)
+        indicatorViewWidthConstraint?.isActive = true
+    }
 
-        handleIndicatorOrigin()
+    private func addIndicatorLeadingConstraint(leadingAnchor: NSLayoutXAxisAnchor) {
+        if let constraint = indicatorViewLeadingConstraint {
+            constraint.isActive = false
+        }
+
+        let leadingConstraint = indicatorView.leadingAnchor.constraint(equalTo: leadingAnchor)
+        leadingConstraint.isActive = true
+
+        indicatorViewLeadingConstraint = leadingConstraint
     }
 
     private func setShadow() {
@@ -130,30 +132,22 @@ extension Tab {
 extension Tab {
 
     private func handleIndexChange() {
-        handleTabsState()
-        handleIndicatorOrigin()
+        updateTabsState()
+        updateIndicatorX()
         delegate?.didChangeSelectedSegmented(index: selectedIndex)
     }
 
-    private func handleTabsState() {
+    private func updateTabsState() {
         for (index, tab) in tabs.enumerated() {
-            tab.setState(state: index == selectedIndex ? .selected : .normal)
+            tab.state = index == selectedIndex ? .selected : .normal
         }
     }
 
-    private func handleIndicatorOrigin() {
-        let index = selectedIndex
+    private func updateIndicatorX() {
+        let selectedTab = tabs[selectedIndex]
+        addIndicatorLeadingConstraint(leadingAnchor: selectedTab.leadingAnchor)
 
         UIView.animate(withDuration: 0.1) { [unowned self] in
-
-            if index == 0 {
-                self.indicatorView.frame.origin.x = 0
-            } else if index == self.tabs.count - 1 {
-                self.indicatorView.frame.origin.x = self.bounds.size.width - self.indicatorView.bounds.size.width
-            } else {
-                self.indicatorView.frame.origin.x = (CGFloat(index) * self.widthForSegment)
-            }
-
             self.layoutIfNeeded()
         }
     }
@@ -165,9 +159,5 @@ extension Tab: TabItemViewDelegate {
         if let index = tabs.firstIndex(where: { $0 == tabItemView }) {
             selectedIndex = index
         }
-    }
-
-    func didTapTabItemAt(index: Int) {
-        selectedIndex = index
     }
 }
