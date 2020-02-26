@@ -18,9 +18,10 @@ class TabItemViewController: UIViewController, SampleItem {
         addTab()
 
         tab.delegate = self
-        tab.insertTab(title: "Tab 1")
-        tab.insertTab(title: "Tab 2")
-        tab.insertTab(title: "Tab 3")
+
+        for index in 1...3 {
+            tab.insertTab(title: "Tab \(index)")
+        }
 
         tab.selectedSegmentedIndex = 2
     }
