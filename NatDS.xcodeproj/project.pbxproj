@@ -41,6 +41,7 @@
 		6404360823F462C30088B20D /* TextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6404360723F462C30088B20D /* TextFieldTests.swift */; };
 		6404360B23F4658D0088B20D /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6404360A23F4658D0088B20D /* Field.swift */; };
 		6404360E23F471AB0088B20D /* FieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6404360D23F471AB0088B20D /* FieldTests.swift */; };
+		644DFBD9240811D300D49AD7 /* TextFieldDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644DFBD8240811D300D49AD7 /* TextFieldDelegateMock.swift */; };
 		64A1125A23F32EF300119CE4 /* Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A1125923F32EF300119CE4 /* Divider.swift */; };
 		64A1125E23F331CA00119CE4 /* DividerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A1125C23F331C500119CE4 /* DividerTests.swift */; };
 		64D84FCE23F5F574004DD910 /* String+Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D84FCD23F5F574004DD910 /* String+Icon.swift */; };
@@ -113,6 +114,7 @@
 		6404360723F462C30088B20D /* TextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTests.swift; sourceTree = "<group>"; };
 		6404360A23F4658D0088B20D /* Field.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
 		6404360D23F471AB0088B20D /* FieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldTests.swift; sourceTree = "<group>"; };
+		644DFBD8240811D300D49AD7 /* TextFieldDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDelegateMock.swift; sourceTree = "<group>"; };
 		64A1125923F32EF300119CE4 /* Divider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Divider.swift; sourceTree = "<group>"; };
 		64A1125C23F331C500119CE4 /* DividerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerTests.swift; sourceTree = "<group>"; };
 		64D84FCD23F5F574004DD910 /* String+Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Icon.swift"; sourceTree = "<group>"; };
@@ -397,11 +399,20 @@
 		6404360623F462A20088B20D /* Field */ = {
 			isa = PBXGroup;
 			children = (
+				644DFBD7240811BC00D49AD7 /* Mock */,
 				6404360D23F471AB0088B20D /* FieldTests.swift */,
 				6404360723F462C30088B20D /* TextFieldTests.swift */,
 				64DF47E423FB4A5600DAF441 /* TextFieldTypeTests.swift */,
 			);
 			path = Field;
+			sourceTree = "<group>";
+		};
+		644DFBD7240811BC00D49AD7 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				644DFBD8240811D300D49AD7 /* TextFieldDelegateMock.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		64A1125823F32E6A00119CE4 /* Divider */ = {
@@ -773,6 +784,7 @@
 				A9CCF8E123CCE39800000FC0 /* IconViewTests.swift in Sources */,
 				64DF47DF23FB2C7D00DAF441 /* String+IconTests.swift in Sources */,
 				110F55B623BE643A00B9937A /* ContainedButtonTests.swift in Sources */,
+				644DFBD9240811D300D49AD7 /* TextFieldDelegateMock.swift in Sources */,
 				A9D3454B238C69480013398C /* UIColor+HexTests.swift in Sources */,
 				117FE017238D9AEB0032E2AC /* FontsNaturaTests.swift in Sources */,
 				A9CCF8EA23CCF16400000FC0 /* UIFont+IconTests.swift in Sources */,
