@@ -93,6 +93,10 @@ public extension TextField {
     override func resignFirstResponder() -> Bool {
         return textField.resignFirstResponder()
     }
+
+    func addTarget(_ target: Any?, selector: Selector, for event: UIControl.Event) {
+        textField.addTarget(target, action: selector, for: event)
+    }
 }
 
 extension TextField {
@@ -205,21 +209,21 @@ extension TextField: UITextFieldDelegate {
 
     public func textFieldDidBeginEditing(_ textField: UITextField) {
         self.isEditing = true
-        delegate?.textFieldDidBeginEditing?(self)
+        delegate?.natTextFieldDidBeginEditing?(self)
     }
 
     public func textFieldDidEndEditing(_ textField: UITextField) {
         self.isEditing = false
-        delegate?.textFieldDidEndEditing?(self)
+        delegate?.natTextFieldDidEndEditing?(self)
     }
 
-    public func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        return delegate?.textFieldShouldBeginEditing?(self) ?? true
+    public func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        return delegate?.natTextFieldShouldBeginEditing?(self) ?? true
     }
 
     public func textField(_ textField: UITextField,
                           shouldChangeCharactersIn range: NSRange,
                           replacementString string: String) -> Bool {
-        return delegate?.textField?(self, changeCharInRange: range, string: string) ?? true
+        return delegate?.natTextField?(self, changeCharInRange: range, string: string) ?? true
     }
 }
