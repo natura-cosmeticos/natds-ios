@@ -93,10 +93,6 @@ public extension TextField {
     override func resignFirstResponder() -> Bool {
         return textField.resignFirstResponder()
     }
-
-    func addTarget(_ target: Any?, selector: Selector, for event: UIControl.Event) {
-        textField.addTarget(target, action: selector, for: event)
-    }
 }
 
 extension TextField {
@@ -110,6 +106,8 @@ extension TextField {
 
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         addGestureRecognizer(tapRecognizer)
+
+        textField.addTarget(self, action: #selector(handleEditingChanged), for: .editingChanged)
 
         handleState()
         handleTextFieldType()
@@ -161,6 +159,10 @@ extension TextField {
 
     @objc private func handleTap() {
         becomeFirstResponder()
+    }
+
+    @objc private func handleEditingChanged() {
+        delegate?.natTextFieldEditingChanged?(self)
     }
 
     private func handleState() {
