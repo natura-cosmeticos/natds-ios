@@ -108,6 +108,8 @@ extension TextField {
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         addGestureRecognizer(tapRecognizer)
 
+        textField.addTarget(self, action: #selector(handleEditingChanged), for: .editingChanged)
+
         handleState()
         handleTextFieldType()
     }
@@ -160,6 +162,10 @@ extension TextField {
         becomeFirstResponder()
     }
 
+    @objc private func handleEditingChanged() {
+        delegate?.natTextFieldEditingChanged?(self)
+    }
+
     private func handleState() {
         switch state {
         case .enable:
@@ -206,21 +212,21 @@ extension TextField: UITextFieldDelegate {
 
     public func textFieldDidBeginEditing(_ textField: UITextField) {
         self.isEditing = true
-        delegate?.textFieldDidBeginEditing?(self)
+        delegate?.natTextFieldDidBeginEditing?(self)
     }
 
     public func textFieldDidEndEditing(_ textField: UITextField) {
         self.isEditing = false
-        delegate?.textFieldDidEndEditing?(self)
+        delegate?.natTextFieldDidEndEditing?(self)
     }
 
-    public func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        return delegate?.textFieldShouldBeginEditing?(self) ?? true
+    public func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        return delegate?.natTextFieldShouldBeginEditing?(self) ?? true
     }
 
     public func textField(_ textField: UITextField,
                           shouldChangeCharactersIn range: NSRange,
                           replacementString string: String) -> Bool {
-        return delegate?.textField?(self, changeCharInRange: range, string: string) ?? true
+        return delegate?.natTextField?(self, changeCharInRange: range, string: string) ?? true
     }
 }

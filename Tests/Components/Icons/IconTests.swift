@@ -284,10 +284,6 @@ class IconTests: FBSnapshotTestCase {
         assert(icon: .outlinedContentAgility)
     }
 
-    func test_outlinedContentBellringing_hasValidSnapshot() {
-        assert(icon: .outlinedContentBellringing)
-    }
-
     func test_outlinedContentBook_hasValidSnapshot() {
         assert(icon: .outlinedContentBook)
     }
@@ -320,24 +316,12 @@ class IconTests: FBSnapshotTestCase {
         assert(icon: .outlinedContentEducation)
     }
 
-    func test_outlinedContentExchangereports_hasValidSnapshot() {
-        assert(icon: .outlinedContentExchangereports)
-    }
-
-    func test_outlinedContentGallery_hasValidSnapshot() {
-        assert(icon: .outlinedContentGallery)
-    }
-
     func test_outlinedContentGift_hasValidSnapshot() {
         assert(icon: .outlinedContentGift)
     }
 
     func test_outlinedContentGlobal_hasValidSnapshot() {
         assert(icon: .outlinedContentGlobal)
-    }
-
-    func test_outlinedContentHealth_hasValidSnapshot() {
-        assert(icon: .outlinedContentHealth)
     }
 
     func test_outlinedContentHealthy_hasValidSnapshot() {
@@ -362,10 +346,6 @@ class IconTests: FBSnapshotTestCase {
 
     func test_outlinedContentMirror_hasValidSnapshot() {
         assert(icon: .outlinedContentMirror)
-    }
-
-    func test_outlinedContentPlanb_hasValidSnapshot() {
-        assert(icon: .outlinedContentPlanb)
     }
 
     func test_outlinedContentProdutivity_hasValidSnapshot() {
@@ -606,6 +586,26 @@ class IconTests: FBSnapshotTestCase {
 
     func test_outlinedSocialPerson_hasValidSnapshot() {
         assert(icon: .outlinedSocialPerson)
+    }
+
+    func test_zOutlinedContentBellringing_hasValidSnapshot() {
+        assert(icon: .zOutlinedContentBellringing)
+    }
+
+    func test_zOutlinedContentExchangereports_hasValidSnapshot() {
+        assert(icon: .zOutlinedContentExchangereports)
+    }
+
+    func test_zOutlinedContentGallery_hasValidSnapshot() {
+        assert(icon: .zOutlinedContentGallery)
+    }
+
+    func test_zOutlinedContentHealth_hasValidSnapshot() {
+        assert(icon: .zOutlinedContentHealth)
+    }
+
+    func test_zOutlinedContentPlanb_hasValidSnapshot() {
+        assert(icon: .zOutlinedContentPlanb)
     }
 
     func assert(icon: Icon) {
