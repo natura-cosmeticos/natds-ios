@@ -22,7 +22,6 @@ public class ContainedButton: UIButton {
         titleEdgeInsets = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
         setShadow()
     }
-
 }
 
 private extension ContainedButton {

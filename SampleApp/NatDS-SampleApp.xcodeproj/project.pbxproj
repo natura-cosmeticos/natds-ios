@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64C9173323FC9EDE0040E714 /* TabItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C9173223FC9EDE0040E714 /* TabItemViewController.swift */; };
 		64D84FD123F5FC7D004DD910 /* ValueTextHighlightItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D84FD023F5FC7D004DD910 /* ValueTextHighlightItemViewController.swift */; };
 		64D84FD423F600C5004DD910 /* TextFieldItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D84FD323F600C5004DD910 /* TextFieldItemViewController.swift */; };
 		64FAAC7723FB5B880085F7C8 /* ColorHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FAAC7623FB5B880085F7C8 /* ColorHeaderCollectionViewCell.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		64C9173223FC9EDE0040E714 /* TabItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemViewController.swift; sourceTree = "<group>"; };
 		64D84FD023F5FC7D004DD910 /* ValueTextHighlightItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueTextHighlightItemViewController.swift; sourceTree = "<group>"; };
 		64D84FD323F600C5004DD910 /* TextFieldItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldItemViewController.swift; sourceTree = "<group>"; };
 		64FAAC7623FB5B880085F7C8 /* ColorHeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHeaderCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -79,6 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		64C9173123FC9EBC0040E714 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				64C9173223FC9EDE0040E714 /* TabItemViewController.swift */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
 		64D84FCF23F5FC62004DD910 /* ValueText */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				A904ECB923D607D800709B43 /* ComponentsSection.swift */,
+				64C9173123FC9EBC0040E714 /* Tab */,
 				64D84FD223F600B4004DD910 /* Field */,
 				64D84FCF23F5FC62004DD910 /* ValueText */,
 				A904ECB823D607BD00709B43 /* Button */,
@@ -308,6 +319,7 @@
 				A904ECC023D760C400709B43 /* DesignSection.swift in Sources */,
 				A9D71BC22386DFEE00CDEC1D /* AppDelegate.swift in Sources */,
 				A904ECC323D761BE00709B43 /* IconographyItemViewController.swift in Sources */,
+				64C9173323FC9EDE0040E714 /* TabItemViewController.swift in Sources */,
 				A97328C323CFA35800ADC5C2 /* MainViewController.swift in Sources */,
 				A97328BD23CFA2F500ADC5C2 /* MainDataSource.swift in Sources */,
 				A9B8A4DA23D0FCD50055E8A3 /* ColorCollectionViewCell.swift in Sources */,

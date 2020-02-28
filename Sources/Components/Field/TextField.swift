@@ -67,6 +67,7 @@ public class TextField: UIView {
 
     private lazy var helperLabel: UILabel = {
         let label = UILabel()
+        label.numberOfLines = 2
         label.font = Fonts.caption
         return label
     }()

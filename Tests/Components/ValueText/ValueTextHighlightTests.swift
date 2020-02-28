@@ -15,8 +15,8 @@ class ValueTextHighlightTests: FBSnapshotTestCase {
     }
 
     func test_init_hasValidSnapshot() {
-        sut.valueDescription = "Você está transferindo"
-        sut.value = "R$ 43,00"
+        sut.valueDescription = "You are transferring"
+        sut.value = "$ 43,00"
         FBSnapshotVerifyView(superview)
     }
 }

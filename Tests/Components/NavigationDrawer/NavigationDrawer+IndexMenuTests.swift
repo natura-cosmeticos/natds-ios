@@ -1,7 +1,8 @@
 import XCTest
 @testable import NatDS
 
-class NavigationDrawerIndexMenuTests: XCTest {
+class NavigationDrawerIndexMenuTests: XCTestCase {
+
     var sut: NavigationDrawer.IndexMenu!
 
     func test_init_hasExpectedValues() {
