@@ -5,9 +5,16 @@ struct ColorsNatura {
     }
 
     enum PB {
-        static let gray: UIColor = UIColor.hexColorOrDefault("#333333")
-        static let gray2: UIColor = UIColor.hexColorOrDefault("#BBBBBB")
         static let gray3: UIColor = UIColor.hexColorOrDefault("#EEEEEE")
+
+        /// DEPRECATED: Will be removed in version 0.0.18
+        @available(*, deprecated, message: "PB.gray is deprecated instead use ColorsNatura.Content.highEmphasis")
+        static let gray: UIColor = UIColor.hexColorOrDefault("#333333")
+        /// DEPRECATED: Will be removed in version 0.0.18
+        @available(*, deprecated, message: "PB.gray2 is deprecated instead use ColorsNatura.Content.lowEmphasis")
+        static let gray2: UIColor = UIColor.hexColorOrDefault("#BBBBBB")
+        /// DEPRECATED: Will be removed in version 0.0.18
+        @available(*, deprecated, message: "PB.black is deprecated instead use ColorsNatura.Content.highlight")
         static let black: UIColor = UIColor.hexColorOrDefault("#000000")
     }
 

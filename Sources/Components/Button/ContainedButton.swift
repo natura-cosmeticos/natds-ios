@@ -42,9 +42,6 @@ private extension ContainedButton {
         layer.shadowOpacity = 1.0
         layer.masksToBounds = false
     }
-}
-
-extension ContainedButton {
 
     private func updateBackgroundByState() {
         switch self.state {
