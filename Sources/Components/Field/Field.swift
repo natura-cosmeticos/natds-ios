@@ -16,7 +16,7 @@ class Field: UITextField {
         }
     }
 
-    var borderColor: UIColor = Colors.lowEmphasis {
+    var borderColor: UIColor = Colors.Content.lowEmphasis {
         didSet {
             layer.borderColor = borderColor.cgColor
         }

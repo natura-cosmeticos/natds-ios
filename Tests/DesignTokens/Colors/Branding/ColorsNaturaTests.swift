@@ -45,9 +45,30 @@ class ColorsNaturaTests: XCTestCase {
         XCTAssertEqual(color, expectedColor)
     }
 
+    func test_content_whenIsHighlight_returnsExpectedColor() {
+        let expectedColor = UIColor(hex: "#000000")
+        let color = ColorsNatura.Content.highlight
+
+        XCTAssertEqual(color, expectedColor)
+    }
+
+    func test_content_whenIsHighEmphasis_returnsExpectedColor() {
+        let expectedColor = UIColor(hex: "#333333")
+        let color = ColorsNatura.Content.highEmphasis
+
+        XCTAssertEqual(color, expectedColor)
+    }
+
     func test_content_whenIsMediumEmphasis_returnsExpectedColor() {
         let expectedColor = UIColor(hex: "#777777")
         let color = ColorsNatura.Content.mediumEmphasis
+
+        XCTAssertEqual(color, expectedColor)
+    }
+
+    func test_content_whenIsLowEmphasis_returnsExpectedColor() {
+        let expectedColor = UIColor(hex: "#BBBBBB")
+        let color = ColorsNatura.Content.lowEmphasis
 
         XCTAssertEqual(color, expectedColor)
     }

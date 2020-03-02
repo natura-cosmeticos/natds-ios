@@ -13,13 +13,13 @@ class ColorsItemViewController: UIViewController, SampleItem {
         "Unknown": [
             ("Primary", Colors.primary),
             ("Secondary", Colors.secondary),
-            ("High Emphasis", Colors.highEmphasis),
-            ("Low Emphasis", Colors.lowEmphasis),
-            ("Surface Dark", Colors.surfaceDark),
-            ("Highlight", Colors.highlight)
+            ("Surface Dark", Colors.surfaceDark)
         ],
         "Content": [
-            ("Medium Emphasis", Colors.Content.mediumEmphasis)
+            ("Highlight", Colors.Content.highlight),
+            ("High Emphasis", Colors.Content.highEmphasis),
+            ("Medium Emphasis", Colors.Content.mediumEmphasis),
+            ("Low Emphasis", Colors.Content.lowEmphasis)
         ],
         "Feedback": [
             ("Alert", Colors.Feedback.alert)

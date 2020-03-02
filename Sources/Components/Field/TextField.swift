@@ -170,7 +170,7 @@ extension TextField {
         switch state {
         case .enable:
             textField.borderWidth = 1
-            textField.borderColor = Colors.lowEmphasis
+            textField.borderColor = Colors.Content.lowEmphasis
             titleLabel.textColor = Colors.Content.mediumEmphasis
             helperLabel.textColor = Colors.Content.mediumEmphasis
             helperLabel.text = helper

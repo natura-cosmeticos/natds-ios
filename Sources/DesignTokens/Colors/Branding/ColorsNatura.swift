@@ -12,7 +12,10 @@ struct ColorsNatura {
     }
 
     enum Content {
+        static let highlight = UIColor.hexColorOrDefault("#000000")
+        static let highEmphasis = UIColor.hexColorOrDefault("#333333")
         static let mediumEmphasis = UIColor.hexColorOrDefault("#777777")
+        static let lowEmphasis = UIColor.hexColorOrDefault("#BBBBBB")
     }
 
     enum Feedback {
