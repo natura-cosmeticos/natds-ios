@@ -75,7 +75,7 @@ extension TabItemView {
         case .normal:
             titleLabel.textColor = Colors.Content.mediumEmphasis
         case .selected:
-            titleLabel.textColor = Colors.highlight
+            titleLabel.textColor = Colors.Content.highlight
         }
     }
 }

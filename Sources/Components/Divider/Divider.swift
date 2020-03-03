@@ -14,7 +14,7 @@ public class Divider: UIView {
 extension Divider {
 
     private func setup() {
-        backgroundColor = Colors.highlight.withAlphaComponent(0.12)
+        backgroundColor = Colors.Content.highlight.withAlphaComponent(0.12)
         addConstraints()
     }
 

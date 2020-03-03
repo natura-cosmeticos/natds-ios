@@ -13,7 +13,7 @@ class IconCollectioViewCell: UICollectionViewCell {
     }
     private let iconView: IconView = {
         let iconView = IconView()
-        iconView.tintColor = Colors.highEmphasis
+        iconView.tintColor = Colors.Content.highEmphasis
         return iconView
     }()
     private let iconCodeLabel: UILabel = {

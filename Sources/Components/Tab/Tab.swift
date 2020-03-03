@@ -124,7 +124,7 @@ extension Tab {
         layer.shadowRadius = 2.0
         layer.shadowOpacity = 0.14
         layer.masksToBounds = false
-        layer.shadowColor = Colors.highlight.cgColor
+        layer.shadowColor = Colors.Content.highlight.cgColor
         layer.shadowOffset = CGSize(width: 0, height: 3)
     }
 }

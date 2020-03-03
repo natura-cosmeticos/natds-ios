@@ -32,7 +32,7 @@ public class ValueTextHighlight: UIView {
     private lazy var valueLabel: UILabel = {
         let label = UILabel()
         label.font = Fonts.h5
-        label.textColor = Colors.highlight
+        label.textColor = Colors.Content.highlight
         label.textAlignment = .right
 
         return label

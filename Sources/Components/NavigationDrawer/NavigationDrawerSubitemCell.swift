@@ -34,7 +34,7 @@ public class NavigationDrawerSubitemCell: UITableViewCell {
 
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.textColor = Colors.highEmphasis
+        label.textColor = Colors.Content.highEmphasis
         label.font = Fonts.body2
         return label
     }()

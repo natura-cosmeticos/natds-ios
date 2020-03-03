@@ -17,6 +17,13 @@ class FontsTests: XCTestCase {
         XCTAssertEqual(font, expectedFont)
     }
 
+    func test_subtitle1_returnsExpectedFont() {
+        let expectedFont = FontsNatura.subtitle1
+        let font = Fonts.subtitle1
+
+        XCTAssertEqual(font, expectedFont)
+    }
+
     func test_body1_returnsExpectedFont() {
         let expectedFont = FontsNatura.body1
         let font = Fonts.body1

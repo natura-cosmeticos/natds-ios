@@ -445,10 +445,10 @@
 			children = (
 				642468AD23FDCAE8008EAE6B /* TabDelegateMock.swift */,
 				642468AF23FDE1AA008EAE6B /* TabItemViewDelegateMock.swift */,
-            );
-            path = Mock;
-            sourceTree = "<group>";
-        };
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		644DFBD7240811BC00D49AD7 /* Mock */ = {
 			isa = PBXGroup;
 			children = (
