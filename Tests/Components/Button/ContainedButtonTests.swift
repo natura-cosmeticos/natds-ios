@@ -26,11 +26,4 @@ class ContainedButtonTests: FBSnapshotTestCase {
         sut.isEnabled = false
         FBSnapshotVerifyView(superview)
     }
-
-    func test_setTitle_hasUppercasedTitle() {
-        sut.setTitle("ok", for: .normal)
-
-        XCTAssertEqual(sut.titleLabel?.text, "OK")
-    }
-
 }
