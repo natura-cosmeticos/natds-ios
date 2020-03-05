@@ -35,8 +35,9 @@ class TextFieldTests: FBSnapshotTestCase {
     }
 
     func test_state_whenHasError_returnMultipleErrorLinesStateSnapshot() {
-        sut.frame = CGRect(x: 0, y: 0, width: 328, height: 109)
-        sut.error = "Error: Has an error - Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur"
+        recordMode = true
+        sut.frame = CGRect(x: 0, y: 0, width: 328, height: 119)
+        sut.error = "Error: Has an error - this input has an error - Neque porro quisquam est qui dolorem ipsum quia"
         FBSnapshotVerifyView(sut)
     }
 
