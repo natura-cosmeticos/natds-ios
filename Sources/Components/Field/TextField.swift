@@ -84,8 +84,8 @@ public class TextField: UIView {
     }()
 
     private lazy var iconView: IconView = {
-        let iconView = IconView(font: .iconFont(ofSize: Fonts.caption.pointSize),
-                                textColor: Colors.Feedback.alert)
+        let iconView = IconView(fontSize: Fonts.caption.pointSize,
+                                color: Colors.Feedback.alert)
         iconView.icon = Icon.outlinedActionCancel
 
         return iconView

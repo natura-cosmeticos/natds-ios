@@ -21,10 +21,10 @@ public class IconView: UIView {
         setup()
     }
 
-    public convenience init(font: UIFont, textColor: UIColor) {
+    public convenience init(fontSize: CGFloat, color: UIColor) {
         self.init()
-        iconLabel.font = font
-        iconLabel.textColor = textColor
+        iconLabel.font = .iconFont(ofSize: fontSize)
+        iconLabel.textColor = color
     }
 
     @available(*, unavailable)
