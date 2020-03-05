@@ -123,7 +123,6 @@ extension TextField {
         addTitleLabel()
         addTextField()
         addStackView()
-
         stackView.addArrangedSubview(iconView)
         stackView.addArrangedSubview(helperLabel)
 
@@ -168,7 +167,7 @@ extension TextField {
         stackView.translatesAutoresizingMaskIntoConstraints = false
 
         let constraints = [
-            stackView.topAnchor.constraint(equalTo: textField.bottomAnchor),
+            stackView.topAnchor.constraint(equalTo: textField.bottomAnchor, constant: 4),
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
             stackView.bottomAnchor.constraint(equalTo: bottomAnchor),
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor)
