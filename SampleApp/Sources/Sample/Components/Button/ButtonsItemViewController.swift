@@ -26,6 +26,19 @@ class ButtonsItemViewController: UIViewController, SampleItem {
         return button
     }()
 
+    private lazy var flatButton: FlatButton = {
+        let button = FlatButton()
+        button.setTitle("Flat Button", for: .normal)
+        return button
+    }()
+
+    private lazy var disabledFlatButton: FlatButton = {
+        let button = FlatButton()
+        button.setTitle("Disabled flat Button", for: .normal)
+        button.isEnabled = false
+        return button
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         title = Self.name
@@ -38,6 +51,8 @@ class ButtonsItemViewController: UIViewController, SampleItem {
         addStackView()
         stackView.addArrangedSubview(containedButton)
         stackView.addArrangedSubview(disabledContainedButton)
+        stackView.addArrangedSubview(flatButton)
+        stackView.addArrangedSubview(disabledFlatButton)
     }
 
     private func addStackView() {
