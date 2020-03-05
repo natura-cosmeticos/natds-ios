@@ -6,9 +6,12 @@ public class ContainedButton: Button {
         }
     }
 
-    override func setup() {
-        super.setup()
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
 
+    private func setup() {
         setTitleColor(Colors.Content.highEmphasis, for: .normal)
         setTitleColor(Colors.Content.highEmphasis.withAlphaComponent(0.24), for: .disabled)
 

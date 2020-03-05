@@ -1,15 +1,19 @@
-import UIKit
-
 class PulseLayer: CAShapeLayer {
 
-    static let kExpandBeyondSuface: CGFloat = 10
+    static let kOpacityPath = "opacity"
+    static let kPositionPath = "position"
+    static let kTransformScalePath = "transform.scale"
+
+    static let kAnimationFadeOutDuration: Double = 0.15
+    static let kAnimationFadeInDuration: Double = 0.075
+    static let kAnimationGroupDuration: Double = 0.3
 
     static func defaultPulseRadius(rect: CGRect) -> CGFloat {
-        return hypot(rect.midX, rect.midY) + kExpandBeyondSuface
+        return hypot(rect.midX, rect.midY)
     }
 
-    var startPulseAnimationActive = false
-    var pulseStartAnimationTime: CFTimeInterval = 0
+    private var startPulseAnimationActive = false
+    private var pulseStartAnimationTime: CFTimeInterval = 0
 
     override func setNeedsLayout() {
         super.setNeedsLayout()
@@ -27,16 +31,12 @@ class PulseLayer: CAShapeLayer {
         self.path = circlePath.cgPath
     }
 
-    private func standartTimingFuction() -> CAMediaTimingFunction {
-        return CAMediaTimingFunction(controlPoints: 0.4, 0, 0.2, 1)
-    }
-
     private func createScaleAnimation() -> CABasicAnimation {
         let animation = CABasicAnimation()
-        animation.keyPath = "transform.scale"
+        animation.keyPath = PulseLayer.kTransformScalePath
         animation.fromValue = 0.2
         animation.toValue = 1
-        animation.timingFunction = standartTimingFuction()
+        animation.timingFunction = CAMediaTimingFunction(name: .default)
         return animation
     }
 
@@ -49,34 +49,28 @@ class PulseLayer: CAShapeLayer {
         centerPath.addLine(to: endPoint)
 
         let animation = CAKeyframeAnimation()
-        animation.keyPath = "position"
+        animation.keyPath = PulseLayer.kPositionPath
         animation.path = centerPath.cgPath
-        animation.keyTimes = [0, 1]
-        animation.values = [0, 1]
-        animation.timingFunction = standartTimingFuction()
+        animation.timingFunction = CAMediaTimingFunction(name: .default)
 
         return animation
     }
 
     private func createFadeInAnimation() -> CABasicAnimation {
         let animation = CABasicAnimation()
-        animation.keyPath = "opacity"
+        animation.keyPath = PulseLayer.kOpacityPath
         animation.fromValue = 0
         animation.toValue = 1
-        animation.duration = 0.075
+        animation.duration = PulseLayer.kAnimationFadeInDuration
         animation.timingFunction = CAMediaTimingFunction(name: .linear)
         return animation
     }
 
     private func createFadeOutAnimation(duration: Double) -> CABasicAnimation {
-        var delay: TimeInterval = 0
-
-        if startPulseAnimationActive {
-            delay = 0.15
-        }
+        let delay = startPulseAnimationActive ? PulseLayer.kAnimationFadeOutDuration : 0
 
         let animation = CABasicAnimation()
-        animation.keyPath = "opacity"
+        animation.keyPath = PulseLayer.kOpacityPath
         animation.fromValue = 1
         animation.toValue = 0
         animation.duration = duration
@@ -98,7 +92,7 @@ extension PulseLayer {
 
         CATransaction.begin()
         let animationGroup = CAAnimationGroup()
-        animationGroup.duration = 0.225
+        animationGroup.duration = PulseLayer.kAnimationGroupDuration
 
         animationGroup.animations = [
             createScaleAnimation(),
@@ -118,7 +112,8 @@ extension PulseLayer {
     func endPulse(animated: Bool) {
         CATransaction.begin()
 
-        let animation = createFadeOutAnimation(duration: animated ? 0.2 : 0)
+        let duration = animated ? PulseLayer.kAnimationGroupDuration : 0
+        let animation = createFadeOutAnimation(duration: duration)
 
         CATransaction.setCompletionBlock { [weak self] in
             self?.removeFromSuperlayer()

@@ -1,5 +1,3 @@
-import UIKit
-
 public class Button: UIButton {
 
     private var activePulseLayer: PulseLayer?
@@ -38,20 +36,19 @@ public class Button: UIButton {
         self.endPulse()
     }
 
-    func setup() {
+    private func setup() {
         layer.cornerRadius = 4.0
-        layer.masksToBounds = false
 
         titleLabel?.font = Fonts.button
         titleEdgeInsets = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
 
-        preparePulseContainerLayer()
+        addPulseContainerLayer()
     }
 }
 
 extension Button {
 
-    private func preparePulseContainerLayer() {
+    private func addPulseContainerLayer() {
         pulseContainerLayer.zPosition = 0
         pulseContainerLayer.masksToBounds = true
         layer.addSublayer(pulseContainerLayer)
