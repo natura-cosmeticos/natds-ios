@@ -109,11 +109,10 @@ extension PulseLayer {
         CATransaction.commit()
     }
 
-    func endPulse(animated: Bool) {
+    func endPulse() {
         CATransaction.begin()
 
-        let duration = animated ? PulseLayer.kAnimationGroupDuration : 0
-        let animation = createFadeOutAnimation(duration: duration)
+        let animation = createFadeOutAnimation(duration: PulseLayer.kAnimationGroupDuration)
 
         CATransaction.setCompletionBlock { [weak self] in
             self?.removeFromSuperlayer()

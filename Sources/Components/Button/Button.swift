@@ -70,8 +70,8 @@ extension Button {
         self.activePulseLayer = pulseLayer
     }
 
-    func endPulse(animated: Bool = true) {
+    func endPulse() {
         guard let pulseLayer = activePulseLayer else { return }
-        pulseLayer.endPulse(animated: animated)
+        pulseLayer.endPulse()
     }
 }

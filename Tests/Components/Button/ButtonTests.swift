@@ -20,13 +20,12 @@ class ButtonTests: FBSnapshotTestCase {
         XCTAssertEqual(sut.titleLabel?.text, "OK")
     }
 
-    func test_pulseAnimation_whenBeginPulseAt_hasPulseActiveSnapshot() {
-        sut.beginPulseAt(point: sut.center)
+    func test_init_hasValidSnapshot() {
         FBSnapshotVerifyView(sut)
     }
 
-    func test_pulseAnimation_whenEndPulse_hasNormalSnapshot() {
-        sut.endPulse(animated: false)
+    func test_pulseAnimation_whenBeginPulseAt_hasPulseActiveSnapshot() {
+        sut.beginPulseAt(point: sut.center)
         FBSnapshotVerifyView(sut)
     }
 }
