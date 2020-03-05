@@ -70,6 +70,7 @@ public class TextField: UIView {
         stackView.distribution = .fillProportionally
         stackView.axis = .horizontal
         stackView.alignment = .top
+        stackView.spacing = 4
 
         return stackView
     }()
@@ -79,20 +80,15 @@ public class TextField: UIView {
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         label.font = Fonts.caption
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.heightAnchor.constraint(greaterThanOrEqualToConstant: 12).isActive = true
         return label
     }()
 
-    private lazy var iconLabel: UILabel = {
-        let label = UILabel()
-        label.numberOfLines = 1
-        label.text = "\(Icon.outlinedActionCancel.rawValue) "
-        label.textColor = Colors.Feedback.alert
-        label.font = .iconFont(ofSize: 12)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.heightAnchor.constraint(greaterThanOrEqualToConstant: 12).isActive = true
-        return label
+    private lazy var iconView: IconView = {
+        let iconView = IconView(font: .iconFont(ofSize: Fonts.caption.pointSize),
+                                textColor: Colors.Feedback.alert)
+        iconView.icon = Icon.outlinedActionCancel
+
+        return iconView
     }()
 
     public override init(frame: CGRect) {
@@ -127,7 +123,8 @@ extension TextField {
         addTitleLabel()
         addTextField()
         addStackView()
-        stackView.addArrangedSubview(iconLabel)
+
+        stackView.addArrangedSubview(iconView)
         stackView.addArrangedSubview(helperLabel)
 
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
@@ -199,7 +196,7 @@ extension TextField {
             titleLabel.textColor = Colors.Content.mediumEmphasis
             helperLabel.textColor = Colors.Content.mediumEmphasis
             helperLabel.text = helper
-            iconLabel.isHidden = true
+            iconView.isHidden = true
 
         case .active:
             textField.borderWidth = 2
@@ -208,7 +205,7 @@ extension TextField {
             titleLabel.textColor = Colors.Content.mediumEmphasis
             helperLabel.textColor = Colors.Content.mediumEmphasis
             helperLabel.text = helper
-            iconLabel.isHidden = true
+            iconView.isHidden = true
 
         case .error:
             textField.borderWidth = 2
@@ -217,7 +214,7 @@ extension TextField {
             titleLabel.textColor = Colors.Feedback.alert
             helperLabel.textColor = Colors.Feedback.alert
             helperLabel.text = error ?? ""
-            iconLabel.isHidden = false
+            iconView.isHidden = false
         }
     }
 

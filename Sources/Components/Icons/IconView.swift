@@ -5,6 +5,10 @@ public class IconView: UIView {
         }
     }
 
+    private let font: UIFont? = nil
+
+    private let textColor: Colors? = nil
+
     private lazy var iconLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
@@ -15,6 +19,12 @@ public class IconView: UIView {
     public override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
+    }
+
+    public convenience init(font: UIFont, textColor: UIColor) {
+        self.init()
+        iconLabel.font = font
+        iconLabel.textColor = textColor
     }
 
     @available(*, unavailable)

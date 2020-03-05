@@ -30,7 +30,7 @@ class TextFieldTests: FBSnapshotTestCase {
     }
 
     func test_state_whenHasError_returnErrorStateSnapshot() {
-        sut.error = "Error: Has an error 1"
+        sut.error = "Error: Has an error"
         FBSnapshotVerifyView(sut)
     }
 
