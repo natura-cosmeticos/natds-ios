@@ -5,10 +5,6 @@ public class IconView: UIView {
         }
     }
 
-    private let font: UIFont? = nil
-
-    private let textColor: Colors? = nil
-
     private lazy var iconLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
