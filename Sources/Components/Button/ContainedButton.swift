@@ -21,7 +21,7 @@ public class ContainedButton: UIButton {
 
     public override func layoutSubviews() {
         super.layoutSubviews()
-        layoutPulseContainerLayer()
+        updatePulseContainerLayerFrame()
     }
 
     public override func setTitle(_ title: String?, for state: UIControl.State) {
@@ -82,7 +82,7 @@ extension ContainedButton {
         layer.addSublayer(pulseContainerLayer)
     }
 
-    private func layoutPulseContainerLayer() {
+    private func updatePulseContainerLayerFrame() {
         pulseContainerLayer.frame = bounds
         pulseContainerLayer.cornerRadius = layer.cornerRadius
     }

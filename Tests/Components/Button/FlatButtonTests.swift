@@ -22,7 +22,7 @@ class FlatButtonTests: FBSnapshotTestCase {
         XCTAssertEqual(sut.titleLabel?.text, "OK")
     }
 
-    func test_int_hasValidSnapshot() {
+    func test_init_hasValidSnapshot() {
         FBSnapshotVerifyView(superview)
     }
 

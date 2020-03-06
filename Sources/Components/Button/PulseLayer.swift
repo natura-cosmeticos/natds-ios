@@ -1,16 +1,12 @@
 class PulseLayer: CAShapeLayer {
 
-    static let kOpacityPath = "opacity"
-    static let kPositionPath = "position"
-    static let kTransformScalePath = "transform.scale"
+    private let kOpacityPath = "opacity"
+    private let kPositionPath = "position"
+    private let kTransformScalePath = "transform.scale"
 
-    static let kAnimationFadeOutDuration: Double = 0.15
-    static let kAnimationFadeInDuration: Double = 0.075
-    static let kAnimationGroupDuration: Double = 0.3
-
-    static func defaultPulseRadius(rect: CGRect) -> CGFloat {
-        return hypot(rect.midX, rect.midY)
-    }
+    private let kAnimationFadeOutDuration: Double = 0.15
+    private let kAnimationFadeInDuration: Double = 0.075
+    private let kAnimationGroupDuration: Double = 0.3
 
     private var startPulseAnimationActive = false
     private var pulseStartAnimationTime: CFTimeInterval = 0
@@ -22,8 +18,12 @@ class PulseLayer: CAShapeLayer {
         self.position = CGPoint(x: self.bounds.midX, y: self.bounds.midY)
     }
 
+    private func defaultPulseRadius(rect: CGRect) -> CGFloat {
+        return hypot(rect.midX, rect.midY)
+    }
+
     private func setPathFromRadii() {
-        let radius = PulseLayer.defaultPulseRadius(rect: self.bounds)
+        let radius = defaultPulseRadius(rect: self.bounds)
         let width = radius * 2
         let ovalRect = CGRect(x: self.bounds.midX - radius, y: self.bounds.midY - radius, width: width, height: width)
 
@@ -33,7 +33,7 @@ class PulseLayer: CAShapeLayer {
 
     private func createScaleAnimation() -> CABasicAnimation {
         let animation = CABasicAnimation()
-        animation.keyPath = PulseLayer.kTransformScalePath
+        animation.keyPath = kTransformScalePath
         animation.fromValue = 0.2
         animation.toValue = 1
         animation.timingFunction = CAMediaTimingFunction(name: .default)
@@ -49,7 +49,7 @@ class PulseLayer: CAShapeLayer {
         centerPath.addLine(to: endPoint)
 
         let animation = CAKeyframeAnimation()
-        animation.keyPath = PulseLayer.kPositionPath
+        animation.keyPath = kPositionPath
         animation.path = centerPath.cgPath
         animation.timingFunction = CAMediaTimingFunction(name: .default)
 
@@ -58,19 +58,19 @@ class PulseLayer: CAShapeLayer {
 
     private func createFadeInAnimation() -> CABasicAnimation {
         let animation = CABasicAnimation()
-        animation.keyPath = PulseLayer.kOpacityPath
+        animation.keyPath = kOpacityPath
         animation.fromValue = 0
         animation.toValue = 1
-        animation.duration = PulseLayer.kAnimationFadeInDuration
+        animation.duration = kAnimationFadeInDuration
         animation.timingFunction = CAMediaTimingFunction(name: .linear)
         return animation
     }
 
     private func createFadeOutAnimation(duration: Double) -> CABasicAnimation {
-        let delay = startPulseAnimationActive ? PulseLayer.kAnimationFadeOutDuration : 0
+        let delay = startPulseAnimationActive ? kAnimationFadeOutDuration : 0
 
         let animation = CABasicAnimation()
-        animation.keyPath = PulseLayer.kOpacityPath
+        animation.keyPath = kOpacityPath
         animation.fromValue = 1
         animation.toValue = 0
         animation.duration = duration
@@ -92,7 +92,7 @@ extension PulseLayer {
 
         CATransaction.begin()
         let animationGroup = CAAnimationGroup()
-        animationGroup.duration = PulseLayer.kAnimationGroupDuration
+        animationGroup.duration = kAnimationGroupDuration
 
         animationGroup.animations = [
             createScaleAnimation(),
@@ -112,7 +112,7 @@ extension PulseLayer {
     func endPulse() {
         CATransaction.begin()
 
-        let animation = createFadeOutAnimation(duration: PulseLayer.kAnimationGroupDuration)
+        let animation = createFadeOutAnimation(duration: kAnimationGroupDuration)
 
         CATransaction.setCompletionBlock { [weak self] in
             self?.removeFromSuperlayer()
