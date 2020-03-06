@@ -86,7 +86,6 @@ public class TextField: UIView {
     private lazy var iconView: IconView = {
         let iconView = IconView(fontSize: Fonts.caption.pointSize)
         iconView.icon = Icon.outlinedActionCancel
-        iconView.tintColor = Colors.Feedback.alert
 
         return iconView
     }()

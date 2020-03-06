@@ -120,19 +120,10 @@ class TextFieldItemViewController: UIViewController, SampleItem {
     }
 
     @objc func didTapView() {
-        let viewController = TabItemViewController()
-        self.navigationController?.pushViewController(viewController, animated: true)
-        //view.endEditing(true)
+        view.endEditing(true)
     }
 }
 
 extension TextFieldItemViewController: TextFieldDelegate {
 
-    func natTextFieldDidEndEditing(_ textField: TextField) {
-        if textField.text == "2" {
-            textField.error = "houve um erro"
-        } else {
-            textField.error = nil
-        }
-    }
 }
