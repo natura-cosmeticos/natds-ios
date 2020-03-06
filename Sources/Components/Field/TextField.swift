@@ -84,8 +84,7 @@ public class TextField: UIView {
     }()
 
     private lazy var iconView: IconView = {
-        let iconView = IconView(fontSize: Fonts.caption.pointSize,
-                                color: Colors.Feedback.alert)
+        let iconView = IconView(fontSize: Fonts.caption.pointSize)
         iconView.icon = Icon.outlinedActionCancel
         iconView.tintColor = Colors.Feedback.alert
 
@@ -214,6 +213,7 @@ extension TextField {
             titleLabel.textColor = Colors.Feedback.alert
             helperLabel.textColor = Colors.Feedback.alert
             helperLabel.text = error ?? ""
+            iconView.tintColor = Colors.Feedback.alert
             iconView.isHidden = false
         }
     }
