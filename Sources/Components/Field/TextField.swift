@@ -65,11 +65,31 @@ public class TextField: UIView {
         return field
     }()
 
+    private lazy var stackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.distribution = .fillProportionally
+        stackView.axis = .horizontal
+        stackView.alignment = .top
+        stackView.spacing = 4
+
+        return stackView
+    }()
+
     private lazy var helperLabel: UILabel = {
         let label = UILabel()
-        label.numberOfLines = 2
+        label.numberOfLines = 0
+        label.lineBreakMode = .byWordWrapping
         label.font = Fonts.caption
         return label
+    }()
+
+    private lazy var iconView: IconView = {
+        let iconView = IconView(fontSize: Fonts.caption.pointSize,
+                                color: Colors.Feedback.alert)
+        iconView.icon = Icon.outlinedActionCancel
+        iconView.tintColor = Colors.Feedback.alert
+
+        return iconView
     }()
 
     public override init(frame: CGRect) {
@@ -103,7 +123,9 @@ extension TextField {
 
         addTitleLabel()
         addTextField()
-        addHelperLabel()
+        addStackView()
+        stackView.addArrangedSubview(iconView)
+        stackView.addArrangedSubview(helperLabel)
 
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         addGestureRecognizer(tapRecognizer)
@@ -141,15 +163,15 @@ extension TextField {
         NSLayoutConstraint.activate(constraints)
     }
 
-    private func addHelperLabel() {
-        addSubview(helperLabel)
-        helperLabel.translatesAutoresizingMaskIntoConstraints = false
+    private func addStackView() {
+        addSubview(stackView)
+        stackView.translatesAutoresizingMaskIntoConstraints = false
 
         let constraints = [
-            helperLabel.topAnchor.constraint(equalTo: textField.bottomAnchor, constant: 4),
-            helperLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
-            helperLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
-            helperLabel.bottomAnchor.constraint(equalTo: bottomAnchor)
+            stackView.topAnchor.constraint(equalTo: textField.bottomAnchor, constant: 4),
+            stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            stackView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            stackView.trailingAnchor.constraint(equalTo: trailingAnchor)
         ]
 
         NSLayoutConstraint.activate(constraints)
@@ -174,6 +196,7 @@ extension TextField {
             titleLabel.textColor = Colors.Content.mediumEmphasis
             helperLabel.textColor = Colors.Content.mediumEmphasis
             helperLabel.text = helper
+            iconView.isHidden = true
 
         case .active:
             textField.borderWidth = 2
@@ -182,6 +205,7 @@ extension TextField {
             titleLabel.textColor = Colors.Content.mediumEmphasis
             helperLabel.textColor = Colors.Content.mediumEmphasis
             helperLabel.text = helper
+            iconView.isHidden = true
 
         case .error:
             textField.borderWidth = 2
@@ -189,7 +213,8 @@ extension TextField {
             textField.tintColor = Colors.Feedback.alert
             titleLabel.textColor = Colors.Feedback.alert
             helperLabel.textColor = Colors.Feedback.alert
-            helperLabel.attributedText = error?.withIcon(Icon.outlinedActionCancel.rawValue)
+            helperLabel.text = error ?? ""
+            iconView.isHidden = false
         }
     }
 
