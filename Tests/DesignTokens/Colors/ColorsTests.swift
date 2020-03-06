@@ -50,4 +50,11 @@ class ColorsTests: XCTestCase {
 
         XCTAssertEqual(color, expectedColor)
     }
+
+    func test_feedback_whenIsSuccess_returnsExpectedColor() {
+        let expectedColor = ColorsNatura.Feedback.success
+        let color = Colors.Feedback.success
+
+        XCTAssertEqual(color, expectedColor)
+    }
 }

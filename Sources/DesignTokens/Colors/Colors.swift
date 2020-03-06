@@ -13,6 +13,6 @@ public class Colors: NSObject {
 
     public class Feedback {
         public static let alert = ColorsNatura.Feedback.alert
+        public static let success = ColorsNatura.Feedback.success
     }
-
 }
