@@ -5,6 +5,8 @@ class DividerViewController: UIViewController, SampleItem {
 
     static var name: String = "Divider"
 
+    private let dividerFullBleed = Divider()
+
     private let divider = Divider()
 
     override func viewDidLoad() {
@@ -16,7 +18,22 @@ class DividerViewController: UIViewController, SampleItem {
         title = Self.name
         view.backgroundColor = .white
 
+        addDividerFullBleed()
         addDivider()
+    }
+
+    private func addDividerFullBleed() {
+        view.addSubview(dividerFullBleed)
+        dividerFullBleed.translatesAutoresizingMaskIntoConstraints = false
+
+        let constraints = [
+            dividerFullBleed.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -40),
+            dividerFullBleed.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            dividerFullBleed.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            dividerFullBleed.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ]
+
+        NSLayoutConstraint.activate(constraints)
     }
 
     private func addDivider() {
