@@ -9,12 +9,8 @@ class PulsableTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        sut = FlatButton(frame: CGRect(x: 8, y: 58, width: 144, height: 48))
+        sut = FlatButton(frame: CGRect(x: 0, y: 0, width: 144, height: 48))
         sut.setTitle("Button", for: .normal)
-
-        superview = UIView(frame: CGRect(x: 0, y: 0, width: 160, height: 160))
-        superview.backgroundColor = .white
-        superview.addSubview(sut)
     }
 
     func test_beginPulseAt_returnsValidActivePulseLayer() {
