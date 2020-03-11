@@ -35,11 +35,10 @@ class PulseLayerTests: XCTestCase {
         sut.endPulse()
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            XCTAssertNil(layer.sublayers)
             expectation.fulfill()
         }
 
         self.waitForExpectations(timeout: 0.5, handler: .none)
-
-        XCTAssertNil(layer.sublayers)
     }
 }
