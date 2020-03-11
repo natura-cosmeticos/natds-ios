@@ -3,11 +3,9 @@ class PulseLayer: CAShapeLayer {
     private let kOpacityPath = "opacity"
     private let kPositionPath = "position"
     private let kTransformScalePath = "transform.scale"
-
     private let kAnimationFadeOutDuration: Double = 0.15
     private let kAnimationFadeInDuration: Double = 0.075
     private let kAnimationGroupDuration: Double = 0.3
-
     private var startPulseAnimationActive = false
     private var pulseStartAnimationTime: CFTimeInterval = 0
 

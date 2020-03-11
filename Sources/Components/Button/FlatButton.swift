@@ -1,10 +1,11 @@
-public class FlatButton: UIButton {
+public class FlatButton: UIButton, Pulsable {
 
-    private let pulse = Pulse()
+    var pulseLayer: PulseLayer?
 
     public override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
+        pulseLayer = PulseLayer()
     }
 
     @available(*, unavailable)
@@ -21,13 +22,13 @@ public class FlatButton: UIButton {
 
         if let touch = touches.first {
             let point = touch.location(in: self)
-            pulse.beginPulseAt(point: point, in: layer)
+            beginPulseAt(pulseLayer, at: point, in: layer)
         }
     }
 
     public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
-        pulse.endPulse()
+        endPulse(pulseLayer: pulseLayer)
     }
 }
 
