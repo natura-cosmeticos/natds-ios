@@ -19,12 +19,24 @@ class PulseLayerTests: XCTestCase {
     }
 
     func test_endPulse_expectedPulseLayerWasRemoved() {
+
+        let expectation = self.expectation(description: "calls the callback with a resource object")
+
         let layer = CALayer()
         layer.bounds = CGRect(x: 0, y: 0, width: 0, height: 0)
 
         let pulseLayer = PulseLayer()
+        pulseLayer.startPulseAt(point: CGPoint(x: 0, y: 0))
+
+        layer.addSublayer(pulseLayer)
         pulseLayer.endPulse()
 
-        XCTAssertNil(pulseLayer.sublayers)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            expectation.fulfill()
+        }
+
+        self.waitForExpectations(timeout: 0.5, handler: .none)
+
+        XCTAssertNil(layer.sublayers)
     }
 }
