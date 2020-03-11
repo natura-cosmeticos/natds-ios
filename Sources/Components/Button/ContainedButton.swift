@@ -2,7 +2,7 @@ public class ContainedButton: UIButton, Pulsable {
 
     private let pulseContainerLayer = CAShapeLayer()
 
-    var pulseLayer: PulseLayer?
+    var pulseLayer: PulseLayer
 
     public override var isEnabled: Bool {
         didSet {

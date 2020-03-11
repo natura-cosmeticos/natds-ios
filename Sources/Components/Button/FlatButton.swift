@@ -1,11 +1,11 @@
 public class FlatButton: UIButton, Pulsable {
 
-    var pulseLayer: PulseLayer?
+    var pulseLayer: PulseLayer
 
     public override init(frame: CGRect) {
+        pulseLayer = PulseLayer()
         super.init(frame: frame)
         setup()
-        pulseLayer = PulseLayer()
     }
 
     @available(*, unavailable)
