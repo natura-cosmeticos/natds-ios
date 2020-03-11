@@ -17,10 +17,9 @@ public class IconView: UIView {
         setup()
     }
 
-    public convenience init(fontSize: CGFloat, color: UIColor) {
+    public convenience init(fontSize: CGFloat) {
         self.init()
         iconLabel.font = .iconFont(ofSize: fontSize)
-        iconLabel.textColor = color
     }
 
     @available(*, unavailable)
