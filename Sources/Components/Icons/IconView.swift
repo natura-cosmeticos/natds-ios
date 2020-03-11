@@ -17,6 +17,11 @@ public class IconView: UIView {
         setup()
     }
 
+    public convenience init(fontSize: CGFloat) {
+        self.init()
+        iconLabel.font = .iconFont(ofSize: fontSize)
+    }
+
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
