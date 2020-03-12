@@ -40,6 +40,7 @@
 		4395D1DF23FC71C400C7DC6F /* TabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4395D1DE23FC71C400C7DC6F /* TabTests.swift */; };
 		43C02A3523FAFDDD0057A31C /* NSMutableAttributedString+Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C02A3423FAFDDD0057A31C /* NSMutableAttributedString+Builder.swift */; };
 		43C02A3723FAFE290057A31C /* NSMutableAttributedString+BuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C02A3623FAFE290057A31C /* NSMutableAttributedString+BuilderTests.swift */; };
+		43F1DD4C24183BA0005A0C4A /* PulseLayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F1DD4A24183B8F005A0C4A /* PulseLayerTests.swift */; };
 		6404360523F45FF00088B20D /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6404360423F45FF00088B20D /* TextField.swift */; };
 		6404360823F462C30088B20D /* TextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6404360723F462C30088B20D /* TextFieldTests.swift */; };
 		6404360B23F4658D0088B20D /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6404360A23F4658D0088B20D /* Field.swift */; };
@@ -47,9 +48,14 @@
 		642468AB23FDC63B008EAE6B /* TabItemViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642468AA23FDC63B008EAE6B /* TabItemViewTests.swift */; };
 		642468AE23FDCAE8008EAE6B /* TabDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642468AD23FDCAE8008EAE6B /* TabDelegateMock.swift */; };
 		642468B023FDE1AA008EAE6B /* TabItemViewDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642468AF23FDE1AA008EAE6B /* TabItemViewDelegateMock.swift */; };
+		643ABFEF24117C79000918EA /* Pulsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643ABFEE24117C79000918EA /* Pulsable.swift */; };
+		643ABFF124118536000918EA /* FlatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643ABFF024118536000918EA /* FlatButton.swift */; };
+		643ABFF324118BF1000918EA /* PulsableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643ABFF224118BF1000918EA /* PulsableTests.swift */; };
 		644DFBD9240811D300D49AD7 /* TextFieldDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644DFBD8240811D300D49AD7 /* TextFieldDelegateMock.swift */; };
 		64A1125A23F32EF300119CE4 /* Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A1125923F32EF300119CE4 /* Divider.swift */; };
 		64A1125E23F331CA00119CE4 /* DividerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A1125C23F331C500119CE4 /* DividerTests.swift */; };
+		64B47D66240EFDA700E19797 /* PulseLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B47D65240EFDA700E19797 /* PulseLayer.swift */; };
+		64B47D6B240F3D9000E19797 /* FlatButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B47D6A240F3D9000E19797 /* FlatButtonTests.swift */; };
 		64D84FCE23F5F574004DD910 /* String+Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D84FCD23F5F574004DD910 /* String+Icon.swift */; };
 		64DF47DF23FB2C7D00DAF441 /* String+IconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DF47DE23FB2C7D00DAF441 /* String+IconTests.swift */; };
 		64DF47E123FB490200DAF441 /* TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DF47E023FB490200DAF441 /* TextFieldDelegate.swift */; };
@@ -119,6 +125,7 @@
 		4395D1DE23FC71C400C7DC6F /* TabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabTests.swift; sourceTree = "<group>"; };
 		43C02A3423FAFDDD0057A31C /* NSMutableAttributedString+Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Builder.swift"; sourceTree = "<group>"; };
 		43C02A3623FAFE290057A31C /* NSMutableAttributedString+BuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+BuilderTests.swift"; sourceTree = "<group>"; };
+		43F1DD4A24183B8F005A0C4A /* PulseLayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseLayerTests.swift; sourceTree = "<group>"; };
 		6404360423F45FF00088B20D /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		6404360723F462C30088B20D /* TextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTests.swift; sourceTree = "<group>"; };
 		6404360A23F4658D0088B20D /* Field.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
@@ -126,9 +133,14 @@
 		642468AA23FDC63B008EAE6B /* TabItemViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemViewTests.swift; sourceTree = "<group>"; };
 		642468AD23FDCAE8008EAE6B /* TabDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabDelegateMock.swift; sourceTree = "<group>"; };
 		642468AF23FDE1AA008EAE6B /* TabItemViewDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemViewDelegateMock.swift; sourceTree = "<group>"; };
+		643ABFEE24117C79000918EA /* Pulsable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pulsable.swift; sourceTree = "<group>"; };
+		643ABFF024118536000918EA /* FlatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatButton.swift; sourceTree = "<group>"; };
+		643ABFF224118BF1000918EA /* PulsableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulsableTests.swift; sourceTree = "<group>"; };
 		644DFBD8240811D300D49AD7 /* TextFieldDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDelegateMock.swift; sourceTree = "<group>"; };
 		64A1125923F32EF300119CE4 /* Divider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Divider.swift; sourceTree = "<group>"; };
 		64A1125C23F331C500119CE4 /* DividerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerTests.swift; sourceTree = "<group>"; };
+		64B47D65240EFDA700E19797 /* PulseLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseLayer.swift; sourceTree = "<group>"; };
+		64B47D6A240F3D9000E19797 /* FlatButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatButtonTests.swift; sourceTree = "<group>"; };
 		64D84FCD23F5F574004DD910 /* String+Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Icon.swift"; sourceTree = "<group>"; };
 		64DF47DE23FB2C7D00DAF441 /* String+IconTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+IconTests.swift"; sourceTree = "<group>"; };
 		64DF47E023FB490200DAF441 /* TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDelegate.swift; sourceTree = "<group>"; };
@@ -184,7 +196,10 @@
 		110F55B123BE5A1E00B9937A /* Button */ = {
 			isa = PBXGroup;
 			children = (
+				64B47D65240EFDA700E19797 /* PulseLayer.swift */,
+				643ABFEE24117C79000918EA /* Pulsable.swift */,
 				110F55B223BE5A3F00B9937A /* ContainedButton.swift */,
+				643ABFF024118536000918EA /* FlatButton.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -192,7 +207,10 @@
 		110F55B423BE642200B9937A /* Button */ = {
 			isa = PBXGroup;
 			children = (
+				643ABFF224118BF1000918EA /* PulsableTests.swift */,
 				110F55B523BE643A00B9937A /* ContainedButtonTests.swift */,
+				64B47D6A240F3D9000E19797 /* FlatButtonTests.swift */,
+				43F1DD4A24183B8F005A0C4A /* PulseLayerTests.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -780,9 +798,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				64DF47E123FB490200DAF441 /* TextFieldDelegate.swift in Sources */,
+				64B47D66240EFDA700E19797 /* PulseLayer.swift in Sources */,
 				11581AAA238F04D8003E45D7 /* AssetsHelper.swift in Sources */,
 				11581A9D238EC256003E45D7 /* NavigationDrawerItemCell.swift in Sources */,
 				4395D1DC23FC6EC700C7DC6F /* TabItemView.swift in Sources */,
+				643ABFEF24117C79000918EA /* Pulsable.swift in Sources */,
 				A9CCF8E523CCEC5400000FC0 /* FontStyle.swift in Sources */,
 				6404360523F45FF00088B20D /* TextField.swift in Sources */,
 				112BAC2523984416009001A7 /* UITableView+Reusable.swift in Sources */,
@@ -804,6 +824,7 @@
 				A9CCF8DF23CCE1CE00000FC0 /* IconView.swift in Sources */,
 				117FE02C238DA53E0032E2AC /* NavigationDrawerSubitemCell.swift in Sources */,
 				A971BE712398306300A0D509 /* NavigationDrawer+IndexMenu.swift in Sources */,
+				643ABFF124118536000918EA /* FlatButton.swift in Sources */,
 				64DF47E323FB492100DAF441 /* TextFieldType.swift in Sources */,
 				43C02A3523FAFDDD0057A31C /* NSMutableAttributedString+Builder.swift in Sources */,
 				117FE024238D9B070032E2AC /* Colors.swift in Sources */,
@@ -819,6 +840,7 @@
 				11FC55C023C64EA800C91014 /* IllustrationIconsTests.swift in Sources */,
 				117FE018238D9AEB0032E2AC /* FontsTests.swift in Sources */,
 				11581A9B238EC15E003E45D7 /* NavigationDrawerItemCellTests.swift in Sources */,
+				43F1DD4C24183BA0005A0C4A /* PulseLayerTests.swift in Sources */,
 				A971BE6F2398171C00A0D509 /* NavigationDrawerDelegateMock.swift in Sources */,
 				11518B6C2396C4AB00220570 /* NavigationDrawerTests.swift in Sources */,
 				64DF47E523FB4A5600DAF441 /* TextFieldTypeTests.swift in Sources */,
@@ -834,6 +856,7 @@
 				117FE017238D9AEB0032E2AC /* FontsNaturaTests.swift in Sources */,
 				A9CCF8EA23CCF16400000FC0 /* UIFont+IconTests.swift in Sources */,
 				6404360823F462C30088B20D /* TextFieldTests.swift in Sources */,
+				64B47D6B240F3D9000E19797 /* FlatButtonTests.swift in Sources */,
 				A9CCF8E823CCF03500000FC0 /* FontIconStyleTests.swift in Sources */,
 				117FE016238D9AEB0032E2AC /* ColorsTests.swift in Sources */,
 				642468AB23FDC63B008EAE6B /* TabItemViewTests.swift in Sources */,
@@ -846,6 +869,7 @@
 				4378068A23F3442D004A9998 /* ValueTextHighlightTests.swift in Sources */,
 				112BAC2923984562009001A7 /* UITableView+ReusableTests.swift in Sources */,
 				642468B023FDE1AA008EAE6B /* TabItemViewDelegateMock.swift in Sources */,
+				643ABFF324118BF1000918EA /* PulsableTests.swift in Sources */,
 				11581AA8238F037D003E45D7 /* AssetsHelperTests.swift in Sources */,
 				117FE015238D9AEB0032E2AC /* ColorsNaturaTests.swift in Sources */,
 			);

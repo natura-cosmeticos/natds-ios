@@ -17,6 +17,6 @@ struct ColorsNatura {
 
     enum Feedback {
         static let alert = UIColor.hexColorOrDefault("#E74627")
+        static let success = UIColor.hexColorOrDefault("#569A32")
     }
-
 }

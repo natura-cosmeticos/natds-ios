@@ -1,4 +1,8 @@
-public class ContainedButton: UIButton {
+public class ContainedButton: UIButton, Pulsable {
+
+    private let pulseContainerLayer = CAShapeLayer()
+
+    var pulseLayer: PulseLayer
 
     public override var isEnabled: Bool {
         didSet {
@@ -7,6 +11,7 @@ public class ContainedButton: UIButton {
     }
 
     public override init(frame: CGRect) {
+        self.pulseLayer = PulseLayer()
         super.init(frame: frame)
         setup()
     }
@@ -16,12 +21,35 @@ public class ContainedButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
 
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+        updatePulseContainerLayerFrame()
+    }
+
     public override func setTitle(_ title: String?, for state: UIControl.State) {
         super.setTitle(title?.uppercased(), for: state)
     }
 
+    public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+
+        if let touch = touches.first {
+            let point = touch.location(in: self)
+            beginPulseAt(pulseLayer, at: point, in: pulseContainerLayer)
+        }
+    }
+
+    public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
+        endPulse(pulseLayer: pulseLayer)
+    }
+}
+
+extension ContainedButton {
+
     private func setup() {
         layer.cornerRadius = 4.0
+
         titleLabel?.font = Fonts.button
         titleEdgeInsets = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
 
@@ -30,10 +58,8 @@ public class ContainedButton: UIButton {
 
         setShadow()
         updateBackgroundByState()
+        addPulseContainerLayer()
     }
-}
-
-private extension ContainedButton {
 
     private func setShadow() {
         layer.shadowColor = Colors.Content.highlight.withAlphaComponent(0.14).cgColor
@@ -50,5 +76,16 @@ private extension ContainedButton {
         default:
             backgroundColor = Colors.primary
         }
+    }
+
+    private func addPulseContainerLayer() {
+        pulseContainerLayer.zPosition = 0
+        pulseContainerLayer.masksToBounds = true
+        layer.addSublayer(pulseContainerLayer)
+    }
+
+    private func updatePulseContainerLayerFrame() {
+        pulseContainerLayer.frame = bounds
+        pulseContainerLayer.cornerRadius = layer.cornerRadius
     }
 }
