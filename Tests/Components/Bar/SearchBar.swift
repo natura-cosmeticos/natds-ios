@@ -4,6 +4,7 @@ import FBSnapshotTestCase
 class SearchBarTests: FBSnapshotTestCase {
 
     var delegateMock: SearchBarDelegateMock!
+    var superview: UIView!
     var sut: SearchBar!
 
     override func setUp() {
@@ -11,42 +12,35 @@ class SearchBarTests: FBSnapshotTestCase {
 
         delegateMock = SearchBarDelegateMock()
 
-        sut = SearchBar(frame: CGRect(x: 0, y: 0, width: 328, height: 99))
+        sut = SearchBar()
         sut.backgroundColor = .white
         sut.placeholder = "Type some text"
         sut.delegate = delegateMock
+
+        superview = UIView(frame: CGRect(x: 0, y: 0, width: 328, height: 112))
+        superview.backgroundColor = .white
+        superview.addSubview(sut)
+
+        sut.translatesAutoresizingMaskIntoConstraints = false
+
+        let constraints = [
+            sut.centerYAnchor.constraint(equalTo: superview.centerYAnchor),
+            sut.centerXAnchor.constraint(equalTo: superview.centerXAnchor),
+            sut.leadingAnchor.constraint(equalTo: superview.leadingAnchor),
+            sut.trailingAnchor.constraint(equalTo: superview.trailingAnchor)
+        ]
+
+        NSLayoutConstraint.activate(constraints)
     }
 
-    /*
-    func test_state_whenHasNoFocus_returnEnableStateSnapshot() {
-        sut.textFieldDidEndEditing(sut.textField)
-        FBSnapshotVerifyView(sut)
+    func test_state_whenHasNoFocus_expectPlaceholderMessageWithoutCleanButton() {
+        FBSnapshotVerifyView(superview)
     }
 
-    func test_state_whenHasFocus_returnActiveStateSnapshot() {
-        sut.textFieldDidBeginEditing(sut.textField)
-        FBSnapshotVerifyView(sut)
+    func test_state_whenHasText_expectedCleanButtonIsVisible() {
+        sut.searchBar.text = "NAT NATURA"
+        FBSnapshotVerifyView(superview)
     }
-
-    func test_state_whenHasError_returnErrorStateSnapshot() {
-        sut.error = "Error: Has an error"
-        FBSnapshotVerifyView(sut)
-    }
-
-    func test_text_whenTextIsSet_expectedTextFieldIsFilledSnapshot() {
-        sut.text = "999.999.999-99"
-        FBSnapshotVerifyView(sut)
-    }
-
-    func test_type_whenTypeIsText_expectedTypeSetup() {
-        let expectedType = TextFieldType.text
-        sut.type = expectedType
-
-        XCTAssertEqual(sut.textField.keyboardType, expectedType.keyboard)
-        XCTAssertEqual(sut.textField.autocorrectionType, expectedType.autoCorrection)
-        XCTAssertEqual(sut.textField.autocapitalizationType, expectedType.capitalization)
-    }
-    */
 
     func test_searchBarDelegate_whenHasDelegateAndCallDidBeginEditing_expectInvokeSearchBarDelegate() {
         sut.searchBarTextDidBeginEditing(sut.searchBar)

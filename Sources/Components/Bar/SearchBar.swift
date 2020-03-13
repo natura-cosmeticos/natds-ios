@@ -9,12 +9,30 @@ public class SearchBar: UIView {
         set { searchBar.placeholder = newValue}
     }
 
+    private lazy var stackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.distribution = .fill
+        stackView.axis = .horizontal
+        return stackView
+    }()
+
+    public private(set) lazy var leftButton: UIButton = {
+        let button = UIButton()
+        button.titleLabel?.font = .iconFont()
+        button.setTitle(Icon.outlinedNavigationDirectionright.rawValue, for: .normal)
+        button.setTitleColor(Colors.Content.highlight, for: .normal)
+        return button
+    }()
+
     private(set) lazy var searchBar: UISearchBar = {
         let searchBar = createSearchBar()
         let searchTextField = searchTextFieldSetup(searchBar: searchBar)
         searchClearButtonSetup(textField: searchTextField)
-
         return searchBar
+    }()
+
+    private(set) lazy var divider: Divider = {
+        return Divider()
     }()
 
     public override init(frame: CGRect) {
@@ -33,19 +51,36 @@ extension SearchBar {
 
     private func setup() {
         self.backgroundColor = .clear
-        addSearchField()
+        addStackView()
+        stackView.addArrangedSubview(leftButton)
+        stackView.addArrangedSubview(searchBar)
+        addDivider()
     }
 
-    private func addSearchField() {
+    private func addStackView() {
+        self.addSubview(stackView)
 
-        self.addSubview(searchBar)
-        searchBar.translatesAutoresizingMaskIntoConstraints = false
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+
+        let constraints = [
+            stackView.topAnchor.constraint(equalTo: topAnchor),
+            stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            stackView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            stackView.heightAnchor.constraint(equalToConstant: 56)
+        ]
+
+        NSLayoutConstraint.activate(constraints)
+    }
+
+    private func addDivider() {
+        self.addSubview(divider)
+        divider.translatesAutoresizingMaskIntoConstraints = false
 
         let contraints = [
-            searchBar.topAnchor.constraint(equalTo: topAnchor, constant: 4),
-            searchBar.leadingAnchor.constraint(equalTo: leadingAnchor),
-            searchBar.trailingAnchor.constraint(equalTo: trailingAnchor),
-            searchBar.heightAnchor.constraint(equalToConstant: 56)
+            divider.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 8),
+            divider.leadingAnchor.constraint(equalTo: leadingAnchor),
+            divider.trailingAnchor.constraint(equalTo: trailingAnchor)
         ]
 
         NSLayoutConstraint.activate(contraints)
@@ -53,7 +88,7 @@ extension SearchBar {
 
     private func createSearchBar() -> UISearchBar {
         let searchBar = UISearchBar()
-        searchBar.backgroundColor = .white
+        searchBar.backgroundColor = .clear
         searchBar.searchBarStyle = .minimal
         searchBar.autocapitalizationType = .allCharacters
         searchBar.setImage(UIImage(), for: .search, state: .normal)
@@ -71,9 +106,8 @@ extension SearchBar {
 
         textField.backgroundColor = .white
         textField.clearButtonMode = .always
-        textField.placeholder = "ESCOLHA UM BANCO"
-        textField.text = "lero lero lero"
         textField.borderStyle = .none
+        textField.keyboardType = .default
 
         return textField
     }

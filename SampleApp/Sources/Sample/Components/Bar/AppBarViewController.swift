@@ -4,12 +4,13 @@ import NatDS
 class AppBarViewController: UIViewController, SampleItem {
     static var name: String = "App Bar"
 
-    private lazy var searchBar: SearchBar = {
-        let searchBar = SearchBar()
-        searchBar.placeholder = "Type some text"
-        searchBar.delegate = self
+    private lazy var appSearchBar: SearchBar = {
+        let appSearchBar = SearchBar()
+        appSearchBar.placeholder = "Type some text"
+        appSearchBar.leftButton.addTarget(self, action: #selector(didTap), for: .touchUpInside)
+        appSearchBar.delegate = self
 
-        return searchBar
+        return appSearchBar
     }()
 
     override func viewDidLoad() {
@@ -17,23 +18,26 @@ class AppBarViewController: UIViewController, SampleItem {
         setup()
     }
 
+    @IBAction func didTap() {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+
     private func setup() {
         title = Self.name
         view.backgroundColor = .white
-
         addSearchBar()
     }
 
     private func addSearchBar() {
-        view.addSubview(searchBar)
-        searchBar.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(appSearchBar)
+
+        appSearchBar.translatesAutoresizingMaskIntoConstraints = false
 
         let constraints = [
-            searchBar.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            searchBar.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            searchBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            searchBar.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            searchBar.heightAnchor.constraint(greaterThanOrEqualToConstant: 48)
+            appSearchBar.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            appSearchBar.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            appSearchBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            appSearchBar.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ]
 
         NSLayoutConstraint.activate(constraints)
@@ -42,15 +46,9 @@ class AppBarViewController: UIViewController, SampleItem {
 
 extension AppBarViewController: SearchBarDelegate {
 
-    public func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        print("DidBeginEditing")
-    }
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) { }
 
-    public func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        print("DidBEndEditing")
-    }
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) { }
 
-    public func natSearchBar(_ searchBar: SearchBar, textDidChange searchText: String) {
-        print("natSearchBar: \(searchText)")
-    }
+    func natSearchBar(_ searchBar: SearchBar, textDidChange searchText: String) { }
 }
