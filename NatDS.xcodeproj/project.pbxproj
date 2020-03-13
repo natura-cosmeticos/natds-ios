@@ -378,7 +378,6 @@
 		117FE02D238DD53D0032E2AC /* NavigationDrawer */ = {
 			isa = PBXGroup;
 			children = (
-				A988199A238C5AAF0008230F /* UIColor+Hex.swift */,
 				117FE02B238DA53E0032E2AC /* NavigationDrawerSubitemCell.swift */,
 				11581A9C238EC256003E45D7 /* NavigationDrawerItemCell.swift */,
 				11518B662396BFAE00220570 /* NavigationDrawer.swift */,
@@ -509,11 +508,12 @@
 		A9881999238C5A8E0008230F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				112BAC2423984416009001A7 /* UITableView+Reusable.swift */,
-				A9325A6523FB34EC0023979C /* UICollectionView+Reusable.swift */,
-				A9CCF8D923CCDDF700000FC0 /* UIFont+Icon.swift */,
-				64D84FCD23F5F574004DD910 /* String+Icon.swift */,
 				43C02A3423FAFDDD0057A31C /* NSMutableAttributedString+Builder.swift */,
+				64D84FCD23F5F574004DD910 /* String+Icon.swift */,
+				A9325A6523FB34EC0023979C /* UICollectionView+Reusable.swift */,
+				A988199A238C5AAF0008230F /* UIColor+Hex.swift */,
+				A9CCF8D923CCDDF700000FC0 /* UIFont+Icon.swift */,
+				112BAC2423984416009001A7 /* UITableView+Reusable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
