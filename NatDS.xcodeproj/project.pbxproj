@@ -629,7 +629,6 @@
 				A9B71E81237B559A00A2BF51 /* Resources */,
 			);
 			buildRules = (
-				EEE12907241C2F9700FAD480 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
