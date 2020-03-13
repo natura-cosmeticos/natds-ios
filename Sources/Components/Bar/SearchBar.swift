@@ -13,6 +13,7 @@ public class SearchBar: UIView {
         let stackView = UIStackView()
         stackView.distribution = .fill
         stackView.axis = .horizontal
+        stackView.alignment = .fill
         return stackView
     }()
 
