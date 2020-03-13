@@ -76,20 +76,6 @@
 		A9D3454B238C69480013398C /* UIColor+HexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D3454A238C69480013398C /* UIColor+HexTests.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXBuildRule section */
-		EEE12907241C2F9700FAD480 /* PBXBuildRule */ = {
-			isa = PBXBuildRule;
-			compilerSpec = com.apple.compilers.proxy.script;
-			fileType = pattern.proxy;
-			inputFiles = (
-			);
-			isEditable = 1;
-			outputFiles = (
-			);
-			script = "# Type a script or drag a script file from your workspace to insert its path.\n";
-		};
-/* End PBXBuildRule section */
-
 /* Begin PBXContainerItemProxy section */
 		A9B71E8E237B559A00A2BF51 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -173,7 +159,6 @@
 		A9D3454A238C69480013398C /* UIColor+HexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HexTests.swift"; sourceTree = "<group>"; };
 		A9D451B823C7E08F001D73B0 /* natds-icons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "natds-icons.ttf"; sourceTree = "<group>"; };
 		B496A6BAA901771980AF5E95 /* Pods_NatDSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NatDSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EEE12906241C296500FAD480 /* natdssampleappprovisioning.mobileprovision */ = {isa = PBXFileReference; lastKnownFileType = file; name = natdssampleappprovisioning.mobileprovision; path = ../../../../Downloads/natdssampleappprovisioning.mobileprovision; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -491,7 +476,6 @@
 		7F7C949F669E1B554E52BEF2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EEE12906241C296500FAD480 /* natdssampleappprovisioning.mobileprovision */,
 				B496A6BAA901771980AF5E95 /* Pods_NatDSTests.framework */,
 			);
 			name = Frameworks;
