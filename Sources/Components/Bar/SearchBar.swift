@@ -11,44 +11,44 @@ public class SearchBar: UISearchBar {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
 }
 
 extension SearchBar {
 
-    private func setup() {
-        self.backgroundColor = .clear
+    private var textField: UITextField? {
+        guard let textField = self.value(forKey: "searchField") as? UITextField else {
+            return nil
+        }
 
-        createSearchBar()
-        let searchTextField = searchTextFieldSetup()
-        searchClearButtonSetup(textField: searchTextField)
+        return textField
     }
 
-    private func createSearchBar() {
+    private func setup() {
+        setupSearchBar()
+        setupTextField()
+        setupClearButton()
+    }
+
+    private func setupSearchBar() {
         self.backgroundColor = .clear
         self.tintColor = Colors.Content.highEmphasis
         self.searchBarStyle = .minimal
         self.autocapitalizationType = .allCharacters
         self.setImage(UIImage(), for: .search, state: .normal)
-        self.setPositionAdjustment(UIOffset(horizontal: 0, vertical: 0), for: .search)
     }
 
-    private func searchTextFieldSetup() -> UITextField? {
-
-        guard let textField = self.value(forKey: "searchField") as? UITextField else {
-            return nil
+    private func setupTextField() {
+        guard let textField = self.textField else {
+            return
         }
 
         textField.backgroundColor = .white
         textField.clearButtonMode = .whileEditing
         textField.borderStyle = .none
         textField.keyboardType = .default
-
-        return textField
     }
 
-    private func searchClearButtonSetup(textField: UITextField?) {
-
+    private func setupClearButton() {
         guard let button = textField?.value(forKey: "clearButton") as? UIButton else {
             return
         }
