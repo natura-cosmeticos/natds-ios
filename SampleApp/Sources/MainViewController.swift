@@ -1,4 +1,5 @@
 import UIKit
+import NatDS
 
 class MainViewController: UITableViewController {
 
@@ -7,6 +8,11 @@ class MainViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Sample App"
+
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+
+
+
         tableView.register(UITableViewCell.self)
         tableView.showsVerticalScrollIndicator = false
         tableView.separatorStyle = .none
