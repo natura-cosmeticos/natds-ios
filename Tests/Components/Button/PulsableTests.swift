@@ -17,13 +17,11 @@ class PulsableTests: XCTestCase {
         let layer = CALayer()
         layer.bounds = CGRect(x: 0, y: 0, width: 0, height: 0)
 
-        let pulseLayer = sut.pulseLayer
-
-        sut.beginPulseAt(pulseLayer, at: CGPoint(x: 0, y: 0), in: layer)
+        sut.beginPulseAt(point: CGPoint(x: 0, y: 0), in: layer)
 
         XCTAssertNotNil(sut.pulseLayer)
-        XCTAssertEqual(sut.pulseLayer.bounds, layer.bounds)
-        XCTAssertEqual(sut.pulseLayer.fillColor, Colors.Content.highEmphasis.withAlphaComponent(0.12).cgColor)
-        XCTAssertTrue(layer.sublayers!.contains(sut.pulseLayer))
+        XCTAssertEqual(sut.pulseLayer?.bounds, layer.bounds)
+        XCTAssertEqual(sut.pulseLayer?.fillColor, Colors.Content.highEmphasis.withAlphaComponent(0.12).cgColor)
+        XCTAssertTrue(layer.sublayers!.contains(sut.pulseLayer!))
     }
 }

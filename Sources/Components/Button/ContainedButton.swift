@@ -2,7 +2,7 @@ public class ContainedButton: UIButton, Pulsable {
 
     private let pulseContainerLayer = CAShapeLayer()
 
-    var pulseLayer: PulseLayer
+    var pulseLayer: PulseLayer?
 
     public override var isEnabled: Bool {
         didSet {
@@ -11,7 +11,6 @@ public class ContainedButton: UIButton, Pulsable {
     }
 
     public override init(frame: CGRect) {
-        self.pulseLayer = PulseLayer()
         super.init(frame: frame)
         setup()
     }
@@ -35,13 +34,13 @@ public class ContainedButton: UIButton, Pulsable {
 
         if let touch = touches.first {
             let point = touch.location(in: self)
-            beginPulseAt(pulseLayer, at: point, in: pulseContainerLayer)
+            beginPulseAt(point: point, in: pulseContainerLayer)
         }
     }
 
     public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
-        endPulse(pulseLayer: pulseLayer)
+        endPulse()
     }
 }
 
