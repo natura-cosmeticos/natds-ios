@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		434E661C241976BD00D91E59 /* AppBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434E661B241976BD00D91E59 /* AppBarViewController.swift */; };
 		437CFD4F241059B8008CEA37 /* DividerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437CFD4E241059B8008CEA37 /* DividerViewController.swift */; };
 		64C9173323FC9EDE0040E714 /* TabItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C9173223FC9EDE0040E714 /* TabItemViewController.swift */; };
 		64D84FD123F5FC7D004DD910 /* ValueTextHighlightItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D84FD023F5FC7D004DD910 /* ValueTextHighlightItemViewController.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		434E661B241976BD00D91E59 /* AppBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBarViewController.swift; sourceTree = "<group>"; };
 		437CFD4E241059B8008CEA37 /* DividerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerViewController.swift; sourceTree = "<group>"; };
 		64C9173223FC9EDE0040E714 /* TabItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemViewController.swift; sourceTree = "<group>"; };
 		64D84FD023F5FC7D004DD910 /* ValueTextHighlightItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueTextHighlightItemViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		434E661A241976A300D91E59 /* Bar */ = {
+			isa = PBXGroup;
+			children = (
+				434E661B241976BD00D91E59 /* AppBarViewController.swift */,
+			);
+			path = Bar;
+			sourceTree = "<group>";
+		};
 		437CFD4D2410598D008CEA37 /* Divider */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				A904ECB923D607D800709B43 /* ComponentsSection.swift */,
+				434E661A241976A300D91E59 /* Bar */,
 				437CFD4D2410598D008CEA37 /* Divider */,
 				64C9173123FC9EBC0040E714 /* Tab */,
 				64D84FD223F600B4004DD910 /* Field */,
@@ -323,6 +334,7 @@
 				64D84FD123F5FC7D004DD910 /* ValueTextHighlightItemViewController.swift in Sources */,
 				A904ECC623D7628000709B43 /* IconCollectioViewCell.swift in Sources */,
 				A9D71BC62386DFEE00CDEC1D /* NavigationDrawerItemViewController.swift in Sources */,
+				434E661C241976BD00D91E59 /* AppBarViewController.swift in Sources */,
 				A904ECBC23D6088600709B43 /* ButtonsItemViewController.swift in Sources */,
 				64FAAC7723FB5B880085F7C8 /* ColorHeaderCollectionViewCell.swift in Sources */,
 				A904ECBA23D607D800709B43 /* ComponentsSection.swift in Sources */,

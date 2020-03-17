@@ -22,7 +22,8 @@ class ColorsItemViewController: UIViewController, SampleItem {
             ("Low Emphasis", Colors.Content.lowEmphasis)
         ],
         "Feedback": [
-            ("Alert", Colors.Feedback.alert)
+            ("Alert", Colors.Feedback.alert),
+            ("Success", Colors.Feedback.success)
         ]
     ]
 
