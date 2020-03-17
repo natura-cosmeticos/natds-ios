@@ -7,9 +7,7 @@ class PulseLayerTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-
         sut = PulseLayer()
-
     }
 
     func test_startPulse_expectedPulseLayerEqualsToLayer() {
