@@ -1,7 +1,7 @@
 import NatDS
 
 class ButtonsItemViewController: UIViewController, SampleItem {
-    static var name = "Buttons"
+    static var name = "Button"
 
     private lazy var stackView: UIStackView = {
         let stack = UIStackView()
@@ -28,13 +28,13 @@ class ButtonsItemViewController: UIViewController, SampleItem {
 
     private lazy var flatButton: FlatButton = {
         let button = FlatButton()
-        button.setTitle("Flat Button", for: .normal)
+        button.setTitle("Tertiary Button", for: .normal)
         return button
     }()
 
     private lazy var disabledFlatButton: FlatButton = {
         let button = FlatButton()
-        button.setTitle("Disabled flat Button", for: .normal)
+        button.setTitle("Disabled Tertiary Button", for: .normal)
         button.isEnabled = false
         return button
     }()
