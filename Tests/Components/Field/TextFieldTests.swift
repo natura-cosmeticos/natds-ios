@@ -40,6 +40,12 @@ class TextFieldTests: FBSnapshotTestCase {
         FBSnapshotVerifyView(sut)
     }
 
+    func test_state_whenHasErrorAndLargeMessageWithSmallWidth_returnMultipleErrorLinesAndNotCutIconSnapshot() {
+        sut.frame = CGRect(x: 0, y: 0, width: 100, height: 119)
+        sut.error = "Error: Has an error"
+        FBSnapshotVerifyView(sut)
+    }
+
     func test_text_whenTextIsSet_expectedTextFieldIsFilledSnapshot() {
         sut.text = "999.999.999-99"
         FBSnapshotVerifyView(sut)
