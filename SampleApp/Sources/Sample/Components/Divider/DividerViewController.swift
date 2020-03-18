@@ -2,7 +2,6 @@ import UIKit
 import NatDS
 
 class DividerViewController: UIViewController, SampleItem {
-
     static var name: String = "Divider"
 
     private let dividerFullBleed = Divider()
