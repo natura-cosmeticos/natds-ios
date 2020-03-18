@@ -1,4 +1,11 @@
 public class IconView: UIView {
+
+    public var aligment: NSTextAlignment = .center {
+        didSet {
+            iconLabel.textAlignment = aligment
+        }
+    }
+
     public var icon: Icon? {
         didSet {
             iconLabel.text = icon?.rawValue
@@ -7,7 +14,7 @@ public class IconView: UIView {
 
     private lazy var iconLabel: UILabel = {
         let label = UILabel()
-        label.textAlignment = .center
+        label.textAlignment = aligment
         label.font = .iconFont()
         return label
     }()
