@@ -2,7 +2,7 @@ import UIKit
 import NatDS
 
 class TextFieldItemViewController: UIViewController, SampleItem {
-    static var name: String = "Text Fields"
+    static var name: String = "Text Field"
 
     private lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
