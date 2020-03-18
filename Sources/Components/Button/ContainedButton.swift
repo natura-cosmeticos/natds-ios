@@ -50,7 +50,7 @@ extension ContainedButton {
         layer.cornerRadius = 4.0
 
         titleLabel?.font = Fonts.button
-        titleEdgeInsets = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+        contentEdgeInsets = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
 
         setTitleColor(Colors.Content.highEmphasis, for: .normal)
         setTitleColor(Colors.Content.highEmphasis.withAlphaComponent(0.24), for: .disabled)

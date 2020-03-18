@@ -31,4 +31,11 @@ class ContainedButtonTests: FBSnapshotTestCase {
         sut.setTitle("ok", for: .normal)
         XCTAssertEqual(sut.titleLabel?.text, "OK")
     }
+
+    func test_contentEdgeInsets_asExpected() {
+        XCTAssertEqual(sut.contentEdgeInsets.top, 16)
+        XCTAssertEqual(sut.contentEdgeInsets.bottom, 16)
+        XCTAssertEqual(sut.contentEdgeInsets.left, 16)
+        XCTAssertEqual(sut.contentEdgeInsets.right, 16)
+    }
 }
