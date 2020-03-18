@@ -70,7 +70,6 @@ public class TextField: UIView {
         stackView.distribution = .fillProportionally
         stackView.axis = .horizontal
         stackView.alignment = .top
-        stackView.spacing = 4
 
         return stackView
     }()
@@ -85,8 +84,10 @@ public class TextField: UIView {
 
     private lazy var iconView: IconView = {
         let iconView = IconView(fontSize: Fonts.caption.pointSize)
+        iconView.aligment = .left
         iconView.icon = Icon.outlinedActionCancel
-
+        iconView.translatesAutoresizingMaskIntoConstraints = false
+        iconView.widthAnchor.constraint(greaterThanOrEqualToConstant: 16).isActive = true
         return iconView
     }()
 
