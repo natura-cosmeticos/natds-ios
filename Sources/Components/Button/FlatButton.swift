@@ -39,7 +39,7 @@ private extension FlatButton {
 
         backgroundColor = .clear
         titleLabel?.font = Fonts.button
-        titleEdgeInsets = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+        contentEdgeInsets = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
 
         setTitleColor(Colors.Content.highEmphasis, for: .normal)
         setTitleColor(Colors.Content.highEmphasis.withAlphaComponent(0.48), for: .disabled)
