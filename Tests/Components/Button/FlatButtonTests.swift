@@ -31,7 +31,7 @@ class FlatButtonTests: FBSnapshotTestCase {
         FBSnapshotVerifyView(superview)
     }
 
-    func test_contentEdgeInsets_asExpected() {
+    func test_contentEdgeInsets_allInsetsHaveSixteen() {
         XCTAssertEqual(sut.contentEdgeInsets.top, 16)
         XCTAssertEqual(sut.contentEdgeInsets.bottom, 16)
         XCTAssertEqual(sut.contentEdgeInsets.left, 16)
