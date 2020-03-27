@@ -356,6 +356,10 @@ class IconTests: FBSnapshotTestCase {
         assert(icon: .outlinedContentStore)
     }
 
+    func test_outlinedContentWellness_hasValidSnapshot() {
+        assert(icon: .outlinedContentWellness)
+    }
+
     func test_outlinedContentWifi_hasValidSnapshot() {
         assert(icon: .outlinedContentWifi)
     }
