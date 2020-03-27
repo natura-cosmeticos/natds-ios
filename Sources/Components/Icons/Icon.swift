@@ -87,6 +87,7 @@ public enum Icon: String, CaseIterable {
     case outlinedContentMirror = "\u{EA56}"
     case outlinedContentProdutivity = "\u{EA57}"
     case outlinedContentStore = "\u{EA58}"
+    case outlinedContentWellness = "\u{EA98}"
     case outlinedContentWifi = "\u{EA59}"
     case outlinedFinanceBag = "\u{EA5A}"
     case outlinedFinanceCards = "\u{EA5B}"
