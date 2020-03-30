@@ -79,7 +79,7 @@ public enum Icon: String, CaseIterable {
     case outlinedContentEducation = "\u{EA4E}"
     case outlinedContentGift = "\u{EA4F}"
     case outlinedContentGlobal = "\u{EA50}"
-    case outlinedContentHealthy = "\u{EA51}"
+    case outlinedContentHealthy = "\u{EA96}"
     case outlinedContentLock = "\u{EA52}"
     case outlinedContentMagic = "\u{EA53}"
     case outlinedContentMedal = "\u{EA54}"
@@ -149,6 +149,6 @@ public enum Icon: String, CaseIterable {
     case zOutlinedContentBellringing = "\u{EA93}"
     case zOutlinedContentExchangereports = "\u{EA94}"
     case zOutlinedContentGallery = "\u{EA95}"
-    case zOutlinedContentHealth = "\u{EA96}"
+    case zOutlinedContentHealth = "\u{EA51}"
     case zOutlinedContentPlanb = "\u{EA97}"
 }
