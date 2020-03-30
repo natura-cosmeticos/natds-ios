@@ -20,7 +20,7 @@ public class NavigationDrawerSubitemCell: UITableViewCell {
 
     private lazy var verticalLineView: UIView = {
         let view = UIView()
-        view.backgroundColor = Colors.Surface.surfaceDark
+        view.backgroundColor = Colors.Surface.dark
         return view
     }()
 

@@ -18,14 +18,14 @@ class ColorsTests: XCTestCase {
 
     func test_surfaceDark_returnsExpectedColor() {
         let expectedColor = ColorsNatura.Surface.backgroundOn
-        let color = Colors.Surface.surfaceDark
+        let color = Colors.Surface.dark
 
         XCTAssertEqual(color, expectedColor)
     }
 
     func test_surfaceLight_returnsExpectedColor() {
         let expectedColor = ColorsNatura.Surface.background
-        let color = Colors.Surface.surfaceLight
+        let color = Colors.Surface.light
 
         XCTAssertEqual(color, expectedColor)
     }
