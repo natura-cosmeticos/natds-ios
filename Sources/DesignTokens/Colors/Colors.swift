@@ -3,6 +3,7 @@ public class Colors: NSObject {
     public static let primary: UIColor = ColorsNatura.Primary.yellow
     public static let secondary: UIColor = ColorsNatura.Primary.orange
     public static let surfaceDark: UIColor = ColorsNatura.PB.gray3
+    public static let surfaceLight: UIColor = ColorsNatura.Surface.background
 
     public class Content {
         public static let highlight = ColorsNatura.Content.highlight

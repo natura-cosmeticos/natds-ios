@@ -23,6 +23,13 @@ class ColorsTests: XCTestCase {
         XCTAssertEqual(color, expectedColor)
     }
 
+    func test_surfaceLight_returnsExpectedColor() {
+        let expectedColor = ColorsNatura.Surface.background
+        let color = Colors.surfaceLight
+
+        XCTAssertEqual(color, expectedColor)
+    }
+
     func test_content_whenIsHighlight_returnsExpectedColor() {
         let expectedColor = ColorsNatura.Content.highlight
         let color = Colors.Content.highlight

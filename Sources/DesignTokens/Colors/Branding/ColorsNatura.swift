@@ -15,6 +15,10 @@ struct ColorsNatura {
         static let lowEmphasis = UIColor.hexColorOrDefault("#BBBBBB")
     }
 
+    enum Surface {
+        static let background = UIColor.hexColorOrDefault("#FAFAFA")
+    }
+
     enum Feedback {
         static let alert = UIColor.hexColorOrDefault("#E74627")
         static let success = UIColor.hexColorOrDefault("#569A32")
