@@ -16,8 +16,8 @@ class ColorsItemViewController: UIViewController, SampleItem {
             ("Secondary", Colors.secondary)
         ],
         "Surface": [
-            ("Surface Dark", Colors.surfaceDark),
-            ("Surface Light", Colors.surfaceLight)
+            ("Surface Dark", Colors.Surface.surfaceDark),
+            ("Surface Light", Colors.Surface.surfaceLight)
         ],
         "Content": [
             ("Highlight", Colors.Content.highlight),
