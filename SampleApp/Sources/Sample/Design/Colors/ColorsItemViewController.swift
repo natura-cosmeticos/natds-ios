@@ -5,6 +5,7 @@ class ColorsItemViewController: UIViewController, SampleItem {
 
     private let colorSections: [String] = [
         "Unknown",
+        "Surface",
         "Content",
         "Feedback"
     ]
@@ -12,7 +13,9 @@ class ColorsItemViewController: UIViewController, SampleItem {
     private let colors: [String: [DSColor]] = [
         "Unknown": [
             ("Primary", Colors.primary),
-            ("Secondary", Colors.secondary),
+            ("Secondary", Colors.secondary)
+        ],
+        "Surface": [
             ("Surface Dark", Colors.surfaceDark),
             ("Surface Light", Colors.surfaceLight)
         ],

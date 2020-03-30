@@ -4,10 +4,6 @@ struct ColorsNatura {
         static let yellow: UIColor = UIColor.hexColorOrDefault("#F4AB34")
     }
 
-    enum PB {
-        static let gray3: UIColor = UIColor.hexColorOrDefault("#EEEEEE")
-    }
-
     enum Content {
         static let highlight = UIColor.hexColorOrDefault("#000000")
         static let highEmphasis = UIColor.hexColorOrDefault("#333333")
@@ -17,6 +13,7 @@ struct ColorsNatura {
 
     enum Surface {
         static let background = UIColor.hexColorOrDefault("#FAFAFA")
+        static let backgroundOn = UIColor.hexColorOrDefault("#EEEEEE")
     }
 
     enum Feedback {

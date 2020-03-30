@@ -17,7 +17,7 @@ class ColorsTests: XCTestCase {
     }
 
     func test_surfaceDark_returnsExpectedColor() {
-        let expectedColor = ColorsNatura.PB.gray3
+        let expectedColor = ColorsNatura.Surface.backgroundOn
         let color = Colors.surfaceDark
 
         XCTAssertEqual(color, expectedColor)
