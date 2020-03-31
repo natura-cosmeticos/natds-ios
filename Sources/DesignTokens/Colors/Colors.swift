@@ -3,8 +3,8 @@ public class Colors: NSObject {
     public static let primary = ColorsNatura.Primary.yellow
     public static let secondary = ColorsNatura.Primary.orange
 
-    @available(*, deprecated, message: "Moved to Colors.Surface.dark")
-    public static let surfaceDark = ColorsNatura.Surface.backgroundOn
+    @available(*, deprecated, message: "Moved to ColorsNatura.Surface.dark")
+    public static let surfaceDark = ColorsNatura.Surface.dark
 
     public class Content {
         public static let highlight = ColorsNatura.Content.highlight
@@ -14,8 +14,11 @@ public class Colors: NSObject {
     }
 
     public class Surface {
+        public static let light = ColorsNatura.Surface.light
+        public static let dark = ColorsNatura.Surface.dark
         public static let background = ColorsNatura.Surface.background
         public static let backgroundOn = ColorsNatura.Surface.backgroundOn
+
     }
 
     public class Feedback {
