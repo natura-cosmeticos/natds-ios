@@ -14,8 +14,8 @@ public class Colors: NSObject {
     }
 
     public class Surface {
-        public static let light = ColorsNatura.Surface.background
-        public static let dark = ColorsNatura.Surface.backgroundOn
+        public static let background = ColorsNatura.Surface.background
+        public static let backgroundOn = ColorsNatura.Surface.backgroundOn
     }
 
     public class Feedback {
