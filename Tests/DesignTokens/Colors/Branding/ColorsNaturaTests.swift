@@ -32,7 +32,7 @@ class ColorsNaturaTests: XCTestCase {
     }
 
     func test_surface_backgroundOn_returnsExpectedColor() {
-        let expectedColor = UIColor(hex: "#EEEEEE")
+        let expectedColor = UIColor(hex: "#333333")
         let color = ColorsNatura.Surface.backgroundOn
 
         XCTAssertEqual(color, expectedColor)

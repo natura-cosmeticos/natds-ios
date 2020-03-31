@@ -15,7 +15,7 @@ struct ColorsNatura {
         static let surface = UIColor.hexColorOrDefault("#FFFFFF")
         static let surfaceOn = UIColor.hexColorOrDefault("#333333")
         static let background = UIColor.hexColorOrDefault("#FAFAFA")
-        static let backgroundOn = UIColor.hexColorOrDefault("#EEEEEE")
+        static let backgroundOn = UIColor.hexColorOrDefault("#333333")
     }
 
     enum Feedback {
