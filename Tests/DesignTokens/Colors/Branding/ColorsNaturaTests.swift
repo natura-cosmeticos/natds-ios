@@ -17,8 +17,22 @@ class ColorsNaturaTests: XCTestCase {
         XCTAssertEqual(color, expectedColor)
     }
 
+    func test_surface_light_returnsExpectedColor() {
+        let expectedColor = UIColor(hex: "#FFFFFF")
+        let color = ColorsNatura.Surface.surface
+
+        XCTAssertEqual(color, expectedColor)
+    }
+
+    func test_surface_dark_returnsExpectedColor() {
+        let expectedColor = UIColor(hex: "#333333")
+        let color = ColorsNatura.Surface.surfaceOn
+
+        XCTAssertEqual(color, expectedColor)
+    }
+
     func test_surface_backgroundOn_returnsExpectedColor() {
-        let expectedColor = UIColor(hex: "#EEEEEE")
+        let expectedColor = UIColor(hex: "#333333")
         let color = ColorsNatura.Surface.backgroundOn
 
         XCTAssertEqual(color, expectedColor)
