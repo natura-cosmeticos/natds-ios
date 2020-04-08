@@ -1,9 +1,5 @@
 language: swift
 osx_image: xcode11.3
-#xcode_workspace: NatDS.xcworkspace
-#xcode_scheme: NatDS
-#xcode_destination: platform=iOS Simulator,OS=13.1,name=iPhone 8
-#xcode_sdk: iphonesimulator13.1
 
 before_install:
   - brew update
@@ -12,7 +8,7 @@ before_install:
 
 install:
   - bundle install
-  
+
 before_script:
   - git lfs pull
   - pod install
