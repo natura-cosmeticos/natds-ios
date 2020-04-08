@@ -31,7 +31,6 @@ platform :ios do
   lane :fetch_certificates do
     match(app_identifier: app_identifier, readonly: true, type: "development")
     match(app_identifier: app_identifier, readonly: true, type: "appstore")
-    # match(app_identifier: app_identifier, readonly: true, type: "adhoc")
   end
 
   desc "Install cocoapods dependencies"
