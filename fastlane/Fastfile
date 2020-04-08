@@ -1,0 +1,141 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+app_identifier = "net.natura.NatDSSampleApp"
+workspace_path = "./NatDS.xcworkspace"
+
+ad_hoc_prefix = "match AdHoc"
+app_store_prefix = "match AppStore"
+
+scheme = "NatDS-SampleApp"
+target = "NatDS_SampleApp"
+
+platform :ios do
+  desc "Run all Unit Tests"
+  lane :test do
+    scan(workspace: workspace_path, scheme: scheme)
+  end
+
+  desc "Fetch the Development, AdHoc and Distribution Certificates"
+  lane :fetch_certificates do
+    match(app_identifier: app_identifier, readonly: true, type: "development")
+    match(app_identifier: app_identifier, readonly: true, type: "appstore")
+    # match(app_identifier: app_identifier, readonly: true, type: "adhoc")
+  end
+
+  desc "Install cocoapods dependencies"
+  lane :pods_install do
+    cocoapods(repo_update:true, clean_install: false, use_bundle_exec:true)
+  end
+
+  desc "Install all project dependencies (npm & pods)"
+  lane :install do
+    if is_ci
+      sh("npm install")
+    else
+      sh("npm install --prefix ../../../")
+    end
+    pods_install
+  end
+
+  desc "Build IPA"
+  lane :build_prd_ipa do
+    build_ipa(
+      scheme: scheme, 
+      method: "ad-hoc", 
+      provisioningProfiles: {
+        app_identifier => "#{ad_hoc_prefix} #{app_identifier}",
+      }
+    )
+  end
+
+  desc "Release an Alpha version on Test Flight"
+  lane :release_alpha do
+    send_build_to_test_flight(
+      app_identifier: app_identifier, 
+      scheme: scheme, 
+      provisioningProfiles: {
+        app_identifier => "#{app_store_prefix} #{app_identifier}",
+      })
+  end
+
+  # desc "Create a tag named release-alpha-{version_number}.{build_number}"
+  # lane :create_release_alpha_tag do
+  #   if !is_ci
+  #     UI.user_error!("This can only be executed on CI.")
+  #   end
+
+  #   version_number = get_version_number(target: "CN-APP")
+  #   build_number = ENV["BITRISE_BUILD_NUMBER"]
+  #   tag_name = "release-alpha-#{version_number}.#{build_number}"
+  #   add_git_tag(tag: tag_name)
+  #   push_git_tags(tag: tag_name)
+  # end
+
+  private_lane :build_ipa do |options|
+    if is_ci
+      increment_build_number(build_number: ENV["BITRISE_BUILD_NUMBER"])
+    end
+
+    # version_number = get_version_number(target: target).gsub(".", "_")
+    version_number = get_version_number(xcodeproj: 'SampleApp/NatDS-SampleApp.xcodeproj')
+    build_number = get_build_number
+    file_name = "#{options[:scheme]}_#{version_number}_#{build_number}.ipa"
+
+    gym(
+      scheme: options[:scheme],
+      export_options: {
+        method: options[:method],
+        provisioningProfiles: options[:provisioningProfiles]
+      },
+      output_directory: "output/ipa",
+      output_name: file_name
+    ) 
+  end
+
+  private_lane :send_build_to_test_flight do |options|
+    if is_ci
+      increment_build_number(build_number: ENV["BITRISE_BUILD_NUMBER"])
+    end
+    
+    build_ipa(
+      scheme: options[:scheme],
+      method: options[:method], 
+      provisioningProfiles: options[:provisioningProfiles]
+    )
+    
+    testflight(
+      app_identifier: options[:app_identifier],
+      distribute_external: false,
+      skip_submission: true,
+      skip_waiting_for_build_processing: true,
+      username: "systemteamopensource@natura.net",
+    )
+
+    clean_build_artifacts
+  end
+
+  private_lane :send_build_to_firebase do |options|
+    if is_ci
+      increment_build_number(build_number: ENV["BITRISE_BUILD_NUMBER"])
+    end
+    
+    build_ipa(
+      scheme: options[:scheme],
+      method: options[:method], 
+      provisioningProfiles: options[:provisioningProfiles]
+    )
+    
+    firebase_app_distribution(
+      app: options[:app_identifier],
+      groups: firebase_test_groups
+    )
+
+    clean_build_artifacts
+  end
+end
