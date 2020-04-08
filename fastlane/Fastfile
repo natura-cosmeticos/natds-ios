@@ -13,12 +13,13 @@ ad_hoc_prefix = "match AdHoc"
 app_store_prefix = "match AppStore"
 
 scheme = "NatDS-SampleApp"
+scheme_lib = "NatDS"
 target = "NatDS_SampleApp"
 
 platform :ios do
   desc "Run all Unit Tests"
   lane :test do
-    scan(workspace: workspace_path, scheme: scheme)
+    scan(workspace: workspace_path, scheme: scheme_lib)
   end
 
   desc "Fetch the Development, AdHoc and Distribution Certificates"
