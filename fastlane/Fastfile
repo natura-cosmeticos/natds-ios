@@ -69,25 +69,11 @@ platform :ios do
       })
   end
 
-  # desc "Create a tag named release-alpha-{version_number}.{build_number}"
-  # lane :create_release_alpha_tag do
-  #   if !is_ci
-  #     UI.user_error!("This can only be executed on CI.")
-  #   end
-
-  #   version_number = get_version_number(target: "CN-APP")
-  #   build_number = ENV["BITRISE_BUILD_NUMBER"]
-  #   tag_name = "release-alpha-#{version_number}.#{build_number}"
-  #   add_git_tag(tag: tag_name)
-  #   push_git_tags(tag: tag_name)
-  # end
-
   private_lane :build_ipa do |options|
     if is_ci
       increment_build_number(build_number: ENV["BITRISE_BUILD_NUMBER"])
     end
 
-    # version_number = get_version_number(target: target).gsub(".", "_")
     version_number = get_version_number(xcodeproj: 'SampleApp/NatDS-SampleApp.xcodeproj')
     build_number = get_build_number
     file_name = "#{options[:scheme]}_#{version_number}_#{build_number}.ipa"

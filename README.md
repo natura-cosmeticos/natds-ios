@@ -3,10 +3,61 @@
 [![Build Status](https://travis-ci.org/natura-cosmeticos/natds-ios.svg)](https://travis-ci.org/natura-cosmeticos/natds-ios)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/NatDS.svg)](https://img.shields.io/cocoapods/v/NatDS.svg)
 
+
 ## What for
 Library with iOS components defined by [Natura Group Design System Team](https://zeroheight.com/25ddaa7f8/p/07a27e).
 
-## Installation
+
+## Tech Stack
+- __Swift 5__
+- Supports iOS __9__ to __13__
+- CocoaPods
+- Fastlane
+- Bitrise (CI)
+- Travis (CI)
+- Git-LFS (https://git-lfs.github.com/)
+- Swiftlint
+
+## Dependecies
+- [Xcode 11.3](https://download.developer.apple.com/Developer_Tools/Xcode_11.3/Xcode_11.3.xip)
+- Homebrew
+- Ruby 2.6.5
+- Bundler
+- [Git-LFS](https://git-lfs.github.com/)
+
+---
+## Before open the project##
+  Intalling dependencies:
+
+1. Install Homebrew, use command bellow on terminal (MacOS & Linux)  
+   ```
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+   ```
+2. Use Homebrew to install rbenv  
+   ```
+   brew install rbenv
+   ```
+3. Use rbenv to install ruby version **2.6.5** 
+   ```
+   rbenv install 2.6.5
+   ```
+4. Install Bundler  
+   ```
+   gem install bundler
+   ```
+5. Install project dependencies:  
+   ```
+   make install
+   ```
+7. Natura employees only:  
+   ```
+   make install_certificates
+   ```  
+   OBS: Será necessário inserir uma senha para decriptar os certificados usados no code-signing. Essa senha deve ser solicitada ao System Team.
+
+8. Done! Open project on Xcode using _.xcworkspace_
+
+---
 
 ### Using CocoaPods
 
@@ -20,17 +71,6 @@ We have provided a sample project in the repository. To use it download the repo
 
 ## How to contribute
 You can contribute submitting [pull requests](https://github.com/natura-cosmeticos/natds-ios/pulls).
-
-### Prerequisites
-For use this repository, you need to install:
-- [Xcode 11+](https://developer.apple.com/xcode/)
-- [Cocoapods](https://guides.cocoapods.org/using/getting-started.html)
-- [Swiftlint](https://github.com/realm/SwiftLint)
-- [Git-LFS](https://git-lfs.github.com/)
-
-### Installing
-- Clone the repo
-- Run `pod install` to install the app dependencies
 
 ### Automated Tests
 - We are using screenshot tests with [iOSSnapshotTestCase](https://github.com/uber/ios-snapshot-test-case) to validate our built components state, color and behavior.
