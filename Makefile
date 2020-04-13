@@ -43,7 +43,7 @@ release_alpha_firebase: ## builds the app using HML scheme and sends it to Fireb
 tag_release_alpha: ## creates tag release-alpha-* (CI ONLY)
 	$(FASTLANE) create_release_alpha_tag
 
-update_patch: ## Y.Y.X ?????
+update_patch: ## Updates SampleApp and DS Lib versions with next Patch (Y.Y.X) number, also tag and commit.
 	$(FASTLANE) update_patch
 
 help:

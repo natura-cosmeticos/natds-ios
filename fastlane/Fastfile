@@ -24,7 +24,7 @@ platform :ios do
       workspace: workspace_path,
       scheme: scheme_lib,
       destination: "platform=iOS Simulator,name=iPhone 8,OS=13.3",
-	    skip_detect_devices: true
+      skip_detect_devices: true
     )
   end
 
@@ -181,28 +181,20 @@ platform :ios do
     
     updated_version_number = next_patch_version
 
-    increment_version_number(
-      xcodeproj: "./NatDS.xcodeproj",
-      version_number: updated_version_number
+    increment_version_number_and_commit(
+      version: updated_version_number, 
+      xcodeproj: "./NatDS.xcodeproj", 
+      commit_message: "Patch version Bump - NatDS"
     )
 
-    commit_version_bump(
-      message: "Patch version Bump - NatDS",
-      xcodeproj: "./NatDS.xcodeproj"
+    increment_version_number_and_commit(
+      version: updated_version_number, 
+      xcodeproj: "./SampleApp/NatDS-SampleApp.xcodeproj", 
+      commit_message: "Patch version Bump - SampleApp"
     )
 
-    increment_version_number(
-      xcodeproj: "./SampleApp/NatDS-SampleApp.xcodeproj",
-      version_number: updated_version_number
-    )
-
-    commit_version_bump(
-      message: "Patch version Bump - SampleApp",
-      xcodeproj: "./SampleApp/NatDS-SampleApp.xcodeproj"
-    )
-
-    add_git_tag(tag: "#{updated_version_number}")
-    push_to_git_remote(local_branch: git_branch)
+    # add_git_tag(tag: "#{updated_version_number}")
+    # push_to_git_remote(local_branch: git_branch)
   end
 
   def next_major_version
@@ -231,6 +223,21 @@ platform :ios do
   end
 
   def version_number
-    get_info_plist_value(path: "./NatDS/Supporting Files/Info.plist", key: "CFBundleShortVersionString")
+    version = get_version_number(
+      xcodeproj: "./NatDS.xcodeproj",
+      target: "NatDS"
+    )
+  end
+
+  def increment_version_number_and_commit(version:, xcodeproj:, commit_message:)
+    increment_version_number(
+      xcodeproj: xcodeproj,
+      version_number: version
+    )
+
+    commit_version_bump(
+      message: commit_message,
+      xcodeproj: xcodeproj
+    )
   end
 end

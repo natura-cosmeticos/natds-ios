@@ -46,16 +46,21 @@ Build IPA
 fastlane ios release_alpha
 ```
 Release an Alpha version on Test Flight
-### ios update_version
+### ios update_major
 ```
-fastlane ios update_version
+fastlane ios update_major
 ```
-Tag and commit an updeted framework minor version - Y.X.Y
+Updates SampleApp and DS Lib versions with next Major (X.Y.Y) number, also tag and commit it.
+### ios update_minor
+```
+fastlane ios update_minor
+```
+Updates SampleApp and DS Lib versions with next Minor (Y.X.Y) number, also tag and commit.
 ### ios update_patch
 ```
 fastlane ios update_patch
 ```
-Tag and commit an updeted framework patch version - Y.Y.X
+Updates SampleApp and DS Lib versions with next Patch (Y.Y.X) number, also tag and commit.
 
 ----
 
