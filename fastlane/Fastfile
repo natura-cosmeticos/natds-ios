@@ -116,7 +116,7 @@ platform :ios do
   end
 
   desc "Updates SampleApp and DS Lib versions with next Major (X.Y.Y) number, also tag and commit it."
-  lane :update_version do
+  lane :update_major do
     next_minor_version || fail('Failed to generate next version')
     
     updated_version_number = next_major_version
@@ -146,7 +146,7 @@ platform :ios do
   end
 
   desc "Updates SampleApp and DS Lib versions with next Minor (Y.X.Y) number, also tag and commit."
-  lane :update_version do 
+  lane :update_minor do
     next_minor_version || fail('Failed to generate next version')
     
     updated_version_number = next_minor_version
