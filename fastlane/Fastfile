@@ -135,9 +135,10 @@ platform :ios do
   lane :update_patch do
     next_patch_version || fail('Failed to generate next version')
     
+    updated_version_number = next_patch_version
     increment_version_number(
       xcodeproj: "./NatDS.xcodeproj",
-      version_number: next_patch_version
+      version_number: updated_version_number
     )
 
     commit_version_bump(
@@ -147,7 +148,7 @@ platform :ios do
 
     increment_version_number(
       xcodeproj: "./SampleApp/NatDS-SampleApp.xcodeproj",
-      version_number: next_patch_version
+      version_number: updated_version_number
     )
 
     commit_version_bump(
@@ -155,9 +156,7 @@ platform :ios do
       xcodeproj: "./SampleApp/NatDS-SampleApp.xcodeproj" # optional, if you have multiple Xcode project files, you must specify your main project here
     )
 
-    # increment_build_number()
-
-    # add_git_tag(tag: "#{next_patch_version}")
+    # add_git_tag(tag: "#{updated_version_number}")
     # push_to_git_remote(local_branch: git_branch)
   end
 
