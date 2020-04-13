@@ -43,5 +43,8 @@ release_alpha_firebase: ## builds the app using HML scheme and sends it to Fireb
 tag_release_alpha: ## creates tag release-alpha-* (CI ONLY)
 	$(FASTLANE) create_release_alpha_tag
 
+update_patch: ## Y.Y.X ?????
+	$(FASTLANE) update_patch
+
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'

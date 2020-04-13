@@ -115,7 +115,7 @@ platform :ios do
     clean_build_artifacts
   end
 
-  desc "Tag and commit an updeted framework minor version - X.Y.X"
+  desc "Tag and commit an updeted framework minor version - Y.X.Y"
   lane :update_version do 
     next_minor_version || fail('Failed to generate next version')
     increment_version_number(
@@ -131,20 +131,33 @@ platform :ios do
     push_to_git_remote(local_branch: git_branch) 
   end
 
-  desc "Tag and commit an updeted framework patch version - X.Y.X"
+  desc "Tag and commit an updeted framework patch version - Y.Y.X"
   lane :update_patch do
     next_patch_version || fail('Failed to generate next version')
     increment_version_number(
       xcodeproj: "./NatDS.xcodeproj",
       version_number: next_patch_version
     )
-    increment_build_number()
-    # commit_version_bump(
-    #   message: "Patch version Bump",
-    #   xcodeproj: "./NatDS.xcodeproj", # optional, if you have multiple Xcode project files, you must specify your main project here
-    # )
-    add_git_tag(tag: "#{next_patch_version}")
-    push_to_git_remote(local_branch: git_branch)
+
+    increment_version_number(
+      xcodeproj: "./SampleApp/NatDS-SampleApp.xcodeproj",
+      version_number: next_patch_version
+    )
+
+    # increment_build_number()
+
+    commit_version_bump(
+      message: "Patch NatDS version Bump",
+      xcodeproj: "./NatDS.xcodeproj"
+    )
+
+    commit_version_bump(
+      message: "Patch SampleApp version Bump",
+      xcodeproj: "./SampleApp/NatDS-SampleApp.xcodeproj" # optional, if you have multiple Xcode project files, you must specify your main project here
+    )
+
+    # add_git_tag(tag: "#{next_patch_version}")
+    # push_to_git_remote(local_branch: git_branch)
   end
 
   def next_patch_version

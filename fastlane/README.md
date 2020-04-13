@@ -46,6 +46,16 @@ Build IPA
 fastlane ios release_alpha
 ```
 Release an Alpha version on Test Flight
+### ios update_version
+```
+fastlane ios update_version
+```
+Tag and commit an updeted framework minor version - Y.X.Y
+### ios update_patch
+```
+fastlane ios update_patch
+```
+Tag and commit an updeted framework patch version - Y.Y.X
 
 ----
 
