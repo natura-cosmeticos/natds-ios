@@ -115,34 +115,19 @@ platform :ios do
     clean_build_artifacts
   end
 
-  desc "Tag and commit an updeted framework minor version - Y.X.Y"
-  lane :update_version do 
+  desc "Updates SampleApp and DS Lib versions with next Major (X.Y.Y) number, also tag and commit it."
+  lane :update_version do
     next_minor_version || fail('Failed to generate next version')
-    increment_version_number(
-      xcodeproj: "./NatDS.xcodeproj", 
-      version_number: next_minor_version
-    )
-    increment_build_number()
-    # commit_version_bump(
-    #   message: "Minor version Bump",
-    #   xcodeproj: "./NatDS.xcodeproj", # optional, if you have multiple Xcode project files, you must specify your main project here
-    # )
-    add_git_tag(tag: "#{next_minor_version}")
-    push_to_git_remote(local_branch: git_branch) 
-  end
-
-  desc "Tag and commit an updeted framework patch version - Y.Y.X"
-  lane :update_patch do
-    next_patch_version || fail('Failed to generate next version')
     
-    updated_version_number = next_patch_version
+    updated_version_number = next_major_version
+
     increment_version_number(
       xcodeproj: "./NatDS.xcodeproj",
       version_number: updated_version_number
     )
 
     commit_version_bump(
-      message: "Patch NatDS version Bump",
+      message: "Major version Bump - NatDS",
       xcodeproj: "./NatDS.xcodeproj"
     )
 
@@ -152,19 +137,79 @@ platform :ios do
     )
 
     commit_version_bump(
-      message: "Patch SampleApp version Bump",
-      xcodeproj: "./SampleApp/NatDS-SampleApp.xcodeproj" # optional, if you have multiple Xcode project files, you must specify your main project here
+      message: "Major version Bump - SampleApp",
+      xcodeproj: "./SampleApp/NatDS-SampleApp.xcodeproj"
     )
 
-    # add_git_tag(tag: "#{updated_version_number}")
-    # push_to_git_remote(local_branch: git_branch)
+    add_git_tag(tag: "#{updated_version_number}")
+    push_to_git_remote(local_branch: git_branch)
   end
 
-  def next_patch_version
+  desc "Updates SampleApp and DS Lib versions with next Minor (Y.X.Y) number, also tag and commit."
+  lane :update_version do 
+    next_minor_version || fail('Failed to generate next version')
+    
+    updated_version_number = next_minor_version
+
+    increment_version_number(
+      xcodeproj: "./NatDS.xcodeproj",
+      version_number: updated_version_number
+    )
+
+    commit_version_bump(
+      message: "Minor version Bump - NatDS",
+      xcodeproj: "./NatDS.xcodeproj"
+    )
+
+    increment_version_number(
+      xcodeproj: "./SampleApp/NatDS-SampleApp.xcodeproj",
+      version_number: updated_version_number
+    )
+
+    commit_version_bump(
+      message: "Minor version Bump - SampleApp",
+      xcodeproj: "./SampleApp/NatDS-SampleApp.xcodeproj"
+    )
+
+    add_git_tag(tag: "#{updated_version_number}")
+    push_to_git_remote(local_branch: git_branch) 
+  end
+
+  desc "Updates SampleApp and DS Lib versions with next Patch (Y.Y.X) number, also tag and commit."
+  lane :update_patch do
+    next_patch_version || fail('Failed to generate next version')
+    
+    updated_version_number = next_patch_version
+
+    increment_version_number(
+      xcodeproj: "./NatDS.xcodeproj",
+      version_number: updated_version_number
+    )
+
+    commit_version_bump(
+      message: "Patch version Bump - NatDS",
+      xcodeproj: "./NatDS.xcodeproj"
+    )
+
+    increment_version_number(
+      xcodeproj: "./SampleApp/NatDS-SampleApp.xcodeproj",
+      version_number: updated_version_number
+    )
+
+    commit_version_bump(
+      message: "Patch version Bump - SampleApp",
+      xcodeproj: "./SampleApp/NatDS-SampleApp.xcodeproj"
+    )
+
+    add_git_tag(tag: "#{updated_version_number}")
+    push_to_git_remote(local_branch: git_branch)
+  end
+
+  def next_major_version
     last_tag = `git tag -l --sort=creatordate [0-9]*.[0-9]*.[0-9]* | tail -n 1`
     major, minor, patch = last_tag.split('.')
-    patch = patch.to_i + 1
-    [ major, minor, patch ].join('.')
+    major = major.to_i + 1
+    [ major, 0, 0 ].join('.')
   end
 
   def next_minor_version
@@ -172,6 +217,13 @@ platform :ios do
     major, minor, patch = last_tag.split('.')
     minor = minor.to_i + 1
     [ major, minor, 0 ].join('.')
+  end
+
+  def next_patch_version
+    last_tag = `git tag -l --sort=creatordate [0-9]*.[0-9]*.[0-9]* | tail -n 1`
+    major, minor, patch = last_tag.split('.')
+    patch = patch.to_i + 1
+    [ major, minor, patch ].join('.')
   end
 
   def next_build_number
