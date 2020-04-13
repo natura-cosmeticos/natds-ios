@@ -134,9 +134,15 @@ platform :ios do
   desc "Tag and commit an updeted framework patch version - Y.Y.X"
   lane :update_patch do
     next_patch_version || fail('Failed to generate next version')
+    
     increment_version_number(
       xcodeproj: "./NatDS.xcodeproj",
       version_number: next_patch_version
+    )
+
+    commit_version_bump(
+      message: "Patch NatDS version Bump",
+      xcodeproj: "./NatDS.xcodeproj"
     )
 
     increment_version_number(
@@ -144,17 +150,12 @@ platform :ios do
       version_number: next_patch_version
     )
 
-    # increment_build_number()
-
-    commit_version_bump(
-      message: "Patch NatDS version Bump",
-      xcodeproj: "./NatDS.xcodeproj"
-    )
-
     commit_version_bump(
       message: "Patch SampleApp version Bump",
       xcodeproj: "./SampleApp/NatDS-SampleApp.xcodeproj" # optional, if you have multiple Xcode project files, you must specify your main project here
     )
+
+    # increment_build_number()
 
     # add_git_tag(tag: "#{next_patch_version}")
     # push_to_git_remote(local_branch: git_branch)
