@@ -2,9 +2,24 @@
 BUNDLE=$(if $(rbenv > /dev/null), rbenv exec bundle, bundle)
 FASTLANE=$(BUNDLE) exec fastlane
 
-install: ## install required dependencies
+setup: ## intalls project dependencies
+	cd scripts && ./setup.sh all && cd ..
+
+	brew install rbenv
+	rbenv install 2.6.5
+
+	gem install bundler
+	
+	brew install git-lfs
+	git lfs install
+	
 	make install_bundle
-	$(FASTLANE) install
+
+	@echo "\033[1;33m"
+	@echo "-----------------------------------------------------------"
+	@echo "Restart all your terminals to ensure the setup takes effect"
+	@echo "-----------------------------------------------------------"
+	@echo "\033[0m"
 
 install_bundle: ## install gems
 	$(BUNDLE) install
@@ -36,12 +51,6 @@ build_ipa: ## builds the ipa file for HML environment (Ad Hoc)
 
 release_alpha: ## builds the app using PRD scheme and sends it to Test Flight
 	$(FASTLANE) release_alpha
-
-release_alpha_firebase: ## builds the app using HML scheme and sends it to Firebase App Distribution
-	$(FASTLANE) release_alpha_firebase
-
-tag_release_alpha: ## creates tag release-alpha-* (CI ONLY)
-	$(FASTLANE) create_release_alpha_tag
 
 update_patch: ## Updates SampleApp and DS Lib versions with next Patch (Y.Y.X) number, also tag and commit.
 	$(FASTLANE) update_patch

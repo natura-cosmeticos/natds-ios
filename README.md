@@ -26,36 +26,21 @@ Library with iOS components defined by [Natura Group Design System Team](https:/
 - [Git-LFS](https://git-lfs.github.com/)
 
 ---
-## Before open the project##
+## Before open the project ##
   Intalling dependencies:
 
-1. Install Homebrew, use command bellow on terminal (MacOS & Linux)  
+1. Install project dependencies:  
    ```
-   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+   make setup
    ```
-2. Use Homebrew to install rbenv  
-   ```
-   brew install rbenv
-   ```
-3. Use rbenv to install ruby version **2.6.5** 
-   ```
-   rbenv install 2.6.5
-   ```
-4. Install Bundler  
-   ```
-   gem install bundler
-   ```
-5. Install project dependencies:  
-   ```
-   make install
-   ```
-7. Natura employees only:  
+3. ## Natura employees only:  
+   OBS: Before execute this line, call System Team to request requiried credentials.
+
    ```
    make install_certificates
    ```  
-   OBS: Será necessário inserir uma senha para decriptar os certificados usados no code-signing. Essa senha deve ser solicitada ao System Team.
 
-8. Done! Open project on Xcode using _.xcworkspace_
+4. Done! Open project on Xcode using _.xcworkspace_
 
 ---
 

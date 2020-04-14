@@ -39,16 +39,6 @@ platform :ios do
     cocoapods(repo_update:true, clean_install: false, use_bundle_exec:true)
   end
 
-  desc "Install all project dependencies (npm & pods)"
-  lane :install do
-    if is_ci
-      sh("npm install")
-    else
-      sh("npm install --prefix ../../../")
-    end
-    pods_install
-  end
-
   desc "Build IPA"
   lane :build_prd_ipa do
     build_ipa(
