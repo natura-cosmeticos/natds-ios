@@ -20,6 +20,11 @@ or alternatively using `brew cask install fastlane`
 fastlane install
 ```
 CI Only - Install all project dependencies (npm & pods)
+### pods_install
+```
+fastlane pods_install
+```
+Install cocoapods dependencies
 
 ----
 

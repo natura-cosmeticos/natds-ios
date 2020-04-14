@@ -2,7 +2,7 @@
 BUNDLE=$(if $(rbenv > /dev/null), rbenv exec bundle, bundle)
 FASTLANE=$(BUNDLE) exec fastlane
 
-install: ## CI Only - install required dependencies
+install: ## install required dependencies - CI Only
 	make install_bundle
 	$(FASTLANE) install
 
