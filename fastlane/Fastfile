@@ -17,6 +17,21 @@ target = "NatDS_SampleApp"
 
 scheme_lib = "NatDS"
 
+desc "CI Only - Install all project dependencies (npm & pods)"
+lane :install do
+  if !is_ci
+    UI.user_error!("This can only be executed on CI.")
+  end
+  
+  sh("npm install")
+  pods_install
+end
+
+desc "Install cocoapods dependencies"
+lane :pods_install do
+  cocoapods(repo_update:true, clean_install: false, use_bundle_exec:true)
+end
+
 platform :ios do
   desc "Run all Unit Tests"
   lane :test do

@@ -2,6 +2,10 @@
 BUNDLE=$(if $(rbenv > /dev/null), rbenv exec bundle, bundle)
 FASTLANE=$(BUNDLE) exec fastlane
 
+install: ## CI Only - install required dependencies
+	make install_bundle
+	$(FASTLANE) install
+
 setup: ## intalls project dependencies
 	cd scripts && ./setup.sh all && cd ..
 
@@ -14,6 +18,8 @@ setup: ## intalls project dependencies
 	git lfs install
 	
 	make install_bundle
+
+	pods_install
 
 	@echo "\033[1;33m"
 	@echo "-----------------------------------------------------------"

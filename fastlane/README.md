@@ -15,6 +15,14 @@ Install _fastlane_ using
 or alternatively using `brew cask install fastlane`
 
 # Available Actions
+### install
+```
+fastlane install
+```
+CI Only - Install all project dependencies (npm & pods)
+
+----
+
 ## iOS
 ### ios test
 ```
@@ -31,11 +39,6 @@ Fetch the Development, AdHoc and Distribution Certificates
 fastlane ios pods_install
 ```
 Install cocoapods dependencies
-### ios install
-```
-fastlane ios install
-```
-Install all project dependencies (npm & pods)
 ### ios build_prd_ipa
 ```
 fastlane ios build_prd_ipa
