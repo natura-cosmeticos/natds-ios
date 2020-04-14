@@ -54,6 +54,11 @@ Build IPA
 fastlane ios release_alpha
 ```
 Release an Alpha version on Test Flight
+### ios build_ipa
+```
+fastlane ios build_ipa
+```
+
 ### ios update_major
 ```
 fastlane ios update_major
