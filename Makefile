@@ -46,10 +46,10 @@ install_certificates: ## fetch and install certificates for code signing
 test: ## run unit tests
 	$(FASTLANE) test
 
-build_ipa: ## builds the ipa file for HML environment (Ad Hoc)
+build_ipa: ## builds the ipa file for environment (Ad Hoc)
 	$(FASTLANE) build_ipa
 
-release_alpha: ## builds the app using PRD scheme and sends it to Test Flight
+release_alpha: ## builds the app using scheme and sends it to Test Flight
 	$(FASTLANE) release_alpha
 
 update_patch: ## Updates SampleApp and DS Lib versions with next Patch (Y.Y.X) number, also tag and commit.
