@@ -16,11 +16,11 @@
 
 public struct DSColors {
     // MARK: - Inits
-    
+
     private init() {}
 
     // MARK: - Primary
-    
+
     public static let primary = ColorSelector().getFromPalette(color: \.primary)
     public static let onPrimary = ColorSelector().getFromPalette(color: \.onPrimary)
     public static let primaryLight = ColorSelector().getFromPalette(color: \.primaryLight)

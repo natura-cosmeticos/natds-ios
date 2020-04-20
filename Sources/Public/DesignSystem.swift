@@ -20,12 +20,12 @@ public final class DesignSystem {
     static let shared = DesignSystem()
 
     private var theme: Theme? //= TheBodyShopTheme() // Default is only for development.
-    
+
     var currentTheme: Theme {
         guard let theme = theme else {
             fatalError("DesignSystem ERROR - Configure the Framework first with DesignSystem.configure(brand:)")
         }
-        
+
         return theme
     }
 
