@@ -16,8 +16,8 @@ struct ColorSelector {
 
     func getFromPalette(color keyPath: KeyPath<SecondaryColorPalette, String>)  -> UIColor {
         createColor(
-            hexLight: lightColorPallet.secundary[keyPath: keyPath],
-            hexDark: darkColorPallet.secundary[keyPath: keyPath]
+            hexLight: lightColorPallet.secondary[keyPath: keyPath],
+            hexDark: darkColorPallet.secondary[keyPath: keyPath]
         )
     }
 
@@ -46,8 +46,8 @@ struct ColorSelector {
         if #available(iOS 13.0, *) {
             return .init { (UITraitCollection) -> UIColor in
                 UITraitCollection.userInterfaceStyle == .dark ?
-                    .hexColorOrDefault(hexLight)  :
-                    .hexColorOrDefault(hexDark)
+                    .hexColorOrDefault(hexDark) :
+                    .hexColorOrDefault(hexLight)
             }
         } else {
             return .hexColorOrDefault(hexLight)

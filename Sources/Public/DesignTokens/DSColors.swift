@@ -9,6 +9,9 @@
  - Warning
         This class supports Light and Dark mode. In other words according with user properties of Light or Dark
         you can recieve two diferents colors
+ 
+ Add exemple of using ----- TODO -----
+ Add Notes Primary and Secundary.....  ----- TODO -----
 */
 
 public struct DSColors {
@@ -28,9 +31,9 @@ public struct DSColors {
     // MARK: - Secundary
 
     public static let secondary = ColorSelector().getFromPalette(color: \.secondary)
-    public static let onSecundary = ColorSelector().getFromPalette(color: \.onSecondary)
+    public static let onSecondary = ColorSelector().getFromPalette(color: \.onSecondary)
     public static let secondaryLight = ColorSelector().getFromPalette(color: \.secondaryLight)
-    public static let onSecundaryLight = ColorSelector().getFromPalette(color: \.onSecondaryLight)
+    public static let onSecondaryLight = ColorSelector().getFromPalette(color: \.onSecondaryLight)
     public static let secondaryDark = ColorSelector().getFromPalette(color: \.secondaryDark)
     public static let onSecondaryDark = ColorSelector().getFromPalette(color: \.onSecondaryDark)
 

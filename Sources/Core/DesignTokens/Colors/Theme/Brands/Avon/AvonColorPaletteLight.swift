@@ -1,6 +1,6 @@
 struct AvonColorPaletteLight: ColorPalette {
     let primary: PrimaryColorPalette = Primary()
-    let secundary: SecondaryColorPalette = Secondary()
+    let secondary: SecondaryColorPalette = Secondary()
     let surface: SurfaceColorPalette = Surface()
     let content: ContentColorPalette = Content()
     let feedback: FeedbackColorPalette = Feedback()

@@ -19,7 +19,7 @@ public final class DesignSystem {
 
     static let shared = DesignSystem()
 
-    private var theme: Theme? = TheBodyShopTheme() // Default is only for development.
+    private var theme: Theme? //= TheBodyShopTheme() // Default is only for development.
     
     var currentTheme: Theme {
         guard let theme = theme else {

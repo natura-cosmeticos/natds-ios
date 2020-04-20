@@ -3,6 +3,8 @@ inhibit_all_warnings!
 
 def test_pod
   pod 'iOSSnapshotTestCase', '5.0.2'
+  pod 'Quick'
+  pod 'Nimble'
 end
 
 target 'NatDSTests' do

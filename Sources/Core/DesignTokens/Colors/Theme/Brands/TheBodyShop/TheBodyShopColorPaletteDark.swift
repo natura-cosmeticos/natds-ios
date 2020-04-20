@@ -1,6 +1,6 @@
 struct TheBodyShopColorPaletteDark: ColorPalette {
     var primary: PrimaryColorPalette = Primary()
-    var secundary: SecondaryColorPalette = Secondary()
+    var secondary: SecondaryColorPalette = Secondary()
     var surface: SurfaceColorPalette = Surface()
     var content: ContentColorPalette = Content()
     var feedback: FeedbackColorPalette = Feedback()
