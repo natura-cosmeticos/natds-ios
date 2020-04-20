@@ -78,6 +78,7 @@
 		8427A2AA2449F9C300CF30D5 /* FeedbackColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427A2A92449F9C300CF30D5 /* FeedbackColorPalette.swift */; };
 		8427A2AC2449FC4E00CF30D5 /* AvonColorPaletteLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427A2AB2449FC4E00CF30D5 /* AvonColorPaletteLight.swift */; };
 		8427A2AE2449FE1200CF30D5 /* TheBodyShopTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427A2AD2449FE1200CF30D5 /* TheBodyShopTheme.swift */; };
+		845D9EEF244DD407003598B0 /* ColorSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D9EEE244DD406003598B0 /* ColorSelector.swift */; };
 		A9325A6623FB34EC0023979C /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9325A6523FB34EC0023979C /* UICollectionView+Reusable.swift */; };
 		A9325A6A23FB35C50023979C /* UICollectionView+ReusableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9325A6723FB35450023979C /* UICollectionView+ReusableTests.swift */; };
 		A971BE6F2398171C00A0D509 /* NavigationDrawerDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A971BE6E2398171C00A0D509 /* NavigationDrawerDelegateMock.swift */; };
@@ -180,6 +181,7 @@
 		8427A2A92449F9C300CF30D5 /* FeedbackColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackColorPalette.swift; sourceTree = "<group>"; };
 		8427A2AB2449FC4E00CF30D5 /* AvonColorPaletteLight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvonColorPaletteLight.swift; sourceTree = "<group>"; };
 		8427A2AD2449FE1200CF30D5 /* TheBodyShopTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheBodyShopTheme.swift; sourceTree = "<group>"; };
+		845D9EEE244DD406003598B0 /* ColorSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSelector.swift; sourceTree = "<group>"; };
 		9A46395C038D4497A880A6FF /* Pods-NatDSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatDSTests.release.xcconfig"; path = "Target Support Files/Pods-NatDSTests/Pods-NatDSTests.release.xcconfig"; sourceTree = "<group>"; };
 		A8B18363274C7A70CF4443A3 /* Pods-NatDSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatDSTests.debug.xcconfig"; path = "Target Support Files/Pods-NatDSTests/Pods-NatDSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A9325A6523FB34EC0023979C /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
@@ -355,7 +357,7 @@
 				8427A28A2447772B00CF30D5 /* Theme */,
 				117FE01C238D9B070032E2AC /* Branding */,
 				117FE01E238D9B070032E2AC /* Colors.swift */,
-				8427A29C2448ED6D00CF30D5 /* DSColors.swift */,
+				845D9EEE244DD406003598B0 /* ColorSelector.swift */,
 			);
 			path = Colors;
 			sourceTree = "<group>";
@@ -559,7 +561,6 @@
 				8427A28B2447774B00CF30D5 /* Theme.swift */,
 				8427A29E2449F28200CF30D5 /* ColorPalettes */,
 				8427A294244787A700CF30D5 /* Brands */,
-				8427A291244778C700CF30D5 /* DesignSystem.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -604,6 +605,23 @@
 				8427A2A92449F9C300CF30D5 /* FeedbackColorPalette.swift */,
 			);
 			path = ColorPalettes;
+			sourceTree = "<group>";
+		};
+		845D9EF0244DD615003598B0 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				8427A291244778C700CF30D5 /* DesignSystem.swift */,
+				845D9EF1244DD630003598B0 /* DesignTokens */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		845D9EF1244DD630003598B0 /* DesignTokens */ = {
+			isa = PBXGroup;
+			children = (
+				8427A29C2448ED6D00CF30D5 /* DSColors.swift */,
+			);
+			path = DesignTokens;
 			sourceTree = "<group>";
 		};
 		A971BE6D2398170B00A0D509 /* Mock */ = {
@@ -663,6 +681,7 @@
 		A9B71E85237B559A00A2BF51 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				845D9EF0244DD615003598B0 /* Public */,
 				117FE02A238DA52D0032E2AC /* Components */,
 				117FE01A238D9B070032E2AC /* DesignTokens */,
 				A9881999238C5A8E0008230F /* Extensions */,
@@ -942,6 +961,7 @@
 				11518B682396C00700220570 /* NavigationDrawer.swift in Sources */,
 				A9CCF8DF23CCE1CE00000FC0 /* IconView.swift in Sources */,
 				117FE02C238DA53E0032E2AC /* NavigationDrawerSubitemCell.swift in Sources */,
+				845D9EEF244DD407003598B0 /* ColorSelector.swift in Sources */,
 				8427A28C2447774B00CF30D5 /* Theme.swift in Sources */,
 				8427A2AA2449F9C300CF30D5 /* FeedbackColorPalette.swift in Sources */,
 				A971BE712398306300A0D509 /* NavigationDrawer+IndexMenu.swift in Sources */,
