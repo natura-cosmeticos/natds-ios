@@ -240,7 +240,7 @@ fileprivate extension UIColor {
 
         getRed(&red, green: &green, blue: &blue, alpha: &alpha)
 
-        let rgb: Int = (Int)(r * 255) << 16 | (Int)(g * 255) << 8 | (Int) ( b * 255) << 0
+        let rgb: Int = (Int)(red * 255) << 16 | (Int)(green * 255) << 8 | (Int)( blue * 255) << 0
 
         return String(format: "#%06x", rgb).uppercased()
     }
