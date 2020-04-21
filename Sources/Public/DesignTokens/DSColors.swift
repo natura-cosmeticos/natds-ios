@@ -1,17 +1,40 @@
 /**
   DSColors is a class that has access to colors from the design system.
-  This colors are changes according with the current Brand configured in the Design system and according
-  with user properties of Light and Dark mode.
- 
+  This colors changes according with the current Brand configured in the Design system
+  and according with user properties of Light and Dark mode.
+
+    Color palette is separeted by groups listed bellow, but this class deliveries
+    all colors in flat way without nested objected.
+
+    - Primary:
+        primary, onPrimary, primaryLight, onPrimaryLight, primaryDark, onPrimaryDark
+    - Secundary:
+        secondary, onSecondary, secondaryLight, onSecondaryLight, secondaryDark, onSecondaryDark
+    - Surface:
+        background, onBackground, surface, onSurface
+    - Content:
+        hightlight, highEmphasis, mediumEmphasis, lowEmphasis, link, onLink
+    - Feedback:
+        success, onSuccess, warning, onWarning, alert, onAlert
+
+    Exemple of usage:
+
+        let label = UILabel()
+        label.backgroundColor = DSColors.primary
+        label.textColor = DSColors.onPrimary
+
  - Requires:
         It's necessary to configure the Design System current Brand at DesisgnSystem class
-        with method DesisgnSystem.configure(brand:).
+        or fatalError will be raised.
+
+            DesisgnSystem.shared.configure(brand:)
+
+ - Returns:
+        All properties returns UIColor.
+
  - Warning
-        This class supports Light and Dark mode. In other words according with user properties of Light or Dark
-        you can recieve two diferents colors
- 
- Add exemple of using ----- TODO -----
- Add Notes Primary and Secundary.....  ----- TODO -----
+        This class supports Light and Dark mode. In other words, according with user properties
+        of Light or Dark, a diferent color can be returned.
 */
 
 public struct DSColors {
