@@ -1,7 +1,7 @@
 import NatDS
 
-class ColorsThemesViewController: UIViewController, SampleItem {
-    static var name = "Themes Color"
+class ThemesColorsViewController: UIViewController, SampleItem {
+    static var name = "Themes Colors"
 
     private let tableView: UITableView = {
         let tableView = UITableView()
@@ -12,7 +12,10 @@ class ColorsThemesViewController: UIViewController, SampleItem {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         title = Self.name
+        tableView.dataSource = self
+
         setup()
     }
 
@@ -28,14 +31,14 @@ class ColorsThemesViewController: UIViewController, SampleItem {
     }
 }
 
-extension ColorsThemesViewController: UITableViewDataSource {
+extension ThemesColorsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         1
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.backgroundColor = .red
+        cell.textLabel?.text = "Under development..."
 
         return cell
     }

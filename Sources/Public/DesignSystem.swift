@@ -1,6 +1,12 @@
 /**
-  DesignSystem is a framework configuration class.
- 
+  DesignSystem is a class entry point of configurations for this framework.
+
+    Exemple of usage:
+
+            DesignSystem.shared.configure(brand: .avon)
+            //or
+            DesignSystem.shared.configure(brand: .theBodyShop)
+
  - Note:
     Current Suported Brands:
         - Avon
@@ -9,6 +15,9 @@
  - Requires:
         It's necessary to configure the Design System current Brand at DesisgnSystem class
         with method DesisgnSystem.configure(brand:) or will lead to fatal error.
+
+ - Warning
+        This class is a singleton.
 */
 
 public final class DesignSystem {
@@ -19,7 +28,7 @@ public final class DesignSystem {
 
     static let shared = DesignSystem()
 
-    private var theme: Theme? //= TheBodyShopTheme() // Default is only for development.
+    private var theme: Theme?
 
     var currentTheme: Theme {
         guard let theme = theme else {

@@ -19,10 +19,8 @@ final class DSColorsTBSSpec: QuickSpec {
             context("The Body Shop") {
                 describe("Primary Color Palette") {
                     it("Primary.primary") {
-                        let colorUnderTest = DSColors.primary.asHexString()
-
-                        let result = compare(
-                            colorUnderTest: colorUnderTest,
+                        let result = isCurrentColorOnCurrentPalette(
+                            colorUnderTest: DSColors.primary.asHexString(),
                             lightColor: lightPalette.primary.primary,
                             darkColor: darkPalette.primary.primary
                         )
@@ -31,10 +29,8 @@ final class DSColorsTBSSpec: QuickSpec {
                     }
 
                     it("Primary.onPrimary") {
-                        let colorUnderTest = DSColors.onPrimary.asHexString()
-
-                        let result = compare(
-                            colorUnderTest: colorUnderTest,
+                        let result = isCurrentColorOnCurrentPalette(
+                            colorUnderTest: DSColors.onPrimary.asHexString(),
                             lightColor: lightPalette.primary.onPrimary,
                             darkColor: darkPalette.primary.onPrimary
                         )
@@ -43,10 +39,8 @@ final class DSColorsTBSSpec: QuickSpec {
                     }
 
                     it("Primary.primaryLight") {
-                        let colorUnderTest = DSColors.primaryLight.asHexString()
-
-                        let result = compare(
-                            colorUnderTest: colorUnderTest,
+                        let result = isCurrentColorOnCurrentPalette(
+                            colorUnderTest: DSColors.primaryLight.asHexString(),
                             lightColor: lightPalette.primary.primaryLight,
                             darkColor: darkPalette.primary.primaryLight
                         )
@@ -55,10 +49,8 @@ final class DSColorsTBSSpec: QuickSpec {
                     }
 
                     it("Primary.onPrimaryLight") {
-                        let colorUnderTest = DSColors.onPrimaryLight.asHexString()
-
-                        let result = compare(
-                            colorUnderTest: colorUnderTest,
+                        let result = isCurrentColorOnCurrentPalette(
+                            colorUnderTest: DSColors.onPrimaryLight.asHexString(),
                             lightColor: lightPalette.primary.onPrimaryLight,
                             darkColor: darkPalette.primary.onPrimaryLight
                         )
@@ -67,10 +59,8 @@ final class DSColorsTBSSpec: QuickSpec {
                     }
 
                     it("Primary.primaryDark") {
-                        let colorUnderTest = DSColors.primaryDark.asHexString()
-
-                        let result = compare(
-                            colorUnderTest: colorUnderTest,
+                        let result = isCurrentColorOnCurrentPalette(
+                            colorUnderTest: DSColors.primaryDark.asHexString(),
                             lightColor: lightPalette.primary.primaryDark,
                             darkColor: darkPalette.primary.primaryDark
                         )
@@ -79,10 +69,8 @@ final class DSColorsTBSSpec: QuickSpec {
                     }
 
                     it("Primary.onPrimaryDark") {
-                        let colorUnderTest = DSColors.onPrimaryDark.asHexString()
-
-                        let result = compare(
-                            colorUnderTest: colorUnderTest,
+                        let result = isCurrentColorOnCurrentPalette(
+                            colorUnderTest: DSColors.onPrimaryDark.asHexString(),
                             lightColor: lightPalette.primary.onPrimaryDark,
                             darkColor: darkPalette.primary.onPrimaryDark
                         )
@@ -93,10 +81,8 @@ final class DSColorsTBSSpec: QuickSpec {
 
                 describe("Secondary Color Palette") {
                     it("Secondary.secondary") {
-                        let colorUnderTest = DSColors.secondary.asHexString()
-
-                        let result = compare(
-                            colorUnderTest: colorUnderTest,
+                        let result = isCurrentColorOnCurrentPalette(
+                            colorUnderTest: DSColors.secondary.asHexString(),
                             lightColor: lightPalette.secondary.secondary,
                             darkColor: darkPalette.secondary.secondary
                         )
@@ -105,10 +91,8 @@ final class DSColorsTBSSpec: QuickSpec {
                     }
 
                     it("Secondary.onSecondary") {
-                        let colorUnderTest = DSColors.onSecondary.asHexString()
-
-                        let result = compare(
-                            colorUnderTest: colorUnderTest,
+                        let result = isCurrentColorOnCurrentPalette(
+                            colorUnderTest: DSColors.onSecondary.asHexString(),
                             lightColor: lightPalette.secondary.onSecondary,
                             darkColor: darkPalette.secondary.onSecondary
                         )
@@ -117,10 +101,8 @@ final class DSColorsTBSSpec: QuickSpec {
                     }
 
                     it("Secondary.secondaryDark") {
-                        let colorUnderTest = DSColors.secondaryDark.asHexString()
-
-                        let result = compare(
-                            colorUnderTest: colorUnderTest,
+                        let result = isCurrentColorOnCurrentPalette(
+                            colorUnderTest: DSColors.secondaryDark.asHexString(),
                             lightColor: lightPalette.secondary.secondaryDark,
                             darkColor: darkPalette.secondary.secondaryDark
                         )
@@ -129,10 +111,8 @@ final class DSColorsTBSSpec: QuickSpec {
                     }
 
                     it("Secondary.onSecondaryDark") {
-                        let colorUnderTest = DSColors.onSecondaryDark.asHexString()
-
-                        let result = compare(
-                            colorUnderTest: colorUnderTest,
+                        let result = isCurrentColorOnCurrentPalette(
+                            colorUnderTest: DSColors.onSecondaryDark.asHexString(),
                             lightColor: lightPalette.secondary.onSecondaryDark,
                             darkColor: darkPalette.secondary.onSecondaryDark
                         )
@@ -141,10 +121,8 @@ final class DSColorsTBSSpec: QuickSpec {
                     }
 
                     it("Secondary.secondaryLight") {
-                        let colorUnderTest = DSColors.secondaryLight.asHexString()
-
-                        let result = compare(
-                            colorUnderTest: colorUnderTest,
+                        let result = isCurrentColorOnCurrentPalette(
+                            colorUnderTest: DSColors.secondaryLight.asHexString(),
                             lightColor: lightPalette.secondary.secondaryLight,
                             darkColor: darkPalette.secondary.secondaryLight
                         )
@@ -153,10 +131,8 @@ final class DSColorsTBSSpec: QuickSpec {
                     }
 
                     it("Secondary.onSecondaryLight") {
-                        let colorUnderTest = DSColors.onSecondaryLight.asHexString()
-
-                        let result = compare(
-                            colorUnderTest: colorUnderTest,
+                        let result = isCurrentColorOnCurrentPalette(
+                            colorUnderTest: DSColors.onSecondaryLight.asHexString(),
                             lightColor: lightPalette.secondary.onSecondaryLight,
                             darkColor: darkPalette.secondary.onSecondaryLight
                         )
@@ -167,10 +143,8 @@ final class DSColorsTBSSpec: QuickSpec {
 
                 describe("Surface Color Palette") {
                     it("Surface.background") {
-                        let colorUnderTest = DSColors.background.asHexString()
-
-                        let result = compare(
-                            colorUnderTest: colorUnderTest,
+                        let result = isCurrentColorOnCurrentPalette(
+                            colorUnderTest: DSColors.background.asHexString(),
                             lightColor: lightPalette.surface.background,
                             darkColor: darkPalette.surface.background
                         )
@@ -179,10 +153,8 @@ final class DSColorsTBSSpec: QuickSpec {
                     }
 
                     it("Surface.onBackground") {
-                        let colorUnderTest = DSColors.onBackground.asHexString()
-
-                        let result = compare(
-                            colorUnderTest: colorUnderTest,
+                        let result = isCurrentColorOnCurrentPalette(
+                            colorUnderTest: DSColors.onBackground.asHexString(),
                             lightColor: lightPalette.surface.onBackground,
                             darkColor: darkPalette.surface.onBackground
                         )
@@ -191,10 +163,8 @@ final class DSColorsTBSSpec: QuickSpec {
                     }
 
                     it("Surface.surface") {
-                        let colorUnderTest = DSColors.surface.asHexString()
-
-                        let result = compare(
-                            colorUnderTest: colorUnderTest,
+                        let result = isCurrentColorOnCurrentPalette(
+                            colorUnderTest: DSColors.surface.asHexString(),
                             lightColor: lightPalette.surface.surface,
                             darkColor: darkPalette.surface.surface
                         )
@@ -203,10 +173,8 @@ final class DSColorsTBSSpec: QuickSpec {
                     }
 
                     it("Surface.onSurface") {
-                        let colorUnderTest = DSColors.onSurface.asHexString()
-
-                        let result = compare(
-                            colorUnderTest: colorUnderTest,
+                        let result = isCurrentColorOnCurrentPalette(
+                            colorUnderTest: DSColors.onSurface.asHexString(),
                             lightColor: lightPalette.surface.onSurface,
                             darkColor: darkPalette.surface.onSurface
                         )
@@ -217,10 +185,8 @@ final class DSColorsTBSSpec: QuickSpec {
 
                 describe("Content Color Palette") {
                     it("Content.hightlight") {
-                        let colorUnderTest = DSColors.hightlight.asHexString()
-
-                        let result = compare(
-                            colorUnderTest: colorUnderTest,
+                        let result = isCurrentColorOnCurrentPalette(
+                            colorUnderTest: DSColors.hightlight.asHexString(),
                             lightColor: lightPalette.content.hightlight,
                             darkColor: darkPalette.content.hightlight
                         )
@@ -229,10 +195,8 @@ final class DSColorsTBSSpec: QuickSpec {
                     }
 
                     it("Content.highEmphasis") {
-                        let colorUnderTest = DSColors.highEmphasis.asHexString()
-
-                        let result = compare(
-                            colorUnderTest: colorUnderTest,
+                        let result = isCurrentColorOnCurrentPalette(
+                            colorUnderTest: DSColors.highEmphasis.asHexString(),
                             lightColor: lightPalette.content.highEmphasis,
                             darkColor: darkPalette.content.highEmphasis
                         )
@@ -241,10 +205,8 @@ final class DSColorsTBSSpec: QuickSpec {
                     }
 
                     it("Content.mediumEmphasis") {
-                        let colorUnderTest = DSColors.highEmphasis.asHexString()
-
-                        let result = compare(
-                            colorUnderTest: colorUnderTest,
+                        let result = isCurrentColorOnCurrentPalette(
+                            colorUnderTest: DSColors.highEmphasis.asHexString(),
                             lightColor: lightPalette.content.highEmphasis,
                             darkColor: darkPalette.content.highEmphasis
                         )
@@ -253,10 +215,8 @@ final class DSColorsTBSSpec: QuickSpec {
                     }
 
                     it("Content.lowEmphasis") {
-                        let colorUnderTest = DSColors.lowEmphasis.asHexString()
-
-                        let result = compare(
-                            colorUnderTest: colorUnderTest,
+                        let result = isCurrentColorOnCurrentPalette(
+                            colorUnderTest: DSColors.lowEmphasis.asHexString(),
                             lightColor: lightPalette.content.lowEmphasis,
                             darkColor: darkPalette.content.lowEmphasis
                         )
@@ -265,10 +225,8 @@ final class DSColorsTBSSpec: QuickSpec {
                     }
 
                     it("Content.link") {
-                        let colorUnderTest = DSColors.link.asHexString()
-
-                        let result = compare(
-                            colorUnderTest: colorUnderTest,
+                        let result = isCurrentColorOnCurrentPalette(
+                            colorUnderTest: DSColors.link.asHexString(),
                             lightColor: lightPalette.content.link,
                             darkColor: darkPalette.content.link
                         )
@@ -277,10 +235,8 @@ final class DSColorsTBSSpec: QuickSpec {
                     }
 
                     it("Content.onLink") {
-                        let colorUnderTest = DSColors.onLink.asHexString()
-
-                        let result = compare(
-                            colorUnderTest: colorUnderTest,
+                        let result = isCurrentColorOnCurrentPalette(
+                            colorUnderTest: DSColors.onLink.asHexString(),
                             lightColor: lightPalette.content.onLink,
                             darkColor: darkPalette.content.onLink
                         )
@@ -294,7 +250,7 @@ final class DSColorsTBSSpec: QuickSpec {
                     it("Feedback.success") {
                         let colorUnderTest = DSColors.success.asHexString()
 
-                        let result = compare(
+                        let result = isCurrentColorOnCurrentPalette(
                             colorUnderTest: colorUnderTest,
                             lightColor: lightPalette.feedback.success,
                             darkColor: darkPalette.feedback.success
@@ -304,10 +260,8 @@ final class DSColorsTBSSpec: QuickSpec {
                     }
 
                     it("Feedback.onSuccess") {
-                        let colorUnderTest = DSColors.onSuccess.asHexString()
-
-                        let result = compare(
-                            colorUnderTest: colorUnderTest,
+                        let result = isCurrentColorOnCurrentPalette(
+                            colorUnderTest: DSColors.onSuccess.asHexString(),
                             lightColor: lightPalette.feedback.onSuccess,
                             darkColor: darkPalette.feedback.onSuccess
                         )
@@ -316,10 +270,8 @@ final class DSColorsTBSSpec: QuickSpec {
                     }
 
                     it("Feedback.warning") {
-                        let colorUnderTest = DSColors.warning.asHexString()
-
-                        let result = compare(
-                            colorUnderTest: colorUnderTest,
+                        let result = isCurrentColorOnCurrentPalette(
+                            colorUnderTest: DSColors.warning.asHexString(),
                             lightColor: lightPalette.feedback.warning,
                             darkColor: darkPalette.feedback.warning
                         )
@@ -328,10 +280,8 @@ final class DSColorsTBSSpec: QuickSpec {
                     }
 
                     it("Feedback.onWarning") {
-                        let colorUnderTest = DSColors.onWarning.asHexString()
-
-                        let result = compare(
-                            colorUnderTest: colorUnderTest,
+                        let result = isCurrentColorOnCurrentPalette(
+                            colorUnderTest: DSColors.onWarning.asHexString(),
                             lightColor: lightPalette.feedback.onWarning,
                             darkColor: darkPalette.feedback.onWarning
                         )
@@ -340,10 +290,8 @@ final class DSColorsTBSSpec: QuickSpec {
                     }
 
                     it("Feedback.alert") {
-                        let colorUnderTest = DSColors.alert.asHexString()
-
-                        let result = compare(
-                            colorUnderTest: colorUnderTest,
+                        let result = isCurrentColorOnCurrentPalette(
+                            colorUnderTest: DSColors.alert.asHexString(),
                             lightColor: lightPalette.feedback.alert,
                             darkColor: darkPalette.feedback.alert
                         )
@@ -352,10 +300,8 @@ final class DSColorsTBSSpec: QuickSpec {
                     }
 
                     it("Feedback.onAlert") {
-                        let colorUnderTest = DSColors.onAlert.asHexString()
-
-                        let result = compare(
-                            colorUnderTest: colorUnderTest,
+                        let result = isCurrentColorOnCurrentPalette(
+                            colorUnderTest: DSColors.onAlert.asHexString(),
                             lightColor: lightPalette.feedback.onAlert,
                             darkColor: darkPalette.feedback.onAlert
                         )
@@ -366,23 +312,11 @@ final class DSColorsTBSSpec: QuickSpec {
             } // context - The Body Shop
         }
 
-        func compare(colorUnderTest: String, lightColor: String, darkColor: String) -> Bool {
+        func isCurrentColorOnCurrentPalette(colorUnderTest: String,
+                                            lightColor: String,
+                                            darkColor: String) -> Bool {
+
             colorUnderTest == lightColor || colorUnderTest == darkColor
         }
-    }
-}
-
-fileprivate extension UIColor {
-    func asHexString() -> String {
-        var red: CGFloat = 0
-        var green: CGFloat = 0
-        var blue: CGFloat = 0
-        var alpha: CGFloat = 0
-
-        getRed(&red, green: &green, blue: &blue, alpha: &alpha)
-
-        let rgb: Int = (Int)(red * 255) << 16 | (Int)(green * 255) << 8 | (Int)( blue * 255) << 0
-
-        return String(format: "#%06x", rgb).uppercased()
     }
 }
