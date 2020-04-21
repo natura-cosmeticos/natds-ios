@@ -11,7 +11,7 @@ final class DesignSystemSpec: QuickSpec {
             describe("method .configure") {
                 context("Brand: .avon") {
                     beforeEach {
-                        designSystem.configure(brand: .avon)
+                        designSystem.configure(with: .avon)
                     }
 
                     it("sets current theme to Avon") {
@@ -22,7 +22,7 @@ final class DesignSystemSpec: QuickSpec {
 
                 context("Brand: .theBodyShop") {
                     beforeEach {
-                        designSystem.configure(brand: .theBodyShop)
+                        designSystem.configure(with: .theBodyShop)
                     }
 
                     it("sets current theme to The Body Shop") {

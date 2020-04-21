@@ -1,60 +1,60 @@
 struct TheBodyShopColorPaletteDark: ColorPalette {
-    var primary: PrimaryColorPalette = Primary()
-    var secondary: SecondaryColorPalette = Secondary()
-    var surface: SurfaceColorPalette = Surface()
-    var content: ContentColorPalette = Content()
-    var feedback: FeedbackColorPalette = Feedback()
+    let primary: PrimaryColorPalette = Primary()
+    let secondary: SecondaryColorPalette = Secondary()
+    let surface: SurfaceColorPalette = Surface()
+    let content: ContentColorPalette = Content()
+    let feedback: FeedbackColorPalette = Feedback()
 }
 
 extension TheBodyShopColorPaletteDark {
     struct Primary: PrimaryColorPalette {
-        var primary = "#62B3AE"
-        var onPrimary = "#000000"
+        let primary = "#62B3AE"
+        let onPrimary = "#000000"
 
-        var primaryDark = "#2F837F"
-        var onPrimaryDark = "#000000"
+        let primaryDark = "#2F837F"
+        let onPrimaryDark = "#000000"
 
-        var primaryLight = "#94E5E0"
-        var onPrimaryLight = "#000000"
+        let primaryLight = "#94E5E0"
+        let onPrimaryLight = "#000000"
     }
 
     struct Secondary: SecondaryColorPalette {
         let secondary = "#D2AD93"
-        var onSecondary = "#000000"
+        let onSecondary = "#000000"
 
-        var secondaryDark = "#A07E65"
-        var onSecondaryDark = "#000000"
+        let secondaryDark = "#A07E65"
+        let onSecondaryDark = "#000000"
 
-        var secondaryLight = "#FFDFC4"
-        var onSecondaryLight = "#000000"
+        let secondaryLight = "#FFDFC4"
+        let onSecondaryLight = "#000000"
     }
 
     struct Surface: SurfaceColorPalette {
-        var background = "#121212"
-        var onBackground = "#FFFFFF"
+        let background = "#121212"
+        let onBackground = "#FFFFFF"
 
-        var surface = "#333333"
-        var onSurface = "#FFFFFF"
+        let surface = "#333333"
+        let onSurface = "#FFFFFF"
     }
 
     struct Content: ContentColorPalette {
-        var hightlight = "#FFFFFF"
-        var highEmphasis = "#FAFAFA"
-        var mediumEmphasis = "#BBBBBB"
-        var lowEmphasis = "#777777"
+        let hightlight = "#FFFFFF"
+        let highEmphasis = "#FAFAFA"
+        let mediumEmphasis = "#BBBBBB"
+        let lowEmphasis = "#777777"
 
-        var link = "#227BBD"
-        var onLink = "#FFFFFF"
+        let link = "#227BBD"
+        let onLink = "#FFFFFF"
     }
 
     struct Feedback: FeedbackColorPalette {
-        var success = "#569A32"
-        var onSuccess = "#FFFFFF"
+        let success = "#569A32"
+        let onSuccess = "#FFFFFF"
 
-        var warning = "#FCC433"
-        var onWarning = "#333333"
+        let warning = "#FCC433"
+        let onWarning = "#333333"
 
-        var alert = "#E74627"
-        var onAlert = "#FFFFFF"
+        let alert = "#E74627"
+        let onAlert = "#FFFFFF"
     }
 }

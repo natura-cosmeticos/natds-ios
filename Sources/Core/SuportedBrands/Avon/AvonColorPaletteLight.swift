@@ -23,7 +23,7 @@ extension AvonColorPaletteLight {
         let onSecondary = "#333333"
 
         let secondaryDark = "#B7B7B7"
-        var onSecondaryDark = "#333333"
+        let onSecondaryDark = "#333333"
 
         let secondaryLight = "#FFFFFF"
         let onSecondaryLight = "#333333"
@@ -31,9 +31,10 @@ extension AvonColorPaletteLight {
 
     struct Surface: SurfaceColorPalette {
         let background = "#FAFAFA"
-        var onBackground = "#333333"
+        let onBackground = "#333333"
+
         let surface = "#FFFFFF"
-        var onSurface = "#333333"
+        let onSurface = "#333333"
     }
 
     struct Content: ContentColorPalette {
@@ -43,18 +44,17 @@ extension AvonColorPaletteLight {
         let lowEmphasis = "#BBBBBB"
 
         let link = "#227BBD"
-        var onLink = "#FFFFFF"
+        let onLink = "#FFFFFF"
     }
 
     struct Feedback: FeedbackColorPalette {
         let success = "#569A32"
-        var onSuccess = "#FFFFFF"
+        let onSuccess = "#FFFFFF"
 
         let warning = "#FCC433"
-        var onWarning = "#333333"
+        let onWarning = "#333333"
 
         let alert = "#E74627"
-        var onAlert = "#FFFFFF"
-
+        let onAlert = "#FFFFFF"
     }
 }

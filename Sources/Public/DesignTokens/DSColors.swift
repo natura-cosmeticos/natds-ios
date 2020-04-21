@@ -27,7 +27,7 @@
         It's necessary to configure the Design System current Brand at DesisgnSystem class
         or fatalError will be raised.
 
-            DesisgnSystem.shared.configure(brand:)
+            DesisgnSystem.shared.configure(with: Brand)
 
  - Returns:
         All properties returns UIColor.

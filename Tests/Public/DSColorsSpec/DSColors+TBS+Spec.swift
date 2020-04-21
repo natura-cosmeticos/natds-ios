@@ -10,7 +10,7 @@ final class DSColorsTBSSpec: QuickSpec {
             var darkPalette: ColorPalette!
 
             beforeEach {
-                DesignSystem.shared.configure(brand: .theBodyShop)
+                DesignSystem.shared.configure(with: .theBodyShop)
                 let theme = DesignSystem.shared.currentTheme
                 lightPalette = theme.lightColorPallet
                 darkPalette = theme.darkColorPallet
