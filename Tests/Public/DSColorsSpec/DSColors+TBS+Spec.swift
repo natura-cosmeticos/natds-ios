@@ -216,11 +216,152 @@ final class DSColorsTBSSpec: QuickSpec {
                 } // describe - Surface Color Palette
 
                 describe("Content Color Palette") {
+                    it("Content.hightlight") {
+                        let colorUnderTest = DSColors.hightlight.asHexString()
+
+                        let result = compare(
+                            colorUnderTest: colorUnderTest,
+                            lightColor: lightPalette.content.hightlight,
+                            darkColor: darkPalette.content.hightlight
+                        )
+
+                        expect(result).to(beTrue())
+                    }
+
+                    it("Content.highEmphasis") {
+                        let colorUnderTest = DSColors.highEmphasis.asHexString()
+
+                        let result = compare(
+                            colorUnderTest: colorUnderTest,
+                            lightColor: lightPalette.content.highEmphasis,
+                            darkColor: darkPalette.content.highEmphasis
+                        )
+
+                        expect(result).to(beTrue())
+                    }
+
+                    it("Content.mediumEmphasis") {
+                        let colorUnderTest = DSColors.highEmphasis.asHexString()
+
+                        let result = compare(
+                            colorUnderTest: colorUnderTest,
+                            lightColor: lightPalette.content.highEmphasis,
+                            darkColor: darkPalette.content.highEmphasis
+                        )
+
+                        expect(result).to(beTrue())
+                    }
+
+                    it("Content.lowEmphasis") {
+                        let colorUnderTest = DSColors.lowEmphasis.asHexString()
+
+                        let result = compare(
+                            colorUnderTest: colorUnderTest,
+                            lightColor: lightPalette.content.lowEmphasis,
+                            darkColor: darkPalette.content.lowEmphasis
+                        )
+
+                        expect(result).to(beTrue())
+                    }
+
+                    it("Content.link") {
+                        let colorUnderTest = DSColors.link.asHexString()
+
+                        let result = compare(
+                            colorUnderTest: colorUnderTest,
+                            lightColor: lightPalette.content.link,
+                            darkColor: darkPalette.content.link
+                        )
+
+                        expect(result).to(beTrue())
+                    }
+
+                    it("Content.onLink") {
+                        let colorUnderTest = DSColors.onLink.asHexString()
+
+                        let result = compare(
+                            colorUnderTest: colorUnderTest,
+                            lightColor: lightPalette.content.onLink,
+                            darkColor: darkPalette.content.onLink
+                        )
+
+                        expect(result).to(beTrue())
+                    }
 
                 } // describe - Content Color Palette
 
                 describe("Feedback Color Palette") {
+                    it("Feedback.success") {
+                        let colorUnderTest = DSColors.success.asHexString()
 
+                        let result = compare(
+                            colorUnderTest: colorUnderTest,
+                            lightColor: lightPalette.feedback.success,
+                            darkColor: darkPalette.feedback.success
+                        )
+
+                        expect(result).to(beTrue())
+                    }
+
+                    it("Feedback.onSuccess") {
+                        let colorUnderTest = DSColors.onSuccess.asHexString()
+
+                        let result = compare(
+                            colorUnderTest: colorUnderTest,
+                            lightColor: lightPalette.feedback.onSuccess,
+                            darkColor: darkPalette.feedback.onSuccess
+                        )
+
+                        expect(result).to(beTrue())
+                    }
+
+                    it("Feedback.warning") {
+                        let colorUnderTest = DSColors.warning.asHexString()
+
+                        let result = compare(
+                            colorUnderTest: colorUnderTest,
+                            lightColor: lightPalette.feedback.warning,
+                            darkColor: darkPalette.feedback.warning
+                        )
+
+                        expect(result).to(beTrue())
+                    }
+
+                    it("Feedback.onWarning") {
+                        let colorUnderTest = DSColors.onWarning.asHexString()
+
+                        let result = compare(
+                            colorUnderTest: colorUnderTest,
+                            lightColor: lightPalette.feedback.onWarning,
+                            darkColor: darkPalette.feedback.onWarning
+                        )
+
+                        expect(result).to(beTrue())
+                    }
+
+                    it("Feedback.alert") {
+                        let colorUnderTest = DSColors.alert.asHexString()
+
+                        let result = compare(
+                            colorUnderTest: colorUnderTest,
+                            lightColor: lightPalette.feedback.alert,
+                            darkColor: darkPalette.feedback.alert
+                        )
+
+                        expect(result).to(beTrue())
+                    }
+
+                    it("Feedback.onAlert") {
+                        let colorUnderTest = DSColors.onAlert.asHexString()
+
+                        let result = compare(
+                            colorUnderTest: colorUnderTest,
+                            lightColor: lightPalette.feedback.onAlert,
+                            darkColor: darkPalette.feedback.onAlert
+                        )
+
+                        expect(result).to(beTrue())
+                    }
                 } // describe - Feedback Color Palette
             } // context - The Body Shop
         }
