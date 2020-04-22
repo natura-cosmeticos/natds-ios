@@ -6,7 +6,7 @@ struct AvonColorPaletteLight: ColorPalette {
     let feedback: FeedbackColorPalette = Feedback()
 }
 
-extension AvonColorPaletteLight {
+private extension AvonColorPaletteLight {
     struct Primary: PrimaryColorPalette {
         let primary = "#DE0085"
         let onPrimary = "#FFFFFF"

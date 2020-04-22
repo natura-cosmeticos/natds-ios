@@ -8,7 +8,7 @@
             DesignSystem.shared.configure(brand: .theBodyShop)
 
  - Note:
-    Current Suported Brands:
+    Current Supported Brands:
         - Avon
         - The Body Shop
  
@@ -28,7 +28,7 @@ public final class DesignSystem {
         case theBodyShop
     }
 
-    static let shared = DesignSystem()
+    public static let shared = DesignSystem()
 
     private var theme: Theme?
 

@@ -6,27 +6,27 @@ import Nimble
 final class DesignSystemSpec: QuickSpec {
     override func spec() {
         describe("DesignSystem") {
-            let designSystem = DesignSystem.shared
+            let systemUnderTest = DesignSystem.shared
 
-            describe("method .configure") {
-                context("Brand: .avon") {
+            describe("#configure") {
+                context("when the brand is .avon") {
                     beforeEach {
-                        designSystem.configure(with: .avon)
+                        systemUnderTest.configure(with: .avon)
                     }
 
                     it("sets current theme to Avon") {
-                        let theme = designSystem.currentTheme
+                        let theme = systemUnderTest.currentTheme
                         expect(theme).to(beAnInstanceOf(AvonTheme.self))
                     }
                 }
 
-                context("Brand: .theBodyShop") {
+                context("when the brand is .theBodyShop") {
                     beforeEach {
-                        designSystem.configure(with: .theBodyShop)
+                        systemUnderTest.configure(with: .theBodyShop)
                     }
 
                     it("sets current theme to The Body Shop") {
-                        let theme = designSystem.currentTheme
+                        let theme = systemUnderTest.currentTheme
                         expect(theme).to(beAnInstanceOf(TheBodyShopTheme.self))
                     }
                 }
