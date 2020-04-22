@@ -1,44 +1,44 @@
 struct ColorSelector {
-    private let lightColorPallet: ColorPalette
-    private let darkColorPallet: ColorPalette
+    private let lightColorPalette: ColorPalette
+    private let darkColorPalette: ColorPalette
 
     init(theme: Theme = DesignSystem.shared.currentTheme) {
-        lightColorPallet = theme.lightColorPallet
-        darkColorPallet = theme.darkColorPallet
+        lightColorPalette = theme.lightColorPalette
+        darkColorPalette = theme.darkColorPalette
     }
 
     func getFromPalette(color keyPath: KeyPath<PrimaryColorPalette, String>) -> UIColor {
         createColor(
-            hexLight: lightColorPallet.primary[keyPath: keyPath],
-            hexDark: darkColorPallet.primary[keyPath: keyPath]
+            hexLight: lightColorPalette.primary[keyPath: keyPath],
+            hexDark: darkColorPalette.primary[keyPath: keyPath]
         )
     }
 
     func getFromPalette(color keyPath: KeyPath<SecondaryColorPalette, String>) -> UIColor {
         createColor(
-            hexLight: lightColorPallet.secondary[keyPath: keyPath],
-            hexDark: darkColorPallet.secondary[keyPath: keyPath]
+            hexLight: lightColorPalette.secondary[keyPath: keyPath],
+            hexDark: darkColorPalette.secondary[keyPath: keyPath]
         )
     }
 
     func getFromPalette(color keyPath: KeyPath<SurfaceColorPalette, String>) -> UIColor {
         createColor(
-            hexLight: lightColorPallet.surface[keyPath: keyPath],
-            hexDark: darkColorPallet.surface[keyPath: keyPath]
+            hexLight: lightColorPalette.surface[keyPath: keyPath],
+            hexDark: darkColorPalette.surface[keyPath: keyPath]
         )
     }
 
     func getFromPalette(color keyPath: KeyPath<ContentColorPalette, String>) -> UIColor {
         createColor(
-            hexLight: lightColorPallet.content[keyPath: keyPath],
-            hexDark: darkColorPallet.content[keyPath: keyPath]
+            hexLight: lightColorPalette.content[keyPath: keyPath],
+            hexDark: darkColorPalette.content[keyPath: keyPath]
         )
     }
 
     func getFromPalette(color keyPath: KeyPath<FeedbackColorPalette, String>) -> UIColor {
         createColor(
-            hexLight: lightColorPallet.feedback[keyPath: keyPath],
-            hexDark: darkColorPallet.feedback[keyPath: keyPath]
+            hexLight: lightColorPalette.feedback[keyPath: keyPath],
+            hexDark: darkColorPalette.feedback[keyPath: keyPath]
         )
     }
 

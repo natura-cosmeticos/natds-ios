@@ -13,7 +13,7 @@
     - Surface:
         background, onBackground, surface, onSurface
     - Content:
-        hightlight, highEmphasis, mediumEmphasis, lowEmphasis, link, onLink
+        highlight, highEmphasis, mediumEmphasis, lowEmphasis, link, onLink
     - Feedback:
         success, onSuccess, warning, onWarning, alert, onAlert
 
@@ -69,7 +69,7 @@ public struct DSColors {
 
     // MARK: - Content
 
-    public static let hightlight = ColorSelector().getFromPalette(color: \.hightlight)
+    public static let highlight = ColorSelector().getFromPalette(color: \.highlight)
     public static let highEmphasis = ColorSelector().getFromPalette(color: \.highEmphasis)
     public static let mediumEmphasis = ColorSelector().getFromPalette(color: \.mediumEmphasis)
     public static let lowEmphasis = ColorSelector().getFromPalette(color: \.lowEmphasis)

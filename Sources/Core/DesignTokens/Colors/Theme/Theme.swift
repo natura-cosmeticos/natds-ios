@@ -1,6 +1,6 @@
 import Foundation
 
 protocol Theme {
-    var lightColorPallet: ColorPalette { get }
-    var darkColorPallet: ColorPalette { get }
+    var lightColorPalette: ColorPalette { get }
+    var darkColorPalette: ColorPalette { get }
 }

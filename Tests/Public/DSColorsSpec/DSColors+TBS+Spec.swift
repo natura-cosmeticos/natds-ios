@@ -2,7 +2,7 @@ import Quick
 import Nimble
 
 @testable import NatDS
-// swiftlint:disable all
+ // swiftlint:disable function_body_length type_body_length
 final class DSColorsTBSSpec: QuickSpec {
     override func spec() {
         var lightPalette: ColorPalette!
@@ -11,13 +11,13 @@ final class DSColorsTBSSpec: QuickSpec {
         beforeEach {
             DesignSystem.shared.configure(with: .theBodyShop)
             let theme = DesignSystem.shared.currentTheme
-            lightPalette = theme.lightColorPallet
-            darkPalette = theme.darkColorPallet
+            lightPalette = theme.lightColorPalette
+            darkPalette = theme.darkColorPalette
         }
 
         describe("colors from PrimaryColorPalette protocol") {
             describe(".primary") {
-                it("returns a color equivalent to ColorPallet.primary.primary") {
+                it("returns a color equivalent to ColorPalette.primary.primary") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: DSColors.primary,
                         lightColor: lightPalette.primary.primary,
@@ -29,7 +29,7 @@ final class DSColorsTBSSpec: QuickSpec {
             }
 
             describe(".onPrimary") {
-                it("returns a color equivalent to ColorPallet.primary.onPrimary") {
+                it("returns a color equivalent to ColorPalette.primary.onPrimary") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: DSColors.onPrimary,
                         lightColor: lightPalette.primary.onPrimary,
@@ -41,7 +41,7 @@ final class DSColorsTBSSpec: QuickSpec {
             }
 
             describe(".primaryLight") {
-                it("returns a color equivalent to ColorPallet.primary.primaryLight") {
+                it("returns a color equivalent to ColorPalette.primary.primaryLight") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: DSColors.primaryLight,
                         lightColor: lightPalette.primary.primaryLight,
@@ -53,7 +53,7 @@ final class DSColorsTBSSpec: QuickSpec {
             }
 
             describe(".onPrimaryLight") {
-                it("returns a color equivalent to ColorPallet.primary.onPrimaryLight") {
+                it("returns a color equivalent to ColorPalette.primary.onPrimaryLight") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: DSColors.onPrimaryLight,
                         lightColor: lightPalette.primary.onPrimaryLight,
@@ -65,7 +65,7 @@ final class DSColorsTBSSpec: QuickSpec {
             }
 
             describe(".primaryDark") {
-                it("returns a color equivalent to ColorPallet.primary.primaryDark") {
+                it("returns a color equivalent to ColorPalette.primary.primaryDark") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: DSColors.primaryDark,
                         lightColor: lightPalette.primary.primaryDark,
@@ -77,7 +77,7 @@ final class DSColorsTBSSpec: QuickSpec {
             }
 
             describe(".onPrimaryDark") {
-                it("returns a color equivalent to ColorPallet.primary.onPrimaryDark") {
+                it("returns a color equivalent to ColorPalette.primary.onPrimaryDark") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: DSColors.onPrimaryDark,
                         lightColor: lightPalette.primary.onPrimaryDark,
@@ -91,7 +91,7 @@ final class DSColorsTBSSpec: QuickSpec {
 
         describe("colors from SecondaryColorPalette protocol") {
             describe(".secondary") {
-                it("returns a color equivalent to ColorPallet.secondary.secondary") {
+                it("returns a color equivalent to ColorPalette.secondary.secondary") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: DSColors.secondary,
                         lightColor: lightPalette.secondary.secondary,
@@ -103,7 +103,7 @@ final class DSColorsTBSSpec: QuickSpec {
             }
 
             describe(".onSecondary") {
-                it("returns a color equivalent to ColorPallet.secondary.onSecondary") {
+                it("returns a color equivalent to ColorPalette.secondary.onSecondary") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: DSColors.onSecondary,
                         lightColor: lightPalette.secondary.onSecondary,
@@ -115,7 +115,7 @@ final class DSColorsTBSSpec: QuickSpec {
             }
 
             describe(".secondaryLight") {
-                it("returns a color equivalent to ColorPallet.secondary.secondaryLight") {
+                it("returns a color equivalent to ColorPalette.secondary.secondaryLight") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: DSColors.secondaryLight,
                         lightColor: lightPalette.secondary.secondaryLight,
@@ -127,7 +127,7 @@ final class DSColorsTBSSpec: QuickSpec {
             }
 
             describe(".onSecondaryLight") {
-                it("returns a color equivalent to ColorPallet.secondary.onSecondaryLight") {
+                it("returns a color equivalent to ColorPalette.secondary.onSecondaryLight") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: DSColors.onSecondaryLight,
                         lightColor: lightPalette.secondary.onSecondaryLight,
@@ -139,7 +139,7 @@ final class DSColorsTBSSpec: QuickSpec {
             }
 
             describe(".secondaryDark") {
-                it("returns a color equivalent to ColorPallet.secondary.secondaryDark") {
+                it("returns a color equivalent to ColorPalette.secondary.secondaryDark") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: DSColors.secondaryDark,
                         lightColor: lightPalette.secondary.secondaryDark,
@@ -151,7 +151,7 @@ final class DSColorsTBSSpec: QuickSpec {
             }
 
             describe(".onSecondaryDark") {
-                it("returns a color equivalent to ColorPallet.secondary.onSecondaryDark") {
+                it("returns a color equivalent to ColorPalette.secondary.onSecondaryDark") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: DSColors.onSecondaryDark,
                         lightColor: lightPalette.secondary.onSecondaryDark,
@@ -165,7 +165,7 @@ final class DSColorsTBSSpec: QuickSpec {
 
         describe("colors from SurfaceColorPalette protocol") {
             describe(".background") {
-                it("returns a color equivalent to ColorPallet.surface.background") {
+                it("returns a color equivalent to ColorPalette.surface.background") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: DSColors.background,
                         lightColor: lightPalette.surface.background,
@@ -177,7 +177,7 @@ final class DSColorsTBSSpec: QuickSpec {
             }
 
             describe(".onBackground") {
-                it("returns a color equivalent to ColorPallet.surface.onBackground") {
+                it("returns a color equivalent to ColorPalette.surface.onBackground") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: DSColors.onBackground,
                         lightColor: lightPalette.surface.onBackground,
@@ -189,7 +189,7 @@ final class DSColorsTBSSpec: QuickSpec {
             }
 
             describe(".surface") {
-                it("returns a color equivalent to ColorPallet.surface.surface") {
+                it("returns a color equivalent to ColorPalette.surface.surface") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: DSColors.surface,
                         lightColor: lightPalette.surface.surface,
@@ -201,7 +201,7 @@ final class DSColorsTBSSpec: QuickSpec {
             }
 
             describe(".onSurface") {
-                it("returns a color equivalent to ColorPallet.surface.onSurface") {
+                it("returns a color equivalent to ColorPalette.surface.onSurface") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: DSColors.onSurface,
                         lightColor: lightPalette.surface.onSurface,
@@ -214,12 +214,12 @@ final class DSColorsTBSSpec: QuickSpec {
         } // describe - colors from SurfaceColorPalette protocol
 
         describe("colors from ContentColorPalette protocol") {
-            describe(".hightlight") {
-                it("returns a color equivalent to ColorPallet.content.hightlight") {
+            describe(".highlight") {
+                it("returns a color equivalent to ColorPalette.content.highlight") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
-                        colorUnderTest: DSColors.hightlight,
-                        lightColor: lightPalette.content.hightlight,
-                        darkColor: darkPalette.content.hightlight
+                        colorUnderTest: DSColors.highlight,
+                        lightColor: lightPalette.content.highlight,
+                        darkColor: darkPalette.content.highlight
                     )
 
                     expect(result).to(beTrue())
@@ -227,7 +227,7 @@ final class DSColorsTBSSpec: QuickSpec {
             }
 
             describe(".highEmphasis") {
-                it("returns a color equivalent to ColorPallet.content.highEmphasis") {
+                it("returns a color equivalent to ColorPalette.content.highEmphasis") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: DSColors.highEmphasis,
                         lightColor: lightPalette.content.highEmphasis,
@@ -239,7 +239,7 @@ final class DSColorsTBSSpec: QuickSpec {
             }
 
             describe(".mediumEmphasis") {
-                it("returns a color equivalent to ColorPallet.content.mediumEmphasis") {
+                it("returns a color equivalent to ColorPalette.content.mediumEmphasis") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: DSColors.mediumEmphasis,
                         lightColor: lightPalette.content.mediumEmphasis,
@@ -251,7 +251,7 @@ final class DSColorsTBSSpec: QuickSpec {
             }
 
             describe(".lowEmphasis") {
-                it("returns a color equivalent to ColorPallet.content.lowEmphasis") {
+                it("returns a color equivalent to ColorPalette.content.lowEmphasis") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: DSColors.lowEmphasis,
                         lightColor: lightPalette.content.lowEmphasis,
@@ -263,7 +263,7 @@ final class DSColorsTBSSpec: QuickSpec {
             }
 
             describe(".link") {
-                it("returns a color equivalent to ColorPallet.content.link") {
+                it("returns a color equivalent to ColorPalette.content.link") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: DSColors.link,
                         lightColor: lightPalette.content.link,
@@ -275,7 +275,7 @@ final class DSColorsTBSSpec: QuickSpec {
             }
 
             describe(".onLink") {
-                it("returns a color equivalent to ColorPallet.content.onLink") {
+                it("returns a color equivalent to ColorPalette.content.onLink") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: DSColors.onLink,
                         lightColor: lightPalette.content.onLink,
@@ -289,7 +289,7 @@ final class DSColorsTBSSpec: QuickSpec {
 
         describe("colors from FeedbackColorPalette protocol") {
             describe(".success") {
-                it("returns a color equivalent to ColorPallet.feedback.success") {
+                it("returns a color equivalent to ColorPalette.feedback.success") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: DSColors.success,
                         lightColor: lightPalette.feedback.success,
@@ -301,7 +301,7 @@ final class DSColorsTBSSpec: QuickSpec {
             }
 
             describe(".onSuccess") {
-                it("returns a color equivalent to ColorPallet.feedback.onSuccess") {
+                it("returns a color equivalent to ColorPalette.feedback.onSuccess") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: DSColors.onSuccess,
                         lightColor: lightPalette.feedback.onSuccess,
@@ -313,7 +313,7 @@ final class DSColorsTBSSpec: QuickSpec {
             }
 
             describe(".warning") {
-                it("returns a color equivalent to ColorPallet.feedback.warning") {
+                it("returns a color equivalent to ColorPalette.feedback.warning") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: DSColors.warning,
                         lightColor: lightPalette.feedback.warning,
@@ -325,7 +325,7 @@ final class DSColorsTBSSpec: QuickSpec {
             }
 
             describe(".onWarning") {
-                it("returns a color equivalent to ColorPallet.feedback.onWarning") {
+                it("returns a color equivalent to ColorPalette.feedback.onWarning") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: DSColors.onWarning,
                         lightColor: lightPalette.feedback.onWarning,
@@ -337,7 +337,7 @@ final class DSColorsTBSSpec: QuickSpec {
             }
 
             describe(".alert") {
-                it("returns a color equivalent to ColorPallet.feedback.alert") {
+                it("returns a color equivalent to ColorPalette.feedback.alert") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: DSColors.alert,
                         lightColor: lightPalette.feedback.alert,
@@ -349,7 +349,7 @@ final class DSColorsTBSSpec: QuickSpec {
             }
 
             describe(".onAlert") {
-                it("returns a color equivalent to ColorPallet.feedback.onAlert") {
+                it("returns a color equivalent to ColorPalette.feedback.onAlert") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: DSColors.onAlert,
                         lightColor: lightPalette.feedback.onAlert,

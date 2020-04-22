@@ -38,7 +38,7 @@ private extension TheBodyShopColorPaletteLight {
     }
 
     struct Content: ContentColorPalette {
-        let hightlight = "#000000"
+        let highlight = "#000000"
         let highEmphasis = "#333333"
         let mediumEmphasis = "#777777"
         let lowEmphasis = "#BBBBBB"

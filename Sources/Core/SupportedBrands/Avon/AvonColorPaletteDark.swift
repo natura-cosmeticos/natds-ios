@@ -1,4 +1,4 @@
-struct TheBodyShopColorPaletteDark: ColorPalette {
+struct AvonColorPaletteDark: ColorPalette {
     let primary: PrimaryColorPalette = Primary()
     let secondary: SecondaryColorPalette = Secondary()
     let surface: SurfaceColorPalette = Surface()
@@ -6,27 +6,27 @@ struct TheBodyShopColorPaletteDark: ColorPalette {
     let feedback: FeedbackColorPalette = Feedback()
 }
 
-private extension TheBodyShopColorPaletteDark {
+private extension AvonColorPaletteDark {
     struct Primary: PrimaryColorPalette {
-        let primary = "#62B3AE"
+        let primary = "#F091C9"
         let onPrimary = "#000000"
 
-        let primaryDark = "#2F837F"
+        let primaryDark = "#BC6198"
         let onPrimaryDark = "#000000"
 
-        let primaryLight = "#94E5E0"
+        let primaryLight = "#FFC3FC"
         let onPrimaryLight = "#000000"
     }
 
     struct Secondary: SecondaryColorPalette {
-        let secondary = "#D2AD93"
-        let onSecondary = "#000000"
+        let secondary = "#E9E9E9"
+        let onSecondary = "#333333"
 
-        let secondaryDark = "#A07E65"
-        let onSecondaryDark = "#000000"
+        let secondaryDark = "#B7B7B7"
+        let onSecondaryDark = "#333333"
 
-        let secondaryLight = "#FFDFC4"
-        let onSecondaryLight = "#000000"
+        let secondaryLight = "#FFFFFF"
+        let onSecondaryLight = "#333333"
     }
 
     struct Surface: SurfaceColorPalette {
@@ -38,7 +38,7 @@ private extension TheBodyShopColorPaletteDark {
     }
 
     struct Content: ContentColorPalette {
-        let hightlight = "#FFFFFF"
+        let highlight = "#FFFFFF"
         let highEmphasis = "#FAFAFA"
         let mediumEmphasis = "#BBBBBB"
         let lowEmphasis = "#777777"

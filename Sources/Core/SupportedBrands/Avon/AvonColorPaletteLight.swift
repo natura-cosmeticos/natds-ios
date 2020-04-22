@@ -1,4 +1,4 @@
-struct AvonColorPaletteDark: ColorPalette {
+struct AvonColorPaletteLight: ColorPalette {
     let primary: PrimaryColorPalette = Primary()
     let secondary: SecondaryColorPalette = Secondary()
     let surface: SurfaceColorPalette = Surface()
@@ -6,15 +6,15 @@ struct AvonColorPaletteDark: ColorPalette {
     let feedback: FeedbackColorPalette = Feedback()
 }
 
-private extension AvonColorPaletteDark {
+private extension AvonColorPaletteLight {
     struct Primary: PrimaryColorPalette {
-        let primary = "#F091C9"
-        let onPrimary = "#000000"
+        let primary = "#DE0085"
+        let onPrimary = "#FFFFFF"
 
-        let primaryDark = "#BC6198"
-        let onPrimaryDark = "#000000"
+        let primaryDark = "#A70058"
+        let onPrimaryDark = "#FFFFFF"
 
-        let primaryLight = "#FFC3FC"
+        let primaryLight = "#FF56B5"
         let onPrimaryLight = "#000000"
     }
 
@@ -30,18 +30,18 @@ private extension AvonColorPaletteDark {
     }
 
     struct Surface: SurfaceColorPalette {
-        let background = "#121212"
-        let onBackground = "#FFFFFF"
+        let background = "#FAFAFA"
+        let onBackground = "#333333"
 
-        let surface = "#333333"
-        let onSurface = "#FFFFFF"
+        let surface = "#FFFFFF"
+        let onSurface = "#333333"
     }
 
     struct Content: ContentColorPalette {
-        let hightlight = "#FFFFFF"
-        let highEmphasis = "#FAFAFA"
-        let mediumEmphasis = "#BBBBBB"
-        let lowEmphasis = "#777777"
+        let highlight = "#000000"
+        let highEmphasis = "#333333"
+        let mediumEmphasis = "#777777"
+        let lowEmphasis = "#BBBBBB"
 
         let link = "#227BBD"
         let onLink = "#FFFFFF"

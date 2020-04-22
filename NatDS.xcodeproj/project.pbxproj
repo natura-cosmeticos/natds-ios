@@ -579,13 +579,13 @@
 			path = Avon;
 			sourceTree = "<group>";
 		};
-		8427A294244787A700CF30D5 /* SuportedBrands */ = {
+		8427A294244787A700CF30D5 /* SupportedBrands */ = {
 			isa = PBXGroup;
 			children = (
 				8427A295244787F900CF30D5 /* TheBodyShop */,
 				8427A29324477F1F00CF30D5 /* Avon */,
 			);
-			path = SuportedBrands;
+			path = SupportedBrands;
 			sourceTree = "<group>";
 		};
 		8427A295244787F900CF30D5 /* TheBodyShop */ = {
@@ -636,6 +636,8 @@
 			children = (
 				845D9EF9244E2A75003598B0 /* DSColorsSpec */,
 				8427A2B2244F78CA00CF30D5 /* DesignSystem+Spec.swift */,
+				117FE027238DA4760032E2AC /* Components */,
+				117FE00C238D9AEB0032E2AC /* DesignTokens */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -643,7 +645,7 @@
 		845D9EF3244DE190003598B0 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				8427A294244787A700CF30D5 /* SuportedBrands */,
+				8427A294244787A700CF30D5 /* SupportedBrands */,
 				117FE01A238D9B070032E2AC /* DesignTokens */,
 				11581AA5238F0315003E45D7 /* Helpers */,
 				A9881999238C5A8E0008230F /* Extensions */,
@@ -736,8 +738,6 @@
 			children = (
 				8427A2AF244F720B00CF30D5 /* UIColor+AsHexString.swift */,
 				845D9EF2244DE16C003598B0 /* Public */,
-				117FE027238DA4760032E2AC /* Components */,
-				117FE00C238D9AEB0032E2AC /* DesignTokens */,
 				A988199D238C61780008230F /* Extensions */,
 				11581AA6238F0348003E45D7 /* Helpers */,
 				A9CCF8D423CCD4E400000FC0 /* Supporting Files */,

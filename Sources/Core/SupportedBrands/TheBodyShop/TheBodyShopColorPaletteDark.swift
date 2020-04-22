@@ -1,4 +1,4 @@
-struct AvonColorPaletteLight: ColorPalette {
+struct TheBodyShopColorPaletteDark: ColorPalette {
     let primary: PrimaryColorPalette = Primary()
     let secondary: SecondaryColorPalette = Secondary()
     let surface: SurfaceColorPalette = Surface()
@@ -6,42 +6,42 @@ struct AvonColorPaletteLight: ColorPalette {
     let feedback: FeedbackColorPalette = Feedback()
 }
 
-private extension AvonColorPaletteLight {
+private extension TheBodyShopColorPaletteDark {
     struct Primary: PrimaryColorPalette {
-        let primary = "#DE0085"
-        let onPrimary = "#FFFFFF"
+        let primary = "#62B3AE"
+        let onPrimary = "#000000"
 
-        let primaryDark = "#A70058"
-        let onPrimaryDark = "#FFFFFF"
+        let primaryDark = "#2F837F"
+        let onPrimaryDark = "#000000"
 
-        let primaryLight = "#FF56B5"
+        let primaryLight = "#94E5E0"
         let onPrimaryLight = "#000000"
     }
 
     struct Secondary: SecondaryColorPalette {
-        let secondary = "#E9E9E9"
-        let onSecondary = "#333333"
+        let secondary = "#D2AD93"
+        let onSecondary = "#000000"
 
-        let secondaryDark = "#B7B7B7"
-        let onSecondaryDark = "#333333"
+        let secondaryDark = "#A07E65"
+        let onSecondaryDark = "#000000"
 
-        let secondaryLight = "#FFFFFF"
-        let onSecondaryLight = "#333333"
+        let secondaryLight = "#FFDFC4"
+        let onSecondaryLight = "#000000"
     }
 
     struct Surface: SurfaceColorPalette {
-        let background = "#FAFAFA"
-        let onBackground = "#333333"
+        let background = "#121212"
+        let onBackground = "#FFFFFF"
 
-        let surface = "#FFFFFF"
-        let onSurface = "#333333"
+        let surface = "#333333"
+        let onSurface = "#FFFFFF"
     }
 
     struct Content: ContentColorPalette {
-        let hightlight = "#000000"
-        let highEmphasis = "#333333"
-        let mediumEmphasis = "#777777"
-        let lowEmphasis = "#BBBBBB"
+        let highlight = "#FFFFFF"
+        let highEmphasis = "#FAFAFA"
+        let mediumEmphasis = "#BBBBBB"
+        let lowEmphasis = "#777777"
 
         let link = "#227BBD"
         let onLink = "#FFFFFF"
