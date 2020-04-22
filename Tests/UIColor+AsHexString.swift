@@ -1,3 +1,5 @@
+import UIKit
+
 extension UIColor {
     func asHexString() -> String {
         var red: CGFloat = 0

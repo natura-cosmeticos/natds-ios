@@ -705,7 +705,6 @@
 			children = (
 				A9B71E85237B559A00A2BF51 /* Sources */,
 				A9B71E90237B559A00A2BF51 /* Tests */,
-				8427A2AF244F720B00CF30D5 /* UIColor+AsHexString.swift */,
 				A9B71E84237B559A00A2BF51 /* Products */,
 				B59DC9FA54CA6649D4077030 /* Pods */,
 				7F7C949F669E1B554E52BEF2 /* Frameworks */,
@@ -735,6 +734,7 @@
 		A9B71E90237B559A00A2BF51 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				8427A2AF244F720B00CF30D5 /* UIColor+AsHexString.swift */,
 				845D9EF2244DE16C003598B0 /* Public */,
 				117FE027238DA4760032E2AC /* Components */,
 				117FE00C238D9AEB0032E2AC /* DesignTokens */,
