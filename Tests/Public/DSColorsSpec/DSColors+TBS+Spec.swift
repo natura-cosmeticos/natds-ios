@@ -5,363 +5,361 @@ import Nimble
 // swiftlint:disable all
 final class DSColorsTBSSpec: QuickSpec {
     override func spec() {
-        describe("DSColors colors properties configured for TBS") {
-            var lightPalette: ColorPalette!
-            var darkPalette: ColorPalette!
+        var lightPalette: ColorPalette!
+        var darkPalette: ColorPalette!
 
-            beforeEach {
-                DesignSystem.shared.configure(with: .theBodyShop)
-                let theme = DesignSystem.shared.currentTheme
-                lightPalette = theme.lightColorPallet
-                darkPalette = theme.darkColorPallet
+        beforeEach {
+            DesignSystem.shared.configure(with: .theBodyShop)
+            let theme = DesignSystem.shared.currentTheme
+            lightPalette = theme.lightColorPallet
+            darkPalette = theme.darkColorPallet
+        }
+
+        describe("colors from PrimaryColorPalette protocol") {
+            describe(".primary") {
+                it("returns a color equivalent to ColorPallet.primary.primary") {
+                    let result = isColorEquivalentToDarkHexOrLightHex(
+                        colorUnderTest: DSColors.primary,
+                        lightColor: lightPalette.primary.primary,
+                        darkColor: darkPalette.primary.primary
+                    )
+
+                    expect(result).to(beTrue())
+                }
             }
 
-            describe("colors from PrimaryColorPalette protocol") {
-                describe(".primary") {
-                    it("returns a color equivalent to ColorPallet.primary.primary") {
-                        let result = isColorEquivalentToDarkHexOrLightHex(
-                            colorUnderTest: DSColors.primary,
-                            lightColor: lightPalette.primary.primary,
-                            darkColor: darkPalette.primary.primary
-                        )
+            describe(".onPrimary") {
+                it("returns a color equivalent to ColorPallet.primary.onPrimary") {
+                    let result = isColorEquivalentToDarkHexOrLightHex(
+                        colorUnderTest: DSColors.onPrimary,
+                        lightColor: lightPalette.primary.onPrimary,
+                        darkColor: darkPalette.primary.onPrimary
+                    )
 
-                        expect(result).to(beTrue())
-                    }
+                    expect(result).to(beTrue())
                 }
+            }
 
-                describe(".onPrimary") {
-                    it("returns a color equivalent to ColorPallet.primary.onPrimary") {
-                        let result = isColorEquivalentToDarkHexOrLightHex(
-                            colorUnderTest: DSColors.onPrimary,
-                            lightColor: lightPalette.primary.onPrimary,
-                            darkColor: darkPalette.primary.onPrimary
-                        )
+            describe(".primaryLight") {
+                it("returns a color equivalent to ColorPallet.primary.primaryLight") {
+                    let result = isColorEquivalentToDarkHexOrLightHex(
+                        colorUnderTest: DSColors.primaryLight,
+                        lightColor: lightPalette.primary.primaryLight,
+                        darkColor: darkPalette.primary.primaryLight
+                    )
 
-                        expect(result).to(beTrue())
-                    }
+                    expect(result).to(beTrue())
                 }
+            }
 
-                describe(".primaryLight") {
-                    it("returns a color equivalent to ColorPallet.primary.primaryLight") {
-                        let result = isColorEquivalentToDarkHexOrLightHex(
-                            colorUnderTest: DSColors.primaryLight,
-                            lightColor: lightPalette.primary.primaryLight,
-                            darkColor: darkPalette.primary.primaryLight
-                        )
+            describe(".onPrimaryLight") {
+                it("returns a color equivalent to ColorPallet.primary.onPrimaryLight") {
+                    let result = isColorEquivalentToDarkHexOrLightHex(
+                        colorUnderTest: DSColors.onPrimaryLight,
+                        lightColor: lightPalette.primary.onPrimaryLight,
+                        darkColor: darkPalette.primary.onPrimaryLight
+                    )
 
-                        expect(result).to(beTrue())
-                    }
+                    expect(result).to(beTrue())
                 }
+            }
 
-                describe(".onPrimaryLight") {
-                    it("returns a color equivalent to ColorPallet.primary.onPrimaryLight") {
-                        let result = isColorEquivalentToDarkHexOrLightHex(
-                            colorUnderTest: DSColors.onPrimaryLight,
-                            lightColor: lightPalette.primary.onPrimaryLight,
-                            darkColor: darkPalette.primary.onPrimaryLight
-                        )
+            describe(".primaryDark") {
+                it("returns a color equivalent to ColorPallet.primary.primaryDark") {
+                    let result = isColorEquivalentToDarkHexOrLightHex(
+                        colorUnderTest: DSColors.primaryDark,
+                        lightColor: lightPalette.primary.primaryDark,
+                        darkColor: darkPalette.primary.primaryDark
+                    )
 
-                        expect(result).to(beTrue())
-                    }
+                    expect(result).to(beTrue())
                 }
+            }
 
-                describe(".primaryDark") {
-                    it("returns a color equivalent to ColorPallet.primary.primaryDark") {
-                        let result = isColorEquivalentToDarkHexOrLightHex(
-                            colorUnderTest: DSColors.primaryDark,
-                            lightColor: lightPalette.primary.primaryDark,
-                            darkColor: darkPalette.primary.primaryDark
-                        )
+            describe(".onPrimaryDark") {
+                it("returns a color equivalent to ColorPallet.primary.onPrimaryDark") {
+                    let result = isColorEquivalentToDarkHexOrLightHex(
+                        colorUnderTest: DSColors.onPrimaryDark,
+                        lightColor: lightPalette.primary.onPrimaryDark,
+                        darkColor: darkPalette.primary.onPrimaryDark
+                    )
 
-                        expect(result).to(beTrue())
-                    }
+                    expect(result).to(beTrue())
                 }
+            }
+        } //describe - colors from PrimaryColorPalette protocol
 
-                describe(".onPrimaryDark") {
-                    it("returns a color equivalent to ColorPallet.primary.onPrimaryDark") {
-                        let result = isColorEquivalentToDarkHexOrLightHex(
-                            colorUnderTest: DSColors.onPrimaryDark,
-                            lightColor: lightPalette.primary.onPrimaryDark,
-                            darkColor: darkPalette.primary.onPrimaryDark
-                        )
+        describe("colors from SecondaryColorPalette protocol") {
+            describe(".secondary") {
+                it("returns a color equivalent to ColorPallet.secondary.secondary") {
+                    let result = isColorEquivalentToDarkHexOrLightHex(
+                        colorUnderTest: DSColors.secondary,
+                        lightColor: lightPalette.secondary.secondary,
+                        darkColor: darkPalette.secondary.secondary
+                    )
 
-                        expect(result).to(beTrue())
-                    }
+                    expect(result).to(beTrue())
                 }
-            } //describe - colors from PrimaryColorPalette protocol
+            }
 
-            describe("colors from SecondaryColorPalette protocol") {
-                describe(".scondary") {
-                    it("returns a color equivalent to ColorPallet.scondary.scondary") {
-                        let result = isColorEquivalentToDarkHexOrLightHex(
-                            colorUnderTest: DSColors.secondary,
-                            lightColor: lightPalette.secondary.secondary,
-                            darkColor: darkPalette.secondary.secondary
-                        )
+            describe(".onSecondary") {
+                it("returns a color equivalent to ColorPallet.secondary.onSecondary") {
+                    let result = isColorEquivalentToDarkHexOrLightHex(
+                        colorUnderTest: DSColors.onSecondary,
+                        lightColor: lightPalette.secondary.onSecondary,
+                        darkColor: darkPalette.secondary.onSecondary
+                    )
 
-                        expect(result).to(beTrue())
-                    }
+                    expect(result).to(beTrue())
                 }
+            }
 
-                describe(".onSecondary") {
-                    it("returns a color equivalent to ColorPallet.scondary.onSecondary") {
-                        let result = isColorEquivalentToDarkHexOrLightHex(
-                            colorUnderTest: DSColors.onSecondary,
-                            lightColor: lightPalette.secondary.onSecondary,
-                            darkColor: darkPalette.secondary.onSecondary
-                        )
+            describe(".secondaryLight") {
+                it("returns a color equivalent to ColorPallet.secondary.secondaryLight") {
+                    let result = isColorEquivalentToDarkHexOrLightHex(
+                        colorUnderTest: DSColors.secondaryLight,
+                        lightColor: lightPalette.secondary.secondaryLight,
+                        darkColor: darkPalette.secondary.secondaryLight
+                    )
 
-                        expect(result).to(beTrue())
-                    }
+                    expect(result).to(beTrue())
                 }
+            }
 
-                describe(".secondaryLight") {
-                    it("returns a color equivalent to ColorPallet.scondary.secondaryLight") {
-                        let result = isColorEquivalentToDarkHexOrLightHex(
-                            colorUnderTest: DSColors.secondaryLight,
-                            lightColor: lightPalette.secondary.secondaryLight,
-                            darkColor: darkPalette.secondary.secondaryLight
-                        )
+            describe(".onSecondaryLight") {
+                it("returns a color equivalent to ColorPallet.secondary.onSecondaryLight") {
+                    let result = isColorEquivalentToDarkHexOrLightHex(
+                        colorUnderTest: DSColors.onSecondaryLight,
+                        lightColor: lightPalette.secondary.onSecondaryLight,
+                        darkColor: darkPalette.secondary.onSecondaryLight
+                    )
 
-                        expect(result).to(beTrue())
-                    }
+                    expect(result).to(beTrue())
                 }
+            }
 
-                describe(".onSecondaryLight") {
-                    it("returns a color equivalent to ColorPallet.scondary.onSecondaryLight") {
-                        let result = isColorEquivalentToDarkHexOrLightHex(
-                            colorUnderTest: DSColors.onSecondaryLight,
-                            lightColor: lightPalette.secondary.onSecondaryLight,
-                            darkColor: darkPalette.secondary.onSecondaryLight
-                        )
+            describe(".secondaryDark") {
+                it("returns a color equivalent to ColorPallet.secondary.secondaryDark") {
+                    let result = isColorEquivalentToDarkHexOrLightHex(
+                        colorUnderTest: DSColors.secondaryDark,
+                        lightColor: lightPalette.secondary.secondaryDark,
+                        darkColor: darkPalette.secondary.secondaryDark
+                    )
 
-                        expect(result).to(beTrue())
-                    }
+                    expect(result).to(beTrue())
                 }
+            }
 
-                describe(".secondaryDark") {
-                    it("returns a color equivalent to ColorPallet.scondary.secondaryDark") {
-                        let result = isColorEquivalentToDarkHexOrLightHex(
-                            colorUnderTest: DSColors.secondaryDark,
-                            lightColor: lightPalette.secondary.secondaryDark,
-                            darkColor: darkPalette.secondary.secondaryDark
-                        )
+            describe(".onSecondaryDark") {
+                it("returns a color equivalent to ColorPallet.secondary.onSecondaryDark") {
+                    let result = isColorEquivalentToDarkHexOrLightHex(
+                        colorUnderTest: DSColors.onSecondaryDark,
+                        lightColor: lightPalette.secondary.onSecondaryDark,
+                        darkColor: darkPalette.secondary.onSecondaryDark
+                    )
 
-                        expect(result).to(beTrue())
-                    }
+                    expect(result).to(beTrue())
                 }
+            }
+        } // describe - colors from SecondaryColorPalette protocol
 
-                describe(".onSecondaryDark") {
-                    it("returns a color equivalent to ColorPallet.scondary.onSecondaryDark") {
-                        let result = isColorEquivalentToDarkHexOrLightHex(
-                            colorUnderTest: DSColors.onSecondaryDark,
-                            lightColor: lightPalette.secondary.onSecondaryDark,
-                            darkColor: darkPalette.secondary.onSecondaryDark
-                        )
+        describe("colors from SurfaceColorPalette protocol") {
+            describe(".background") {
+                it("returns a color equivalent to ColorPallet.surface.background") {
+                    let result = isColorEquivalentToDarkHexOrLightHex(
+                        colorUnderTest: DSColors.background,
+                        lightColor: lightPalette.surface.background,
+                        darkColor: darkPalette.surface.background
+                    )
 
-                        expect(result).to(beTrue())
-                    }
+                    expect(result).to(beTrue())
                 }
-            } // describe - colors from SecondaryColorPalette protocol
+            }
 
-            describe("colors from SurfaceColorPalette protocol") {
-                describe(".background") {
-                    it("returns a color equivalent to ColorPallet.surface.background") {
-                        let result = isColorEquivalentToDarkHexOrLightHex(
-                            colorUnderTest: DSColors.background,
-                            lightColor: lightPalette.surface.background,
-                            darkColor: darkPalette.surface.background
-                        )
+            describe(".onBackground") {
+                it("returns a color equivalent to ColorPallet.surface.onBackground") {
+                    let result = isColorEquivalentToDarkHexOrLightHex(
+                        colorUnderTest: DSColors.onBackground,
+                        lightColor: lightPalette.surface.onBackground,
+                        darkColor: darkPalette.surface.onBackground
+                    )
 
-                        expect(result).to(beTrue())
-                    }
+                    expect(result).to(beTrue())
                 }
+            }
 
-                describe(".onBackground") {
-                    it("returns a color equivalent to ColorPallet.surface.onBackground") {
-                        let result = isColorEquivalentToDarkHexOrLightHex(
-                            colorUnderTest: DSColors.onBackground,
-                            lightColor: lightPalette.surface.onBackground,
-                            darkColor: darkPalette.surface.onBackground
-                        )
+            describe(".surface") {
+                it("returns a color equivalent to ColorPallet.surface.surface") {
+                    let result = isColorEquivalentToDarkHexOrLightHex(
+                        colorUnderTest: DSColors.surface,
+                        lightColor: lightPalette.surface.surface,
+                        darkColor: darkPalette.surface.surface
+                    )
 
-                        expect(result).to(beTrue())
-                    }
+                    expect(result).to(beTrue())
                 }
+            }
 
-                describe(".surface") {
-                    it("returns a color equivalent to ColorPallet.surface.surface") {
-                        let result = isColorEquivalentToDarkHexOrLightHex(
-                            colorUnderTest: DSColors.surface,
-                            lightColor: lightPalette.surface.surface,
-                            darkColor: darkPalette.surface.surface
-                        )
+            describe(".onSurface") {
+                it("returns a color equivalent to ColorPallet.surface.onSurface") {
+                    let result = isColorEquivalentToDarkHexOrLightHex(
+                        colorUnderTest: DSColors.onSurface,
+                        lightColor: lightPalette.surface.onSurface,
+                        darkColor: darkPalette.surface.onSurface
+                    )
 
-                        expect(result).to(beTrue())
-                    }
+                    expect(result).to(beTrue())
                 }
+            }
+        } // describe - colors from SurfaceColorPalette protocol
 
-                describe(".onSurface") {
-                    it("returns a color equivalent to ColorPallet.surface.surface") {
-                        let result = isColorEquivalentToDarkHexOrLightHex(
-                            colorUnderTest: DSColors.onSurface,
-                            lightColor: lightPalette.surface.onSurface,
-                            darkColor: darkPalette.surface.onSurface
-                        )
+        describe("colors from ContentColorPalette protocol") {
+            describe(".hightlight") {
+                it("returns a color equivalent to ColorPallet.content.hightlight") {
+                    let result = isColorEquivalentToDarkHexOrLightHex(
+                        colorUnderTest: DSColors.hightlight,
+                        lightColor: lightPalette.content.hightlight,
+                        darkColor: darkPalette.content.hightlight
+                    )
 
-                        expect(result).to(beTrue())
-                    }
+                    expect(result).to(beTrue())
                 }
-            } // describe - colors from SurfaceColorPalette protocol
+            }
 
-            describe("colors from ContentColorPalette protocol") {
-                describe(".hightlight") {
-                    it("returns a color equivalent to ColorPallet.content.surface") {
-                        let result = isColorEquivalentToDarkHexOrLightHex(
-                            colorUnderTest: DSColors.hightlight,
-                            lightColor: lightPalette.content.hightlight,
-                            darkColor: darkPalette.content.hightlight
-                        )
+            describe(".highEmphasis") {
+                it("returns a color equivalent to ColorPallet.content.highEmphasis") {
+                    let result = isColorEquivalentToDarkHexOrLightHex(
+                        colorUnderTest: DSColors.highEmphasis,
+                        lightColor: lightPalette.content.highEmphasis,
+                        darkColor: darkPalette.content.highEmphasis
+                    )
 
-                        expect(result).to(beTrue())
-                    }
+                    expect(result).to(beTrue())
                 }
+            }
 
-                describe(".highEmphasis") {
-                    it("returns a color equivalent to ColorPallet.content.highEmphasis") {
-                        let result = isColorEquivalentToDarkHexOrLightHex(
-                            colorUnderTest: DSColors.highEmphasis,
-                            lightColor: lightPalette.content.highEmphasis,
-                            darkColor: darkPalette.content.highEmphasis
-                        )
+            describe(".mediumEmphasis") {
+                it("returns a color equivalent to ColorPallet.content.mediumEmphasis") {
+                    let result = isColorEquivalentToDarkHexOrLightHex(
+                        colorUnderTest: DSColors.mediumEmphasis,
+                        lightColor: lightPalette.content.mediumEmphasis,
+                        darkColor: darkPalette.content.mediumEmphasis
+                    )
 
-                        expect(result).to(beTrue())
-                    }
+                    expect(result).to(beTrue())
                 }
+            }
 
-                describe(".mediumEmphasis") {
-                    it("returns a color equivalent to ColorPallet.content.mediumEmphasis") {
-                        let result = isColorEquivalentToDarkHexOrLightHex(
-                            colorUnderTest: DSColors.mediumEmphasis,
-                            lightColor: lightPalette.content.mediumEmphasis,
-                            darkColor: darkPalette.content.mediumEmphasis
-                        )
+            describe(".lowEmphasis") {
+                it("returns a color equivalent to ColorPallet.content.lowEmphasis") {
+                    let result = isColorEquivalentToDarkHexOrLightHex(
+                        colorUnderTest: DSColors.lowEmphasis,
+                        lightColor: lightPalette.content.lowEmphasis,
+                        darkColor: darkPalette.content.lowEmphasis
+                    )
 
-                        expect(result).to(beTrue())
-                    }
+                    expect(result).to(beTrue())
                 }
+            }
 
-                describe(".lowEmphasis") {
-                    it("returns a color equivalent to ColorPallet.content.lowEmphasis") {
-                        let result = isColorEquivalentToDarkHexOrLightHex(
-                            colorUnderTest: DSColors.lowEmphasis,
-                            lightColor: lightPalette.content.lowEmphasis,
-                            darkColor: darkPalette.content.lowEmphasis
-                        )
+            describe(".link") {
+                it("returns a color equivalent to ColorPallet.content.link") {
+                    let result = isColorEquivalentToDarkHexOrLightHex(
+                        colorUnderTest: DSColors.link,
+                        lightColor: lightPalette.content.link,
+                        darkColor: darkPalette.content.link
+                    )
 
-                        expect(result).to(beTrue())
-                    }
+                    expect(result).to(beTrue())
                 }
+            }
 
-                describe(".link") {
-                    it("returns a color equivalent to ColorPallet.content.link") {
-                        let result = isColorEquivalentToDarkHexOrLightHex(
-                            colorUnderTest: DSColors.link,
-                            lightColor: lightPalette.content.link,
-                            darkColor: darkPalette.content.link
-                        )
+            describe(".onLink") {
+                it("returns a color equivalent to ColorPallet.content.onLink") {
+                    let result = isColorEquivalentToDarkHexOrLightHex(
+                        colorUnderTest: DSColors.onLink,
+                        lightColor: lightPalette.content.onLink,
+                        darkColor: darkPalette.content.onLink
+                    )
 
-                        expect(result).to(beTrue())
-                    }
+                    expect(result).to(beTrue())
                 }
+            }
+        } // describe - colors from ContentColorPalette protocol
 
-                describe(".onLink") {
-                    it("returns a color equivalent to ColorPallet.content.onLink") {
-                        let result = isColorEquivalentToDarkHexOrLightHex(
-                            colorUnderTest: DSColors.onLink,
-                            lightColor: lightPalette.content.onLink,
-                            darkColor: darkPalette.content.onLink
-                        )
+        describe("colors from FeedbackColorPalette protocol") {
+            describe(".success") {
+                it("returns a color equivalent to ColorPallet.feedback.success") {
+                    let result = isColorEquivalentToDarkHexOrLightHex(
+                        colorUnderTest: DSColors.success,
+                        lightColor: lightPalette.feedback.success,
+                        darkColor: darkPalette.feedback.success
+                    )
 
-                        expect(result).to(beTrue())
-                    }
+                    expect(result).to(beTrue())
                 }
-            } // describe - colors from ContentColorPalette protocol
+            }
 
-            describe("colors from FeedbackColorPalette protocol") {
-                describe(".success") {
-                    it("returns a color equivalent to ColorPallet.feedback.success") {
-                        let result = isColorEquivalentToDarkHexOrLightHex(
-                            colorUnderTest: DSColors.success,
-                            lightColor: lightPalette.feedback.success,
-                            darkColor: darkPalette.feedback.success
-                        )
+            describe(".onSuccess") {
+                it("returns a color equivalent to ColorPallet.feedback.onSuccess") {
+                    let result = isColorEquivalentToDarkHexOrLightHex(
+                        colorUnderTest: DSColors.onSuccess,
+                        lightColor: lightPalette.feedback.onSuccess,
+                        darkColor: darkPalette.feedback.onSuccess
+                    )
 
-                        expect(result).to(beTrue())
-                    }
+                    expect(result).to(beTrue())
                 }
+            }
 
-                describe(".onSuccess") {
-                    it("returns a color equivalent to ColorPallet.feedback.onSuccess") {
-                        let result = isColorEquivalentToDarkHexOrLightHex(
-                            colorUnderTest: DSColors.onSuccess,
-                            lightColor: lightPalette.feedback.onSuccess,
-                            darkColor: darkPalette.feedback.onSuccess
-                        )
+            describe(".warning") {
+                it("returns a color equivalent to ColorPallet.feedback.warning") {
+                    let result = isColorEquivalentToDarkHexOrLightHex(
+                        colorUnderTest: DSColors.warning,
+                        lightColor: lightPalette.feedback.warning,
+                        darkColor: darkPalette.feedback.warning
+                    )
 
-                        expect(result).to(beTrue())
-                    }
+                    expect(result).to(beTrue())
                 }
+            }
 
-                describe(".warning") {
-                    it("returns a color equivalent to ColorPallet.feedback.warning") {
-                        let result = isColorEquivalentToDarkHexOrLightHex(
-                            colorUnderTest: DSColors.warning,
-                            lightColor: lightPalette.feedback.warning,
-                            darkColor: darkPalette.feedback.warning
-                        )
+            describe(".onWarning") {
+                it("returns a color equivalent to ColorPallet.feedback.onWarning") {
+                    let result = isColorEquivalentToDarkHexOrLightHex(
+                        colorUnderTest: DSColors.onWarning,
+                        lightColor: lightPalette.feedback.onWarning,
+                        darkColor: darkPalette.feedback.onWarning
+                    )
 
-                        expect(result).to(beTrue())
-                    }
+                    expect(result).to(beTrue())
                 }
+            }
 
-                describe(".onWarning") {
-                    it("returns a color equivalent to ColorPallet.feedback.onWarning") {
-                        let result = isColorEquivalentToDarkHexOrLightHex(
-                            colorUnderTest: DSColors.onWarning,
-                            lightColor: lightPalette.feedback.onWarning,
-                            darkColor: darkPalette.feedback.onWarning
-                        )
+            describe(".alert") {
+                it("returns a color equivalent to ColorPallet.feedback.alert") {
+                    let result = isColorEquivalentToDarkHexOrLightHex(
+                        colorUnderTest: DSColors.alert,
+                        lightColor: lightPalette.feedback.alert,
+                        darkColor: darkPalette.feedback.alert
+                    )
 
-                        expect(result).to(beTrue())
-                    }
+                    expect(result).to(beTrue())
                 }
+            }
 
-                describe(".alert") {
-                    it("returns a color equivalent to ColorPallet.feedback.alert") {
-                        let result = isColorEquivalentToDarkHexOrLightHex(
-                            colorUnderTest: DSColors.alert,
-                            lightColor: lightPalette.feedback.alert,
-                            darkColor: darkPalette.feedback.alert
-                        )
+            describe(".onAlert") {
+                it("returns a color equivalent to ColorPallet.feedback.onAlert") {
+                    let result = isColorEquivalentToDarkHexOrLightHex(
+                        colorUnderTest: DSColors.onAlert,
+                        lightColor: lightPalette.feedback.onAlert,
+                        darkColor: darkPalette.feedback.onAlert
+                    )
 
-                        expect(result).to(beTrue())
-                    }
+                    expect(result).to(beTrue())
                 }
-
-                describe(".onAlert") {
-                    it("returns a color equivalent to ColorPallet.feedback.onAlert") {
-                        let result = isColorEquivalentToDarkHexOrLightHex(
-                            colorUnderTest: DSColors.onAlert,
-                            lightColor: lightPalette.feedback.onAlert,
-                            darkColor: darkPalette.feedback.onAlert
-                        )
-
-                        expect(result).to(beTrue())
-                    }
-                }
-            } // describe - colors from FeedbackColorPalette protocol
-        }
+            }
+        } // describe - colors from FeedbackColorPalette protocol
 
         func isColorEquivalentToDarkHexOrLightHex(colorUnderTest: UIColor,
                                                   lightColor: String,
