@@ -25,6 +25,7 @@
 public final class DesignSystem {
     public enum Brand {
         case avon
+        case natura
         case theBodyShop
     }
 
@@ -40,10 +41,14 @@ public final class DesignSystem {
         return theme
     }
 
+    private init() {}
+
     public func configure(with brand: Brand) {
         switch brand {
         case .avon:
             theme = AvonTheme()
+        case .natura:
+            theme = NaturaTheme()
         case .theBodyShop:
             theme = TheBodyShopTheme()
         }

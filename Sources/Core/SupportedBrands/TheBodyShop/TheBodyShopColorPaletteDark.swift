@@ -11,22 +11,22 @@ private extension TheBodyShopColorPaletteDark {
         let primary = "#62B3AE"
         let onPrimary = "#000000"
 
-        let primaryDark = "#2F837F"
-        let onPrimaryDark = "#000000"
-
         let primaryLight = "#94E5E0"
         let onPrimaryLight = "#000000"
+
+        let primaryDark = "#2F837F"
+        let onPrimaryDark = "#000000"
     }
 
     struct Secondary: SecondaryColorPalette {
         let secondary = "#D2AD93"
         let onSecondary = "#000000"
 
-        let secondaryDark = "#A07E65"
-        let onSecondaryDark = "#000000"
-
         let secondaryLight = "#FFDFC4"
         let onSecondaryLight = "#000000"
+
+        let secondaryDark = "#A07E65"
+        let onSecondaryDark = "#000000"
     }
 
     struct Surface: SurfaceColorPalette {

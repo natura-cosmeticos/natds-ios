@@ -1,4 +1,4 @@
-struct AvonColorPaletteDark: ColorPalette {
+struct NaturaColorPaletteDark: ColorPalette {
     let primary: PrimaryColorPalette = Primary()
     let secondary: SecondaryColorPalette = Secondary()
     let surface: SurfaceColorPalette = Surface()
@@ -6,27 +6,27 @@ struct AvonColorPaletteDark: ColorPalette {
     let feedback: FeedbackColorPalette = Feedback()
 }
 
-extension AvonColorPaletteDark {
+private extension NaturaColorPaletteDark {
     struct Primary: PrimaryColorPalette {
-        let primary = "#F091C9"
-        let onPrimary = "#000000"
+        let primary = "#F4AB34"
+        let onPrimary = "#333333"
 
-        let primaryDark = "#BC6198"
-        let onPrimaryDark = "#000000"
+        let primaryLight = "#FEFDE8"
+        let onPrimaryLight = "#333333"
 
-        let primaryLight = "#FFC3FC"
-        let onPrimaryLight = "#000000"
+        let primaryDark = "#EF8426"
+        let onPrimaryDark = "#333333"
     }
 
     struct Secondary: SecondaryColorPalette {
-        let secondary = "#E9E9E9"
-        let onSecondary = "#333333"
+        let secondary = "#FF6B0B"
+        let onSecondary = "#000000"
 
-        let secondaryDark = "#B7B7B7"
-        let onSecondaryDark = "#333333"
+        let secondaryLight = "#FFF8E1"
+        let onSecondaryLight = "#000000"
 
-        let secondaryLight = "#FFFFFF"
-        let onSecondaryLight = "#333333"
+        let secondaryDark = "#FF5808"
+        let onSecondaryDark = "#000000"
     }
 
     struct Surface: SurfaceColorPalette {
