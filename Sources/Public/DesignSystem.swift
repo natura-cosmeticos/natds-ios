@@ -23,15 +23,11 @@
 */
 
 public final class DesignSystem {
-    public enum Brand {
-        case avon
-        case natura
-        case theBodyShop
-    }
-
-    public static let shared = DesignSystem()
+    // MARK: - Private properties
 
     private var theme: Theme?
+
+    // MARK: - Internal properties
 
     var currentTheme: Theme {
         guard let theme = theme else {
@@ -41,7 +37,19 @@ public final class DesignSystem {
         return theme
     }
 
+    // MARK: - Inits
+
     private init() {}
+
+    // MARK: - Public
+
+    public static let shared = DesignSystem()
+
+    public enum Brand {
+        case avon
+        case natura
+        case theBodyShop
+    }
 
     public func configure(with brand: Brand) {
         switch brand {
