@@ -6,7 +6,7 @@ struct NaturaColorPaletteDark: ColorPalette {
     let feedback: FeedbackColorPalette = Feedback()
 }
 
-private extension NaturaColorPaletteDark {
+extension NaturaColorPaletteDark {
     struct Primary: PrimaryColorPalette {
         let primary = "#F4AB34"
         let onPrimary = "#333333"

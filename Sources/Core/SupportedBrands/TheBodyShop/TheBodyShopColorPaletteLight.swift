@@ -6,14 +6,14 @@ struct TheBodyShopColorPaletteLight: ColorPalette {
     let feedback: FeedbackColorPalette = Feedback()
 }
 
-private extension TheBodyShopColorPaletteLight {
+extension TheBodyShopColorPaletteLight {
     struct Primary: PrimaryColorPalette {
         let primary = "#004236"
         let onPrimary = "#FFFFFF"
 
         let primaryLight = "#356D60"
         let onPrimaryLight = "#FFFFFF"
-        
+
         let primaryDark = "#001D10"
         let onPrimaryDark = "#FFFFFF"
     }
