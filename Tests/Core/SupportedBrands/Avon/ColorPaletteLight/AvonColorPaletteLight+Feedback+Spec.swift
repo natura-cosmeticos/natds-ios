@@ -8,7 +8,7 @@ final class AvonColorPaletteLightFeedbackSpec: QuickSpec {
         let systemUnderTest = AvonColorPaletteLight.Feedback()
 
         describe("#success") {
-            it("returns a string of a color hex expected for success color") {
+            it("returns a string of expected hex color") {
                 let colorHex = systemUnderTest.success
                 let expectedHex = "#569A32"
 
@@ -17,7 +17,7 @@ final class AvonColorPaletteLightFeedbackSpec: QuickSpec {
         }
 
         describe("#onSuccess") {
-            it("returns a string of a color hex expected for onSuccess color") {
+            it("returns a string of expected hex color") {
                 let colorHex = systemUnderTest.onSuccess
                 let expectedHex = "#FFFFFF"
 
@@ -26,7 +26,7 @@ final class AvonColorPaletteLightFeedbackSpec: QuickSpec {
         }
 
         describe("#warning") {
-            it("returns a string of a color hex expected for warning color") {
+            it("returns a string of expected hex color") {
                 let colorHex = systemUnderTest.warning
                 let expectedHex = "#FCC433"
 
@@ -35,7 +35,7 @@ final class AvonColorPaletteLightFeedbackSpec: QuickSpec {
         }
 
         describe("#onWarning") {
-            it("returns a string of a color hex expected for onWarning color") {
+            it("returns a string of expected hex color") {
                 let colorHex = systemUnderTest.onWarning
                 let expectedHex = "#333333"
 
@@ -44,7 +44,7 @@ final class AvonColorPaletteLightFeedbackSpec: QuickSpec {
         }
 
         describe("#alert") {
-            it("returns a string of a color hex expected for alert color") {
+            it("returns a string of expected hex color") {
                 let colorHex = systemUnderTest.alert
                 let expectedHex = "#E74627"
 
@@ -53,7 +53,7 @@ final class AvonColorPaletteLightFeedbackSpec: QuickSpec {
         }
 
         describe("#onAlert") {
-            it("returns a string of a color hex expected for onAlert color") {
+            it("returns a string of expected hex color") {
                 let colorHex = systemUnderTest.onAlert
                 let expectedHex = "#FFFFFF"
 

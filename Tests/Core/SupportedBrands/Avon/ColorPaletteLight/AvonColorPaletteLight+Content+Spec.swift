@@ -8,7 +8,7 @@ final class AvonColorPaletteLightContentSpec: QuickSpec {
         let systemUnderTest = AvonColorPaletteLight.Content()
 
         describe("#highlight") {
-            it("returns a string of a color hex expected for highlight color") {
+            it("returns a string of expected hex color") {
                 let colorHex = systemUnderTest.highlight
                 let expectedHex = "#000000"
 
@@ -17,7 +17,7 @@ final class AvonColorPaletteLightContentSpec: QuickSpec {
         }
 
         describe("#highEmphasis") {
-            it("returns a string of a color hex expected for highEmphasis color") {
+            it("returns a string of expected hex color") {
                 let colorHex = systemUnderTest.highEmphasis
                 let expectedHex = "#333333"
 
@@ -26,7 +26,7 @@ final class AvonColorPaletteLightContentSpec: QuickSpec {
         }
 
         describe("#mediumEmphasis") {
-            it("returns a string of a color hex expected for mediumEmphasis color") {
+            it("returns a string of expected hex color") {
                 let colorHex = systemUnderTest.mediumEmphasis
                 let expectedHex = "#777777"
 
@@ -35,7 +35,7 @@ final class AvonColorPaletteLightContentSpec: QuickSpec {
         }
 
         describe("#lowEmphasis") {
-            it("returns a string of a color hex expected for lowEmphasis color") {
+            it("returns a string of expected hex color") {
                 let colorHex = systemUnderTest.lowEmphasis
                 let expectedHex = "#BBBBBB"
 
@@ -44,7 +44,7 @@ final class AvonColorPaletteLightContentSpec: QuickSpec {
         }
 
         describe("#link") {
-            it("returns a string of a color hex expected for link color") {
+            it("returns a string of expected hex color") {
                 let colorHex = systemUnderTest.link
                 let expectedHex = "#227BBD"
 
@@ -53,7 +53,7 @@ final class AvonColorPaletteLightContentSpec: QuickSpec {
         }
 
         describe("#onLink") {
-            it("returns a string of a color hex expected for onLink color") {
+            it("returns a string of expected hex color") {
                 let colorHex = systemUnderTest.onLink
                 let expectedHex = "#FFFFFF"
 

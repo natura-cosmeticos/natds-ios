@@ -8,7 +8,7 @@ final class AvonColorPaletteLightSecondarySpec: QuickSpec {
         let systemUnderTest = AvonColorPaletteLight.Secondary()
 
         describe("#secondary") {
-            it("returns a string of a color hex expected for secondary color") {
+            it("returns a string of expected hex color") {
                 let colorHex = systemUnderTest.secondary
                 let expectedHex = "#E9E9E9"
 
@@ -17,7 +17,7 @@ final class AvonColorPaletteLightSecondarySpec: QuickSpec {
         }
 
         describe("#onSecondary") {
-            it("returns a string of a color hex expected for onSecondary color") {
+            it("returns a string of expected hex color") {
                 let colorHex = systemUnderTest.onSecondary
                 let expectedHex = "#333333"
 
@@ -26,7 +26,7 @@ final class AvonColorPaletteLightSecondarySpec: QuickSpec {
         }
 
         describe("#secondaryLight") {
-            it("returns a string of a color hex expected for secondaryLight color") {
+            it("returns a string of expected hex color") {
                 let colorHex = systemUnderTest.secondaryLight
                 let expectedHex = "#FFFFFF"
 
@@ -35,7 +35,7 @@ final class AvonColorPaletteLightSecondarySpec: QuickSpec {
         }
 
         describe("#onSecondaryLight") {
-            it("returns a string of a color hex expected for onSecondaryLight color") {
+            it("returns a string of expected hex color") {
                 let colorHex = systemUnderTest.onSecondaryLight
                 let expectedHex = "#333333"
 
@@ -44,7 +44,7 @@ final class AvonColorPaletteLightSecondarySpec: QuickSpec {
         }
 
         describe("#secondaryDark") {
-            it("returns a string of a color hex expected for secondaryDark color") {
+            it("returns a string of expected hex color") {
                 let colorHex = systemUnderTest.secondaryDark
                 let expectedHex = "#B7B7B7"
 
@@ -53,7 +53,7 @@ final class AvonColorPaletteLightSecondarySpec: QuickSpec {
         }
 
         describe("#onSecondaryDark") {
-            it("returns a string of a color hex expected for onSecondaryDark color") {
+            it("returns a string of expected hex color") {
                 let colorHex = systemUnderTest.onSecondaryDark
                 let expectedHex = "#333333"
 

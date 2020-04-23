@@ -8,7 +8,7 @@ final class TheBodyShopColorPaletteLightPrimarySpec: QuickSpec {
         let systemUnderTest = TheBodyShopColorPaletteLight.Primary()
 
         describe("#primary") {
-            it("returns a string of a color hex expected for primary color") {
+            it("returns a string of expected hex color") {
                 let colorHex = systemUnderTest.primary
                 let expectedHex = "#004236"
 
@@ -17,7 +17,7 @@ final class TheBodyShopColorPaletteLightPrimarySpec: QuickSpec {
         }
 
         describe("#onPrimary") {
-            it("returns a string of a color hex expected for onPrimary color") {
+            it("returns a string of expected hex color") {
                 let colorHex = systemUnderTest.onPrimary
                 let expectedHex = "#FFFFFF"
 
@@ -26,7 +26,7 @@ final class TheBodyShopColorPaletteLightPrimarySpec: QuickSpec {
         }
 
         describe("#primaryLight") {
-            it("returns a string of a color hex expected for primaryLight color") {
+            it("returns a string of expected hex color") {
                 let colorHex = systemUnderTest.primaryLight
                 let expectedHex = "#356D60"
 
@@ -35,7 +35,7 @@ final class TheBodyShopColorPaletteLightPrimarySpec: QuickSpec {
         }
 
         describe("#onPrimaryLight") {
-            it("returns a string of a color hex expected for onPrimaryLight color") {
+            it("returns a string of expected hex color") {
                 let colorHex = systemUnderTest.onPrimaryLight
                 let expectedHex = "#FFFFFF"
 
@@ -44,7 +44,7 @@ final class TheBodyShopColorPaletteLightPrimarySpec: QuickSpec {
         }
 
         describe("#primaryDark") {
-            it("returns a string of a color hex expected for primaryDark color") {
+            it("returns a string of expected hex color") {
                 let colorHex = systemUnderTest.primaryDark
                 let expectedHex = "#001D10"
 
@@ -53,7 +53,7 @@ final class TheBodyShopColorPaletteLightPrimarySpec: QuickSpec {
         }
 
         describe("#onPrimaryDark") {
-            it("returns a string of a color hex expected for onPrimaryDark color") {
+            it("returns a string of expected hex color") {
                 let colorHex = systemUnderTest.onPrimaryDark
                 let expectedHex = "#FFFFFF"
 

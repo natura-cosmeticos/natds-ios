@@ -10,6 +10,7 @@ final class AvonColorPaletteDarktSpec: QuickSpec {
         describe("#primary") {
             it("returns a instance of AvonColorPaletteDark.Primary") {
                 let colorPalette = systemUnderTest.primary
+
                 expect(colorPalette).to(beAnInstanceOf(AvonColorPaletteDark.Primary.self))
             }
         }
@@ -17,6 +18,7 @@ final class AvonColorPaletteDarktSpec: QuickSpec {
         describe("#secondary") {
             it("returns a instance of AvonColorPaletteDark.Secondary") {
                 let colorPalette = systemUnderTest.secondary
+
                 expect(colorPalette).to(beAnInstanceOf(AvonColorPaletteDark.Secondary.self))
             }
         }
@@ -24,20 +26,23 @@ final class AvonColorPaletteDarktSpec: QuickSpec {
         describe("#surface") {
             it("returns a instance of AvonColorPaletteLight.Surface") {
                 let colorPalette = systemUnderTest.surface
+
                 expect(colorPalette).to(beAnInstanceOf(AvonColorPaletteDark.Surface.self))
             }
         }
 
-        describe("#surface") {
+        describe("#content") {
             it("returns a instance of AvonColorPaletteDark.Content") {
                 let colorPalette = systemUnderTest.content
+
                 expect(colorPalette).to(beAnInstanceOf(AvonColorPaletteDark.Content.self))
             }
         }
 
-        describe("#surface") {
+        describe("#feedback") {
             it("returns a instance of AvonColorPaletteDark.Feedback") {
                 let colorPalette = systemUnderTest.feedback
+
                 expect(colorPalette).to(beAnInstanceOf(AvonColorPaletteDark.Feedback.self))
             }
         }

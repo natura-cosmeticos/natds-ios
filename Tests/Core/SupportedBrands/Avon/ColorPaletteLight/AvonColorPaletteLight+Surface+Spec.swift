@@ -8,7 +8,7 @@ final class AvonColorPaletteLightSurfaceSpec: QuickSpec {
         let systemUnderTest = AvonColorPaletteLight.Surface()
 
         describe("#background") {
-            it("returns a string of a color hex expected for background color") {
+            it("returns a string of expected hex color") {
                 let colorHex = systemUnderTest.background
                 let expectedHex = "#FAFAFA"
 
@@ -17,7 +17,7 @@ final class AvonColorPaletteLightSurfaceSpec: QuickSpec {
         }
 
         describe("#onBackground") {
-            it("returns a string of a color hex expected for onBackground color") {
+            it("returns a string of expected hex color") {
                 let colorHex = systemUnderTest.onBackground
                 let expectedHex = "#333333"
 
@@ -26,7 +26,7 @@ final class AvonColorPaletteLightSurfaceSpec: QuickSpec {
         }
 
         describe("#surface") {
-            it("returns a string of a color hex expected for surface color") {
+            it("returns a string of expected hex color") {
                 let colorHex = systemUnderTest.surface
                 let expectedHex = "#FFFFFF"
 
@@ -35,7 +35,7 @@ final class AvonColorPaletteLightSurfaceSpec: QuickSpec {
         }
 
         describe("#onSurface") {
-            it("returns a string of a color hex expected for onSurface color") {
+            it("returns a string of expected hex color") {
                 let colorHex = systemUnderTest.onSurface
                 let expectedHex = "#333333"
 

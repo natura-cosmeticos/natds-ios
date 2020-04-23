@@ -24,6 +24,7 @@
 */
 
 public final class DesignSystem {
+
     // MARK: - Private properties
 
     private var theme: Theme?

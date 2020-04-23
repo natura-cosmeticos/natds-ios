@@ -10,7 +10,7 @@ final class TheBodyShopColorPaletteLightSecondarySpec: QuickSpec {
         let systemUnderTest = TheBodyShopColorPaletteLight.Secondary()
 
         describe("#secondary") {
-            it("returns a string of a color hex expected for secondary color") {
+            it("returns a string of expected hex color") {
                 let colorHex = systemUnderTest.secondary
                 let expectedHex = "#A55F53"
 
@@ -19,7 +19,7 @@ final class TheBodyShopColorPaletteLightSecondarySpec: QuickSpec {
         }
 
         describe("#onSecondary") {
-            it("returns a string of a color hex expected for onSecondary color") {
+            it("returns a string of expected hex color") {
                 let colorHex = systemUnderTest.onSecondary
                 let expectedHex = "#FFFFFF"
 
@@ -28,7 +28,7 @@ final class TheBodyShopColorPaletteLightSecondarySpec: QuickSpec {
         }
 
         describe("#secondaryLight") {
-            it("returns a string of a color hex expected for secondaryLight color") {
+            it("returns a string of expected hex color") {
                 let colorHex = systemUnderTest.secondaryLight
                 let expectedHex = "#D98D7F"
 
@@ -37,7 +37,7 @@ final class TheBodyShopColorPaletteLightSecondarySpec: QuickSpec {
         }
 
         describe("#onSecondaryLight") {
-            it("returns a string of a color hex expected for onSecondaryLight color") {
+            it("returns a string of expected hex color") {
                 let colorHex = systemUnderTest.onSecondaryLight
                 let expectedHex = "#FFFFFF"
 
@@ -46,7 +46,7 @@ final class TheBodyShopColorPaletteLightSecondarySpec: QuickSpec {
         }
 
         describe("#secondaryDark") {
-            it("returns a string of a color hex expected for secondaryDark color") {
+            it("returns a string of expected hex color") {
                 let colorHex = systemUnderTest.secondaryDark
                 let expectedHex = "#73342A"
 
@@ -55,7 +55,7 @@ final class TheBodyShopColorPaletteLightSecondarySpec: QuickSpec {
         }
 
         describe("#onSecondaryDark") {
-            it("returns a string of a color hex expected for onSecondaryDark color") {
+            it("returns a string of expected hex color") {
                 let colorHex = systemUnderTest.onSecondaryDark
                 let expectedHex = "#FFFFFF"
 
