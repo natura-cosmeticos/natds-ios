@@ -10,6 +10,7 @@
  - Note:
     Current Supported Brands:
         - Avon
+        - Natura
         - The Body Shop
  
  - Requires:
