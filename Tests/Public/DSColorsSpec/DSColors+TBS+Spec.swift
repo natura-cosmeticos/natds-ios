@@ -2,7 +2,9 @@ import Quick
 import Nimble
 
 @testable import NatDS
- // swiftlint:disable function_body_length type_body_length
+
+// swiftlint:disable function_body_length type_body_length
+
 final class DSColorsTBSSpec: QuickSpec {
     override func spec() {
         var lightPalette: ColorPalette!
