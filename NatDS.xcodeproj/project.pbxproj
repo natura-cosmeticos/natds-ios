@@ -93,6 +93,9 @@
 		8427A2D82451E11400CF30D5 /* TheBodyShopColorPaletteLight+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427A2D72451E11400CF30D5 /* TheBodyShopColorPaletteLight+Spec.swift */; };
 		8427A2DA2451E19500CF30D5 /* TheBodyShopColorPaletteDark+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427A2D92451E19500CF30D5 /* TheBodyShopColorPaletteDark+Spec.swift */; };
 		8427A2DC2451E3F200CF30D5 /* AvonColorPaletteDark+Primary+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427A2DB2451E3F200CF30D5 /* AvonColorPaletteDark+Primary+Spec.swift */; };
+		8427A2DF24520A0200CF30D5 /* AvonColorPaletteLight+Primary+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427A2DE24520A0200CF30D5 /* AvonColorPaletteLight+Primary+Spec.swift */; };
+		8427A2E324520C3500CF30D5 /* NaturaColorPaletteLight+Primary+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427A2E224520C3500CF30D5 /* NaturaColorPaletteLight+Primary+Spec.swift */; };
+		8427A2E624520D5D00CF30D5 /* NaturaColorPaletteDark+Primary+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427A2E524520D5D00CF30D5 /* NaturaColorPaletteDark+Primary+Spec.swift */; };
 		845D9EEF244DD407003598B0 /* ColorSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D9EEE244DD406003598B0 /* ColorSelector.swift */; };
 		845D9EF8244DE32F003598B0 /* DSColors+TBS+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D9EF6244DE2E7003598B0 /* DSColors+TBS+Spec.swift */; };
 		A9325A6623FB34EC0023979C /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9325A6523FB34EC0023979C /* UICollectionView+Reusable.swift */; };
@@ -212,6 +215,9 @@
 		8427A2D72451E11400CF30D5 /* TheBodyShopColorPaletteLight+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheBodyShopColorPaletteLight+Spec.swift"; sourceTree = "<group>"; };
 		8427A2D92451E19500CF30D5 /* TheBodyShopColorPaletteDark+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheBodyShopColorPaletteDark+Spec.swift"; sourceTree = "<group>"; };
 		8427A2DB2451E3F200CF30D5 /* AvonColorPaletteDark+Primary+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AvonColorPaletteDark+Primary+Spec.swift"; sourceTree = "<group>"; };
+		8427A2DE24520A0200CF30D5 /* AvonColorPaletteLight+Primary+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AvonColorPaletteLight+Primary+Spec.swift"; sourceTree = "<group>"; };
+		8427A2E224520C3500CF30D5 /* NaturaColorPaletteLight+Primary+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaturaColorPaletteLight+Primary+Spec.swift"; sourceTree = "<group>"; };
+		8427A2E524520D5D00CF30D5 /* NaturaColorPaletteDark+Primary+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaturaColorPaletteDark+Primary+Spec.swift"; sourceTree = "<group>"; };
 		845D9EEE244DD406003598B0 /* ColorSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSelector.swift; sourceTree = "<group>"; };
 		845D9EF6244DE2E7003598B0 /* DSColors+TBS+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DSColors+TBS+Spec.swift"; sourceTree = "<group>"; };
 		9A46395C038D4497A880A6FF /* Pods-NatDSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatDSTests.release.xcconfig"; path = "Target Support Files/Pods-NatDSTests/Pods-NatDSTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -672,6 +678,8 @@
 				8427A2BE2451CB4A00CF30D5 /* NaturaThemeSpec.swift */,
 				8427A2D52451E07700CF30D5 /* NaturaColorPaletteLight+Spec.swift */,
 				8427A2D32451DE7C00CF30D5 /* NaturaColorPaletteDark+Spec.swift */,
+				8427A2E124520C0500CF30D5 /* ColorPaletteLight */,
+				8427A2E424520D1D00CF30D5 /* ColorPaletteDark */,
 			);
 			path = Natura;
 			sourceTree = "<group>";
@@ -682,7 +690,8 @@
 				8427A2C42451CE7400CF30D5 /* AvonThemeSpec.swift */,
 				8427A2CF2451DA6800CF30D5 /* AvonColorPaletteLight+Spec.swift */,
 				8427A2D12451DD0400CF30D5 /* AvonColorPaletteDark+Spec.swift */,
-				8427A2DB2451E3F200CF30D5 /* AvonColorPaletteDark+Primary+Spec.swift */,
+				8427A2DD245209B300CF30D5 /* ColorPaletteLight */,
+				8427A2E024520B7000CF30D5 /* ColorPaletteDark */,
 			);
 			path = Avon;
 			sourceTree = "<group>";
@@ -695,6 +704,38 @@
 				8427A2D92451E19500CF30D5 /* TheBodyShopColorPaletteDark+Spec.swift */,
 			);
 			path = TheBodyShop;
+			sourceTree = "<group>";
+		};
+		8427A2DD245209B300CF30D5 /* ColorPaletteLight */ = {
+			isa = PBXGroup;
+			children = (
+				8427A2DE24520A0200CF30D5 /* AvonColorPaletteLight+Primary+Spec.swift */,
+			);
+			path = ColorPaletteLight;
+			sourceTree = "<group>";
+		};
+		8427A2E024520B7000CF30D5 /* ColorPaletteDark */ = {
+			isa = PBXGroup;
+			children = (
+				8427A2DB2451E3F200CF30D5 /* AvonColorPaletteDark+Primary+Spec.swift */,
+			);
+			path = ColorPaletteDark;
+			sourceTree = "<group>";
+		};
+		8427A2E124520C0500CF30D5 /* ColorPaletteLight */ = {
+			isa = PBXGroup;
+			children = (
+				8427A2E224520C3500CF30D5 /* NaturaColorPaletteLight+Primary+Spec.swift */,
+			);
+			path = ColorPaletteLight;
+			sourceTree = "<group>";
+		};
+		8427A2E424520D1D00CF30D5 /* ColorPaletteDark */ = {
+			isa = PBXGroup;
+			children = (
+				8427A2E524520D5D00CF30D5 /* NaturaColorPaletteDark+Primary+Spec.swift */,
+			);
+			path = ColorPaletteDark;
 			sourceTree = "<group>";
 		};
 		845D9EF0244DD615003598B0 /* Public */ = {
@@ -1149,17 +1190,20 @@
 				117FE029238DA4B70032E2AC /* NavigationDrawerSubitemCellTests.swift in Sources */,
 				8427A2DA2451E19500CF30D5 /* TheBodyShopColorPaletteDark+Spec.swift in Sources */,
 				8427A2D02451DA6800CF30D5 /* AvonColorPaletteLight+Spec.swift in Sources */,
+				8427A2DF24520A0200CF30D5 /* AvonColorPaletteLight+Primary+Spec.swift in Sources */,
 				64A1125E23F331CA00119CE4 /* DividerTests.swift in Sources */,
 				112BAC2723984476009001A7 /* ReusableViewTests.swift in Sources */,
 				A9325A6A23FB35C50023979C /* UICollectionView+ReusableTests.swift in Sources */,
 				4378068A23F3442D004A9998 /* ValueTextHighlightTests.swift in Sources */,
 				112BAC2923984562009001A7 /* UITableView+ReusableTests.swift in Sources */,
+				8427A2E624520D5D00CF30D5 /* NaturaColorPaletteDark+Primary+Spec.swift in Sources */,
 				642468B023FDE1AA008EAE6B /* TabItemViewDelegateMock.swift in Sources */,
 				643ABFF324118BF1000918EA /* PulsableTests.swift in Sources */,
 				11581AA8238F037D003E45D7 /* AssetsHelperTests.swift in Sources */,
 				8427A2DC2451E3F200CF30D5 /* AvonColorPaletteDark+Primary+Spec.swift in Sources */,
 				8427A2D62451E07700CF30D5 /* NaturaColorPaletteLight+Spec.swift in Sources */,
 				117FE015238D9AEB0032E2AC /* ColorsNaturaTests.swift in Sources */,
+				8427A2E324520C3500CF30D5 /* NaturaColorPaletteLight+Primary+Spec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
