@@ -13,6 +13,7 @@
 		64D84FD123F5FC7D004DD910 /* ValueTextHighlightItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D84FD023F5FC7D004DD910 /* ValueTextHighlightItemViewController.swift */; };
 		64D84FD423F600C5004DD910 /* TextFieldItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D84FD323F600C5004DD910 /* TextFieldItemViewController.swift */; };
 		64FAAC7723FB5B880085F7C8 /* ColorHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FAAC7623FB5B880085F7C8 /* ColorHeaderCollectionViewCell.swift */; };
+		8427A29B244894A000CF30D5 /* ThemesColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427A29A244894A000CF30D5 /* ThemesColorsViewController.swift */; };
 		A904ECBA23D607D800709B43 /* ComponentsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A904ECB923D607D800709B43 /* ComponentsSection.swift */; };
 		A904ECBC23D6088600709B43 /* ButtonsItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A904ECBB23D6088600709B43 /* ButtonsItemViewController.swift */; };
 		A904ECC023D760C400709B43 /* DesignSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A904ECBF23D760C400709B43 /* DesignSection.swift */; };
@@ -53,6 +54,7 @@
 		64D84FD023F5FC7D004DD910 /* ValueTextHighlightItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueTextHighlightItemViewController.swift; sourceTree = "<group>"; };
 		64D84FD323F600C5004DD910 /* TextFieldItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldItemViewController.swift; sourceTree = "<group>"; };
 		64FAAC7623FB5B880085F7C8 /* ColorHeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHeaderCollectionViewCell.swift; sourceTree = "<group>"; };
+		8427A29A244894A000CF30D5 /* ThemesColorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesColorsViewController.swift; sourceTree = "<group>"; };
 		A904ECB923D607D800709B43 /* ComponentsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentsSection.swift; sourceTree = "<group>"; };
 		A904ECBB23D6088600709B43 /* ButtonsItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsItemViewController.swift; sourceTree = "<group>"; };
 		A904ECBF23D760C400709B43 /* DesignSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSection.swift; sourceTree = "<group>"; };
@@ -125,6 +127,14 @@
 			path = Field;
 			sourceTree = "<group>";
 		};
+		8427A2B1244F745D00CF30D5 /* ThemesColors */ = {
+			isa = PBXGroup;
+			children = (
+				8427A29A244894A000CF30D5 /* ThemesColorsViewController.swift */,
+			);
+			path = ThemesColors;
+			sourceTree = "<group>";
+		};
 		A904ECB823D607BD00709B43 /* Button */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +199,7 @@
 		A97328C523CFA3A400ADC5C2 /* Colors */ = {
 			isa = PBXGroup;
 			children = (
+				8427A2B1244F745D00CF30D5 /* ThemesColors */,
 				A9B8A4DB23D0FD680055E8A3 /* Cell */,
 				A97328C723CFA3DC00ADC5C2 /* ColorsItemViewController.swift */,
 			);
@@ -342,6 +353,7 @@
 				A904ECC023D760C400709B43 /* DesignSection.swift in Sources */,
 				A9D71BC22386DFEE00CDEC1D /* AppDelegate.swift in Sources */,
 				A904ECC323D761BE00709B43 /* IconographyItemViewController.swift in Sources */,
+				8427A29B244894A000CF30D5 /* ThemesColorsViewController.swift in Sources */,
 				64C9173323FC9EDE0040E714 /* TabItemViewController.swift in Sources */,
 				437CFD4F241059B8008CEA37 /* DividerViewController.swift in Sources */,
 				A97328C323CFA35800ADC5C2 /* MainViewController.swift in Sources */,
