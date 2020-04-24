@@ -35,6 +35,9 @@
  - Warning
         This class supports Light and Dark mode. In other words, according with user properties
         of Light or Dark, a diferent color can be returned.
+
+        Attention with .cgColor, becuase it doesn`t support dynamically changes
+        of light and dark mode.
 */
 
 public struct DSColors {
