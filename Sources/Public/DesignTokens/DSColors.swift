@@ -27,7 +27,7 @@
         It's necessary to configure the Design System current Brand at DesisgnSystem class
         or fatalError will be raised.
 
-            DesisgnSystem.shared.configure(with: Brand)
+            DesisgnSystem().configure(with: Brand)
 
  - Returns:
         All properties returns UIColor.
@@ -36,7 +36,7 @@
         This class supports Light and Dark mode. In other words, according with user properties
         of Light or Dark, a diferent color can be returned.
 
-        Attention with .cgColor, becuase it doesn`t support dynamically changes
+        Attention with .cgColor, because it doesn`t support dynamically changes
         of light and dark mode.
 */
 
