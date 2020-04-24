@@ -847,6 +847,15 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
+		8427A32F2453AAFD00CF30D5 /* TestingHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				8427A2AF244F720B00CF30D5 /* UIColor+AsHexString.swift */,
+				8427A32D2453A8C900CF30D5 /* MockStorage.swift */,
+			);
+			path = TestingHelpers;
+			sourceTree = "<group>";
+		};
 		845D9EF0244DD615003598B0 /* Public */ = {
 			isa = PBXGroup;
 			children = (
@@ -975,11 +984,9 @@
 			children = (
 				845D9EF2244DE16C003598B0 /* Public */,
 				8427A2BD2451CB1E00CF30D5 /* Core */,
-				8427A2AF244F720B00CF30D5 /* UIColor+AsHexString.swift */,
 				A988199D238C61780008230F /* Extensions */,
 				11581AA6238F0348003E45D7 /* Helpers */,
 				A9CCF8D423CCD4E400000FC0 /* Supporting Files */,
-				8427A32D2453A8C900CF30D5 /* MockStorage.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -997,6 +1004,7 @@
 		A9CCF8D423CCD4E400000FC0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8427A32F2453AAFD00CF30D5 /* TestingHelpers */,
 				A9B71E93237B559A00A2BF51 /* Info.plist */,
 			);
 			path = "Supporting Files";
