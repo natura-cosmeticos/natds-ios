@@ -6,27 +6,27 @@ struct AvonColorPaletteDark: ColorPalette {
     let feedback: FeedbackColorPalette = Feedback()
 }
 
-private extension AvonColorPaletteDark {
+extension AvonColorPaletteDark {
     struct Primary: PrimaryColorPalette {
         let primary = "#F091C9"
         let onPrimary = "#000000"
 
-        let primaryDark = "#BC6198"
-        let onPrimaryDark = "#000000"
-
         let primaryLight = "#FFC3FC"
         let onPrimaryLight = "#000000"
+
+        let primaryDark = "#BC6198"
+        let onPrimaryDark = "#000000"
     }
 
     struct Secondary: SecondaryColorPalette {
         let secondary = "#E9E9E9"
         let onSecondary = "#333333"
 
-        let secondaryDark = "#B7B7B7"
-        let onSecondaryDark = "#333333"
-
         let secondaryLight = "#FFFFFF"
         let onSecondaryLight = "#333333"
+
+        let secondaryDark = "#B7B7B7"
+        let onSecondaryDark = "#333333"
     }
 
     struct Surface: SurfaceColorPalette {

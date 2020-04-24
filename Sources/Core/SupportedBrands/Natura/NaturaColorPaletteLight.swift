@@ -1,4 +1,4 @@
-struct TheBodyShopColorPaletteLight: ColorPalette {
+struct NaturaColorPaletteLight: ColorPalette {
     let primary: PrimaryColorPalette = Primary()
     let secondary: SecondaryColorPalette = Secondary()
     let surface: SurfaceColorPalette = Surface()
@@ -6,27 +6,27 @@ struct TheBodyShopColorPaletteLight: ColorPalette {
     let feedback: FeedbackColorPalette = Feedback()
 }
 
-extension TheBodyShopColorPaletteLight {
+extension NaturaColorPaletteLight {
     struct Primary: PrimaryColorPalette {
-        let primary = "#004236"
-        let onPrimary = "#FFFFFF"
+        let primary = "#F4AB34"
+        let onPrimary = "#333333"
 
-        let primaryLight = "#356D60"
-        let onPrimaryLight = "#FFFFFF"
+        let primaryLight = "#FEFDE8"
+        let onPrimaryLight = "#333333"
 
-        let primaryDark = "#001D10"
-        let onPrimaryDark = "#FFFFFF"
+        let primaryDark = "#EF8426"
+        let onPrimaryDark = "#333333"
     }
 
     struct Secondary: SecondaryColorPalette {
-        let secondary = "#A55F53"
-        let onSecondary = "#FFFFFF"
+        let secondary = "#FF6B0B"
+        let onSecondary = "#000000"
 
-        let secondaryLight = "#D98D7F"
-        let onSecondaryLight = "#FFFFFF"
+        let secondaryLight = "#FFF8E1"
+        let onSecondaryLight = "#000000"
 
-        let secondaryDark = "#73342A"
-        let onSecondaryDark = "#FFFFFF"
+        let secondaryDark = "#FF5808"
+        let onSecondaryDark = "#000000"
     }
 
     struct Surface: SurfaceColorPalette {
