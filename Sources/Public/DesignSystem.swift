@@ -56,9 +56,9 @@ public final class DesignSystem {
 
     public func configure(with brand: Brand) {
         switch brand {
-        case .avon: storage.save(AvonTheme())
-        case .natura: storage.save(NaturaTheme())
-        case .theBodyShop: storage.save(TheBodyShopTheme())
+        case .avon: storage.save(theme: AvonTheme())
+        case .natura: storage.save(theme: NaturaTheme())
+        case .theBodyShop: storage.save(theme: TheBodyShopTheme())
         }
     }
 }

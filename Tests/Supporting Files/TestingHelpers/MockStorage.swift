@@ -5,7 +5,7 @@ final class MockStorage: ConfigurationStorable {
     var saveInvocations = 0
     var getThemeInvocations = 0
 
-    func save(_ theme: Theme) {
+    func save(theme: Theme) {
         self.theme = theme
 
         saveInvocations += 1

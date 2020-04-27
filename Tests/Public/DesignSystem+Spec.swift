@@ -86,7 +86,7 @@ final class DesignSystemSpec: QuickSpec {
                 beforeEach {
                     mockStarage = MockStorage()
                     systemUnderTest = DesignSystem(storage: mockStarage)
-                    mockStarage.save(AvonTheme())
+                    mockStarage.save(theme: AvonTheme())
                 }
 
                 it("calls storage.getTheme only once") {

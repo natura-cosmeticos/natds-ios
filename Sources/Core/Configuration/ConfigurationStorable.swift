@@ -1,4 +1,4 @@
 protocol ConfigurationStorable: class {
-    func save(_ theme: Theme)
+    func save(theme: Theme)
     func getTheme() -> Theme?
 }

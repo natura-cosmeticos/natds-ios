@@ -5,7 +5,7 @@ final class ConfigurationStorage: ConfigurationStorable {
 
     static let shared = ConfigurationStorage()
 
-    func save(_ theme: Theme) {
+    func save(theme: Theme) {
         self.theme = theme
     }
 
