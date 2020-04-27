@@ -50,19 +50,19 @@ final class DesignSystemSpec: QuickSpec {
         } // context - When using default storage
 
         context("when using mock storage to analyze behavior") {
-            var mockStarage: MockStorage!
+            var mockStorage: MockStorage!
             var systemUnderTest: DesignSystem!
 
             describe("#configure") {
                 beforeEach {
-                    mockStarage = MockStorage()
-                    systemUnderTest = DesignSystem(storage: mockStarage)
+                    mockStorage = MockStorage()
+                    systemUnderTest = DesignSystem(storage: mockStorage)
                 }
 
                 context("when the brand is .avon") {
                     it("calls storage.save only once") {
                         systemUnderTest.configure(with: .avon)
-                        expect(mockStarage.saveInvocations).to(equal(1))
+                        expect(mockStorage.saveInvocations).to(equal(1))
                     }
                 }
 
@@ -70,29 +70,29 @@ final class DesignSystemSpec: QuickSpec {
                     it("calls storage.save only once") {
                         systemUnderTest.configure(with: .natura)
 
-                        expect(mockStarage.saveInvocations).to(equal(1))
+                        expect(mockStorage.saveInvocations).to(equal(1))
                     }
                 }
                 context("when the brand is .theBodyShop") {
                     it("calls storage.save only once") {
                         systemUnderTest.configure(with: .theBodyShop)
 
-                        expect(mockStarage.saveInvocations).to(equal(1))
+                        expect(mockStorage.saveInvocations).to(equal(1))
                     }
                 }
             }
 
             describe("#currentTheme") {
                 beforeEach {
-                    mockStarage = MockStorage()
-                    systemUnderTest = DesignSystem(storage: mockStarage)
-                    mockStarage.save(theme: AvonTheme())
+                    mockStorage = MockStorage()
+                    systemUnderTest = DesignSystem(storage: mockStorage)
+                    mockStorage.save(theme: AvonTheme())
                 }
 
                 it("calls storage.getTheme only once") {
                     _ = systemUnderTest.currentTheme
 
-                    expect(mockStarage.getThemeInvocations).to(equal(1))
+                    expect(mockStorage.getThemeInvocations).to(equal(1))
                 }
 
                 it("returns the same type that was saved") {
