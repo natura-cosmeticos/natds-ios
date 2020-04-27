@@ -53,18 +53,7 @@ platform :ios do
   lane :pods_install do
     cocoapods(repo_update:true, clean_install: false, use_bundle_exec:true)
   end
-
-  desc "Build IPA"
-  lane :build_prd_ipa do
-    build_ipa(
-      scheme: scheme, 
-      method: "ad-hoc", 
-      provisioningProfiles: {
-        app_identifier => "#{ad_hoc_prefix} #{app_identifier}",
-      }
-    )
-  end
-
+  
   desc "Release an Alpha version on Test Flight"
   lane :release_alpha do
     send_build_to_test_flight(
