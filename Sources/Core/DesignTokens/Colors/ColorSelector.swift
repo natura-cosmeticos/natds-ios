@@ -2,7 +2,7 @@ struct ColorSelector {
     private let lightColorPalette: ColorPalette
     private let darkColorPalette: ColorPalette
 
-    init(theme: Theme = DesignSystem.shared.currentTheme) {
+    init(theme: Theme = DesignSystem().currentTheme) {
         lightColorPalette = theme.lightColorPalette
         darkColorPalette = theme.darkColorPalette
     }
