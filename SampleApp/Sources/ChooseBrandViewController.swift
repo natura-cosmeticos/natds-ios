@@ -18,7 +18,7 @@ class ChooseBrandViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "aaaa"
+        title = "Choose a Brand"
         setup()
 
         tableView.delegate = self
@@ -67,8 +67,11 @@ extension ChooseBrandViewController: UITableViewDelegate {
         let viewController = MainViewController()
         let navigationController = UINavigationController(rootViewController: viewController)
         navigationController.modalPresentationStyle = .fullScreen
-        navigationController.navigationBar.barTintColor = .white
-        navigationController.navigationBar.tintColor = DSColors.highEmphasis
+        navigationController.navigationBar.barTintColor = DSColors.primary
+        navigationController.navigationBar.tintColor = DSColors.onPrimary
+        navigationController.navigationBar.titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: DSColors.onPrimary
+        ]
         self.navigationController?.present(navigationController, animated: true)
     }
 }

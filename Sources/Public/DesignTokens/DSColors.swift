@@ -76,8 +76,6 @@ public struct DSColors {
     public static let highEmphasis = ColorSelector().getFromPalette(color: \.highEmphasis)
     public static let mediumEmphasis = ColorSelector().getFromPalette(color: \.mediumEmphasis)
     public static let lowEmphasis = ColorSelector().getFromPalette(color: \.lowEmphasis)
-    public static let link = ColorSelector().getFromPalette(color: \.link)
-    public static let onLink = ColorSelector().getFromPalette(color: \.onLink)
 
     // MARK: - Feedback
 
@@ -87,4 +85,7 @@ public struct DSColors {
     public static let onWarning = ColorSelector().getFromPalette(color: \.onWarning)
     public static let alert = ColorSelector().getFromPalette(color: \.alert)
     public static let onAlert = ColorSelector().getFromPalette(color: \.onAlert)
+
+    public static let link = ColorSelector().getFromPalette(color: \.link)
+    public static let onLink = ColorSelector().getFromPalette(color: \.onLink)
 }
