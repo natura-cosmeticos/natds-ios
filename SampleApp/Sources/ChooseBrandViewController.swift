@@ -1,11 +1,16 @@
 import UIKit
 import NatDS
 
-class ChooseBrandViewController: UIViewController {
-    private let tableView: UITableView = {
+final class ChooseBrandViewController: UIViewController {
+    private lazy var tableView: UITableView = {
         let tableView = UITableView()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: UITableViewCell.reuseIdentifier)
+        tableView.register(
+            UITableViewCell.self,
+            forCellReuseIdentifier: UITableViewCell.reuseIdentifier
+        )
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.delegate = self
+        tableView.dataSource = self
 
         return tableView
     }()
@@ -20,9 +25,6 @@ class ChooseBrandViewController: UIViewController {
         super.viewDidLoad()
         title = "Choose a Brand"
         setup()
-
-        tableView.delegate = self
-        tableView.dataSource = self
     }
 
     private func setup() {

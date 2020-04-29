@@ -1,7 +1,7 @@
 import UIKit
 import NatDS
 
-class ColorsCell: UITableViewCell {
+final class ColorsCell: UITableViewCell {
     typealias ViewModel = (colorName: String, color: UIColor, onColor: UIColor, isTextOnHidden: Bool)
 
     private let nameLabel: UILabel = {
@@ -33,26 +33,29 @@ class ColorsCell: UITableViewCell {
         setup()
     }
 
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     func configure(viewModel: ViewModel) {
         nameLabel.text = viewModel.colorName
         nameLabel.textColor = viewModel.onColor
 
+        hexLabel.text = createTextForHexLabel(viewModel: viewModel)
+        hexLabel.textColor = viewModel.onColor
+
+        backgroundColor = viewModel.color
+    }
+
+    private func createTextForHexLabel(viewModel: ViewModel) -> String {
         var text = viewModel.color.hex
 
         if !viewModel.isTextOnHidden {
             text += " / ON: \(viewModel.onColor.hex)"
         }
 
-        hexLabel.text = text
-        hexLabel.textColor = viewModel.onColor
-
-        backgroundColor = viewModel.color
-
-    }
-
-    @available(*, unavailable)
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        return text
     }
 
     func setup() {

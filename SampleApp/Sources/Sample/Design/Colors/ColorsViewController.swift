@@ -1,6 +1,6 @@
 import NatDS
 
-class ColorsViewController: UIViewController, SampleItem {
+final class ColorsViewController: UIViewController, SampleItem {
     static var name = "Color"
 
     private let sections = [
@@ -40,7 +40,7 @@ class ColorsViewController: UIViewController, SampleItem {
         ]
     ]
 
-    private let tableView: UITableView = {
+    private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.register(ColorsCell.self, forCellReuseIdentifier: ColorsCell.reuseIdentifier)
         tableView.register(ColorsHeader.self, forHeaderFooterViewReuseIdentifier: ColorsHeader.reuseIdentifier)
@@ -48,6 +48,8 @@ class ColorsViewController: UIViewController, SampleItem {
         tableView.sectionHeaderHeight = 50
         tableView.allowsSelection = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.delegate = self
+        tableView.dataSource = self
 
         return tableView
     }()
@@ -56,21 +58,22 @@ class ColorsViewController: UIViewController, SampleItem {
         super.viewDidLoad()
 
         title = Self.name
-        tableView.delegate = self
-        tableView.dataSource = self
 
         setup()
     }
 
     @objc private func navigationButtonTapHandler() {
+        setupUserInterfaceStyle()
+        tableView.reloadData()
+    }
+
+    private func setupUserInterfaceStyle() {
         if #available(iOS 13.0, *) {
             if overrideUserInterfaceStyle == .dark {
                 overrideUserInterfaceStyle = .light
             } else {
                 overrideUserInterfaceStyle = .dark
             }
-
-            self.tableView.reloadData()
         }
     }
 
