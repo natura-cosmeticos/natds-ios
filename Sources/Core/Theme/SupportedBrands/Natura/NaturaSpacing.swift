@@ -9,7 +9,7 @@ struct NaturaSpacing: Spacing {
 
     init() {
         let spacing: CGFloat = 8
-        
+
         micro = spacing / 2
         tiny = spacing
         small = spacing * 2

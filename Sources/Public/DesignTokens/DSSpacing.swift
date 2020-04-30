@@ -8,18 +8,3 @@ struct DSSpacing {
     static var large: CGFloat { getCurrentTheme().spacing.large }
     static var xLarge: CGFloat { getCurrentTheme().spacing.xLarge }
 }
-
-func getCurrentTheme(
-    storage: ConfigurationStorable = ConfigurationStorage.shared,
-    fatalError: () -> Never = designSystemFatalError) -> Theme {
-
-    guard let theme = ConfigurationStorage.shared.getTheme() else {
-        fatalError()
-    }
-
-    return theme
-}
-
-func designSystemFatalError() -> Never {
-    fatalError("aaa")
-}
