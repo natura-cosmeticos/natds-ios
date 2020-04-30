@@ -42,9 +42,6 @@ extension AvonColorPaletteDark {
         let highEmphasis = "#FAFAFA"
         let mediumEmphasis = "#BBBBBB"
         let lowEmphasis = "#777777"
-
-        let link = "#227BBD"
-        let onLink = "#FFFFFF"
     }
 
     struct Feedback: FeedbackColorPalette {
@@ -56,5 +53,8 @@ extension AvonColorPaletteDark {
 
         let alert = "#E74627"
         let onAlert = "#FFFFFF"
+
+        let link = "#227BBD"
+        let onLink = "#FFFFFF"
     }
 }

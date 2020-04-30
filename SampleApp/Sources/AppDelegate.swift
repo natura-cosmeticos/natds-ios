@@ -9,12 +9,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        let navigationController = UINavigationController(rootViewController: MainViewController())
-        navigationController.navigationBar.barTintColor = .white
-        navigationController.navigationBar.tintColor = Colors.Content.highEmphasis
+        let navigationController = UINavigationController(
+            rootViewController: ChooseBrandViewController()
+        )
 
         let window = UIWindow()
-        window.backgroundColor = .white
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
 

@@ -12,8 +12,10 @@
 		64C9173323FC9EDE0040E714 /* TabItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C9173223FC9EDE0040E714 /* TabItemViewController.swift */; };
 		64D84FD123F5FC7D004DD910 /* ValueTextHighlightItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D84FD023F5FC7D004DD910 /* ValueTextHighlightItemViewController.swift */; };
 		64D84FD423F600C5004DD910 /* TextFieldItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D84FD323F600C5004DD910 /* TextFieldItemViewController.swift */; };
-		64FAAC7723FB5B880085F7C8 /* ColorHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FAAC7623FB5B880085F7C8 /* ColorHeaderCollectionViewCell.swift */; };
-		8427A29B244894A000CF30D5 /* ThemesColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427A29A244894A000CF30D5 /* ThemesColorsViewController.swift */; };
+		8406F5E42458AD0A001A3A1E /* ColorsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8406F5E32458AD0A001A3A1E /* ColorsHeaderView.swift */; };
+		8427A3312457AFEF00CF30D5 /* ChooseBrandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427A3302457AFEE00CF30D5 /* ChooseBrandViewController.swift */; };
+		8427A334245875E300CF30D5 /* ColorsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427A333245875E300CF30D5 /* ColorsCell.swift */; };
+		8427A3362458764900CF30D5 /* ColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427A3352458764900CF30D5 /* ColorsViewController.swift */; };
 		A904ECBA23D607D800709B43 /* ComponentsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A904ECB923D607D800709B43 /* ComponentsSection.swift */; };
 		A904ECBC23D6088600709B43 /* ButtonsItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A904ECBB23D6088600709B43 /* ButtonsItemViewController.swift */; };
 		A904ECC023D760C400709B43 /* DesignSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A904ECBF23D760C400709B43 /* DesignSection.swift */; };
@@ -23,8 +25,6 @@
 		A97328BF23CFA32900ADC5C2 /* SampleSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97328BE23CFA32900ADC5C2 /* SampleSection.swift */; };
 		A97328C123CFA33800ADC5C2 /* SampleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97328C023CFA33800ADC5C2 /* SampleItem.swift */; };
 		A97328C323CFA35800ADC5C2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97328C223CFA35800ADC5C2 /* MainViewController.swift */; };
-		A97328C823CFA3DC00ADC5C2 /* ColorsItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97328C723CFA3DC00ADC5C2 /* ColorsItemViewController.swift */; };
-		A9B8A4DA23D0FCD50055E8A3 /* ColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B8A4D923D0FCD50055E8A3 /* ColorCollectionViewCell.swift */; };
 		A9D71BC22386DFEE00CDEC1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D71BC12386DFEE00CDEC1D /* AppDelegate.swift */; };
 		A9D71BC62386DFEE00CDEC1D /* NavigationDrawerItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D71BC52386DFEE00CDEC1D /* NavigationDrawerItemViewController.swift */; };
 		A9D71BCB2386DFF200CDEC1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9D71BCA2386DFF200CDEC1D /* Assets.xcassets */; };
@@ -53,8 +53,10 @@
 		64C9173223FC9EDE0040E714 /* TabItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemViewController.swift; sourceTree = "<group>"; };
 		64D84FD023F5FC7D004DD910 /* ValueTextHighlightItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueTextHighlightItemViewController.swift; sourceTree = "<group>"; };
 		64D84FD323F600C5004DD910 /* TextFieldItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldItemViewController.swift; sourceTree = "<group>"; };
-		64FAAC7623FB5B880085F7C8 /* ColorHeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHeaderCollectionViewCell.swift; sourceTree = "<group>"; };
-		8427A29A244894A000CF30D5 /* ThemesColorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesColorsViewController.swift; sourceTree = "<group>"; };
+		8406F5E32458AD0A001A3A1E /* ColorsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsHeaderView.swift; sourceTree = "<group>"; };
+		8427A3302457AFEE00CF30D5 /* ChooseBrandViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseBrandViewController.swift; sourceTree = "<group>"; };
+		8427A333245875E300CF30D5 /* ColorsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsCell.swift; sourceTree = "<group>"; };
+		8427A3352458764900CF30D5 /* ColorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsViewController.swift; sourceTree = "<group>"; };
 		A904ECB923D607D800709B43 /* ComponentsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentsSection.swift; sourceTree = "<group>"; };
 		A904ECBB23D6088600709B43 /* ButtonsItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsItemViewController.swift; sourceTree = "<group>"; };
 		A904ECBF23D760C400709B43 /* DesignSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSection.swift; sourceTree = "<group>"; };
@@ -64,8 +66,6 @@
 		A97328BE23CFA32900ADC5C2 /* SampleSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleSection.swift; sourceTree = "<group>"; };
 		A97328C023CFA33800ADC5C2 /* SampleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleItem.swift; sourceTree = "<group>"; };
 		A97328C223CFA35800ADC5C2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		A97328C723CFA3DC00ADC5C2 /* ColorsItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsItemViewController.swift; sourceTree = "<group>"; };
-		A9B8A4D923D0FCD50055E8A3 /* ColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCollectionViewCell.swift; sourceTree = "<group>"; };
 		A9D71BBE2386DFEE00CDEC1D /* NatDS-SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NatDS-SampleApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9D71BC12386DFEE00CDEC1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9D71BC52386DFEE00CDEC1D /* NavigationDrawerItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerItemViewController.swift; sourceTree = "<group>"; };
@@ -127,12 +127,13 @@
 			path = Field;
 			sourceTree = "<group>";
 		};
-		8427A2B1244F745D00CF30D5 /* ThemesColors */ = {
+		8427A332245875C700CF30D5 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				8427A29A244894A000CF30D5 /* ThemesColorsViewController.swift */,
+				8427A333245875E300CF30D5 /* ColorsCell.swift */,
+				8406F5E32458AD0A001A3A1E /* ColorsHeaderView.swift */,
 			);
-			path = ThemesColors;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		A904ECB823D607BD00709B43 /* Button */ = {
@@ -199,9 +200,8 @@
 		A97328C523CFA3A400ADC5C2 /* Colors */ = {
 			isa = PBXGroup;
 			children = (
-				8427A2B1244F745D00CF30D5 /* ThemesColors */,
-				A9B8A4DB23D0FD680055E8A3 /* Cell */,
-				A97328C723CFA3DC00ADC5C2 /* ColorsItemViewController.swift */,
+				8427A332245875C700CF30D5 /* Cells */,
+				8427A3352458764900CF30D5 /* ColorsViewController.swift */,
 			);
 			path = Colors;
 			sourceTree = "<group>";
@@ -212,15 +212,6 @@
 				A9D71BC52386DFEE00CDEC1D /* NavigationDrawerItemViewController.swift */,
 			);
 			path = NavigationDrawer;
-			sourceTree = "<group>";
-		};
-		A9B8A4DB23D0FD680055E8A3 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				A9B8A4D923D0FCD50055E8A3 /* ColorCollectionViewCell.swift */,
-				64FAAC7623FB5B880085F7C8 /* ColorHeaderCollectionViewCell.swift */,
-			);
-			path = Cell;
 			sourceTree = "<group>";
 		};
 		A9D71BB52386DFEE00CDEC1D = {
@@ -245,6 +236,7 @@
 			children = (
 				A9D71BC12386DFEE00CDEC1D /* AppDelegate.swift */,
 				A97328BC23CFA2F500ADC5C2 /* MainDataSource.swift */,
+				8427A3302457AFEE00CF30D5 /* ChooseBrandViewController.swift */,
 				A97328C223CFA35800ADC5C2 /* MainViewController.swift */,
 				A97328C423CFA39600ADC5C2 /* Sample */,
 				A9D71BDA2386F53400CDEC1D /* Supporting Files */,
@@ -342,24 +334,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				64D84FD423F600C5004DD910 /* TextFieldItemViewController.swift in Sources */,
+				8427A334245875E300CF30D5 /* ColorsCell.swift in Sources */,
 				64D84FD123F5FC7D004DD910 /* ValueTextHighlightItemViewController.swift in Sources */,
 				A904ECC623D7628000709B43 /* IconCollectioViewCell.swift in Sources */,
 				A9D71BC62386DFEE00CDEC1D /* NavigationDrawerItemViewController.swift in Sources */,
 				434E661C241976BD00D91E59 /* AppBarViewController.swift in Sources */,
 				A904ECBC23D6088600709B43 /* ButtonsItemViewController.swift in Sources */,
-				64FAAC7723FB5B880085F7C8 /* ColorHeaderCollectionViewCell.swift in Sources */,
 				A904ECBA23D607D800709B43 /* ComponentsSection.swift in Sources */,
 				A97328BF23CFA32900ADC5C2 /* SampleSection.swift in Sources */,
 				A904ECC023D760C400709B43 /* DesignSection.swift in Sources */,
 				A9D71BC22386DFEE00CDEC1D /* AppDelegate.swift in Sources */,
+				8427A3362458764900CF30D5 /* ColorsViewController.swift in Sources */,
 				A904ECC323D761BE00709B43 /* IconographyItemViewController.swift in Sources */,
-				8427A29B244894A000CF30D5 /* ThemesColorsViewController.swift in Sources */,
 				64C9173323FC9EDE0040E714 /* TabItemViewController.swift in Sources */,
 				437CFD4F241059B8008CEA37 /* DividerViewController.swift in Sources */,
+				8427A3312457AFEF00CF30D5 /* ChooseBrandViewController.swift in Sources */,
 				A97328C323CFA35800ADC5C2 /* MainViewController.swift in Sources */,
 				A97328BD23CFA2F500ADC5C2 /* MainDataSource.swift in Sources */,
-				A9B8A4DA23D0FCD50055E8A3 /* ColorCollectionViewCell.swift in Sources */,
-				A97328C823CFA3DC00ADC5C2 /* ColorsItemViewController.swift in Sources */,
+				8406F5E42458AD0A001A3A1E /* ColorsHeaderView.swift in Sources */,
 				A97328C123CFA33800ADC5C2 /* SampleItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

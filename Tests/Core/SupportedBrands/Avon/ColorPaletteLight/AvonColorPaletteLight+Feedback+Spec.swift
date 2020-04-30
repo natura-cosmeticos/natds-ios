@@ -60,5 +60,23 @@ final class AvonColorPaletteLightFeedbackSpec: QuickSpec {
                 expect(colorHex == expectedHex).to(beTrue())
             }
         }
+
+        describe("#link") {
+            it("returns a string of expected hex color") {
+                let colorHex = systemUnderTest.link
+                let expectedHex = "#227BBD"
+
+                expect(colorHex == expectedHex).to(beTrue())
+            }
+        }
+
+        describe("#onLink") {
+            it("returns a string of expected hex color") {
+                let colorHex = systemUnderTest.onLink
+                let expectedHex = "#FFFFFF"
+
+                expect(colorHex == expectedHex).to(beTrue())
+            }
+        }
     }
 }
