@@ -132,6 +132,8 @@
 		84428F8A245B219700D46611 /* NaturaSpacing+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84428F88245B217C00D46611 /* NaturaSpacing+Spec.swift */; };
 		84428F8D245B248D00D46611 /* TheBodyShopSpacing+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84428F8B245B245C00D46611 /* TheBodyShopSpacing+Spec.swift */; };
 		84428F90245B24B300D46611 /* AvonSpacing+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84428F8E245B24B000D46611 /* AvonSpacing+Spec.swift */; };
+		84428F92245B265000D46611 /* DSSpacing+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84428F91245B265000D46611 /* DSSpacing+Spec.swift */; };
+		84428F95245B9DE000D46611 /* CurrentState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84428F94245B9DE000D46611 /* CurrentState.swift */; };
 		845D9EEF244DD407003598B0 /* ColorSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D9EEE244DD406003598B0 /* ColorSelector.swift */; };
 		845D9EF8244DE32F003598B0 /* DSColors+TBS+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D9EF6244DE2E7003598B0 /* DSColors+TBS+Spec.swift */; };
 		84EE85E9245A0FB20009293A /* DSSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE85E8245A0FB20009293A /* DSSpacing.swift */; };
@@ -291,6 +293,8 @@
 		84428F88245B217C00D46611 /* NaturaSpacing+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaturaSpacing+Spec.swift"; sourceTree = "<group>"; };
 		84428F8B245B245C00D46611 /* TheBodyShopSpacing+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheBodyShopSpacing+Spec.swift"; sourceTree = "<group>"; };
 		84428F8E245B24B000D46611 /* AvonSpacing+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AvonSpacing+Spec.swift"; sourceTree = "<group>"; };
+		84428F91245B265000D46611 /* DSSpacing+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DSSpacing+Spec.swift"; sourceTree = "<group>"; };
+		84428F94245B9DE000D46611 /* CurrentState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentState.swift; sourceTree = "<group>"; };
 		845D9EEE244DD406003598B0 /* ColorSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSelector.swift; sourceTree = "<group>"; };
 		845D9EF6244DE2E7003598B0 /* DSColors+TBS+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DSColors+TBS+Spec.swift"; sourceTree = "<group>"; };
 		84EE85E8245A0FB20009293A /* DSSpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSSpacing.swift; sourceTree = "<group>"; };
@@ -415,6 +419,7 @@
 			children = (
 				117FE00D238D9AEB0032E2AC /* Colors */,
 				117FE011238D9AEB0032E2AC /* Fonts */,
+				84428F91245B265000D46611 /* DSSpacing+Spec.swift */,
 			);
 			path = DesignTokens;
 			sourceTree = "<group>";
@@ -866,6 +871,7 @@
 			children = (
 				8427A32824538D9D00CF30D5 /* ConfigurationStorable.swift */,
 				8427A32B24538DFA00CF30D5 /* ConfigurationStorage.swift */,
+				84428F93245B9D5800D46611 /* CurrentState */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -877,6 +883,14 @@
 				8427A32D2453A8C900CF30D5 /* MockStorage.swift */,
 			);
 			path = TestingHelpers;
+			sourceTree = "<group>";
+		};
+		84428F93245B9D5800D46611 /* CurrentState */ = {
+			isa = PBXGroup;
+			children = (
+				84428F94245B9DE000D46611 /* CurrentState.swift */,
+			);
+			path = CurrentState;
 			sourceTree = "<group>";
 		};
 		845D9EF0244DD615003598B0 /* Public */ = {
@@ -1299,6 +1313,7 @@
 				A9CCF8DC23CCDF0100000FC0 /* FontIconStyle.swift in Sources */,
 				4395D1DA23FC6AB700C7DC6F /* Tab.swift in Sources */,
 				A9325A6623FB34EC0023979C /* UICollectionView+Reusable.swift in Sources */,
+				84428F95245B9DE000D46611 /* CurrentState.swift in Sources */,
 				117FE025238D9B070032E2AC /* FontsNatura.swift in Sources */,
 				8427A32924538D9D00CF30D5 /* ConfigurationStorable.swift in Sources */,
 				A9CCF8D823CCDAC900000FC0 /* Icon.swift in Sources */,
@@ -1404,6 +1419,7 @@
 				643ABFF324118BF1000918EA /* PulsableTests.swift in Sources */,
 				11581AA8238F037D003E45D7 /* AssetsHelperTests.swift in Sources */,
 				8427A2DC2451E3F200CF30D5 /* AvonColorPaletteDark+Primary+Spec.swift in Sources */,
+				84428F92245B265000D46611 /* DSSpacing+Spec.swift in Sources */,
 				8427A2D62451E07700CF30D5 /* NaturaColorPaletteLight+Spec.swift in Sources */,
 				8427A3062452230B00CF30D5 /* AvonColorPaletteLight+Content+Spec.swift in Sources */,
 				117FE015238D9AEB0032E2AC /* ColorsNaturaTests.swift in Sources */,

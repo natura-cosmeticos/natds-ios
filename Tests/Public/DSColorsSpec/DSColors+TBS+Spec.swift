@@ -12,7 +12,7 @@ final class DSColorsTBSSpec: QuickSpec {
 
         beforeEach {
             DesignSystem().configure(with: .theBodyShop)
-            let theme = DesignSystem().currentTheme
+            let theme = getCurrentTheme()
             lightPalette = theme.lightColorPalette
             darkPalette = theme.darkColorPalette
         }

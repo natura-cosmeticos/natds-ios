@@ -17,7 +17,7 @@ final class DesignSystemSpec: QuickSpec {
                     }
 
                     it("sets current theme to Avon") {
-                        let theme = systemUnderTest.currentTheme
+                        let theme = getCurrentTheme()
 
                         expect(theme).to(beAnInstanceOf(AvonTheme.self))
                     }
@@ -29,7 +29,7 @@ final class DesignSystemSpec: QuickSpec {
                     }
 
                     it("sets current theme to Natura") {
-                        let theme = systemUnderTest.currentTheme
+                        let theme = getCurrentTheme()
 
                         expect(theme).to(beAnInstanceOf(NaturaTheme.self))
                     }
@@ -41,9 +41,47 @@ final class DesignSystemSpec: QuickSpec {
                     }
 
                     it("sets current theme to The Body Shop") {
-                        let theme = systemUnderTest.currentTheme
+                        let theme = getCurrentTheme()
 
                         expect(theme).to(beAnInstanceOf(TheBodyShopTheme.self))
+                    }
+                }
+
+                describe("#currentBrand") {
+                    context("when the brand is .avon") {
+                        beforeEach {
+                            systemUnderTest.configure(with: .avon)
+                        }
+
+                        it("returns current brand as Avon") {
+                            let brand = systemUnderTest.currentBrand
+
+                            expect(brand).to(equal(.avon))
+                        }
+                    }
+
+                    context("when the brand is .natura") {
+                        beforeEach {
+                            systemUnderTest.configure(with: .natura)
+                        }
+
+                        it("returns current brand as Natura") {
+                            let brand = systemUnderTest.currentBrand
+
+                            expect(brand).to(equal(.natura))
+                        }
+                    }
+
+                    context("when the brand is .theBodyShop") {
+                        beforeEach {
+                            systemUnderTest.configure(with: .theBodyShop)
+                        }
+
+                        it("returns current brand as The Body Shop") {
+                            let brand = systemUnderTest.currentBrand
+
+                            expect(brand).to(equal(.theBodyShop))
+                        }
                     }
                 }
             }
@@ -82,25 +120,82 @@ final class DesignSystemSpec: QuickSpec {
                 }
             }
 
-            describe("#currentTheme") {
-                beforeEach {
-                    mockStorage = MockStorage()
-                    systemUnderTest = DesignSystem(storage: mockStorage)
-                    mockStorage.save(theme: AvonTheme())
+            describe("#currentBrand") {
+                context("when the brand is not configured") {
+                    beforeEach {
+                        mockStorage = MockStorage()
+                        systemUnderTest = DesignSystem(storage: mockStorage)
+                    }
+
+                    it("returns nil") {
+                        let brand = systemUnderTest.currentBrand
+
+                        expect(brand).to(beNil())
+                    }
                 }
 
-                it("calls storage.getTheme only once") {
-                    _ = systemUnderTest.currentTheme
+                context("when the brand is .avon") {
+                    beforeEach {
+                        mockStorage = MockStorage()
+                        systemUnderTest = DesignSystem(storage: mockStorage)
+                        systemUnderTest.configure(with: .avon)
+                    }
 
-                    expect(mockStorage.getThemeInvocations).to(equal(1))
+                    it("returns current brand as Avon") {
+                        let brand = systemUnderTest.currentBrand
+
+                        expect(brand).to(equal(.avon))
+                    }
                 }
 
-                it("returns the same type that was saved") {
-                    let theme = systemUnderTest.currentTheme
+                context("when the brand is .natura") {
+                    beforeEach {
+                        mockStorage = MockStorage()
+                        systemUnderTest = DesignSystem(storage: mockStorage)
+                        systemUnderTest.configure(with: .natura)
+                    }
 
-                    expect(theme).to(beAnInstanceOf(AvonTheme.self))
+                    it("returns current brand as Natura") {
+                        let brand = systemUnderTest.currentBrand
+
+                        expect(brand).to(equal(.natura))
+                    }
+                }
+
+                context("when the brand is .theBodyShop") {
+                    beforeEach {
+                        mockStorage = MockStorage()
+                        systemUnderTest = DesignSystem(storage: mockStorage)
+                        systemUnderTest.configure(with: .theBodyShop)
+                    }
+
+                    it("returns current brand as The Body Shop") {
+                        let brand = systemUnderTest.currentBrand
+
+                        expect(brand).to(equal(.theBodyShop))
+                    }
                 }
             }
+
+//            describe("#currentTheme") {
+//                beforeEach {
+//                    mockStorage = MockStorage()
+//                    systemUnderTest = DesignSystem(storage: mockStorage)
+//                    mockStorage.save(theme: AvonTheme())
+//                }
+//
+//                it("calls storage.getTheme only once") {
+//                    _ = systemUnderTest.currentTheme
+//
+//                    expect(mockStorage.getThemeInvocations).to(equal(1))
+//                }
+//
+//                it("returns the same type that was saved") {
+//                    let theme = systemUnderTest.currentTheme
+//
+//                    expect(theme).to(beAnInstanceOf(AvonTheme.self))
+//                }
+//            }
         } // context - when using custom mock storage to analyze behavior
     }
 }
