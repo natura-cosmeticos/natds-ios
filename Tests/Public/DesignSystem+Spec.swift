@@ -17,7 +17,7 @@ final class DesignSystemSpec: QuickSpec {
                     }
 
                     it("sets current theme to Avon") {
-                        let theme = getCurrentTheme()
+                        let theme = getTheme()
 
                         expect(theme).to(beAnInstanceOf(AvonTheme.self))
                     }
@@ -29,7 +29,7 @@ final class DesignSystemSpec: QuickSpec {
                     }
 
                     it("sets current theme to Natura") {
-                        let theme = getCurrentTheme()
+                        let theme = getTheme()
 
                         expect(theme).to(beAnInstanceOf(NaturaTheme.self))
                     }
@@ -41,7 +41,7 @@ final class DesignSystemSpec: QuickSpec {
                     }
 
                     it("sets current theme to The Body Shop") {
-                        let theme = getCurrentTheme()
+                        let theme = getTheme()
 
                         expect(theme).to(beAnInstanceOf(TheBodyShopTheme.self))
                     }

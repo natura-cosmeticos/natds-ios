@@ -21,11 +21,11 @@
 public struct DSSpacing {
     private init() {}
 
-    public static var micro: CGFloat { getCurrentTheme().spacing.micro }
-    public static var tiny: CGFloat { getCurrentTheme().spacing.tiny }
-    public static var small: CGFloat { getCurrentTheme().spacing.small }
-    public static var standart: CGFloat { getCurrentTheme().spacing.standart }
-    public static var semi: CGFloat { getCurrentTheme().spacing.semi }
-    public static var large: CGFloat { getCurrentTheme().spacing.large }
-    public static var xLarge: CGFloat { getCurrentTheme().spacing.xLarge }
+    public static var micro: CGFloat { getTheme().spacing.micro }
+    public static var tiny: CGFloat { getTheme().spacing.tiny }
+    public static var small: CGFloat { getTheme().spacing.small }
+    public static var standart: CGFloat { getTheme().spacing.standart }
+    public static var semi: CGFloat { getTheme().spacing.semi }
+    public static var large: CGFloat { getTheme().spacing.large }
+    public static var xLarge: CGFloat { getTheme().spacing.xLarge }
 }
