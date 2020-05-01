@@ -263,30 +263,6 @@ final class DSColorsTBSSpec: QuickSpec {
                     expect(result).to(beTrue())
                 }
             }
-
-            describe(".link") {
-                it("returns a color equivalent to ColorPalette.content.link") {
-                    let result = isColorEquivalentToDarkHexOrLightHex(
-                        colorUnderTest: DSColors.link,
-                        lightColor: lightPalette.content.link,
-                        darkColor: darkPalette.content.link
-                    )
-
-                    expect(result).to(beTrue())
-                }
-            }
-
-            describe(".onLink") {
-                it("returns a color equivalent to ColorPalette.content.onLink") {
-                    let result = isColorEquivalentToDarkHexOrLightHex(
-                        colorUnderTest: DSColors.onLink,
-                        lightColor: lightPalette.content.onLink,
-                        darkColor: darkPalette.content.onLink
-                    )
-
-                    expect(result).to(beTrue())
-                }
-            }
         } // describe - colors from ContentColorPalette protocol
 
         describe("colors from FeedbackColorPalette protocol") {
@@ -356,6 +332,30 @@ final class DSColorsTBSSpec: QuickSpec {
                         colorUnderTest: DSColors.onAlert,
                         lightColor: lightPalette.feedback.onAlert,
                         darkColor: darkPalette.feedback.onAlert
+                    )
+
+                    expect(result).to(beTrue())
+                }
+            }
+
+            describe(".link") {
+                it("returns a color equivalent to ColorPalette.feedback.link") {
+                    let result = isColorEquivalentToDarkHexOrLightHex(
+                        colorUnderTest: DSColors.link,
+                        lightColor: lightPalette.feedback.link,
+                        darkColor: darkPalette.feedback.link
+                    )
+
+                    expect(result).to(beTrue())
+                }
+            }
+
+            describe(".onLink") {
+                it("returns a color equivalent to ColorPalette.feedback.onLink") {
+                    let result = isColorEquivalentToDarkHexOrLightHex(
+                        colorUnderTest: DSColors.onLink,
+                        lightColor: lightPalette.feedback.onLink,
+                        darkColor: darkPalette.feedback.onLink
                     )
 
                     expect(result).to(beTrue())

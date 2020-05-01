@@ -7,4 +7,7 @@ protocol FeedbackColorPalette {
 
     var alert: String { get }
     var onAlert: String { get }
+
+    var link: String { get }
+    var onLink: String { get }
 }
