@@ -4,6 +4,8 @@ import NatDS
 final class SpacingViewController: UIViewController, SampleItem {
     static var name = "Spacing"
 
+    // MARK: - Private properties
+
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.register(SpacingCell.self, forCellReuseIdentifier: SpacingCell.reuseIdentifier)
@@ -26,6 +28,8 @@ final class SpacingViewController: UIViewController, SampleItem {
         ("xLarge: \(DSSpacing.xLarge)", DSSpacing.xLarge)
     ]
 
+    // MARK: - Life cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,6 +37,8 @@ final class SpacingViewController: UIViewController, SampleItem {
 
         setup()
     }
+
+    // MARK: - Private methods
 
     private func setup() {
         view.backgroundColor = DSColors.background
@@ -56,6 +62,8 @@ final class SpacingViewController: UIViewController, SampleItem {
         ])
     }
 }
+
+// MARK: - UITableViewDataSource
 
 extension SpacingViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

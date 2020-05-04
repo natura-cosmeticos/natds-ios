@@ -44,8 +44,8 @@ final class SpacingCell: UITableViewCell {
         symbolicSpacingView.layoutIfNeeded()
     }
 
-    // MARK: - Public methods
-    
+    // MARK: - Private methods
+
     private func setup() {
         contentView.addSubview(symbolicSpacingView)
         contentView.addSubview(label)
