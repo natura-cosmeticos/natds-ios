@@ -10,102 +10,108 @@ final class DSSpacingSpec: QuickSpec {
         let systemUnderTest = DSSpacing.self
 
         context("Avon") {
+            let expectedSpacing = AvonSpacing()
+
             beforeEach {
                 DesignSystem().configure(with: .avon)
             }
 
             describe("#micro") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.micro).to(equal(4))
+                    expect(systemUnderTest.micro).to(equal(expectedSpacing.micro))
                 }
             }
 
             describe("#tiny") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.tiny).to(equal(8))
+                    expect(systemUnderTest.tiny).to(equal(expectedSpacing.tiny))
                 }
             }
 
             describe("#small") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.small).to(equal(16))
+                    expect(systemUnderTest.small).to(equal(expectedSpacing.small))
                 }
             }
 
             describe("#standart") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.standart).to(equal(24))
+                    expect(systemUnderTest.standart).to(equal(expectedSpacing.standart))
                 }
             }
 
             describe("#semi") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.semi).to(equal(32))
+                    expect(systemUnderTest.semi).to(equal(expectedSpacing.semi))
                 }
             }
 
             describe("#large") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.large).to(equal(48))
+                    expect(systemUnderTest.large).to(equal(expectedSpacing.large))
                 }
             }
 
             describe("#xLarge") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.xLarge).to(equal(64))
+                    expect(systemUnderTest.xLarge).to(equal(expectedSpacing.xLarge))
                 }
             }
         } // context - when using Avon as theme
 
         context("Natura") {
+            let expectedSpacing = NaturaSpacing()
+
             beforeEach {
                 DesignSystem().configure(with: .natura)
             }
 
             describe("#micro") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.micro).to(equal(4))
+                    expect(systemUnderTest.micro).to(equal(expectedSpacing.micro))
                 }
             }
 
             describe("#tiny") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.tiny).to(equal(8))
+                    expect(systemUnderTest.tiny).to(equal(expectedSpacing.tiny))
                 }
             }
 
             describe("#small") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.small).to(equal(16))
+                    expect(systemUnderTest.small).to(equal(expectedSpacing.small))
                 }
             }
 
             describe("#standart") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.standart).to(equal(24))
+                    expect(systemUnderTest.standart).to(equal(expectedSpacing.standart))
                 }
             }
 
             describe("#semi") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.semi).to(equal(32))
+                    expect(systemUnderTest.semi).to(equal(expectedSpacing.semi))
                 }
             }
 
             describe("#large") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.large).to(equal(48))
+                    expect(systemUnderTest.large).to(equal(expectedSpacing.large))
                 }
             }
 
             describe("#xLarge") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.xLarge).to(equal(64))
+                    expect(systemUnderTest.xLarge).to(equal(expectedSpacing.xLarge))
                 }
             }
         } // context - when using Natura as theme
 
         context("when using The Body Shop as theme") {
+            let expectedSpacing = TheBodyShopSpacing()
+
             beforeEach {
                 DesignSystem().configure(with: .theBodyShop)
             }
@@ -116,39 +122,45 @@ final class DSSpacingSpec: QuickSpec {
                 }
             }
 
+            describe("#micro") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.micro).to(equal(expectedSpacing.micro))
+                }
+            }
+
             describe("#tiny") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.tiny).to(equal(8))
+                    expect(systemUnderTest.tiny).to(equal(expectedSpacing.tiny))
                 }
             }
 
             describe("#small") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.small).to(equal(16))
+                    expect(systemUnderTest.small).to(equal(expectedSpacing.small))
                 }
             }
 
             describe("#standart") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.standart).to(equal(24))
+                    expect(systemUnderTest.standart).to(equal(expectedSpacing.standart))
                 }
             }
 
             describe("#semi") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.semi).to(equal(32))
+                    expect(systemUnderTest.semi).to(equal(expectedSpacing.semi))
                 }
             }
 
             describe("#large") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.large).to(equal(48))
+                    expect(systemUnderTest.large).to(equal(expectedSpacing.large))
                 }
             }
 
             describe("#xLarge") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.xLarge).to(equal(64))
+                    expect(systemUnderTest.xLarge).to(equal(expectedSpacing.xLarge))
                 }
             }
         } // context - when using The Body Shop as theme
