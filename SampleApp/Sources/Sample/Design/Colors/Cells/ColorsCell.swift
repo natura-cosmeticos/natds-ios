@@ -6,15 +6,17 @@ final class ColorsCell: UITableViewCell {
 
     private let nameLabel: UILabel = {
         let label = UILabel()
-        label.font = Fonts.h5
+        label.font = Fonts.body1
         label.translatesAutoresizingMaskIntoConstraints = false
+
         return label
     }()
 
     private let hexLabel: UILabel = {
         let label = UILabel()
-        label.font = Fonts.body2
+        label.font = Fonts.caption
         label.translatesAutoresizingMaskIntoConstraints = false
+
         return label
     }()
 
@@ -24,6 +26,7 @@ final class ColorsCell: UITableViewCell {
         stackView.axis = .vertical
         stackView.spacing = 8
         stackView.translatesAutoresizingMaskIntoConstraints = false
+
         return stackView
     }()
 
@@ -58,7 +61,7 @@ final class ColorsCell: UITableViewCell {
         return text
     }
 
-    func setup() {
+    private func setup() {
         stackView.addArrangedSubview(nameLabel)
         stackView.addArrangedSubview(hexLabel)
 
