@@ -176,26 +176,6 @@ final class DesignSystemSpec: QuickSpec {
                     }
                 }
             }
-
-//            describe("#currentTheme") {
-//                beforeEach {
-//                    mockStorage = MockStorage()
-//                    systemUnderTest = DesignSystem(storage: mockStorage)
-//                    mockStorage.save(theme: AvonTheme())
-//                }
-//
-//                it("calls storage.getTheme only once") {
-//                    _ = systemUnderTest.currentTheme
-//
-//                    expect(mockStorage.getThemeInvocations).to(equal(1))
-//                }
-//
-//                it("returns the same type that was saved") {
-//                    let theme = systemUnderTest.currentTheme
-//
-//                    expect(theme).to(beAnInstanceOf(AvonTheme.self))
-//                }
-//            }
         } // context - when using custom mock storage to analyze behavior
     }
 }
