@@ -70,12 +70,6 @@ final class DSSizeSpec: QuickSpec {
                 }
             }
 
-            describe("#large") {
-                it("returns a expect value") {
-                    expect(systemUnderTest.large).to(equal(expectedSpacing.large))
-                }
-            }
-
             describe("#largeX") {
                 it("returns a expect value") {
                     expect(systemUnderTest.largeX).to(equal(expectedSpacing.largeX))
@@ -186,12 +180,6 @@ final class DSSizeSpec: QuickSpec {
                 }
             }
 
-            describe("#large") {
-                it("returns a expect value") {
-                    expect(systemUnderTest.large).to(equal(expectedSpacing.large))
-                }
-            }
-
             describe("#largeX") {
                 it("returns a expect value") {
                     expect(systemUnderTest.largeX).to(equal(expectedSpacing.largeX))
@@ -293,12 +281,6 @@ final class DSSizeSpec: QuickSpec {
             describe("#mediumX") {
                 it("returns a expect value") {
                     expect(systemUnderTest.mediumX).to(equal(expectedSpacing.mediumX))
-                }
-            }
-
-            describe("#large") {
-                it("returns a expect value") {
-                    expect(systemUnderTest.large).to(equal(expectedSpacing.large))
                 }
             }
 

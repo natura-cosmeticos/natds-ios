@@ -3,6 +3,8 @@ import Nimble
 
 @testable import NatDS
 
+// swiftlint:disable function_body_length
+
 final class AvonColorPaletteDarkFeedbackSpec: QuickSpec {
     override func spec() {
         let systemUnderTest = AvonColorPaletteDark.Feedback()
