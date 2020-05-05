@@ -16,6 +16,8 @@
 		8427A3312457AFEF00CF30D5 /* ChooseBrandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427A3302457AFEE00CF30D5 /* ChooseBrandViewController.swift */; };
 		8427A334245875E300CF30D5 /* ColorsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427A333245875E300CF30D5 /* ColorsCell.swift */; };
 		8427A3362458764900CF30D5 /* ColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427A3352458764900CF30D5 /* ColorsViewController.swift */; };
+		843FA28F2462235800D20D9A /* SizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FA28E2462235800D20D9A /* SizeViewController.swift */; };
+		843FA2922462241A00D20D9A /* SizeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FA2912462241A00D20D9A /* SizeCell.swift */; };
 		846313B024603BC200387FCF /* SpacingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846313AF24603BC200387FCF /* SpacingViewController.swift */; };
 		846313B424603E0100387FCF /* SpacingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846313B324603E0100387FCF /* SpacingCell.swift */; };
 		A904ECBA23D607D800709B43 /* ComponentsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A904ECB923D607D800709B43 /* ComponentsSection.swift */; };
@@ -59,6 +61,8 @@
 		8427A3302457AFEE00CF30D5 /* ChooseBrandViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseBrandViewController.swift; sourceTree = "<group>"; };
 		8427A333245875E300CF30D5 /* ColorsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsCell.swift; sourceTree = "<group>"; };
 		8427A3352458764900CF30D5 /* ColorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsViewController.swift; sourceTree = "<group>"; };
+		843FA28E2462235800D20D9A /* SizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeViewController.swift; sourceTree = "<group>"; };
+		843FA2912462241A00D20D9A /* SizeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeCell.swift; sourceTree = "<group>"; };
 		846313AF24603BC200387FCF /* SpacingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacingViewController.swift; sourceTree = "<group>"; };
 		846313B324603E0100387FCF /* SpacingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacingCell.swift; sourceTree = "<group>"; };
 		A904ECB923D607D800709B43 /* ComponentsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentsSection.swift; sourceTree = "<group>"; };
@@ -140,6 +144,23 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		843FA28D2462232D00D20D9A /* Size */ = {
+			isa = PBXGroup;
+			children = (
+				843FA290246223FF00D20D9A /* Cells */,
+				843FA28E2462235800D20D9A /* SizeViewController.swift */,
+			);
+			path = Size;
+			sourceTree = "<group>";
+		};
+		843FA290246223FF00D20D9A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				843FA2912462241A00D20D9A /* SizeCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		846313B124603BCF00387FCF /* Spacing */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +208,7 @@
 				A904ECBF23D760C400709B43 /* DesignSection.swift */,
 				A97328C523CFA3A400ADC5C2 /* Colors */,
 				846313B124603BCF00387FCF /* Spacing */,
+				843FA28D2462232D00D20D9A /* Size */,
 			);
 			path = Design;
 			sourceTree = "<group>";
@@ -356,8 +378,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				64D84FD423F600C5004DD910 /* TextFieldItemViewController.swift in Sources */,
+				843FA28F2462235800D20D9A /* SizeViewController.swift in Sources */,
 				8427A334245875E300CF30D5 /* ColorsCell.swift in Sources */,
 				64D84FD123F5FC7D004DD910 /* ValueTextHighlightItemViewController.swift in Sources */,
+				843FA2922462241A00D20D9A /* SizeCell.swift in Sources */,
 				A904ECC623D7628000709B43 /* IconCollectioViewCell.swift in Sources */,
 				A9D71BC62386DFEE00CDEC1D /* NavigationDrawerItemViewController.swift in Sources */,
 				434E661C241976BD00D91E59 /* AppBarViewController.swift in Sources */,
