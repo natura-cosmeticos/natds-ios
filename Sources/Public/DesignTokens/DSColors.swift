@@ -1,8 +1,10 @@
 /**
-  DSColors is a class that has access to colors from the design system.
+  DSColors is a struct that has access to colors from the design system.
   This colors changes according with the current Brand configured in the Design system
   and according with user properties of Light and Dark mode.
 
+    All properties returns UIColor.
+ 
     Color palette is separeted by groups listed bellow, but this class deliveries
     all colors in flat way without nested objected.
 
@@ -29,9 +31,6 @@
 
             DesignSystem().configure(with: Brand)
 
- - Returns:
-        All properties returns UIColor.
-
  - Warning
         This class supports Light and Dark mode. In other words, according with user properties
         of Light or Dark, a diferent color can be returned.
@@ -41,6 +40,7 @@
 */
 
 public struct DSColors {
+
     // MARK: - Inits
 
     private init() {}

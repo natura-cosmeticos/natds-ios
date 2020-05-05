@@ -16,6 +16,8 @@
 		8427A3312457AFEF00CF30D5 /* ChooseBrandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427A3302457AFEE00CF30D5 /* ChooseBrandViewController.swift */; };
 		8427A334245875E300CF30D5 /* ColorsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427A333245875E300CF30D5 /* ColorsCell.swift */; };
 		8427A3362458764900CF30D5 /* ColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427A3352458764900CF30D5 /* ColorsViewController.swift */; };
+		846313B024603BC200387FCF /* SpacingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846313AF24603BC200387FCF /* SpacingViewController.swift */; };
+		846313B424603E0100387FCF /* SpacingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846313B324603E0100387FCF /* SpacingCell.swift */; };
 		A904ECBA23D607D800709B43 /* ComponentsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A904ECB923D607D800709B43 /* ComponentsSection.swift */; };
 		A904ECBC23D6088600709B43 /* ButtonsItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A904ECBB23D6088600709B43 /* ButtonsItemViewController.swift */; };
 		A904ECC023D760C400709B43 /* DesignSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A904ECBF23D760C400709B43 /* DesignSection.swift */; };
@@ -57,6 +59,8 @@
 		8427A3302457AFEE00CF30D5 /* ChooseBrandViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseBrandViewController.swift; sourceTree = "<group>"; };
 		8427A333245875E300CF30D5 /* ColorsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsCell.swift; sourceTree = "<group>"; };
 		8427A3352458764900CF30D5 /* ColorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsViewController.swift; sourceTree = "<group>"; };
+		846313AF24603BC200387FCF /* SpacingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacingViewController.swift; sourceTree = "<group>"; };
+		846313B324603E0100387FCF /* SpacingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacingCell.swift; sourceTree = "<group>"; };
 		A904ECB923D607D800709B43 /* ComponentsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentsSection.swift; sourceTree = "<group>"; };
 		A904ECBB23D6088600709B43 /* ButtonsItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsItemViewController.swift; sourceTree = "<group>"; };
 		A904ECBF23D760C400709B43 /* DesignSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSection.swift; sourceTree = "<group>"; };
@@ -136,6 +140,23 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		846313B124603BCF00387FCF /* Spacing */ = {
+			isa = PBXGroup;
+			children = (
+				846313B224603DED00387FCF /* Cells */,
+				846313AF24603BC200387FCF /* SpacingViewController.swift */,
+			);
+			path = Spacing;
+			sourceTree = "<group>";
+		};
+		846313B224603DED00387FCF /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				846313B324603E0100387FCF /* SpacingCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		A904ECB823D607BD00709B43 /* Button */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +186,7 @@
 			children = (
 				A904ECBF23D760C400709B43 /* DesignSection.swift */,
 				A97328C523CFA3A400ADC5C2 /* Colors */,
+				846313B124603BCF00387FCF /* Spacing */,
 			);
 			path = Design;
 			sourceTree = "<group>";
@@ -351,8 +373,10 @@
 				8427A3312457AFEF00CF30D5 /* ChooseBrandViewController.swift in Sources */,
 				A97328C323CFA35800ADC5C2 /* MainViewController.swift in Sources */,
 				A97328BD23CFA2F500ADC5C2 /* MainDataSource.swift in Sources */,
+				846313B024603BC200387FCF /* SpacingViewController.swift in Sources */,
 				8406F5E42458AD0A001A3A1E /* ColorsHeaderView.swift in Sources */,
 				A97328C123CFA33800ADC5C2 /* SampleItem.swift in Sources */,
+				846313B424603E0100387FCF /* SpacingCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

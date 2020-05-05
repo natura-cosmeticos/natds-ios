@@ -1,8 +1,9 @@
 import UIKit
 
 class DesignSection: SampleSection {
-    var name = "Design"
+    var name = "Design Tokens"
     var items: [SampleItem.Type] = [
-        ColorsViewController.self
+        ColorsViewController.self,
+        SpacingViewController.self
     ]
 }

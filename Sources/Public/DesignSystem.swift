@@ -26,16 +26,6 @@ public final class DesignSystem {
 
     private let storage: ConfigurationStorable
 
-    // MARK: - Internal properties
-
-    var currentTheme: Theme {
-        guard let theme = storage.getTheme() else {
-            fatalError("DesignSystem ERROR - DesignSystem.shared.configure(with: Brand) needed!!!!")
-        }
-
-        return theme
-    }
-
     // MARK: - Inits
 
     public convenience init() {
@@ -60,5 +50,24 @@ public final class DesignSystem {
         case .natura: storage.save(theme: NaturaTheme())
         case .theBodyShop: storage.save(theme: TheBodyShopTheme())
         }
+    }
+
+    public var currentBrand: Brand? {
+        let theme = storage.getTheme()
+        return getBrandFrom(theme: theme)
+    }
+
+    // MARK: - Private methods
+
+    private func getBrandFrom(theme: Theme?) -> Brand? {
+        let brand: Brand?
+
+        switch theme {
+        case is AvonTheme: brand = .avon
+        case is NaturaTheme: brand = .natura
+        case is TheBodyShopTheme: brand = .theBodyShop
+        default: brand = nil
+        }
+        return brand
     }
 }

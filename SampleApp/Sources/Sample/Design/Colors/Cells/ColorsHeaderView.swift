@@ -6,6 +6,7 @@ final class ColorsHeader: UITableViewHeaderFooterView {
         let label = UILabel()
         label.font = Fonts.subtitle1
         label.translatesAutoresizingMaskIntoConstraints = false
+
         return label
     }()
 
