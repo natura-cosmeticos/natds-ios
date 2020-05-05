@@ -1,4 +1,4 @@
-protocol Spacing {
+protocol Space {
     var micro: CGFloat { get }
     var tiny: CGFloat { get }
     var small: CGFloat { get }

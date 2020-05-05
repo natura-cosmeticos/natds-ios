@@ -1,4 +1,4 @@
-struct NaturaSpacing: Spacing {
+struct NaturaSpacing: Space {
     let micro: CGFloat
     let tiny: CGFloat
     let small: CGFloat

@@ -1,4 +1,4 @@
-struct AvonSpacing: Spacing {
+struct AvonSpacing: Space {
     let micro: CGFloat
     let tiny: CGFloat
     let small: CGFloat
