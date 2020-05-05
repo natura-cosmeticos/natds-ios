@@ -24,7 +24,7 @@ final class AvonThemeSpec: QuickSpec {
         }
 
         describe("#size") {
-            it("returns a instance of AvonSpacing") {
+            it("returns a instance of AvonSize") {
                 let colorPalette = systemUnderTest.size
 
                 expect(colorPalette).to(beAnInstanceOf(AvonSize.self))

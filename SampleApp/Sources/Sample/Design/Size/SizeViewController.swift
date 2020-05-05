@@ -10,6 +10,7 @@ final class SizeViewController: UIViewController, SampleItem {
         let tableView = UITableView()
         tableView.register(SizeCell.self, forCellReuseIdentifier: SizeCell.reuseIdentifier)
         tableView.rowHeight = 60
+        tableView.separatorStyle = .none
         tableView.allowsSelection = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.dataSource = self

@@ -23,6 +23,14 @@ final class NaturaThemeSpec: QuickSpec {
             }
         }
 
+        describe("#size") {
+            it("returns a instance of NaturaSize") {
+                let colorPalette = systemUnderTest.size
+
+                expect(colorPalette).to(beAnInstanceOf(NaturaSize.self))
+            }
+        }
+
         describe("#spacing") {
             it("returns a instance of NaturaSpacing") {
                 let colorPalette = systemUnderTest.spacing
