@@ -7,7 +7,7 @@ import Nimble
 
 final class AvonSizeSpec: QuickSpec {
     override func spec() {
-        let systemUnderTest = AvonSize()
+        let systemUnderTest = AvonSizes()
 
         describe("#micro") {
             it("returns a expect value") {

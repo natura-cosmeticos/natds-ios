@@ -1,4 +1,4 @@
-struct NaturaSize: Size {
+struct NaturaSizes: Sizes {
     let micro: CGFloat = 4
     let tiny: CGFloat = 8
     let small: CGFloat = 16

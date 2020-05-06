@@ -7,7 +7,7 @@ import Nimble
 
 final class NaturaSizeSpec: QuickSpec {
     override func spec() {
-        let systemUnderTest = NaturaSize()
+        let systemUnderTest = NaturaSizes()
 
         describe("#micro") {
             it("returns a expect value") {

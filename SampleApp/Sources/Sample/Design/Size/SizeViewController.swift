@@ -19,23 +19,23 @@ final class SizeViewController: UIViewController, SampleItem {
     }()
 
     private let cellsViewModels: [(description: String, value: CGFloat)] = [
-        ("micro: \(DSSize.micro)", DSSize.micro),
-        ("tiny: \(DSSize.tiny)", DSSize.tiny),
-        ("small: \(DSSize.small)", DSSize.small),
-        ("standard: \(DSSize.standart)", DSSize.standart),
-        ("semi: \(DSSize.semi)", DSSize.semi),
-        ("semiX: \(DSSize.semiX)", DSSize.semiX),
-        ("medium: \(DSSize.medium)", DSSize.medium),
-        ("mediumX: \(DSSize.mediumX)", DSSize.mediumX),
-        ("large: \(DSSize.large)", DSSize.large),
-        ("largeX: \(DSSize.largeX)", DSSize.largeX),
-        ("largeXX: \(DSSize.largeXX)", DSSize.largeXX),
-        ("largeXXX: \(DSSize.largeXXX)", DSSize.largeXXX),
-        ("huge: \(DSSize.huge)", DSSize.huge),
-        ("hugeX: \(DSSize.hugeX)", DSSize.hugeX),
-        ("hugeXX: \(DSSize.hugeXX)", DSSize.hugeXX),
-        ("hugeXXX: \(DSSize.hugeXXX)", DSSize.hugeXXX),
-        ("veryHuge: \(DSSize.veryHuge)", DSSize.veryHuge)
+        ("micro: \(DSSizes.micro)", DSSizes.micro),
+        ("tiny: \(DSSizes.tiny)", DSSizes.tiny),
+        ("small: \(DSSizes.small)", DSSizes.small),
+        ("standard: \(DSSizes.standart)", DSSizes.standart),
+        ("semi: \(DSSizes.semi)", DSSizes.semi),
+        ("semiX: \(DSSizes.semiX)", DSSizes.semiX),
+        ("medium: \(DSSizes.medium)", DSSizes.medium),
+        ("mediumX: \(DSSizes.mediumX)", DSSizes.mediumX),
+        ("large: \(DSSizes.large)", DSSizes.large),
+        ("largeX: \(DSSizes.largeX)", DSSizes.largeX),
+        ("largeXX: \(DSSizes.largeXX)", DSSizes.largeXX),
+        ("largeXXX: \(DSSizes.largeXXX)", DSSizes.largeXXX),
+        ("huge: \(DSSizes.huge)", DSSizes.huge),
+        ("hugeX: \(DSSizes.hugeX)", DSSizes.hugeX),
+        ("hugeXX: \(DSSizes.hugeXX)", DSSizes.hugeXX),
+        ("hugeXXX: \(DSSizes.hugeXXX)", DSSizes.hugeXXX),
+        ("veryHuge: \(DSSizes.veryHuge)", DSSizes.veryHuge)
     ]
 
     // MARK: - Life cycle

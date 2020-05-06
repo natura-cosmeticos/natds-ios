@@ -1,4 +1,4 @@
-protocol Size {
+protocol Sizes {
     var micro: CGFloat { get }
     var tiny: CGFloat { get }
     var small: CGFloat { get }

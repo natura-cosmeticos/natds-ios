@@ -23,11 +23,11 @@ final class AvonThemeSpec: QuickSpec {
             }
         }
 
-        describe("#size") {
-            it("returns a instance of AvonSize") {
-                let colorPalette = systemUnderTest.size
+        describe("#sizes") {
+            it("returns a instance of AvonSizes") {
+                let colorPalette = systemUnderTest.sizes
 
-                expect(colorPalette).to(beAnInstanceOf(AvonSize.self))
+                expect(colorPalette).to(beAnInstanceOf(AvonSizes.self))
             }
         }
 

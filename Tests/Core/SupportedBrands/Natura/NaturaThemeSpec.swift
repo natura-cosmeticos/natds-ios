@@ -23,11 +23,11 @@ final class NaturaThemeSpec: QuickSpec {
             }
         }
 
-        describe("#size") {
-            it("returns a instance of NaturaSize") {
-                let colorPalette = systemUnderTest.size
+        describe("#sizes") {
+            it("returns a instance of NaturaSizes") {
+                let colorPalette = systemUnderTest.sizes
 
-                expect(colorPalette).to(beAnInstanceOf(NaturaSize.self))
+                expect(colorPalette).to(beAnInstanceOf(NaturaSizes.self))
             }
         }
 

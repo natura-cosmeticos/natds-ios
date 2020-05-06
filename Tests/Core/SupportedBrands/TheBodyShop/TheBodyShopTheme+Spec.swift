@@ -23,11 +23,11 @@ final class TheBodyShopThemeSpec: QuickSpec {
             }
         }
 
-        describe("#size") {
-            it("returns a instance of TheBodyShopSize") {
-                let colorPalette = systemUnderTest.size
+        describe("#sizes") {
+            it("returns a instance of TheBodyShopSizes") {
+                let colorPalette = systemUnderTest.sizes
 
-                expect(colorPalette).to(beAnInstanceOf(TheBodyShopSize.self))
+                expect(colorPalette).to(beAnInstanceOf(TheBodyShopSizes.self))
             }
         }
 

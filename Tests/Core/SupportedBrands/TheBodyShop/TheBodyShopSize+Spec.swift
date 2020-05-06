@@ -7,7 +7,7 @@ import Nimble
 
 final class TheBodyShopSizeSpec: QuickSpec {
     override func spec() {
-        let systemUnderTest = TheBodyShopSize()
+        let systemUnderTest = TheBodyShopSizes()
 
         describe("#micro") {
             it("returns a expect value") {
