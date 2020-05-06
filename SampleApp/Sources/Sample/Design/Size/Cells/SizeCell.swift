@@ -8,6 +8,7 @@ final class SizeCell: UITableViewCell {
     private let symbolicSizeView: UIView = {
         let view = UIView()
         view.backgroundColor = DSColors.primary
+        view.layer.cornerRadius = 4
         view.translatesAutoresizingMaskIntoConstraints = false
 
         return view
@@ -15,6 +16,7 @@ final class SizeCell: UITableViewCell {
 
     private let label: UILabel = {
         let label = UILabel()
+        label.font = Fonts.body1
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label
