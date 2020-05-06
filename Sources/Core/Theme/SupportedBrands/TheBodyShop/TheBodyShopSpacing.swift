@@ -1,4 +1,4 @@
-struct TheBodyShopSpacing: Spacing {
+struct TheBodyShopSpacing: Space {
     let micro: CGFloat
     let tiny: CGFloat
     let small: CGFloat

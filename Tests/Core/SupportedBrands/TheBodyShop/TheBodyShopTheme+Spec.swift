@@ -23,6 +23,14 @@ final class TheBodyShopThemeSpec: QuickSpec {
             }
         }
 
+        describe("#sizes") {
+            it("returns a instance of TheBodyShopSizes") {
+                let colorPalette = systemUnderTest.sizes
+
+                expect(colorPalette).to(beAnInstanceOf(TheBodyShopSizes.self))
+            }
+        }
+
         describe("#spacing") {
             it("returns a instance of TheBodyShopSpacing") {
                 let colorPalette = systemUnderTest.spacing

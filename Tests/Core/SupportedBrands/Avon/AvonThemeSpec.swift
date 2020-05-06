@@ -23,6 +23,14 @@ final class AvonThemeSpec: QuickSpec {
             }
         }
 
+        describe("#sizes") {
+            it("returns a instance of AvonSizes") {
+                let colorPalette = systemUnderTest.sizes
+
+                expect(colorPalette).to(beAnInstanceOf(AvonSizes.self))
+            }
+        }
+
         describe("#spacing") {
             it("returns a instance of AvonSpacing") {
                 let colorPalette = systemUnderTest.spacing
