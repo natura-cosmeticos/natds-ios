@@ -3,8 +3,6 @@ import Nimble
 
 @testable import NatDS
 
-// swiftlint:disable function_body_length
-
 final class AvonSizeSpec: QuickSpec {
     override func spec() {
         let systemUnderTest = AvonSizes()
