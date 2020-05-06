@@ -3,6 +3,8 @@ import Nimble
 
 @testable import NatDS
 
+// swiftlint:disable type_name
+
 final class TheBodyShopColorPaletteLightSecondarySpec: QuickSpec {
     override func spec() {
         let systemUnderTest = TheBodyShopColorPaletteLight.Secondary()

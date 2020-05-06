@@ -1,6 +1,5 @@
 excluded:
   - Pods
-  - ./Tests
 
 type_name:
     min_length: 2

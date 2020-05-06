@@ -3,6 +3,8 @@ import Nimble
 
 @testable import NatDS
 
+// swiftlint:disable function_body_length
+
 final class DesignSystemSpec: QuickSpec {
     override func spec() {
         context("when using default storage") {
