@@ -38,10 +38,9 @@ final class BorderRadiusCell: UITableViewCell {
 
     // MARK: - Public methods
 
-    func configure(description: String, size: CGFloat) {
+    func configure(description: String, cornerRadius: CGFloat) {
         label.text = description
-
-        symbolicView.layer.cornerRadius = size
+        symbolicView.layer.cornerRadius = cornerRadius
     }
 
     // MARK: - Private methods

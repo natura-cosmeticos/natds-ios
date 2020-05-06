@@ -5,21 +5,21 @@ final class SizeCell: UITableViewCell {
 
     // MARK: - Private properties
 
-    private let symbolicSizeView: UIView = {
-        let view = UIView()
-        view.backgroundColor = DSColors.primary
-        view.layer.cornerRadius = 4
-        view.translatesAutoresizingMaskIntoConstraints = false
-
-        return view
-    }()
-
     private let label: UILabel = {
         let label = UILabel()
         label.font = Fonts.body1
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label
+    }()
+
+    private let symbolicView: UIView = {
+        let view = UIView()
+        view.backgroundColor = DSColors.primary
+        view.layer.cornerRadius = DSBorderRadius.medium
+        view.translatesAutoresizingMaskIntoConstraints = false
+
+        return view
     }()
 
     private var symbolicSizeWidthConstraint: NSLayoutConstraint!
@@ -43,36 +43,36 @@ final class SizeCell: UITableViewCell {
         label.text = description
 
         symbolicSizeWidthConstraint.constant = size
-        symbolicSizeView.layoutIfNeeded()
+        symbolicView.layoutIfNeeded()
     }
 
     // MARK: - Private methods
 
     private func setup() {
-        contentView.addSubview(symbolicSizeView)
         contentView.addSubview(label)
+        contentView.addSubview(symbolicView)
 
-        symbolicSizeWidthConstraint = symbolicSizeView
+        symbolicSizeWidthConstraint = symbolicView
             .widthAnchor.constraint(equalToConstant: 0)
 
         NSLayoutConstraint.activate([
             label.topAnchor.constraint(
                 equalTo: contentView.topAnchor,
-                constant: 4
+                constant: DSSpacing.micro
             ),
             label.leftAnchor.constraint(
                 equalTo: contentView.leftAnchor
             ),
 
-            symbolicSizeView.topAnchor.constraint(
+            symbolicView.topAnchor.constraint(
                 equalTo: label.bottomAnchor,
-                constant: 4
+                constant: DSSpacing.micro
             ),
-            symbolicSizeView.bottomAnchor.constraint(
+            symbolicView.bottomAnchor.constraint(
                 equalTo: contentView.bottomAnchor,
-                constant: -4
+                constant: -DSSpacing.micro
             ),
-            symbolicSizeView.leftAnchor.constraint(
+            symbolicView.leftAnchor.constraint(
                 equalTo: contentView.leftAnchor
             ),
             symbolicSizeWidthConstraint

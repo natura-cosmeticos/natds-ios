@@ -38,5 +38,13 @@ final class NaturaThemeSpec: QuickSpec {
                 expect(colorPalette).to(beAnInstanceOf(NaturaSpacing.self))
             }
         }
+
+        describe("#borderRadius") {
+            it("returns a instance of AvonSpacing") {
+                let colorPalette = systemUnderTest.borderRadius
+
+                expect(colorPalette).to(beAnInstanceOf(NaturaBorderRadius.self))
+            }
+        }
     }
 }

@@ -79,7 +79,7 @@ extension BorderRadiusViewController: UITableViewDataSource {
 
         let viewModel = cellsViewModels[indexPath.row]
 
-        cell.configure(description: viewModel.description, size: viewModel.value)
+        cell.configure(description: viewModel.description, cornerRadius: viewModel.value)
 
         return cell
     }
