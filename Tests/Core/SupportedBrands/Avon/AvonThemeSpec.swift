@@ -40,7 +40,7 @@ final class AvonThemeSpec: QuickSpec {
         }
 
         describe("#borderRadius") {
-            it("returns a instance of AvonSpacing") {
+            it("returns a instance of AvonBorderRadius") {
                 let colorPalette = systemUnderTest.borderRadius
 
                 expect(colorPalette).to(beAnInstanceOf(AvonBorderRadius.self))
