@@ -58,7 +58,7 @@ final class BorderRadiusCell: UITableViewCell {
                 equalTo: label.bottomAnchor,
                 constant: DSSpacing.micro
             ),
-            symbolicView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            symbolicView.leftAnchor.constraint(equalTo: contentView.leftAnchor),
             symbolicView.widthAnchor.constraint(equalToConstant: DSSizes.huge),
             symbolicView.heightAnchor.constraint(equalToConstant: DSSizes.huge)
         ])
