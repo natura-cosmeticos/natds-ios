@@ -1,14 +1,17 @@
 import UIKit
 import NatDS
 
-final class OpacityViewController: UIViewController, SampleItem {
-    static var name = "Opacity"
+final class BorderRadiusViewController: UIViewController, SampleItem {
+    static var name = "Border Radius"
 
     // MARK: - Private properties
 
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
-        tableView.register(OpacityCell.self, forCellReuseIdentifier: OpacityCell.reuseIdentifier)
+        tableView.register(
+            BorderRadiusCell.self,
+            forCellReuseIdentifier: BorderRadiusCell.reuseIdentifier
+        )
         tableView.rowHeight = DSSizes.hugeXX
         tableView.separatorStyle = .none
         tableView.allowsSelection = false
@@ -19,17 +22,11 @@ final class OpacityViewController: UIViewController, SampleItem {
     }()
 
     private let cellsViewModels: [(description: String, value: CGFloat)] = [
-        ("none: 1", 1),
-        ("opacity01: \(DSOpacities.opacity01)", DSOpacities.opacity01),
-        ("opacity02: \(DSOpacities.opacity02)", DSOpacities.opacity02),
-        ("opacity03: \(DSOpacities.opacity03)", DSOpacities.opacity03),
-        ("opacity04: \(DSOpacities.opacity04)", DSOpacities.opacity04),
-        ("opacity05: \(DSOpacities.opacity05)", DSOpacities.opacity05),
-        ("opacity06: \(DSOpacities.opacity06)", DSOpacities.opacity06),
-        ("opacity07: \(DSOpacities.opacity07)", DSOpacities.opacity07),
-        ("opacity08: \(DSOpacities.opacity08)", DSOpacities.opacity08),
-        ("opacity09: \(DSOpacities.opacity09)", DSOpacities.opacity09),
-        ("opacity10: \(DSOpacities.opacity10)", DSOpacities.opacity10)
+        ("none: 0", 0),
+        ("small: \(DSBorderRadius.small)", DSBorderRadius.small),
+        ("medium: \(DSBorderRadius.medium)", DSBorderRadius.medium),
+        ("large: \(DSBorderRadius.large)", DSBorderRadius.large),
+        ("circle: viewHeight / 2", DSBorderRadius.circle(viewHeight: DSSizes.huge))
     ]
 
     // MARK: - Life cycle
@@ -69,20 +66,20 @@ final class OpacityViewController: UIViewController, SampleItem {
 
 // MARK: - UITableViewDataSource
 
-extension OpacityViewController: UITableViewDataSource {
+extension BorderRadiusViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         cellsViewModels.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(
-            withIdentifier: OpacityCell.reuseIdentifier,
+            withIdentifier: BorderRadiusCell.reuseIdentifier,
             for: indexPath
-        ) as? OpacityCell ?? OpacityCell()
+        ) as? BorderRadiusCell ?? BorderRadiusCell()
 
         let viewModel = cellsViewModels[indexPath.row]
 
-        cell.configure(description: viewModel.description, alpha: viewModel.value)
+        cell.configure(description: viewModel.description, cornerRadius: viewModel.value)
 
         return cell
     }

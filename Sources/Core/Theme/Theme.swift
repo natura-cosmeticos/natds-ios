@@ -5,5 +5,6 @@ protocol Theme {
     var darkColorPalette: ColorPalette { get }
     var sizes: Sizes { get }
     var spacing: Space { get }
+    var borderRadius: BorderRadius { get }
     var opacities: Opacities { get }
 }

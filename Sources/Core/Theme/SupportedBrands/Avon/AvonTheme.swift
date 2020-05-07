@@ -3,5 +3,6 @@ struct AvonTheme: Theme {
     let darkColorPalette: ColorPalette = AvonColorPaletteDark()
     let sizes: Sizes = AvonSizes()
     let spacing: Space = AvonSpacing()
+    let borderRadius: BorderRadius = AvonBorderRadius()
     let opacities: Opacities = AvonOpacities()
 }

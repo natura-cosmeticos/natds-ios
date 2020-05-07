@@ -39,6 +39,14 @@ final class TheBodyShopThemeSpec: QuickSpec {
             }
         }
 
+        describe("#borderRadius") {
+            it("returns a instance of TheBodyShopBorderRadius") {
+                let colorPalette = systemUnderTest.borderRadius
+
+                expect(colorPalette).to(beAnInstanceOf(TheBodyShopBorderRadius.self))
+            }
+        }
+
         describe("#opacities") {
             it("returns a instance of TheBodyShopOpacities") {
                 let colorPalette = systemUnderTest.opacities

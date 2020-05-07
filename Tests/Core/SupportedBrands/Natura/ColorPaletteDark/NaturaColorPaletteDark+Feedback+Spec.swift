@@ -3,8 +3,6 @@ import Nimble
 
 @testable import NatDS
 
-// swiftlint:disable function_body_length
-
 final class NaturaColorPaletteDarkFeedbackSpec: QuickSpec {
     override func spec() {
         let systemUnderTest = NaturaColorPaletteDark.Feedback()
