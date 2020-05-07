@@ -38,5 +38,13 @@ final class NaturaThemeSpec: QuickSpec {
                 expect(colorPalette).to(beAnInstanceOf(NaturaSpacing.self))
             }
         }
+
+        describe("#opacities") {
+            it("returns a instance of NaturaOpacities") {
+                let colorPalette = systemUnderTest.opacities
+
+                expect(colorPalette).to(beAnInstanceOf(NaturaOpacities.self))
+            }
+        }
     }
 }

@@ -38,5 +38,13 @@ final class TheBodyShopThemeSpec: QuickSpec {
                 expect(colorPalette).to(beAnInstanceOf(TheBodyShopSpacing.self))
             }
         }
+
+        describe("#opacities") {
+            it("returns a instance of TheBodyShopOpacities") {
+                let colorPalette = systemUnderTest.opacities
+
+                expect(colorPalette).to(beAnInstanceOf(TheBodyShopOpacities.self))
+            }
+        }
     }
 }
