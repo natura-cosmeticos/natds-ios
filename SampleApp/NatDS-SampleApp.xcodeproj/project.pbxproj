@@ -226,11 +226,11 @@
 		A904ECBE23D75FF500709B43 /* Design */ = {
 			isa = PBXGroup;
 			children = (
-				843FA2C32464883200D20D9A /* Opacity */,
 				A904ECBF23D760C400709B43 /* DesignSection.swift */,
 				A97328C523CFA3A400ADC5C2 /* Colors */,
 				846313B124603BCF00387FCF /* Spacing */,
 				843FA28D2462232D00D20D9A /* Size */,
+				843FA2C32464883200D20D9A /* Opacity */,
 			);
 			path = Design;
 			sourceTree = "<group>";
