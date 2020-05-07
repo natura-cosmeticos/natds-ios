@@ -11,6 +11,7 @@ final class SpacingViewController: UIViewController, SampleItem {
         tableView.register(SpacingCell.self, forCellReuseIdentifier: SpacingCell.reuseIdentifier)
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 60
+        tableView.separatorStyle = .none
         tableView.allowsSelection = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.dataSource = self

@@ -3,4 +3,5 @@ struct NaturaTheme: Theme {
     let darkColorPalette: ColorPalette = NaturaColorPaletteDark()
     let sizes: Sizes = NaturaSizes()
     let spacing: Space = NaturaSpacing()
+    let opacities: Opacities = NaturaOpacities()
 }

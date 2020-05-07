@@ -46,6 +46,7 @@ final class ColorsViewController: UIViewController, SampleItem {
         tableView.register(ColorsHeader.self, forHeaderFooterViewReuseIdentifier: ColorsHeader.reuseIdentifier)
         tableView.rowHeight = 64
         tableView.sectionHeaderHeight = 50
+        tableView.separatorStyle = .none
         tableView.allowsSelection = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.delegate = self

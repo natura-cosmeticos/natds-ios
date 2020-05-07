@@ -3,4 +3,5 @@ struct AvonTheme: Theme {
     let darkColorPalette: ColorPalette = AvonColorPaletteDark()
     let sizes: Sizes = AvonSizes()
     let spacing: Space = AvonSpacing()
+    let opacities: Opacities = AvonOpacities()
 }
