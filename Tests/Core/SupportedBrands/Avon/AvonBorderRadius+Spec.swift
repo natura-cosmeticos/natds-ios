@@ -25,7 +25,7 @@ final class AvonBorderRadiusSpec: QuickSpec {
             }
         }
 
-        describe("#standart") {
+        describe("#circle") {
             it("returns a expect value") {
                 expect(systemUnderTest.circle(viewHeight: 2)).to(equal(1))
             }
