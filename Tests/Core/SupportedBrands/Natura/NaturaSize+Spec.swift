@@ -3,8 +3,6 @@ import Nimble
 
 @testable import NatDS
 
-// swiftlint:disable function_body_length
-
 final class NaturaSizeSpec: QuickSpec {
     override func spec() {
         let systemUnderTest = NaturaSizes()
