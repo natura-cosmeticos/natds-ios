@@ -3,8 +3,6 @@ import Nimble
 
 @testable import NatDS
 
-// swiftlint:disable function_body_length
-
 final class DSSizesSpec: QuickSpec {
     override func spec() {
         let systemUnderTest = DSSizes.self

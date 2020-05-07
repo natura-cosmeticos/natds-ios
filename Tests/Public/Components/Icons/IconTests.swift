@@ -1,7 +1,6 @@
 import FBSnapshotTestCase
 @testable import NatDS
 
-// swiftlint:disable type_body_length file_length
 class IconTests: FBSnapshotTestCase {
 
     func test_filledActionAdd_hasValidSnapshot() {
