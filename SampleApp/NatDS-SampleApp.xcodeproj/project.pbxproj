@@ -18,6 +18,8 @@
 		8427A3362458764900CF30D5 /* ColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427A3352458764900CF30D5 /* ColorsViewController.swift */; };
 		843FA28F2462235800D20D9A /* SizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FA28E2462235800D20D9A /* SizeViewController.swift */; };
 		843FA2922462241A00D20D9A /* SizeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FA2912462241A00D20D9A /* SizeCell.swift */; };
+		843FA2C52464885200D20D9A /* OpacityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FA2C42464885200D20D9A /* OpacityViewController.swift */; };
+		843FA2C824648A6D00D20D9A /* OpacityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FA2C724648A6D00D20D9A /* OpacityCell.swift */; };
 		846313B024603BC200387FCF /* SpacingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846313AF24603BC200387FCF /* SpacingViewController.swift */; };
 		846313B424603E0100387FCF /* SpacingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846313B324603E0100387FCF /* SpacingCell.swift */; };
 		A904ECBA23D607D800709B43 /* ComponentsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A904ECB923D607D800709B43 /* ComponentsSection.swift */; };
@@ -63,6 +65,8 @@
 		8427A3352458764900CF30D5 /* ColorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsViewController.swift; sourceTree = "<group>"; };
 		843FA28E2462235800D20D9A /* SizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeViewController.swift; sourceTree = "<group>"; };
 		843FA2912462241A00D20D9A /* SizeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeCell.swift; sourceTree = "<group>"; };
+		843FA2C42464885200D20D9A /* OpacityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpacityViewController.swift; sourceTree = "<group>"; };
+		843FA2C724648A6D00D20D9A /* OpacityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpacityCell.swift; sourceTree = "<group>"; };
 		846313AF24603BC200387FCF /* SpacingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacingViewController.swift; sourceTree = "<group>"; };
 		846313B324603E0100387FCF /* SpacingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacingCell.swift; sourceTree = "<group>"; };
 		A904ECB923D607D800709B43 /* ComponentsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentsSection.swift; sourceTree = "<group>"; };
@@ -161,6 +165,23 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		843FA2C32464883200D20D9A /* Opacity */ = {
+			isa = PBXGroup;
+			children = (
+				843FA2C624648A5A00D20D9A /* Cells */,
+				843FA2C42464885200D20D9A /* OpacityViewController.swift */,
+			);
+			path = Opacity;
+			sourceTree = "<group>";
+		};
+		843FA2C624648A5A00D20D9A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				843FA2C724648A6D00D20D9A /* OpacityCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		846313B124603BCF00387FCF /* Spacing */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +226,7 @@
 		A904ECBE23D75FF500709B43 /* Design */ = {
 			isa = PBXGroup;
 			children = (
+				843FA2C32464883200D20D9A /* Opacity */,
 				A904ECBF23D760C400709B43 /* DesignSection.swift */,
 				A97328C523CFA3A400ADC5C2 /* Colors */,
 				846313B124603BCF00387FCF /* Spacing */,
@@ -382,6 +404,7 @@
 				8427A334245875E300CF30D5 /* ColorsCell.swift in Sources */,
 				64D84FD123F5FC7D004DD910 /* ValueTextHighlightItemViewController.swift in Sources */,
 				843FA2922462241A00D20D9A /* SizeCell.swift in Sources */,
+				843FA2C52464885200D20D9A /* OpacityViewController.swift in Sources */,
 				A904ECC623D7628000709B43 /* IconCollectioViewCell.swift in Sources */,
 				A9D71BC62386DFEE00CDEC1D /* NavigationDrawerItemViewController.swift in Sources */,
 				434E661C241976BD00D91E59 /* AppBarViewController.swift in Sources */,
@@ -399,6 +422,7 @@
 				A97328BD23CFA2F500ADC5C2 /* MainDataSource.swift in Sources */,
 				846313B024603BC200387FCF /* SpacingViewController.swift in Sources */,
 				8406F5E42458AD0A001A3A1E /* ColorsHeaderView.swift in Sources */,
+				843FA2C824648A6D00D20D9A /* OpacityCell.swift in Sources */,
 				A97328C123CFA33800ADC5C2 /* SampleItem.swift in Sources */,
 				846313B424603E0100387FCF /* SpacingCell.swift in Sources */,
 			);

@@ -5,6 +5,7 @@ class DesignSection: SampleSection {
     var items: [SampleItem.Type] = [
         ColorsViewController.self,
         SizeViewController.self,
-        SpacingViewController.self
+        SpacingViewController.self,
+        OpacityViewController.self
     ]
 }
