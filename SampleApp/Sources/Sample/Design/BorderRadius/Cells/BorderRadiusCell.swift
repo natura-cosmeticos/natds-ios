@@ -1,7 +1,7 @@
 import UIKit
 import NatDS
 
-final class SizeCell: UITableViewCell {
+final class BorderRadiusCell: UITableViewCell {
 
     // MARK: - Private properties
 
@@ -16,7 +16,6 @@ final class SizeCell: UITableViewCell {
     private let symbolicView: UIView = {
         let view = UIView()
         view.backgroundColor = DSColors.primary
-        view.layer.cornerRadius = DSBorderRadius.medium
         view.translatesAutoresizingMaskIntoConstraints = false
 
         return view
@@ -39,11 +38,9 @@ final class SizeCell: UITableViewCell {
 
     // MARK: - Public methods
 
-    func configure(description: String, size: CGFloat) {
+    func configure(description: String, cornerRadius: CGFloat) {
         label.text = description
-
-        symbolicSizeWidthConstraint.constant = size
-        symbolicView.layoutIfNeeded()
+        symbolicView.layer.cornerRadius = cornerRadius
     }
 
     // MARK: - Private methods
@@ -52,30 +49,17 @@ final class SizeCell: UITableViewCell {
         contentView.addSubview(label)
         contentView.addSubview(symbolicView)
 
-        symbolicSizeWidthConstraint = symbolicView
-            .widthAnchor.constraint(equalToConstant: 0)
-
         NSLayoutConstraint.activate([
-            label.topAnchor.constraint(
-                equalTo: contentView.topAnchor,
-                constant: DSSpacing.micro
-            ),
-            label.leftAnchor.constraint(
-                equalTo: contentView.leftAnchor
-            ),
+            label.topAnchor.constraint(equalTo: contentView.topAnchor, constant: DSSpacing.micro),
+            label.leftAnchor.constraint(equalTo: contentView.leftAnchor),
 
             symbolicView.topAnchor.constraint(
                 equalTo: label.bottomAnchor,
                 constant: DSSpacing.micro
             ),
-            symbolicView.bottomAnchor.constraint(
-                equalTo: contentView.bottomAnchor,
-                constant: -DSSpacing.micro
-            ),
-            symbolicView.leftAnchor.constraint(
-                equalTo: contentView.leftAnchor
-            ),
-            symbolicSizeWidthConstraint
+            symbolicView.leftAnchor.constraint(equalTo: contentView.leftAnchor),
+            symbolicView.widthAnchor.constraint(equalToConstant: DSSizes.huge),
+            symbolicView.heightAnchor.constraint(equalToConstant: DSSizes.huge)
         ])
     }
 }
