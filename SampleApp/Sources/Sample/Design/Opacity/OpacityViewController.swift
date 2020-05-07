@@ -9,7 +9,7 @@ final class OpacityViewController: UIViewController, SampleItem {
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.register(OpacityCell.self, forCellReuseIdentifier: OpacityCell.reuseIdentifier)
-        tableView.rowHeight = DSSizes.hugeXX
+        tableView.rowHeight = DSSizes.huge
         tableView.separatorStyle = .none
         tableView.allowsSelection = false
         tableView.translatesAutoresizingMaskIntoConstraints = false

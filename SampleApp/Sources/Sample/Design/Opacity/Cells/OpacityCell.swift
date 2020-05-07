@@ -58,8 +58,8 @@ final class OpacityCell: UITableViewCell {
                 constant: DSSpacing.micro
             ),
             symbolicView.leftAnchor.constraint(equalTo: contentView.leftAnchor),
-            symbolicView.widthAnchor.constraint(equalToConstant: DSSizes.huge),
-            symbolicView.heightAnchor.constraint(equalToConstant: DSSizes.huge)
+            symbolicView.rightAnchor.constraint(equalTo: contentView.rightAnchor),
+            symbolicView.heightAnchor.constraint(equalToConstant: DSSizes.large)
         ])
     }
 }
