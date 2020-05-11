@@ -177,7 +177,7 @@
 		84BFB61F24699ECA00506ED1 /* NatFonts+Natura+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB61E24699ECA00506ED1 /* NatFonts+Natura+Spec.swift */; };
 		84BFB62124699F2D00506ED1 /* NatFonts+TheBodyShop+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB62024699F2D00506ED1 /* NatFonts+TheBodyShop+Spec.swift */; };
 		84BFB6232469A01D00506ED1 /* AvonFontSizes+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB6222469A01D00506ED1 /* AvonFontSizes+Spec.swift */; };
-		84BFB6252469A30500506ED1 /* AvonFontWeights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB6242469A30500506ED1 /* AvonFontWeights.swift */; };
+		84BFB6252469A30500506ED1 /* AvonFontWeights+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB6242469A30500506ED1 /* AvonFontWeights+Spec.swift */; };
 		84BFB6282469B92000506ED1 /* TheBodyShopFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB6272469B92000506ED1 /* TheBodyShopFont.swift */; };
 		84BFB62A2469B93C00506ED1 /* TheBodyShopFontSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB6292469B93C00506ED1 /* TheBodyShopFontSizes.swift */; };
 		84BFB62C2469B95300506ED1 /* TheBodyShopFontWeights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB62B2469B95300506ED1 /* TheBodyShopFontWeights.swift */; };
@@ -187,6 +187,10 @@
 		84BFB6362469BF1A00506ED1 /* AvonFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB6352469BF1A00506ED1 /* AvonFont.swift */; };
 		84BFB6382469BF4B00506ED1 /* AvonFontSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB6372469BF4B00506ED1 /* AvonFontSizes.swift */; };
 		84BFB63A2469BF6500506ED1 /* AvonFontWeights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB6392469BF6500506ED1 /* AvonFontWeights.swift */; };
+		84BFB6402469C2B900506ED1 /* NaturaFontWeights+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB63F2469C2B900506ED1 /* NaturaFontWeights+Spec.swift */; };
+		84BFB6412469C2BE00506ED1 /* NaturaFontSizes+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB63D2469C28900506ED1 /* NaturaFontSizes+Spec.swift */; };
+		84BFB6442469C9EB00506ED1 /* TheBodyShopFontWeights+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB6432469C9EB00506ED1 /* TheBodyShopFontWeights+Spec.swift */; };
+		84BFB6462469C9FC00506ED1 /* TheBodyShopFontSizes+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB6452469C9FC00506ED1 /* TheBodyShopFontSizes+Spec.swift */; };
 		84EE85E9245A0FB20009293A /* DSSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE85E8245A0FB20009293A /* DSSpacing.swift */; };
 		A9325A6623FB34EC0023979C /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9325A6523FB34EC0023979C /* UICollectionView+Reusable.swift */; };
 		A9325A6A23FB35C50023979C /* UICollectionView+ReusableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9325A6723FB35450023979C /* UICollectionView+ReusableTests.swift */; };
@@ -389,7 +393,7 @@
 		84BFB61E24699ECA00506ED1 /* NatFonts+Natura+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatFonts+Natura+Spec.swift"; sourceTree = "<group>"; };
 		84BFB62024699F2D00506ED1 /* NatFonts+TheBodyShop+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatFonts+TheBodyShop+Spec.swift"; sourceTree = "<group>"; };
 		84BFB6222469A01D00506ED1 /* AvonFontSizes+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AvonFontSizes+Spec.swift"; sourceTree = "<group>"; };
-		84BFB6242469A30500506ED1 /* AvonFontWeights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvonFontWeights.swift; sourceTree = "<group>"; };
+		84BFB6242469A30500506ED1 /* AvonFontWeights+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AvonFontWeights+Spec.swift"; sourceTree = "<group>"; };
 		84BFB6272469B92000506ED1 /* TheBodyShopFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheBodyShopFont.swift; sourceTree = "<group>"; };
 		84BFB6292469B93C00506ED1 /* TheBodyShopFontSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheBodyShopFontSizes.swift; sourceTree = "<group>"; };
 		84BFB62B2469B95300506ED1 /* TheBodyShopFontWeights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheBodyShopFontWeights.swift; sourceTree = "<group>"; };
@@ -399,6 +403,10 @@
 		84BFB6352469BF1A00506ED1 /* AvonFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvonFont.swift; sourceTree = "<group>"; };
 		84BFB6372469BF4B00506ED1 /* AvonFontSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvonFontSizes.swift; sourceTree = "<group>"; };
 		84BFB6392469BF6500506ED1 /* AvonFontWeights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvonFontWeights.swift; sourceTree = "<group>"; };
+		84BFB63D2469C28900506ED1 /* NaturaFontSizes+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaturaFontSizes+Spec.swift"; sourceTree = "<group>"; };
+		84BFB63F2469C2B900506ED1 /* NaturaFontWeights+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaturaFontWeights+Spec.swift"; sourceTree = "<group>"; };
+		84BFB6432469C9EB00506ED1 /* TheBodyShopFontWeights+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheBodyShopFontWeights+Spec.swift"; sourceTree = "<group>"; };
+		84BFB6452469C9FC00506ED1 /* TheBodyShopFontSizes+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheBodyShopFontSizes+Spec.swift"; sourceTree = "<group>"; };
 		84EE85E8245A0FB20009293A /* DSSpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSSpacing.swift; sourceTree = "<group>"; };
 		9A46395C038D4497A880A6FF /* Pods-NatDSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatDSTests.release.xcconfig"; path = "Target Support Files/Pods-NatDSTests/Pods-NatDSTests.release.xcconfig"; sourceTree = "<group>"; };
 		A8B18363274C7A70CF4443A3 /* Pods-NatDSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatDSTests.debug.xcconfig"; path = "Target Support Files/Pods-NatDSTests/Pods-NatDSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -890,6 +898,7 @@
 				843FA2892461F78200D20D9A /* NaturaSize+Spec.swift */,
 				843FA2AB24635E9F00D20D9A /* NaturaBorderRadius+Spec.swift */,
 				843FA2BF246483CC00D20D9A /* NaturaOpacities+Spec.swift */,
+				84BFB63C2469C26600506ED1 /* Font */,
 			);
 			path = Natura;
 			sourceTree = "<group>";
@@ -903,9 +912,8 @@
 				84428F8E245B24B000D46611 /* AvonSpacing+Spec.swift */,
 				843FA2872461F33600D20D9A /* AvonSize+Spec.swift */,
 				843FA2A924635D7400D20D9A /* AvonBorderRadius+Spec.swift */,
-				84BFB6222469A01D00506ED1 /* AvonFontSizes+Spec.swift */,
-				84BFB6242469A30500506ED1 /* AvonFontWeights.swift */,
 				843FA2BD2464837E00D20D9A /* AvonOpacities+Spec.swift */,
+				84BFB63B2469C24C00506ED1 /* Font */,
 			);
 			path = Avon;
 			sourceTree = "<group>";
@@ -920,6 +928,7 @@
 				843FA28B2461F96700D20D9A /* TheBodyShopSize+Spec.swift */,
 				843FA2AD24635EDF00D20D9A /* TheBodyShopBorderRadius+Spec.swift */,
 				843FA2C1246483E500D20D9A /* TheBodyShopOpacities+Spec.swift */,
+				84BFB6422469C9C900506ED1 /* Font */,
 			);
 			path = TheBodyShop;
 			sourceTree = "<group>";
@@ -1142,6 +1151,33 @@
 				84BFB6352469BF1A00506ED1 /* AvonFont.swift */,
 				84BFB6372469BF4B00506ED1 /* AvonFontSizes.swift */,
 				84BFB6392469BF6500506ED1 /* AvonFontWeights.swift */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		84BFB63B2469C24C00506ED1 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				84BFB6222469A01D00506ED1 /* AvonFontSizes+Spec.swift */,
+				84BFB6242469A30500506ED1 /* AvonFontWeights+Spec.swift */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		84BFB63C2469C26600506ED1 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				84BFB63D2469C28900506ED1 /* NaturaFontSizes+Spec.swift */,
+				84BFB63F2469C2B900506ED1 /* NaturaFontWeights+Spec.swift */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		84BFB6422469C9C900506ED1 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				84BFB6452469C9FC00506ED1 /* TheBodyShopFontSizes+Spec.swift */,
+				84BFB6432469C9EB00506ED1 /* TheBodyShopFontWeights+Spec.swift */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -1575,6 +1611,7 @@
 				117FE018238D9AEB0032E2AC /* FontsTests.swift in Sources */,
 				843FA2C0246483CC00D20D9A /* NaturaOpacities+Spec.swift in Sources */,
 				11581A9B238EC15E003E45D7 /* NavigationDrawerItemCellTests.swift in Sources */,
+				84BFB6402469C2B900506ED1 /* NaturaFontWeights+Spec.swift in Sources */,
 				8427A31C24522A4600CF30D5 /* TheBodyShopColorPaletteDark+Feedback+Spec.swift in Sources */,
 				43F1DD4C24183BA0005A0C4A /* PulseLayerTests.swift in Sources */,
 				8427A3102452264700CF30D5 /* TheBodyShopColorPaletteDark+Content+Spec.swift in Sources */,
@@ -1595,13 +1632,16 @@
 				8427A3002452217900CF30D5 /* AvonColorPaletteDark+Surface+Spec.swift in Sources */,
 				43C02A3723FAFE290057A31C /* NSMutableAttributedString+BuilderTests.swift in Sources */,
 				8427A2D82451E11400CF30D5 /* TheBodyShopColorPaletteLight+Spec.swift in Sources */,
-				84BFB6252469A30500506ED1 /* AvonFontWeights.swift in Sources */,
+				84BFB6462469C9FC00506ED1 /* TheBodyShopFontSizes+Spec.swift in Sources */,
+				84BFB6252469A30500506ED1 /* AvonFontWeights+Spec.swift in Sources */,
 				845D9EF8244DE32F003598B0 /* DSColors+TBS+Spec.swift in Sources */,
 				8427A2F424521B9E00CF30D5 /* AvonColorPaletteDark+Secondary+Spec.swift in Sources */,
 				A971BE73239831F200A0D509 /* NavigationDrawer+IndexMenuTests.swift in Sources */,
+				84BFB6412469C2BE00506ED1 /* NaturaFontSizes+Spec.swift in Sources */,
 				8427A3082452241900CF30D5 /* NaturaColorPaletteLight+Content+Spec.swift in Sources */,
 				84428F8D245B248D00D46611 /* TheBodyShopSpacing+Spec.swift in Sources */,
 				A9CCF8E123CCE39800000FC0 /* IconViewTests.swift in Sources */,
+				84BFB6442469C9EB00506ED1 /* TheBodyShopFontWeights+Spec.swift in Sources */,
 				8427A31A24522A1700CF30D5 /* TheBodyShopColorPaletteLight+Feedback+Spec.swift in Sources */,
 				843FA2AA24635D7400D20D9A /* AvonBorderRadius+Spec.swift in Sources */,
 				8427A2D22451DD0400CF30D5 /* AvonColorPaletteDark+Spec.swift in Sources */,

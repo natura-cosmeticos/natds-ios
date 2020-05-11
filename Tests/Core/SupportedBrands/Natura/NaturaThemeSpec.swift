@@ -25,33 +25,41 @@ final class NaturaThemeSpec: QuickSpec {
 
         describe("#sizes") {
             it("returns a instance of NaturaSizes") {
-                let colorPalette = systemUnderTest.sizes
+                let sizes = systemUnderTest.sizes
 
-                expect(colorPalette).to(beAnInstanceOf(NaturaSizes.self))
+                expect(sizes).to(beAnInstanceOf(NaturaSizes.self))
             }
         }
 
         describe("#spacing") {
             it("returns a instance of NaturaSpacing") {
-                let colorPalette = systemUnderTest.spacing
+                let spacing = systemUnderTest.spacing
 
-                expect(colorPalette).to(beAnInstanceOf(NaturaSpacing.self))
+                expect(spacing).to(beAnInstanceOf(NaturaSpacing.self))
             }
         }
 
         describe("#borderRadius") {
             it("returns a instance of NaturaBorderRadius") {
-                let colorPalette = systemUnderTest.borderRadius
+                let borderRadius = systemUnderTest.borderRadius
 
-                expect(colorPalette).to(beAnInstanceOf(NaturaBorderRadius.self))
+                expect(borderRadius).to(beAnInstanceOf(NaturaBorderRadius.self))
             }
         }
 
         describe("#opacities") {
             it("returns a instance of NaturaOpacities") {
-                let colorPalette = systemUnderTest.opacities
+                let opacities = systemUnderTest.opacities
 
-                expect(colorPalette).to(beAnInstanceOf(NaturaOpacities.self))
+                expect(opacities).to(beAnInstanceOf(NaturaOpacities.self))
+            }
+        }
+
+        describe("#font") {
+            it("returns a instance of NaturaFont") {
+                let font = systemUnderTest.font
+
+                expect(font).to(beAnInstanceOf(NaturaFont.self))
             }
         }
     }
