@@ -57,11 +57,11 @@ final class SpacingCell: UITableViewCell {
         NSLayoutConstraint.activate([
             symbolicSpacingView.topAnchor.constraint(
                 greaterThanOrEqualTo: contentView.topAnchor,
-                constant: 4
+                constant: DSSpacing.micro
             ),
             symbolicSpacingView.bottomAnchor.constraint(
                 equalTo: contentView.bottomAnchor,
-                constant: -4
+                constant: -DSSpacing.micro
             ),
             symbolicSpacingView.leftAnchor.constraint(
                 equalTo: contentView.leftAnchor
@@ -69,19 +69,19 @@ final class SpacingCell: UITableViewCell {
             symbolicSpacingHeightConstraint,
             symbolicSpacingView.widthAnchor.constraint(
                 equalTo: contentView.widthAnchor,
-                multiplier: 0.65
+                multiplier: 0.62
             ),
 
             label.topAnchor.constraint(
                 greaterThanOrEqualTo: contentView.topAnchor,
-                constant: 4
+                constant: DSSpacing.micro
             ),
             label.rightAnchor.constraint(
                 equalTo: contentView.rightAnchor
             ),
             label.bottomAnchor.constraint(
                 equalTo: contentView.bottomAnchor,
-                constant: -4
+                constant: -DSSpacing.micro
             )
         ])
     }

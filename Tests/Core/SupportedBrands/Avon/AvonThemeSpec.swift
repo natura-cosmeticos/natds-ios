@@ -46,5 +46,13 @@ final class AvonThemeSpec: QuickSpec {
                 expect(colorPalette).to(beAnInstanceOf(AvonBorderRadius.self))
             }
         }
+
+        describe("#opacities") {
+            it("returns a instance of AvonOpacities") {
+                let colorPalette = systemUnderTest.opacities
+
+                expect(colorPalette).to(beAnInstanceOf(AvonOpacities.self))
+            }
+        }
     }
 }
