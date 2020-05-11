@@ -20,6 +20,8 @@
 		843FA2A32463450400D20D9A /* SizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FA2A22463450400D20D9A /* SizeViewController.swift */; };
 		843FA2A52463451B00D20D9A /* SizeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FA2A42463451B00D20D9A /* SizeCell.swift */; };
 		843FA2A82463480100D20D9A /* BorderRadiusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FA2A72463480100D20D9A /* BorderRadiusCell.swift */; };
+		843FA2D52466478B00D20D9A /* TipographyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FA2D42466478B00D20D9A /* TipographyViewController.swift */; };
+		843FA2D92466494D00D20D9A /* TipographyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FA2D82466494D00D20D9A /* TipographyCell.swift */; };
 		846313B024603BC200387FCF /* SpacingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846313AF24603BC200387FCF /* SpacingViewController.swift */; };
 		846313B424603E0100387FCF /* SpacingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846313B324603E0100387FCF /* SpacingCell.swift */; };
 		A904ECBA23D607D800709B43 /* ComponentsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A904ECB923D607D800709B43 /* ComponentsSection.swift */; };
@@ -67,6 +69,8 @@
 		843FA2A22463450400D20D9A /* SizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeViewController.swift; sourceTree = "<group>"; };
 		843FA2A42463451B00D20D9A /* SizeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeCell.swift; sourceTree = "<group>"; };
 		843FA2A72463480100D20D9A /* BorderRadiusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderRadiusCell.swift; sourceTree = "<group>"; };
+		843FA2D42466478B00D20D9A /* TipographyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipographyViewController.swift; sourceTree = "<group>"; };
+		843FA2D82466494D00D20D9A /* TipographyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipographyCell.swift; sourceTree = "<group>"; };
 		846313AF24603BC200387FCF /* SpacingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacingViewController.swift; sourceTree = "<group>"; };
 		846313B324603E0100387FCF /* SpacingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacingCell.swift; sourceTree = "<group>"; };
 		A904ECB923D607D800709B43 /* ComponentsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentsSection.swift; sourceTree = "<group>"; };
@@ -182,6 +186,23 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		843FA2D62466491000D20D9A /* Tipography */ = {
+			isa = PBXGroup;
+			children = (
+				843FA2D72466493200D20D9A /* Cells */,
+				843FA2D42466478B00D20D9A /* TipographyViewController.swift */,
+			);
+			path = Tipography;
+			sourceTree = "<group>";
+		};
+		843FA2D72466493200D20D9A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				843FA2D82466494D00D20D9A /* TipographyCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		846313B124603BCF00387FCF /* Spacing */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +252,7 @@
 				A97328C523CFA3A400ADC5C2 /* Colors */,
 				846313B124603BCF00387FCF /* Spacing */,
 				843FA28D2462232D00D20D9A /* Size */,
+				843FA2D62466491000D20D9A /* Tipography */,
 			);
 			path = Design;
 			sourceTree = "<group>";
@@ -415,7 +437,9 @@
 				A904ECC323D761BE00709B43 /* IconographyItemViewController.swift in Sources */,
 				64C9173323FC9EDE0040E714 /* TabItemViewController.swift in Sources */,
 				843FA2A82463480100D20D9A /* BorderRadiusCell.swift in Sources */,
+				843FA2D52466478B00D20D9A /* TipographyViewController.swift in Sources */,
 				437CFD4F241059B8008CEA37 /* DividerViewController.swift in Sources */,
+				843FA2D92466494D00D20D9A /* TipographyCell.swift in Sources */,
 				8427A3312457AFEF00CF30D5 /* ChooseBrandViewController.swift in Sources */,
 				A97328C323CFA35800ADC5C2 /* MainViewController.swift in Sources */,
 				A97328BD23CFA2F500ADC5C2 /* MainDataSource.swift in Sources */,

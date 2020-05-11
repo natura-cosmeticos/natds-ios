@@ -6,6 +6,7 @@ class DesignSection: SampleSection {
         BorderRadiusViewController.self,
         ColorsViewController.self,
         SizeViewController.self,
-        SpacingViewController.self
+        SpacingViewController.self,
+        TipographyViewController.self
     ]
 }

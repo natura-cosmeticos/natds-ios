@@ -4,4 +4,5 @@ struct AvonTheme: Theme {
     let sizes: Sizes = AvonSizes()
     let spacing: Space = AvonSpacing()
     let borderRadius: BorderRadius = AvonBorderRadius()
+    let font: Font = TheBodyShopFont()
 }
