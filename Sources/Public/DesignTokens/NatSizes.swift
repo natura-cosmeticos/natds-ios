@@ -1,5 +1,5 @@
 /**
-  DSSizes is a enum that has access to size properties from the Design System.
+  NatSizes is a enum that has access to size properties from the Design System.
   This properties are used with contraints to handle view size of view objects.
   According with the current Brand in the Design System this properties can change.
 
@@ -7,8 +7,8 @@
 
     Exemple of usage:
 
-        containerView.widthAnchor.constraint(equalToConstant: DSSizes.large)
-        containerView.heightAncor.constraint(equalToConstant: DSSizes.tiny)
+        containerView.widthAnchor.constraint(equalToConstant: NatSizes.large)
+        containerView.heightAncor.constraint(equalToConstant: NatSizes.tiny)
 
  - Requires:
         It's necessary to configure the Design System current Brand at DesisgnSystem class
@@ -17,7 +17,7 @@
             DesignSystem().configure(with: Brand)
 */
 
-public enum DSSizes {
+public enum NatSizes {
     public static var micro: CGFloat { getTheme().sizes.micro }
     public static var tiny: CGFloat { getTheme().sizes.tiny }
     public static var small: CGFloat { getTheme().sizes.small }

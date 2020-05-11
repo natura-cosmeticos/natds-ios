@@ -1,5 +1,5 @@
 /**
-  DSSpacing is a enum that has access to spacing properties from the Design System.
+  NatSpacing is a enum that has access to spacing properties from the Design System.
   This properties are used with contraints to handle view spaces between other views or view
   properties like safeAreaLayoutGuide.
   According with the current Brand in the Design System this spacing properties can change.
@@ -8,8 +8,8 @@
 
     Exemple of usage:
 
-        containerView.topAnchor.constraint(equalTo: view.topAnchor, constant: DSSpacing.tiny)
-        containerView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: DSSpacing.large)
+        containerView.topAnchor.constraint(equalTo: view.topAnchor, constant: NatSpacing.tiny)
+        containerView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: NatSpacing.large)
 
  - Requires:
         It's necessary to configure the Design System current Brand at DesisgnSystem class
@@ -18,7 +18,7 @@
             DesignSystem().configure(with: Brand)
 */
 
-public enum DSSpacing {
+public enum NatSpacing {
     public static var micro: CGFloat { getTheme().spacing.micro }
     public static var tiny: CGFloat { getTheme().spacing.tiny }
     public static var small: CGFloat { getTheme().spacing.small }

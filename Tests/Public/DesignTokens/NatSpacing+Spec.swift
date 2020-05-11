@@ -3,9 +3,9 @@ import Nimble
 
 @testable import NatDS
 
-final class DSSpacingSpec: QuickSpec {
+final class NatSpacingSpec: QuickSpec {
     override func spec() {
-        let systemUnderTest = DSSpacing.self
+        let systemUnderTest = NatSpacing.self
 
         context("Avon") {
             let expectedSpacing = AvonSpacing()

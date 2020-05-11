@@ -7,7 +7,7 @@ final class SpacingCell: UITableViewCell {
 
     private let symbolicSpacingView: UIView = {
         let view = UIView()
-        view.backgroundColor = DSColors.primary
+        view.backgroundColor = NatColors.primary
         view.translatesAutoresizingMaskIntoConstraints = false
 
         return view
@@ -57,11 +57,11 @@ final class SpacingCell: UITableViewCell {
         NSLayoutConstraint.activate([
             symbolicSpacingView.topAnchor.constraint(
                 greaterThanOrEqualTo: contentView.topAnchor,
-                constant: DSSpacing.micro
+                constant: NatSpacing.micro
             ),
             symbolicSpacingView.bottomAnchor.constraint(
                 equalTo: contentView.bottomAnchor,
-                constant: -DSSpacing.micro
+                constant: -NatSpacing.micro
             ),
             symbolicSpacingView.leftAnchor.constraint(
                 equalTo: contentView.leftAnchor
@@ -74,14 +74,14 @@ final class SpacingCell: UITableViewCell {
 
             label.topAnchor.constraint(
                 greaterThanOrEqualTo: contentView.topAnchor,
-                constant: DSSpacing.micro
+                constant: NatSpacing.micro
             ),
             label.rightAnchor.constraint(
                 equalTo: contentView.rightAnchor
             ),
             label.bottomAnchor.constraint(
                 equalTo: contentView.bottomAnchor,
-                constant: -DSSpacing.micro
+                constant: -NatSpacing.micro
             )
         ])
     }

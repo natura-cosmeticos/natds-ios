@@ -20,13 +20,13 @@ final class SpacingViewController: UIViewController, SampleItem {
     }()
 
     private let cellsViewModels: [(description: String, value: CGFloat)] = [
-        ("micro: \(DSSpacing.micro)", DSSpacing.micro),
-        ("tiny: \(DSSpacing.tiny)", DSSpacing.tiny),
-        ("small: \(DSSpacing.small)", DSSpacing.small),
-        ("standard: \(DSSpacing.standart)", DSSpacing.standart),
-        ("semi: \(DSSpacing.semi)", DSSpacing.semi),
-        ("large: \(DSSpacing.large)", DSSpacing.large),
-        ("xLarge: \(DSSpacing.xLarge)", DSSpacing.xLarge)
+        ("micro: \(NatSpacing.micro)", NatSpacing.micro),
+        ("tiny: \(NatSpacing.tiny)", NatSpacing.tiny),
+        ("small: \(NatSpacing.small)", NatSpacing.small),
+        ("standard: \(NatSpacing.standart)", NatSpacing.standart),
+        ("semi: \(NatSpacing.semi)", NatSpacing.semi),
+        ("large: \(NatSpacing.large)", NatSpacing.large),
+        ("xLarge: \(NatSpacing.xLarge)", NatSpacing.xLarge)
     ]
 
     // MARK: - Life cycle
@@ -42,7 +42,7 @@ final class SpacingViewController: UIViewController, SampleItem {
     // MARK: - Private methods
 
     private func setup() {
-        view.backgroundColor = DSColors.background
+        view.backgroundColor = NatColors.background
         view.addSubview(tableView)
 
         NSLayoutConstraint.activate([
@@ -51,14 +51,14 @@ final class SpacingViewController: UIViewController, SampleItem {
             ),
             tableView.rightAnchor.constraint(
                 equalTo: view.safeAreaLayoutGuide.rightAnchor,
-                constant: -DSSpacing.tiny
+                constant: -NatSpacing.tiny
             ),
             tableView.bottomAnchor.constraint(
                 equalTo: view.safeAreaLayoutGuide.bottomAnchor
             ),
             tableView.leftAnchor.constraint(
                 equalTo: view.safeAreaLayoutGuide.leftAnchor,
-                constant: DSSpacing.tiny
+                constant: NatSpacing.tiny
             )
         ])
     }

@@ -38,7 +38,7 @@ final class TypographyViewController: UIViewController, SampleItem {
     // MARK: - Private methods
 
     private func setup() {
-        view.backgroundColor = DSColors.background
+        view.backgroundColor = NatColors.background
         view.addSubview(tableView)
 
         NSLayoutConstraint.activate([
@@ -47,14 +47,14 @@ final class TypographyViewController: UIViewController, SampleItem {
             ),
             tableView.rightAnchor.constraint(
                 equalTo: view.safeAreaLayoutGuide.rightAnchor,
-                constant: -DSSpacing.tiny
+                constant: -NatSpacing.tiny
             ),
             tableView.bottomAnchor.constraint(
                 equalTo: view.safeAreaLayoutGuide.bottomAnchor
             ),
             tableView.leftAnchor.constraint(
                 equalTo: view.safeAreaLayoutGuide.leftAnchor,
-                constant: DSSpacing.tiny
+                constant: NatSpacing.tiny
             )
         ])
     }

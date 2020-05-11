@@ -9,7 +9,7 @@ final class OpacityViewController: UIViewController, SampleItem {
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.register(OpacityCell.self, forCellReuseIdentifier: OpacityCell.reuseIdentifier)
-        tableView.rowHeight = DSSizes.huge
+        tableView.rowHeight = NatSizes.huge
         tableView.separatorStyle = .none
         tableView.allowsSelection = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -20,16 +20,16 @@ final class OpacityViewController: UIViewController, SampleItem {
 
     private let cellsViewModels: [(description: String, value: CGFloat)] = [
         ("none: 1", 1),
-        ("opacity01: \(DSOpacities.opacity01)", DSOpacities.opacity01),
-        ("opacity02: \(DSOpacities.opacity02)", DSOpacities.opacity02),
-        ("opacity03: \(DSOpacities.opacity03)", DSOpacities.opacity03),
-        ("opacity04: \(DSOpacities.opacity04)", DSOpacities.opacity04),
-        ("opacity05: \(DSOpacities.opacity05)", DSOpacities.opacity05),
-        ("opacity06: \(DSOpacities.opacity06)", DSOpacities.opacity06),
-        ("opacity07: \(DSOpacities.opacity07)", DSOpacities.opacity07),
-        ("opacity08: \(DSOpacities.opacity08)", DSOpacities.opacity08),
-        ("opacity09: \(DSOpacities.opacity09)", DSOpacities.opacity09),
-        ("opacity10: \(DSOpacities.opacity10)", DSOpacities.opacity10)
+        ("opacity01: \(NatOpacities.opacity01)", NatOpacities.opacity01),
+        ("opacity02: \(NatOpacities.opacity02)", NatOpacities.opacity02),
+        ("opacity03: \(NatOpacities.opacity03)", NatOpacities.opacity03),
+        ("opacity04: \(NatOpacities.opacity04)", NatOpacities.opacity04),
+        ("opacity05: \(NatOpacities.opacity05)", NatOpacities.opacity05),
+        ("opacity06: \(NatOpacities.opacity06)", NatOpacities.opacity06),
+        ("opacity07: \(NatOpacities.opacity07)", NatOpacities.opacity07),
+        ("opacity08: \(NatOpacities.opacity08)", NatOpacities.opacity08),
+        ("opacity09: \(NatOpacities.opacity09)", NatOpacities.opacity09),
+        ("opacity10: \(NatOpacities.opacity10)", NatOpacities.opacity10)
     ]
 
     // MARK: - Life cycle
@@ -45,7 +45,7 @@ final class OpacityViewController: UIViewController, SampleItem {
     // MARK: - Private methods
 
     private func setup() {
-        view.backgroundColor = DSColors.background
+        view.backgroundColor = NatColors.background
         view.addSubview(tableView)
 
         NSLayoutConstraint.activate([
@@ -54,14 +54,14 @@ final class OpacityViewController: UIViewController, SampleItem {
             ),
             tableView.rightAnchor.constraint(
                 equalTo: view.safeAreaLayoutGuide.rightAnchor,
-                constant: -DSSpacing.tiny
+                constant: -NatSpacing.tiny
             ),
             tableView.bottomAnchor.constraint(
                 equalTo: view.safeAreaLayoutGuide.bottomAnchor
             ),
             tableView.leftAnchor.constraint(
                 equalTo: view.safeAreaLayoutGuide.leftAnchor,
-                constant: DSSpacing.tiny
+                constant: NatSpacing.tiny
             )
         ])
     }
