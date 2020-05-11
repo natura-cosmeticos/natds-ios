@@ -4,4 +4,5 @@ struct NaturaTheme: Theme {
     let sizes: Sizes = NaturaSizes()
     let spacing: Space = NaturaSpacing()
     let borderRadius: BorderRadius = NaturaBorderRadius()
+    let opacities: Opacities = NaturaOpacities()
 }

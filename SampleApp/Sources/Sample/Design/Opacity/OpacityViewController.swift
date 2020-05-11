@@ -1,16 +1,15 @@
 import UIKit
 import NatDS
 
-final class SpacingViewController: UIViewController, SampleItem {
-    static var name = "Spacing"
+final class OpacityViewController: UIViewController, SampleItem {
+    static var name = "Opacity"
 
     // MARK: - Private properties
 
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
-        tableView.register(SpacingCell.self, forCellReuseIdentifier: SpacingCell.reuseIdentifier)
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 60
+        tableView.register(OpacityCell.self, forCellReuseIdentifier: OpacityCell.reuseIdentifier)
+        tableView.rowHeight = DSSizes.huge
         tableView.separatorStyle = .none
         tableView.allowsSelection = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -20,13 +19,17 @@ final class SpacingViewController: UIViewController, SampleItem {
     }()
 
     private let cellsViewModels: [(description: String, value: CGFloat)] = [
-        ("micro: \(DSSpacing.micro)", DSSpacing.micro),
-        ("tiny: \(DSSpacing.tiny)", DSSpacing.tiny),
-        ("small: \(DSSpacing.small)", DSSpacing.small),
-        ("standard: \(DSSpacing.standart)", DSSpacing.standart),
-        ("semi: \(DSSpacing.semi)", DSSpacing.semi),
-        ("large: \(DSSpacing.large)", DSSpacing.large),
-        ("xLarge: \(DSSpacing.xLarge)", DSSpacing.xLarge)
+        ("none: 1", 1),
+        ("opacity01: \(DSOpacities.opacity01)", DSOpacities.opacity01),
+        ("opacity02: \(DSOpacities.opacity02)", DSOpacities.opacity02),
+        ("opacity03: \(DSOpacities.opacity03)", DSOpacities.opacity03),
+        ("opacity04: \(DSOpacities.opacity04)", DSOpacities.opacity04),
+        ("opacity05: \(DSOpacities.opacity05)", DSOpacities.opacity05),
+        ("opacity06: \(DSOpacities.opacity06)", DSOpacities.opacity06),
+        ("opacity07: \(DSOpacities.opacity07)", DSOpacities.opacity07),
+        ("opacity08: \(DSOpacities.opacity08)", DSOpacities.opacity08),
+        ("opacity09: \(DSOpacities.opacity09)", DSOpacities.opacity09),
+        ("opacity10: \(DSOpacities.opacity10)", DSOpacities.opacity10)
     ]
 
     // MARK: - Life cycle
@@ -66,20 +69,20 @@ final class SpacingViewController: UIViewController, SampleItem {
 
 // MARK: - UITableViewDataSource
 
-extension SpacingViewController: UITableViewDataSource {
+extension OpacityViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         cellsViewModels.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(
-            withIdentifier: SpacingCell.reuseIdentifier,
+            withIdentifier: OpacityCell.reuseIdentifier,
             for: indexPath
-        ) as? SpacingCell ?? SpacingCell()
+        ) as? OpacityCell ?? OpacityCell()
 
         let viewModel = cellsViewModels[indexPath.row]
 
-        cell.configure(description: viewModel.description, spacing: viewModel.value)
+        cell.configure(description: viewModel.description, alpha: viewModel.value)
 
         return cell
     }
