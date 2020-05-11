@@ -153,7 +153,6 @@
 		843FA2C0246483CC00D20D9A /* NaturaOpacities+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FA2BF246483CC00D20D9A /* NaturaOpacities+Spec.swift */; };
 		843FA2C2246483E500D20D9A /* TheBodyShopOpacities+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FA2C1246483E500D20D9A /* TheBodyShopOpacities+Spec.swift */; };
 		843FA2CB2465CE9E00D20D9A /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FA2CA2465CE9E00D20D9A /* Font.swift */; };
-		843FA2CD2465EDB800D20D9A /* TextStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FA2CC2465EDB800D20D9A /* TextStyles.swift */; };
 		843FA2CF2465EE8100D20D9A /* FontWeights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FA2CE2465EE8100D20D9A /* FontWeights.swift */; };
 		843FA2D12465EEA000D20D9A /* FontSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FA2D02465EEA000D20D9A /* FontSizes.swift */; };
 		843FA2D324660E2100D20D9A /* NatFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FA2D224660E2100D20D9A /* NatFonts.swift */; };
@@ -372,7 +371,6 @@
 		843FA2BF246483CC00D20D9A /* NaturaOpacities+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaturaOpacities+Spec.swift"; sourceTree = "<group>"; };
 		843FA2C1246483E500D20D9A /* TheBodyShopOpacities+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheBodyShopOpacities+Spec.swift"; sourceTree = "<group>"; };
 		843FA2CA2465CE9E00D20D9A /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
-		843FA2CC2465EDB800D20D9A /* TextStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyles.swift; sourceTree = "<group>"; };
 		843FA2CE2465EE8100D20D9A /* FontWeights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontWeights.swift; sourceTree = "<group>"; };
 		843FA2D02465EEA000D20D9A /* FontSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSizes.swift; sourceTree = "<group>"; };
 		843FA2D224660E2100D20D9A /* NatFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatFonts.swift; sourceTree = "<group>"; };
@@ -616,7 +614,6 @@
 				117FE020238D9B070032E2AC /* Branding */,
 				A9CCF8E223CCEBB700000FC0 /* Style */,
 				843FA2CA2465CE9E00D20D9A /* Font.swift */,
-				843FA2CC2465EDB800D20D9A /* TextStyles.swift */,
 				843FA2CE2465EE8100D20D9A /* FontWeights.swift */,
 				843FA2D02465EEA000D20D9A /* FontSizes.swift */,
 			);
@@ -1546,7 +1543,6 @@
 				8427A2B82451C93B00CF30D5 /* NaturaTheme.swift in Sources */,
 				84BFB6312469BDF400506ED1 /* NaturaFontSizes.swift in Sources */,
 				117FE023238D9B070032E2AC /* ColorsNatura.swift in Sources */,
-				843FA2CD2465EDB800D20D9A /* TextStyles.swift in Sources */,
 				8427A2A82449F9AC00CF30D5 /* ContentColorPalette.swift in Sources */,
 				843FA27B2461D82200D20D9A /* DSSizes.swift in Sources */,
 				8427A2AE2449FE1200CF30D5 /* TheBodyShopTheme.swift in Sources */,
