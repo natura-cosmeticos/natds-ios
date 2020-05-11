@@ -1,4 +1,4 @@
-public class DSFonts {
+public class NatFonts {
     public static func font(ofSize size: Size, withWeight weight: Weight) -> UIFont {
         .systemFont(
             ofSize: getTheme().font.sizes[keyPath: size.rawValue],
@@ -7,7 +7,7 @@ public class DSFonts {
     }
 }
 
-extension DSFonts {
+extension NatFonts {
     public enum Size {
         case heading1
         case heading2

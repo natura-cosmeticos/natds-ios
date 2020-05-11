@@ -14,7 +14,7 @@ final class TipographyCell: UITableViewCell {
 
     private let weightLabel: UILabel = {
         let label = UILabel()
-        label.font = DSFonts.font(ofSize: .caption, withWeight: .regular)
+        label.font = NatFonts.font(ofSize: .caption, withWeight: .regular)
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label

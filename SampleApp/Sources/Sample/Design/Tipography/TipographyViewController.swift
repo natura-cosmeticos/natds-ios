@@ -64,67 +64,67 @@ final class TipographyViewController: UIViewController, SampleItem {
             .init(
                 sizeDescription: "heading1",
                 weightDescription: "regular",
-                font: DSFonts.font(ofSize: .heading1, withWeight: .regular)
+                font: NatFonts.font(ofSize: .heading1, withWeight: .regular)
             ),
             .init(
                 sizeDescription: "heading2",
                 weightDescription: "regular",
-                font: DSFonts.font(ofSize: .heading2, withWeight: .regular)
+                font: NatFonts.font(ofSize: .heading2, withWeight: .regular)
             ),
             .init(
                 sizeDescription: "heading3:",
                 weightDescription: "regular",
-                font: DSFonts.font(ofSize: .heading3, withWeight: .regular)
+                font: NatFonts.font(ofSize: .heading3, withWeight: .regular)
             ),
             .init(
                 sizeDescription: "heading4:",
                 weightDescription: "regular",
-                font: DSFonts.font(ofSize: .heading4, withWeight: .regular)
+                font: NatFonts.font(ofSize: .heading4, withWeight: .regular)
             ),
             .init(
                 sizeDescription: "heading5:",
                 weightDescription: "regular",
-                font: DSFonts.font(ofSize: .heading5, withWeight: .regular)
+                font: NatFonts.font(ofSize: .heading5, withWeight: .regular)
             ),
             .init(
                 sizeDescription: "heading6:",
                 weightDescription: "medium",
-                font: DSFonts.font(ofSize: .heading6, withWeight: .medium)
+                font: NatFonts.font(ofSize: .heading6, withWeight: .medium)
             ),
             .init(
                 sizeDescription: "subtitle1:",
                 weightDescription: "medium",
-                font: DSFonts.font(ofSize: .subtitle1, withWeight: .medium)
+                font: NatFonts.font(ofSize: .subtitle1, withWeight: .medium)
             ),
             .init(
                 sizeDescription: "subtitle2:",
                 weightDescription: "medium",
-                font: DSFonts.font(ofSize: .subtitle2, withWeight: .medium)
+                font: NatFonts.font(ofSize: .subtitle2, withWeight: .medium)
             ),
             .init(
                 sizeDescription: "body1:",
                 weightDescription: "regular",
-                font: DSFonts.font(ofSize: .body1, withWeight: .regular)
+                font: NatFonts.font(ofSize: .body1, withWeight: .regular)
             ),
             .init(
                 sizeDescription: "body2:",
                 weightDescription: "regular",
-                font: DSFonts.font(ofSize: .body2, withWeight: .regular)
+                font: NatFonts.font(ofSize: .body2, withWeight: .regular)
             ),
             .init(
                 sizeDescription: "button:",
                 weightDescription: "medium",
-                font: DSFonts.font(ofSize: .button, withWeight: .medium)
+                font: NatFonts.font(ofSize: .button, withWeight: .medium)
             ),
             .init(
                 sizeDescription: "caption:",
                 weightDescription: "regular",
-                font: DSFonts.font(ofSize: .caption, withWeight: .regular)
+                font: NatFonts.font(ofSize: .caption, withWeight: .regular)
             ),
             .init(
                 sizeDescription: "overline:",
                 weightDescription: "medium",
-                font: DSFonts.font(ofSize: .overline, withWeight: .medium)
+                font: NatFonts.font(ofSize: .overline, withWeight: .medium)
             )
         ]
     }
