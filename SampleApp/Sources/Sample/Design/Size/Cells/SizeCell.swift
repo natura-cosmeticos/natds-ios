@@ -56,8 +56,11 @@ final class SizeCell: UITableViewCell {
 
         symbolicSizeHeightConstraint = symbolicView
             .heightAnchor.constraint(equalToConstant: 0)
+        symbolicSizeHeightConstraint.priority = .defaultLow
+
         symbolicSizeWidthConstraint = symbolicView
             .widthAnchor.constraint(equalToConstant: 0)
+        symbolicSizeWidthConstraint.priority = .defaultLow
 
         NSLayoutConstraint.activate([
             label.topAnchor.constraint(
@@ -69,17 +72,14 @@ final class SizeCell: UITableViewCell {
             ),
 
             symbolicView.topAnchor.constraint(
-                equalTo: label.bottomAnchor,
+                greaterThanOrEqualTo: label.bottomAnchor,
                 constant: NatSpacing.micro
             ),
             symbolicView.bottomAnchor.constraint(
                 lessThanOrEqualTo: contentView.bottomAnchor,
-                constant: -NatSpacing.micro
+                constant: -NatSpacing.small
             ),
             symbolicView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-//            symbolicView.leftAnchor.constraint(
-//                equalTo: contentView.leftAnchor
-//            ),
             symbolicSizeHeightConstraint,
             symbolicSizeWidthConstraint
         ])

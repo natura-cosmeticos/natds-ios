@@ -11,7 +11,6 @@ final class SizeViewController: UIViewController, SampleItem {
         tableView.register(SizeCell.self, forCellReuseIdentifier: SizeCell.reuseIdentifier)
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 60
-        tableView.separatorStyle = .none
         tableView.allowsSelection = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.dataSource = self
