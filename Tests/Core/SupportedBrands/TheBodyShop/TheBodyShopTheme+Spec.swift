@@ -25,33 +25,41 @@ final class TheBodyShopThemeSpec: QuickSpec {
 
         describe("#sizes") {
             it("returns a instance of TheBodyShopSizes") {
-                let colorPalette = systemUnderTest.sizes
+                let sizes = systemUnderTest.sizes
 
-                expect(colorPalette).to(beAnInstanceOf(TheBodyShopSizes.self))
+                expect(sizes).to(beAnInstanceOf(TheBodyShopSizes.self))
             }
         }
 
         describe("#spacing") {
             it("returns a instance of TheBodyShopSpacing") {
-                let colorPalette = systemUnderTest.spacing
+                let spacing = systemUnderTest.spacing
 
-                expect(colorPalette).to(beAnInstanceOf(TheBodyShopSpacing.self))
+                expect(spacing).to(beAnInstanceOf(TheBodyShopSpacing.self))
             }
         }
 
         describe("#borderRadius") {
             it("returns a instance of TheBodyShopBorderRadius") {
-                let colorPalette = systemUnderTest.borderRadius
+                let borderRadius = systemUnderTest.borderRadius
 
-                expect(colorPalette).to(beAnInstanceOf(TheBodyShopBorderRadius.self))
+                expect(borderRadius).to(beAnInstanceOf(TheBodyShopBorderRadius.self))
             }
         }
 
         describe("#opacities") {
             it("returns a instance of TheBodyShopOpacities") {
-                let colorPalette = systemUnderTest.opacities
+                let opacities = systemUnderTest.opacities
 
-                expect(colorPalette).to(beAnInstanceOf(TheBodyShopOpacities.self))
+                expect(opacities).to(beAnInstanceOf(TheBodyShopOpacities.self))
+            }
+        }
+
+        describe("#font") {
+            it("returns a instance of AvonFont") {
+                let font = systemUnderTest.font
+
+                expect(font).to(beAnInstanceOf(TheBodyShopFont.self))
             }
         }
     }

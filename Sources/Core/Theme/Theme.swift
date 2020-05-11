@@ -7,4 +7,5 @@ protocol Theme {
     var spacing: Space { get }
     var borderRadius: BorderRadius { get }
     var opacities: Opacities { get }
+    var font: Font { get }
 }

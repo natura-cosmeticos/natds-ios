@@ -7,6 +7,7 @@ class DesignSection: SampleSection {
         ColorsViewController.self,
         SizeViewController.self,
         SpacingViewController.self,
-        OpacityViewController.self
+        OpacityViewController.self,
+        TypographyViewController.self
     ]
 }

@@ -25,9 +25,9 @@ final class AvonThemeSpec: QuickSpec {
 
         describe("#sizes") {
             it("returns a instance of AvonSizes") {
-                let colorPalette = systemUnderTest.sizes
+                let sizes = systemUnderTest.sizes
 
-                expect(colorPalette).to(beAnInstanceOf(AvonSizes.self))
+                expect(sizes).to(beAnInstanceOf(AvonSizes.self))
             }
         }
 
@@ -41,17 +41,25 @@ final class AvonThemeSpec: QuickSpec {
 
         describe("#borderRadius") {
             it("returns a instance of AvonBorderRadius") {
-                let colorPalette = systemUnderTest.borderRadius
+                let borderRadius = systemUnderTest.borderRadius
 
-                expect(colorPalette).to(beAnInstanceOf(AvonBorderRadius.self))
+                expect(borderRadius).to(beAnInstanceOf(AvonBorderRadius.self))
             }
         }
 
         describe("#opacities") {
             it("returns a instance of AvonOpacities") {
-                let colorPalette = systemUnderTest.opacities
+                let opacities = systemUnderTest.opacities
 
-                expect(colorPalette).to(beAnInstanceOf(AvonOpacities.self))
+                expect(opacities).to(beAnInstanceOf(AvonOpacities.self))
+            }
+        }
+
+        describe("#font") {
+            it("returns a instance of AvonFont") {
+                let font = systemUnderTest.font
+
+                expect(font).to(beAnInstanceOf(AvonFont.self))
             }
         }
     }
