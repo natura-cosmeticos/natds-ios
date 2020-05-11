@@ -612,7 +612,7 @@
 		117FE01F238D9B070032E2AC /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				117FE020238D9B070032E2AC /* Branding */,
+				84BFB6502469F65900506ED1 /* DeprecatedWillBeRemoved */,
 				A9CCF8E223CCEBB700000FC0 /* Style */,
 				843FA2CA2465CE9E00D20D9A /* Font.swift */,
 				843FA2CE2465EE8100D20D9A /* FontWeights.swift */,
@@ -1186,6 +1186,14 @@
 				84BFB6432469C9EB00506ED1 /* TheBodyShopFontWeights+Spec.swift */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		84BFB6502469F65900506ED1 /* DeprecatedWillBeRemoved */ = {
+			isa = PBXGroup;
+			children = (
+				117FE020238D9B070032E2AC /* Branding */,
+			);
+			path = DeprecatedWillBeRemoved;
 			sourceTree = "<group>";
 		};
 		84EE85E5245A0E970009293A /* DeprecatedWillBeRemoved */ = {
