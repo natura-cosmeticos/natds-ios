@@ -1,7 +1,7 @@
 import UIKit
 import NatDS
 
-final class TipographyCell: UITableViewCell {
+final class TypographyCell: UITableViewCell {
 
     // MARK: - Private properties
 
@@ -79,7 +79,7 @@ final class TipographyCell: UITableViewCell {
     }
 }
 
-extension TipographyCell {
+extension TypographyCell {
     struct ViewModel {
         let sizeDescription: String
         let weightDescription: String

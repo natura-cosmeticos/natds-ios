@@ -3,16 +3,16 @@ import NatDS
 
 // swiftlint:disable function_body_length
 
-final class TipographyViewController: UIViewController, SampleItem {
-    static var name = "Tipography"
+final class TypographyViewController: UIViewController, SampleItem {
+    static var name = "Typography"
 
     // MARK: - Private properties
 
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.register(
-            TipographyCell.self,
-            forCellReuseIdentifier: TipographyCell.reuseIdentifier
+            TypographyCell.self,
+            forCellReuseIdentifier: TypographyCell.reuseIdentifier
         )
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 60
@@ -23,7 +23,7 @@ final class TipographyViewController: UIViewController, SampleItem {
         return tableView
     }()
 
-    private lazy var cellsViewModels: [TipographyCell.ViewModel] = createCellsViewModels()
+    private lazy var cellsViewModels: [TypographyCell.ViewModel] = createCellsViewModels()
 
     // MARK: - Life cycle
 
@@ -59,15 +59,15 @@ final class TipographyViewController: UIViewController, SampleItem {
         ])
     }
 
-    private func createCellsViewModels() -> [TipographyCell.ViewModel] {
+    private func createCellsViewModels() -> [TypographyCell.ViewModel] {
         [
             .init(
-                sizeDescription: "heading1",
+                sizeDescription: "heading1:",
                 weightDescription: "regular",
                 font: NatFonts.font(ofSize: .heading1, withWeight: .regular)
             ),
             .init(
-                sizeDescription: "heading2",
+                sizeDescription: "heading2:",
                 weightDescription: "regular",
                 font: NatFonts.font(ofSize: .heading2, withWeight: .regular)
             ),
@@ -132,16 +132,16 @@ final class TipographyViewController: UIViewController, SampleItem {
 
 // MARK: - UITableViewDataSource
 
-extension TipographyViewController: UITableViewDataSource {
+extension TypographyViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         cellsViewModels.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(
-            withIdentifier: TipographyCell.reuseIdentifier,
+            withIdentifier: TypographyCell.reuseIdentifier,
             for: indexPath
-        ) as? TipographyCell ?? TipographyCell()
+        ) as? TypographyCell ?? TypographyCell()
 
         let viewModel = cellsViewModels[indexPath.row]
 

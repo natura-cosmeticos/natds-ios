@@ -8,6 +8,6 @@ class DesignSection: SampleSection {
         SizeViewController.self,
         SpacingViewController.self,
         OpacityViewController.self,
-        TipographyViewController.self
+        TypographyViewController.self
     ]
 }
