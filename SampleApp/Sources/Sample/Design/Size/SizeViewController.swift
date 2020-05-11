@@ -9,7 +9,8 @@ final class SizeViewController: UIViewController, SampleItem {
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.register(SizeCell.self, forCellReuseIdentifier: SizeCell.reuseIdentifier)
-        tableView.rowHeight = 60
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 60
         tableView.separatorStyle = .none
         tableView.allowsSelection = false
         tableView.translatesAutoresizingMaskIntoConstraints = false

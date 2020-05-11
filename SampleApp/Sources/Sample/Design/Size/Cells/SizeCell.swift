@@ -22,6 +22,7 @@ final class SizeCell: UITableViewCell {
         return view
     }()
 
+    private var symbolicSizeHeightConstraint: NSLayoutConstraint!
     private var symbolicSizeWidthConstraint: NSLayoutConstraint!
 
     // MARK: - Inits
@@ -42,6 +43,7 @@ final class SizeCell: UITableViewCell {
     func configure(description: String, size: CGFloat) {
         label.text = description
 
+        symbolicSizeHeightConstraint.constant = size
         symbolicSizeWidthConstraint.constant = size
         symbolicView.layoutIfNeeded()
     }
@@ -52,6 +54,8 @@ final class SizeCell: UITableViewCell {
         contentView.addSubview(label)
         contentView.addSubview(symbolicView)
 
+        symbolicSizeHeightConstraint = symbolicView
+            .heightAnchor.constraint(equalToConstant: 0)
         symbolicSizeWidthConstraint = symbolicView
             .widthAnchor.constraint(equalToConstant: 0)
 
@@ -69,12 +73,14 @@ final class SizeCell: UITableViewCell {
                 constant: NatSpacing.micro
             ),
             symbolicView.bottomAnchor.constraint(
-                equalTo: contentView.bottomAnchor,
+                lessThanOrEqualTo: contentView.bottomAnchor,
                 constant: -NatSpacing.micro
             ),
-            symbolicView.leftAnchor.constraint(
-                equalTo: contentView.leftAnchor
-            ),
+            symbolicView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+//            symbolicView.leftAnchor.constraint(
+//                equalTo: contentView.leftAnchor
+//            ),
+            symbolicSizeHeightConstraint,
             symbolicSizeWidthConstraint
         ])
     }
