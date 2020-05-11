@@ -7,10 +7,7 @@ class DesignSection: SampleSection {
         ColorsViewController.self,
         SizeViewController.self,
         SpacingViewController.self,
-<<<<<<< HEAD
+        OpacityViewController.self,
         TipographyViewController.self
-=======
-        OpacityViewController.self
->>>>>>> master
     ]
 }
