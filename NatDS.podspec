@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name          = 'NatDS'
-  s.version       = '0.0.20'
+  s.version       = '0.0.21'
   s.summary       = 'Natura Group Design System'
   s.description   = <<-DESC
                     Natura Design System helps designers and developers work faster and smarter, ensuring brand consistency and scalability.
@@ -16,5 +16,5 @@ Pod::Spec.new do |s|
   s.ios.resource_bundle = { 'NatDS' => ['Sources/**/*.png', 'Sources/**/*.{ttf}'] }
 
   s.swift_version = '5.0' 
-  s.platform      = :ios, '9.0'
+  s.platform      = :ios, '10.0'
 end
