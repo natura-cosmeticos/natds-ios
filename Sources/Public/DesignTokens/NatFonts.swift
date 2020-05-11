@@ -1,4 +1,19 @@
-public class NatFonts {
+/**
+  NatFonts is a struct that has methods to create fonts from the Design System tokens.
+  According with the current Brand in the Design System this properties can change.
+
+    Exemple of usage:
+
+        label.font = NatFonts.font(ofSize: .heading6 withWeight: .regular)
+
+ - Requires:
+        It's necessary to configure the Design System current Brand at DesisgnSystem class
+        or fatalError will be raised.
+
+            DesignSystem().configure(with: Brand)
+*/
+
+public struct NatFonts {
     public static func font(ofSize size: Size, withWeight weight: Weight) -> UIFont {
         .systemFont(
             ofSize: getTheme().font.sizes[keyPath: size.rawValue],
