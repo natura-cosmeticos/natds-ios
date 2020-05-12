@@ -1,5 +1,5 @@
 /**
-  DSOpacities is a enum that has access to alpha properties from the Design System.
+  NatOpacities is a enum that has access to alpha properties from the Design System.
   This properties are used to set alpha property from views.
   According with the current Brand in the Design System this properties can change.
 
@@ -7,8 +7,8 @@
 
     Exemple of usage:
 
-        containerView.alpha = DSOpacity.opacity02
-        profileView.alpha = DSOpacity.opacity03
+        containerView.alpha = NatOpacity.opacity02
+        profileView.alpha = NatOpacity.opacity03
 
  - Requires:
         It's necessary to configure the Design System current Brand at DesisgnSystem class
@@ -17,7 +17,7 @@
             DesignSystem().configure(with: Brand)
 */
 
-public enum DSOpacities {
+public enum NatOpacities {
     public static var opacity01: CGFloat { getTheme().opacities.opacity01 }
     public static var opacity02: CGFloat { getTheme().opacities.opacity02 }
     public static var opacity03: CGFloat { getTheme().opacities.opacity03 }

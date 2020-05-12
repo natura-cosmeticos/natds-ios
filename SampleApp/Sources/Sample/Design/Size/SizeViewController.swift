@@ -19,23 +19,23 @@ final class SizeViewController: UIViewController, SampleItem {
     }()
 
     private let cellsViewModels: [(description: String, value: CGFloat)] = [
-        ("micro: \(DSSizes.micro)", DSSizes.micro),
-        ("tiny: \(DSSizes.tiny)", DSSizes.tiny),
-        ("small: \(DSSizes.small)", DSSizes.small),
-        ("standard: \(DSSizes.standart)", DSSizes.standart),
-        ("semi: \(DSSizes.semi)", DSSizes.semi),
-        ("semiX: \(DSSizes.semiX)", DSSizes.semiX),
-        ("medium: \(DSSizes.medium)", DSSizes.medium),
-        ("mediumX: \(DSSizes.mediumX)", DSSizes.mediumX),
-        ("large: \(DSSizes.large)", DSSizes.large),
-        ("largeX: \(DSSizes.largeX)", DSSizes.largeX),
-        ("largeXX: \(DSSizes.largeXX)", DSSizes.largeXX),
-        ("largeXXX: \(DSSizes.largeXXX)", DSSizes.largeXXX),
-        ("huge: \(DSSizes.huge)", DSSizes.huge),
-        ("hugeX: \(DSSizes.hugeX)", DSSizes.hugeX),
-        ("hugeXX: \(DSSizes.hugeXX)", DSSizes.hugeXX),
-        ("hugeXXX: \(DSSizes.hugeXXX)", DSSizes.hugeXXX),
-        ("veryHuge: \(DSSizes.veryHuge)", DSSizes.veryHuge)
+        ("micro: \(NatSizes.micro)", NatSizes.micro),
+        ("tiny: \(NatSizes.tiny)", NatSizes.tiny),
+        ("small: \(NatSizes.small)", NatSizes.small),
+        ("standard: \(NatSizes.standart)", NatSizes.standart),
+        ("semi: \(NatSizes.semi)", NatSizes.semi),
+        ("semiX: \(NatSizes.semiX)", NatSizes.semiX),
+        ("medium: \(NatSizes.medium)", NatSizes.medium),
+        ("mediumX: \(NatSizes.mediumX)", NatSizes.mediumX),
+        ("large: \(NatSizes.large)", NatSizes.large),
+        ("largeX: \(NatSizes.largeX)", NatSizes.largeX),
+        ("largeXX: \(NatSizes.largeXX)", NatSizes.largeXX),
+        ("largeXXX: \(NatSizes.largeXXX)", NatSizes.largeXXX),
+        ("huge: \(NatSizes.huge)", NatSizes.huge),
+        ("hugeX: \(NatSizes.hugeX)", NatSizes.hugeX),
+        ("hugeXX: \(NatSizes.hugeXX)", NatSizes.hugeXX),
+        ("hugeXXX: \(NatSizes.hugeXXX)", NatSizes.hugeXXX),
+        ("veryHuge: \(NatSizes.veryHuge)", NatSizes.veryHuge)
     ]
 
     // MARK: - Life cycle
@@ -51,7 +51,7 @@ final class SizeViewController: UIViewController, SampleItem {
     // MARK: - Private methods
 
     private func setup() {
-        view.backgroundColor = DSColors.background
+        view.backgroundColor = NatColors.background
         view.addSubview(tableView)
 
         NSLayoutConstraint.activate([
@@ -60,14 +60,14 @@ final class SizeViewController: UIViewController, SampleItem {
             ),
             tableView.rightAnchor.constraint(
                 equalTo: view.safeAreaLayoutGuide.rightAnchor,
-                constant: -DSSpacing.tiny
+                constant: -NatSpacing.tiny
             ),
             tableView.bottomAnchor.constraint(
                 equalTo: view.safeAreaLayoutGuide.bottomAnchor
             ),
             tableView.leftAnchor.constraint(
                 equalTo: view.safeAreaLayoutGuide.leftAnchor,
-                constant: DSSpacing.tiny
+                constant: NatSpacing.tiny
             )
         ])
     }

@@ -3,9 +3,9 @@ import Nimble
 
 @testable import NatDS
 
-final class DSBorderRadiusSpec: QuickSpec {
+final class NatBorderRadiusSpec: QuickSpec {
     override func spec() {
-        let systemUnderTest = DSBorderRadius.self
+        let systemUnderTest = NatBorderRadius.self
 
         context("Avon") {
             let expectedBorderRadius = AvonBorderRadius()

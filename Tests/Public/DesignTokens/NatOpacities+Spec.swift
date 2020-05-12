@@ -3,9 +3,9 @@ import Nimble
 
 @testable import NatDS
 
-final class DSOpacitiesSpec: QuickSpec {
+final class NatOpacitiesSpec: QuickSpec {
     override func spec() {
-        let systemUnderTest = DSOpacities.self
+        let systemUnderTest = NatOpacities.self
 
         context("Avon") {
             let expectedOpacities = AvonOpacities()

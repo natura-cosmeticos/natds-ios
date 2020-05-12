@@ -69,10 +69,10 @@ extension ChooseBrandViewController: UITableViewDelegate {
         let viewController = MainViewController()
         let navigationController = UINavigationController(rootViewController: viewController)
         navigationController.modalPresentationStyle = .fullScreen
-        navigationController.navigationBar.barTintColor = DSColors.primary
-        navigationController.navigationBar.tintColor = DSColors.onPrimary
+        navigationController.navigationBar.barTintColor = NatColors.primary
+        navigationController.navigationBar.tintColor = NatColors.onPrimary
         navigationController.navigationBar.titleTextAttributes = [
-            NSAttributedString.Key.foregroundColor: DSColors.onPrimary
+            NSAttributedString.Key.foregroundColor: NatColors.onPrimary
         ]
         self.navigationController?.present(navigationController, animated: true)
     }

@@ -15,7 +15,7 @@ final class OpacityCell: UITableViewCell {
 
     private let symbolicView: UIView = {
         let view = UIView()
-        view.backgroundColor = DSColors.primary
+        view.backgroundColor = NatColors.primary
         view.translatesAutoresizingMaskIntoConstraints = false
 
         return view
@@ -50,16 +50,16 @@ final class OpacityCell: UITableViewCell {
         contentView.addSubview(symbolicView)
 
         NSLayoutConstraint.activate([
-            label.topAnchor.constraint(equalTo: contentView.topAnchor, constant: DSSpacing.micro),
+            label.topAnchor.constraint(equalTo: contentView.topAnchor, constant: NatSpacing.micro),
             label.leftAnchor.constraint(equalTo: contentView.leftAnchor),
 
             symbolicView.topAnchor.constraint(
                 equalTo: label.bottomAnchor,
-                constant: DSSpacing.micro
+                constant: NatSpacing.micro
             ),
             symbolicView.leftAnchor.constraint(equalTo: contentView.leftAnchor),
             symbolicView.rightAnchor.constraint(equalTo: contentView.rightAnchor),
-            symbolicView.heightAnchor.constraint(equalToConstant: DSSizes.large)
+            symbolicView.heightAnchor.constraint(equalToConstant: NatSizes.large)
         ])
     }
 }

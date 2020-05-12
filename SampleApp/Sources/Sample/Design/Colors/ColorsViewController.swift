@@ -13,30 +13,30 @@ final class ColorsViewController: UIViewController, SampleItem {
 
     private let cellsViewModel: [String: [ColorsCell.ViewModel]] = [
         "Primary": [
-            ("primary", DSColors.primary, DSColors.onPrimary, false),
-            ("primaryLight", DSColors.primaryLight, DSColors.onPrimaryLight, false),
-            ("primaryDark", DSColors.primaryDark, DSColors.onPrimaryDark, false)
+            ("primary", NatColors.primary, NatColors.onPrimary, false),
+            ("primaryLight", NatColors.primaryLight, NatColors.onPrimaryLight, false),
+            ("primaryDark", NatColors.primaryDark, NatColors.onPrimaryDark, false)
         ],
         "Secondary": [
-            ("secondary", DSColors.secondary, DSColors.onSecondary, false),
-            ("secondaryLight", DSColors.secondaryLight, DSColors.onSecondaryLight, false),
-            ("secondaryDark", DSColors.secondaryDark, DSColors.onSecondaryDark, false)
+            ("secondary", NatColors.secondary, NatColors.onSecondary, false),
+            ("secondaryLight", NatColors.secondaryLight, NatColors.onSecondaryLight, false),
+            ("secondaryDark", NatColors.secondaryDark, NatColors.onSecondaryDark, false)
         ],
         "Surface": [
-            ("background", DSColors.background, DSColors.onBackground, false),
-            ("surface", DSColors.surface, DSColors.onSurface, false)
+            ("background", NatColors.background, NatColors.onBackground, false),
+            ("surface", NatColors.surface, NatColors.onSurface, false)
         ],
         "Content": [
-            ("highlight", DSColors.highlight, DSColors.surface, true),
-            ("highEmphasis", DSColors.highEmphasis, DSColors.surface, true),
-            ("mediumEmphasis", DSColors.mediumEmphasis, DSColors.surface, true),
-            ("lowEmphasis", DSColors.lowEmphasis, DSColors.surface, true)
+            ("highlight", NatColors.highlight, NatColors.surface, true),
+            ("highEmphasis", NatColors.highEmphasis, NatColors.surface, true),
+            ("mediumEmphasis", NatColors.mediumEmphasis, NatColors.surface, true),
+            ("lowEmphasis", NatColors.lowEmphasis, NatColors.surface, true)
         ],
         "Feedback": [
-            ("success", DSColors.success, DSColors.onSuccess, false),
-            ("warning", DSColors.warning, DSColors.onWarning, false),
-            ("alert", DSColors.alert, DSColors.onAlert, false),
-            ("link", DSColors.link, DSColors.onLink, false)
+            ("success", NatColors.success, NatColors.onSuccess, false),
+            ("warning", NatColors.warning, NatColors.onWarning, false),
+            ("alert", NatColors.alert, NatColors.onAlert, false),
+            ("link", NatColors.link, NatColors.onLink, false)
         ]
     ]
 
@@ -79,7 +79,7 @@ final class ColorsViewController: UIViewController, SampleItem {
     }
 
     private func setup() {
-        view.backgroundColor = DSColors.background
+        view.backgroundColor = NatColors.background
 
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             title: "Light/Dark",

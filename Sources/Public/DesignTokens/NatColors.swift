@@ -1,5 +1,5 @@
 /**
-  DSColors is a struct that has access to colors from the design system.
+  NatColors is a struct that has access to colors from the design system.
   This colors changes according with the current Brand configured in the Design system
   and according with user properties of Light and Dark mode.
 
@@ -22,8 +22,8 @@
     Exemple of usage:
 
         let label = UILabel()
-        label.backgroundColor = DSColors.primary
-        label.textColor = DSColors.onPrimary
+        label.backgroundColor = NatColors.primary
+        label.textColor = NatColors.onPrimary
 
  - Requires:
         It's necessary to configure the Design System current Brand at DesisgnSystem class
@@ -39,7 +39,7 @@
         of light and dark mode.
 */
 
-public struct DSColors {
+public struct NatColors {
 
     // MARK: - Inits
 

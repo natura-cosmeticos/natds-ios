@@ -12,7 +12,7 @@ final class BorderRadiusViewController: UIViewController, SampleItem {
             BorderRadiusCell.self,
             forCellReuseIdentifier: BorderRadiusCell.reuseIdentifier
         )
-        tableView.rowHeight = DSSizes.hugeXX
+        tableView.rowHeight = NatSizes.hugeXX
         tableView.separatorStyle = .none
         tableView.allowsSelection = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -23,10 +23,10 @@ final class BorderRadiusViewController: UIViewController, SampleItem {
 
     private let cellsViewModels: [(description: String, value: CGFloat)] = [
         ("none: 0", 0),
-        ("small: \(DSBorderRadius.small)", DSBorderRadius.small),
-        ("medium: \(DSBorderRadius.medium)", DSBorderRadius.medium),
-        ("large: \(DSBorderRadius.large)", DSBorderRadius.large),
-        ("circle: viewHeight / 2", DSBorderRadius.circle(viewHeight: DSSizes.huge))
+        ("small: \(NatBorderRadius.small)", NatBorderRadius.small),
+        ("medium: \(NatBorderRadius.medium)", NatBorderRadius.medium),
+        ("large: \(NatBorderRadius.large)", NatBorderRadius.large),
+        ("circle: viewHeight / 2", NatBorderRadius.circle(viewHeight: NatSizes.huge))
     ]
 
     // MARK: - Life cycle
@@ -42,7 +42,7 @@ final class BorderRadiusViewController: UIViewController, SampleItem {
     // MARK: - Private methods
 
     private func setup() {
-        view.backgroundColor = DSColors.background
+        view.backgroundColor = NatColors.background
         view.addSubview(tableView)
 
         NSLayoutConstraint.activate([
@@ -51,14 +51,14 @@ final class BorderRadiusViewController: UIViewController, SampleItem {
             ),
             tableView.rightAnchor.constraint(
                 equalTo: view.safeAreaLayoutGuide.rightAnchor,
-                constant: -DSSpacing.tiny
+                constant: -NatSpacing.tiny
             ),
             tableView.bottomAnchor.constraint(
                 equalTo: view.safeAreaLayoutGuide.bottomAnchor
             ),
             tableView.leftAnchor.constraint(
                 equalTo: view.safeAreaLayoutGuide.leftAnchor,
-                constant: DSSpacing.tiny
+                constant: NatSpacing.tiny
             )
         ])
     }

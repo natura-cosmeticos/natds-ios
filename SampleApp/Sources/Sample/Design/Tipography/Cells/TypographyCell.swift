@@ -52,28 +52,28 @@ final class TypographyCell: UITableViewCell {
         NSLayoutConstraint.activate([
             sizeLabel.topAnchor.constraint(
                 greaterThanOrEqualTo: contentView.topAnchor,
-                constant: DSSpacing.micro
+                constant: NatSpacing.micro
             ),
             sizeLabel.rightAnchor.constraint(
                 lessThanOrEqualTo: weightLabel.leftAnchor
             ),
             sizeLabel.bottomAnchor.constraint(
                 equalTo: contentView.bottomAnchor,
-                constant: -DSSpacing.micro
+                constant: -NatSpacing.micro
             ),
             sizeLabel.leftAnchor.constraint(
                 equalTo: contentView.leftAnchor
             ),
             weightLabel.topAnchor.constraint(
                 greaterThanOrEqualTo: contentView.topAnchor,
-                constant: DSSpacing.micro
+                constant: NatSpacing.micro
             ),
             weightLabel.rightAnchor.constraint(
                 equalTo: contentView.rightAnchor
             ),
             weightLabel.bottomAnchor.constraint(
                 equalTo: contentView.bottomAnchor,
-                constant: -DSSpacing.micro
+                constant: -NatSpacing.micro
             )
         ])
     }

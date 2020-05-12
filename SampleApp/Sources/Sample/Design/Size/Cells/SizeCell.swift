@@ -15,8 +15,8 @@ final class SizeCell: UITableViewCell {
 
     private let symbolicView: UIView = {
         let view = UIView()
-        view.backgroundColor = DSColors.primary
-        view.layer.cornerRadius = DSBorderRadius.medium
+        view.backgroundColor = NatColors.primary
+        view.layer.cornerRadius = NatBorderRadius.medium
         view.translatesAutoresizingMaskIntoConstraints = false
 
         return view
@@ -58,7 +58,7 @@ final class SizeCell: UITableViewCell {
         NSLayoutConstraint.activate([
             label.topAnchor.constraint(
                 equalTo: contentView.topAnchor,
-                constant: DSSpacing.micro
+                constant: NatSpacing.micro
             ),
             label.leftAnchor.constraint(
                 equalTo: contentView.leftAnchor
@@ -66,11 +66,11 @@ final class SizeCell: UITableViewCell {
 
             symbolicView.topAnchor.constraint(
                 equalTo: label.bottomAnchor,
-                constant: DSSpacing.micro
+                constant: NatSpacing.micro
             ),
             symbolicView.bottomAnchor.constraint(
                 equalTo: contentView.bottomAnchor,
-                constant: -DSSpacing.micro
+                constant: -NatSpacing.micro
             ),
             symbolicView.leftAnchor.constraint(
                 equalTo: contentView.leftAnchor

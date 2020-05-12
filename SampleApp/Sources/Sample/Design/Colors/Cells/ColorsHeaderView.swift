@@ -21,7 +21,7 @@ final class ColorsHeader: UITableViewHeaderFooterView {
     }
 
     func setup() {
-        contentView.backgroundColor = DSColors.background
+        contentView.backgroundColor = NatColors.background
         contentView.addSubview(sectionLabel)
 
         NSLayoutConstraint.activate([

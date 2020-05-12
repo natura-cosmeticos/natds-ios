@@ -3,9 +3,9 @@ import Nimble
 
 @testable import NatDS
 
-final class DSSizesSpec: QuickSpec {
+final class NatSizesSpec: QuickSpec {
     override func spec() {
-        let systemUnderTest = DSSizes.self
+        let systemUnderTest = NatSizes.self
 
         context("Avon") {
             let expectedSizes = AvonSizes()
