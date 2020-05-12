@@ -7,7 +7,8 @@ final class SizeCell: UITableViewCell {
 
     private let label: UILabel = {
         let label = UILabel()
-        label.font = Fonts.body1
+        label.font = NatFonts.font(ofSize: .body1, withWeight: .regular)
+        label.textColor = NatColors.mediumEmphasis
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label
@@ -22,6 +23,7 @@ final class SizeCell: UITableViewCell {
         return view
     }()
 
+    private var symbolicSizeHeightConstraint: NSLayoutConstraint!
     private var symbolicSizeWidthConstraint: NSLayoutConstraint!
 
     // MARK: - Inits
@@ -42,8 +44,8 @@ final class SizeCell: UITableViewCell {
     func configure(description: String, size: CGFloat) {
         label.text = description
 
+        symbolicSizeHeightConstraint.constant = size
         symbolicSizeWidthConstraint.constant = size
-        symbolicView.layoutIfNeeded()
     }
 
     // MARK: - Private methods
@@ -52,8 +54,13 @@ final class SizeCell: UITableViewCell {
         contentView.addSubview(label)
         contentView.addSubview(symbolicView)
 
+        symbolicSizeHeightConstraint = symbolicView
+            .heightAnchor.constraint(equalToConstant: 0)
+        symbolicSizeHeightConstraint.priority = .defaultLow
+
         symbolicSizeWidthConstraint = symbolicView
             .widthAnchor.constraint(equalToConstant: 0)
+        symbolicSizeWidthConstraint.priority = .defaultLow
 
         NSLayoutConstraint.activate([
             label.topAnchor.constraint(
@@ -65,16 +72,15 @@ final class SizeCell: UITableViewCell {
             ),
 
             symbolicView.topAnchor.constraint(
-                equalTo: label.bottomAnchor,
+                greaterThanOrEqualTo: label.bottomAnchor,
                 constant: NatSpacing.micro
             ),
             symbolicView.bottomAnchor.constraint(
-                equalTo: contentView.bottomAnchor,
-                constant: -NatSpacing.micro
+                lessThanOrEqualTo: contentView.bottomAnchor,
+                constant: -NatSpacing.small
             ),
-            symbolicView.leftAnchor.constraint(
-                equalTo: contentView.leftAnchor
-            ),
+            symbolicView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            symbolicSizeHeightConstraint,
             symbolicSizeWidthConstraint
         ])
     }

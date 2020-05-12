@@ -7,7 +7,8 @@ final class BorderRadiusCell: UITableViewCell {
 
     private let label: UILabel = {
         let label = UILabel()
-        label.font = Fonts.body1
+        label.font = NatFonts.font(ofSize: .body1, withWeight: .regular)
+        label.textColor = NatColors.mediumEmphasis
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label
@@ -57,9 +58,9 @@ final class BorderRadiusCell: UITableViewCell {
                 equalTo: label.bottomAnchor,
                 constant: NatSpacing.micro
             ),
-            symbolicView.leftAnchor.constraint(equalTo: contentView.leftAnchor),
             symbolicView.widthAnchor.constraint(equalToConstant: NatSizes.huge),
-            symbolicView.heightAnchor.constraint(equalToConstant: NatSizes.huge)
+            symbolicView.heightAnchor.constraint(equalToConstant: NatSizes.huge),
+            symbolicView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor)
         ])
     }
 }

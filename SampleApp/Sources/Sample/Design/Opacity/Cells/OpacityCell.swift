@@ -7,7 +7,8 @@ final class OpacityCell: UITableViewCell {
 
     private let label: UILabel = {
         let label = UILabel()
-        label.font = Fonts.body1
+        label.font = NatFonts.font(ofSize: .body1, withWeight: .regular)
+        label.textColor = NatColors.mediumEmphasis
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label
