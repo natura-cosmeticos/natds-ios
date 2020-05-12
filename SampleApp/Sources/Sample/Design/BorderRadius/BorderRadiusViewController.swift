@@ -13,7 +13,6 @@ final class BorderRadiusViewController: UIViewController, SampleItem {
             forCellReuseIdentifier: BorderRadiusCell.reuseIdentifier
         )
         tableView.rowHeight = NatSizes.hugeXX
-        tableView.separatorStyle = .none
         tableView.allowsSelection = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.dataSource = self

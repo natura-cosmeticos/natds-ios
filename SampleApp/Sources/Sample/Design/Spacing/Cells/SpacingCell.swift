@@ -1,6 +1,8 @@
 import UIKit
 import NatDS
 
+// swiftlint:disable function_body_length
+
 final class SpacingCell: UITableViewCell {
 
     // MARK: - Private properties
@@ -38,13 +40,16 @@ final class SpacingCell: UITableViewCell {
         return view
     }()
 
-    private let symbolicBottomLeft: UIView = {
+    private let symbolicViewBottomLeft: UIView = {
         let view = UIView()
-        view.backgroundColor = .red
+        view.backgroundColor = NatColors.primary
         view.translatesAutoresizingMaskIntoConstraints = false
 
         return view
     }()
+
+    private var topLeftCenterConstraint: NSLayoutConstraint!
+    private var bottomLeftCenterConstraint: NSLayoutConstraint!
 
     private var topLeftFromTopRightConstraint: NSLayoutConstraint!
     private var topRightFromBottomRightConstraint: NSLayoutConstraint!
@@ -69,44 +74,49 @@ final class SpacingCell: UITableViewCell {
     func configure(description: String, spacing: CGFloat) {
         label.text = description
 
-//        symbolicSpacingHeightConstraint.constant = spacing
+        topLeftCenterConstraint.constant = (-spacing - NatSpacing.semi) / 2
+        bottomLeftCenterConstraint.constant = (-spacing - NatSpacing.semi) / 2
 
+        topLeftFromTopRightConstraint.constant = -spacing
+        topRightFromBottomRightConstraint.constant = -spacing
+        bottomRightFromBottomLeftConstraint.constant = spacing
         bottomLeftFromTopLeftConstraint.constant = spacing
-//        bottomLeftFromTopLeftConstraint.layoutIfNeeded()
     }
 
     // MARK: - Private methods
 
     private func setup() {
         contentView.addSubview(symbolicViewTopLeft)
-//        contentView.addSubview(symbolicViewTopRight)
-//        contentView.addSubview(symbolicViewBottomRight)
-        contentView.addSubview(symbolicBottomLeft)
+        contentView.addSubview(symbolicViewTopRight)
+        contentView.addSubview(symbolicViewBottomRight)
+        contentView.addSubview(symbolicViewBottomLeft)
         contentView.addSubview(label)
 
-//        symbolicSpacingHeightConstraint = symbolicSpacingView
-//            .heightAnchor.constraint(equalToConstant: 0)
-//        symbolicSpacingHeightConstraint.priority = .defaultLow
+        topLeftCenterConstraint = symbolicViewTopLeft.centerXAnchor.constraint(
+            equalTo: contentView.centerXAnchor
+        )
+        bottomLeftCenterConstraint = symbolicViewBottomLeft.centerXAnchor.constraint(
+            equalTo: contentView.centerXAnchor
+        )
 
-        bottomLeftFromTopLeftConstraint = symbolicBottomLeft.topAnchor.constraint(equalTo: symbolicViewTopLeft.bottomAnchor)
+        topLeftFromTopRightConstraint = symbolicViewTopLeft.rightAnchor.constraint(
+            equalTo: symbolicViewTopRight.leftAnchor
+        )
+
+        topRightFromBottomRightConstraint = symbolicViewTopRight.bottomAnchor.constraint(
+            equalTo: symbolicViewBottomRight.topAnchor
+        )
+
+        bottomRightFromBottomLeftConstraint = symbolicViewBottomRight.leftAnchor.constraint(
+            equalTo: symbolicViewBottomLeft.rightAnchor
+        )
+
+        bottomLeftFromTopLeftConstraint = symbolicViewBottomLeft.topAnchor.constraint(
+            equalTo: symbolicViewTopLeft.bottomAnchor
+        )
+        bottomLeftFromTopLeftConstraint.priority = .defaultLow
+
         NSLayoutConstraint.activate([
-//            symbolicSpacingView.topAnchor.constraint(
-//                greaterThanOrEqualTo: contentView.topAnchor,
-//                constant: NatSpacing.micro
-//            ),
-//            symbolicSpacingView.bottomAnchor.constraint(
-//                equalTo: contentView.bottomAnchor,
-//                constant: -NatSpacing.micro
-//            ),
-//            symbolicSpacingView.leftAnchor.constraint(
-//                equalTo: contentView.leftAnchor
-//            ),
-//            symbolicSpacingHeightConstraint,
-//            symbolicSpacingView.widthAnchor.constraint(
-//                equalTo: contentView.widthAnchor,
-//                multiplier: 0.62
-//            ),
-
             label.topAnchor.constraint(
                 greaterThanOrEqualTo: contentView.topAnchor,
                 constant: NatSpacing.micro
@@ -121,25 +131,34 @@ final class SpacingCell: UITableViewCell {
             ),
             symbolicViewTopLeft.heightAnchor.constraint(equalToConstant: NatSizes.medium),
             symbolicViewTopLeft.widthAnchor.constraint(equalToConstant: NatSizes.medium),
-            symbolicViewTopLeft.centerXAnchor.constraint(equalTo: contentView.centerXAnchor, constant: -NatSpacing.standart),
-//            symbolicViewTopLeft.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            topLeftCenterConstraint,
 
-//            symbolicViewTopRight.heightAnchor.constraint(equalToConstant: NatSizes.medium),
-//            symbolicViewTopRight.widthAnchor.constraint(equalToConstant: NatSizes.medium),
-//            symbolicViewTopRight.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-//            symbolicViewTopRight.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-//
-//            symbolicViewBottomRight.heightAnchor.constraint(equalToConstant: NatSizes.medium),
-//            symbolicViewBottomRight.widthAnchor.constraint(equalToConstant: NatSizes.medium),
-//            symbolicViewBottomRight.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-//            symbolicViewBottomRight.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-//
-            symbolicBottomLeft.heightAnchor.constraint(equalToConstant: NatSizes.medium),
-            symbolicBottomLeft.widthAnchor.constraint(equalToConstant: NatSizes.medium),
-            symbolicBottomLeft.centerXAnchor.constraint(equalTo: contentView.centerXAnchor, constant: -NatSpacing.standart),
-//            symbolicBottomLeft.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+            topLeftFromTopRightConstraint,
+
+            symbolicViewTopRight.topAnchor.constraint(
+                equalTo: label.bottomAnchor,
+                constant: NatSpacing.micro
+            ),
+            symbolicViewTopRight.heightAnchor.constraint(equalToConstant: NatSizes.medium),
+            symbolicViewTopRight.widthAnchor.constraint(equalToConstant: NatSizes.medium),
+
+            topRightFromBottomRightConstraint,
+
+            symbolicViewBottomRight.heightAnchor.constraint(equalToConstant: NatSizes.medium),
+            symbolicViewBottomRight.widthAnchor.constraint(equalToConstant: NatSizes.medium),
+
+            bottomRightFromBottomLeftConstraint,
+
+            symbolicViewBottomLeft.heightAnchor.constraint(equalToConstant: NatSizes.medium),
+            symbolicViewBottomLeft.widthAnchor.constraint(equalToConstant: NatSizes.medium),
+            bottomLeftCenterConstraint,
+
             bottomLeftFromTopLeftConstraint,
-            symbolicBottomLeft.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -NatSpacing.small)
+
+            symbolicViewBottomLeft.bottomAnchor.constraint(
+                equalTo: contentView.bottomAnchor,
+                constant: -NatSpacing.small
+            )
         ])
     }
 }

@@ -19,6 +19,7 @@ final class SpacingViewController: UIViewController, SampleItem {
     }()
 
     private let cellsViewModels: [(description: String, value: CGFloat)] = [
+        ("none", 0),
         ("micro: \(NatSpacing.micro)", NatSpacing.micro),
         ("tiny: \(NatSpacing.tiny)", NatSpacing.tiny),
         ("small: \(NatSpacing.small)", NatSpacing.small),
