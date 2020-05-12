@@ -19,6 +19,7 @@ final class SpacingCell: UITableViewCell {
     private let symbolicViewTopLeft: UIView = {
         let view = UIView()
         view.backgroundColor = NatColors.primary
+        view.layer.cornerRadius = NatBorderRadius.small
         view.translatesAutoresizingMaskIntoConstraints = false
 
         return view
@@ -27,6 +28,7 @@ final class SpacingCell: UITableViewCell {
     private let symbolicViewTopRight: UIView = {
         let view = UIView()
         view.backgroundColor = NatColors.primary
+        view.layer.cornerRadius = NatBorderRadius.small
         view.translatesAutoresizingMaskIntoConstraints = false
 
         return view
@@ -35,6 +37,7 @@ final class SpacingCell: UITableViewCell {
     private let symbolicViewBottomRight: UIView = {
         let view = UIView()
         view.backgroundColor = NatColors.primary
+        view.layer.cornerRadius = NatBorderRadius.small
         view.translatesAutoresizingMaskIntoConstraints = false
 
         return view
@@ -43,6 +46,7 @@ final class SpacingCell: UITableViewCell {
     private let symbolicViewBottomLeft: UIView = {
         let view = UIView()
         view.backgroundColor = NatColors.primary
+        view.layer.cornerRadius = NatBorderRadius.small
         view.translatesAutoresizingMaskIntoConstraints = false
 
         return view
