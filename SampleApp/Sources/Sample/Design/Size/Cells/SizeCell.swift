@@ -17,7 +17,7 @@ final class SizeCell: UITableViewCell {
     private let symbolicView: UIView = {
         let view = UIView()
         view.backgroundColor = NatColors.primary
-        view.layer.cornerRadius = NatBorderRadius.medium
+        view.layer.cornerRadius = NatBorderRadius.small
         view.translatesAutoresizingMaskIntoConstraints = false
 
         return view
