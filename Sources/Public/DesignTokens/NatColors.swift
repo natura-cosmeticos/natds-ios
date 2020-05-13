@@ -15,9 +15,9 @@
     - Surface:
         background, onBackground, surface, onSurface
     - Content:
-        highlight, highEmphasis, mediumEmphasis, lowEmphasis, link, onLink
+        highlight, highEmphasis, mediumEmphasis, lowEmphasis
     - Feedback:
-        success, onSuccess, warning, onWarning, alert, onAlert
+        success, onSuccess, warning, onWarning, alert, onAlert, link, onLink
 
     Exemple of usage:
 
