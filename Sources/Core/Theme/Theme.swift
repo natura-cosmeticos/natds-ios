@@ -8,4 +8,5 @@ protocol Theme {
     var borderRadius: BorderRadius { get }
     var opacities: Opacities { get }
     var font: Font { get }
+    var elevations: Elevations { get }
 }

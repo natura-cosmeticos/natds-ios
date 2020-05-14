@@ -6,4 +6,5 @@ struct TheBodyShopTheme: Theme {
     let borderRadius: BorderRadius = TheBodyShopBorderRadius()
     let opacities: Opacities = TheBodyShopOpacities()
     let font: Font = TheBodyShopFont()
+    let elevations: Elevations = TheBodyShopElevations()
 }

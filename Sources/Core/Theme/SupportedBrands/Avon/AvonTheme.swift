@@ -6,4 +6,5 @@ struct AvonTheme: Theme {
     let borderRadius: BorderRadius = AvonBorderRadius()
     let opacities: Opacities = AvonOpacities()
     let font: Font = AvonFont()
+    let elevations: Elevations = AvonElevations()
 }
