@@ -1,8 +1,23 @@
-public final class NatElevation {
-    public init() {}
+/**
+  NatElevation is a struct that has access to elevation attributes properties from the Design System.
+  This properties are used with view.layer to create elevation visual effect.
+  According with the current Brand in the Design System this properties can change.
 
-    public func apply(onView view: UIView, elevation: Elevation) {
+    Exemple of usage:
+
+        NatElevation.apply(onView: variantCardView, with: elevation09)
+
+ - Requires:
+        It's necessary to configure the Design System current Brand at DesisgnSystem class
+        or fatalError will be raised.
+
+            DesignSystem().configure(with: Brand)
+*/
+
+public struct NatElevation {
+    public static func apply(onView view: UIView, elevation: Elevation) {
         let attributes = getTheme().elevations[keyPath: elevation.rawValue]
+
         ViewStyling().applyElevation(onView: view, with: attributes)
     }
 }
