@@ -2,8 +2,8 @@ public final class NatElevation {
     public init() {}
 
     public func apply(onView view: UIView, elevation: Elevation) {
-        let elevation = getTheme().elevations[keyPath: elevation.rawValue]
-        ViewStyling().setElevation(onView: view, with: elevation)
+        let attributes = getTheme().elevations[keyPath: elevation.rawValue]
+        ViewStyling().applyElevation(onView: view, with: attributes)
     }
 }
 
