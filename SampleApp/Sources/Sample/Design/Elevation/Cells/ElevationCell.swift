@@ -17,7 +17,7 @@ final class ElevationCell: UITableViewCell {
     private let symbolicView: UIView = {
         let view = UIView()
         view.backgroundColor = NatColors.surface
-//        view.layer.cornerRadius = NatBorderRadius.medium
+        view.layer.cornerRadius = NatBorderRadius.medium
         view.translatesAutoresizingMaskIntoConstraints = false
 
         return view
@@ -38,6 +38,15 @@ final class ElevationCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
+    // MARK: - Overrides
+
+    override func prepareForReuse() {
+        symbolicView.layer.shadowColor = nil
+        symbolicView.layer.shadowOffset = .zero
+        symbolicView.layer.shadowRadius = 3
+        symbolicView.layer.shadowOpacity = 0
+    }
+
     // MARK: - Public methods
 
     func configure(description: String, elevation: NatElevation.Elevation?) {
@@ -45,10 +54,8 @@ final class ElevationCell: UITableViewCell {
 
         if let elevation = elevation {
             NatElevation().apply(onView: symbolicView, elevation: elevation)
-            symbolicView.setNeedsLayout()
         }
     }
-
     // MARK: - Private methods
 
     private func setup() {

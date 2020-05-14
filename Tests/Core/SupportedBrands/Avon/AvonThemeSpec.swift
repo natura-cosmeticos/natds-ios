@@ -62,5 +62,13 @@ final class AvonThemeSpec: QuickSpec {
                 expect(font).to(beAnInstanceOf(AvonFont.self))
             }
         }
+
+        describe("#elevations") {
+            it("returns a instance of AvonElevations") {
+                let elevations = systemUnderTest.elevations
+
+                expect(elevations).to(beAnInstanceOf(AvonElevations.self))
+            }
+        }
     }
 }

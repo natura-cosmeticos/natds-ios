@@ -62,5 +62,13 @@ final class TheBodyShopThemeSpec: QuickSpec {
                 expect(font).to(beAnInstanceOf(TheBodyShopFont.self))
             }
         }
+
+        describe("#elevations") {
+            it("returns a instance of TheBodyShopElevations") {
+                let elevations = systemUnderTest.elevations
+
+                expect(elevations).to(beAnInstanceOf(TheBodyShopElevations.self))
+            }
+        }
     }
 }
