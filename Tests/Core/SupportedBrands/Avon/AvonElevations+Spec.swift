@@ -6,6 +6,7 @@ import Nimble
 final class AvonElevationsSpec: QuickSpec {
     override func spec() {
         let systemUnderTest = AvonElevations()
+        var view: UIView!
 
         describe("#elevation01") {
             let attributes = systemUnderTest.elevation01
