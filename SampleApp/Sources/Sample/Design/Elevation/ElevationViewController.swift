@@ -21,7 +21,7 @@ final class ElevationViewController: UIViewController, SampleItem {
     }()
 
     private let cellsViewModels: [(description: String, value: NatElevation.Elevation?)] = [
-        ("elevation00", nil),
+        ("none", nil),
         ("elevation01", .elevation01),
         ("elevation02", .elevation02),
         ("elevation03", .elevation03),
