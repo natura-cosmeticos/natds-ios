@@ -6,4 +6,5 @@ struct NaturaTheme: Theme {
     let borderRadius: BorderRadius = NaturaBorderRadius()
     let opacities: Opacities = NaturaOpacities()
     let font: Font = NaturaFont()
+    let elevations: Elevations = NaturaElevations()
 }
