@@ -14,6 +14,12 @@ final class NatOpacitiesSpec: QuickSpec {
                 DesignSystem().configure(with: .avon)
             }
 
+            describe("#transparent") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.transparent).to(equal(expectedOpacities.transparent))
+                }
+            }
+
             describe("#opacity01") {
                 it("returns a expect value") {
                     expect(systemUnderTest.opacity01).to(equal(expectedOpacities.opacity01))
@@ -65,6 +71,12 @@ final class NatOpacitiesSpec: QuickSpec {
             describe("#opacity10") {
                 it("returns a expect value") {
                     expect(systemUnderTest.opacity10).to(equal(expectedOpacities.opacity10))
+                }
+            }
+
+            describe("#full") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.full).to(equal(expectedOpacities.full))
                 }
             }
         } // context - when using Avon as theme
@@ -76,6 +88,12 @@ final class NatOpacitiesSpec: QuickSpec {
                 DesignSystem().configure(with: .natura)
             }
 
+            describe("#transparent") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.transparent).to(equal(expectedOpacities.transparent))
+                }
+            }
+
             describe("#opacity01") {
                 it("returns a expect value") {
                     expect(systemUnderTest.opacity01).to(equal(expectedOpacities.opacity01))
@@ -127,6 +145,12 @@ final class NatOpacitiesSpec: QuickSpec {
             describe("#opacity10") {
                 it("returns a expect value") {
                     expect(systemUnderTest.opacity10).to(equal(expectedOpacities.opacity10))
+                }
+            }
+
+            describe("#full") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.full).to(equal(expectedOpacities.full))
                 }
             }
         } // context - when using Natura as theme
@@ -138,6 +162,12 @@ final class NatOpacitiesSpec: QuickSpec {
                 DesignSystem().configure(with: .theBodyShop)
             }
 
+            describe("#transparent") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.transparent).to(equal(expectedOpacities.transparent))
+                }
+            }
+
             describe("#opacity01") {
                 it("returns a expect value") {
                     expect(systemUnderTest.opacity01).to(equal(expectedOpacities.opacity01))
@@ -189,6 +219,12 @@ final class NatOpacitiesSpec: QuickSpec {
             describe("#opacity10") {
                 it("returns a expect value") {
                     expect(systemUnderTest.opacity10).to(equal(expectedOpacities.opacity10))
+                }
+            }
+
+            describe("#full") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.full).to(equal(expectedOpacities.full))
                 }
             }
         } // context - when using The Body Shop as theme

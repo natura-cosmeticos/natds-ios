@@ -19,6 +19,7 @@ final class OpacityViewController: UIViewController, SampleItem {
     }()
 
     private let cellsViewModels: [(description: String, value: CGFloat)] = [
+        ("transparent: \(NatOpacities.transparent)", NatOpacities.transparent),
         ("opacity01: \(NatOpacities.opacity01)", NatOpacities.opacity01),
         ("opacity02: \(NatOpacities.opacity02)", NatOpacities.opacity02),
         ("opacity03: \(NatOpacities.opacity03)", NatOpacities.opacity03),
@@ -29,7 +30,7 @@ final class OpacityViewController: UIViewController, SampleItem {
         ("opacity08: \(NatOpacities.opacity08)", NatOpacities.opacity08),
         ("opacity09: \(NatOpacities.opacity09)", NatOpacities.opacity09),
         ("opacity10: \(NatOpacities.opacity10)", NatOpacities.opacity10),
-        ("none: 1", 1)
+        ("full: \(NatOpacities.full)", NatOpacities.full)
     ]
 
     // MARK: - Life cycle

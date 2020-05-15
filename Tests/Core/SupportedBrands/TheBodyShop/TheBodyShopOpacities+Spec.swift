@@ -7,6 +7,12 @@ final class TheBodyShopOpacitiesSpec: QuickSpec {
     override func spec() {
         let systemUnderTest = TheBodyShopOpacities()
 
+        describe("#transparent") {
+            it("returns a expect value") {
+                expect(systemUnderTest.transparent).to(equal(0))
+            }
+        }
+
         describe("#opacity01") {
             it("returns a expect value") {
                 expect(systemUnderTest.opacity01).to(equal(0.04))
@@ -58,6 +64,12 @@ final class TheBodyShopOpacitiesSpec: QuickSpec {
         describe("#opacity10") {
             it("returns a expect value") {
                 expect(systemUnderTest.opacity10).to(equal(0.8))
+            }
+        }
+
+        describe("#full") {
+            it("returns a expect value") {
+                expect(systemUnderTest.full).to(equal(1))
             }
         }
     }
