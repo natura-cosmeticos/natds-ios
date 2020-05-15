@@ -5,7 +5,7 @@ import Nimble
 
 final class ViewStylingSpecSpec: QuickSpec {
     override func spec() {
-        let systemUnderTest = ViewStyling()
+        let systemUnderTest = ViewStyling.self
 
         describe("#applyElevation") {
             var view: UIView!
