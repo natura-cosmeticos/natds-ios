@@ -18,6 +18,7 @@
 */
 
 public enum NatOpacities {
+    public static var transparent: CGFloat { getTheme().opacities.transparent }
     public static var opacity01: CGFloat { getTheme().opacities.opacity01 }
     public static var opacity02: CGFloat { getTheme().opacities.opacity02 }
     public static var opacity03: CGFloat { getTheme().opacities.opacity03 }
@@ -28,4 +29,5 @@ public enum NatOpacities {
     public static var opacity08: CGFloat { getTheme().opacities.opacity08 }
     public static var opacity09: CGFloat { getTheme().opacities.opacity09 }
     public static var opacity10: CGFloat { getTheme().opacities.opacity10 }
+    public static var full: CGFloat { getTheme().opacities.full }
 }
