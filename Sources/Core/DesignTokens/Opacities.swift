@@ -1,4 +1,5 @@
 protocol Opacities {
+    var transparent: CGFloat { get }
     var opacity01: CGFloat { get }
     var opacity02: CGFloat { get }
     var opacity03: CGFloat { get }
@@ -9,4 +10,5 @@ protocol Opacities {
     var opacity08: CGFloat { get }
     var opacity09: CGFloat { get }
     var opacity10: CGFloat { get }
+    var full: CGFloat { get }
 }

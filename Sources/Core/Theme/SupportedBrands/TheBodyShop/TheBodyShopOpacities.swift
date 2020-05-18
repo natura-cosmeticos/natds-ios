@@ -1,4 +1,5 @@
 struct TheBodyShopOpacities: Opacities {
+    let transparent: CGFloat = 0
     let opacity01: CGFloat = 0.04
     let opacity02: CGFloat = 0.08
     let opacity03: CGFloat = 0.12
@@ -9,4 +10,5 @@ struct TheBodyShopOpacities: Opacities {
     let opacity08: CGFloat = 0.56
     let opacity09: CGFloat = 0.64
     let opacity10: CGFloat = 0.8
+    let full: CGFloat = 1
 }
