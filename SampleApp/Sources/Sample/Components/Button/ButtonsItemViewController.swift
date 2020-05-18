@@ -39,6 +39,12 @@ class ButtonsItemViewController: UIViewController, SampleItem {
         return button
     }()
 
+    private let outlinedButton: NatButton = {
+        let button = NatButton(style: .outlined)
+        button.setTitle("Default", for: .normal)//Outlined Button
+        return button
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         title = Self.name
@@ -53,6 +59,7 @@ class ButtonsItemViewController: UIViewController, SampleItem {
         stackView.addArrangedSubview(disabledContainedButton)
         stackView.addArrangedSubview(flatButton)
         stackView.addArrangedSubview(disabledFlatButton)
+        stackView.addArrangedSubview(outlinedButton)
     }
 
     private func addStackView() {

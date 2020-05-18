@@ -206,6 +206,7 @@
 		84BFB66F246DD15700506ED1 /* NaturaElevations+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB66E246DD15700506ED1 /* NaturaElevations+Spec.swift */; };
 		84BFB671246DF0B300506ED1 /* NatElevations+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB670246DF0B300506ED1 /* NatElevations+Spec.swift */; };
 		84BFB673246DF82800506ED1 /* ElevationAttributes+Equitable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB672246DF82800506ED1 /* ElevationAttributes+Equitable.swift */; };
+		84C24DA6246F3DE40046833B /* NatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C24DA5246F3DE40046833B /* NatButton.swift */; };
 		84EE85E9245A0FB20009293A /* NatSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE85E8245A0FB20009293A /* NatSpacing.swift */; };
 		A9325A6623FB34EC0023979C /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9325A6523FB34EC0023979C /* UICollectionView+Reusable.swift */; };
 		A9325A6A23FB35C50023979C /* UICollectionView+ReusableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9325A6723FB35450023979C /* UICollectionView+ReusableTests.swift */; };
@@ -437,6 +438,7 @@
 		84BFB66E246DD15700506ED1 /* NaturaElevations+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaturaElevations+Spec.swift"; sourceTree = "<group>"; };
 		84BFB670246DF0B300506ED1 /* NatElevations+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatElevations+Spec.swift"; sourceTree = "<group>"; };
 		84BFB672246DF82800506ED1 /* ElevationAttributes+Equitable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ElevationAttributes+Equitable.swift"; sourceTree = "<group>"; };
+		84C24DA5246F3DE40046833B /* NatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatButton.swift; sourceTree = "<group>"; };
 		84EE85E8245A0FB20009293A /* NatSpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatSpacing.swift; sourceTree = "<group>"; };
 		9A46395C038D4497A880A6FF /* Pods-NatDSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatDSTests.release.xcconfig"; path = "Target Support Files/Pods-NatDSTests/Pods-NatDSTests.release.xcconfig"; sourceTree = "<group>"; };
 		A8B18363274C7A70CF4443A3 /* Pods-NatDSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatDSTests.debug.xcconfig"; path = "Target Support Files/Pods-NatDSTests/Pods-NatDSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -492,6 +494,7 @@
 				643ABFEE24117C79000918EA /* Pulsable.swift */,
 				110F55B223BE5A3F00B9937A /* ContainedButton.swift */,
 				643ABFF024118536000918EA /* FlatButton.swift */,
+				84C24DA5246F3DE40046833B /* NatButton.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -1659,6 +1662,7 @@
 				A971BE712398306300A0D509 /* NavigationDrawer+IndexMenu.swift in Sources */,
 				84BFB6332469BE1900506ED1 /* NaturaFontWeights.swift in Sources */,
 				843FA29C2463369A00D20D9A /* TheBodyShopRadius.swift in Sources */,
+				84C24DA6246F3DE40046833B /* NatButton.swift in Sources */,
 				643ABFF124118536000918EA /* FlatButton.swift in Sources */,
 				843FA2B82464736500D20D9A /* Opacities.swift in Sources */,
 				84BFB663246DA50100506ED1 /* TheBodyShopElevations.swift in Sources */,
