@@ -4,8 +4,16 @@ public class NatButton: UIButton, Pulsable {
     private let pulseContainerLayer = CAShapeLayer()
     var pulseLayer: PulseLayer?
 
+    var updatedHandler: ((NatButton) -> Void)?
+
     public enum Style {
         case outlined
+    }
+
+    public override var isEnabled: Bool {
+        didSet {
+            updatedHandler?(self)
+        }
     }
 
     public init(style: Style) {
@@ -29,12 +37,16 @@ public class NatButton: UIButton, Pulsable {
         updatePulseContainerLayerFrame()
     }
 
-    public override func setTitle(_ title: String?, for state: UIControl.State) {
+    public func configure(title: String?) {
         if let title = title {
-            let attributedString = TypographyStyling().applyKern(onText: title.uppercased())
-            setAttributedTitle(attributedString, for: state)
+            let attributedString = ButtonStyling().applyTextForEneable(onText: title.uppercased())
+            setAttributedTitle(attributedString, for: .normal)
+
+            let attributedString2 = ButtonStyling().applyTextForDisable(onText: title.uppercased())
+            setAttributedTitle(attributedString2, for: .disabled)
         } else {
-            super.setTitle(title, for: state)
+            super.setAttributedTitle(nil, for: .normal)
+            super.setAttributedTitle(nil, for: .disabled)
         }
     }
 
@@ -79,19 +91,59 @@ final class TypographyStyling {
 }
 
 final class ButtonStyling {
-    func applyOutilinedStyle(onButton button: UIButton) {
-        button.backgroundColor = NatColors.surface
+    func applyOutilinedStyle(onButton button: NatButton) {
+        button.backgroundColor = .clear
 
-        button.setTitleColor(NatColors.onSurface, for: .normal)
         button.titleLabel?.font = NatFonts.font(ofSize: .button, withWeight: .medium)
 
-        button.setTitleColor(NatColors.onSurface, for: .disabled)
-        button.titleLabel?.font = NatFonts.font(ofSize: .button, withWeight: .medium)
+        button.updatedHandler = { button in
+            switch button.state {
+            case .normal:
+                button.layer.borderColor = NatColors.primary.cgColor
+            case .disabled:
+                button.layer.borderColor = NatColors.primary.withAlphaComponent(NatOpacities.opacity05).cgColor
+            default:
+                break
+            }
+        }
 
         button.layer.cornerRadius = NatBorderRadius.medium
         button.layer.borderColor = NatColors.primary.cgColor
         button.layer.borderWidth = 1
-        //Elevation
-        //...toooo dooooo
+        NatElevation.apply(onView: button, elevation: .elevation02)
+    }
+
+    func applyTextForEneable(onText text: String) -> NSAttributedString {
+        let attributedString = NSMutableAttributedString(string: text)
+
+        attributedString.addAttribute(
+            NSAttributedString.Key.kern,
+            value: 1.25, //Button
+            range: NSRange(location: 0, length: text.count)
+        )
+
+        attributedString.addAttribute(
+            NSAttributedString.Key.foregroundColor,
+            value: NatColors.onSurface,
+            range: NSRange(location: 0, length: text.count))
+
+        return attributedString
+    }
+
+    func applyTextForDisable(onText text: String) -> NSAttributedString {
+        let attributedString = NSMutableAttributedString(string: text)
+
+        attributedString.addAttribute(
+            NSAttributedString.Key.kern,
+            value: 1.25, //Button
+            range: NSRange(location: 0, length: text.count)
+        )
+
+        attributedString.addAttribute(
+            NSAttributedString.Key.foregroundColor,
+            value: NatColors.onSurface.withAlphaComponent(NatOpacities.opacity05),
+            range: NSRange(location: 0, length: text.count))
+
+        return attributedString
     }
 }

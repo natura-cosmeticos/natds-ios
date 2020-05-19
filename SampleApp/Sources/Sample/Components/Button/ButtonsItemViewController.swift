@@ -41,7 +41,14 @@ class ButtonsItemViewController: UIViewController, SampleItem {
 
     private let outlinedButton: NatButton = {
         let button = NatButton(style: .outlined)
-        button.setTitle("Default", for: .normal)//Outlined Button
+        button.configure(title: "Outlined Button")
+        return button
+    }()
+
+    private let disableOutlinedButton: NatButton = {
+        let button = NatButton(style: .outlined)
+        button.configure(title: "Disabled Outlined Button")
+        button.isEnabled = false
         return button
     }()
 
@@ -52,7 +59,7 @@ class ButtonsItemViewController: UIViewController, SampleItem {
     }
 
     private func setup() {
-        view.backgroundColor = .white
+        view.backgroundColor = NatColors.background
 
         addStackView()
         stackView.addArrangedSubview(containedButton)
@@ -60,6 +67,7 @@ class ButtonsItemViewController: UIViewController, SampleItem {
         stackView.addArrangedSubview(flatButton)
         stackView.addArrangedSubview(disabledFlatButton)
         stackView.addArrangedSubview(outlinedButton)
+        stackView.addArrangedSubview(disableOutlinedButton)
     }
 
     private func addStackView() {
