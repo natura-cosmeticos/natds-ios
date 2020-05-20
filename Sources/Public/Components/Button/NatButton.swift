@@ -9,7 +9,7 @@ public class NatButton: UIButton, Pulsable {
 
     public override var isEnabled: Bool {
         didSet {
-            ButtonStyling().changeState(onButton: self, style: style)
+            ButtonStyling().applyStateChanges(onButton: self, withStyle: style)
         }
     }
 
@@ -26,16 +26,7 @@ public class NatButton: UIButton, Pulsable {
     }
 
     public func configure(title: String?) {
-        if let title = title {
-            let attributedString = ButtonStyling().applyTextForEneable(onText: title.uppercased())
-            setAttributedTitle(attributedString, for: .normal)
-
-            let attributedString2 = ButtonStyling().applyTextForDisable(onText: title.uppercased())
-            setAttributedTitle(attributedString2, for: .disabled)
-        } else {
-            super.setAttributedTitle(nil, for: .normal)
-            super.setAttributedTitle(nil, for: .disabled)
-        }
+        ButtonStyling().apply(title: title, onButton: self, withStyle: style)
     }
 
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -53,88 +44,94 @@ public class NatButton: UIButton, Pulsable {
     }
 }
 
-
-final class TypographyStyling {
-    func applyKern(onText text: String) -> NSAttributedString {
-        let attributedString = NSMutableAttributedString(string: text)
-
-        attributedString.addAttribute(
-            NSAttributedString.Key.kern,
-            value: 1.25, //Button
-            range: NSRange(location: 0, length: text.count)
-        )
-
-        return attributedString
-    }
-}
-
 final class ButtonStyling {
     func applyStyle(onButton button: NatButton, withStyle style: NatButton.Style) {
         switch style {
-        case .outlined: applyOutilinedStyle(onButton: button)
+        case .outlined: Outlined.applyStyle(onButton: button)
         }
     }
 
-    func changeState(onButton button: NatButton, style: NatButton.Style) {
+    func applyStateChanges(onButton button: NatButton, withStyle style: NatButton.Style) {
         switch style {
-        case .outlined: ButtonStyling().applyChangeState(onButton: button)
+        case .outlined: Outlined.applyStyeForStateChanges(onButton: button)
+        }
+    }
+
+    func apply(title: String?, onButton button: NatButton, withStyle style: NatButton.Style) {
+        switch style {
+        case .outlined: Outlined.applyStyleForTitle(title, onButton: button)
         }
     }
 }
 
 //Outlined
 extension ButtonStyling {
-    private func applyOutilinedStyle(onButton button: NatButton) {
-        button.backgroundColor = .clear
+    enum Outlined {
+        static func applyStyle(onButton button: NatButton) {
+            button.backgroundColor = .clear
 
-        button.titleLabel?.font = NatFonts.font(ofSize: .button, withWeight: .medium)
+            button.titleLabel?.font = NatFonts.font(ofSize: .button, withWeight: .medium)
 
-        button.layer.cornerRadius = NatBorderRadius.medium
-        button.layer.borderColor = NatColors.primary.cgColor
-        button.layer.borderWidth = 1
-    }
-
-    private func applyChangeState(onButton button: NatButton) {
-        switch button.state {
-        case .normal:
+            button.layer.cornerRadius = NatBorderRadius.medium
             button.layer.borderColor = NatColors.primary.cgColor
-        case .disabled:
-            button.layer.borderColor = NatColors.primary.withAlphaComponent(NatOpacities.opacity05).cgColor
-        default: break
+            button.layer.borderWidth = 1
         }
-    }
 
-    func applyTextForEneable(onText text: String) -> NSAttributedString {
-        let attributedString = NSMutableAttributedString(string: text)
+        static func applyStyeForStateChanges(onButton button: NatButton) {
+            switch button.state {
+            case .normal:
+                button.layer.borderColor = NatColors.primary.cgColor
+            case .disabled:
+                button.layer.borderColor = NatColors.primary.withAlphaComponent(NatOpacities.opacity05).cgColor
+            default: break
+            }
+        }
 
-        attributedString.addAttribute(
-            NSAttributedString.Key.kern,
-            value: 1.25, //Button
-            range: NSRange(location: 0, length: text.count)
-        )
+        static func applyStyleForTitle(_ title: String?, onButton button: NatButton) {
+            if let title = title {
+                let attributedStringForNormal = createTextForOutlinedEneable(onText: title.uppercased())
+                button.setAttributedTitle(attributedStringForNormal, for: .normal)
 
-        attributedString.addAttribute(
-            NSAttributedString.Key.foregroundColor,
-            value: NatColors.onSurface,
-            range: NSRange(location: 0, length: text.count))
+                let attributedStringForDisabled = createTextForOutlinedDisable(onText: title.uppercased())
+                button.setAttributedTitle(attributedStringForDisabled, for: .disabled)
+            } else {
+                button.setAttributedTitle(nil, for: .normal)
+                button.setAttributedTitle(nil, for: .disabled)
+            }
+        }
 
-        return attributedString
-    }
+        static private func createTextForOutlinedEneable(onText text: String) -> NSAttributedString {
+            let attributedString = NSMutableAttributedString(string: text)
 
-    func applyTextForDisable(onText text: String) -> NSAttributedString {
-        let attributedString = NSMutableAttributedString(string: text)
+            attributedString.addAttribute(
+                NSAttributedString.Key.kern,
+                value: 1.25, //Button
+                range: NSRange(location: 0, length: text.count)
+            )
 
-        attributedString.addAttribute(
-            NSAttributedString.Key.kern,
-            value: 1.25, //Button
-            range: NSRange(location: 0, length: text.count)
-        )
+            attributedString.addAttribute(
+                NSAttributedString.Key.foregroundColor,
+                value: NatColors.onSurface,
+                range: NSRange(location: 0, length: text.count))
 
-        attributedString.addAttribute(
-            NSAttributedString.Key.foregroundColor,
-            value: NatColors.onSurface.withAlphaComponent(NatOpacities.opacity05),
-            range: NSRange(location: 0, length: text.count))
+            return attributedString
+        }
 
-        return attributedString
+        static private func createTextForOutlinedDisable(onText text: String) -> NSAttributedString {
+            let attributedString = NSMutableAttributedString(string: text)
+
+            attributedString.addAttribute(
+                NSAttributedString.Key.kern,
+                value: 1.25, //Button
+                range: NSRange(location: 0, length: text.count)
+            )
+
+            attributedString.addAttribute(
+                NSAttributedString.Key.foregroundColor,
+                value: NatColors.onSurface.withAlphaComponent(NatOpacities.opacity05),
+                range: NSRange(location: 0, length: text.count))
+
+            return attributedString
+        }
     }
 }

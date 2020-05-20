@@ -25,6 +25,8 @@ class ContainedPulseLayer: CAShapeLayer {
 
         masksToBounds = true
         addSublayer(pulseLayer)
+
+        pulseLayer.fillColor = NatColors.highEmphasis.withAlphaComponent(0.12).cgColor
     }
 
     required init?(coder: NSCoder) {
@@ -34,7 +36,6 @@ class ContainedPulseLayer: CAShapeLayer {
     override var frame: CGRect {
         didSet {
             pulseLayer.frame = bounds
-            pulseLayer.fillColor = Colors.Content.highEmphasis.withAlphaComponent(0.12).cgColor
         }
     }
 
