@@ -171,6 +171,8 @@
 		845D9EF8244DE32F003598B0 /* NatColors+TBS+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D9EF6244DE2E7003598B0 /* NatColors+TBS+Spec.swift */; };
 		846313AC245C47D100387FCF /* ValidateTheme+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846313AA245C47C400387FCF /* ValidateTheme+Spec.swift */; };
 		846313AE245CE9AE00387FCF /* GetTheme+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846313AD245CE9AE00387FCF /* GetTheme+Spec.swift */; };
+		84B197A02475915E00F1B575 /* ButtonOutlineStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1979F2475915E00F1B575 /* ButtonOutlineStyle.swift */; };
+		84B197A3247593B500F1B575 /* NatButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B197A2247593B500F1B575 /* NatButton+Style.swift */; };
 		84BFB61A24695E7D00506ED1 /* NatFonts+Avon+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB61824695E6600506ED1 /* NatFonts+Avon+Spec.swift */; };
 		84BFB61C2469810600506ED1 /* UIFont+GetWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB61B2469810600506ED1 /* UIFont+GetWeight.swift */; };
 		84BFB61F24699ECA00506ED1 /* NatFonts+Natura+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB61E24699ECA00506ED1 /* NatFonts+Natura+Spec.swift */; };
@@ -403,6 +405,8 @@
 		845D9EF6244DE2E7003598B0 /* NatColors+TBS+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatColors+TBS+Spec.swift"; sourceTree = "<group>"; };
 		846313AA245C47C400387FCF /* ValidateTheme+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ValidateTheme+Spec.swift"; sourceTree = "<group>"; };
 		846313AD245CE9AE00387FCF /* GetTheme+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GetTheme+Spec.swift"; sourceTree = "<group>"; };
+		84B1979F2475915E00F1B575 /* ButtonOutlineStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonOutlineStyle.swift; sourceTree = "<group>"; };
+		84B197A2247593B500F1B575 /* NatButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+Style.swift"; sourceTree = "<group>"; };
 		84BFB61824695E6600506ED1 /* NatFonts+Avon+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatFonts+Avon+Spec.swift"; sourceTree = "<group>"; };
 		84BFB61B2469810600506ED1 /* UIFont+GetWeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+GetWeight.swift"; sourceTree = "<group>"; };
 		84BFB61E24699ECA00506ED1 /* NatFonts+Natura+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatFonts+Natura+Spec.swift"; sourceTree = "<group>"; };
@@ -494,7 +498,7 @@
 				643ABFEE24117C79000918EA /* Pulsable.swift */,
 				110F55B223BE5A3F00B9937A /* ContainedButton.swift */,
 				643ABFF024118536000918EA /* FlatButton.swift */,
-				84C24DA5246F3DE40046833B /* NatButton.swift */,
+				84B197A12475934B00F1B575 /* NatButton */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -1159,6 +1163,23 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
+		84B1979E2475912300F1B575 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				84B1979F2475915E00F1B575 /* ButtonOutlineStyle.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		84B197A12475934B00F1B575 /* NatButton */ = {
+			isa = PBXGroup;
+			children = (
+				84C24DA5246F3DE40046833B /* NatButton.swift */,
+				84B197A2247593B500F1B575 /* NatButton+Style.swift */,
+			);
+			path = NatButton;
+			sourceTree = "<group>";
+		};
 		84BFB61D24699DB600506ED1 /* NatFonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -1249,6 +1270,7 @@
 		84BFB664246DCB2B00506ED1 /* ViewStyling */ = {
 			isa = PBXGroup;
 			children = (
+				84B1979E2475912300F1B575 /* Button */,
 				84BFB665246DCB5900506ED1 /* ViewStyling.swift */,
 			);
 			path = ViewStyling;
@@ -1590,6 +1612,7 @@
 				843FA2D324660E2100D20D9A /* NatFonts.swift in Sources */,
 				8427A2A22449F39500CF30D5 /* PrimaryColorPalette.swift in Sources */,
 				4395D1DC23FC6EC700C7DC6F /* TabItemView.swift in Sources */,
+				84B197A3247593B500F1B575 /* NatButton+Style.swift in Sources */,
 				84BFB62C2469B95300506ED1 /* TheBodyShopFontWeights.swift in Sources */,
 				843FA298246331F000D20D9A /* AvonBorderRadius.swift in Sources */,
 				84EE85E9245A0FB20009293A /* NatSpacing.swift in Sources */,
@@ -1638,6 +1661,7 @@
 				84BFB63A2469BF6500506ED1 /* AvonFontWeights.swift in Sources */,
 				8427A28E2447778600CF30D5 /* AvonTheme.swift in Sources */,
 				8427A2C82451CFFA00CF30D5 /* NaturaColorPaletteDark.swift in Sources */,
+				84B197A02475915E00F1B575 /* ButtonOutlineStyle.swift in Sources */,
 				117FE026238D9B070032E2AC /* Fonts.swift in Sources */,
 				8427A290244777AB00CF30D5 /* AvonColorPaletteDark.swift in Sources */,
 				843FA2CF2465EE8100D20D9A /* FontWeights.swift in Sources */,
