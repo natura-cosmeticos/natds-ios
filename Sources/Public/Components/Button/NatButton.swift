@@ -1,40 +1,28 @@
 import UIKit
 
 public class NatButton: UIButton, Pulsable {
-    private let pulseContainerLayer = CAShapeLayer()
-    var pulseLayer: PulseLayer?
-
-    var updatedHandler: ((NatButton) -> Void)?
-
     public enum Style {
         case outlined
     }
 
+    private let style: Style
+
     public override var isEnabled: Bool {
         didSet {
-            updatedHandler?(self)
+            ButtonStyling().changeState(onButton: self, style: style)
         }
     }
 
     public init(style: Style) {
+        self.style = style
+
         super.init(frame: .zero)
 
-        switch style {
-        case .outlined:
-            ButtonStyling().applyOutilinedStyle(onButton: self)
-        }
-
-        addPulseContainerLayer()
-        updatePulseContainerLayerFrame()
+        ButtonStyling().applyStyle(onButton: self, withStyle: style)
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-
-    public override func layoutSubviews() {
-        super.layoutSubviews()
-        updatePulseContainerLayerFrame()
     }
 
     public func configure(title: String?) {
@@ -55,26 +43,16 @@ public class NatButton: UIButton, Pulsable {
 
         if let touch = touches.first {
             let point = touch.location(in: self)
-            beginPulseAt(point: point, in: pulseContainerLayer)
+            beginPulseAt(point: point, in: layer)
         }
     }
 
     public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
-        endPulse()
-    }
-
-    private func addPulseContainerLayer() {
-        pulseContainerLayer.zPosition = 0
-        pulseContainerLayer.masksToBounds = true
-        layer.addSublayer(pulseContainerLayer)
-    }
-
-    private func updatePulseContainerLayerFrame() {
-        pulseContainerLayer.frame = bounds
-        pulseContainerLayer.cornerRadius = layer.cornerRadius
+        endPulse(layer: layer)
     }
 }
+
 
 final class TypographyStyling {
     func applyKern(onText text: String) -> NSAttributedString {
@@ -91,26 +69,39 @@ final class TypographyStyling {
 }
 
 final class ButtonStyling {
-    func applyOutilinedStyle(onButton button: NatButton) {
+    func applyStyle(onButton button: NatButton, withStyle style: NatButton.Style) {
+        switch style {
+        case .outlined: applyOutilinedStyle(onButton: button)
+        }
+    }
+
+    func changeState(onButton button: NatButton, style: NatButton.Style) {
+        switch style {
+        case .outlined: ButtonStyling().applyChangeState(onButton: button)
+        }
+    }
+}
+
+//Outlined
+extension ButtonStyling {
+    private func applyOutilinedStyle(onButton button: NatButton) {
         button.backgroundColor = .clear
 
         button.titleLabel?.font = NatFonts.font(ofSize: .button, withWeight: .medium)
 
-        button.updatedHandler = { button in
-            switch button.state {
-            case .normal:
-                button.layer.borderColor = NatColors.primary.cgColor
-            case .disabled:
-                button.layer.borderColor = NatColors.primary.withAlphaComponent(NatOpacities.opacity05).cgColor
-            default:
-                break
-            }
-        }
-
         button.layer.cornerRadius = NatBorderRadius.medium
         button.layer.borderColor = NatColors.primary.cgColor
         button.layer.borderWidth = 1
-        NatElevation.apply(onView: button, elevation: .elevation02)
+    }
+
+    private func applyChangeState(onButton button: NatButton) {
+        switch button.state {
+        case .normal:
+            button.layer.borderColor = NatColors.primary.cgColor
+        case .disabled:
+            button.layer.borderColor = NatColors.primary.withAlphaComponent(NatOpacities.opacity05).cgColor
+        default: break
+        }
     }
 
     func applyTextForEneable(onText text: String) -> NSAttributedString {

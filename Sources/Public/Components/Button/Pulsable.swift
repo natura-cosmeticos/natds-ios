@@ -1,22 +1,48 @@
-protocol Pulsable: AnyObject {
-    var pulseLayer: PulseLayer? { get set }
-}
+protocol Pulsable: AnyObject {}
 
 extension Pulsable {
-
     func beginPulseAt(point: CGPoint, in layer: CALayer) {
-        let pulseLayer = PulseLayer()
-        pulseLayer.frame = layer.bounds
-        pulseLayer.fillColor = Colors.Content.highEmphasis.withAlphaComponent(0.12).cgColor
+        let containedPulseLayer = ContainedPulseLayer()
+        containedPulseLayer.frame = layer.bounds
 
-        layer.insertSublayer(pulseLayer, above: nil)
+        layer.insertSublayer(containedPulseLayer, above: nil)
+
+        containedPulseLayer.startPulseAt(point: point)
+    }
+
+    func endPulse(layer: CALayer) {
+        layer.sublayers?
+            .compactMap { $0 as? ContainedPulseLayer }
+            .forEach { $0.endPulse() }
+    }
+}
+
+class ContainedPulseLayer: CAShapeLayer {
+    let pulseLayer: PulseLayer = PulseLayer()
+
+    override init() {
+        super.init()
+
+        masksToBounds = true
+        addSublayer(pulseLayer)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    override var frame: CGRect {
+        didSet {
+            pulseLayer.frame = bounds
+            pulseLayer.fillColor = Colors.Content.highEmphasis.withAlphaComponent(0.12).cgColor
+        }
+    }
+
+    func startPulseAt(point: CGPoint) {
         pulseLayer.startPulseAt(point: point)
-
-        self.pulseLayer = pulseLayer
     }
 
     func endPulse() {
-        guard let pulseLayer = self.pulseLayer else { return }
-        pulseLayer.endPulse()
+        pulseLayer.endPulse { self.removeFromSuperlayer() }
     }
 }
