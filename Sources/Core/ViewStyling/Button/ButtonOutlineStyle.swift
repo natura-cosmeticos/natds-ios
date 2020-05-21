@@ -1,7 +1,7 @@
 enum ButtonOutlinedStyle {
     static func applyStyle(onButton button: UIButton) {
         button.titleLabel?.font = NatFonts.font(ofSize: .button, withWeight: .medium)
-
+        button.titleLabel?.lineBreakMode = .byTruncatingTail
         button.backgroundColor = .clear
 
         button.layer.cornerRadius = NatBorderRadius.medium
@@ -30,10 +30,16 @@ enum ButtonOutlinedStyle {
 
     static func applyStyleForTitle(_ title: String?, onButton button: UIButton) {
         if let title = title?.uppercased() {
-            let attributedStringForNormal = createTextForOutlinedEneable(onText: title)
+            let attributedStringForNormal = createTextForTitle(
+                text: title,
+                withColor: NatColors.onSurface
+            )
             button.setAttributedTitle(attributedStringForNormal, for: .normal)
 
-            let attributedStringForDisabled = createTextForOutlinedDisable(onText: title)
+            let attributedStringForDisabled = createTextForTitle(
+                text: title,
+                withColor: NatColors.onSurface.withAlphaComponent(NatOpacities.opacity05)
+            )
             button.setAttributedTitle(attributedStringForDisabled, for: .disabled)
         } else {
             button.setAttributedTitle(nil, for: .normal)
@@ -41,7 +47,9 @@ enum ButtonOutlinedStyle {
         }
     }
 
-    static private func createTextForOutlinedEneable(onText text: String) -> NSAttributedString {
+    static private func createTextForTitle(text: String,
+                                           withColor color: UIColor) -> NSAttributedString {
+
         let attributedString = NSMutableAttributedString(string: text)
 
         attributedString.addAttribute(
@@ -52,24 +60,7 @@ enum ButtonOutlinedStyle {
 
         attributedString.addAttribute(
             NSAttributedString.Key.foregroundColor,
-            value: NatColors.onSurface,
-            range: NSRange(location: 0, length: text.count))
-
-        return attributedString
-    }
-
-    static private func createTextForOutlinedDisable(onText text: String) -> NSAttributedString {
-        let attributedString = NSMutableAttributedString(string: text)
-
-        attributedString.addAttribute(
-            NSAttributedString.Key.kern,
-            value: 1.25,
-            range: NSRange(location: 0, length: text.count)
-        )
-
-        attributedString.addAttribute(
-            NSAttributedString.Key.foregroundColor,
-            value: NatColors.onSurface.withAlphaComponent(NatOpacities.opacity05),
+            value: color,
             range: NSRange(location: 0, length: text.count))
 
         return attributedString

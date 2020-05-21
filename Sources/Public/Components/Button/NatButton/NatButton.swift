@@ -2,9 +2,6 @@ import UIKit
 
 public final class NatButton: UIButton, Pulsable {
     private let style: Style
-    private lazy var heightConstraint = heightAnchor.constraint(
-        equalToConstant: Height.medium.rawValue
-    )
 
     public override var isEnabled: Bool {
         didSet {
@@ -18,9 +15,6 @@ public final class NatButton: UIButton, Pulsable {
         super.init(frame: .zero)
 
         style.apply(self)
-
-        translatesAutoresizingMaskIntoConstraints = false
-        heightConstraint.isActive = true
     }
 
     required init?(coder: NSCoder) {
@@ -29,10 +23,6 @@ public final class NatButton: UIButton, Pulsable {
 
     public func configure(title: String?) {
         style.applyTitle(title, self)
-    }
-
-    public func configure(height: Height) {
-        heightConstraint.constant = height.rawValue
     }
 
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -47,5 +37,13 @@ public final class NatButton: UIButton, Pulsable {
     public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
         endPulse(layer: layer)
+    }
+}
+
+extension NatButton {
+    public enum Height {
+        public static var small: CGFloat { getTheme().sizes.semi }
+        public static var medium: CGFloat { getTheme().sizes.semiX }
+        public static var large: CGFloat { getTheme().sizes.medium }
     }
 }

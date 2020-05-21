@@ -20,28 +20,29 @@ final class ButtonsItemViewControllerN: UIViewController, SampleItem {
     }()
 
     private lazy var eneabledStackView: UIStackView = {
-        let stack = UIStackView()
-        stack.axis = .horizontal
-        stack.spacing = 16
-        stack.distribution = .fillEqually
-        stack.translatesAutoresizingMaskIntoConstraints = false
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.spacing = NatSpacing.tiny
+        stackView.distribution = .fillEqually
+        stackView.translatesAutoresizingMaskIntoConstraints = false
 
-        return stack
+        return stackView
     }()
 
     private lazy var disabledStackView: UIStackView = {
-        let stack = UIStackView()
-        stack.axis = .horizontal
-        stack.spacing = 16
-        stack.distribution = .fillEqually
-        stack.translatesAutoresizingMaskIntoConstraints = false
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.spacing = NatSpacing.tiny
+        stackView.distribution = .fillEqually
+        stackView.translatesAutoresizingMaskIntoConstraints = false
 
-        return stack
+        return stackView
     }()
 
-    private let containedButton: NatButton = {
-        let button = NatButton(style: .outlined)
-        button.configure(title: "Contained")
+    private let containedButton: ContainedButton = {
+        let button = ContainedButton()
+        button.setTitle("Contained", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
 
         return button
     }()
@@ -49,21 +50,24 @@ final class ButtonsItemViewControllerN: UIViewController, SampleItem {
     private let outlinedButton: NatButton = {
         let button = NatButton(style: .outlined)
         button.configure(title: "Outlined")
+        button.translatesAutoresizingMaskIntoConstraints = false
 
         return button
     }()
 
-    private let textButton: NatButton = {
-        let button = NatButton(style: .outlined)
-        button.configure(title: "Text")
+    private let textButton: FlatButton = {
+        let button = FlatButton()
+        button.setTitle("Text", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
 
         return button
     }()
 
-    private let disableContainedButton: NatButton = {
-        let button = NatButton(style: .outlined)
-        button.configure(title: "Contained")
+    private let disableContainedButton: ContainedButton = {
+        let button = ContainedButton()
+        button.setTitle("Contained", for: .disabled)
         button.isEnabled = false
+        button.translatesAutoresizingMaskIntoConstraints = false
 
         return button
     }()
@@ -72,29 +76,33 @@ final class ButtonsItemViewControllerN: UIViewController, SampleItem {
         let button = NatButton(style: .outlined)
         button.configure(title: "Outlined")
         button.isEnabled = false
+        button.translatesAutoresizingMaskIntoConstraints = false
 
         return button
     }()
 
-    private let disableTextButton: NatButton = {
-        let button = NatButton(style: .outlined)
-        button.configure(title: "Text")
+    private let disableTextButton: FlatButton = {
+        let button = FlatButton()
+        button.setTitle("Text", for: .disabled)
         button.isEnabled = false
+        button.translatesAutoresizingMaskIntoConstraints = false
 
         return button
     }()
 
-    private let containedFullButton: NatButton = {
-        let button = NatButton(style: .outlined)
-        button.configure(title: "Contained")
+    private let containedFullButton: ContainedButton = {
+        let button = ContainedButton()
+        button.setTitle("Contained", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
 
         return button
     }()
 
-    private let disableContainedFullButton: NatButton = {
-        let button = NatButton(style: .outlined)
-        button.configure(title: "Disabled Contained")
+    private let disableContainedFullButton: ContainedButton = {
+        let button = ContainedButton()
+        button.setTitle("Disabled Contained", for: .disabled)
         button.isEnabled = false
+        button.translatesAutoresizingMaskIntoConstraints = false
 
         return button
     }()
@@ -102,6 +110,7 @@ final class ButtonsItemViewControllerN: UIViewController, SampleItem {
     private let outlinedFullButton: NatButton = {
         let button = NatButton(style: .outlined)
         button.configure(title: "Outlined")
+        button.translatesAutoresizingMaskIntoConstraints = false
 
         return button
     }()
@@ -110,41 +119,34 @@ final class ButtonsItemViewControllerN: UIViewController, SampleItem {
         let button = NatButton(style: .outlined)
         button.configure(title: "Disabled Outlined")
         button.isEnabled = false
+        button.translatesAutoresizingMaskIntoConstraints = false
 
         return button
     }()
 
-    private let textFullButton: NatButton = {
-        let button = NatButton(style: .outlined)
-        button.configure(title: "Text")
+    private let textFullButton: FlatButton = {
+        let button = FlatButton()
+        button.setTitle("Text", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
 
         return button
     }()
 
-    private let disableTextFullButton: NatButton = {
-        let button = NatButton(style: .outlined)
-        button.configure(title: "Disabled Text")
+    private let disableTextFullButton: FlatButton = {
+        let button = FlatButton()
+        button.setTitle("Disabled Text", for: .disabled)
         button.isEnabled = false
+        button.translatesAutoresizingMaskIntoConstraints = false
 
         return button
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         title = Self.name
+
         setup()
-
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 4.5) {
-//            self.outlinedButton.configure(height: .medium)
-//        }
-
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 6.5) {
-//            self.outlinedButton.isEnabled = false
-//        }
-//
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 12.5) {
-//            self.outlinedButton.isEnabled = true
-//        }
     }
 
     private func setup() {
@@ -152,8 +154,8 @@ final class ButtonsItemViewControllerN: UIViewController, SampleItem {
 
         scrollView.addSubview(containerView)
 
-        eneabledStackView.addArrangedSubview(outlinedButton)
         eneabledStackView.addArrangedSubview(containedButton)
+        eneabledStackView.addArrangedSubview(outlinedButton)
         eneabledStackView.addArrangedSubview(textButton)
 
         disabledStackView.addArrangedSubview(disableContainedButton)
@@ -205,6 +207,7 @@ final class ButtonsItemViewControllerN: UIViewController, SampleItem {
             ),
             eneabledStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
             eneabledStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+            eneabledStackView.heightAnchor.constraint(equalToConstant: NatButton.Height.medium),
 
             disabledStackView.topAnchor.constraint(
                 equalTo: eneabledStackView.bottomAnchor,
@@ -212,6 +215,7 @@ final class ButtonsItemViewControllerN: UIViewController, SampleItem {
             ),
             disabledStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
             disabledStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+            disabledStackView.heightAnchor.constraint(equalToConstant: NatButton.Height.medium),
 
             containedFullButton.topAnchor.constraint(
                 equalTo: disabledStackView.bottomAnchor,
@@ -219,6 +223,7 @@ final class ButtonsItemViewControllerN: UIViewController, SampleItem {
             ),
             containedFullButton.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
             containedFullButton.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+            containedFullButton.heightAnchor.constraint(equalToConstant: NatButton.Height.medium),
 
             disableContainedFullButton.topAnchor.constraint(
                 equalTo: containedFullButton.bottomAnchor,
@@ -226,6 +231,7 @@ final class ButtonsItemViewControllerN: UIViewController, SampleItem {
             ),
             disableContainedFullButton.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
             disableContainedFullButton.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+            disableContainedFullButton.heightAnchor.constraint(equalToConstant: NatButton.Height.medium),
 
             outlinedFullButton.topAnchor.constraint(
                 equalTo: disableContainedFullButton.bottomAnchor,
@@ -233,6 +239,7 @@ final class ButtonsItemViewControllerN: UIViewController, SampleItem {
             ),
             outlinedFullButton.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
             outlinedFullButton.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+            outlinedFullButton.heightAnchor.constraint(equalToConstant: NatButton.Height.medium),
 
             disableOutlinedFullButton.topAnchor.constraint(
                 equalTo: outlinedFullButton.bottomAnchor,
@@ -240,6 +247,7 @@ final class ButtonsItemViewControllerN: UIViewController, SampleItem {
             ),
             disableOutlinedFullButton.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
             disableOutlinedFullButton.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+            disableOutlinedFullButton.heightAnchor.constraint(equalToConstant: NatButton.Height.medium),
 
             textFullButton.topAnchor.constraint(
                 equalTo: disableOutlinedFullButton.bottomAnchor,
@@ -247,6 +255,7 @@ final class ButtonsItemViewControllerN: UIViewController, SampleItem {
             ),
             textFullButton.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
             textFullButton.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+            textFullButton.heightAnchor.constraint(equalToConstant: NatButton.Height.medium),
 
             disableTextFullButton.topAnchor.constraint(
                 equalTo: textFullButton.bottomAnchor,
@@ -254,6 +263,7 @@ final class ButtonsItemViewControllerN: UIViewController, SampleItem {
             ),
             disableTextFullButton.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
             disableTextFullButton.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+            disableTextFullButton.heightAnchor.constraint(equalToConstant: NatButton.Height.medium),
             disableTextFullButton.bottomAnchor.constraint(
                 equalTo: containerView.bottomAnchor,
                 constant: -NatSpacing.small
