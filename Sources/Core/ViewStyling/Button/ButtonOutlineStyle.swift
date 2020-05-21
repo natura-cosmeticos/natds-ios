@@ -1,30 +1,39 @@
 enum ButtonOutlinedStyle {
-    static func applyStyle(onButton button: NatButton) {
-        button.backgroundColor = .clear
-
+    static func applyStyle(onButton button: UIButton) {
         button.titleLabel?.font = NatFonts.font(ofSize: .button, withWeight: .medium)
+
+        button.backgroundColor = .clear
 
         button.layer.cornerRadius = NatBorderRadius.medium
         button.layer.borderColor = NatColors.primary.cgColor
         button.layer.borderWidth = 1
+
+        let spacing = getTheme().spacing.small
+        button.contentEdgeInsets = UIEdgeInsets(
+            top: spacing,
+            left: spacing,
+            bottom: spacing,
+            right: spacing
+        )
     }
 
-    static func applyStyeForStateChanges(onButton button: NatButton) {
+    static func applyStyleForStates(onButton button: UIButton) {
         switch button.state {
         case .normal:
             button.layer.borderColor = NatColors.primary.cgColor
         case .disabled:
-            button.layer.borderColor = NatColors.primary.withAlphaComponent(NatOpacities.opacity05).cgColor
+            button.layer.borderColor = NatColors.primary
+                .withAlphaComponent(NatOpacities.opacity05).cgColor
         default: break
         }
     }
 
-    static func applyStyleForTitle(_ title: String?, onButton button: NatButton) {
-        if let title = title {
-            let attributedStringForNormal = createTextForOutlinedEneable(onText: title.uppercased())
+    static func applyStyleForTitle(_ title: String?, onButton button: UIButton) {
+        if let title = title?.uppercased() {
+            let attributedStringForNormal = createTextForOutlinedEneable(onText: title)
             button.setAttributedTitle(attributedStringForNormal, for: .normal)
 
-            let attributedStringForDisabled = createTextForOutlinedDisable(onText: title.uppercased())
+            let attributedStringForDisabled = createTextForOutlinedDisable(onText: title)
             button.setAttributedTitle(attributedStringForDisabled, for: .disabled)
         } else {
             button.setAttributedTitle(nil, for: .normal)
@@ -37,7 +46,7 @@ enum ButtonOutlinedStyle {
 
         attributedString.addAttribute(
             NSAttributedString.Key.kern,
-            value: 1.25, //Button
+            value: 1.25,
             range: NSRange(location: 0, length: text.count)
         )
 
@@ -54,7 +63,7 @@ enum ButtonOutlinedStyle {
 
         attributedString.addAttribute(
             NSAttributedString.Key.kern,
-            value: 1.25, //Button
+            value: 1.25,
             range: NSRange(location: 0, length: text.count)
         )
 

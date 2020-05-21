@@ -1,6 +1,6 @@
 import UIKit
 
-public class NatButton: UIButton, Pulsable {
+public final class NatButton: UIButton, Pulsable {
     private let style: Style
     private lazy var heightConstraint = heightAnchor.constraint(
         equalToConstant: Height.medium.rawValue

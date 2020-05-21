@@ -5,13 +5,26 @@ class ButtonsItemViewControllerN: UIViewController, SampleItem {
 
     private let outlinedButton: NatButton = {
         let button = NatButton(style: .outlined)
-        button.configure(title: "Outlined Button")
+        button.configure(title: "Outlined")
         return button
     }()
 
     private let disableOutlinedButton: NatButton = {
         let button = NatButton(style: .outlined)
-        button.configure(title: "Disabled Outlined Button")
+        button.configure(title: "Outlined")
+        button.isEnabled = false
+        return button
+    }()
+
+    private let outlinedFullButton: NatButton = {
+        let button = NatButton(style: .outlined)
+        button.configure(title: "Outlined")
+        return button
+    }()
+
+    private let disableOutlinedFullButton: NatButton = {
+        let button = NatButton(style: .outlined)
+        button.configure(title: "Disabled Outlined")
         button.isEnabled = false
         return button
     }()
@@ -38,7 +51,9 @@ class ButtonsItemViewControllerN: UIViewController, SampleItem {
         view.backgroundColor = NatColors.background
 
         view.addSubview(outlinedButton)
-//        view.addSubview(disableOutlinedButton)
+        view.addSubview(disableOutlinedButton)
+        view.addSubview(outlinedFullButton)
+        view.addSubview(disableOutlinedFullButton)
         addConstraints()
     }
 
@@ -48,7 +63,18 @@ class ButtonsItemViewControllerN: UIViewController, SampleItem {
         let constraints = [
             outlinedButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
             outlinedButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            outlinedButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
+//            outlinedButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+
+            disableOutlinedButton.topAnchor.constraint(equalTo: outlinedButton.bottomAnchor, constant: 16),
+            disableOutlinedButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+
+            outlinedFullButton.topAnchor.constraint(equalTo: disableOutlinedButton.bottomAnchor, constant: 16),
+            outlinedFullButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            outlinedFullButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+
+            disableOutlinedFullButton.topAnchor.constraint(equalTo: outlinedFullButton.bottomAnchor, constant: 16),
+            disableOutlinedFullButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            disableOutlinedFullButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
         ]
 
         NSLayoutConstraint.activate(constraints)

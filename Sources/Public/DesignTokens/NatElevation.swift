@@ -18,7 +18,7 @@ public struct NatElevation {
     public static func apply(onView view: UIView, elevation: Elevation) {
         let attributes = getTheme().elevations[keyPath: elevation.rawValue]
 
-        ViewStyling.applyElevation(onView: view, with: attributes)
+        ViewStyle.applyElevation(onView: view, with: attributes)
     }
 }
 

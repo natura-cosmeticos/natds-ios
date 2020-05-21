@@ -3,9 +3,9 @@ import Nimble
 
 @testable import NatDS
 
-final class ViewStylingSpecSpec: QuickSpec {
+final class ViewStyleSpecSpec: QuickSpec {
     override func spec() {
-        let systemUnderTest = ViewStyling.self
+        let systemUnderTest = ViewStyle.self
 
         describe("#applyElevation") {
             var view: UIView!

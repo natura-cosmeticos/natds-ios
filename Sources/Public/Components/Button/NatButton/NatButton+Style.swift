@@ -10,7 +10,7 @@ extension NatButton.Style {
     public static var outlined: NatButton.Style {
         .init(
             apply: ButtonOutlinedStyle.applyStyle,
-            changeState: ButtonOutlinedStyle.applyStyeForStateChanges,
+            changeState: ButtonOutlinedStyle.applyStyleForStates,
             applyTitle: ButtonOutlinedStyle.applyStyleForTitle
         )
     }
