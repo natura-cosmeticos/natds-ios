@@ -36,6 +36,7 @@ public final class NatButton: UIButton, Pulsable {
 
     public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
+
         endPulse(layer: layer)
     }
 }

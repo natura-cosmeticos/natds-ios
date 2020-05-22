@@ -41,6 +41,10 @@ final class NatButtonSpec: QuickSpec {
             it("does not call applyTitle") {
                 expect(applyTitleInvocations).to(equal(0))
             }
+
+            it("has nil sublayers") {
+                expect(systemUnderTest.layer.sublayers).to(beNil())
+            }
         }
 
         describe("#isEneable") {
@@ -96,6 +100,27 @@ final class NatButtonSpec: QuickSpec {
 
             it("calls applyTitle only once") {
                 expect(applyTitleInvocations).to(equal(1))
+            }
+        }
+
+        describe("#touchesBegan") {
+            beforeEach {
+                systemUnderTest.touchesBegan(.init(arrayLiteral: .init()), with: nil)
+            }
+
+            it("calls beginPulseAt and sublayer for animation is add") {
+                expect(systemUnderTest.layer.sublayers?.count).to(equal(1))
+            }
+        }
+
+        describe("#touchesEnded") {
+            beforeEach {
+                systemUnderTest.touchesBegan(.init(arrayLiteral: .init()), with: nil)
+                systemUnderTest.touchesEnded(.init(), with: nil)
+            }
+
+            it("calls endPulse and sublayer is removed after animation ends") {
+                expect(systemUnderTest.layer.sublayers?.count).toEventually(beNil())
             }
         }
     }
