@@ -108,6 +108,18 @@ final class NatButtonSpec: QuickSpec {
                 systemUnderTest.touchesBegan(.init(arrayLiteral: .init()), with: nil)
             }
 
+            it("apply style only on init") {
+                expect(applyStyleInvocations).to(equal(1))
+            }
+
+            it("does not call changeState") {
+                expect(changeStateInvocations).to(equal(0))
+            }
+
+            it("does not call applyTitle") {
+                expect(applyTitleInvocations).to(equal(0))
+            }
+
             it("calls beginPulseAt and sublayer for animation is add") {
                 expect(systemUnderTest.layer.sublayers?.count).to(equal(1))
             }
@@ -117,6 +129,18 @@ final class NatButtonSpec: QuickSpec {
             beforeEach {
                 systemUnderTest.touchesBegan(.init(arrayLiteral: .init()), with: nil)
                 systemUnderTest.touchesEnded(.init(), with: nil)
+            }
+
+            it("apply style only on init") {
+                expect(applyStyleInvocations).to(equal(1))
+            }
+
+            it("does not call changeState") {
+                expect(changeStateInvocations).to(equal(0))
+            }
+
+            it("does not call applyTitle") {
+                expect(applyTitleInvocations).to(equal(0))
             }
 
             it("calls endPulse and sublayer is removed after animation ends") {
