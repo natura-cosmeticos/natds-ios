@@ -1,5 +1,34 @@
 import UIKit
 
+/**
+  NatButton is a class that representes com the button component from the design system.
+  The button colors changes according with the current Brand configured in the Design system and according with user properties of Light and Dark mode.
+
+    This button has 3 styles:
+    - Contained (on development)
+    - Outlined
+    - Text (on development)
+
+    Exemple of usage:
+
+        let containedButton = NatButton(style: .contained) (on development)
+        let outlinedButton = NatButton(style: .oulined)
+        let textButton = NatButton(style: .text) (on development)
+
+ - Requires:
+        It's necessary to configure the Design System current Brand at DesisgnSystem class
+        or fatalError will be raised.
+
+            DesignSystem().configure(with: Brand)
+
+ - Warning
+        This class supports Light and Dark mode. In other words, according with user properties
+        of Light or Dark, a diferent color can be returned.
+
+        Attention with .cgColor, because it doesn`t support dynamically changes
+        of light and dark mode.
+*/
+
 public final class NatButton: UIButton, Pulsable {
 
     // MARK: - Private properties
