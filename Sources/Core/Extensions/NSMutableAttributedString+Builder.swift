@@ -30,4 +30,12 @@ extension NSMutableAttributedString {
 
         return self
     }
+
+    @discardableResult
+    func apply(kernValue: CGFloat, in text: String? = nil) -> NSMutableAttributedString {
+        let range = self.string.range(for: text ?? self.string)
+        addAttribute(.kern, value: kernValue, range: range)
+
+        return self
+    }
 }

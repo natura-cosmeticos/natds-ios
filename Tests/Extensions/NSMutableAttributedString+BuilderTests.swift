@@ -67,4 +67,17 @@ class NSMutableAttributedStringBuilderTests: XCTestCase {
         XCTAssertEqual(attribute?.key, .foregroundColor)
         XCTAssertEqual(attribute?.value as? UIColor, expectedColor)
     }
+
+    func test_applyKern_returnsAttributedStringWithAppliedKern() {
+        let expectedValue: CGFloat = 2.25
+
+        let attributedString = NSMutableAttributedString(string: string)
+            .apply(kernValue: expectedValue)
+
+        let attribute = attributedString.attributes(at: string.range(for: string).location,
+                                                    effectiveRange: nil).first
+
+        XCTAssertEqual(attribute?.key, .kern)
+        XCTAssertEqual(attribute?.value as? CGFloat, expectedValue)
+    }
 }

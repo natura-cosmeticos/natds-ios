@@ -110,13 +110,14 @@ extension PulseLayer {
         pulseStartAnimationTime = CACurrentMediaTime()
     }
 
-    func endPulse() {
+    func endPulse(completion: (() -> Void)? = nil) {
         CATransaction.begin()
 
         let animation = createFadeOutAnimation(duration: kAnimationGroupDuration)
 
         CATransaction.setCompletionBlock { [weak self] in
             self?.removeFromSuperlayer()
+            completion?()
         }
 
         self.add(animation, forKey: nil)

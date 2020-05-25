@@ -1,22 +1,18 @@
-protocol Pulsable: AnyObject {
-    var pulseLayer: PulseLayer? { get set }
-}
+protocol Pulsable: AnyObject {}
 
 extension Pulsable {
-
     func beginPulseAt(point: CGPoint, in layer: CALayer) {
-        let pulseLayer = PulseLayer()
-        pulseLayer.frame = layer.bounds
-        pulseLayer.fillColor = Colors.Content.highEmphasis.withAlphaComponent(0.12).cgColor
+        let containedPulseLayer = PulseContainerLayer()
+        containedPulseLayer.frame = layer.bounds
 
-        layer.insertSublayer(pulseLayer, above: nil)
-        pulseLayer.startPulseAt(point: point)
+        layer.insertSublayer(containedPulseLayer, above: nil)
 
-        self.pulseLayer = pulseLayer
+        containedPulseLayer.startPulseAt(point: point)
     }
 
-    func endPulse() {
-        guard let pulseLayer = self.pulseLayer else { return }
-        pulseLayer.endPulse()
+    func endPulse(layer: CALayer) {
+        layer.sublayers?
+            .compactMap { $0 as? PulseContainerLayer }
+            .forEach { $0.endPulse() }
     }
 }

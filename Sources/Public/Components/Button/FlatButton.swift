@@ -1,7 +1,5 @@
 public class FlatButton: UIButton, Pulsable {
 
-    var pulseLayer: PulseLayer?
-
     public override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -27,7 +25,7 @@ public class FlatButton: UIButton, Pulsable {
 
     public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
-        endPulse()
+        endPulse(layer: layer)
     }
 }
 

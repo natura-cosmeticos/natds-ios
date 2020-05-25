@@ -1,9 +1,4 @@
 public class ContainedButton: UIButton, Pulsable {
-
-    private let pulseContainerLayer = CAShapeLayer()
-
-    var pulseLayer: PulseLayer?
-
     public override var isEnabled: Bool {
         didSet {
             updateBackgroundByState()
@@ -20,11 +15,6 @@ public class ContainedButton: UIButton, Pulsable {
         fatalError("init(coder:) has not been implemented")
     }
 
-    public override func layoutSubviews() {
-        super.layoutSubviews()
-        updatePulseContainerLayerFrame()
-    }
-
     public override func setTitle(_ title: String?, for state: UIControl.State) {
         super.setTitle(title?.uppercased(), for: state)
     }
@@ -34,13 +24,13 @@ public class ContainedButton: UIButton, Pulsable {
 
         if let touch = touches.first {
             let point = touch.location(in: self)
-            beginPulseAt(point: point, in: pulseContainerLayer)
+            beginPulseAt(point: point, in: layer)
         }
     }
 
     public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
-        endPulse()
+        endPulse(layer: layer)
     }
 }
 
@@ -57,7 +47,6 @@ extension ContainedButton {
 
         setShadow()
         updateBackgroundByState()
-        addPulseContainerLayer()
     }
 
     private func setShadow() {
@@ -75,16 +64,5 @@ extension ContainedButton {
         default:
             backgroundColor = Colors.primary
         }
-    }
-
-    private func addPulseContainerLayer() {
-        pulseContainerLayer.zPosition = 0
-        pulseContainerLayer.masksToBounds = true
-        layer.addSublayer(pulseContainerLayer)
-    }
-
-    private func updatePulseContainerLayerFrame() {
-        pulseContainerLayer.frame = bounds
-        pulseContainerLayer.cornerRadius = layer.cornerRadius
     }
 }
