@@ -52,7 +52,6 @@
 		642468B023FDE1AA008EAE6B /* TabItemViewDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642468AF23FDE1AA008EAE6B /* TabItemViewDelegateMock.swift */; };
 		643ABFEF24117C79000918EA /* Pulsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643ABFEE24117C79000918EA /* Pulsable.swift */; };
 		643ABFF124118536000918EA /* FlatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643ABFF024118536000918EA /* FlatButton.swift */; };
-		643ABFF324118BF1000918EA /* PulsableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643ABFF224118BF1000918EA /* PulsableTests.swift */; };
 		644DFBD9240811D300D49AD7 /* TextFieldDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644DFBD8240811D300D49AD7 /* TextFieldDelegateMock.swift */; };
 		64A1125A23F32EF300119CE4 /* Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A1125923F32EF300119CE4 /* Divider.swift */; };
 		64A1125E23F331CA00119CE4 /* DividerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A1125C23F331C500119CE4 /* DividerTests.swift */; };
@@ -291,7 +290,6 @@
 		642468AF23FDE1AA008EAE6B /* TabItemViewDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemViewDelegateMock.swift; sourceTree = "<group>"; };
 		643ABFEE24117C79000918EA /* Pulsable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pulsable.swift; sourceTree = "<group>"; };
 		643ABFF024118536000918EA /* FlatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatButton.swift; sourceTree = "<group>"; };
-		643ABFF224118BF1000918EA /* PulsableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulsableTests.swift; sourceTree = "<group>"; };
 		644DFBD8240811D300D49AD7 /* TextFieldDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDelegateMock.swift; sourceTree = "<group>"; };
 		64A1125923F32EF300119CE4 /* Divider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Divider.swift; sourceTree = "<group>"; };
 		64A1125C23F331C500119CE4 /* DividerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerTests.swift; sourceTree = "<group>"; };
@@ -517,7 +515,6 @@
 		110F55B423BE642200B9937A /* Button */ = {
 			isa = PBXGroup;
 			children = (
-				643ABFF224118BF1000918EA /* PulsableTests.swift */,
 				110F55B523BE643A00B9937A /* ContainedButtonTests.swift */,
 				64B47D6A240F3D9000E19797 /* FlatButtonTests.swift */,
 				43F1DD4A24183B8F005A0C4A /* PulseLayerTests.swift */,
@@ -1846,7 +1843,6 @@
 				8427A3042452224800CF30D5 /* TheBodyShopColorPaletteDark+Surface+Spec.swift in Sources */,
 				8427A3142452296900CF30D5 /* AvonColorPaletteDark+Feedback+Spec.swift in Sources */,
 				8427A2F02452174800CF30D5 /* NaturaColorPaletteLight+Secondary+Spec.swift in Sources */,
-				643ABFF324118BF1000918EA /* PulsableTests.swift in Sources */,
 				84BFB66B246DCD1100506ED1 /* TheBodyShopElevations+Spec.swift in Sources */,
 				11581AA8238F037D003E45D7 /* AssetsHelperTests.swift in Sources */,
 				8427A2DC2451E3F200CF30D5 /* AvonColorPaletteDark+Primary+Spec.swift in Sources */,

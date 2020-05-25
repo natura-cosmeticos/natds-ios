@@ -26,6 +26,6 @@ final class ContainedPulseLayer: CAShapeLayer {
     }
 
     func endPulse() {
-        pulseLayer.endPulse { self.removeFromSuperlayer() }
+        pulseLayer.endPulse { [weak self] in self?.removeFromSuperlayer() }
     }
 }
