@@ -1463,7 +1463,7 @@
 		A9B71E7A237B559A00A2BF51 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = Natura;
 				TargetAttributes = {
 					A9B71E82237B559A00A2BF51 = {
@@ -1927,6 +1927,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";

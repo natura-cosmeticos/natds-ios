@@ -42,7 +42,7 @@
 		A9D71BCB2386DFF200CDEC1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9D71BCA2386DFF200CDEC1D /* Assets.xcassets */; };
 		A9D71BCE2386DFF200CDEC1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9D71BCC2386DFF200CDEC1D /* LaunchScreen.storyboard */; };
 		A9D71BD72386E12600CDEC1D /* NatDS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D71BD62386E12600CDEC1D /* NatDS.framework */; };
-		A9D71BD82386E12600CDEC1D /* NatDS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9D71BD62386E12600CDEC1D /* NatDS.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A9D71BD82386E12600CDEC1D /* NatDS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A9D71BD62386E12600CDEC1D /* NatDS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -430,7 +430,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1110;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = Natura;
 				TargetAttributes = {
 					A9D71BBD2386DFEE00CDEC1D = {
