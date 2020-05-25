@@ -126,6 +126,8 @@
 		8427A32C24538DFA00CF30D5 /* ConfigurationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427A32B24538DFA00CF30D5 /* ConfigurationStorage.swift */; };
 		8427A32E2453A8C900CF30D5 /* MockStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427A32D2453A8C900CF30D5 /* MockStorage.swift */; };
 		84391CA92477019600803545 /* NatButton+Specs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84391CA72477019100803545 /* NatButton+Specs.swift */; };
+		84391CAB247B220200803545 /* NatButton+Height+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84391CAA247B220200803545 /* NatButton+Height+Spec.swift */; };
+		84391CAD247BECD100803545 /* ContainedPulseLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84391CAC247BECD000803545 /* ContainedPulseLayer.swift */; };
 		843FA27B2461D82200D20D9A /* NatSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FA27A2461D82200D20D9A /* NatSizes.swift */; };
 		843FA27D2461DB1400D20D9A /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FA27C2461DB1400D20D9A /* Sizes.swift */; };
 		843FA27F2461DDFC00D20D9A /* AvonSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FA27E2461DDFC00D20D9A /* AvonSizes.swift */; };
@@ -362,6 +364,8 @@
 		8427A32B24538DFA00CF30D5 /* ConfigurationStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationStorage.swift; sourceTree = "<group>"; };
 		8427A32D2453A8C900CF30D5 /* MockStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStorage.swift; sourceTree = "<group>"; };
 		84391CA72477019100803545 /* NatButton+Specs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+Specs.swift"; sourceTree = "<group>"; };
+		84391CAA247B220200803545 /* NatButton+Height+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+Height+Spec.swift"; sourceTree = "<group>"; };
+		84391CAC247BECD000803545 /* ContainedPulseLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainedPulseLayer.swift; sourceTree = "<group>"; };
 		843FA27A2461D82200D20D9A /* NatSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatSizes.swift; sourceTree = "<group>"; };
 		843FA27C2461DB1400D20D9A /* Sizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sizes.swift; sourceTree = "<group>"; };
 		843FA27E2461DDFC00D20D9A /* AvonSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvonSizes.swift; sourceTree = "<group>"; };
@@ -498,6 +502,7 @@
 		110F55B123BE5A1E00B9937A /* Button */ = {
 			isa = PBXGroup;
 			children = (
+				84391CAC247BECD000803545 /* ContainedPulseLayer.swift */,
 				64B47D65240EFDA700E19797 /* PulseLayer.swift */,
 				643ABFEE24117C79000918EA /* Pulsable.swift */,
 				110F55B223BE5A3F00B9937A /* ContainedButton.swift */,
@@ -515,6 +520,7 @@
 				64B47D6A240F3D9000E19797 /* FlatButtonTests.swift */,
 				43F1DD4A24183B8F005A0C4A /* PulseLayerTests.swift */,
 				84391CA72477019100803545 /* NatButton+Specs.swift */,
+				84391CAA247B220200803545 /* NatButton+Height+Spec.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -1681,6 +1687,7 @@
 				843FA2CF2465EE8100D20D9A /* FontWeights.swift in Sources */,
 				843FA2BA2464757200D20D9A /* NaturaOpacities.swift in Sources */,
 				A9CCF8DC23CCDF0100000FC0 /* FontIconStyle.swift in Sources */,
+				84391CAD247BECD100803545 /* ContainedPulseLayer.swift in Sources */,
 				4395D1DA23FC6AB700C7DC6F /* Tab.swift in Sources */,
 				A9325A6623FB34EC0023979C /* UICollectionView+Reusable.swift in Sources */,
 				84BFB666246DCB5900506ED1 /* ViewStyle.swift in Sources */,
@@ -1760,6 +1767,7 @@
 				8427A2D82451E11400CF30D5 /* TheBodyShopColorPaletteLight+Spec.swift in Sources */,
 				84BFB6462469C9FC00506ED1 /* TheBodyShopFontSizes+Spec.swift in Sources */,
 				84BFB64A2469CBAA00506ED1 /* NaturaFont+Spec.swift in Sources */,
+				84391CAB247B220200803545 /* NatButton+Height+Spec.swift in Sources */,
 				84BFB6252469A30500506ED1 /* AvonFontWeights+Spec.swift in Sources */,
 				845D9EF8244DE32F003598B0 /* NatColors+TBS+Spec.swift in Sources */,
 				8427A2F424521B9E00CF30D5 /* AvonColorPaletteDark+Secondary+Spec.swift in Sources */,

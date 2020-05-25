@@ -47,9 +47,7 @@ enum ButtonOutlinedStyle {
         }
     }
 
-    static private func createTextForTitle(text: String,
-                                           withColor color: UIColor) -> NSAttributedString {
-
+    static private func createTextForTitle(text: String, withColor color: UIColor) -> NSAttributedString {
         let attributedString = NSMutableAttributedString(string: text)
 
         attributedString.addAttribute(

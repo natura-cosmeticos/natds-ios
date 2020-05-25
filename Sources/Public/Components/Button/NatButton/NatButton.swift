@@ -1,7 +1,12 @@
 import UIKit
 
 public final class NatButton: UIButton, Pulsable {
+
+    // MARK: - Private properties
+
     private let style: Style
+
+    // MARK: - Public properties
 
     public override var isEnabled: Bool {
         didSet {
@@ -9,21 +14,27 @@ public final class NatButton: UIButton, Pulsable {
         }
     }
 
+    // MARK: - Inits
+
     public init(style: Style) {
         self.style = style
 
         super.init(frame: .zero)
 
-        style.apply(self)
+        style.applyStyle(self)
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
+    // MARK: - Public methods
+
     public func configure(title: String?) {
         style.applyTitle(title, self)
     }
+
+    // MARK: - Overrides
 
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
@@ -40,6 +51,8 @@ public final class NatButton: UIButton, Pulsable {
         endPulse(layer: layer)
     }
 }
+
+// MARK: - NatButton - Height
 
 extension NatButton {
     public enum Height {

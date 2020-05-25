@@ -16,34 +16,3 @@ extension Pulsable {
             .forEach { $0.endPulse() }
     }
 }
-
-class ContainedPulseLayer: CAShapeLayer {
-    let pulseLayer: PulseLayer = PulseLayer()
-
-    override init() {
-        super.init()
-
-        masksToBounds = true
-        addSublayer(pulseLayer)
-
-        pulseLayer.fillColor = NatColors.highEmphasis.withAlphaComponent(0.12).cgColor
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
-    override var frame: CGRect {
-        didSet {
-            pulseLayer.frame = bounds
-        }
-    }
-
-    func startPulseAt(point: CGPoint) {
-        pulseLayer.startPulseAt(point: point)
-    }
-
-    func endPulse() {
-        pulseLayer.endPulse { self.removeFromSuperlayer() }
-    }
-}
