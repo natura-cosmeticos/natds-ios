@@ -144,7 +144,7 @@ final class ButtonsItemViewControllerN: UIViewController, SampleItem {
         let button = FlatButton()
         button.setTitle("Disabled Text", for: .disabled)
         button.isEnabled = false
-        
+
         return button
     }()
 

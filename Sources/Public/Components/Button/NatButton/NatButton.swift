@@ -1,19 +1,24 @@
 import UIKit
 
 /**
-  NatButton is a class that representes com the button component from the design system.
-  The button colors changes according with the current Brand configured in the Design system and according with user properties of Light and Dark mode.
+  NatButton is a class that represents  button  component from the design system.
+  The button colors changes according with the current Brand configured in the Design system
+  and according with user properties of Light and Dark mode.
 
     This button has 3 styles:
     - Contained (on development)
     - Outlined
     - Text (on development)
 
-    Exemple of usage:
+    Example of usage:
 
         let containedButton = NatButton(style: .contained) (on development)
         let outlinedButton = NatButton(style: .oulined)
         let textButton = NatButton(style: .text) (on development)
+
+    This button has pre-defined height values with enum NatButton.Height:
+
+        button.heightAnchor.constraint(equalToConstant: NatButton.Height.medium)
 
  - Requires:
         It's necessary to configure the Design System current Brand at DesisgnSystem class
@@ -78,15 +83,5 @@ public final class NatButton: UIButton, Pulsable {
         super.touchesEnded(touches, with: event)
 
         endPulse(layer: layer)
-    }
-}
-
-// MARK: - NatButton - Height
-
-extension NatButton {
-    public enum Height {
-        public static var small: CGFloat { getTheme().sizes.semi }
-        public static var medium: CGFloat { getTheme().sizes.semiX }
-        public static var large: CGFloat { getTheme().sizes.medium }
     }
 }
