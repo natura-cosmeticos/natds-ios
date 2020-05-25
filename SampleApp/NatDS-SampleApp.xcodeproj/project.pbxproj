@@ -23,14 +23,13 @@
 		843FA2C52464885200D20D9A /* OpacityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FA2C42464885200D20D9A /* OpacityViewController.swift */; };
 		843FA2C824648A6D00D20D9A /* OpacityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FA2C724648A6D00D20D9A /* OpacityCell.swift */; };
 		843FA2D52466478B00D20D9A /* TypographyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FA2D42466478B00D20D9A /* TypographyViewController.swift */; };
-		8458A98E24759EF600BD8BC8 /* ButtonsItemViewControllerN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8458A98D24759EF600BD8BC8 /* ButtonsItemViewControllerN.swift */; };
+		8458A98E24759EF600BD8BC8 /* ButtonsItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8458A98D24759EF600BD8BC8 /* ButtonsItemViewController.swift */; };
 		846313B024603BC200387FCF /* SpacingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846313AF24603BC200387FCF /* SpacingViewController.swift */; };
 		846313B424603E0100387FCF /* SpacingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846313B324603E0100387FCF /* SpacingCell.swift */; };
 		84BFB64E2469CE7E00506ED1 /* TypographyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB64D2469CE7E00506ED1 /* TypographyCell.swift */; };
 		84BFB655246D689000506ED1 /* ElevationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB654246D689000506ED1 /* ElevationViewController.swift */; };
 		84BFB658246D694700506ED1 /* ElevationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB657246D694700506ED1 /* ElevationCell.swift */; };
 		A904ECBA23D607D800709B43 /* ComponentsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A904ECB923D607D800709B43 /* ComponentsSection.swift */; };
-		A904ECBC23D6088600709B43 /* ButtonsItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A904ECBB23D6088600709B43 /* ButtonsItemViewController.swift */; };
 		A904ECC023D760C400709B43 /* DesignSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A904ECBF23D760C400709B43 /* DesignSection.swift */; };
 		A904ECC323D761BE00709B43 /* IconographyItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A904ECC223D761BE00709B43 /* IconographyItemViewController.swift */; };
 		A904ECC623D7628000709B43 /* IconCollectioViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A904ECC523D7628000709B43 /* IconCollectioViewCell.swift */; };
@@ -77,14 +76,13 @@
 		843FA2C42464885200D20D9A /* OpacityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpacityViewController.swift; sourceTree = "<group>"; };
 		843FA2C724648A6D00D20D9A /* OpacityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpacityCell.swift; sourceTree = "<group>"; };
 		843FA2D42466478B00D20D9A /* TypographyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypographyViewController.swift; sourceTree = "<group>"; };
-		8458A98D24759EF600BD8BC8 /* ButtonsItemViewControllerN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsItemViewControllerN.swift; sourceTree = "<group>"; };
+		8458A98D24759EF600BD8BC8 /* ButtonsItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsItemViewController.swift; sourceTree = "<group>"; };
 		846313AF24603BC200387FCF /* SpacingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacingViewController.swift; sourceTree = "<group>"; };
 		846313B324603E0100387FCF /* SpacingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacingCell.swift; sourceTree = "<group>"; };
 		84BFB64D2469CE7E00506ED1 /* TypographyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypographyCell.swift; sourceTree = "<group>"; };
 		84BFB654246D689000506ED1 /* ElevationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevationViewController.swift; sourceTree = "<group>"; };
 		84BFB657246D694700506ED1 /* ElevationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevationCell.swift; sourceTree = "<group>"; };
 		A904ECB923D607D800709B43 /* ComponentsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentsSection.swift; sourceTree = "<group>"; };
-		A904ECBB23D6088600709B43 /* ButtonsItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsItemViewController.swift; sourceTree = "<group>"; };
 		A904ECBF23D760C400709B43 /* DesignSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSection.swift; sourceTree = "<group>"; };
 		A904ECC223D761BE00709B43 /* IconographyItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconographyItemViewController.swift; sourceTree = "<group>"; };
 		A904ECC523D7628000709B43 /* IconCollectioViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCollectioViewCell.swift; sourceTree = "<group>"; };
@@ -274,8 +272,7 @@
 		A904ECB823D607BD00709B43 /* Button */ = {
 			isa = PBXGroup;
 			children = (
-				A904ECBB23D6088600709B43 /* ButtonsItemViewController.swift */,
-				8458A98D24759EF600BD8BC8 /* ButtonsItemViewControllerN.swift */,
+				8458A98D24759EF600BD8BC8 /* ButtonsItemViewController.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -483,7 +480,6 @@
 				A904ECC623D7628000709B43 /* IconCollectioViewCell.swift in Sources */,
 				A9D71BC62386DFEE00CDEC1D /* NavigationDrawerItemViewController.swift in Sources */,
 				434E661C241976BD00D91E59 /* AppBarViewController.swift in Sources */,
-				A904ECBC23D6088600709B43 /* ButtonsItemViewController.swift in Sources */,
 				84BFB64E2469CE7E00506ED1 /* TypographyCell.swift in Sources */,
 				A904ECBA23D607D800709B43 /* ComponentsSection.swift in Sources */,
 				A97328BF23CFA32900ADC5C2 /* SampleSection.swift in Sources */,
@@ -500,7 +496,7 @@
 				84BFB658246D694700506ED1 /* ElevationCell.swift in Sources */,
 				8427A3312457AFEF00CF30D5 /* ChooseBrandViewController.swift in Sources */,
 				A97328C323CFA35800ADC5C2 /* MainViewController.swift in Sources */,
-				8458A98E24759EF600BD8BC8 /* ButtonsItemViewControllerN.swift in Sources */,
+				8458A98E24759EF600BD8BC8 /* ButtonsItemViewController.swift in Sources */,
 				A97328BD23CFA2F500ADC5C2 /* MainDataSource.swift in Sources */,
 				846313B024603BC200387FCF /* SpacingViewController.swift in Sources */,
 				8406F5E42458AD0A001A3A1E /* ColorsHeaderView.swift in Sources */,
