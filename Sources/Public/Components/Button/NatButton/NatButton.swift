@@ -25,13 +25,6 @@ import UIKit
         or fatalError will be raised.
 
             DesignSystem().configure(with: Brand)
-
- - Warning
-        This class supports Light and Dark mode. In other words, according with user properties
-        of Light or Dark, a diferent color can be returned.
-
-        Attention with .cgColor, because it doesn`t support dynamically changes
-        of light and dark mode.
 */
 
 public final class NatButton: UIButton, Pulsable {
@@ -58,12 +51,26 @@ public final class NatButton: UIButton, Pulsable {
         style.applyStyle(self)
     }
 
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
     // MARK: - Public methods
 
+    /**
+     This method has the objetive to set title for 2 states that aways have to be
+     configured in NatButton as default behavior: Normal & Disabled.
+
+     When this method is used, it configures title using an attributed string.
+
+     If a different state or behavior is needed for configure a title, use native approuch like
+      - setTitle(title: String?, for: UIControl.State)
+      - setAttributedTitle(NSAttributedString?, for: UIControl.State)
+
+     - Parameters:
+        - title: This String will be used to configure Normal & Disabled states.
+    */
     public func configure(title: String?) {
         style.applyTitle(title, self)
     }
@@ -77,6 +84,12 @@ public final class NatButton: UIButton, Pulsable {
             let point = touch.location(in: self)
             beginPulseAt(point: point, in: layer)
         }
+    }
+
+    public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+
+        style.changeState(self)
     }
 
     public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {

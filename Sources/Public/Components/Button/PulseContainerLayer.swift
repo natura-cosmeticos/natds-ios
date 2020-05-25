@@ -1,4 +1,4 @@
-final class ContainedPulseLayer: CAShapeLayer {
+final class PulseContainerLayer: CAShapeLayer {
     let pulseLayer: PulseLayer = PulseLayer()
 
     override init() {

@@ -47,7 +47,7 @@ final class NatButtonSpec: QuickSpec {
             }
         }
 
-        describe("#isEneable") {
+        describe("#isEnabled") {
             context("when is eneable is True") {
                 beforeEach {
                     systemUnderTest.isEnabled = true

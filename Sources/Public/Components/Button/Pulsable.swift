@@ -2,7 +2,7 @@ protocol Pulsable: AnyObject {}
 
 extension Pulsable {
     func beginPulseAt(point: CGPoint, in layer: CALayer) {
-        let containedPulseLayer = ContainedPulseLayer()
+        let containedPulseLayer = PulseContainerLayer()
         containedPulseLayer.frame = layer.bounds
 
         layer.insertSublayer(containedPulseLayer, above: nil)
@@ -12,7 +12,7 @@ extension Pulsable {
 
     func endPulse(layer: CALayer) {
         layer.sublayers?
-            .compactMap { $0 as? ContainedPulseLayer }
+            .compactMap { $0 as? PulseContainerLayer }
             .forEach { $0.endPulse() }
     }
 }

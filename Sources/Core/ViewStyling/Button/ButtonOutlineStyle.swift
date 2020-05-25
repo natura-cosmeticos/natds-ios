@@ -1,5 +1,5 @@
 enum ButtonOutlinedStyle {
-    static func applyStyle(onButton button: UIButton) {
+    static func applyStyle(on button: UIButton) {
         button.titleLabel?.font = NatFonts.font(ofSize: .button, withWeight: .medium)
         button.titleLabel?.lineBreakMode = .byTruncatingTail
         button.backgroundColor = .clear
@@ -17,7 +17,7 @@ enum ButtonOutlinedStyle {
         )
     }
 
-    static func applyStyleForStates(onButton button: UIButton) {
+    static func applyStyleForStates(on button: UIButton) {
         switch button.state {
         case .normal:
             button.layer.borderColor = NatColors.primary.cgColor
@@ -28,7 +28,7 @@ enum ButtonOutlinedStyle {
         }
     }
 
-    static func applyStyleForTitle(_ title: String?, onButton button: UIButton) {
+    static func applyStyleForTitle(_ title: String?, on button: UIButton) {
         if let title = title?.uppercased() {
             let attributedStringForNormal = createTextForTitle(
                 text: title,
@@ -49,17 +49,8 @@ enum ButtonOutlinedStyle {
 
     static private func createTextForTitle(text: String, withColor color: UIColor) -> NSAttributedString {
         let attributedString = NSMutableAttributedString(string: text)
-
-        attributedString.addAttribute(
-            NSAttributedString.Key.kern,
-            value: 1.25,
-            range: NSRange(location: 0, length: text.count)
-        )
-
-        attributedString.addAttribute(
-            NSAttributedString.Key.foregroundColor,
-            value: color,
-            range: NSRange(location: 0, length: text.count))
+        attributedString.apply(kernValue: 1.25)
+        attributedString.apply(foregroundColor: color)
 
         return attributedString
     }

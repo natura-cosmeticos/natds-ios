@@ -9,9 +9,9 @@ extension NatButton {
 extension NatButton.Style {
     public static var outlined: NatButton.Style {
         .init(
-            applyStyle: ButtonOutlinedStyle.applyStyle(onButton:),
-            changeState: ButtonOutlinedStyle.applyStyleForStates(onButton:),
-            applyTitle: ButtonOutlinedStyle.applyStyleForTitle(_: onButton:)
+            applyStyle: ButtonOutlinedStyle.applyStyle,
+            changeState: ButtonOutlinedStyle.applyStyleForStates,
+            applyTitle: ButtonOutlinedStyle.applyStyleForTitle
         )
     }
 }

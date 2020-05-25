@@ -15,7 +15,7 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
 
         describe("#applyStyle") {
             beforeEach {
-                systemUnderTest.applyStyle(onButton: button)
+                systemUnderTest.applyStyle(on: button)
             }
 
             it("returns a expect font") {
@@ -53,10 +53,10 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
         }
 
         describe("#applyStyleForState") {
-            context("when #isEneable is true") {
+            context("when isEnabled is true") {
                 beforeEach {
                     button.isEnabled = true
-                    systemUnderTest.applyStyleForStates(onButton: button)
+                    systemUnderTest.applyStyleForStates(on: button)
                 }
 
                 it("returns a expect borderColor") {
@@ -64,10 +64,10 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
                 }
             }
 
-            context("when #isEneable is false") {
+            context("when isEnabled is false") {
                 beforeEach {
                     button.isEnabled = false
-                    systemUnderTest.applyStyleForStates(onButton: button)
+                    systemUnderTest.applyStyleForStates(on: button)
                 }
 
                 it("returns a expect borderColor") {
@@ -79,10 +79,10 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
         }
 
         describe("#applyStyleForState") {
-            context("when #isEneable is true and Title is nil") {
+            context("when isEnabled is true and Title is nil") {
                 beforeEach {
                     button.isEnabled = true
-                    systemUnderTest.applyStyleForTitle(nil, onButton: button)
+                    systemUnderTest.applyStyleForTitle(nil, on: button)
                 }
 
                 it("returns a expect attributedTitle") {
@@ -91,14 +91,14 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
                 }
             }
 
-            context("when #isEneable is true and Title has a value") {
+            context("when isEnabled is true and Title has a value") {
                 let title = "title"
                 var attributes: [NSAttributedString.Key: Any]!
 
                 beforeEach {
                     button.isEnabled = true
 
-                    systemUnderTest.applyStyleForTitle(title, onButton: button)
+                    systemUnderTest.applyStyleForTitle(title, on: button)
 
                     let attributedTitle = button.attributedTitle(for: .normal)
                     attributes = attributedTitle!.attributes(at: 0, effectiveRange: nil)
@@ -123,10 +123,10 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
                 }
             }
 
-            context("when #isEneable is false and Title is nil") {
+            context("when isEnabled is false and Title is nil") {
                 beforeEach {
                     button.isEnabled = false
-                    systemUnderTest.applyStyleForTitle(nil, onButton: button)
+                    systemUnderTest.applyStyleForTitle(nil, on: button)
                 }
 
                 it("returns a expect attributedTitle") {
@@ -135,14 +135,14 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
                 }
             }
 
-            context("when #isEneable is false and Title has a value") {
+            context("when isEnabled is false and Title has a value") {
                 let title = "title"
                 var attributes: [NSAttributedString.Key: Any]!
 
                 beforeEach {
                     button.isEnabled = false
 
-                    systemUnderTest.applyStyleForTitle(title, onButton: button)
+                    systemUnderTest.applyStyleForTitle(title, on: button)
 
                     let attributedTitle = button.attributedTitle(for: .disabled)
                     attributes = attributedTitle!.attributes(at: 0, effectiveRange: nil)
