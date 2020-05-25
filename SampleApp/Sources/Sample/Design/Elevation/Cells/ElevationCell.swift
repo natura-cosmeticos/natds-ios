@@ -53,7 +53,7 @@ final class ElevationCell: UITableViewCell {
         label.text = description
 
         if let elevation = elevation {
-            NatElevation.apply(onView: symbolicView, elevation: elevation)
+            NatElevation.apply(on: symbolicView, elevation: elevation)
         }
     }
     // MARK: - Private methods
