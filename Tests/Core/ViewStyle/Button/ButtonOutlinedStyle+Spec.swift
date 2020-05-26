@@ -71,7 +71,7 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
                 }
 
                 it("returns a expect borderColor") {
-                    let color = NatColors.primary.withAlphaComponent(NatOpacities.opacity05).cgColor
+                    let color = NatColors.onSurface.withAlphaComponent(NatOpacities.opacity03).cgColor
 
                     expect(button.layer.borderColor).to(equal(color))
                 }
@@ -113,7 +113,7 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
                 it("returns a expect kern") {
                     let kern = attributes[.kern] as? CGFloat
 
-                    expect(kern).to(equal(1.25))
+                    expect(kern).to(equal(0.44))
                 }
 
                 it("returns a expect foregroundColor") {
@@ -157,14 +157,14 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
                 it("returns a expect kern") {
                     let kern = attributes[.kern] as? CGFloat
 
-                    expect(kern).to(equal(1.25))
+                    expect(kern).to(equal(0.44))
                 }
 
                 it("returns a expect foregroundColor") {
                     let foregroundColor = attributes[.foregroundColor] as? UIColor
 
                     expect(foregroundColor)
-                        .to(equal(NatColors.onSurface.withAlphaComponent(NatOpacities.opacity05)))
+                        .to(equal(NatColors.onSurface.withAlphaComponent(NatOpacities.opacity06)))
                 }
             }
         }

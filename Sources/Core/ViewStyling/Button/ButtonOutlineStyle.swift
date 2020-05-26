@@ -22,8 +22,8 @@ enum ButtonOutlinedStyle {
         case .normal:
             button.layer.borderColor = NatColors.primary.cgColor
         case .disabled:
-            button.layer.borderColor = NatColors.primary
-                .withAlphaComponent(NatOpacities.opacity05).cgColor
+            button.layer.borderColor = NatColors.onSurface
+                .withAlphaComponent(NatOpacities.opacity03).cgColor
         default: break
         }
     }
@@ -38,7 +38,7 @@ enum ButtonOutlinedStyle {
 
             let attributedStringForDisabled = createTextForTitle(
                 text: title,
-                withColor: NatColors.onSurface.withAlphaComponent(NatOpacities.opacity05)
+                withColor: NatColors.onSurface.withAlphaComponent(NatOpacities.opacity06)
             )
             button.setAttributedTitle(attributedStringForDisabled, for: .disabled)
         } else {
@@ -49,7 +49,7 @@ enum ButtonOutlinedStyle {
 
     static private func createTextForTitle(text: String, withColor color: UIColor) -> NSAttributedString {
         let attributedString = NSMutableAttributedString(string: text)
-        attributedString.apply(kernValue: 1.25)
+        attributedString.apply(kernValue: 0.44)
         attributedString.apply(foregroundColor: color)
 
         return attributedString
