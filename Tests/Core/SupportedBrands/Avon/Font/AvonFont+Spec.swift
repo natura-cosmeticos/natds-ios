@@ -22,5 +22,11 @@ final class AvonFontSpec: QuickSpec {
                 expect(systemUnderTest.weights).to(beAnInstanceOf(AvonFontWeights.self))
             }
         }
+
+        describe("#letterSpacings") {
+            it("returns a instance of AvonFontLetterSpacings") {
+                expect(systemUnderTest.letterSpacings).to(beAnInstanceOf(AvonFontLetterSpacings.self))
+            }
+        }
     }
 }
