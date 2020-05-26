@@ -18,7 +18,7 @@ final class ViewStyleSpecSpec: QuickSpec {
 
             beforeEach {
                 view = .init(frame: .init(x: 0, y: 0, width: 200, height: 200))
-                systemUnderTest.applyElevation(onView: view, with: elevationAttributes)
+                systemUnderTest.applyElevation(on: view, with: elevationAttributes)
             }
 
             it("returns a expect shadowColor") {
