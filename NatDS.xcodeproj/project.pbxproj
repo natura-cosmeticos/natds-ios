@@ -175,7 +175,7 @@
 		845D9EF8244DE32F003598B0 /* NatColors+TBS+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D9EF6244DE2E7003598B0 /* NatColors+TBS+Spec.swift */; };
 		846313AC245C47D100387FCF /* ValidateTheme+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846313AA245C47C400387FCF /* ValidateTheme+Spec.swift */; };
 		846313AE245CE9AE00387FCF /* GetTheme+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846313AD245CE9AE00387FCF /* GetTheme+Spec.swift */; };
-		84692854247D46F2008DF255 /* AvonLetterSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84692853247D46F2008DF255 /* AvonLetterSpacing.swift */; };
+		84692854247D46F2008DF255 /* FontLetterSpacings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84692853247D46F2008DF255 /* FontLetterSpacings.swift */; };
 		84692856247D78BD008DF255 /* TheBodyShopFontLetterSpacings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84692855247D78BD008DF255 /* TheBodyShopFontLetterSpacings.swift */; };
 		84692858247D79DC008DF255 /* AvonFontLetterSpacings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84692857247D79DC008DF255 /* AvonFontLetterSpacings.swift */; };
 		8469285A247D7C2A008DF255 /* NaturaFontLetterSpacings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84692859247D7C2A008DF255 /* NaturaFontLetterSpacings.swift */; };
@@ -421,7 +421,7 @@
 		845D9EF6244DE2E7003598B0 /* NatColors+TBS+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatColors+TBS+Spec.swift"; sourceTree = "<group>"; };
 		846313AA245C47C400387FCF /* ValidateTheme+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ValidateTheme+Spec.swift"; sourceTree = "<group>"; };
 		846313AD245CE9AE00387FCF /* GetTheme+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GetTheme+Spec.swift"; sourceTree = "<group>"; };
-		84692853247D46F2008DF255 /* AvonLetterSpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvonLetterSpacing.swift; sourceTree = "<group>"; };
+		84692853247D46F2008DF255 /* FontLetterSpacings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontLetterSpacings.swift; sourceTree = "<group>"; };
 		84692855247D78BD008DF255 /* TheBodyShopFontLetterSpacings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheBodyShopFontLetterSpacings.swift; sourceTree = "<group>"; };
 		84692857247D79DC008DF255 /* AvonFontLetterSpacings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvonFontLetterSpacings.swift; sourceTree = "<group>"; };
 		84692859247D7C2A008DF255 /* NaturaFontLetterSpacings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturaFontLetterSpacings.swift; sourceTree = "<group>"; };
@@ -678,6 +678,7 @@
 				843FA2CA2465CE9E00D20D9A /* Font.swift */,
 				843FA2CE2465EE8100D20D9A /* FontWeights.swift */,
 				843FA2D02465EEA000D20D9A /* FontSizes.swift */,
+				84692853247D46F2008DF255 /* FontLetterSpacings.swift */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -1262,7 +1263,6 @@
 				84BFB6352469BF1A00506ED1 /* AvonFont.swift */,
 				84BFB6372469BF4B00506ED1 /* AvonFontSizes.swift */,
 				84BFB6392469BF6500506ED1 /* AvonFontWeights.swift */,
-				84692853247D46F2008DF255 /* AvonLetterSpacing.swift */,
 				84692857247D79DC008DF255 /* AvonFontLetterSpacings.swift */,
 			);
 			path = Font;
@@ -1758,7 +1758,7 @@
 				117FE024238D9B070032E2AC /* Colors.swift in Sources */,
 				84BFB65D246DA42800506ED1 /* ElevationAttributes.swift in Sources */,
 				A988199B238C5AAF0008230F /* UIColor+Hex.swift in Sources */,
-				84692854247D46F2008DF255 /* AvonLetterSpacing.swift in Sources */,
+				84692854247D46F2008DF255 /* FontLetterSpacings.swift in Sources */,
 				8427A2CA2451D05700CF30D5 /* NaturaColorPaletteLight.swift in Sources */,
 				843FA29A246335D700D20D9A /* NaturaBorderRadius.swift in Sources */,
 				64D84FCE23F5F574004DD910 /* String+Icon.swift in Sources */,
