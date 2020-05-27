@@ -83,23 +83,3 @@ extension NatFonts {
         }
     }
 }
-
-// MARK: - KernValues
-
-extension NatFonts {
-    public enum Kern {
-        public static var heading1: CGFloat { getTheme().font.letterSpacings.heading1 }
-        public static var heading2: CGFloat { getTheme().font.letterSpacings.heading2 }
-        public static var heading3: CGFloat { getTheme().font.letterSpacings.heading3 }
-        public static var heading4: CGFloat { getTheme().font.letterSpacings.heading4 }
-        public static var heading5: CGFloat { getTheme().font.letterSpacings.heading5 }
-        public static var heading6: CGFloat { getTheme().font.letterSpacings.heading6 }
-        public static var subtitle1: CGFloat { getTheme().font.letterSpacings.subtitle1 }
-        public static var subtitle2: CGFloat { getTheme().font.letterSpacings.subtitle2 }
-        public static var body1: CGFloat { getTheme().font.letterSpacings.body1 }
-        public static var body2: CGFloat { getTheme().font.letterSpacings.body2 }
-        public static var button: CGFloat { getTheme().font.letterSpacings.button }
-        public static var caption: CGFloat { getTheme().font.letterSpacings.caption }
-        public static var overline: CGFloat { getTheme().font.letterSpacings.overline }
-    }
-}

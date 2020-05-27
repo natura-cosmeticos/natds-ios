@@ -39,7 +39,7 @@ final class TypographyCell: UITableViewCell {
     // MARK: - Public methods
 
     func configure(viewModel: ViewModel) {
-        sizeLabel.attributedText = viewModel.sizeDescriptionAttributed
+        sizeLabel.text = viewModel.sizeDescription
         sizeLabel.font = viewModel.font
         weightLabel.text = viewModel.weightDescription
     }
@@ -82,18 +82,8 @@ final class TypographyCell: UITableViewCell {
 
 extension TypographyCell {
     struct ViewModel {
-        let sizeDescriptionAttributed: NSAttributedString
+        let sizeDescription: String
         let weightDescription: String
         let font: UIFont
-
-        init(sizeDescription: String, weightDescription: String, font: UIFont, kernValue: CGFloat) {
-            sizeDescriptionAttributed = NSAttributedString(
-                string: sizeDescription,
-                attributes: [NSAttributedString.Key.kern: kernValue]
-            )
-
-            self.weightDescription = weightDescription
-            self.font = font
-        }
     }
 }

@@ -64,80 +64,67 @@ final class TypographyViewController: UIViewController, SampleItem {
             .init(
                 sizeDescription: "heading1:",
                 weightDescription: "regular",
-                font: NatFonts.font(ofSize: .heading1, withWeight: .regular),
-                kernValue: NatFonts.Kern.heading1
+                font: NatFonts.font(ofSize: .heading1, withWeight: .regular)
             ),
             .init(
                 sizeDescription: "heading2:",
                 weightDescription: "regular",
-                font: NatFonts.font(ofSize: .heading2, withWeight: .regular),
-                kernValue: NatFonts.Kern.heading2
+                font: NatFonts.font(ofSize: .heading2, withWeight: .regular)
             ),
             .init(
                 sizeDescription: "heading3:",
                 weightDescription: "regular",
-                font: NatFonts.font(ofSize: .heading3, withWeight: .regular),
-                kernValue: NatFonts.Kern.heading3
+                font: NatFonts.font(ofSize: .heading3, withWeight: .regular)
             ),
             .init(
                 sizeDescription: "heading4:",
                 weightDescription: "regular",
-                font: NatFonts.font(ofSize: .heading4, withWeight: .regular),
-                kernValue: NatFonts.Kern.heading4
+                font: NatFonts.font(ofSize: .heading4, withWeight: .regular)
             ),
             .init(
                 sizeDescription: "heading5:",
                 weightDescription: "regular",
-                font: NatFonts.font(ofSize: .heading5, withWeight: .regular),
-                kernValue: NatFonts.Kern.heading5
+                font: NatFonts.font(ofSize: .heading5, withWeight: .regular)
             ),
             .init(
                 sizeDescription: "heading6:",
                 weightDescription: "medium",
-                font: NatFonts.font(ofSize: .heading6, withWeight: .medium),
-                kernValue: NatFonts.Kern.heading6
+                font: NatFonts.font(ofSize: .heading6, withWeight: .medium)
             ),
             .init(
                 sizeDescription: "subtitle1:",
                 weightDescription: "medium",
-                font: NatFonts.font(ofSize: .subtitle1, withWeight: .medium),
-                kernValue: NatFonts.Kern.subtitle1
+                font: NatFonts.font(ofSize: .subtitle1, withWeight: .medium)
             ),
             .init(
                 sizeDescription: "subtitle2:",
                 weightDescription: "medium",
-                font: NatFonts.font(ofSize: .subtitle2, withWeight: .medium),
-                kernValue: NatFonts.Kern.subtitle2
+                font: NatFonts.font(ofSize: .subtitle2, withWeight: .medium)
             ),
             .init(
                 sizeDescription: "body1:",
                 weightDescription: "regular",
-                font: NatFonts.font(ofSize: .body1, withWeight: .regular),
-                kernValue: NatFonts.Kern.body1
+                font: NatFonts.font(ofSize: .body1, withWeight: .regular)
             ),
             .init(
                 sizeDescription: "body2:",
                 weightDescription: "regular",
-                font: NatFonts.font(ofSize: .body2, withWeight: .regular),
-                kernValue: NatFonts.Kern.body2
+                font: NatFonts.font(ofSize: .body2, withWeight: .regular)
             ),
             .init(
                 sizeDescription: "button:",
                 weightDescription: "medium",
-                font: NatFonts.font(ofSize: .button, withWeight: .medium),
-                kernValue: NatFonts.Kern.button
+                font: NatFonts.font(ofSize: .button, withWeight: .medium)
             ),
             .init(
                 sizeDescription: "caption:",
                 weightDescription: "regular",
-                font: NatFonts.font(ofSize: .caption, withWeight: .regular),
-                kernValue: NatFonts.Kern.caption
+                font: NatFonts.font(ofSize: .caption, withWeight: .regular)
             ),
             .init(
                 sizeDescription: "overline:",
                 weightDescription: "medium",
-                font: NatFonts.font(ofSize: .overline, withWeight: .medium),
-                kernValue: NatFonts.Kern.overline
+                font: NatFonts.font(ofSize: .overline, withWeight: .medium)
             )
         ]
     }
