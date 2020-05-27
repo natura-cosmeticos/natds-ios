@@ -87,7 +87,7 @@ extension NatFonts {
 // MARK: - KernValues
 
 extension NatFonts {
-    public struct Kerns {
+    public enum Kern {
         public static var heading1: CGFloat { getTheme().font.letterSpacings.heading1 }
         public static var heading2: CGFloat { getTheme().font.letterSpacings.heading2 }
         public static var heading3: CGFloat { getTheme().font.letterSpacings.heading3 }
