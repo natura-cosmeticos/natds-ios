@@ -147,5 +147,23 @@ final class NatButtonSpec: QuickSpec {
                 expect(systemUnderTest.layer.sublayers?.count).toEventually(beNil())
             }
         }
+
+        describe("#traitCollectionDidChange") {
+            beforeEach {
+                systemUnderTest.traitCollectionDidChange(nil)
+            }
+
+            it("apply style only on init") {
+                expect(applyStyleInvocations).to(equal(1))
+            }
+
+            it("calls changeState only once") {
+                expect(changeStateInvocations).to(equal(1))
+            }
+
+            it("does not call applyTitle") {
+                expect(applyTitleInvocations).to(equal(0))
+            }
+        }
     }
 }
