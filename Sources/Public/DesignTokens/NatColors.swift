@@ -47,45 +47,44 @@ public struct NatColors {
 
     // MARK: - Primary
 
-    public static let primary = ColorSelector().getFromPalette(color: \.primary)
-    public static let onPrimary = ColorSelector().getFromPalette(color: \.onPrimary)
-    public static let primaryLight = ColorSelector().getFromPalette(color: \.primaryLight)
-    public static let onPrimaryLight = ColorSelector().getFromPalette(color: \.onPrimaryLight)
-    public static let primaryDark = ColorSelector().getFromPalette(color: \.primaryDark)
-    public static let onPrimaryDark = ColorSelector().getFromPalette(color: \.onPrimaryDark)
+    public static var primary: UIColor { getTheme().colors.primary }
+    public static var onPrimary: UIColor { getTheme().colors.onPrimary }
+    public static var primaryLight: UIColor { getTheme().colors.primaryLight }
+    public static var onPrimaryLight: UIColor { getTheme().colors.onPrimaryLight }
+    public static var primaryDark: UIColor { getTheme().colors.primaryDark }
+    public static var onPrimaryDark: UIColor { getTheme().colors.onPrimaryDark }
 
     // MARK: - Secundary
 
-    public static let secondary = ColorSelector().getFromPalette(color: \.secondary)
-    public static let onSecondary = ColorSelector().getFromPalette(color: \.onSecondary)
-    public static let secondaryLight = ColorSelector().getFromPalette(color: \.secondaryLight)
-    public static let onSecondaryLight = ColorSelector().getFromPalette(color: \.onSecondaryLight)
-    public static let secondaryDark = ColorSelector().getFromPalette(color: \.secondaryDark)
-    public static let onSecondaryDark = ColorSelector().getFromPalette(color: \.onSecondaryDark)
+    public static var secondary: UIColor { getTheme().colors.secondary }
+    public static var onSecondary: UIColor { getTheme().colors.onSecondary }
+    public static var secondaryLight: UIColor { getTheme().colors.secondaryLight }
+    public static var onSecondaryLight: UIColor { getTheme().colors.onSecondaryLight }
+    public static var secondaryDark: UIColor { getTheme().colors.secondaryDark }
+    public static var onSecondaryDark: UIColor { getTheme().colors.onSecondaryDark }
 
     // MARK: - Surface
 
-    public static let background = ColorSelector().getFromPalette(color: \.background)
-    public static let onBackground = ColorSelector().getFromPalette(color: \.onBackground)
-    public static let surface = ColorSelector().getFromPalette(color: \.surface)
-    public static let onSurface = ColorSelector().getFromPalette(color: \.onSurface)
+    public static var background: UIColor { getTheme().colors.background }
+    public static var onBackground: UIColor { getTheme().colors.onBackground }
+    public static var surface: UIColor { getTheme().colors.surface }
+    public static var onSurface: UIColor { getTheme().colors.onSurface }
 
     // MARK: - Content
 
-    public static let highlight = ColorSelector().getFromPalette(color: \.highlight)
-    public static let highEmphasis = ColorSelector().getFromPalette(color: \.highEmphasis)
-    public static let mediumEmphasis = ColorSelector().getFromPalette(color: \.mediumEmphasis)
-    public static let lowEmphasis = ColorSelector().getFromPalette(color: \.lowEmphasis)
+    public static var highlight: UIColor { getTheme().colors.highlight }
+    public static var highEmphasis: UIColor { getTheme().colors.highEmphasis }
+    public static var mediumEmphasis: UIColor { getTheme().colors.mediumEmphasis }
+    public static var lowEmphasis: UIColor { getTheme().colors.lowEmphasis }
 
     // MARK: - Feedback
 
-    public static let success = ColorSelector().getFromPalette(color: \.success)
-    public static let onSuccess = ColorSelector().getFromPalette(color: \.onSuccess)
-    public static let warning = ColorSelector().getFromPalette(color: \.warning)
-    public static let onWarning = ColorSelector().getFromPalette(color: \.onWarning)
-    public static let alert = ColorSelector().getFromPalette(color: \.alert)
-    public static let onAlert = ColorSelector().getFromPalette(color: \.onAlert)
-
-    public static let link = ColorSelector().getFromPalette(color: \.link)
-    public static let onLink = ColorSelector().getFromPalette(color: \.onLink)
+    public static var success: UIColor { getTheme().colors.success }
+    public static var onSuccess: UIColor { getTheme().colors.onSuccess }
+    public static var warning: UIColor { getTheme().colors.warning }
+    public static var onWarning: UIColor { getTheme().colors.onWarning }
+    public static var alert: UIColor { getTheme().colors.alert }
+    public static var onAlert: UIColor { getTheme().colors.onAlert }
+    public static var link: UIColor { getTheme().colors.link }
+    public static var onLink: UIColor { getTheme().colors.onLink }
 }

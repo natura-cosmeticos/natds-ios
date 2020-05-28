@@ -175,6 +175,12 @@
 		845D9EF8244DE32F003598B0 /* NatColors+TBS+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D9EF6244DE2E7003598B0 /* NatColors+TBS+Spec.swift */; };
 		846313AC245C47D100387FCF /* ValidateTheme+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846313AA245C47C400387FCF /* ValidateTheme+Spec.swift */; };
 		846313AE245CE9AE00387FCF /* GetTheme+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846313AD245CE9AE00387FCF /* GetTheme+Spec.swift */; };
+		84692865247FEB0D008DF255 /* AvonColorPaletteLight2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84692864247FEB0D008DF255 /* AvonColorPaletteLight2.swift */; };
+		84692867247FEB5C008DF255 /* AvonColorPaletteDark2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84692866247FEB5C008DF255 /* AvonColorPaletteDark2.swift */; };
+		84692869248022EB008DF255 /* NaturaColorPaletteLight2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84692868248022EB008DF255 /* NaturaColorPaletteLight2.swift */; };
+		8469286B24802359008DF255 /* NaturaColorPaletteDark2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469286A24802359008DF255 /* NaturaColorPaletteDark2.swift */; };
+		8469286D248023E2008DF255 /* TheBodyShopColorPaletteLight2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469286C248023E2008DF255 /* TheBodyShopColorPaletteLight2.swift */; };
+		8469286F24802446008DF255 /* TheBodyShopColorPaletteDark2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469286E24802446008DF255 /* TheBodyShopColorPaletteDark2.swift */; };
 		84B197A02475915E00F1B575 /* ButtonOutlineStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1979F2475915E00F1B575 /* ButtonOutlineStyle.swift */; };
 		84B197A3247593B500F1B575 /* NatButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B197A2247593B500F1B575 /* NatButton+Style.swift */; };
 		84BFB61A24695E7D00506ED1 /* NatFonts+Avon+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB61824695E6600506ED1 /* NatFonts+Avon+Spec.swift */; };
@@ -413,6 +419,12 @@
 		845D9EF6244DE2E7003598B0 /* NatColors+TBS+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatColors+TBS+Spec.swift"; sourceTree = "<group>"; };
 		846313AA245C47C400387FCF /* ValidateTheme+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ValidateTheme+Spec.swift"; sourceTree = "<group>"; };
 		846313AD245CE9AE00387FCF /* GetTheme+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GetTheme+Spec.swift"; sourceTree = "<group>"; };
+		84692864247FEB0D008DF255 /* AvonColorPaletteLight2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvonColorPaletteLight2.swift; sourceTree = "<group>"; };
+		84692866247FEB5C008DF255 /* AvonColorPaletteDark2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvonColorPaletteDark2.swift; sourceTree = "<group>"; };
+		84692868248022EB008DF255 /* NaturaColorPaletteLight2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturaColorPaletteLight2.swift; sourceTree = "<group>"; };
+		8469286A24802359008DF255 /* NaturaColorPaletteDark2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturaColorPaletteDark2.swift; sourceTree = "<group>"; };
+		8469286C248023E2008DF255 /* TheBodyShopColorPaletteLight2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheBodyShopColorPaletteLight2.swift; sourceTree = "<group>"; };
+		8469286E24802446008DF255 /* TheBodyShopColorPaletteDark2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheBodyShopColorPaletteDark2.swift; sourceTree = "<group>"; };
 		84B1979F2475915E00F1B575 /* ButtonOutlineStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonOutlineStyle.swift; sourceTree = "<group>"; };
 		84B197A2247593B500F1B575 /* NatButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+Style.swift"; sourceTree = "<group>"; };
 		84BFB61824695E6600506ED1 /* NatFonts+Avon+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatFonts+Avon+Spec.swift"; sourceTree = "<group>"; };
@@ -862,6 +874,8 @@
 				843FA297246331F000D20D9A /* AvonBorderRadius.swift */,
 				84BFB6342469BEF900506ED1 /* Font */,
 				84BFB65E246DA47500506ED1 /* AvonElevations.swift */,
+				84692864247FEB0D008DF255 /* AvonColorPaletteLight2.swift */,
+				84692866247FEB5C008DF255 /* AvonColorPaletteDark2.swift */,
 			);
 			path = Avon;
 			sourceTree = "<group>";
@@ -888,6 +902,8 @@
 				843FA29B2463369A00D20D9A /* TheBodyShopRadius.swift */,
 				84BFB6262469B90000506ED1 /* Font */,
 				84BFB662246DA50100506ED1 /* TheBodyShopElevations.swift */,
+				8469286C248023E2008DF255 /* TheBodyShopColorPaletteLight2.swift */,
+				8469286E24802446008DF255 /* TheBodyShopColorPaletteDark2.swift */,
 			);
 			path = TheBodyShop;
 			sourceTree = "<group>";
@@ -917,6 +933,8 @@
 				843FA299246335D600D20D9A /* NaturaBorderRadius.swift */,
 				84BFB62D2469BDB900506ED1 /* Font */,
 				84BFB660246DA4B400506ED1 /* NaturaElevations.swift */,
+				84692868248022EB008DF255 /* NaturaColorPaletteLight2.swift */,
+				8469286A24802359008DF255 /* NaturaColorPaletteDark2.swift */,
 			);
 			path = Natura;
 			sourceTree = "<group>";
@@ -1626,6 +1644,7 @@
 			files = (
 				64DF47E123FB490200DAF441 /* TextFieldDelegate.swift in Sources */,
 				64B47D66240EFDA700E19797 /* PulseLayer.swift in Sources */,
+				84692869248022EB008DF255 /* NaturaColorPaletteLight2.swift in Sources */,
 				11581AAA238F04D8003E45D7 /* AssetsHelper.swift in Sources */,
 				84428F85245B044700D46611 /* TheBodyShopSpacing.swift in Sources */,
 				11581A9D238EC256003E45D7 /* NavigationDrawerItemCell.swift in Sources */,
@@ -1633,6 +1652,7 @@
 				8427A2A22449F39500CF30D5 /* PrimaryColorPalette.swift in Sources */,
 				4395D1DC23FC6EC700C7DC6F /* TabItemView.swift in Sources */,
 				84B197A3247593B500F1B575 /* NatButton+Style.swift in Sources */,
+				84692867247FEB5C008DF255 /* AvonColorPaletteDark2.swift in Sources */,
 				84BFB62C2469B95300506ED1 /* TheBodyShopFontWeights.swift in Sources */,
 				843FA298246331F000D20D9A /* AvonBorderRadius.swift in Sources */,
 				84EE85E9245A0FB20009293A /* NatSpacing.swift in Sources */,
@@ -1651,6 +1671,7 @@
 				8427A2A42449F97F00CF30D5 /* SecondaryColorPalette.swift in Sources */,
 				843FA27F2461DDFC00D20D9A /* AvonSizes.swift in Sources */,
 				11FC55BE23C64E8800C91014 /* IllustrationIcons.swift in Sources */,
+				84692865247FEB0D008DF255 /* AvonColorPaletteLight2.swift in Sources */,
 				84428F87245B205D00D46611 /* Space.swift in Sources */,
 				84BFB6282469B92000506ED1 /* TheBodyShopFont.swift in Sources */,
 				110F55B323BE5A3F00B9937A /* ContainedButton.swift in Sources */,
@@ -1696,8 +1717,11 @@
 				84BFB62A2469B93C00506ED1 /* TheBodyShopFontSizes.swift in Sources */,
 				117FE025238D9B070032E2AC /* FontsNatura.swift in Sources */,
 				8427A32924538D9D00CF30D5 /* ConfigurationStorable.swift in Sources */,
+				8469286D248023E2008DF255 /* TheBodyShopColorPaletteLight2.swift in Sources */,
 				A9CCF8D823CCDAC900000FC0 /* Icon.swift in Sources */,
+				8469286F24802446008DF255 /* TheBodyShopColorPaletteDark2.swift in Sources */,
 				11518B682396C00700220570 /* NavigationDrawer.swift in Sources */,
+				8469286B24802359008DF255 /* NaturaColorPaletteDark2.swift in Sources */,
 				A9CCF8DF23CCE1CE00000FC0 /* IconView.swift in Sources */,
 				117FE02C238DA53E0032E2AC /* NavigationDrawerSubitemCell.swift in Sources */,
 				845D9EEF244DD407003598B0 /* ColorSelector.swift in Sources */,
