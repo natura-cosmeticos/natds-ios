@@ -1,10 +1,8 @@
 struct AvonTheme: Theme {
-    let lightColorPalette: ColorPalette = AvonColorPaletteLight()
-    let darkColorPalette: ColorPalette = AvonColorPaletteDark()
-    let colors = Colors2(
-        colorSelector: .init(
-            lightColorPalette: AvonColorPaletteLight2(),
-            darkColorPalette: AvonColorPaletteDark2()
+    let colors = DynamicColors(
+        dynamicColorFactory: .init(
+            lightColorPalette: AvonColorPaletteLight(),
+            darkColorPalette: AvonColorPaletteDark()
         )
     )
     let sizes: Sizes = AvonSizes()

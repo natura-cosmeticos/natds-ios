@@ -1,10 +1,8 @@
 struct TheBodyShopTheme: Theme {
-    let lightColorPalette: ColorPalette = TheBodyShopColorPaletteLight()
-    let darkColorPalette: ColorPalette = TheBodyShopColorPaletteDark()
-    let colors = Colors2(
-        colorSelector: .init(
-            lightColorPalette: TheBodyShopColorPaletteLight2(),
-            darkColorPalette: TheBodyShopColorPaletteDark2()
+    let colors = DynamicColors(
+        dynamicColorFactory: .init(
+            lightColorPalette: TheBodyShopColorPaletteLight(),
+            darkColorPalette: TheBodyShopColorPaletteDark()
         )
     )
     let sizes: Sizes = TheBodyShopSizes()

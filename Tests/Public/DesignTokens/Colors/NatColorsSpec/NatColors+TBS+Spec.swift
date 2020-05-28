@@ -10,18 +10,18 @@ final class NatColorsTBSSpec: QuickSpec {
 
         beforeEach {
             DesignSystem().configure(with: .theBodyShop)
-            let theme = getTheme()
-            lightPalette = theme.lightColorPalette
-            darkPalette = theme.darkColorPalette
+
+            lightPalette = TheBodyShopColorPaletteLight()
+            darkPalette = TheBodyShopColorPaletteDark()
         }
 
-        describe("colors from PrimaryColorPalette protocol") {
+        describe("colors from Primary") {
             describe(".primary") {
-                it("returns a color equivalent to ColorPalette.primary.primary") {
+                it("returns a color equivalent to ColorPalette.primary") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: NatColors.primary,
-                        lightColor: lightPalette.primary.primary,
-                        darkColor: darkPalette.primary.primary
+                        lightColor: lightPalette.primary,
+                        darkColor: darkPalette.primary
                     )
 
                     expect(result).to(beTrue())
@@ -29,11 +29,11 @@ final class NatColorsTBSSpec: QuickSpec {
             }
 
             describe(".onPrimary") {
-                it("returns a color equivalent to ColorPalette.primary.onPrimary") {
+                it("returns a color equivalent to ColorPalette.onPrimary") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: NatColors.onPrimary,
-                        lightColor: lightPalette.primary.onPrimary,
-                        darkColor: darkPalette.primary.onPrimary
+                        lightColor: lightPalette.onPrimary,
+                        darkColor: darkPalette.onPrimary
                     )
 
                     expect(result).to(beTrue())
@@ -41,11 +41,11 @@ final class NatColorsTBSSpec: QuickSpec {
             }
 
             describe(".primaryLight") {
-                it("returns a color equivalent to ColorPalette.primary.primaryLight") {
+                it("returns a color equivalent to ColorPalette.primaryLight") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: NatColors.primaryLight,
-                        lightColor: lightPalette.primary.primaryLight,
-                        darkColor: darkPalette.primary.primaryLight
+                        lightColor: lightPalette.primaryLight,
+                        darkColor: darkPalette.primaryLight
                     )
 
                     expect(result).to(beTrue())
@@ -53,11 +53,11 @@ final class NatColorsTBSSpec: QuickSpec {
             }
 
             describe(".onPrimaryLight") {
-                it("returns a color equivalent to ColorPalette.primary.onPrimaryLight") {
+                it("returns a color equivalent to ColorPalette.onPrimaryLight") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: NatColors.onPrimaryLight,
-                        lightColor: lightPalette.primary.onPrimaryLight,
-                        darkColor: darkPalette.primary.onPrimaryLight
+                        lightColor: lightPalette.onPrimaryLight,
+                        darkColor: darkPalette.onPrimaryLight
                     )
 
                     expect(result).to(beTrue())
@@ -65,11 +65,11 @@ final class NatColorsTBSSpec: QuickSpec {
             }
 
             describe(".primaryDark") {
-                it("returns a color equivalent to ColorPalette.primary.primaryDark") {
+                it("returns a color equivalent to ColorPalette.primaryDark") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: NatColors.primaryDark,
-                        lightColor: lightPalette.primary.primaryDark,
-                        darkColor: darkPalette.primary.primaryDark
+                        lightColor: lightPalette.primaryDark,
+                        darkColor: darkPalette.primaryDark
                     )
 
                     expect(result).to(beTrue())
@@ -77,25 +77,25 @@ final class NatColorsTBSSpec: QuickSpec {
             }
 
             describe(".onPrimaryDark") {
-                it("returns a color equivalent to ColorPalette.primary.onPrimaryDark") {
+                it("returns a color equivalent to ColorPalette.onPrimaryDark") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: NatColors.onPrimaryDark,
-                        lightColor: lightPalette.primary.onPrimaryDark,
-                        darkColor: darkPalette.primary.onPrimaryDark
+                        lightColor: lightPalette.onPrimaryDark,
+                        darkColor: darkPalette.onPrimaryDark
                     )
 
                     expect(result).to(beTrue())
                 }
             }
-        } //describe - colors from PrimaryColorPalette protocol
+        } //describe - colors from Primary
 
-        describe("colors from SecondaryColorPalette protocol") {
+        describe("colors from Secondary") {
             describe(".secondary") {
-                it("returns a color equivalent to ColorPalette.secondary.secondary") {
+                it("returns a color equivalent to ColorPalette.secondary") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: NatColors.secondary,
-                        lightColor: lightPalette.secondary.secondary,
-                        darkColor: darkPalette.secondary.secondary
+                        lightColor: lightPalette.secondary,
+                        darkColor: darkPalette.secondary
                     )
 
                     expect(result).to(beTrue())
@@ -103,11 +103,11 @@ final class NatColorsTBSSpec: QuickSpec {
             }
 
             describe(".onSecondary") {
-                it("returns a color equivalent to ColorPalette.secondary.onSecondary") {
+                it("returns a color equivalent to ColorPalette.onSecondary") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: NatColors.onSecondary,
-                        lightColor: lightPalette.secondary.onSecondary,
-                        darkColor: darkPalette.secondary.onSecondary
+                        lightColor: lightPalette.onSecondary,
+                        darkColor: darkPalette.onSecondary
                     )
 
                     expect(result).to(beTrue())
@@ -115,11 +115,11 @@ final class NatColorsTBSSpec: QuickSpec {
             }
 
             describe(".secondaryLight") {
-                it("returns a color equivalent to ColorPalette.secondary.secondaryLight") {
+                it("returns a color equivalent to ColorPalette.secondaryLight") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: NatColors.secondaryLight,
-                        lightColor: lightPalette.secondary.secondaryLight,
-                        darkColor: darkPalette.secondary.secondaryLight
+                        lightColor: lightPalette.secondaryLight,
+                        darkColor: darkPalette.secondaryLight
                     )
 
                     expect(result).to(beTrue())
@@ -127,11 +127,11 @@ final class NatColorsTBSSpec: QuickSpec {
             }
 
             describe(".onSecondaryLight") {
-                it("returns a color equivalent to ColorPalette.secondary.onSecondaryLight") {
+                it("returns a color equivalent to ColorPalette.onSecondaryLight") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: NatColors.onSecondaryLight,
-                        lightColor: lightPalette.secondary.onSecondaryLight,
-                        darkColor: darkPalette.secondary.onSecondaryLight
+                        lightColor: lightPalette.onSecondaryLight,
+                        darkColor: darkPalette.onSecondaryLight
                     )
 
                     expect(result).to(beTrue())
@@ -139,11 +139,11 @@ final class NatColorsTBSSpec: QuickSpec {
             }
 
             describe(".secondaryDark") {
-                it("returns a color equivalent to ColorPalette.secondary.secondaryDark") {
+                it("returns a color equivalent to ColorPalette.secondaryDark") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: NatColors.secondaryDark,
-                        lightColor: lightPalette.secondary.secondaryDark,
-                        darkColor: darkPalette.secondary.secondaryDark
+                        lightColor: lightPalette.secondaryDark,
+                        darkColor: darkPalette.secondaryDark
                     )
 
                     expect(result).to(beTrue())
@@ -151,25 +151,25 @@ final class NatColorsTBSSpec: QuickSpec {
             }
 
             describe(".onSecondaryDark") {
-                it("returns a color equivalent to ColorPalette.secondary.onSecondaryDark") {
+                it("returns a color equivalent to ColorPalette.onSecondaryDark") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: NatColors.onSecondaryDark,
-                        lightColor: lightPalette.secondary.onSecondaryDark,
-                        darkColor: darkPalette.secondary.onSecondaryDark
+                        lightColor: lightPalette.onSecondaryDark,
+                        darkColor: darkPalette.onSecondaryDark
                     )
 
                     expect(result).to(beTrue())
                 }
             }
-        } // describe - colors from SecondaryColorPalette protocol
+        } // describe - colors from Secondary
 
-        describe("colors from SurfaceColorPalette protocol") {
+        describe("colors from Surface") {
             describe(".background") {
-                it("returns a color equivalent to ColorPalette.surface.background") {
+                it("returns a color equivalent to ColorPalette.background") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: NatColors.background,
-                        lightColor: lightPalette.surface.background,
-                        darkColor: darkPalette.surface.background
+                        lightColor: lightPalette.background,
+                        darkColor: darkPalette.background
                     )
 
                     expect(result).to(beTrue())
@@ -177,11 +177,11 @@ final class NatColorsTBSSpec: QuickSpec {
             }
 
             describe(".onBackground") {
-                it("returns a color equivalent to ColorPalette.surface.onBackground") {
+                it("returns a color equivalent to ColorPalette.onBackground") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: NatColors.onBackground,
-                        lightColor: lightPalette.surface.onBackground,
-                        darkColor: darkPalette.surface.onBackground
+                        lightColor: lightPalette.onBackground,
+                        darkColor: darkPalette.onBackground
                     )
 
                     expect(result).to(beTrue())
@@ -189,11 +189,11 @@ final class NatColorsTBSSpec: QuickSpec {
             }
 
             describe(".surface") {
-                it("returns a color equivalent to ColorPalette.surface.surface") {
+                it("returns a color equivalent to ColorPalette.surface") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: NatColors.surface,
-                        lightColor: lightPalette.surface.surface,
-                        darkColor: darkPalette.surface.surface
+                        lightColor: lightPalette.surface,
+                        darkColor: darkPalette.surface
                     )
 
                     expect(result).to(beTrue())
@@ -201,25 +201,25 @@ final class NatColorsTBSSpec: QuickSpec {
             }
 
             describe(".onSurface") {
-                it("returns a color equivalent to ColorPalette.surface.onSurface") {
+                it("returns a color equivalent to ColorPalette.onSurface") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: NatColors.onSurface,
-                        lightColor: lightPalette.surface.onSurface,
-                        darkColor: darkPalette.surface.onSurface
+                        lightColor: lightPalette.onSurface,
+                        darkColor: darkPalette.onSurface
                     )
 
                     expect(result).to(beTrue())
                 }
             }
-        } // describe - colors from SurfaceColorPalette protocol
+        } // describe - colors from Surface
 
-        describe("colors from ContentColorPalette protocol") {
+        describe("colors from Content") {
             describe(".highlight") {
-                it("returns a color equivalent to ColorPalette.content.highlight") {
+                it("returns a color equivalent to ColorPalette.highlight") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: NatColors.highlight,
-                        lightColor: lightPalette.content.highlight,
-                        darkColor: darkPalette.content.highlight
+                        lightColor: lightPalette.highlight,
+                        darkColor: darkPalette.highlight
                     )
 
                     expect(result).to(beTrue())
@@ -227,11 +227,11 @@ final class NatColorsTBSSpec: QuickSpec {
             }
 
             describe(".highEmphasis") {
-                it("returns a color equivalent to ColorPalette.content.highEmphasis") {
+                it("returns a color equivalent to ColorPalette.highEmphasis") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: NatColors.highEmphasis,
-                        lightColor: lightPalette.content.highEmphasis,
-                        darkColor: darkPalette.content.highEmphasis
+                        lightColor: lightPalette.highEmphasis,
+                        darkColor: darkPalette.highEmphasis
                     )
 
                     expect(result).to(beTrue())
@@ -239,11 +239,11 @@ final class NatColorsTBSSpec: QuickSpec {
             }
 
             describe(".mediumEmphasis") {
-                it("returns a color equivalent to ColorPalette.content.mediumEmphasis") {
+                it("returns a color equivalent to ColorPalette.mediumEmphasis") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: NatColors.mediumEmphasis,
-                        lightColor: lightPalette.content.mediumEmphasis,
-                        darkColor: darkPalette.content.mediumEmphasis
+                        lightColor: lightPalette.mediumEmphasis,
+                        darkColor: darkPalette.mediumEmphasis
                     )
 
                     expect(result).to(beTrue())
@@ -251,25 +251,25 @@ final class NatColorsTBSSpec: QuickSpec {
             }
 
             describe(".lowEmphasis") {
-                it("returns a color equivalent to ColorPalette.content.lowEmphasis") {
+                it("returns a color equivalent to ColorPalette.lowEmphasis") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: NatColors.lowEmphasis,
-                        lightColor: lightPalette.content.lowEmphasis,
-                        darkColor: darkPalette.content.lowEmphasis
+                        lightColor: lightPalette.lowEmphasis,
+                        darkColor: darkPalette.lowEmphasis
                     )
 
                     expect(result).to(beTrue())
                 }
             }
-        } // describe - colors from ContentColorPalette protocol
+        } // describe - colors from Content
 
-        describe("colors from FeedbackColorPalette protocol") {
+        describe("colors from Feedback") {
             describe(".success") {
-                it("returns a color equivalent to ColorPalette.feedback.success") {
+                it("returns a color equivalent to ColorPalette.success") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: NatColors.success,
-                        lightColor: lightPalette.feedback.success,
-                        darkColor: darkPalette.feedback.success
+                        lightColor: lightPalette.success,
+                        darkColor: darkPalette.success
                     )
 
                     expect(result).to(beTrue())
@@ -277,11 +277,11 @@ final class NatColorsTBSSpec: QuickSpec {
             }
 
             describe(".onSuccess") {
-                it("returns a color equivalent to ColorPalette.feedback.onSuccess") {
+                it("returns a color equivalent to ColorPalette.onSuccess") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: NatColors.onSuccess,
-                        lightColor: lightPalette.feedback.onSuccess,
-                        darkColor: darkPalette.feedback.onSuccess
+                        lightColor: lightPalette.onSuccess,
+                        darkColor: darkPalette.onSuccess
                     )
 
                     expect(result).to(beTrue())
@@ -289,11 +289,11 @@ final class NatColorsTBSSpec: QuickSpec {
             }
 
             describe(".warning") {
-                it("returns a color equivalent to ColorPalette.feedback.warning") {
+                it("returns a color equivalent to ColorPalette.warning") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: NatColors.warning,
-                        lightColor: lightPalette.feedback.warning,
-                        darkColor: darkPalette.feedback.warning
+                        lightColor: lightPalette.warning,
+                        darkColor: darkPalette.warning
                     )
 
                     expect(result).to(beTrue())
@@ -301,11 +301,11 @@ final class NatColorsTBSSpec: QuickSpec {
             }
 
             describe(".onWarning") {
-                it("returns a color equivalent to ColorPalette.feedback.onWarning") {
+                it("returns a color equivalent to ColorPalette.onWarning") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: NatColors.onWarning,
-                        lightColor: lightPalette.feedback.onWarning,
-                        darkColor: darkPalette.feedback.onWarning
+                        lightColor: lightPalette.onWarning,
+                        darkColor: darkPalette.onWarning
                     )
 
                     expect(result).to(beTrue())
@@ -313,11 +313,11 @@ final class NatColorsTBSSpec: QuickSpec {
             }
 
             describe(".alert") {
-                it("returns a color equivalent to ColorPalette.feedback.alert") {
+                it("returns a color equivalent to ColorPalette.alert") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: NatColors.alert,
-                        lightColor: lightPalette.feedback.alert,
-                        darkColor: darkPalette.feedback.alert
+                        lightColor: lightPalette.alert,
+                        darkColor: darkPalette.alert
                     )
 
                     expect(result).to(beTrue())
@@ -325,11 +325,11 @@ final class NatColorsTBSSpec: QuickSpec {
             }
 
             describe(".onAlert") {
-                it("returns a color equivalent to ColorPalette.feedback.onAlert") {
+                it("returns a color equivalent to ColorPalette.onAlert") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: NatColors.onAlert,
-                        lightColor: lightPalette.feedback.onAlert,
-                        darkColor: darkPalette.feedback.onAlert
+                        lightColor: lightPalette.onAlert,
+                        darkColor: darkPalette.onAlert
                     )
 
                     expect(result).to(beTrue())
@@ -337,11 +337,11 @@ final class NatColorsTBSSpec: QuickSpec {
             }
 
             describe(".link") {
-                it("returns a color equivalent to ColorPalette.feedback.link") {
+                it("returns a color equivalent to ColorPalette.link") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: NatColors.link,
-                        lightColor: lightPalette.feedback.link,
-                        darkColor: darkPalette.feedback.link
+                        lightColor: lightPalette.link,
+                        darkColor: darkPalette.link
                     )
 
                     expect(result).to(beTrue())
@@ -349,24 +349,24 @@ final class NatColorsTBSSpec: QuickSpec {
             }
 
             describe(".onLink") {
-                it("returns a color equivalent to ColorPalette.feedback.onLink") {
+                it("returns a color equivalent to ColorPalette.onLink") {
                     let result = isColorEquivalentToDarkHexOrLightHex(
                         colorUnderTest: NatColors.onLink,
-                        lightColor: lightPalette.feedback.onLink,
-                        darkColor: darkPalette.feedback.onLink
+                        lightColor: lightPalette.onLink,
+                        darkColor: darkPalette.onLink
                     )
 
                     expect(result).to(beTrue())
                 }
             }
-        } // describe - colors from FeedbackColorPalette protocol
+        } // describe - colors from Feedback
 
         func isColorEquivalentToDarkHexOrLightHex(colorUnderTest: UIColor,
                                                   lightColor: String,
                                                   darkColor: String) -> Bool {
 
             colorUnderTest.asHexString() == lightColor ||
-            colorUnderTest.asHexString() == darkColor
+                colorUnderTest.asHexString() == darkColor
         }
     }
 }

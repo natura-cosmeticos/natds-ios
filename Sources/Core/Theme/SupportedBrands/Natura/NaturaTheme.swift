@@ -1,10 +1,8 @@
 struct NaturaTheme: Theme {
-    let lightColorPalette: ColorPalette = NaturaColorPaletteLight()
-    let darkColorPalette: ColorPalette = NaturaColorPaletteDark()
-    let colors = Colors2(
-        colorSelector: .init(
-            lightColorPalette: NaturaColorPaletteLight2(),
-            darkColorPalette: NaturaColorPaletteDark2()
+    let colors = DynamicColors(
+        dynamicColorFactory: .init(
+            lightColorPalette: NaturaColorPaletteLight(),
+            darkColorPalette: NaturaColorPaletteDark()
         )
     )
     let sizes: Sizes = NaturaSizes()
