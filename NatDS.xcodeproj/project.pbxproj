@@ -134,7 +134,7 @@
 		846313AC245C47D100387FCF /* ValidateTheme+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846313AA245C47C400387FCF /* ValidateTheme+Spec.swift */; };
 		846313AE245CE9AE00387FCF /* GetTheme+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846313AD245CE9AE00387FCF /* GetTheme+Spec.swift */; };
 		84685CBB24813CC6003E90C4 /* DynamicColors+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84685CBA24813CC6003E90C4 /* DynamicColors+Spec.swift */; };
-		84685CBD248154BF003E90C4 /* DynamicColorFactoryImp+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84685CBC248154BF003E90C4 /* DynamicColorFactoryImp+Spec.swift */; };
+		84685CBD248154BF003E90C4 /* DynamicColorFactory+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84685CBC248154BF003E90C4 /* DynamicColorFactory+Spec.swift */; };
 		84692865247FEB0D008DF255 /* AvonColorPaletteLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84692864247FEB0D008DF255 /* AvonColorPaletteLight.swift */; };
 		84692867247FEB5C008DF255 /* AvonColorPaletteDark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84692866247FEB5C008DF255 /* AvonColorPaletteDark.swift */; };
 		84692869248022EB008DF255 /* NaturaColorPaletteLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84692868248022EB008DF255 /* NaturaColorPaletteLight.swift */; };
@@ -145,6 +145,7 @@
 		8469287324803738008DF255 /* DynamicColorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469287224803738008DF255 /* DynamicColorFactory.swift */; };
 		846928762480458D008DF255 /* NatColors+Natura+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469287424804553008DF255 /* NatColors+Natura+Spec.swift */; };
 		84692879248046F7008DF255 /* NatColors+Avon+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84692877248046DD008DF255 /* NatColors+Avon+Spec.swift */; };
+		849F39E52481786800CCF076 /* ColorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F39E42481786800CCF076 /* ColorProvider.swift */; };
 		84B197A02475915E00F1B575 /* ButtonOutlineStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1979F2475915E00F1B575 /* ButtonOutlineStyle.swift */; };
 		84B197A3247593B500F1B575 /* NatButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B197A2247593B500F1B575 /* NatButton+Style.swift */; };
 		84BFB61A24695E7D00506ED1 /* NatFonts+Avon+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB61824695E6600506ED1 /* NatFonts+Avon+Spec.swift */; };
@@ -342,7 +343,7 @@
 		846313AA245C47C400387FCF /* ValidateTheme+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ValidateTheme+Spec.swift"; sourceTree = "<group>"; };
 		846313AD245CE9AE00387FCF /* GetTheme+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GetTheme+Spec.swift"; sourceTree = "<group>"; };
 		84685CBA24813CC6003E90C4 /* DynamicColors+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DynamicColors+Spec.swift"; sourceTree = "<group>"; };
-		84685CBC248154BF003E90C4 /* DynamicColorFactoryImp+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DynamicColorFactoryImp+Spec.swift"; sourceTree = "<group>"; };
+		84685CBC248154BF003E90C4 /* DynamicColorFactory+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DynamicColorFactory+Spec.swift"; sourceTree = "<group>"; };
 		84692864247FEB0D008DF255 /* AvonColorPaletteLight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvonColorPaletteLight.swift; sourceTree = "<group>"; };
 		84692866247FEB5C008DF255 /* AvonColorPaletteDark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvonColorPaletteDark.swift; sourceTree = "<group>"; };
 		84692868248022EB008DF255 /* NaturaColorPaletteLight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturaColorPaletteLight.swift; sourceTree = "<group>"; };
@@ -353,6 +354,7 @@
 		8469287224803738008DF255 /* DynamicColorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicColorFactory.swift; sourceTree = "<group>"; };
 		8469287424804553008DF255 /* NatColors+Natura+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatColors+Natura+Spec.swift"; sourceTree = "<group>"; };
 		84692877248046DD008DF255 /* NatColors+Avon+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatColors+Avon+Spec.swift"; sourceTree = "<group>"; };
+		849F39E42481786800CCF076 /* ColorProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorProvider.swift; sourceTree = "<group>"; };
 		84B1979F2475915E00F1B575 /* ButtonOutlineStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonOutlineStyle.swift; sourceTree = "<group>"; };
 		84B197A2247593B500F1B575 /* NatButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+Style.swift"; sourceTree = "<group>"; };
 		84BFB61824695E6600506ED1 /* NatFonts+Avon+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatFonts+Avon+Spec.swift"; sourceTree = "<group>"; };
@@ -533,7 +535,7 @@
 				117FE00E238D9AEB0032E2AC /* Branding */,
 				117FE010238D9AEB0032E2AC /* ColorsTests.swift */,
 				84685CBA24813CC6003E90C4 /* DynamicColors+Spec.swift */,
-				84685CBC248154BF003E90C4 /* DynamicColorFactoryImp+Spec.swift */,
+				84685CBC248154BF003E90C4 /* DynamicColorFactory+Spec.swift */,
 			);
 			path = Colors;
 			sourceTree = "<group>";
@@ -839,6 +841,7 @@
 				8427A29F2449F2A700CF30D5 /* ColorPalette.swift */,
 				84692870248036C0008DF255 /* DynamicColors.swift */,
 				8469287224803738008DF255 /* DynamicColorFactory.swift */,
+				849F39E42481786800CCF076 /* ColorProvider.swift */,
 			);
 			path = ColorPalettes;
 			sourceTree = "<group>";
@@ -1546,6 +1549,7 @@
 				8427A2B82451C93B00CF30D5 /* NaturaTheme.swift in Sources */,
 				84BFB65B246DA40700506ED1 /* Elevations.swift in Sources */,
 				84BFB6312469BDF400506ED1 /* NaturaFontSizes.swift in Sources */,
+				849F39E52481786800CCF076 /* ColorProvider.swift in Sources */,
 				117FE023238D9B070032E2AC /* ColorsNatura.swift in Sources */,
 				84BFB652246C276800506ED1 /* NatElevation.swift in Sources */,
 				843FA27B2461D82200D20D9A /* NatSizes.swift in Sources */,
@@ -1700,7 +1704,7 @@
 				4378068A23F3442D004A9998 /* ValueTextHighlightTests.swift in Sources */,
 				112BAC2923984562009001A7 /* UITableView+ReusableTests.swift in Sources */,
 				642468B023FDE1AA008EAE6B /* TabItemViewDelegateMock.swift in Sources */,
-				84685CBD248154BF003E90C4 /* DynamicColorFactoryImp+Spec.swift in Sources */,
+				84685CBD248154BF003E90C4 /* DynamicColorFactory+Spec.swift in Sources */,
 				843FA2C2246483E500D20D9A /* TheBodyShopOpacities+Spec.swift in Sources */,
 				84BFB66B246DCD1100506ED1 /* TheBodyShopElevations+Spec.swift in Sources */,
 				11581AA8238F037D003E45D7 /* AssetsHelperTests.swift in Sources */,

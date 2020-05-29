@@ -1,7 +1,7 @@
 final class DynamicColors {
-    private let dynamicColorFactory: DynamicColorFactory
+    private let dynamicColorFactory: ColorProvider
 
-    init(dynamicColorFactory: DynamicColorFactory) { self.dynamicColorFactory = dynamicColorFactory }
+    init(dynamicColorFactory: ColorProvider) { self.dynamicColorFactory = dynamicColorFactory }
 
     lazy var primary = dynamicColorFactory.createDynamicColor(for: \.primary)
     lazy var onPrimary = dynamicColorFactory.createDynamicColor(for: \.onPrimary)

@@ -1,6 +1,6 @@
 struct TheBodyShopTheme: Theme {
     let colors = DynamicColors(
-        dynamicColorFactory: DynamicColorFactoryImp(
+        dynamicColorFactory: DynamicColorFactory(
             lightColorPalette: TheBodyShopColorPaletteLight(),
             darkColorPalette: TheBodyShopColorPaletteDark()
         )

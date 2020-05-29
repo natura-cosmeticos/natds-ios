@@ -3,11 +3,11 @@ import Nimble
 
 @testable import NatDS
 
-final class DynamicColorFactoryImpSpec: QuickSpec {
+final class DynamicColorFactorySpec: QuickSpec {
     override func spec() {
         let lightColorPalette = StubLightColorPalette()
         let darkColorPalette = StubDarkColorPalette()
-        let systemUserTest = DynamicColorFactoryImp(
+        let systemUserTest = DynamicColorFactory(
                lightColorPalette: lightColorPalette,
                darkColorPalette: darkColorPalette
         )

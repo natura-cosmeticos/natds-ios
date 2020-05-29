@@ -248,7 +248,7 @@ final class DynamicColorsSpec: QuickSpec {
     }
 }
 
-fileprivate final class DynamicColorFactorySpy: DynamicColorFactory {
+fileprivate final class DynamicColorFactorySpy: ColorProvider {
     var keyPathInvoked: KeyPath<ColorPalette, String>?
 
     func createDynamicColor(for keyPath: KeyPath<ColorPalette, String>) -> UIColor {

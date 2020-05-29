@@ -1,6 +1,6 @@
 struct AvonTheme: Theme {
     let colors = DynamicColors(
-        dynamicColorFactory: DynamicColorFactoryImp(
+        dynamicColorFactory: DynamicColorFactory(
             lightColorPalette: AvonColorPaletteLight(),
             darkColorPalette: AvonColorPaletteDark()
         )

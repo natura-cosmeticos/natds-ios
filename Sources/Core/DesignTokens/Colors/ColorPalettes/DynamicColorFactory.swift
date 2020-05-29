@@ -1,4 +1,4 @@
-struct DynamicColorFactoryImp: DynamicColorFactory {
+struct DynamicColorFactory: ColorProvider {
     private let lightColorPalette: ColorPalette
     private let darkColorPalette: ColorPalette
 
@@ -25,8 +25,4 @@ struct DynamicColorFactoryImp: DynamicColorFactory {
             return .hexColorOrDefault(hexLight)
         }
     }
-}
-
-protocol DynamicColorFactory {
-    func createDynamicColor(for keyPath: KeyPath<ColorPalette, String>) -> UIColor
 }
