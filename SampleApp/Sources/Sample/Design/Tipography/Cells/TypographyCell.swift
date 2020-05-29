@@ -21,8 +21,6 @@ final class TypographyCell: UITableViewCell {
         return label
     }()
 
-    private var symbolicSpacingHeightConstraint: NSLayoutConstraint!
-
     // MARK: - Inits
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -79,6 +77,8 @@ final class TypographyCell: UITableViewCell {
         ])
     }
 }
+
+// MARK: - ViewModel
 
 extension TypographyCell {
     struct ViewModel {

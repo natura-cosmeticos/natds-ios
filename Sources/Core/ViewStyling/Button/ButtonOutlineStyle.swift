@@ -49,8 +49,10 @@ enum ButtonOutlinedStyle {
 
     static private func createTextForTitle(text: String, withColor color: UIColor) -> NSAttributedString {
         let attributedString = NSMutableAttributedString(string: text)
-        attributedString.apply(kernValue: 0.44)
         attributedString.apply(foregroundColor: color)
+
+        let value = getTheme().font.letterSpacings.button
+        attributedString.apply(kernValue: value)
 
         return attributedString
     }

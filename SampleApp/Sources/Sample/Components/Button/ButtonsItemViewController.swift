@@ -3,6 +3,8 @@ import NatDS
 final class ButtonsItemViewController: UIViewController, SampleItem {
     static var name = "Button"
 
+    // MARK: - Private properties
+
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
@@ -148,6 +150,8 @@ final class ButtonsItemViewController: UIViewController, SampleItem {
         return button
     }()
 
+    // MARK: - Life cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -155,6 +159,8 @@ final class ButtonsItemViewController: UIViewController, SampleItem {
 
         setup()
     }
+
+    // MARK: - Private methods
 
     private func setup() {
         view.backgroundColor = NatColors.background

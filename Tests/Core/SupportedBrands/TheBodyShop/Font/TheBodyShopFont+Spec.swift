@@ -22,5 +22,11 @@ final class TheBodyShopFontSpec: QuickSpec {
                 expect(systemUnderTest.weights).to(beAnInstanceOf(TheBodyShopFontWeights.self))
             }
         }
+
+        describe("#letterSpacings") {
+            it("returns a instance of TheBodyShopFontLetterSpacings") {
+                expect(systemUnderTest.letterSpacings).to(beAnInstanceOf(TheBodyShopFontLetterSpacings.self))
+            }
+        }
     }
 }
