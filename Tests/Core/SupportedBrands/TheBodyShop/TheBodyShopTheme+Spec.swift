@@ -7,19 +7,11 @@ final class TheBodyShopThemeSpec: QuickSpec {
     override func spec() {
         let systemUnderTest = TheBodyShopTheme()
 
-        describe("#lightColorPalette") {
-            it("returns a instance of TheBodyShopColorPaletteLight") {
-                let colorPalette = systemUnderTest.lightColorPalette
+        describe("#colors") {
+            it("returns a instance of DynamicColors") {
+                let colorPalette = systemUnderTest.colors
 
-                expect(colorPalette).to(beAnInstanceOf(TheBodyShopColorPaletteLight.self))
-            }
-        }
-
-        describe("#darkColorPalette") {
-            it("returns a instance of TheBodyShopColorPaletteDark") {
-                let colorPalette = systemUnderTest.darkColorPalette
-
-                expect(colorPalette).to(beAnInstanceOf(TheBodyShopColorPaletteDark.self))
+                expect(colorPalette).to(beAnInstanceOf(DynamicColors.self))
             }
         }
 

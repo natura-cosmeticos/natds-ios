@@ -1,6 +1,10 @@
 struct TheBodyShopTheme: Theme {
-    let lightColorPalette: ColorPalette = TheBodyShopColorPaletteLight()
-    let darkColorPalette: ColorPalette = TheBodyShopColorPaletteDark()
+    let colors = DynamicColors(
+        dynamicColorFactory: DynamicColorFactory(
+            lightColorPalette: TheBodyShopColorPaletteLight(),
+            darkColorPalette: TheBodyShopColorPaletteDark()
+        )
+    )
     let sizes: Sizes = TheBodyShopSizes()
     let spacing: Space = TheBodyShopSpacing()
     let borderRadius: BorderRadius = TheBodyShopBorderRadius()

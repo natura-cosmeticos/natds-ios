@@ -1,8 +1,7 @@
 import Foundation
 
 protocol Theme {
-    var lightColorPalette: ColorPalette { get }
-    var darkColorPalette: ColorPalette { get }
+    var colors: DynamicColors { get }
     var sizes: Sizes { get }
     var spacing: Space { get }
     var borderRadius: BorderRadius { get }
