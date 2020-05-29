@@ -1,6 +1,6 @@
 struct NaturaTheme: Theme {
     let colors = DynamicColors(
-        dynamicColorFactory: .init(
+        dynamicColorFactory: DynamicColorFactoryImp(
             lightColorPalette: NaturaColorPaletteLight(),
             darkColorPalette: NaturaColorPaletteDark()
         )
