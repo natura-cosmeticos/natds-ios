@@ -22,5 +22,11 @@ final class NaturaFontSpec: QuickSpec {
                 expect(systemUnderTest.weights).to(beAnInstanceOf(NaturaFontWeights.self))
             }
         }
+
+        describe("#letterSpacings") {
+            it("returns a instance of NaturaFontLetterSpacings") {
+                expect(systemUnderTest.letterSpacings).to(beAnInstanceOf(NaturaFontLetterSpacings.self))
+            }
+        }
     }
 }

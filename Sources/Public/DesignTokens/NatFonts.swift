@@ -22,6 +22,8 @@ public struct NatFonts {
     }
 }
 
+// MARK: - Size
+
 extension NatFonts {
     public enum Size {
         case heading1
@@ -60,7 +62,11 @@ extension NatFonts {
             return keyPath
         }
     }
+}
 
+// MARK: - Weight
+
+extension NatFonts {
     public enum Weight {
         case regular
         case medium
