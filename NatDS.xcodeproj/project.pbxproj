@@ -146,6 +146,8 @@
 		846928762480458D008DF255 /* NatColors+Natura+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469287424804553008DF255 /* NatColors+Natura+Spec.swift */; };
 		84692879248046F7008DF255 /* NatColors+Avon+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84692877248046DD008DF255 /* NatColors+Avon+Spec.swift */; };
 		849F39E52481786800CCF076 /* ColorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F39E42481786800CCF076 /* ColorProvider.swift */; };
+		849F39E724819C0D00CCF076 /* StubLightColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F39E624819C0D00CCF076 /* StubLightColorPalette.swift */; };
+		849F39E924819C3500CCF076 /* StubDarkColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F39E824819C3500CCF076 /* StubDarkColorPalette.swift */; };
 		84B197A02475915E00F1B575 /* ButtonOutlineStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1979F2475915E00F1B575 /* ButtonOutlineStyle.swift */; };
 		84B197A3247593B500F1B575 /* NatButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B197A2247593B500F1B575 /* NatButton+Style.swift */; };
 		84BFB61A24695E7D00506ED1 /* NatFonts+Avon+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB61824695E6600506ED1 /* NatFonts+Avon+Spec.swift */; };
@@ -355,6 +357,8 @@
 		8469287424804553008DF255 /* NatColors+Natura+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatColors+Natura+Spec.swift"; sourceTree = "<group>"; };
 		84692877248046DD008DF255 /* NatColors+Avon+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatColors+Avon+Spec.swift"; sourceTree = "<group>"; };
 		849F39E42481786800CCF076 /* ColorProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorProvider.swift; sourceTree = "<group>"; };
+		849F39E624819C0D00CCF076 /* StubLightColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubLightColorPalette.swift; sourceTree = "<group>"; };
+		849F39E824819C3500CCF076 /* StubDarkColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubDarkColorPalette.swift; sourceTree = "<group>"; };
 		84B1979F2475915E00F1B575 /* ButtonOutlineStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonOutlineStyle.swift; sourceTree = "<group>"; };
 		84B197A2247593B500F1B575 /* NatButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+Style.swift"; sourceTree = "<group>"; };
 		84BFB61824695E6600506ED1 /* NatFonts+Avon+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatFonts+Avon+Spec.swift"; sourceTree = "<group>"; };
@@ -971,6 +975,8 @@
 				8427A32D2453A8C900CF30D5 /* MockStorage.swift */,
 				84BFB61B2469810600506ED1 /* UIFont+GetWeight.swift */,
 				84BFB672246DF82800506ED1 /* ElevationAttributes+Equitable.swift */,
+				849F39E624819C0D00CCF076 /* StubLightColorPalette.swift */,
+				849F39E824819C3500CCF076 /* StubDarkColorPalette.swift */,
 			);
 			path = TestingHelpers;
 			sourceTree = "<group>";
@@ -1684,6 +1690,7 @@
 				843FA2B42464717700D20D9A /* NatOpacities+Spec.swift in Sources */,
 				843FA2AE24635EDF00D20D9A /* TheBodyShopBorderRadius+Spec.swift in Sources */,
 				843FA28C2461F96700D20D9A /* TheBodyShopSize+Spec.swift in Sources */,
+				849F39E724819C0D00CCF076 /* StubLightColorPalette.swift in Sources */,
 				A9CCF8E823CCF03500000FC0 /* FontIconStyleTests.swift in Sources */,
 				117FE016238D9AEB0032E2AC /* ColorsTests.swift in Sources */,
 				642468AB23FDC63B008EAE6B /* TabItemViewTests.swift in Sources */,
@@ -1712,6 +1719,7 @@
 				84BFB66D246DD12200506ED1 /* AvonElevations+Spec.swift in Sources */,
 				8427A2D62451E07700CF30D5 /* NaturaColorPaletteLight+Spec.swift in Sources */,
 				117FE015238D9AEB0032E2AC /* ColorsNaturaTests.swift in Sources */,
+				849F39E924819C3500CCF076 /* StubDarkColorPalette.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
