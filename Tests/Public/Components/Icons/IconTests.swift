@@ -591,24 +591,24 @@ class IconTests: FBSnapshotTestCase {
         assert(icon: .outlinedSocialPerson)
     }
 
-    func test_zOutlinedContentBellringing_hasValidSnapshot() {
-        assert(icon: .zOutlinedContentBellringing)
+    func test_outlinedContentBellringing_hasValidSnapshot() {
+        assert(icon: .outlinedContentBellringing)
     }
 
-    func test_zOutlinedContentExchangereports_hasValidSnapshot() {
-        assert(icon: .zOutlinedContentExchangereports)
+    func test_outlinedContentExchangereports_hasValidSnapshot() {
+        assert(icon: .outlinedContentExchangereports)
     }
 
-    func test_zOutlinedContentGallery_hasValidSnapshot() {
-        assert(icon: .zOutlinedContentGallery)
+    func test_outlinedContentGallery_hasValidSnapshot() {
+        assert(icon: .outlinedContentGallery)
     }
 
-    func test_zOutlinedContentHealth_hasValidSnapshot() {
-        assert(icon: .zOutlinedContentHealth)
+    func test_outlinedContentHealth_hasValidSnapshot() {
+        assert(icon: .outlinedContentHealth)
     }
 
-    func test_zOutlinedContentPlanb_hasValidSnapshot() {
-        assert(icon: .zOutlinedContentPlanb)
+    func test_outlinedContentPlanb_hasValidSnapshot() {
+        assert(icon: .outlinedContentPlanb)
     }
 
     func assert(icon: Icon) {
