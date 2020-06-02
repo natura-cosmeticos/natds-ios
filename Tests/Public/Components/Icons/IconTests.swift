@@ -1,622 +1,226 @@
 import FBSnapshotTestCase
+
 @testable import NatDS
 
 class IconTests: FBSnapshotTestCase {
+    func test_difference_between_icons_and_test_mirror() {
+        let difference = diffBetweenIcons(
+            appIcons: Icon.allCases,
+            testIcons: IconMirror.allCases
+        )
 
-    func test_filledActionAdd_hasValidSnapshot() {
-        assert(icon: .filledActionAdd)
+        XCTAssertEqual(difference.count, 0)
     }
 
-    func test_filledActionCancel_hasValidSnapshot() {
-        assert(icon: .filledActionCancel)
+    func test_icons_hasValidSnapshot() {
+        Icon.allCases.forEach { assert(icon: $0) }
     }
 
-    func test_filledActionCheck_hasValidSnapshot() {
-        assert(icon: .filledActionCheck)
-    }
-
-    func test_filledActionRating_hasValidSnapshot() {
-        assert(icon: .filledActionRating)
-    }
-
-    func test_filledActionSubtract_hasValidSnapshot() {
-        assert(icon: .filledActionSubtract)
-    }
-
-    func test_filledBrandNaturarosacea_hasValidSnapshot() {
-        assert(icon: .filledBrandNaturarosacea)
-    }
-
-    func test_filledMediaPause_hasValidSnapshot() {
-        assert(icon: .filledMediaPause)
-    }
-
-    func test_filledMediaPlay_hasValidSnapshot() {
-        assert(icon: .filledMediaPlay)
-    }
-
-    func test_filledNavigationDirectionleft_hasValidSnapshot() {
-        assert(icon: .filledNavigationDirectionleft)
-    }
-
-    func test_filledNavigationDirectionright_hasValidSnapshot() {
-        assert(icon: .filledNavigationDirectionright)
-    }
-
-    func test_filledNavigationDirectiontbottom_hasValidSnapshot() {
-        assert(icon: .filledNavigationDirectiontbottom)
-    }
-
-    func test_filledNavigationDirectiontop_hasValidSnapshot() {
-        assert(icon: .filledNavigationDirectiontop)
-    }
-
-    func test_filledNavigationMenu_hasValidSnapshot() {
-        assert(icon: .filledNavigationMenu)
-    }
-
-    func test_filledNavigationMore_hasValidSnapshot() {
-        assert(icon: .filledNavigationMore)
-    }
-
-    func test_outlinedActionAdd_hasValidSnapshot() {
-        assert(icon: .outlinedActionAdd)
-    }
-
-    func test_outlinedActionAttachment_hasValidSnapshot() {
-        assert(icon: .outlinedActionAttachment)
-    }
-
-    func test_outlinedActionAutofilter_hasValidSnapshot() {
-        assert(icon: .outlinedActionAutofilter)
-    }
-
-    func test_outlinedActionCalendar_hasValidSnapshot() {
-        assert(icon: .outlinedActionCalendar)
-    }
-
-    func test_outlinedActionCancel_hasValidSnapshot() {
-        assert(icon: .outlinedActionCancel)
-    }
-
-    func test_outlinedActionChange_hasValidSnapshot() {
-        assert(icon: .outlinedActionChange)
-    }
-
-    func test_outlinedActionCheck_hasValidSnapshot() {
-        assert(icon: .outlinedActionCheck)
-    }
-
-    func test_outlinedActionClosedbox_hasValidSnapshot() {
-        assert(icon: .outlinedActionClosedbox)
-    }
-
-    func test_outlinedActionCopy_hasValidSnapshot() {
-        assert(icon: .outlinedActionCopy)
-    }
-
-    func test_outlinedActionCycle_hasValidSnapshot() {
-        assert(icon: .outlinedActionCycle)
-    }
-
-    func test_outlinedActionDelete_hasValidSnapshot() {
-        assert(icon: .outlinedActionDelete)
-    }
-
-    func test_outlinedActionDone_hasValidSnapshot() {
-        assert(icon: .outlinedActionDone)
-    }
-
-    func test_outlinedActionDownload_hasValidSnapshot() {
-        assert(icon: .outlinedActionDownload)
-    }
-
-    func test_outlinedActionEdit_hasValidSnapshot() {
-        assert(icon: .outlinedActionEdit)
-    }
-
-    func test_outlinedActionFavorite_hasValidSnapshot() {
-        assert(icon: .outlinedActionFavorite)
-    }
-
-    func test_outlinedActionFilter_hasValidSnapshot() {
-        assert(icon: .outlinedActionFilter)
-    }
-
-    func test_outlinedActionGridsquare_hasValidSnapshot() {
-        assert(icon: .outlinedActionGridsquare)
-    }
-
-    func test_outlinedActionHelp_hasValidSnapshot() {
-        assert(icon: .outlinedActionHelp)
-    }
-
-    func test_outlinedActionHistory_hasValidSnapshot() {
-        assert(icon: .outlinedActionHistory)
-    }
-
-    func test_outlinedActionLike_hasValidSnapshot() {
-        assert(icon: .outlinedActionLike)
-    }
-
-    func test_outlinedActionList_hasValidSnapshot() {
-        assert(icon: .outlinedActionList)
-    }
-
-    func test_outlinedActionLove_hasValidSnapshot() {
-        assert(icon: .outlinedActionLove)
-    }
-
-    func test_outlinedActionMic_hasValidSnapshot() {
-        assert(icon: .outlinedActionMic)
-    }
-
-    func test_outlinedActionMicrec_hasValidSnapshot() {
-        assert(icon: .outlinedActionMicrec)
-    }
-
-    func test_outlinedActionNewrequest_hasValidSnapshot() {
-        assert(icon: .outlinedActionNewrequest)
-    }
-
-    func test_outlinedActionOrder_hasValidSnapshot() {
-        assert(icon: .outlinedActionOrder)
-    }
-
-    func test_outlinedActionPhone_hasValidSnapshot() {
-        assert(icon: .outlinedActionPhone)
-    }
-
-    func test_outlinedActionPrint_hasValidSnapshot() {
-        assert(icon: .outlinedActionPrint)
-    }
-
-    func test_outlinedActionRating_hasValidSnapshot() {
-        assert(icon: .outlinedActionRating)
-    }
-
-    func test_outlinedActionRequest_hasValidSnapshot() {
-        assert(icon: .outlinedActionRequest)
-    }
-
-    func test_outlinedActionSave_hasValidSnapshot() {
-        assert(icon: .outlinedActionSave)
-    }
-
-    func test_outlinedActionSchedule_hasValidSnapshot() {
-        assert(icon: .outlinedActionSchedule)
-    }
-
-    func test_outlinedActionSearch_hasValidSnapshot() {
-        assert(icon: .outlinedActionSearch)
-    }
-
-    func test_outlinedActionSelectedalllines_hasValidSnapshot() {
-        assert(icon: .outlinedActionSelectedalllines)
-    }
-
-    func test_outlinedActionSend_hasValidSnapshot() {
-        assert(icon: .outlinedActionSend)
-    }
-
-    func test_outlinedActionSettings_hasValidSnapshot() {
-        assert(icon: .outlinedActionSettings)
-    }
-
-    func test_outlinedActionShare_hasValidSnapshot() {
-        assert(icon: .outlinedActionShare)
-    }
-
-    func test_outlinedActionSubtract_hasValidSnapshot() {
-        assert(icon: .outlinedActionSubtract)
-    }
-
-    func test_outlinedActionUpdate_hasValidSnapshot() {
-        assert(icon: .outlinedActionUpdate)
-    }
-
-    func test_outlinedActionUpload_hasValidSnapshot() {
-        assert(icon: .outlinedActionUpload)
-    }
-
-    func test_outlinedActionVisibility_hasValidSnapshot() {
-        assert(icon: .outlinedActionVisibility)
-    }
-
-    func test_outlinedActionVisibilityoff_hasValidSnapshot() {
-        assert(icon: .outlinedActionVisibilityoff)
-    }
-
-    func test_outlinedAlertEmpty_hasValidSnapshot() {
-        assert(icon: .outlinedAlertEmpty)
-    }
-
-    func test_outlinedAlertIndeterminate_hasValidSnapshot() {
-        assert(icon: .outlinedAlertIndeterminate)
-    }
-
-    func test_outlinedAlertInfo_hasValidSnapshot() {
-        assert(icon: .outlinedAlertInfo)
-    }
-
-    func test_outlinedCommunicationChat_hasValidSnapshot() {
-        assert(icon: .outlinedCommunicationChat)
-    }
-
-    func test_outlinedCommunicationEmail_hasValidSnapshot() {
-        assert(icon: .outlinedCommunicationEmail)
-    }
-
-    func test_outlinedCommunicationHelp_hasValidSnapshot() {
-        assert(icon: .outlinedCommunicationHelp)
-    }
-
-    func test_outlinedCommunicationMessage_hasValidSnapshot() {
-        assert(icon: .outlinedCommunicationMessage)
-    }
-
-    func test_outlinedCommunicationOccurrence_hasValidSnapshot() {
-        assert(icon: .outlinedCommunicationOccurrence)
-    }
-
-    func test_outlinedCommunicationReadEmail_hasValidSnapshot() {
-        assert(icon: .outlinedCommunicationReadEmail)
-    }
-
-    func test_outlinedCommunicationSignal_hasValidSnapshot() {
-        assert(icon: .outlinedCommunicationSignal)
-    }
-
-    func test_outlinedCommunicationSpeaker_hasValidSnapshot() {
-        assert(icon: .outlinedCommunicationSpeaker)
-    }
-
-    func test_outlinedCommunicationTreatment_hasValidSnapshot() {
-        assert(icon: .outlinedCommunicationTreatment)
-    }
-
-    func test_outlinedContentAdddocument_hasValidSnapshot() {
-        assert(icon: .outlinedContentAdddocument)
-    }
-
-    func test_outlinedContentAgility_hasValidSnapshot() {
-        assert(icon: .outlinedContentAgility)
-    }
-
-    func test_outlinedContentBook_hasValidSnapshot() {
-        assert(icon: .outlinedContentBook)
-    }
-
-    func test_outlinedContentBrightness_hasValidSnapshot() {
-        assert(icon: .outlinedContentBrightness)
-    }
-
-    func test_outlinedContentChangeview_hasValidSnapshot() {
-        assert(icon: .outlinedContentChangeview)
-    }
-
-    func test_outlinedContentChannel_hasValidSnapshot() {
-        assert(icon: .outlinedContentChannel)
-    }
-
-    func test_outlinedContentChristmascard_hasValidSnapshot() {
-        assert(icon: .outlinedContentChristmascard)
-    }
-
-    func test_outlinedContentConsistency_hasValidSnapshot() {
-        assert(icon: .outlinedContentConsistency)
-    }
-
-    func test_outlinedContentDivulgation_hasValidSnapshot() {
-        assert(icon: .outlinedContentDivulgation)
-    }
-
-    func test_outlinedContentEducation_hasValidSnapshot() {
-        assert(icon: .outlinedContentEducation)
-    }
-
-    func test_outlinedContentGift_hasValidSnapshot() {
-        assert(icon: .outlinedContentGift)
-    }
-
-    func test_outlinedContentGlobal_hasValidSnapshot() {
-        assert(icon: .outlinedContentGlobal)
-    }
-
-    func test_outlinedContentHealthy_hasValidSnapshot() {
-        assert(icon: .outlinedContentHealthy)
-    }
-
-    func test_outlinedContentLock_hasValidSnapshot() {
-        assert(icon: .outlinedContentLock)
-    }
-
-    func test_outlinedContentMagic_hasValidSnapshot() {
-        assert(icon: .outlinedContentMagic)
-    }
-
-    func test_outlinedContentMedal_hasValidSnapshot() {
-        assert(icon: .outlinedContentMedal)
-    }
-
-    func test_outlinedContentMenu_hasValidSnapshot() {
-        assert(icon: .outlinedContentMenu)
-    }
-
-    func test_outlinedContentMirror_hasValidSnapshot() {
-        assert(icon: .outlinedContentMirror)
-    }
-
-    func test_outlinedContentProdutivity_hasValidSnapshot() {
-        assert(icon: .outlinedContentProdutivity)
-    }
-
-    func test_outlinedContentStore_hasValidSnapshot() {
-        assert(icon: .outlinedContentStore)
-    }
-
-    func test_outlinedContentWellness_hasValidSnapshot() {
-        assert(icon: .outlinedContentWellness)
-    }
-
-    func test_outlinedContentWifi_hasValidSnapshot() {
-        assert(icon: .outlinedContentWifi)
-    }
-
-    func test_outlinedFinanceBag_hasValidSnapshot() {
-        assert(icon: .outlinedFinanceBag)
-    }
-
-    func test_outlinedFinanceCards_hasValidSnapshot() {
-        assert(icon: .outlinedFinanceCards)
-    }
-
-    func test_outlinedFinanceCharging_hasValidSnapshot() {
-        assert(icon: .outlinedFinanceCharging)
-    }
-
-    func test_outlinedFinanceCreditcard_hasValidSnapshot() {
-        assert(icon: .outlinedFinanceCreditcard)
-    }
-
-    func test_outlinedFinanceDebit_hasValidSnapshot() {
-        assert(icon: .outlinedFinanceDebit)
-    }
-
-    func test_outlinedFinanceDiscount_hasValidSnapshot() {
-        assert(icon: .outlinedFinanceDiscount)
-    }
-
-    func test_outlinedFinanceLittlemachine_hasValidSnapshot() {
-        assert(icon: .outlinedFinanceLittlemachine)
-    }
-
-    func test_outlinedFinanceMoney_hasValidSnapshot() {
-        assert(icon: .outlinedFinanceMoney)
-    }
-
-    func test_outlinedFinanceMoneypaper_hasValidSnapshot() {
-        assert(icon: .outlinedFinanceMoneypaper)
-    }
-
-    func test_outlinedFinancePromotion_hasValidSnapshot() {
-        assert(icon: .outlinedFinancePromotion)
-    }
-
-    func test_outlinedFinanceShoppingcart_hasValidSnapshot() {
-        assert(icon: .outlinedFinanceShoppingcart)
-    }
-
-    func test_outlinedFinanceShoppingcartproduct_hasValidSnapshot() {
-        assert(icon: .outlinedFinanceShoppingcartproduct)
-    }
-
-    func test_outlinedFinanceTagdiscount_hasValidSnapshot() {
-        assert(icon: .outlinedFinanceTagdiscount)
-    }
-
-    func test_outlinedFinanceTransfermoney_hasValidSnapshot() {
-        assert(icon: .outlinedFinanceTransfermoney)
-    }
-
-    func test_outlinedMediaApp_hasValidSnapshot() {
-        assert(icon: .outlinedMediaApp)
-    }
-
-    func test_outlinedMediaCamera_hasValidSnapshot() {
-        assert(icon: .outlinedMediaCamera)
-    }
-
-    func test_outlinedMediaMonitor_hasValidSnapshot() {
-        assert(icon: .outlinedMediaMonitor)
-    }
-
-    func test_outlinedMediaPlay_hasValidSnapshot() {
-        assert(icon: .outlinedMediaPlay)
-    }
-
-    func test_outlinedNavigationArrowbottom_hasValidSnapshot() {
-        assert(icon: .outlinedNavigationArrowbottom)
-    }
-
-    func test_outlinedNavigationArrowleft_hasValidSnapshot() {
-        assert(icon: .outlinedNavigationArrowleft)
-    }
-
-    func test_outlinedNavigationArrowright_hasValidSnapshot() {
-        assert(icon: .outlinedNavigationArrowright)
-    }
-
-    func test_outlinedNavigationArrowtop_hasValidSnapshot() {
-        assert(icon: .outlinedNavigationArrowtop)
-    }
-
-    func test_outlinedNavigationClose_hasValidSnapshot() {
-        assert(icon: .outlinedNavigationClose)
-    }
-
-    func test_outlinedNavigationDirectionbottom_hasValidSnapshot() {
-        assert(icon: .outlinedNavigationDirectionbottom)
-    }
-
-    func test_outlinedNavigationDirectionleft_hasValidSnapshot() {
-        assert(icon: .outlinedNavigationDirectionleft)
-    }
-
-    func test_outlinedNavigationDirectionright_hasValidSnapshot() {
-        assert(icon: .outlinedNavigationDirectionright)
-    }
-
-    func test_outlinedNavigationDirectiontop_hasValidSnapshot() {
-        assert(icon: .outlinedNavigationDirectiontop)
-    }
-
-    func test_outlinedNavigationExit_hasValidSnapshot() {
-        assert(icon: .outlinedNavigationExit)
-    }
-
-    func test_outlinedNavigationGoback_hasValidSnapshot() {
-        assert(icon: .outlinedNavigationGoback)
-    }
-
-    func test_outlinedNavigationGofront_hasValidSnapshot() {
-        assert(icon: .outlinedNavigationGofront)
-    }
-
-    func test_outlinedNavigationHome_hasValidSnapshot() {
-        assert(icon: .outlinedNavigationHome)
-    }
-
-    func test_outlinedNavigationMenu_hasValidSnapshot() {
-        assert(icon: .outlinedNavigationMenu)
-    }
-
-    func test_outlinedPlaceBus_hasValidSnapshot() {
-        assert(icon: .outlinedPlaceBus)
-    }
-
-    func test_outlinedPlaceForklift_hasValidSnapshot() {
-        assert(icon: .outlinedPlaceForklift)
-    }
-
-    func test_outlinedPlaceLocal_hasValidSnapshot() {
-        assert(icon: .outlinedPlaceLocal)
-    }
-
-    func test_outlinedPlaceTruck_hasValidSnapshot() {
-        assert(icon: .outlinedPlaceTruck)
-    }
-
-    func test_outlinedPlaceWaze_hasValidSnapshot() {
-        assert(icon: .outlinedPlaceWaze)
-    }
-
-    func test_outlinedProductBagproduct_hasValidSnapshot() {
-        assert(icon: .outlinedProductBagproduct)
-    }
-
-    func test_outlinedProductBeard_hasValidSnapshot() {
-        assert(icon: .outlinedProductBeard)
-    }
-
-    func test_outlinedProductBrandsproduct_hasValidSnapshot() {
-        assert(icon: .outlinedProductBrandsproduct)
-    }
-
-    func test_outlinedProductChildish_hasValidSnapshot() {
-        assert(icon: .outlinedProductChildish)
-    }
-
-    func test_outlinedProductDailycare_hasValidSnapshot() {
-        assert(icon: .outlinedProductDailycare)
-    }
-
-    func test_outlinedProductHair_hasValidSnapshot() {
-        assert(icon: .outlinedProductHair)
-    }
-
-    func test_outlinedProductMakeup_hasValidSnapshot() {
-        assert(icon: .outlinedProductMakeup)
-    }
-
-    func test_outlinedProductOutlet_hasValidSnapshot() {
-        assert(icon: .outlinedProductOutlet)
-    }
-
-    func test_outlinedProductPerfumery_hasValidSnapshot() {
-        assert(icon: .outlinedProductPerfumery)
-    }
-
-    func test_outlinedProductPromotionproduct_hasValidSnapshot() {
-        assert(icon: .outlinedProductPromotionproduct)
-    }
-
-    func test_outlinedProductVegan_hasValidSnapshot() {
-        assert(icon: .outlinedProductVegan)
-    }
-
-    func test_outlinedSocialAddcontact_hasValidSnapshot() {
-        assert(icon: .outlinedSocialAddcontact)
-    }
-
-    func test_outlinedSocialBirthday_hasValidSnapshot() {
-        assert(icon: .outlinedSocialBirthday)
-    }
-
-    func test_outlinedSocialCollaborate_hasValidSnapshot() {
-        assert(icon: .outlinedSocialCollaborate)
-    }
-
-    func test_outlinedSocialContact_hasValidSnapshot() {
-        assert(icon: .outlinedSocialContact)
-    }
-
-    func test_outlinedSocialDigitalconsultant_hasValidSnapshot() {
-        assert(icon: .outlinedSocialDigitalconsultant)
-    }
-
-    func test_outlinedSocialGroupofpeople_hasValidSnapshot() {
-        assert(icon: .outlinedSocialGroupofpeople)
-    }
-
-    func test_outlinedSocialMyprofile_hasValidSnapshot() {
-        assert(icon: .outlinedSocialMyprofile)
-    }
-
-    func test_outlinedSocialNetwork_hasValidSnapshot() {
-        assert(icon: .outlinedSocialNetwork)
-    }
-
-    func test_outlinedSocialPerson_hasValidSnapshot() {
-        assert(icon: .outlinedSocialPerson)
-    }
-
-    func test_outlinedContentBellringing_hasValidSnapshot() {
-        assert(icon: .outlinedContentBellringing)
-    }
-
-    func test_outlinedContentExchangereports_hasValidSnapshot() {
-        assert(icon: .outlinedContentExchangereports)
-    }
-
-    func test_outlinedContentGallery_hasValidSnapshot() {
-        assert(icon: .outlinedContentGallery)
-    }
-
-    func test_outlinedContentHealth_hasValidSnapshot() {
-        assert(icon: .outlinedContentHealth)
-    }
-
-    func test_outlinedContentPlanb_hasValidSnapshot() {
-        assert(icon: .outlinedContentPlanb)
-    }
-
-    func assert(icon: Icon) {
+    private func assert(icon: Icon) {
         let label = UILabel()
         label.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
         label.font = .iconFont(ofSize: 24)
         label.text = icon.rawValue
 
-        FBSnapshotVerifyView(label)
+        let identifier = "\(icon)"
+
+        FBSnapshotVerifyView(label, identifier: identifier)
+    }
+}
+
+extension IconTests {
+
+    /**
+     This enum only exist becuase Icon.swift is generate by an external tool.
+     To be able to update snapshot tests, this file is need to compare diference between updates.
+     Example: deleted Icons or renamed Icons
+    */
+
+    private enum IconMirror: String, CaseIterable {
+        case filledActionAdd = "\u{EA01}"
+        case filledActionCancel = "\u{EA02}"
+        case filledActionCheck = "\u{EA03}"
+        case filledActionDelete = "\u{EA04}"
+        case filledActionNewrequest = "\u{EA05}"
+        case filledActionRating = "\u{EA06}"
+        case filledActionSubtract = "\u{EA07}"
+        case filledBrandNaturarosacea = "\u{EA08}"
+        case filledFinanceCharging = "\u{EA09}"
+        case filledMediaPause = "\u{EA0A}"
+        case filledMediaPlay = "\u{EA0B}"
+        case filledMediaStop = "\u{EA0C}"
+        case filledNavigationDirectionleft = "\u{EA0D}"
+        case filledNavigationDirectionright = "\u{EA0E}"
+        case filledNavigationDirectiontbottom = "\u{EA0F}"
+        case filledNavigationDirectiontop = "\u{EA10}"
+        case filledNavigationMenu = "\u{EA11}"
+        case filledNavigationMore = "\u{EA12}"
+        case filledProductBrandsproduct = "\u{EA13}"
+        case filledSocialMyprofile = "\u{EA14}"
+        case outlinedActionAdd = "\u{EA15}"
+        case outlinedActionAddproduct = "\u{EA16}"
+        case outlinedActionAttachment = "\u{EA17}"
+        case outlinedActionAutofilter = "\u{EA18}"
+        case outlinedActionCalendar = "\u{EA19}"
+        case outlinedActionCamerachange = "\u{EA1A}"
+        case outlinedActionCancel = "\u{EA1B}"
+        case outlinedActionChange = "\u{EA1C}"
+        case outlinedActionCheck = "\u{EA1D}"
+        case outlinedActionClosedbox = "\u{EA1E}"
+        case outlinedActionCopy = "\u{EA1F}"
+        case outlinedActionCopylink = "\u{EA20}"
+        case outlinedActionCycle = "\u{EA21}"
+        case outlinedActionDelete = "\u{EA22}"
+        case outlinedActionDone = "\u{EA23}"
+        case outlinedActionDownload = "\u{EA24}"
+        case outlinedActionEdit = "\u{EA25}"
+        case outlinedActionFavorite = "\u{EA26}"
+        case outlinedActionFilter = "\u{EA27}"
+        case outlinedActionGridsquare = "\u{EA28}"
+        case outlinedActionHelp = "\u{EA29}"
+        case outlinedActionHistory = "\u{EA2A}"
+        case outlinedActionLightoff = "\u{EA2B}"
+        case outlinedActionLighton = "\u{EA2C}"
+        case outlinedActionLike = "\u{EA2D}"
+        case outlinedActionList = "\u{EA2E}"
+        case outlinedActionLove = "\u{EA2F}"
+        case outlinedActionMic = "\u{EA30}"
+        case outlinedActionMicrec = "\u{EA31}"
+        case outlinedActionNewregister = "\u{EA32}"
+        case outlinedActionNewrequest = "\u{EA33}"
+        case outlinedActionOrder = "\u{EA34}"
+        case outlinedActionPhone = "\u{EA35}"
+        case outlinedActionPrint = "\u{EA36}"
+        case outlinedActionRating = "\u{EA37}"
+        case outlinedActionRecycle = "\u{EA38}"
+        case outlinedActionRequest = "\u{EA39}"
+        case outlinedActionSave = "\u{EA3A}"
+        case outlinedActionSchedule = "\u{EA3B}"
+        case outlinedActionSearch = "\u{EA3C}"
+        case outlinedActionSelectedalllines = "\u{EA3D}"
+        case outlinedActionSend = "\u{EA3E}"
+        case outlinedActionSettings = "\u{EA3F}"
+        case outlinedActionShare = "\u{EA40}"
+        case outlinedActionShareios = "\u{EA41}"
+        case outlinedActionSubtract = "\u{EA42}"
+        case outlinedActionText = "\u{EA43}"
+        case outlinedActionUpdate = "\u{EA44}"
+        case outlinedActionUpload = "\u{EA45}"
+        case outlinedActionVisibility = "\u{EA46}"
+        case outlinedActionVisibilityoff = "\u{EA47}"
+        case outlinedAlertCancel = "\u{EA48}"
+        case outlinedAlertCheck = "\u{EA49}"
+        case outlinedAlertEmpty = "\u{EA4A}"
+        case outlinedAlertIndeterminate = "\u{EA4B}"
+        case outlinedAlertInfo = "\u{EA4C}"
+        case outlinedAlertWarning = "\u{EA4D}"
+        case outlinedCommunicationChat = "\u{EA4E}"
+        case outlinedCommunicationEmail = "\u{EA4F}"
+        case outlinedCommunicationHelp = "\u{EA50}"
+        case outlinedCommunicationMessage = "\u{EA51}"
+        case outlinedCommunicationOccurrence = "\u{EA52}"
+        case outlinedCommunicationReadEmail = "\u{EA53}"
+        case outlinedCommunicationSignal = "\u{EA54}"
+        case outlinedCommunicationSpeaker = "\u{EA55}"
+        case outlinedCommunicationTreatment = "\u{EA56}"
+        case outlinedContentAdddocument = "\u{EA57}"
+        case outlinedContentAgility = "\u{EA58}"
+        case outlinedContentBellringing = "\u{EA59}"
+        case outlinedContentBook = "\u{EA5A}"
+        case outlinedContentBrightness = "\u{EA5B}"
+        case outlinedContentChangeview = "\u{EA5C}"
+        case outlinedContentChannel = "\u{EA5D}"
+        case outlinedContentChristmascard = "\u{EA5E}"
+        case outlinedContentConsistency = "\u{EA5F}"
+        case outlinedContentDivulgation = "\u{EA60}"
+        case outlinedContentEducation = "\u{EA61}"
+        case outlinedContentExchangereports = "\u{EA62}"
+        case outlinedContentGallery = "\u{EA63}"
+        case outlinedContentGift = "\u{EA64}"
+        case outlinedContentGlobal = "\u{EA65}"
+        case outlinedContentHealth = "\u{EA66}"
+        case outlinedContentHealthy = "\u{EA67}"
+        case outlinedContentIndicator = "\u{EA68}"
+        case outlinedContentLock = "\u{EA69}"
+        case outlinedContentMagic = "\u{EA6A}"
+        case outlinedContentMedal = "\u{EA6B}"
+        case outlinedContentMenu = "\u{EA6C}"
+        case outlinedContentMirror = "\u{EA6D}"
+        case outlinedContentPlanb = "\u{EA6E}"
+        case outlinedContentProdutivity = "\u{EA6F}"
+        case outlinedContentReport = "\u{EA70}"
+        case outlinedContentStore = "\u{EA71}"
+        case outlinedContentWellness = "\u{EA72}"
+        case outlinedContentWifi = "\u{EA73}"
+        case outlinedDefaultMockup = "\u{EA74}"
+        case outlinedFinanceBag = "\u{EA75}"
+        case outlinedFinanceBank = "\u{EA76}"
+        case outlinedFinanceCards = "\u{EA77}"
+        case outlinedFinanceCharging = "\u{EA78}"
+        case outlinedFinanceCreditcard = "\u{EA79}"
+        case outlinedFinanceDebit = "\u{EA7A}"
+        case outlinedFinanceDiscount = "\u{EA7B}"
+        case outlinedFinanceLittlemachine = "\u{EA7C}"
+        case outlinedFinanceMoney = "\u{EA7D}"
+        case outlinedFinanceMoneypaper = "\u{EA7E}"
+        case outlinedFinancePromotion = "\u{EA7F}"
+        case outlinedFinanceShoppingcart = "\u{EA80}"
+        case outlinedFinanceShoppingcartproduct = "\u{EA81}"
+        case outlinedFinanceTagdiscount = "\u{EA82}"
+        case outlinedFinanceTransfermoney = "\u{EA83}"
+        case outlinedMediaApp = "\u{EA84}"
+        case outlinedMediaCamera = "\u{EA85}"
+        case outlinedMediaMonitor = "\u{EA86}"
+        case outlinedMediaPlay = "\u{EA87}"
+        case outlinedNavigationArrowbottom = "\u{EA88}"
+        case outlinedNavigationArrowleft = "\u{EA89}"
+        case outlinedNavigationArrowright = "\u{EA8A}"
+        case outlinedNavigationArrowtop = "\u{EA8B}"
+        case outlinedNavigationClose = "\u{EA8C}"
+        case outlinedNavigationDirectionbottom = "\u{EA8D}"
+        case outlinedNavigationDirectionleft = "\u{EA8E}"
+        case outlinedNavigationDirectionright = "\u{EA8F}"
+        case outlinedNavigationDirectiontop = "\u{EA90}"
+        case outlinedNavigationExit = "\u{EA91}"
+        case outlinedNavigationGoback = "\u{EA92}"
+        case outlinedNavigationGofront = "\u{EA93}"
+        case outlinedNavigationHome = "\u{EA94}"
+        case outlinedNavigationMenu = "\u{EA95}"
+        case outlinedPlaceBus = "\u{EA96}"
+        case outlinedPlaceForklift = "\u{EA97}"
+        case outlinedPlaceGps = "\u{EA98}"
+        case outlinedPlaceLocal = "\u{EA99}"
+        case outlinedPlaceTruck = "\u{EA9A}"
+        case outlinedPlaceWaze = "\u{EA9B}"
+        case outlinedProductBagproduct = "\u{EA9C}"
+        case outlinedProductBeard = "\u{EA9D}"
+        case outlinedProductBrandsproduct = "\u{EA9E}"
+        case outlinedProductChildish = "\u{EA9F}"
+        case outlinedProductDailycare = "\u{EAA0}"
+        case outlinedProductHair = "\u{EAA1}"
+        case outlinedProductMakeup = "\u{EAA2}"
+        case outlinedProductOutlet = "\u{EAA3}"
+        case outlinedProductPerfumery = "\u{EAA4}"
+        case outlinedProductPromotionproduct = "\u{EAA5}"
+        case outlinedProductVegan = "\u{EAA6}"
+        case outlinedSocialAddcontact = "\u{EAA7}"
+        case outlinedSocialBirthday = "\u{EAA8}"
+        case outlinedSocialCollaborate = "\u{EAA9}"
+        case outlinedSocialContact = "\u{EAAA}"
+        case outlinedSocialDigitalconsultant = "\u{EAAB}"
+        case outlinedSocialGroupofpeople = "\u{EAAC}"
+        case outlinedSocialMyprofile = "\u{EAAD}"
+        case outlinedSocialNetwork = "\u{EAAE}"
+        case outlinedSocialPerson = "\u{EAAF}"
+    }
+
+    private func diffBetweenIcons(appIcons: [Icon], testIcons: [IconMirror]) -> [String] {
+        let appIcons = testIcons.map { "\($0)" }
+        let testIcons = appIcons.map { "\($0)" }
+
+        let thisSet = Set(appIcons)
+        let otherSet = Set(testIcons)
+
+        return Array(thisSet.symmetricDifference(otherSet))
     }
 }
