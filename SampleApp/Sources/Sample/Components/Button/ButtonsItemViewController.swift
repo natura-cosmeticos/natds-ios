@@ -108,6 +108,15 @@ final class ButtonsItemViewController: UIViewController, SampleItem {
         return button
     }()
 
+    private let containedFullButtonDev: NatButton = {
+        let button = NatButton(style: .contained)
+        button.configure(title: "Contained")
+        button.isEnabled = false
+        button.translatesAutoresizingMaskIntoConstraints = false
+
+        return button
+    }()
+
     private let disableContainedFullButton: ContainedButton = {
         let button = ContainedButton()
         button.setTitle("Disabled Contained", for: .disabled)
@@ -182,6 +191,7 @@ final class ButtonsItemViewController: UIViewController, SampleItem {
         disabledStackView.addArrangedSubview(disableTextButton)
 
         fullStackView.addArrangedSubview(containedFullButton)
+        fullStackView.addArrangedSubview(containedFullButtonDev)
         fullStackView.addArrangedSubview(disableContainedFullButton)
         fullStackView.addArrangedSubview(outlinedFullButton)
         fullStackView.addArrangedSubview(disableOutlinedFullButton)
