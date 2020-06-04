@@ -7,6 +7,26 @@ final class AvonElevationsSpec: QuickSpec {
     override func spec() {
         let systemUnderTest = AvonElevations()
 
+        describe("#none") {
+            let attributes = systemUnderTest.none
+
+            it("returns a expect shadowColor") {
+                expect(attributes.shadowColor).to(beNil())
+            }
+
+            it("returns a expect shadowOffSet") {
+                expect(attributes.shadowOffSet).to(equal(.init(width: 0, height: -3)))
+            }
+
+            it("returns a expect shadowRadius") {
+                expect(attributes.shadowRadius).to(equal(3))
+            }
+
+            it("returns a expect shadowOpacity") {
+                expect(attributes.shadowOpacity).to(equal(0))
+            }
+        }
+
         describe("#elevation01") {
             let attributes = systemUnderTest.elevation01
 
