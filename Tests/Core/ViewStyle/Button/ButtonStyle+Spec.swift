@@ -59,9 +59,20 @@ final class ButtonStyleSpec: QuickSpec {
                     systemUnderTest.applyStyleForTitle(nil, colorForNormal: .red, on: button)
                 }
 
-                it("returns an expected attributedTitle") {
-                    let attributedTitle = button.attributedTitle(for: .normal)
-                    expect(attributedTitle).to(beNil())
+                context("when state is normal") {
+                    it("returns an expected attributedTitle") {
+                        let attributedTitle = button.attributedTitle(for: .normal)
+
+                        expect(attributedTitle).to(beNil())
+                    }
+                }
+
+                context("when state is disabled") {
+                    it("returns an expected attributedTitle") {
+                        let attributedTitle = button.attributedTitle(for: .disabled)
+
+                        expect(attributedTitle).to(beNil())
+                    }
                 }
             }
 
@@ -122,7 +133,8 @@ final class ButtonStyleSpec: QuickSpec {
 
                     it("returns an expected foregroundColor") {
                         let foregroundColor = attributes[.foregroundColor] as? UIColor
-                        let expectedColor = getTheme().colors.onSurface.withAlphaComponent(getTheme().opacities.opacity06)
+                        let expectedColor = getTheme().colors.onSurface
+                            .withAlphaComponent(getTheme().opacities.opacity06)
 
                         expect(foregroundColor).to(equal(expectedColor))
                     }

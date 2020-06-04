@@ -29,9 +29,9 @@ final class ButtonsItemViewController: UIViewController, SampleItem {
         return stackView
     }()
 
-    private let containedButton: ContainedButton = {
-        let button = ContainedButton()
-        button.setTitle("Contained", for: .normal)
+    private let containedButton: NatButton = {
+        let button = NatButton(style: .contained)
+        button.configure(title: "Contained")
         button.translatesAutoresizingMaskIntoConstraints = false
 
         return button
@@ -63,9 +63,9 @@ final class ButtonsItemViewController: UIViewController, SampleItem {
         return stackView
     }()
 
-    private let disableContainedButton: ContainedButton = {
-        let button = ContainedButton()
-        button.setTitle("Contained", for: .disabled)
+    private let disableContainedButton: NatButton = {
+        let button = NatButton(style: .contained)
+        button.configure(title: "Contained")
         button.isEnabled = false
         button.translatesAutoresizingMaskIntoConstraints = false
 
@@ -100,26 +100,17 @@ final class ButtonsItemViewController: UIViewController, SampleItem {
         return stackView
     }()
 
-    private let containedFullButton: ContainedButton = {
-        let button = ContainedButton()
-        button.setTitle("Contained", for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-
-        return button
-    }()
-
-    private let containedFullButtonDev: NatButton = {
+    private let containedFullButton: NatButton = {
         let button = NatButton(style: .contained)
         button.configure(title: "Contained")
-        button.isEnabled = false
         button.translatesAutoresizingMaskIntoConstraints = false
 
         return button
     }()
 
-    private let disableContainedFullButton: ContainedButton = {
-        let button = ContainedButton()
-        button.setTitle("Disabled Contained", for: .disabled)
+    private let disableContainedFullButton: NatButton = {
+        let button = NatButton(style: .contained)
+        button.configure(title: "Disabled Contained")
         button.isEnabled = false
         button.translatesAutoresizingMaskIntoConstraints = false
 
@@ -191,7 +182,6 @@ final class ButtonsItemViewController: UIViewController, SampleItem {
         disabledStackView.addArrangedSubview(disableTextButton)
 
         fullStackView.addArrangedSubview(containedFullButton)
-        fullStackView.addArrangedSubview(containedFullButtonDev)
         fullStackView.addArrangedSubview(disableContainedFullButton)
         fullStackView.addArrangedSubview(outlinedFullButton)
         fullStackView.addArrangedSubview(disableOutlinedFullButton)
