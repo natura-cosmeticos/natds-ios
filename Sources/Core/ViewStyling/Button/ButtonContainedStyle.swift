@@ -1,21 +1,17 @@
 enum ButtonContainedStyle {
     static func applyStyle(on button: UIButton) {
         ButtonStyle.applyStyle(on: button)
-        button.backgroundColor = NatColors.primary
-        NatElevation.apply(on: button, elevation: .elevation02)
+        applyStyleForStates(on: button)
     }
 
     static func applyStyleForStates(on button: UIButton) {
         switch button.state {
         case .normal:
             button.backgroundColor = NatColors.primary
+            NatElevation.apply(on: button, elevation: .elevation02)
         case .disabled:
             button.backgroundColor = NatColors.onSurface.withAlphaComponent(NatOpacities.opacity03)
-//            NatElevation.apply(on: button, elevation: .elevation01)
-            button.layer.shadowColor = nil
-            button.layer.shadowOffset = CGSize(width: 0, height: -3)
-            button.layer.shadowRadius = 3
-            button.layer.shadowOpacity = 0
+            NatElevation.apply(on: button, elevation: .none)
         default: break
         }
     }

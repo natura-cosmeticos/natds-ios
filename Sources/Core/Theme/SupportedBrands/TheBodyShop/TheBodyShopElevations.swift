@@ -1,4 +1,11 @@
 final class TheBodyShopElevations: Elevations {
+    lazy var none: ElevationAttributes = .init(
+        shadowColor: nil,
+        shadowOffSet: .init(width: 0, height: -3),
+        shadowRadius: 3,
+        shadowOpacity: 0
+    )
+
     lazy var elevation01: ElevationAttributes = .init(
         shadowColor: UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor,
         shadowOffSet: .init(width: 0, height: 1),

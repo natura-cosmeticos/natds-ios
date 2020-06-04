@@ -24,6 +24,7 @@ public struct NatElevation {
 
 extension NatElevation {
     public enum Elevation {
+        case none
         case elevation01
         case elevation02
         case elevation03
@@ -39,6 +40,7 @@ extension NatElevation {
             let keyPath: KeyPath<Elevations, ElevationAttributes>
 
             switch self {
+            case .none: keyPath = \.none
             case .elevation01: keyPath = \.elevation01
             case .elevation02: keyPath = \.elevation02
             case .elevation03: keyPath = \.elevation03
