@@ -37,7 +37,7 @@ public final class NatButton: UIButton, Pulsable {
 
     public override var isEnabled: Bool {
         didSet {
-            style.changeState(self)
+            style.changeState?(self)
         }
     }
 
@@ -95,6 +95,6 @@ public final class NatButton: UIButton, Pulsable {
     public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
 
-        style.changeState(self)
+        style.changeState?(self)
     }
 }

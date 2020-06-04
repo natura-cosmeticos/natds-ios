@@ -3,9 +3,9 @@ import Nimble
 
 @testable import NatDS
 
-final class ButtonOutlinedStyleSpec: QuickSpec {
+final class ButtonTextStyleSpec: QuickSpec {
     override func spec() {
-        let systemUnderTest = ButtonOutlinedStyle.self
+        let systemUnderTest = ButtonTextStyle.self
         var button: UIButton!
 
         beforeEach {
@@ -31,16 +31,17 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
 
             it("returns an expected cornerRadius") {
                 let borderRadius = getTheme().borderRadius.medium
-
                 expect(button.layer.cornerRadius).to(equal(borderRadius))
             }
 
             it("returns an expected borderWidth") {
-                expect(button.layer.borderWidth).to(equal(1))
+                expect(button.layer.borderWidth).to(equal(0))
             }
 
             it("returns an expected borderColor") {
-                expect(button.layer.borderColor).to(equal(NatColors.primary.cgColor))
+                let expectedColor = UIButton().layer.borderColor
+
+                expect(button.layer.borderColor).to(equal(expectedColor))
             }
 
             it("returns an expected contentEdgeInsets") {
@@ -50,32 +51,6 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
                 expect(button.contentEdgeInsets.right).to(equal(spacing))
                 expect(button.contentEdgeInsets.bottom).to(equal(spacing))
                 expect(button.contentEdgeInsets.left).to(equal(spacing))
-            }
-        }
-
-        describe("#applyStyleForState") {
-            context("when isEnabled is true") {
-                beforeEach {
-                    button.isEnabled = true
-                    systemUnderTest.applyStyleForStates(on: button)
-                }
-
-                it("returns an expected borderColor") {
-                    expect(button.layer.borderColor).to(equal(NatColors.primary.cgColor))
-                }
-            }
-
-            context("when isEnabled is false") {
-                beforeEach {
-                    button.isEnabled = false
-                    systemUnderTest.applyStyleForStates(on: button)
-                }
-
-                it("returns an expected borderColor") {
-                    let color = NatColors.onSurface.withAlphaComponent(NatOpacities.opacity03).cgColor
-
-                    expect(button.layer.borderColor).to(equal(color))
-                }
             }
         }
 
@@ -120,7 +95,7 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
                 it("returns an expected foregroundColor") {
                     let foregroundColor = attributes[.foregroundColor] as? UIColor
 
-                    expect(foregroundColor).to(equal(getTheme().colors.onSurface))
+                    expect(foregroundColor).to(equal(getTheme().colors.highEmphasis))
                 }
             }
 

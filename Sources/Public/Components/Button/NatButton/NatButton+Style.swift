@@ -1,7 +1,7 @@
 extension NatButton {
     public struct Style {
         let applyStyle: (NatButton) -> Void
-        let changeState: (NatButton) -> Void
+        let changeState: ((NatButton) -> Void)?
         let applyTitle: (String?, NatButton) -> Void
     }
 }
@@ -20,6 +20,14 @@ extension NatButton.Style {
             applyStyle: ButtonOutlinedStyle.applyStyle,
             changeState: ButtonOutlinedStyle.applyStyleForStates,
             applyTitle: ButtonOutlinedStyle.applyStyleForTitle
+        )
+    }
+
+    public static var text: NatButton.Style {
+        .init(
+            applyStyle: ButtonTextStyle.applyStyle,
+            changeState: nil,
+            applyTitle: ButtonTextStyle.applyStyleForTitle
         )
     }
 }
