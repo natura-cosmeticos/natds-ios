@@ -153,6 +153,7 @@
 		846928762480458D008DF255 /* NatColors+Natura+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469287424804553008DF255 /* NatColors+Natura+Spec.swift */; };
 		84692879248046F7008DF255 /* NatColors+Avon+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84692877248046DD008DF255 /* NatColors+Avon+Spec.swift */; };
 		846EB6202486DA80000E3901 /* ButtonContainedStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EB61F2486DA80000E3901 /* ButtonContainedStyle.swift */; };
+		846EB6232487ED47000E3901 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EB6222487ED47000E3901 /* ButtonStyle.swift */; };
 		849F39E52481786800CCF076 /* ColorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F39E42481786800CCF076 /* ColorProvider.swift */; };
 		849F39E724819C0D00CCF076 /* StubLightColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F39E624819C0D00CCF076 /* StubLightColorPalette.swift */; };
 		849F39E924819C3500CCF076 /* StubDarkColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F39E824819C3500CCF076 /* StubDarkColorPalette.swift */; };
@@ -372,6 +373,7 @@
 		8469287424804553008DF255 /* NatColors+Natura+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatColors+Natura+Spec.swift"; sourceTree = "<group>"; };
 		84692877248046DD008DF255 /* NatColors+Avon+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatColors+Avon+Spec.swift"; sourceTree = "<group>"; };
 		846EB61F2486DA80000E3901 /* ButtonContainedStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonContainedStyle.swift; sourceTree = "<group>"; };
+		846EB6222487ED47000E3901 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		849F39E42481786800CCF076 /* ColorProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorProvider.swift; sourceTree = "<group>"; };
 		849F39E624819C0D00CCF076 /* StubLightColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubLightColorPalette.swift; sourceTree = "<group>"; };
 		849F39E824819C3500CCF076 /* StubDarkColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubDarkColorPalette.swift; sourceTree = "<group>"; };
@@ -1098,6 +1100,7 @@
 			children = (
 				84B1979F2475915E00F1B575 /* ButtonOutlineStyle.swift */,
 				846EB61F2486DA80000E3901 /* ButtonContainedStyle.swift */,
+				846EB6222487ED47000E3901 /* ButtonStyle.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -1566,6 +1569,7 @@
 				A9CCF8E523CCEC5400000FC0 /* FontStyle.swift in Sources */,
 				843FA2D12465EEA000D20D9A /* FontSizes.swift in Sources */,
 				843FA2B2246458C400D20D9A /* NatOpacities.swift in Sources */,
+				846EB6232487ED47000E3901 /* ButtonStyle.swift in Sources */,
 				6404360523F45FF00088B20D /* TextField.swift in Sources */,
 				112BAC2523984416009001A7 /* UITableView+Reusable.swift in Sources */,
 				84BFB661246DA4B400506ED1 /* NaturaElevations.swift in Sources */,
