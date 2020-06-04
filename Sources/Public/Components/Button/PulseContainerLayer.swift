@@ -8,7 +8,7 @@ final class PulseContainerLayer: CAShapeLayer {
         addSublayer(pulseLayer)
 
         let opacity = getTheme().opacities.opacity03
-        pulseLayer.fillColor = NatColors.highEmphasis.withAlphaComponent(opacity).cgColor
+        pulseLayer.fillColor = NatColors.highlight.withAlphaComponent(opacity).cgColor
     }
 
     required init?(coder: NSCoder) {

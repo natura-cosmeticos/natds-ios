@@ -1,18 +1,17 @@
-enum ButtonOutlinedStyle {
+enum ButtonContainedStyle {
     static func applyStyle(on button: UIButton) {
         ButtonStyle.applyStyle(on: button)
         applyStyleForStates(on: button)
-        button.backgroundColor = .clear
-        button.layer.borderWidth = 1
     }
 
     static func applyStyleForStates(on button: UIButton) {
         switch button.state {
         case .normal:
-            button.layer.borderColor = NatColors.primary.cgColor
+            button.backgroundColor = NatColors.primary
+            NatElevation.apply(on: button, elevation: .elevation02)
         case .disabled:
-            button.layer.borderColor = NatColors.onSurface
-                .withAlphaComponent(NatOpacities.opacity03).cgColor
+            button.backgroundColor = NatColors.onSurface.withAlphaComponent(NatOpacities.opacity03)
+            NatElevation.apply(on: button, elevation: .none)
         default: break
         }
     }
@@ -20,7 +19,7 @@ enum ButtonOutlinedStyle {
     static func applyStyleForTitle(_ title: String?, on button: UIButton) {
         ButtonStyle.applyStyleForTitle(
             title,
-            colorForNormal: NatColors.onSurface,
+            colorForNormal: NatColors.onPrimary,
             on: button
         )
     }

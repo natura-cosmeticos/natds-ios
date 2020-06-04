@@ -1,4 +1,5 @@
 protocol Elevations {
+    var none: ElevationAttributes { get }
     var elevation01: ElevationAttributes { get }
     var elevation02: ElevationAttributes { get }
     var elevation03: ElevationAttributes { get }

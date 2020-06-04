@@ -3,9 +3,9 @@ import Nimble
 
 @testable import NatDS
 
-final class ButtonOutlinedStyleSpec: QuickSpec {
+final class ButtonContainedStyleSpec: QuickSpec {
     override func spec() {
-        let systemUnderTest = ButtonOutlinedStyle.self
+        let systemUnderTest = ButtonContainedStyle.self
         var button: UIButton!
 
         beforeEach {
@@ -21,25 +21,29 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
             it("returns an expected font") {
                 let size = getTheme().font.sizes.button
                 let weight = getTheme().font.weights.medium
+
                 expect(button.titleLabel?.font.pointSize).to(equal(size))
                 expect(button.titleLabel?.font.getWeight()).to(equal(weight))
             }
 
             it("returns an expected backgroundColor") {
-                expect(button.backgroundColor).to(equal(.clear))
+                expect(button.backgroundColor).to(equal(getTheme().colors.primary))
             }
 
             it("returns an expected cornerRadius") {
                 let borderRadius = getTheme().borderRadius.medium
+
                 expect(button.layer.cornerRadius).to(equal(borderRadius))
             }
 
             it("returns an expected borderWidth") {
-                expect(button.layer.borderWidth).to(equal(1))
+                expect(button.layer.borderWidth).to(equal(0))
             }
 
             it("returns an expected borderColor") {
-                expect(button.layer.borderColor).to(equal(NatColors.primary.cgColor))
+                let expectedColor = UIButton().layer.borderColor
+
+                expect(button.layer.borderColor).to(equal(expectedColor))
             }
 
             it("returns an expected contentEdgeInsets") {
@@ -60,7 +64,13 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
                 }
 
                 it("returns an expected borderColor") {
-                    expect(button.layer.borderColor).to(equal(NatColors.primary.cgColor))
+                    let expectedColor = UIButton().layer.borderColor
+
+                    expect(button.layer.borderColor).to(equal(expectedColor))
+                }
+
+                it("returns an expected backgroundColor") {
+                    expect(button.backgroundColor).to(equal(getTheme().colors.primary))
                 }
             }
 
@@ -71,9 +81,15 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
                 }
 
                 it("returns an expected borderColor") {
-                    let color = NatColors.onSurface.withAlphaComponent(NatOpacities.opacity03).cgColor
+                    let expectedColor = UIButton().layer.borderColor
 
-                    expect(button.layer.borderColor).to(equal(color))
+                    expect(button.layer.borderColor).to(equal(expectedColor))
+                }
+
+                it("returns an expected backgroundColor") {
+                    let expectedColor = getTheme().colors.onSurface.withAlphaComponent(NatOpacities.opacity03)
+
+                    expect(button.backgroundColor).to(equal(expectedColor))
                 }
             }
         }
@@ -119,7 +135,7 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
                 it("returns an expected foregroundColor") {
                     let foregroundColor = attributes[.foregroundColor] as? UIColor
 
-                    expect(foregroundColor).to(equal(getTheme().colors.onSurface))
+                    expect(foregroundColor).to(equal(NatColors.onPrimary))
                 }
             }
 
@@ -164,7 +180,7 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
                     let foregroundColor = attributes[.foregroundColor] as? UIColor
 
                     expect(foregroundColor)
-                        .to(equal(NatColors.onSurface.withAlphaComponent(getTheme().opacities.opacity06)))
+                        .to(equal(NatColors.onSurface.withAlphaComponent(NatOpacities.opacity06)))
                 }
             }
         }

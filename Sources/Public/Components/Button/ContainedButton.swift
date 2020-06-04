@@ -1,3 +1,5 @@
+@available(*, deprecated, message: "Use NatButton(style: .contained) instead")
+
 public class ContainedButton: UIButton, Pulsable {
     public override var isEnabled: Bool {
         didSet {

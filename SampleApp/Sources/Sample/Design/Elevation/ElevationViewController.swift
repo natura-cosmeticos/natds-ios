@@ -20,8 +20,8 @@ final class ElevationViewController: UIViewController, SampleItem {
         return tableView
     }()
 
-    private let cellsViewModels: [(description: String, value: NatElevation.Elevation?)] = [
-        ("none", nil),
+    private let cellsViewModels: [(description: String, value: NatElevation.Elevation)] = [
+        ("none", .none),
         ("elevation01", .elevation01),
         ("elevation02", .elevation02),
         ("elevation03", .elevation03),
