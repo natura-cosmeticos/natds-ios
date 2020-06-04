@@ -12,9 +12,9 @@ import UIKit
 
     Example of usage:
 
-        let containedButton = NatButton(style: .contained) (on development)
+        let containedButton = NatButton(style: .contained)
         let outlinedButton = NatButton(style: .oulined)
-        let textButton = NatButton(style: .text) (on development)
+        let textButton = NatButton(style: .text)
 
     This button has pre-defined height values with enum NatButton.Height:
 
