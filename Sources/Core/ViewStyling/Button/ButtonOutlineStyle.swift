@@ -21,7 +21,6 @@ enum ButtonOutlinedStyle {
         ButtonStyle.applyStyleForTitle(
             title,
             colorForNormal: NatColors.onSurface,
-            colorForDisable: NatColors.onSurface.withAlphaComponent(NatOpacities.opacity06),
             on: button
         )
     }

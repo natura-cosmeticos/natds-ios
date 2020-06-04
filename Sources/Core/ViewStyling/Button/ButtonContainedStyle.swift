@@ -20,7 +20,6 @@ enum ButtonContainedStyle {
         ButtonStyle.applyStyleForTitle(
             title,
             colorForNormal: NatColors.onPrimary,
-            colorForDisable: NatColors.onSurface.withAlphaComponent(NatOpacities.opacity06),
             on: button
         )
     }

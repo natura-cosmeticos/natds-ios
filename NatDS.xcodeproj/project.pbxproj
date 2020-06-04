@@ -155,6 +155,7 @@
 		846EB6202486DA80000E3901 /* ButtonContainedStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EB61F2486DA80000E3901 /* ButtonContainedStyle.swift */; };
 		846EB6232487ED47000E3901 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EB6222487ED47000E3901 /* ButtonStyle.swift */; };
 		846EB62624887BDC000E3901 /* ButtonContainedStyle+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EB62424887B7A000E3901 /* ButtonContainedStyle+Spec.swift */; };
+		846EB62824891511000E3901 /* ButtonStyle+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EB62724891511000E3901 /* ButtonStyle+Spec.swift */; };
 		849F39E52481786800CCF076 /* ColorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F39E42481786800CCF076 /* ColorProvider.swift */; };
 		849F39E724819C0D00CCF076 /* StubLightColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F39E624819C0D00CCF076 /* StubLightColorPalette.swift */; };
 		849F39E924819C3500CCF076 /* StubDarkColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F39E824819C3500CCF076 /* StubDarkColorPalette.swift */; };
@@ -376,6 +377,7 @@
 		846EB61F2486DA80000E3901 /* ButtonContainedStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonContainedStyle.swift; sourceTree = "<group>"; };
 		846EB6222487ED47000E3901 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		846EB62424887B7A000E3901 /* ButtonContainedStyle+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonContainedStyle+Spec.swift"; sourceTree = "<group>"; };
+		846EB62724891511000E3901 /* ButtonStyle+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonStyle+Spec.swift"; sourceTree = "<group>"; };
 		849F39E42481786800CCF076 /* ColorProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorProvider.swift; sourceTree = "<group>"; };
 		849F39E624819C0D00CCF076 /* StubLightColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubLightColorPalette.swift; sourceTree = "<group>"; };
 		849F39E824819C3500CCF076 /* StubDarkColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubDarkColorPalette.swift; sourceTree = "<group>"; };
@@ -1015,6 +1017,7 @@
 		8458A9912475C19A00BD8BC8 /* Button */ = {
 			isa = PBXGroup;
 			children = (
+				846EB62724891511000E3901 /* ButtonStyle+Spec.swift */,
 				8458A9922475C1E000BD8BC8 /* ButtonOutlinedStyle+Spec.swift */,
 				846EB62424887B7A000E3901 /* ButtonContainedStyle+Spec.swift */,
 			);
@@ -1746,6 +1749,7 @@
 				84428F90245B24B300D46611 /* AvonSpacing+Spec.swift in Sources */,
 				64A1125E23F331CA00119CE4 /* DividerTests.swift in Sources */,
 				112BAC2723984476009001A7 /* ReusableViewTests.swift in Sources */,
+				846EB62824891511000E3901 /* ButtonStyle+Spec.swift in Sources */,
 				A9325A6A23FB35C50023979C /* UICollectionView+ReusableTests.swift in Sources */,
 				843FA2B02463624A00D20D9A /* NatBorderRadius+Spec.swift in Sources */,
 				4378068A23F3442D004A9998 /* ValueTextHighlightTests.swift in Sources */,

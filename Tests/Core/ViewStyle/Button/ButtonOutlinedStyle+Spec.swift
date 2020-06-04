@@ -18,31 +18,31 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
                 systemUnderTest.applyStyle(on: button)
             }
 
-            it("returns a expect font") {
+            it("returns an expected font") {
                 let size = getTheme().font.sizes.button
                 let weight = getTheme().font.weights.medium
                 expect(button.titleLabel?.font.pointSize).to(equal(size))
                 expect(button.titleLabel?.font.getWeight()).to(equal(weight))
             }
 
-            it("returns a expect backgroundColor") {
+            it("returns an expected backgroundColor") {
                 expect(button.backgroundColor).to(equal(.clear))
             }
 
-            it("returns a expect cornerRadius") {
+            it("returns an expected cornerRadius") {
                 let borderRadius = getTheme().borderRadius.medium
                 expect(button.layer.cornerRadius).to(equal(borderRadius))
             }
 
-            it("returns a expect borderWidth") {
+            it("returns an expected borderWidth") {
                 expect(button.layer.borderWidth).to(equal(1))
             }
 
-            it("returns a expect borderColor") {
+            it("returns an expected borderColor") {
                 expect(button.layer.borderColor).to(equal(NatColors.primary.cgColor))
             }
 
-            it("returns a expect contentEdgeInsets") {
+            it("returns an expected contentEdgeInsets") {
                 let spacing = getTheme().spacing.small
 
                 expect(button.contentEdgeInsets.top).to(equal(spacing))
@@ -59,7 +59,7 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
                     systemUnderTest.applyStyleForStates(on: button)
                 }
 
-                it("returns a expect borderColor") {
+                it("returns an expected borderColor") {
                     expect(button.layer.borderColor).to(equal(NatColors.primary.cgColor))
                 }
             }
@@ -70,7 +70,7 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
                     systemUnderTest.applyStyleForStates(on: button)
                 }
 
-                it("returns a expect borderColor") {
+                it("returns an expected borderColor") {
                     let color = NatColors.onSurface.withAlphaComponent(NatOpacities.opacity03).cgColor
 
                     expect(button.layer.borderColor).to(equal(color))
@@ -78,21 +78,21 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
             }
         }
 
-        describe("#applyStyleForState") {
+        describe("#applyStyleForTitle") {
             context("when isEnabled is true and Title is nil") {
                 beforeEach {
                     button.isEnabled = true
                     systemUnderTest.applyStyleForTitle(nil, on: button)
                 }
 
-                it("returns a expect attributedTitle") {
+                it("returns an expected attributedTitle") {
                     let attributedTitle = button.attributedTitle(for: .normal)
                     expect(attributedTitle).to(beNil())
                 }
             }
 
             context("when isEnabled is true and Title has a value") {
-                let title = "title"
+                let title = "title".uppercased()
                 var attributes: [NSAttributedString.Key: Any]!
 
                 beforeEach {
@@ -104,22 +104,22 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
                     attributes = attributedTitle!.attributes(at: 0, effectiveRange: nil)
                 }
 
-                it("returns a expect attributedTitle") {
+                it("returns an expected attributedTitle") {
                     let attributedTitle = button.attributedTitle(for: .normal)
 
-                    expect(attributedTitle?.string).to(equal(title.uppercased()))
+                    expect(attributedTitle?.string).to(equal(title))
                 }
 
-                it("returns a expect kern") {
+                it("returns an expected kern") {
                     let kern = attributes[.kern] as? CGFloat
 
                     expect(kern).to(equal(0.44))
                 }
 
-                it("returns a expect foregroundColor") {
+                it("returns an expected foregroundColor") {
                     let foregroundColor = attributes[.foregroundColor] as? UIColor
 
-                    expect(foregroundColor).to(equal(NatColors.onSurface))
+                    expect(foregroundColor).to(equal(getTheme().colors.onSurface))
                 }
             }
 
@@ -129,14 +129,14 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
                     systemUnderTest.applyStyleForTitle(nil, on: button)
                 }
 
-                it("returns a expect attributedTitle") {
+                it("returns an expected attributedTitle") {
                     let attributedTitle = button.attributedTitle(for: .disabled)
                     expect(attributedTitle).to(beNil())
                 }
             }
 
             context("when isEnabled is false and Title has a value") {
-                let title = "title"
+                let title = "title".uppercased()
                 var attributes: [NSAttributedString.Key: Any]!
 
                 beforeEach {
@@ -148,23 +148,23 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
                     attributes = attributedTitle!.attributes(at: 0, effectiveRange: nil)
                 }
 
-                it("returns a expect attributedTitle") {
+                it("returns an expected attributedTitle") {
                     let attributedTitle = button.attributedTitle(for: .normal)
 
-                    expect(attributedTitle?.string).to(equal(title.uppercased()))
+                    expect(attributedTitle?.string).to(equal(title))
                 }
 
-                it("returns a expect kern") {
+                it("returns an expected kern") {
                     let kern = attributes[.kern] as? CGFloat
 
                     expect(kern).to(equal(0.44))
                 }
 
-                it("returns a expect foregroundColor") {
+                it("returns an expected foregroundColor") {
                     let foregroundColor = attributes[.foregroundColor] as? UIColor
 
                     expect(foregroundColor)
-                        .to(equal(NatColors.onSurface.withAlphaComponent(NatOpacities.opacity06)))
+                        .to(equal(NatColors.onSurface.withAlphaComponent(getTheme().opacities.opacity06)))
                 }
             }
         }
