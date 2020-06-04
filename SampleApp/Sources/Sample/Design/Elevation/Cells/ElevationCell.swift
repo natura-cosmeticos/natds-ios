@@ -42,19 +42,17 @@ final class ElevationCell: UITableViewCell {
 
     override func prepareForReuse() {
         symbolicView.layer.shadowColor = nil
-        symbolicView.layer.shadowOffset = .zero
+        symbolicView.layer.shadowOffset = .init(width: 0, height: -3)
         symbolicView.layer.shadowRadius = 3
         symbolicView.layer.shadowOpacity = 0
     }
 
     // MARK: - Public methods
 
-    func configure(description: String, elevation: NatElevation.Elevation?) {
+    func configure(description: String, elevation: NatElevation.Elevation) {
         label.text = description
 
-        if let elevation = elevation {
-            NatElevation.apply(on: symbolicView, elevation: elevation)
-        }
+        NatElevation.apply(on: symbolicView, elevation: elevation)
     }
     // MARK: - Private methods
 
