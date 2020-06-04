@@ -2,7 +2,7 @@ extension NatButton {
     public struct Style {
         let applyStyle: (NatButton) -> Void
         let changeState: ((NatButton) -> Void)?
-        let applyTitle: (String?, NatButton) -> Void
+        let applyTitle: (String, NatButton) -> Void
     }
 }
 

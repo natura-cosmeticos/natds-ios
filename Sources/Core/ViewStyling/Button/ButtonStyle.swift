@@ -15,23 +15,18 @@ enum ButtonStyle {
     }
 
     static func applyStyleForTitle(
-        _ title: String?,
+        _ title: String,
         colorForNormal: UIColor,
         on button: UIButton) {
 
-        var titleForNormal: NSAttributedString?
-        var titleForDisabled: NSAttributedString?
-
-        if let title = title {
-            titleForNormal = createTextForTitle(
-                text: title,
-                withColor: colorForNormal
-            )
-            titleForDisabled = createTextForTitle(
-                text: title,
-                withColor: NatColors.onSurface.withAlphaComponent(getTheme().opacities.opacity06)
-            )
-        }
+        let titleForNormal = createTextForTitle(
+            text: title,
+            withColor: colorForNormal
+        )
+        let titleForDisabled = createTextForTitle(
+            text: title,
+            withColor: NatColors.onSurface.withAlphaComponent(getTheme().opacities.opacity06)
+        )
 
         button.setAttributedTitle(titleForNormal, for: .normal)
         button.setAttributedTitle(titleForDisabled, for: .disabled)

@@ -16,7 +16,7 @@ enum ButtonContainedStyle {
         }
     }
 
-    static func applyStyleForTitle(_ title: String?, on button: UIButton) {
+    static func applyStyleForTitle(_ title: String, on button: UIButton) {
         ButtonStyle.applyStyleForTitle(
             title,
             colorForNormal: NatColors.onPrimary,

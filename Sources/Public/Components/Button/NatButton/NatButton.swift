@@ -71,7 +71,7 @@ public final class NatButton: UIButton, Pulsable {
      - Parameters:
         - title: This String will be used to configure Normal & Disabled states.
     */
-    public func configure(title: String?) {
+    public func configure(title: String) {
         style.applyTitle(title, self)
     }
 

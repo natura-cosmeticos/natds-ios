@@ -55,19 +55,7 @@ final class ButtonTextStyleSpec: QuickSpec {
         }
 
         describe("#applyStyleForTitle") {
-            context("when isEnabled is true and Title is nil") {
-                beforeEach {
-                    button.isEnabled = true
-                    systemUnderTest.applyStyleForTitle(nil, on: button)
-                }
-
-                it("returns an expected attributedTitle") {
-                    let attributedTitle = button.attributedTitle(for: .normal)
-                    expect(attributedTitle).to(beNil())
-                }
-            }
-
-            context("when isEnabled is true and Title has a value") {
+            context("when isEnabled is true") {
                 let title = "title".uppercased()
                 var attributes: [NSAttributedString.Key: Any]!
 
@@ -99,19 +87,7 @@ final class ButtonTextStyleSpec: QuickSpec {
                 }
             }
 
-            context("when isEnabled is false and Title is nil") {
-                beforeEach {
-                    button.isEnabled = false
-                    systemUnderTest.applyStyleForTitle(nil, on: button)
-                }
-
-                it("returns an expected attributedTitle") {
-                    let attributedTitle = button.attributedTitle(for: .disabled)
-                    expect(attributedTitle).to(beNil())
-                }
-            }
-
-            context("when isEnabled is false and Title has a value") {
+            context("when isEnabled is false") {
                 let title = "title".uppercased()
                 var attributes: [NSAttributedString.Key: Any]!
 

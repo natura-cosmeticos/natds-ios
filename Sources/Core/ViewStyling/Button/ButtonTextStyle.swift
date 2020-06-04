@@ -3,7 +3,7 @@ enum ButtonTextStyle {
         ButtonStyle.applyStyle(on: button)
     }
 
-    static func applyStyleForTitle(_ title: String?, on button: UIButton) {
+    static func applyStyleForTitle(_ title: String, on button: UIButton) {
         ButtonStyle.applyStyleForTitle(
             title,
             colorForNormal: getTheme().colors.highEmphasis,

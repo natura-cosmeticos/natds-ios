@@ -54,92 +54,67 @@ final class ButtonStyleSpec: QuickSpec {
         }
 
         describe("#applyStyleForTitle") {
-            context("when Title is nil") {
+            let title = "title".uppercased()
+            var attributes: [NSAttributedString.Key: Any]!
+
+            beforeEach {
+                systemUnderTest.applyStyleForTitle("StubTitle", colorForNormal: .red, on: button)
+            }
+
+            context("when state is normal") {
                 beforeEach {
-                    systemUnderTest.applyStyleForTitle(nil, colorForNormal: .red, on: button)
+                    systemUnderTest.applyStyleForTitle(title, colorForNormal: .red, on: button)
+
+                    let attributedTitle = button.attributedTitle(for: .normal)
+                    attributes = attributedTitle!.attributes(at: 0, effectiveRange: nil)
                 }
 
-                context("when state is normal") {
-                    it("returns an expected attributedTitle") {
-                        let attributedTitle = button.attributedTitle(for: .normal)
+                it("returns an expected attributedTitle") {
+                    let attributedTitle = button.attributedTitle(for: .normal)
 
-                        expect(attributedTitle).to(beNil())
-                    }
+                    expect(attributedTitle?.string).to(equal(title))
                 }
 
-                context("when state is disabled") {
-                    it("returns an expected attributedTitle") {
-                        let attributedTitle = button.attributedTitle(for: .disabled)
+                it("returns an expected kern") {
+                    let kern = attributes[.kern] as? CGFloat
 
-                        expect(attributedTitle).to(beNil())
-                    }
+                    expect(kern).to(equal(0.44))
+                }
+
+                it("returns an expected foregroundColor") {
+                    let foregroundColor = attributes[.foregroundColor] as? UIColor
+
+                    expect(foregroundColor).to(equal(UIColor.red))
                 }
             }
 
-            context("when Title has a value") {
-                let title = "title".uppercased()
-                var attributes: [NSAttributedString.Key: Any]!
-
+            context("when state is disabled") {
                 beforeEach {
-                    systemUnderTest.applyStyleForTitle("StubTitle", colorForNormal: .red, on: button)
+                    systemUnderTest.applyStyleForTitle(title, colorForNormal: .red, on: button)
+
+                    let attributedTitle = button.attributedTitle(for: .disabled)
+                    attributes = attributedTitle!.attributes(at: 0, effectiveRange: nil)
                 }
 
-                context("when state is normal") {
-                    beforeEach {
-                        systemUnderTest.applyStyleForTitle(title, colorForNormal: .red, on: button)
+                it("returns an expected attributedTitle") {
+                    let attributedTitle = button.attributedTitle(for: .normal)
 
-                        let attributedTitle = button.attributedTitle(for: .normal)
-                        attributes = attributedTitle!.attributes(at: 0, effectiveRange: nil)
-                    }
-
-                    it("returns an expected attributedTitle") {
-                        let attributedTitle = button.attributedTitle(for: .normal)
-
-                        expect(attributedTitle?.string).to(equal(title))
-                    }
-
-                    it("returns an expected kern") {
-                        let kern = attributes[.kern] as? CGFloat
-
-                        expect(kern).to(equal(0.44))
-                    }
-
-                    it("returns an expected foregroundColor") {
-                        let foregroundColor = attributes[.foregroundColor] as? UIColor
-
-                        expect(foregroundColor).to(equal(UIColor.red))
-                    }
+                    expect(attributedTitle?.string).to(equal(title))
                 }
 
-                context("when state is disabled") {
-                    beforeEach {
-                        systemUnderTest.applyStyleForTitle(title, colorForNormal: .red, on: button)
+                it("returns an expected kern") {
+                    let kern = attributes[.kern] as? CGFloat
 
-                        let attributedTitle = button.attributedTitle(for: .disabled)
-                        attributes = attributedTitle!.attributes(at: 0, effectiveRange: nil)
-                    }
-
-                    it("returns an expected attributedTitle") {
-                        let attributedTitle = button.attributedTitle(for: .normal)
-
-                        expect(attributedTitle?.string).to(equal(title))
-                    }
-
-                    it("returns an expected kern") {
-                        let kern = attributes[.kern] as? CGFloat
-
-                        expect(kern).to(equal(0.44))
-                    }
-
-                    it("returns an expected foregroundColor") {
-                        let foregroundColor = attributes[.foregroundColor] as? UIColor
-                        let expectedColor = getTheme().colors.onSurface
-                            .withAlphaComponent(getTheme().opacities.opacity06)
-
-                        expect(foregroundColor).to(equal(expectedColor))
-                    }
+                    expect(kern).to(equal(0.44))
                 }
 
+                it("returns an expected foregroundColor") {
+                    let foregroundColor = attributes[.foregroundColor] as? UIColor
+                    let expectedColor = getTheme().colors.onSurface
+                        .withAlphaComponent(getTheme().opacities.opacity06)
+
+                    expect(foregroundColor).to(equal(expectedColor))
+                }
             }
         }
     }
