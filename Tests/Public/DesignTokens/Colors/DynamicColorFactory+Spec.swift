@@ -13,7 +13,7 @@ final class DynamicColorFactorySpec: QuickSpec {
         )
 
         describe("#createDynamicColor") {
-            it("creates color base on a expected Hexa") {
+            it("creates color base on an expected Hexa") {
                 let color = systemUserTest.createDynamicColor(for: \.primary)
                 let isColorEquivalent = isColorEquivalentToDarkHexOrLightHex(
                     colorUnderTest: color,
@@ -24,7 +24,7 @@ final class DynamicColorFactorySpec: QuickSpec {
                 expect(isColorEquivalent).to(beTrue())
             }
 
-            it("creates color base on a expected Hexa") {
+            it("creates color base on an expected Hexa") {
                 let color = systemUserTest.createDynamicColor(for: \.secondary)
                 let isColorEquivalent = isColorEquivalentToDarkHexOrLightHex(
                     colorUnderTest: color,
