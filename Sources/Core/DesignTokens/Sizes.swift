@@ -1,19 +1,20 @@
 protocol Sizes {
+    var none: CGFloat { get }
     var micro: CGFloat { get }
     var tiny: CGFloat { get }
     var small: CGFloat { get }
-    var standart: CGFloat { get }
+    var standard: CGFloat { get }
     var semi: CGFloat { get }
-    var semiX: CGFloat { get }
+    var semix: CGFloat { get }
     var medium: CGFloat { get }
-    var mediumX: CGFloat { get }
+    var mediumx: CGFloat { get }
     var large: CGFloat { get }
-    var largeX: CGFloat { get }
-    var largeXX: CGFloat { get }
-    var largeXXX: CGFloat { get }
+    var largex: CGFloat { get }
+    var largexx: CGFloat { get }
+    var largexxx: CGFloat { get }
     var huge: CGFloat { get }
-    var hugeX: CGFloat { get }
-    var hugeXX: CGFloat { get }
-    var hugeXXX: CGFloat { get }
-    var veryHuge: CGFloat { get }
+    var hugex: CGFloat { get }
+    var hugexx: CGFloat { get }
+    var hugexxx: CGFloat { get }
+    var veryhuge: CGFloat { get }
 }

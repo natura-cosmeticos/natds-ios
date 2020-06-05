@@ -22,7 +22,7 @@ final class SizeViewController: UIViewController, SampleItem {
         ("micro: \(NatSizes.micro)", NatSizes.micro),
         ("tiny: \(NatSizes.tiny)", NatSizes.tiny),
         ("small: \(NatSizes.small)", NatSizes.small),
-        ("standard: \(NatSizes.standart)", NatSizes.standart),
+        ("standard: \(NatSizes.standard)", NatSizes.standard),
         ("semi: \(NatSizes.semi)", NatSizes.semi),
         ("semiX: \(NatSizes.semiX)", NatSizes.semiX),
         ("medium: \(NatSizes.medium)", NatSizes.medium),
