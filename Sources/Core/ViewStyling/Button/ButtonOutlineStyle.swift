@@ -2,7 +2,6 @@ enum ButtonOutlinedStyle {
     static func applyStyle(on button: UIButton) {
         ButtonStyle.applyStyle(on: button)
         applyStyleForStates(on: button)
-        button.backgroundColor = .clear
         button.layer.borderWidth = 1
     }
 
@@ -17,7 +16,7 @@ enum ButtonOutlinedStyle {
         }
     }
 
-    static func applyStyleForTitle(_ title: String?, on button: UIButton) {
+    static func applyStyleForTitle(_ title: String, on button: UIButton) {
         ButtonStyle.applyStyleForTitle(
             title,
             colorForNormal: NatColors.onSurface,

@@ -45,9 +45,9 @@ final class ButtonsItemViewController: UIViewController, SampleItem {
         return button
     }()
 
-    private let textButton: FlatButton = {
-        let button = FlatButton()
-        button.setTitle("Text", for: .normal)
+    private let textButton: NatButton = {
+        let button = NatButton(style: .text)
+        button.configure(title: "Text")
         button.translatesAutoresizingMaskIntoConstraints = false
 
         return button
@@ -81,9 +81,9 @@ final class ButtonsItemViewController: UIViewController, SampleItem {
         return button
     }()
 
-    private let disableTextButton: FlatButton = {
-        let button = FlatButton()
-        button.setTitle("Text", for: .disabled)
+    private let disableTextButton: NatButton = {
+        let button = NatButton(style: .text)
+        button.configure(title: "Text")
         button.isEnabled = false
         button.translatesAutoresizingMaskIntoConstraints = false
 
@@ -134,17 +134,17 @@ final class ButtonsItemViewController: UIViewController, SampleItem {
         return button
     }()
 
-    private let textFullButton: FlatButton = {
-        let button = FlatButton()
-        button.setTitle("Text", for: .normal)
+    private let textFullButton: NatButton = {
+        let button = NatButton(style: .text)
+        button.configure(title: "Text")
         button.translatesAutoresizingMaskIntoConstraints = false
 
         return button
     }()
 
-    private let disableTextFullButton: FlatButton = {
-        let button = FlatButton()
-        button.setTitle("Disabled Text", for: .disabled)
+    private let disableTextFullButton: NatButton = {
+        let button = NatButton(style: .text)
+        button.configure(title: "Disabled Text")
         button.isEnabled = false
 
         return button

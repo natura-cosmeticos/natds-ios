@@ -57,7 +57,7 @@ final class ButtonContainedStyleSpec: QuickSpec {
         }
 
         describe("#applyStyleForState") {
-            context("when isEnabled is true") {
+            context("when button is enabled") {
                 beforeEach {
                     button.isEnabled = true
                     systemUnderTest.applyStyleForStates(on: button)
@@ -74,7 +74,7 @@ final class ButtonContainedStyleSpec: QuickSpec {
                 }
             }
 
-            context("when isEnabled is false") {
+            context("when button is disabled") {
                 beforeEach {
                     button.isEnabled = false
                     systemUnderTest.applyStyleForStates(on: button)
@@ -95,19 +95,7 @@ final class ButtonContainedStyleSpec: QuickSpec {
         }
 
         describe("#applyStyleForTitle") {
-            context("when isEnabled is true and Title is nil") {
-                beforeEach {
-                    button.isEnabled = true
-                    systemUnderTest.applyStyleForTitle(nil, on: button)
-                }
-
-                it("returns an expected attributedTitle") {
-                    let attributedTitle = button.attributedTitle(for: .normal)
-                    expect(attributedTitle).to(beNil())
-                }
-            }
-
-            context("when isEnabled is true and Title has a value") {
+            context("when button is enabled") {
                 let title = "title".uppercased()
                 var attributes: [NSAttributedString.Key: Any]!
 
@@ -139,19 +127,7 @@ final class ButtonContainedStyleSpec: QuickSpec {
                 }
             }
 
-            context("when isEnabled is false and Title is nil") {
-                beforeEach {
-                    button.isEnabled = false
-                    systemUnderTest.applyStyleForTitle(nil, on: button)
-                }
-
-                it("returns an expected attributedTitle") {
-                    let attributedTitle = button.attributedTitle(for: .disabled)
-                    expect(attributedTitle).to(beNil())
-                }
-            }
-
-            context("when isEnabled is false and Title has a value") {
+            context("when button is disabled") {
                 let title = "title".uppercased()
                 var attributes: [NSAttributedString.Key: Any]!
 

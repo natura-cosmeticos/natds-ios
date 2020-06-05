@@ -1,3 +1,5 @@
+@available(*, deprecated, message: "Use NatButton(style: .text) instead")
+
 public class FlatButton: UIButton, Pulsable {
 
     public override init(frame: CGRect) {

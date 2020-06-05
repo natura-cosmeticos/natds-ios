@@ -12,9 +12,9 @@ import UIKit
 
     Example of usage:
 
-        let containedButton = NatButton(style: .contained) (on development)
+        let containedButton = NatButton(style: .contained)
         let outlinedButton = NatButton(style: .oulined)
-        let textButton = NatButton(style: .text) (on development)
+        let textButton = NatButton(style: .text)
 
     This button has pre-defined height values with enum NatButton.Height:
 
@@ -37,7 +37,7 @@ public final class NatButton: UIButton, Pulsable {
 
     public override var isEnabled: Bool {
         didSet {
-            style.changeState(self)
+            style.changeState?(self)
         }
     }
 
@@ -71,7 +71,7 @@ public final class NatButton: UIButton, Pulsable {
      - Parameters:
         - title: This String will be used to configure Normal & Disabled states.
     */
-    public func configure(title: String?) {
+    public func configure(title: String) {
         style.applyTitle(title, self)
     }
 
@@ -95,6 +95,6 @@ public final class NatButton: UIButton, Pulsable {
     public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
 
-        style.changeState(self)
+        style.changeState?(self)
     }
 }
