@@ -54,7 +54,7 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
         }
 
         describe("#applyStyleForState") {
-            context("when isEnabled is true") {
+            context("when button is enabled") {
                 beforeEach {
                     button.isEnabled = true
                     systemUnderTest.applyStyleForStates(on: button)
@@ -65,7 +65,7 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
                 }
             }
 
-            context("when isEnabled is false") {
+            context("when button is disabled") {
                 beforeEach {
                     button.isEnabled = false
                     systemUnderTest.applyStyleForStates(on: button)
@@ -80,7 +80,7 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
         }
 
         describe("#applyStyleForTitle") {
-            context("when isEnabled is true") {
+            context("when button is enabled") {
                 let title = "title".uppercased()
                 var attributes: [NSAttributedString.Key: Any]!
 
@@ -112,7 +112,7 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
                 }
             }
 
-            context("when isEnabled is false") {
+            context("when button is disabled") {
                 let title = "title".uppercased()
                 var attributes: [NSAttributedString.Key: Any]!
 

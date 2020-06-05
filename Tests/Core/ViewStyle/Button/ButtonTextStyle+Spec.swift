@@ -55,7 +55,7 @@ final class ButtonTextStyleSpec: QuickSpec {
         }
 
         describe("#applyStyleForTitle") {
-            context("when isEnabled is true") {
+            context("when button is enabled") {
                 let title = "title".uppercased()
                 var attributes: [NSAttributedString.Key: Any]!
 
@@ -87,7 +87,7 @@ final class ButtonTextStyleSpec: QuickSpec {
                 }
             }
 
-            context("when isEnabled is false") {
+            context("when button is disabled") {
                 let title = "title".uppercased()
                 var attributes: [NSAttributedString.Key: Any]!
 
