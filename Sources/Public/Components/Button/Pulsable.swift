@@ -7,7 +7,7 @@ extension Pulsable {
         containedPulseLayer.cornerRadius = layer.cornerRadius
 
         layer.insertSublayer(containedPulseLayer, above: nil)
-        
+
         containedPulseLayer.startPulseAt(point: point)
     }
 
