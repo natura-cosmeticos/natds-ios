@@ -4,7 +4,7 @@ class IconCollectioViewCell: UICollectionViewCell {
     var icon: Icon? {
         didSet {
             iconView.icon = icon
-            if let iconCode = icon?.rawValue,
+            if let iconCode = icon?.unicode,
                 let iconUnicode = iconCode.unicodeScalars.first {
                 let hex = String(format: "%X", iconUnicode.value)
                 iconCodeLabel.text = hex

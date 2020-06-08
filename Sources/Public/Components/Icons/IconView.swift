@@ -8,7 +8,7 @@ public class IconView: UIView {
 
     public var icon: Icon? {
         didSet {
-            iconLabel.text = icon?.rawValue
+            iconLabel.text = icon?.unicode
         }
     }
 
