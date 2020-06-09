@@ -12,6 +12,12 @@ class IconTests: FBSnapshotTestCase {
         XCTAssertEqual(difference.count, 0)
     }
 
+    func test_difference_between_icons_and_test_mirror_raw_value() {
+        let iconsMirror = Icon.allCases.compactMap { IconMirror(rawValue: $0.rawValue) }
+
+        XCTAssertEqual(iconsMirror.count, Icon.allCases.count)
+    }
+
     func test_icons_hasValidSnapshot() {
         Icon.allCases.forEach { assert(icon: $0) }
     }
