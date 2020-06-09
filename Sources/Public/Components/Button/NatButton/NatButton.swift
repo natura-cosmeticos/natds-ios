@@ -13,7 +13,7 @@ import UIKit
     Example of usage:
 
         let containedButton = NatButton(style: .contained)
-        let outlinedButton = NatButton(style: .oulined)
+        let outlinedButton = NatButton(style: .outlined)
         let textButton = NatButton(style: .text)
 
     This button has pre-defined height values with enum NatButton.Height:
