@@ -1,5 +1,5 @@
 final class PulseContainerLayer: CAShapeLayer {
-    let pulseLayer: PulseLayer = PulseLayer()
+    private let pulseLayer: PulseLayer = PulseLayer()
 
     override init() {
         super.init()
