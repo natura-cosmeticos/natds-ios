@@ -20,7 +20,7 @@ extension NatButton {
 
     public enum Height {
         public static var small: CGFloat { getTheme().sizes.semi }
-        public static var medium: CGFloat { getTheme().sizes.semiX }
+        public static var medium: CGFloat { getTheme().sizes.semix }
         public static var large: CGFloat { getTheme().sizes.medium }
     }
 }

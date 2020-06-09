@@ -32,9 +32,9 @@ final class NatSizesSpec: QuickSpec {
                 }
             }
 
-            describe("#standart") {
+            describe("#standard") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.standart).to(equal(expectedSizes.standart))
+                    expect(systemUnderTest.standard).to(equal(expectedSizes.standard))
                 }
             }
 
@@ -46,7 +46,7 @@ final class NatSizesSpec: QuickSpec {
 
             describe("#semiX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.semiX).to(equal(expectedSizes.semiX))
+                    expect(systemUnderTest.semiX).to(equal(expectedSizes.semix))
                 }
             }
 
@@ -58,7 +58,7 @@ final class NatSizesSpec: QuickSpec {
 
             describe("#mediumX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.mediumX).to(equal(expectedSizes.mediumX))
+                    expect(systemUnderTest.mediumX).to(equal(expectedSizes.mediumx))
                 }
             }
 
@@ -70,19 +70,19 @@ final class NatSizesSpec: QuickSpec {
 
             describe("#largeX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.largeX).to(equal(expectedSizes.largeX))
+                    expect(systemUnderTest.largeX).to(equal(expectedSizes.largex))
                 }
             }
 
             describe("#largeXX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.largeXX).to(equal(expectedSizes.largeXX))
+                    expect(systemUnderTest.largeXX).to(equal(expectedSizes.largexx))
                 }
             }
 
             describe("#largeXXX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.largeXXX).to(equal(expectedSizes.largeXXX))
+                    expect(systemUnderTest.largeXXX).to(equal(expectedSizes.largexxx))
                 }
             }
 
@@ -94,25 +94,25 @@ final class NatSizesSpec: QuickSpec {
 
             describe("#hugeX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.hugeX).to(equal(expectedSizes.hugeX))
+                    expect(systemUnderTest.hugeX).to(equal(expectedSizes.hugex))
                 }
             }
 
             describe("#hugeXX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.hugeXX).to(equal(expectedSizes.hugeXX))
+                    expect(systemUnderTest.hugeXX).to(equal(expectedSizes.hugexx))
                 }
             }
 
             describe("#hugeXXX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.hugeXXX).to(equal(expectedSizes.hugeXXX))
+                    expect(systemUnderTest.hugeXXX).to(equal(expectedSizes.hugexxx))
                 }
             }
 
             describe("#veryHuge") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.veryHuge).to(equal(expectedSizes.veryHuge))
+                    expect(systemUnderTest.veryHuge).to(equal(expectedSizes.veryhuge))
                 }
             }
         } // context - when using Avon as theme
@@ -142,9 +142,9 @@ final class NatSizesSpec: QuickSpec {
                 }
             }
 
-            describe("#standart") {
+            describe("#standard") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.standart).to(equal(expectedSizes.standart))
+                    expect(systemUnderTest.standard).to(equal(expectedSizes.standard))
                 }
             }
 
@@ -156,7 +156,7 @@ final class NatSizesSpec: QuickSpec {
 
             describe("#semiX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.semiX).to(equal(expectedSizes.semiX))
+                    expect(systemUnderTest.semiX).to(equal(expectedSizes.semix))
                 }
             }
 
@@ -168,7 +168,7 @@ final class NatSizesSpec: QuickSpec {
 
             describe("#mediumX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.mediumX).to(equal(expectedSizes.mediumX))
+                    expect(systemUnderTest.mediumX).to(equal(expectedSizes.mediumx))
                 }
             }
 
@@ -180,19 +180,19 @@ final class NatSizesSpec: QuickSpec {
 
             describe("#largeX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.largeX).to(equal(expectedSizes.largeX))
+                    expect(systemUnderTest.largeX).to(equal(expectedSizes.largex))
                 }
             }
 
             describe("#largeXX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.largeXX).to(equal(expectedSizes.largeXX))
+                    expect(systemUnderTest.largeXX).to(equal(expectedSizes.largexx))
                 }
             }
 
             describe("#largeXXX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.largeXXX).to(equal(expectedSizes.largeXXX))
+                    expect(systemUnderTest.largeXXX).to(equal(expectedSizes.largexxx))
                 }
             }
 
@@ -204,25 +204,25 @@ final class NatSizesSpec: QuickSpec {
 
             describe("#hugeX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.hugeX).to(equal(expectedSizes.hugeX))
+                    expect(systemUnderTest.hugeX).to(equal(expectedSizes.hugex))
                 }
             }
 
             describe("#hugeXX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.hugeXX).to(equal(expectedSizes.hugeXX))
+                    expect(systemUnderTest.hugeXX).to(equal(expectedSizes.hugexx))
                 }
             }
 
             describe("#hugeXXX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.hugeXXX).to(equal(expectedSizes.hugeXXX))
+                    expect(systemUnderTest.hugeXXX).to(equal(expectedSizes.hugexxx))
                 }
             }
 
             describe("#veryHuge") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.veryHuge).to(equal(expectedSizes.veryHuge))
+                    expect(systemUnderTest.veryHuge).to(equal(expectedSizes.veryhuge))
                 }
             }
         } // context - when using Natura as theme
@@ -252,9 +252,9 @@ final class NatSizesSpec: QuickSpec {
                 }
             }
 
-            describe("#standart") {
+            describe("#standard") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.standart).to(equal(expectedSizes.standart))
+                    expect(systemUnderTest.standard).to(equal(expectedSizes.standard))
                 }
             }
 
@@ -266,7 +266,7 @@ final class NatSizesSpec: QuickSpec {
 
             describe("#semiX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.semiX).to(equal(expectedSizes.semiX))
+                    expect(systemUnderTest.semiX).to(equal(expectedSizes.semix))
                 }
             }
 
@@ -278,7 +278,7 @@ final class NatSizesSpec: QuickSpec {
 
             describe("#mediumX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.mediumX).to(equal(expectedSizes.mediumX))
+                    expect(systemUnderTest.mediumX).to(equal(expectedSizes.mediumx))
                 }
             }
 
@@ -290,19 +290,19 @@ final class NatSizesSpec: QuickSpec {
 
             describe("#largeX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.largeX).to(equal(expectedSizes.largeX))
+                    expect(systemUnderTest.largeX).to(equal(expectedSizes.largex))
                 }
             }
 
             describe("#largeXX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.largeXX).to(equal(expectedSizes.largeXX))
+                    expect(systemUnderTest.largeXX).to(equal(expectedSizes.largexx))
                 }
             }
 
             describe("#largeXXX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.largeXXX).to(equal(expectedSizes.largeXXX))
+                    expect(systemUnderTest.largeXXX).to(equal(expectedSizes.largexxx))
                 }
             }
 
@@ -314,25 +314,25 @@ final class NatSizesSpec: QuickSpec {
 
             describe("#hugeX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.hugeX).to(equal(expectedSizes.hugeX))
+                    expect(systemUnderTest.hugeX).to(equal(expectedSizes.hugex))
                 }
             }
 
             describe("#hugeXX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.hugeXX).to(equal(expectedSizes.hugeXX))
+                    expect(systemUnderTest.hugeXX).to(equal(expectedSizes.hugexx))
                 }
             }
 
             describe("#hugeXXX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.hugeXXX).to(equal(expectedSizes.hugeXXX))
+                    expect(systemUnderTest.hugeXXX).to(equal(expectedSizes.hugexxx))
                 }
             }
 
             describe("#veryHuge") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.veryHuge).to(equal(expectedSizes.veryHuge))
+                    expect(systemUnderTest.veryHuge).to(equal(expectedSizes.veryhuge))
                 }
             }
         } // context - when using The Body Shop as theme
