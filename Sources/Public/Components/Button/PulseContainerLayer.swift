@@ -1,5 +1,5 @@
 final class PulseContainerLayer: CAShapeLayer {
-    let pulseLayer: PulseLayer = PulseLayer()
+    private let pulseLayer: PulseLayer = PulseLayer()
 
     override init() {
         super.init()
@@ -7,7 +7,7 @@ final class PulseContainerLayer: CAShapeLayer {
         masksToBounds = true
         addSublayer(pulseLayer)
 
-        let opacity = getTheme().opacities.opacity03
+        let opacity = getTheme().opacities.opacity05
         pulseLayer.fillColor = NatColors.highlight.withAlphaComponent(opacity).cgColor
     }
 

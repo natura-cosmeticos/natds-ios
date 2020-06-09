@@ -152,6 +152,8 @@
 		8469287324803738008DF255 /* DynamicColorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469287224803738008DF255 /* DynamicColorFactory.swift */; };
 		846928762480458D008DF255 /* NatColors+Natura+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469287424804553008DF255 /* NatColors+Natura+Spec.swift */; };
 		84692879248046F7008DF255 /* NatColors+Avon+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84692877248046DD008DF255 /* NatColors+Avon+Spec.swift */; };
+		846C9FC9248FB6D80079B686 /* Pulsable+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C9FC7248FB6050079B686 /* Pulsable+Spec.swift */; };
+		846C9FCC248FC2050079B686 /* PulseContainerLayer+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C9FCB248FC2050079B686 /* PulseContainerLayer+Spec.swift */; };
 		846EB6202486DA80000E3901 /* ButtonContainedStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EB61F2486DA80000E3901 /* ButtonContainedStyle.swift */; };
 		846EB6232487ED47000E3901 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EB6222487ED47000E3901 /* ButtonStyle.swift */; };
 		846EB62624887BDC000E3901 /* ButtonContainedStyle+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EB62424887B7A000E3901 /* ButtonContainedStyle+Spec.swift */; };
@@ -376,6 +378,8 @@
 		8469287224803738008DF255 /* DynamicColorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicColorFactory.swift; sourceTree = "<group>"; };
 		8469287424804553008DF255 /* NatColors+Natura+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatColors+Natura+Spec.swift"; sourceTree = "<group>"; };
 		84692877248046DD008DF255 /* NatColors+Avon+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatColors+Avon+Spec.swift"; sourceTree = "<group>"; };
+		846C9FC7248FB6050079B686 /* Pulsable+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pulsable+Spec.swift"; sourceTree = "<group>"; };
+		846C9FCB248FC2050079B686 /* PulseContainerLayer+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PulseContainerLayer+Spec.swift"; sourceTree = "<group>"; };
 		846EB61F2486DA80000E3901 /* ButtonContainedStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonContainedStyle.swift; sourceTree = "<group>"; };
 		846EB6222487ED47000E3901 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		846EB62424887B7A000E3901 /* ButtonContainedStyle+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonContainedStyle+Spec.swift"; sourceTree = "<group>"; };
@@ -487,6 +491,7 @@
 		110F55B423BE642200B9937A /* Button */ = {
 			isa = PBXGroup;
 			children = (
+				846C9FCA248FC1D20079B686 /* Pusable */,
 				110F55B523BE643A00B9937A /* ContainedButtonTests.swift */,
 				64B47D6A240F3D9000E19797 /* FlatButtonTests.swift */,
 				43F1DD4A24183B8F005A0C4A /* PulseLayerTests.swift */,
@@ -1104,6 +1109,15 @@
 				846313AD245CE9AE00387FCF /* GetTheme+Spec.swift */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		846C9FCA248FC1D20079B686 /* Pusable */ = {
+			isa = PBXGroup;
+			children = (
+				846C9FC7248FB6050079B686 /* Pulsable+Spec.swift */,
+				846C9FCB248FC2050079B686 /* PulseContainerLayer+Spec.swift */,
+			);
+			path = Pusable;
 			sourceTree = "<group>";
 		};
 		84B1979E2475912300F1B575 /* Button */ = {
@@ -1733,6 +1747,7 @@
 				84BFB6482469CB9000506ED1 /* TheBodyShopFont+Spec.swift in Sources */,
 				6404360823F462C30088B20D /* TextFieldTests.swift in Sources */,
 				84BFB64C2469CBBC00506ED1 /* AvonFont+Spec.swift in Sources */,
+				846C9FC9248FB6D80079B686 /* Pulsable+Spec.swift in Sources */,
 				64B47D6B240F3D9000E19797 /* FlatButtonTests.swift in Sources */,
 				846928762480458D008DF255 /* NatColors+Natura+Spec.swift in Sources */,
 				84BFB669246DCC0800506ED1 /* ViewStyle+Spec.swift in Sources */,
@@ -1767,6 +1782,7 @@
 				843FA2C2246483E500D20D9A /* TheBodyShopOpacities+Spec.swift in Sources */,
 				84BFB66B246DCD1100506ED1 /* TheBodyShopElevations+Spec.swift in Sources */,
 				11581AA8238F037D003E45D7 /* AssetsHelperTests.swift in Sources */,
+				846C9FCC248FC2050079B686 /* PulseContainerLayer+Spec.swift in Sources */,
 				84428F92245B265000D46611 /* NatSpacing+Spec.swift in Sources */,
 				84BFB66D246DD12200506ED1 /* AvonElevations+Spec.swift in Sources */,
 				8427A2D62451E07700CF30D5 /* NaturaColorPaletteLight+Spec.swift in Sources */,
