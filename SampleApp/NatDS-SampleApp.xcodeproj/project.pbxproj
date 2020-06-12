@@ -16,6 +16,7 @@
 		8427A3312457AFEF00CF30D5 /* ChooseBrandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427A3302457AFEE00CF30D5 /* ChooseBrandViewController.swift */; };
 		8427A334245875E300CF30D5 /* ColorsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427A333245875E300CF30D5 /* ColorsCell.swift */; };
 		8427A3362458764900CF30D5 /* ColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427A3352458764900CF30D5 /* ColorsViewController.swift */; };
+		842CB5062493BC0E002D3121 /* DialogItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842CB5052493BC0E002D3121 /* DialogItemViewController.swift */; };
 		843FA2A1246344D600D20D9A /* BorderRadiusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FA2A0246344D500D20D9A /* BorderRadiusViewController.swift */; };
 		843FA2A32463450400D20D9A /* SizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FA2A22463450400D20D9A /* SizeViewController.swift */; };
 		843FA2A52463451B00D20D9A /* SizeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FA2A42463451B00D20D9A /* SizeCell.swift */; };
@@ -69,6 +70,7 @@
 		8427A3302457AFEE00CF30D5 /* ChooseBrandViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseBrandViewController.swift; sourceTree = "<group>"; };
 		8427A333245875E300CF30D5 /* ColorsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsCell.swift; sourceTree = "<group>"; };
 		8427A3352458764900CF30D5 /* ColorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsViewController.swift; sourceTree = "<group>"; };
+		842CB5052493BC0E002D3121 /* DialogItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogItemViewController.swift; sourceTree = "<group>"; };
 		843FA2A0246344D500D20D9A /* BorderRadiusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderRadiusViewController.swift; sourceTree = "<group>"; };
 		843FA2A22463450400D20D9A /* SizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeViewController.swift; sourceTree = "<group>"; };
 		843FA2A42463451B00D20D9A /* SizeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeCell.swift; sourceTree = "<group>"; };
@@ -158,6 +160,14 @@
 				8406F5E32458AD0A001A3A1E /* ColorsHeaderView.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		842CB5042493BBBB002D3121 /* Dialog */ = {
+			isa = PBXGroup;
+			children = (
+				842CB5052493BC0E002D3121 /* DialogItemViewController.swift */,
+			);
+			path = Dialog;
 			sourceTree = "<group>";
 		};
 		843FA28D2462232D00D20D9A /* Size */ = {
@@ -280,6 +290,7 @@
 		A904ECBD23D75F8000709B43 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				842CB5042493BBBB002D3121 /* Dialog */,
 				A904ECB923D607D800709B43 /* ComponentsSection.swift */,
 				434E661A241976A300D91E59 /* Bar */,
 				437CFD4D2410598D008CEA37 /* Divider */,
@@ -479,6 +490,7 @@
 				843FA2C52464885200D20D9A /* OpacityViewController.swift in Sources */,
 				A904ECC623D7628000709B43 /* IconCollectioViewCell.swift in Sources */,
 				A9D71BC62386DFEE00CDEC1D /* NavigationDrawerItemViewController.swift in Sources */,
+				842CB5062493BC0E002D3121 /* DialogItemViewController.swift in Sources */,
 				434E661C241976BD00D91E59 /* AppBarViewController.swift in Sources */,
 				84BFB64E2469CE7E00506ED1 /* TypographyCell.swift in Sources */,
 				A904ECBA23D607D800709B43 /* ComponentsSection.swift in Sources */,
