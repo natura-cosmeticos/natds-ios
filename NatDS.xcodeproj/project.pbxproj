@@ -62,7 +62,7 @@
 		64DF47E123FB490200DAF441 /* TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DF47E023FB490200DAF441 /* TextFieldDelegate.swift */; };
 		64DF47E323FB492100DAF441 /* TextFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DF47E223FB492100DAF441 /* TextFieldType.swift */; };
 		64DF47E523FB4A5600DAF441 /* TextFieldTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DF47E423FB4A5600DAF441 /* TextFieldTypeTests.swift */; };
-		8410F28F2490710E002028E8 /* NatDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8410F28E2490710E002028E8 /* NatDialogView.swift */; };
+		8410F28F2490710E002028E8 /* NatDialogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8410F28E2490710E002028E8 /* NatDialogController.swift */; };
 		8427A28C2447774B00CF30D5 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427A28B2447774B00CF30D5 /* Theme.swift */; };
 		8427A28E2447778600CF30D5 /* AvonTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427A28D2447778600CF30D5 /* AvonTheme.swift */; };
 		8427A292244778C700CF30D5 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8427A291244778C700CF30D5 /* DesignSystem.swift */; };
@@ -289,7 +289,7 @@
 		64DF47E023FB490200DAF441 /* TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDelegate.swift; sourceTree = "<group>"; };
 		64DF47E223FB492100DAF441 /* TextFieldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldType.swift; sourceTree = "<group>"; };
 		64DF47E423FB4A5600DAF441 /* TextFieldTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTypeTests.swift; sourceTree = "<group>"; };
-		8410F28E2490710E002028E8 /* NatDialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatDialogView.swift; sourceTree = "<group>"; };
+		8410F28E2490710E002028E8 /* NatDialogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatDialogController.swift; sourceTree = "<group>"; };
 		8427A28B2447774B00CF30D5 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		8427A28D2447778600CF30D5 /* AvonTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvonTheme.swift; sourceTree = "<group>"; };
 		8427A291244778C700CF30D5 /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
@@ -826,7 +826,7 @@
 		8410F28D249070EE002028E8 /* Dialog */ = {
 			isa = PBXGroup;
 			children = (
-				8410F28E2490710E002028E8 /* NatDialogView.swift */,
+				8410F28E2490710E002028E8 /* NatDialogController.swift */,
 			);
 			path = Dialog;
 			sourceTree = "<group>";
@@ -1596,7 +1596,7 @@
 				84692867247FEB5C008DF255 /* AvonColorPaletteDark.swift in Sources */,
 				84BFB62C2469B95300506ED1 /* TheBodyShopFontWeights.swift in Sources */,
 				84692856247D78BD008DF255 /* TheBodyShopFontLetterSpacings.swift in Sources */,
-				8410F28F2490710E002028E8 /* NatDialogView.swift in Sources */,
+				8410F28F2490710E002028E8 /* NatDialogController.swift in Sources */,
 				843FA298246331F000D20D9A /* AvonBorderRadius.swift in Sources */,
 				84EE85E9245A0FB20009293A /* NatSpacing.swift in Sources */,
 				843FA2812461DF5400D20D9A /* NaturaSizes.swift in Sources */,

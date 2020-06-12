@@ -51,7 +51,7 @@ final class DialogItemViewController: UIViewController, SampleItem {
     // MARK: - Actions
 
     @objc func actionHandler () {
-        let dialog = NatDialogView()
+        let dialog = NatDialogController()
 
         navigationController?.present(dialog, animated: true)
     }
