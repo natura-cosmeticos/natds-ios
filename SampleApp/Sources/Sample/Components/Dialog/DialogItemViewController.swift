@@ -53,6 +53,8 @@ final class DialogItemViewController: UIViewController, SampleItem {
     @objc func actionHandler () {
         let dialog = NatDialogController
             .standartBuilder
+            .set(title: "Title")
+            .set(body: "Some body")
             .build()
 
         navigationController?.present(dialog, animated: true)
