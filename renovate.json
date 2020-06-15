@@ -2,5 +2,5 @@
   "extends": [
     "config:base"
   ],
-  semanticCommits: true
+  "semanticCommits": true
 }
