@@ -50,7 +50,8 @@ public final class NatDialogController: UIViewController { //add View
     // MARK: - Private methods
 
     private func setup() {
-        view.backgroundColor = UIColor.black.withAlphaComponent(0.4)
+        let opacity = getTheme().opacities.opacity08
+        view.backgroundColor = UIColor.black.withAlphaComponent(opacity)
         containerView.layer.cornerRadius = getTheme().borderRadius.medium
         containerView.backgroundColor = getTheme().colors.surface
 
@@ -81,176 +82,6 @@ public final class NatDialogController: UIViewController { //add View
 }
 
 extension NatDialogController {
-    final class TitleView: UIView {
-        private let label: UILabel = {
-            let label = UILabel()
-            label.textColor = getTheme().colors.onSurface
-            label.translatesAutoresizingMaskIntoConstraints = false
-
-            return label
-        }()
-
-        // MARK: - Inits
-
-        init() {
-            super.init(frame: .zero)
-
-            setup()
-        }
-
-        required init?(coder: NSCoder) {
-            fatalError("init(coder:) has not been implemented")
-        }
-
-        // MARK: - Public methods
-
-        func set(title: String) {
-            label.text = title
-        }
-
-        // MARK: - Private methods
-
-        private func setup() {
-            addSubview(label)
-
-            addConstraints()
-        }
-
-        private func addConstraints() {
-            NSLayoutConstraint.activate([
-                label.topAnchor.constraint(equalTo: topAnchor),
-                label.trailingAnchor.constraint(equalTo: trailingAnchor),
-                label.bottomAnchor.constraint(equalTo: bottomAnchor),
-                label.leadingAnchor.constraint(equalTo: leadingAnchor)
-            ])
-        }
-    }
-}
-
-extension NatDialogController {
-    final class BodyView: UIView {
-        private let label: UILabel = {
-            let label = UILabel()
-            label.text = "Some body!!"
-            label.numberOfLines = 0
-            label.textColor = getTheme().colors.onSurface
-            label.translatesAutoresizingMaskIntoConstraints = false
-
-            return label
-        }()
-
-        // MARK: - Inits
-
-        init() {
-            super.init(frame: .zero)
-
-            setup()
-        }
-
-        required init?(coder: NSCoder) {
-            fatalError("init(coder:) has not been implemented")
-        }
-
-        // MARK: - Public methods
-
-        func set(body: String) {
-            label.text = body
-        }
-
-        // MARK: - Private methods
-
-        private func setup() {
-            addSubview(label)
-
-            addConstraints()
-        }
-
-        private func addConstraints() {
-            NSLayoutConstraint.activate([
-                label.topAnchor.constraint(equalTo: topAnchor),
-                label.trailingAnchor.constraint(equalTo: trailingAnchor),
-                label.bottomAnchor.constraint(equalTo: bottomAnchor),
-                label.leadingAnchor.constraint(equalTo: leadingAnchor)
-            ])
-        }
-    }
-}
-
-extension NatDialogController {
-    final class FooterView: UIView {
-        private let stackView: UIStackView = {
-            let stackView = UIStackView()
-            stackView.axis = .horizontal
-            stackView.spacing = getTheme().spacing.small
-            stackView.translatesAutoresizingMaskIntoConstraints = false
-
-            return stackView
-        }()
-
-        private let firstButton: NatButton = {
-            let button = NatButton(style: .contained)
-            button.configure(title: "Some text")
-            button.translatesAutoresizingMaskIntoConstraints = false
-
-            return button
-        }()
-
-        private let secondButton: NatButton = {
-            let button = NatButton(style: .outlined)
-            button.configure(title: "Some text")
-            button.translatesAutoresizingMaskIntoConstraints = false
-
-            return button
-        }()
-
-        init() {
-            super.init(frame: .zero)
-
-            setup()
-
-//            backgroundColor = .blue
-        }
-
-        required init?(coder: NSCoder) {
-            fatalError("init(coder:) has not been implemented")
-        }
-
-        private func setup() {
-            addSubview(stackView)
-
-            stackView.insertArrangedSubview(firstButton, at: 0)
-            stackView.insertArrangedSubview(secondButton, at: 0)
-
-            addConstraints()
-        }
-
-        override func layoutSubviews() {
-            super.layoutSubviews()
-
-            print("StackView: \(stackView.frame.width)")
-            print("view: \(frame.width)")
-
-            if stackView.frame.width == frame.width {
-                stackView.axis = .vertical
-            }
-        }
-
-
-        private func addConstraints() {
-            NSLayoutConstraint.activate([
-                stackView.topAnchor.constraint(greaterThanOrEqualTo: topAnchor),
-                stackView.trailingAnchor.constraint(equalTo: trailingAnchor),
-                stackView.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor),
-                stackView.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor),
-
-                firstButton.heightAnchor.constraint(equalToConstant: NatButton.Height.medium),
-                secondButton.heightAnchor.constraint(equalToConstant: NatButton.Height.medium),
-            ])
-        }
-    }
-}
-
-extension NatDialogController {
     public static var standartBuilder: StandartBuilder { .init() }
 }
 
@@ -263,27 +94,29 @@ extension NatDialogController {
     public final class StandartBuilder {
         private var title: String?
         private var body: String?
-        private var buttonActions: [ButtonAction] = []
+        private var primaryAction: ButtonAction?
+        private var secondaryAction: ButtonAction?
 
-        public func set(title: String) -> Self {
+        public func configure(title: String) -> Self {
             self.title = title
 
             return self
         }
 
-        public func set(body: String) -> Self {
+        public func configure(body: String) -> Self {
             self.body = body
 
             return self
         }
 
-        func setButtonAction(title: String, action: @escaping () -> Void) -> Self {
-            if buttonActions.count > 3 { //magic number
-                fatalError("AAAAA")
-//                return self
-            }
+        public func configure(primaryTitle title: String, primaryAction action: @escaping () -> Void) -> Self {
+            primaryAction = .init(title: title, action: action)
 
-            buttonActions.append(.init(title: title, action: action))
+            return self
+        }
+
+        public func configure(secondaryTitle title: String, secondaryAction action: @escaping () -> Void) -> Self {
+            secondaryAction = .init(title: title, action: action)
 
             return self
         }
@@ -305,8 +138,12 @@ extension NatDialogController {
                 views.append(bodyView)
             }
 
-            let footerView = FooterView()
-            views.append(footerView)
+            if let primaryAction = primaryAction,
+               let secondaryAction = secondaryAction {
+
+                let footerView = FooterView(primaryAction: primaryAction, secondaryAction: secondaryAction)
+                views.append(footerView)
+            }
 
             return .init(views: views)
         }

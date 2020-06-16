@@ -53,8 +53,10 @@ final class DialogItemViewController: UIViewController, SampleItem {
     @objc func actionHandler () {
         let dialog = NatDialogController
             .standartBuilder
-            .set(title: "Title")
-            .set(body: "Some body")
+            .configure(title: "Title")
+            .configure(body: "Some body")
+            .configure(primaryTitle: "Foo", primaryAction: { print("Foo") })
+            .configure(secondaryTitle: "Foo2", secondaryAction: { print("Foo2") })
             .build()
 
         navigationController?.present(dialog, animated: true)

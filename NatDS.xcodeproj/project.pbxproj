@@ -164,6 +164,9 @@
 		849F39E52481786800CCF076 /* ColorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F39E42481786800CCF076 /* ColorProvider.swift */; };
 		849F39E724819C0D00CCF076 /* StubLightColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F39E624819C0D00CCF076 /* StubLightColorPalette.swift */; };
 		849F39E924819C3500CCF076 /* StubDarkColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F39E824819C3500CCF076 /* StubDarkColorPalette.swift */; };
+		849F39EE2498493B00CCF076 /* NatDialogController+FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F39ED2498493B00CCF076 /* NatDialogController+FooterView.swift */; };
+		849F39F0249907C200CCF076 /* NatDialogController+TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F39EF249907C100CCF076 /* NatDialogController+TitleView.swift */; };
+		849F39F2249907FA00CCF076 /* NatDialogController+BodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F39F1249907FA00CCF076 /* NatDialogController+BodyView.swift */; };
 		84B197A02475915E00F1B575 /* ButtonOutlineStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1979F2475915E00F1B575 /* ButtonOutlineStyle.swift */; };
 		84B197A3247593B500F1B575 /* NatButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B197A2247593B500F1B575 /* NatButton+Style.swift */; };
 		84BFB61A24695E7D00506ED1 /* NatFonts+Avon+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB61824695E6600506ED1 /* NatFonts+Avon+Spec.swift */; };
@@ -391,6 +394,9 @@
 		849F39E42481786800CCF076 /* ColorProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorProvider.swift; sourceTree = "<group>"; };
 		849F39E624819C0D00CCF076 /* StubLightColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubLightColorPalette.swift; sourceTree = "<group>"; };
 		849F39E824819C3500CCF076 /* StubDarkColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubDarkColorPalette.swift; sourceTree = "<group>"; };
+		849F39ED2498493B00CCF076 /* NatDialogController+FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogController+FooterView.swift"; sourceTree = "<group>"; };
+		849F39EF249907C100CCF076 /* NatDialogController+TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogController+TitleView.swift"; sourceTree = "<group>"; };
+		849F39F1249907FA00CCF076 /* NatDialogController+BodyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogController+BodyView.swift"; sourceTree = "<group>"; };
 		84B1979F2475915E00F1B575 /* ButtonOutlineStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonOutlineStyle.swift; sourceTree = "<group>"; };
 		84B197A2247593B500F1B575 /* NatButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+Style.swift"; sourceTree = "<group>"; };
 		84BFB61824695E6600506ED1 /* NatFonts+Avon+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatFonts+Avon+Spec.swift"; sourceTree = "<group>"; };
@@ -827,6 +833,9 @@
 			isa = PBXGroup;
 			children = (
 				8410F28E2490710E002028E8 /* NatDialogController.swift */,
+				849F39EF249907C100CCF076 /* NatDialogController+TitleView.swift */,
+				849F39ED2498493B00CCF076 /* NatDialogController+FooterView.swift */,
+				849F39F1249907FA00CCF076 /* NatDialogController+BodyView.swift */,
 			);
 			path = Dialog;
 			sourceTree = "<group>";
@@ -1598,6 +1607,7 @@
 				84692856247D78BD008DF255 /* TheBodyShopFontLetterSpacings.swift in Sources */,
 				8410F28F2490710E002028E8 /* NatDialogController.swift in Sources */,
 				843FA298246331F000D20D9A /* AvonBorderRadius.swift in Sources */,
+				849F39F0249907C200CCF076 /* NatDialogController+TitleView.swift in Sources */,
 				84EE85E9245A0FB20009293A /* NatSpacing.swift in Sources */,
 				843FA2812461DF5400D20D9A /* NaturaSizes.swift in Sources */,
 				8427A29D2448ED6D00CF30D5 /* NatColors.swift in Sources */,
@@ -1664,6 +1674,7 @@
 				84692858247D79DC008DF255 /* AvonFontLetterSpacings.swift in Sources */,
 				8469285A247D7C2A008DF255 /* NaturaFontLetterSpacings.swift in Sources */,
 				11518B682396C00700220570 /* NavigationDrawer.swift in Sources */,
+				849F39F2249907FA00CCF076 /* NatDialogController+BodyView.swift in Sources */,
 				8469286B24802359008DF255 /* NaturaColorPaletteDark.swift in Sources */,
 				A9CCF8DF23CCE1CE00000FC0 /* IconView.swift in Sources */,
 				117FE02C238DA53E0032E2AC /* NavigationDrawerSubitemCell.swift in Sources */,
@@ -1682,6 +1693,7 @@
 				64DF47E323FB492100DAF441 /* TextFieldType.swift in Sources */,
 				8427A32C24538DFA00CF30D5 /* ConfigurationStorage.swift in Sources */,
 				84BFB65F246DA47500506ED1 /* AvonElevations.swift in Sources */,
+				849F39EE2498493B00CCF076 /* NatDialogController+FooterView.swift in Sources */,
 				84BFB6382469BF4B00506ED1 /* AvonFontSizes.swift in Sources */,
 				43C02A3523FAFDDD0057A31C /* NSMutableAttributedString+Builder.swift in Sources */,
 				117FE024238D9B070032E2AC /* Colors.swift in Sources */,
