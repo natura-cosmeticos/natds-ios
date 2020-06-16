@@ -7,6 +7,7 @@ extension NatDialogController {
         private let stackView: UIStackView = {
             let stackView = UIStackView()
             stackView.axis = .horizontal
+            stackView.distribution = .fill
             stackView.spacing = getTheme().spacing.tiny
             stackView.translatesAutoresizingMaskIntoConstraints = false
 

@@ -31,7 +31,7 @@ final class DialogItemViewController: UIViewController, SampleItem {
 
     private let containedFullButton: NatButton = {
         let button = NatButton(style: .contained)
-        button.configure(title: "Contained")
+        button.configure(title: "standard")
         button.addTarget(self, action: #selector(actionHandler), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
 
@@ -52,11 +52,14 @@ final class DialogItemViewController: UIViewController, SampleItem {
 
     @objc func actionHandler () {
         let dialog = NatDialogController
-            .standartBuilder
+            .standardBuilder
             .configure(title: "Title")
-            .configure(body: "Some body Some body Some body Some body Some body Some body Some body Some body SomebodySome")
-            .configure(primaryTitle: "Foo big foo text algo assim", primaryAction: { print("Foo") })
-            .configure(secondaryTitle: "Foo2", secondaryAction: { self.navigationController?.presentedViewController?.dismiss(animated: true)
+            .configure(body: "Contrary to popular belief, Lorem Ipsum is not simply random text.")
+            .configure(primaryTitle: "Compartilhar Revista", primaryAction: {
+                self.navigationController?.presentedViewController?.dismiss(animated: true)
+            })
+            .configure(secondaryTitle: "Close", secondaryAction: {
+                self.navigationController?.presentedViewController?.dismiss(animated: true)
             })
             .build()
 

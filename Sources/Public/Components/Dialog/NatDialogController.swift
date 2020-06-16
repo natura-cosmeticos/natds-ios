@@ -10,7 +10,7 @@ import UIKit
             DesignSystem().configure(with: Brand)
 */
 
-public final class NatDialogController: UIViewController { //add View
+public final class NatDialogController: UIViewController {
 
     // MARK: - Private properties
 
@@ -35,9 +35,6 @@ public final class NatDialogController: UIViewController { //add View
     init(views: [UIView]) {
         super.init(nibName: nil, bundle: nil)
 
-        modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
-        modalTransitionStyle = UIModalTransitionStyle.crossDissolve
-
         setup()
 
         views.forEach { stackView.addArrangedSubview($0) }
@@ -50,6 +47,9 @@ public final class NatDialogController: UIViewController { //add View
     // MARK: - Private methods
 
     private func setup() {
+        modalPresentationStyle = .overCurrentContext
+        modalTransitionStyle = .crossDissolve
+        
         let opacity = getTheme().opacities.opacity08
         view.backgroundColor = UIColor.black.withAlphaComponent(opacity)
         containerView.layer.cornerRadius = getTheme().borderRadius.medium
@@ -84,74 +84,5 @@ public final class NatDialogController: UIViewController { //add View
 }
 
 extension NatDialogController {
-    public static var standartBuilder: StandartBuilder { .init() }
-}
-
-extension NatDialogController {
-    struct ButtonConfiguration {
-        let title: String
-        let action: () -> Void
-    }
-
-    public final class StandartBuilder {
-        private var title: String?
-        private var body: String?
-        private var primaryAction: ButtonConfiguration?
-        private var secondaryAction: ButtonConfiguration?
-
-        public func configure(title: String) -> Self {
-            self.title = title
-
-            return self
-        }
-
-        public func configure(body: String) -> Self {
-            self.body = body
-
-            return self
-        }
-
-        public func configure(primaryTitle title: String, primaryAction action: @escaping () -> Void) -> Self {
-            primaryAction = .init(title: title, action: action)
-
-            return self
-        }
-
-        public func configure(secondaryTitle title: String, secondaryAction action: @escaping () -> Void) -> Self {
-            secondaryAction = .init(title: title, action: action)
-
-            return self
-        }
-
-        public func build() -> NatDialogController {
-            var views: [UIView] = []
-
-            if let title = title {
-                let titleView = TitleView()
-                titleView.set(title: title)
-
-                views.append(titleView)
-            }
-
-            if let body = body {
-                let bodyView = BodyView()
-                bodyView.set(body: body)
-
-                views.append(bodyView)
-            }
-
-            if let primaryAction = primaryAction {
-                let footerView = FooterView()
-                views.append(footerView)
-
-                footerView.configure(primaryButton: primaryAction)
-
-                if let secondaryAction = secondaryAction {
-                    footerView.configure(secondaryButton: secondaryAction)
-                }
-            }
-
-            return .init(views: views)
-        }
-    }
+    public static var standardBuilder: StandardBuilder { .init() }
 }
