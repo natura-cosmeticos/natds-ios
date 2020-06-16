@@ -56,7 +56,8 @@ final class DialogItemViewController: UIViewController, SampleItem {
             .configure(title: "Title")
             .configure(body: "Some body Some body Some body Some body Some body Some body Some body Some body SomebodySome")
             .configure(primaryTitle: "Foo big foo text algo assim", primaryAction: { print("Foo") })
-            .configure(secondaryTitle: "Foo2", secondaryAction: { print("Foo2") })
+            .configure(secondaryTitle: "Foo2", secondaryAction: { self.navigationController?.presentedViewController?.dismiss(animated: true)
+            })
             .build()
 
         navigationController?.present(dialog, animated: true)

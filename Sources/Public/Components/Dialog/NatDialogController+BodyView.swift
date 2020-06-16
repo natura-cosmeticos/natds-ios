@@ -3,6 +3,7 @@ extension NatDialogController {
         private let label: UILabel = {
             let label = UILabel()
             label.numberOfLines = 0
+            label.font = NatFonts.font(ofSize: .body1, withWeight: .regular)
             label.translatesAutoresizingMaskIntoConstraints = false
 
             return label

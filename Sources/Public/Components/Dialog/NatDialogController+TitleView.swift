@@ -2,6 +2,7 @@ extension NatDialogController {
     final class TitleView: UIView {
         private let label: UILabel = {
             let label = UILabel()
+            label.font = NatFonts.font(ofSize: .heading6, withWeight: .medium)
             label.translatesAutoresizingMaskIntoConstraints = false
 
             return label
