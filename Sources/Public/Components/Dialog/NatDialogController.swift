@@ -64,19 +64,21 @@ public final class NatDialogController: UIViewController { //add View
     private func addConstraints() {
         let minimumHeightConstraint = containerView.heightAnchor.constraint(equalToConstant: 100)
         minimumHeightConstraint.priority = .defaultLow
+
         NSLayoutConstraint.activate([
-            containerView.topAnchor.constraint(greaterThanOrEqualTo: view.topAnchor, constant: 20),
-            containerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -NatSpacing.small),
-            containerView.bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor, constant: -20),
-            containerView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: NatSpacing.small),
+            containerView.topAnchor.constraint(greaterThanOrEqualTo: view.topAnchor, constant: 16),
+            containerView.trailingAnchor.constraint(lessThanOrEqualTo: view.trailingAnchor, constant: -16),
+            containerView.bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor, constant: -16),
+            containerView.leadingAnchor.constraint(greaterThanOrEqualTo: view.leadingAnchor, constant: 16),
 
             containerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             containerView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             minimumHeightConstraint,
-            stackView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 20),
+
+            stackView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 16),
             stackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -NatSpacing.small),
-            stackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -20),
-            stackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: NatSpacing.small),
+            stackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -16),
+            stackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: NatSpacing.small)
         ])
     }
 }
@@ -86,7 +88,7 @@ extension NatDialogController {
 }
 
 extension NatDialogController {
-    struct ButtonAction {
+    struct ButtonConfiguration {
         let title: String
         let action: () -> Void
     }
@@ -94,8 +96,8 @@ extension NatDialogController {
     public final class StandartBuilder {
         private var title: String?
         private var body: String?
-        private var primaryAction: ButtonAction?
-        private var secondaryAction: ButtonAction?
+        private var primaryAction: ButtonConfiguration?
+        private var secondaryAction: ButtonConfiguration?
 
         public func configure(title: String) -> Self {
             self.title = title
@@ -138,11 +140,15 @@ extension NatDialogController {
                 views.append(bodyView)
             }
 
-            if let primaryAction = primaryAction,
-               let secondaryAction = secondaryAction {
-
-                let footerView = FooterView(primaryAction: primaryAction, secondaryAction: secondaryAction)
+            if let primaryAction = primaryAction {
+                let footerView = FooterView()
                 views.append(footerView)
+
+                footerView.configure(primaryButton: primaryAction)
+
+                if let secondaryAction = secondaryAction {
+                    footerView.configure(secondaryButton: secondaryAction)
+                }
             }
 
             return .init(views: views)

@@ -54,8 +54,8 @@ final class DialogItemViewController: UIViewController, SampleItem {
         let dialog = NatDialogController
             .standartBuilder
             .configure(title: "Title")
-            .configure(body: "Some body")
-            .configure(primaryTitle: "Foo", primaryAction: { print("Foo") })
+            .configure(body: "Some body Some body Some body Some body Some body Some body Some body Some body SomebodySome")
+            .configure(primaryTitle: "Foo big foo text algo assim", primaryAction: { print("Foo") })
             .configure(secondaryTitle: "Foo2", secondaryAction: { print("Foo2") })
             .build()
 

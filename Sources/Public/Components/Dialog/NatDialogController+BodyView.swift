@@ -3,7 +3,6 @@ extension NatDialogController {
         private let label: UILabel = {
             let label = UILabel()
             label.numberOfLines = 0
-            label.textColor = getTheme().colors.onSurface
             label.translatesAutoresizingMaskIntoConstraints = false
 
             return label
@@ -24,10 +23,20 @@ extension NatDialogController {
         // MARK: - Public methods
 
         func set(body: String) {
-            label.text = body
+            label.attributedText = createTextForTitle(text: body, withColor: getTheme().colors.highEmphasis)
         }
 
         // MARK: - Private methods
+
+        private func createTextForTitle(text: String, withColor color: UIColor) -> NSAttributedString {
+            let attributedString = NSMutableAttributedString(string: text)
+            attributedString.apply(foregroundColor: color)
+
+            let value = getTheme().font.letterSpacings.body1
+            attributedString.apply(kernValue: value)
+
+            return attributedString
+        }
 
         private func setup() {
             addSubview(label)

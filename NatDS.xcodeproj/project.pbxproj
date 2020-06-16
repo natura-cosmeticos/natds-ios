@@ -834,8 +834,8 @@
 			children = (
 				8410F28E2490710E002028E8 /* NatDialogController.swift */,
 				849F39EF249907C100CCF076 /* NatDialogController+TitleView.swift */,
-				849F39ED2498493B00CCF076 /* NatDialogController+FooterView.swift */,
 				849F39F1249907FA00CCF076 /* NatDialogController+BodyView.swift */,
+				849F39ED2498493B00CCF076 /* NatDialogController+FooterView.swift */,
 			);
 			path = Dialog;
 			sourceTree = "<group>";

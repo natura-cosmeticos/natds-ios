@@ -1,6 +1,7 @@
+private typealias ActionHandler = () -> Void
+
 extension NatDialogController {
     final class FooterView: UIView {
-
         // MARK: - Private properties
 
         private let stackView: UIStackView = {
@@ -12,41 +13,17 @@ extension NatDialogController {
             return stackView
         }()
 
-        private let primaryButton: NatButton = {
-            let button = NatButton(style: .contained)
-            button.translatesAutoresizingMaskIntoConstraints = false
+        private var primaryButtonActionHandler: ActionHandler?
+        private var secondaryButtonActionHandler: ActionHandler?
 
-            return button
-        }()
-
-        private let secondaryButton: NatButton = {
-            let button = NatButton(style: .outlined)
-            button.translatesAutoresizingMaskIntoConstraints = false
-
-            return button
-        }()
-
-        private let primaryAction: ButtonAction
-        private let secondaryAction: ButtonAction
-
-        private var shouldEvaluateButtonsPosition = true
+        private var isFirstTimeInLayoutSubviews = true
 
         // MARK: - Inits
 
-        init(primaryAction: ButtonAction, secondaryAction: ButtonAction) {
-            self.primaryAction = primaryAction
-            self.secondaryAction = secondaryAction
-
+        init() {
             super.init(frame: .zero)
 
             setup()
-
-            NotificationCenter.default.addObserver(
-                self,
-                selector: #selector(rotated),
-                name: UIDevice.orientationDidChangeNotification,
-                object: nil
-            )
         }
 
         required init?(coder: NSCoder) {
@@ -59,46 +36,76 @@ extension NatDialogController {
             NotificationCenter.default.removeObserver(self)
         }
 
-        @objc func rotated() {
-            adjustButtonsToFitScreen()
-        }
-
         // MARK: - Overrides
 
         override func layoutSubviews() {
             super.layoutSubviews()
 
-            if shouldEvaluateButtonsPosition {
+            if isFirstTimeInLayoutSubviews {
                 adjustButtonsToFitScreen()
-                shouldEvaluateButtonsPosition = false
+                isFirstTimeInLayoutSubviews = false
             }
         }
 
-        private func adjustButtonsToFitScreen() {
-            print("StackView: \(stackView.frame.width)")
-            print("view: \(frame.width)")
+        // MARK: - Action handlers
 
-            if stackView.frame.width >= frame.width {
-                stackView.axis = .vertical
-            } else if stackView.frame.width < frame.width {
-                stackView.axis = .horizontal
-            }
+        @objc private func primaryActionHandler() {
+            primaryButtonActionHandler?()
+        }
 
-//            stackView.axis = stackView.frame.width >= frame.width ? .vertical : .horizontal
+        @objc private func secondaryActionHandler() {
+            secondaryButtonActionHandler?()
+        }
+
+        // MARK: - Public methods
+
+        func configure(primaryButton configuration: ButtonConfiguration) {
+            primaryButtonActionHandler = configuration.action
+
+            let button = NatButton(style: .contained)
+            button.configure(title: configuration.title)
+            button.addTarget(self, action: #selector(primaryActionHandler), for: .touchUpInside)
+            button.translatesAutoresizingMaskIntoConstraints = false
+
+            stackView.insertArrangedSubview(button, at: 0)
+
+            NSLayoutConstraint.activate([
+                button.heightAnchor.constraint(equalToConstant: NatButton.Height.medium)
+            ])
+        }
+
+        func configure(secondaryButton configuration: ButtonConfiguration) {
+            secondaryButtonActionHandler = configuration.action
+
+            let button = NatButton(style: .text)
+            button.configure(title: configuration.title)
+            button.addTarget(self, action: #selector(secondaryActionHandler), for: .touchUpInside)
+            button.translatesAutoresizingMaskIntoConstraints = false
+
+            stackView.insertArrangedSubview(button, at: 0)
+
+            NSLayoutConstraint.activate([
+                button.heightAnchor.constraint(equalToConstant: NatButton.Height.medium)
+            ])
         }
 
         // MARK: - Private methods
 
         private func setup() {
-            primaryButton.configure(title: primaryAction.title)
-            secondaryButton.configure(title: secondaryAction.title)
+            NotificationCenter.default.addObserver(
+                self,
+                selector: #selector(adjustButtonsToFitScreen),
+                name: UIDevice.orientationDidChangeNotification,
+                object: nil
+            )
 
             addSubview(stackView)
 
-            stackView.insertArrangedSubview(primaryButton, at: 0)
-            stackView.insertArrangedSubview(secondaryButton, at: 0)
-
             addConstraints()
+        }
+
+        @objc private func adjustButtonsToFitScreen() {
+            stackView.axis = stackView.frame.width >= frame.width ? .vertical : .horizontal
         }
 
         private func addConstraints() {
@@ -106,10 +113,7 @@ extension NatDialogController {
                 stackView.topAnchor.constraint(greaterThanOrEqualTo: topAnchor),
                 stackView.trailingAnchor.constraint(equalTo: trailingAnchor),
                 stackView.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor),
-                stackView.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor),
-
-                primaryButton.heightAnchor.constraint(equalToConstant: NatButton.Height.medium),
-                secondaryButton.heightAnchor.constraint(equalToConstant: NatButton.Height.medium)
+                stackView.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor)
             ])
         }
     }
