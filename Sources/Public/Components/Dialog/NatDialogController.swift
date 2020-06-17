@@ -1,7 +1,21 @@
 import UIKit
 
 /**
-  ????
+  NatDialogController is a class that represents Dialog component from the design system.
+  The colors changes according with the current Brand configured in the Design system
+  and according with user properties of Light and Dark mode.
+
+    Aviable styles:
+    - Standard
+    - Alert(Development)
+
+    To create and configure Dialogs it's necessary use via Dialog Builders this builds are aviable as class properties,
+     Example of usage:
+
+        let dialog = NatDialogController
+        .standardStyleBuilder
+        .configure(...)
+        .build()
 
  - Requires:
         It's necessary to configure the Design System current Brand at DesisgnSystem class
@@ -91,5 +105,29 @@ public final class NatDialogController: UIViewController {
 // MARK: - Class properties
 
 extension NatDialogController {
+    /**
+      Class property to access StandardStyleBuilder.
+
+        Aviable elements to configure:
+        - Title
+        - Body
+        - Primary Button
+        - Secondary Button (Optional)
+
+         Example of usage:
+
+            let dialog = NatDialogController
+            .standardStyleBuilder
+            .configure(title: "Title")
+            .configure(body: "Body")
+            .configure(primaryTitle: "Title", primaryAction: { print("lol") })
+            .build()
+
+     - Requires:
+            It's necessary to configure the Design System current Brand at DesisgnSystem class
+            or fatalError will be raised.
+
+                DesignSystem().configure(with: Brand)
+    */
     public static var standardStyleBuilder: StandardStyleBuilder { .init() }
 }

@@ -6,9 +6,9 @@ import UIKit
   and according with user properties of Light and Dark mode.
 
     This button has 3 styles:
-    - Contained (on development)
+    - Contained
     - Outlined
-    - Text (on development)
+    - Text
 
     Example of usage:
 
