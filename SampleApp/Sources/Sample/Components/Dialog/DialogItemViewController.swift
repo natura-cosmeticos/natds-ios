@@ -52,7 +52,7 @@ final class DialogItemViewController: UIViewController, SampleItem {
 
     @objc func actionHandler () {
         let dialog = NatDialogController
-            .standardBuilder
+            .standardStyleBuilder
             .configure(title: "Title")
             .configure(body: "Contrary to popular belief, Lorem Ipsum is not simply random text.")
             .configure(primaryTitle: "Compartilhar Revista", primaryAction: {

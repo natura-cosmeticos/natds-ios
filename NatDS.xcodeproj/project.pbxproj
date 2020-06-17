@@ -205,8 +205,9 @@
 		84BFB671246DF0B300506ED1 /* NatElevations+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB670246DF0B300506ED1 /* NatElevations+Spec.swift */; };
 		84BFB673246DF82800506ED1 /* ElevationAttributes+Equitable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB672246DF82800506ED1 /* ElevationAttributes+Equitable.swift */; };
 		84C1CABD249952930041A511 /* NatDialogController+ButtonConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C1CABC249952930041A511 /* NatDialogController+ButtonConfiguration.swift */; };
-		84C1CABF249953440041A511 /* NatDialogController+StandardBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C1CABE249953440041A511 /* NatDialogController+StandardBuilder.swift */; };
+		84C1CABF249953440041A511 /* NatDialogController+StandardStyleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C1CABE249953440041A511 /* NatDialogController+StandardStyleBuilder.swift */; };
 		84C1CAC02499558E0041A511 /* NatDialogController+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C1CAB92499522D0041A511 /* NatDialogController+Spec.swift */; };
+		84C1CAC2249A49A40041A511 /* NatDialogController+StandardStyleBuilder+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C1CAC1249A49A40041A511 /* NatDialogController+StandardStyleBuilder+Spec.swift */; };
 		84C24DA6246F3DE40046833B /* NatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C24DA5246F3DE40046833B /* NatButton.swift */; };
 		84EE85E9245A0FB20009293A /* NatSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE85E8245A0FB20009293A /* NatSpacing.swift */; };
 		A9325A6623FB34EC0023979C /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9325A6523FB34EC0023979C /* UICollectionView+Reusable.swift */; };
@@ -439,7 +440,8 @@
 		84BFB672246DF82800506ED1 /* ElevationAttributes+Equitable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ElevationAttributes+Equitable.swift"; sourceTree = "<group>"; };
 		84C1CAB92499522D0041A511 /* NatDialogController+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogController+Spec.swift"; sourceTree = "<group>"; };
 		84C1CABC249952930041A511 /* NatDialogController+ButtonConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogController+ButtonConfiguration.swift"; sourceTree = "<group>"; };
-		84C1CABE249953440041A511 /* NatDialogController+StandardBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogController+StandardBuilder.swift"; sourceTree = "<group>"; };
+		84C1CABE249953440041A511 /* NatDialogController+StandardStyleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogController+StandardStyleBuilder.swift"; sourceTree = "<group>"; };
+		84C1CAC1249A49A40041A511 /* NatDialogController+StandardStyleBuilder+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogController+StandardStyleBuilder+Spec.swift"; sourceTree = "<group>"; };
 		84C24DA5246F3DE40046833B /* NatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatButton.swift; sourceTree = "<group>"; };
 		84EE85E8245A0FB20009293A /* NatSpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatSpacing.swift; sourceTree = "<group>"; };
 		9A46395C038D4497A880A6FF /* Pods-NatDSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatDSTests.release.xcconfig"; path = "Target Support Files/Pods-NatDSTests/Pods-NatDSTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -1284,6 +1286,7 @@
 			isa = PBXGroup;
 			children = (
 				84C1CAB92499522D0041A511 /* NatDialogController+Spec.swift */,
+				84C1CAC1249A49A40041A511 /* NatDialogController+StandardStyleBuilder+Spec.swift */,
 			);
 			path = Dialog;
 			sourceTree = "<group>";
@@ -1292,7 +1295,7 @@
 			isa = PBXGroup;
 			children = (
 				84C1CABC249952930041A511 /* NatDialogController+ButtonConfiguration.swift */,
-				84C1CABE249953440041A511 /* NatDialogController+StandardBuilder.swift */,
+				84C1CABE249953440041A511 /* NatDialogController+StandardStyleBuilder.swift */,
 			);
 			path = Builders;
 			sourceTree = "<group>";
@@ -1619,7 +1622,7 @@
 			files = (
 				64DF47E123FB490200DAF441 /* TextFieldDelegate.swift in Sources */,
 				64B47D66240EFDA700E19797 /* PulseLayer.swift in Sources */,
-				84C1CABF249953440041A511 /* NatDialogController+StandardBuilder.swift in Sources */,
+				84C1CABF249953440041A511 /* NatDialogController+StandardStyleBuilder.swift in Sources */,
 				84692869248022EB008DF255 /* NaturaColorPaletteLight.swift in Sources */,
 				11581AAA238F04D8003E45D7 /* AssetsHelper.swift in Sources */,
 				84428F85245B044700D46611 /* TheBodyShopSpacing.swift in Sources */,
@@ -1816,6 +1819,7 @@
 				4395D1DF23FC71C400C7DC6F /* TabTests.swift in Sources */,
 				117FE029238DA4B70032E2AC /* NavigationDrawerSubitemCellTests.swift in Sources */,
 				84428F8A245B219700D46611 /* NaturaSpacing+Spec.swift in Sources */,
+				84C1CAC2249A49A40041A511 /* NatDialogController+StandardStyleBuilder+Spec.swift in Sources */,
 				8469285E247DAB69008DF255 /* NaturaFontLetterSpacings+Spec.swift in Sources */,
 				8469285C247DA8F7008DF255 /* TheBodyShopFontLetterSpacings+Spec.swift in Sources */,
 				8458A9932475C1E000BD8BC8 /* ButtonOutlinedStyle+Spec.swift in Sources */,

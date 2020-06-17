@@ -1,12 +1,12 @@
 extension NatDialogController {
-    public final class StandardBuilder {
+    public final class StandardStyleBuilder {
 
         // MARK: - Private properties
 
         private var titleView: UIView?
         private var bodyView: UIView?
-        private var primaryAction: ButtonConfiguration?
-        private var secondaryAction: ButtonConfiguration?
+        private var primaryButtonConfiguraton: ButtonConfiguration?
+        private var secondaryButtonConfiguraton: ButtonConfiguration?
 
         // MARK: - Public methods
 
@@ -34,13 +34,13 @@ extension NatDialogController {
         }
 
         public func configure(primaryTitle title: String, primaryAction action: @escaping () -> Void) -> Self {
-            primaryAction = .init(title: title, action: action)
+            primaryButtonConfiguraton = .init(title: title, action: action)
 
             return self
         }
 
         public func configure(secondaryTitle title: String, secondaryAction action: @escaping () -> Void) -> Self {
-            secondaryAction = .init(title: title, action: action)
+            secondaryButtonConfiguraton = .init(title: title, action: action)
 
             return self
         }
@@ -57,13 +57,13 @@ extension NatDialogController {
                 views.append(view)
             }
 
-            if let primaryAction = primaryAction {
+            if let primaryAction = primaryButtonConfiguraton {
                 let footerView = FooterView()
                 views.append(footerView)
 
                 footerView.configure(primaryButton: primaryAction)
 
-                if let secondaryAction = secondaryAction {
+                if let secondaryAction = secondaryButtonConfiguraton {
                     footerView.configure(secondaryButton: secondaryAction)
                 }
             }

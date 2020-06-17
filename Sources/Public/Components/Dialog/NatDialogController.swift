@@ -24,7 +24,7 @@ public final class NatDialogController: UIViewController {
     private let stackView: UIStackView = {
         let view = UIStackView()
         view.axis = .vertical
-        view.spacing = 16
+        view.spacing = getTheme().spacing.small
         view.translatesAutoresizingMaskIntoConstraints = false
 
         return view
@@ -40,6 +40,7 @@ public final class NatDialogController: UIViewController {
         views.forEach { stackView.addArrangedSubview($0) }
     }
 
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -49,9 +50,10 @@ public final class NatDialogController: UIViewController {
     private func setup() {
         modalPresentationStyle = .overCurrentContext
         modalTransitionStyle = .crossDissolve
-        
+
         let opacity = getTheme().opacities.opacity08
         view.backgroundColor = UIColor.black.withAlphaComponent(opacity)
+
         containerView.layer.cornerRadius = getTheme().borderRadius.medium
         containerView.backgroundColor = getTheme().colors.surface
 
@@ -62,8 +64,8 @@ public final class NatDialogController: UIViewController {
     }
 
     private func addConstraints() {
-        let minimumHeightConstraint = containerView.heightAnchor.constraint(equalToConstant: 100)
-        minimumHeightConstraint.priority = .defaultLow
+        let containerViewMinimumHeight = containerView.heightAnchor.constraint(equalToConstant: 100)
+        containerViewMinimumHeight.priority = .defaultLow
 
         NSLayoutConstraint.activate([
             containerView.topAnchor.constraint(greaterThanOrEqualTo: view.topAnchor, constant: 16),
@@ -73,7 +75,7 @@ public final class NatDialogController: UIViewController {
 
             containerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             containerView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            minimumHeightConstraint,
+            containerViewMinimumHeight,
 
             stackView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 16),
             stackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -NatSpacing.small),
@@ -83,6 +85,8 @@ public final class NatDialogController: UIViewController {
     }
 }
 
+// MARK: - Class properties
+
 extension NatDialogController {
-    public static var standardBuilder: StandardBuilder { .init() }
+    public static var standardStyleBuilder: StandardStyleBuilder { .init() }
 }
