@@ -64,23 +64,26 @@ public final class NatDialogController: UIViewController {
     }
 
     private func addConstraints() {
-        let containerViewMinimumHeight = containerView.heightAnchor.constraint(equalToConstant: 100)
-        containerViewMinimumHeight.priority = .defaultLow
+        let sideMargins = getTheme().spacing.small
+        let containerViewMinimumWidth = containerView.widthAnchor.constraint(greaterThanOrEqualToConstant: 300)
+        containerViewMinimumWidth.priority = .defaultHigh
+        let containerViewMinimumHeight = containerView.heightAnchor.constraint(greaterThanOrEqualToConstant: 80)
+        containerViewMinimumHeight.priority = .defaultHigh
 
         NSLayoutConstraint.activate([
-            containerView.topAnchor.constraint(greaterThanOrEqualTo: view.topAnchor, constant: 16),
-            containerView.trailingAnchor.constraint(lessThanOrEqualTo: view.trailingAnchor, constant: -16),
-            containerView.bottomAnchor.constraint(lessThanOrEqualTo: view.bottomAnchor, constant: -16),
-            containerView.leadingAnchor.constraint(greaterThanOrEqualTo: view.leadingAnchor, constant: 16),
+            containerView.trailingAnchor.constraint(lessThanOrEqualTo: view.trailingAnchor, constant: -sideMargins),
+            containerView.leadingAnchor.constraint(greaterThanOrEqualTo: view.leadingAnchor, constant: sideMargins),
+            containerView.heightAnchor.constraint(lessThanOrEqualTo: view.heightAnchor, multiplier: 0.7),
 
             containerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             containerView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            containerViewMinimumWidth,
             containerViewMinimumHeight,
 
-            stackView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 16),
-            stackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -NatSpacing.small),
-            stackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -16),
-            stackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: NatSpacing.small)
+            stackView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: sideMargins),
+            stackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -sideMargins),
+            stackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -sideMargins),
+            stackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: sideMargins)
         ])
     }
 }

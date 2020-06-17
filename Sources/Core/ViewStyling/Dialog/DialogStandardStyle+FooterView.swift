@@ -111,9 +111,9 @@ extension DialogStandardStyle {
 
         private func addConstraints() {
             NSLayoutConstraint.activate([
-                stackView.topAnchor.constraint(greaterThanOrEqualTo: topAnchor),
+                stackView.topAnchor.constraint(equalTo: topAnchor),
                 stackView.trailingAnchor.constraint(equalTo: trailingAnchor),
-                stackView.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor),
+                stackView.bottomAnchor.constraint(equalTo: bottomAnchor),
                 stackView.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor)
             ])
         }

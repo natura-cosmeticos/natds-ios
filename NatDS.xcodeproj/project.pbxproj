@@ -211,6 +211,7 @@
 		84C1CAC4249A80E40041A511 /* DialogStandardStyle+TitleView+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C1CAC3249A80E40041A511 /* DialogStandardStyle+TitleView+Spec.swift */; };
 		84C1CAC9249A89430041A511 /* DialogStandardStyle+BodyView+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C1CAC8249A89430041A511 /* DialogStandardStyle+BodyView+Spec.swift */; };
 		84C1CACB249A8AB00041A511 /* DialogStandardStyle+FooterView+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C1CACA249A8AB00041A511 /* DialogStandardStyle+FooterView+Spec.swift */; };
+		84C1CACE249A93940041A511 /* NatDialogController+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C1CACD249A93940041A511 /* NatDialogController+Snapshot+Tests.swift */; };
 		84C24DA6246F3DE40046833B /* NatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C24DA5246F3DE40046833B /* NatButton.swift */; };
 		84EE85E9245A0FB20009293A /* NatSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE85E8245A0FB20009293A /* NatSpacing.swift */; };
 		A9325A6623FB34EC0023979C /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9325A6523FB34EC0023979C /* UICollectionView+Reusable.swift */; };
@@ -448,6 +449,7 @@
 		84C1CAC3249A80E40041A511 /* DialogStandardStyle+TitleView+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DialogStandardStyle+TitleView+Spec.swift"; sourceTree = "<group>"; };
 		84C1CAC8249A89430041A511 /* DialogStandardStyle+BodyView+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DialogStandardStyle+BodyView+Spec.swift"; sourceTree = "<group>"; };
 		84C1CACA249A8AB00041A511 /* DialogStandardStyle+FooterView+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DialogStandardStyle+FooterView+Spec.swift"; sourceTree = "<group>"; };
+		84C1CACD249A93940041A511 /* NatDialogController+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogController+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		84C24DA5246F3DE40046833B /* NatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatButton.swift; sourceTree = "<group>"; };
 		84EE85E8245A0FB20009293A /* NatSpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatSpacing.swift; sourceTree = "<group>"; };
 		9A46395C038D4497A880A6FF /* Pods-NatDSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatDSTests.release.xcconfig"; path = "Target Support Files/Pods-NatDSTests/Pods-NatDSTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -1096,6 +1098,7 @@
 		845D9EF2244DE16C003598B0 /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				84C1CACC249A93460041A511 /* SnapShot */,
 				8427A2B2244F78CA00CF30D5 /* DesignSystem+Spec.swift */,
 				117FE027238DA4760032E2AC /* Components */,
 				117FE00C238D9AEB0032E2AC /* DesignTokens */,
@@ -1331,6 +1334,14 @@
 				84C1CACA249A8AB00041A511 /* DialogStandardStyle+FooterView+Spec.swift */,
 			);
 			path = Dialog;
+			sourceTree = "<group>";
+		};
+		84C1CACC249A93460041A511 /* SnapShot */ = {
+			isa = PBXGroup;
+			children = (
+				84C1CACD249A93940041A511 /* NatDialogController+Snapshot+Tests.swift */,
+			);
+			path = SnapShot;
 			sourceTree = "<group>";
 		};
 		84EE85E5245A0E970009293A /* DeprecatedWillBeRemoved */ = {
@@ -1850,6 +1861,7 @@
 				84BFB673246DF82800506ED1 /* ElevationAttributes+Equitable.swift in Sources */,
 				84BFB61C2469810600506ED1 /* UIFont+GetWeight.swift in Sources */,
 				A9CBAD8523CE535300A46CB2 /* IconTests.swift in Sources */,
+				84C1CACE249A93940041A511 /* NatDialogController+Snapshot+Tests.swift in Sources */,
 				4395D1DF23FC71C400C7DC6F /* TabTests.swift in Sources */,
 				117FE029238DA4B70032E2AC /* NavigationDrawerSubitemCellTests.swift in Sources */,
 				84428F8A245B219700D46611 /* NaturaSpacing+Spec.swift in Sources */,

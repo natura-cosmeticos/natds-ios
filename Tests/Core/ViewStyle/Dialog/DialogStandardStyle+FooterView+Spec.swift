@@ -30,7 +30,7 @@ final class DialogStandardStyleFooterViewSpec: QuickSpec {
             beforeEach {
                 let configuration = NatDialogController.ButtonConfiguration(
                     title: "StubText",
-                    action: { }
+                    action: {}
                 )
                 systemUnderTest.configure(primaryButton: configuration)
             }
@@ -46,7 +46,7 @@ final class DialogStandardStyleFooterViewSpec: QuickSpec {
             beforeEach {
                 let configuration = NatDialogController.ButtonConfiguration(
                     title: "StubText",
-                    action: { }
+                    action: {}
                 )
                 systemUnderTest.configure(secondaryButton: configuration)
             }
