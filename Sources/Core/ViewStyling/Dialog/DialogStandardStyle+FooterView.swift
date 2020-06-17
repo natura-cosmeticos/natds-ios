@@ -1,7 +1,8 @@
 private typealias ActionHandler = () -> Void
 
-extension NatDialogController {
+extension DialogStandardStyle {
     final class FooterView: UIView {
+
         // MARK: - Private properties
 
         private let stackView: UIStackView = {
@@ -60,27 +61,28 @@ extension NatDialogController {
 
         // MARK: - Public methods
 
-        func configure(primaryButton configuration: ButtonConfiguration) {
+        func configure(primaryButton configuration: NatDialogController.ButtonConfiguration) {
             primaryButtonActionHandler = configuration.action
 
             let button = NatButton(style: .contained)
             button.configure(title: configuration.title)
             button.addTarget(self, action: #selector(primaryActionHandler), for: .touchUpInside)
-            button.translatesAutoresizingMaskIntoConstraints = false
-
-            stackView.insertArrangedSubview(button, at: 0)
-
-            NSLayoutConstraint.activate([
-                button.heightAnchor.constraint(equalToConstant: NatButton.Height.medium)
-            ])
+            setupButton(button: button)
         }
 
-        func configure(secondaryButton configuration: ButtonConfiguration) {
+        func configure(secondaryButton configuration: NatDialogController.ButtonConfiguration) {
             secondaryButtonActionHandler = configuration.action
 
             let button = NatButton(style: .text)
             button.configure(title: configuration.title)
             button.addTarget(self, action: #selector(secondaryActionHandler), for: .touchUpInside)
+
+            setupButton(button: button)
+        }
+
+        // MARK: - Private methods
+
+        private func setupButton(button: NatButton) {
             button.translatesAutoresizingMaskIntoConstraints = false
 
             stackView.insertArrangedSubview(button, at: 0)
@@ -89,8 +91,6 @@ extension NatDialogController {
                 button.heightAnchor.constraint(equalToConstant: NatButton.Height.medium)
             ])
         }
-
-        // MARK: - Private methods
 
         private func setup() {
             NotificationCenter.default.addObserver(

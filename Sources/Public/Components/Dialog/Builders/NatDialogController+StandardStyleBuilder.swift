@@ -11,16 +11,16 @@ extension NatDialogController {
         // MARK: - Public methods
 
         public func configure(title: String) -> Self {
-            let view = TitleView()
-            view.set(title: title)
+            let view = DialogStandardStyle.TitleView()
+            view.configure(title: title)
             titleView = view
 
             return self
         }
 
         public func configure(body: String) -> Self {
-            let view = BodyView()
-            view.set(body: body)
+            let view = DialogStandardStyle.BodyView()
+            view.configure(body: body)
 
             bodyView = view
 
@@ -58,7 +58,7 @@ extension NatDialogController {
             }
 
             if let primaryAction = primaryButtonConfiguraton {
-                let footerView = FooterView()
+                let footerView = DialogStandardStyle.FooterView()
                 views.append(footerView)
 
                 footerView.configure(primaryButton: primaryAction)

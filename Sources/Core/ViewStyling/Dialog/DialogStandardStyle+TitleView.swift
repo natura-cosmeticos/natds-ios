@@ -1,9 +1,13 @@
-extension NatDialogController {
-    final class BodyView: UIView {
+final class DialogStandardStyle {}
+
+extension DialogStandardStyle {
+    final class TitleView: UIView {
+
+        // MARK: - Private properties
+
         private let label: UILabel = {
             let label = UILabel()
-            label.numberOfLines = 0
-            label.font = NatFonts.font(ofSize: .body1, withWeight: .regular)
+            label.font = NatFonts.font(ofSize: .heading6, withWeight: .medium)
             label.translatesAutoresizingMaskIntoConstraints = false
 
             return label
@@ -23,8 +27,8 @@ extension NatDialogController {
 
         // MARK: - Public methods
 
-        func set(body: String) {
-            label.attributedText = createTextForTitle(text: body, withColor: getTheme().colors.highEmphasis)
+        func configure(title: String) {
+            label.attributedText = createTextForTitle(text: title, withColor: getTheme().colors.highEmphasis)
         }
 
         // MARK: - Private methods
@@ -33,7 +37,7 @@ extension NatDialogController {
             let attributedString = NSMutableAttributedString(string: text)
             attributedString.apply(foregroundColor: color)
 
-            let value = getTheme().font.letterSpacings.body1
+            let value = getTheme().font.letterSpacings.heading6
             attributedString.apply(kernValue: value)
 
             return attributedString

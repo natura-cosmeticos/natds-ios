@@ -24,7 +24,7 @@ final class NatDialogControllerStandardStyleBuilderSpec: QuickSpec {
 
                 let containerView = natDialogController.view.subviews.first
                 let stackView = containerView?.subviews.first
-                let expectedView = stackView?.subviews.first as? NatDialogController.TitleView
+                let expectedView = stackView?.subviews.first as? DialogStandardStyle.TitleView
 
                 expect(expectedView).toNot(beNil())
             }
@@ -40,7 +40,7 @@ final class NatDialogControllerStandardStyleBuilderSpec: QuickSpec {
             it("sets bodyView") {
                 let containerView = natDialogController.view.subviews.first
                 let stackView = containerView?.subviews.first
-                let expectedView = stackView?.subviews.first as? NatDialogController.BodyView
+                let expectedView = stackView?.subviews.first as? DialogStandardStyle.BodyView
 
                 expect(expectedView).toNot(beNil())
             }
@@ -74,23 +74,24 @@ final class NatDialogControllerStandardStyleBuilderSpec: QuickSpec {
             it("sets footerView") {
                 let containerView = natDialogController.view.subviews.first
                 let stackView = containerView?.subviews.first
-                let expectedView = stackView?.subviews.first as? NatDialogController.FooterView
+                let expectedView = stackView?.subviews.first as? DialogStandardStyle.FooterView
 
                 expect(expectedView).toNot(beNil())
             }
         }
 
-        describe("#configure(primaryTitle: String, primaryAction: @escaping () -> Void)") {
+        describe("#configure(secondaryTitle: String, secondaryction: @escaping () -> Void)") {
             beforeEach {
                 natDialogController = systemUnderTest
                     .configure(secondaryTitle: "StubText") { }
                     .build()
             }
 
-            it("only sets footerView if has a primaryButtonConfiguration") {
+            it("sets footerView only if has a primaryButtonConfiguration seted first") {
                 let containerView = natDialogController.view.subviews.first
                 let stackView = containerView?.subviews.first
-                let expectedView = stackView?.subviews.first as? NatDialogController.FooterView
+                let expectedView = stackView?.subviews.first as? DialogStandardStyle.FooterView
+
                 expect(expectedView).to(beNil())
             }
         }
