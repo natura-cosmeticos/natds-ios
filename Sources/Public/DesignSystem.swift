@@ -17,7 +17,7 @@
         It's necessary to configure the Design System current Brand first
         or fatalError will be raised.
 
-            DesisgnSystem().configure(with: Brand)
+            DesignSystem().configure(with: Brand)
 */
 
 public final class DesignSystem {
