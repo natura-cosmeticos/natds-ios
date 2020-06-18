@@ -55,7 +55,7 @@ final class DialogItemViewController: UIViewController, SampleItem {
             .standardStyleBuilder
             .configure(title: "Title")
             .configure(body: "Contrary to popular belief, Lorem Ipsum is not simply random text.")
-            .configure(primaryButtonTitle: "Compartilhar Revista") {
+            .configure(primaryButtonTitle: "Confirm") {
                 self.navigationController?.presentedViewController?.dismiss(animated: true)
             }
             .configure(secondaryButtonTitle: "Close") {
