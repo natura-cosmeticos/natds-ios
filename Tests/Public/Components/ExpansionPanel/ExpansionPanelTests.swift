@@ -14,7 +14,6 @@ class ExpansionPanelTests: FBSnapshotTestCase {
     }
 
     func test_defaultInit_hasValidSnapshot() {
-        recordMode = true
         FBSnapshotVerifyView(sut)
     }
 
