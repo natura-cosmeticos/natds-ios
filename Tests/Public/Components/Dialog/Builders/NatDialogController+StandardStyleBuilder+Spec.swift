@@ -87,7 +87,7 @@ final class NatDialogControllerStandardStyleBuilderSpec: QuickSpec {
                     .build()
             }
 
-            it("sets footerView only if has a primaryButtonConfiguration seted first") {
+            it("sets footerView only if has a primaryButtonConfiguration set first") {
                 let containerView = natDialogController.view.subviews.first
                 let stackView = containerView?.subviews.first
                 let expectedView = stackView?.subviews.first as? DialogStandardStyle.FooterView
