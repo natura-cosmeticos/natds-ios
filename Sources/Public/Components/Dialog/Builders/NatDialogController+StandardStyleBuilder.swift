@@ -5,8 +5,8 @@ extension NatDialogController {
 
         private var titleView: UIView?
         private var bodyView: UIView?
-        private var primaryButtonConfiguraton: ButtonConfiguration?
-        private var secondaryButtonConfiguraton: ButtonConfiguration?
+        private var primaryButtonConfiguration: ButtonConfiguration?
+        private var secondaryButtonConfiguration: ButtonConfiguration?
 
         // MARK: - Public methods
 
@@ -33,14 +33,14 @@ extension NatDialogController {
             return self
         }
 
-        public func configure(primaryTitle title: String, primaryAction action: @escaping () -> Void) -> Self {
-            primaryButtonConfiguraton = .init(title: title, action: action)
+        public func configure(primaryButtonTitle title: String, withAction action: @escaping () -> Void) -> Self {
+            primaryButtonConfiguration = .init(title: title, action: action)
 
             return self
         }
 
-        public func configure(secondaryTitle title: String, secondaryAction action: @escaping () -> Void) -> Self {
-            secondaryButtonConfiguraton = .init(title: title, action: action)
+        public func configure(secondaryButtonTitle title: String, withAction action: @escaping () -> Void) -> Self {
+            secondaryButtonConfiguration = .init(title: title, action: action)
 
             return self
         }
@@ -57,13 +57,13 @@ extension NatDialogController {
                 views.append(view)
             }
 
-            if let primaryAction = primaryButtonConfiguraton {
+            if let primaryAction = primaryButtonConfiguration {
                 let footerView = DialogStandardStyle.FooterView()
                 views.append(footerView)
 
                 footerView.configure(primaryButton: primaryAction)
 
-                if let secondaryAction = secondaryButtonConfiguraton {
+                if let secondaryAction = secondaryButtonConfiguration {
                     footerView.configure(secondaryButton: secondaryAction)
                 }
             }

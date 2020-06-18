@@ -14,15 +14,37 @@ class NatDialogControllerSnapshotTests: FBSnapshotTestCase {
 
     }
 
-    func test_natDialog_style_standard_hasValidSnapshot() {
+    func test_dialog_minimum_contraints_for_size_hasValidSnapshot() {
+        let systemUnderTest = NatDialogController(views: [])
+
+        superview.addSubview(systemUnderTest.view)
+
+        FBSnapshotVerifyView(superview)
+    }
+
+    func test_dialog_style_standard_hasValidSnapshot() {
         let systemUnderTest = NatDialogController
             .standardStyleBuilder
             .configure(title: "Title")
             .configure(body: "Some body text to make a snapshot text without think about the future.")
-            .configure(primaryTitle: "Primary", primaryAction: {})
-            .configure(secondaryTitle: "Secondary", secondaryAction: {})
+            .configure(primaryButtonTitle: "Primary", withAction: {})
+            .configure(secondaryButtonTitle: "Secondary", withAction: {})
             .build()
-        
+
+        superview.addSubview(systemUnderTest.view)
+
+        FBSnapshotVerifyView(superview)
+    }
+
+    func test_dialog_style_standard_with_vertical_buttons_hasValidSnapshot() {
+        let systemUnderTest = NatDialogController
+            .standardStyleBuilder
+            .configure(title: "Title")
+            .configure(body: "Some body text to make a snapshot text without think about the future.")
+            .configure(primaryButtonTitle: "Primary big big title", withAction: {})
+            .configure(secondaryButtonTitle: "Secondary", withAction: {})
+            .build()
+
         superview.addSubview(systemUnderTest.view)
 
         FBSnapshotVerifyView(superview)

@@ -5,11 +5,12 @@ import UIKit
   The colors changes according with the current Brand configured in the Design system
   and according with user properties of Light and Dark mode.
 
-    Aviable styles:
+    Available styles:
     - Standard
     - Alert(Development)
 
-    To create and configure Dialogs it's necessary use via Dialog Builders this builds are aviable as class properties,
+    To create and configure Dialogs it's necessary use via Dialog Builders this builds are available as class
+    properties,
      Example of usage:
 
         let dialog = NatDialogController
@@ -18,7 +19,7 @@ import UIKit
         .build()
 
  - Requires:
-        It's necessary to configure the Design System current Brand at DesisgnSystem class
+        It's necessary to configure the Design System current Brand at DesignSystem class
         or fatalError will be raised.
 
             DesignSystem().configure(with: Brand)
@@ -108,7 +109,7 @@ extension NatDialogController {
     /**
       Class property to access StandardStyleBuilder.
 
-        Aviable elements to configure:
+        Available elements to configure:
         - Title
         - Body
         - Primary Button
@@ -124,7 +125,7 @@ extension NatDialogController {
             .build()
 
      - Requires:
-            It's necessary to configure the Design System current Brand at DesisgnSystem class
+            It's necessary to configure the Design System current Brand at DesignSystem class
             or fatalError will be raised.
 
                 DesignSystem().configure(with: Brand)

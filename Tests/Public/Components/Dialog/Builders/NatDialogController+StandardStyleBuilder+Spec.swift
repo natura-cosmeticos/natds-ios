@@ -64,10 +64,10 @@ final class NatDialogControllerStandardStyleBuilderSpec: QuickSpec {
             }
         }
 
-        describe("#configure(primaryTitle: String, primaryAction: @escaping () -> Void)") {
+        describe("#configure(primaryButtonTitle: String, withAction: @escaping () -> Void)") {
             beforeEach {
                 natDialogController = systemUnderTest
-                    .configure(primaryTitle: "StubText") { }
+                    .configure(primaryButtonTitle: "StubText") { }
                     .build()
             }
 
@@ -80,10 +80,10 @@ final class NatDialogControllerStandardStyleBuilderSpec: QuickSpec {
             }
         }
 
-        describe("#configure(secondaryTitle: String, secondaryction: @escaping () -> Void)") {
+        describe("#configure(secondaryButtonTitle: String, withAction: @escaping () -> Void)") {
             beforeEach {
                 natDialogController = systemUnderTest
-                    .configure(secondaryTitle: "StubText") { }
+                    .configure(secondaryButtonTitle: "StubText") { }
                     .build()
             }
 

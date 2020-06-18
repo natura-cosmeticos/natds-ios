@@ -1,5 +1,3 @@
-final class DialogStandardStyle {}
-
 extension DialogStandardStyle {
     final class TitleView: UIView {
 
@@ -21,6 +19,7 @@ extension DialogStandardStyle {
             setup()
         }
 
+        @available(*, unavailable)
         required init?(coder: NSCoder) {
             fatalError("init(coder:) has not been implemented")
         }

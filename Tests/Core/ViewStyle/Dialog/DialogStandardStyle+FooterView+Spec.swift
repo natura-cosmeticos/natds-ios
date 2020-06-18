@@ -35,7 +35,7 @@ final class DialogStandardStyleFooterViewSpec: QuickSpec {
                 systemUnderTest.configure(primaryButton: configuration)
             }
 
-            it("it sets a button to stackView") {
+            it("sets a button to stackView") {
                 let expectedView = systemUnderTest.subviews.first as? UIStackView
 
                 expect(expectedView?.subviews.count).to(equal(1))
@@ -51,7 +51,7 @@ final class DialogStandardStyleFooterViewSpec: QuickSpec {
                 systemUnderTest.configure(secondaryButton: configuration)
             }
 
-            it("it sets a button to stackView") {
+            it("sets a button to stackView") {
                 let expectedView = systemUnderTest.subviews.first as? UIStackView
 
                 expect(expectedView?.subviews.count).to(equal(1))
