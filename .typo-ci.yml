@@ -1,0 +1,12 @@
+dictionaries:
+  - en
+excluded_files:
+  - ".typo-ci.yml"
+excluded_words:
+  - Inits
+  - isa
+  - nat
+  - natDialogController
+  - natura
+  - objc
+  - pbxproj
