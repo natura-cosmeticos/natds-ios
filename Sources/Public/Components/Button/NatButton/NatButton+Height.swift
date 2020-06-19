@@ -4,7 +4,7 @@ extension NatButton {
 
         These are all sizes allowed for a NatButton:
         - small
-        - medium
+        - medium (should be default)
         - large
 
         usage example:

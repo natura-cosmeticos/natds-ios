@@ -4,13 +4,13 @@ extension NatButton {
 
         These are all edgeInsets allowed for a NatButton:
         - small
-        - medium
+        - medium (default)
         - large
 
         usage example:
 
             let button = NatButton(style: .contained)
-            button.contentEdgeInsets = .small
+            button.contentEdgeInsets = NatButton.EdgeInsets.medium
 
      - Requires:
             It's necessary to configure the Design System current Brand at DesignSystem class
@@ -20,9 +20,9 @@ extension NatButton {
     */
 
     public enum EdgeInsets {
-        public static var small: UIEdgeInsets { .init(spacing: getTheme().spacing.small) }
-        public static var medium: UIEdgeInsets { .init(spacing: getTheme().spacing.small) }
-        public static var large: UIEdgeInsets { .init(spacing: getTheme().spacing.small) }
+        public static var small: UIEdgeInsets { .init(spacing: 8) }
+        public static var medium: UIEdgeInsets { .init(spacing: 12) }
+        public static var large: UIEdgeInsets { .init(spacing: 16) }
     }
 }
 
