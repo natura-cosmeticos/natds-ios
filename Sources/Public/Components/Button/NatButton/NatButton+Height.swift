@@ -2,7 +2,7 @@ extension NatButton {
     /**
       Height is a enum that represents height values for the button component.
 
-        This is all sizes allowed for a NatButton:
+        These are all sizes allowed for a NatButton:
         - small
         - medium
         - large
