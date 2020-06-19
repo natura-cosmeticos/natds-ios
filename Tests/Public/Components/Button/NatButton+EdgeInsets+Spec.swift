@@ -3,7 +3,7 @@ import Nimble
 
 @testable import NatDS
 
-final class NatButtonEdgeInsetstSpec: QuickSpec {
+final class NatButtonEdgeInsetsSpec: QuickSpec {
     override func spec() {
         let systemUnderTest = NatButton.EdgeInsets.self
 
