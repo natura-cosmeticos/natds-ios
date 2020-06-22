@@ -14,7 +14,7 @@ class NatDialogControllerSnapshotTests: FBSnapshotTestCase {
 
     }
 
-    func test_dialog_minimum_contraints_for_size_hasValidSnapshot() {
+    func test_dialog_minimum_constraints_for_size_hasValidSnapshot() {
         let systemUnderTest = NatDialogController(views: [])
 
         superview.addSubview(systemUnderTest.view)
