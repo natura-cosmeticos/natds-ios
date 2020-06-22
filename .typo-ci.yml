@@ -2,6 +2,8 @@ dictionaries:
   - en
 excluded_files:
   - ".typo-ci.yml"
+  - "NatDS.xcodeproj/project.pbxproj"
+  - "SampleApp/NatDS-SampleApp.xcodeproj/project.pbxproj"
 excluded_words:
   - Inits
   - isa
