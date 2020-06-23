@@ -134,7 +134,7 @@ class ExpansionPanelTests: FBSnapshotTestCase {
         FBSnapshotVerifyView(view)
     }
 
-    func test_tapPanelToCollapse_whenSetDetailView_AndPanelIsExpanded_showsButtonPointingUp_AndDetailView() {
+    func test_tapPanelToCollapse_whenSetDetailView_AndPanelIsExpanded_showsButtonPointingDown() {
         let view = addsOnViewLargeHeight()
         sut.setDetailView(detailMock)
         tapPanel()
@@ -144,7 +144,7 @@ class ExpansionPanelTests: FBSnapshotTestCase {
         FBSnapshotVerifyView(view)
     }
 
-    func test_removeDetailView_AndPanelIsExpanded_showsButtonPointingUp_AndDetailView() {
+    func test_removeDetailView_AndPanelIsExpanded_showsButtonPointingDown() {
         let view = addsOnViewLargeHeight()
         sut.setDetailView(detailMock)
         tapPanel()
