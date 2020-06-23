@@ -19,7 +19,6 @@ class ExpansionPanelTests: FBSnapshotTestCase {
         sut = ExpansionPanel(viewAnimating: viewAnimatingMock)
         sut.setSubtitle(subtitle)
         sut.layoutIfNeeded()
-
     }
 
     func test_defaultInit_hasValidSnapshot() {
