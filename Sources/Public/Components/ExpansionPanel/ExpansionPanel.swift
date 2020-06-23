@@ -10,16 +10,26 @@ public class ExpansionPanel: UIView {
         return label
     }()
 
-    private lazy var arrowButton: UIButton = {
+    private lazy var upDownButton: UIButton = {
         let button = UIButton(type: .system)
         button.tintColor = Colors.Content.highEmphasis
         button.titleLabel?.font = .iconFont(ofSize: 18.0)
         button.setTitle(Icon.outlinedNavigationArrowbottom.unicode, for: .normal)
         button.layer.cornerRadius = 9.0
+        button.addTarget(self, action: #selector(didTapUpDownButton), for: .touchUpInside)
         return button
     }()
 
-    init() {
+    private let viewAnimating: ViewAnimating
+
+    public init() {
+        self.viewAnimating = ViewAnimatingWrapper()
+        super.init(frame: .zero)
+        setup()
+    }
+
+    init(viewAnimating: ViewAnimating) {
+        self.viewAnimating = viewAnimating
         super.init(frame: .zero)
         setup()
     }
@@ -41,7 +51,7 @@ public class ExpansionPanel: UIView {
 
     private func addSubviews() {
         addSubview(subtitleLabel)
-        addSubview(arrowButton)
+        addSubview(upDownButton)
     }
 
     private func setLayout() {
@@ -50,7 +60,7 @@ public class ExpansionPanel: UIView {
             heightAnchor.constraint(equalToConstant: 64)
         ])
         setSubtitleLabelLayout()
-        setArrowButtonLayout()
+        setUpDownButtonLayout()
     }
 
     private func setSubtitleLabelLayout() {
@@ -59,18 +69,40 @@ public class ExpansionPanel: UIView {
             subtitleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24),
             subtitleLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
             subtitleLabel.heightAnchor.constraint(equalToConstant: 21),
-            subtitleLabel.trailingAnchor.constraint(equalTo: arrowButton.leadingAnchor, constant: -16)
+            subtitleLabel.trailingAnchor.constraint(equalTo: upDownButton.leadingAnchor, constant: -16)
         ])
     }
 
-    private func setArrowButtonLayout() {
-        arrowButton.translatesAutoresizingMaskIntoConstraints = false
+    private func setUpDownButtonLayout() {
+        upDownButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            arrowButton.widthAnchor.constraint(equalToConstant: 18),
-            arrowButton.heightAnchor.constraint(equalToConstant: 18),
-            arrowButton.centerYAnchor.constraint(equalTo: centerYAnchor),
-            arrowButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16)
+            upDownButton.widthAnchor.constraint(equalToConstant: 18),
+            upDownButton.heightAnchor.constraint(equalToConstant: 18),
+            upDownButton.centerYAnchor.constraint(equalTo: centerYAnchor),
+            upDownButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16)
         ])
+    }
+
+    @objc private func didTapUpDownButton() {
+        if upDownButton.transform == CGAffineTransform.identity {
+            rotateButtonUp()
+        } else {
+            rotateButtonDown()
+        }
+    }
+
+    private func rotateButtonUp() {
+        viewAnimating.animate(withDuration: 0.7) {
+            self.upDownButton.transform = CGAffineTransform(rotationAngle: .pi)
+        }
+    }
+
+    private func rotateButtonDown() {
+        viewAnimating.animate(withDuration: 0.7, animations: {
+            self.upDownButton.transform = CGAffineTransform(rotationAngle: .pi * -2.0)
+        }, completion: { (_) in
+            self.upDownButton.transform = CGAffineTransform.identity
+        })
     }
 
 }
