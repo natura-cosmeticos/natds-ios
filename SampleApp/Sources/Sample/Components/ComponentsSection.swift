@@ -8,6 +8,7 @@ class ComponentsSection: SampleSection {
         TextFieldItemViewController.self,
         ValueTextHighlightItemViewController.self,
         ButtonsItemViewController.self,
+        DialogItemViewController.self,
         IconographyItemViewController.self,
         NavigationDrawerItemViewController.self,
         DividerViewController.self,

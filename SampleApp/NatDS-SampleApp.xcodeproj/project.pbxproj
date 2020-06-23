@@ -19,6 +19,7 @@
 		542BBE6C15A7E0C25DD69346A43430B0 /* ColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C4E23EBB1B07DF334BBA42C272EBB /* ColorsViewController.swift */; };
 		DF627B5ABA0E7336C4F3554132159A83 /* ComponentsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B703332C6994E56C229AEDFFD1B5EB /* ComponentsSection.swift */; };
 		DC40596AEA7EE184F0A1BCD2F3BFF7FC /* DesignSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729810E32083E04163C749DCF3552FA6 /* DesignSection.swift */; };
+		6B065E9FA8AEAD33D6341DB8C671D74C /* DialogItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6AF03A3D6B2368E721CAB74F2424A /* DialogItemViewController.swift */; };
 		B14E0B8A51D237CFBA1AD574ED6EC10C /* DividerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F657058E049073E0255E8EE6ED2580B /* DividerViewController.swift */; };
 		D10339C459C644B3172B6106B51A961C /* ElevationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBBC99CEDEAD9957C2FDFCDCF340E4 /* ElevationCell.swift */; };
 		04AA815DDD6F9388F3A1010428342BBB /* ElevationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCC7C3B8819A99402107EA24F698A53 /* ElevationViewController.swift */; };
@@ -74,10 +75,11 @@
 		845C4E23EBB1B07DF334BBA42C272EBB /* ColorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsViewController.swift; sourceTree = "<group>"; };
 		62B703332C6994E56C229AEDFFD1B5EB /* ComponentsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentsSection.swift; sourceTree = "<group>"; };
 		729810E32083E04163C749DCF3552FA6 /* DesignSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSection.swift; sourceTree = "<group>"; };
+		CBF6AF03A3D6B2368E721CAB74F2424A /* DialogItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogItemViewController.swift; sourceTree = "<group>"; };
 		9F657058E049073E0255E8EE6ED2580B /* DividerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerViewController.swift; sourceTree = "<group>"; };
 		4CBBBC99CEDEAD9957C2FDFCDCF340E4 /* ElevationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevationCell.swift; sourceTree = "<group>"; };
 		BFCC7C3B8819A99402107EA24F698A53 /* ElevationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevationViewController.swift; sourceTree = "<group>"; };
-		BAE1310620FE9C1F53F4420EEBB52174 /* ExpansionPanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionPanelViewController.swift; sourceTree = "<group>"; };
+		BAE1310620FE9C1F53F4420EEBB52174 /* ExpansionPanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpansionPanelViewController.swift; sourceTree = "<group>"; };
 		C7FBDBE3AD8777A865F1B1E40859758D /* IconCollectioViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCollectioViewCell.swift; sourceTree = "<group>"; };
 		3336D64DBE111BD9CEB3EAF55A72897A /* IconographyItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconographyItemViewController.swift; sourceTree = "<group>"; };
 		35E9FC28C9F42A1770BF5C6983ECF749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -113,153 +115,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00BA79FB1659D007DB8720B65080C439 /* Dialog */ = {
+			isa = PBXGroup;
+			children = (
+				CBF6AF03A3D6B2368E721CAB74F2424A /* DialogItemViewController.swift */,
+			);
+			path = Dialog;
+			sourceTree = "<group>";
+		};
+		0F9EB0B48CDC91FB1CA02458F9570578 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2D71CBBDDF4F8308F1C24A8F907CBE25 /* NatDS-SampleApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		DFD5C58E6C019591057F6663EFBBA044 /* ExpansionPanel */ = {
 			isa = PBXGroup;
 			children = (
 				BAE1310620FE9C1F53F4420EEBB52174 /* ExpansionPanelViewController.swift */,
 			);
 			path = ExpansionPanel;
-			sourceTree = "<group>";
-		};
-		D8DBFA16188C4BCC7FE097B676C32FF8 /* Bar */ = {
-			isa = PBXGroup;
-			children = (
-				F65EAA4E8148EBDC96E68E9E054CED31 /* AppBarViewController.swift */,
-			);
-			path = Bar;
-			sourceTree = "<group>";
-		};
-		D2D202BFFC95DC39B94A26A5FB172483 /* Divider */ = {
-			isa = PBXGroup;
-			children = (
-				9F657058E049073E0255E8EE6ED2580B /* DividerViewController.swift */,
-			);
-			path = Divider;
-			sourceTree = "<group>";
-		};
-		C420063DEF581D12DAA6D31645B6B382 /* Tab */ = {
-			isa = PBXGroup;
-			children = (
-				8AD6BDA39D2DFA18294278D33A054F9B /* TabItemViewController.swift */,
-			);
-			path = Tab;
-			sourceTree = "<group>";
-		};
-		C1D1F3FC973CC3D14F86C680F200601D /* ValueText */ = {
-			isa = PBXGroup;
-			children = (
-				3ECE4EA4030547C9B71419A660386C4A /* ValueTextHighlightItemViewController.swift */,
-			);
-			path = ValueText;
-			sourceTree = "<group>";
-		};
-		FE7854E68C30109D4B2988E1E01AE179 /* Field */ = {
-			isa = PBXGroup;
-			children = (
-				B02CD4C57B8F31F4FB76CB430C3A9F39 /* TextFieldItemViewController.swift */,
-			);
-			path = Field;
-			sourceTree = "<group>";
-		};
-		C216B869C49B98316C79CC628A4C9017 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				FD277263F8F3EE00B21A0DE2E9849D97 /* ColorsCell.swift */,
-				5DF7BFDAFFA13841520A52D2EDE5400D /* ColorsHeaderView.swift */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		B2720C821B540A7F455BED15A98C6755 /* Size */ = {
-			isa = PBXGroup;
-			children = (
-				AD7153C6722DD4818645E5ADE1A5C8D3 /* Cells */,
-				6CCE6B3ED45C1E81094E9B4DDAB9D1EC /* SizeViewController.swift */,
-			);
-			path = Size;
-			sourceTree = "<group>";
-		};
-		AD7153C6722DD4818645E5ADE1A5C8D3 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				D6931A5C475B8907A39E71B99395C70C /* SizeCell.swift */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		3D9C41A89DFFF420774C67EFCF601A6A /* BorderRadius */ = {
-			isa = PBXGroup;
-			children = (
-				B936FD4AAF4E6441617F194A597367DD /* Cells */,
-				C3ECCCD44B56293C5FBF0660526ABA56 /* BorderRadiusViewController.swift */,
-			);
-			path = BorderRadius;
-			sourceTree = "<group>";
-		};
-		B936FD4AAF4E6441617F194A597367DD /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				9D0DC29437C7F5B9950A6FDE4E0E7786 /* BorderRadiusCell.swift */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		E87CB56433DA6E5473F5C6B643789BA6 /* Opacity */ = {
-			isa = PBXGroup;
-			children = (
-				36ED2BCB248D0370832F458C8819AED3 /* Cells */,
-				1E864ED7BB360AA6C6091D7E1053A5ED /* OpacityViewController.swift */,
-			);
-			path = Opacity;
-			sourceTree = "<group>";
-		};
-		36ED2BCB248D0370832F458C8819AED3 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				D79F005407CCF54F38930570D9BE50EA /* OpacityCell.swift */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		A4B0AFA88B08B9E594D39FA3019AF45B /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Recovered References";
-			sourceTree = "<group>";
-		};
-		D1E87FD723F5C0CE6B516C38B689A892 /* Tipography */ = {
-			isa = PBXGroup;
-			children = (
-				B7D68855C6F46E43FC45CF037561B02B /* Cells */,
-				FE39135EC83E5AE456AC7FBF5FE7F9CA /* TypographyViewController.swift */,
-			);
-			path = Tipography;
-			sourceTree = "<group>";
-		};
-		DEA60779BDC024D9AD1244CD29A20E30 /* Spacing */ = {
-			isa = PBXGroup;
-			children = (
-				FB45A508878AF11006636A3B1F5FF4BE /* Cells */,
-				F481A68E21070452D7ABE08B85865E10 /* SpacingViewController.swift */,
-			);
-			path = Spacing;
-			sourceTree = "<group>";
-		};
-		FB45A508878AF11006636A3B1F5FF4BE /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				73162360481FF4DE5378EBF0DF3B2F1C /* SpacingCell.swift */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		B7D68855C6F46E43FC45CF037561B02B /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				5A620BF5125BD5A9285A07613BD28359 /* TypographyCell.swift */,
-			);
-			path = Cells;
 			sourceTree = "<group>";
 		};
 		1663B3E8761EA7718C591D7378085408 /* Elevation */ = {
@@ -279,12 +156,51 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		BD3CB0F80322B0EA8970D31ABDFB1318 /* Button */ = {
+		36ED2BCB248D0370832F458C8819AED3 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				EB193A88212A44D97B2A08002B40993F /* ButtonsItemViewController.swift */,
+				D79F005407CCF54F38930570D9BE50EA /* OpacityCell.swift */,
 			);
-			path = Button;
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		3D9C41A89DFFF420774C67EFCF601A6A /* BorderRadius */ = {
+			isa = PBXGroup;
+			children = (
+				B936FD4AAF4E6441617F194A597367DD /* Cells */,
+				C3ECCCD44B56293C5FBF0660526ABA56 /* BorderRadiusViewController.swift */,
+			);
+			path = BorderRadius;
+			sourceTree = "<group>";
+		};
+		42CA660B6D99BC41804F8F3DFFF846E2 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				9DE43D2630BC7A2BC76DE6043192AFF4 /* Sample */,
+				BBBD9AE748A7F062C343564EE84A8A71 /* Supporting Files */,
+				A9EB78FC7F0EEE4914F65F61B2E74031 /* AppDelegate.swift */,
+				88DF0FA08B4E2EB33C77654A3EC4E83E /* ChooseBrandViewController.swift */,
+				96E03E96B39ADDD9B77FC7C702E3029F /* MainDataSource.swift */,
+				9AFC72AFBBBAAEBA2097DA669BB3792F /* MainViewController.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		60BA3889843FAC643954B470CDCD738E /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				C216B869C49B98316C79CC628A4C9017 /* Cells */,
+				845C4E23EBB1B07DF334BBA42C272EBB /* ColorsViewController.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		84AAD9C60B28018A447D43D10A281470 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				C7FBDBE3AD8777A865F1B1E40859758D /* IconCollectioViewCell.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		86D88A8EB08915984C5FB6D277F7A6FA /* Components */ = {
@@ -292,6 +208,7 @@
 			children = (
 				D8DBFA16188C4BCC7FE097B676C32FF8 /* Bar */,
 				BD3CB0F80322B0EA8970D31ABDFB1318 /* Button */,
+				00BA79FB1659D007DB8720B65080C439 /* Dialog */,
 				D2D202BFFC95DC39B94A26A5FB172483 /* Divider */,
 				DFD5C58E6C019591057F6663EFBBA044 /* ExpansionPanel */,
 				FE7854E68C30109D4B2988E1E01AE179 /* Field */,
@@ -319,23 +236,6 @@
 			path = Design;
 			sourceTree = "<group>";
 		};
-		CDF47F683C800E8289A0310CD7EA0F0C /* Iconography */ = {
-			isa = PBXGroup;
-			children = (
-				84AAD9C60B28018A447D43D10A281470 /* Helper */,
-				3336D64DBE111BD9CEB3EAF55A72897A /* IconographyItemViewController.swift */,
-			);
-			path = Iconography;
-			sourceTree = "<group>";
-		};
-		84AAD9C60B28018A447D43D10A281470 /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-				C7FBDBE3AD8777A865F1B1E40859758D /* IconCollectioViewCell.swift */,
-			);
-			path = Helper;
-			sourceTree = "<group>";
-		};
 		9DE43D2630BC7A2BC76DE6043192AFF4 /* Sample */ = {
 			isa = PBXGroup;
 			children = (
@@ -347,60 +247,37 @@
 			path = Sample;
 			sourceTree = "<group>";
 		};
-		60BA3889843FAC643954B470CDCD738E /* Colors */ = {
+		AD7153C6722DD4818645E5ADE1A5C8D3 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				C216B869C49B98316C79CC628A4C9017 /* Cells */,
-				845C4E23EBB1B07DF334BBA42C272EBB /* ColorsViewController.swift */,
+				D6931A5C475B8907A39E71B99395C70C /* SizeCell.swift */,
 			);
-			path = Colors;
+			path = Cells;
 			sourceTree = "<group>";
 		};
-		FC4556C0DD691C829616B3DDA86F0CBA /* NavigationDrawer */ = {
+		B2720C821B540A7F455BED15A98C6755 /* Size */ = {
 			isa = PBXGroup;
 			children = (
-				26D4B7F03E632BFE339DA40C2269B9D9 /* NavigationDrawerItemViewController.swift */,
+				AD7153C6722DD4818645E5ADE1A5C8D3 /* Cells */,
+				6CCE6B3ED45C1E81094E9B4DDAB9D1EC /* SizeViewController.swift */,
 			);
-			path = NavigationDrawer;
+			path = Size;
 			sourceTree = "<group>";
 		};
-		E832EF116BC4BE224E3691F2196CCD5B = {
+		B7D68855C6F46E43FC45CF037561B02B /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				F2174DEEE59502836CB34FDA60D30A21 /* Frameworks */,
-				0F9EB0B48CDC91FB1CA02458F9570578 /* Products */,
-				A4B0AFA88B08B9E594D39FA3019AF45B /* Recovered References */,
-				42CA660B6D99BC41804F8F3DFFF846E2 /* Sources */,
+				5A620BF5125BD5A9285A07613BD28359 /* TypographyCell.swift */,
 			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
-		0F9EB0B48CDC91FB1CA02458F9570578 /* Products */ = {
+		B936FD4AAF4E6441617F194A597367DD /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				2D71CBBDDF4F8308F1C24A8F907CBE25 /* NatDS-SampleApp.app */,
+				9D0DC29437C7F5B9950A6FDE4E0E7786 /* BorderRadiusCell.swift */,
 			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		42CA660B6D99BC41804F8F3DFFF846E2 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				9DE43D2630BC7A2BC76DE6043192AFF4 /* Sample */,
-				BBBD9AE748A7F062C343564EE84A8A71 /* Supporting Files */,
-				A9EB78FC7F0EEE4914F65F61B2E74031 /* AppDelegate.swift */,
-				88DF0FA08B4E2EB33C77654A3EC4E83E /* ChooseBrandViewController.swift */,
-				96E03E96B39ADDD9B77FC7C702E3029F /* MainDataSource.swift */,
-				9AFC72AFBBBAAEBA2097DA669BB3792F /* MainViewController.swift */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
-		F2174DEEE59502836CB34FDA60D30A21 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				EEBC24456A172162B3538C51FBFE2BA6 /* NatDS.framework */,
-			);
-			name = Frameworks;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		BBBD9AE748A7F062C343564EE84A8A71 /* Supporting Files */ = {
@@ -411,6 +288,132 @@
 				60F631F3D82A74E2CC246BA76661EF48 /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BD3CB0F80322B0EA8970D31ABDFB1318 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				EB193A88212A44D97B2A08002B40993F /* ButtonsItemViewController.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		C1D1F3FC973CC3D14F86C680F200601D /* ValueText */ = {
+			isa = PBXGroup;
+			children = (
+				3ECE4EA4030547C9B71419A660386C4A /* ValueTextHighlightItemViewController.swift */,
+			);
+			path = ValueText;
+			sourceTree = "<group>";
+		};
+		C216B869C49B98316C79CC628A4C9017 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FD277263F8F3EE00B21A0DE2E9849D97 /* ColorsCell.swift */,
+				5DF7BFDAFFA13841520A52D2EDE5400D /* ColorsHeaderView.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		C420063DEF581D12DAA6D31645B6B382 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				8AD6BDA39D2DFA18294278D33A054F9B /* TabItemViewController.swift */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		CDF47F683C800E8289A0310CD7EA0F0C /* Iconography */ = {
+			isa = PBXGroup;
+			children = (
+				84AAD9C60B28018A447D43D10A281470 /* Helper */,
+				3336D64DBE111BD9CEB3EAF55A72897A /* IconographyItemViewController.swift */,
+			);
+			path = Iconography;
+			sourceTree = "<group>";
+		};
+		D1E87FD723F5C0CE6B516C38B689A892 /* Tipography */ = {
+			isa = PBXGroup;
+			children = (
+				B7D68855C6F46E43FC45CF037561B02B /* Cells */,
+				FE39135EC83E5AE456AC7FBF5FE7F9CA /* TypographyViewController.swift */,
+			);
+			path = Tipography;
+			sourceTree = "<group>";
+		};
+		D2D202BFFC95DC39B94A26A5FB172483 /* Divider */ = {
+			isa = PBXGroup;
+			children = (
+				9F657058E049073E0255E8EE6ED2580B /* DividerViewController.swift */,
+			);
+			path = Divider;
+			sourceTree = "<group>";
+		};
+		D8DBFA16188C4BCC7FE097B676C32FF8 /* Bar */ = {
+			isa = PBXGroup;
+			children = (
+				F65EAA4E8148EBDC96E68E9E054CED31 /* AppBarViewController.swift */,
+			);
+			path = Bar;
+			sourceTree = "<group>";
+		};
+		DEA60779BDC024D9AD1244CD29A20E30 /* Spacing */ = {
+			isa = PBXGroup;
+			children = (
+				FB45A508878AF11006636A3B1F5FF4BE /* Cells */,
+				F481A68E21070452D7ABE08B85865E10 /* SpacingViewController.swift */,
+			);
+			path = Spacing;
+			sourceTree = "<group>";
+		};
+		E832EF116BC4BE224E3691F2196CCD5B = {
+			isa = PBXGroup;
+			children = (
+				F2174DEEE59502836CB34FDA60D30A21 /* Frameworks */,
+				0F9EB0B48CDC91FB1CA02458F9570578 /* Products */,
+				42CA660B6D99BC41804F8F3DFFF846E2 /* Sources */,
+			);
+			sourceTree = "<group>";
+		};
+		E87CB56433DA6E5473F5C6B643789BA6 /* Opacity */ = {
+			isa = PBXGroup;
+			children = (
+				36ED2BCB248D0370832F458C8819AED3 /* Cells */,
+				1E864ED7BB360AA6C6091D7E1053A5ED /* OpacityViewController.swift */,
+			);
+			path = Opacity;
+			sourceTree = "<group>";
+		};
+		F2174DEEE59502836CB34FDA60D30A21 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EEBC24456A172162B3538C51FBFE2BA6 /* NatDS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB45A508878AF11006636A3B1F5FF4BE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				73162360481FF4DE5378EBF0DF3B2F1C /* SpacingCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		FC4556C0DD691C829616B3DDA86F0CBA /* NavigationDrawer */ = {
+			isa = PBXGroup;
+			children = (
+				26D4B7F03E632BFE339DA40C2269B9D9 /* NavigationDrawerItemViewController.swift */,
+			);
+			path = NavigationDrawer;
+			sourceTree = "<group>";
+		};
+		FE7854E68C30109D4B2988E1E01AE179 /* Field */ = {
+			isa = PBXGroup;
+			children = (
+				B02CD4C57B8F31F4FB76CB430C3A9F39 /* TextFieldItemViewController.swift */,
+			);
+			path = Field;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -495,6 +498,7 @@
 				542BBE6C15A7E0C25DD69346A43430B0 /* ColorsViewController.swift in Sources */,
 				DF627B5ABA0E7336C4F3554132159A83 /* ComponentsSection.swift in Sources */,
 				DC40596AEA7EE184F0A1BCD2F3BFF7FC /* DesignSection.swift in Sources */,
+				6B065E9FA8AEAD33D6341DB8C671D74C /* DialogItemViewController.swift in Sources */,
 				B14E0B8A51D237CFBA1AD574ED6EC10C /* DividerViewController.swift in Sources */,
 				D10339C459C644B3172B6106B51A961C /* ElevationCell.swift in Sources */,
 				04AA815DDD6F9388F3A1010428342BBB /* ElevationViewController.swift in Sources */,
@@ -534,6 +538,28 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		019A913675636B94392D5270062B2DCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 6;
+				DEVELOPMENT_TEAM = XUT82JX72R;
+				INFOPLIST_FILE = "Sources/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = net.natura.NatDSSampleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development net.natura.NatDSSampleApp";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		0E35A4BBEAADEE7EBE43F80FCA435B73 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -647,28 +673,6 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
-		};
-		019A913675636B94392D5270062B2DCA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 6;
-				DEVELOPMENT_TEAM = XUT82JX72R;
-				INFOPLIST_FILE = "Sources/Supporting Files/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = net.natura.NatDSSampleApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match Development net.natura.NatDSSampleApp";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
 		};
 		D00D945FE925C86C6319D2CF4D40F044 /* Release */ = {
 			isa = XCBuildConfiguration;

@@ -20,7 +20,7 @@ final class NatButtonSpec: QuickSpec {
             changeStateInvocations = 0
             applyTitleInvocations = 0
 
-            styleSpy = NatButton.Style.init(
+            styleSpy = NatButton.Style(
                 applyStyle: { _ in applyStyleInvocations += 1 },
                 changeState: { _ in changeStateInvocations += 1 },
                 applyTitle: { _, _ in applyTitleInvocations += 1 }

@@ -6,9 +6,9 @@ import UIKit
   and according with user properties of Light and Dark mode.
 
     This button has 3 styles:
-    - Contained (on development)
+    - Contained
     - Outlined
-    - Text (on development)
+    - Text
 
     Example of usage:
 
@@ -21,7 +21,7 @@ import UIKit
         button.heightAnchor.constraint(equalToConstant: NatButton.Height.medium)
 
  - Requires:
-        It's necessary to configure the Design System current Brand at DesisgnSystem class
+        It's necessary to configure the Design System current Brand at DesignSystem class
         or fatalError will be raised.
 
             DesignSystem().configure(with: Brand)

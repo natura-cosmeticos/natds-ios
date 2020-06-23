@@ -11,7 +11,7 @@
         button.layer.cornerRadius = NatBorderRadius.circle(viewHeight: DSSizes.large)
 
  - Requires:
-        It's necessary to configure the Design System current Brand at DesisgnSystem class
+        It's necessary to configure the Design System current Brand at DesignSystem class
         or fatalError will be raised.
 
             DesignSystem().configure(with: Brand)
