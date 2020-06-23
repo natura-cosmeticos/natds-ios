@@ -5,13 +5,7 @@ enum ButtonStyle {
 
         button.layer.cornerRadius = NatBorderRadius.medium
 
-        let spacing = getTheme().spacing.small
-        button.contentEdgeInsets = UIEdgeInsets(
-            top: spacing,
-            left: spacing,
-            bottom: spacing,
-            right: spacing
-        )
+        button.contentEdgeInsets = NatButton.EdgeInsets.medium
     }
 
     static func applyStyleForTitle(
@@ -25,7 +19,7 @@ enum ButtonStyle {
         )
         let titleForDisabled = createTextForTitle(
             text: title,
-            withColor: NatColors.onSurface.withAlphaComponent(getTheme().opacities.opacity06)
+            withColor: NatColors.onSurface.withAlphaComponent(getTheme().opacities.opacity08)
         )
 
         button.setAttributedTitle(titleForNormal, for: .normal)
