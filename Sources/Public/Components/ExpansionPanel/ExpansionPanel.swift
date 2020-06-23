@@ -4,15 +4,15 @@ public class ExpansionPanel: UIView {
 
     private lazy var subtitleLabel: UILabel = {
         let label = UILabel()
-        label.numberOfLines = 1
+        label.numberOfLines = 0
         label.font = Fonts.subtitle1
-        label.textColor = Colors.Content.highEmphasis
+        label.textColor = NatColors.highEmphasis
         return label
     }()
 
     private lazy var upDownButton: UIButton = {
         let button = UIButton(type: .system)
-        button.tintColor = Colors.Content.highEmphasis
+        button.tintColor = NatColors.highEmphasis
         button.titleLabel?.font = .iconFont(ofSize: 18.0)
         button.setTitle(Icon.outlinedNavigationArrowbottom.unicode, for: .normal)
         button.layer.cornerRadius = 9.0
@@ -77,7 +77,7 @@ public class ExpansionPanel: UIView {
     }
 
     private func setup() {
-        backgroundColor = Colors.Surface.surface
+        backgroundColor = NatColors.surface
         NatElevation.apply(on: self, elevation: .elevation01)
         layer.cornerRadius = NatBorderRadius.medium
         layer.borderWidth = 1.0
@@ -95,7 +95,6 @@ public class ExpansionPanel: UIView {
 
     private func setLayout() {
         translatesAutoresizingMaskIntoConstraints = false
-        collapsePanelHeight()
         setSubtitleLabelLayout()
         setUpDownButtonLayout()
         setContentViewLayout()
@@ -104,10 +103,10 @@ public class ExpansionPanel: UIView {
     private func setSubtitleLabelLayout() {
         subtitleLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            subtitleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24),
-            subtitleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 22),
-            subtitleLabel.heightAnchor.constraint(equalToConstant: 21),
-            subtitleLabel.trailingAnchor.constraint(equalTo: upDownButton.leadingAnchor, constant: -16)
+            subtitleLabel.topAnchor.constraint(equalTo: topAnchor, constant: NatSpacing.small),
+            subtitleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: NatSpacing.standart),
+            subtitleLabel.trailingAnchor.constraint(equalTo: upDownButton.leadingAnchor, constant: -NatSpacing.small),
+            subtitleLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 21.0)
         ])
     }
 
@@ -116,15 +115,15 @@ public class ExpansionPanel: UIView {
         NSLayoutConstraint.activate([
             upDownButton.widthAnchor.constraint(equalToConstant: 18),
             upDownButton.heightAnchor.constraint(equalToConstant: 18),
-            upDownButton.topAnchor.constraint(equalTo: topAnchor, constant: 23),
-            upDownButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16)
+            upDownButton.topAnchor.constraint(equalTo: subtitleLabel.topAnchor),
+            upDownButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -NatSpacing.small)
         ])
     }
 
     private func setContentViewLayout() {
         contentView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            contentView.topAnchor.constraint(equalTo: subtitleLabel.bottomAnchor, constant: 24),
+            contentView.topAnchor.constraint(equalTo: subtitleLabel.bottomAnchor, constant: NatSpacing.small),
             contentView.leadingAnchor.constraint(equalTo: leadingAnchor),
             contentView.trailingAnchor.constraint(equalTo: trailingAnchor),
             contentView.bottomAnchor.constraint(equalTo: bottomAnchor)
@@ -139,47 +138,9 @@ public class ExpansionPanel: UIView {
         isCollapsed ? expand() : collapse()
     }
 
-    private func collapse() {
-        let previousHeight = frame.size.height
-        resetHeight()
-        cleanContentView()
-        layoutIfNeeded()
-        rotateButtonDown()
-        animateDecreasingHeight(from: previousHeight)
-        animateChangingColorToInactive()
-    }
-
-    private func animateDecreasingHeight(from previousHeight: CGFloat) {
-        let newHeight = frame.size.height
-        self.height = previousHeight
-        viewAnimating.animate(withDuration: animationDuration) {
-            self.height = newHeight
-        }
-    }
-
-    private func animateChangingColorToInactive() {
-        animateChangingBorderColor(from: activeBorderColor, to: inactiveBorderColor)
-        setBorderColorInactive()
-    }
-
-    private func animateChangingColorToActive() {
-        animateChangingBorderColor(from: inactiveBorderColor, to: activeBorderColor)
-        setBorderColorActive()
-    }
-
-    private func animateChangingBorderColor(from sourceColor: UIColor, to targetColor: UIColor) {
-        let color = CABasicAnimation(keyPath: "borderColor")
-        color.fromValue = sourceColor
-        color.toValue = targetColor
-        color.duration = animationDuration
-        color.repeatCount = 1
-        layer.add(color, forKey: "color")
-    }
-
     private func expand() {
         if let detailView = detailView {
             contentView.addArrangedSubview(detailView)
-            expandPanelHeight()
             expandContentView()
         }
         let previousHeight = frame.size.height
@@ -188,6 +149,37 @@ public class ExpansionPanel: UIView {
         animateIncreasingHeight(from: previousHeight)
         animateIncreasingDetailHeight()
         animateChangingColorToActive()
+    }
+
+    private func collapse() {
+        let previousHeight = frame.size.height
+        collapseContentView()
+        cleanContentView()
+        layoutIfNeeded()
+        rotateButtonDown()
+        animateDecreasingHeight(from: previousHeight)
+        animateChangingColorToInactive()
+    }
+
+    private func setBorderColorActive() {
+        layer.borderColor = activeBorderColor.cgColor
+    }
+
+    private func setBorderColorInactive() {
+        layer.borderColor = inactiveBorderColor.cgColor
+    }
+
+    private func expandContentView() {
+        contentView.layoutMargins = UIEdgeInsets(top: 0,
+                                                 left: NatSpacing.standart,
+                                                 bottom: NatSpacing.standart,
+                                                 right: NatSpacing.standart)
+    }
+
+    private func rotateButtonUp() {
+        viewAnimating.animate(withDuration: animationDuration) {
+            self.upDownButton.transform = CGAffineTransform(rotationAngle: .pi)
+        }
     }
 
     private func animateIncreasingHeight(from previousHeight: CGFloat) {
@@ -211,14 +203,26 @@ public class ExpansionPanel: UIView {
         }
     }
 
-    private func rotateButtonUp() {
-        viewAnimating.animate(withDuration: animationDuration) {
-            self.upDownButton.transform = CGAffineTransform(rotationAngle: .pi)
-        }
+    private func animateChangingColorToActive() {
+        animateChangingBorderColor(from: inactiveBorderColor, to: activeBorderColor)
+        setBorderColorActive()
     }
 
-    private func setBorderColorActive() {
-        layer.borderColor = activeBorderColor.cgColor
+    private func animateChangingBorderColor(from sourceColor: UIColor, to targetColor: UIColor) {
+        let animation = CABasicAnimation(keyPath: "borderColor")
+        animation.fromValue = sourceColor
+        animation.toValue = targetColor
+        animation.duration = animationDuration
+        animation.repeatCount = 1
+        layer.add(animation, forKey: "color")
+    }
+
+    private func collapseContentView() {
+        contentView.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    }
+
+    private func cleanContentView() {
+        contentView.arrangedSubviews.forEach { $0.removeFromSuperview() }
     }
 
     private func rotateButtonDown() {
@@ -229,48 +233,17 @@ public class ExpansionPanel: UIView {
         })
     }
 
-    private func setBorderColorInactive() {
-        layer.borderColor = inactiveBorderColor.cgColor
-    }
-
-    private func cleanContentView() {
-        contentView.arrangedSubviews.forEach { $0.removeFromSuperview() }
-    }
-
-    private func resetHeight() {
-        removePanelHeightConstraint()
-        collapsePanelHeight()
-        collapseContentView()
-    }
-
-    private func expandPanelHeight() {
-        removePanelHeightConstraint()
-        panelHeightConstraint = heightAnchor.constraint(greaterThanOrEqualToConstant: 64)
-        setupPanelHeightConstraint()
-    }
-
-    private func removePanelHeightConstraint() {
-        if let constraint = panelHeightConstraint {
-            removeConstraint(constraint)
+    private func animateDecreasingHeight(from previousHeight: CGFloat) {
+        let newHeight = frame.size.height
+        self.height = previousHeight
+        viewAnimating.animate(withDuration: animationDuration) {
+            self.height = newHeight
         }
     }
 
-    private func collapsePanelHeight() {
-        panelHeightConstraint = heightAnchor.constraint(equalToConstant: 64)
-        setupPanelHeightConstraint()
-    }
-
-    private func setupPanelHeightConstraint() {
-        panelHeightConstraint?.priority = .defaultHigh
-        panelHeightConstraint?.isActive = true
-    }
-
-    private func expandContentView() {
-        contentView.layoutMargins = UIEdgeInsets(top: 0, left: 24, bottom: 24, right: 24)
-    }
-
-    private func collapseContentView() {
-        contentView.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    private func animateChangingColorToInactive() {
+        animateChangingBorderColor(from: activeBorderColor, to: inactiveBorderColor)
+        setBorderColorInactive()
     }
 
     private func addTapToToggle() {

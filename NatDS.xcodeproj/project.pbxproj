@@ -71,6 +71,7 @@
 		6D4DFEB09D32E1F36B9FA29904AE1ED8 /* ElevationAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C267848A6D4A2289C862E53EA54F84 /* ElevationAttributes.swift */; };
 		2655155E5437F0880708125E1F9F5BC9 /* Elevations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D49BA63C5E5BFEED327C214620A7657 /* Elevations.swift */; };
 		3A65DE112EB34ED5B9F3F1DF7B8D3FBD /* ExpansionPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58B1BFBC101D26CBEC7E3448F9B33D2 /* ExpansionPanel.swift */; };
+		1715E4B78E2721E0181A401A0DA97A98 /* ExpansionPanelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FFA81AA763D45B2BCB5F321784CECE /* ExpansionPanelBuilder.swift */; };
 		4CEBA5F26393AC6F09BEE6382ABC55E9 /* ExpansionPanelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF507003D3035F2C312F8C225D481FC /* ExpansionPanelTests.swift */; };
 		4612CED8B9691035EFA62E01E2B30FD6 /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEE0086E453EC48CFDC60DBA3C5C989 /* Field.swift */; };
 		E6AE8A410953E6B447735D9E565B0264 /* FieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9C7ED46E33571D0B2A1E60936B8ACD /* FieldTests.swift */; };
@@ -316,6 +317,7 @@
 		D7C267848A6D4A2289C862E53EA54F84 /* ElevationAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevationAttributes.swift; sourceTree = "<group>"; };
 		0D49BA63C5E5BFEED327C214620A7657 /* Elevations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elevations.swift; sourceTree = "<group>"; };
 		C58B1BFBC101D26CBEC7E3448F9B33D2 /* ExpansionPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpansionPanel.swift; sourceTree = "<group>"; };
+		14FFA81AA763D45B2BCB5F321784CECE /* ExpansionPanelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpansionPanelBuilder.swift; sourceTree = "<group>"; };
 		0FF507003D3035F2C312F8C225D481FC /* ExpansionPanelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpansionPanelTests.swift; sourceTree = "<group>"; };
 		8BEE0086E453EC48CFDC60DBA3C5C989 /* Field.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
 		2D9C7ED46E33571D0B2A1E60936B8ACD /* FieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldTests.swift; sourceTree = "<group>"; };
@@ -886,6 +888,7 @@
 		6759B588024397D1AC93C8D123122D59 /* ExpansionPanel */ = {
 			isa = PBXGroup;
 			children = (
+				14FFA81AA763D45B2BCB5F321784CECE /* ExpansionPanelBuilder.swift */,
 				0FF507003D3035F2C312F8C225D481FC /* ExpansionPanelTests.swift */,
 			);
 			path = ExpansionPanel;
@@ -1750,6 +1753,7 @@
 				705A576866667D11B1D05EBB709BCC00 /* DynamicColorFactory+Spec.swift in Sources */,
 				91A18CB3646844B3C0EF8924AF376ACD /* DynamicColors+Spec.swift in Sources */,
 				5C3B779F94FC59E1F2329996E3E55DF5 /* ElevationAttributes+Equitable.swift in Sources */,
+				1715E4B78E2721E0181A401A0DA97A98 /* ExpansionPanelBuilder.swift in Sources */,
 				4CEBA5F26393AC6F09BEE6382ABC55E9 /* ExpansionPanelTests.swift in Sources */,
 				E6AE8A410953E6B447735D9E565B0264 /* FieldTests.swift in Sources */,
 				9710B5B12B03F97C954A8C56CFCB26B3 /* FlatButtonTests.swift in Sources */,

@@ -6,8 +6,8 @@ class ExpansionPanelTests: FBSnapshotTestCase {
 
     var sut: ExpansionPanel!
     var viewAnimatingMock: ViewAnimatingMock!
-    let subtitle = "Subtitle"
-    let longSubtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt"
+    var subtitleMock: String!
+    var longSubtitleMock: String!
     var detailMock: UILabel!
     var otherDetailMock: UILabel!
 
@@ -16,28 +16,21 @@ class ExpansionPanelTests: FBSnapshotTestCase {
 
         ConfigurationStorage.shared.save(theme: NaturaTheme())
 
-        viewAnimatingMock = ViewAnimatingMock()
-
-        detailMock = UILabel()
-        detailMock.numberOfLines = 0
-        // swiftlint:disable line_length
-        detailMock.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        // swiftlint:enable line_length
-
-        otherDetailMock = UILabel()
-        otherDetailMock.numberOfLines = 0
-        // swiftlint:disable line_length
-        otherDetailMock.text = "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        // swiftlint:enable line_length
+        let builder = ExpansionPanelBuilder()
+        viewAnimatingMock = builder.viewAnimatingMock
+        subtitleMock = builder.subtitleMock
+        longSubtitleMock = builder.longSubtitleMock
+        detailMock = builder.detailMock
+        otherDetailMock = builder.otherDetailMock
 
         sut = ExpansionPanel(viewAnimating: viewAnimatingMock)
-        sut.setSubtitle(subtitle)
+        sut.setSubtitle(subtitleMock)
         sut.layoutIfNeeded()
     }
 
     func test_defaultInit_hasValidSnapshot() {
         sut = ExpansionPanel()
-        sut.setSubtitle(subtitle)
+        sut.setSubtitle(subtitleMock)
         sut.layoutIfNeeded()
 
         FBSnapshotVerifyView(sut)
@@ -49,7 +42,7 @@ class ExpansionPanelTests: FBSnapshotTestCase {
 
     func test_defaultInit_withLongSubtitle_hasValidSnapshot() {
         sut = ExpansionPanel()
-        sut.setSubtitle(longSubtitle)
+        sut.setSubtitle(longSubtitleMock)
         sut.layoutIfNeeded()
 
         FBSnapshotVerifyView(sut)
@@ -57,7 +50,7 @@ class ExpansionPanelTests: FBSnapshotTestCase {
 
     func test_initWithViewAnimating_withLongSubtitle_hasValidSnapshot() {
         sut = ExpansionPanel(viewAnimating: viewAnimatingMock)
-        sut.setSubtitle(longSubtitle)
+        sut.setSubtitle(longSubtitleMock)
         sut.layoutIfNeeded()
 
         FBSnapshotVerifyView(sut)
@@ -65,7 +58,7 @@ class ExpansionPanelTests: FBSnapshotTestCase {
 
     func test_defaultInit_withLongSubtitle_andLimitedSize_hasValidSnapshot() {
         sut = ExpansionPanel()
-        sut.setSubtitle(longSubtitle)
+        sut.setSubtitle(longSubtitleMock)
         let view = addsOnViewLimitedSize()
 
         FBSnapshotVerifyView(view)
@@ -73,7 +66,7 @@ class ExpansionPanelTests: FBSnapshotTestCase {
 
     func test_initWithViewAnimating_withLongSubtitle_andLimitedSize_hasValidSnapshot() {
         sut = ExpansionPanel(viewAnimating: viewAnimatingMock)
-        sut.setSubtitle(longSubtitle)
+        sut.setSubtitle(longSubtitleMock)
         let view = addsOnViewLimitedSize()
 
         FBSnapshotVerifyView(view)
