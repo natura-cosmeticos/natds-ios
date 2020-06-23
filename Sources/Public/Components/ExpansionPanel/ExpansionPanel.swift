@@ -1,5 +1,37 @@
 import UIKit
 
+/**
+  ExpansionPanel is a class that represents  a  view component that can be expanded and collapsed.
+  Also, it can show or hide a detail view
+  This is a component from the design system.
+  The panel expands and retracts as user touches the upDownButton,
+  and the border color changes according to the current Brand configured in the Design system
+  and according with user properties of Light and Dark mode.
+
+    This panel has only 2 public methods to interact with:
+
+    With this, you can define a text for the subtitle
+
+        public func setSubtitle(_ subtitle: String)
+
+    With that one, you can add a detail view into the bottom content of the panel
+    This detail is going to be showed or hidden as the panel expands or collapses, respectively.
+
+        public func setDetailView(_ detailView: UIView?)
+
+    Example of usage:
+
+        let expansionPanel = ExpansionPanel()
+        expansionPanel.setSubtitle("My Subtitle")
+        expansionPanel.setDetailView(myDetailView)
+
+ - Requires:
+        It's necessary to configure the Design System current Brand at DesignSystem class
+        or fatalError will be raised.
+
+            DesignSystem().configure(with: Brand)
+*/
+
 public class ExpansionPanel: UIView {
 
     private lazy var subtitleLabel: UILabel = {
