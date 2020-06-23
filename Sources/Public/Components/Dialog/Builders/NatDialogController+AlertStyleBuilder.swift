@@ -1,5 +1,5 @@
 extension NatDialogController {
-    public final class StandardStyleBuilder {
+    public final class AlertStyleBuilder {
 
         // MARK: - Private properties
 
@@ -10,11 +10,11 @@ extension NatDialogController {
 
         // MARK: - Public methods
 
-        public func configure(title: String) -> Self {
-            titleView = DialogStyle.createLabelForTitle(title: title)
-
-            return self
-        }
+//        public func configure(title: String) -> Self {
+//            titleView = DialogStyle.createLabelForTitle(title: title)
+//
+//            return self
+//        }
 
         public func configure(body: String) -> Self {
             bodyView = DialogStyle.createLabelForBody(body: body)
@@ -53,7 +53,7 @@ extension NatDialogController {
             }
 
             if let primaryAction = primaryButtonConfiguration {
-                let footerView = DialogStandardStyle.FooterView()
+                let footerView = DialogAlertStyle.FooterView()
                 views.append(footerView)
 
                 footerView.configure(primaryButton: primaryAction)

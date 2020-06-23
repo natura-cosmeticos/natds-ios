@@ -132,4 +132,5 @@ extension NatDialogController {
                 DesignSystem().configure(with: Brand)
     */
     public static var standardStyleBuilder: StandardStyleBuilder { .init() }
+    public static var alertStyleBuilder: AlertStyleBuilder { .init() }
 }
