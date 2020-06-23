@@ -49,6 +49,7 @@ public class ExpansionPanel: UIView {
     private var panelHeightConstraint: NSLayoutConstraint?
     private let activeBorderColor = NatColors.primary
     private let inactiveBorderColor = UIColor.clear
+    private let animationDuration = 0.5
 
     public init() {
         self.viewAnimating = ViewAnimatingWrapper()
@@ -80,7 +81,7 @@ public class ExpansionPanel: UIView {
         NatElevation.apply(on: self, elevation: .elevation01)
         layer.cornerRadius = NatBorderRadius.medium
         layer.borderWidth = 1.0
-        layer.borderColor = UIColor.clear.cgColor
+        layer.borderColor = inactiveBorderColor.cgColor
         addSubviews()
         setLayout()
     }
@@ -144,12 +145,9 @@ public class ExpansionPanel: UIView {
 
     private func animateDecreasingHeight(from previousHeight: CGFloat) {
         let newHeight = frame.size.height
-        var frame = self.frame
-        frame.size.height = previousHeight
-        self.frame = frame
-        viewAnimating.animate(withDuration: 0.7) {
-            frame.size.height = newHeight
-            self.frame = frame
+        self.height = previousHeight
+        viewAnimating.animate(withDuration: animationDuration) {
+            self.height = newHeight
         }
     }
 
@@ -167,7 +165,7 @@ public class ExpansionPanel: UIView {
         let color = CABasicAnimation(keyPath: "borderColor")
         color.fromValue = sourceColor
         color.toValue = targetColor
-        color.duration = 0.7
+        color.duration = animationDuration
         color.repeatCount = 1
         layer.add(color, forKey: "color")
     }
@@ -188,31 +186,27 @@ public class ExpansionPanel: UIView {
 
     private func animateIncreasingHeight(from previousHeight: CGFloat) {
         let newHeight = frame.size.height
-        var frame = self.frame
-        frame.size.height = previousHeight
-        self.frame = frame
-        viewAnimating.animate(withDuration: 0.7, animations: {
-            frame.size.height = newHeight
-            self.frame = frame
+        self.height = previousHeight
+        viewAnimating.animate(withDuration: animationDuration, animations: {
+            self.height = newHeight
         })
     }
 
     private func animateIncreasingDetailHeight() {
         guard let detailView = detailView else { return }
         let newContentHeight = detailView.frame.height
-        var frameContent = detailView.frame
-        frameContent.size.height = newContentHeight / 2.0
-        detailView.frame = frameContent
+        detailView.height = newContentHeight / 2.0
         detailView.alpha = 0.0
-        viewAnimating.animate(withDuration: 0.35, delay: 0.35, options: .allowAnimatedContent) {
+        let duration = animationDuration / 2.0
+        let delay = duration
+        viewAnimating.animate(withDuration: duration, delay: delay, options: .allowAnimatedContent) {
             detailView.alpha = 1.0
-            frameContent.size.height = newContentHeight
-            self.detailView?.frame = frameContent
+            self.detailView?.height = newContentHeight
         }
     }
 
     private func rotateButtonUp() {
-        viewAnimating.animate(withDuration: 0.7) {
+        viewAnimating.animate(withDuration: animationDuration) {
             self.upDownButton.transform = CGAffineTransform(rotationAngle: .pi)
         }
     }
@@ -222,7 +216,7 @@ public class ExpansionPanel: UIView {
     }
 
     private func rotateButtonDown() {
-        viewAnimating.animate(withDuration: 0.7, animations: {
+        viewAnimating.animate(withDuration: animationDuration, animations: {
             self.upDownButton.transform = CGAffineTransform(rotationAngle: .pi * -2.0)
         }, completion: { (_) in
             self.upDownButton.transform = CGAffineTransform.identity
@@ -239,23 +233,29 @@ public class ExpansionPanel: UIView {
     }
 
     private func resetHeight() {
-        if let constraint = panelHeightConstraint {
-            removeConstraint(constraint)
-        }
+        removePanelHeightConstraint()
         collapsePanelHeight()
         collapseContentView()
     }
 
     private func expandPanelHeight() {
+        removePanelHeightConstraint()
+        panelHeightConstraint = heightAnchor.constraint(greaterThanOrEqualToConstant: 64)
+        setupPanelHeightConstraint()
+    }
+
+    private func removePanelHeightConstraint() {
         if let constraint = panelHeightConstraint {
             removeConstraint(constraint)
         }
-        panelHeightConstraint = heightAnchor.constraint(greaterThanOrEqualToConstant: 64)
-        panelHeightConstraint?.isActive = true
     }
 
     private func collapsePanelHeight() {
         panelHeightConstraint = heightAnchor.constraint(equalToConstant: 64)
+        setupPanelHeightConstraint()
+    }
+
+    private func setupPanelHeightConstraint() {
         panelHeightConstraint?.priority = .defaultHigh
         panelHeightConstraint?.isActive = true
     }
@@ -263,6 +263,7 @@ public class ExpansionPanel: UIView {
     private func expandContentView() {
         contentView.layoutMargins = UIEdgeInsets(top: 0, left: 24, bottom: 24, right: 24)
     }
+
     private func collapseContentView() {
         contentView.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
