@@ -37,7 +37,7 @@ public class ExpansionPanel: UIView {
                     contentView.addArrangedSubview(detailView)
                 }
             } else {
-                cleanContentView()
+                collapse()
             }
         }
     }
@@ -72,7 +72,7 @@ public class ExpansionPanel: UIView {
         subtitleLabel.text = subtitle
     }
 
-    public func setDetailView(_ detailView: UIView) {
+    public func setDetailView(_ detailView: UIView?) {
         self.detailView = detailView
     }
 
@@ -141,6 +141,7 @@ public class ExpansionPanel: UIView {
 
     private func collapse() {
         let previousHeight = frame.size.height
+        resetHeight()
         cleanContentView()
         layoutIfNeeded()
         rotateButtonDown()
@@ -233,7 +234,6 @@ public class ExpansionPanel: UIView {
     }
 
     private func cleanContentView() {
-        resetHeight()
         contentView.arrangedSubviews.forEach { $0.removeFromSuperview() }
     }
 
