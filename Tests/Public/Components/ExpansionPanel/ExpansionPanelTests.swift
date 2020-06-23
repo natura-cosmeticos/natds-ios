@@ -17,6 +17,7 @@ class ExpansionPanelTests: FBSnapshotTestCase {
         sut = ExpansionPanel(viewAnimating: viewAnimatingMock)
         sut.setSubtitle(subtitle)
         sut.layoutIfNeeded()
+
     }
 
     func test_defaultInit_hasValidSnapshot() {
@@ -91,8 +92,9 @@ class ExpansionPanelTests: FBSnapshotTestCase {
     }
 
     private func addsOnViewLimitedSize() -> UIView {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 64))
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 80))
         view.addSubview(sut)
+        view.backgroundColor = .white
         setConstraints(with: view)
         return view
     }
@@ -100,8 +102,8 @@ class ExpansionPanelTests: FBSnapshotTestCase {
     private func setConstraints(with view: UIView) {
         NSLayoutConstraint.activate([
             sut.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            sut.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            sut.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            sut.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8),
+            sut.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8)
         ])
     }
 

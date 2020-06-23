@@ -45,6 +45,8 @@ public class ExpansionPanel: UIView {
 
     private func setup() {
         backgroundColor = Colors.Surface.surface
+        NatElevation.apply(on: self, elevation: .elevation01)
+        layer.cornerRadius = NatBorderRadius.medium
         addSubviews()
         setLayout()
     }
