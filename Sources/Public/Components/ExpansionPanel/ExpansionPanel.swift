@@ -82,6 +82,7 @@ public class ExpansionPanel: UIView {
         layer.cornerRadius = NatBorderRadius.medium
         layer.borderWidth = 1.0
         layer.borderColor = inactiveBorderColor.cgColor
+        addTapToToggle()
         addSubviews()
         setLayout()
     }
@@ -131,6 +132,10 @@ public class ExpansionPanel: UIView {
     }
 
     @objc private func didTapUpDownButton() {
+        toggle()
+    }
+
+    private func toggle() {
         isCollapsed ? expand() : collapse()
     }
 
@@ -266,6 +271,15 @@ public class ExpansionPanel: UIView {
 
     private func collapseContentView() {
         contentView.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    }
+
+    private func addTapToToggle() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(didTapPanel))
+        addGestureRecognizer(tap)
+    }
+
+    @objc private func didTapPanel() {
+        toggle()
     }
 
 }
