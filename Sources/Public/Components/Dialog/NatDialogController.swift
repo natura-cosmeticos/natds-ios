@@ -48,12 +48,22 @@ public final class NatDialogController: UIViewController {
 
     // MARK: - Inits
 
-    init(views: [UIView]) {
+    init(viewModel: ViewModel) {
         super.init(nibName: nil, bundle: nil)
 
         setup()
 
-        views.forEach { stackView.addArrangedSubview($0) }
+        if let view = viewModel.titleView {
+            stackView.addArrangedSubview(view)
+        }
+
+        if let view = viewModel.bodyView {
+            stackView.addArrangedSubview(view)
+        }
+
+        if let view = viewModel.footerView {
+            stackView.addArrangedSubview(view)
+        }
     }
 
     @available(*, unavailable)

@@ -88,9 +88,12 @@
 		84391CAB247B220200803545 /* NatButton+Height+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84391CAA247B220200803545 /* NatButton+Height+Spec.swift */; };
 		84391CAD247BECD100803545 /* PulseContainerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84391CAC247BECD000803545 /* PulseContainerLayer.swift */; };
 		84391CAF247BF85F00803545 /* NatButton+Height.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84391CAE247BF85F00803545 /* NatButton+Height.swift */; };
-		843A1E6024A128E500FA7A7B /* DialogAlertStyle+FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A1E5F24A128E500FA7A7B /* DialogAlertStyle+FooterView.swift */; };
 		843A1E6224A12AF300FA7A7B /* DialogStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A1E6124A12AF300FA7A7B /* DialogStyle.swift */; };
 		843A1E6624A188FB00FA7A7B /* NatDialogController+AlertStyleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A1E6524A188FA00FA7A7B /* NatDialogController+AlertStyleBuilder.swift */; };
+		843A1E6924A27D0800FA7A7B /* DialogBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A1E6824A27D0800FA7A7B /* DialogBuilder.swift */; };
+		843A1E6B24A27E7300FA7A7B /* DialogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A1E6A24A27E7300FA7A7B /* DialogViewModel.swift */; };
+		843A1E6D24A27EA300FA7A7B /* DialogTitleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A1E6C24A27EA300FA7A7B /* DialogTitleConfigurator.swift */; };
+		843A1E6F24A27FAC00FA7A7B /* DialogBodyConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843A1E6E24A27FAC00FA7A7B /* DialogBodyConfigurator.swift */; };
 		843FA27B2461D82200D20D9A /* NatSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FA27A2461D82200D20D9A /* NatSizes.swift */; };
 		843FA27D2461DB1400D20D9A /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FA27C2461DB1400D20D9A /* Sizes.swift */; };
 		843FA27F2461DDFC00D20D9A /* AvonSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FA27E2461DDFC00D20D9A /* AvonSizes.swift */; };
@@ -167,7 +170,6 @@
 		849F39E52481786800CCF076 /* ColorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F39E42481786800CCF076 /* ColorProvider.swift */; };
 		849F39E724819C0D00CCF076 /* StubLightColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F39E624819C0D00CCF076 /* StubLightColorPalette.swift */; };
 		849F39E924819C3500CCF076 /* StubDarkColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F39E824819C3500CCF076 /* StubDarkColorPalette.swift */; };
-		849F39EE2498493B00CCF076 /* DialogStandardStyle+FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F39ED2498493B00CCF076 /* DialogStandardStyle+FooterView.swift */; };
 		84B197A02475915E00F1B575 /* ButtonOutlineStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1979F2475915E00F1B575 /* ButtonOutlineStyle.swift */; };
 		84B197A3247593B500F1B575 /* NatButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B197A2247593B500F1B575 /* NatButton+Style.swift */; };
 		84BFB61A24695E7D00506ED1 /* NatFonts+Avon+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB61824695E6600506ED1 /* NatFonts+Avon+Spec.swift */; };
@@ -327,9 +329,12 @@
 		84391CAA247B220200803545 /* NatButton+Height+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+Height+Spec.swift"; sourceTree = "<group>"; };
 		84391CAC247BECD000803545 /* PulseContainerLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseContainerLayer.swift; sourceTree = "<group>"; };
 		84391CAE247BF85F00803545 /* NatButton+Height.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+Height.swift"; sourceTree = "<group>"; };
-		843A1E5F24A128E500FA7A7B /* DialogAlertStyle+FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DialogAlertStyle+FooterView.swift"; sourceTree = "<group>"; };
 		843A1E6124A12AF300FA7A7B /* DialogStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogStyle.swift; sourceTree = "<group>"; };
 		843A1E6524A188FA00FA7A7B /* NatDialogController+AlertStyleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogController+AlertStyleBuilder.swift"; sourceTree = "<group>"; };
+		843A1E6824A27D0800FA7A7B /* DialogBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogBuilder.swift; sourceTree = "<group>"; };
+		843A1E6A24A27E7300FA7A7B /* DialogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogViewModel.swift; sourceTree = "<group>"; };
+		843A1E6C24A27EA300FA7A7B /* DialogTitleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogTitleConfigurator.swift; sourceTree = "<group>"; };
+		843A1E6E24A27FAC00FA7A7B /* DialogBodyConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogBodyConfigurator.swift; sourceTree = "<group>"; };
 		843FA27A2461D82200D20D9A /* NatSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatSizes.swift; sourceTree = "<group>"; };
 		843FA27C2461DB1400D20D9A /* Sizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sizes.swift; sourceTree = "<group>"; };
 		843FA27E2461DDFC00D20D9A /* AvonSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvonSizes.swift; sourceTree = "<group>"; };
@@ -406,7 +411,6 @@
 		849F39E42481786800CCF076 /* ColorProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorProvider.swift; sourceTree = "<group>"; };
 		849F39E624819C0D00CCF076 /* StubLightColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubLightColorPalette.swift; sourceTree = "<group>"; };
 		849F39E824819C3500CCF076 /* StubDarkColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubDarkColorPalette.swift; sourceTree = "<group>"; };
-		849F39ED2498493B00CCF076 /* DialogStandardStyle+FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DialogStandardStyle+FooterView.swift"; sourceTree = "<group>"; };
 		84B1979F2475915E00F1B575 /* ButtonOutlineStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonOutlineStyle.swift; sourceTree = "<group>"; };
 		84B197A2247593B500F1B575 /* NatButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+Style.swift"; sourceTree = "<group>"; };
 		84BFB61824695E6600506ED1 /* NatFonts+Avon+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatFonts+Avon+Spec.swift"; sourceTree = "<group>"; };
@@ -853,6 +857,7 @@
 			children = (
 				84C1CABB249952480041A511 /* Builders */,
 				8410F28E2490710E002028E8 /* NatDialogController.swift */,
+				843A1E6A24A27E7300FA7A7B /* DialogViewModel.swift */,
 			);
 			path = Dialog;
 			sourceTree = "<group>";
@@ -1050,22 +1055,6 @@
 			path = TestingHelpers;
 			sourceTree = "<group>";
 		};
-		843A1E5D24A1289800FA7A7B /* Standard */ = {
-			isa = PBXGroup;
-			children = (
-				849F39ED2498493B00CCF076 /* DialogStandardStyle+FooterView.swift */,
-			);
-			path = Standard;
-			sourceTree = "<group>";
-		};
-		843A1E5E24A128B500FA7A7B /* Alert */ = {
-			isa = PBXGroup;
-			children = (
-				843A1E5F24A128E500FA7A7B /* DialogAlertStyle+FooterView.swift */,
-			);
-			path = Alert;
-			sourceTree = "<group>";
-		};
 		843A1E6324A1304700FA7A7B /* Standard */ = {
 			isa = PBXGroup;
 			children = (
@@ -1078,6 +1067,16 @@
 			children = (
 			);
 			path = Alert;
+			sourceTree = "<group>";
+		};
+		843A1E6724A27CEC00FA7A7B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				843A1E6824A27D0800FA7A7B /* DialogBuilder.swift */,
+				843A1E6C24A27EA300FA7A7B /* DialogTitleConfigurator.swift */,
+				843A1E6E24A27FAC00FA7A7B /* DialogBodyConfigurator.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		84428F93245B9D5800D46611 /* Helpers */ = {
@@ -1334,7 +1333,7 @@
 		84C1CABB249952480041A511 /* Builders */ = {
 			isa = PBXGroup;
 			children = (
-				84C1CABC249952930041A511 /* NatDialogController+ButtonConfiguration.swift */,
+				843A1E6724A27CEC00FA7A7B /* Protocols */,
 				84C1CABE249953440041A511 /* NatDialogController+StandardStyleBuilder.swift */,
 				843A1E6524A188FA00FA7A7B /* NatDialogController+AlertStyleBuilder.swift */,
 			);
@@ -1352,9 +1351,8 @@
 		84C1CAC6249A83AF0041A511 /* Dialog */ = {
 			isa = PBXGroup;
 			children = (
+				84C1CABC249952930041A511 /* NatDialogController+ButtonConfiguration.swift */,
 				843A1E6124A12AF300FA7A7B /* DialogStyle.swift */,
-				843A1E5E24A128B500FA7A7B /* Alert */,
-				843A1E5D24A1289800FA7A7B /* Standard */,
 			);
 			path = Dialog;
 			sourceTree = "<group>";
@@ -1719,7 +1717,9 @@
 				843A1E6224A12AF300FA7A7B /* DialogStyle.swift in Sources */,
 				84EE85E9245A0FB20009293A /* NatSpacing.swift in Sources */,
 				843FA2812461DF5400D20D9A /* NaturaSizes.swift in Sources */,
+				843A1E6F24A27FAC00FA7A7B /* DialogBodyConfigurator.swift in Sources */,
 				8427A29D2448ED6D00CF30D5 /* NatColors.swift in Sources */,
+				843A1E6924A27D0800FA7A7B /* DialogBuilder.swift in Sources */,
 				84BFB6362469BF1A00506ED1 /* AvonFont.swift in Sources */,
 				84428F81245B03A100D46611 /* NaturaSpacing.swift in Sources */,
 				643ABFEF24117C79000918EA /* Pulsable.swift in Sources */,
@@ -1770,6 +1770,7 @@
 				843FA2BA2464757200D20D9A /* NaturaOpacities.swift in Sources */,
 				84391CAF247BF85F00803545 /* NatButton+Height.swift in Sources */,
 				A9CCF8DC23CCDF0100000FC0 /* FontIconStyle.swift in Sources */,
+				843A1E6B24A27E7300FA7A7B /* DialogViewModel.swift in Sources */,
 				84391CAD247BECD100803545 /* PulseContainerLayer.swift in Sources */,
 				4395D1DA23FC6AB700C7DC6F /* Tab.swift in Sources */,
 				A9325A6623FB34EC0023979C /* UICollectionView+Reusable.swift in Sources */,
@@ -1789,6 +1790,7 @@
 				117FE02C238DA53E0032E2AC /* NavigationDrawerSubitemCell.swift in Sources */,
 				843FA2832461E1CA00D20D9A /* TheBodySystemSize.swift in Sources */,
 				843FA27D2461DB1400D20D9A /* Sizes.swift in Sources */,
+				843A1E6D24A27EA300FA7A7B /* DialogTitleConfigurator.swift in Sources */,
 				8427A28C2447774B00CF30D5 /* Theme.swift in Sources */,
 				A971BE712398306300A0D509 /* NavigationDrawer+IndexMenu.swift in Sources */,
 				84BFB6332469BE1900506ED1 /* NaturaFontWeights.swift in Sources */,
@@ -1802,8 +1804,6 @@
 				64DF47E323FB492100DAF441 /* TextFieldType.swift in Sources */,
 				8427A32C24538DFA00CF30D5 /* ConfigurationStorage.swift in Sources */,
 				84BFB65F246DA47500506ED1 /* AvonElevations.swift in Sources */,
-				849F39EE2498493B00CCF076 /* DialogStandardStyle+FooterView.swift in Sources */,
-				843A1E6024A128E500FA7A7B /* DialogAlertStyle+FooterView.swift in Sources */,
 				84BFB6382469BF4B00506ED1 /* AvonFontSizes.swift in Sources */,
 				43C02A3523FAFDDD0057A31C /* NSMutableAttributedString+Builder.swift in Sources */,
 				117FE024238D9B070032E2AC /* Colors.swift in Sources */,
