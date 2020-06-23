@@ -12,6 +12,8 @@ class ExpansionPanelTests: FBSnapshotTestCase {
     override func setUp() {
         super.setUp()
 
+        ConfigurationStorage.shared.save(theme: NaturaTheme())
+
         viewAnimatingMock = ViewAnimatingMock()
 
         sut = ExpansionPanel(viewAnimating: viewAnimatingMock)
@@ -65,24 +67,30 @@ class ExpansionPanelTests: FBSnapshotTestCase {
     }
 
     func test_tapButtonOnce_showsButtonPointingUp() {
+        let view = addsOnViewLimitedSize()
+
         tapButton()
 
-        FBSnapshotVerifyView(sut)
+        FBSnapshotVerifyView(view)
     }
 
     func test_tapButtonTwice_showsButtonPointingDown() {
+        let view = addsOnViewLimitedSize()
+
         tapButton()
         tapButton()
 
-        FBSnapshotVerifyView(sut)
+        FBSnapshotVerifyView(view)
     }
 
     func test_tapButtonThrice_showsButtonPointingUp() {
+        let view = addsOnViewLimitedSize()
+
         tapButton()
         tapButton()
         tapButton()
 
-        FBSnapshotVerifyView(sut)
+        FBSnapshotVerifyView(view)
     }
 
     // MARK: Helper methods

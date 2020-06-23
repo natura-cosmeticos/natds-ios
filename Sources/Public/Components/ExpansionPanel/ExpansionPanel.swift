@@ -47,6 +47,8 @@ public class ExpansionPanel: UIView {
         backgroundColor = Colors.Surface.surface
         NatElevation.apply(on: self, elevation: .elevation01)
         layer.cornerRadius = NatBorderRadius.medium
+        layer.borderWidth = 1.0
+        layer.borderColor = UIColor.clear.cgColor
         addSubviews()
         setLayout()
     }
@@ -87,8 +89,10 @@ public class ExpansionPanel: UIView {
 
     @objc private func didTapUpDownButton() {
         if upDownButton.transform == CGAffineTransform.identity {
+            setBorderColorActive()
             rotateButtonUp()
         } else {
+            setBorderColorInactive()
             rotateButtonDown()
         }
     }
@@ -99,12 +103,20 @@ public class ExpansionPanel: UIView {
         }
     }
 
+    private func setBorderColorActive() {
+        layer.borderColor = NatColors.primary.cgColor
+    }
+
     private func rotateButtonDown() {
         viewAnimating.animate(withDuration: 0.7, animations: {
             self.upDownButton.transform = CGAffineTransform(rotationAngle: .pi * -2.0)
         }, completion: { (_) in
             self.upDownButton.transform = CGAffineTransform.identity
         })
+    }
+
+    private func setBorderColorInactive() {
+        layer.borderColor = UIColor.clear.cgColor
     }
 
 }
