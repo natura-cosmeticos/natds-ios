@@ -1,6 +1,6 @@
 private typealias ActionHandler = () -> Void
 
-extension DialogStandardStyle {
+enum DialogAlertStyle {
     final class FooterView: UIView {
 
         // MARK: - Private properties
@@ -65,7 +65,7 @@ extension DialogStandardStyle {
         func configure(primaryButton configuration: NatDialogController.ButtonConfiguration) {
             primaryButtonActionHandler = configuration.action
 
-            let button = NatButton(style: .contained)
+            let button = NatButton(style: .text)
             button.configure(title: configuration.title)
             button.addTarget(self, action: #selector(primaryActionHandler), for: .touchUpInside)
             setupButton(button: button)

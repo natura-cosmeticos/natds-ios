@@ -24,7 +24,7 @@ final class NatDialogControllerStandardStyleBuilderSpec: QuickSpec {
 
                 let containerView = natDialogController.view.subviews.first
                 let stackView = containerView?.subviews.first
-                let expectedView = stackView?.subviews.first as? DialogStandardStyle.TitleView
+                let expectedView = stackView?.subviews.first as? UILabel
 
                 expect(expectedView).toNot(beNil())
             }
@@ -40,7 +40,7 @@ final class NatDialogControllerStandardStyleBuilderSpec: QuickSpec {
             it("sets bodyView") {
                 let containerView = natDialogController.view.subviews.first
                 let stackView = containerView?.subviews.first
-                let expectedView = stackView?.subviews.first as? DialogStandardStyle.BodyView
+                let expectedView = stackView?.subviews.first as? UILabel
 
                 expect(expectedView).toNot(beNil())
             }
