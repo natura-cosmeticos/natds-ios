@@ -37,17 +37,18 @@ public class ExpansionPanel: UIView {
     private lazy var subtitleLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
-        label.font = Fonts.subtitle1
+        label.font = NatFonts.font(ofSize: .subtitle1, withWeight: .medium)
         label.textColor = NatColors.highEmphasis
         return label
     }()
 
     private lazy var upDownButton: UIButton = {
+        let size: CGFloat = NatSizes.standard
         let button = UIButton(type: .system)
-        button.tintColor = NatColors.highEmphasis
-        button.titleLabel?.font = .iconFont(ofSize: 18.0)
+        button.tintColor = NatColors.onBackground
+        button.titleLabel?.font = .iconFont(ofSize: size)
         button.setTitle(Icon.outlinedNavigationArrowbottom.unicode, for: .normal)
-        button.layer.cornerRadius = 9.0
+        button.layer.cornerRadius = NatBorderRadius.circle(viewHeight: size)
         button.addTarget(self, action: #selector(didTapUpDownButton), for: .touchUpInside)
         return button
     }()
@@ -83,10 +84,10 @@ public class ExpansionPanel: UIView {
     private let inactiveBorderColor = UIColor.clear
     private let animationDuration = 0.5
 
-    public init() {
-        self.viewAnimating = ViewAnimatingWrapper()
-        super.init(frame: .zero)
-        setup()
+    // MARK: - Inits
+
+    public convenience init() {
+        self.init(viewAnimating: ViewAnimatingWrapper())
     }
 
     init(viewAnimating: ViewAnimating) {
@@ -100,6 +101,8 @@ public class ExpansionPanel: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
+    // MARK: - Public methods
+
     public func setSubtitle(_ subtitle: String) {
         subtitleLabel.text = subtitle
     }
@@ -108,16 +111,39 @@ public class ExpansionPanel: UIView {
         self.detailView = detailView
     }
 
+    // MARK: - User interactions
+
+    @objc private func didTapUpDownButton() {
+        toggle()
+    }
+
+    @objc private func didTapPanel() {
+        toggle()
+    }
+
+    // MARK: - Private methods
+
     private func setup() {
         backgroundColor = NatColors.surface
         NatElevation.apply(on: self, elevation: .elevation01)
         layer.cornerRadius = NatBorderRadius.medium
-        layer.borderWidth = 1.0
+        layer.borderWidth = 1
         layer.borderColor = inactiveBorderColor.cgColor
         addTapToToggle()
         addSubviews()
         setLayout()
     }
+
+    private func toggle() {
+        isCollapsed ? expand() : collapse()
+    }
+
+    private func addTapToToggle() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(didTapPanel))
+        addGestureRecognizer(tap)
+    }
+
+    // MARK: - Private methods - UI
 
     private func addSubviews() {
         addSubview(subtitleLabel)
@@ -126,7 +152,6 @@ public class ExpansionPanel: UIView {
     }
 
     private func setLayout() {
-        translatesAutoresizingMaskIntoConstraints = false
         setSubtitleLabelLayout()
         setUpDownButtonLayout()
         setContentViewLayout()
@@ -138,15 +163,15 @@ public class ExpansionPanel: UIView {
             subtitleLabel.topAnchor.constraint(equalTo: topAnchor, constant: NatSpacing.small),
             subtitleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: NatSpacing.standart),
             subtitleLabel.trailingAnchor.constraint(equalTo: upDownButton.leadingAnchor, constant: -NatSpacing.small),
-            subtitleLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 21.0)
+            subtitleLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: NatSizes.standard)
         ])
     }
 
     private func setUpDownButtonLayout() {
         upDownButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            upDownButton.widthAnchor.constraint(equalToConstant: 18),
-            upDownButton.heightAnchor.constraint(equalToConstant: 18),
+            upDownButton.widthAnchor.constraint(equalToConstant: NatSizes.standard),
+            upDownButton.heightAnchor.constraint(equalToConstant: NatSizes.standard),
             upDownButton.topAnchor.constraint(equalTo: subtitleLabel.topAnchor),
             upDownButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -NatSpacing.small)
         ])
@@ -162,13 +187,11 @@ public class ExpansionPanel: UIView {
         ])
     }
 
-    @objc private func didTapUpDownButton() {
-        toggle()
-    }
+}
 
-    private func toggle() {
-        isCollapsed ? expand() : collapse()
-    }
+// MARK: - Expand
+
+extension ExpansionPanel {
 
     private func expand() {
         if let detailView = detailView {
@@ -183,6 +206,28 @@ public class ExpansionPanel: UIView {
         animateChangingColorToActive()
     }
 
+    private func setBorderColorActive() {
+        layer.borderColor = activeBorderColor.cgColor
+    }
+
+    private func expandContentView() {
+        contentView.layoutMargins = UIEdgeInsets(top: 0,
+                                                 left: NatSpacing.standart,
+                                                 bottom: NatSpacing.standart,
+                                                 right: NatSpacing.standart)
+    }
+
+    private func animateChangingColorToActive() {
+        animateChangingBorderColor(from: inactiveBorderColor, to: activeBorderColor)
+        setBorderColorActive()
+    }
+
+}
+
+// MARK: - Collapse
+
+extension ExpansionPanel {
+
     private func collapse() {
         let previousHeight = frame.size.height
         collapseContentView()
@@ -193,26 +238,28 @@ public class ExpansionPanel: UIView {
         animateChangingColorToInactive()
     }
 
-    private func setBorderColorActive() {
-        layer.borderColor = activeBorderColor.cgColor
-    }
-
     private func setBorderColorInactive() {
         layer.borderColor = inactiveBorderColor.cgColor
     }
 
-    private func expandContentView() {
-        contentView.layoutMargins = UIEdgeInsets(top: 0,
-                                                 left: NatSpacing.standart,
-                                                 bottom: NatSpacing.standart,
-                                                 right: NatSpacing.standart)
+    private func collapseContentView() {
+        contentView.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
 
-    private func rotateButtonUp() {
-        viewAnimating.animate(withDuration: animationDuration) {
-            self.upDownButton.transform = CGAffineTransform(rotationAngle: .pi)
-        }
+    private func cleanContentView() {
+        contentView.arrangedSubviews.forEach { $0.removeFromSuperview() }
     }
+
+    private func animateChangingColorToInactive() {
+        animateChangingBorderColor(from: activeBorderColor, to: inactiveBorderColor)
+        setBorderColorInactive()
+    }
+
+}
+
+// MARK: - Animations
+
+extension ExpansionPanel {
 
     private func animateIncreasingHeight(from previousHeight: CGFloat) {
         let newHeight = frame.size.height
@@ -235,26 +282,10 @@ public class ExpansionPanel: UIView {
         }
     }
 
-    private func animateChangingColorToActive() {
-        animateChangingBorderColor(from: inactiveBorderColor, to: activeBorderColor)
-        setBorderColorActive()
-    }
-
-    private func animateChangingBorderColor(from sourceColor: UIColor, to targetColor: UIColor) {
-        let animation = CABasicAnimation(keyPath: "borderColor")
-        animation.fromValue = sourceColor
-        animation.toValue = targetColor
-        animation.duration = animationDuration
-        animation.repeatCount = 1
-        layer.add(animation, forKey: "color")
-    }
-
-    private func collapseContentView() {
-        contentView.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-    }
-
-    private func cleanContentView() {
-        contentView.arrangedSubviews.forEach { $0.removeFromSuperview() }
+    private func rotateButtonUp() {
+        viewAnimating.animate(withDuration: animationDuration) {
+            self.upDownButton.transform = CGAffineTransform(rotationAngle: .pi)
+        }
     }
 
     private func rotateButtonDown() {
@@ -273,18 +304,13 @@ public class ExpansionPanel: UIView {
         }
     }
 
-    private func animateChangingColorToInactive() {
-        animateChangingBorderColor(from: activeBorderColor, to: inactiveBorderColor)
-        setBorderColorInactive()
-    }
-
-    private func addTapToToggle() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(didTapPanel))
-        addGestureRecognizer(tap)
-    }
-
-    @objc private func didTapPanel() {
-        toggle()
+    private func animateChangingBorderColor(from sourceColor: UIColor, to targetColor: UIColor) {
+        let animation = CABasicAnimation(keyPath: "borderColor")
+        animation.fromValue = sourceColor
+        animation.toValue = targetColor
+        animation.duration = animationDuration
+        animation.repeatCount = 1
+        layer.add(animation, forKey: "color")
     }
 
 }

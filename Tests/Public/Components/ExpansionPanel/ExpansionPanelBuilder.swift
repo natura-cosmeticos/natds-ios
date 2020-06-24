@@ -1,4 +1,5 @@
 import UIKit
+@testable import NatDS
 
 struct ExpansionPanelBuilder {
 
@@ -24,6 +25,34 @@ struct ExpansionPanelBuilder {
         label.text = "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         // swiftlint:enable line_length
         return label
+    }
+
+    var panelDefault: ExpansionPanel {
+        let panel = ExpansionPanel()
+        panel.setSubtitle(subtitleMock)
+        panel.translatesAutoresizingMaskIntoConstraints = false
+        return panel
+    }
+
+    var panelDefaultWithLongSubtitle: ExpansionPanel {
+        let panel = ExpansionPanel()
+        panel.setSubtitle(longSubtitleMock)
+        panel.translatesAutoresizingMaskIntoConstraints = false
+        return panel
+    }
+
+    var panelWithViewAnimatingMock: ExpansionPanel {
+        let panel = ExpansionPanel(viewAnimating: viewAnimatingMock)
+        panel.setSubtitle(subtitleMock)
+        panel.translatesAutoresizingMaskIntoConstraints = false
+        return panel
+    }
+
+    var panelWithViewAnimatingMockAndLongSubtitle: ExpansionPanel {
+        let panel = ExpansionPanel(viewAnimating: viewAnimatingMock)
+        panel.setSubtitle(longSubtitleMock)
+        panel.translatesAutoresizingMaskIntoConstraints = false
+        return panel
     }
 
 }

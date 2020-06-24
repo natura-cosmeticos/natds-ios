@@ -5,32 +5,24 @@ import FBSnapshotTestCase
 class ExpansionPanelTests: FBSnapshotTestCase {
 
     var sut: ExpansionPanel!
-    var viewAnimatingMock: ViewAnimatingMock!
-    var subtitleMock: String!
-    var longSubtitleMock: String!
     var detailMock: UILabel!
     var otherDetailMock: UILabel!
+    let builder = ExpansionPanelBuilder()
 
     override func setUp() {
         super.setUp()
 
         ConfigurationStorage.shared.save(theme: NaturaTheme())
 
-        let builder = ExpansionPanelBuilder()
-        viewAnimatingMock = builder.viewAnimatingMock
-        subtitleMock = builder.subtitleMock
-        longSubtitleMock = builder.longSubtitleMock
         detailMock = builder.detailMock
         otherDetailMock = builder.otherDetailMock
 
-        sut = ExpansionPanel(viewAnimating: viewAnimatingMock)
-        sut.setSubtitle(subtitleMock)
+        sut = builder.panelWithViewAnimatingMock
         sut.layoutIfNeeded()
     }
 
     func test_defaultInit_hasValidSnapshot() {
-        sut = ExpansionPanel()
-        sut.setSubtitle(subtitleMock)
+        sut = builder.panelDefault
         sut.layoutIfNeeded()
 
         FBSnapshotVerifyView(sut)
@@ -41,32 +33,28 @@ class ExpansionPanelTests: FBSnapshotTestCase {
     }
 
     func test_defaultInit_withLongSubtitle_hasValidSnapshot() {
-        sut = ExpansionPanel()
-        sut.setSubtitle(longSubtitleMock)
+        sut = builder.panelDefaultWithLongSubtitle
         sut.layoutIfNeeded()
 
         FBSnapshotVerifyView(sut)
     }
 
     func test_initWithViewAnimating_withLongSubtitle_hasValidSnapshot() {
-        sut = ExpansionPanel(viewAnimating: viewAnimatingMock)
-        sut.setSubtitle(longSubtitleMock)
+        sut = builder.panelWithViewAnimatingMockAndLongSubtitle
         sut.layoutIfNeeded()
 
         FBSnapshotVerifyView(sut)
     }
 
     func test_defaultInit_withLongSubtitle_andLimitedSize_hasValidSnapshot() {
-        sut = ExpansionPanel()
-        sut.setSubtitle(longSubtitleMock)
+        sut = builder.panelDefaultWithLongSubtitle
         let view = addsOnViewLimitedSize()
 
         FBSnapshotVerifyView(view)
     }
 
     func test_initWithViewAnimating_withLongSubtitle_andLimitedSize_hasValidSnapshot() {
-        sut = ExpansionPanel(viewAnimating: viewAnimatingMock)
-        sut.setSubtitle(longSubtitleMock)
+        sut = builder.panelWithViewAnimatingMockAndLongSubtitle
         let view = addsOnViewLimitedSize()
 
         FBSnapshotVerifyView(view)
@@ -158,7 +146,7 @@ class ExpansionPanelTests: FBSnapshotTestCase {
     }
 
     private func addsOnViewLimitedSize() -> UIView {
-        return addsOnView(frame: CGRect(x: 0, y: 0, width: 320, height: 80))
+        return addsOnView(frame: CGRect(x: 0, y: 0, width: 320, height: 200))
     }
 
     private func addsOnViewLargeHeight() -> UIView {
