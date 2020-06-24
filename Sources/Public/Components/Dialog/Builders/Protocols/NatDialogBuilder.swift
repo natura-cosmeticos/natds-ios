@@ -1,8 +1,8 @@
-public protocol DialogBuilder {
+public protocol NatDialogBuilder {
     var viewModel: NatDialogController.ViewModel { get }
 }
 
-extension DialogBuilder {
+extension NatDialogBuilder {
     public func build() -> NatDialogController {
         return .init(viewModel: viewModel)
     }

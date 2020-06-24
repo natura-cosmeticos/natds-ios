@@ -6,43 +6,61 @@ import Nimble
 final class NatDialogControllerStandardStyleBuilderSpec: QuickSpec {
     override func spec() {
         var systemUnderTest: NatDialogController.StandardStyleBuilder!
-        var natDialogController: NatDialogController!
+        var viewModel: NatDialogController.ViewModel!
 
         beforeEach {
             DesignSystem().configure(with: .theBodyShop)
             systemUnderTest = .init()
+            viewModel = systemUnderTest.viewModel
+        }
+
+        describe("#init") {
+            it("does not set titleView") {
+                expect(viewModel.titleView).to(beNil())
+            }
+
+            it("does not set bodyView") {
+                expect(viewModel.bodyView).to(beNil())
+            }
+
+            it("does not set footerView") {
+                expect(viewModel.footerView).to(beNil())
+            }
         }
 
         describe("#configure(title: String)") {
             beforeEach {
-                natDialogController = systemUnderTest
-                    .configure(title: "StubText")
-                    .build()
+                _ = systemUnderTest.configure(title: "StubText")
             }
 
             it("sets titleView") {
+                expect(viewModel.titleView).toNot(beNil())
+            }
 
-                let containerView = natDialogController.view.subviews.first
-                let stackView = containerView?.subviews.first
-                let expectedView = stackView?.subviews.first as? UILabel
+            it("does not set bodyView") {
+                expect(viewModel.bodyView).to(beNil())
+            }
 
-                expect(expectedView).toNot(beNil())
+            it("does not set footerView") {
+                expect(viewModel.footerView).to(beNil())
             }
         }
 
         describe("#configure(body: String)") {
             beforeEach {
-                natDialogController = systemUnderTest
-                    .configure(body: "StubText")
-                    .build()
+                _ = systemUnderTest.configure(body: "StubText")
+            }
+
+            it("does not set titleView") {
+                expect(viewModel.titleView).to(beNil())
             }
 
             it("sets bodyView") {
-                let containerView = natDialogController.view.subviews.first
-                let stackView = containerView?.subviews.first
-                let expectedView = stackView?.subviews.first as? UILabel
+                expect(viewModel.bodyView).toNot(beNil())
+            }
 
-                expect(expectedView).toNot(beNil())
+            it("does not set footerView") {
+                expect(viewModel.footerView).to(beNil())
             }
         }
 
@@ -50,49 +68,108 @@ final class NatDialogControllerStandardStyleBuilderSpec: QuickSpec {
             let stubView = UIView()
 
             beforeEach {
-                natDialogController = systemUnderTest
-                    .configure(body: stubView)
-                    .build()
+                _ = systemUnderTest.configure(body: stubView)
+            }
+
+            it("does not set titleView") {
+                expect(viewModel.titleView).to(beNil())
             }
 
             it("sets bodyView") {
-                let containerView = natDialogController.view.subviews.first
-                let stackView = containerView?.subviews.first
-                let expectedView = stackView?.subviews.first
+                expect(viewModel.bodyView).toNot(beNil())
+            }
+
+            it("sets bodyView to an expected view") {
+                let expectedView = systemUnderTest.viewModel.bodyView
 
                 expect(expectedView).to(equal(stubView))
+            }
+
+            it("does not set footerView") {
+                expect(viewModel.footerView).to(beNil())
             }
         }
 
         describe("#configure(primaryButtonTitle: String, withAction: @escaping () -> Void)") {
             beforeEach {
-                natDialogController = systemUnderTest
-                    .configure(primaryButtonTitle: "StubText") { }
-                    .build()
+                _ = systemUnderTest.configure(primaryButtonTitle: "StubText") {}
+            }
+
+            it("does not set titleView") {
+                expect(viewModel.titleView).to(beNil())
+            }
+
+            it("does not set bodyView") {
+                expect(viewModel.bodyView).to(beNil())
             }
 
             it("sets footerView") {
-                let containerView = natDialogController.view.subviews.first
-                let stackView = containerView?.subviews.first
-                let expectedView = stackView?.subviews.first as? DialogStyle.FooterView
+                expect(viewModel.footerView).toNot(beNil())
+            }
+
+            it("sets only one button at footerView") {
+                let stackView = viewModel.footerView?.subviews.first
+
+                expect(stackView?.subviews.count).to(equal(1))
+            }
+
+            it("sets a primary button at footerView") {
+                let stackView = viewModel.footerView?.subviews.first
+                let expectedView = stackView?.subviews.first as? NatButton
 
                 expect(expectedView).toNot(beNil())
             }
         }
 
         describe("#configure(secondaryButtonTitle: String, withAction: @escaping () -> Void)") {
-            beforeEach {
-                natDialogController = systemUnderTest
-                    .configure(secondaryButtonTitle: "StubText") { }
-                    .build()
+            context("without set primary button first") {
+                beforeEach {
+                    _ = systemUnderTest.configure(secondaryButtonTitle: "StubText") {}
+                }
+
+                it("does not set titleView") {
+                    expect(viewModel.titleView).to(beNil())
+                }
+
+                it("does not set bodyView") {
+                    expect(viewModel.bodyView).to(beNil())
+                }
+
+                it("does not set footerView") {
+                    expect(viewModel.footerView).to(beNil())
+                }
             }
 
-            it("sets footerView only if has a primaryButtonConfiguration set first") {
-                let containerView = natDialogController.view.subviews.first
-                let stackView = containerView?.subviews.first
-                let expectedView = stackView?.subviews.first as? DialogStyle.FooterView
+            context("setting primary button first") {
+                beforeEach {
+                    _ = systemUnderTest.configure(primaryButtonTitle: "StubText") {}
+                    _ = systemUnderTest.configure(secondaryButtonTitle: "StubText") {}
+                }
 
-                expect(expectedView).to(beNil())
+                it("does not set titleView") {
+                    expect(viewModel.titleView).to(beNil())
+                }
+
+                it("does not set bodyView") {
+                    expect(viewModel.bodyView).to(beNil())
+                }
+
+                it("has footerView already set") {
+                    expect(viewModel.footerView).toNot(beNil())
+                }
+
+                it("sets a second button at footerView") {
+                    let stackView = viewModel.footerView?.subviews.first
+
+                    expect(stackView?.subviews.count).to(equal(2))
+                }
+
+                it("sets a secondary button at footerView") {
+                    let stackView = viewModel.footerView?.subviews.first
+                    let expectedView = stackView?.subviews.last as? NatButton
+
+                    expect(expectedView).toNot(beNil())
+                }
             }
         }
     }

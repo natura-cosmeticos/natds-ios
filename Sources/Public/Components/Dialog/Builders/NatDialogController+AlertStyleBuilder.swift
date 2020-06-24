@@ -1,14 +1,14 @@
 extension NatDialogController {
     public final class AlertStyleBuilder {
 
-        // MARK: - DialogBuilder
+        // MARK: - NatDialogBuilder
 
         public let viewModel = ViewModel()
 
         // MARK: - Public methods
 
         public func configure(primaryButtonTitle title: String, withAction action: @escaping () -> Void) -> Self {
-            let footerView = DialogStyle.FooterView()
+            let footerView = DialogFooterView()
 
             footerView.configure(primaryButton: .init(
                 title: title,
@@ -33,6 +33,14 @@ extension NatDialogController {
     }
 }
 
-extension NatDialogController.AlertStyleBuilder: DialogBuilder {}
-extension NatDialogController.AlertStyleBuilder: DialogTitleConfigurator {}
-extension NatDialogController.AlertStyleBuilder: DialogBodyConfigurator {}
+// MARK: - NatDialogBuilder
+
+extension NatDialogController.AlertStyleBuilder: NatDialogBuilder {}
+
+// MARK: - NatDialogTitleConfigurator
+
+extension NatDialogController.AlertStyleBuilder: NatDialogTitleConfigurator {}
+
+// MARK: - NatDialogBodyConfigurator
+
+extension NatDialogController.AlertStyleBuilder: NatDialogBodyConfigurator {}

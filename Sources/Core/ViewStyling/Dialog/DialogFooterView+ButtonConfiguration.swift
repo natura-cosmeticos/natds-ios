@@ -1,4 +1,4 @@
-extension NatDialogController { //TODO REVIEW
+extension DialogFooterView {
     struct ButtonConfiguration {
         let title: String
         let style: NatButton.Style

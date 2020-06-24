@@ -1,6 +1,6 @@
-public protocol DialogBodyConfigurator: DialogBuilder {}
+public protocol NatDialogBodyConfigurator: NatDialogBuilder {}
 
-extension DialogBodyConfigurator {
+extension NatDialogBodyConfigurator {
     public func configure(body: String) -> Self {
         viewModel.bodyView = DialogStyle.createLabelForBody(body: body)
 
