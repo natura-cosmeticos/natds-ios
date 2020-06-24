@@ -44,3 +44,7 @@ extension NatDialogController.StandardStyleBuilder: NatDialogTitleConfigurator {
 // MARK: - NatDialogBodyConfigurator
 
 extension NatDialogController.StandardStyleBuilder: NatDialogBodyConfigurator {}
+
+// MARK: - NatDialogCustomBodyConfigurator
+
+extension NatDialogController.StandardStyleBuilder: NatDialogCustomBodyConfigurator {}

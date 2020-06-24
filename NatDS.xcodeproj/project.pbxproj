@@ -217,6 +217,9 @@
 		84C1CACE249A93940041A511 /* NatDialogController+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C1CACD249A93940041A511 /* NatDialogController+Snapshot+Tests.swift */; };
 		84C24DA6246F3DE40046833B /* NatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C24DA5246F3DE40046833B /* NatButton.swift */; };
 		84C8210E24A375A30090DE1E /* DialogFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8210D24A375A30090DE1E /* DialogFooterView.swift */; };
+		84C8211424A392BB0090DE1E /* NatDialogCustomBodyConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8211324A392BB0090DE1E /* NatDialogCustomBodyConfigurator.swift */; };
+		84C8211624A3937A0090DE1E /* NatDialogController+AlertStyleBuilder+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8211524A3937A0090DE1E /* NatDialogController+AlertStyleBuilder+Spec.swift */; };
+		84C8211924A3980F0090DE1E /* DialogStyle+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8211824A3980F0090DE1E /* DialogStyle+Spec.swift */; };
 		84EE85E9245A0FB20009293A /* NatSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE85E8245A0FB20009293A /* NatSpacing.swift */; };
 		A9325A6623FB34EC0023979C /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9325A6523FB34EC0023979C /* UICollectionView+Reusable.swift */; };
 		A9325A6A23FB35C50023979C /* UICollectionView+ReusableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9325A6723FB35450023979C /* UICollectionView+ReusableTests.swift */; };
@@ -459,6 +462,9 @@
 		84C1CACD249A93940041A511 /* NatDialogController+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogController+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		84C24DA5246F3DE40046833B /* NatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatButton.swift; sourceTree = "<group>"; };
 		84C8210D24A375A30090DE1E /* DialogFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogFooterView.swift; sourceTree = "<group>"; };
+		84C8211324A392BB0090DE1E /* NatDialogCustomBodyConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatDialogCustomBodyConfigurator.swift; sourceTree = "<group>"; };
+		84C8211524A3937A0090DE1E /* NatDialogController+AlertStyleBuilder+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogController+AlertStyleBuilder+Spec.swift"; sourceTree = "<group>"; };
+		84C8211824A3980F0090DE1E /* DialogStyle+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DialogStyle+Spec.swift"; sourceTree = "<group>"; };
 		84EE85E8245A0FB20009293A /* NatSpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatSpacing.swift; sourceTree = "<group>"; };
 		9A46395C038D4497A880A6FF /* Pods-NatDSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatDSTests.release.xcconfig"; path = "Target Support Files/Pods-NatDSTests/Pods-NatDSTests.release.xcconfig"; sourceTree = "<group>"; };
 		A8B18363274C7A70CF4443A3 /* Pods-NatDSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatDSTests.debug.xcconfig"; path = "Target Support Files/Pods-NatDSTests/Pods-NatDSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1077,6 +1083,7 @@
 				843A1E6824A27D0800FA7A7B /* NatDialogBuilder.swift */,
 				843A1E6C24A27EA300FA7A7B /* NatDialogTitleConfigurator.swift */,
 				843A1E6E24A27FAC00FA7A7B /* NatDialogBodyConfigurator.swift */,
+				84C8211324A392BB0090DE1E /* NatDialogCustomBodyConfigurator.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -1306,8 +1313,8 @@
 		84BFB664246DCB2B00506ED1 /* ViewStyling */ = {
 			isa = PBXGroup;
 			children = (
-				84C1CAC6249A83AF0041A511 /* Dialog */,
 				84B1979E2475912300F1B575 /* Button */,
+				84C1CAC6249A83AF0041A511 /* Dialog */,
 				84BFB665246DCB5900506ED1 /* ViewStyle.swift */,
 			);
 			path = ViewStyling;
@@ -1346,6 +1353,7 @@
 			isa = PBXGroup;
 			children = (
 				84C1CAC1249A49A40041A511 /* NatDialogController+StandardStyleBuilder+Spec.swift */,
+				84C8211524A3937A0090DE1E /* NatDialogController+AlertStyleBuilder+Spec.swift */,
 			);
 			path = Builders;
 			sourceTree = "<group>";
@@ -1368,6 +1376,7 @@
 				843A1E6424A1305A00FA7A7B /* Alert */,
 				843A1E6324A1304700FA7A7B /* Standard */,
 				84C1CACA249A8AB00041A511 /* DialogStandardStyle+FooterView+Spec.swift */,
+				84C8211824A3980F0090DE1E /* DialogStyle+Spec.swift */,
 			);
 			path = Dialog;
 			sourceTree = "<group>";
@@ -1811,6 +1820,7 @@
 				84BFB6382469BF4B00506ED1 /* AvonFontSizes.swift in Sources */,
 				43C02A3523FAFDDD0057A31C /* NSMutableAttributedString+Builder.swift in Sources */,
 				117FE024238D9B070032E2AC /* Colors.swift in Sources */,
+				84C8211424A392BB0090DE1E /* NatDialogCustomBodyConfigurator.swift in Sources */,
 				84BFB65D246DA42800506ED1 /* ElevationAttributes.swift in Sources */,
 				A988199B238C5AAF0008230F /* UIColor+Hex.swift in Sources */,
 				84692854247D46F2008DF255 /* FontLetterSpacings.swift in Sources */,
@@ -1832,11 +1842,13 @@
 				117FE018238D9AEB0032E2AC /* FontsTests.swift in Sources */,
 				843FA2C0246483CC00D20D9A /* NaturaOpacities+Spec.swift in Sources */,
 				11581A9B238EC15E003E45D7 /* NavigationDrawerItemCellTests.swift in Sources */,
+				84C8211624A3937A0090DE1E /* NatDialogController+AlertStyleBuilder+Spec.swift in Sources */,
 				84BFB6402469C2B900506ED1 /* NaturaFontWeights+Spec.swift in Sources */,
 				84BFB66F246DD15700506ED1 /* NaturaElevations+Spec.swift in Sources */,
 				43F1DD4C24183BA0005A0C4A /* PulseLayerTests.swift in Sources */,
 				A971BE6F2398171C00A0D509 /* NavigationDrawerDelegateMock.swift in Sources */,
 				434E662324198FCE00D91E59 /* SearchBar.swift in Sources */,
+				84C8211924A3980F0090DE1E /* DialogStyle+Spec.swift in Sources */,
 				84BFB6232469A01D00506ED1 /* AvonFontSizes+Spec.swift in Sources */,
 				84BFB61F24699ECA00506ED1 /* NatFonts+Natura+Spec.swift in Sources */,
 				11518B6C2396C4AB00220570 /* NavigationDrawerTests.swift in Sources */,

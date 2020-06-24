@@ -6,10 +6,4 @@ extension NatDialogBodyConfigurator {
 
         return self
     }
-
-    public func configure(body: UIView) -> Self {
-        viewModel.bodyView = body
-
-        return self
-    }
 }
