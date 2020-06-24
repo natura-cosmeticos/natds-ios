@@ -63,8 +63,8 @@ final class DialogItemViewController: UIViewController, SampleItem {
         let dialog = NatDialogController
             .standardStyleBuilder
             .configure(title: "Title")
-            .configure(body: "Contrary to popular belief, Lorem Ipsum is not simply random text.")
-            .configure(primaryButtonTitle: "Confirm") {
+            .configure(body: "Some body text to make a snapshot text without think about the future.")
+            .configure(primaryButtonTitle: "Confirm button") {
                 self.navigationController?.presentedViewController?.dismiss(animated: true)
             }
             .configure(secondaryButtonTitle: "Close") {
@@ -78,8 +78,7 @@ final class DialogItemViewController: UIViewController, SampleItem {
     @objc func dialogAlertButtonHandler () {
         let dialog = NatDialogController
             .alertStyleBuilder
-//            .configure(title: "Title")
-            .configure(body: "Contrary to popular belief, Lorem Ipsum is not simply random text.")
+            .configure(body: "Some body text to make a snapshot text without think about the future.")
             .configure(primaryButtonTitle: "Confirm") {
                 self.navigationController?.presentedViewController?.dismiss(animated: true)
             }
