@@ -67,8 +67,8 @@ class NavigationDrawerItemCellTests: FBSnapshotTestCase {
         FBSnapshotVerifyView(sut)
     }
 
-    func test_init_hasIconAsOutlinedNavigationArrowLeft() {
-        XCTAssertEqual(sut.icon, .outlinedNavigationArrowleft)
+    func test_init_hasADefaultIcon() {
+        XCTAssertEqual(sut.icon, .outlinedDefaultMockup)
     }
 
     func test_init_hasSelectionStyleAsNone() {

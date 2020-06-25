@@ -18,7 +18,7 @@ public class NavigationDrawerItemCell: UITableViewCell {
         set { titleLabel.text = newValue }
     }
 
-    public var icon: Icon = .outlinedNavigationArrowleft {
+    public var icon: Icon = .outlinedDefaultMockup {
         didSet {
             iconView.icon = icon
         }
@@ -65,7 +65,7 @@ public class NavigationDrawerItemCell: UITableViewCell {
         defer {
             state = .normal
             hasSubItems = false
-            icon = .outlinedNavigationArrowleft
+            icon = .outlinedDefaultMockup
         }
         setup()
     }
