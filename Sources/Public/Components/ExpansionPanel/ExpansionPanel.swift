@@ -38,7 +38,7 @@ public class ExpansionPanel: UIView {
         let label = UILabel()
         label.numberOfLines = 0
         label.font = NatFonts.font(ofSize: .subtitle1, withWeight: .medium)
-        label.textColor = NatColors.highEmphasis
+        label.textColor = NatColors.onSurface
         return label
     }()
 
