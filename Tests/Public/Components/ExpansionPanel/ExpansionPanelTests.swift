@@ -17,7 +17,7 @@ class ExpansionPanelTests: FBSnapshotTestCase {
         detailMock = builder.detailMock
         otherDetailMock = builder.otherDetailMock
 
-        systemUnderTest = builder.panelWithViewAnimatingMock
+        systemUnderTest = builder.panelWithViewAnimating
         systemUnderTest.layoutIfNeeded()
     }
 
@@ -40,7 +40,7 @@ class ExpansionPanelTests: FBSnapshotTestCase {
     }
 
     func test_initWithViewAnimating_withLongSubtitle_hasValidSnapshot() {
-        systemUnderTest = builder.panelWithViewAnimatingMockAndLongSubtitle
+        systemUnderTest = builder.panelWithViewAnimatingAndLongSubtitle
         systemUnderTest.layoutIfNeeded()
 
         FBSnapshotVerifyView(systemUnderTest)
@@ -54,7 +54,7 @@ class ExpansionPanelTests: FBSnapshotTestCase {
     }
 
     func test_initWithViewAnimating_withLongSubtitle_andLimitedSize_hasValidSnapshot() {
-        systemUnderTest = builder.panelWithViewAnimatingMockAndLongSubtitle
+        systemUnderTest = builder.panelWithViewAnimatingAndLongSubtitle
         let view = addsOnViewLimitedSize()
 
         FBSnapshotVerifyView(view)

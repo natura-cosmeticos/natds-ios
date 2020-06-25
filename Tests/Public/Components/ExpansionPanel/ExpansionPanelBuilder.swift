@@ -41,20 +41,18 @@ struct ExpansionPanelBuilder {
         return panel
     }
 
-    var panelWithViewAnimatingMock: ExpansionPanel {
+    var panelWithViewAnimating: ExpansionPanel {
         let panel = ExpansionPanel(viewAnimating: viewAnimatingMock)
         panel.setSubtitle(subtitleMock)
         panel.translatesAutoresizingMaskIntoConstraints = false
         return panel
     }
 
-    //  swiftlint:disable identifier_name
-    var panelWithViewAnimatingMockAndLongSubtitle: ExpansionPanel {
+    var panelWithViewAnimatingAndLongSubtitle: ExpansionPanel {
         let panel = ExpansionPanel(viewAnimating: viewAnimatingMock)
         panel.setSubtitle(longSubtitleMock)
         panel.translatesAutoresizingMaskIntoConstraints = false
         return panel
     }
-    //  swiftlint:enable identifier_name
 
 }
