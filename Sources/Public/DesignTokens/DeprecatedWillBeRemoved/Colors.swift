@@ -1,4 +1,7 @@
 @objcMembers
+
+@available(*, deprecated, message: "Use NatColors instead")
+
 public class Colors: NSObject {
     public static let primary = ColorsNatura.Primary.yellow
     public static let secondary = ColorsNatura.Primary.orange
