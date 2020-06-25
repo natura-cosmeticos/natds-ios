@@ -79,7 +79,6 @@ public class ExpansionPanel: UIView {
 
     private var isExpanded: Bool { !isCollapsed }
     private var isCollapsed: Bool { upDownButton.transform == CGAffineTransform.identity }
-    private var panelHeightConstraint: NSLayoutConstraint?
     private let activeBorderColor = NatColors.primary
     private let inactiveBorderColor = UIColor.clear
     private let animationDuration = 0.5
