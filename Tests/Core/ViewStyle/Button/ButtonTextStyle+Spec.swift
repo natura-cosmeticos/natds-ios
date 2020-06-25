@@ -45,7 +45,7 @@ final class ButtonTextStyleSpec: QuickSpec {
             }
 
             it("returns an expected contentEdgeInsets") {
-                let spacing = getTheme().spacing.small
+                let spacing: CGFloat = 12
 
                 expect(button.contentEdgeInsets.top).to(equal(spacing))
                 expect(button.contentEdgeInsets.right).to(equal(spacing))
@@ -116,7 +116,7 @@ final class ButtonTextStyleSpec: QuickSpec {
                     let foregroundColor = attributes[.foregroundColor] as? UIColor
 
                     expect(foregroundColor)
-                        .to(equal(NatColors.onSurface.withAlphaComponent(getTheme().opacities.opacity06)))
+                        .to(equal(NatColors.onSurface.withAlphaComponent(getTheme().opacities.opacity08)))
                 }
             }
         }

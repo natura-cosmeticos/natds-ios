@@ -30,6 +30,7 @@ class ExpansionPanelViewController: UIViewController, SampleItem {
         title = Self.name
         view.backgroundColor = NatColors.surface
         view.addSubview(expansionPanel)
+        expansionPanel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             expansionPanel.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 8),
             expansionPanel.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: 16),
