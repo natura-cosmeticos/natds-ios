@@ -27,32 +27,4 @@ struct ExpansionPanelBuilder {
         return label
     }
 
-    var panelDefault: ExpansionPanel {
-        let panel = ExpansionPanel()
-        panel.setSubtitle(subtitleMock)
-        panel.translatesAutoresizingMaskIntoConstraints = false
-        return panel
-    }
-
-    var panelDefaultWithLongSubtitle: ExpansionPanel {
-        let panel = ExpansionPanel()
-        panel.setSubtitle(longSubtitleMock)
-        panel.translatesAutoresizingMaskIntoConstraints = false
-        return panel
-    }
-
-    var panelWithViewAnimating: ExpansionPanel {
-        let panel = ExpansionPanel(viewAnimating: viewAnimatingMock)
-        panel.setSubtitle(subtitleMock)
-        panel.translatesAutoresizingMaskIntoConstraints = false
-        return panel
-    }
-
-    var panelWithViewAnimatingAndLongSubtitle: ExpansionPanel {
-        let panel = ExpansionPanel(viewAnimating: viewAnimatingMock)
-        panel.setSubtitle(longSubtitleMock)
-        panel.translatesAutoresizingMaskIntoConstraints = false
-        return panel
-    }
-
 }

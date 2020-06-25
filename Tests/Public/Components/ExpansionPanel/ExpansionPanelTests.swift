@@ -17,12 +17,16 @@ class ExpansionPanelTests: FBSnapshotTestCase {
         detailMock = builder.detailMock
         otherDetailMock = builder.otherDetailMock
 
-        systemUnderTest = builder.panelWithViewAnimating
+        systemUnderTest = ExpansionPanel(viewAnimating: builder.viewAnimatingMock)
+        systemUnderTest.setSubtitle(builder.subtitleMock)
+        systemUnderTest.translatesAutoresizingMaskIntoConstraints = false
         systemUnderTest.layoutIfNeeded()
     }
 
     func test_defaultInit_hasValidSnapshot() {
-        systemUnderTest = builder.panelDefault
+        systemUnderTest = ExpansionPanel()
+        systemUnderTest.setSubtitle(builder.subtitleMock)
+        systemUnderTest.translatesAutoresizingMaskIntoConstraints = false
         systemUnderTest.layoutIfNeeded()
 
         FBSnapshotVerifyView(systemUnderTest)
@@ -33,35 +37,43 @@ class ExpansionPanelTests: FBSnapshotTestCase {
     }
 
     func test_defaultInit_withLongSubtitle_hasValidSnapshot() {
-        systemUnderTest = builder.panelDefaultWithLongSubtitle
+        systemUnderTest = ExpansionPanel()
+        systemUnderTest.setSubtitle(builder.longSubtitleMock)
+        systemUnderTest.translatesAutoresizingMaskIntoConstraints = false
         systemUnderTest.layoutIfNeeded()
 
         FBSnapshotVerifyView(systemUnderTest)
     }
 
     func test_initWithViewAnimating_withLongSubtitle_hasValidSnapshot() {
-        systemUnderTest = builder.panelWithViewAnimatingAndLongSubtitle
+        systemUnderTest = ExpansionPanel(viewAnimating: builder.viewAnimatingMock)
+        systemUnderTest.setSubtitle(builder.longSubtitleMock)
+        systemUnderTest.translatesAutoresizingMaskIntoConstraints = false
         systemUnderTest.layoutIfNeeded()
 
         FBSnapshotVerifyView(systemUnderTest)
     }
 
     func test_defaultInit_withLongSubtitle_andLimitedSize_hasValidSnapshot() {
-        systemUnderTest = builder.panelDefaultWithLongSubtitle
-        let view = addsOnViewLimitedSize()
+        systemUnderTest = ExpansionPanel()
+        systemUnderTest.setSubtitle(builder.longSubtitleMock)
+        systemUnderTest.translatesAutoresizingMaskIntoConstraints = false
+        let view = addsSutOnViewLimitedSize()
 
         FBSnapshotVerifyView(view)
     }
 
     func test_initWithViewAnimating_withLongSubtitle_andLimitedSize_hasValidSnapshot() {
-        systemUnderTest = builder.panelWithViewAnimatingAndLongSubtitle
-        let view = addsOnViewLimitedSize()
+        systemUnderTest = ExpansionPanel(viewAnimating: builder.viewAnimatingMock)
+        systemUnderTest.setSubtitle(builder.longSubtitleMock)
+        systemUnderTest.translatesAutoresizingMaskIntoConstraints = false
+        let view = addsSutOnViewLimitedSize()
 
         FBSnapshotVerifyView(view)
     }
 
     func test_tapButtonOnce_showsButtonPointingUp() {
-        let view = addsOnViewLimitedSize()
+        let view = addsSutOnViewLimitedSize()
 
         tapButton()
 
@@ -69,7 +81,7 @@ class ExpansionPanelTests: FBSnapshotTestCase {
     }
 
     func test_tapButtonTwice_showsButtonPointingDown() {
-        let view = addsOnViewLimitedSize()
+        let view = addsSutOnViewLimitedSize()
 
         tapButton()
         tapButton()
@@ -78,7 +90,7 @@ class ExpansionPanelTests: FBSnapshotTestCase {
     }
 
     func test_tapButtonThrice_showsButtonPointingUp() {
-        let view = addsOnViewLimitedSize()
+        let view = addsSutOnViewLimitedSize()
 
         tapButton()
         tapButton()
@@ -88,7 +100,7 @@ class ExpansionPanelTests: FBSnapshotTestCase {
     }
 
     func test_tapButtonOnce_withDetailView_showsButtonPointingUp_AndDetailView() {
-        let view = addsOnViewLargeHeight()
+        let view = addsSutOnViewLargeHeight()
         systemUnderTest.setDetailView(detailMock)
 
         tapButton()
@@ -97,7 +109,7 @@ class ExpansionPanelTests: FBSnapshotTestCase {
     }
 
     func test_tapPanelOnce_withDetailView_showsButtonPointingUp_AndDetailView() {
-        let view = addsOnViewLargeHeight()
+        let view = addsSutOnViewLargeHeight()
         systemUnderTest.setDetailView(detailMock)
 
         tapPanel()
@@ -106,7 +118,7 @@ class ExpansionPanelTests: FBSnapshotTestCase {
     }
 
     func test_setDetailView_whenPanelIsExpanded_showsButtonPointingUp_AndDetailView() {
-        let view = addsOnViewLargeHeight()
+        let view = addsSutOnViewLargeHeight()
         systemUnderTest.setDetailView(detailMock)
         tapPanel()
 
@@ -116,7 +128,7 @@ class ExpansionPanelTests: FBSnapshotTestCase {
     }
 
     func test_tapPanelToCollapse_whenSetDetailView_AndPanelIsExpanded_showsButtonPointingDown() {
-        let view = addsOnViewLargeHeight()
+        let view = addsSutOnViewLargeHeight()
         systemUnderTest.setDetailView(detailMock)
         tapPanel()
 
@@ -126,7 +138,7 @@ class ExpansionPanelTests: FBSnapshotTestCase {
     }
 
     func test_removeDetailView_AndPanelIsExpanded_showsButtonPointingDown() {
-        let view = addsOnViewLargeHeight()
+        let view = addsSutOnViewLargeHeight()
         systemUnderTest.setDetailView(detailMock)
         tapPanel()
 
@@ -145,23 +157,25 @@ class ExpansionPanelTests: FBSnapshotTestCase {
         systemUnderTest.perform(Selector("didTapPanel"))
     }
 
-    private func addsOnViewLimitedSize() -> UIView {
-        return addsOnView(frame: CGRect(x: 0, y: 0, width: 320, height: 200))
+    private func addsSutOnViewLimitedSize() -> UIView {
+        let frame = CGRect(x: 0, y: 0, width: 320, height: 200)
+        return addsSystemUnderTestOnView(frame: frame)
     }
 
-    private func addsOnViewLargeHeight() -> UIView {
-        return addsOnView(frame: CGRect(x: 0, y: 0, width: 320, height: 420))
+    private func addsSutOnViewLargeHeight() -> UIView {
+        let frame = CGRect(x: 0, y: 0, width: 320, height: 420)
+        return addsSystemUnderTestOnView(frame: frame)
     }
 
-    private func addsOnView(frame: CGRect) -> UIView {
+    private func addsSystemUnderTestOnView(frame: CGRect) -> UIView {
         let view = UIView(frame: frame)
         view.addSubview(systemUnderTest)
         view.backgroundColor = .white
-        setConstraints(with: view)
+        setSystemUnderTestConstraints(with: view)
         return view
     }
 
-    private func setConstraints(with view: UIView) {
+    private func setSystemUnderTestConstraints(with view: UIView) {
         NSLayoutConstraint.activate([
             systemUnderTest.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             systemUnderTest.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8),
