@@ -99,6 +99,8 @@
 		691B7778F2E674B0828966377F8B71C3 /* NSMutableAttributedString+BuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CCB4D4D576DACD400A9C98B01483C6 /* NSMutableAttributedString+BuilderTests.swift */; };
 		5E34A8BE616690B54E3DCDDF5395963E /* NatBorderRadius+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E3877B37EA290C13920BA9754C76C1 /* NatBorderRadius+Spec.swift */; };
 		CF14752D6F385AD399A59F275DEB1ED7 /* NatBorderRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A74845475F2B53E1C0242E26F6DD1 /* NatBorderRadius.swift */; };
+		B7CCF87E56EA792B3471AD69AF68B23F /* NatButton+EdgeInsets+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF10A178B1E50604C97B543CD204939B /* NatButton+EdgeInsets+Spec.swift */; };
+		F6B6FF5891E1F871748A9D598EA14AFE /* NatButton+EdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B397DFEC0D8F0FBBDE7AE09BA83B2D /* NatButton+EdgeInsets.swift */; };
 		AA1F5760B92801C89E927B323F7691B7 /* NatButton+Height+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8DC06D81E2DEFAF54C74410DAD95D8 /* NatButton+Height+Spec.swift */; };
 		C0F15375EEFCBC922341EBD9DED5A29B /* NatButton+Height.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C54C550ED4D44A309C43261BF40F55 /* NatButton+Height.swift */; };
 		19CCAA043E9657B0F68877ABC0F7F90F /* NatButton+Specs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F485CDE6E86A020B1549C882DC64B38 /* NatButton+Specs.swift */; };
@@ -341,6 +343,8 @@
 		78CCB4D4D576DACD400A9C98B01483C6 /* NSMutableAttributedString+BuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+BuilderTests.swift"; sourceTree = "<group>"; };
 		A6E3877B37EA290C13920BA9754C76C1 /* NatBorderRadius+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatBorderRadius+Spec.swift"; sourceTree = "<group>"; };
 		A59A74845475F2B53E1C0242E26F6DD1 /* NatBorderRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatBorderRadius.swift; sourceTree = "<group>"; };
+		CF10A178B1E50604C97B543CD204939B /* NatButton+EdgeInsets+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+EdgeInsets+Spec.swift"; sourceTree = "<group>"; };
+		D9B397DFEC0D8F0FBBDE7AE09BA83B2D /* NatButton+EdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+EdgeInsets.swift"; sourceTree = "<group>"; };
 		BF8DC06D81E2DEFAF54C74410DAD95D8 /* NatButton+Height+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+Height+Spec.swift"; sourceTree = "<group>"; };
 		10C54C550ED4D44A309C43261BF40F55 /* NatButton+Height.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+Height.swift"; sourceTree = "<group>"; };
 		5F485CDE6E86A020B1549C882DC64B38 /* NatButton+Specs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+Specs.swift"; sourceTree = "<group>"; };
@@ -520,6 +524,7 @@
 				9C16A106EDB094AEBB02B7EDBAF61E15 /* Pusable */,
 				A95440A28904714D5452372B860A3541 /* ContainedButtonTests.swift */,
 				22C390A2FC2AAA69757BADEB95808375 /* FlatButtonTests.swift */,
+				CF10A178B1E50604C97B543CD204939B /* NatButton+EdgeInsets+Spec.swift */,
 				BF8DC06D81E2DEFAF54C74410DAD95D8 /* NatButton+Height+Spec.swift */,
 				5F485CDE6E86A020B1549C882DC64B38 /* NatButton+Specs.swift */,
 				2381FCF8210ECD9A4895ECA9ED41B0FB /* PulseLayerTests.swift */,
@@ -1172,6 +1177,7 @@
 		55C56C56418DE50EB64ADD8E2B4B70F4 /* NatButton */ = {
 			isa = PBXGroup;
 			children = (
+				D9B397DFEC0D8F0FBBDE7AE09BA83B2D /* NatButton+EdgeInsets.swift */,
 				10C54C550ED4D44A309C43261BF40F55 /* NatButton+Height.swift */,
 				D331FCE6B4B326453609B50D92482230 /* NatButton+Style.swift */,
 				7CCF632B4501044E5062C574CCBBF74E /* NatButton.swift */,
@@ -1718,6 +1724,7 @@
 				5737265E1EA6FD9BF1004F1CC1333F29 /* IllustrationIcons.swift in Sources */,
 				1908219397D007DC35BC0F99D5DEDE80 /* NSMutableAttributedString+Builder.swift in Sources */,
 				CF14752D6F385AD399A59F275DEB1ED7 /* NatBorderRadius.swift in Sources */,
+				F6B6FF5891E1F871748A9D598EA14AFE /* NatButton+EdgeInsets.swift in Sources */,
 				C0F15375EEFCBC922341EBD9DED5A29B /* NatButton+Height.swift in Sources */,
 				AC66A51CB3C8EE95429250880CADCB07 /* NatButton+Style.swift in Sources */,
 				E70EF1AC4BB7A93A80A500786C1A6497 /* NatButton.swift in Sources */,
@@ -1828,6 +1835,7 @@
 				79B1DEDF25B2042A1FD15D6ED9C15722 /* MockStorage.swift in Sources */,
 				691B7778F2E674B0828966377F8B71C3 /* NSMutableAttributedString+BuilderTests.swift in Sources */,
 				5E34A8BE616690B54E3DCDDF5395963E /* NatBorderRadius+Spec.swift in Sources */,
+				B7CCF87E56EA792B3471AD69AF68B23F /* NatButton+EdgeInsets+Spec.swift in Sources */,
 				AA1F5760B92801C89E927B323F7691B7 /* NatButton+Height+Spec.swift in Sources */,
 				19CCAA043E9657B0F68877ABC0F7F90F /* NatButton+Specs.swift in Sources */,
 				65D2ED6A736F8BD53729307D3E83A35D /* NatColors+Avon+Spec.swift in Sources */,
@@ -2051,7 +2059,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.natura.NatDS;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -2081,7 +2089,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.natura.NatDS;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

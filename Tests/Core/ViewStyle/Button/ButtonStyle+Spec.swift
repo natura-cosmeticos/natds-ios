@@ -44,7 +44,7 @@ final class ButtonStyleSpec: QuickSpec {
             }
 
             it("returns an expected contentEdgeInsets") {
-                let spacing = getTheme().spacing.small
+                let spacing: CGFloat = 12
 
                 expect(button.contentEdgeInsets.top).to(equal(spacing))
                 expect(button.contentEdgeInsets.right).to(equal(spacing))
@@ -111,7 +111,7 @@ final class ButtonStyleSpec: QuickSpec {
                 it("returns an expected foregroundColor") {
                     let foregroundColor = attributes[.foregroundColor] as? UIColor
                     let expectedColor = getTheme().colors.onSurface
-                        .withAlphaComponent(getTheme().opacities.opacity06)
+                        .withAlphaComponent(getTheme().opacities.opacity08)
 
                     expect(foregroundColor).to(equal(expectedColor))
                 }

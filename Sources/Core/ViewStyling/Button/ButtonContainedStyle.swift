@@ -10,7 +10,7 @@ enum ButtonContainedStyle {
             button.backgroundColor = NatColors.primary
             NatElevation.apply(on: button, elevation: .elevation02)
         case .disabled:
-            button.backgroundColor = NatColors.onSurface.withAlphaComponent(NatOpacities.opacity03)
+            button.backgroundColor = NatColors.onSurface.withAlphaComponent(NatOpacities.opacity02)
             NatElevation.apply(on: button, elevation: .none)
         default: break
         }
