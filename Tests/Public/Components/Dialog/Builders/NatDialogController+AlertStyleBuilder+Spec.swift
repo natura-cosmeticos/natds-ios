@@ -64,7 +64,7 @@ final class NatDialogControllerAlertStyleBuilderSpec: QuickSpec {
             }
         }
 
-        describe("#configure(primaryButtonTitle: String, withAction: @escaping () -> Void)") {
+        describe("#configure(primaryButtonTitle: withAction:)") {
             beforeEach {
                 _ = systemUnderTest.configure(primaryButtonTitle: "StubText") {}
             }
@@ -95,7 +95,7 @@ final class NatDialogControllerAlertStyleBuilderSpec: QuickSpec {
             }
         }
 
-        describe("#configure(secondaryButtonTitle: String, withAction: @escaping () -> Void)") {
+        describe("#configure(secondaryButtonTitle: withAction:)") {
             context("without set primary button first") {
                 beforeEach {
                     _ = systemUnderTest.configure(secondaryButtonTitle: "StubText") {}
