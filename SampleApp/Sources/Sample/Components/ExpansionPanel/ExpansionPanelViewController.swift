@@ -32,9 +32,9 @@ class ExpansionPanelViewController: UIViewController, SampleItem {
         view.addSubview(expansionPanel)
         expansionPanel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            expansionPanel.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: 8),
-            expansionPanel.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: 16),
-            expansionPanel.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -16)
+            expansionPanel.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: NatSpacing.tiny),
+            expansionPanel.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: NatSpacing.small),
+            expansionPanel.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -NatSpacing.small)
         ])
         expansionPanel.setDetailView(detail)
     }
