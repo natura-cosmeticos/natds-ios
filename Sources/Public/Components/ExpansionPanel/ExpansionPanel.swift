@@ -123,7 +123,7 @@ public class ExpansionPanel: UIView {
     // MARK: - Private methods
 
     private func setup() {
-        backgroundColor = NatColors.surface
+        backgroundColor = NatColors.background
         NatElevation.apply(on: self, elevation: .elevation01)
         layer.cornerRadius = NatBorderRadius.medium
         layer.borderWidth = 1
