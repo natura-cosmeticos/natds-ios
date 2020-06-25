@@ -7,13 +7,13 @@ struct ExpansionPanelBuilder {
 
     let subtitleMock = "Subtitle"
 
-    let longSubtitleMock = "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt"
+    let longSubtitleMock = "Since he was lost in the dark without hope, and could neither go on nor back."
 
     var detailMock: UILabel {
         let label = UILabel()
         label.numberOfLines = 0
         // swiftlint:disable line_length
-        label.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        label.text = "As for the Hobbits of the Shire, with whom these tales are concerned, in the days of their peace and prosperity they were a merry folk. They dressed in bright colours, being notably fond of yellow and green; but they seldom wore shoes, since their feet had tough leathery soles and were clad in a thick curling hair, much like the hair of their heads, which was commonly brown."
         // swiftlint:enable line_length
         return label
     }
@@ -22,7 +22,7 @@ struct ExpansionPanelBuilder {
         let label = UILabel()
         label.numberOfLines = 0
         // swiftlint:disable line_length
-        label.text = "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        label.text = "The habit of building farmhouses and barns was said to have begun among the inhabitants of the Marish down by the Brandywine."
         // swiftlint:enable line_length
         return label
     }
