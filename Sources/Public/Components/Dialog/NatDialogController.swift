@@ -122,8 +122,8 @@ extension NatDialogController {
 
         Available elements to configure:
         - Title
-        - Body
-        - Primary Button
+        - Body (Text or Custom view)
+        - Primary Button (must be configured before other buttons)
         - Secondary Button (Optional)
 
          Example of usage:
@@ -142,5 +142,29 @@ extension NatDialogController {
                 DesignSystem().configure(with: Brand)
     */
     public static var standardStyleBuilder: StandardStyleBuilder { .init() }
+
+    /**
+      Class property to access AlertStyleBuilder.
+
+        Available elements to configure:
+        - Title
+        - Body
+        - Primary Button (must be configured before other buttons)
+        - Secondary Button (Optional)
+
+         Example of usage:
+
+            let dialog = NatDialogController
+            .alertStyleBuilder
+            .configure(body: "Body")
+            .configure(primaryTitle: "Title", primaryAction: { print("lol") })
+            .build()
+
+     - Requires:
+            It's necessary to configure the Design System current Brand at DesignSystem class
+            or fatalError will be raised.
+
+                DesignSystem().configure(with: Brand)
+    */
     public static var alertStyleBuilder: AlertStyleBuilder { .init() }
 }
