@@ -70,6 +70,8 @@
 		5C3B779F94FC59E1F2329996E3E55DF5 /* ElevationAttributes+Equitable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58907D6C652303C4D5FC5FFE6E8F721A /* ElevationAttributes+Equitable.swift */; };
 		6D4DFEB09D32E1F36B9FA29904AE1ED8 /* ElevationAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C267848A6D4A2289C862E53EA54F84 /* ElevationAttributes.swift */; };
 		2655155E5437F0880708125E1F9F5BC9 /* Elevations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D49BA63C5E5BFEED327C214620A7657 /* Elevations.swift */; };
+		672E84F3438F653B2DF42C2018894304 /* ExpansionPanel+Margin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92374A53F43E8BA6129F16B7AB1F4F0 /* ExpansionPanel+Margin.swift */; };
+		291A2ABAA2039E539F7E45F394B8529D /* ExpansionPanel+MarginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F7B50CF41E6ECBFD7148828549ECBF /* ExpansionPanel+MarginTests.swift */; };
 		3A65DE112EB34ED5B9F3F1DF7B8D3FBD /* ExpansionPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58B1BFBC101D26CBEC7E3448F9B33D2 /* ExpansionPanel.swift */; };
 		1715E4B78E2721E0181A401A0DA97A98 /* ExpansionPanelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FFA81AA763D45B2BCB5F321784CECE /* ExpansionPanelBuilder.swift */; };
 		4CEBA5F26393AC6F09BEE6382ABC55E9 /* ExpansionPanelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF507003D3035F2C312F8C225D481FC /* ExpansionPanelTests.swift */; };
@@ -319,6 +321,8 @@
 		58907D6C652303C4D5FC5FFE6E8F721A /* ElevationAttributes+Equitable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ElevationAttributes+Equitable.swift"; sourceTree = "<group>"; };
 		D7C267848A6D4A2289C862E53EA54F84 /* ElevationAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevationAttributes.swift; sourceTree = "<group>"; };
 		0D49BA63C5E5BFEED327C214620A7657 /* Elevations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elevations.swift; sourceTree = "<group>"; };
+		B92374A53F43E8BA6129F16B7AB1F4F0 /* ExpansionPanel+Margin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExpansionPanel+Margin.swift"; sourceTree = "<group>"; };
+		F6F7B50CF41E6ECBFD7148828549ECBF /* ExpansionPanel+MarginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExpansionPanel+MarginTests.swift"; sourceTree = "<group>"; };
 		C58B1BFBC101D26CBEC7E3448F9B33D2 /* ExpansionPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpansionPanel.swift; sourceTree = "<group>"; };
 		14FFA81AA763D45B2BCB5F321784CECE /* ExpansionPanelBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpansionPanelBuilder.swift; sourceTree = "<group>"; };
 		0FF507003D3035F2C312F8C225D481FC /* ExpansionPanelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpansionPanelTests.swift; sourceTree = "<group>"; };
@@ -836,20 +840,6 @@
 			path = NatButton;
 			sourceTree = "<group>";
 		};
-		E3284AABCC53927621EACCBF1C988CA3 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				CAD56BE8AA67D399ED570EA78BFC09E7 /* NSMutableAttributedString+BuilderTests.swift */,
-				AD080B942BE2F7A41B1DEF15B19C34DB /* String+IconTests.swift */,
-				36B6CEC817D03194414588BB22C1833A /* UICollectionView+ReusableTests.swift */,
-				DA25909FD964254E6B99AD359EFD8A5C /* UIColor+HexTests.swift */,
-				F6EAF8A97988FC1AA2F71C29D348A67D /* UIFont+IconTests.swift */,
-				8656CC0789F1E0DACEB77D4C50C2ECC1 /* UITableView+ReusableTests.swift */,
-				FF60BC58D83695B3AC61ABB7BBE49B9C /* UIView+FrameTests.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		5711C7C177B3A652CFE2D2EE77837359 /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -896,6 +886,7 @@
 		6759B588024397D1AC93C8D123122D59 /* ExpansionPanel */ = {
 			isa = PBXGroup;
 			children = (
+				F6F7B50CF41E6ECBFD7148828549ECBF /* ExpansionPanel+MarginTests.swift */,
 				14FFA81AA763D45B2BCB5F321784CECE /* ExpansionPanelBuilder.swift */,
 				0FF507003D3035F2C312F8C225D481FC /* ExpansionPanelTests.swift */,
 			);
@@ -1151,6 +1142,7 @@
 		9A95973E20D8800C2A72454FF93AEC3F /* ExpansionPanel */ = {
 			isa = PBXGroup;
 			children = (
+				B92374A53F43E8BA6129F16B7AB1F4F0 /* ExpansionPanel+Margin.swift */,
 				C58B1BFBC101D26CBEC7E3448F9B33D2 /* ExpansionPanel.swift */,
 			);
 			path = ExpansionPanel;
@@ -1490,6 +1482,20 @@
 			path = Builders;
 			sourceTree = "<group>";
 		};
+		E3284AABCC53927621EACCBF1C988CA3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CAD56BE8AA67D399ED570EA78BFC09E7 /* NSMutableAttributedString+BuilderTests.swift */,
+				AD080B942BE2F7A41B1DEF15B19C34DB /* String+IconTests.swift */,
+				36B6CEC817D03194414588BB22C1833A /* UICollectionView+ReusableTests.swift */,
+				DA25909FD964254E6B99AD359EFD8A5C /* UIColor+HexTests.swift */,
+				F6EAF8A97988FC1AA2F71C29D348A67D /* UIFont+IconTests.swift */,
+				8656CC0789F1E0DACEB77D4C50C2ECC1 /* UITableView+ReusableTests.swift */,
+				FF60BC58D83695B3AC61ABB7BBE49B9C /* UIView+FrameTests.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		E69353726F01C76405770FFD9B3A7D74 /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -1762,6 +1768,7 @@
 				705A576866667D11B1D05EBB709BCC00 /* DynamicColorFactory+Spec.swift in Sources */,
 				91A18CB3646844B3C0EF8924AF376ACD /* DynamicColors+Spec.swift in Sources */,
 				5C3B779F94FC59E1F2329996E3E55DF5 /* ElevationAttributes+Equitable.swift in Sources */,
+				291A2ABAA2039E539F7E45F394B8529D /* ExpansionPanel+MarginTests.swift in Sources */,
 				1715E4B78E2721E0181A401A0DA97A98 /* ExpansionPanelBuilder.swift in Sources */,
 				4CEBA5F26393AC6F09BEE6382ABC55E9 /* ExpansionPanelTests.swift in Sources */,
 				E6AE8A410953E6B447735D9E565B0264 /* FieldTests.swift in Sources */,
@@ -1889,6 +1896,7 @@
 				A0A9D4F59612E12F2A8B878133B8289A /* DynamicColors.swift in Sources */,
 				6D4DFEB09D32E1F36B9FA29904AE1ED8 /* ElevationAttributes.swift in Sources */,
 				2655155E5437F0880708125E1F9F5BC9 /* Elevations.swift in Sources */,
+				672E84F3438F653B2DF42C2018894304 /* ExpansionPanel+Margin.swift in Sources */,
 				3A65DE112EB34ED5B9F3F1DF7B8D3FBD /* ExpansionPanel.swift in Sources */,
 				4612CED8B9691035EFA62E01E2B30FD6 /* Field.swift in Sources */,
 				2175BE4F7334ED85AECC5C401B400BD8 /* FlatButton.swift in Sources */,

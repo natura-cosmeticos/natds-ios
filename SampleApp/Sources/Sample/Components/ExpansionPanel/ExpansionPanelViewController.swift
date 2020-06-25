@@ -4,7 +4,7 @@ class ExpansionPanelViewController: UIViewController, SampleItem {
 
     static var name: String = "Expansion Panel"
 
-    private lazy var expansionPanel: ExpansionPanel = {
+    private lazy var panel: ExpansionPanel = {
         let expansionPanel = ExpansionPanel()
         expansionPanel.setSubtitle("Subtitle")
         return expansionPanel
@@ -29,14 +29,15 @@ class ExpansionPanelViewController: UIViewController, SampleItem {
     private func setup() {
         title = Self.name
         view.backgroundColor = NatColors.surface
-        view.addSubview(expansionPanel)
-        expansionPanel.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(panel)
+        panel.translatesAutoresizingMaskIntoConstraints = false
+        let safeArea = view.safeAreaLayoutGuide
         NSLayoutConstraint.activate([
-            expansionPanel.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor, constant: NatSpacing.tiny),
-            expansionPanel.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor, constant: NatSpacing.small),
-            expansionPanel.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -NatSpacing.small)
+            panel.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: ExpansionPanel.Margin.top),
+            panel.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: ExpansionPanel.Margin.left),
+            panel.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -ExpansionPanel.Margin.right)
         ])
-        expansionPanel.setDetailView(detail)
+        panel.setDetailView(detail)
     }
 
 }
