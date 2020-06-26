@@ -2,15 +2,13 @@ extension ExpansionPanel {
     /**
       Margin is an enum that represents margin spacing values for the panel component.
 
-        These are all spacing available for a ExpansionPanel margin:
-        - top
-        - left
-        - right
+        This is the spacing available for a ExpansionPanel margin:
+        - horizontalMargin
 
         usage example:
 
             expansionPanel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,
-                                                    constant: ExpansionPanel.Margin.left)
+                                                    constant: ExpansionPanel.Margin.horizontalMargin)
 
      - Requires:
             It's necessary to configure the Design System current Brand at DesignSystem class
