@@ -14,8 +14,7 @@ final class DialogFooterView: UIView {
         return stackView
     }()
 
-    private var primaryButtonActionHandler: ActionHandler?
-    private var secondaryButtonActionHandler: ActionHandler?
+    private var actions: [UIButton: ActionHandler] = [:]
 
     private var isFirstTimeInLayoutSubviews = true
 
@@ -51,38 +50,24 @@ final class DialogFooterView: UIView {
 
     // MARK: - Action handlers
 
-    @objc private func primaryActionHandler() {
-        primaryButtonActionHandler?()
-    }
-
-    @objc private func secondaryActionHandler() {
-        secondaryButtonActionHandler?()
+    @objc private func buttonTapHandler(_ sender: UIButton) {
+        actions[sender]?()
     }
 
     // MARK: - Public methods
 
-    func configure(primaryButton configuration: ButtonConfiguration) {
-        primaryButtonActionHandler = configuration.action
-
+    func configure(newButton configuration: DialogButtonConfiguration) {
         let button = NatButton(style: configuration.style)
         button.configure(title: configuration.title)
-        button.addTarget(self, action: #selector(primaryActionHandler), for: .touchUpInside)
-        setupButton(button: button)
-    }
+        button.addTarget(self, action: #selector(buttonTapHandler), for: .touchUpInside)
+        addConstraintAndSuperView(button: button)
 
-    func configure(secondaryButton configuration: ButtonConfiguration) {
-        secondaryButtonActionHandler = configuration.action
-
-        let button = NatButton(style: configuration.style)
-        button.configure(title: configuration.title)
-        button.addTarget(self, action: #selector(secondaryActionHandler), for: .touchUpInside)
-
-        setupButton(button: button)
+        actions[button] = configuration.action
     }
 
     // MARK: - Private methods
 
-    private func setupButton(button: NatButton) {
+    private func addConstraintAndSuperView(button: NatButton) {
         button.translatesAutoresizingMaskIntoConstraints = false
 
         stackView.insertArrangedSubview(button, at: 0)

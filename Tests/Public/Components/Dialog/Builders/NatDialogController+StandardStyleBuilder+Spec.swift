@@ -103,21 +103,16 @@ final class NatDialogControllerStandardStyleBuilderSpec: QuickSpec {
                 expect(viewModel.bodyView).to(beNil())
             }
 
-            it("sets footerView") {
-                expect(viewModel.footerView).toNot(beNil())
+            it("does not set footerView") {
+                expect(viewModel.footerView).to(beNil())
             }
 
-            it("sets only one button at footerView") {
-                let stackView = viewModel.footerView?.subviews.first
-
-                expect(stackView?.subviews.count).to(equal(1))
+            it("sets primary button configuration") {
+                expect(systemUnderTest.buttonsConfiguration.primary).toNot(beNil())
             }
 
-            it("sets a primary button at footerView") {
-                let stackView = viewModel.footerView?.subviews.first
-                let expectedView = stackView?.subviews.first as? NatButton
-
-                expect(expectedView).toNot(beNil())
+            it("does not set secondary button configuration") {
+                expect(systemUnderTest.buttonsConfiguration.secondary).to(beNil())
             }
         }
 
@@ -138,37 +133,17 @@ final class NatDialogControllerStandardStyleBuilderSpec: QuickSpec {
                 it("does not set footerView") {
                     expect(viewModel.footerView).to(beNil())
                 }
-            }
 
-            context("setting primary button first") {
-                beforeEach {
-                    _ = systemUnderTest.configure(primaryButtonTitle: "StubText") {}
-                    _ = systemUnderTest.configure(secondaryButtonTitle: "StubText") {}
+                it("does not set footerView") {
+                    expect(viewModel.footerView).to(beNil())
                 }
 
-                it("does not set titleView") {
-                    expect(viewModel.titleView).to(beNil())
+                it("does not set primary button configuration") {
+                    expect(systemUnderTest.buttonsConfiguration.primary).to(beNil())
                 }
 
-                it("does not set bodyView") {
-                    expect(viewModel.bodyView).to(beNil())
-                }
-
-                it("has footerView already set") {
-                    expect(viewModel.footerView).toNot(beNil())
-                }
-
-                it("sets a second button at footerView") {
-                    let stackView = viewModel.footerView?.subviews.first
-
-                    expect(stackView?.subviews.count).to(equal(2))
-                }
-
-                it("sets a secondary button at footerView") {
-                    let stackView = viewModel.footerView?.subviews.first
-                    let expectedView = stackView?.subviews.last as? NatButton
-
-                    expect(expectedView).toNot(beNil())
+                it("sets secondary button configuration") {
+                    expect(systemUnderTest.buttonsConfiguration.secondary).toNot(beNil())
                 }
             }
         }

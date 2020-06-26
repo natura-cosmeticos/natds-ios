@@ -207,13 +207,12 @@
 		84BFB66F246DD15700506ED1 /* NaturaElevations+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB66E246DD15700506ED1 /* NaturaElevations+Spec.swift */; };
 		84BFB671246DF0B300506ED1 /* NatElevations+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB670246DF0B300506ED1 /* NatElevations+Spec.swift */; };
 		84BFB673246DF82800506ED1 /* ElevationAttributes+Equitable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFB672246DF82800506ED1 /* ElevationAttributes+Equitable.swift */; };
-		84C1CABD249952930041A511 /* DialogFooterView+ButtonConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C1CABC249952930041A511 /* DialogFooterView+ButtonConfiguration.swift */; };
+		84C1CABD249952930041A511 /* DialogButtonConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C1CABC249952930041A511 /* DialogButtonConfiguration.swift */; };
 		84C1CABF249953440041A511 /* NatDialogController+StandardStyleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C1CABE249953440041A511 /* NatDialogController+StandardStyleBuilder.swift */; };
 		84C1CAC02499558E0041A511 /* NatDialogController+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C1CAB92499522D0041A511 /* NatDialogController+Spec.swift */; };
 		84C1CAC2249A49A40041A511 /* NatDialogController+StandardStyleBuilder+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C1CAC1249A49A40041A511 /* NatDialogController+StandardStyleBuilder+Spec.swift */; };
 		84C1CACB249A8AB00041A511 /* DialogFooterView+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C1CACA249A8AB00041A511 /* DialogFooterView+Spec.swift */; };
 		84C1CACE249A93940041A511 /* NatDialogController+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C1CACD249A93940041A511 /* NatDialogController+Snapshot+Tests.swift */; };
-		84C1CAD0249B9A230041A511 /* DialogStandardStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C1CACF249B9A230041A511 /* DialogStandardStyle.swift */; };
 		84C1CAD2249D00DD0041A511 /* NatButton+EdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C1CAD1249D00DD0041A511 /* NatButton+EdgeInsets.swift */; };
 		84C1CAD4249D2ED90041A511 /* NatButton+EdgeInsets+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C1CAD3249D2ED90041A511 /* NatButton+EdgeInsets+Spec.swift */; };
 		84C24DA6246F3DE40046833B /* NatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C24DA5246F3DE40046833B /* NatButton.swift */; };
@@ -454,12 +453,11 @@
 		84BFB670246DF0B300506ED1 /* NatElevations+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatElevations+Spec.swift"; sourceTree = "<group>"; };
 		84BFB672246DF82800506ED1 /* ElevationAttributes+Equitable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ElevationAttributes+Equitable.swift"; sourceTree = "<group>"; };
 		84C1CAB92499522D0041A511 /* NatDialogController+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogController+Spec.swift"; sourceTree = "<group>"; };
-		84C1CABC249952930041A511 /* DialogFooterView+ButtonConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DialogFooterView+ButtonConfiguration.swift"; sourceTree = "<group>"; };
+		84C1CABC249952930041A511 /* DialogButtonConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogButtonConfiguration.swift; sourceTree = "<group>"; };
 		84C1CABE249953440041A511 /* NatDialogController+StandardStyleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogController+StandardStyleBuilder.swift"; sourceTree = "<group>"; };
 		84C1CAC1249A49A40041A511 /* NatDialogController+StandardStyleBuilder+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogController+StandardStyleBuilder+Spec.swift"; sourceTree = "<group>"; };
 		84C1CACA249A8AB00041A511 /* DialogFooterView+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DialogFooterView+Spec.swift"; sourceTree = "<group>"; };
 		84C1CACD249A93940041A511 /* NatDialogController+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogController+Snapshot+Tests.swift"; sourceTree = "<group>"; };
-		84C1CACF249B9A230041A511 /* DialogStandardStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogStandardStyle.swift; sourceTree = "<group>"; };
 		84C1CAD1249D00DD0041A511 /* NatButton+EdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+EdgeInsets.swift"; sourceTree = "<group>"; };
 		84C1CAD3249D2ED90041A511 /* NatButton+EdgeInsets+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+EdgeInsets+Spec.swift"; sourceTree = "<group>"; };
 		84C24DA5246F3DE40046833B /* NatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatButton.swift; sourceTree = "<group>"; };
@@ -869,6 +867,7 @@
 				84C1CABB249952480041A511 /* Builders */,
 				8410F28E2490710E002028E8 /* NatDialogController.swift */,
 				843A1E6A24A27E7300FA7A7B /* DialogViewModel.swift */,
+				84C1CABC249952930041A511 /* DialogButtonConfiguration.swift */,
 			);
 			path = Dialog;
 			sourceTree = "<group>";
@@ -1352,7 +1351,6 @@
 			isa = PBXGroup;
 			children = (
 				84C8210D24A375A30090DE1E /* DialogFooterView.swift */,
-				84C1CABC249952930041A511 /* DialogFooterView+ButtonConfiguration.swift */,
 				843A1E6124A12AF300FA7A7B /* DialogStyle.swift */,
 			);
 			path = Dialog;
@@ -1729,7 +1727,7 @@
 				6404360523F45FF00088B20D /* TextField.swift in Sources */,
 				112BAC2523984416009001A7 /* UITableView+Reusable.swift in Sources */,
 				84BFB661246DA4B400506ED1 /* NaturaElevations.swift in Sources */,
-				84C1CABD249952930041A511 /* DialogFooterView+ButtonConfiguration.swift in Sources */,
+				84C1CABD249952930041A511 /* DialogButtonConfiguration.swift in Sources */,
 				843FA27F2461DDFC00D20D9A /* AvonSizes.swift in Sources */,
 				11FC55BE23C64E8800C91014 /* IllustrationIcons.swift in Sources */,
 				84692865247FEB0D008DF255 /* AvonColorPaletteLight.swift in Sources */,

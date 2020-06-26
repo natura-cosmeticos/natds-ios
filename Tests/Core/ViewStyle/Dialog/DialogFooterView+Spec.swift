@@ -26,37 +26,41 @@ final class DialogFooterViewSpec: QuickSpec {
             }
         }
 
-        describe("#configureconfigure(primaryButton:)") {
-            beforeEach {
-                let configuration = DialogFooterView.ButtonConfiguration(
-                    title: "StubText",
-                    style: .contained,
-                    action: {}
-                )
-                systemUnderTest.configure(primaryButton: configuration)
+        describe("#configureconfigure(newButton:)") {
+            context("when called once") {
+                beforeEach {
+                    let configuration = DialogButtonConfiguration(
+                        title: "StubText",
+                        style: .contained,
+                        action: {}
+                    )
+                    systemUnderTest.configure(newButton: configuration)
+                }
+
+                it("sets a button to stackView") {
+                    let expectedView = systemUnderTest.subviews.first as? UIStackView
+
+                    expect(expectedView?.subviews.count).to(equal(1))
+                }
             }
 
-            it("sets a button to stackView") {
-                let expectedView = systemUnderTest.subviews.first as? UIStackView
+            context("when called mote than once") {
+                beforeEach {
+                    let configuration = DialogButtonConfiguration(
+                        title: "StubText",
+                        style: .contained,
+                        action: {}
+                    )
+                    systemUnderTest.configure(newButton: configuration)
+                    systemUnderTest.configure(newButton: configuration)
+                    systemUnderTest.configure(newButton: configuration)
+                }
 
-                expect(expectedView?.subviews.count).to(equal(1))
-            }
-        }
+                it("sets more than one button to stackView") {
+                    let expectedView = systemUnderTest.subviews.first as? UIStackView
 
-        describe("#configureconfigure(secondaryButton:)") {
-            beforeEach {
-                let configuration = DialogFooterView.ButtonConfiguration(
-                    title: "StubText",
-                    style: .contained,
-                    action: {}
-                )
-                systemUnderTest.configure(secondaryButton: configuration)
-            }
-
-            it("sets a button to stackView") {
-                let expectedView = systemUnderTest.subviews.first as? UIStackView
-
-                expect(expectedView?.subviews.count).to(equal(1))
+                    expect(expectedView?.subviews.count).to(equal(3))
+                }
             }
         }
     }

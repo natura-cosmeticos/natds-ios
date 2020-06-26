@@ -4,32 +4,28 @@ extension NatDialogController {
         // MARK: - NatDialogBuilder
 
         public let viewModel = ViewModel()
+        public var buttonsConfiguration: (
+            primary: DialogButtonConfiguration?,
+            secondary: DialogButtonConfiguration?
+        ) = (primary: nil, secondary: nil)
 
         // MARK: - Public methods
 
         public func configure(primaryButtonTitle title: String, withAction action: @escaping () -> Void) -> Self {
-            let footerView = DialogFooterView()
-
-            footerView.configure(primaryButton:
-                .init(
-                    title: title,
-                    style: .text,
-                    action: action
-                )
+            buttonsConfiguration.primary = .init(
+                title: title,
+                style: .text,
+                action: action
             )
-
-            viewModel.footerView = footerView
 
             return self
         }
 
         public func configure(secondaryButtonTitle title: String, withAction action: @escaping () -> Void) -> Self {
-            viewModel.footerView?.configure(secondaryButton:
-                .init(
-                    title: title,
-                    style: .text,
-                    action: action
-                )
+            buttonsConfiguration.secondary = .init(
+                title: title,
+                style: .text,
+                action: action
             )
 
             return self
