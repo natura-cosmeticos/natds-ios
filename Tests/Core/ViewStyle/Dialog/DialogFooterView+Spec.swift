@@ -6,10 +6,12 @@ import Nimble
 final class DialogFooterViewSpec: QuickSpec {
     override func spec() {
         var systemUnderTest: DialogFooterView!
+        var notificationCenterSpy: NotificationCenterSpy!
 
         beforeEach {
             DesignSystem().configure(with: .theBodyShop)
-            systemUnderTest = .init()
+            notificationCenterSpy = .init()
+            systemUnderTest = .init(notificationCenter: notificationCenterSpy)
         }
 
         describe("#init") {
@@ -23,6 +25,21 @@ final class DialogFooterViewSpec: QuickSpec {
                 let expectedView = systemUnderTest.subviews.first as? UIStackView
 
                 expect(expectedView?.subviews.isEmpty).to(beTrue())
+            }
+
+            it("registers to notification center") {
+                expect(notificationCenterSpy.invokedAddObserver?.name)
+                    .to(equal(UIDevice.orientationDidChangeNotification))
+            }
+        }
+
+        describe("#deinit") {
+            beforeEach {
+                systemUnderTest = nil
+            }
+
+            it("removes registration of notification center") {
+                expect(notificationCenterSpy.invokedRemoveObserver).to(beTrue())
             }
         }
 

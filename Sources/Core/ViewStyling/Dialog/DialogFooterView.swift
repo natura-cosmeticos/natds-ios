@@ -14,13 +14,16 @@ final class DialogFooterView: UIView {
         return stackView
     }()
 
-    private var actions: [UIButton: ActionHandler] = [:]
+    private let notificationCenter: NotificationCenterProtocol
 
+    private var actions: [UIButton: ActionHandler] = [:]
     private var isFirstTimeInLayoutSubviews = true
 
     // MARK: - Inits
 
-    init() {
+    init(notificationCenter: NotificationCenterProtocol = NotificationCenter.default) {
+        self.notificationCenter = notificationCenter
+
         super.init(frame: .zero)
 
         setup()
@@ -34,7 +37,7 @@ final class DialogFooterView: UIView {
     // MARK: - Inits
 
     deinit {
-        NotificationCenter.default.removeObserver(self)
+        notificationCenter.removeObserver(self)
     }
 
     // MARK: - Overrides
@@ -78,7 +81,7 @@ final class DialogFooterView: UIView {
     }
 
     private func setup() {
-        NotificationCenter.default.addObserver(
+        notificationCenter.addObserver(
             self,
             selector: #selector(adjustButtonsToFitScreen),
             name: UIDevice.orientationDidChangeNotification,
