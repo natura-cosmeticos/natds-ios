@@ -28,7 +28,7 @@ class ExpansionPanelViewController: UIViewController, SampleItem {
 
     private func setup() {
         title = Self.name
-        view.backgroundColor = NatColors.surface
+        view.backgroundColor = NatColors.background
         view.addSubview(panel)
         panel.translatesAutoresizingMaskIntoConstraints = false
         let safeArea = view.safeAreaLayoutGuide
