@@ -9,22 +9,10 @@ class ExpansionPanelMarginTests: XCTestCase {
         DesignSystem().configure(with: .natura)
     }
 
-    func test_top_expectedSpacing() {
-        let expectedSpacing = NatSpacing.tiny
-
-        XCTAssertEqual(systemUnderTest.top, expectedSpacing)
-    }
-
-    func test_left_expectedSpacing() {
+    func test_horizontalMargin_expectedSpacing() {
         let expectedSpacing = NatSpacing.small
 
-        XCTAssertEqual(systemUnderTest.left, expectedSpacing)
-    }
-
-    func test_right_expectedSpacing() {
-        let expectedSpacing = NatSpacing.small
-
-        XCTAssertEqual(systemUnderTest.right, expectedSpacing)
+        XCTAssertEqual(systemUnderTest.horizontalMargin, expectedSpacing)
     }
 
 }

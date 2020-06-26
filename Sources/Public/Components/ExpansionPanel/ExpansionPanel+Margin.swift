@@ -20,9 +20,7 @@ extension ExpansionPanel {
     */
 
     public enum Margin {
-        public static var top: CGFloat { NatSpacing.tiny }
-        public static var left: CGFloat { NatSpacing.small }
-        public static var right: CGFloat { NatSpacing.small }
+        public static var horizontalMargin: CGFloat { NatSpacing.small }
     }
 
 }
