@@ -120,6 +120,13 @@ public class ExpansionPanel: UIView {
         toggle()
     }
 
+    // MARK: - Overrides
+
+    public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        updateBorderColor()
+    }
+
     // MARK: - Private methods
 
     private func setup() {
@@ -184,6 +191,10 @@ public class ExpansionPanel: UIView {
             contentView.trailingAnchor.constraint(equalTo: trailingAnchor),
             contentView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
+    }
+
+    private func updateBorderColor() {
+        isExpanded ? setBorderColorActive() : setBorderColorInactive()
     }
 
 }
