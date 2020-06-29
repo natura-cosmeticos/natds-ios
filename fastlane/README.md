@@ -44,11 +44,6 @@ Fetch the Development, AdHoc and Distribution Certificates
 fastlane ios pods_install
 ```
 Install cocoapods dependencies
-### ios build_prd_ipa
-```
-fastlane ios build_prd_ipa
-```
-Build IPA
 ### ios release_alpha
 ```
 fastlane ios release_alpha
