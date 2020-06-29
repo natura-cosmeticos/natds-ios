@@ -32,7 +32,7 @@ final class DialogItemViewController: UIViewController, SampleItem {
     private let dialogStandardButton: NatButton = {
         let button = NatButton(style: .contained)
         button.configure(title: "standard")
-        button.addTarget(self, action: #selector(dialogStandardButtonHandler), for: .touchUpInside)
+        button.addTarget(self, action: #selector(showStandardDialog), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
 
         return button
@@ -41,7 +41,7 @@ final class DialogItemViewController: UIViewController, SampleItem {
     private let dialogAlertButton: NatButton = {
         let button = NatButton(style: .contained)
         button.configure(title: "alert")
-        button.addTarget(self, action: #selector(dialogAlertButtonHandler), for: .touchUpInside)
+        button.addTarget(self, action: #selector(showAlertDialog), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
 
         return button
@@ -59,7 +59,7 @@ final class DialogItemViewController: UIViewController, SampleItem {
 
     // MARK: - Actions
 
-    @objc func dialogStandardButtonHandler () {
+    @objc func showStandardDialog() {
         let dialog = NatDialogController
             .standardStyleBuilder
             .configure(title: "Title")
@@ -75,7 +75,7 @@ final class DialogItemViewController: UIViewController, SampleItem {
         navigationController?.present(dialog, animated: true)
     }
 
-    @objc func dialogAlertButtonHandler () {
+    @objc func showAlertDialog() {
         let dialog = NatDialogController
             .alertStyleBuilder
             .configure(body: "Some body text to make a snapshot text without think about the future.")
