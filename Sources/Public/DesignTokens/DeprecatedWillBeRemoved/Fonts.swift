@@ -1,4 +1,7 @@
 @objcMembers
+
+@available(*, deprecated, message: "Use NatFonts instead")
+
 public class Fonts: NSObject {
     public static let h5: UIFont = FontsNatura.h5
     public static let h6: UIFont = FontsNatura.h6
