@@ -19,7 +19,7 @@ final class DialogItemViewController: UIViewController, SampleItem {
         return view
     }()
 
-    private let fullStackView: UIStackView = {
+    private let stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.spacing = NatSpacing.tiny
@@ -29,10 +29,19 @@ final class DialogItemViewController: UIViewController, SampleItem {
         return stackView
     }()
 
-    private let containedFullButton: NatButton = {
+    private let dialogStandardButton: NatButton = {
         let button = NatButton(style: .contained)
         button.configure(title: "standard")
-        button.addTarget(self, action: #selector(actionHandler), for: .touchUpInside)
+        button.addTarget(self, action: #selector(showStandardDialog), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+
+        return button
+    }()
+
+    private let dialogAlertButton: NatButton = {
+        let button = NatButton(style: .contained)
+        button.configure(title: "alert")
+        button.addTarget(self, action: #selector(showAlertDialog), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
 
         return button
@@ -50,11 +59,26 @@ final class DialogItemViewController: UIViewController, SampleItem {
 
     // MARK: - Actions
 
-    @objc func actionHandler () {
+    @objc func showStandardDialog() {
         let dialog = NatDialogController
             .standardStyleBuilder
             .configure(title: "Title")
-            .configure(body: "Contrary to popular belief, Lorem Ipsum is not simply random text.")
+            .configure(body: "Some body text to make a snapshot text without think about the future.")
+            .configure(primaryButtonTitle: "Confirm button") {
+                self.navigationController?.presentedViewController?.dismiss(animated: true)
+            }
+            .configure(secondaryButtonTitle: "Close") {
+                self.navigationController?.presentedViewController?.dismiss(animated: true)
+            }
+            .build()
+
+        navigationController?.present(dialog, animated: true)
+    }
+
+    @objc func showAlertDialog() {
+        let dialog = NatDialogController
+            .alertStyleBuilder
+            .configure(body: "Some body text to make a snapshot text without think about the future.")
             .configure(primaryButtonTitle: "Confirm") {
                 self.navigationController?.presentedViewController?.dismiss(animated: true)
             }
@@ -74,9 +98,10 @@ final class DialogItemViewController: UIViewController, SampleItem {
 
         scrollView.addSubview(containerView)
 
-        containerView.addSubview(fullStackView)
+        containerView.addSubview(stackView)
 
-        fullStackView.addArrangedSubview(containedFullButton)
+        stackView.addArrangedSubview(dialogStandardButton)
+        stackView.addArrangedSubview(dialogAlertButton)
 
         addConstraints()
     }
@@ -99,15 +124,15 @@ final class DialogItemViewController: UIViewController, SampleItem {
             containerView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
             containerHeightConstraint,
 
-            fullStackView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: NatSpacing.small),
-            fullStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
-            fullStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
-            fullStackView.bottomAnchor.constraint(
+            stackView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: NatSpacing.small),
+            stackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+            stackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+            stackView.bottomAnchor.constraint(
                 greaterThanOrEqualTo: containerView.bottomAnchor,
                 constant: -NatSpacing.small
             ),
 
-            containedFullButton.heightAnchor.constraint(equalToConstant: NatButton.Height.medium)
+            dialogStandardButton.heightAnchor.constraint(equalToConstant: NatButton.Height.medium)
         ]
 
         NSLayoutConstraint.activate(constraints)

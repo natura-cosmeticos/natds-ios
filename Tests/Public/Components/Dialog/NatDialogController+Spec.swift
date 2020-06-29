@@ -12,7 +12,10 @@ final class NatDialogControllerSpec: QuickSpec {
 
             beforeEach {
                 DesignSystem().configure(with: .theBodyShop)
-                systemUnderTest = NatDialogController(views: [stubView])
+
+                let viewModel = NatDialogController.ViewModel()
+                viewModel.bodyView = stubView
+                systemUnderTest = NatDialogController(viewModel: viewModel)
             }
 
             it("sets passed view as subview") {

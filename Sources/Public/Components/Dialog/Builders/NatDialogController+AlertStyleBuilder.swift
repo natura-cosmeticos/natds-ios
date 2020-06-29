@@ -1,5 +1,5 @@
 extension NatDialogController {
-    public final class StandardStyleBuilder {
+    public final class AlertStyleBuilder {
 
         // MARK: - NatDialogBuilder
 
@@ -7,14 +7,14 @@ extension NatDialogController {
         public var buttonsConfiguration: (
             primary: DialogButtonConfiguration?,
             secondary: DialogButtonConfiguration?
-        ) = (nil, nil)
+        ) = (primary: nil, secondary: nil)
 
         // MARK: - Public methods
 
         public func configure(primaryButtonTitle title: String, withAction action: @escaping () -> Void) -> Self {
             buttonsConfiguration.primary = .init(
                 title: title,
-                style: .contained,
+                style: .text,
                 action: action
             )
 
@@ -35,16 +35,12 @@ extension NatDialogController {
 
 // MARK: - NatDialogBuilder
 
-extension NatDialogController.StandardStyleBuilder: NatDialogBuilder {}
+extension NatDialogController.AlertStyleBuilder: NatDialogBuilder {}
 
 // MARK: - NatDialogTitleConfigurator
 
-extension NatDialogController.StandardStyleBuilder: NatDialogTitleConfigurator {}
+extension NatDialogController.AlertStyleBuilder: NatDialogTitleConfigurator {}
 
 // MARK: - NatDialogBodyConfigurator
 
-extension NatDialogController.StandardStyleBuilder: NatDialogBodyConfigurator {}
-
-// MARK: - NatDialogCustomBodyConfigurator
-
-extension NatDialogController.StandardStyleBuilder: NatDialogCustomBodyConfigurator {}
+extension NatDialogController.AlertStyleBuilder: NatDialogBodyConfigurator {}

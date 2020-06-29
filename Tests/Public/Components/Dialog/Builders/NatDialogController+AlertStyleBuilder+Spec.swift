@@ -3,9 +3,9 @@ import Nimble
 
 @testable import NatDS
 
-final class NatDialogControllerStandardStyleBuilderSpec: QuickSpec {
+final class NatDialogControllerAlertStyleBuilderSpec: QuickSpec {
     override func spec() {
-        var systemUnderTest: NatDialogController.StandardStyleBuilder!
+        var systemUnderTest: NatDialogController.AlertStyleBuilder!
         var viewModel: NatDialogController.ViewModel!
 
         beforeEach {
@@ -64,32 +64,6 @@ final class NatDialogControllerStandardStyleBuilderSpec: QuickSpec {
             }
         }
 
-        describe("#configure(body: UIView)") {
-            let stubView = UIView()
-
-            beforeEach {
-                _ = systemUnderTest.configure(body: stubView)
-            }
-
-            it("does not set titleView") {
-                expect(viewModel.titleView).to(beNil())
-            }
-
-            it("sets bodyView") {
-                expect(viewModel.bodyView).toNot(beNil())
-            }
-
-            it("sets bodyView to an expected view") {
-                let expectedView = systemUnderTest.viewModel.bodyView
-
-                expect(expectedView).to(equal(stubView))
-            }
-
-            it("does not set footerView") {
-                expect(viewModel.footerView).to(beNil())
-            }
-        }
-
         describe("#configure(primaryButtonTitle: withAction:)") {
             beforeEach {
                 _ = systemUnderTest.configure(primaryButtonTitle: "StubText") {}
@@ -101,6 +75,10 @@ final class NatDialogControllerStandardStyleBuilderSpec: QuickSpec {
 
             it("does not set bodyView") {
                 expect(viewModel.bodyView).to(beNil())
+            }
+
+            it("does not set footerView") {
+                expect(viewModel.footerView).to(beNil())
             }
 
             it("does not set footerView") {
@@ -128,10 +106,6 @@ final class NatDialogControllerStandardStyleBuilderSpec: QuickSpec {
 
                 it("does not set bodyView") {
                     expect(viewModel.bodyView).to(beNil())
-                }
-
-                it("does not set footerView") {
-                    expect(viewModel.footerView).to(beNil())
                 }
 
                 it("does not set footerView") {
