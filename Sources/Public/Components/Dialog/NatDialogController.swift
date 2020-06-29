@@ -64,11 +64,28 @@ public final class NatDialogController: UIViewController {
         if let view = viewModel.footerView {
             stackView.addArrangedSubview(view)
         }
+
+        if viewModel.isDismissable {
+            let dismissTapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissDialog(_:)))
+            view.addGestureRecognizer(dismissTapGesture)
+        }
     }
 
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    // MARK: - User interactions
+
+    @objc func dismissDialog(_ sender: UITapGestureRecognizer) {
+        guard sender.state == .ended else { return }
+
+        let tappedAtPoint = sender.location(in: view)
+
+        if !containerView.frame.contains(tappedAtPoint) {
+            dismiss(animated: true)
+        }
     }
 
     // MARK: - Private methods
