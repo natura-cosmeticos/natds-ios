@@ -137,6 +137,10 @@
 		840B6A754236624B9738CBC3D5CFE895 /* ViewAnimatingWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7316FE65E814E2D5CA475475CD8D4EA /* ViewAnimatingWrapper.swift */; };
 		841DC30AC5612DDD81C8175BCFF4507E /* AvonFontSizes+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C94FCAA23AB699A4926C6B8E598C6 /* AvonFontSizes+Spec.swift */; };
 		84AB67611C0B5D85CBE5CE489FCA4DC6 /* UIFont+IconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EAF8A97988FC1AA2F71C29D348A67D /* UIFont+IconTests.swift */; };
+		84B9330824AB788E00B71BD4 /* NatDialogDismissableConfigurator+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9330724AB788E00B71BD4 /* NatDialogDismissableConfigurator+Spec.swift */; };
+		84B9330A24ABC38C00B71BD4 /* NatDialogTitleConfigurator+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9330924ABC38C00B71BD4 /* NatDialogTitleConfigurator+Spec.swift */; };
+		84B9330C24ABC5FD00B71BD4 /* NatDialogBodyConfigurator+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9330B24ABC5FD00B71BD4 /* NatDialogBodyConfigurator+Spec.swift */; };
+		84B9330E24ABC6D200B71BD4 /* NatDialogCustomBodyConfigurator+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9330D24ABC6D200B71BD4 /* NatDialogCustomBodyConfigurator+Spec.swift */; };
 		84BC900224AA15C3007DF09D /* NotificationCenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC900124AA15C3007DF09D /* NotificationCenterProtocol.swift */; };
 		84BC900524AA163A007DF09D /* DialogFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC900324AA163A007DF09D /* DialogFooterView.swift */; };
 		84BC900624AA163A007DF09D /* DialogStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC900424AA163A007DF09D /* DialogStyle.swift */; };
@@ -379,6 +383,10 @@
 		7F9C4251076A01537D0A8CB995DF81EC /* NavigationDrawerSubitemCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerSubitemCellTests.swift; sourceTree = "<group>"; };
 		83C59F929E88764313134A046BA5C30F /* DesignSystem+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DesignSystem+Spec.swift"; sourceTree = "<group>"; };
 		847C94FCAA23AB699A4926C6B8E598C6 /* AvonFontSizes+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AvonFontSizes+Spec.swift"; sourceTree = "<group>"; };
+		84B9330724AB788E00B71BD4 /* NatDialogDismissableConfigurator+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogDismissableConfigurator+Spec.swift"; sourceTree = "<group>"; };
+		84B9330924ABC38C00B71BD4 /* NatDialogTitleConfigurator+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogTitleConfigurator+Spec.swift"; sourceTree = "<group>"; };
+		84B9330B24ABC5FD00B71BD4 /* NatDialogBodyConfigurator+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogBodyConfigurator+Spec.swift"; sourceTree = "<group>"; };
+		84B9330D24ABC6D200B71BD4 /* NatDialogCustomBodyConfigurator+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogCustomBodyConfigurator+Spec.swift"; sourceTree = "<group>"; };
 		84BC8FF824AA13B8007DF09D /* NatDialogController+AlertStyleBuilder+Spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NatDialogController+AlertStyleBuilder+Spec.swift"; sourceTree = "<group>"; };
 		84BC8FFA24AA14C0007DF09D /* DialogFooterView+Spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DialogFooterView+Spec.swift"; sourceTree = "<group>"; };
 		84BC8FFB24AA14C0007DF09D /* DialogStyle+Spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DialogStyle+Spec.swift"; sourceTree = "<group>"; };
@@ -1027,6 +1035,17 @@
 			path = DesignTokens;
 			sourceTree = "<group>";
 		};
+		84B9330624AB779800B71BD4 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				84B9330924ABC38C00B71BD4 /* NatDialogTitleConfigurator+Spec.swift */,
+				84B9330B24ABC5FD00B71BD4 /* NatDialogBodyConfigurator+Spec.swift */,
+				84B9330D24ABC6D200B71BD4 /* NatDialogCustomBodyConfigurator+Spec.swift */,
+				84B9330724AB788E00B71BD4 /* NatDialogDismissableConfigurator+Spec.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		84BC8FF724AA120D007DF09D /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -1045,8 +1064,8 @@
 		84BC901024AA178F007DF09D /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				84BC901124AA17C0007DF09D /* NatDialogBodyConfigurator.swift */,
 				84BC901424AA17C0007DF09D /* NatDialogBuilder.swift */,
+				84BC901124AA17C0007DF09D /* NatDialogBodyConfigurator.swift */,
 				84BC901224AA17C0007DF09D /* NatDialogCustomBodyConfigurator.swift */,
 				84BC901324AA17C0007DF09D /* NatDialogTitleConfigurator.swift */,
 				84BC901B24AB7445007DF09D /* NatDialogDismissableConfigurator.swift */,
@@ -1520,6 +1539,7 @@
 		E035F8401CE3E98D4ED1ED7A870740C9 /* Builders */ = {
 			isa = PBXGroup;
 			children = (
+				84B9330624AB779800B71BD4 /* Protocols */,
 				84BC8FF824AA13B8007DF09D /* NatDialogController+AlertStyleBuilder+Spec.swift */,
 				8D7EAA7BDB4A7A15736AF73EF6EBCD74 /* NatDialogController+StandardStyleBuilder+Spec.swift */,
 			);
@@ -1806,6 +1826,7 @@
 				5549F0F4D09E073E0FAFBCC6F7B6699A /* ColorsNaturaTests.swift in Sources */,
 				24A65D792FD25FA06DEACBD91A7E04A3 /* ColorsTests.swift in Sources */,
 				9ED0B11B243051C089AA8FDCB7F8CA3B /* ContainedButtonTests.swift in Sources */,
+				84B9330824AB788E00B71BD4 /* NatDialogDismissableConfigurator+Spec.swift in Sources */,
 				7392D4960D4A13B6ADF3AB7372B264F5 /* DesignSystem+Spec.swift in Sources */,
 				1A59055F415CB4058DA88A823383FBC9 /* DividerTests.swift in Sources */,
 				705A576866667D11B1D05EBB709BCC00 /* DynamicColorFactory+Spec.swift in Sources */,
@@ -1864,8 +1885,10 @@
 				3D8762A06C970677D223A561419340A9 /* PulseLayerTests.swift in Sources */,
 				A0328AF2000431B6155A5A6CD94B1835 /* ReusableViewTests.swift in Sources */,
 				46A73ED2AC6774550A3F2D82CCE8BAF7 /* SearchBar.swift in Sources */,
+				84B9330E24ABC6D200B71BD4 /* NatDialogCustomBodyConfigurator+Spec.swift in Sources */,
 				6E6C6EC0105FF251940E4C011D611149 /* String+IconTests.swift in Sources */,
 				944056C3F885BC4ACF0B59F08ECCA2F9 /* StubDarkColorPalette.swift in Sources */,
+				84B9330C24ABC5FD00B71BD4 /* NatDialogBodyConfigurator+Spec.swift in Sources */,
 				A3A86E5E58592409B35198B154FA7A49 /* StubLightColorPalette.swift in Sources */,
 				ECF18B7FA2F5A22C0F919BBBE58FF611 /* TabDelegateMock.swift in Sources */,
 				6231AEE531E549E406745A37170FC719 /* TabItemViewDelegateMock.swift in Sources */,
@@ -1898,6 +1921,7 @@
 				D05CEB5C2F5F9D32FA015604F6E719F0 /* ValidateTheme+Spec.swift in Sources */,
 				1FBF5A52B03E9E219462A06F9487D3B4 /* ValueTextHighlightTests.swift in Sources */,
 				1734E4583B85C0197E0AC6F1CE877ADC /* ViewAnimatingMock.swift in Sources */,
+				84B9330A24ABC38C00B71BD4 /* NatDialogTitleConfigurator+Spec.swift in Sources */,
 				E4B171E23C40B91B211DB2F64357778D /* ViewStyle+Spec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

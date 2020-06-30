@@ -1,6 +1,6 @@
-public protocol NatDialogDismissableConfigurator: NatDialogBuilder {}
+public protocol NatDialogDismissableConfigurator {}
 
-extension NatDialogTitleConfigurator {
+extension NatDialogDismissableConfigurator where Self: NatDialogBuilder {
     public func configure(isDismissable: Bool) -> Self {
         viewModel.isDismissable = isDismissable
 

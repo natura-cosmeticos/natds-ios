@@ -26,41 +26,23 @@ final class NatDialogControllerAlertStyleBuilderSpec: QuickSpec {
             it("does not set footerView") {
                 expect(viewModel.footerView).to(beNil())
             }
-        }
 
-        describe("#configure(title: String)") {
-            beforeEach {
-                _ = systemUnderTest.configure(title: "StubText")
+            it("has protocol NatDialogTitleConfigurator") {
+                let systemUnderTest: Any? = systemUnderTest
+
+                expect(systemUnderTest as? NatDialogTitleConfigurator).toNot(beNil())
             }
 
-            it("sets titleView") {
-                expect(viewModel.titleView).toNot(beNil())
+            it("has protocol NatDialogBodyConfigurator") {
+                let systemUnderTest: Any? = systemUnderTest
+
+                expect(systemUnderTest as? NatDialogBodyConfigurator).toNot(beNil())
             }
 
-            it("does not set bodyView") {
-                expect(viewModel.bodyView).to(beNil())
-            }
+            it("has protocol NatDialogDismissableConfigurator") {
+                let systemUnderTest: Any? = systemUnderTest
 
-            it("does not set footerView") {
-                expect(viewModel.footerView).to(beNil())
-            }
-        }
-
-        describe("#configure(body: String)") {
-            beforeEach {
-                _ = systemUnderTest.configure(body: "StubText")
-            }
-
-            it("does not set titleView") {
-                expect(viewModel.titleView).to(beNil())
-            }
-
-            it("sets bodyView") {
-                expect(viewModel.bodyView).toNot(beNil())
-            }
-
-            it("does not set footerView") {
-                expect(viewModel.footerView).to(beNil())
+                expect(systemUnderTest as? NatDialogDismissableConfigurator).toNot(beNil())
             }
         }
 
