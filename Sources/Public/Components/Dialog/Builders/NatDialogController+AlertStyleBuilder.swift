@@ -4,6 +4,7 @@ extension NatDialogController {
         // MARK: - NatDialogBuilder
 
         public let viewModel = ViewModel()
+
         public var buttonsConfiguration: (
             primary: DialogButtonConfiguration?,
             secondary: DialogButtonConfiguration?
@@ -44,3 +45,7 @@ extension NatDialogController.AlertStyleBuilder: NatDialogTitleConfigurator {}
 // MARK: - NatDialogBodyConfigurator
 
 extension NatDialogController.AlertStyleBuilder: NatDialogBodyConfigurator {}
+
+// MARK: - NatDialogDismissableConfigurator
+
+extension NatDialogController.AlertStyleBuilder: NatDialogDismissableConfigurator {}
