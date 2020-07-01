@@ -18,7 +18,7 @@ final class NatDialogCustomBodyConfigurableSpec: QuickSpec {
             let stubView = UIView()
 
             beforeEach {
-                _ = systemUnderTest.configure(body: stubView)
+                systemUnderTest.configure(body: stubView)
             }
 
             it("does not set titleView") {

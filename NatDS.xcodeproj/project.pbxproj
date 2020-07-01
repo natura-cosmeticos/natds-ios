@@ -142,6 +142,7 @@
 		84B9330C24ABC5FD00B71BD4 /* NatDialogBodyConfigurable+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9330B24ABC5FD00B71BD4 /* NatDialogBodyConfigurable+Spec.swift */; };
 		84B9330E24ABC6D200B71BD4 /* NatDialogCustomBodyConfigurable+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9330D24ABC6D200B71BD4 /* NatDialogCustomBodyConfigurable+Spec.swift */; };
 		84B9331024ABD16100B71BD4 /* NatDialogController+ViewModel+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9330F24ABD16100B71BD4 /* NatDialogController+ViewModel+Spec.swift */; };
+		84B9331124ACF28400B71BD4 /* NotificationCenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC901924AA187C007DF09D /* NotificationCenterSpy.swift */; };
 		84BC900224AA15C3007DF09D /* NotificationCenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC900124AA15C3007DF09D /* NotificationCenterProtocol.swift */; };
 		84BC900524AA163A007DF09D /* DialogFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC900324AA163A007DF09D /* DialogFooterView.swift */; };
 		84BC900624AA163A007DF09D /* DialogStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC900424AA163A007DF09D /* DialogStyle.swift */; };
@@ -155,7 +156,6 @@
 		84BC901624AA17C0007DF09D /* NatDialogCustomBodyConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC901224AA17C0007DF09D /* NatDialogCustomBodyConfigurable.swift */; };
 		84BC901724AA17C0007DF09D /* NatDialogTitleConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC901324AA17C0007DF09D /* NatDialogTitleConfigurable.swift */; };
 		84BC901824AA17C0007DF09D /* NatDialogBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC901424AA17C0007DF09D /* NatDialogBuilder.swift */; };
-		84BC901A24AA187C007DF09D /* NotificationCenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC901924AA187C007DF09D /* NotificationCenterSpy.swift */; };
 		84BC901C24AB7445007DF09D /* NatDialogDismissableConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC901B24AB7445007DF09D /* NatDialogDismissableConfigurable.swift */; };
 		84F709FF1D1DFC32BA4E9CB1803A6E30 /* NavigationDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31247B21FE6C5054DC6E3BD9BE4A5E35 /* NavigationDrawer.swift */; };
 		851B94BB8C1F2DE82905BF1FE9495800 /* Radius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68038F1CA64FC2164BFB108D7666D0E0 /* Radius.swift */; };
@@ -1906,6 +1906,7 @@
 				75EE471D49FB3FFD3E3296D8AFD4B244 /* TheBodyShopColorPaletteDark+Spec.swift in Sources */,
 				634A481FEBE80549DC205C587125503E /* TheBodyShopColorPaletteLight+Spec.swift in Sources */,
 				5BF229979E317363CECB5B8BED8D6662 /* TheBodyShopElevations+Spec.swift in Sources */,
+				84B9331124ACF28400B71BD4 /* NotificationCenterSpy.swift in Sources */,
 				CA236A066D3EBA4E8E13CC4DD6A2A40D /* TheBodyShopFont+Spec.swift in Sources */,
 				82883672709B4F62F288ADD68528D460 /* TheBodyShopFontLetterSpacings+Spec.swift in Sources */,
 				BF60ADF4759C13689B2FF740FBC0A4AE /* TheBodyShopFontSizes+Spec.swift in Sources */,
@@ -1942,7 +1943,6 @@
 				AA2218A08849224F57943C49A7CE3DDA /* AvonFont.swift in Sources */,
 				1C33F8923E873C6C60821B00A3AF20C8 /* AvonFontLetterSpacings.swift in Sources */,
 				3F12D75506942B4F6ED3212F793C6177 /* AvonFontSizes.swift in Sources */,
-				84BC901A24AA187C007DF09D /* NotificationCenterSpy.swift in Sources */,
 				B00E0C6AC86C3AEFF988F529F639B0FB /* AvonFontWeights.swift in Sources */,
 				84BC901624AA17C0007DF09D /* NatDialogCustomBodyConfigurable.swift in Sources */,
 				156EE5EBDDF801745FB87B90E7559617 /* AvonOpacities.swift in Sources */,

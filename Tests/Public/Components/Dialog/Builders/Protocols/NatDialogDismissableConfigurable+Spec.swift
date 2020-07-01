@@ -17,7 +17,7 @@ final class NatDialogDismissableConfigurableSpec: QuickSpec {
         describe("#configure(isDismissable:)") {
             context("when isDismissable is false") {
                 beforeEach {
-                    _ = systemUnderTest.configure(isDismissable: false)
+                    systemUnderTest.configure(isDismissable: false)
                 }
 
                 it("does not set titleView") {

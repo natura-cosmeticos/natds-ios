@@ -16,7 +16,7 @@ final class NatDialogTitleConfigurableSpec: QuickSpec {
 
         describe("#configure(title:)") {
             beforeEach {
-                _ = systemUnderTest.configure(title: "Stub Text")
+                systemUnderTest.configure(title: "Stub Text")
             }
 
             it("sets titleView") {

@@ -12,6 +12,7 @@ extension NatDialogController {
 
         // MARK: - Public methods
 
+        @discardableResult
         public func configure(primaryButtonTitle title: String, withAction action: @escaping () -> Void) -> Self {
             buttonsConfiguration.primary = .init(
                 title: title,
@@ -22,6 +23,7 @@ extension NatDialogController {
             return self
         }
 
+        @discardableResult
         public func configure(secondaryButtonTitle title: String, withAction action: @escaping () -> Void) -> Self {
             buttonsConfiguration.secondary = .init(
                 title: title,

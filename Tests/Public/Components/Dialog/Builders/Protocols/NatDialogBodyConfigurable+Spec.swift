@@ -16,7 +16,7 @@ final class NatDialogBodyConfigurableSpec: QuickSpec {
 
         describe("#configure(body:)") {
             beforeEach {
-                _ = systemUnderTest.configure(body: "Stub Text")
+                systemUnderTest.configure(body: "Stub Text")
             }
 
             it("does not set titleView") {
