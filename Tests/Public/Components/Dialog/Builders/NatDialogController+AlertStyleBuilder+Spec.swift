@@ -27,22 +27,26 @@ final class NatDialogControllerAlertStyleBuilderSpec: QuickSpec {
                 expect(viewModel.footerView).to(beNil())
             }
 
-            it("has protocol NatDialogTitleConfigurator") {
-                let systemUnderTest: Any? = systemUnderTest
-
-                expect(systemUnderTest as? NatDialogTitleConfigurator).toNot(beNil())
+            it("does not set isDismissable") {
+                expect(viewModel.isDismissable).to(beTrue())
             }
 
-            it("has protocol NatDialogBodyConfigurator") {
+            it("has protocol NatDialogTitleConfigurable") {
                 let systemUnderTest: Any? = systemUnderTest
 
-                expect(systemUnderTest as? NatDialogBodyConfigurator).toNot(beNil())
+                expect(systemUnderTest as? NatDialogTitleConfigurable).toNot(beNil())
             }
 
-            it("has protocol NatDialogDismissableConfigurator") {
+            it("has protocol NatDialogBodyConfigurable") {
                 let systemUnderTest: Any? = systemUnderTest
 
-                expect(systemUnderTest as? NatDialogDismissableConfigurator).toNot(beNil())
+                expect(systemUnderTest as? NatDialogBodyConfigurable).toNot(beNil())
+            }
+
+            it("has protocol NatDialogDismissableConfigurable") {
+                let systemUnderTest: Any? = systemUnderTest
+
+                expect(systemUnderTest as? NatDialogDismissableConfigurable).toNot(beNil())
             }
         }
 

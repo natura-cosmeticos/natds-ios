@@ -137,10 +137,11 @@
 		840B6A754236624B9738CBC3D5CFE895 /* ViewAnimatingWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7316FE65E814E2D5CA475475CD8D4EA /* ViewAnimatingWrapper.swift */; };
 		841DC30AC5612DDD81C8175BCFF4507E /* AvonFontSizes+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C94FCAA23AB699A4926C6B8E598C6 /* AvonFontSizes+Spec.swift */; };
 		84AB67611C0B5D85CBE5CE489FCA4DC6 /* UIFont+IconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EAF8A97988FC1AA2F71C29D348A67D /* UIFont+IconTests.swift */; };
-		84B9330824AB788E00B71BD4 /* NatDialogDismissableConfigurator+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9330724AB788E00B71BD4 /* NatDialogDismissableConfigurator+Spec.swift */; };
-		84B9330A24ABC38C00B71BD4 /* NatDialogTitleConfigurator+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9330924ABC38C00B71BD4 /* NatDialogTitleConfigurator+Spec.swift */; };
-		84B9330C24ABC5FD00B71BD4 /* NatDialogBodyConfigurator+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9330B24ABC5FD00B71BD4 /* NatDialogBodyConfigurator+Spec.swift */; };
-		84B9330E24ABC6D200B71BD4 /* NatDialogCustomBodyConfigurator+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9330D24ABC6D200B71BD4 /* NatDialogCustomBodyConfigurator+Spec.swift */; };
+		84B9330824AB788E00B71BD4 /* NatDialogDismissableConfigurable+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9330724AB788E00B71BD4 /* NatDialogDismissableConfigurable+Spec.swift */; };
+		84B9330A24ABC38C00B71BD4 /* NatDialogTitleConfigurable+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9330924ABC38C00B71BD4 /* NatDialogTitleConfigurable+Spec.swift */; };
+		84B9330C24ABC5FD00B71BD4 /* NatDialogBodyConfigurable+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9330B24ABC5FD00B71BD4 /* NatDialogBodyConfigurable+Spec.swift */; };
+		84B9330E24ABC6D200B71BD4 /* NatDialogCustomBodyConfigurable+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9330D24ABC6D200B71BD4 /* NatDialogCustomBodyConfigurable+Spec.swift */; };
+		84B9331024ABD16100B71BD4 /* NatDialogController+ViewModel+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9330F24ABD16100B71BD4 /* NatDialogController+ViewModel+Spec.swift */; };
 		84BC900224AA15C3007DF09D /* NotificationCenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC900124AA15C3007DF09D /* NotificationCenterProtocol.swift */; };
 		84BC900524AA163A007DF09D /* DialogFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC900324AA163A007DF09D /* DialogFooterView.swift */; };
 		84BC900624AA163A007DF09D /* DialogStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC900424AA163A007DF09D /* DialogStyle.swift */; };
@@ -150,12 +151,12 @@
 		84BC900D24AA16E0007DF09D /* NatDialogController+AlertStyleBuilder+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC8FF824AA13B8007DF09D /* NatDialogController+AlertStyleBuilder+Spec.swift */; };
 		84BC900E24AA16EF007DF09D /* DialogStyle+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC8FFB24AA14C0007DF09D /* DialogStyle+Spec.swift */; };
 		84BC900F24AA16FA007DF09D /* DialogFooterView+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC8FFA24AA14C0007DF09D /* DialogFooterView+Spec.swift */; };
-		84BC901524AA17C0007DF09D /* NatDialogBodyConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC901124AA17C0007DF09D /* NatDialogBodyConfigurator.swift */; };
-		84BC901624AA17C0007DF09D /* NatDialogCustomBodyConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC901224AA17C0007DF09D /* NatDialogCustomBodyConfigurator.swift */; };
-		84BC901724AA17C0007DF09D /* NatDialogTitleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC901324AA17C0007DF09D /* NatDialogTitleConfigurator.swift */; };
+		84BC901524AA17C0007DF09D /* NatDialogBodyConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC901124AA17C0007DF09D /* NatDialogBodyConfigurable.swift */; };
+		84BC901624AA17C0007DF09D /* NatDialogCustomBodyConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC901224AA17C0007DF09D /* NatDialogCustomBodyConfigurable.swift */; };
+		84BC901724AA17C0007DF09D /* NatDialogTitleConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC901324AA17C0007DF09D /* NatDialogTitleConfigurable.swift */; };
 		84BC901824AA17C0007DF09D /* NatDialogBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC901424AA17C0007DF09D /* NatDialogBuilder.swift */; };
 		84BC901A24AA187C007DF09D /* NotificationCenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC901924AA187C007DF09D /* NotificationCenterSpy.swift */; };
-		84BC901C24AB7445007DF09D /* NatDialogDismissableConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC901B24AB7445007DF09D /* NatDialogDismissableConfigurator.swift */; };
+		84BC901C24AB7445007DF09D /* NatDialogDismissableConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC901B24AB7445007DF09D /* NatDialogDismissableConfigurable.swift */; };
 		84F709FF1D1DFC32BA4E9CB1803A6E30 /* NavigationDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31247B21FE6C5054DC6E3BD9BE4A5E35 /* NavigationDrawer.swift */; };
 		851B94BB8C1F2DE82905BF1FE9495800 /* Radius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68038F1CA64FC2164BFB108D7666D0E0 /* Radius.swift */; };
 		852951C972BCD617DDBCE725AE58B8DF /* NaturaElevations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EAF4EE243017499F4D4FB924B336C2 /* NaturaElevations.swift */; };
@@ -383,10 +384,11 @@
 		7F9C4251076A01537D0A8CB995DF81EC /* NavigationDrawerSubitemCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerSubitemCellTests.swift; sourceTree = "<group>"; };
 		83C59F929E88764313134A046BA5C30F /* DesignSystem+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DesignSystem+Spec.swift"; sourceTree = "<group>"; };
 		847C94FCAA23AB699A4926C6B8E598C6 /* AvonFontSizes+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AvonFontSizes+Spec.swift"; sourceTree = "<group>"; };
-		84B9330724AB788E00B71BD4 /* NatDialogDismissableConfigurator+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogDismissableConfigurator+Spec.swift"; sourceTree = "<group>"; };
-		84B9330924ABC38C00B71BD4 /* NatDialogTitleConfigurator+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogTitleConfigurator+Spec.swift"; sourceTree = "<group>"; };
-		84B9330B24ABC5FD00B71BD4 /* NatDialogBodyConfigurator+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogBodyConfigurator+Spec.swift"; sourceTree = "<group>"; };
-		84B9330D24ABC6D200B71BD4 /* NatDialogCustomBodyConfigurator+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogCustomBodyConfigurator+Spec.swift"; sourceTree = "<group>"; };
+		84B9330724AB788E00B71BD4 /* NatDialogDismissableConfigurable+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogDismissableConfigurable+Spec.swift"; sourceTree = "<group>"; };
+		84B9330924ABC38C00B71BD4 /* NatDialogTitleConfigurable+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogTitleConfigurable+Spec.swift"; sourceTree = "<group>"; };
+		84B9330B24ABC5FD00B71BD4 /* NatDialogBodyConfigurable+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogBodyConfigurable+Spec.swift"; sourceTree = "<group>"; };
+		84B9330D24ABC6D200B71BD4 /* NatDialogCustomBodyConfigurable+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogCustomBodyConfigurable+Spec.swift"; sourceTree = "<group>"; };
+		84B9330F24ABD16100B71BD4 /* NatDialogController+ViewModel+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogController+ViewModel+Spec.swift"; sourceTree = "<group>"; };
 		84BC8FF824AA13B8007DF09D /* NatDialogController+AlertStyleBuilder+Spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NatDialogController+AlertStyleBuilder+Spec.swift"; sourceTree = "<group>"; };
 		84BC8FFA24AA14C0007DF09D /* DialogFooterView+Spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DialogFooterView+Spec.swift"; sourceTree = "<group>"; };
 		84BC8FFB24AA14C0007DF09D /* DialogStyle+Spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DialogStyle+Spec.swift"; sourceTree = "<group>"; };
@@ -396,12 +398,12 @@
 		84BC900724AA1678007DF09D /* NatDialogController+AlertStyleBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NatDialogController+AlertStyleBuilder.swift"; sourceTree = "<group>"; };
 		84BC900924AA169B007DF09D /* DialogViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogViewModel.swift; sourceTree = "<group>"; };
 		84BC900A24AA169B007DF09D /* DialogButtonConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogButtonConfiguration.swift; sourceTree = "<group>"; };
-		84BC901124AA17C0007DF09D /* NatDialogBodyConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NatDialogBodyConfigurator.swift; sourceTree = "<group>"; };
-		84BC901224AA17C0007DF09D /* NatDialogCustomBodyConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NatDialogCustomBodyConfigurator.swift; sourceTree = "<group>"; };
-		84BC901324AA17C0007DF09D /* NatDialogTitleConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NatDialogTitleConfigurator.swift; sourceTree = "<group>"; };
+		84BC901124AA17C0007DF09D /* NatDialogBodyConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NatDialogBodyConfigurable.swift; sourceTree = "<group>"; };
+		84BC901224AA17C0007DF09D /* NatDialogCustomBodyConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NatDialogCustomBodyConfigurable.swift; sourceTree = "<group>"; };
+		84BC901324AA17C0007DF09D /* NatDialogTitleConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NatDialogTitleConfigurable.swift; sourceTree = "<group>"; };
 		84BC901424AA17C0007DF09D /* NatDialogBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NatDialogBuilder.swift; sourceTree = "<group>"; };
 		84BC901924AA187C007DF09D /* NotificationCenterSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenterSpy.swift; sourceTree = "<group>"; };
-		84BC901B24AB7445007DF09D /* NatDialogDismissableConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatDialogDismissableConfigurator.swift; sourceTree = "<group>"; };
+		84BC901B24AB7445007DF09D /* NatDialogDismissableConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatDialogDismissableConfigurable.swift; sourceTree = "<group>"; };
 		85AC3BBD38115B8137B4E1CF7BFB87CE /* NaturaFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturaFont.swift; sourceTree = "<group>"; };
 		8602357A60C6B3C2C20CC759E847FE9A /* AvonColorPaletteDark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvonColorPaletteDark.swift; sourceTree = "<group>"; };
 		86372A8479510FC7E2A2105B903F04FA /* FontsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontsTests.swift; sourceTree = "<group>"; };
@@ -1038,10 +1040,10 @@
 		84B9330624AB779800B71BD4 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				84B9330924ABC38C00B71BD4 /* NatDialogTitleConfigurator+Spec.swift */,
-				84B9330B24ABC5FD00B71BD4 /* NatDialogBodyConfigurator+Spec.swift */,
-				84B9330D24ABC6D200B71BD4 /* NatDialogCustomBodyConfigurator+Spec.swift */,
-				84B9330724AB788E00B71BD4 /* NatDialogDismissableConfigurator+Spec.swift */,
+				84B9330924ABC38C00B71BD4 /* NatDialogTitleConfigurable+Spec.swift */,
+				84B9330B24ABC5FD00B71BD4 /* NatDialogBodyConfigurable+Spec.swift */,
+				84B9330D24ABC6D200B71BD4 /* NatDialogCustomBodyConfigurable+Spec.swift */,
+				84B9330724AB788E00B71BD4 /* NatDialogDismissableConfigurable+Spec.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -1065,10 +1067,10 @@
 			isa = PBXGroup;
 			children = (
 				84BC901424AA17C0007DF09D /* NatDialogBuilder.swift */,
-				84BC901124AA17C0007DF09D /* NatDialogBodyConfigurator.swift */,
-				84BC901224AA17C0007DF09D /* NatDialogCustomBodyConfigurator.swift */,
-				84BC901324AA17C0007DF09D /* NatDialogTitleConfigurator.swift */,
-				84BC901B24AB7445007DF09D /* NatDialogDismissableConfigurator.swift */,
+				84BC901324AA17C0007DF09D /* NatDialogTitleConfigurable.swift */,
+				84BC901124AA17C0007DF09D /* NatDialogBodyConfigurable.swift */,
+				84BC901224AA17C0007DF09D /* NatDialogCustomBodyConfigurable.swift */,
+				84BC901B24AB7445007DF09D /* NatDialogDismissableConfigurable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -1542,6 +1544,7 @@
 				84B9330624AB779800B71BD4 /* Protocols */,
 				84BC8FF824AA13B8007DF09D /* NatDialogController+AlertStyleBuilder+Spec.swift */,
 				8D7EAA7BDB4A7A15736AF73EF6EBCD74 /* NatDialogController+StandardStyleBuilder+Spec.swift */,
+				84B9330F24ABD16100B71BD4 /* NatDialogController+ViewModel+Spec.swift */,
 			);
 			path = Builders;
 			sourceTree = "<group>";
@@ -1826,7 +1829,7 @@
 				5549F0F4D09E073E0FAFBCC6F7B6699A /* ColorsNaturaTests.swift in Sources */,
 				24A65D792FD25FA06DEACBD91A7E04A3 /* ColorsTests.swift in Sources */,
 				9ED0B11B243051C089AA8FDCB7F8CA3B /* ContainedButtonTests.swift in Sources */,
-				84B9330824AB788E00B71BD4 /* NatDialogDismissableConfigurator+Spec.swift in Sources */,
+				84B9330824AB788E00B71BD4 /* NatDialogDismissableConfigurable+Spec.swift in Sources */,
 				7392D4960D4A13B6ADF3AB7372B264F5 /* DesignSystem+Spec.swift in Sources */,
 				1A59055F415CB4058DA88A823383FBC9 /* DividerTests.swift in Sources */,
 				705A576866667D11B1D05EBB709BCC00 /* DynamicColorFactory+Spec.swift in Sources */,
@@ -1872,6 +1875,7 @@
 				AF143B9322E1DA9A81FD13C1392CBEB5 /* NaturaFontSizes+Spec.swift in Sources */,
 				FA5F806923A8A2D45347A9797DB8B001 /* NaturaFontWeights+Spec.swift in Sources */,
 				F9EBABAAB5F1921124B621A23F819691 /* NaturaOpacities+Spec.swift in Sources */,
+				84B9331024ABD16100B71BD4 /* NatDialogController+ViewModel+Spec.swift in Sources */,
 				BE1DA23EAAD3FB82DD151A8B71E6883C /* NaturaSizes+Spec.swift in Sources */,
 				2D176E558C3297F7629B7F3D39003DC1 /* NaturaSpacing+Spec.swift in Sources */,
 				C9BA9F8B8449E7B2B19C5A0ADAA34C69 /* NaturaThemeSpec.swift in Sources */,
@@ -1885,10 +1889,10 @@
 				3D8762A06C970677D223A561419340A9 /* PulseLayerTests.swift in Sources */,
 				A0328AF2000431B6155A5A6CD94B1835 /* ReusableViewTests.swift in Sources */,
 				46A73ED2AC6774550A3F2D82CCE8BAF7 /* SearchBar.swift in Sources */,
-				84B9330E24ABC6D200B71BD4 /* NatDialogCustomBodyConfigurator+Spec.swift in Sources */,
+				84B9330E24ABC6D200B71BD4 /* NatDialogCustomBodyConfigurable+Spec.swift in Sources */,
 				6E6C6EC0105FF251940E4C011D611149 /* String+IconTests.swift in Sources */,
 				944056C3F885BC4ACF0B59F08ECCA2F9 /* StubDarkColorPalette.swift in Sources */,
-				84B9330C24ABC5FD00B71BD4 /* NatDialogBodyConfigurator+Spec.swift in Sources */,
+				84B9330C24ABC5FD00B71BD4 /* NatDialogBodyConfigurable+Spec.swift in Sources */,
 				A3A86E5E58592409B35198B154FA7A49 /* StubLightColorPalette.swift in Sources */,
 				ECF18B7FA2F5A22C0F919BBBE58FF611 /* TabDelegateMock.swift in Sources */,
 				6231AEE531E549E406745A37170FC719 /* TabItemViewDelegateMock.swift in Sources */,
@@ -1921,7 +1925,7 @@
 				D05CEB5C2F5F9D32FA015604F6E719F0 /* ValidateTheme+Spec.swift in Sources */,
 				1FBF5A52B03E9E219462A06F9487D3B4 /* ValueTextHighlightTests.swift in Sources */,
 				1734E4583B85C0197E0AC6F1CE877ADC /* ViewAnimatingMock.swift in Sources */,
-				84B9330A24ABC38C00B71BD4 /* NatDialogTitleConfigurator+Spec.swift in Sources */,
+				84B9330A24ABC38C00B71BD4 /* NatDialogTitleConfigurable+Spec.swift in Sources */,
 				E4B171E23C40B91B211DB2F64357778D /* ViewStyle+Spec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1940,10 +1944,10 @@
 				3F12D75506942B4F6ED3212F793C6177 /* AvonFontSizes.swift in Sources */,
 				84BC901A24AA187C007DF09D /* NotificationCenterSpy.swift in Sources */,
 				B00E0C6AC86C3AEFF988F529F639B0FB /* AvonFontWeights.swift in Sources */,
-				84BC901624AA17C0007DF09D /* NatDialogCustomBodyConfigurator.swift in Sources */,
+				84BC901624AA17C0007DF09D /* NatDialogCustomBodyConfigurable.swift in Sources */,
 				156EE5EBDDF801745FB87B90E7559617 /* AvonOpacities.swift in Sources */,
 				84BC901824AA17C0007DF09D /* NatDialogBuilder.swift in Sources */,
-				84BC901524AA17C0007DF09D /* NatDialogBodyConfigurator.swift in Sources */,
+				84BC901524AA17C0007DF09D /* NatDialogBodyConfigurable.swift in Sources */,
 				71BFF46A2E8EE022B73DF3171D0C08CE /* AvonSizes.swift in Sources */,
 				1486785D9C1BC4FCF2308F2B9CC28543 /* AvonSpacing.swift in Sources */,
 				38DB283DDC43587A2456F690D45DFE67 /* AvonTheme.swift in Sources */,
@@ -1958,7 +1962,7 @@
 				92FF5150726174EFBBFDC8A50657C90E /* ConfigurationStorable.swift in Sources */,
 				40B14F67117654B7854317119E5B3509 /* ConfigurationStorage.swift in Sources */,
 				7E5A9E64BC68581EC58FCA6EB03DF802 /* ContainedButton.swift in Sources */,
-				84BC901C24AB7445007DF09D /* NatDialogDismissableConfigurator.swift in Sources */,
+				84BC901C24AB7445007DF09D /* NatDialogDismissableConfigurable.swift in Sources */,
 				AB9CCFDF8B930FD49AFAEAE1BB5CA718 /* DesignSystem.swift in Sources */,
 				7CA6BAC353B73AF5D31F09CAF0268EE5 /* DesignSystemFatalError.swift in Sources */,
 				8F808FFBB4549BC4F3895B8CBB23ADB3 /* Divider.swift in Sources */,
@@ -2001,7 +2005,7 @@
 				81AA5DF0A9D5F332072CA1EC9C5CF968 /* NatOpacities.swift in Sources */,
 				6F66306180843E285A6B82D8788835D2 /* NatSizes.swift in Sources */,
 				1E1CA75D4F2464DBEA0DD722294FFDEB /* NatSpacing.swift in Sources */,
-				84BC901724AA17C0007DF09D /* NatDialogTitleConfigurator.swift in Sources */,
+				84BC901724AA17C0007DF09D /* NatDialogTitleConfigurable.swift in Sources */,
 				9FE54A146C1346B993F49E58E27A43D6 /* NaturaBorderRadius.swift in Sources */,
 				EC5DC493DBC599A1A5215E49662545D5 /* NaturaColorPaletteDark.swift in Sources */,
 				7C70828FE3E0B0D94A3CD29705B2BEDA /* NaturaColorPaletteLight.swift in Sources */,

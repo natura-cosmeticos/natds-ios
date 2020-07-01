@@ -38,14 +38,14 @@ extension NatDialogController {
 
 extension NatDialogController.AlertStyleBuilder: NatDialogBuilder {}
 
-// MARK: - NatDialogTitleConfigurator
+// MARK: - NatDialogTitleConfigurable
 
-extension NatDialogController.AlertStyleBuilder: NatDialogTitleConfigurator {}
+extension NatDialogController.AlertStyleBuilder: NatDialogTitleConfigurable {}
 
-// MARK: - NatDialogBodyConfigurator
+// MARK: - NatDialogBodyConfigurable
 
-extension NatDialogController.AlertStyleBuilder: NatDialogBodyConfigurator {}
+extension NatDialogController.AlertStyleBuilder: NatDialogBodyConfigurable {}
 
-// MARK: - NatDialogDismissableConfigurator
+// MARK: - NatDialogDismissableConfigurable
 
-extension NatDialogController.AlertStyleBuilder: NatDialogDismissableConfigurator {}
+extension NatDialogController.AlertStyleBuilder: NatDialogDismissableConfigurable {}

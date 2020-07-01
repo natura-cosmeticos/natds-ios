@@ -1,6 +1,6 @@
-public protocol NatDialogTitleConfigurator {}
+public protocol NatDialogTitleConfigurable {}
 
-extension NatDialogTitleConfigurator where Self: NatDialogBuilder {
+extension NatDialogTitleConfigurable where Self: NatDialogBuilder {
     public func configure(title: String) -> Self {
         viewModel.titleView = DialogStyle.createLabelForTitle(title: title)
 

@@ -38,18 +38,18 @@ extension NatDialogController {
 
 extension NatDialogController.StandardStyleBuilder: NatDialogBuilder {}
 
-// MARK: - NatDialogTitleConfigurator
+// MARK: - NatDialogTitleConfigurable
 
-extension NatDialogController.StandardStyleBuilder: NatDialogTitleConfigurator {}
+extension NatDialogController.StandardStyleBuilder: NatDialogTitleConfigurable {}
 
-// MARK: - NatDialogBodyConfigurator
+// MARK: - NatDialogBodyConfigurable
 
-extension NatDialogController.StandardStyleBuilder: NatDialogBodyConfigurator {}
+extension NatDialogController.StandardStyleBuilder: NatDialogBodyConfigurable {}
 
-// MARK: - NatDialogCustomBodyConfigurator
+// MARK: - NatDialogCustomBodyConfigurable
 
-extension NatDialogController.StandardStyleBuilder: NatDialogCustomBodyConfigurator {}
+extension NatDialogController.StandardStyleBuilder: NatDialogCustomBodyConfigurable {}
 
-// MARK: - NatDialogDismissableConfigurator
+// MARK: - NatDialogDismissableConfigurable
 
-extension NatDialogController.StandardStyleBuilder: NatDialogDismissableConfigurator {}
+extension NatDialogController.StandardStyleBuilder: NatDialogDismissableConfigurable {}

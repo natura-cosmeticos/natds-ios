@@ -3,7 +3,7 @@ import Nimble
 
 @testable import NatDS
 
-final class NatDialogDismissableConfiguratorSpec: QuickSpec {
+final class NatDialogDismissableConfigurableSpec: QuickSpec {
     override func spec() {
         var systemUnderTest: StubClassWithProtocol!
         var viewModel: NatDialogController.ViewModel!
@@ -61,7 +61,7 @@ final class NatDialogDismissableConfiguratorSpec: QuickSpec {
     }
 }
 
-private final class StubClassWithProtocol: NatDialogDismissableConfigurator, NatDialogBuilder {
+private final class StubClassWithProtocol: NatDialogDismissableConfigurable, NatDialogBuilder {
     var viewModel = NatDialogController.ViewModel()
     var buttonsConfiguration: (primary: DialogButtonConfiguration?, secondary: DialogButtonConfiguration?)
 }
