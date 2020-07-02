@@ -136,6 +136,7 @@
 		83FB15E1B8B7F6D80B9226B2A75567DC /* AvonThemeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D81AFC13659B24C0C08DCFCA630E1D /* AvonThemeSpec.swift */; };
 		840B6A754236624B9738CBC3D5CFE895 /* ViewAnimatingWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7316FE65E814E2D5CA475475CD8D4EA /* ViewAnimatingWrapper.swift */; };
 		841DC30AC5612DDD81C8175BCFF4507E /* AvonFontSizes+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C94FCAA23AB699A4926C6B8E598C6 /* AvonFontSizes+Spec.swift */; };
+		844A1E2324AE117400E93AD9 /* NatShortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A1E2224AE117400E93AD9 /* NatShortcut.swift */; };
 		84AB67611C0B5D85CBE5CE489FCA4DC6 /* UIFont+IconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EAF8A97988FC1AA2F71C29D348A67D /* UIFont+IconTests.swift */; };
 		84B9330824AB788E00B71BD4 /* NatDialogDismissableConfigurable+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9330724AB788E00B71BD4 /* NatDialogDismissableConfigurable+Spec.swift */; };
 		84B9330A24ABC38C00B71BD4 /* NatDialogTitleConfigurable+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9330924ABC38C00B71BD4 /* NatDialogTitleConfigurable+Spec.swift */; };
@@ -383,6 +384,7 @@
 		7E37D0B1B9BAD8ACC82F2DDAEB6FF77E /* AvonTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvonTheme.swift; sourceTree = "<group>"; };
 		7F9C4251076A01537D0A8CB995DF81EC /* NavigationDrawerSubitemCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerSubitemCellTests.swift; sourceTree = "<group>"; };
 		83C59F929E88764313134A046BA5C30F /* DesignSystem+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DesignSystem+Spec.swift"; sourceTree = "<group>"; };
+		844A1E2224AE117400E93AD9 /* NatShortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatShortcut.swift; sourceTree = "<group>"; };
 		847C94FCAA23AB699A4926C6B8E598C6 /* AvonFontSizes+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AvonFontSizes+Spec.swift"; sourceTree = "<group>"; };
 		84B9330724AB788E00B71BD4 /* NatDialogDismissableConfigurable+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogDismissableConfigurable+Spec.swift"; sourceTree = "<group>"; };
 		84B9330924ABC38C00B71BD4 /* NatDialogTitleConfigurable+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogTitleConfigurable+Spec.swift"; sourceTree = "<group>"; };
@@ -1037,6 +1039,14 @@
 			path = DesignTokens;
 			sourceTree = "<group>";
 		};
+		844A1E2124AE111D00E93AD9 /* Shortcut */ = {
+			isa = PBXGroup;
+			children = (
+				844A1E2224AE117400E93AD9 /* NatShortcut.swift */,
+			);
+			path = Shortcut;
+			sourceTree = "<group>";
+		};
 		84B9330624AB779800B71BD4 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -1145,6 +1155,7 @@
 				EA99DA7A49950566847F2CD983BBD1EA /* Field */,
 				FBCFD36466E6B86E32075C92503882F7 /* Icons */,
 				719A57636DBDBD5D6854EFEC0F362C4C /* NavigationDrawer */,
+				844A1E2124AE111D00E93AD9 /* Shortcut */,
 				1C64E7FC7AE243CD11623B12CB2E59B4 /* Tab */,
 				857FA81A9331D03B846B818F61F9D19A /* ValueText */,
 			);
@@ -1938,6 +1949,7 @@
 				BBCC40A29117B4CB675FE57C3B0130E4 /* AssetsHelper.swift in Sources */,
 				75C6E6108454D8D59FCFD7B5C82D9902 /* AvonBorderRadius.swift in Sources */,
 				FC5D4E056A537A2355FB279F63D7BBDB /* AvonColorPaletteDark.swift in Sources */,
+				844A1E2324AE117400E93AD9 /* NatShortcut.swift in Sources */,
 				3D429A6E88BA742E49ECCA485A26E70F /* AvonColorPaletteLight.swift in Sources */,
 				E595C8E0683039156EECADB28A93AC69 /* AvonElevations.swift in Sources */,
 				AA2218A08849224F57943C49A7CE3DDA /* AvonFont.swift in Sources */,
