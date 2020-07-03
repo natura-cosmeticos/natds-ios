@@ -3,14 +3,17 @@ import Nimble
 
 @testable import NatDS
 
+private typealias SystemUnderTest = NatDialogTitleConfigurable & NatDialogBuilder
+
 final class NatDialogTitleConfigurableSpec: QuickSpec {
     override func spec() {
-        var systemUnderTest: StubClassWithProtocol!
+        var systemUnderTest: SystemUnderTest!
         var viewModel: NatDialogController.ViewModel!
 
         beforeEach {
             DesignSystem().configure(with: .theBodyShop)
-            systemUnderTest = StubClassWithProtocol()
+
+            systemUnderTest = StubClassWithProtocols()
             viewModel = systemUnderTest.viewModel
         }
 
@@ -38,7 +41,7 @@ final class NatDialogTitleConfigurableSpec: QuickSpec {
     }
 }
 
-private final class StubClassWithProtocol: NatDialogTitleConfigurable, NatDialogBuilder {
+private final class StubClassWithProtocols: SystemUnderTest {
     var viewModel = NatDialogController.ViewModel()
     var buttonsConfiguration: (primary: DialogButtonConfiguration?, secondary: DialogButtonConfiguration?)
 }
