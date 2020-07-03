@@ -4,6 +4,7 @@ extension NatDialogController {
         // MARK: - NatDialogBuilder
 
         public let viewModel = ViewModel()
+
         public var buttonsConfiguration: (
             primary: DialogButtonConfiguration?,
             secondary: DialogButtonConfiguration?
@@ -11,6 +12,7 @@ extension NatDialogController {
 
         // MARK: - Public methods
 
+        @discardableResult
         public func configure(primaryButtonTitle title: String, withAction action: @escaping () -> Void) -> Self {
             buttonsConfiguration.primary = .init(
                 title: title,
@@ -21,6 +23,7 @@ extension NatDialogController {
             return self
         }
 
+        @discardableResult
         public func configure(secondaryButtonTitle title: String, withAction action: @escaping () -> Void) -> Self {
             buttonsConfiguration.secondary = .init(
                 title: title,
@@ -37,10 +40,14 @@ extension NatDialogController {
 
 extension NatDialogController.AlertStyleBuilder: NatDialogBuilder {}
 
-// MARK: - NatDialogTitleConfigurator
+// MARK: - NatDialogTitleConfigurable
 
-extension NatDialogController.AlertStyleBuilder: NatDialogTitleConfigurator {}
+extension NatDialogController.AlertStyleBuilder: NatDialogTitleConfigurable {}
 
-// MARK: - NatDialogBodyConfigurator
+// MARK: - NatDialogBodyConfigurable
 
-extension NatDialogController.AlertStyleBuilder: NatDialogBodyConfigurator {}
+extension NatDialogController.AlertStyleBuilder: NatDialogBodyConfigurable {}
+
+// MARK: - NatDialogDismissableConfigurable
+
+extension NatDialogController.AlertStyleBuilder: NatDialogDismissableConfigurable {}
