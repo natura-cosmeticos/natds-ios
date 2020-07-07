@@ -23,7 +23,6 @@ public final class NatShortcut: UIView, Pulsable {
         let label = UILabel()
         label.font = NatFonts.font(ofSize: .caption, withWeight: .regular)
         label.textColor = getTheme().colors.highEmphasis
-        label.text = "Compras & Status"
         label.textAlignment = .center
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -49,7 +48,7 @@ public final class NatShortcut: UIView, Pulsable {
         fatalError("init(coder:) has not been implemented")
     }
 
-    // MARK: - User ???
+    // MARK: - Overrides
 
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
@@ -61,6 +60,12 @@ public final class NatShortcut: UIView, Pulsable {
         super.touchesEnded(touches, with: event)
 
         endPulse(layer: circleView.layer)
+    }
+
+    public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+
+        style.applyStyle(self)
     }
 }
 
@@ -83,7 +88,7 @@ extension NatShortcut {
         circleView.backgroundColor = color
     }
 
-    func configure(circleBorder value: CGFloat) {
+    func configure(circleBorderWidth value: CGFloat) {
         circleView.layer.borderWidth = value
     }
 
@@ -122,11 +127,11 @@ extension NatShortcut {
             iconView.centerXAnchor.constraint(equalTo: circleView.centerXAnchor),
             iconView.centerYAnchor.constraint(equalTo: circleView.centerYAnchor),
 
-            label.topAnchor.constraint(equalTo: circleView.bottomAnchor, constant: 8),
+            label.topAnchor.constraint(equalTo: circleView.bottomAnchor, constant: getTheme().spacing.tiny),
             label.trailingAnchor.constraint(equalTo: trailingAnchor),
             label.bottomAnchor.constraint(equalTo: bottomAnchor),
             label.leadingAnchor.constraint(equalTo: leadingAnchor),
-            label.widthAnchor.constraint(lessThanOrEqualToConstant: 56),
+            label.widthAnchor.constraint(lessThanOrEqualToConstant: getTheme().sizes.large),
             label.centerXAnchor.constraint(equalTo: centerXAnchor)
         ]
 

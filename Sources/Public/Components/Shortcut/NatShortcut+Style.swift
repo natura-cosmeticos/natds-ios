@@ -5,6 +5,18 @@ extension NatShortcut {
 }
 
 extension NatShortcut.Style {
+    public static var containedPrimary: NatShortcut.Style {
+        .init(
+            applyStyle: ShortcutContainedStyle.applyPrimaryStyle
+        )
+    }
+
+    public static var containedDefault: NatShortcut.Style {
+        .init(
+            applyStyle: ShortcutContainedStyle.applyDefaultStyle
+        )
+    }
+    
     public static var outlinedPrimary: NatShortcut.Style {
         .init(
             applyStyle: ShortcutOutlinedStyle.applyPrimaryStyle
@@ -12,18 +24,6 @@ extension NatShortcut.Style {
     }
 
     public static var outlinedDefault: NatShortcut.Style {
-        .init(
-            applyStyle: ShortcutOutlinedStyle.applyDefaultStyle
-        )
-    }
-
-    public static var containedPrimary: NatShortcut.Style {
-        .init(
-            applyStyle: ShortcutOutlinedStyle.applyPrimaryStyle
-        )
-    }
-
-    public static var containedDefault: NatShortcut.Style {
         .init(
             applyStyle: ShortcutOutlinedStyle.applyDefaultStyle
         )

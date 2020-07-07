@@ -11,7 +11,7 @@ enum ShortcutOutlinedStyle {
         shortcut.configure(circleColor: getTheme().colors.surface)
         let opacity = getTheme().opacities.opacity04
         shortcut.configure(circleBorderColor: decorationColor.withAlphaComponent(opacity).cgColor)
-        shortcut.configure(circleBorder: 1)
+        shortcut.configure(circleBorderWidth: 1)
         shortcut.configure(iconColor: decorationColor)
     }
 }

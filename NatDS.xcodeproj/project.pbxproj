@@ -161,6 +161,9 @@
 		84BF066224B4A62400462AC5 /* NatShortcut+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF066124B4A62400462AC5 /* NatShortcut+Style.swift */; };
 		84BF066524B4A8BD00462AC5 /* ShortcutOutlinedStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF066424B4A8BD00462AC5 /* ShortcutOutlinedStyle.swift */; };
 		84BF066724B4A8DA00462AC5 /* ShortcutContainedStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF066624B4A8DA00462AC5 /* ShortcutContainedStyle.swift */; };
+		84BF066B24B504B200462AC5 /* ShortcutOutlinedStyle+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF066924B4FF9300462AC5 /* ShortcutOutlinedStyle+Spec.swift */; };
+		84BF066E24B5099700462AC5 /* ShortcutContainedStyle+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF066C24B5099300462AC5 /* ShortcutContainedStyle+Spec.swift */; };
+		84BF067224B5126800462AC5 /* NatShortcut+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF067024B5123500462AC5 /* NatShortcut+Spec.swift */; };
 		84F709FF1D1DFC32BA4E9CB1803A6E30 /* NavigationDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31247B21FE6C5054DC6E3BD9BE4A5E35 /* NavigationDrawer.swift */; };
 		851B94BB8C1F2DE82905BF1FE9495800 /* Radius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68038F1CA64FC2164BFB108D7666D0E0 /* Radius.swift */; };
 		852951C972BCD617DDBCE725AE58B8DF /* NaturaElevations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EAF4EE243017499F4D4FB924B336C2 /* NaturaElevations.swift */; };
@@ -412,6 +415,9 @@
 		84BF066124B4A62400462AC5 /* NatShortcut+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatShortcut+Style.swift"; sourceTree = "<group>"; };
 		84BF066424B4A8BD00462AC5 /* ShortcutOutlinedStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutOutlinedStyle.swift; sourceTree = "<group>"; };
 		84BF066624B4A8DA00462AC5 /* ShortcutContainedStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutContainedStyle.swift; sourceTree = "<group>"; };
+		84BF066924B4FF9300462AC5 /* ShortcutOutlinedStyle+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShortcutOutlinedStyle+Spec.swift"; sourceTree = "<group>"; };
+		84BF066C24B5099300462AC5 /* ShortcutContainedStyle+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShortcutContainedStyle+Spec.swift"; sourceTree = "<group>"; };
+		84BF067024B5123500462AC5 /* NatShortcut+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatShortcut+Spec.swift"; sourceTree = "<group>"; };
 		85AC3BBD38115B8137B4E1CF7BFB87CE /* NaturaFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturaFont.swift; sourceTree = "<group>"; };
 		8602357A60C6B3C2C20CC759E847FE9A /* AvonColorPaletteDark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvonColorPaletteDark.swift; sourceTree = "<group>"; };
 		86372A8479510FC7E2A2105B903F04FA /* FontsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontsTests.swift; sourceTree = "<group>"; };
@@ -1096,8 +1102,25 @@
 		84BF066324B4A89B00462AC5 /* Shortcut */ = {
 			isa = PBXGroup;
 			children = (
-				84BF066424B4A8BD00462AC5 /* ShortcutOutlinedStyle.swift */,
 				84BF066624B4A8DA00462AC5 /* ShortcutContainedStyle.swift */,
+				84BF066424B4A8BD00462AC5 /* ShortcutOutlinedStyle.swift */,
+			);
+			path = Shortcut;
+			sourceTree = "<group>";
+		};
+		84BF066824B4FEE300462AC5 /* Shortcut */ = {
+			isa = PBXGroup;
+			children = (
+				84BF066924B4FF9300462AC5 /* ShortcutOutlinedStyle+Spec.swift */,
+				84BF066C24B5099300462AC5 /* ShortcutContainedStyle+Spec.swift */,
+			);
+			path = Shortcut;
+			sourceTree = "<group>";
+		};
+		84BF066F24B511F600462AC5 /* Shortcut */ = {
+			isa = PBXGroup;
+			children = (
+				84BF067024B5123500462AC5 /* NatShortcut+Spec.swift */,
 			);
 			path = Shortcut;
 			sourceTree = "<group>";
@@ -1132,6 +1155,7 @@
 				3FCB7713DAAB2F827B224E06280AF674 /* Field */,
 				BEE13D19F1A22BF171DC1BAC64B38FA7 /* Icons */,
 				7BEFD3D9F02DCD62D7A24864218DC0D8 /* NavigationDrawer */,
+				84BF066F24B511F600462AC5 /* Shortcut */,
 				28B8CBEE15559C8DBD459A3FC53141DB /* Tab */,
 				42322F15110B108E59C217709124F184 /* ValueText */,
 			);
@@ -1528,6 +1552,7 @@
 			children = (
 				00B52FC06F103FA5697F6E2B5CC0A920 /* Button */,
 				DBACC3116710A6183CD3BC637E92D0D7 /* Dialog */,
+				84BF066824B4FEE300462AC5 /* Shortcut */,
 				9EAE325876E14C91105C5CF9D2E7F1EF /* ViewStyle+Spec.swift */,
 			);
 			path = ViewStyle;
@@ -1881,6 +1906,7 @@
 				B7CCF87E56EA792B3471AD69AF68B23F /* NatButton+EdgeInsets+Spec.swift in Sources */,
 				AA1F5760B92801C89E927B323F7691B7 /* NatButton+Height+Spec.swift in Sources */,
 				19CCAA043E9657B0F68877ABC0F7F90F /* NatButton+Specs.swift in Sources */,
+				84BF066B24B504B200462AC5 /* ShortcutOutlinedStyle+Spec.swift in Sources */,
 				65D2ED6A736F8BD53729307D3E83A35D /* NatColors+Avon+Spec.swift in Sources */,
 				82FFB36F823296E60F0CBCE8D419D689 /* NatColors+Natura+Spec.swift in Sources */,
 				D18DCEC54B0D407538EC7F218CDF25E1 /* NatColors+TBS+Spec.swift in Sources */,
@@ -1901,6 +1927,7 @@
 				D4573CF72BFE36A5621B648267DFE5CA /* NaturaFont+Spec.swift in Sources */,
 				4A960CCEE0BE260F4B77B8CD3090AD8A /* NaturaFontLetterSpacings+Spec.swift in Sources */,
 				AF143B9322E1DA9A81FD13C1392CBEB5 /* NaturaFontSizes+Spec.swift in Sources */,
+				84BF066E24B5099700462AC5 /* ShortcutContainedStyle+Spec.swift in Sources */,
 				FA5F806923A8A2D45347A9797DB8B001 /* NaturaFontWeights+Spec.swift in Sources */,
 				F9EBABAAB5F1921124B621A23F819691 /* NaturaOpacities+Spec.swift in Sources */,
 				84B9331024ABD16100B71BD4 /* NatDialogController+ViewModel+Spec.swift in Sources */,
@@ -1948,6 +1975,7 @@
 				51308DFBAF8D2A3E20B52E3AC688610A /* UIColor+AsHexString.swift in Sources */,
 				10734D11ADA3847CF236F1C8B98F4555 /* UIColor+HexTests.swift in Sources */,
 				00677CE3627142815E32CE84F60D8910 /* UIFont+GetWeight.swift in Sources */,
+				84BF067224B5126800462AC5 /* NatShortcut+Spec.swift in Sources */,
 				84AB67611C0B5D85CBE5CE489FCA4DC6 /* UIFont+IconTests.swift in Sources */,
 				50130A6AE7342A799C5989AF8FE486E8 /* UITableView+ReusableTests.swift in Sources */,
 				8E7FE7AAE264D40AF9BFF5CE6E5C7AD0 /* UIView+FrameTests.swift in Sources */,
