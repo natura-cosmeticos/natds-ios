@@ -6,7 +6,7 @@ final class ShortcutItemViewController: UIViewController, SampleItem {
     // MARK: - Private properties
 
     private let shortcut: NatShortcut = {
-        let shorcut = NatShortcut()
+        let shorcut = NatShortcut(style: .outlinedPrimary)
         shorcut.translatesAutoresizingMaskIntoConstraints = false
         return shorcut
     }()
@@ -36,9 +36,7 @@ final class ShortcutItemViewController: UIViewController, SampleItem {
 
         let constraints = [
             shortcut.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            shortcut.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-//            shortcut.widthAnchor.constraint(equalToConstant: 100),
-//            shortcut.heightAnchor.constraint(equalToConstant: 100),
+            shortcut.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ]
 
         NSLayoutConstraint.activate(constraints)

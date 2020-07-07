@@ -12,7 +12,7 @@ final class NatDialogBodyConfigurableSpec: QuickSpec {
 
         beforeEach {
             DesignSystem().configure(with: .theBodyShop)
-            
+
             systemUnderTest = StubClassWithProtocols()
             viewModel = systemUnderTest.viewModel
         }
