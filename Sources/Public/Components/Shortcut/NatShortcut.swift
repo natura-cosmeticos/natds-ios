@@ -131,10 +131,16 @@ extension NatShortcut {
             label.trailingAnchor.constraint(equalTo: trailingAnchor),
             label.bottomAnchor.constraint(equalTo: bottomAnchor),
             label.leadingAnchor.constraint(equalTo: leadingAnchor),
-            label.widthAnchor.constraint(lessThanOrEqualToConstant: getTheme().sizes.large),
+            label.widthAnchor.constraint(lessThanOrEqualToConstant: Widths.maximum),
             label.centerXAnchor.constraint(equalTo: centerXAnchor)
         ]
 
         NSLayoutConstraint.activate(constraints)
+    }
+}
+
+extension NatShortcut {
+    enum Widths {
+        static var maximum: CGFloat { getTheme().sizes.large }
     }
 }

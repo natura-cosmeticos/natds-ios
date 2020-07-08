@@ -137,6 +137,7 @@
 		840B6A754236624B9738CBC3D5CFE895 /* ViewAnimatingWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7316FE65E814E2D5CA475475CD8D4EA /* ViewAnimatingWrapper.swift */; };
 		841DC30AC5612DDD81C8175BCFF4507E /* AvonFontSizes+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C94FCAA23AB699A4926C6B8E598C6 /* AvonFontSizes+Spec.swift */; };
 		844A1E2324AE117400E93AD9 /* NatShortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A1E2224AE117400E93AD9 /* NatShortcut.swift */; };
+		8475413524B542170071E884 /* NatShortcut+Widths+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475413424B542170071E884 /* NatShortcut+Widths+Spec.swift */; };
 		84AB67611C0B5D85CBE5CE489FCA4DC6 /* UIFont+IconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EAF8A97988FC1AA2F71C29D348A67D /* UIFont+IconTests.swift */; };
 		84B9330824AB788E00B71BD4 /* NatDialogDismissableConfigurable+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9330724AB788E00B71BD4 /* NatDialogDismissableConfigurable+Spec.swift */; };
 		84B9330A24ABC38C00B71BD4 /* NatDialogTitleConfigurable+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9330924ABC38C00B71BD4 /* NatDialogTitleConfigurable+Spec.swift */; };
@@ -391,6 +392,7 @@
 		7F9C4251076A01537D0A8CB995DF81EC /* NavigationDrawerSubitemCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerSubitemCellTests.swift; sourceTree = "<group>"; };
 		83C59F929E88764313134A046BA5C30F /* DesignSystem+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DesignSystem+Spec.swift"; sourceTree = "<group>"; };
 		844A1E2224AE117400E93AD9 /* NatShortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatShortcut.swift; sourceTree = "<group>"; };
+		8475413424B542170071E884 /* NatShortcut+Widths+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatShortcut+Widths+Spec.swift"; sourceTree = "<group>"; };
 		847C94FCAA23AB699A4926C6B8E598C6 /* AvonFontSizes+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AvonFontSizes+Spec.swift"; sourceTree = "<group>"; };
 		84B9330724AB788E00B71BD4 /* NatDialogDismissableConfigurable+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogDismissableConfigurable+Spec.swift"; sourceTree = "<group>"; };
 		84B9330924ABC38C00B71BD4 /* NatDialogTitleConfigurable+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogTitleConfigurable+Spec.swift"; sourceTree = "<group>"; };
@@ -1061,6 +1063,16 @@
 			path = Shortcut;
 			sourceTree = "<group>";
 		};
+		8475413624B5F7FC0071E884 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				42FC9280C40680336260347DADB5C0F3 /* Pulsable.swift */,
+				EF0F2CA30F4AA6E3F9B482693C997D55 /* PulseContainerLayer.swift */,
+				5AF8919785F0CA6D3AB0AD57F759ED73 /* PulseLayer.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
 		84B9330624AB779800B71BD4 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -1121,6 +1133,7 @@
 			isa = PBXGroup;
 			children = (
 				84BF067024B5123500462AC5 /* NatShortcut+Spec.swift */,
+				8475413424B542170071E884 /* NatShortcut+Widths+Spec.swift */,
 			);
 			path = Shortcut;
 			sourceTree = "<group>";
@@ -1303,6 +1316,7 @@
 		A49A262765C555E6BDBC06EDF2F28E79 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				8475413624B5F7FC0071E884 /* Animations */,
 				7AB7FF70C9AEA25A8E77912E1563B1EE /* Configuration */,
 				E3284AABCC53927621EACCBF1C988CA3 /* Extensions */,
 				DBF274BBC18977A0881FCCC6174DF985 /* SupportedBrands */,
@@ -1659,9 +1673,6 @@
 				55C56C56418DE50EB64ADD8E2B4B70F4 /* NatButton */,
 				3C58A7E1BE25BB61275135C97BD4C757 /* ContainedButton.swift */,
 				FF5220FFBF3EE662D05373D401183E54 /* FlatButton.swift */,
-				42FC9280C40680336260347DADB5C0F3 /* Pulsable.swift */,
-				EF0F2CA30F4AA6E3F9B482693C997D55 /* PulseContainerLayer.swift */,
-				5AF8919785F0CA6D3AB0AD57F759ED73 /* PulseLayer.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -1954,6 +1965,7 @@
 				D23F82EE5C3333FD06E87016848DCD37 /* TabItemViewTests.swift in Sources */,
 				5C5DF89CCAB72EC25E1A1BC43D450CB0 /* TabTests.swift in Sources */,
 				CB6F95EF082D5B6EF08A8BC9B7A01427 /* TextFieldDelegateMock.swift in Sources */,
+				8475413524B542170071E884 /* NatShortcut+Widths+Spec.swift in Sources */,
 				C3E184D6CD3B52645D0E06A7138CA94E /* TextFieldTests.swift in Sources */,
 				2934666EAAD661E372AA6009BB287275 /* TextFieldTypeTests.swift in Sources */,
 				D164898BC9757AC94E919F1C29A72D7C /* TheBodyShopBorderRadius+Spec.swift in Sources */,
