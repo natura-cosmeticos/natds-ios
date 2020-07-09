@@ -17,6 +17,7 @@
 		190F96D8AFCE86FA621E6BDD5A3390F2 /* ColorsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF7BFDAFFA13841520A52D2EDE5400D /* ColorsHeaderView.swift */; };
 		1D1DA594D70300F43F7B5F7BD9215C90 /* NatDS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EEBC24456A172162B3538C51FBFE2BA6 /* NatDS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		237BDC613256825FFF9C564C51CEBED6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60F631F3D82A74E2CC246BA76661EF48 /* LaunchScreen.storyboard */; };
+		265B17EE24AFBE5500FD0407 /* BadgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265B17ED24AFBE5500FD0407 /* BadgeViewController.swift */; };
 		47382B136831753E7775B5E76392DA56 /* ColorsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD277263F8F3EE00B21A0DE2E9849D97 /* ColorsCell.swift */; };
 		4FB74E3BCCB54EE2242A9A78778F6024 /* TypographyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE39135EC83E5AE456AC7FBF5FE7F9CA /* TypographyViewController.swift */; };
 		542BBE6C15A7E0C25DD69346A43430B0 /* ColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C4E23EBB1B07DF334BBA42C272EBB /* ColorsViewController.swift */; };
@@ -63,6 +64,7 @@
 
 /* Begin PBXFileReference section */
 		1E864ED7BB360AA6C6091D7E1053A5ED /* OpacityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpacityViewController.swift; sourceTree = "<group>"; };
+		265B17ED24AFBE5500FD0407 /* BadgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeViewController.swift; sourceTree = "<group>"; };
 		26D4B7F03E632BFE339DA40C2269B9D9 /* NavigationDrawerItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerItemViewController.swift; sourceTree = "<group>"; };
 		2D71CBBDDF4F8308F1C24A8F907CBE25 /* NatDS-SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NatDS-SampleApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3336D64DBE111BD9CEB3EAF55A72897A /* IconographyItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconographyItemViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +142,14 @@
 			path = Elevation;
 			sourceTree = "<group>";
 		};
+		265B17EC24AFBE2A00FD0407 /* Badge */ = {
+			isa = PBXGroup;
+			children = (
+				265B17ED24AFBE5500FD0407 /* BadgeViewController.swift */,
+			);
+			path = Badge;
+			sourceTree = "<group>";
+		};
 		325C58392C7C330F75C621948DF99A49 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +208,7 @@
 		86D88A8EB08915984C5FB6D277F7A6FA /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				265B17EC24AFBE2A00FD0407 /* Badge */,
 				D8DBFA16188C4BCC7FE097B676C32FF8 /* Bar */,
 				BD3CB0F80322B0EA8970D31ABDFB1318 /* Button */,
 				00BA79FB1659D007DB8720B65080C439 /* Dialog */,
@@ -497,6 +508,7 @@
 				190F96D8AFCE86FA621E6BDD5A3390F2 /* ColorsHeaderView.swift in Sources */,
 				542BBE6C15A7E0C25DD69346A43430B0 /* ColorsViewController.swift in Sources */,
 				DF627B5ABA0E7336C4F3554132159A83 /* ComponentsSection.swift in Sources */,
+				265B17EE24AFBE5500FD0407 /* BadgeViewController.swift in Sources */,
 				DC40596AEA7EE184F0A1BCD2F3BFF7FC /* DesignSection.swift in Sources */,
 				6B065E9FA8AEAD33D6341DB8C671D74C /* DialogItemViewController.swift in Sources */,
 				B14E0B8A51D237CFBA1AD574ED6EC10C /* DividerViewController.swift in Sources */,

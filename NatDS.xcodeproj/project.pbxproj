@@ -40,6 +40,9 @@
 		232DAFD65FD65951D36C6F2618D6B7FC /* NaturaFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AC3BBD38115B8137B4E1CF7BFB87CE /* NaturaFont.swift */; };
 		24A65D792FD25FA06DEACBD91A7E04A3 /* ColorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CB7087AA6D24EDDC31C9DD6682C6DD /* ColorsTests.swift */; };
 		2655155E5437F0880708125E1F9F5BC9 /* Elevations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D49BA63C5E5BFEED327C214620A7657 /* Elevations.swift */; };
+		265B17EB24AFA12900FD0407 /* NatBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265B17EA24AFA12900FD0407 /* NatBadge.swift */; };
+		26740A4924B3A60C00419526 /* NatBadge+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26740A4824B3A60C00419526 /* NatBadge+Style.swift */; };
+		26740A4B24B3A62F00419526 /* NatBadge+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26740A4A24B3A62F00419526 /* NatBadge+Color.swift */; };
 		26A3DF759DBD205A03559B561D576D13 /* NaturaSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E36F59CB9704420750D7F661F7AD993 /* NaturaSpacing.swift */; };
 		288891838FD58A93C7A7CC39277932E8 /* FontSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAAD7AE3D905B5B7DD0A1BFD9689AD5 /* FontSizes.swift */; };
 		291A2ABAA2039E539F7E45F394B8529D /* ExpansionPanel+MarginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F7B50CF41E6ECBFD7148828549ECBF /* ExpansionPanel+MarginTests.swift */; };
@@ -296,6 +299,9 @@
 		22F7508455AB7040D802941984E62D9D /* NaturaOpacities+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaturaOpacities+Spec.swift"; sourceTree = "<group>"; };
 		2381FCF8210ECD9A4895ECA9ED41B0FB /* PulseLayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseLayerTests.swift; sourceTree = "<group>"; };
 		255B7772A418A4544E0B8F793BEB519D /* UIColor+AsHexString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+AsHexString.swift"; sourceTree = "<group>"; };
+		265B17EA24AFA12900FD0407 /* NatBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatBadge.swift; sourceTree = "<group>"; };
+		26740A4824B3A60C00419526 /* NatBadge+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatBadge+Style.swift"; sourceTree = "<group>"; };
+		26740A4A24B3A62F00419526 /* NatBadge+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatBadge+Color.swift"; sourceTree = "<group>"; };
 		2775F568C47ADB6D5DA7B7AFA4A41B4E /* NatElevation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatElevation.swift; sourceTree = "<group>"; };
 		28081788999B58F24CF92BB33E68BD87 /* NaturaThemeSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturaThemeSpec.swift; sourceTree = "<group>"; };
 		2BCA01BC8343C22F5908AC65F37C5FB6 /* TheBodyShopFont+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheBodyShopFont+Spec.swift"; sourceTree = "<group>"; };
@@ -674,6 +680,16 @@
 				84BC900424AA163A007DF09D /* DialogStyle.swift */,
 			);
 			path = Dialog;
+			sourceTree = "<group>";
+		};
+		265B17E924AFA0DA00FD0407 /* Badge */ = {
+			isa = PBXGroup;
+			children = (
+				265B17EA24AFA12900FD0407 /* NatBadge.swift */,
+				26740A4824B3A60C00419526 /* NatBadge+Style.swift */,
+				26740A4A24B3A62F00419526 /* NatBadge+Color.swift */,
+			);
+			path = Badge;
 			sourceTree = "<group>";
 		};
 		26ABA00AE2743DB7BD15DE7348A3768D /* Avon */ = {
@@ -1113,6 +1129,7 @@
 		8F17D4DBF2804B57A4C0A71661E479AF /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				265B17E924AFA0DA00FD0407 /* Badge */,
 				AAA7C27FE8E04EF2103505C58C128D34 /* Bar */,
 				F39AE9E5CB68E8C7A269525355E8E4D3 /* Button */,
 				78FE21C8815B7AED38811BF6BEB37BF0 /* Dialog */,
@@ -1903,6 +1920,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26740A4924B3A60C00419526 /* NatBadge+Style.swift in Sources */,
 				BBCC40A29117B4CB675FE57C3B0130E4 /* AssetsHelper.swift in Sources */,
 				75C6E6108454D8D59FCFD7B5C82D9902 /* AvonBorderRadius.swift in Sources */,
 				FC5D4E056A537A2355FB279F63D7BBDB /* AvonColorPaletteDark.swift in Sources */,
@@ -1910,12 +1928,14 @@
 				E595C8E0683039156EECADB28A93AC69 /* AvonElevations.swift in Sources */,
 				AA2218A08849224F57943C49A7CE3DDA /* AvonFont.swift in Sources */,
 				1C33F8923E873C6C60821B00A3AF20C8 /* AvonFontLetterSpacings.swift in Sources */,
+				265B17EB24AFA12900FD0407 /* NatBadge.swift in Sources */,
 				3F12D75506942B4F6ED3212F793C6177 /* AvonFontSizes.swift in Sources */,
 				84BC901A24AA187C007DF09D /* NotificationCenterSpy.swift in Sources */,
 				B00E0C6AC86C3AEFF988F529F639B0FB /* AvonFontWeights.swift in Sources */,
 				84BC901624AA17C0007DF09D /* NatDialogCustomBodyConfigurator.swift in Sources */,
 				156EE5EBDDF801745FB87B90E7559617 /* AvonOpacities.swift in Sources */,
 				84BC901824AA17C0007DF09D /* NatDialogBuilder.swift in Sources */,
+				26740A4B24B3A62F00419526 /* NatBadge+Color.swift in Sources */,
 				84BC901524AA17C0007DF09D /* NatDialogBodyConfigurator.swift in Sources */,
 				71BFF46A2E8EE022B73DF3171D0C08CE /* AvonSizes.swift in Sources */,
 				1486785D9C1BC4FCF2308F2B9CC28543 /* AvonSpacing.swift in Sources */,
