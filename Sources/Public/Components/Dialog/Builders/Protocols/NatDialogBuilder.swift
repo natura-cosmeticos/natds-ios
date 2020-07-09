@@ -1,4 +1,4 @@
-public protocol NatDialogBuilder {
+public protocol NatDialogBuilder: class {
     var viewModel: NatDialogController.ViewModel { get }
     var buttonsConfiguration: (primary: DialogButtonConfiguration?, secondary: DialogButtonConfiguration?) { get }
 }

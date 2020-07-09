@@ -47,6 +47,15 @@ final class DialogItemViewController: UIViewController, SampleItem {
         return button
     }()
 
+    private let dialogNotDismissableButton: NatButton = {
+        let button = NatButton(style: .contained)
+        button.configure(title: "not dismissable dialog")
+        button.addTarget(self, action: #selector(showNotDismissableDialog), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+
+        return button
+    }()
+
     // MARK: - Life cycle
 
     override func viewDidLoad() {
@@ -90,6 +99,22 @@ final class DialogItemViewController: UIViewController, SampleItem {
         navigationController?.present(dialog, animated: true)
     }
 
+    @objc func showNotDismissableDialog() {
+        let dialog = NatDialogController
+            .alertStyleBuilder
+            .configure(body: "Attention: Dismissable is Dialog property, that can be configured for all styles.")
+            .configure(isDismissable: false)
+            .configure(primaryButtonTitle: "Confirm") {
+                self.navigationController?.presentedViewController?.dismiss(animated: true)
+            }
+            .configure(secondaryButtonTitle: "Close") {
+                self.navigationController?.presentedViewController?.dismiss(animated: true)
+            }
+            .build()
+
+        navigationController?.present(dialog, animated: true)
+    }
+
     // MARK: - Private methods
 
     private func setup() {
@@ -102,6 +127,7 @@ final class DialogItemViewController: UIViewController, SampleItem {
 
         stackView.addArrangedSubview(dialogStandardButton)
         stackView.addArrangedSubview(dialogAlertButton)
+        stackView.addArrangedSubview(dialogNotDismissableButton)
 
         addConstraints()
     }
