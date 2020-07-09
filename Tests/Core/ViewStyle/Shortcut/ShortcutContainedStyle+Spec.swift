@@ -12,7 +12,7 @@ final class ShortcutContainedStyleSpec: QuickSpec {
 
         beforeEach {
             DesignSystem().configure(with: .theBodyShop)
-            
+
             shortcut = NatShortcut(style: stubStyle)
             circleView = shortcut.subviews.first
         }

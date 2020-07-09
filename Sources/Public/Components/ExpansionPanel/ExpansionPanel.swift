@@ -167,7 +167,7 @@ public class ExpansionPanel: UIView {
         subtitleLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             subtitleLabel.topAnchor.constraint(equalTo: topAnchor, constant: NatSpacing.small),
-            subtitleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: NatSpacing.standart),
+            subtitleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: NatSpacing.standard),
             subtitleLabel.trailingAnchor.constraint(equalTo: upDownButton.leadingAnchor, constant: -NatSpacing.small),
             subtitleLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: NatSizes.standard)
         ])
@@ -222,9 +222,9 @@ extension ExpansionPanel {
 
     private func expandContentView() {
         contentView.layoutMargins = UIEdgeInsets(top: 0,
-                                                 left: NatSpacing.standart,
-                                                 bottom: NatSpacing.standart,
-                                                 right: NatSpacing.standart)
+                                                 left: NatSpacing.standard,
+                                                 bottom: NatSpacing.standard,
+                                                 right: NatSpacing.standard)
     }
 
     private func animateChangingColorToActive() {

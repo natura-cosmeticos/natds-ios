@@ -22,7 +22,9 @@ public enum NatSpacing {
     public static var micro: CGFloat { getTheme().spacing.micro }
     public static var tiny: CGFloat { getTheme().spacing.tiny }
     public static var small: CGFloat { getTheme().spacing.small }
+    @available(*, deprecated, message: "Use .standard instead")
     public static var standart: CGFloat { getTheme().spacing.standart }
+    public static var standard: CGFloat { getTheme().spacing.standart }
     public static var semi: CGFloat { getTheme().spacing.semi }
     public static var large: CGFloat { getTheme().spacing.large }
     public static var xLarge: CGFloat { getTheme().spacing.xLarge }

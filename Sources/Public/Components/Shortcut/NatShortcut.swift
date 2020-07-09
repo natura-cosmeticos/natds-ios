@@ -31,6 +31,7 @@ public final class NatShortcut: UIView, Pulsable {
     }()
 
     private let style: Style
+    private var action: (() -> Void)?
 
     // MARK: - Inits
 
@@ -46,6 +47,13 @@ public final class NatShortcut: UIView, Pulsable {
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    // MARK: - User interactions
+
+    @objc func tapHanlder(_ sender: UIGestureRecognizer) {
+        action?()
+        endPulse(layer: circleView.layer)
     }
 
     // MARK: - Overrides
@@ -79,6 +87,10 @@ extension NatShortcut {
     public func configure(icon: Icon) {
         iconView.icon = icon
     }
+
+    public func configure(action: @escaping () -> Void) {
+        self.action = action
+    }
 }
 
 // MARK: - Internal methods
@@ -111,6 +123,9 @@ extension NatShortcut {
         addSubview(label)
 
         addConstraints()
+
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapHanlder))
+        addGestureRecognizer(tapGesture)
     }
 
     private func addConstraints() {

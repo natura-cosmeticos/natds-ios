@@ -90,7 +90,7 @@ final class NatShortSpec: QuickSpec {
                 systemUnderTest.configure(circleBorderColor: UIColor.red.cgColor)
             }
 
-            it("sets boder color to circleView") {
+            it("sets border color to circleView") {
                 let circleView = systemUnderTest.subviews.first
 
                 expect(circleView?.layer.borderColor).to(equal(UIColor.red.cgColor))
@@ -107,6 +107,19 @@ final class NatShortSpec: QuickSpec {
                 let iconView = circleView?.subviews.first as? IconView
 
                 expect(iconView?.tintColor).to(equal(.red))
+            }
+        }
+
+        describe("#configure(action:)") {
+            var actionInvocations = 0
+
+            beforeEach {
+                systemUnderTest.configure(action: { actionInvocations += 1 })
+                systemUnderTest.gestureRecognizers?.forEach { $0.sendGesturesEvents() }
+            }
+
+            it("stores action and uses it in tap events") {
+                expect(actionInvocations).toEventually(equal(1))
             }
         }
 

@@ -16,7 +16,7 @@ extension NatShortcut.Style {
             applyStyle: ShortcutContainedStyle.applyDefaultStyle
         )
     }
-    
+
     public static var outlinedPrimary: NatShortcut.Style {
         .init(
             applyStyle: ShortcutOutlinedStyle.applyPrimaryStyle
