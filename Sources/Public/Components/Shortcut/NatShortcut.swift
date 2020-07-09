@@ -51,7 +51,7 @@ public final class NatShortcut: UIView, Pulsable {
 
     // MARK: - User interactions
 
-    @objc func tapHanlder(_ sender: UIGestureRecognizer) {
+    @objc func tapHandler(_ sender: UIGestureRecognizer) {
         action?()
         endPulse(layer: circleView.layer)
     }
@@ -124,7 +124,7 @@ extension NatShortcut {
 
         addConstraints()
 
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapHanlder))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapHandler))
         addGestureRecognizer(tapGesture)
     }
 
