@@ -72,11 +72,11 @@ final class ShortcutItemViewController: UIViewController, SampleItem {
             ),
             containedPrimaryStackView.trailingAnchor.constraint(
                 equalTo: view.safeAreaLayoutGuide.trailingAnchor,
-                constant: -NatSpacing.standart
+                constant: -NatSpacing.standard
             ),
             containedPrimaryStackView.leadingAnchor.constraint(
                 equalTo: view.safeAreaLayoutGuide.leadingAnchor,
-                constant: NatSpacing.standart
+                constant: NatSpacing.standard
             ),
             containedPrimaryStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
 
