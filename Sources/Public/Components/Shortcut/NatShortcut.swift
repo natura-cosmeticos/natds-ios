@@ -12,7 +12,7 @@ public final class NatShortcut: UIView, Pulsable {
     }()
 
     private let iconView: IconView = {
-        let iconView = IconView()
+        let iconView = IconView(fontSize: getTheme().sizes.semi)
         iconView.icon = .outlinedDefaultMockup
         iconView.translatesAutoresizingMaskIntoConstraints = false
 
@@ -139,6 +139,8 @@ extension NatShortcut {
             circleView.widthAnchor.constraint(equalToConstant: circleSize),
             circleView.heightAnchor.constraint(equalToConstant: circleSize),
 
+            iconView.widthAnchor.constraint(equalToConstant: getTheme().sizes.semi),
+            iconView.heightAnchor.constraint(equalToConstant: getTheme().sizes.semi),
             iconView.centerXAnchor.constraint(equalTo: circleView.centerXAnchor),
             iconView.centerYAnchor.constraint(equalTo: circleView.centerYAnchor),
 
@@ -151,11 +153,5 @@ extension NatShortcut {
         ]
 
         NSLayoutConstraint.activate(constraints)
-    }
-}
-
-extension NatShortcut {
-    enum Widths {
-        static var maximum: CGFloat { getTheme().sizes.large }
     }
 }
