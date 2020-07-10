@@ -23,7 +23,7 @@ final class SpacingViewController: UIViewController, SampleItem {
         ("micro: \(NatSpacing.micro)", NatSpacing.micro),
         ("tiny: \(NatSpacing.tiny)", NatSpacing.tiny),
         ("small: \(NatSpacing.small)", NatSpacing.small),
-        ("standard: \(NatSpacing.standart)", NatSpacing.standart),
+        ("standard: \(NatSpacing.standard)", NatSpacing.standard),
         ("semi: \(NatSpacing.semi)", NatSpacing.semi),
         ("large: \(NatSpacing.large)", NatSpacing.large),
         ("xLarge: \(NatSpacing.xLarge)", NatSpacing.xLarge)
