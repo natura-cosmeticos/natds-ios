@@ -45,6 +45,7 @@ public final class NatShortcut: UIView, Pulsable {
         setup()
     }
 
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -129,7 +130,6 @@ extension NatShortcut {
     }
 
     private func addConstraints() {
-
         let circleSize = getTheme().sizes.mediumx
         let constraints = [
             circleView.topAnchor.constraint(equalTo: topAnchor),
@@ -139,8 +139,6 @@ extension NatShortcut {
             circleView.widthAnchor.constraint(equalToConstant: circleSize),
             circleView.heightAnchor.constraint(equalToConstant: circleSize),
 
-            iconView.widthAnchor.constraint(equalToConstant: getTheme().sizes.semi),
-            iconView.heightAnchor.constraint(equalToConstant: getTheme().sizes.semi),
             iconView.centerXAnchor.constraint(equalTo: circleView.centerXAnchor),
             iconView.centerYAnchor.constraint(equalTo: circleView.centerYAnchor),
 
