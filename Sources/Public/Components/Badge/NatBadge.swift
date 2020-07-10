@@ -4,11 +4,10 @@ public final class NatBadge: UIView {
 
     // MARK: - Public properties
 
-    public var text: String? {
+    public var count: Int? {
         didSet {
-            if case .standard = style {
-                label.string = text
-                shape.path = path
+            if case .standard = style, let number = count {
+                label.text = string(for: number)
             }
         }
     }
@@ -19,34 +18,14 @@ public final class NatBadge: UIView {
 
     private let color: Color
 
-    private lazy var shape: CAShapeLayer = {
-        let shape = CAShapeLayer()
-        shape.fillColor = color.cgColors.shape
-        return shape
-    }()
-
-    private lazy var label: CATextLayer = {
-        let label = CATextLayer()
-        label.alignmentMode = CATextLayerAlignmentMode.center
+    private lazy var label: UILabel = {
+        let label = UILabel()
         label.font = NatFonts.font(ofSize: .caption, withWeight: .regular)
-        label.fontSize = getTheme().font.sizes.caption
-        label.foregroundColor = color.cgColors.content
-        label.contentsScale = UIScreen.main.scale
+        label.textColor = color.content
+        label.textAlignment = .center
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-
-    private var path: CGPath {
-        switch style {
-        case .standard:
-            let cornerRadius = NatBorderRadius.circle(viewHeight: getTheme().sizes.medium)
-            let origin = CGPoint(x: frame.width - label.frame.width * 0.5, y: -label.frame.height * 0.5)
-            label.frame = CGRect(origin: CGPoint(x: origin.x - NatSizes.micro * 0.5, y: origin.y),
-                                 size: label.preferredFrameSize())
-            return UIBezierPath(roundedRect: CGRect(origin: CGPoint(x: origin.x - NatSizes.micro, y: origin.y),
-                                                    size: CGSize(width: label.frame.width + NatSizes.micro, height: label.frame.height)),
-                                cornerRadius: cornerRadius).cgPath
-        }
-    }
 
     // MARK: - Inits
 
@@ -67,15 +46,46 @@ public final class NatBadge: UIView {
     private func setup() {
         backgroundColor = .clear
         if case .standard = style {
-            shape.addSublayer(label)
+            addSubview(label)
+            addConstraints()
         }
-        layer.addSublayer(shape)
+    }
+
+    private func addConstraints() {
+        translatesAutoresizingMaskIntoConstraints = false
+
+        let constraints = [
+            label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -2),
+            label.topAnchor.constraint(equalTo: topAnchor),
+            label.bottomAnchor.constraint(equalTo: bottomAnchor),
+            label.widthAnchor.constraint(greaterThanOrEqualToConstant: 10),
+            label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 2)
+        ]
+
+        NSLayoutConstraint.activate(constraints)
+    }
+
+    override public func draw(_ rect: CGRect) {
+        let path: UIBezierPath?
+
+        switch style {
+        case .standard:
+            path = UIBezierPath(roundedRect: CGRect(origin: .zero, size: bounds.size),
+                                cornerRadius: NatBorderRadius.circle(viewHeight: bounds.size.height))
+        }
+
+        color.box.set()
+        path?.fill()
+    }
+
+    private func string(for count: Int) -> String? {
+        return count > 99 ? "99+" : "\(count)"
     }
 
     // MARK: - Public methods
 
-    override public func layoutSublayers(of layer: CALayer) {
-        super.layoutSublayers(of: layer)
-        shape.path = path
+    public func remove() {
+        removeFromSuperview()
     }
+
 }

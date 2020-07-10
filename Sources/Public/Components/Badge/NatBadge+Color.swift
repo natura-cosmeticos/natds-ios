@@ -5,10 +5,19 @@ extension NatBadge {
 }
 
 extension NatBadge.Color {
-    var cgColors: (shape: CGColor, content: CGColor) {
+
+    var box: UIColor {
         switch self {
         case .alert:
-            return (shape: getTheme().colors.alert.cgColor, content: getTheme().colors.onAlert.cgColor)
+            return getTheme().colors.alert
         }
     }
+
+    var content: UIColor {
+        switch self {
+        case .alert:
+            return getTheme().colors.onAlert
+        }
+    }
+
 }

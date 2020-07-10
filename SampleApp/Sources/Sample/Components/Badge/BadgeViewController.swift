@@ -6,16 +6,8 @@ class BadgeViewController: UIViewController, SampleItem {
 
     private lazy var standard: NatBadge = {
         let standard = NatBadge(style: .standard, color: .alert)
-        standard.text = "99+"
-        standard.translatesAutoresizingMaskIntoConstraints = false
+        standard.count = 100
         return standard
-    }()
-
-    private lazy var square: UIView = {
-        let square = UIView()
-        square.translatesAutoresizingMaskIntoConstraints = false
-        square.backgroundColor = NatColors.primary
-        return square
     }()
 
     override func viewDidLoad() {
@@ -25,19 +17,12 @@ class BadgeViewController: UIViewController, SampleItem {
 
     private func setup() {
         title = Self.name
-        view.backgroundColor = .white
-        square.addSubview(standard)
-        view.addSubview(square)
+        view.backgroundColor = NatColors.background
+        view.addSubview(standard)
 
         let constraints = [
-            square.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            square.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            square.widthAnchor.constraint(equalToConstant: 50),
-            square.heightAnchor.constraint(equalToConstant: 50),
-            standard.topAnchor.constraint(equalTo: square.topAnchor),
-            standard.rightAnchor.constraint(equalTo: square.rightAnchor),
-            standard.bottomAnchor.constraint(equalTo: square.bottomAnchor),
-            standard.leftAnchor.constraint(equalTo: square.leftAnchor)
+            standard.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            standard.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ]
 
         NSLayoutConstraint.activate(constraints)
