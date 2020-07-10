@@ -30,7 +30,7 @@ final class NatButtonSpec: QuickSpec {
         }
 
         describe("#init") {
-            it("apply style only once") {
+            it("applies style only once") {
                 expect(applyStyleInvocations).to(equal(1))
             }
 
@@ -53,7 +53,7 @@ final class NatButtonSpec: QuickSpec {
                     systemUnderTest.isEnabled = true
                 }
 
-                it("apply style only on init") {
+                it("applies style only on init") {
                     expect(applyStyleInvocations).to(equal(1))
                 }
 
@@ -71,7 +71,7 @@ final class NatButtonSpec: QuickSpec {
                     systemUnderTest.isEnabled = false
                 }
 
-                it("apply style only on init") {
+                it("applies style only on init") {
                     expect(applyStyleInvocations).to(equal(1))
                 }
 
@@ -90,7 +90,7 @@ final class NatButtonSpec: QuickSpec {
                 systemUnderTest.configure(title: "stub")
             }
 
-            it("apply style only on init") {
+            it("applies style only on init") {
                 expect(applyStyleInvocations).to(equal(1))
             }
 
@@ -108,7 +108,7 @@ final class NatButtonSpec: QuickSpec {
                 systemUnderTest.touchesBegan(.init(arrayLiteral: .init()), with: nil)
             }
 
-            it("apply style only on init") {
+            it("applies style only on init") {
                 expect(applyStyleInvocations).to(equal(1))
             }
 
@@ -131,7 +131,7 @@ final class NatButtonSpec: QuickSpec {
                 systemUnderTest.touchesEnded(.init(), with: nil)
             }
 
-            it("apply style only on init") {
+            it("applies style only on init") {
                 expect(applyStyleInvocations).to(equal(1))
             }
 
@@ -153,7 +153,7 @@ final class NatButtonSpec: QuickSpec {
                 systemUnderTest.traitCollectionDidChange(nil)
             }
 
-            it("apply style only on init") {
+            it("applies style again besides init") {
                 expect(applyStyleInvocations).to(equal(1))
             }
 

@@ -5,14 +5,15 @@ class ComponentsSection: SampleSection {
     var items: [SampleItem.Type] = [
         AppBarViewController.self,
         BadgeViewController.self,
-        TabItemViewController.self,
-        TextFieldItemViewController.self,
-        ValueTextHighlightItemViewController.self,
         ButtonsItemViewController.self,
         DialogItemViewController.self,
-        IconographyItemViewController.self,
-        NavigationDrawerItemViewController.self,
         DividerViewController.self,
-        ExpansionPanelViewController.self
+        ExpansionPanelViewController.self,
+        IconographyItemViewController.self,
+        TabItemViewController.self,
+        TextFieldItemViewController.self,
+        NavigationDrawerItemViewController.self,
+        ShortcutItemViewController.self,
+        ValueTextHighlightItemViewController.self
     ]
 }

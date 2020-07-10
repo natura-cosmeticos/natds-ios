@@ -32,9 +32,9 @@ final class NatSpacingSpec: QuickSpec {
                 }
             }
 
-            describe("#standart") {
+            describe("#standard") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.standart).to(equal(expectedSpacing.standart))
+                    expect(systemUnderTest.standard).to(equal(expectedSpacing.standart))
                 }
             }
 
@@ -82,9 +82,9 @@ final class NatSpacingSpec: QuickSpec {
                 }
             }
 
-            describe("#standart") {
+            describe("#standard") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.standart).to(equal(expectedSpacing.standart))
+                    expect(systemUnderTest.standard).to(equal(expectedSpacing.standart))
                 }
             }
 
@@ -138,9 +138,9 @@ final class NatSpacingSpec: QuickSpec {
                 }
             }
 
-            describe("#standart") {
+            describe("#standard") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.standart).to(equal(expectedSpacing.standart))
+                    expect(systemUnderTest.standard).to(equal(expectedSpacing.standart))
                 }
             }
 
