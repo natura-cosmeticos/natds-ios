@@ -19,7 +19,7 @@
 
     This shortcut has an enum NatShortcut.Widths with allowed values for width values, if needed:
 
-        shortcurt.widthAnchor.constraint(equalToConstant: NatShortcut.Widths.maximum)
+        shortcut.widthAnchor.constraint(equalToConstant: NatShortcut.Widths.maximum)
 
  - Requires:
         It's necessary to configure the Design System current Brand at DesignSystem class
