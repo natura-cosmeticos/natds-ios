@@ -2,7 +2,13 @@ public protocol Badgeable: UIView {}
 
 extension Badgeable {
 
-    public func addBadge(style: NatBadge.Style, color: NatBadge.Color) {
+    private var badge: NatBadge? {
+        return subviews.compactMap { $0 as? NatBadge }.first
+    }
+
+    public func configure(badgeStyle style: NatBadge.Style, withColor color: NatBadge.Color) {
+        guard badge == nil else { return }
+
         let badge = NatBadge(style: style, color: color)
         addSubview(badge)
 
@@ -15,14 +21,14 @@ extension Badgeable {
     }
 
     public func setBadgeIsHidden(_ hidden: Bool) {
-        subviews.compactMap { $0 as?  NatBadge }.first?.isHidden = hidden
+        badge?.isHidden = hidden
     }
 
     public func setBadge(count: Int) {
-        subviews.compactMap { $0 as?  NatBadge }.first?.configure(count: count)
+        badge?.configure(count: count)
     }
 
     public func removeBadge() {
-        subviews.compactMap { $0 as?  NatBadge }.first?.removeFromSuperview()
+       badge?.removeFromSuperview()
     }
 }

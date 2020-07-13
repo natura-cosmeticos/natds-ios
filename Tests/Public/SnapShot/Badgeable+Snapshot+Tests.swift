@@ -25,14 +25,14 @@ class BadgeableSnapshotTests: FBSnapshotTestCase {
     }
 
     func test_badge_style_standard_alert_count_100_hasValidSnapshot() {
-        systemUnderTest.addBadge(style: .standard, color: .alert)
+        systemUnderTest.configure(badgeStyle: .standard, withColor: .alert)
         systemUnderTest.setBadge(count: 100)
 
         FBSnapshotVerifyView(superview)
     }
 
     func test_badge_style_standard_alert_count_1_hasValidSnapshot() {
-        systemUnderTest.addBadge(style: .standard, color: .alert)
+        systemUnderTest.configure(badgeStyle: .standard, withColor: .alert)
         systemUnderTest.setBadge(count: 1)
 
         FBSnapshotVerifyView(superview)

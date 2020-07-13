@@ -13,13 +13,18 @@ final class BadgeableSpec: QuickSpec {
             systemUnderTest = BadgeableStub()
         }
 
-        describe("#addBadge(style:color:)") {
+        describe("#configure(badgeStyle:withColor:)") {
             beforeEach {
-                systemUnderTest.addBadge(style: .standard, color: .alert)
+                systemUnderTest.configure(badgeStyle: .standard, withColor: .alert)
             }
 
             it("adds badge") {
                 expect(systemUnderTest.subviews.first).to(beAKindOf(NatBadge.self))
+            }
+
+            it("does not add multiple badges") {
+                systemUnderTest.configure(badgeStyle: .standard, withColor: .alert)
+                expect(systemUnderTest.subviews.compactMap { $0 as? NatBadge }.count).to(equal(1))
             }
         }
 
@@ -27,7 +32,7 @@ final class BadgeableSpec: QuickSpec {
             var badge: NatBadge?
 
             beforeEach {
-                systemUnderTest.addBadge(style: .standard, color: .alert)
+                systemUnderTest.configure(badgeStyle: .standard, withColor: .alert)
                 systemUnderTest.setBadge(count: 35)
                 badge = systemUnderTest.subviews.first as? NatBadge
             }
@@ -40,7 +45,7 @@ final class BadgeableSpec: QuickSpec {
 
         describe("#removeBadge()") {
             beforeEach {
-                systemUnderTest.addBadge(style: .standard, color: .alert)
+                systemUnderTest.configure(badgeStyle: .standard, withColor: .alert)
                 systemUnderTest.removeBadge()
             }
 
@@ -53,7 +58,7 @@ final class BadgeableSpec: QuickSpec {
             var badge: NatBadge?
 
             beforeEach {
-                systemUnderTest.addBadge(style: .standard, color: .alert)
+                systemUnderTest.configure(badgeStyle: .standard, withColor: .alert)
             }
 
             context("when hidden is true") {
