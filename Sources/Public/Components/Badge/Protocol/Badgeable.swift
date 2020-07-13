@@ -7,8 +7,8 @@ extension Badgeable {
         addSubview(badge)
 
         let constraints = [
-            badge.centerXAnchor.constraint(equalTo: trailingAnchor, constant: 0.8536),
-            badge.centerYAnchor.constraint(equalTo: topAnchor, constant: 0.1464)
+            badge.centerXAnchor.constraint(equalTo: trailingAnchor, constant: 0.85),
+            badge.centerYAnchor.constraint(equalTo: topAnchor, constant: 0.14)
         ]
 
         NSLayoutConstraint.activate(constraints)

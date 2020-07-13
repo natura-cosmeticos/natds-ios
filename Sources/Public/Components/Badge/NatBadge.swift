@@ -1,5 +1,3 @@
-import UIKit
-
 public final class NatBadge: UIView {
 
     // MARK: - Private properties

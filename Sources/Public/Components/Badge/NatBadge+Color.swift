@@ -5,7 +5,6 @@ extension NatBadge {
 }
 
 extension NatBadge.Color {
-
     var box: UIColor {
         switch self {
         case .alert:
@@ -19,5 +18,4 @@ extension NatBadge.Color {
             return getTheme().colors.onAlert
         }
     }
-
 }
