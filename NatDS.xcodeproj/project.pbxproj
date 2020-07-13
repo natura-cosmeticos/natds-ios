@@ -39,6 +39,8 @@
 		2175BE4F7334ED85AECC5C401B400BD8 /* FlatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5220FFBF3EE662D05373D401183E54 /* FlatButton.swift */; };
 		232DAFD65FD65951D36C6F2618D6B7FC /* NaturaFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AC3BBD38115B8137B4E1CF7BFB87CE /* NaturaFont.swift */; };
 		24A65D792FD25FA06DEACBD91A7E04A3 /* ColorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CB7087AA6D24EDDC31C9DD6682C6DD /* ColorsTests.swift */; };
+		263291DA24BCAF24004036C3 /* Badgeable+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263291D924BCAF24004036C3 /* Badgeable+Snapshot+Tests.swift */; };
+		263291DD24BCB226004036C3 /* BadgeableStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263291DC24BCB226004036C3 /* BadgeableStub.swift */; };
 		2655155E5437F0880708125E1F9F5BC9 /* Elevations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D49BA63C5E5BFEED327C214620A7657 /* Elevations.swift */; };
 		265B17EB24AFA12900FD0407 /* NatBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265B17EA24AFA12900FD0407 /* NatBadge.swift */; };
 		26740A4924B3A60C00419526 /* NatBadge+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26740A4824B3A60C00419526 /* NatBadge+Style.swift */; };
@@ -321,6 +323,8 @@
 		22F7508455AB7040D802941984E62D9D /* NaturaOpacities+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaturaOpacities+Spec.swift"; sourceTree = "<group>"; };
 		2381FCF8210ECD9A4895ECA9ED41B0FB /* PulseLayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseLayerTests.swift; sourceTree = "<group>"; };
 		255B7772A418A4544E0B8F793BEB519D /* UIColor+AsHexString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+AsHexString.swift"; sourceTree = "<group>"; };
+		263291D924BCAF24004036C3 /* Badgeable+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Badgeable+Snapshot+Tests.swift"; sourceTree = "<group>"; };
+		263291DC24BCB226004036C3 /* BadgeableStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeableStub.swift; sourceTree = "<group>"; };
 		265B17EA24AFA12900FD0407 /* NatBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatBadge.swift; sourceTree = "<group>"; };
 		26740A4824B3A60C00419526 /* NatBadge+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatBadge+Style.swift"; sourceTree = "<group>"; };
 		26740A4A24B3A62F00419526 /* NatBadge+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatBadge+Color.swift"; sourceTree = "<group>"; };
@@ -658,6 +662,7 @@
 			children = (
 				D557EC044D85EC418D42A00C93EEC23D /* NatDialogController+Snapshot+Tests.swift */,
 				84A818BC24B784EA0007C7D5 /* NatShortcut+Snapshot+Tests.swift */,
+				263291D924BCAF24004036C3 /* Badgeable+Snapshot+Tests.swift */,
 				26BB817424B9197D00617EFC /* NatBadge+Snapshot+Tests.swift */,
 			);
 			path = SnapShot;
@@ -720,6 +725,14 @@
 			path = ViewStyling;
 			sourceTree = "<group>";
 		};
+		263291DB24BCB20D004036C3 /* Stub */ = {
+			isa = PBXGroup;
+			children = (
+				263291DC24BCB226004036C3 /* BadgeableStub.swift */,
+			);
+			path = Stub;
+			sourceTree = "<group>";
+		};
 		263F97EA92FA5FCB098A752856788881 /* Dialog */ = {
 			isa = PBXGroup;
 			children = (
@@ -758,6 +771,7 @@
 		26BB817124B918FB00617EFC /* Badge */ = {
 			isa = PBXGroup;
 			children = (
+				263291DB24BCB20D004036C3 /* Stub */,
 				26BB817B24B94CE700617EFC /* Protocol */,
 				26BB817224B9191000617EFC /* NatBadge+Spec.swift */,
 				26BB817624B931E900617EFC /* NatBadge+Color+Spec.swift */,
@@ -2036,6 +2050,7 @@
 				D23F82EE5C3333FD06E87016848DCD37 /* TabItemViewTests.swift in Sources */,
 				5C5DF89CCAB72EC25E1A1BC43D450CB0 /* TabTests.swift in Sources */,
 				CB6F95EF082D5B6EF08A8BC9B7A01427 /* TextFieldDelegateMock.swift in Sources */,
+				263291DD24BCB226004036C3 /* BadgeableStub.swift in Sources */,
 				8475413524B542170071E884 /* NatShortcut+Widths+Spec.swift in Sources */,
 				C3E184D6CD3B52645D0E06A7138CA94E /* TextFieldTests.swift in Sources */,
 				2934666EAAD661E372AA6009BB287275 /* TextFieldTypeTests.swift in Sources */,
@@ -2062,6 +2077,7 @@
 				84AB67611C0B5D85CBE5CE489FCA4DC6 /* UIFont+IconTests.swift in Sources */,
 				50130A6AE7342A799C5989AF8FE486E8 /* UITableView+ReusableTests.swift in Sources */,
 				8E7FE7AAE264D40AF9BFF5CE6E5C7AD0 /* UIView+FrameTests.swift in Sources */,
+				263291DA24BCAF24004036C3 /* Badgeable+Snapshot+Tests.swift in Sources */,
 				D05CEB5C2F5F9D32FA015604F6E719F0 /* ValidateTheme+Spec.swift in Sources */,
 				1FBF5A52B03E9E219462A06F9487D3B4 /* ValueTextHighlightTests.swift in Sources */,
 				1734E4583B85C0197E0AC6F1CE877ADC /* ViewAnimatingMock.swift in Sources */,

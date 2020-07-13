@@ -82,5 +82,3 @@ final class BadgeableSpec: QuickSpec {
 
     }
 }
-
-private class BadgeableStub: UIView, Badgeable {}
