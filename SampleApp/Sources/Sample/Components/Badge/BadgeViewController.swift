@@ -6,7 +6,7 @@ class BadgeViewController: UIViewController, SampleItem {
 
     private lazy var standard: NatBadge = {
         let standard = NatBadge(style: .standard, color: .alert)
-        standard.count = 100
+        standard.configure(count: 100)
         return standard
     }()
 

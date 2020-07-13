@@ -2,16 +2,6 @@ import UIKit
 
 public final class NatBadge: UIView {
 
-    // MARK: - Public properties
-
-    public var count: Int? {
-        didSet {
-            if case .standard = style, let number = count {
-                label.text = string(for: number)
-            }
-        }
-    }
-
     // MARK: - Private properties
 
     private let style: Style
@@ -65,6 +55,8 @@ public final class NatBadge: UIView {
         NSLayoutConstraint.activate(constraints)
     }
 
+    // MARK: - Public methods
+
     override public func draw(_ rect: CGRect) {
         let path: UIBezierPath?
 
@@ -78,14 +70,9 @@ public final class NatBadge: UIView {
         path?.fill()
     }
 
-    private func string(for count: Int) -> String? {
-        return count > 99 ? "99+" : "\(count)"
+    public func configure(count: Int) {
+        if case .standard = style {
+            label.text = count > 99 ? "99+" : "\(count)"
+        }
     }
-
-    // MARK: - Public methods
-
-    public func remove() {
-        removeFromSuperview()
-    }
-
 }
