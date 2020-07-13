@@ -1,3 +1,33 @@
+
+/**
+  NatShortcut is a class that represents  a component from the design system.
+  The shortcut colors changes according with the current Brand configured in the Design system
+  and according with user properties of Light and Dark mode.
+
+    This component has 4 styles:
+    - Contained with Primary color
+    - Contained with Default color
+    - Outlined with Primary color
+    - Outlined with Default color
+
+    Example of usage:
+
+        let containedPrimary = NatShortcut(style: .containedPrimary)
+        let containedDefault = NatShortcut(style: .containedDefault)
+        let outlinedPrimary = NatShortcut(style: .outlinedPrimary)
+        let outlinedPrimary = NatShortcut(style: .outlinedPrimary)
+
+    This shortcut has an enum NatShortcut.Widths with allowed values for width values, if needed:
+
+        shortcurt.widthAnchor.constraint(equalToConstant: NatShortcut.Widths.maximum)
+
+ - Requires:
+        It's necessary to configure the Design System current Brand at DesignSystem class
+        or fatalError will be raised.
+
+            DesignSystem().configure(with: Brand)
+*/
+
 public final class NatShortcut: UIView, Pulsable {
 
     // MARK: - Private properties
