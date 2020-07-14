@@ -1,3 +1,24 @@
+/**
+  NatBadge is a class that represents  a component from the design system.
+
+  The badge colors changes according with the current Brand configured in the Design system
+  and according with user properties of Light and Dark mode.
+
+    This component has 1 style:
+    - Standard
+
+    And 1 color theme:
+    - Alert
+
+    Example of usage:
+        let badge = NatBadge(style: .standard, color: .alert)
+
+ - Requires:
+        It's necessary to configure the Design System current Brand at DesignSystem class
+        or fatalError will be raised.
+            DesignSystem().configure(with: Brand)
+*/
+
 public final class NatBadge: UIView {
 
     // MARK: - Private properties
