@@ -90,8 +90,19 @@ public final class NatBadge: UIView {
     }
 
     public func configure(count: Int) {
+        var text: String?
         if case .standard = style {
-            label.text = count > 99 ? "99+" : "\(count)"
+            switch count {
+            case ...0:
+                break
+            case 1...99:
+                text = "\(count)"
+            default:
+                text = "99+"
+            }
         }
+
+        label.text = text
+        isHidden = text == nil
     }
 }

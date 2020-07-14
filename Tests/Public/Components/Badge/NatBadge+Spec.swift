@@ -37,8 +37,28 @@ final class NatBadgeSpec: QuickSpec {
                 systemUnderTest.configure(count: 0)
             }
 
-            it("sets count to label") {
-                expect(label?.text).to(equal("0"))
+            context("when count is smaller or equal to zero") {
+                beforeEach {
+                    systemUnderTest.configure(count: 0)
+                }
+
+                it("does not set count to label") {
+                    expect(label?.text).to(beNil())
+                }
+
+                it("hides badge") {
+                    expect(systemUnderTest?.isHidden).to(beTrue())
+                }
+            }
+
+            context("when count is between 1 and 99") {
+                beforeEach {
+                    systemUnderTest.configure(count: 2)
+                }
+
+                it("sets count to label") {
+                    expect(label?.text).to(equal("2"))
+                }
             }
 
             context("when count is bigger than 99") {
