@@ -7,7 +7,7 @@
     This component has 1 style:
     - Standard
 
-    And 1 color theme:
+    And 1 color:
     - Alert
 
     Example of usage:

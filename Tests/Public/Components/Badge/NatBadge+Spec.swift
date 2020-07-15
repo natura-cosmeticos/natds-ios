@@ -20,8 +20,9 @@ final class NatBadgeSpec: QuickSpec {
                 label = systemUnderTest.subviews.first as? UILabel
             }
 
-            it("has count nil") {
-                expect(label?.text).to(beNil())
+            it("has label text nil") {
+                guard let label = try? XCTUnwrap(label) else { return }
+                expect(label.text).to(beNil())
             }
 
             it("has a label") {
@@ -43,7 +44,8 @@ final class NatBadgeSpec: QuickSpec {
                 }
 
                 it("does not set count to label") {
-                    expect(label?.text).to(beNil())
+                    guard let label = try? XCTUnwrap(label) else { return }
+                    expect(label.text).to(beNil())
                 }
 
                 it("hides badge") {
