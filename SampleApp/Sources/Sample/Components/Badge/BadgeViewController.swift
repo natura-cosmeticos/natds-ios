@@ -4,7 +4,19 @@ import NatDS
 class BadgeViewController: UIViewController, SampleItem {
     static var name: String = "Badge"
 
-    private lazy var standard: NatBadge = {
+    private lazy var oneCharStandard: NatBadge = {
+        let standard = NatBadge(style: .standard, color: .alert)
+        standard.configure(count: 9)
+        return standard
+    }()
+
+    private lazy var twoCharStandard: NatBadge = {
+        let standard = NatBadge(style: .standard, color: .alert)
+        standard.configure(count: 99)
+        return standard
+    }()
+
+    private lazy var threeCharStandard: NatBadge = {
         let standard = NatBadge(style: .standard, color: .alert)
         standard.configure(count: 100)
         return standard
@@ -18,11 +30,18 @@ class BadgeViewController: UIViewController, SampleItem {
     private func setup() {
         title = Self.name
         view.backgroundColor = NatColors.background
-        view.addSubview(standard)
+
+        view.addSubview(oneCharStandard)
+        view.addSubview(twoCharStandard)
+        view.addSubview(threeCharStandard)
 
         let constraints = [
-            standard.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            standard.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            oneCharStandard.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            oneCharStandard.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 48),
+            twoCharStandard.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            twoCharStandard.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            threeCharStandard.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            threeCharStandard.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -48)
         ]
 
         NSLayoutConstraint.activate(constraints)
