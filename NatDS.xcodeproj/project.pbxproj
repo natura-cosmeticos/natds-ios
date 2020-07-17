@@ -15,13 +15,7 @@
 		0B8E46E0DEAF3F9ACFCD7D8FBCB6B4A6 /* NaturaTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330801219DAEACF172CA41236390A4D0 /* NaturaTheme.swift */; };
 		0C0E58167E0896AEBC4B69F2F846F57F /* NatFonts+Natura+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36A7D37B7A89976DC5D42F6EC8FABF /* NatFonts+Natura+Spec.swift */; };
 		0C4CBA15016075A8E8A7CA6FC6054383 /* IllustrationIconsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D67F65D9E72160E498FBA256C62159F /* IllustrationIconsTests.swift */; };
-		0E3F578F24B8F059004B2F9E /* NatAppBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3F578E24B8F059004B2F9E /* NatAppBar.swift */; };
-		0E45136024BDE56C002296AE /* NatAppBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E45135F24BDE56C002296AE /* NatAppBarViewModel.swift */; };
-		0E45136224BDE5C3002296AE /* NatAppBarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E45136124BDE5C3002296AE /* NatAppBarBuilder.swift */; };
-		0E45136424BDE5FD002296AE /* NatAppBarStandardStyleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E45136324BDE5FD002296AE /* NatAppBarStandardStyleBuilder.swift */; };
-		0E45136724BDE640002296AE /* NatAppBarColorConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E45136624BDE640002296AE /* NatAppBarColorConfigurable.swift */; };
-		0E45136924BDE69B002296AE /* NatAppBarColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E45136824BDE69B002296AE /* NatAppBarColor.swift */; };
-		0E4741DE24BE4C4100BB96FA /* NatAppBarHighlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4741DD24BE4C4100BB96FA /* NatAppBarHighlight.swift */; };
+		0E4741DE24BE4C4100BB96FA /* UIViewController+Highlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4741DD24BE4C4100BB96FA /* UIViewController+Highlight.swift */; };
 		0FB003017C3A179872BC65E6E321FD13 /* NatDialogController+StandardStyleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F4D9E1F67A97596AD6E676E979CEC0 /* NatDialogController+StandardStyleBuilder.swift */; };
 		104CDF5166233472D947A0F32FF81911 /* NaturaOpacities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D8E653272562ABCC278D3D5A982192 /* NaturaOpacities.swift */; };
 		10734D11ADA3847CF236F1C8B98F4555 /* UIColor+HexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25909FD964254E6B99AD359EFD8A5C /* UIColor+HexTests.swift */; };
@@ -47,6 +41,10 @@
 		232DAFD65FD65951D36C6F2618D6B7FC /* NaturaFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AC3BBD38115B8137B4E1CF7BFB87CE /* NaturaFont.swift */; };
 		24A65D792FD25FA06DEACBD91A7E04A3 /* ColorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CB7087AA6D24EDDC31C9DD6682C6DD /* ColorsTests.swift */; };
 		2655155E5437F0880708125E1F9F5BC9 /* Elevations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D49BA63C5E5BFEED327C214620A7657 /* Elevations.swift */; };
+		269C886224C23B0100A507BE /* UINavigationController+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269C886124C23B0100A507BE /* UINavigationController+Style.swift */; };
+		269C886424C2456B00A507BE /* UINavigationController+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269C886324C2456B00A507BE /* UINavigationController+Color.swift */; };
+		269C886624C2480800A507BE /* UIViewController+Configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269C886524C2480800A507BE /* UIViewController+Configure.swift */; };
+		269C886824C2483600A507BE /* UIBarButtonItem+Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269C886724C2483600A507BE /* UIBarButtonItem+Icon.swift */; };
 		26A3DF759DBD205A03559B561D576D13 /* NaturaSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E36F59CB9704420750D7F661F7AD993 /* NaturaSpacing.swift */; };
 		288891838FD58A93C7A7CC39277932E8 /* FontSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAAD7AE3D905B5B7DD0A1BFD9689AD5 /* FontSizes.swift */; };
 		291A2ABAA2039E539F7E45F394B8529D /* ExpansionPanel+MarginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F7B50CF41E6ECBFD7148828549ECBF /* ExpansionPanel+MarginTests.swift */; };
@@ -302,13 +300,7 @@
 		0D49BA63C5E5BFEED327C214620A7657 /* Elevations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elevations.swift; sourceTree = "<group>"; };
 		0D6236D4B7FFC5CF049C20642874B068 /* ButtonContainedStyle+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonContainedStyle+Spec.swift"; sourceTree = "<group>"; };
 		0D8BC0D102CE4444401C0469C861358A /* NatFonts+Avon+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatFonts+Avon+Spec.swift"; sourceTree = "<group>"; };
-		0E3F578E24B8F059004B2F9E /* NatAppBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatAppBar.swift; sourceTree = "<group>"; };
-		0E45135F24BDE56C002296AE /* NatAppBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatAppBarViewModel.swift; sourceTree = "<group>"; };
-		0E45136124BDE5C3002296AE /* NatAppBarBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatAppBarBuilder.swift; sourceTree = "<group>"; };
-		0E45136324BDE5FD002296AE /* NatAppBarStandardStyleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatAppBarStandardStyleBuilder.swift; sourceTree = "<group>"; };
-		0E45136624BDE640002296AE /* NatAppBarColorConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatAppBarColorConfigurable.swift; sourceTree = "<group>"; };
-		0E45136824BDE69B002296AE /* NatAppBarColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatAppBarColor.swift; sourceTree = "<group>"; };
-		0E4741DD24BE4C4100BB96FA /* NatAppBarHighlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatAppBarHighlight.swift; sourceTree = "<group>"; };
+		0E4741DD24BE4C4100BB96FA /* UIViewController+Highlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Highlight.swift"; sourceTree = "<group>"; };
 		0F3972A77C0F33A56F5725680D5D3835 /* FontWeights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontWeights.swift; sourceTree = "<group>"; };
 		0FF507003D3035F2C312F8C225D481FC /* ExpansionPanelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpansionPanelTests.swift; sourceTree = "<group>"; };
 		10C54C550ED4D44A309C43261BF40F55 /* NatButton+Height.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+Height.swift"; sourceTree = "<group>"; };
@@ -327,6 +319,10 @@
 		22F7508455AB7040D802941984E62D9D /* NaturaOpacities+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaturaOpacities+Spec.swift"; sourceTree = "<group>"; };
 		2381FCF8210ECD9A4895ECA9ED41B0FB /* PulseLayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseLayerTests.swift; sourceTree = "<group>"; };
 		255B7772A418A4544E0B8F793BEB519D /* UIColor+AsHexString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+AsHexString.swift"; sourceTree = "<group>"; };
+		269C886124C23B0100A507BE /* UINavigationController+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Style.swift"; sourceTree = "<group>"; };
+		269C886324C2456B00A507BE /* UINavigationController+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Color.swift"; sourceTree = "<group>"; };
+		269C886524C2480800A507BE /* UIViewController+Configure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Configure.swift"; sourceTree = "<group>"; };
+		269C886724C2483600A507BE /* UIBarButtonItem+Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Icon.swift"; sourceTree = "<group>"; };
 		2775F568C47ADB6D5DA7B7AFA4A41B4E /* NatElevation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatElevation.swift; sourceTree = "<group>"; };
 		28081788999B58F24CF92BB33E68BD87 /* NaturaThemeSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturaThemeSpec.swift; sourceTree = "<group>"; };
 		2BCA01BC8343C22F5908AC65F37C5FB6 /* TheBodyShopFont+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheBodyShopFont+Spec.swift"; sourceTree = "<group>"; };
@@ -626,31 +622,13 @@
 		0E3F578D24B8E9C8004B2F9E /* AppBar */ = {
 			isa = PBXGroup;
 			children = (
-				0E45135E24BDE517002296AE /* Builders */,
-				0E3F578E24B8F059004B2F9E /* NatAppBar.swift */,
-				0E45135F24BDE56C002296AE /* NatAppBarViewModel.swift */,
-				0E45136824BDE69B002296AE /* NatAppBarColor.swift */,
-				0E4741DD24BE4C4100BB96FA /* NatAppBarHighlight.swift */,
+				0E4741DD24BE4C4100BB96FA /* UIViewController+Highlight.swift */,
+				269C886124C23B0100A507BE /* UINavigationController+Style.swift */,
+				269C886724C2483600A507BE /* UIBarButtonItem+Icon.swift */,
+				269C886524C2480800A507BE /* UIViewController+Configure.swift */,
+				269C886324C2456B00A507BE /* UINavigationController+Color.swift */,
 			);
 			path = AppBar;
-			sourceTree = "<group>";
-		};
-		0E45135E24BDE517002296AE /* Builders */ = {
-			isa = PBXGroup;
-			children = (
-				0E45136524BDE631002296AE /* Protocols */,
-				0E45136324BDE5FD002296AE /* NatAppBarStandardStyleBuilder.swift */,
-			);
-			path = Builders;
-			sourceTree = "<group>";
-		};
-		0E45136524BDE631002296AE /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				0E45136124BDE5C3002296AE /* NatAppBarBuilder.swift */,
-				0E45136624BDE640002296AE /* NatAppBarColorConfigurable.swift */,
-			);
-			path = Protocols;
 			sourceTree = "<group>";
 		};
 		12097409E99458B51C9B5F2FEF8C5BE8 /* Branding */ = {
@@ -2083,7 +2061,6 @@
 				95DDF51D083DECFEF5B51DEF0BB24E3D /* ColorPalette.swift in Sources */,
 				E39867F4E1EED3D8D5DF7E46799F4939 /* ColorProvider.swift in Sources */,
 				E6FD461A93420854906BA6F9E90F89CE /* Colors.swift in Sources */,
-				0E45136424BDE5FD002296AE /* NatAppBarStandardStyleBuilder.swift in Sources */,
 				7B00B2BBB09B3E7B317323F17DE99832 /* ColorsNatura.swift in Sources */,
 				92FF5150726174EFBBFDC8A50657C90E /* ConfigurationStorable.swift in Sources */,
 				40B14F67117654B7854317119E5B3509 /* ConfigurationStorage.swift in Sources */,
@@ -2093,6 +2070,7 @@
 				7CA6BAC353B73AF5D31F09CAF0268EE5 /* DesignSystemFatalError.swift in Sources */,
 				8F808FFBB4549BC4F3895B8CBB23ADB3 /* Divider.swift in Sources */,
 				84BC900524AA163A007DF09D /* DialogFooterView.swift in Sources */,
+				269C886824C2483600A507BE /* UIBarButtonItem+Icon.swift in Sources */,
 				4BDEB19DC31DEB91FAB5CC161B159FA7 /* DynamicColorFactory.swift in Sources */,
 				A0A9D4F59612E12F2A8B878133B8289A /* DynamicColors.swift in Sources */,
 				6D4DFEB09D32E1F36B9FA29904AE1ED8 /* ElevationAttributes.swift in Sources */,
@@ -2106,25 +2084,22 @@
 				84BF066724B4A8DA00462AC5 /* ShortcutContainedStyle.swift in Sources */,
 				18B9F28B461F8F6294ABA51229BA2385 /* Font.swift in Sources */,
 				758EE01159A6E7AFC7217055678D4ED3 /* FontIconStyle.swift in Sources */,
+				269C886224C23B0100A507BE /* UINavigationController+Style.swift in Sources */,
 				ABAA902E9332B77F192D5EF948B5E88E /* FontLetterSpacings.swift in Sources */,
 				288891838FD58A93C7A7CC39277932E8 /* FontSizes.swift in Sources */,
 				F01F3CA72313B3C97F42498878234A82 /* FontStyle.swift in Sources */,
 				494B238CBB871A4FB2092730783EF93C /* FontWeights.swift in Sources */,
 				1255F87384A5EC561A10BF1598651BBF /* Fonts.swift in Sources */,
 				5B1A38F8E6EC1AA2AA97A02F4F7AE9F7 /* FontsNatura.swift in Sources */,
-				0E45136024BDE56C002296AE /* NatAppBarViewModel.swift in Sources */,
-				0E45136224BDE5C3002296AE /* NatAppBarBuilder.swift in Sources */,
 				84BC900624AA163A007DF09D /* DialogStyle.swift in Sources */,
 				E5D0580914B53A966EF6E25F9735D747 /* GetTheme.swift in Sources */,
-				0E45136724BDE640002296AE /* NatAppBarColorConfigurable.swift in Sources */,
 				7FCD65E56A79CE1AE08A4C86B8DC1303 /* Icon.swift in Sources */,
 				F72BEF338B46182BC440C92CCF3D02B0 /* IconView.swift in Sources */,
 				5737265E1EA6FD9BF1004F1CC1333F29 /* IllustrationIcons.swift in Sources */,
-				0E4741DE24BE4C4100BB96FA /* NatAppBarHighlight.swift in Sources */,
+				0E4741DE24BE4C4100BB96FA /* UIViewController+Highlight.swift in Sources */,
 				1908219397D007DC35BC0F99D5DEDE80 /* NSMutableAttributedString+Builder.swift in Sources */,
 				CF14752D6F385AD399A59F275DEB1ED7 /* NatBorderRadius.swift in Sources */,
 				F6B6FF5891E1F871748A9D598EA14AFE /* NatButton+EdgeInsets.swift in Sources */,
-				0E3F578F24B8F059004B2F9E /* NatAppBar.swift in Sources */,
 				C0F15375EEFCBC922341EBD9DED5A29B /* NatButton+Height.swift in Sources */,
 				AC66A51CB3C8EE95429250880CADCB07 /* NatButton+Style.swift in Sources */,
 				E70EF1AC4BB7A93A80A500786C1A6497 /* NatButton.swift in Sources */,
@@ -2157,6 +2132,7 @@
 				84F709FF1D1DFC32BA4E9CB1803A6E30 /* NavigationDrawer.swift in Sources */,
 				B16B10A0AA533EF36343B6B8A4AE4DA0 /* NavigationDrawerItemCell.swift in Sources */,
 				A096BCFF55DBEF25B29C30C1537210D5 /* NavigationDrawerSubitemCell.swift in Sources */,
+				269C886424C2456B00A507BE /* UINavigationController+Color.swift in Sources */,
 				38ACA8E49786402581AA78B85DAE6CA7 /* Opacities.swift in Sources */,
 				9D4FF6FB92A6A5BD0AF263A69FF707E4 /* Pulsable.swift in Sources */,
 				E4FCC8108D5F57339F6297CDD676F8DF /* PulseContainerLayer.swift in Sources */,
@@ -2179,7 +2155,6 @@
 				E0F623F11FAFC75EA92353F270449E96 /* TheBodyShopFontLetterSpacings.swift in Sources */,
 				84A818BF24B7BA4D0007C7D5 /* NatShortcut+Widths.swift in Sources */,
 				590A53D96F90B89C4E352ADB38743179 /* TheBodyShopFontSizes.swift in Sources */,
-				0E45136924BDE69B002296AE /* NatAppBarColor.swift in Sources */,
 				F53456A828AC4A581E5F0DD6451BCD0A /* TheBodyShopFontWeights.swift in Sources */,
 				65D57A64A56F3130E6444CB713188276 /* TheBodyShopOpacities.swift in Sources */,
 				93927EA4437A34A37E0CD79E21377713 /* TheBodyShopRadius.swift in Sources */,
@@ -2191,6 +2166,7 @@
 				37953EE81D12EA2376E8C56E16BC4A29 /* UIColor+Hex.swift in Sources */,
 				56B51E3D524A0D2900D7DD3E6CC761E7 /* UIFont+Icon.swift in Sources */,
 				6C6CB092994DB60C83AC24F93B0F4E49 /* UITableView+Reusable.swift in Sources */,
+				269C886624C2480800A507BE /* UIViewController+Configure.swift in Sources */,
 				93B1D8CFBB1420174B310CC4906AA2EF /* UIView+Frame.swift in Sources */,
 				3A50A52D23FB5E21A70E4FBB1063381A /* ValidateTheme.swift in Sources */,
 				77C55B339CA403354D76ABF05E283D5A /* ValueTextHighlight.swift in Sources */,

@@ -39,8 +39,9 @@ class AppBarViewController: UIViewController, SampleItem {
         viewController.title = title
         viewController.view.backgroundColor = NatColors.background
 
-        let appBarNavigationController = NatAppBar.standardStyleBuilder.configure(color: .default)
-            .build(rootViewController: viewController)
+        let appBarNavigationController = UINavigationController()
+        appBarNavigationController.addChild(viewController)
+        appBarNavigationController.configure(style: .default)
         navigationController?.present(appBarNavigationController, animated: true, completion: nil)
     }
 }
@@ -71,9 +72,7 @@ class AppBarItemViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-//        if let navController = navigationController as? NatAppBar {
-//            navController.configure(barButtonTitle: "Teste")
-//        }
+//        navigationController?.configure(style: .default)
     }
 
     @objc func openDetail() {
@@ -86,16 +85,21 @@ class AppBarItemViewController: UIViewController {
 class AppBarDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Detail"
+        configure(highlight: .image)
         view.backgroundColor = NatColors.background
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        if let navController = navigationController as? NatAppBar {
-            navController.configure(barButtonTitle: "Item 1")
-            navController.configure(barButtonTitle: "Item 2")
-        }
+
+
+        let button = UIBarButtonItem(icon: .filledMediaPlay, action: #selector(buttonAction), target: self)
+
+        configure(button: [button])
+    }
+
+    @objc func buttonAction() {
+        print("Action executed")
     }
 }

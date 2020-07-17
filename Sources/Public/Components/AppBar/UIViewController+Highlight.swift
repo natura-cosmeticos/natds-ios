@@ -1,7 +1,8 @@
 import Foundation
 
-extension NatAppBar {
+extension UIViewController {
     public enum Highlight {
         case image
+        case title(String)
     }
 }
