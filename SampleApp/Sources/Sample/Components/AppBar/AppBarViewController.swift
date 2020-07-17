@@ -83,23 +83,36 @@ class AppBarItemViewController: UIViewController {
 }
 
 class AppBarDetailViewController: UIViewController {
+
+    var button: UIBarButtonItem!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configure(highlight: .image)
         view.backgroundColor = NatColors.background
+        button = UIBarButtonItem(icon: .outlinedContentBellringing, action: #selector(buttonAction), target: self)
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-
-
-        let button = UIBarButtonItem(icon: .filledMediaPlay, action: #selector(buttonAction), target: self)
-
         configure(button: [button])
+        button.setBadgeValue(1)
     }
 
     @objc func buttonAction() {
         print("Action executed")
     }
 }
+
+extension UIBarButtonItem {
+
+    func setBadgeValue(_ count: Int) {
+        (customView as? IconView)?.configure(badgeStyle: .standard, withColor: .alert)
+        (customView as? IconView)?.setBadge(count: count)
+    }
+
+}
+
+
+extension IconView: Badgeable {}
