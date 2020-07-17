@@ -5,6 +5,7 @@ class ComponentsSection: SampleSection {
     var items: [SampleItem.Type] = [
         AppBarViewController.self,
         AppSearchBarViewController.self,
+        BadgeViewController.self,
         ButtonsItemViewController.self,
         DialogItemViewController.self,
         DividerViewController.self,
