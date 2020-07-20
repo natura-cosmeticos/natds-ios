@@ -1,5 +1,5 @@
 /**
-  LogoImages is a struct that  logo images from the design system.
+  LogoImages is a struct with all logo images from the design system.
   The Images changes according with the current Brand configured in the Design system
   and according with user properties of Light and Dark mode.
 
