@@ -147,6 +147,7 @@
 		840B6A754236624B9738CBC3D5CFE895 /* ViewAnimatingWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7316FE65E814E2D5CA475475CD8D4EA /* ViewAnimatingWrapper.swift */; };
 		841DC30AC5612DDD81C8175BCFF4507E /* AvonFontSizes+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C94FCAA23AB699A4926C6B8E598C6 /* AvonFontSizes+Spec.swift */; };
 		841FEABA24C5C1A100C50AFF /* LogoImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841FEAB924C5C1A100C50AFF /* LogoImages.swift */; };
+		841FEABC24C5CD6A00C50AFF /* LogoImages+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841FEABB24C5CD6A00C50AFF /* LogoImages+Spec.swift */; };
 		844A1E2324AE117400E93AD9 /* NatShortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A1E2224AE117400E93AD9 /* NatShortcut.swift */; };
 		8475413524B542170071E884 /* NatShortcut+Widths+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475413424B542170071E884 /* NatShortcut+Widths+Spec.swift */; };
 		84A818BB24B77FA80007C7D5 /* UIGestureRecognizer+SendGesturesEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A818BA24B77FA80007C7D5 /* UIGestureRecognizer+SendGesturesEvent.swift */; };
@@ -416,6 +417,7 @@
 		7F9C4251076A01537D0A8CB995DF81EC /* NavigationDrawerSubitemCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerSubitemCellTests.swift; sourceTree = "<group>"; };
 		83C59F929E88764313134A046BA5C30F /* DesignSystem+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DesignSystem+Spec.swift"; sourceTree = "<group>"; };
 		841FEAB924C5C1A100C50AFF /* LogoImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoImages.swift; sourceTree = "<group>"; };
+		841FEABB24C5CD6A00C50AFF /* LogoImages+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LogoImages+Spec.swift"; sourceTree = "<group>"; };
 		844A1E2224AE117400E93AD9 /* NatShortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatShortcut.swift; sourceTree = "<group>"; };
 		8475413424B542170071E884 /* NatShortcut+Widths+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatShortcut+Widths+Spec.swift"; sourceTree = "<group>"; };
 		847C94FCAA23AB699A4926C6B8E598C6 /* AvonFontSizes+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AvonFontSizes+Spec.swift"; sourceTree = "<group>"; };
@@ -1231,6 +1233,7 @@
 				7C4807A858EAC069D38D22195EC3B0B9 /* DesignTokens */,
 				13976EA337BD073D09936248522E409C /* SnapShot */,
 				83C59F929E88764313134A046BA5C30F /* DesignSystem+Spec.swift */,
+				841FEABB24C5CD6A00C50AFF /* LogoImages+Spec.swift */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -1985,6 +1988,7 @@
 				291A2ABAA2039E539F7E45F394B8529D /* ExpansionPanel+MarginTests.swift in Sources */,
 				1715E4B78E2721E0181A401A0DA97A98 /* ExpansionPanelBuilder.swift in Sources */,
 				4CEBA5F26393AC6F09BEE6382ABC55E9 /* ExpansionPanelTests.swift in Sources */,
+				841FEABC24C5CD6A00C50AFF /* LogoImages+Spec.swift in Sources */,
 				E6AE8A410953E6B447735D9E565B0264 /* FieldTests.swift in Sources */,
 				9710B5B12B03F97C954A8C56CFCB26B3 /* FlatButtonTests.swift in Sources */,
 				346443D54361FCD8E0E7BFAF8FE2D299 /* FontIconStyleTests.swift in Sources */,
