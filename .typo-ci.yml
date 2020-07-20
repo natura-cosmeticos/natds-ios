@@ -5,11 +5,20 @@ excluded_files:
   - "NatDS.xcodeproj/project.pbxproj"
   - "SampleApp/NatDS-SampleApp.xcodeproj/project.pbxproj"
 excluded_words:
+  - DarkHorizontal
+  - DarkVertical
   - enum
+  - Horizontal
   - Inits
   - isa
+  - Logo
+  - Logo-NaturaCosmeticos-DarkHorizontal
+  - Logo-NaturaCosmeticos-DarkVertical
+  - Logo-NaturaCosmeticos-Horizontal
   - nat
   - natDialogController
   - natura
+  - NaturaCosmeticos
   - objc
   - pbxproj
+  - xcassets
