@@ -98,6 +98,6 @@ final class LogoImagesSpec: QuickSpec {
                 }
             }
 
-        } // context - when Brand is Natura
+        } // context - when Brand is The Body Shop
     }
 }

@@ -1,3 +1,24 @@
+/**
+  LogoImages is a struct that  logo images from the design system.
+  The Images changes according with the current Brand configured in the Design system
+  and according with user properties of Light and Dark mode.
+
+    This button has 2 variants:
+    - horizontal
+    - vertical
+
+    Example of usage:
+
+        let logoHorizontal = LogoImages.horzontal
+        let logoVertical = LogoImages.vertical
+
+ - Requires:
+        It's necessary to configure the Design System current Brand at DesignSystem class
+        or fatalError will be raised.
+
+            DesignSystem().configure(with: Brand)
+*/
+
 public struct LogoImages {
     public static var horizontal: UIImage? {
         guard let brand = DesignSystem().currentBrand else { return nil }
