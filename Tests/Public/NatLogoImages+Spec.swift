@@ -3,9 +3,9 @@ import Nimble
 
 @testable import NatDS
 
-final class LogoImagesSpec: QuickSpec {
+final class NatLogoImagesSpec: QuickSpec {
     override func spec() {
-        let systemUnderTest = LogoImages.self
+        let systemUnderTest = NatLogoImages.self
 
         context("when Brand is Avon") {
             beforeEach {

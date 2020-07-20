@@ -20,7 +20,7 @@ final class LogoItemViewController: UIViewController, SampleItem {
     }()
 
     private let logoHorizontal: UIImageView = {
-        let imageView = UIImageView(image: LogoImages.horizontal)
+        let imageView = UIImageView(image: NatLogoImages.horizontal)
         imageView.translatesAutoresizingMaskIntoConstraints = false
 
         return imageView
@@ -36,7 +36,7 @@ final class LogoItemViewController: UIViewController, SampleItem {
     }()
 
     private let logoVertical: UIImageView = {
-        let imageView = UIImageView(image: LogoImages.vertical)
+        let imageView = UIImageView(image: NatLogoImages.vertical)
         imageView.translatesAutoresizingMaskIntoConstraints = false
 
         return imageView

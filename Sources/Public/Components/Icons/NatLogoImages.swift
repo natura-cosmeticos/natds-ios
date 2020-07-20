@@ -1,5 +1,5 @@
 /**
-  LogoImages is a struct with all logo images from the design system.
+  NatLogoImages is a struct with all logo images from the design system.
   The Images changes according with the current Brand configured in the Design system
   and according with user properties of Light and Dark mode.
 
@@ -9,8 +9,8 @@
 
     Example of usage:
 
-        let logoHorizontal = LogoImages.horizontal
-        let logoVertical = LogoImages.vertical
+        let logoHorizontal = NatLogoImages.horizontal
+        let logoVertical = NatLogoImages.vertical
 
  - Requires:
         It's necessary to configure the Design System current Brand at DesignSystem class
@@ -19,7 +19,7 @@
             DesignSystem().configure(with: Brand)
 */
 
-public struct LogoImages {
+public struct NatLogoImages {
     public static var horizontal: UIImage? {
         guard let brand = DesignSystem().currentBrand else { return nil }
 
