@@ -26,11 +26,29 @@ final class LogoItemViewController: UIViewController, SampleItem {
         return imageView
     }()
 
+    private let labelLogoHorizontal: UILabel = {
+        let label = UILabel()
+        label.text = "Logo Horizontal"
+        label.font = NatFonts.font(ofSize: .heading6, withWeight: .regular)
+        label.translatesAutoresizingMaskIntoConstraints = false
+
+        return label
+    }()
+
     private let logoVertical: UIImageView = {
         let imageView = UIImageView(image: LogoImages.vertical)
         imageView.translatesAutoresizingMaskIntoConstraints = false
 
         return imageView
+    }()
+
+    private let labelLogoVertical: UILabel = {
+        let label = UILabel()
+        label.text = "Logo Vertical"
+        label.font = NatFonts.font(ofSize: .heading6, withWeight: .regular)
+        label.translatesAutoresizingMaskIntoConstraints = false
+
+        return label
     }()
 
     // MARK: - Life cycle
@@ -52,7 +70,9 @@ final class LogoItemViewController: UIViewController, SampleItem {
         scrollView.addSubview(containerView)
 
         containerView.addSubview(logoHorizontal)
+        containerView.addSubview(labelLogoHorizontal)
         containerView.addSubview(logoVertical)
+        containerView.addSubview(labelLogoVertical)
 
         addConstraints()
     }
@@ -75,14 +95,21 @@ final class LogoItemViewController: UIViewController, SampleItem {
             containerView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
             containerHeightConstraint,
 
+            logoHorizontal.topAnchor.constraint(equalTo: containerView.topAnchor, constant: NatSpacing.xLarge),
             logoHorizontal.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            logoHorizontal.centerYAnchor.constraint(equalTo: view.centerYAnchor),
 
-            logoVertical.topAnchor.constraint(equalTo: logoHorizontal.bottomAnchor, constant: 16),
+            labelLogoHorizontal.topAnchor.constraint(equalTo: logoHorizontal.bottomAnchor, constant: NatSpacing.small),
+            labelLogoHorizontal.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+
+            logoVertical.topAnchor.constraint(equalTo: labelLogoHorizontal.bottomAnchor, constant: NatSpacing.xLarge),
             logoVertical.centerXAnchor.constraint(equalTo: view.centerXAnchor),
 
-//            logoHorizontal.widthAnchor.constraint(equalToConstant: 100),
-//            logoHorizontal.heightAnchor.constraint(equalToConstant: 100)
+            labelLogoVertical.topAnchor.constraint(equalTo: logoVertical.bottomAnchor, constant: NatSpacing.small),
+            labelLogoVertical.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            labelLogoVertical.bottomAnchor.constraint(
+                lessThanOrEqualTo: containerView.bottomAnchor,
+                constant: -NatSpacing.small
+            )
         ]
 
         NSLayoutConstraint.activate(constraints)
