@@ -9,7 +9,7 @@
 
     Example of usage:
 
-        let logoHorizontal = LogoImages.horzontal
+        let logoHorizontal = LogoImages.horizontal
         let logoVertical = LogoImages.vertical
 
  - Requires:
