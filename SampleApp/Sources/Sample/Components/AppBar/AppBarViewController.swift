@@ -91,12 +91,14 @@ class AppBarDetailViewController: UIViewController {
         configure(highlight: .image)
         view.backgroundColor = NatColors.background
         button = UIBarButtonItem(icon: .outlinedContentBellringing, action: #selector(buttonAction), target: self)
+        
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        configure(button: [button])
+        configure(buttons: [button])
         button.setBadgeValue(1)
     }
 
@@ -104,15 +106,3 @@ class AppBarDetailViewController: UIViewController {
         print("Action executed")
     }
 }
-
-extension UIBarButtonItem {
-
-    func setBadgeValue(_ count: Int) {
-        (customView as? IconView)?.configure(badgeStyle: .standard, withColor: .alert)
-        (customView as? IconView)?.setBadge(count: count)
-    }
-
-}
-
-
-extension IconView: Badgeable {}

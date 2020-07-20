@@ -177,7 +177,7 @@ public enum Icon: String, CaseIterable {
 }
 
 extension Icon {
-    var unicode: String {
+    public var unicode: String {
         switch self {
         case .filledActionAdd: return "\u{EA01}"
         case .filledActionCancel: return "\u{EA02}"

@@ -7,8 +7,4 @@ public extension UINavigationController {
         NatElevation.apply(on: navigationBar, elevation: .elevation02)
         navigationBar.shadowImage = UIImage()
     }
-
-    func configureDefaultStyle() {
-        configure(style: .default)
-    }
 }

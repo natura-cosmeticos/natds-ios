@@ -6,14 +6,13 @@ public extension UIViewController {
         case .title(let string):
             title = string
         case .image:
-            let iconView = IconView(fontSize: 25)
-            let icon = Icon.filledActionDelete
-            iconView.icon = icon
-            navigationItem.titleView = iconView
+            let logo = UIImage()
+            let imageView = UIImageView(image: logo)
+            navigationItem.titleView = imageView
         }
     }
 
-    func configure(button: [UIBarButtonItem]) {
-        navigationItem.setRightBarButtonItems(button, animated: true)
+    func configure(buttons: [UIBarButtonItem]) {
+        navigationItem.setRightBarButtonItems(buttons, animated: true)
     }
 }
