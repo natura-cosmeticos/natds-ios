@@ -32,7 +32,7 @@ public class IconView: UIView {
     public convenience init(fontSize: CGFloat, icon: Icon) {
         self.init()
         iconLabel.font = .iconFont(ofSize: fontSize)
-        self.icon = icon
+        defer { self.icon = icon }
     }
 
     @available(*, unavailable)

@@ -4,6 +4,7 @@ public extension UIViewController {
     func configure(titleStyle: TitleStyle) {
         switch titleStyle {
         case .title(let string):
+            navigationItem.titleView = nil
             title = string
         case .logo:
             let logo = NatLogoImages.horizontal

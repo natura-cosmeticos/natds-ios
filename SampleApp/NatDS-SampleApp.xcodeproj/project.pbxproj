@@ -11,6 +11,8 @@
 		04AA815DDD6F9388F3A1010428342BBB /* ElevationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCC7C3B8819A99402107EA24F698A53 /* ElevationViewController.swift */; };
 		06E258AB651CE4F232CAAA3A2D94807C /* SpacingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73162360481FF4DE5378EBF0DF3B2F1C /* SpacingCell.swift */; };
 		0A2178D12DE267C878A84A6ED80350D4 /* ChooseBrandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DF0FA08B4E2EB33C77654A3EC4E83E /* ChooseBrandViewController.swift */; };
+		0E0C618824C768B700AF8FBB /* AppBarDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0C618724C768B700AF8FBB /* AppBarDetailViewController.swift */; };
+		0E0C618A24C7749300AF8FBB /* AppBarDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0C618924C7749300AF8FBB /* AppBarDataSource.swift */; };
 		0E45136B24BE1DEB002296AE /* AppBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E45136A24BE1DEB002296AE /* AppBarViewController.swift */; };
 		15B75BDE2A9BA5FCCD4E2CFE49AC1055 /* ButtonsItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB193A88212A44D97B2A08002B40993F /* ButtonsItemViewController.swift */; };
 		15CB9B603913EB682989F204523A1472 /* SpacingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F481A68E21070452D7ABE08B85865E10 /* SpacingViewController.swift */; };
@@ -66,6 +68,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0E0C618724C768B700AF8FBB /* AppBarDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBarDetailViewController.swift; sourceTree = "<group>"; };
+		0E0C618924C7749300AF8FBB /* AppBarDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBarDataSource.swift; sourceTree = "<group>"; };
 		0E45136A24BE1DEB002296AE /* AppBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBarViewController.swift; sourceTree = "<group>"; };
 		1E864ED7BB360AA6C6091D7E1053A5ED /* OpacityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpacityViewController.swift; sourceTree = "<group>"; };
 		265B17ED24AFBE5500FD0407 /* BadgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +139,8 @@
 			isa = PBXGroup;
 			children = (
 				0E45136A24BE1DEB002296AE /* AppBarViewController.swift */,
+				0E0C618724C768B700AF8FBB /* AppBarDetailViewController.swift */,
+				0E0C618924C7749300AF8FBB /* AppBarDataSource.swift */,
 			);
 			path = AppBar;
 			sourceTree = "<group>";
@@ -533,6 +539,7 @@
 				0E45136B24BE1DEB002296AE /* AppBarViewController.swift in Sources */,
 				0A2178D12DE267C878A84A6ED80350D4 /* ChooseBrandViewController.swift in Sources */,
 				47382B136831753E7775B5E76392DA56 /* ColorsCell.swift in Sources */,
+				0E0C618A24C7749300AF8FBB /* AppBarDataSource.swift in Sources */,
 				190F96D8AFCE86FA621E6BDD5A3390F2 /* ColorsHeaderView.swift in Sources */,
 				542BBE6C15A7E0C25DD69346A43430B0 /* ColorsViewController.swift in Sources */,
 				DF627B5ABA0E7336C4F3554132159A83 /* ComponentsSection.swift in Sources */,
@@ -554,6 +561,7 @@
 				E061B6B85CEFBAE9AE8A8079DEF9E0A4 /* SampleSection.swift in Sources */,
 				D30EE21E999567FD384CCE8B5D90FAC2 /* SizeCell.swift in Sources */,
 				F73DA218B08455F09195D7D6F4990961 /* SizeViewController.swift in Sources */,
+				0E0C618824C768B700AF8FBB /* AppBarDetailViewController.swift in Sources */,
 				06E258AB651CE4F232CAAA3A2D94807C /* SpacingCell.swift in Sources */,
 				15CB9B603913EB682989F204523A1472 /* SpacingViewController.swift in Sources */,
 				FD3C1A6EDAD5F31BC9E4984E981C28A8 /* TabItemViewController.swift in Sources */,
