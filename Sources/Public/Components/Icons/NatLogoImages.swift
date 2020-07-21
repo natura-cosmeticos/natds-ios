@@ -3,7 +3,7 @@
   The Images changes according with the current Brand configured in the Design system
   and according with user properties of Light and Dark mode.
 
-    This button has 2 variants:
+    This struct has 2 variants:
     - horizontal
     - vertical
 
