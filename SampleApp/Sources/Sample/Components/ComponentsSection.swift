@@ -11,6 +11,7 @@ class ComponentsSection: SampleSection {
         DividerViewController.self,
         ExpansionPanelViewController.self,
         IconographyItemViewController.self,
+        LogoItemViewController.self,
         TabItemViewController.self,
         TextFieldItemViewController.self,
         NavigationDrawerItemViewController.self,

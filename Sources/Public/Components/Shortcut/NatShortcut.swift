@@ -1,4 +1,3 @@
-
 /**
   NatShortcut is a class that represents  a component from the design system.
   The shortcut colors changes according with the current Brand configured in the Design system
