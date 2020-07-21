@@ -45,6 +45,7 @@
 		2175BE4F7334ED85AECC5C401B400BD8 /* FlatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5220FFBF3EE662D05373D401183E54 /* FlatButton.swift */; };
 		232DAFD65FD65951D36C6F2618D6B7FC /* NaturaFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AC3BBD38115B8137B4E1CF7BFB87CE /* NaturaFont.swift */; };
 		24A65D792FD25FA06DEACBD91A7E04A3 /* ColorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CB7087AA6D24EDDC31C9DD6682C6DD /* ColorsTests.swift */; };
+		2625466124C7379800B98A91 /* StubSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2625465F24C7379400B98A91 /* StubSelector.swift */; };
 		263291DA24BCAF24004036C3 /* Badgeable+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263291D924BCAF24004036C3 /* Badgeable+Snapshot+Tests.swift */; };
 		263291DD24BCB226004036C3 /* BadgeableStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263291DC24BCB226004036C3 /* BadgeableStub.swift */; };
 		2655155E5437F0880708125E1F9F5BC9 /* Elevations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D49BA63C5E5BFEED327C214620A7657 /* Elevations.swift */; };
@@ -339,6 +340,7 @@
 		22F7508455AB7040D802941984E62D9D /* NaturaOpacities+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaturaOpacities+Spec.swift"; sourceTree = "<group>"; };
 		2381FCF8210ECD9A4895ECA9ED41B0FB /* PulseLayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseLayerTests.swift; sourceTree = "<group>"; };
 		255B7772A418A4544E0B8F793BEB519D /* UIColor+AsHexString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+AsHexString.swift"; sourceTree = "<group>"; };
+		2625465F24C7379400B98A91 /* StubSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubSelector.swift; sourceTree = "<group>"; };
 		263291D924BCAF24004036C3 /* Badgeable+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Badgeable+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		263291DC24BCB226004036C3 /* BadgeableStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeableStub.swift; sourceTree = "<group>"; };
 		265B17EA24AFA12900FD0407 /* NatBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatBadge.swift; sourceTree = "<group>"; };
@@ -664,6 +666,7 @@
 		0E7C160024C5D214002FF46F /* AppBar */ = {
 			isa = PBXGroup;
 			children = (
+				2625465E24C7378300B98A91 /* Stub */,
 				0E7C160124C5D237002FF46F /* UINavigationController+Style+Spec.swift */,
 				0E7C160424C5D3C3002FF46F /* UIViewController+Configure+Spec.swift */,
 				0E7C160624C5D6DC002FF46F /* UIBarButtonItem+Icon+Spec.swift */,
@@ -766,6 +769,14 @@
 				307E705878C6A3A88E39CDC82B799361 /* ViewStyle.swift */,
 			);
 			path = ViewStyling;
+			sourceTree = "<group>";
+		};
+		2625465E24C7378300B98A91 /* Stub */ = {
+			isa = PBXGroup;
+			children = (
+				2625465F24C7379400B98A91 /* StubSelector.swift */,
+			);
+			path = Stub;
 			sourceTree = "<group>";
 		};
 		263291DB24BCB20D004036C3 /* Stub */ = {
@@ -2133,6 +2144,7 @@
 				1FBF5A52B03E9E219462A06F9487D3B4 /* ValueTextHighlightTests.swift in Sources */,
 				1734E4583B85C0197E0AC6F1CE877ADC /* ViewAnimatingMock.swift in Sources */,
 				84B9330A24ABC38C00B71BD4 /* NatDialogTitleConfigurable+Spec.swift in Sources */,
+				2625466124C7379800B98A91 /* StubSelector.swift in Sources */,
 				E4B171E23C40B91B211DB2F64357778D /* ViewStyle+Spec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

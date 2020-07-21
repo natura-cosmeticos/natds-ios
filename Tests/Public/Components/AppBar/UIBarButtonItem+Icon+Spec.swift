@@ -5,11 +5,13 @@ import Quick
 
 final class UIBarButtonItemIconSpec: QuickSpec {
     override func spec() {
+        var selector: StubSelector!
         var sut: UIBarButtonItem!
 
         beforeEach {
             DesignSystem().configure(with: .theBodyShop)
-            sut = UIBarButtonItem(icon: Icon.filledActionAdd, action: Selector("Test"), target: self)
+            selector = StubSelector()
+            sut = UIBarButtonItem(icon: Icon.filledActionAdd, action: #selector(selector.handler), target: selector)
         }
 
         describe("#init") {
@@ -18,10 +20,10 @@ final class UIBarButtonItemIconSpec: QuickSpec {
                 expect(customView?.icon).to(equal(Icon.filledActionAdd))
             }
             it("sets expected selector") {
-//                let tap = sut.customView?.gestureRecognizers?.first
-//                tap?.sendGesturesEvents()
-//
-//                expect(tap?.responds(to: selector)).to(beTrue())
+                let tap = sut.customView?.gestureRecognizers?.first
+                tap?.sendGesturesEvents()
+
+                expect(selector.handlerWasCalled).to(beTrue())
             }
             it("sets expected tap gesture") {
                 let tap = sut.customView?.gestureRecognizers
