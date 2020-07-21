@@ -29,6 +29,12 @@ final class UIViewControllerConfigureSpec: QuickSpec {
                 it("sets navigationItem titleView") {
                     expect(sut.navigationItem.titleView).toNot(beNil())
                 }
+                it("sets navigationItem titleView with logo") {
+                    let logoImageView = sut.navigationItem.titleView as? UIImageView
+                    let logoImage = logoImageView?.image
+
+                    expect(logoImage).to(equal(NatLogoImages.horizontal))
+                }
             }
         }
 

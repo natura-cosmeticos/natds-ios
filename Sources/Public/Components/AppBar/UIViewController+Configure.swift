@@ -6,8 +6,12 @@ public extension UIViewController {
         case .title(let string):
             title = string
         case .logo:
-            let logo = UIImage()
+            let logo = NatLogoImages.horizontal
             let imageView = UIImageView(image: logo)
+
+            imageView.translatesAutoresizingMaskIntoConstraints = false
+            imageView.widthAnchor.constraint(lessThanOrEqualToConstant: 128).isActive = true
+            imageView.contentMode = .scaleAspectFit
             navigationItem.titleView = imageView
         }
     }
