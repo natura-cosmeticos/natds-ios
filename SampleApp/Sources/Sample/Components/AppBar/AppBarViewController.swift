@@ -71,8 +71,6 @@ class AppBarItemViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
-//        navigationController?.configure(style: .default)
     }
 
     @objc func openDetail() {
@@ -83,16 +81,13 @@ class AppBarItemViewController: UIViewController {
 }
 
 class AppBarDetailViewController: UIViewController {
-
     var button: UIBarButtonItem!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        configure(highlight: .image)
+        configure(titleStyle: .logo)
         view.backgroundColor = NatColors.background
         button = UIBarButtonItem(icon: .outlinedContentBellringing, action: #selector(buttonAction), target: self)
-        
-        
     }
 
     override func viewWillAppear(_ animated: Bool) {

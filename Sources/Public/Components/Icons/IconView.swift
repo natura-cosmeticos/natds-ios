@@ -28,7 +28,7 @@ public class IconView: UIView {
         self.init()
         iconLabel.font = .iconFont(ofSize: fontSize)
     }
-    
+
     public convenience init(fontSize: CGFloat, icon: Icon) {
         self.init()
         iconLabel.font = .iconFont(ofSize: fontSize)

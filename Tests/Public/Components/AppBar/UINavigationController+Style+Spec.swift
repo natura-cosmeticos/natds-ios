@@ -5,40 +5,27 @@ import Quick
 
 final class UINavigationControllerStyleSpec: QuickSpec {
     override func spec() {
-        var sut: UINavigationController!
-        var color: UINavigationController.Color!
-        
+        var sut: UINavigationController.Style!
+
         beforeEach {
             DesignSystem().configure(with: .theBodyShop)
-            sut = UINavigationController()
-            color = .default
         }
-        
-        describe("configure(style:)") {
+
+        describe("#default") {
             beforeEach {
-                sut.configure(style: color)
+                sut = .default
             }
-            
-            it("sets tintColor") {
-                expect(sut.navigationBar.tintColor).to(equal(color.title))
+            it("returns expected color for background") {
+                let expectedColor = getTheme().colors.surface
+                expect(sut.backgroundColor).to(equal(expectedColor))
             }
-            it("sets barTintColor") {
-                expect(sut.navigationBar.barTintColor).to(equal(color.background))
+            it("returns expected color for title") {
+                let expectedColor = getTheme().colors.highEmphasis
+                expect(sut.titleColor).to(equal(expectedColor))
             }
-            
-            it("apply elevation") {
-                let elevation = NatElevation.Elevation.elevation02
-                let attributes = getTheme().elevations[keyPath: elevation.rawValue]
-                
-                expect(sut.navigationBar.layer.shadowColor).to(equal(attributes.shadowColor))
-                expect(sut.navigationBar.layer.shadowOffset).to(equal(attributes.shadowOffSet))
-                expect(sut.navigationBar.layer.shadowRadius).to(equal(attributes.shadowRadius))
-                expect(sut.navigationBar.layer.shadowOpacity).to(equal(attributes.shadowOpacity))
-                expect(sut.navigationBar.layer.masksToBounds).to(beFalse())
-            }
-            
-            it("sets shadowImage") {
-                expect(sut.navigationBar.shadowImage).toNot(beNil())
+            it("returns expected elevation") {
+                let expectedElevation = NatElevation.Elevation.elevation02
+                expect(sut.elevation).to(equal(expectedElevation))
             }
         }
     }

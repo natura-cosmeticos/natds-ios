@@ -1,8 +1,8 @@
 import Foundation
 
 extension UIViewController {
-    public enum Highlight {
-        case image
+    public enum TitleStyle {
+        case logo
         case title(String)
     }
 }

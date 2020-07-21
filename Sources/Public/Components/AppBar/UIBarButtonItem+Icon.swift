@@ -16,5 +16,3 @@ public extension UIBarButtonItem {
 }
 
 extension IconView: Badgeable {}
-
-

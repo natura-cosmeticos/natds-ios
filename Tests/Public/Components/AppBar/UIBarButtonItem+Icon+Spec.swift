@@ -28,17 +28,16 @@ final class UIBarButtonItemIconSpec: QuickSpec {
                 expect(tap).toNot(beNil())
             }
         }
-        
+
         describe("#setBadgeValue(count:)") {
             beforeEach {
                 sut.setBadgeValue(1)
             }
-            
+
             it("adds a badge subview to customView") {
                 let subview = sut.customView?.subviews.first(where: { $0 is NatBadge })
                 expect(subview).toNot(beNil())
             }
-            
         }
     }
 }

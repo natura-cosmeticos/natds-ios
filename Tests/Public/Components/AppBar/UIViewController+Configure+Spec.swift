@@ -12,19 +12,19 @@ final class UIViewControllerConfigureSpec: QuickSpec {
             sut = UIViewController()
         }
 
-        describe("#configure(highlight:)") {
-            context("when hightlight is .title") {
+        describe("#configure(titleStyle:)") {
+            context("when titleStyle is .title") {
                 beforeEach {
-                    sut.configure(highlight: .title("Title"))
+                    sut.configure(titleStyle: .title("Title"))
                 }
                 it("sets navigationItem title") {
                     expect(sut.title).to(equal("Title"))
                 }
             }
 
-            context("when hightlight is .image") {
+            context("when titleStyle is .image") {
                 beforeEach {
-                    sut.configure(highlight: .image)
+                    sut.configure(titleStyle: .logo)
                 }
                 it("sets navigationItem titleView") {
                     expect(sut.navigationItem.titleView).toNot(beNil())

@@ -1,11 +1,11 @@
 import UIKit
 
 public extension UIViewController {
-    func configure(highlight: Highlight) {
-        switch highlight {
+    func configure(titleStyle: TitleStyle) {
+        switch titleStyle {
         case .title(let string):
             title = string
-        case .image:
+        case .logo:
             let logo = UIImage()
             let imageView = UIImageView(image: logo)
             navigationItem.titleView = imageView

@@ -1,10 +1,23 @@
 import UIKit
 
 public extension UINavigationController {
-    func configure(style color: Color) {
-        navigationBar.tintColor = color.title
-        navigationBar.barTintColor = color.background
-        NatElevation.apply(on: navigationBar, elevation: .elevation02)
-        navigationBar.shadowImage = UIImage()
+    enum Style {
+        case `default`
+
+        var backgroundColor: UIColor {
+            switch self {
+            case .default: return getTheme().colors.surface
+            }
+        }
+
+        var titleColor: UIColor {
+            return getTheme().colors.highEmphasis
+        }
+
+        var elevation: NatElevation.Elevation {
+            switch self {
+            case .default: return .elevation02
+            }
+        }
     }
 }
