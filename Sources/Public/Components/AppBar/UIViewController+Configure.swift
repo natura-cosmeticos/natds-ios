@@ -11,7 +11,7 @@ public extension UIViewController {
             let imageView = UIImageView(image: logo)
 
             imageView.translatesAutoresizingMaskIntoConstraints = false
-            imageView.widthAnchor.constraint(lessThanOrEqualToConstant: 128).isActive = true
+            imageView.widthAnchor.constraint(lessThanOrEqualToConstant: NatSizes.hugeX).isActive = true
             imageView.contentMode = .scaleAspectFit
             navigationItem.titleView = imageView
         }

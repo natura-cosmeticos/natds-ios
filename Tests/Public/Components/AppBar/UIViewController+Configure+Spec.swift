@@ -20,6 +20,9 @@ final class UIViewControllerConfigureSpec: QuickSpec {
                 it("sets navigationItem title") {
                     expect(sut.title).to(equal("Title"))
                 }
+                it("sets navigationItem titleView to nil") {
+                    expect(sut.navigationItem.titleView).to(beNil())
+                }
             }
 
             context("when titleStyle is .image") {
