@@ -25,6 +25,7 @@
 		5C015C21B5CCA24BFE6643ABE6AEF850 /* NatDS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBC24456A172162B3538C51FBFE2BA6 /* NatDS.framework */; };
 		6566B8AD366FC73D95DA1F35979D488C /* NavigationDrawerItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D4B7F03E632BFE339DA40C2269B9D9 /* NavigationDrawerItemViewController.swift */; };
 		6B065E9FA8AEAD33D6341DB8C671D74C /* DialogItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6AF03A3D6B2368E721CAB74F2424A /* DialogItemViewController.swift */; };
+		8449828124C0C9F200CDA676 /* LogoItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8449828024C0C9F200CDA676 /* LogoItemViewController.swift */; };
 		844A1E2624AE2BCE00E93AD9 /* ShortcutItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A1E2524AE2BCE00E93AD9 /* ShortcutItemViewController.swift */; };
 		9B13D285941681F8967FCC54F3945D5F /* IconCollectioViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FBDBE3AD8777A865F1B1E40859758D /* IconCollectioViewCell.swift */; };
 		B0824E26ADCA40FFA158AA0A35155D71 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFC72AFBBBAAEBA2097DA669BB3792F /* MainViewController.swift */; };
@@ -79,6 +80,7 @@
 		6CCE6B3ED45C1E81094E9B4DDAB9D1EC /* SizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeViewController.swift; sourceTree = "<group>"; };
 		729810E32083E04163C749DCF3552FA6 /* DesignSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSection.swift; sourceTree = "<group>"; };
 		73162360481FF4DE5378EBF0DF3B2F1C /* SpacingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacingCell.swift; sourceTree = "<group>"; };
+		8449828024C0C9F200CDA676 /* LogoItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoItemViewController.swift; sourceTree = "<group>"; };
 		844A1E2524AE2BCE00E93AD9 /* ShortcutItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutItemViewController.swift; sourceTree = "<group>"; };
 		845C4E23EBB1B07DF334BBA42C272EBB /* ColorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsViewController.swift; sourceTree = "<group>"; };
 		88DF0FA08B4E2EB33C77654A3EC4E83E /* ChooseBrandViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseBrandViewController.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				C420063DEF581D12DAA6D31645B6B382 /* Tab */,
 				C1D1F3FC973CC3D14F86C680F200601D /* ValueText */,
 				62B703332C6994E56C229AEDFFD1B5EB /* ComponentsSection.swift */,
+				8449828024C0C9F200CDA676 /* LogoItemViewController.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -515,6 +518,7 @@
 				C45042BFA9A69738E74BF45255330A76 /* BorderRadiusCell.swift in Sources */,
 				D8E43C13D4DE5237EBF1AAA69FCF03EF /* BorderRadiusViewController.swift in Sources */,
 				15B75BDE2A9BA5FCCD4E2CFE49AC1055 /* ButtonsItemViewController.swift in Sources */,
+				8449828124C0C9F200CDA676 /* LogoItemViewController.swift in Sources */,
 				0A2178D12DE267C878A84A6ED80350D4 /* ChooseBrandViewController.swift in Sources */,
 				47382B136831753E7775B5E76392DA56 /* ColorsCell.swift in Sources */,
 				190F96D8AFCE86FA621E6BDD5A3390F2 /* ColorsHeaderView.swift in Sources */,
