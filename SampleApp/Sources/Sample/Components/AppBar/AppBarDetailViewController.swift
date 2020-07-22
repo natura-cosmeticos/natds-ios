@@ -1,5 +1,5 @@
-import UIKit
 import NatDS
+import UIKit
 
 class AppBarDetailViewController: UITableViewController {
     private var appBarStyle: UINavigationController.Style
@@ -68,14 +68,20 @@ class AppBarDetailViewController: UITableViewController {
         case .noneBarItems:
             configure(buttons: [UIBarButtonItem]())
         case .twoBarItems:
-            let barButtonItemWithBadge = UIBarButtonItem(icon: .outlinedContentBellringing, action: nil, target: nil)
+            let barButtonItem = UIBarButtonItem(icon: .outlinedActionCalendar,
+                                                action: #selector(barButtonItemHandler),
+                                                target: self)
+            let barButtonItemWithBadge = UIBarButtonItem(icon: .outlinedAlertNotification,
+                                                         action: nil,
+                                                         target: nil)
             barButtonItemWithBadge.setBadgeValue(99)
 
-            let barItems: [UIBarButtonItem] = [
-                UIBarButtonItem(icon: .outlinedActionCalendar, action: nil, target: nil),
-                barButtonItemWithBadge
-            ]
+            let barItems = [barButtonItemWithBadge, barButtonItem]
             configure(buttons: barItems)
         }
+    }
+
+    @objc func barButtonItemHandler() {
+        print("barButtonItemHandler called")
     }
 }

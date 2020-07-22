@@ -37,7 +37,7 @@ public extension UIViewController {
     }
 
     /**
-     This method has the objetive to set the rightBarButtonItems of navigationItem.
+     This method has the objective to set the rightBarButtonItems of navigationItem.
 
         Example of usage:
             let barItems: [UIBarButtonItem] = [
