@@ -52,6 +52,7 @@
 		265B17EB24AFA12900FD0407 /* NatBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265B17EA24AFA12900FD0407 /* NatBadge.swift */; };
 		26740A4924B3A60C00419526 /* NatBadge+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26740A4824B3A60C00419526 /* NatBadge+Style.swift */; };
 		26740A4B24B3A62F00419526 /* NatBadge+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26740A4A24B3A62F00419526 /* NatBadge+Color.swift */; };
+		268E9C6124C8746B006D6142 /* AppBar+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E9C6024C8746B006D6142 /* AppBar+Snapshot+Tests.swift */; };
 		269C886224C23B0100A507BE /* UINavigationController+Configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269C886124C23B0100A507BE /* UINavigationController+Configure.swift */; };
 		269C886424C2456B00A507BE /* UINavigationController+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269C886324C2456B00A507BE /* UINavigationController+Style.swift */; };
 		269C886624C2480800A507BE /* UIViewController+Configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269C886524C2480800A507BE /* UIViewController+Configure.swift */; };
@@ -348,6 +349,7 @@
 		265B17EA24AFA12900FD0407 /* NatBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatBadge.swift; sourceTree = "<group>"; };
 		26740A4824B3A60C00419526 /* NatBadge+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatBadge+Style.swift"; sourceTree = "<group>"; };
 		26740A4A24B3A62F00419526 /* NatBadge+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatBadge+Color.swift"; sourceTree = "<group>"; };
+		268E9C6024C8746B006D6142 /* AppBar+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppBar+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		269C886124C23B0100A507BE /* UINavigationController+Configure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Configure.swift"; sourceTree = "<group>"; };
 		269C886324C2456B00A507BE /* UINavigationController+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Style.swift"; sourceTree = "<group>"; };
 		269C886524C2480800A507BE /* UIViewController+Configure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Configure.swift"; sourceTree = "<group>"; };
@@ -714,6 +716,7 @@
 				84A818BC24B784EA0007C7D5 /* NatShortcut+Snapshot+Tests.swift */,
 				263291D924BCAF24004036C3 /* Badgeable+Snapshot+Tests.swift */,
 				26BB817424B9197D00617EFC /* NatBadge+Snapshot+Tests.swift */,
+				268E9C6024C8746B006D6142 /* AppBar+Snapshot+Tests.swift */,
 			);
 			path = SnapShot;
 			sourceTree = "<group>";
@@ -2131,6 +2134,7 @@
 				84B9331124ACF28400B71BD4 /* NotificationCenterSpy.swift in Sources */,
 				CA236A066D3EBA4E8E13CC4DD6A2A40D /* TheBodyShopFont+Spec.swift in Sources */,
 				82883672709B4F62F288ADD68528D460 /* TheBodyShopFontLetterSpacings+Spec.swift in Sources */,
+				268E9C6124C8746B006D6142 /* AppBar+Snapshot+Tests.swift in Sources */,
 				BF60ADF4759C13689B2FF740FBC0A4AE /* TheBodyShopFontSizes+Spec.swift in Sources */,
 				527DF39CAC1D19BFACC191CC02D66346 /* TheBodyShopFontWeights+Spec.swift in Sources */,
 				84BC900E24AA16EF007DF09D /* DialogStyle+Spec.swift in Sources */,
