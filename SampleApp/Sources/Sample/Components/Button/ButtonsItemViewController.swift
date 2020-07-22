@@ -162,7 +162,7 @@ final class ButtonsItemViewController: UIViewController, SampleItem {
 
     private func setup() {
         title = Self.name
-        
+
         view.backgroundColor = NatColors.background
         view.addSubview(scrollView)
 

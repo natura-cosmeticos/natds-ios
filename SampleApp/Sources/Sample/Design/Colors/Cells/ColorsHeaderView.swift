@@ -4,7 +4,7 @@ import NatDS
 final class ColorsHeader: UITableViewHeaderFooterView {
     private let sectionLabel: UILabel = {
         let label = UILabel()
-        label.font = Fonts.subtitle1
+        label.font = NatFonts.font(ofSize: .subtitle1, withWeight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label
@@ -25,10 +25,10 @@ final class ColorsHeader: UITableViewHeaderFooterView {
         contentView.addSubview(sectionLabel)
 
         NSLayoutConstraint.activate([
-            sectionLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
-            sectionLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -8),
-            sectionLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
-            sectionLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 8)
+            sectionLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: NatSpacing.tiny),
+            sectionLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -NatSpacing.tiny),
+            sectionLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -NatSpacing.tiny),
+            sectionLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: NatSpacing.tiny)
         ])
     }
 

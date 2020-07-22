@@ -14,7 +14,7 @@ class IconographyItemViewController: UIViewController, SampleItem {
         collectionView.collectionViewLayout = layout
         collectionView.dataSource = self
         collectionView.register(IconCollectioViewCell.self)
-        collectionView.backgroundColor = .white
+
         return collectionView
     }()
 
@@ -25,6 +25,7 @@ class IconographyItemViewController: UIViewController, SampleItem {
     }
 
     private func setup() {
+        view.backgroundColor = NatColors.background
         view.addSubview(collectionView)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
