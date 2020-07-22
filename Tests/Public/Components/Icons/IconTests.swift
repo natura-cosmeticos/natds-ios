@@ -128,6 +128,7 @@ extension IconTests {
         case outlinedAlertEmpty = "outlined-alert-empty"
         case outlinedAlertIndeterminate = "outlined-alert-indeterminate"
         case outlinedAlertInfo = "outlined-alert-info"
+        case outlinedAlertNotification = "outlined-alert-notification"
         case outlinedAlertWarning = "outlined-alert-warning"
         case outlinedCommunicationChat = "outlined-communication-chat"
         case outlinedCommunicationEmail = "outlined-communication-email"
