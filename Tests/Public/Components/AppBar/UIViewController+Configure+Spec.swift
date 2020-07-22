@@ -49,8 +49,8 @@ final class UIViewControllerConfigureSpec: QuickSpec {
                 sut.configure(buttons: buttons)
             }
 
-            it("sets navigationItem right barButtonItems") {
-                expect(sut.navigationItem.rightBarButtonItems).to(equal(buttons))
+            it("sets navigationItem right barButtonItems and spacing") {
+                expect(sut.navigationItem.rightBarButtonItems?.count).to(equal(buttons.count + 1))
             }
         }
     }
