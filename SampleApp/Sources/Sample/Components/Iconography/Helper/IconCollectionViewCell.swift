@@ -1,6 +1,6 @@
 import NatDS
 
-class IconCollectioViewCell: UICollectionViewCell {
+class IconCollectionViewCell: UICollectionViewCell {
     var icon: Icon? {
         didSet {
             iconView.icon = icon
@@ -17,7 +17,7 @@ class IconCollectioViewCell: UICollectionViewCell {
         let stackView = UIStackView()
         stackView.distribution = .fill
         stackView.axis = .vertical
-        stackView.spacing = 8
+        stackView.spacing = NatSpacing.tiny
         stackView.translatesAutoresizingMaskIntoConstraints = false
 
         return stackView

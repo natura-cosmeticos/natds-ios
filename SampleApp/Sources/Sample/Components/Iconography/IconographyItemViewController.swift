@@ -13,7 +13,7 @@ class IconographyItemViewController: UIViewController, SampleItem {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.collectionViewLayout = layout
         collectionView.dataSource = self
-        collectionView.register(IconCollectioViewCell.self)
+        collectionView.register(IconCollectionViewCell.self)
 
         return collectionView
     }()
@@ -44,7 +44,7 @@ extension IconographyItemViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let view = collectionView.dequeueReusableCell(for: indexPath, cellType: IconCollectioViewCell.self)
+        let view = collectionView.dequeueReusableCell(for: indexPath, cellType: IconCollectionViewCell.self)
         view.icon = icons[indexPath.row]
         return view
     }
