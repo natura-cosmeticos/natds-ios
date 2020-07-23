@@ -53,7 +53,7 @@ public extension UIViewController {
         var itemButtons = buttons
 
         if !buttons.isEmpty {
-            let navbarRightPadding = getBarButtonItemSpacing(width: NatSizes.small)
+            let navbarRightPadding = getBarButtonItemSpacing(width: NatSizes.tiny)
             itemButtons.insert(navbarRightPadding, at: 0)
         }
 
