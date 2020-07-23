@@ -50,14 +50,25 @@ public extension UIViewController {
     */
 
     func configure(buttons: [UIBarButtonItem]) {
-        var itemButtons = buttons
+        let itemButtons = setSpacingBetween(buttons: buttons)
+        navigationItem.setRightBarButtonItems(itemButtons, animated: true)
+    }
+
+    private func setSpacingBetween(buttons: [UIBarButtonItem]) -> [UIBarButtonItem] {
+        var buttons = buttons
+
+        let totalButtons = (buttons.count * 2)
+
+        for index in stride(from: 1, to: totalButtons, by: 2) {
+            buttons.insert(getBarButtonItemSpacing(width: 16), at: index)
+        }
 
         if !buttons.isEmpty {
             let navbarRightPadding = getBarButtonItemSpacing(width: NatSizes.tiny)
-            itemButtons.insert(navbarRightPadding, at: 0)
+            buttons.insert(navbarRightPadding, at: 0)
         }
 
-        navigationItem.setRightBarButtonItems(itemButtons, animated: true)
+        return buttons
     }
 
     private func getBarButtonItemSpacing(width: CGFloat) -> UIBarButtonItem {

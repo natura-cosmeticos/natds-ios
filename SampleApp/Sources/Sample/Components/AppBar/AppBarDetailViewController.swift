@@ -71,6 +71,9 @@ class AppBarDetailViewController: UITableViewController {
             let barButtonItem = UIBarButtonItem(icon: .outlinedActionCalendar,
                                                 action: #selector(barButtonItemHandler),
                                                 target: self)
+
+            barButtonItem.setBadgeValue(1)
+
             let barButtonItemWithBadge = UIBarButtonItem(icon: .outlinedAlertNotification,
                                                          action: nil,
                                                          target: nil)

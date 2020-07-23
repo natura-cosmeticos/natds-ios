@@ -45,12 +45,19 @@ final class UIViewControllerConfigureSpec: QuickSpec {
             var buttons: [UIBarButtonItem]!
 
             beforeEach {
-                buttons = [UIBarButtonItem()]
+                buttons = [UIBarButtonItem(), UIBarButtonItem()]
                 sut.configure(buttons: buttons)
             }
 
             it("sets navigationItem right barButtonItems and spacing") {
-                expect(sut.navigationItem.rightBarButtonItems?.count).to(equal(buttons.count + 1))
+                let expectedCount = (buttons.count * 2) + 1
+                expect(sut.navigationItem.rightBarButtonItems?.count).to(equal(expectedCount))
+            }
+            it("sets NatSizes.tiny as spacing between navigationItem and navigationBar") {
+                expect(sut.navigationItem.rightBarButtonItems?.first?.width).to(equal(NatSizes.tiny))
+            }
+            it("sets NatSizes.small as spacing between barButtonItems") {
+                expect(sut.navigationItem.rightBarButtonItems?[2].width).to(equal(NatSizes.small))
             }
         }
     }
