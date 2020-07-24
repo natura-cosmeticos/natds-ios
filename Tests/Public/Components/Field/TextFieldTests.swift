@@ -9,6 +9,8 @@ class TextFieldTests: FBSnapshotTestCase {
     override func setUp() {
         super.setUp()
 
+        DesignSystem().configure(with: .natura)
+
         delegateMock = TextFieldDelegateMock()
         sut = TextField(frame: CGRect(x: 0, y: 0, width: 328, height: 99))
         sut.backgroundColor = .white

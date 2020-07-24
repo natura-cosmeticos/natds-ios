@@ -55,7 +55,7 @@ public class TextField: UIView {
 
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = Fonts.button
+        label.font = NatFonts.font(ofSize: .button, withWeight: .medium)
         return label
     }()
 
@@ -78,12 +78,13 @@ public class TextField: UIView {
         let label = UILabel()
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
-        label.font = Fonts.caption
+        label.font = NatFonts.font(ofSize: .caption, withWeight: .regular)
         return label
     }()
 
     private lazy var iconView: IconView = {
-        let iconView = IconView(fontSize: Fonts.caption.pointSize)
+        let font = NatFonts.font(ofSize: .caption, withWeight: .regular)
+        let iconView = IconView(fontSize: font.pointSize)
         iconView.aligment = .left
         iconView.icon = Icon.outlinedActionCancel
         iconView.translatesAutoresizingMaskIntoConstraints = false
@@ -191,29 +192,29 @@ extension TextField {
         switch state {
         case .enable:
             textField.borderWidth = 1
-            textField.borderColor = Colors.Content.lowEmphasis
-            titleLabel.textColor = Colors.Content.mediumEmphasis
-            helperLabel.textColor = Colors.Content.mediumEmphasis
+            textField.borderColor = getTheme().colors.lowEmphasis
+            titleLabel.textColor = getTheme().colors.mediumEmphasis
+            helperLabel.textColor = getTheme().colors.mediumEmphasis
             helperLabel.text = helper
             iconView.isHidden = true
 
         case .active:
             textField.borderWidth = 2
-            textField.borderColor = Colors.primary
-            textField.tintColor = Colors.primary
-            titleLabel.textColor = Colors.Content.mediumEmphasis
-            helperLabel.textColor = Colors.Content.mediumEmphasis
+            textField.borderColor = getTheme().colors.primary
+            textField.tintColor = getTheme().colors.primary
+            titleLabel.textColor = getTheme().colors.mediumEmphasis
+            helperLabel.textColor = getTheme().colors.mediumEmphasis
             helperLabel.text = helper
             iconView.isHidden = true
 
         case .error:
             textField.borderWidth = 2
-            textField.borderColor = Colors.Feedback.alert
-            textField.tintColor = Colors.Feedback.alert
-            titleLabel.textColor = Colors.Feedback.alert
-            helperLabel.textColor = Colors.Feedback.alert
+            textField.borderColor = getTheme().colors.alert
+            textField.tintColor = getTheme().colors.alert
+            titleLabel.textColor = getTheme().colors.alert
+            helperLabel.textColor = getTheme().colors.alert
             helperLabel.text = error ?? ""
-            iconView.tintColor = Colors.Feedback.alert
+            iconView.tintColor = getTheme().colors.alert
             iconView.isHidden = false
         }
     }

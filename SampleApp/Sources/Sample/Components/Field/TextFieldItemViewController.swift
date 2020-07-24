@@ -6,7 +6,6 @@ class TextFieldItemViewController: UIViewController, SampleItem {
 
     private lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
-        scrollView.backgroundColor = .white
         scrollView.alwaysBounceVertical = true
         scrollView.alwaysBounceHorizontal = false
         scrollView.keyboardDismissMode = .interactive
@@ -85,7 +84,9 @@ class TextFieldItemViewController: UIViewController, SampleItem {
 
     private func setup() {
         title = Self.name
-        view.backgroundColor = .white
+
+        view.backgroundColor = NatColors.background
+
         view.addSubview(scrollView)
 
         scrollView.addSubview(stackView)
@@ -124,6 +125,4 @@ class TextFieldItemViewController: UIViewController, SampleItem {
     }
 }
 
-extension TextFieldItemViewController: TextFieldDelegate {
-
-}
+extension TextFieldItemViewController: TextFieldDelegate {}

@@ -6,7 +6,7 @@ final class ColorsCell: UITableViewCell {
 
     private let nameLabel: UILabel = {
         let label = UILabel()
-        label.font = Fonts.body1
+        label.font = NatFonts.font(ofSize: .body1, withWeight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label
@@ -14,7 +14,7 @@ final class ColorsCell: UITableViewCell {
 
     private let hexLabel: UILabel = {
         let label = UILabel()
-        label.font = Fonts.caption
+        label.font = NatFonts.font(ofSize: .caption, withWeight: .regular)
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label

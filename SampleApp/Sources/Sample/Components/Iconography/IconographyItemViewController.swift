@@ -13,8 +13,8 @@ class IconographyItemViewController: UIViewController, SampleItem {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.collectionViewLayout = layout
         collectionView.dataSource = self
-        collectionView.register(IconCollectioViewCell.self)
-        collectionView.backgroundColor = .white
+        collectionView.register(IconCollectionViewCell.self)
+
         return collectionView
     }()
 
@@ -25,6 +25,7 @@ class IconographyItemViewController: UIViewController, SampleItem {
     }
 
     private func setup() {
+        view.backgroundColor = NatColors.background
         view.addSubview(collectionView)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -43,7 +44,7 @@ extension IconographyItemViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let view = collectionView.dequeueReusableCell(for: indexPath, cellType: IconCollectioViewCell.self)
+        let view = collectionView.dequeueReusableCell(for: indexPath, cellType: IconCollectionViewCell.self)
         view.icon = icons[indexPath.row]
         return view
     }

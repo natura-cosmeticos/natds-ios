@@ -155,14 +155,14 @@ final class ButtonsItemViewController: UIViewController, SampleItem {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = Self.name
-
         setup()
     }
 
     // MARK: - Private methods
 
     private func setup() {
+        title = Self.name
+
         view.backgroundColor = NatColors.background
         view.addSubview(scrollView)
 
