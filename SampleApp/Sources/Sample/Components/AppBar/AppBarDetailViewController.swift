@@ -72,12 +72,10 @@ class AppBarDetailViewController: UITableViewController {
                                                 action: #selector(barButtonItemHandler),
                                                 target: self)
 
-            barButtonItem.setBadgeValue(1)
-
             let barButtonItemWithBadge = UIBarButtonItem(icon: .outlinedAlertNotification,
                                                          action: nil,
                                                          target: nil)
-            barButtonItemWithBadge.setBadgeValue(99)
+            barButtonItemWithBadge.setBadgeValue(9)
 
             let barItems = [barButtonItemWithBadge, barButtonItem]
             configure(buttons: barItems)
