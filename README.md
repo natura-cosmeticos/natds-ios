@@ -50,7 +50,7 @@ $ pod install
 ```
 
 ### Getting Started
-WIP
+[Start using our lib](doc/getting-started.md).
 
 ## How to contribute
 WIP 
