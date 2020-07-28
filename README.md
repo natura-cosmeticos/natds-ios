@@ -17,13 +17,7 @@ Library with iOS components defined by [Natura Group Design System Team](https:/
 - Travis (CI)
 - Git-LFS (https://git-lfs.github.com/)
 - Swiftlint
-
-## Dependecies
-- Xcode 11.6+
-- Homebrew
-- Ruby 2.6.5
-- Bundler
-- [Git-LFS](https://git-lfs.github.com/)
+-
 
 ### How to Install
 
