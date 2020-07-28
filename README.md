@@ -53,4 +53,4 @@ $ pod install
 [Start using our lib](doc/getting-started.md).
 
 ## How to contribute
-WIP 
+[Help us to grow!](doc/how-to-contribute.md)
