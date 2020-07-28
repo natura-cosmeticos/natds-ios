@@ -16,7 +16,6 @@ class AppBarDetailViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "App bar"
         setupTableView()
     }
 
@@ -68,21 +67,25 @@ class AppBarDetailViewController: UITableViewController {
         case .noneBarItems:
             configure(buttons: [UIBarButtonItem]())
         case .twoBarItems:
-            let barButtonItem = UIBarButtonItem(icon: .outlinedActionCalendar,
-                                                action: #selector(barButtonItemHandler),
+            let calendarBarButtonItem = UIBarButtonItem(icon: .outlinedActionCalendar,
+                                                action: #selector(calendarBarButtonItemHandler),
                                                 target: self)
 
-            let barButtonItemWithBadge = UIBarButtonItem(icon: .outlinedAlertNotification,
-                                                         action: nil,
+            let notificationBarButtonItem = UIBarButtonItem(icon: .outlinedAlertNotification,
+                                                         action: #selector(notificationBarButtonItemHandler),
                                                          target: nil)
-            barButtonItemWithBadge.setBadgeValue(9)
+            notificationBarButtonItem.setBadgeValue(9)
 
-            let barItems = [barButtonItemWithBadge, barButtonItem]
+            let barItems = [notificationBarButtonItem, calendarBarButtonItem]
             configure(buttons: barItems)
         }
     }
 
-    @objc func barButtonItemHandler() {
-        print("barButtonItemHandler called")
+    @objc func calendarBarButtonItemHandler() {
+        print("calendarBarButtonItem called")
+    }
+
+    @objc func notificationBarButtonItemHandler() {
+        print("notificationBarButtonItem called")
     }
 }

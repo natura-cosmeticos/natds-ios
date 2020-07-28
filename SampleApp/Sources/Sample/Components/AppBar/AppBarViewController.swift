@@ -16,11 +16,29 @@ class AppBarViewController: UITableViewController, SampleItem {
         setup()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        resetNavigationBar()
+    }
+
     // MARK: - Private methods
 
     private func setup() {
         view.backgroundColor = NatColors.background
         setupTableView()
+    }
+
+    private func resetNavigationBar() {
+        navigationController?.navigationBar.shadowImage = nil
+        navigationController?.navigationBar.layer.shadowColor = nil
+        navigationController?.navigationBar.layer.shadowOpacity = 0.0
+        navigationController?.navigationBar.barTintColor = NatColors.primary
+        navigationController?.navigationBar.tintColor = NatColors.onPrimary
+
+        navigationController?.navigationBar.titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: NatColors.onPrimary
+        ]
     }
 
     private func setupTableView() {
@@ -46,8 +64,7 @@ class AppBarViewController: UITableViewController, SampleItem {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = dataSource[indexPath.row]
         let viewController = AppBarDetailViewController(appBarStyle: item.style)
-        let navigationController = UINavigationController(rootViewController: viewController)
-
-        self.navigationController?.present(navigationController, animated: true, completion: nil)
+        viewController.title = item.title
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 }

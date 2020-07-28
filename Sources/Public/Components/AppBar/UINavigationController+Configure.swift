@@ -24,5 +24,9 @@ public extension UINavigationController {
         navigationBar.barTintColor = style.backgroundColor
         NatElevation.apply(on: navigationBar, elevation: style.elevation)
         navigationBar.shadowImage = UIImage()
+
+        navigationBar.titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: NatColors.highEmphasis
+        ]
     }
 }

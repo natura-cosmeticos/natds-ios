@@ -36,6 +36,14 @@ final class UINavigationControllerConfigureSpec: QuickSpec {
             it("sets shadowImage") {
                 expect(sut.navigationBar.shadowImage).toNot(beNil())
             }
+            it("sets titleTextAttributes") {
+                let foregroundAttribute = sut.navigationBar.titleTextAttributes?[NSAttributedString.Key.foregroundColor]
+                if let foregroundColor = foregroundAttribute as? UIColor {
+                    expect(foregroundColor).to(equal(NatColors.highEmphasis))
+                } else {
+                    fail()
+                }
+            }
         }
     }
 }
