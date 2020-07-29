@@ -15,6 +15,12 @@
 		0B8E46E0DEAF3F9ACFCD7D8FBCB6B4A6 /* NaturaTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330801219DAEACF172CA41236390A4D0 /* NaturaTheme.swift */; };
 		0C0E58167E0896AEBC4B69F2F846F57F /* NatFonts+Natura+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C36A7D37B7A89976DC5D42F6EC8FABF /* NatFonts+Natura+Spec.swift */; };
 		0C4CBA15016075A8E8A7CA6FC6054383 /* IllustrationIconsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D67F65D9E72160E498FBA256C62159F /* IllustrationIconsTests.swift */; };
+		0E4741DE24BE4C4100BB96FA /* UIViewController+TitleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4741DD24BE4C4100BB96FA /* UIViewController+TitleStyle.swift */; };
+		0E7C160324C5D274002FF46F /* UINavigationController+Style+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7C160124C5D237002FF46F /* UINavigationController+Style+Spec.swift */; };
+		0E7C160524C5D3C3002FF46F /* UIViewController+Configure+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7C160424C5D3C3002FF46F /* UIViewController+Configure+Spec.swift */; };
+		0E7C160724C5D6DC002FF46F /* UIBarButtonItem+Icon+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7C160624C5D6DC002FF46F /* UIBarButtonItem+Icon+Spec.swift */; };
+		0E7C160924C5E614002FF46F /* IconViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7C160824C5E614002FF46F /* IconViewSpec.swift */; };
+		0E7C160B24C61E45002FF46F /* UINavigationController+Configure+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7C160A24C61E45002FF46F /* UINavigationController+Configure+Spec.swift */; };
 		0FB003017C3A179872BC65E6E321FD13 /* NatDialogController+StandardStyleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F4D9E1F67A97596AD6E676E979CEC0 /* NatDialogController+StandardStyleBuilder.swift */; };
 		104CDF5166233472D947A0F32FF81911 /* NaturaOpacities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D8E653272562ABCC278D3D5A982192 /* NaturaOpacities.swift */; };
 		10734D11ADA3847CF236F1C8B98F4555 /* UIColor+HexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25909FD964254E6B99AD359EFD8A5C /* UIColor+HexTests.swift */; };
@@ -39,12 +45,18 @@
 		2175BE4F7334ED85AECC5C401B400BD8 /* FlatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5220FFBF3EE662D05373D401183E54 /* FlatButton.swift */; };
 		232DAFD65FD65951D36C6F2618D6B7FC /* NaturaFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AC3BBD38115B8137B4E1CF7BFB87CE /* NaturaFont.swift */; };
 		24A65D792FD25FA06DEACBD91A7E04A3 /* ColorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CB7087AA6D24EDDC31C9DD6682C6DD /* ColorsTests.swift */; };
+		2625466124C7379800B98A91 /* StubSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2625465F24C7379400B98A91 /* StubSelector.swift */; };
 		263291DA24BCAF24004036C3 /* Badgeable+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263291D924BCAF24004036C3 /* Badgeable+Snapshot+Tests.swift */; };
 		263291DD24BCB226004036C3 /* BadgeableStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263291DC24BCB226004036C3 /* BadgeableStub.swift */; };
 		2655155E5437F0880708125E1F9F5BC9 /* Elevations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D49BA63C5E5BFEED327C214620A7657 /* Elevations.swift */; };
 		265B17EB24AFA12900FD0407 /* NatBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265B17EA24AFA12900FD0407 /* NatBadge.swift */; };
 		26740A4924B3A60C00419526 /* NatBadge+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26740A4824B3A60C00419526 /* NatBadge+Style.swift */; };
 		26740A4B24B3A62F00419526 /* NatBadge+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26740A4A24B3A62F00419526 /* NatBadge+Color.swift */; };
+		268E9C6124C8746B006D6142 /* AppBar+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E9C6024C8746B006D6142 /* AppBar+Snapshot+Tests.swift */; };
+		269C886224C23B0100A507BE /* UINavigationController+Configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269C886124C23B0100A507BE /* UINavigationController+Configure.swift */; };
+		269C886424C2456B00A507BE /* UINavigationController+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269C886324C2456B00A507BE /* UINavigationController+Style.swift */; };
+		269C886624C2480800A507BE /* UIViewController+Configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269C886524C2480800A507BE /* UIViewController+Configure.swift */; };
+		269C886824C2483600A507BE /* UIBarButtonItem+Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269C886724C2483600A507BE /* UIBarButtonItem+Icon.swift */; };
 		26A3DF759DBD205A03559B561D576D13 /* NaturaSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E36F59CB9704420750D7F661F7AD993 /* NaturaSpacing.swift */; };
 		26BB817324B9191000617EFC /* NatBadge+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BB817224B9191000617EFC /* NatBadge+Spec.swift */; };
 		26BB817524B9197D00617EFC /* NatBadge+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BB817424B9197D00617EFC /* NatBadge+Snapshot+Tests.swift */; };
@@ -307,6 +319,12 @@
 		0D49BA63C5E5BFEED327C214620A7657 /* Elevations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elevations.swift; sourceTree = "<group>"; };
 		0D6236D4B7FFC5CF049C20642874B068 /* ButtonContainedStyle+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonContainedStyle+Spec.swift"; sourceTree = "<group>"; };
 		0D8BC0D102CE4444401C0469C861358A /* NatFonts+Avon+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatFonts+Avon+Spec.swift"; sourceTree = "<group>"; };
+		0E4741DD24BE4C4100BB96FA /* UIViewController+TitleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+TitleStyle.swift"; sourceTree = "<group>"; };
+		0E7C160124C5D237002FF46F /* UINavigationController+Style+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Style+Spec.swift"; sourceTree = "<group>"; };
+		0E7C160424C5D3C3002FF46F /* UIViewController+Configure+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Configure+Spec.swift"; sourceTree = "<group>"; };
+		0E7C160624C5D6DC002FF46F /* UIBarButtonItem+Icon+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Icon+Spec.swift"; sourceTree = "<group>"; };
+		0E7C160824C5E614002FF46F /* IconViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconViewSpec.swift; sourceTree = "<group>"; };
+		0E7C160A24C61E45002FF46F /* UINavigationController+Configure+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Configure+Spec.swift"; sourceTree = "<group>"; };
 		0F3972A77C0F33A56F5725680D5D3835 /* FontWeights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontWeights.swift; sourceTree = "<group>"; };
 		0FF507003D3035F2C312F8C225D481FC /* ExpansionPanelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpansionPanelTests.swift; sourceTree = "<group>"; };
 		10C54C550ED4D44A309C43261BF40F55 /* NatButton+Height.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+Height.swift"; sourceTree = "<group>"; };
@@ -325,11 +343,17 @@
 		22F7508455AB7040D802941984E62D9D /* NaturaOpacities+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaturaOpacities+Spec.swift"; sourceTree = "<group>"; };
 		2381FCF8210ECD9A4895ECA9ED41B0FB /* PulseLayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseLayerTests.swift; sourceTree = "<group>"; };
 		255B7772A418A4544E0B8F793BEB519D /* UIColor+AsHexString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+AsHexString.swift"; sourceTree = "<group>"; };
+		2625465F24C7379400B98A91 /* StubSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubSelector.swift; sourceTree = "<group>"; };
 		263291D924BCAF24004036C3 /* Badgeable+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Badgeable+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		263291DC24BCB226004036C3 /* BadgeableStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeableStub.swift; sourceTree = "<group>"; };
 		265B17EA24AFA12900FD0407 /* NatBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatBadge.swift; sourceTree = "<group>"; };
 		26740A4824B3A60C00419526 /* NatBadge+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatBadge+Style.swift"; sourceTree = "<group>"; };
 		26740A4A24B3A62F00419526 /* NatBadge+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatBadge+Color.swift"; sourceTree = "<group>"; };
+		268E9C6024C8746B006D6142 /* AppBar+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppBar+Snapshot+Tests.swift"; sourceTree = "<group>"; };
+		269C886124C23B0100A507BE /* UINavigationController+Configure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Configure.swift"; sourceTree = "<group>"; };
+		269C886324C2456B00A507BE /* UINavigationController+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Style.swift"; sourceTree = "<group>"; };
+		269C886524C2480800A507BE /* UIViewController+Configure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Configure.swift"; sourceTree = "<group>"; };
+		269C886724C2483600A507BE /* UIBarButtonItem+Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Icon.swift"; sourceTree = "<group>"; };
 		26BB817224B9191000617EFC /* NatBadge+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatBadge+Spec.swift"; sourceTree = "<group>"; };
 		26BB817424B9197D00617EFC /* NatBadge+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatBadge+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		26BB817624B931E900617EFC /* NatBadge+Color+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatBadge+Color+Spec.swift"; sourceTree = "<group>"; };
@@ -633,6 +657,30 @@
 			path = Branding;
 			sourceTree = "<group>";
 		};
+		0E3F578D24B8E9C8004B2F9E /* AppBar */ = {
+			isa = PBXGroup;
+			children = (
+				0E4741DD24BE4C4100BB96FA /* UIViewController+TitleStyle.swift */,
+				269C886124C23B0100A507BE /* UINavigationController+Configure.swift */,
+				269C886724C2483600A507BE /* UIBarButtonItem+Icon.swift */,
+				269C886524C2480800A507BE /* UIViewController+Configure.swift */,
+				269C886324C2456B00A507BE /* UINavigationController+Style.swift */,
+			);
+			path = AppBar;
+			sourceTree = "<group>";
+		};
+		0E7C160024C5D214002FF46F /* AppBar */ = {
+			isa = PBXGroup;
+			children = (
+				2625465E24C7378300B98A91 /* Stub */,
+				0E7C160124C5D237002FF46F /* UINavigationController+Style+Spec.swift */,
+				0E7C160424C5D3C3002FF46F /* UIViewController+Configure+Spec.swift */,
+				0E7C160624C5D6DC002FF46F /* UIBarButtonItem+Icon+Spec.swift */,
+				0E7C160A24C61E45002FF46F /* UINavigationController+Configure+Spec.swift */,
+			);
+			path = AppBar;
+			sourceTree = "<group>";
+		};
 		12097409E99458B51C9B5F2FEF8C5BE8 /* Branding */ = {
 			isa = PBXGroup;
 			children = (
@@ -668,6 +716,7 @@
 				84A818BC24B784EA0007C7D5 /* NatShortcut+Snapshot+Tests.swift */,
 				263291D924BCAF24004036C3 /* Badgeable+Snapshot+Tests.swift */,
 				26BB817424B9197D00617EFC /* NatBadge+Snapshot+Tests.swift */,
+				268E9C6024C8746B006D6142 /* AppBar+Snapshot+Tests.swift */,
 			);
 			path = SnapShot;
 			sourceTree = "<group>";
@@ -727,6 +776,14 @@
 				307E705878C6A3A88E39CDC82B799361 /* ViewStyle.swift */,
 			);
 			path = ViewStyling;
+			sourceTree = "<group>";
+		};
+		2625465E24C7378300B98A91 /* Stub */ = {
+			isa = PBXGroup;
+			children = (
+				2625465F24C7379400B98A91 /* StubSelector.swift */,
+			);
+			path = Stub;
 			sourceTree = "<group>";
 		};
 		263291DB24BCB20D004036C3 /* Stub */ = {
@@ -1241,6 +1298,7 @@
 		8959EC82EF195A60EF12AFDC0F9CFE75 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				0E7C160024C5D214002FF46F /* AppBar */,
 				26BB817124B918FB00617EFC /* Badge */,
 				9A5EB6FB21BA40B6C21C650900AF7CA2 /* Bar */,
 				37C041B132E91C20059E887D83DD7E4E /* Button */,
@@ -1284,6 +1342,7 @@
 			isa = PBXGroup;
 			children = (
 				265B17E924AFA0DA00FD0407 /* Badge */,
+				0E3F578D24B8E9C8004B2F9E /* AppBar */,
 				AAA7C27FE8E04EF2103505C58C128D34 /* Bar */,
 				F39AE9E5CB68E8C7A269525355E8E4D3 /* Button */,
 				78FE21C8815B7AED38811BF6BEB37BF0 /* Dialog */,
@@ -1521,6 +1580,7 @@
 				AE41CCB3978D56C1CB091FFBF9B03AF7 /* IconTests.swift */,
 				0B29FF4C598F8297E81A6B6A82ACA4F9 /* IconViewTests.swift */,
 				5D67F65D9E72160E498FBA256C62159F /* IllustrationIconsTests.swift */,
+				0E7C160824C5E614002FF46F /* IconViewSpec.swift */,
 			);
 			path = Icons;
 			sourceTree = "<group>";
@@ -1969,6 +2029,7 @@
 				7A4EA58751A4005CDC8869389680036B /* AvonOpacities+Spec.swift in Sources */,
 				557B42D36C536AF16BD53225A006AB29 /* AvonSizes+Spec.swift in Sources */,
 				F56784241784E8788555902BAF0623C5 /* AvonSpacing+Spec.swift in Sources */,
+				0E7C160524C5D3C3002FF46F /* UIViewController+Configure+Spec.swift in Sources */,
 				83FB15E1B8B7F6D80B9226B2A75567DC /* AvonThemeSpec.swift in Sources */,
 				1A30D78CDFD9F95DDAFF61EDF612261D /* ButtonContainedStyle+Spec.swift in Sources */,
 				521AFD7AFA9579A0A57971504ABE7145 /* ButtonOutlinedStyle+Spec.swift in Sources */,
@@ -1980,9 +2041,11 @@
 				24A65D792FD25FA06DEACBD91A7E04A3 /* ColorsTests.swift in Sources */,
 				9ED0B11B243051C089AA8FDCB7F8CA3B /* ContainedButtonTests.swift in Sources */,
 				84B9330824AB788E00B71BD4 /* NatDialogDismissableConfigurable+Spec.swift in Sources */,
+				0E7C160324C5D274002FF46F /* UINavigationController+Style+Spec.swift in Sources */,
 				7392D4960D4A13B6ADF3AB7372B264F5 /* DesignSystem+Spec.swift in Sources */,
 				1A59055F415CB4058DA88A823383FBC9 /* DividerTests.swift in Sources */,
 				705A576866667D11B1D05EBB709BCC00 /* DynamicColorFactory+Spec.swift in Sources */,
+				0E7C160924C5E614002FF46F /* IconViewSpec.swift in Sources */,
 				91A18CB3646844B3C0EF8924AF376ACD /* DynamicColors+Spec.swift in Sources */,
 				5C3B779F94FC59E1F2329996E3E55DF5 /* ElevationAttributes+Equitable.swift in Sources */,
 				291A2ABAA2039E539F7E45F394B8529D /* ExpansionPanel+MarginTests.swift in Sources */,
@@ -2043,6 +2106,7 @@
 				525A8C62B68D8C9B0AC882318792D04C /* Pulsable+Spec.swift in Sources */,
 				C24255D434C838206493D9A89581F7C1 /* PulseContainerLayer+Spec.swift in Sources */,
 				3D8762A06C970677D223A561419340A9 /* PulseLayerTests.swift in Sources */,
+				0E7C160B24C61E45002FF46F /* UINavigationController+Configure+Spec.swift in Sources */,
 				A0328AF2000431B6155A5A6CD94B1835 /* ReusableViewTests.swift in Sources */,
 				46A73ED2AC6774550A3F2D82CCE8BAF7 /* SearchBar.swift in Sources */,
 				84B9330E24ABC6D200B71BD4 /* NatDialogCustomBodyConfigurable+Spec.swift in Sources */,
@@ -2053,6 +2117,7 @@
 				ECF18B7FA2F5A22C0F919BBBE58FF611 /* TabDelegateMock.swift in Sources */,
 				84A818BD24B784EA0007C7D5 /* NatShortcut+Snapshot+Tests.swift in Sources */,
 				6231AEE531E549E406745A37170FC719 /* TabItemViewDelegateMock.swift in Sources */,
+				0E7C160724C5D6DC002FF46F /* UIBarButtonItem+Icon+Spec.swift in Sources */,
 				26BB817324B9191000617EFC /* NatBadge+Spec.swift in Sources */,
 				D23F82EE5C3333FD06E87016848DCD37 /* TabItemViewTests.swift in Sources */,
 				5C5DF89CCAB72EC25E1A1BC43D450CB0 /* TabTests.swift in Sources */,
@@ -2069,6 +2134,7 @@
 				84B9331124ACF28400B71BD4 /* NotificationCenterSpy.swift in Sources */,
 				CA236A066D3EBA4E8E13CC4DD6A2A40D /* TheBodyShopFont+Spec.swift in Sources */,
 				82883672709B4F62F288ADD68528D460 /* TheBodyShopFontLetterSpacings+Spec.swift in Sources */,
+				268E9C6124C8746B006D6142 /* AppBar+Snapshot+Tests.swift in Sources */,
 				BF60ADF4759C13689B2FF740FBC0A4AE /* TheBodyShopFontSizes+Spec.swift in Sources */,
 				527DF39CAC1D19BFACC191CC02D66346 /* TheBodyShopFontWeights+Spec.swift in Sources */,
 				84BC900E24AA16EF007DF09D /* DialogStyle+Spec.swift in Sources */,
@@ -2089,6 +2155,7 @@
 				1FBF5A52B03E9E219462A06F9487D3B4 /* ValueTextHighlightTests.swift in Sources */,
 				1734E4583B85C0197E0AC6F1CE877ADC /* ViewAnimatingMock.swift in Sources */,
 				84B9330A24ABC38C00B71BD4 /* NatDialogTitleConfigurable+Spec.swift in Sources */,
+				2625466124C7379800B98A91 /* StubSelector.swift in Sources */,
 				E4B171E23C40B91B211DB2F64357778D /* ViewStyle+Spec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2134,6 +2201,7 @@
 				7CA6BAC353B73AF5D31F09CAF0268EE5 /* DesignSystemFatalError.swift in Sources */,
 				8F808FFBB4549BC4F3895B8CBB23ADB3 /* Divider.swift in Sources */,
 				84BC900524AA163A007DF09D /* DialogFooterView.swift in Sources */,
+				269C886824C2483600A507BE /* UIBarButtonItem+Icon.swift in Sources */,
 				4BDEB19DC31DEB91FAB5CC161B159FA7 /* DynamicColorFactory.swift in Sources */,
 				A0A9D4F59612E12F2A8B878133B8289A /* DynamicColors.swift in Sources */,
 				6D4DFEB09D32E1F36B9FA29904AE1ED8 /* ElevationAttributes.swift in Sources */,
@@ -2147,6 +2215,7 @@
 				84BF066724B4A8DA00462AC5 /* ShortcutContainedStyle.swift in Sources */,
 				18B9F28B461F8F6294ABA51229BA2385 /* Font.swift in Sources */,
 				758EE01159A6E7AFC7217055678D4ED3 /* FontIconStyle.swift in Sources */,
+				269C886224C23B0100A507BE /* UINavigationController+Configure.swift in Sources */,
 				ABAA902E9332B77F192D5EF948B5E88E /* FontLetterSpacings.swift in Sources */,
 				288891838FD58A93C7A7CC39277932E8 /* FontSizes.swift in Sources */,
 				F01F3CA72313B3C97F42498878234A82 /* FontStyle.swift in Sources */,
@@ -2158,6 +2227,7 @@
 				7FCD65E56A79CE1AE08A4C86B8DC1303 /* Icon.swift in Sources */,
 				F72BEF338B46182BC440C92CCF3D02B0 /* IconView.swift in Sources */,
 				5737265E1EA6FD9BF1004F1CC1333F29 /* IllustrationIcons.swift in Sources */,
+				0E4741DE24BE4C4100BB96FA /* UIViewController+TitleStyle.swift in Sources */,
 				1908219397D007DC35BC0F99D5DEDE80 /* NSMutableAttributedString+Builder.swift in Sources */,
 				CF14752D6F385AD399A59F275DEB1ED7 /* NatBorderRadius.swift in Sources */,
 				F6B6FF5891E1F871748A9D598EA14AFE /* NatButton+EdgeInsets.swift in Sources */,
@@ -2194,6 +2264,7 @@
 				841FEABA24C5C1A100C50AFF /* NatLogoImages.swift in Sources */,
 				B16B10A0AA533EF36343B6B8A4AE4DA0 /* NavigationDrawerItemCell.swift in Sources */,
 				A096BCFF55DBEF25B29C30C1537210D5 /* NavigationDrawerSubitemCell.swift in Sources */,
+				269C886424C2456B00A507BE /* UINavigationController+Style.swift in Sources */,
 				38ACA8E49786402581AA78B85DAE6CA7 /* Opacities.swift in Sources */,
 				9D4FF6FB92A6A5BD0AF263A69FF707E4 /* Pulsable.swift in Sources */,
 				E4FCC8108D5F57339F6297CDD676F8DF /* PulseContainerLayer.swift in Sources */,
@@ -2227,6 +2298,7 @@
 				37953EE81D12EA2376E8C56E16BC4A29 /* UIColor+Hex.swift in Sources */,
 				56B51E3D524A0D2900D7DD3E6CC761E7 /* UIFont+Icon.swift in Sources */,
 				6C6CB092994DB60C83AC24F93B0F4E49 /* UITableView+Reusable.swift in Sources */,
+				269C886624C2480800A507BE /* UIViewController+Configure.swift in Sources */,
 				93B1D8CFBB1420174B310CC4906AA2EF /* UIView+Frame.swift in Sources */,
 				3A50A52D23FB5E21A70E4FBB1063381A /* ValidateTheme.swift in Sources */,
 				77C55B339CA403354D76ABF05E283D5A /* ValueTextHighlight.swift in Sources */,

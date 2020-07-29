@@ -1,7 +1,7 @@
 import UIKit
 import NatDS
 
-class AppBarViewController: UIViewController, SampleItem {
+class AppSearchBarViewController: UIViewController, SampleItem {
     static var name: String = "Search Bar"
 
     private lazy var appSearchBar: SearchBar = {
