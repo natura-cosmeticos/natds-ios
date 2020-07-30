@@ -37,3 +37,25 @@ Commitizen will guide you about how to structure you commit
 - Ruby 2.6.5
 - Bundler
 - [Git-LFS](https://git-lfs.github.com/)
+
+---
+## Before open the project ##
+  Installing dependencies:
+
+1. Install project dependencies:
+   ```
+   make setup
+   ```
+3. ## Natura employees only:
+   OBS: Before execute this line, call System Team to request required credentials.
+
+   ```
+   make install_certificates
+   ```
+
+4. Done! Open project on Xcode using _.xcworkspace_
+
+---
+
+## Sample
+We have provided a sample project in the repository. To use it download the repo, run pod install to download the required libraries and open NatDS.xcworkspace. You'll see two schemes: NatDS and NatDS-SampleApp - select the NatDS-Sample and then build & run! Source files for these are in the NatDS-SamppleApp/Sources directory in project navigator.
