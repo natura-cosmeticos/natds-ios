@@ -21,4 +21,5 @@ excluded_words:
   - NaturaCosmeticos
   - objc
   - pbxproj
+  - sut
   - xcassets
