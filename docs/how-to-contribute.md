@@ -3,7 +3,9 @@
 Are you feeling that you can help us with anything in the project? Just get closer!!
 
 There are many ways to contribute, check some of them:
+
 ## Do you want add something in the project? Just create a PR
+
 We will review your PR, checking some criteria and if everything is fine, a new version of the lib will be publish with your contribution ASAP!
 
 ### Commits structure
@@ -18,13 +20,17 @@ There are many other types that you can use to tag your commits: build:, chore:,
 [here you can find more info about it](https://www.conventionalcommits.org/en/v1.0.0/).
 
 #### Tool to help:
+
 You can add an CLI to help you writing your commits. [Commitizen](https://github.com/commitizen/cz-cli) is the tool we use :)
 
 ##### Install the CLI
+
 ```bash
 npm install -g commitizen
 ```
+
 ###### Do your work and commit
+
 ```bash
 git add .
 git cz
@@ -33,6 +39,7 @@ git cz
 Commitizen will guide you about how to structure you commit
 
 ## Dependencies
+
 - Xcode 11.6+
 - Homebrew
 - Ruby 2.6.5
@@ -41,6 +48,7 @@ Commitizen will guide you about how to structure you commit
 
 ---
 ## Before open the project ##
+
   Installing dependencies:
 
 1. Install project dependencies:
@@ -59,4 +67,5 @@ Commitizen will guide you about how to structure you commit
 ---
 
 ## Sample
+
 We have provided a sample project in the repository. To use it, download the repository, run `pod install` to download the required libraries and open NatDS.xcworkspace. You'll see two schemes: NatDS and NatDS-SampleApp - select the NatDS-SampleApp and then build & run! Source files for these are in the NatDS-SampleApp/Sources directory in project navigator.
