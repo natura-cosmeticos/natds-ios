@@ -5,10 +5,12 @@
 
 
 ## What for
+
 Library with iOS components defined by [Natura Group Design System Team](https://zeroheight.com/08f80f4e1/p/335165-natds--natura-design-system).
 
 
 ## Tech Stack
+
 - __Swift 5__
 - Supports iOS __10__ to __13__
 - CocoaPods
@@ -44,7 +46,9 @@ $ pod install
 ```
 
 ### Getting Started
-[Start using our lib](doc/getting-started.md).
+
+[Start using our lib](docs/getting-started.md).
 
 ## How to contribute
-[Help us to grow!](doc/how-to-contribute.md)
+
+[Help us to grow!](docs/how-to-contribute.md)
