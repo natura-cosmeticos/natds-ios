@@ -5,57 +5,50 @@
 
 
 ## What for
-Library with iOS components defined by [Natura Group Design System Team](https://zeroheight.com/25ddaa7f8/p/07a27e).
+
+Library with iOS components defined by [Natura Group Design System Team](https://zeroheight.com/08f80f4e1/p/335165-natds--natura-design-system).
 
 
 ## Tech Stack
+
 - __Swift 5__
-- Supports iOS __9__ to __13__
+- Supports iOS __10__ to __13__
 - CocoaPods
 - Fastlane
 - Bitrise (CI)
 - Travis (CI)
 - Git-LFS (https://git-lfs.github.com/)
 - Swiftlint
+-
 
-## Dependecies
-- [Xcode 11.3](https://download.developer.apple.com/Developer_Tools/Xcode_11.3/Xcode_11.3.xip)
-- Homebrew
-- Ruby 2.6.5
-- Bundler
-- [Git-LFS](https://git-lfs.github.com/)
+### How to Install
 
----
-## Before open the project ##
-  Intalling dependencies:
+### CocoaPods
 
-1. Install project dependencies:  
-   ```
-   make setup
-   ```
-3. ## Natura employees only:  
-   OBS: Before execute this line, call System Team to request requiried credentials.
+[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
 
-   ```
-   make install_certificates
-   ```  
-
-4. Done! Open project on Xcode using _.xcworkspace_
-
----
-
-### Using CocoaPods
-
-Add the following line to your Podfile:
-```ruby
-  pod 'NatDS'
+```bash
+$ gem install cocoapods
 ```
 
-## Sample
-We have provided a sample project in the repository. To use it download the repo, run pod install to download the required libraries and open NatDS.xcworkspace. You'll see two schemes: NatDS and NatDS-SampleApp - select the NatDS-Sample and then build & run! Source files for these are in the NatDS-SamppleApp/Sources directory in project navigator.
+To integrate NatDS into your Xcode project using CocoaPods, specify it in your `Podfile`:
+
+```ruby
+target '<Your Target Name>' do
+    pod 'NatDS'
+end
+```
+
+Then, run the following command:
+
+```bash
+$ pod install
+```
+
+### Getting Started
+
+[Start using our lib](docs/getting-started.md).
 
 ## How to contribute
-You can contribute submitting [pull requests](https://github.com/natura-cosmeticos/natds-ios/pulls).
 
-### Automated Tests
-- We are using screenshot tests with [iOSSnapshotTestCase](https://github.com/uber/ios-snapshot-test-case) to validate our built components state, color and behavior.
+[Help us to grow!](docs/how-to-contribute.md)
