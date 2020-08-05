@@ -1,8 +1,9 @@
-import FBSnapshotTestCase
+import XCTest
+import SnapshotTesting
 
 @testable import NatDS
 
-class NatShortcutSnapshotTests: FBSnapshotTestCase {
+final class NatShortcutSnapshotTests: XCTestCase {
     var superview: UIView!
 
     override func setUp() {
@@ -21,7 +22,7 @@ class NatShortcutSnapshotTests: FBSnapshotTestCase {
 
         superview.addSubview(systemUnderTest)
 
-        FBSnapshotVerifyView(superview)
+        assertSnapshot(matching: superview, as: .image)
     }
 
     func test_shortcut_style_contained_default_hasValidSnapshot() {
@@ -31,7 +32,7 @@ class NatShortcutSnapshotTests: FBSnapshotTestCase {
 
         superview.addSubview(systemUnderTest)
 
-        FBSnapshotVerifyView(superview)
+        assertSnapshot(matching: superview, as: .image)
     }
 
     func test_shortcut_style_outlined_primary_hasValidSnapshot() {
@@ -41,7 +42,7 @@ class NatShortcutSnapshotTests: FBSnapshotTestCase {
 
         superview.addSubview(systemUnderTest)
 
-        FBSnapshotVerifyView(superview)
+        assertSnapshot(matching: superview, as: .image)
     }
 
     func test_shortcut_style_outlined_default_hasValidSnapshot() {
@@ -51,6 +52,6 @@ class NatShortcutSnapshotTests: FBSnapshotTestCase {
 
         superview.addSubview(systemUnderTest)
 
-        FBSnapshotVerifyView(superview)
+        assertSnapshot(matching: superview, as: .image)
     }
 }

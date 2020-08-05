@@ -3,7 +3,7 @@ import SnapshotTesting
 
 @testable import NatDS
 
-class NatDialogControllerSnapshotTests: XCTestCase {
+final class NatDialogControllerSnapshotTests: XCTestCase {
     var superview: UIView!
 
     override func setUp() {
