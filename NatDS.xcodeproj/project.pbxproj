@@ -52,7 +52,6 @@
 		265B17EB24AFA12900FD0407 /* NatBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265B17EA24AFA12900FD0407 /* NatBadge.swift */; };
 		26740A4924B3A60C00419526 /* NatBadge+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26740A4824B3A60C00419526 /* NatBadge+Style.swift */; };
 		26740A4B24B3A62F00419526 /* NatBadge+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26740A4A24B3A62F00419526 /* NatBadge+Color.swift */; };
-		268E9C6124C8746B006D6142 /* AppBar+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E9C6024C8746B006D6142 /* AppBar+Snapshot+Tests.swift */; };
 		269C886224C23B0100A507BE /* UINavigationController+Configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269C886124C23B0100A507BE /* UINavigationController+Configure.swift */; };
 		269C886424C2456B00A507BE /* UINavigationController+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269C886324C2456B00A507BE /* UINavigationController+Style.swift */; };
 		269C886624C2480800A507BE /* UIViewController+Configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269C886524C2480800A507BE /* UIViewController+Configure.swift */; };
@@ -164,6 +163,7 @@
 		84391DE224DB1B8B009D0BE8 /* NatDS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17433A27D62633345ECA245C99114C15 /* NatDS.framework */; };
 		84391DE824DB1C67009D0BE8 /* NatDialogController+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D557EC044D85EC418D42A00C93EEC23D /* NatDialogController+Snapshot+Tests.swift */; };
 		84391DEA24DB477F009D0BE8 /* NatShortcut+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A818BC24B784EA0007C7D5 /* NatShortcut+Snapshot+Tests.swift */; };
+		84391DED24DB5C1F009D0BE8 /* AppBar+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E9C6024C8746B006D6142 /* AppBar+Snapshot+Tests.swift */; };
 		844A1E2324AE117400E93AD9 /* NatShortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A1E2224AE117400E93AD9 /* NatShortcut.swift */; };
 		8475413524B542170071E884 /* NatShortcut+Widths+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475413424B542170071E884 /* NatShortcut+Widths+Spec.swift */; };
 		84A818BB24B77FA80007C7D5 /* UIGestureRecognizer+SendGesturesEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A818BA24B77FA80007C7D5 /* UIGestureRecognizer+SendGesturesEvent.swift */; };
@@ -739,7 +739,6 @@
 			children = (
 				263291D924BCAF24004036C3 /* Badgeable+Snapshot+Tests.swift */,
 				26BB817424B9197D00617EFC /* NatBadge+Snapshot+Tests.swift */,
-				268E9C6024C8746B006D6142 /* AppBar+Snapshot+Tests.swift */,
 			);
 			path = SnapShot;
 			sourceTree = "<group>";
@@ -1219,8 +1218,9 @@
 		84391DDE24DB1B8B009D0BE8 /* NatDSSnapShotTests */ = {
 			isa = PBXGroup;
 			children = (
-				84391DEB24DB4784009D0BE8 /* ShortCut */,
+				84391DEC24DB5AE6009D0BE8 /* AppBar */,
 				84391DE924DB275E009D0BE8 /* Dialog */,
+				84391DEB24DB4784009D0BE8 /* ShortCut */,
 				84391DDF24DB1B8B009D0BE8 /* NatDSSnapShotTests.swift */,
 				84391DE124DB1B8B009D0BE8 /* Info.plist */,
 			);
@@ -1241,6 +1241,14 @@
 				84A818BC24B784EA0007C7D5 /* NatShortcut+Snapshot+Tests.swift */,
 			);
 			path = ShortCut;
+			sourceTree = "<group>";
+		};
+		84391DEC24DB5AE6009D0BE8 /* AppBar */ = {
+			isa = PBXGroup;
+			children = (
+				268E9C6024C8746B006D6142 /* AppBar+Snapshot+Tests.swift */,
+			);
+			path = AppBar;
 			sourceTree = "<group>";
 		};
 		844A1E2124AE111D00E93AD9 /* Shortcut */ = {
@@ -2258,7 +2266,6 @@
 				84B9331124ACF28400B71BD4 /* NotificationCenterSpy.swift in Sources */,
 				CA236A066D3EBA4E8E13CC4DD6A2A40D /* TheBodyShopFont+Spec.swift in Sources */,
 				82883672709B4F62F288ADD68528D460 /* TheBodyShopFontLetterSpacings+Spec.swift in Sources */,
-				268E9C6124C8746B006D6142 /* AppBar+Snapshot+Tests.swift in Sources */,
 				BF60ADF4759C13689B2FF740FBC0A4AE /* TheBodyShopFontSizes+Spec.swift in Sources */,
 				527DF39CAC1D19BFACC191CC02D66346 /* TheBodyShopFontWeights+Spec.swift in Sources */,
 				84BC900E24AA16EF007DF09D /* DialogStyle+Spec.swift in Sources */,
@@ -2436,6 +2443,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84391DEA24DB477F009D0BE8 /* NatShortcut+Snapshot+Tests.swift in Sources */,
+				84391DED24DB5C1F009D0BE8 /* AppBar+Snapshot+Tests.swift in Sources */,
 				84391DE024DB1B8B009D0BE8 /* NatDSSnapShotTests.swift in Sources */,
 				84391DE824DB1C67009D0BE8 /* NatDialogController+Snapshot+Tests.swift in Sources */,
 			);
