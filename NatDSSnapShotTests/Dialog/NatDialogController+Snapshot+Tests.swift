@@ -1,15 +1,17 @@
-import FBSnapshotTestCase
+import XCTest
+import SnapshotTesting
 
 @testable import NatDS
 
-class NatDialogControllerSnapshotTests: FBSnapshotTestCase {
+class NatDialogControllerSnapshotTests: XCTestCase {
     var superview: UIView!
 
     override func setUp() {
         super.setUp()
 
-        superview = UIView(frame: CGRect(x: 0, y: 0, width: 380, height: 600))
+        superview = .init(frame: .init(x: 0, y: 0, width: 375, height: 600))
         superview.backgroundColor = .white
+
         DesignSystem().configure(with: .natura)
 
     }
@@ -19,7 +21,7 @@ class NatDialogControllerSnapshotTests: FBSnapshotTestCase {
 
         superview.addSubview(systemUnderTest.view)
 
-        FBSnapshotVerifyView(superview)
+        assertSnapshot(matching: superview, as: .image)
     }
 
     func test_dialog_style_standard_hasValidSnapshot() {
@@ -33,7 +35,7 @@ class NatDialogControllerSnapshotTests: FBSnapshotTestCase {
 
         superview.addSubview(systemUnderTest.view)
 
-        FBSnapshotVerifyView(superview)
+        assertSnapshot(matching: superview, as: .image)
     }
 
     func test_dialog_style_standard_without_title_hasValidSnapshot() {
@@ -46,7 +48,7 @@ class NatDialogControllerSnapshotTests: FBSnapshotTestCase {
 
         superview.addSubview(systemUnderTest.view)
 
-        FBSnapshotVerifyView(superview)
+        assertSnapshot(matching: superview, as: .image)
     }
 
     func test_dialog_style_standard_with_vertical_buttons_hasValidSnapshot() {
@@ -60,7 +62,7 @@ class NatDialogControllerSnapshotTests: FBSnapshotTestCase {
 
         superview.addSubview(systemUnderTest.view)
 
-        FBSnapshotVerifyView(superview)
+        assertSnapshot(matching: superview, as: .image)
     }
 
     func test_dialog_style_standard_with_title_hasValidSnapshot() {
@@ -74,7 +76,7 @@ class NatDialogControllerSnapshotTests: FBSnapshotTestCase {
 
         superview.addSubview(systemUnderTest.view)
 
-        FBSnapshotVerifyView(superview)
+        assertSnapshot(matching: superview, as: .image)
     }
 
     func test_dialog_style_alert_hasValidSnapshot() {
@@ -87,7 +89,7 @@ class NatDialogControllerSnapshotTests: FBSnapshotTestCase {
 
         superview.addSubview(systemUnderTest.view)
 
-        FBSnapshotVerifyView(superview)
+        assertSnapshot(matching: superview, as: .image)
     }
 
     func test_dialog_style_alert_with_vertical_buttons_hasValidSnapshot() {
@@ -100,6 +102,6 @@ class NatDialogControllerSnapshotTests: FBSnapshotTestCase {
 
         superview.addSubview(systemUnderTest.view)
 
-        FBSnapshotVerifyView(superview)
+        assertSnapshot(matching: superview, as: .image)
     }
 }

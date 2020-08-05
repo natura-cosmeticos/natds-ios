@@ -11,3 +11,8 @@ target 'NatDSTests' do
   use_frameworks!
   test_pod
 end
+
+target 'NatDSSnapShotTests' do
+  use_frameworks!
+  pod 'SnapshotTesting'
+end

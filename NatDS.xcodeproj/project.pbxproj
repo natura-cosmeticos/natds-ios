@@ -160,6 +160,9 @@
 		841DC30AC5612DDD81C8175BCFF4507E /* AvonFontSizes+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C94FCAA23AB699A4926C6B8E598C6 /* AvonFontSizes+Spec.swift */; };
 		841FEABA24C5C1A100C50AFF /* NatLogoImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841FEAB924C5C1A100C50AFF /* NatLogoImages.swift */; };
 		841FEABC24C5CD6A00C50AFF /* NatLogoImages+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841FEABB24C5CD6A00C50AFF /* NatLogoImages+Spec.swift */; };
+		84391DE024DB1B8B009D0BE8 /* NatDSSnapShotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84391DDF24DB1B8B009D0BE8 /* NatDSSnapShotTests.swift */; };
+		84391DE224DB1B8B009D0BE8 /* NatDS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17433A27D62633345ECA245C99114C15 /* NatDS.framework */; };
+		84391DE824DB1C67009D0BE8 /* NatDialogController+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D557EC044D85EC418D42A00C93EEC23D /* NatDialogController+Snapshot+Tests.swift */; };
 		844A1E2324AE117400E93AD9 /* NatShortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A1E2224AE117400E93AD9 /* NatShortcut.swift */; };
 		8475413524B542170071E884 /* NatShortcut+Widths+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475413424B542170071E884 /* NatShortcut+Widths+Spec.swift */; };
 		84A818BB24B77FA80007C7D5 /* UIGestureRecognizer+SendGesturesEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A818BA24B77FA80007C7D5 /* UIGestureRecognizer+SendGesturesEvent.swift */; };
@@ -223,6 +226,7 @@
 		A19D6F5A3F2F85158D4D5B1BD0F60417 /* IconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE41CCB3978D56C1CB091FFBF9B03AF7 /* IconTests.swift */; };
 		A3A86E5E58592409B35198B154FA7A49 /* StubLightColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022E7CE82BB807D156D9AE482A117976 /* StubLightColorPalette.swift */; };
 		A6327B5D03ADF2ACEBF5DB1F62E69C52 /* NaturaColorPaletteLight+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A4F347B360D8AB2AAC25D4CEA0169A /* NaturaColorPaletteLight+Spec.swift */; };
+		A7FA51D049147DE098A2D1EB /* Pods_NatDSSnapShotTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD8F16712FE1A5C351E09A1 /* Pods_NatDSSnapShotTests.framework */; };
 		AA1F5760B92801C89E927B323F7691B7 /* NatButton+Height+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8DC06D81E2DEFAF54C74410DAD95D8 /* NatButton+Height+Spec.swift */; };
 		AA2218A08849224F57943C49A7CE3DDA /* AvonFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72809614C87697C6EAF138E246F4C55 /* AvonFont.swift */; };
 		AAA3820978AE27C3A6ED940916227C9D /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759689DD6C3696C4726646B8356D3B4D /* TabItemView.swift */; };
@@ -277,7 +281,6 @@
 		ECA4CB7769FB08CB62C5F8CD79EE6521 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA6561EEF13B1CE57B6CE00222286CB /* ReusableView.swift */; };
 		ECDFAB69C926EDC613B5464C8EEFF85D /* NavigationDrawerSubitemCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9C4251076A01537D0A8CB995DF81EC /* NavigationDrawerSubitemCellTests.swift */; };
 		ECF18B7FA2F5A22C0F919BBBE58FF611 /* TabDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA17128B21436681D0D607C145E56E2 /* TabDelegateMock.swift */; };
-		ED7E10535BEAE482689A78C1B6184C55 /* NatDialogController+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D557EC044D85EC418D42A00C93EEC23D /* NatDialogController+Snapshot+Tests.swift */; };
 		EE1E7A9F49A18BCD194E0C03FB2F0074 /* ViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307E705878C6A3A88E39CDC82B799361 /* ViewStyle.swift */; };
 		F01F3CA72313B3C97F42498878234A82 /* FontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C1C3FD73F0E5F31735966CB48D7B16 /* FontStyle.swift */; };
 		F53456A828AC4A581E5F0DD6451BCD0A /* TheBodyShopFontWeights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F36582C40F1A58052F011027DBD753B /* TheBodyShopFontWeights.swift */; };
@@ -295,6 +298,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		84391DE324DB1B8B009D0BE8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 36C3D511769B0C048CF47BC3D975C8A0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F49E39B57E86C6597B624106BE14A13E;
+			remoteInfo = NatDS;
+		};
 		E35D44E67B83B19A493C4A863C46BAFA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 36C3D511769B0C048CF47BC3D975C8A0 /* Project object */;
@@ -375,6 +385,7 @@
 		331DF6EE1E7134B054C23EC492276E71 /* ConfigurationStorable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationStorable.swift; sourceTree = "<group>"; };
 		33688D8CB5F9DEC8813BA9C3F4425D76 /* NatDSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NatDSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33B948F0346A1813FB982C1DB5F0DC89 /* DynamicColors+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DynamicColors+Spec.swift"; sourceTree = "<group>"; };
+		34C351B9D855FD2B32E29833 /* Pods-NatDSSnapShotTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatDSSnapShotTests.release.xcconfig"; path = "Target Support Files/Pods-NatDSSnapShotTests/Pods-NatDSSnapShotTests.release.xcconfig"; sourceTree = "<group>"; };
 		36B6CEC817D03194414588BB22C1833A /* UICollectionView+ReusableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+ReusableTests.swift"; sourceTree = "<group>"; };
 		37416A32D8AD942A180B5FDF1A82192B /* NatSizes+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatSizes+Spec.swift"; sourceTree = "<group>"; };
 		38DAA7E13F0D9435753C08228E164289 /* AssetsHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsHelperTests.swift; sourceTree = "<group>"; };
@@ -442,6 +453,9 @@
 		83C59F929E88764313134A046BA5C30F /* DesignSystem+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DesignSystem+Spec.swift"; sourceTree = "<group>"; };
 		841FEAB924C5C1A100C50AFF /* NatLogoImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatLogoImages.swift; sourceTree = "<group>"; };
 		841FEABB24C5CD6A00C50AFF /* NatLogoImages+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatLogoImages+Spec.swift"; sourceTree = "<group>"; };
+		84391DDD24DB1B8B009D0BE8 /* NatDSSnapShotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NatDSSnapShotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84391DDF24DB1B8B009D0BE8 /* NatDSSnapShotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatDSSnapShotTests.swift; sourceTree = "<group>"; };
+		84391DE124DB1B8B009D0BE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		844A1E2224AE117400E93AD9 /* NatShortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatShortcut.swift; sourceTree = "<group>"; };
 		8475413424B542170071E884 /* NatShortcut+Widths+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatShortcut+Widths+Spec.swift"; sourceTree = "<group>"; };
 		847C94FCAA23AB699A4926C6B8E598C6 /* AvonFontSizes+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AvonFontSizes+Spec.swift"; sourceTree = "<group>"; };
@@ -565,6 +579,7 @@
 		DAA3731D183F680F4C79ACD366C2136C /* NaturaFontLetterSpacings+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaturaFontLetterSpacings+Spec.swift"; sourceTree = "<group>"; };
 		DD7122400C6AAB36772A6E365FBD263D /* String+Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Icon.swift"; sourceTree = "<group>"; };
 		DE0ECAE7CBDEFA14BEB1C2BDCC3384DF /* MockStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStorage.swift; sourceTree = "<group>"; };
+		E2274F3C7AE245CDA327DD2C /* Pods-NatDSSnapShotTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatDSSnapShotTests.debug.xcconfig"; path = "Target Support Files/Pods-NatDSSnapShotTests/Pods-NatDSSnapShotTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E46448E79883A4EB8A9416823A01531F /* NatOpacities+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatOpacities+Spec.swift"; sourceTree = "<group>"; };
 		E466D95B01186AA3E08CC793E6014EDF /* AvonSpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvonSpacing.swift; sourceTree = "<group>"; };
 		E541D4660533BA7440D7EAFA3C55D613 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
@@ -576,6 +591,7 @@
 		E99F543F7F6AC44B9A4E1341942EE0E0 /* TabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabTests.swift; sourceTree = "<group>"; };
 		EA6C2225E568F933653803F970EF3103 /* Pods_NatDSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NatDSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB6A44B9A9D7999BD68C1D60499CEF88 /* TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDelegate.swift; sourceTree = "<group>"; };
+		EBD8F16712FE1A5C351E09A1 /* Pods_NatDSSnapShotTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NatDSSnapShotTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC0F5D32B4B46B6C50413BEC01AF4215 /* NatColors+Avon+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatColors+Avon+Spec.swift"; sourceTree = "<group>"; };
 		EC5970C426475EACCF56EF2C12EB450D /* Pods-NatDSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatDSTests.release.xcconfig"; path = "Target Support Files/Pods-NatDSTests/Pods-NatDSTests.release.xcconfig"; sourceTree = "<group>"; };
 		EF0F2CA30F4AA6E3F9B482693C997D55 /* PulseContainerLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseContainerLayer.swift; sourceTree = "<group>"; };
@@ -604,6 +620,15 @@
 			files = (
 				47A806814516D6365DE9967251BA94E8 /* NatDS.framework in Frameworks */,
 				4A59C326E069798EF1B4E61751F3F73D /* Pods_NatDSTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84391DDA24DB1B8B009D0BE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84391DE224DB1B8B009D0BE8 /* NatDS.framework in Frameworks */,
+				A7FA51D049147DE098A2D1EB /* Pods_NatDSSnapShotTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -712,7 +737,6 @@
 		13976EA337BD073D09936248522E409C /* SnapShot */ = {
 			isa = PBXGroup;
 			children = (
-				D557EC044D85EC418D42A00C93EEC23D /* NatDialogController+Snapshot+Tests.swift */,
 				84A818BC24B784EA0007C7D5 /* NatShortcut+Snapshot+Tests.swift */,
 				263291D924BCAF24004036C3 /* Badgeable+Snapshot+Tests.swift */,
 				26BB817424B9197D00617EFC /* NatBadge+Snapshot+Tests.swift */,
@@ -881,6 +905,7 @@
 			isa = PBXGroup;
 			children = (
 				EA6C2225E568F933653803F970EF3103 /* Pods_NatDSTests.framework */,
+				EBD8F16712FE1A5C351E09A1 /* Pods_NatDSSnapShotTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -928,6 +953,7 @@
 			children = (
 				17433A27D62633345ECA245C99114C15 /* NatDS.framework */,
 				33688D8CB5F9DEC8813BA9C3F4425D76 /* NatDSTests.xctest */,
+				84391DDD24DB1B8B009D0BE8 /* NatDSSnapShotTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1043,6 +1069,7 @@
 				3F21990B524A8E12755106BE4A73AB22 /* Products */,
 				A25310B672B899E9AD3D68186E4A1AFA /* Sources */,
 				2A013B73B77FB9B791A5038B2A1998D6 /* Tests */,
+				84391DDE24DB1B8B009D0BE8 /* NatDSSnapShotTests */,
 				84BC8FF724AA120D007DF09D /* Recovered References */,
 			);
 			sourceTree = "<group>";
@@ -1188,6 +1215,24 @@
 				1E59C232A91FF981110D0EB2DE8CBB80 /* NatSpacing+Spec.swift */,
 			);
 			path = DesignTokens;
+			sourceTree = "<group>";
+		};
+		84391DDE24DB1B8B009D0BE8 /* NatDSSnapShotTests */ = {
+			isa = PBXGroup;
+			children = (
+				84391DE924DB275E009D0BE8 /* Dialog */,
+				84391DDF24DB1B8B009D0BE8 /* NatDSSnapShotTests.swift */,
+				84391DE124DB1B8B009D0BE8 /* Info.plist */,
+			);
+			path = NatDSSnapShotTests;
+			sourceTree = "<group>";
+		};
+		84391DE924DB275E009D0BE8 /* Dialog */ = {
+			isa = PBXGroup;
+			children = (
+				D557EC044D85EC418D42A00C93EEC23D /* NatDialogController+Snapshot+Tests.swift */,
+			);
+			path = Dialog;
 			sourceTree = "<group>";
 		};
 		844A1E2124AE111D00E93AD9 /* Shortcut */ = {
@@ -1529,6 +1574,8 @@
 			children = (
 				951DBA41C4F1A24B4EB8567B5CD0878C /* Pods-NatDSTests.debug.xcconfig */,
 				EC5970C426475EACCF56EF2C12EB450D /* Pods-NatDSTests.release.xcconfig */,
+				E2274F3C7AE245CDA327DD2C /* Pods-NatDSSnapShotTests.debug.xcconfig */,
+				34C351B9D855FD2B32E29833 /* Pods-NatDSSnapShotTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -1856,6 +1903,26 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		84391DDC24DB1B8B009D0BE8 /* NatDSSnapShotTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84391DE724DB1B8B009D0BE8 /* Build configuration list for PBXNativeTarget "NatDSSnapShotTests" */;
+			buildPhases = (
+				55594C813E419D407445529B /* [CP] Check Pods Manifest.lock */,
+				84391DD924DB1B8B009D0BE8 /* Sources */,
+				84391DDA24DB1B8B009D0BE8 /* Frameworks */,
+				84391DDB24DB1B8B009D0BE8 /* Resources */,
+				EBEDB299301627A88D82165A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84391DE424DB1B8B009D0BE8 /* PBXTargetDependency */,
+			);
+			name = NatDSSnapShotTests;
+			productName = NatDSSnapShotTests;
+			productReference = 84391DDD24DB1B8B009D0BE8 /* NatDSSnapShotTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B5A3069809DD9E998F7671EF5F1BAE1C /* NatDSTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4362247C7D260F44FF1BDDF69AA10A47 /* Build configuration list for PBXNativeTarget "NatDSTests" */;
@@ -1901,9 +1968,13 @@
 		36C3D511769B0C048CF47BC3D975C8A0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1160;
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = Natura;
 				TargetAttributes = {
+					84391DDC24DB1B8B009D0BE8 = {
+						CreatedOnToolsVersion = 11.6;
+					};
 					B5A3069809DD9E998F7671EF5F1BAE1C = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1010;
@@ -1929,6 +2000,7 @@
 			targets = (
 				F49E39B57E86C6597B624106BE14A13E /* NatDS */,
 				B5A3069809DD9E998F7671EF5F1BAE1C /* NatDSTests */,
+				84391DDC24DB1B8B009D0BE8 /* NatDSSnapShotTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1940,6 +2012,13 @@
 			files = (
 				67BB06E023B48B85454BD2B38E60B156 /* Images.xcassets in Resources */,
 				65E0C105942614AA1438FEA773B255B9 /* natds-icons.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84391DDB24DB1B8B009D0BE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1988,6 +2067,28 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NatDSTests/Pods-NatDSTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		55594C813E419D407445529B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NatDSSnapShotTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C112FA8EC5F1593FD78D2DF25A20E2CC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2008,6 +2109,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBEDB299301627A88D82165A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NatDSSnapShotTests/Pods-NatDSSnapShotTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NatDSSnapShotTests/Pods-NatDSSnapShotTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NatDSSnapShotTests/Pods-NatDSSnapShotTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -2071,7 +2189,6 @@
 				65D2ED6A736F8BD53729307D3E83A35D /* NatColors+Avon+Spec.swift in Sources */,
 				82FFB36F823296E60F0CBCE8D419D689 /* NatColors+Natura+Spec.swift in Sources */,
 				D18DCEC54B0D407538EC7F218CDF25E1 /* NatColors+TBS+Spec.swift in Sources */,
-				ED7E10535BEAE482689A78C1B6184C55 /* NatDialogController+Snapshot+Tests.swift in Sources */,
 				C4EB3DDBDD3DEFDA5183455CCDB2720F /* NatDialogController+Spec.swift in Sources */,
 				E891D4E704EDCC6EA9CD3EE125A5D292 /* NatDialogController+StandardStyleBuilder+Spec.swift in Sources */,
 				DF58B3DD08824CC1C80C886321CEA0F4 /* NatElevations+Spec.swift in Sources */,
@@ -2307,6 +2424,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		84391DD924DB1B8B009D0BE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84391DE024DB1B8B009D0BE8 /* NatDSSnapShotTests.swift in Sources */,
+				84391DE824DB1C67009D0BE8 /* NatDialogController+Snapshot+Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -2314,6 +2440,11 @@
 			isa = PBXTargetDependency;
 			target = F49E39B57E86C6597B624106BE14A13E /* NatDS */;
 			targetProxy = E35D44E67B83B19A493C4A863C46BAFA /* PBXContainerItemProxy */;
+		};
+		84391DE424DB1B8B009D0BE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F49E39B57E86C6597B624106BE14A13E /* NatDS */;
+			targetProxy = 84391DE324DB1B8B009D0BE8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -2423,6 +2554,47 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.natura.NatDSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		84391DE524DB1B8B009D0BE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2274F3C7AE245CDA327DD2C /* Pods-NatDSSnapShotTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NatDSSnapShotTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = na.NatDSSnapShotTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84391DE624DB1B8B009D0BE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34C351B9D855FD2B32E29833 /* Pods-NatDSSnapShotTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NatDSSnapShotTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = na.NatDSSnapShotTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -2560,6 +2732,15 @@
 			buildConfigurations = (
 				3A36E05DD8E57CC423F189F37D2BACB5 /* Debug */,
 				E81B60C5B552018D194773A2E10A8CD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84391DE724DB1B8B009D0BE8 /* Build configuration list for PBXNativeTarget "NatDSSnapShotTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84391DE524DB1B8B009D0BE8 /* Debug */,
+				84391DE624DB1B8B009D0BE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
