@@ -112,7 +112,6 @@
 		604835F2975D92A9D2EF46132C17C0A5 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6FF51FEADFA402D3EDC3FE828081CC /* Tab.swift */; };
 		609B09BFF70FF1405824230B477568C0 /* TheBodyShopSpacing+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118CB6043C0920D56389F452736F6796 /* TheBodyShopSpacing+Spec.swift */; };
 		60B6A40046E3479DEC3808473AF0D08B /* NatSizes+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37416A32D8AD942A180B5FDF1A82192B /* NatSizes+Spec.swift */; };
-		6231AEE531E549E406745A37170FC719 /* TabItemViewDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2216A9839DE07735A376736AB143A7F /* TabItemViewDelegateMock.swift */; };
 		634A481FEBE80549DC205C587125503E /* TheBodyShopColorPaletteLight+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFC5ABDDB7E6AA9C6199C7EC96F634D /* TheBodyShopColorPaletteLight+Spec.swift */; };
 		65D2ED6A736F8BD53729307D3E83A35D /* NatColors+Avon+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0F5D32B4B46B6C50413BEC01AF4215 /* NatColors+Avon+Spec.swift */; };
 		65D57A64A56F3130E6444CB713188276 /* TheBodyShopOpacities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55B5042824197A28F138846312F7803 /* TheBodyShopOpacities.swift */; };
@@ -174,6 +173,11 @@
 		84BB928524DC69C900A9BCC8 /* Badgeable+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263291D924BCAF24004036C3 /* Badgeable+Snapshot+Tests.swift */; };
 		84BB928624DC6B3500A9BCC8 /* BadgeableStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263291DC24BCB226004036C3 /* BadgeableStub.swift */; };
 		84BB928824DC6CA700A9BCC8 /* BadgeableStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263291DC24BCB226004036C3 /* BadgeableStub.swift */; };
+		84BB928B24DC743300A9BCC8 /* TabItem+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BB928A24DC743300A9BCC8 /* TabItem+Snapshot+Tests.swift */; };
+		84BB928D24DC75D100A9BCC8 /* TabItemViewDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2216A9839DE07735A376736AB143A7F /* TabItemViewDelegateMock.swift */; };
+		84BB928E24DC760600A9BCC8 /* TabItemViewDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2216A9839DE07735A376736AB143A7F /* TabItemViewDelegateMock.swift */; };
+		84BB929024DC772D00A9BCC8 /* Tab+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BB928F24DC772D00A9BCC8 /* Tab+Snapshot+Tests.swift */; };
+		84BB929124DC788D00A9BCC8 /* TabDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA17128B21436681D0D607C145E56E2 /* TabDelegateMock.swift */; };
 		84BC900224AA15C3007DF09D /* NotificationCenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC900124AA15C3007DF09D /* NotificationCenterProtocol.swift */; };
 		84BC900524AA163A007DF09D /* DialogFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC900324AA163A007DF09D /* DialogFooterView.swift */; };
 		84BC900624AA163A007DF09D /* DialogStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC900424AA163A007DF09D /* DialogStyle.swift */; };
@@ -462,6 +466,8 @@
 		84B9330B24ABC5FD00B71BD4 /* NatDialogBodyConfigurable+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogBodyConfigurable+Spec.swift"; sourceTree = "<group>"; };
 		84B9330D24ABC6D200B71BD4 /* NatDialogCustomBodyConfigurable+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogCustomBodyConfigurable+Spec.swift"; sourceTree = "<group>"; };
 		84B9330F24ABD16100B71BD4 /* NatDialogController+ViewModel+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogController+ViewModel+Spec.swift"; sourceTree = "<group>"; };
+		84BB928A24DC743300A9BCC8 /* TabItem+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TabItem+Snapshot+Tests.swift"; sourceTree = "<group>"; };
+		84BB928F24DC772D00A9BCC8 /* Tab+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tab+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		84BC8FF824AA13B8007DF09D /* NatDialogController+AlertStyleBuilder+Spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NatDialogController+AlertStyleBuilder+Spec.swift"; sourceTree = "<group>"; };
 		84BC8FFA24AA14C0007DF09D /* DialogFooterView+Spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DialogFooterView+Spec.swift"; sourceTree = "<group>"; };
 		84BC8FFB24AA14C0007DF09D /* DialogStyle+Spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DialogStyle+Spec.swift"; sourceTree = "<group>"; };
@@ -864,7 +870,6 @@
 		28B8CBEE15559C8DBD459A3FC53141DB /* Tab */ = {
 			isa = PBXGroup;
 			children = (
-				41643C1EBBBE270376A2D401F0393730 /* Mock */,
 				75AA33B684C0A723F3E2F341D0A10EEC /* TabItemViewTests.swift */,
 				E99F543F7F6AC44B9A4E1341942EE0E0 /* TabTests.swift */,
 			);
@@ -946,15 +951,6 @@
 				9FBF1F1170177B1B22FABD607AA283EB /* TextFieldTypeTests.swift */,
 			);
 			path = Field;
-			sourceTree = "<group>";
-		};
-		41643C1EBBBE270376A2D401F0393730 /* Mock */ = {
-			isa = PBXGroup;
-			children = (
-				CCA17128B21436681D0D607C145E56E2 /* TabDelegateMock.swift */,
-				A2216A9839DE07735A376736AB143A7F /* TabItemViewDelegateMock.swift */,
-			);
-			path = Mock;
 			sourceTree = "<group>";
 		};
 		42322F15110B108E59C217709124F184 /* ValueText */ = {
@@ -1198,8 +1194,9 @@
 		84391DDE24DB1B8B009D0BE8 /* NatDSSnapShotTests */ = {
 			isa = PBXGroup;
 			children = (
-				84BB928324DC680A00A9BCC8 /* Badge */,
+				84BB928924DC734800A9BCC8 /* Tab */,
 				84391DEC24DB5AE6009D0BE8 /* AppBar */,
+				84BB928324DC680A00A9BCC8 /* Badge */,
 				84391DE924DB275E009D0BE8 /* Dialog */,
 				84391DEB24DB4784009D0BE8 /* ShortCut */,
 				84391DDF24DB1B8B009D0BE8 /* NatDSSnapShotTests.swift */,
@@ -1276,8 +1273,27 @@
 			isa = PBXGroup;
 			children = (
 				263291DB24BCB20D004036C3 /* Badge */,
+				84BB928C24DC75B100A9BCC8 /* Tab */,
 			);
 			path = TestHelpers;
+			sourceTree = "<group>";
+		};
+		84BB928924DC734800A9BCC8 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				84BB928A24DC743300A9BCC8 /* TabItem+Snapshot+Tests.swift */,
+				84BB928F24DC772D00A9BCC8 /* Tab+Snapshot+Tests.swift */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		84BB928C24DC75B100A9BCC8 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				CCA17128B21436681D0D607C145E56E2 /* TabDelegateMock.swift */,
+				A2216A9839DE07735A376736AB143A7F /* TabItemViewDelegateMock.swift */,
+			);
+			path = Tab;
 			sourceTree = "<group>";
 		};
 		84BC8FF724AA120D007DF09D /* Recovered References */ = {
@@ -2185,6 +2201,7 @@
 				346443D54361FCD8E0E7BFAF8FE2D299 /* FontIconStyleTests.swift in Sources */,
 				FEDB1DDCAB1F042EDCF50A9AEA52E756 /* FontsNaturaTests.swift in Sources */,
 				60271BCF19E462F42A5941AA4D9E49B8 /* GetTheme+Spec.swift in Sources */,
+				84BB928E24DC760600A9BCC8 /* TabItemViewDelegateMock.swift in Sources */,
 				A19D6F5A3F2F85158D4D5B1BD0F60417 /* IconTests.swift in Sources */,
 				9D7F4DC7B4A874C02230C12A249D9F83 /* IconViewTests.swift in Sources */,
 				0C4CBA15016075A8E8A7CA6FC6054383 /* IllustrationIconsTests.swift in Sources */,
@@ -2241,7 +2258,6 @@
 				84B9330C24ABC5FD00B71BD4 /* NatDialogBodyConfigurable+Spec.swift in Sources */,
 				A3A86E5E58592409B35198B154FA7A49 /* StubLightColorPalette.swift in Sources */,
 				ECF18B7FA2F5A22C0F919BBBE58FF611 /* TabDelegateMock.swift in Sources */,
-				6231AEE531E549E406745A37170FC719 /* TabItemViewDelegateMock.swift in Sources */,
 				0E7C160724C5D6DC002FF46F /* UIBarButtonItem+Icon+Spec.swift in Sources */,
 				26BB817324B9191000617EFC /* NatBadge+Spec.swift in Sources */,
 				D23F82EE5C3333FD06E87016848DCD37 /* TabItemViewTests.swift in Sources */,
@@ -2434,11 +2450,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				84391DEA24DB477F009D0BE8 /* NatShortcut+Snapshot+Tests.swift in Sources */,
+				84BB929124DC788D00A9BCC8 /* TabDelegateMock.swift in Sources */,
+				84BB928D24DC75D100A9BCC8 /* TabItemViewDelegateMock.swift in Sources */,
 				84BB928524DC69C900A9BCC8 /* Badgeable+Snapshot+Tests.swift in Sources */,
 				84BB928424DC683700A9BCC8 /* NatBadge+Snapshot+Tests.swift in Sources */,
 				84391DED24DB5C1F009D0BE8 /* AppBar+Snapshot+Tests.swift in Sources */,
 				84BB928624DC6B3500A9BCC8 /* BadgeableStub.swift in Sources */,
 				84391DE024DB1B8B009D0BE8 /* NatDSSnapShotTests.swift in Sources */,
+				84BB929024DC772D00A9BCC8 /* Tab+Snapshot+Tests.swift in Sources */,
+				84BB928B24DC743300A9BCC8 /* TabItem+Snapshot+Tests.swift in Sources */,
 				84391DE824DB1C67009D0BE8 /* NatDialogController+Snapshot+Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
