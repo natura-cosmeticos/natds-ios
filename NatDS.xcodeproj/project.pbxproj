@@ -46,8 +46,6 @@
 		232DAFD65FD65951D36C6F2618D6B7FC /* NaturaFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AC3BBD38115B8137B4E1CF7BFB87CE /* NaturaFont.swift */; };
 		24A65D792FD25FA06DEACBD91A7E04A3 /* ColorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CB7087AA6D24EDDC31C9DD6682C6DD /* ColorsTests.swift */; };
 		2625466124C7379800B98A91 /* StubSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2625465F24C7379400B98A91 /* StubSelector.swift */; };
-		263291DA24BCAF24004036C3 /* Badgeable+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263291D924BCAF24004036C3 /* Badgeable+Snapshot+Tests.swift */; };
-		263291DD24BCB226004036C3 /* BadgeableStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263291DC24BCB226004036C3 /* BadgeableStub.swift */; };
 		2655155E5437F0880708125E1F9F5BC9 /* Elevations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D49BA63C5E5BFEED327C214620A7657 /* Elevations.swift */; };
 		265B17EB24AFA12900FD0407 /* NatBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265B17EA24AFA12900FD0407 /* NatBadge.swift */; };
 		26740A4924B3A60C00419526 /* NatBadge+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26740A4824B3A60C00419526 /* NatBadge+Style.swift */; };
@@ -58,7 +56,6 @@
 		269C886824C2483600A507BE /* UIBarButtonItem+Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269C886724C2483600A507BE /* UIBarButtonItem+Icon.swift */; };
 		26A3DF759DBD205A03559B561D576D13 /* NaturaSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E36F59CB9704420750D7F661F7AD993 /* NaturaSpacing.swift */; };
 		26BB817324B9191000617EFC /* NatBadge+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BB817224B9191000617EFC /* NatBadge+Spec.swift */; };
-		26BB817524B9197D00617EFC /* NatBadge+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BB817424B9197D00617EFC /* NatBadge+Snapshot+Tests.swift */; };
 		26BB817724B931E900617EFC /* NatBadge+Color+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BB817624B931E900617EFC /* NatBadge+Color+Spec.swift */; };
 		26BB817924B944D100617EFC /* Badgeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BB817824B944D000617EFC /* Badgeable.swift */; };
 		26BB817D24B94CFB00617EFC /* Badgeable+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BB817C24B94CFB00617EFC /* Badgeable+Spec.swift */; };
@@ -175,6 +172,10 @@
 		84B9330E24ABC6D200B71BD4 /* NatDialogCustomBodyConfigurable+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9330D24ABC6D200B71BD4 /* NatDialogCustomBodyConfigurable+Spec.swift */; };
 		84B9331024ABD16100B71BD4 /* NatDialogController+ViewModel+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9330F24ABD16100B71BD4 /* NatDialogController+ViewModel+Spec.swift */; };
 		84B9331124ACF28400B71BD4 /* NotificationCenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC901924AA187C007DF09D /* NotificationCenterSpy.swift */; };
+		84BB928424DC683700A9BCC8 /* NatBadge+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BB817424B9197D00617EFC /* NatBadge+Snapshot+Tests.swift */; };
+		84BB928524DC69C900A9BCC8 /* Badgeable+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263291D924BCAF24004036C3 /* Badgeable+Snapshot+Tests.swift */; };
+		84BB928624DC6B3500A9BCC8 /* BadgeableStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263291DC24BCB226004036C3 /* BadgeableStub.swift */; };
+		84BB928824DC6CA700A9BCC8 /* BadgeableStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263291DC24BCB226004036C3 /* BadgeableStub.swift */; };
 		84BC900224AA15C3007DF09D /* NotificationCenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC900124AA15C3007DF09D /* NotificationCenterProtocol.swift */; };
 		84BC900524AA163A007DF09D /* DialogFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC900324AA163A007DF09D /* DialogFooterView.swift */; };
 		84BC900624AA163A007DF09D /* DialogStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC900424AA163A007DF09D /* DialogStyle.swift */; };
@@ -734,15 +735,6 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		13976EA337BD073D09936248522E409C /* SnapShot */ = {
-			isa = PBXGroup;
-			children = (
-				263291D924BCAF24004036C3 /* Badgeable+Snapshot+Tests.swift */,
-				26BB817424B9197D00617EFC /* NatBadge+Snapshot+Tests.swift */,
-			);
-			path = SnapShot;
-			sourceTree = "<group>";
-		};
 		144F2AC4381EFDA362F5A39709BEC12E /* NatColorsSpec */ = {
 			isa = PBXGroup;
 			children = (
@@ -808,12 +800,12 @@
 			path = Stub;
 			sourceTree = "<group>";
 		};
-		263291DB24BCB20D004036C3 /* Stub */ = {
+		263291DB24BCB20D004036C3 /* Badge */ = {
 			isa = PBXGroup;
 			children = (
 				263291DC24BCB226004036C3 /* BadgeableStub.swift */,
 			);
-			path = Stub;
+			path = Badge;
 			sourceTree = "<group>";
 		};
 		263F97EA92FA5FCB098A752856788881 /* Dialog */ = {
@@ -854,7 +846,6 @@
 		26BB817124B918FB00617EFC /* Badge */ = {
 			isa = PBXGroup;
 			children = (
-				263291DB24BCB20D004036C3 /* Stub */,
 				26BB817B24B94CE700617EFC /* Protocol */,
 				26BB817224B9191000617EFC /* NatBadge+Spec.swift */,
 				26BB817624B931E900617EFC /* NatBadge+Color+Spec.swift */,
@@ -1066,6 +1057,7 @@
 				B193B1BE5AA5EB10B51FF8ADA51A7F66 /* Pods */,
 				3F21990B524A8E12755106BE4A73AB22 /* Products */,
 				A25310B672B899E9AD3D68186E4A1AFA /* Sources */,
+				84BB928724DC6C6100A9BCC8 /* TestHelpers */,
 				2A013B73B77FB9B791A5038B2A1998D6 /* Tests */,
 				84391DDE24DB1B8B009D0BE8 /* NatDSSnapShotTests */,
 				84BC8FF724AA120D007DF09D /* Recovered References */,
@@ -1218,6 +1210,7 @@
 		84391DDE24DB1B8B009D0BE8 /* NatDSSnapShotTests */ = {
 			isa = PBXGroup;
 			children = (
+				84BB928324DC680A00A9BCC8 /* Badge */,
 				84391DEC24DB5AE6009D0BE8 /* AppBar */,
 				84391DE924DB275E009D0BE8 /* Dialog */,
 				84391DEB24DB4784009D0BE8 /* ShortCut */,
@@ -1280,6 +1273,23 @@
 				84B9330724AB788E00B71BD4 /* NatDialogDismissableConfigurable+Spec.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		84BB928324DC680A00A9BCC8 /* Badge */ = {
+			isa = PBXGroup;
+			children = (
+				263291D924BCAF24004036C3 /* Badgeable+Snapshot+Tests.swift */,
+				26BB817424B9197D00617EFC /* NatBadge+Snapshot+Tests.swift */,
+			);
+			path = Badge;
+			sourceTree = "<group>";
+		};
+		84BB928724DC6C6100A9BCC8 /* TestHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				263291DB24BCB20D004036C3 /* Badge */,
+			);
+			path = TestHelpers;
 			sourceTree = "<group>";
 		};
 		84BC8FF724AA120D007DF09D /* Recovered References */ = {
@@ -1349,7 +1359,6 @@
 			children = (
 				8959EC82EF195A60EF12AFDC0F9CFE75 /* Components */,
 				7C4807A858EAC069D38D22195EC3B0B9 /* DesignTokens */,
-				13976EA337BD073D09936248522E409C /* SnapShot */,
 				83C59F929E88764313134A046BA5C30F /* DesignSystem+Spec.swift */,
 				841FEABB24C5CD6A00C50AFF /* NatLogoImages+Spec.swift */,
 			);
@@ -2208,6 +2217,7 @@
 				C4EB3DDBDD3DEFDA5183455CCDB2720F /* NatDialogController+Spec.swift in Sources */,
 				E891D4E704EDCC6EA9CD3EE125A5D292 /* NatDialogController+StandardStyleBuilder+Spec.swift in Sources */,
 				DF58B3DD08824CC1C80C886321CEA0F4 /* NatElevations+Spec.swift in Sources */,
+				84BB928824DC6CA700A9BCC8 /* BadgeableStub.swift in Sources */,
 				FF4C87EAD7ADB8D9EF8F897BA229A3A7 /* NatFonts+Avon+Spec.swift in Sources */,
 				0C0E58167E0896AEBC4B69F2F846F57F /* NatFonts+Natura+Spec.swift in Sources */,
 				C6584A3BCF2E06BCC409A6D586A1503F /* NatFonts+TheBodyShop+Spec.swift in Sources */,
@@ -2235,7 +2245,6 @@
 				06B6AF457FA3A8ADB837E7A2BBE53D91 /* NavigationDrawerItemCellTests.swift in Sources */,
 				ECDFAB69C926EDC613B5464C8EEFF85D /* NavigationDrawerSubitemCellTests.swift in Sources */,
 				D2063015F26B7E8B3A27602A3B907BCE /* NavigationDrawerTests.swift in Sources */,
-				26BB817524B9197D00617EFC /* NatBadge+Snapshot+Tests.swift in Sources */,
 				525A8C62B68D8C9B0AC882318792D04C /* Pulsable+Spec.swift in Sources */,
 				C24255D434C838206493D9A89581F7C1 /* PulseContainerLayer+Spec.swift in Sources */,
 				3D8762A06C970677D223A561419340A9 /* PulseLayerTests.swift in Sources */,
@@ -2254,7 +2263,6 @@
 				D23F82EE5C3333FD06E87016848DCD37 /* TabItemViewTests.swift in Sources */,
 				5C5DF89CCAB72EC25E1A1BC43D450CB0 /* TabTests.swift in Sources */,
 				CB6F95EF082D5B6EF08A8BC9B7A01427 /* TextFieldDelegateMock.swift in Sources */,
-				263291DD24BCB226004036C3 /* BadgeableStub.swift in Sources */,
 				8475413524B542170071E884 /* NatShortcut+Widths+Spec.swift in Sources */,
 				C3E184D6CD3B52645D0E06A7138CA94E /* TextFieldTests.swift in Sources */,
 				2934666EAAD661E372AA6009BB287275 /* TextFieldTypeTests.swift in Sources */,
@@ -2281,7 +2289,6 @@
 				84AB67611C0B5D85CBE5CE489FCA4DC6 /* UIFont+IconTests.swift in Sources */,
 				50130A6AE7342A799C5989AF8FE486E8 /* UITableView+ReusableTests.swift in Sources */,
 				8E7FE7AAE264D40AF9BFF5CE6E5C7AD0 /* UIView+FrameTests.swift in Sources */,
-				263291DA24BCAF24004036C3 /* Badgeable+Snapshot+Tests.swift in Sources */,
 				D05CEB5C2F5F9D32FA015604F6E719F0 /* ValidateTheme+Spec.swift in Sources */,
 				1FBF5A52B03E9E219462A06F9487D3B4 /* ValueTextHighlightTests.swift in Sources */,
 				1734E4583B85C0197E0AC6F1CE877ADC /* ViewAnimatingMock.swift in Sources */,
@@ -2443,7 +2450,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				84391DEA24DB477F009D0BE8 /* NatShortcut+Snapshot+Tests.swift in Sources */,
+				84BB928524DC69C900A9BCC8 /* Badgeable+Snapshot+Tests.swift in Sources */,
+				84BB928424DC683700A9BCC8 /* NatBadge+Snapshot+Tests.swift in Sources */,
 				84391DED24DB5C1F009D0BE8 /* AppBar+Snapshot+Tests.swift in Sources */,
+				84BB928624DC6B3500A9BCC8 /* BadgeableStub.swift in Sources */,
 				84391DE024DB1B8B009D0BE8 /* NatDSSnapShotTests.swift in Sources */,
 				84391DE824DB1C67009D0BE8 /* NatDialogController+Snapshot+Tests.swift in Sources */,
 			);

@@ -1,8 +1,9 @@
-import FBSnapshotTestCase
+import XCTest
+import SnapshotTesting
 
 @testable import NatDS
 
-class BadgeableSnapshotTests: FBSnapshotTestCase {
+class BadgeableSnapshotTests: XCTestCase {
     var superview: UIView!
     var systemUnderTest: Badgeable!
 
@@ -28,13 +29,13 @@ class BadgeableSnapshotTests: FBSnapshotTestCase {
         systemUnderTest.configure(badgeStyle: .standard, withColor: .alert)
         systemUnderTest.setBadge(count: 100)
 
-        FBSnapshotVerifyView(superview)
+        assertSnapshot(matching: superview, as: .image)
     }
 
     func test_badge_style_standard_alert_count_1_hasValidSnapshot() {
         systemUnderTest.configure(badgeStyle: .standard, withColor: .alert)
         systemUnderTest.setBadge(count: 1)
 
-        FBSnapshotVerifyView(superview)
+        assertSnapshot(matching: superview, as: .image)
     }
 }
