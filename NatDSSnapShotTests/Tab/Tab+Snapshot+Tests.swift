@@ -12,6 +12,8 @@ final class TabSnapshotTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
+        DesignSystem().configure(with: .natura)
+
         delegateMock = TabDelegateMock()
 
         superView = UIView(frame: CGRect(x: 0, y: 0, width: 328, height: 60))

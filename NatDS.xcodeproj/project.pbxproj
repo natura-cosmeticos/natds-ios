@@ -78,7 +78,6 @@
 		3F12D75506942B4F6ED3212F793C6177 /* AvonFontSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7D792BB1ABA865B43C4E9AFD578235 /* AvonFontSizes.swift */; };
 		40B14F67117654B7854317119E5B3509 /* ConfigurationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04723CCAA125D20DF5FFBB3D77A939D4 /* ConfigurationStorage.swift */; };
 		4612CED8B9691035EFA62E01E2B30FD6 /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEE0086E453EC48CFDC60DBA3C5C989 /* Field.swift */; };
-		46A73ED2AC6774550A3F2D82CCE8BAF7 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F988EE601584B907D997288958055215 /* SearchBar.swift */; };
 		47A806814516D6365DE9967251BA94E8 /* NatDS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17433A27D62633345ECA245C99114C15 /* NatDS.framework */; };
 		4838BBC57B1464D82D59DE861726268A /* NatColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546EF920207BAF8470E811B146A05C0F /* NatColors.swift */; };
 		494B238CBB871A4FB2092730783EF93C /* FontWeights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3972A77C0F33A56F5725680D5D3835 /* FontWeights.swift */; };
@@ -178,6 +177,7 @@
 		84BB928E24DC760600A9BCC8 /* TabItemViewDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2216A9839DE07735A376736AB143A7F /* TabItemViewDelegateMock.swift */; };
 		84BB929024DC772D00A9BCC8 /* Tab+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BB928F24DC772D00A9BCC8 /* Tab+Snapshot+Tests.swift */; };
 		84BB929124DC788D00A9BCC8 /* TabDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA17128B21436681D0D607C145E56E2 /* TabDelegateMock.swift */; };
+		84BB929324DC7B9800A9BCC8 /* SearchBar+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F988EE601584B907D997288958055215 /* SearchBar+Snapshot+Tests.swift */; };
 		84BC900224AA15C3007DF09D /* NotificationCenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC900124AA15C3007DF09D /* NotificationCenterProtocol.swift */; };
 		84BC900524AA163A007DF09D /* DialogFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC900324AA163A007DF09D /* DialogFooterView.swift */; };
 		84BC900624AA163A007DF09D /* DialogStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC900424AA163A007DF09D /* DialogStyle.swift */; };
@@ -602,7 +602,7 @@
 		F72809614C87697C6EAF138E246F4C55 /* AvonFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvonFont.swift; sourceTree = "<group>"; };
 		F883FDBE8A405C0A87D003DD585D8FE0 /* TheBodyShopFontLetterSpacings+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheBodyShopFontLetterSpacings+Spec.swift"; sourceTree = "<group>"; };
 		F8BA669F1AAFFCA1DE8B8C6CBAFF61DA /* TheBodyShopFontLetterSpacings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheBodyShopFontLetterSpacings.swift; sourceTree = "<group>"; };
-		F988EE601584B907D997288958055215 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		F988EE601584B907D997288958055215 /* SearchBar+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchBar+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		FADDEC4E472D2A193BED0EBF058A67E8 /* ViewAnimatingMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewAnimatingMock.swift; sourceTree = "<group>"; };
 		FB170792B9F11FE626EDB17C9AA646DE /* NaturaColorPaletteDark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturaColorPaletteDark.swift; sourceTree = "<group>"; };
 		FB7FB96016F7D02CB5976F54C383CCD6 /* NatSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatSizes.swift; sourceTree = "<group>"; };
@@ -1194,11 +1194,12 @@
 		84391DDE24DB1B8B009D0BE8 /* NatDSSnapShotTests */ = {
 			isa = PBXGroup;
 			children = (
-				84BB928924DC734800A9BCC8 /* Tab */,
 				84391DEC24DB5AE6009D0BE8 /* AppBar */,
 				84BB928324DC680A00A9BCC8 /* Badge */,
+				84BB929224DC7B0800A9BCC8 /* Bar */,
 				84391DE924DB275E009D0BE8 /* Dialog */,
 				84391DEB24DB4784009D0BE8 /* ShortCut */,
+				84BB928924DC734800A9BCC8 /* Tab */,
 				84391DDF24DB1B8B009D0BE8 /* NatDSSnapShotTests.swift */,
 				84391DE124DB1B8B009D0BE8 /* Info.plist */,
 			);
@@ -1296,6 +1297,14 @@
 			path = Tab;
 			sourceTree = "<group>";
 		};
+		84BB929224DC7B0800A9BCC8 /* Bar */ = {
+			isa = PBXGroup;
+			children = (
+				F988EE601584B907D997288958055215 /* SearchBar+Snapshot+Tests.swift */,
+			);
+			path = Bar;
+			sourceTree = "<group>";
+		};
 		84BC8FF724AA120D007DF09D /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -1374,7 +1383,6 @@
 			children = (
 				0E7C160024C5D214002FF46F /* AppBar */,
 				26BB817124B918FB00617EFC /* Badge */,
-				9A5EB6FB21BA40B6C21C650900AF7CA2 /* Bar */,
 				37C041B132E91C20059E887D83DD7E4E /* Button */,
 				67643298FB5CC3CCB193DC69AF79EC67 /* Dialog */,
 				59FEB5F81D357B0250D929D9D895E20C /* Divider */,
@@ -1474,14 +1482,6 @@
 				BA54A54D526EF416E3689FD0D07E7886 /* NatFonts+TheBodyShop+Spec.swift */,
 			);
 			path = NatFonts;
-			sourceTree = "<group>";
-		};
-		9A5EB6FB21BA40B6C21C650900AF7CA2 /* Bar */ = {
-			isa = PBXGroup;
-			children = (
-				F988EE601584B907D997288958055215 /* SearchBar.swift */,
-			);
-			path = Bar;
 			sourceTree = "<group>";
 		};
 		9A95973E20D8800C2A72454FF93AEC3F /* ExpansionPanel */ = {
@@ -2251,7 +2251,6 @@
 				3D8762A06C970677D223A561419340A9 /* PulseLayerTests.swift in Sources */,
 				0E7C160B24C61E45002FF46F /* UINavigationController+Configure+Spec.swift in Sources */,
 				A0328AF2000431B6155A5A6CD94B1835 /* ReusableViewTests.swift in Sources */,
-				46A73ED2AC6774550A3F2D82CCE8BAF7 /* SearchBar.swift in Sources */,
 				84B9330E24ABC6D200B71BD4 /* NatDialogCustomBodyConfigurable+Spec.swift in Sources */,
 				6E6C6EC0105FF251940E4C011D611149 /* String+IconTests.swift in Sources */,
 				944056C3F885BC4ACF0B59F08ECCA2F9 /* StubDarkColorPalette.swift in Sources */,
@@ -2454,6 +2453,7 @@
 				84BB928D24DC75D100A9BCC8 /* TabItemViewDelegateMock.swift in Sources */,
 				84BB928524DC69C900A9BCC8 /* Badgeable+Snapshot+Tests.swift in Sources */,
 				84BB928424DC683700A9BCC8 /* NatBadge+Snapshot+Tests.swift in Sources */,
+				84BB929324DC7B9800A9BCC8 /* SearchBar+Snapshot+Tests.swift in Sources */,
 				84391DED24DB5C1F009D0BE8 /* AppBar+Snapshot+Tests.swift in Sources */,
 				84BB928624DC6B3500A9BCC8 /* BadgeableStub.swift in Sources */,
 				84391DE024DB1B8B009D0BE8 /* NatDSSnapShotTests.swift in Sources */,
