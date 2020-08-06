@@ -1,7 +1,6 @@
 @testable import NatDS
 
 struct ViewAnimatingMock: ViewAnimating {
-
     func animate(withDuration duration: TimeInterval, animations: @escaping () -> Void) {
         animations()
     }
@@ -28,5 +27,4 @@ struct ViewAnimatingMock: ViewAnimating {
         let finished = true
         completion?(finished)
     }
-
 }

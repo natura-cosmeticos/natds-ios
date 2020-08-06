@@ -1,7 +1,8 @@
 import Foundation
+
 @testable import NatDS
 
-class TextFieldDelegateMock: TextFieldDelegate {
+final class TextFieldDelegateMock: TextFieldDelegate {
 
     var invokedDidBeginEditing: (count: Int, field: TextField?) = (count: 0, field: nil)
     var invokedDidEndEditing: (count: Int, field: TextField?) = (count: 0, field: nil)

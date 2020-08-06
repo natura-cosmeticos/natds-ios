@@ -177,6 +177,9 @@
 		84BB929724DC8FA300A9BCC8 /* ExpansionPanelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FFA81AA763D45B2BCB5F321784CECE /* ExpansionPanelBuilder.swift */; };
 		84BB929824DC8FA600A9BCC8 /* ExpansionPanel+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF507003D3035F2C312F8C225D481FC /* ExpansionPanel+Snapshot+Tests.swift */; };
 		84BB929A24DC935700A9BCC8 /* ViewAnimatingMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADDEC4E472D2A193BED0EBF058A67E8 /* ViewAnimatingMock.swift */; };
+		84BB929C24DC97EE00A9BCC8 /* Field+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9C7ED46E33571D0B2A1E60936B8ACD /* Field+Snapshot+Tests.swift */; };
+		84BB929E24DCA6C500A9BCC8 /* TextField+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BB929D24DCA6C500A9BCC8 /* TextField+Snapshot+Tests.swift */; };
+		84BB92A024DCA7E300A9BCC8 /* TextFieldDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D521C44E858B4345479E0B193CE2BB9C /* TextFieldDelegateMock.swift */; };
 		84BC900224AA15C3007DF09D /* NotificationCenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC900124AA15C3007DF09D /* NotificationCenterProtocol.swift */; };
 		84BC900524AA163A007DF09D /* DialogFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC900324AA163A007DF09D /* DialogFooterView.swift */; };
 		84BC900624AA163A007DF09D /* DialogStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC900424AA163A007DF09D /* DialogStyle.swift */; };
@@ -273,7 +276,6 @@
 		E4FCC8108D5F57339F6297CDD676F8DF /* PulseContainerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0F2CA30F4AA6E3F9B482693C997D55 /* PulseContainerLayer.swift */; };
 		E595C8E0683039156EECADB28A93AC69 /* AvonElevations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A051382812558571E778F51A332B9FE /* AvonElevations.swift */; };
 		E5D0580914B53A966EF6E25F9735D747 /* GetTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E856487186C50FE1A88712C7CDC29E57 /* GetTheme.swift */; };
-		E6AE8A410953E6B447735D9E565B0264 /* FieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9C7ED46E33571D0B2A1E60936B8ACD /* FieldTests.swift */; };
 		E6FD461A93420854906BA6F9E90F89CE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F915C266CD0901846F201CD150DB9 /* Colors.swift */; };
 		E70EF1AC4BB7A93A80A500786C1A6497 /* NatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCF632B4501044E5062C574CCBBF74E /* NatButton.swift */; };
 		E891D4E704EDCC6EA9CD3EE125A5D292 /* NatDialogController+StandardStyleBuilder+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7EAA7BDB4A7A15736AF73EF6EBCD74 /* NatDialogController+StandardStyleBuilder+Spec.swift */; };
@@ -372,7 +374,7 @@
 		2BCA01BC8343C22F5908AC65F37C5FB6 /* TheBodyShopFont+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheBodyShopFont+Spec.swift"; sourceTree = "<group>"; };
 		2C157151985B2586A5377C35B4FC1F27 /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
 		2D221DC99290B86F7B59C72F4FA77BE4 /* FontIconStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontIconStyle.swift; sourceTree = "<group>"; };
-		2D9C7ED46E33571D0B2A1E60936B8ACD /* FieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldTests.swift; sourceTree = "<group>"; };
+		2D9C7ED46E33571D0B2A1E60936B8ACD /* Field+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Field+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		2E0E59F57D0AD2166D6216527E95A6CD /* AvonFont+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AvonFont+Spec.swift"; sourceTree = "<group>"; };
 		2FDEE58147C2E1605E69E24EE6CE7409 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		307E705878C6A3A88E39CDC82B799361 /* ViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStyle.swift; sourceTree = "<group>"; };
@@ -466,6 +468,7 @@
 		84B9330F24ABD16100B71BD4 /* NatDialogController+ViewModel+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogController+ViewModel+Spec.swift"; sourceTree = "<group>"; };
 		84BB928A24DC743300A9BCC8 /* TabItem+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TabItem+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		84BB928F24DC772D00A9BCC8 /* Tab+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tab+Snapshot+Tests.swift"; sourceTree = "<group>"; };
+		84BB929D24DCA6C500A9BCC8 /* TextField+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		84BC8FF824AA13B8007DF09D /* NatDialogController+AlertStyleBuilder+Spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NatDialogController+AlertStyleBuilder+Spec.swift"; sourceTree = "<group>"; };
 		84BC8FFA24AA14C0007DF09D /* DialogFooterView+Spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DialogFooterView+Spec.swift"; sourceTree = "<group>"; };
 		84BC8FFB24AA14C0007DF09D /* DialogStyle+Spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DialogStyle+Spec.swift"; sourceTree = "<group>"; };
@@ -943,8 +946,6 @@
 		3FCB7713DAAB2F827B224E06280AF674 /* Field */ = {
 			isa = PBXGroup;
 			children = (
-				52A204267543FEBA5DA00BDF5CA63C5C /* Mock */,
-				2D9C7ED46E33571D0B2A1E60936B8ACD /* FieldTests.swift */,
 				A99D4E498664E80E25C8F8C061407424 /* TextFieldTests.swift */,
 				9FBF1F1170177B1B22FABD607AA283EB /* TextFieldTypeTests.swift */,
 			);
@@ -984,14 +985,6 @@
 				33B948F0346A1813FB982C1DB5F0DC89 /* DynamicColors+Spec.swift */,
 			);
 			path = Colors;
-			sourceTree = "<group>";
-		};
-		52A204267543FEBA5DA00BDF5CA63C5C /* Mock */ = {
-			isa = PBXGroup;
-			children = (
-				D521C44E858B4345479E0B193CE2BB9C /* TextFieldDelegateMock.swift */,
-			);
-			path = Mock;
 			sourceTree = "<group>";
 		};
 		537008F0FDEDBCE526AE919C78FF66F6 /* ColorPalette */ = {
@@ -1116,14 +1109,6 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		761C0FC62FB7A8515154824913F55F69 /* Wrappers */ = {
-			isa = PBXGroup;
-			children = (
-				C5587FAB4E0C1AEF7FA7D89207954014 /* Mocks */,
-			);
-			path = Wrappers;
-			sourceTree = "<group>";
-		};
 		763D65E6291DD5F6F7F2E49BCE8649AA /* Branding */ = {
 			isa = PBXGroup;
 			children = (
@@ -1182,14 +1167,15 @@
 		84391DDE24DB1B8B009D0BE8 /* NatDSSnapShotTests */ = {
 			isa = PBXGroup;
 			children = (
-				84BB929624DC8F3600A9BCC8 /* ExpansionPanel */,
 				84391DEC24DB5AE6009D0BE8 /* AppBar */,
 				84BB928324DC680A00A9BCC8 /* Badge */,
 				84BB929224DC7B0800A9BCC8 /* Bar */,
 				84391DE924DB275E009D0BE8 /* Dialog */,
 				84BB929424DC821800A9BCC8 /* Divider */,
+				84BB929624DC8F3600A9BCC8 /* ExpansionPanel */,
 				84391DEB24DB4784009D0BE8 /* ShortCut */,
 				84BB928924DC734800A9BCC8 /* Tab */,
+				84BB929B24DC975E00A9BCC8 /* TextField */,
 				84391DE124DB1B8B009D0BE8 /* Info.plist */,
 			);
 			path = NatDSSnapShotTests;
@@ -1264,6 +1250,7 @@
 			children = (
 				263291DB24BCB20D004036C3 /* Badge */,
 				84BB928C24DC75B100A9BCC8 /* Tab */,
+				84BB929F24DCA79800A9BCC8 /* TextField */,
 			);
 			path = TestHelpers;
 			sourceTree = "<group>";
@@ -1318,6 +1305,23 @@
 				14FFA81AA763D45B2BCB5F321784CECE /* ExpansionPanelBuilder.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		84BB929B24DC975E00A9BCC8 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				2D9C7ED46E33571D0B2A1E60936B8ACD /* Field+Snapshot+Tests.swift */,
+				84BB929D24DCA6C500A9BCC8 /* TextField+Snapshot+Tests.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
+		84BB929F24DCA79800A9BCC8 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				D521C44E858B4345479E0B193CE2BB9C /* TextFieldDelegateMock.swift */,
+			);
+			path = TextField;
 			sourceTree = "<group>";
 		};
 		84BC8FF724AA120D007DF09D /* Recovered References */ = {
@@ -1550,7 +1554,6 @@
 				E3284AABCC53927621EACCBF1C988CA3 /* Extensions */,
 				DBF274BBC18977A0881FCCC6174DF985 /* SupportedBrands */,
 				DCA8206FBF7A0CC92AB1B5DA7728EFB0 /* ViewStyle */,
-				761C0FC62FB7A8515154824913F55F69 /* Wrappers */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -1705,13 +1708,6 @@
 				D188AF406F8BA21532CDD7169A474560 /* DynamicColors.swift */,
 			);
 			path = ColorPalettes;
-			sourceTree = "<group>";
-		};
-		C5587FAB4E0C1AEF7FA7D89207954014 /* Mocks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Mocks;
 			sourceTree = "<group>";
 		};
 		C94988526BDF92E8494DD3869128E497 /* Spacing */ = {
@@ -2207,7 +2203,6 @@
 				5C3B779F94FC59E1F2329996E3E55DF5 /* ElevationAttributes+Equitable.swift in Sources */,
 				291A2ABAA2039E539F7E45F394B8529D /* ExpansionPanel+MarginTests.swift in Sources */,
 				841FEABC24C5CD6A00C50AFF /* NatLogoImages+Spec.swift in Sources */,
-				E6AE8A410953E6B447735D9E565B0264 /* FieldTests.swift in Sources */,
 				346443D54361FCD8E0E7BFAF8FE2D299 /* FontIconStyleTests.swift in Sources */,
 				FEDB1DDCAB1F042EDCF50A9AEA52E756 /* FontsNaturaTests.swift in Sources */,
 				60271BCF19E462F42A5941AA4D9E49B8 /* GetTheme+Spec.swift in Sources */,
@@ -2459,12 +2454,15 @@
 			files = (
 				84391DEA24DB477F009D0BE8 /* NatShortcut+Snapshot+Tests.swift in Sources */,
 				84BB929124DC788D00A9BCC8 /* TabDelegateMock.swift in Sources */,
+				84BB929C24DC97EE00A9BCC8 /* Field+Snapshot+Tests.swift in Sources */,
 				84BB928D24DC75D100A9BCC8 /* TabItemViewDelegateMock.swift in Sources */,
 				84BB928524DC69C900A9BCC8 /* Badgeable+Snapshot+Tests.swift in Sources */,
 				84BB928424DC683700A9BCC8 /* NatBadge+Snapshot+Tests.swift in Sources */,
 				84BB929724DC8FA300A9BCC8 /* ExpansionPanelBuilder.swift in Sources */,
 				84BB929324DC7B9800A9BCC8 /* SearchBar+Snapshot+Tests.swift in Sources */,
+				84BB929E24DCA6C500A9BCC8 /* TextField+Snapshot+Tests.swift in Sources */,
 				84BB929A24DC935700A9BCC8 /* ViewAnimatingMock.swift in Sources */,
+				84BB92A024DCA7E300A9BCC8 /* TextFieldDelegateMock.swift in Sources */,
 				84391DED24DB5C1F009D0BE8 /* AppBar+Snapshot+Tests.swift in Sources */,
 				84BB929524DC82EC00A9BCC8 /* Divider+Snapshot+Tests.swift in Sources */,
 				84BB928624DC6B3500A9BCC8 /* BadgeableStub.swift in Sources */,

@@ -3,8 +3,8 @@ class Field: UITextField {
     override var placeholder: String? {
         didSet {
             let attrPlaceholder = NSMutableAttributedString(string: placeholder ?? "")
-                .apply(font: Fonts.body1)
-                .apply(foregroundColor: Colors.Content.mediumEmphasis)
+                .apply(font: NatFonts.font(ofSize: .body1, withWeight: .regular))
+                .apply(foregroundColor: getTheme().colors.mediumEmphasis)
 
             attributedPlaceholder = attrPlaceholder
         }
@@ -16,7 +16,7 @@ class Field: UITextField {
         }
     }
 
-    var borderColor: UIColor = Colors.Content.lowEmphasis {
+    var borderColor: UIColor = getTheme().colors.lowEmphasis {
         didSet {
             layer.borderColor = borderColor.cgColor
         }
@@ -30,7 +30,7 @@ class Field: UITextField {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        font = Fonts.body1
+        font = NatFonts.font(ofSize: .body1, withWeight: .regular)
         layer.cornerRadius = 4
         layer.borderWidth = borderWidth
         layer.borderColor = borderColor.cgColor

@@ -32,5 +32,4 @@ struct ExpansionPanelBuilder {
         label.font = NatFonts.font(ofSize: .body1, withWeight: .regular)
         return label
     }
-
 }
