@@ -37,7 +37,6 @@
 		1908219397D007DC35BC0F99D5DEDE80 /* NSMutableAttributedString+Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4E75499E95EC13EB47F2CD9CB26622 /* NSMutableAttributedString+Builder.swift */; };
 		19CCAA043E9657B0F68877ABC0F7F90F /* NatButton+Specs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F485CDE6E86A020B1549C882DC64B38 /* NatButton+Specs.swift */; };
 		1A30D78CDFD9F95DDAFF61EDF612261D /* ButtonContainedStyle+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6236D4B7FFC5CF049C20642874B068 /* ButtonContainedStyle+Spec.swift */; };
-		1A59055F415CB4058DA88A823383FBC9 /* DividerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3CA47F5B151245708F86A82388401D /* DividerTests.swift */; };
 		1C33F8923E873C6C60821B00A3AF20C8 /* AvonFontLetterSpacings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F0FED09E44BABDCC90B51BEA23A2B3 /* AvonFontLetterSpacings.swift */; };
 		1E1CA75D4F2464DBEA0DD722294FFDEB /* NatSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0268F8E94DAA2428259644D88E375D32 /* NatSpacing.swift */; };
 		1F40DBA4B8A3C9B0558AD83B5B2884D6 /* ButtonContainedStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6921E739399DFDC850A3FD044E812EEE /* ButtonContainedStyle.swift */; };
@@ -178,6 +177,7 @@
 		84BB929024DC772D00A9BCC8 /* Tab+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BB928F24DC772D00A9BCC8 /* Tab+Snapshot+Tests.swift */; };
 		84BB929124DC788D00A9BCC8 /* TabDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA17128B21436681D0D607C145E56E2 /* TabDelegateMock.swift */; };
 		84BB929324DC7B9800A9BCC8 /* SearchBar+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F988EE601584B907D997288958055215 /* SearchBar+Snapshot+Tests.swift */; };
+		84BB929524DC82EC00A9BCC8 /* Divider+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3CA47F5B151245708F86A82388401D /* Divider+Snapshot+Tests.swift */; };
 		84BC900224AA15C3007DF09D /* NotificationCenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC900124AA15C3007DF09D /* NotificationCenterProtocol.swift */; };
 		84BC900524AA163A007DF09D /* DialogFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC900324AA163A007DF09D /* DialogFooterView.swift */; };
 		84BC900624AA163A007DF09D /* DialogStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC900424AA163A007DF09D /* DialogStyle.swift */; };
@@ -606,7 +606,7 @@
 		FADDEC4E472D2A193BED0EBF058A67E8 /* ViewAnimatingMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewAnimatingMock.swift; sourceTree = "<group>"; };
 		FB170792B9F11FE626EDB17C9AA646DE /* NaturaColorPaletteDark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturaColorPaletteDark.swift; sourceTree = "<group>"; };
 		FB7FB96016F7D02CB5976F54C383CCD6 /* NatSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatSizes.swift; sourceTree = "<group>"; };
-		FD3CA47F5B151245708F86A82388401D /* DividerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerTests.swift; sourceTree = "<group>"; };
+		FD3CA47F5B151245708F86A82388401D /* Divider+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Divider+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		FEFC5ABDDB7E6AA9C6199C7EC96F634D /* TheBodyShopColorPaletteLight+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheBodyShopColorPaletteLight+Spec.swift"; sourceTree = "<group>"; };
 		FF5220FFBF3EE662D05373D401183E54 /* FlatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatButton.swift; sourceTree = "<group>"; };
 		FF60BC58D83695B3AC61ABB7BBE49B9C /* UIView+FrameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+FrameTests.swift"; sourceTree = "<group>"; };
@@ -1027,14 +1027,6 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
-		59FEB5F81D357B0250D929D9D895E20C /* Divider */ = {
-			isa = PBXGroup;
-			children = (
-				FD3CA47F5B151245708F86A82388401D /* DividerTests.swift */,
-			);
-			path = Divider;
-			sourceTree = "<group>";
-		};
 		603A2F49CA3712BCACA1947C6DF47B0B = {
 			isa = PBXGroup;
 			children = (
@@ -1198,6 +1190,7 @@
 				84BB928324DC680A00A9BCC8 /* Badge */,
 				84BB929224DC7B0800A9BCC8 /* Bar */,
 				84391DE924DB275E009D0BE8 /* Dialog */,
+				84BB929424DC821800A9BCC8 /* Divider */,
 				84391DEB24DB4784009D0BE8 /* ShortCut */,
 				84BB928924DC734800A9BCC8 /* Tab */,
 				84391DDF24DB1B8B009D0BE8 /* NatDSSnapShotTests.swift */,
@@ -1305,6 +1298,14 @@
 			path = Bar;
 			sourceTree = "<group>";
 		};
+		84BB929424DC821800A9BCC8 /* Divider */ = {
+			isa = PBXGroup;
+			children = (
+				FD3CA47F5B151245708F86A82388401D /* Divider+Snapshot+Tests.swift */,
+			);
+			path = Divider;
+			sourceTree = "<group>";
+		};
 		84BC8FF724AA120D007DF09D /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -1385,7 +1386,6 @@
 				26BB817124B918FB00617EFC /* Badge */,
 				37C041B132E91C20059E887D83DD7E4E /* Button */,
 				67643298FB5CC3CCB193DC69AF79EC67 /* Dialog */,
-				59FEB5F81D357B0250D929D9D895E20C /* Divider */,
 				6759B588024397D1AC93C8D123122D59 /* ExpansionPanel */,
 				3FCB7713DAAB2F827B224E06280AF674 /* Field */,
 				BEE13D19F1A22BF171DC1BAC64B38FA7 /* Icons */,
@@ -2188,7 +2188,6 @@
 				84B9330824AB788E00B71BD4 /* NatDialogDismissableConfigurable+Spec.swift in Sources */,
 				0E7C160324C5D274002FF46F /* UINavigationController+Style+Spec.swift in Sources */,
 				7392D4960D4A13B6ADF3AB7372B264F5 /* DesignSystem+Spec.swift in Sources */,
-				1A59055F415CB4058DA88A823383FBC9 /* DividerTests.swift in Sources */,
 				705A576866667D11B1D05EBB709BCC00 /* DynamicColorFactory+Spec.swift in Sources */,
 				0E7C160924C5E614002FF46F /* IconViewSpec.swift in Sources */,
 				91A18CB3646844B3C0EF8924AF376ACD /* DynamicColors+Spec.swift in Sources */,
@@ -2455,6 +2454,7 @@
 				84BB928424DC683700A9BCC8 /* NatBadge+Snapshot+Tests.swift in Sources */,
 				84BB929324DC7B9800A9BCC8 /* SearchBar+Snapshot+Tests.swift in Sources */,
 				84391DED24DB5C1F009D0BE8 /* AppBar+Snapshot+Tests.swift in Sources */,
+				84BB929524DC82EC00A9BCC8 /* Divider+Snapshot+Tests.swift in Sources */,
 				84BB928624DC6B3500A9BCC8 /* BadgeableStub.swift in Sources */,
 				84391DE024DB1B8B009D0BE8 /* NatDSSnapShotTests.swift in Sources */,
 				84BB929024DC772D00A9BCC8 /* Tab+Snapshot+Tests.swift in Sources */,
