@@ -1,9 +1,9 @@
 import XCTest
-import FBSnapshotTestCase
+import SnapshotTesting
+
 @testable import NatDS
 
-class ExpansionPanelTests: FBSnapshotTestCase {
-
+class ExpansionPanelSnapshotTests: XCTestCase {
     var systemUnderTest: ExpansionPanel!
     var detailMock: UILabel!
     var otherDetailMock: UILabel!
@@ -29,11 +29,11 @@ class ExpansionPanelTests: FBSnapshotTestCase {
         systemUnderTest.translatesAutoresizingMaskIntoConstraints = false
         systemUnderTest.layoutIfNeeded()
 
-        FBSnapshotVerifyView(systemUnderTest)
+        assertSnapshot(matching: systemUnderTest, as: .image)
     }
 
     func test_initWithViewAnimating_hasValidSnapshot() {
-        FBSnapshotVerifyView(systemUnderTest)
+        assertSnapshot(matching: systemUnderTest, as: .image)
     }
 
     func test_defaultInit_withLongSubtitle_hasValidSnapshot() {
@@ -42,7 +42,7 @@ class ExpansionPanelTests: FBSnapshotTestCase {
         systemUnderTest.translatesAutoresizingMaskIntoConstraints = false
         systemUnderTest.layoutIfNeeded()
 
-        FBSnapshotVerifyView(systemUnderTest)
+        assertSnapshot(matching: systemUnderTest, as: .image)
     }
 
     func test_initWithViewAnimating_withLongSubtitle_hasValidSnapshot() {
@@ -51,7 +51,7 @@ class ExpansionPanelTests: FBSnapshotTestCase {
         systemUnderTest.translatesAutoresizingMaskIntoConstraints = false
         systemUnderTest.layoutIfNeeded()
 
-        FBSnapshotVerifyView(systemUnderTest)
+        assertSnapshot(matching: systemUnderTest, as: .image)
     }
 
     func test_defaultInit_withLongSubtitle_andLimitedSize_hasValidSnapshot() {
@@ -60,7 +60,7 @@ class ExpansionPanelTests: FBSnapshotTestCase {
         systemUnderTest.translatesAutoresizingMaskIntoConstraints = false
         let view = addsSutOnViewLimitedSize()
 
-        FBSnapshotVerifyView(view)
+        assertSnapshot(matching: view, as: .image)
     }
 
     func test_initWithViewAnimating_withLongSubtitle_andLimitedSize_hasValidSnapshot() {
@@ -69,7 +69,7 @@ class ExpansionPanelTests: FBSnapshotTestCase {
         systemUnderTest.translatesAutoresizingMaskIntoConstraints = false
         let view = addsSutOnViewLimitedSize()
 
-        FBSnapshotVerifyView(view)
+        assertSnapshot(matching: view, as: .image)
     }
 
     func test_tapButtonOnce_showsButtonPointingUp() {
@@ -77,7 +77,7 @@ class ExpansionPanelTests: FBSnapshotTestCase {
 
         tapButton()
 
-        FBSnapshotVerifyView(view)
+        assertSnapshot(matching: view, as: .image)
     }
 
     func test_tapButtonTwice_showsButtonPointingDown() {
@@ -86,7 +86,7 @@ class ExpansionPanelTests: FBSnapshotTestCase {
         tapButton()
         tapButton()
 
-        FBSnapshotVerifyView(view)
+        assertSnapshot(matching: view, as: .image)
     }
 
     func test_tapButtonThrice_showsButtonPointingUp() {
@@ -96,7 +96,7 @@ class ExpansionPanelTests: FBSnapshotTestCase {
         tapButton()
         tapButton()
 
-        FBSnapshotVerifyView(view)
+        assertSnapshot(matching: view, as: .image)
     }
 
     func test_tapButtonOnce_withDetailView_showsButtonPointingUp_AndDetailView() {
@@ -105,7 +105,7 @@ class ExpansionPanelTests: FBSnapshotTestCase {
 
         tapButton()
 
-        FBSnapshotVerifyView(view)
+        assertSnapshot(matching: view, as: .image)
     }
 
     func test_tapPanelOnce_withDetailView_showsButtonPointingUp_AndDetailView() {
@@ -114,7 +114,7 @@ class ExpansionPanelTests: FBSnapshotTestCase {
 
         tapPanel()
 
-        FBSnapshotVerifyView(view)
+        assertSnapshot(matching: view, as: .image)
     }
 
     func test_setDetailView_whenPanelIsExpanded_showsButtonPointingUp_AndDetailView() {
@@ -124,7 +124,7 @@ class ExpansionPanelTests: FBSnapshotTestCase {
 
         systemUnderTest.setDetailView(otherDetailMock)
 
-        FBSnapshotVerifyView(view)
+        assertSnapshot(matching: view, as: .image)
     }
 
     func test_tapPanelToCollapse_whenSetDetailView_AndPanelIsExpanded_showsButtonPointingDown() {
@@ -134,7 +134,7 @@ class ExpansionPanelTests: FBSnapshotTestCase {
 
         tapPanel()
 
-        FBSnapshotVerifyView(view)
+        assertSnapshot(matching: view, as: .image)
     }
 
     func test_removeDetailView_AndPanelIsExpanded_showsButtonPointingDown() {
@@ -144,7 +144,7 @@ class ExpansionPanelTests: FBSnapshotTestCase {
 
         systemUnderTest.setDetailView(nil)
 
-        FBSnapshotVerifyView(view)
+        assertSnapshot(matching: view, as: .image)
     }
 
     // MARK: Helper methods
@@ -182,5 +182,4 @@ class ExpansionPanelTests: FBSnapshotTestCase {
             systemUnderTest.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8)
         ])
     }
-
 }

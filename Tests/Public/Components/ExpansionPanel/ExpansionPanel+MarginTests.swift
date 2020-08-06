@@ -2,7 +2,6 @@ import XCTest
 @testable import NatDS
 
 class ExpansionPanelMarginTests: XCTestCase {
-
     let systemUnderTest = ExpansionPanel.Margin.self
 
     override func setUp() {
@@ -14,5 +13,4 @@ class ExpansionPanelMarginTests: XCTestCase {
 
         XCTAssertEqual(systemUnderTest.horizontalMargin, expectedSpacing)
     }
-
 }
