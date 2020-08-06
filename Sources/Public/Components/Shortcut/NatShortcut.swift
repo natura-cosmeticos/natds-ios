@@ -14,7 +14,7 @@
         let containedPrimary = NatShortcut(style: .containedPrimary)
         let containedDefault = NatShortcut(style: .containedDefault)
         let outlinedPrimary = NatShortcut(style: .outlinedPrimary)
-        let outlinedPrimary = NatShortcut(style: .outlinedPrimary)
+        let outlinedDefault = NatShortcut(style: .outlinedDefault)
 
     This shortcut has an enum NatShortcut.Widths with allowed values for width values, if needed:
 
