@@ -49,7 +49,7 @@ platform :ios do
     scan(
       workspace: workspace_path,
       scheme: scheme_lib,
-      destination: "platform=iOS Simulator,name=iPhone 8,OS=13.6",
+      destination: "platform=iOS Simulator,name=iPhone 8",
       skip_detect_devices: true
     )
   end
