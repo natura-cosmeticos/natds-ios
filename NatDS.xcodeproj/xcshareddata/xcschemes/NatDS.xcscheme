@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A9B71E82237B559A00A2BF51"
+               BlueprintIdentifier = "F49E39B57E86C6597B624106BE14A13E"
                BuildableName = "NatDS.framework"
                BlueprintName = "NatDS"
                ReferencedContainer = "container:NatDS.xcodeproj">
@@ -32,7 +32,7 @@
       <CodeCoverageTargets>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A9B71E82237B559A00A2BF51"
+            BlueprintIdentifier = "F49E39B57E86C6597B624106BE14A13E"
             BuildableName = "NatDS.framework"
             BlueprintName = "NatDS"
             ReferencedContainer = "container:NatDS.xcodeproj">
@@ -44,7 +44,7 @@
             testExecutionOrdering = "random">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A9B71E8B237B559A00A2BF51"
+               BlueprintIdentifier = "B5A3069809DD9E998F7671EF5F1BAE1C"
                BuildableName = "NatDSTests.xctest"
                BlueprintName = "NatDSTests"
                ReferencedContainer = "container:NatDS.xcodeproj">
@@ -65,24 +65,12 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A9B71E82237B559A00A2BF51"
+            BlueprintIdentifier = "F49E39B57E86C6597B624106BE14A13E"
             BuildableName = "NatDS.framework"
             BlueprintName = "NatDS"
             ReferencedContainer = "container:NatDS.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
-      <EnvironmentVariables>
-         <EnvironmentVariable
-            key = "FB_REFERENCE_IMAGE_DIR"
-            value = "$(SOURCE_ROOT)/Tests/ReferenceImages"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "IMAGE_DIFF_DIR"
-            value = "$(SOURCE_ROOT)/Tests/FailureDiffs"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -93,7 +81,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A9B71E82237B559A00A2BF51"
+            BlueprintIdentifier = "F49E39B57E86C6597B624106BE14A13E"
             BuildableName = "NatDS.framework"
             BlueprintName = "NatDS"
             ReferencedContainer = "container:NatDS.xcodeproj">
