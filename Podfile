@@ -2,7 +2,6 @@ platform :ios, '10.0'
 inhibit_all_warnings!
 
 def test_pod
-  pod 'iOSSnapshotTestCase'
   pod 'Quick'
   pod 'Nimble'
 end
