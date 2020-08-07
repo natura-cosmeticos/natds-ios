@@ -18,13 +18,13 @@ final class DividerSnapshotTests: XCTestCase {
         superview.backgroundColor = .white
         superview.addSubview(systemUnderTest)
 
-        let contraints = [
+        let constraints = [
             systemUnderTest.topAnchor.constraint(equalTo: superview.topAnchor, constant: 1),
             systemUnderTest.leadingAnchor.constraint(equalTo: superview.leadingAnchor),
             systemUnderTest.trailingAnchor.constraint(equalTo: superview.trailingAnchor)
         ]
 
-        NSLayoutConstraint.activate(contraints)
+        NSLayoutConstraint.activate(constraints)
     }
 
     func test_init_hasValidSnapshot() {

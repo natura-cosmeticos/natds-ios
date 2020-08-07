@@ -64,46 +64,46 @@ extension ValueTextHighlight {
         self.addSubview(topDivider)
         topDivider.translatesAutoresizingMaskIntoConstraints = false
 
-        let contraints = [
+        let constraints = [
             topDivider.topAnchor.constraint(equalTo: topAnchor),
             topDivider.leadingAnchor.constraint(equalTo: leadingAnchor),
             topDivider.trailingAnchor.constraint(equalTo: trailingAnchor)
         ]
 
-        NSLayoutConstraint.activate(contraints)
+        NSLayoutConstraint.activate(constraints)
     }
 
     private func addBottomDivider() {
         self.addSubview(bottomDivider)
         bottomDivider.translatesAutoresizingMaskIntoConstraints = false
 
-        let contraints = [
+        let constraints = [
             bottomDivider.bottomAnchor.constraint(equalTo: bottomAnchor),
             bottomDivider.leadingAnchor.constraint(equalTo: leadingAnchor),
             bottomDivider.trailingAnchor.constraint(equalTo: trailingAnchor)
         ]
 
-        NSLayoutConstraint.activate(contraints)
+        NSLayoutConstraint.activate(constraints)
     }
 
     private func addValueLabel() {
         self.addSubview(valueLabel)
         valueLabel.translatesAutoresizingMaskIntoConstraints = false
 
-        let contraints = [
+        let constraints = [
             valueLabel.topAnchor.constraint(equalTo: topDivider.bottomAnchor, constant: 20),
             valueLabel.bottomAnchor.constraint(equalTo: bottomDivider.topAnchor, constant: -20),
             valueLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8)
         ]
 
-        NSLayoutConstraint.activate(contraints)
+        NSLayoutConstraint.activate(constraints)
     }
 
     private func addValueDescriptionLabel() {
         self.addSubview(valueDescriptionLabel)
         valueDescriptionLabel.translatesAutoresizingMaskIntoConstraints = false
 
-        let contraints = [
+        let constraints = [
             valueDescriptionLabel.topAnchor.constraint(greaterThanOrEqualTo: topDivider.bottomAnchor, constant: 20),
             valueDescriptionLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
             valueDescriptionLabel.bottomAnchor.constraint(greaterThanOrEqualTo: bottomDivider.topAnchor, constant: -20),
@@ -111,6 +111,6 @@ extension ValueTextHighlight {
             valueDescriptionLabel.centerYAnchor.constraint(equalTo: valueLabel.centerYAnchor)
         ]
 
-        NSLayoutConstraint.activate(contraints)
+        NSLayoutConstraint.activate(constraints)
     }
 }

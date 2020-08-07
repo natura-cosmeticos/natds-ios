@@ -1,6 +1,6 @@
 /**
   NatSpacing is a enum that has access to spacing properties from the Design System.
-  This properties are used with contraints to handle view spaces between other views or view
+  This properties are used with constraints to handle view spaces between other views or view
   properties like safeAreaLayoutGuide.
   According with the current Brand in the Design System this spacing properties can change.
 
