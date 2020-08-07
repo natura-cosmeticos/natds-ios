@@ -3,7 +3,6 @@ import XCTest
 @testable import NatDS
 
 final class TextFieldTests: XCTestCase {
-
     var delegateMock: TextFieldDelegateMock!
     var sut: TextField!
 

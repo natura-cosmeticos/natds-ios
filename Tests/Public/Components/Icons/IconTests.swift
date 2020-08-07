@@ -1,8 +1,8 @@
-import FBSnapshotTestCase
+import XCTest
 
 @testable import NatDS
 
-class IconTests: FBSnapshotTestCase {
+class IconTests: XCTestCase {
     func test_difference_between_icons_and_test_mirror() {
         let difference = diffBetweenIcons(
             appIcons: Icon.allCases,
@@ -16,21 +16,6 @@ class IconTests: FBSnapshotTestCase {
         let iconsMirror = Icon.allCases.compactMap { IconMirror(rawValue: $0.rawValue) }
 
         XCTAssertEqual(iconsMirror.count, Icon.allCases.count)
-    }
-
-    func test_icons_hasValidSnapshot() {
-        Icon.allCases.forEach { assert(icon: $0) }
-    }
-
-    private func assert(icon: Icon) {
-        let label = UILabel()
-        label.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
-        label.font = .iconFont(ofSize: 24)
-        label.text = icon.unicode
-
-        let identifier = "\(icon)"
-
-        FBSnapshotVerifyView(label, identifier: identifier)
     }
 }
 

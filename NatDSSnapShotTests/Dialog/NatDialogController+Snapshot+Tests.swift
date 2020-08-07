@@ -10,7 +10,7 @@ final class NatDialogControllerSnapshotTests: XCTestCase {
         super.setUp()
 
         DesignSystem().configure(with: .natura)
-        
+
         superview = .init(frame: .init(x: 0, y: 0, width: 375, height: 600))
         superview.backgroundColor = .white
     }

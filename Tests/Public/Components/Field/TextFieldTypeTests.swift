@@ -1,8 +1,8 @@
 import XCTest
+
 @testable import NatDS
 
 class TextFieldTypeTests: XCTestCase {
-
     func test_text_returnsExpectedKeyboardAndTextSettings() {
         let expectedKeyboard = UIKeyboardType.default
         let expectedAutocorrection = UITextAutocorrectionType.yes

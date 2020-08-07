@@ -5,7 +5,7 @@ import SnapshotTesting
 
 final class TextFieldTests: XCTestCase {
     var delegateMock: TextFieldDelegateMock!
-    var sut: TextField!
+    var systemUnderTest: TextField!
 
     override func setUp() {
         super.setUp()
@@ -13,45 +13,45 @@ final class TextFieldTests: XCTestCase {
         DesignSystem().configure(with: .natura)
 
         delegateMock = TextFieldDelegateMock()
-        sut = TextField(frame: CGRect(x: 0, y: 0, width: 328, height: 99))
-        sut.backgroundColor = .white
+        systemUnderTest = TextField(frame: CGRect(x: 0, y: 0, width: 328, height: 99))
+        systemUnderTest.backgroundColor = .white
 
-        sut.title = "Label"
-        sut.placeholder = "Placeholder"
-        sut.helper = "Helper Text"
-        sut.delegate = delegateMock
+        systemUnderTest.title = "Label"
+        systemUnderTest.placeholder = "Placeholder"
+        systemUnderTest.helper = "Helper Text"
+        systemUnderTest.delegate = delegateMock
     }
 
     func test_state_whenHasNoFocus_returnEnableStateSnapshot() {
-        sut.textFieldDidEndEditing(sut.textField)
+        systemUnderTest.textFieldDidEndEditing(systemUnderTest.textField)
 
-        assertSnapshot(matching: sut, as: .image)
+        assertSnapshot(matching: systemUnderTest, as: .image)
     }
 
     func test_state_whenHasFocus_returnActiveStateSnapshot() {
-        sut.textFieldDidBeginEditing(sut.textField)
-        assertSnapshot(matching: sut, as: .image)
+        systemUnderTest.textFieldDidBeginEditing(systemUnderTest.textField)
+        assertSnapshot(matching: systemUnderTest, as: .image)
     }
 
     func test_state_whenHasError_returnErrorStateSnapshot() {
-        sut.error = "Error: Has an error"
-        assertSnapshot(matching: sut, as: .image)
+        systemUnderTest.error = "Error: Has an error"
+        assertSnapshot(matching: systemUnderTest, as: .image)
     }
 
     func test_state_whenHasErrorAndLargeMessage_returnMultipleErrorLinesStateSnapshot() {
-        sut.frame = CGRect(x: 0, y: 0, width: 328, height: 119)
-        sut.error = "Error: Has an error - this input has an error - Neque porro quisquam est qui dolorem ipsum quia"
-        assertSnapshot(matching: sut, as: .image)
+        systemUnderTest.frame = CGRect(x: 0, y: 0, width: 328, height: 119)
+        systemUnderTest.error = "Error: Has an error - this input has an error - Neque porro quisquam est qui dolorem ipsum quia"
+        assertSnapshot(matching: systemUnderTest, as: .image)
     }
 
     func test_state_whenHasErrorAndLargeMessageWithSmallWidth_returnMultipleErrorLinesAndNotCutIconSnapshot() {
-        sut.frame = CGRect(x: 0, y: 0, width: 100, height: 119)
-        sut.error = "Error: Has an error"
-        assertSnapshot(matching: sut, as: .image)
+        systemUnderTest.frame = CGRect(x: 0, y: 0, width: 100, height: 119)
+        systemUnderTest.error = "Error: Has an error"
+        assertSnapshot(matching: systemUnderTest, as: .image)
     }
 
     func test_text_whenTextIsSet_expectedTextFieldIsFilledSnapshot() {
-        sut.text = "999.999.999-99"
-        assertSnapshot(matching: sut, as: .image)
+        systemUnderTest.text = "999.999.999-99"
+        assertSnapshot(matching: systemUnderTest, as: .image)
     }
 }
