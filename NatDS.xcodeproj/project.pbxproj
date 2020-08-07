@@ -38,7 +38,6 @@
 		1C33F8923E873C6C60821B00A3AF20C8 /* AvonFontLetterSpacings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F0FED09E44BABDCC90B51BEA23A2B3 /* AvonFontLetterSpacings.swift */; };
 		1E1CA75D4F2464DBEA0DD722294FFDEB /* NatSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0268F8E94DAA2428259644D88E375D32 /* NatSpacing.swift */; };
 		1F40DBA4B8A3C9B0558AD83B5B2884D6 /* ButtonContainedStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6921E739399DFDC850A3FD044E812EEE /* ButtonContainedStyle.swift */; };
-		1FBF5A52B03E9E219462A06F9487D3B4 /* ValueTextHighlightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526CD2A36CE33EBE0E9EFD858C9074DE /* ValueTextHighlightTests.swift */; };
 		2175BE4F7334ED85AECC5C401B400BD8 /* FlatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5220FFBF3EE662D05373D401183E54 /* FlatButton.swift */; };
 		232DAFD65FD65951D36C6F2618D6B7FC /* NaturaFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AC3BBD38115B8137B4E1CF7BFB87CE /* NaturaFont.swift */; };
 		2625466124C7379800B98A91 /* StubSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2625465F24C7379400B98A91 /* StubSelector.swift */; };
@@ -158,6 +157,7 @@
 		84A16F0124DDBE5500E80DA0 /* NavigationDrawerSubitemCell+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A16F0024DDBE5500E80DA0 /* NavigationDrawerSubitemCell+Snapshot+Tests.swift */; };
 		84A16F0324DDBF6C00E80DA0 /* NavigationDrawer+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A16F0224DDBF6C00E80DA0 /* NavigationDrawer+Snapshot+Tests.swift */; };
 		84A16F0524DDC30100E80DA0 /* NavigationDrawerDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92BFB29E97D8520D6B67E8883AB9A08 /* NavigationDrawerDelegateMock.swift */; };
+		84A16F0624DDC61000E80DA0 /* ValueTextHighlight+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526CD2A36CE33EBE0E9EFD858C9074DE /* ValueTextHighlight+Snapshot+Tests.swift */; };
 		84A818BB24B77FA80007C7D5 /* UIGestureRecognizer+SendGesturesEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A818BA24B77FA80007C7D5 /* UIGestureRecognizer+SendGesturesEvent.swift */; };
 		84A818BF24B7BA4D0007C7D5 /* NatShortcut+Widths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A818BE24B7BA4D0007C7D5 /* NatShortcut+Widths.swift */; };
 		84AB67611C0B5D85CBE5CE489FCA4DC6 /* UIFont+IconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EAF8A97988FC1AA2F71C29D348A67D /* UIFont+IconTests.swift */; };
@@ -414,7 +414,7 @@
 		4F55DA20C78EC30101A75371CAD5225C /* DynamicColorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicColorFactory.swift; sourceTree = "<group>"; };
 		50D996E4B957C51847075E986215675B /* Divider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Divider.swift; sourceTree = "<group>"; };
 		51306DA6015CBDFD44DECF0E4C7F16E2 /* NaturaFontLetterSpacings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturaFontLetterSpacings.swift; sourceTree = "<group>"; };
-		526CD2A36CE33EBE0E9EFD858C9074DE /* ValueTextHighlightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueTextHighlightTests.swift; sourceTree = "<group>"; };
+		526CD2A36CE33EBE0E9EFD858C9074DE /* ValueTextHighlight+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ValueTextHighlight+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		52F4D9E1F67A97596AD6E676E979CEC0 /* NatDialogController+StandardStyleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogController+StandardStyleBuilder.swift"; sourceTree = "<group>"; };
 		52F6EAD3698A963C25994CE309B0DB9E /* NaturaColorPaletteDark+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaturaColorPaletteDark+Spec.swift"; sourceTree = "<group>"; };
 		546EF920207BAF8470E811B146A05C0F /* NatColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatColors.swift; sourceTree = "<group>"; };
@@ -964,7 +964,7 @@
 		42322F15110B108E59C217709124F184 /* ValueText */ = {
 			isa = PBXGroup;
 			children = (
-				526CD2A36CE33EBE0E9EFD858C9074DE /* ValueTextHighlightTests.swift */,
+				526CD2A36CE33EBE0E9EFD858C9074DE /* ValueTextHighlight+Snapshot+Tests.swift */,
 			);
 			path = ValueText;
 			sourceTree = "<group>";
@@ -1178,6 +1178,7 @@
 				84391DEB24DB4784009D0BE8 /* ShortCut */,
 				84BB928924DC734800A9BCC8 /* Tab */,
 				84BB929B24DC975E00A9BCC8 /* TextField */,
+				42322F15110B108E59C217709124F184 /* ValueText */,
 				84391DE124DB1B8B009D0BE8 /* Info.plist */,
 			);
 			path = NatDSSnapShotTests;
@@ -1440,7 +1441,6 @@
 				7BEFD3D9F02DCD62D7A24864218DC0D8 /* NavigationDrawer */,
 				84BF066F24B511F600462AC5 /* Shortcut */,
 				28B8CBEE15559C8DBD459A3FC53141DB /* Tab */,
-				42322F15110B108E59C217709124F184 /* ValueText */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -2322,7 +2322,6 @@
 				50130A6AE7342A799C5989AF8FE486E8 /* UITableView+ReusableTests.swift in Sources */,
 				8E7FE7AAE264D40AF9BFF5CE6E5C7AD0 /* UIView+FrameTests.swift in Sources */,
 				D05CEB5C2F5F9D32FA015604F6E719F0 /* ValidateTheme+Spec.swift in Sources */,
-				1FBF5A52B03E9E219462A06F9487D3B4 /* ValueTextHighlightTests.swift in Sources */,
 				84B9330A24ABC38C00B71BD4 /* NatDialogTitleConfigurable+Spec.swift in Sources */,
 				2625466124C7379800B98A91 /* StubSelector.swift in Sources */,
 				E4B171E23C40B91B211DB2F64357778D /* ViewStyle+Spec.swift in Sources */,
@@ -2493,6 +2492,7 @@
 				84BB929324DC7B9800A9BCC8 /* SearchBar+Snapshot+Tests.swift in Sources */,
 				84BB929E24DCA6C500A9BCC8 /* TextField+Snapshot+Tests.swift in Sources */,
 				84A16F0324DDBF6C00E80DA0 /* NavigationDrawer+Snapshot+Tests.swift in Sources */,
+				84A16F0624DDC61000E80DA0 /* ValueTextHighlight+Snapshot+Tests.swift in Sources */,
 				84BB929A24DC935700A9BCC8 /* ViewAnimatingMock.swift in Sources */,
 				84BB92A024DCA7E300A9BCC8 /* TextFieldDelegateMock.swift in Sources */,
 				84391DED24DB5C1F009D0BE8 /* AppBar+Snapshot+Tests.swift in Sources */,

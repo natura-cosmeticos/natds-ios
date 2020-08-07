@@ -8,6 +8,9 @@ final class NavigationDrawerSubitemCellSnapshotTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
+
+        DesignSystem().configure(with: .natura)
+
         systemUnderTest = NavigationDrawerSubitemCell()
         systemUnderTest.frame = CGRect(x: 0, y: 0, width: 320, height: 48)
         systemUnderTest.title = "Sub Menu Item"

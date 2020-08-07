@@ -3,7 +3,7 @@ import SnapshotTesting
 
 @testable import NatDS
 
-final class TextFieldTests: XCTestCase {
+final class TextFieldSnapshotTests: XCTestCase {
     var delegateMock: TextFieldDelegateMock!
     var systemUnderTest: TextField!
 
