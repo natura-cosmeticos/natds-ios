@@ -12,7 +12,7 @@ Install _fastlane_ using
 ```
 [sudo] gem install fastlane -NV
 ```
-or alternatively using `brew cask install fastlane`
+or alternatively using `brew install fastlane`
 
 # Available Actions
 ### install
@@ -34,6 +34,16 @@ Install cocoapods dependencies
 fastlane ios test
 ```
 Run all Unit Tests
+### ios test_unit
+```
+fastlane ios test_unit
+```
+Run all Unit Tests
+### ios test_snapshot
+```
+fastlane ios test_snapshot
+```
+Run all Snapshot Tests
 ### ios fetch_certificates
 ```
 fastlane ios fetch_certificates

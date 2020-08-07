@@ -16,6 +16,7 @@ scheme = "NatDS-SampleApp"
 target = "NatDS_SampleApp"
 
 scheme_lib = "NatDS"
+scheme_snapshot = "NatDSSnapShotTests"
 
 desc "CI Only - Install all project dependencies (npm & pods)"
 lane :install do
@@ -38,7 +39,27 @@ platform :ios do
     scan(
       workspace: workspace_path,
       scheme: scheme_lib,
-      destination: "platform=iOS Simulator,name=iPhone 8,OS=13.3",
+      destination: "platform=iOS Simulator,name=iPhone 8,OS=13.6",
+      skip_detect_devices: true
+    )
+  end
+
+  desc "Run all Unit Tests"
+  lane :test_unit do
+    scan(
+      workspace: workspace_path,
+      scheme: scheme_lib,
+      destination: "platform=iOS Simulator,name=iPhone 8,OS=13.6",
+      skip_detect_devices: true
+    )
+  end
+
+  desc "Run all Snapshot Tests"
+  lane :test_snapshot do
+    scan(
+      workspace: workspace_path,
+      scheme: scheme_snapshot,
+      destination: "platform=iOS Simulator,name=iPhone SE (2nd generation)",
       skip_detect_devices: true
     )
   end
