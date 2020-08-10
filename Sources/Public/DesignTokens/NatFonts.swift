@@ -17,7 +17,7 @@ public struct NatFonts {
     public static func font(ofSize size: Size, withWeight weight: Weight) -> UIFont {
         .systemFont(
             ofSize: getTheme().font.sizes[keyPath: size.rawValue],
-            weight: getTheme().font.weights[keyPath: weight.rawValue]
+            weight: weight.rawValue
         )
     }
 }
@@ -70,16 +70,18 @@ extension NatFonts {
     public enum Weight {
         case regular
         case medium
+        case bold
 
-        var rawValue: KeyPath<FontWeights, UIFont.Weight> {
-            let keyPath: KeyPath<FontWeights, UIFont.Weight>
+        var rawValue: UIFont.Weight {
+            let weight: UIFont.Weight
 
             switch self {
-            case .regular: keyPath = \.regular
-            case .medium: keyPath = \.medium
+            case .regular: weight = getTheme().font.weights.regular
+            case .medium: weight = getTheme().font.weights.medium
+            case .bold: weight = .bold
             }
 
-            return keyPath
+            return weight
         }
     }
 }

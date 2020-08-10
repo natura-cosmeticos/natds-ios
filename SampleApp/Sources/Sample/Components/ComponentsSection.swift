@@ -12,10 +12,10 @@ class ComponentsSection: SampleSection {
         ExpansionPanelViewController.self,
         IconographyItemViewController.self,
         LogoItemViewController.self,
-        TabItemViewController.self,
-        TextFieldItemViewController.self,
         NavigationDrawerItemViewController.self,
         ShortcutItemViewController.self,
+        TabItemViewController.self,
+        TextFieldItemViewController.self,
         ValueTextHighlightItemViewController.self
     ]
 }
