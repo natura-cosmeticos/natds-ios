@@ -29,11 +29,6 @@ Install cocoapods dependencies
 ----
 
 ## iOS
-### ios test
-```
-fastlane ios test
-```
-Run all Unit Tests
 ### ios test_unit
 ```
 fastlane ios test_unit
