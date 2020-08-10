@@ -34,9 +34,6 @@ public class ContainedButton: UIButton, Pulsable {
         super.touchesEnded(touches, with: event)
         endPulse(layer: layer)
     }
-}
-
-extension ContainedButton {
 
     private func setup() {
         layer.cornerRadius = 4.0

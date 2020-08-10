@@ -14,6 +14,7 @@ class IconographyItemViewController: UIViewController, SampleItem {
         collectionView.collectionViewLayout = layout
         collectionView.dataSource = self
         collectionView.register(IconCollectionViewCell.self)
+        collectionView.backgroundColor = .clear
 
         return collectionView
     }()
@@ -45,6 +46,7 @@ extension IconographyItemViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let view = collectionView.dequeueReusableCell(for: indexPath, cellType: IconCollectionViewCell.self)
+
         view.icon = icons[indexPath.row]
         return view
     }

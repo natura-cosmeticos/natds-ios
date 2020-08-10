@@ -15,6 +15,7 @@ final class IconViewSpec: QuickSpec {
             beforeEach {
                 sut = IconView(fontSize: 25, icon: Icon.filledActionAdd)
             }
+
             it("sets expected icon") {
                 expect(sut.icon).to(equal(Icon.filledActionAdd))
             }

@@ -29,9 +29,6 @@ public class FlatButton: UIButton, Pulsable {
         super.touchesEnded(touches, with: event)
         endPulse(layer: layer)
     }
-}
-
-private extension FlatButton {
 
     private func setup() {
         layer.cornerRadius = 4.0

@@ -1,6 +1,6 @@
 /**
   NatSizes is a enum that has access to size properties from the Design System.
-  This properties are used with contraints to handle view size of view objects.
+  This properties are used with constraints to handle view size of view objects.
   According with the current Brand in the Design System this properties can change.
 
     All properties returns a CGFloat.

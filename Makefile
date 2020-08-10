@@ -52,6 +52,11 @@ install_certificates: ## fetch and install certificates for code signing
 test: ## run unit tests
 	$(FASTLANE) test
 
+test_unit: ## run unit tests
+	$(FASTLANE) test_unit
+
+test_snapshot: ## run snapshot tests
+	$(FASTLANE) test_snapshot
 build_ipa: ## builds the ipa file for environment (Ad Hoc)
 	$(FASTLANE) build_ipa
 
