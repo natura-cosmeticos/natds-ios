@@ -17,36 +17,36 @@
  *
  */
 
-struct AvonDarkTheme: ThemeProtocol {
-    let tokens: TokensProtocol = AvonDarkTokens() //Faltou colocar o objeto aqui
-    let components: ComponentsProtocol = AvonDarkComponents()
+struct AvonLightTheme: ThemeProtocol {
+    let tokens: TokensProtocol = AvonLightTokens()
+    let components: ComponentsProtocol = AvonLightComponents()
 }
 
-struct AvonDarkTokens: TokensProtocol {
+struct AvonLightTokens: TokensProtocol {
     let borderRadiusNone: CGFloat = 0
     let borderRadiusSmall: CGFloat = 2
     let borderRadiusMedium: CGFloat = 4
     let borderRadiusLarge: CGFloat = 8
-    let colorPrimary = "#F091C9"
-    let colorOnPrimary = "#000000"
-    let colorPrimaryLight = "#FFC3FC"
+    let colorPrimary = "#DE0085"
+    let colorOnPrimary = "#FFFFFF"
+    let colorPrimaryLight = "#FF56B5"
     let colorOnPrimaryLight = "#000000"
-    let colorPrimaryDark = "#BC6198"
-    let colorOnPrimaryDark = "#000000"
+    let colorPrimaryDark = "#A70058"
+    let colorOnPrimaryDark = "#FFFFFF"
     let colorSecondary = "#E9E9E9"
     let colorOnSecondary = "#333333"
     let colorSecondaryLight = "#FFFFFF"
     let colorOnSecondaryLight = "#333333"
     let colorSecondaryDark = "#B7B7B7"
     let colorOnSecondaryDark = "#333333"
-    let colorBackground = "#121212"
-    let colorOnBackground = "#FFFFFF"
-    let colorSurface = "#333333"
-    let colorOnSurface = "#FFFFFF"
-    let colorHighlight = "#FFFFFF"
-    let colorHighEmphasis = "#FAFAFA"
-    let colorMediumEmphasis = "#BBBBBB"
-    let colorLowEmphasis = "#777777"
+    let colorBackground = "#FAFAFA"
+    let colorOnBackground = "#333333"
+    let colorSurface = "#FFFFFF"
+    let colorOnSurface = "#333333"
+    let colorHighlight = "#000000"
+    let colorHighEmphasis = "#333333"
+    let colorMediumEmphasis = "#777777"
+    let colorLowEmphasis = "#BBBBBB"
     let colorLink = "#227BBD"
     let colorOnLink = "#FFFFFF"
     let colorSuccess = "#569A32"
@@ -92,11 +92,11 @@ struct AvonDarkTokens: TokensProtocol {
     let typographyFontWeightMedium: UIFont.Weight = .medium
 }
 
-struct AvonDarkComponents: ComponentsProtocol {
+struct AvonLightComponents: ComponentsProtocol {
     let buttonDefaultFontSize: CGFloat = 14
     let buttonDefaultFontWeight: UIFont.Weight = .medium
     let buttonDefaultLetterSpacing: CGFloat = 0.44
-    let buttonDefaultLineHeight: CGFloat = 1.5 //Faltou o tipo aqui
+    let buttonDefaultLineHeight: CGFloat = 1.5
     let heading1FontSize: CGFloat = 96
     let heading1FontWeight: UIFont.Weight = .regular
     let heading1LetterSpacing: CGFloat = 0

@@ -96,7 +96,7 @@ protocol ComponentsProtocol {
     var buttonDefaultFontSize: CGFloat { get }
     var buttonDefaultFontWeight: UIFont.Weight { get }
     var buttonDefaultLetterSpacing: CGFloat { get }
-    var buttonDefaultLineHeight: CGFloat { get } // Not String
+    var buttonDefaultLineHeight: CGFloat { get }
     var heading1FontSize: CGFloat { get }
     var heading1FontWeight: UIFont.Weight { get }
     var heading1LetterSpacing: CGFloat { get }
