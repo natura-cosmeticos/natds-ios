@@ -1,11 +1,20 @@
 /**
- Representation of avaible themes in Desgin System.
+  Representation of avaible themes in Desgin System.
+
+ - Note:
+    Supported Themes:
+      - AvonDark
+      - AvonLight
+      - NaturaDark
+      - NaturaLight
+      - TheBodyShopDark
+      - TheBodyShopLight
 
  - Warning:
     Under development.
 */
 
-public enum AvailableTheme {
+enum AvailableTheme {
     case avonDark
     case avonLight
     case naturaDark
