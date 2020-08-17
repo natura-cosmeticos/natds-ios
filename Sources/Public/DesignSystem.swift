@@ -36,8 +36,21 @@ public final class DesignSystem {
         self.storage = storage
     }
 
-    // MARK: - Public
+    // MARK: - Public methods
 
+    func configure(with theme: AvailableTheme) {
+        storage.save(theme: theme.newInstance)
+    }
+
+    var currentTheme: AvailableTheme? {
+        storage.getThemeProtocol()
+            .flatMap(AvailableTheme.init)
+    }
+}
+
+// MARK: - Under Refactoring, will be deprecated
+
+extension DesignSystem {
     public enum Brand {
         case avon
         case natura
@@ -46,9 +59,15 @@ public final class DesignSystem {
 
     public func configure(with brand: Brand) {
         switch brand {
-        case .avon: storage.save(theme: AvonTheme())
-        case .natura: storage.save(theme: NaturaTheme())
-        case .theBodyShop: storage.save(theme: TheBodyShopTheme())
+        case .avon:
+            storage.save(theme: AvonTheme())
+            configure(with: .avonLight)
+        case .natura:
+            storage.save(theme: NaturaTheme())
+            configure(with: .naturaLight)
+        case .theBodyShop:
+            storage.save(theme: TheBodyShopTheme())
+            configure(with: .theBodyShopLight)
         }
     }
 
@@ -56,8 +75,6 @@ public final class DesignSystem {
         let theme = storage.getTheme()
         return getBrandFrom(theme: theme)
     }
-
-    // MARK: - Private methods
 
     private func getBrandFrom(theme: Theme?) -> Brand? {
         let brand: Brand?

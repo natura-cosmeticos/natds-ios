@@ -166,6 +166,9 @@
 		847C82A424E578D3001CE116 /* NaturaLightTheme+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C82A324E578D3001CE116 /* NaturaLightTheme+Spec.swift */; };
 		847C82A624E57931001CE116 /* TheBodyShopDarkTheme+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C82A524E57931001CE116 /* TheBodyShopDarkTheme+Spec.swift */; };
 		847C82A824E57946001CE116 /* TheBodyShopLightTheme+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C82A724E57946001CE116 /* TheBodyShopLightTheme+Spec.swift */; };
+		84932F1324EAB9270052265F /* AvailableTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84932F1224EAB9270052265F /* AvailableTheme.swift */; };
+		84932F1624EABB190052265F /* AvailableTheme+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84932F1424EABA280052265F /* AvailableTheme+Spec.swift */; };
+		84932F1A24EAF07B0052265F /* StubThemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84932F1824EAF06B0052265F /* StubThemeProtocol.swift */; };
 		84A16EFF24DDBC6D00E80DA0 /* NavigationDrawerItemCell+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A16EFE24DDBC6D00E80DA0 /* NavigationDrawerItemCell+Snapshot+Tests.swift */; };
 		84A16F0124DDBE5500E80DA0 /* NavigationDrawerSubitemCell+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A16F0024DDBE5500E80DA0 /* NavigationDrawerSubitemCell+Snapshot+Tests.swift */; };
 		84A16F0324DDBF6C00E80DA0 /* NavigationDrawer+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A16F0224DDBF6C00E80DA0 /* NavigationDrawer+Snapshot+Tests.swift */; };
@@ -489,6 +492,9 @@
 		847C82A524E57931001CE116 /* TheBodyShopDarkTheme+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheBodyShopDarkTheme+Spec.swift"; sourceTree = "<group>"; };
 		847C82A724E57946001CE116 /* TheBodyShopLightTheme+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheBodyShopLightTheme+Spec.swift"; sourceTree = "<group>"; };
 		847C94FCAA23AB699A4926C6B8E598C6 /* AvonFontSizes+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AvonFontSizes+Spec.swift"; sourceTree = "<group>"; };
+		84932F1224EAB9270052265F /* AvailableTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableTheme.swift; sourceTree = "<group>"; };
+		84932F1424EABA280052265F /* AvailableTheme+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AvailableTheme+Spec.swift"; sourceTree = "<group>"; };
+		84932F1824EAF06B0052265F /* StubThemeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubThemeProtocol.swift; sourceTree = "<group>"; };
 		84A16EFE24DDBC6D00E80DA0 /* NavigationDrawerItemCell+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationDrawerItemCell+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		84A16F0024DDBE5500E80DA0 /* NavigationDrawerSubitemCell+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationDrawerSubitemCell+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		84A16F0224DDBF6C00E80DA0 /* NavigationDrawer+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationDrawer+Snapshot+Tests.swift"; sourceTree = "<group>"; };
@@ -756,6 +762,7 @@
 				D0A81AF824CDF9690E19EF12D5D38297 /* DesignTokens */,
 				AB858EEAF58ED77E8AD12908C12E22EA /* Extensions */,
 				AC44AC684E1D6DB6F7BF21E7660666AD /* DesignSystem.swift */,
+				84932F1224EAB9270052265F /* AvailableTheme.swift */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -1354,6 +1361,14 @@
 			path = TheBodyShop;
 			sourceTree = "<group>";
 		};
+		84932F1724EAF0510052265F /* ThemeProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				84932F1824EAF06B0052265F /* StubThemeProtocol.swift */,
+			);
+			path = ThemeProtocol;
+			sourceTree = "<group>";
+		};
 		84A16EFD24DDBC3200E80DA0 /* NavigationDrawer */ = {
 			isa = PBXGroup;
 			children = (
@@ -1550,6 +1565,7 @@
 				7C4807A858EAC069D38D22195EC3B0B9 /* DesignTokens */,
 				83C59F929E88764313134A046BA5C30F /* DesignSystem+Spec.swift */,
 				841FEABB24C5CD6A00C50AFF /* NatLogoImages+Spec.swift */,
+				84932F1424EABA280052265F /* AvailableTheme+Spec.swift */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -1795,6 +1811,7 @@
 		B74C0772E6C10FAF9E1EBEDD82A7F0B1 /* TestingHelpers */ = {
 			isa = PBXGroup;
 			children = (
+				84932F1724EAF0510052265F /* ThemeProtocol */,
 				84BC901924AA187C007DF09D /* NotificationCenterSpy.swift */,
 				58907D6C652303C4D5FC5FFE6E8F721A /* ElevationAttributes+Equitable.swift */,
 				DE0ECAE7CBDEFA14BEB1C2BDCC3384DF /* MockStorage.swift */,
@@ -2374,6 +2391,7 @@
 				19CCAA043E9657B0F68877ABC0F7F90F /* NatButton+Specs.swift in Sources */,
 				84BF066B24B504B200462AC5 /* ShortcutOutlinedStyle+Spec.swift in Sources */,
 				65D2ED6A736F8BD53729307D3E83A35D /* NatColors+Avon+Spec.swift in Sources */,
+				84932F1A24EAF07B0052265F /* StubThemeProtocol.swift in Sources */,
 				82FFB36F823296E60F0CBCE8D419D689 /* NatColors+Natura+Spec.swift in Sources */,
 				D18DCEC54B0D407538EC7F218CDF25E1 /* NatColors+TBS+Spec.swift in Sources */,
 				C4EB3DDBDD3DEFDA5183455CCDB2720F /* NatDialogController+Spec.swift in Sources */,
@@ -2385,6 +2403,7 @@
 				C6584A3BCF2E06BCC409A6D586A1503F /* NatFonts+TheBodyShop+Spec.swift in Sources */,
 				FAD0A71F10707995BE66A299D98CC33B /* NatOpacities+Spec.swift in Sources */,
 				60B6A40046E3479DEC3808473AF0D08B /* NatSizes+Spec.swift in Sources */,
+				84932F1624EABB190052265F /* AvailableTheme+Spec.swift in Sources */,
 				165E49381ECDC5C699C3496C7C3EA66A /* NatSpacing+Spec.swift in Sources */,
 				54EE932D2039B52E94806AF0DAA1991B /* NaturaBorderRadius+Spec.swift in Sources */,
 				D56B28908E741BB32C718161EB4F0641 /* NaturaColorPaletteDark+Spec.swift in Sources */,
@@ -2597,6 +2616,7 @@
 				590A53D96F90B89C4E352ADB38743179 /* TheBodyShopFontSizes.swift in Sources */,
 				F53456A828AC4A581E5F0DD6451BCD0A /* TheBodyShopFontWeights.swift in Sources */,
 				65D57A64A56F3130E6444CB713188276 /* TheBodyShopOpacities.swift in Sources */,
+				84932F1324EAB9270052265F /* AvailableTheme.swift in Sources */,
 				93927EA4437A34A37E0CD79E21377713 /* TheBodyShopRadius.swift in Sources */,
 				87A77C8CE141E19AE56906A928D824AB /* TheBodyShopSpacing.swift in Sources */,
 				6C8512981F307B7CFC65975B94D811BE /* TheBodyShopTheme.swift in Sources */,
