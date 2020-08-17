@@ -26,6 +26,14 @@ public final class DesignSystem {
 
     private let storage: ConfigurationStorable
 
+    // MARK: - Public properties
+
+    var currentTheme: AvailableTheme? {
+        storage
+            .getThemeProtocol()
+            .flatMap(AvailableTheme.init)
+    }
+
     // MARK: - Inits
 
     public convenience init() {
@@ -40,11 +48,6 @@ public final class DesignSystem {
 
     func configure(with theme: AvailableTheme) {
         storage.save(theme: theme.newInstance)
-    }
-
-    var currentTheme: AvailableTheme? {
-        storage.getThemeProtocol()
-            .flatMap(AvailableTheme.init)
     }
 }
 
