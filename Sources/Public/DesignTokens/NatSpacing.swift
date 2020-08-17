@@ -19,13 +19,13 @@
 */
 
 public enum NatSpacing {
-    public static var micro: CGFloat { getTheme().spacing.micro }
-    public static var tiny: CGFloat { getTheme().spacing.tiny }
-    public static var small: CGFloat { getTheme().spacing.small }
+    public static var micro: CGFloat { getFromTheme(\.spacingMicro) }
+    public static var tiny: CGFloat { getFromTheme(\.spacingTiny) }
+    public static var small: CGFloat { getFromTheme(\.spacingSmall) }
     @available(*, deprecated, message: "Use .standard instead")
-    public static var standart: CGFloat { getTheme().spacing.standart }
-    public static var standard: CGFloat { getTheme().spacing.standart }
-    public static var semi: CGFloat { getTheme().spacing.semi }
-    public static var large: CGFloat { getTheme().spacing.large }
-    public static var xLarge: CGFloat { getTheme().spacing.xLarge }
+    public static var standart: CGFloat { getFromTheme(\.spacingStandard) }
+    public static var standard: CGFloat { getFromTheme(\.spacingStandard) }
+    public static var semi: CGFloat { getFromTheme(\.spacingSemi) }
+    public static var large: CGFloat { getFromTheme(\.spacingLarge) }
+    public static var xLarge: CGFloat { getFromTheme(\.spacingXLarge) }
 }

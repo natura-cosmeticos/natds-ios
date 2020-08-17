@@ -5,3 +5,11 @@ func validateTheme(from storage: ConfigurationStorable, fatalError: () -> Never)
 
     return theme
 }
+
+func validateThemeProtocol(from storage: ConfigurationStorable, fatalError: () -> Never) -> ThemeProtocol {
+    guard let theme = storage.getThemeProtocol() else {
+        fatalError()
+    }
+
+    return theme
+}
