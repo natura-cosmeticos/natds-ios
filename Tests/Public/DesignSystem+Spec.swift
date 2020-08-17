@@ -5,175 +5,151 @@ import Nimble
 
 final class DesignSystemSpec: QuickSpec {
     override func spec() {
-        context("when using default storage") {
-            let systemUnderTest = DesignSystem()
+        var mockStorage: MockStorage!
+        var systemUnderTest: DesignSystem!
 
-            describe("#configure") {
-                context("when the brand is .avon") {
-                    beforeEach {
-                        systemUnderTest.configure(with: .avon)
-                    }
+        beforeEach {
+            mockStorage = MockStorage()
+            systemUnderTest = DesignSystem(storage: mockStorage)
+        }
 
-                    it("sets current theme to Avon") {
-                        let theme = getTheme()
+        describe("#init") {
+            it("does not call storage.save") {
+                expect(mockStorage.saveThemeInvocations).to(equal(0))
+            }
 
-                        expect(theme).to(beAnInstanceOf(AvonTheme.self))
-                    }
-                }
+            it("does not call storage.save") {
+                expect(mockStorage.saveThemeProtocolInvocations).to(equal(0))
+            }
 
-                context("when the brand is .natura") {
-                    beforeEach {
-                        systemUnderTest.configure(with: .natura)
-                    }
+            it("does not call storage.getTheme") {
+                expect(mockStorage.getThemeInvocations).to(equal(0))
+            }
 
-                    it("sets current theme to Natura") {
-                        let theme = getTheme()
+            it("does not call storage.getThemeProtocol") {
+                expect(mockStorage.getThemeProtocolInvocations).to(equal(0))
+            }
+        }
 
-                        expect(theme).to(beAnInstanceOf(NaturaTheme.self))
-                    }
-                }
-
-                context("when the brand is .theBodyShop") {
-                    beforeEach {
-                        systemUnderTest.configure(with: .theBodyShop)
-                    }
-
-                    it("sets current theme to The Body Shop") {
-                        let theme = getTheme()
-
-                        expect(theme).to(beAnInstanceOf(TheBodyShopTheme.self))
-                    }
-                }
-
-                describe("#currentBrand") {
-                    context("when the brand is .avon") {
-                        beforeEach {
-                            systemUnderTest.configure(with: .avon)
-                        }
-
-                        it("returns current brand as Avon") {
-                            let brand = systemUnderTest.currentBrand
-
-                            expect(brand).to(equal(.avon))
-                        }
-                    }
-
-                    context("when the brand is .natura") {
-                        beforeEach {
-                            systemUnderTest.configure(with: .natura)
-                        }
-
-                        it("returns current brand as Natura") {
-                            let brand = systemUnderTest.currentBrand
-
-                            expect(brand).to(equal(.natura))
-                        }
-                    }
-
-                    context("when the brand is .theBodyShop") {
-                        beforeEach {
-                            systemUnderTest.configure(with: .theBodyShop)
-                        }
-
-                        it("returns current brand as The Body Shop") {
-                            let brand = systemUnderTest.currentBrand
-
-                            expect(brand).to(equal(.theBodyShop))
-                        }
-                    }
+        describe("#configure(brand:)") {
+            context("when the brand is .avon") {
+                it("calls storage.save only once") {
+                    systemUnderTest.configure(with: .avon)
+                    expect(mockStorage.saveThemeInvocations).to(equal(1))
                 }
             }
-        } // context - When using default storage
 
-        context("when using mock storage to analyze behavior") {
-            var mockStorage: MockStorage!
-            var systemUnderTest: DesignSystem!
+            context("when the brand is .natura") {
+                it("calls storage.save only once") {
+                    systemUnderTest.configure(with: .natura)
 
-            describe("#configure") {
+                    expect(mockStorage.saveThemeInvocations).to(equal(1))
+                }
+            }
+            context("when the brand is .theBodyShop") {
+                it("calls storage.save only once") {
+                    systemUnderTest.configure(with: .theBodyShop)
+
+                    expect(mockStorage.saveThemeInvocations).to(equal(1))
+                }
+            }
+        }
+
+        describe("#configure(theme:)") {
+            context("when the brand is .avonLight") {
+                it("calls storage.save only once") {
+                    systemUnderTest.configure(with: .avonDark)
+
+                    expect(mockStorage.saveThemeProtocolInvocations).to(equal(1))
+                }
+
+                it("calls storage.save only once") {
+                    systemUnderTest.configure(with: .avonLight)
+
+                    expect(mockStorage.saveThemeProtocolInvocations).to(equal(1))
+                }
+
+                it("calls storage.save only once") {
+                    systemUnderTest.configure(with: .naturaDark)
+
+                    expect(mockStorage.saveThemeProtocolInvocations).to(equal(1))
+                }
+
+                it("calls storage.save only once") {
+                    systemUnderTest.configure(with: .naturaLight)
+
+                    expect(mockStorage.saveThemeProtocolInvocations).to(equal(1))
+                }
+
+                it("calls storage.save only once") {
+                    systemUnderTest.configure(with: .theBodyShopDark)
+
+                    expect(mockStorage.saveThemeProtocolInvocations).to(equal(1))
+                }
+
+                it("calls storage.save only once") {
+                    systemUnderTest.configure(with: .theBodyShopLight)
+
+                    expect(mockStorage.saveThemeProtocolInvocations).to(equal(1))
+                }
+            }
+        }
+
+        describe("#currentBrand") {
+            context("when the brand is not configured") {
                 beforeEach {
                     mockStorage = MockStorage()
                     systemUnderTest = DesignSystem(storage: mockStorage)
                 }
 
-                context("when the brand is .avon") {
-                    it("calls storage.save only once") {
-                        systemUnderTest.configure(with: .avon)
-                        expect(mockStorage.saveInvocations).to(equal(1))
-                    }
-                }
+                it("returns nil") {
+                    let brand = systemUnderTest.currentBrand
 
-                context("when the brand is .natura") {
-                    it("calls storage.save only once") {
-                        systemUnderTest.configure(with: .natura)
-
-                        expect(mockStorage.saveInvocations).to(equal(1))
-                    }
-                }
-                context("when the brand is .theBodyShop") {
-                    it("calls storage.save only once") {
-                        systemUnderTest.configure(with: .theBodyShop)
-
-                        expect(mockStorage.saveInvocations).to(equal(1))
-                    }
+                    expect(brand).to(beNil())
                 }
             }
 
-            describe("#currentBrand") {
-                context("when the brand is not configured") {
-                    beforeEach {
-                        mockStorage = MockStorage()
-                        systemUnderTest = DesignSystem(storage: mockStorage)
-                    }
-
-                    it("returns nil") {
-                        let brand = systemUnderTest.currentBrand
-
-                        expect(brand).to(beNil())
-                    }
+            context("when the brand is .avon") {
+                beforeEach {
+                    mockStorage = MockStorage()
+                    systemUnderTest = DesignSystem(storage: mockStorage)
+                    systemUnderTest.configure(with: .avon)
                 }
 
-                context("when the brand is .avon") {
-                    beforeEach {
-                        mockStorage = MockStorage()
-                        systemUnderTest = DesignSystem(storage: mockStorage)
-                        systemUnderTest.configure(with: .avon)
-                    }
+                it("returns current brand as Avon") {
+                    let brand = systemUnderTest.currentBrand
 
-                    it("returns current brand as Avon") {
-                        let brand = systemUnderTest.currentBrand
-
-                        expect(brand).to(equal(.avon))
-                    }
-                }
-
-                context("when the brand is .natura") {
-                    beforeEach {
-                        mockStorage = MockStorage()
-                        systemUnderTest = DesignSystem(storage: mockStorage)
-                        systemUnderTest.configure(with: .natura)
-                    }
-
-                    it("returns current brand as Natura") {
-                        let brand = systemUnderTest.currentBrand
-
-                        expect(brand).to(equal(.natura))
-                    }
-                }
-
-                context("when the brand is .theBodyShop") {
-                    beforeEach {
-                        mockStorage = MockStorage()
-                        systemUnderTest = DesignSystem(storage: mockStorage)
-                        systemUnderTest.configure(with: .theBodyShop)
-                    }
-
-                    it("returns current brand as The Body Shop") {
-                        let brand = systemUnderTest.currentBrand
-
-                        expect(brand).to(equal(.theBodyShop))
-                    }
+                    expect(brand).to(equal(.avon))
                 }
             }
-        } // context - when using custom mock storage to analyze behavior
+
+            context("when the brand is .natura") {
+                beforeEach {
+                    mockStorage = MockStorage()
+                    systemUnderTest = DesignSystem(storage: mockStorage)
+                    systemUnderTest.configure(with: .natura)
+                }
+
+                it("returns current brand as Natura") {
+                    let brand = systemUnderTest.currentBrand
+
+                    expect(brand).to(equal(.natura))
+                }
+            }
+
+            context("when the brand is .theBodyShop") {
+                beforeEach {
+                    mockStorage = MockStorage()
+                    systemUnderTest = DesignSystem(storage: mockStorage)
+                    systemUnderTest.configure(with: .theBodyShop)
+                }
+
+                it("returns current brand as The Body Shop") {
+                    let brand = systemUnderTest.currentBrand
+
+                    expect(brand).to(equal(.theBodyShop))
+                }
+            }
+        }
     }
 }
