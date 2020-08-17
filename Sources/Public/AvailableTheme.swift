@@ -1,5 +1,5 @@
 /**
-  Representation of avaible themes in Desgin System.
+  Representation of available themes in Design System.
 
  - Note:
     Supported Themes:

@@ -8,43 +8,43 @@ final class AvailableThemeSpec: QuickSpec {
         describe("#init") {
             let systemUnderTest = AvailableTheme.self
 
-            it("initilizes with expected value") {
+            it("initializes with expected value") {
                 let availableTheme = systemUnderTest.init(theme: AvonDarkTheme())
 
                 expect(availableTheme).to(equal(.avonDark))
             }
 
-            it("initilizes with expected value") {
+            it("initializes with expected value") {
                 let availableTheme = systemUnderTest.init(theme: AvonLightTheme())
 
                 expect(availableTheme).to(equal(.avonLight))
             }
 
-            it("initilizes with expected value") {
+            it("initializes with expected value") {
                 let availableTheme = systemUnderTest.init(theme: NaturaDarkTheme())
 
                 expect(availableTheme).to(equal(.naturaDark))
             }
 
-            it("initilizes with expected value") {
+            it("initializes with expected value") {
                 let availableTheme = systemUnderTest.init(theme: NaturaLightTheme())
 
                 expect(availableTheme).to(equal(.naturaLight))
             }
 
-            it("initilizes with expected value") {
+            it("initializes with expected value") {
                 let availableTheme = systemUnderTest.init(theme: TheBodyShopDarkTheme())
 
                 expect(availableTheme).to(equal(.theBodyShopDark))
             }
 
-            it("initilizes with expected value") {
+            it("initializes with expected value") {
                 let availableTheme = systemUnderTest.init(theme: TheBodyShopLightTheme())
 
                 expect(availableTheme).to(equal(.theBodyShopLight))
             }
 
-            it("initilizes with expected value") {
+            it("initializes with expected value") {
                 let availableTheme = systemUnderTest.init(theme: StubThemeProtocol())
 
                 expect(availableTheme).to(beNil())
