@@ -7,7 +7,7 @@ final class PulseContainerLayer: CAShapeLayer {
         masksToBounds = true
         addSublayer(pulseLayer)
 
-        let opacity = getFromThemeTokens(\.opacity05)
+        let opacity = getTokenFromTheme(\.opacity05)
         pulseLayer.fillColor = NatColors.highlight.withAlphaComponent(opacity).cgColor
     }
 

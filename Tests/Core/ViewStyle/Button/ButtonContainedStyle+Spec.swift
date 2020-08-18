@@ -31,7 +31,7 @@ final class ButtonContainedStyleSpec: QuickSpec {
             }
 
             it("returns an expected cornerRadius") {
-                let borderRadius = getFromThemeTokens(\.borderRadiusMedium)
+                let borderRadius = getTokenFromTheme(\.borderRadiusMedium)
 
                 expect(button.layer.cornerRadius).to(equal(borderRadius))
             }

@@ -13,19 +13,19 @@ final class NatButtonHeightSpec: QuickSpec {
 
         describe("#small") {
             it("returns expected height") {
-                expect(systemUnderTest.small).to(equal(getFromThemeTokens(\.sizeSemi)))
+                expect(systemUnderTest.small).to(equal(getTokenFromTheme(\.sizeSemi)))
             }
         }
 
         describe("#medium") {
             it("returns expected height") {
-                expect(systemUnderTest.medium).to(equal(getFromThemeTokens(\.sizeSemiX)))
+                expect(systemUnderTest.medium).to(equal(getTokenFromTheme(\.sizeSemiX)))
             }
         }
 
         describe("#large") {
             it("returns expected height") {
-                expect(systemUnderTest.large).to(equal(getFromThemeTokens(\.sizeMedium)))
+                expect(systemUnderTest.large).to(equal(getTokenFromTheme(\.sizeMedium)))
             }
         }
     }

@@ -209,7 +209,7 @@
 		84BF066B24B504B200462AC5 /* ShortcutOutlinedStyle+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF066924B4FF9300462AC5 /* ShortcutOutlinedStyle+Spec.swift */; };
 		84BF066E24B5099700462AC5 /* ShortcutContainedStyle+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF066C24B5099300462AC5 /* ShortcutContainedStyle+Spec.swift */; };
 		84BF067224B5126800462AC5 /* NatShortcut+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF067024B5123500462AC5 /* NatShortcut+Spec.swift */; };
-		84EB6B6F24EB197000C6A792 /* GetFromThemeTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB6B6E24EB197000C6A792 /* GetFromThemeTokens.swift */; };
+		84EB6B6F24EB197000C6A792 /* GetTokensFromTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB6B6E24EB197000C6A792 /* GetTokensFromTheme.swift */; };
 		84EB6B7524EBFEC000C6A792 /* GetThemeValidated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB6B7424EBFEC000C6A792 /* GetThemeValidated.swift */; };
 		84EB6B7924EC019700C6A792 /* GetThemeValidated+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB6B7824EC019700C6A792 /* GetThemeValidated+Spec.swift */; };
 		84EB6B7D24EC04AA00C6A792 /* Theme+Opacities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB6B7C24EC04AA00C6A792 /* Theme+Opacities.swift */; };
@@ -504,7 +504,7 @@
 		84BF066924B4FF9300462AC5 /* ShortcutOutlinedStyle+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShortcutOutlinedStyle+Spec.swift"; sourceTree = "<group>"; };
 		84BF066C24B5099300462AC5 /* ShortcutContainedStyle+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShortcutContainedStyle+Spec.swift"; sourceTree = "<group>"; };
 		84BF067024B5123500462AC5 /* NatShortcut+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatShortcut+Spec.swift"; sourceTree = "<group>"; };
-		84EB6B6E24EB197000C6A792 /* GetFromThemeTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFromThemeTokens.swift; sourceTree = "<group>"; };
+		84EB6B6E24EB197000C6A792 /* GetTokensFromTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTokensFromTheme.swift; sourceTree = "<group>"; };
 		84EB6B7424EBFEC000C6A792 /* GetThemeValidated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetThemeValidated.swift; sourceTree = "<group>"; };
 		84EB6B7824EC019700C6A792 /* GetThemeValidated+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GetThemeValidated+Spec.swift"; sourceTree = "<group>"; };
 		84EB6B7C24EC04AA00C6A792 /* Theme+Opacities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Theme+Opacities.swift"; sourceTree = "<group>"; };
@@ -2066,7 +2066,7 @@
 			isa = PBXGroup;
 			children = (
 				84EB6B7624EBFF1000C6A792 /* DeprecatedWillBeRemoved */,
-				84EB6B6E24EB197000C6A792 /* GetFromThemeTokens.swift */,
+				84EB6B6E24EB197000C6A792 /* GetTokensFromTheme.swift */,
 				84EB6B7424EBFEC000C6A792 /* GetThemeValidated.swift */,
 			);
 			path = DomainFunctions;
@@ -2513,7 +2513,7 @@
 				288891838FD58A93C7A7CC39277932E8 /* FontSizes.swift in Sources */,
 				F01F3CA72313B3C97F42498878234A82 /* FontStyle.swift in Sources */,
 				494B238CBB871A4FB2092730783EF93C /* FontWeights.swift in Sources */,
-				84EB6B6F24EB197000C6A792 /* GetFromThemeTokens.swift in Sources */,
+				84EB6B6F24EB197000C6A792 /* GetTokensFromTheme.swift in Sources */,
 				1255F87384A5EC561A10BF1598651BBF /* Fonts.swift in Sources */,
 				5B1A38F8E6EC1AA2AA97A02F4F7AE9F7 /* FontsNatura.swift in Sources */,
 				84BC900624AA163A007DF09D /* DialogStyle.swift in Sources */,

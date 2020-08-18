@@ -9,7 +9,7 @@ final class ValidateThemeSpec: QuickSpec {
 
         context("when there is no theme stored") {
             describe("#validateTheme") {
-                it("execute a faltal error") {
+                it("execute a fatal error") {
                     let systemUnderTestWrapper = { () -> Void in
                         _ = systemUnderTest(MockStorage(), { fatalError("stub error") })
                     }

@@ -13,7 +13,7 @@ final class NatShortcutWidthsSpec: QuickSpec {
 
         describe("#small") {
             it("returns expected maximum") {
-                expect(systemUnderTest.maximum).to(equal(getFromThemeTokens(\.sizeLarge)))
+                expect(systemUnderTest.maximum).to(equal(getTokenFromTheme(\.sizeLarge)))
             }
         }
     }

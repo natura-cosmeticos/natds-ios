@@ -30,7 +30,7 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
             }
 
             it("returns an expected cornerRadius") {
-                let borderRadius = getFromThemeTokens(\.borderRadiusMedium)
+                let borderRadius = getTokenFromTheme(\.borderRadiusMedium)
 
                 expect(button.layer.cornerRadius).to(equal(borderRadius))
             }
@@ -139,7 +139,7 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
 
                 it("returns an expected foregroundColor") {
                     let foregroundColor = attributes[.foregroundColor] as? UIColor
-                    let opacity = getFromThemeTokens(\.opacity08)
+                    let opacity = getTokenFromTheme(\.opacity08)
 
                     expect(foregroundColor)
                         .to(equal(NatColors.onSurface.withAlphaComponent(opacity)))

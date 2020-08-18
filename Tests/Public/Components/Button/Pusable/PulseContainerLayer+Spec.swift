@@ -27,7 +27,7 @@ final class PulseContainerLayerSpec: QuickSpec {
             it("sets a color to PulseLayer") {
                 let pulseLayer = systemUnderTest.sublayers?.first as? PulseLayer
 
-                let opacity = getFromThemeTokens(\.opacity05)
+                let opacity = getTokenFromTheme(\.opacity05)
                 let expectedColor = NatColors.highlight.withAlphaComponent(opacity).cgColor
 
                 expect(pulseLayer?.fillColor).to(equal(expectedColor))

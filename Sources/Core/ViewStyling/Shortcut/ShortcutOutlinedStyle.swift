@@ -9,7 +9,7 @@ enum ShortcutOutlinedStyle {
 
     static private func applyStyle(on shortcut: NatShortcut, decorationColor: UIColor) {
         shortcut.configure(circleColor: getTheme().colors.surface)
-        let opacity = getFromThemeTokens(\.opacity04)
+        let opacity = getTokenFromTheme(\.opacity04)
         shortcut.configure(circleBorderColor: decorationColor.withAlphaComponent(opacity).cgColor)
         shortcut.configure(circleBorderWidth: 1)
         shortcut.configure(iconColor: decorationColor)

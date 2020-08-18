@@ -34,14 +34,14 @@ public final class NatShortcut: UIView, Pulsable {
     private let circleView: UIView = {
         let view = UIView()
         let theme = getTheme()
-        view.layer.cornerRadius = getFromThemeTokens(\.sizeMediumX) / 2
+        view.layer.cornerRadius = getTokenFromTheme(\.sizeMediumX) / 2
         view.translatesAutoresizingMaskIntoConstraints = false
 
         return view
     }()
 
     private let iconView: IconView = {
-        let iconView = IconView(fontSize: getFromThemeTokens(\.sizeSemi))
+        let iconView = IconView(fontSize: getTokenFromTheme(\.sizeSemi))
         iconView.icon = .outlinedDefaultMockup
         iconView.translatesAutoresizingMaskIntoConstraints = false
 
@@ -159,7 +159,7 @@ extension NatShortcut {
     }
 
     private func addConstraints() {
-        let circleSize = getFromThemeTokens(\.sizeMediumX)
+        let circleSize = getTokenFromTheme(\.sizeMediumX)
         let constraints = [
             circleView.topAnchor.constraint(equalTo: topAnchor),
             circleView.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor),
@@ -171,7 +171,7 @@ extension NatShortcut {
             iconView.centerXAnchor.constraint(equalTo: circleView.centerXAnchor),
             iconView.centerYAnchor.constraint(equalTo: circleView.centerYAnchor),
 
-            label.topAnchor.constraint(equalTo: circleView.bottomAnchor, constant: getFromThemeTokens(\.sizeTiny)),
+            label.topAnchor.constraint(equalTo: circleView.bottomAnchor, constant: getTokenFromTheme(\.sizeTiny)),
             label.trailingAnchor.constraint(equalTo: trailingAnchor),
             label.bottomAnchor.constraint(equalTo: bottomAnchor),
             label.leadingAnchor.constraint(equalTo: leadingAnchor),
