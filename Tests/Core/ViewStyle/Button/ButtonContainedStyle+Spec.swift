@@ -9,7 +9,7 @@ final class ButtonContainedStyleSpec: QuickSpec {
         var button: UIButton!
 
         beforeEach {
-            DesignSystem().configure(with: .theBodyShopLight)
+            DesignSystem().configure(with: .theBodyShop)
             button = UIButton()
         }
 

@@ -9,7 +9,7 @@ final class DialogFooterViewSpec: QuickSpec {
         var notificationCenterSpy: NotificationCenterSpy!
 
         beforeEach {
-            DesignSystem().configure(with: .theBodyShopLight)
+            DesignSystem().configure(with: .theBodyShop)
             notificationCenterSpy = .init()
             systemUnderTest = .init(notificationCenter: notificationCenterSpy)
         }
