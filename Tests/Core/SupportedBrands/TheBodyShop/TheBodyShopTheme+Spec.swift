@@ -15,38 +15,6 @@ final class TheBodyShopThemeSpec: QuickSpec {
             }
         }
 
-        describe("#sizes") {
-            it("returns a instance of TheBodyShopSizes") {
-                let sizes = systemUnderTest.sizes
-
-                expect(sizes).to(beAnInstanceOf(TheBodyShopSizes.self))
-            }
-        }
-
-        describe("#spacing") {
-            it("returns a instance of TheBodyShopSpacing") {
-                let spacing = systemUnderTest.spacing
-
-                expect(spacing).to(beAnInstanceOf(TheBodyShopSpacing.self))
-            }
-        }
-
-        describe("#borderRadius") {
-            it("returns a instance of TheBodyShopBorderRadius") {
-                let borderRadius = systemUnderTest.borderRadius
-
-                expect(borderRadius).to(beAnInstanceOf(TheBodyShopBorderRadius.self))
-            }
-        }
-
-        describe("#opacities") {
-            it("returns a instance of TheBodyShopOpacities") {
-                let opacities = systemUnderTest.opacities
-
-                expect(opacities).to(beAnInstanceOf(TheBodyShopOpacities.self))
-            }
-        }
-
         describe("#font") {
             it("returns a instance of AvonFont") {
                 let font = systemUnderTest.font

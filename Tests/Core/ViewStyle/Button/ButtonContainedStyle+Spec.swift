@@ -9,7 +9,7 @@ final class ButtonContainedStyleSpec: QuickSpec {
         var button: UIButton!
 
         beforeEach {
-            DesignSystem().configure(with: .theBodyShop)
+            DesignSystem().configure(with: .theBodyShopLight)
             button = UIButton()
         }
 
@@ -31,7 +31,7 @@ final class ButtonContainedStyleSpec: QuickSpec {
             }
 
             it("returns an expected cornerRadius") {
-                let borderRadius = getTheme().borderRadius.medium
+                let borderRadius = getFromThemeTokens(\.borderRadiusMedium)
 
                 expect(button.layer.cornerRadius).to(equal(borderRadius))
             }

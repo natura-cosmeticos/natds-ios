@@ -8,7 +8,7 @@ final class DialogStyleSpec: QuickSpec {
         let systemUnderTest = DialogStyle.self
 
         beforeEach {
-            DesignSystem().configure(with: .theBodyShop)
+            DesignSystem().configure(with: .theBodyShopLight)
         }
 
         describe("#createLabelForTitle") {

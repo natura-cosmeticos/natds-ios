@@ -9,7 +9,7 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
         var button: UIButton!
 
         beforeEach {
-            DesignSystem().configure(with: .theBodyShop)
+            DesignSystem().configure(with: .theBodyShopLight)
             button = UIButton()
         }
 
@@ -30,7 +30,7 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
             }
 
             it("returns an expected cornerRadius") {
-                let borderRadius = getTheme().borderRadius.medium
+                let borderRadius = getFromThemeTokens(\.borderRadiusMedium)
 
                 expect(button.layer.cornerRadius).to(equal(borderRadius))
             }
@@ -139,9 +139,10 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
 
                 it("returns an expected foregroundColor") {
                     let foregroundColor = attributes[.foregroundColor] as? UIColor
+                    let opacity = getFromThemeTokens(\.opacity08)
 
                     expect(foregroundColor)
-                        .to(equal(NatColors.onSurface.withAlphaComponent(getTheme().opacities.opacity08)))
+                        .to(equal(NatColors.onSurface.withAlphaComponent(opacity)))
                 }
             }
         }

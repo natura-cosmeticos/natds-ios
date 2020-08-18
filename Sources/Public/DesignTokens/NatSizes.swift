@@ -18,25 +18,25 @@
 */
 
 public enum NatSizes {
-    public static var micro: CGFloat { getFromTheme(\.sizeMicro) }
-    public static var tiny: CGFloat { getFromTheme(\.sizeTiny) }
-    public static var small: CGFloat { getFromTheme(\.sizeSmall) }
+    public static var micro: CGFloat { getFromThemeTokens(\.sizeMicro) }
+    public static var tiny: CGFloat { getFromThemeTokens(\.sizeTiny) }
+    public static var small: CGFloat { getFromThemeTokens(\.sizeSmall) }
 
     @available(*, deprecated, message: "Use standard instead")
-    public static var standart: CGFloat { getFromTheme(\.sizeStandard) }
-    public static var standard: CGFloat { getFromTheme(\.sizeStandard) }
+    public static var standart: CGFloat { getFromThemeTokens(\.sizeStandard) }
+    public static var standard: CGFloat { getFromThemeTokens(\.sizeStandard) }
 
-    public static var semi: CGFloat { getFromTheme(\.sizeSemi) }
-    public static var semiX: CGFloat { getFromTheme(\.sizeSemiX) }
-    public static var medium: CGFloat { getFromTheme(\.sizeMedium) }
-    public static var mediumX: CGFloat { getFromTheme(\.sizeMediumX) }
-    public static var large: CGFloat { getFromTheme(\.sizeLarge) }
-    public static var largeX: CGFloat { getFromTheme(\.sizeLargeX) }
-    public static var largeXX: CGFloat { getFromTheme(\.sizeLargeXx) }
-    public static var largeXXX: CGFloat { getFromTheme(\.sizeLargeXxx) }
-    public static var huge: CGFloat { getFromTheme(\.sizeHuge) }
-    public static var hugeX: CGFloat { getFromTheme(\.sizeHugeX) }
-    public static var hugeXX: CGFloat { getFromTheme(\.sizeHugeXx) }
-    public static var hugeXXX: CGFloat { getFromTheme(\.sizeHugeXxx) }
-    public static var veryHuge: CGFloat { getFromTheme(\.sizeVeryHuge) }
+    public static var semi: CGFloat { getFromThemeTokens(\.sizeSemi) }
+    public static var semiX: CGFloat { getFromThemeTokens(\.sizeSemiX) }
+    public static var medium: CGFloat { getFromThemeTokens(\.sizeMedium) }
+    public static var mediumX: CGFloat { getFromThemeTokens(\.sizeMediumX) }
+    public static var large: CGFloat { getFromThemeTokens(\.sizeLarge) }
+    public static var largeX: CGFloat { getFromThemeTokens(\.sizeLargeX) }
+    public static var largeXX: CGFloat { getFromThemeTokens(\.sizeLargeXx) }
+    public static var largeXXX: CGFloat { getFromThemeTokens(\.sizeLargeXxx) }
+    public static var huge: CGFloat { getFromThemeTokens(\.sizeHuge) }
+    public static var hugeX: CGFloat { getFromThemeTokens(\.sizeHugeX) }
+    public static var hugeXX: CGFloat { getFromThemeTokens(\.sizeHugeXx) }
+    public static var hugeXXX: CGFloat { getFromThemeTokens(\.sizeHugeXxx) }
+    public static var veryHuge: CGFloat { getFromThemeTokens(\.sizeVeryHuge) }
 }

@@ -8,7 +8,7 @@ final class DialogFooterView: UIView {
         let stackView = UIStackView()
         stackView.axis = .horizontal
         stackView.distribution = .fill
-        stackView.spacing = getTheme().spacing.tiny
+        stackView.spacing = getFromThemeTokens(\.sizeTiny)
         stackView.translatesAutoresizingMaskIntoConstraints = false
 
         return stackView

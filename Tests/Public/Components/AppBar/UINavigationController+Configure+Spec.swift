@@ -9,7 +9,7 @@ final class UINavigationControllerConfigureSpec: QuickSpec {
         var style: UINavigationController.Style!
 
         beforeEach {
-            DesignSystem().configure(with: .theBodyShop)
+            DesignSystem().configure(with: .theBodyShopLight)
             sut = UINavigationController()
             style = .default
         }
