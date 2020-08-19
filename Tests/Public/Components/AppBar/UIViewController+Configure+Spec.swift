@@ -8,7 +8,7 @@ final class UIViewControllerConfigureSpec: QuickSpec {
         var sut: UIViewController!
 
         beforeEach {
-            DesignSystem().configure(with: .theBodyShop)
+            DesignSystem().configure(with: .theBodyShopLight)
             sut = UIViewController()
         }
 

@@ -40,7 +40,7 @@ public final class NatDialogController: UIViewController {
     private let stackView: UIStackView = {
         let view = UIStackView()
         view.axis = .vertical
-        view.spacing = getTheme().spacing.small
+        view.spacing = getTokenFromTheme(\.sizeSmall)
         view.translatesAutoresizingMaskIntoConstraints = false
 
         return view
@@ -94,10 +94,10 @@ public final class NatDialogController: UIViewController {
         modalPresentationStyle = .overCurrentContext
         modalTransitionStyle = .crossDissolve
 
-        let opacity = getTheme().opacities.opacity08
+        let opacity = getTokenFromTheme(\.opacity08)
         view.backgroundColor = UIColor.black.withAlphaComponent(opacity)
 
-        containerView.layer.cornerRadius = getTheme().borderRadius.medium
+        containerView.layer.cornerRadius = getTokenFromTheme(\.borderRadiusMedium)
         containerView.backgroundColor = getTheme().colors.surface
 
         view.addSubview(containerView)
@@ -107,7 +107,7 @@ public final class NatDialogController: UIViewController {
     }
 
     private func addConstraints() {
-        let sideMargins = getTheme().spacing.small
+        let sideMargins = getTokenFromTheme(\.sizeSmall)
         let containerViewMinimumWidth = containerView.widthAnchor.constraint(greaterThanOrEqualToConstant: 300)
         containerViewMinimumWidth.priority = .defaultHigh
         let containerViewMinimumHeight = containerView.heightAnchor.constraint(greaterThanOrEqualToConstant: 80)

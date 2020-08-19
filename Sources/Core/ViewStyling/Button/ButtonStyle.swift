@@ -19,7 +19,7 @@ enum ButtonStyle {
         )
         let titleForDisabled = createTextForTitle(
             text: title,
-            withColor: NatColors.onSurface.withAlphaComponent(getTheme().opacities.opacity08)
+            withColor: NatColors.onSurface.withAlphaComponent(getTokenFromTheme(\.opacity08))
         )
 
         button.setAttributedTitle(titleForNormal, for: .normal)

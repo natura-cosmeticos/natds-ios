@@ -34,7 +34,7 @@ final class NatDialogControllerSpec: QuickSpec {
             }
 
             it("sets view.backgroundColor to expected") {
-                let opacity = getTheme().opacities.opacity08
+                let opacity = getTokenFromTheme(\.opacity08)
                 let expectedColor = UIColor.black.withAlphaComponent(opacity)
 
                 expect(systemUnderTest.view.backgroundColor).to(equal(expectedColor))

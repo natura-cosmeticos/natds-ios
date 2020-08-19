@@ -18,10 +18,8 @@
 */
 
 public enum NatBorderRadius {
-    public static var small: CGFloat { getTheme().borderRadius.small }
-    public static var medium: CGFloat { getTheme().borderRadius.medium }
-    public static var large: CGFloat { getTheme().borderRadius.large }
-    public static func circle(viewHeight: CGFloat) -> CGFloat {
-        getTheme().borderRadius.circle(viewHeight: viewHeight)
-    }
+    public static var small: CGFloat { getTokenFromTheme(\.borderRadiusSmall) }
+    public static var medium: CGFloat { getTokenFromTheme(\.borderRadiusMedium) }
+    public static var large: CGFloat { getTokenFromTheme(\.borderRadiusLarge) }
+    public static func circle(viewHeight: CGFloat) -> CGFloat { viewHeight / 2 }
 }
