@@ -57,7 +57,6 @@
 		2E9E3D015F63CD38CD7EE5D6936ED897 /* NaturaElevations+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1B6705F4D1647BB7E1B56E47E1092D /* NaturaElevations+Spec.swift */; };
 		346443D54361FCD8E0E7BFAF8FE2D299 /* FontIconStyleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CDD513F5E78AFAC3E17DD22AB3C6E1 /* FontIconStyleTests.swift */; };
 		37953EE81D12EA2376E8C56E16BC4A29 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6444578A8B4B35C37D0B5FA4D8E0F6 /* UIColor+Hex.swift */; };
-		38ACA8E49786402581AA78B85DAE6CA7 /* Opacities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F111B90C6990191CCEE34F707A05A9D /* Opacities.swift */; };
 		38DB283DDC43587A2456F690D45DFE67 /* AvonTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E37D0B1B9BAD8ACC82F2DDAEB6FF77E /* AvonTheme.swift */; };
 		3A50A52D23FB5E21A70E4FBB1063381A /* ValidateTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5ACED8A5F3AEC978D459E930E842494 /* ValidateTheme.swift */; };
 		3A65DE112EB34ED5B9F3F1DF7B8D3FBD /* ExpansionPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58B1BFBC101D26CBEC7E3448F9B33D2 /* ExpansionPanel.swift */; };
@@ -93,7 +92,6 @@
 		60271BCF19E462F42A5941AA4D9E49B8 /* GetTheme+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D239FA6939F046FDE679FEE4162DB483 /* GetTheme+Spec.swift */; };
 		604835F2975D92A9D2EF46132C17C0A5 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6FF51FEADFA402D3EDC3FE828081CC /* Tab.swift */; };
 		60B6A40046E3479DEC3808473AF0D08B /* NatSizes+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37416A32D8AD942A180B5FDF1A82192B /* NatSizes+Spec.swift */; };
-		65D57A64A56F3130E6444CB713188276 /* TheBodyShopOpacities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55B5042824197A28F138846312F7803 /* TheBodyShopOpacities.swift */; };
 		65E0C105942614AA1438FEA773B255B9 /* natds-icons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BC6A871B0A080C7AB0127CF2EA0D9153 /* natds-icons.ttf */; };
 		672E84F3438F653B2DF42C2018894304 /* ExpansionPanel+Margin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92374A53F43E8BA6129F16B7AB1F4F0 /* ExpansionPanel+Margin.swift */; };
 		67BB06E023B48B85454BD2B38E60B156 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 438A5C92460A2D83E14DF108D8CD8988 /* Images.xcassets */; };
@@ -207,7 +205,6 @@
 		84EB6B8324EEEA6200C6A792 /* GetUIColorFromTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB6B8224EEEA6200C6A792 /* GetUIColorFromTokens.swift */; };
 		84EB6B8524EEEA8E00C6A792 /* GetOrCreatedCachedColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB6B8424EEEA8E00C6A792 /* GetOrCreatedCachedColor.swift */; };
 		84F709FF1D1DFC32BA4E9CB1803A6E30 /* NavigationDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31247B21FE6C5054DC6E3BD9BE4A5E35 /* NavigationDrawer.swift */; };
-		851B94BB8C1F2DE82905BF1FE9495800 /* Radius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68038F1CA64FC2164BFB108D7666D0E0 /* Radius.swift */; };
 		852951C972BCD617DDBCE725AE58B8DF /* NaturaElevations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EAF4EE243017499F4D4FB924B336C2 /* NaturaElevations.swift */; };
 		86F8857C7577478735C05E26B01F6E61 /* NaturaFontWeights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56943F2DD4CD2F8A5100625E77500E66 /* NaturaFontWeights.swift */; };
 		8D1EAB3D076206BCF28328D0054701CA /* NatDS.h in Headers */ = {isa = PBXBuildFile; fileRef = EFD589860DA945AE5563620B305091ED /* NatDS.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -253,7 +250,6 @@
 		D18DCEC54B0D407538EC7F218CDF25E1 /* NatColors+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3B9936E46C7C4571BB36673012AFCE /* NatColors+Spec.swift */; };
 		D2063015F26B7E8B3A27602A3B907BCE /* NavigationDrawerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E816229C707C64C390D3320DFA6B5D99 /* NavigationDrawerTests.swift */; };
 		D23F82EE5C3333FD06E87016848DCD37 /* TabItemViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AA33B684C0A723F3E2F341D0A10EEC /* TabItemViewTests.swift */; };
-		D27BE56EFE3A19A922C3319484C81601 /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A274991E53CAB8F385D592B0B8FB730 /* Sizes.swift */; };
 		D36E7374F76C10792F8292DCD99800D5 /* NavigationDrawerDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92BFB29E97D8520D6B67E8883AB9A08 /* NavigationDrawerDelegateMock.swift */; };
 		D4573CF72BFE36A5621B648267DFE5CA /* NaturaFont+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE5FE60614956D5009698923D6F8C56 /* NaturaFont+Spec.swift */; };
 		DF58B3DD08824CC1C80C886321CEA0F4 /* NatElevations+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A9D6B3184A3081BD0CDE0B1A351C8F /* NatElevations+Spec.swift */; };
@@ -395,20 +391,17 @@
 		62CDD513F5E78AFAC3E17DD22AB3C6E1 /* FontIconStyleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontIconStyleTests.swift; sourceTree = "<group>"; };
 		66D81AFC13659B24C0C08DCFCA630E1D /* AvonThemeSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvonThemeSpec.swift; sourceTree = "<group>"; };
 		674EEA4A2112FC3EF3AE40AA3776A35A /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
-		68038F1CA64FC2164BFB108D7666D0E0 /* Radius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Radius.swift; sourceTree = "<group>"; };
 		68C5BFF0EEC5CF26F7D88796B6E5F767 /* TheBodyShopFontWeights+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheBodyShopFontWeights+Spec.swift"; sourceTree = "<group>"; };
 		6921E739399DFDC850A3FD044E812EEE /* ButtonContainedStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonContainedStyle.swift; sourceTree = "<group>"; };
 		6C71F734657E837707189B1D151A9751 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
 		6C886FFFE18844DCBC5A1F73FD2720FE /* NavigationDrawerItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerItemCell.swift; sourceTree = "<group>"; };
 		6DA6561EEF13B1CE57B6CE00222286CB /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
-		6F111B90C6990191CCEE34F707A05A9D /* Opacities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Opacities.swift; sourceTree = "<group>"; };
 		759689DD6C3696C4726646B8356D3B4D /* TabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemView.swift; sourceTree = "<group>"; };
 		75AA33B684C0A723F3E2F341D0A10EEC /* TabItemViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemViewTests.swift; sourceTree = "<group>"; };
 		75DBB32E272580681677AA85CA5A2649 /* NavigationDrawer+IndexMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationDrawer+IndexMenu.swift"; sourceTree = "<group>"; };
 		773A20BC4747B6884F87025C49FD335F /* TheBodyShopFontSizes+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheBodyShopFontSizes+Spec.swift"; sourceTree = "<group>"; };
 		79EAF4EE243017499F4D4FB924B336C2 /* NaturaElevations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturaElevations.swift; sourceTree = "<group>"; };
 		79F0FED09E44BABDCC90B51BEA23A2B3 /* AvonFontLetterSpacings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvonFontLetterSpacings.swift; sourceTree = "<group>"; };
-		7A274991E53CAB8F385D592B0B8FB730 /* Sizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sizes.swift; sourceTree = "<group>"; };
 		7CCF632B4501044E5062C574CCBBF74E /* NatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatButton.swift; sourceTree = "<group>"; };
 		7D8E6D9764598D210D58B32B2AEB0FE9 /* DesignSystemFatalError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemFatalError.swift; sourceTree = "<group>"; };
 		7E37D0B1B9BAD8ACC82F2DDAEB6FF77E /* AvonTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvonTheme.swift; sourceTree = "<group>"; };
@@ -539,7 +532,6 @@
 		D4969844F4A007C92B7C67A4FA020C85 /* IllustrationIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllustrationIcons.swift; sourceTree = "<group>"; };
 		D521C44E858B4345479E0B193CE2BB9C /* TextFieldDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDelegateMock.swift; sourceTree = "<group>"; };
 		D557EC044D85EC418D42A00C93EEC23D /* NatDialogController+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogController+Snapshot+Tests.swift"; sourceTree = "<group>"; };
-		D55B5042824197A28F138846312F7803 /* TheBodyShopOpacities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheBodyShopOpacities.swift; sourceTree = "<group>"; };
 		D7316FE65E814E2D5CA475475CD8D4EA /* ViewAnimatingWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewAnimatingWrapper.swift; sourceTree = "<group>"; };
 		D7C267848A6D4A2289C862E53EA54F84 /* ElevationAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevationAttributes.swift; sourceTree = "<group>"; };
 		D9B397DFEC0D8F0FBBDE7AE09BA83B2D /* NatButton+EdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+EdgeInsets.swift"; sourceTree = "<group>"; };
@@ -1547,9 +1539,6 @@
 				8A1F86B04869A5468469B88843CC0E39 /* Elevation */,
 				64B35360D246BD94D64943CAB0591D20 /* Fonts */,
 				C94988526BDF92E8494DD3869128E497 /* Spacing */,
-				6F111B90C6990191CCEE34F707A05A9D /* Opacities.swift */,
-				68038F1CA64FC2164BFB108D7666D0E0 /* Radius.swift */,
-				7A274991E53CAB8F385D592B0B8FB730 /* Sizes.swift */,
 			);
 			path = DesignTokens;
 			sourceTree = "<group>";
@@ -1823,7 +1812,6 @@
 			children = (
 				1E6230BCD6F799CA50D0ECBFDF1DFDD2 /* Font */,
 				86856217718A39F3D99C9B1784214747 /* TheBodyShopElevations.swift */,
-				D55B5042824197A28F138846312F7803 /* TheBodyShopOpacities.swift */,
 				050ABE35D75A976F479CD4725D5DEFE5 /* TheBodyShopTheme.swift */,
 			);
 			path = TheBodyShop;
@@ -2450,15 +2438,12 @@
 				B16B10A0AA533EF36343B6B8A4AE4DA0 /* NavigationDrawerItemCell.swift in Sources */,
 				A096BCFF55DBEF25B29C30C1537210D5 /* NavigationDrawerSubitemCell.swift in Sources */,
 				269C886424C2456B00A507BE /* UINavigationController+Style.swift in Sources */,
-				38ACA8E49786402581AA78B85DAE6CA7 /* Opacities.swift in Sources */,
 				9D4FF6FB92A6A5BD0AF263A69FF707E4 /* Pulsable.swift in Sources */,
 				E4FCC8108D5F57339F6297CDD676F8DF /* PulseContainerLayer.swift in Sources */,
 				80FE219D764217C0520E0C784F9C0C0B /* PulseLayer.swift in Sources */,
-				851B94BB8C1F2DE82905BF1FE9495800 /* Radius.swift in Sources */,
 				ECA4CB7769FB08CB62C5F8CD79EE6521 /* ReusableView.swift in Sources */,
 				84EB6B8324EEEA6200C6A792 /* GetUIColorFromTokens.swift in Sources */,
 				509D46F287D25DAEB7A71BF2665EF894 /* SearchBar.swift in Sources */,
-				D27BE56EFE3A19A922C3319484C81601 /* Sizes.swift in Sources */,
 				CC12FA9DD2B8935D427D78F863301A2E /* Space.swift in Sources */,
 				10953079D3A781AA63E2E03A93F222C4 /* String+Icon.swift in Sources */,
 				604835F2975D92A9D2EF46132C17C0A5 /* Tab.swift in Sources */,
@@ -2474,7 +2459,6 @@
 				84A818BF24B7BA4D0007C7D5 /* NatShortcut+Widths.swift in Sources */,
 				590A53D96F90B89C4E352ADB38743179 /* TheBodyShopFontSizes.swift in Sources */,
 				F53456A828AC4A581E5F0DD6451BCD0A /* TheBodyShopFontWeights.swift in Sources */,
-				65D57A64A56F3130E6444CB713188276 /* TheBodyShopOpacities.swift in Sources */,
 				84932F1324EAB9270052265F /* AvailableTheme.swift in Sources */,
 				6C8512981F307B7CFC65975B94D811BE /* TheBodyShopTheme.swift in Sources */,
 				6B5F3A36A4FD345C2559A12A3A61FEAF /* Theme.swift in Sources */,
