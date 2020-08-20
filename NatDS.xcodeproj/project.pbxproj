@@ -214,6 +214,8 @@
 		84EB6B7924EC019700C6A792 /* GetThemeValidated+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB6B7824EC019700C6A792 /* GetThemeValidated+Spec.swift */; };
 		84EB6B7D24EC04AA00C6A792 /* Theme+Opacities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB6B7C24EC04AA00C6A792 /* Theme+Opacities.swift */; };
 		84EB6B8124EEC82700C6A792 /* GetOrCreatedCachedColor+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB6B7F24EEC75C00C6A792 /* GetOrCreatedCachedColor+Spec.swift */; };
+		84EB6B8324EEEA6200C6A792 /* GetUIColorFromTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB6B8224EEEA6200C6A792 /* GetUIColorFromTokens.swift */; };
+		84EB6B8524EEEA8E00C6A792 /* GetOrCreatedCachedColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB6B8424EEEA8E00C6A792 /* GetOrCreatedCachedColor.swift */; };
 		84F709FF1D1DFC32BA4E9CB1803A6E30 /* NavigationDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31247B21FE6C5054DC6E3BD9BE4A5E35 /* NavigationDrawer.swift */; };
 		851B94BB8C1F2DE82905BF1FE9495800 /* Radius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68038F1CA64FC2164BFB108D7666D0E0 /* Radius.swift */; };
 		852951C972BCD617DDBCE725AE58B8DF /* NaturaElevations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EAF4EE243017499F4D4FB924B336C2 /* NaturaElevations.swift */; };
@@ -510,6 +512,8 @@
 		84EB6B7824EC019700C6A792 /* GetThemeValidated+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GetThemeValidated+Spec.swift"; sourceTree = "<group>"; };
 		84EB6B7C24EC04AA00C6A792 /* Theme+Opacities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Theme+Opacities.swift"; sourceTree = "<group>"; };
 		84EB6B7F24EEC75C00C6A792 /* GetOrCreatedCachedColor+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GetOrCreatedCachedColor+Spec.swift"; sourceTree = "<group>"; };
+		84EB6B8224EEEA6200C6A792 /* GetUIColorFromTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUIColorFromTokens.swift; sourceTree = "<group>"; };
+		84EB6B8424EEEA8E00C6A792 /* GetOrCreatedCachedColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOrCreatedCachedColor.swift; sourceTree = "<group>"; };
 		85AC3BBD38115B8137B4E1CF7BFB87CE /* NaturaFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturaFont.swift; sourceTree = "<group>"; };
 		8602357A60C6B3C2C20CC759E847FE9A /* AvonColorPaletteDark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvonColorPaletteDark.swift; sourceTree = "<group>"; };
 		8656CC0789F1E0DACEB77D4C50C2ECC1 /* UITableView+ReusableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+ReusableTests.swift"; sourceTree = "<group>"; };
@@ -2071,6 +2075,8 @@
 				84EB6B7624EBFF1000C6A792 /* DeprecatedWillBeRemoved */,
 				84EB6B6E24EB197000C6A792 /* GetTokensFromTheme.swift */,
 				84EB6B7424EBFEC000C6A792 /* GetThemeValidated.swift */,
+				84EB6B8224EEEA6200C6A792 /* GetUIColorFromTokens.swift */,
+				84EB6B8424EEEA8E00C6A792 /* GetOrCreatedCachedColor.swift */,
 			);
 			path = DomainFunctions;
 			sourceTree = "<group>";
@@ -2482,6 +2488,7 @@
 				1F40DBA4B8A3C9B0558AD83B5B2884D6 /* ButtonContainedStyle.swift in Sources */,
 				98C6EB095DD059D51DD9883B943AF889 /* ButtonOutlineStyle.swift in Sources */,
 				14016A20C7BF7046BAFCD2AE53673EB0 /* ButtonStyle.swift in Sources */,
+				84EB6B8524EEEA8E00C6A792 /* GetOrCreatedCachedColor.swift in Sources */,
 				845AD7A424E2C4DA006CA226 /* ThemeProtocol.swift in Sources */,
 				000598F48ADE170D305737C11E3F2D99 /* ButtonTextStyle.swift in Sources */,
 				845AD7AA24E2CC82006CA226 /* AvonLightTheme.swift in Sources */,
@@ -2567,6 +2574,7 @@
 				80FE219D764217C0520E0C784F9C0C0B /* PulseLayer.swift in Sources */,
 				851B94BB8C1F2DE82905BF1FE9495800 /* Radius.swift in Sources */,
 				ECA4CB7769FB08CB62C5F8CD79EE6521 /* ReusableView.swift in Sources */,
+				84EB6B8324EEEA6200C6A792 /* GetUIColorFromTokens.swift in Sources */,
 				509D46F287D25DAEB7A71BF2665EF894 /* SearchBar.swift in Sources */,
 				D27BE56EFE3A19A922C3319484C81601 /* Sizes.swift in Sources */,
 				CC12FA9DD2B8935D427D78F863301A2E /* Space.swift in Sources */,
