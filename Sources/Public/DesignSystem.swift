@@ -24,13 +24,13 @@ public final class DesignSystem {
 
     // MARK: - Private properties
 
-    private let storage: ConfigurationStorable
+    private let storage: ConfigurationStorage
 
     // MARK: - Public properties
 
     var currentTheme: AvailableTheme? {
         storage
-            .getThemeProtocol()
+            .currentTheme
             .flatMap(AvailableTheme.init)
     }
 
@@ -40,14 +40,15 @@ public final class DesignSystem {
         self.init(storage: ConfigurationStorage.shared)
     }
 
-    init(storage: ConfigurationStorable) {
+    init(storage: ConfigurationStorage) {
         self.storage = storage
     }
 
     // MARK: - Public methods
 
     func configure(with theme: AvailableTheme) {
-        storage.save(theme: theme.newInstance)
+        storage.currentTheme = theme.newInstance
+        storage.cachedColors = [:]
     }
 }
 

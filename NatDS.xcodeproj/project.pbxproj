@@ -213,6 +213,7 @@
 		84EB6B7524EBFEC000C6A792 /* GetThemeValidated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB6B7424EBFEC000C6A792 /* GetThemeValidated.swift */; };
 		84EB6B7924EC019700C6A792 /* GetThemeValidated+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB6B7824EC019700C6A792 /* GetThemeValidated+Spec.swift */; };
 		84EB6B7D24EC04AA00C6A792 /* Theme+Opacities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB6B7C24EC04AA00C6A792 /* Theme+Opacities.swift */; };
+		84EB6B8124EEC82700C6A792 /* GetOrCreatedCachedColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB6B7F24EEC75C00C6A792 /* GetOrCreatedCachedColor.swift */; };
 		84F709FF1D1DFC32BA4E9CB1803A6E30 /* NavigationDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31247B21FE6C5054DC6E3BD9BE4A5E35 /* NavigationDrawer.swift */; };
 		851B94BB8C1F2DE82905BF1FE9495800 /* Radius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68038F1CA64FC2164BFB108D7666D0E0 /* Radius.swift */; };
 		852951C972BCD617DDBCE725AE58B8DF /* NaturaElevations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EAF4EE243017499F4D4FB924B336C2 /* NaturaElevations.swift */; };
@@ -508,6 +509,7 @@
 		84EB6B7424EBFEC000C6A792 /* GetThemeValidated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetThemeValidated.swift; sourceTree = "<group>"; };
 		84EB6B7824EC019700C6A792 /* GetThemeValidated+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GetThemeValidated+Spec.swift"; sourceTree = "<group>"; };
 		84EB6B7C24EC04AA00C6A792 /* Theme+Opacities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Theme+Opacities.swift"; sourceTree = "<group>"; };
+		84EB6B7F24EEC75C00C6A792 /* GetOrCreatedCachedColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOrCreatedCachedColor.swift; sourceTree = "<group>"; };
 		85AC3BBD38115B8137B4E1CF7BFB87CE /* NaturaFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturaFont.swift; sourceTree = "<group>"; };
 		8602357A60C6B3C2C20CC759E847FE9A /* AvonColorPaletteDark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvonColorPaletteDark.swift; sourceTree = "<group>"; };
 		8656CC0789F1E0DACEB77D4C50C2ECC1 /* UITableView+ReusableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+ReusableTests.swift"; sourceTree = "<group>"; };
@@ -1121,6 +1123,7 @@
 			children = (
 				84EB6B7724EC017400C6A792 /* DeprecatedWillBeRemoved */,
 				84EB6B7824EC019700C6A792 /* GetThemeValidated+Spec.swift */,
+				84EB6B7F24EEC75C00C6A792 /* GetOrCreatedCachedColor.swift */,
 			);
 			path = DomainFunctions;
 			sourceTree = "<group>";
@@ -2448,6 +2451,7 @@
 				D05CEB5C2F5F9D32FA015604F6E719F0 /* ValidateTheme+Spec.swift in Sources */,
 				84B9330A24ABC38C00B71BD4 /* NatDialogTitleConfigurable+Spec.swift in Sources */,
 				2625466124C7379800B98A91 /* StubSelector.swift in Sources */,
+				84EB6B8124EEC82700C6A792 /* GetOrCreatedCachedColor.swift in Sources */,
 				E4B171E23C40B91B211DB2F64357778D /* ViewStyle+Spec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
