@@ -53,7 +53,7 @@ final class GetOrCreatedCachedColorSpec: QuickSpec {
                 expect(color).toNot(beNil())
             }
 
-            it("saves color on cahce") {
+            it("saves color on cache") {
                 expect(store.cachedColors.count).to(equal(2))
             }
         }
