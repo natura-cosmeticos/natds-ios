@@ -9,7 +9,7 @@ final class ButtonStyleSpec: QuickSpec {
         var button: UIButton!
 
         beforeEach {
-            DesignSystem().configure(with: .theBodyShop)
+            ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
             button = UIButton()
         }
 
@@ -110,7 +110,7 @@ final class ButtonStyleSpec: QuickSpec {
 
                 it("returns an expected foregroundColor") {
                     let foregroundColor = attributes[.foregroundColor] as? UIColor
-                    let expectedColor = getTheme().colors.onSurface
+                    let expectedColor = getUIColorFromTokens(\.colorOnSurface)
                         .withAlphaComponent(getTokenFromTheme(\.opacity08))
 
                     expect(foregroundColor).to(equal(expectedColor))

@@ -9,7 +9,7 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
         var button: UIButton!
 
         beforeEach {
-            DesignSystem().configure(with: .theBodyShop)
+            ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
             button = UIButton()
         }
 
@@ -107,8 +107,9 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
 
                 it("returns an expected foregroundColor") {
                     let foregroundColor = attributes[.foregroundColor] as? UIColor
+                    let expectedColor = getUIColorFromTokens(\.colorOnSurface)
 
-                    expect(foregroundColor).to(equal(getTheme().colors.onSurface))
+                    expect(foregroundColor).to(equal(expectedColor))
                 }
             }
 
