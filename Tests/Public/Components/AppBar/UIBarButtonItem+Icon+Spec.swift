@@ -9,7 +9,7 @@ final class UIBarButtonItemIconSpec: QuickSpec {
         var sut: UIBarButtonItem!
 
         beforeEach {
-            DesignSystem().configure(with: .theBodyShopLight)
+            DesignSystem().configure(with: .theBodyShop)
             selector = StubSelector()
             sut = UIBarButtonItem(icon: Icon.filledActionAdd, action: #selector(selector.handler), target: selector)
         }

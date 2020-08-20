@@ -23,7 +23,7 @@ final class ShortcutContainedStyleSpec: QuickSpec {
             }
 
             it("sets an expected circle color") {
-                expect(circleView?.backgroundColor).to(equal(getTheme().colors.primary))
+                expect(circleView?.backgroundColor).to(equal(getUIColorFromTokens(\.colorPrimary)))
             }
 
             it("does not set circle border color") {
@@ -39,7 +39,7 @@ final class ShortcutContainedStyleSpec: QuickSpec {
             it("sets an expected icon color") {
                 let iconView = circleView?.subviews.first as? IconView
 
-                expect(iconView?.tintColor).to(equal(getTheme().colors.onPrimary))
+                expect(iconView?.tintColor).to(equal(getUIColorFromTokens(\.colorOnPrimary)))
             }
         }
 
@@ -49,7 +49,7 @@ final class ShortcutContainedStyleSpec: QuickSpec {
             }
 
             it("sets an expected circle color") {
-                expect(circleView?.backgroundColor).to(equal(getTheme().colors.surface))
+                expect(circleView?.backgroundColor).to(equal(getUIColorFromTokens(\.colorSurface)))
             }
 
             it("does not set circle border color") {
@@ -65,7 +65,7 @@ final class ShortcutContainedStyleSpec: QuickSpec {
             it("sets an expected icon color") {
                 let iconView = circleView?.subviews.first as? IconView
 
-                expect(iconView?.tintColor).to(equal(getTheme().colors.highEmphasis))
+                expect(iconView?.tintColor).to(equal(getUIColorFromTokens(\.colorHighEmphasis)))
             }
         }
     }

@@ -23,12 +23,12 @@ final class ShortcutOutlinedStyleSpec: QuickSpec {
             }
 
             it("sets an expected circle color") {
-                expect(circleView?.backgroundColor).to(equal(getTheme().colors.surface))
+                expect(circleView?.backgroundColor).to(equal(getUIColorFromTokens(\.colorSurface)))
             }
 
             it("sets an expected circle border color") {
                 let opacity = getTokenFromTheme(\.opacity04)
-                let color = getTheme().colors.primary.withAlphaComponent(opacity).cgColor
+                let color = getUIColorFromTokens(\.colorPrimary).withAlphaComponent(opacity).cgColor
 
                 expect(circleView?.layer.borderColor).to(equal(color))
             }
@@ -40,7 +40,7 @@ final class ShortcutOutlinedStyleSpec: QuickSpec {
             it("sets an expected icon color") {
                 let iconView = circleView?.subviews.first as? IconView
 
-                expect(iconView?.tintColor).to(equal(getTheme().colors.primary))
+                expect(iconView?.tintColor).to(equal(getUIColorFromTokens(\.colorPrimary)))
             }
         }
 
@@ -50,12 +50,12 @@ final class ShortcutOutlinedStyleSpec: QuickSpec {
             }
 
             it("sets an expected circle color") {
-                expect(circleView?.backgroundColor).to(equal(getTheme().colors.surface))
+                expect(circleView?.backgroundColor).to(equal(getUIColorFromTokens(\.colorSurface)))
             }
 
             it("sets an expected circle border color") {
                 let opacity = getTokenFromTheme(\.opacity04)
-                let color = getTheme().colors.highEmphasis.withAlphaComponent(opacity).cgColor
+                let color = getUIColorFromTokens(\.colorHighEmphasis).withAlphaComponent(opacity).cgColor
 
                 expect(circleView?.layer.borderColor).to(equal(color))
             }
@@ -67,7 +67,7 @@ final class ShortcutOutlinedStyleSpec: QuickSpec {
             it("sets an expected icon color") {
                 let iconView = circleView?.subviews.first as? IconView
 
-                expect(iconView?.tintColor).to(equal(getTheme().colors.highEmphasis))
+                expect(iconView?.tintColor).to(equal(getUIColorFromTokens(\.colorHighEmphasis)))
             }
         }
     }

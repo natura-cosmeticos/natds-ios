@@ -32,7 +32,7 @@ final class DialogStyleSpec: QuickSpec {
             }
 
             it("returns a expect value for weight") {
-                let expectedColor = getTheme().colors.highEmphasis
+                let expectedColor = getUIColorFromTokens(\.colorHighEmphasis)
                 expect(label.textColor).to(equal(expectedColor))
             }
 
@@ -53,7 +53,7 @@ final class DialogStyleSpec: QuickSpec {
                 let attributedText = label.attributedText
                 let attributes = attributedText!.attributes(at: 0, effectiveRange: nil)
                 let foregroundColor = attributes[.foregroundColor] as? UIColor
-                let expectedColor = getTheme().colors.highEmphasis
+                let expectedColor = getUIColorFromTokens(\.colorHighEmphasis)
 
                 expect(foregroundColor).to(equal(expectedColor))
             }
@@ -80,7 +80,7 @@ final class DialogStyleSpec: QuickSpec {
             }
 
             it("returns a expect value for weight") {
-                let expectedColor = getTheme().colors.highEmphasis
+                let expectedColor = getUIColorFromTokens(\.colorHighEmphasis)
                 expect(label.textColor).to(equal(expectedColor))
             }
 
@@ -101,7 +101,7 @@ final class DialogStyleSpec: QuickSpec {
                 let attributedText = label.attributedText
                 let attributes = attributedText!.attributes(at: 0, effectiveRange: nil)
                 let foregroundColor = attributes[.foregroundColor] as? UIColor
-                let expectedColor = getTheme().colors.highEmphasis
+                let expectedColor = getUIColorFromTokens(\.colorHighEmphasis)
 
                 expect(foregroundColor).to(equal(expectedColor))
             }
