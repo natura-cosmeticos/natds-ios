@@ -1,7 +1,7 @@
 @testable import NatDS
 
 final class NotificationCenterSpy {
-    var postInvokations = 0
+    var postInvocations = 0
     var lastPostSent: (name: NSNotification.Name, object: Any?)?
     var invokedRemoveObserver: Bool?
     var invokedAddObserver: (name: NSNotification.Name?, object: Any?)?
@@ -9,7 +9,7 @@ final class NotificationCenterSpy {
 
 extension NotificationCenterSpy: NotificationCenterPostable {
     func post(name: NSNotification.Name, object: Any?) {
-        postInvokations += 1
+        postInvocations += 1
         lastPostSent = (name: name, object: object)
     }
 }

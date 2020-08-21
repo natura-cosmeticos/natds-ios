@@ -28,7 +28,7 @@ final class DesignSystemSpec: QuickSpec {
             }
 
             it("does not call notificationCenter.post") {
-                expect(notificationSpy.postInvokations).to(equal(0))
+                expect(notificationSpy.postInvocations).to(equal(0))
             }
         }
 
@@ -51,7 +51,7 @@ final class DesignSystemSpec: QuickSpec {
                 }
 
                 it("calls notificationCenter.post only once") {
-                    expect(notificationSpy.postInvokations).to(equal(1))
+                    expect(notificationSpy.postInvocations).to(equal(1))
                 }
 
                 it("calls notificationCenter.post with expected parameters") {
@@ -74,7 +74,7 @@ final class DesignSystemSpec: QuickSpec {
                 }
 
                 it("calls notificationCenter.post only once") {
-                    expect(notificationSpy.postInvokations).to(equal(1))
+                    expect(notificationSpy.postInvocations).to(equal(1))
                 }
 
                 it("calls notificationCenter.post with expected parameters") {
@@ -97,7 +97,7 @@ final class DesignSystemSpec: QuickSpec {
                 }
 
                 it("calls notificationCenter.post only once") {
-                    expect(notificationSpy.postInvokations).to(equal(1))
+                    expect(notificationSpy.postInvocations).to(equal(1))
                 }
 
                 it("calls notificationCenter.post with expected parameters") {
@@ -120,7 +120,7 @@ final class DesignSystemSpec: QuickSpec {
                 }
 
                 it("calls notificationCenter.post only once") {
-                    expect(notificationSpy.postInvokations).to(equal(1))
+                    expect(notificationSpy.postInvocations).to(equal(1))
                 }
 
                 it("calls notificationCenter.post with expected parameters") {
@@ -143,7 +143,7 @@ final class DesignSystemSpec: QuickSpec {
                 }
 
                 it("calls notificationCenter.post only once") {
-                    expect(notificationSpy.postInvokations).to(equal(1))
+                    expect(notificationSpy.postInvocations).to(equal(1))
                 }
 
                 it("calls notificationCenter.post with expected parameters") {
@@ -166,7 +166,7 @@ final class DesignSystemSpec: QuickSpec {
                 }
 
                 it("calls notificationCenter.post only once") {
-                    expect(notificationSpy.postInvokations).to(equal(1))
+                    expect(notificationSpy.postInvocations).to(equal(1))
                 }
 
                 it("calls notificationCenter.post with expected parameters") {
@@ -187,7 +187,7 @@ final class DesignSystemSpec: QuickSpec {
                 }
 
                 it("does not call notificationCenter.post") {
-                    expect(notificationSpy.postInvokations).to(equal(0))
+                    expect(notificationSpy.postInvocations).to(equal(0))
                 }
             }
 
@@ -201,7 +201,7 @@ final class DesignSystemSpec: QuickSpec {
                 }
 
                 it("does not call notificationCenter.post") {
-                    expect(notificationSpy.postInvokations).to(equal(0))
+                    expect(notificationSpy.postInvocations).to(equal(0))
                 }
             }
 
@@ -215,7 +215,7 @@ final class DesignSystemSpec: QuickSpec {
                 }
 
                 it("does not call notificationCenter.post") {
-                    expect(notificationSpy.postInvokations).to(equal(0))
+                    expect(notificationSpy.postInvocations).to(equal(0))
                 }
             }
 
@@ -229,7 +229,7 @@ final class DesignSystemSpec: QuickSpec {
                 }
 
                 it("does not call notificationCenter.post") {
-                    expect(notificationSpy.postInvokations).to(equal(0))
+                    expect(notificationSpy.postInvocations).to(equal(0))
                 }
             }
 
@@ -243,7 +243,7 @@ final class DesignSystemSpec: QuickSpec {
                 }
 
                 it("does not call notificationCenter.post") {
-                    expect(notificationSpy.postInvokations).to(equal(0))
+                    expect(notificationSpy.postInvocations).to(equal(0))
                 }
             }
 
@@ -257,7 +257,7 @@ final class DesignSystemSpec: QuickSpec {
                 }
 
                 it("does not call notificationCenter.post") {
-                    expect(notificationSpy.postInvokations).to(equal(0))
+                    expect(notificationSpy.postInvocations).to(equal(0))
                 }
             }
 
@@ -271,7 +271,7 @@ final class DesignSystemSpec: QuickSpec {
                 }
 
                 it("does not call notificationCenter.post") {
-                    expect(notificationSpy.postInvokations).to(equal(0))
+                    expect(notificationSpy.postInvocations).to(equal(0))
                 }
             }
         }

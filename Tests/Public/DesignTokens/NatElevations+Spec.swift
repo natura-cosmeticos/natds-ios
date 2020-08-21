@@ -21,7 +21,7 @@ final class NatElevationsSpec: QuickSpec {
                     it("returns an expected value") {
                         systemUnderTest.apply(on: view, elevation: .none)
 
-                        expect(view.getElevationSetted()).to(equal(tokens.elevationNone))
+                        expect(view.getElevationSet()).to(equal(tokens.elevationNone))
                     }
                 }
 
@@ -29,7 +29,7 @@ final class NatElevationsSpec: QuickSpec {
                     it("returns an expected value") {
                         systemUnderTest.apply(on: view, elevation: .elevation01)
 
-                        expect(view.getElevationSetted()).to(equal(tokens.elevation01))
+                        expect(view.getElevationSet()).to(equal(tokens.elevation01))
                     }
                 }
 
@@ -37,7 +37,7 @@ final class NatElevationsSpec: QuickSpec {
                     it("returns an expected value") {
                         systemUnderTest.apply(on: view, elevation: .elevation02)
 
-                        expect(view.getElevationSetted()).to(equal(tokens.elevation02))
+                        expect(view.getElevationSet()).to(equal(tokens.elevation02))
                     }
                 }
 
@@ -45,7 +45,7 @@ final class NatElevationsSpec: QuickSpec {
                     it("returns an expected value") {
                         systemUnderTest.apply(on: view, elevation: .elevation03)
 
-                        expect(view.getElevationSetted()).to(equal(tokens.elevation03))
+                        expect(view.getElevationSet()).to(equal(tokens.elevation03))
                     }
                 }
 
@@ -53,7 +53,7 @@ final class NatElevationsSpec: QuickSpec {
                     it("returns an expected value") {
                         systemUnderTest.apply(on: view, elevation: .elevation04)
 
-                        expect(view.getElevationSetted()).to(equal(tokens.elevation04))
+                        expect(view.getElevationSet()).to(equal(tokens.elevation04))
                     }
                 }
 
@@ -61,7 +61,7 @@ final class NatElevationsSpec: QuickSpec {
                     it("returns an expected value") {
                         systemUnderTest.apply(on: view, elevation: .elevation05)
 
-                        expect(view.getElevationSetted()).to(equal(tokens.elevation05))
+                        expect(view.getElevationSet()).to(equal(tokens.elevation05))
                     }
                 }
 
@@ -69,7 +69,7 @@ final class NatElevationsSpec: QuickSpec {
                     it("returns an expected value") {
                         systemUnderTest.apply(on: view, elevation: .elevation06)
 
-                        expect(view.getElevationSetted()).to(equal(tokens.elevation06))
+                        expect(view.getElevationSet()).to(equal(tokens.elevation06))
                     }
                 }
 
@@ -77,7 +77,7 @@ final class NatElevationsSpec: QuickSpec {
                     it("returns an expected value") {
                         systemUnderTest.apply(on: view, elevation: .elevation07)
 
-                        expect(view.getElevationSetted()).to(equal(tokens.elevation07))
+                        expect(view.getElevationSet()).to(equal(tokens.elevation07))
                     }
                 }
 
@@ -85,7 +85,7 @@ final class NatElevationsSpec: QuickSpec {
                     it("returns an expected value") {
                         systemUnderTest.apply(on: view, elevation: .elevation08)
 
-                        expect(view.getElevationSetted()).to(equal(tokens.elevation08))
+                        expect(view.getElevationSet()).to(equal(tokens.elevation08))
                     }
                 }
 
@@ -93,7 +93,7 @@ final class NatElevationsSpec: QuickSpec {
                     it("returns an expected value") {
                         systemUnderTest.apply(on: view, elevation: .elevation09)
 
-                        expect(view.getElevationSetted()).to(equal(tokens.elevation09))
+                        expect(view.getElevationSet()).to(equal(tokens.elevation09))
                     }
                 }
 
@@ -101,7 +101,7 @@ final class NatElevationsSpec: QuickSpec {
                     it("returns an expected value") {
                         systemUnderTest.apply(on: view, elevation: .elevation10)
 
-                        expect(view.getElevationSetted()).to(equal(tokens.elevation10))
+                        expect(view.getElevationSet()).to(equal(tokens.elevation10))
                     }
                 }
             }
@@ -120,7 +120,7 @@ final class NatElevationsSpec: QuickSpec {
                     it("returns an expected value") {
                         systemUnderTest.apply(on: view, elevation: .none)
 
-                        expect(view.getElevationSetted()).to(equal(tokens.elevationNone))
+                        expect(view.getElevationSet()).to(equal(tokens.elevationNone))
                     }
                 }
 
@@ -128,7 +128,7 @@ final class NatElevationsSpec: QuickSpec {
                     it("returns an expected value") {
                         systemUnderTest.apply(on: view, elevation: .elevation01)
 
-                        expect(view.getElevationSetted()).to(equal(tokens.elevation01))
+                        expect(view.getElevationSet()).to(equal(tokens.elevation01))
                     }
                 }
 
@@ -136,7 +136,7 @@ final class NatElevationsSpec: QuickSpec {
                     it("returns an expected value") {
                         systemUnderTest.apply(on: view, elevation: .elevation02)
 
-                        expect(view.getElevationSetted()).to(equal(tokens.elevation02))
+                        expect(view.getElevationSet()).to(equal(tokens.elevation02))
                     }
                 }
 
@@ -144,7 +144,7 @@ final class NatElevationsSpec: QuickSpec {
                     it("returns an expected value") {
                         systemUnderTest.apply(on: view, elevation: .elevation03)
 
-                        expect(view.getElevationSetted()).to(equal(tokens.elevation03))
+                        expect(view.getElevationSet()).to(equal(tokens.elevation03))
                     }
                 }
 
@@ -152,7 +152,7 @@ final class NatElevationsSpec: QuickSpec {
                     it("returns an expected value") {
                         systemUnderTest.apply(on: view, elevation: .elevation04)
 
-                        expect(view.getElevationSetted()).to(equal(tokens.elevation04))
+                        expect(view.getElevationSet()).to(equal(tokens.elevation04))
                     }
                 }
 
@@ -160,7 +160,7 @@ final class NatElevationsSpec: QuickSpec {
                     it("returns an expected value") {
                         systemUnderTest.apply(on: view, elevation: .elevation05)
 
-                        expect(view.getElevationSetted()).to(equal(tokens.elevation05))
+                        expect(view.getElevationSet()).to(equal(tokens.elevation05))
                     }
                 }
 
@@ -168,7 +168,7 @@ final class NatElevationsSpec: QuickSpec {
                     it("returns an expected value") {
                         systemUnderTest.apply(on: view, elevation: .elevation06)
 
-                        expect(view.getElevationSetted()).to(equal(tokens.elevation06))
+                        expect(view.getElevationSet()).to(equal(tokens.elevation06))
                     }
                 }
 
@@ -176,7 +176,7 @@ final class NatElevationsSpec: QuickSpec {
                     it("returns an expected value") {
                         systemUnderTest.apply(on: view, elevation: .elevation07)
 
-                        expect(view.getElevationSetted()).to(equal(tokens.elevation07))
+                        expect(view.getElevationSet()).to(equal(tokens.elevation07))
                     }
                 }
 
@@ -184,7 +184,7 @@ final class NatElevationsSpec: QuickSpec {
                     it("returns an expected value") {
                         systemUnderTest.apply(on: view, elevation: .elevation08)
 
-                        expect(view.getElevationSetted()).to(equal(tokens.elevation08))
+                        expect(view.getElevationSet()).to(equal(tokens.elevation08))
                     }
                 }
 
@@ -192,7 +192,7 @@ final class NatElevationsSpec: QuickSpec {
                     it("returns an expected value") {
                         systemUnderTest.apply(on: view, elevation: .elevation09)
 
-                        expect(view.getElevationSetted()).to(equal(tokens.elevation09))
+                        expect(view.getElevationSet()).to(equal(tokens.elevation09))
                     }
                 }
 
@@ -200,7 +200,7 @@ final class NatElevationsSpec: QuickSpec {
                     it("returns an expected value") {
                         systemUnderTest.apply(on: view, elevation: .elevation10)
 
-                        expect(view.getElevationSetted()).to(equal(tokens.elevation10))
+                        expect(view.getElevationSet()).to(equal(tokens.elevation10))
                     }
                 }
             }
@@ -219,7 +219,7 @@ final class NatElevationsSpec: QuickSpec {
                     it("returns an expected value") {
                         systemUnderTest.apply(on: view, elevation: .none)
 
-                        expect(view.getElevationSetted()).to(equal(tokens.elevationNone))
+                        expect(view.getElevationSet()).to(equal(tokens.elevationNone))
                     }
                 }
 
@@ -227,7 +227,7 @@ final class NatElevationsSpec: QuickSpec {
                     it("returns an expected value") {
                         systemUnderTest.apply(on: view, elevation: .elevation01)
 
-                        expect(view.getElevationSetted()).to(equal(tokens.elevation01))
+                        expect(view.getElevationSet()).to(equal(tokens.elevation01))
                     }
                 }
 
@@ -235,7 +235,7 @@ final class NatElevationsSpec: QuickSpec {
                     it("returns an expected value") {
                         systemUnderTest.apply(on: view, elevation: .elevation02)
 
-                        expect(view.getElevationSetted()).to(equal(tokens.elevation02))
+                        expect(view.getElevationSet()).to(equal(tokens.elevation02))
                     }
                 }
 
@@ -243,7 +243,7 @@ final class NatElevationsSpec: QuickSpec {
                     it("returns an expected value") {
                         systemUnderTest.apply(on: view, elevation: .elevation03)
 
-                        expect(view.getElevationSetted()).to(equal(tokens.elevation03))
+                        expect(view.getElevationSet()).to(equal(tokens.elevation03))
                     }
                 }
 
@@ -251,7 +251,7 @@ final class NatElevationsSpec: QuickSpec {
                     it("returns an expected value") {
                         systemUnderTest.apply(on: view, elevation: .elevation04)
 
-                        expect(view.getElevationSetted()).to(equal(tokens.elevation04))
+                        expect(view.getElevationSet()).to(equal(tokens.elevation04))
                     }
                 }
 
@@ -259,7 +259,7 @@ final class NatElevationsSpec: QuickSpec {
                     it("returns an expected value") {
                         systemUnderTest.apply(on: view, elevation: .elevation05)
 
-                        expect(view.getElevationSetted()).to(equal(tokens.elevation05))
+                        expect(view.getElevationSet()).to(equal(tokens.elevation05))
                     }
                 }
 
@@ -267,7 +267,7 @@ final class NatElevationsSpec: QuickSpec {
                     it("returns an expected value") {
                         systemUnderTest.apply(on: view, elevation: .elevation06)
 
-                        expect(view.getElevationSetted()).to(equal(tokens.elevation06))
+                        expect(view.getElevationSet()).to(equal(tokens.elevation06))
                     }
                 }
 
@@ -275,7 +275,7 @@ final class NatElevationsSpec: QuickSpec {
                     it("returns an expected value") {
                         systemUnderTest.apply(on: view, elevation: .elevation07)
 
-                        expect(view.getElevationSetted()).to(equal(tokens.elevation07))
+                        expect(view.getElevationSet()).to(equal(tokens.elevation07))
                     }
                 }
 
@@ -283,7 +283,7 @@ final class NatElevationsSpec: QuickSpec {
                     it("returns an expected value") {
                         systemUnderTest.apply(on: view, elevation: .elevation08)
 
-                        expect(view.getElevationSetted()).to(equal(tokens.elevation08))
+                        expect(view.getElevationSet()).to(equal(tokens.elevation08))
                     }
                 }
 
@@ -291,7 +291,7 @@ final class NatElevationsSpec: QuickSpec {
                     it("returns an expected value") {
                         systemUnderTest.apply(on: view, elevation: .elevation09)
 
-                        expect(view.getElevationSetted()).to(equal(tokens.elevation09))
+                        expect(view.getElevationSet()).to(equal(tokens.elevation09))
                     }
                 }
 
@@ -299,7 +299,7 @@ final class NatElevationsSpec: QuickSpec {
                     it("returns an expected value") {
                         systemUnderTest.apply(on: view, elevation: .elevation10)
 
-                        expect(view.getElevationSetted()).to(equal(tokens.elevation10))
+                        expect(view.getElevationSet()).to(equal(tokens.elevation10))
                     }
                 }
             }
@@ -308,7 +308,7 @@ final class NatElevationsSpec: QuickSpec {
 }
 
 fileprivate extension UIView {
-    func getElevationSetted() -> ElevationAttributes {
+    func getElevationSet() -> ElevationAttributes {
         .init(
             shadowColor: layer.shadowColor,
             shadowOffSet: layer.shadowOffset,
