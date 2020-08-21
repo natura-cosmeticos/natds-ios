@@ -51,7 +51,7 @@ public final class NatShortcut: UIView, Pulsable {
     private let label: UILabel = {
         let label = UILabel()
         label.font = NatFonts.font(ofSize: .caption, withWeight: .regular)
-        label.textColor = getTheme().colors.highEmphasis
+        label.textColor = getUIColorFromTokens(\.colorHighEmphasis)
         label.textAlignment = .center
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false

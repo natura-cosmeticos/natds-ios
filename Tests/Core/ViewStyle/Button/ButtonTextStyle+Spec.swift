@@ -83,7 +83,7 @@ final class ButtonTextStyleSpec: QuickSpec {
                 it("returns an expected foregroundColor") {
                     let foregroundColor = attributes[.foregroundColor] as? UIColor
 
-                    expect(foregroundColor).to(equal(getTheme().colors.highEmphasis))
+                    expect(foregroundColor).to(equal(getUIColorFromTokens(\.colorHighEmphasis)))
                 }
             }
 

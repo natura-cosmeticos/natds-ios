@@ -47,44 +47,44 @@ public struct NatColors {
 
     // MARK: - Primary
 
-    public static var primary: UIColor { getTheme().colors.primary }
-    public static var onPrimary: UIColor { getTheme().colors.onPrimary }
-    public static var primaryLight: UIColor { getTheme().colors.primaryLight }
-    public static var onPrimaryLight: UIColor { getTheme().colors.onPrimaryLight }
-    public static var primaryDark: UIColor { getTheme().colors.primaryDark }
-    public static var onPrimaryDark: UIColor { getTheme().colors.onPrimaryDark }
+    public static var primary: UIColor { getUIColorFromTokens(\.colorPrimary) }
+    public static var onPrimary: UIColor { getUIColorFromTokens(\.colorOnPrimary) }
+    public static var primaryDark: UIColor { getUIColorFromTokens(\.colorPrimaryDark) }
+    public static var onPrimaryDark: UIColor { getUIColorFromTokens(\.colorOnPrimaryDark) }
+    public static var primaryLight: UIColor { getUIColorFromTokens(\.colorPrimaryLight) }
+    public static var onPrimaryLight: UIColor { getUIColorFromTokens(\.colorOnPrimaryLight) }
 
     // MARK: - Secundary
 
-    public static var secondary: UIColor { getTheme().colors.secondary }
-    public static var onSecondary: UIColor { getTheme().colors.onSecondary }
-    public static var secondaryLight: UIColor { getTheme().colors.secondaryLight }
-    public static var onSecondaryLight: UIColor { getTheme().colors.onSecondaryLight }
-    public static var secondaryDark: UIColor { getTheme().colors.secondaryDark }
-    public static var onSecondaryDark: UIColor { getTheme().colors.onSecondaryDark }
+    public static var secondary: UIColor { getUIColorFromTokens(\.colorSecondary) }
+    public static var onSecondary: UIColor { getUIColorFromTokens(\.colorOnSecondary) }
+    public static var secondaryDark: UIColor { getUIColorFromTokens(\.colorSecondaryDark) }
+    public static var onSecondaryDark: UIColor { getUIColorFromTokens(\.colorOnSecondaryDark) }
+    public static var secondaryLight: UIColor { getUIColorFromTokens(\.colorSecondaryLight) }
+    public static var onSecondaryLight: UIColor { getUIColorFromTokens(\.colorOnSecondaryLight) }
 
     // MARK: - Surface
 
-    public static var background: UIColor { getTheme().colors.background }
-    public static var onBackground: UIColor { getTheme().colors.onBackground }
-    public static var surface: UIColor { getTheme().colors.surface }
-    public static var onSurface: UIColor { getTheme().colors.onSurface }
+    public static var background: UIColor { getUIColorFromTokens(\.colorBackground) }
+    public static var onBackground: UIColor { getUIColorFromTokens(\.colorOnBackground) }
+    public static var surface: UIColor { getUIColorFromTokens(\.colorSurface) }
+    public static var onSurface: UIColor { getUIColorFromTokens(\.colorOnSurface) }
 
     // MARK: - Content
 
-    public static var highlight: UIColor { getTheme().colors.highlight }
-    public static var highEmphasis: UIColor { getTheme().colors.highEmphasis }
-    public static var mediumEmphasis: UIColor { getTheme().colors.mediumEmphasis }
-    public static var lowEmphasis: UIColor { getTheme().colors.lowEmphasis }
+    public static var highlight: UIColor { getUIColorFromTokens(\.colorHighlight) }
+    public static var highEmphasis: UIColor { getUIColorFromTokens(\.colorHighEmphasis) }
+    public static var mediumEmphasis: UIColor { getUIColorFromTokens(\.colorMediumEmphasis) }
+    public static var lowEmphasis: UIColor { getUIColorFromTokens(\.colorLowEmphasis) }
 
     // MARK: - Feedback
 
-    public static var success: UIColor { getTheme().colors.success }
-    public static var onSuccess: UIColor { getTheme().colors.onSuccess }
-    public static var warning: UIColor { getTheme().colors.warning }
-    public static var onWarning: UIColor { getTheme().colors.onWarning }
-    public static var alert: UIColor { getTheme().colors.alert }
-    public static var onAlert: UIColor { getTheme().colors.onAlert }
-    public static var link: UIColor { getTheme().colors.link }
-    public static var onLink: UIColor { getTheme().colors.onLink }
+    public static var success: UIColor { getUIColorFromTokens(\.colorSuccess) }
+    public static var onSuccess: UIColor { getUIColorFromTokens(\.colorOnSuccess) }
+    public static var warning: UIColor { getUIColorFromTokens(\.colorWarning) }
+    public static var onWarning: UIColor { getUIColorFromTokens(\.colorOnWarning) }
+    public static var alert: UIColor { getUIColorFromTokens(\.colorAlert) }
+    public static var onAlert: UIColor { getUIColorFromTokens(\.colorOnAlert) }
+    public static var link: UIColor { getUIColorFromTokens(\.colorLink) }
+    public static var onLink: UIColor { getUIColorFromTokens(\.colorOnLink) }
 }

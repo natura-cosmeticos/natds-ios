@@ -1,6 +1,7 @@
 final class ConfigurationStorage: ConfigurationStorable {
     private var theme: Theme?
-    private var themeProtocol: ThemeProtocol?
+    var currentTheme: ThemeProtocol?
+    var cachedColors: [String: UIColor] = [:]
 
     private init() {}
 
@@ -10,15 +11,7 @@ final class ConfigurationStorage: ConfigurationStorable {
         self.theme = theme
     }
 
-    func save(theme: ThemeProtocol) {
-        self.themeProtocol = theme
-    }
-
     func getTheme() -> Theme? {
         theme
-    }
-
-    func getThemeProtocol() -> ThemeProtocol? {
-        themeProtocol
     }
 }

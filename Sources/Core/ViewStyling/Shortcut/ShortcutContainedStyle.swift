@@ -2,16 +2,16 @@ enum ShortcutContainedStyle {
     static func applyPrimaryStyle(on shortcut: NatShortcut) {
         applyStyle(
             on: shortcut,
-            circleColor: getTheme().colors.primary,
-            decorationColor: getTheme().colors.onPrimary
+            circleColor: getUIColorFromTokens(\.colorPrimary),
+            decorationColor: getUIColorFromTokens(\.colorOnPrimary)
         )
     }
 
     static func applyDefaultStyle(on shortcut: NatShortcut) {
         applyStyle(
             on: shortcut,
-            circleColor: getTheme().colors.surface,
-            decorationColor: getTheme().colors.highEmphasis
+            circleColor: getUIColorFromTokens(\.colorSurface),
+            decorationColor: getUIColorFromTokens(\.colorHighEmphasis)
         )
     }
 

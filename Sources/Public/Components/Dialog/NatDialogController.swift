@@ -98,7 +98,7 @@ public final class NatDialogController: UIViewController {
         view.backgroundColor = UIColor.black.withAlphaComponent(opacity)
 
         containerView.layer.cornerRadius = getTokenFromTheme(\.borderRadiusMedium)
-        containerView.backgroundColor = getTheme().colors.surface
+        containerView.backgroundColor = getUIColorFromTokens(\.colorSurface)
 
         view.addSubview(containerView)
         containerView.addSubview(stackView)

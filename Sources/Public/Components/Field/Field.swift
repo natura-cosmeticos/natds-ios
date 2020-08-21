@@ -4,7 +4,7 @@ class Field: UITextField {
         didSet {
             let attrPlaceholder = NSMutableAttributedString(string: placeholder ?? "")
                 .apply(font: NatFonts.font(ofSize: .body1, withWeight: .regular))
-                .apply(foregroundColor: getTheme().colors.mediumEmphasis)
+                .apply(foregroundColor: getUIColorFromTokens(\.colorMediumEmphasis))
 
             attributedPlaceholder = attrPlaceholder
         }
@@ -16,7 +16,7 @@ class Field: UITextField {
         }
     }
 
-    var borderColor: UIColor = getTheme().colors.lowEmphasis {
+    var borderColor: UIColor = getUIColorFromTokens(\.colorLowEmphasis) {
         didSet {
             layer.borderColor = borderColor.cgColor
         }

@@ -13,11 +13,11 @@ final class NatBadgeColorSpec: QuickSpec {
 
         describe("#alert") {
             it("returns expected color for box") {
-                expect(systemUnderTest.alert.box).to(equal(getTheme().colors.alert))
+                expect(systemUnderTest.alert.box).to(equal(getUIColorFromTokens(\.colorAlert)))
             }
 
             it("returns expected color for content") {
-                expect(systemUnderTest.alert.content).to(equal(getTheme().colors.onAlert))
+                expect(systemUnderTest.alert.content).to(equal(getUIColorFromTokens(\.colorOnAlert)))
             }
         }
     }

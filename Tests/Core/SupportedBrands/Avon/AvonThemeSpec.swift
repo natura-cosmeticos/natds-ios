@@ -7,14 +7,6 @@ final class AvonThemeSpec: QuickSpec {
     override func spec() {
         let systemUnderTest = AvonTheme()
 
-        describe("#colors") {
-            it("returns a instance of DynamicColors") {
-                let colorPalette = systemUnderTest.colors
-
-                expect(colorPalette).to(beAnInstanceOf(DynamicColors.self))
-            }
-        }
-
         describe("#font") {
             it("returns a instance of AvonFont") {
                 let font = systemUnderTest.font

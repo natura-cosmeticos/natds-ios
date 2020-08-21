@@ -1,7 +1,8 @@
-func getThemeValidated(from storage: ConfigurationStorable, fatalError: () -> Never) -> ThemeProtocol {
-    guard let theme = storage.getThemeProtocol() else {
-        fatalError()
-    }
+func getThemeValidated(
+    from storage: ConfigurationStorage,
+    fatalError: () -> Never) -> ThemeProtocol {
+
+    guard let theme = storage.currentTheme else { fatalError() }
 
     return theme
 }

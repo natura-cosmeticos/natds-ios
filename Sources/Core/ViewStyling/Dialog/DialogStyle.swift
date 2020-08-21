@@ -3,7 +3,7 @@ enum DialogStyle {
         let label = UILabel()
         label.font = NatFonts.font(ofSize: .heading6, withWeight: .medium)
 
-        let color = getTheme().colors.highEmphasis
+        let color = getUIColorFromTokens(\.colorHighEmphasis)
         let kern = getTheme().font.letterSpacings.heading6
         label.attributedText = createAttributedText(text: title, color: color, kern: kern)
 
@@ -17,7 +17,7 @@ enum DialogStyle {
         label.numberOfLines = 0
         label.font = NatFonts.font(ofSize: .body1, withWeight: .regular)
 
-        let color = getTheme().colors.highEmphasis
+        let color = getUIColorFromTokens(\.colorHighEmphasis)
         let kern = getTheme().font.letterSpacings.body1
         label.attributedText = createAttributedText(text: body, color: color, kern: kern)
 
