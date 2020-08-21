@@ -14,13 +14,5 @@ final class NaturaThemeSpec: QuickSpec {
                 expect(font).to(beAnInstanceOf(NaturaFont.self))
             }
         }
-
-        describe("#elevations") {
-            it("returns a instance of NaturaElevations") {
-                let elevations = systemUnderTest.elevations
-
-                expect(elevations).to(beAnInstanceOf(NaturaElevations.self))
-            }
-        }
     }
 }

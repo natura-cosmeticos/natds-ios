@@ -16,7 +16,7 @@
 
 public struct NatElevation {
     public static func apply(on view: UIView, elevation: Elevation) {
-        let attributes = getTheme().elevations[keyPath: elevation.rawValue]
+        let attributes = getTokenFromTheme(elevation.rawValue)
 
         ViewStyle.applyElevation(on: view, with: attributes)
     }
@@ -36,11 +36,11 @@ extension NatElevation {
         case elevation09
         case elevation10
 
-        var rawValue: KeyPath<Elevations, ElevationAttributes> {
-            let keyPath: KeyPath<Elevations, ElevationAttributes>
+        var rawValue: KeyPath<TokensProtocol, ElevationAttributes> {
+            let keyPath: KeyPath<TokensProtocol, ElevationAttributes>
 
             switch self {
-            case .none: keyPath = \.none
+            case .none: keyPath = \.elevationNone
             case .elevation01: keyPath = \.elevation01
             case .elevation02: keyPath = \.elevation02
             case .elevation03: keyPath = \.elevation03

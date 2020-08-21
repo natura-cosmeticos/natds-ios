@@ -19,7 +19,7 @@ enum ShortcutContainedStyle {
         shortcut.configure(circleColor: circleColor)
         shortcut.configure(iconColor: decorationColor)
 
-        let elevation = getTheme().elevations.elevation02
+        let elevation = getTokenFromTheme(\.elevation02)
         ViewStyle.applyElevation(on: shortcut, with: elevation)
     }
 }
