@@ -25,6 +25,7 @@ public final class DesignSystem {
     // MARK: - Private properties
 
     private let storage: ConfigurationStorage
+    private let notificationCenter: NotificationCenterPostable
 
     // MARK: - Public properties
 
@@ -37,18 +38,21 @@ public final class DesignSystem {
     // MARK: - Inits
 
     public convenience init() {
-        self.init(storage: ConfigurationStorage.shared)
+        self.init(storage: ConfigurationStorage.shared, notificationCenter: NotificationCenter.default)
     }
 
-    init(storage: ConfigurationStorage) {
+    init(storage: ConfigurationStorage, notificationCenter: NotificationCenterPostable) {
         self.storage = storage
+        self.notificationCenter = notificationCenter
     }
 
     // MARK: - Public methods
 
-    func configure(with theme: AvailableTheme) {
+    public func configure(with theme: AvailableTheme) {
         storage.currentTheme = theme.newInstance
         storage.cachedColors = [:]
+
+        notificationCenter.post(name: .themeHasChanged, object: nil)
     }
 }
 

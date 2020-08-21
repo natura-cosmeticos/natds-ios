@@ -118,6 +118,9 @@
 		81AA5DF0A9D5F332072CA1EC9C5CF968 /* NatOpacities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E76AA6120032EE8B86EB90B51BFD8 /* NatOpacities.swift */; };
 		82883672709B4F62F288ADD68528D460 /* TheBodyShopFontLetterSpacings+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F883FDBE8A405C0A87D003DD585D8FE0 /* TheBodyShopFontLetterSpacings+Spec.swift */; };
 		83FB15E1B8B7F6D80B9226B2A75567DC /* AvonThemeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D81AFC13659B24C0C08DCFCA630E1D /* AvonThemeSpec.swift */; };
+		8409854724F02B230095D6AD /* Notification+Name+ThemeHasChanged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409854624F02B230095D6AD /* Notification+Name+ThemeHasChanged.swift */; };
+		8409854A24F02BF60095D6AD /* Notification+Name+ThemeHasChanged+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409854924F02BF60095D6AD /* Notification+Name+ThemeHasChanged+Spec.swift */; };
+		8409854C24F030930095D6AD /* NotificationCenterObsersable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409854B24F030930095D6AD /* NotificationCenterObsersable.swift */; };
 		840B6A754236624B9738CBC3D5CFE895 /* ViewAnimatingWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7316FE65E814E2D5CA475475CD8D4EA /* ViewAnimatingWrapper.swift */; };
 		841DC30AC5612DDD81C8175BCFF4507E /* AvonFontSizes+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C94FCAA23AB699A4926C6B8E598C6 /* AvonFontSizes+Spec.swift */; };
 		841FEABA24C5C1A100C50AFF /* NatLogoImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841FEAB924C5C1A100C50AFF /* NatLogoImages.swift */; };
@@ -177,7 +180,7 @@
 		84BB92A024DCA7E300A9BCC8 /* TextFieldDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D521C44E858B4345479E0B193CE2BB9C /* TextFieldDelegateMock.swift */; };
 		84BB92A224DCB73100A9BCC8 /* IconView+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B29FF4C598F8297E81A6B6A82ACA4F9 /* IconView+Snapshot+Tests.swift */; };
 		84BB92A824DD910C00A9BCC8 /* Icon+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BB92A724DD910C00A9BCC8 /* Icon+Snapshot+Tests.swift */; };
-		84BC900224AA15C3007DF09D /* NotificationCenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC900124AA15C3007DF09D /* NotificationCenterProtocol.swift */; };
+		84BC900224AA15C3007DF09D /* NotificationCenterPostable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC900124AA15C3007DF09D /* NotificationCenterPostable.swift */; };
 		84BC900524AA163A007DF09D /* DialogFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC900324AA163A007DF09D /* DialogFooterView.swift */; };
 		84BC900624AA163A007DF09D /* DialogStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC900424AA163A007DF09D /* DialogStyle.swift */; };
 		84BC900824AA1678007DF09D /* NatDialogController+AlertStyleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC900724AA1678007DF09D /* NatDialogController+AlertStyleBuilder.swift */; };
@@ -407,6 +410,9 @@
 		7E37D0B1B9BAD8ACC82F2DDAEB6FF77E /* AvonTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvonTheme.swift; sourceTree = "<group>"; };
 		7F9C4251076A01537D0A8CB995DF81EC /* NavigationDrawerSubitemCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerSubitemCellTests.swift; sourceTree = "<group>"; };
 		83C59F929E88764313134A046BA5C30F /* DesignSystem+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DesignSystem+Spec.swift"; sourceTree = "<group>"; };
+		8409854624F02B230095D6AD /* Notification+Name+ThemeHasChanged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Name+ThemeHasChanged.swift"; sourceTree = "<group>"; };
+		8409854924F02BF60095D6AD /* Notification+Name+ThemeHasChanged+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Name+ThemeHasChanged+Spec.swift"; sourceTree = "<group>"; };
+		8409854B24F030930095D6AD /* NotificationCenterObsersable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterObsersable.swift; sourceTree = "<group>"; };
 		841FEAB924C5C1A100C50AFF /* NatLogoImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatLogoImages.swift; sourceTree = "<group>"; };
 		841FEABB24C5CD6A00C50AFF /* NatLogoImages+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatLogoImages+Spec.swift"; sourceTree = "<group>"; };
 		84391DDD24DB1B8B009D0BE8 /* NatDSSnapShotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NatDSSnapShotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -448,7 +454,7 @@
 		84BC8FF824AA13B8007DF09D /* NatDialogController+AlertStyleBuilder+Spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NatDialogController+AlertStyleBuilder+Spec.swift"; sourceTree = "<group>"; };
 		84BC8FFA24AA14C0007DF09D /* DialogFooterView+Spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DialogFooterView+Spec.swift"; sourceTree = "<group>"; };
 		84BC8FFB24AA14C0007DF09D /* DialogStyle+Spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DialogStyle+Spec.swift"; sourceTree = "<group>"; };
-		84BC900124AA15C3007DF09D /* NotificationCenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenterProtocol.swift; sourceTree = "<group>"; };
+		84BC900124AA15C3007DF09D /* NotificationCenterPostable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenterPostable.swift; sourceTree = "<group>"; };
 		84BC900324AA163A007DF09D /* DialogFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogFooterView.swift; sourceTree = "<group>"; };
 		84BC900424AA163A007DF09D /* DialogStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogStyle.swift; sourceTree = "<group>"; };
 		84BC900724AA1678007DF09D /* NatDialogController+AlertStyleBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NatDialogController+AlertStyleBuilder.swift"; sourceTree = "<group>"; };
@@ -1081,6 +1087,30 @@
 			path = DesignTokens;
 			sourceTree = "<group>";
 		};
+		8409854824F02BA60095D6AD /* NotificationCenter */ = {
+			isa = PBXGroup;
+			children = (
+				8409854E24F030E10095D6AD /* EventNames */,
+			);
+			path = NotificationCenter;
+			sourceTree = "<group>";
+		};
+		8409854D24F030C70095D6AD /* EventNames */ = {
+			isa = PBXGroup;
+			children = (
+				8409854624F02B230095D6AD /* Notification+Name+ThemeHasChanged.swift */,
+			);
+			path = EventNames;
+			sourceTree = "<group>";
+		};
+		8409854E24F030E10095D6AD /* EventNames */ = {
+			isa = PBXGroup;
+			children = (
+				8409854924F02BF60095D6AD /* Notification+Name+ThemeHasChanged+Spec.swift */,
+			);
+			path = EventNames;
+			sourceTree = "<group>";
+		};
 		84391DDE24DB1B8B009D0BE8 /* NatDSSnapShotTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -1390,7 +1420,9 @@
 		84BC900024AA1594007DF09D /* NotificationCenter */ = {
 			isa = PBXGroup;
 			children = (
-				84BC900124AA15C3007DF09D /* NotificationCenterProtocol.swift */,
+				8409854D24F030C70095D6AD /* EventNames */,
+				84BC900124AA15C3007DF09D /* NotificationCenterPostable.swift */,
+				8409854B24F030930095D6AD /* NotificationCenterObsersable.swift */,
 			);
 			path = NotificationCenter;
 			sourceTree = "<group>";
@@ -1647,6 +1679,7 @@
 				84EB6B7A24EC043400C6A792 /* Theme */,
 				7AB7FF70C9AEA25A8E77912E1563B1EE /* DomainFunctions */,
 				E3284AABCC53927621EACCBF1C988CA3 /* Extensions */,
+				8409854824F02BA60095D6AD /* NotificationCenter */,
 				DBF274BBC18977A0881FCCC6174DF985 /* SupportedBrands */,
 				DCA8206FBF7A0CC92AB1B5DA7728EFB0 /* ViewStyle */,
 			);
@@ -2332,6 +2365,7 @@
 				84AB67611C0B5D85CBE5CE489FCA4DC6 /* UIFont+IconTests.swift in Sources */,
 				50130A6AE7342A799C5989AF8FE486E8 /* UITableView+ReusableTests.swift in Sources */,
 				8E7FE7AAE264D40AF9BFF5CE6E5C7AD0 /* UIView+FrameTests.swift in Sources */,
+				8409854A24F02BF60095D6AD /* Notification+Name+ThemeHasChanged+Spec.swift in Sources */,
 				D05CEB5C2F5F9D32FA015604F6E719F0 /* ValidateTheme+Spec.swift in Sources */,
 				84B9330A24ABC38C00B71BD4 /* NatDialogTitleConfigurable+Spec.swift in Sources */,
 				2625466124C7379800B98A91 /* StubSelector.swift in Sources */,
@@ -2357,6 +2391,7 @@
 				84BC901824AA17C0007DF09D /* NatDialogBuilder.swift in Sources */,
 				84BC901524AA17C0007DF09D /* NatDialogBodyConfigurable.swift in Sources */,
 				847C829024E36AA6001CE116 /* NaturaDarkTheme.swift in Sources */,
+				8409854C24F030930095D6AD /* NotificationCenterObsersable.swift in Sources */,
 				26740A4B24B3A62F00419526 /* NatBadge+Color.swift in Sources */,
 				26BB817924B944D100617EFC /* Badgeable.swift in Sources */,
 				84EB6B7524EBFEC000C6A792 /* GetThemeValidated.swift in Sources */,
@@ -2413,7 +2448,7 @@
 				AC66A51CB3C8EE95429250880CADCB07 /* NatButton+Style.swift in Sources */,
 				E70EF1AC4BB7A93A80A500786C1A6497 /* NatButton.swift in Sources */,
 				4838BBC57B1464D82D59DE861726268A /* NatColors.swift in Sources */,
-				84BC900224AA15C3007DF09D /* NotificationCenterProtocol.swift in Sources */,
+				84BC900224AA15C3007DF09D /* NotificationCenterPostable.swift in Sources */,
 				845AD7A824E2C8E6006CA226 /* AvonDarkTheme.swift in Sources */,
 				0FB003017C3A179872BC65E6E321FD13 /* NatDialogController+StandardStyleBuilder.swift in Sources */,
 				84BC900B24AA169B007DF09D /* DialogViewModel.swift in Sources */,
@@ -2448,6 +2483,7 @@
 				10953079D3A781AA63E2E03A93F222C4 /* String+Icon.swift in Sources */,
 				604835F2975D92A9D2EF46132C17C0A5 /* Tab.swift in Sources */,
 				AAA3820978AE27C3A6ED940916227C9D /* TabItemView.swift in Sources */,
+				8409854724F02B230095D6AD /* Notification+Name+ThemeHasChanged.swift in Sources */,
 				5C0716F242EFC1AF6A61CBE257DA7CFE /* TextField.swift in Sources */,
 				56E21DDCD3217649B6CC5332DB901648 /* TextFieldDelegate.swift in Sources */,
 				E07925C3535D79164EBC061C7D6A6CE4 /* TextFieldType.swift in Sources */,

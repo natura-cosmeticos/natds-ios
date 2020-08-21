@@ -14,14 +14,14 @@ final class DialogFooterView: UIView {
         return stackView
     }()
 
-    private let notificationCenter: NotificationCenterProtocol
+    private let notificationCenter: NotificationCenterObsersable
 
     private var actions: [UIButton: ActionHandler] = [:]
     private var isFirstTimeInLayoutSubviews = true
 
     // MARK: - Inits
 
-    init(notificationCenter: NotificationCenterProtocol = NotificationCenter.default) {
+    init(notificationCenter: NotificationCenterObsersable = NotificationCenter.default) {
         self.notificationCenter = notificationCenter
 
         super.init(frame: .zero)

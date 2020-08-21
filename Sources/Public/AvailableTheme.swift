@@ -14,7 +14,7 @@
     Under development.
 */
 
-enum AvailableTheme {
+public enum AvailableTheme {
     case avonDark
     case avonLight
     case naturaDark

@@ -6,14 +6,16 @@ import Nimble
 final class DesignSystemSpec: QuickSpec {
     override func spec() {
         var storage: ConfigurationStorage!
+        var notificationSpy: NotificationCenterSpy!
         var systemUnderTest: DesignSystem!
 
         beforeEach {
             storage = ConfigurationStorage.shared
             storage.currentTheme = nil
             storage.cachedColors = [:]
+            notificationSpy = NotificationCenterSpy()
 
-            systemUnderTest = DesignSystem(storage: storage)
+            systemUnderTest = DesignSystem(storage: storage, notificationCenter: notificationSpy)
         }
 
         describe("#init") {
@@ -23,6 +25,10 @@ final class DesignSystemSpec: QuickSpec {
 
             it("does not call storage.save") {
                 expect(storage.cachedColors.count).to(equal(0))
+            }
+
+            it("does not call notificationCenter.post") {
+                expect(notificationSpy.postInvokations).to(equal(0))
             }
         }
 
@@ -43,6 +49,15 @@ final class DesignSystemSpec: QuickSpec {
                 it("cleans cached color") {
                     expect(storage.cachedColors.count).to(equal(0))
                 }
+
+                it("calls notificationCenter.post only once") {
+                    expect(notificationSpy.postInvokations).to(equal(1))
+                }
+
+                it("calls notificationCenter.post with expected parameters") {
+                    expect(notificationSpy.lastPostSent?.name).to(equal(.themeHasChanged))
+                    expect(notificationSpy.lastPostSent?.object).to(beNil())
+                }
             }
 
             context("when the theme is .avonLight") {
@@ -56,6 +71,15 @@ final class DesignSystemSpec: QuickSpec {
 
                 it("cleans cached color") {
                     expect(storage.cachedColors.count).to(equal(0))
+                }
+
+                it("calls notificationCenter.post only once") {
+                    expect(notificationSpy.postInvokations).to(equal(1))
+                }
+
+                it("calls notificationCenter.post with expected parameters") {
+                    expect(notificationSpy.lastPostSent?.name).to(equal(.themeHasChanged))
+                    expect(notificationSpy.lastPostSent?.object).to(beNil())
                 }
             }
 
@@ -71,6 +95,15 @@ final class DesignSystemSpec: QuickSpec {
                 it("cleans cached color") {
                     expect(storage.cachedColors.count).to(equal(0))
                 }
+
+                it("calls notificationCenter.post only once") {
+                    expect(notificationSpy.postInvokations).to(equal(1))
+                }
+
+                it("calls notificationCenter.post with expected parameters") {
+                    expect(notificationSpy.lastPostSent?.name).to(equal(.themeHasChanged))
+                    expect(notificationSpy.lastPostSent?.object).to(beNil())
+                }
             }
 
             context("when the theme is .naturaLight") {
@@ -84,6 +117,15 @@ final class DesignSystemSpec: QuickSpec {
 
                 it("cleans cached color") {
                     expect(storage.cachedColors.count).to(equal(0))
+                }
+
+                it("calls notificationCenter.post only once") {
+                    expect(notificationSpy.postInvokations).to(equal(1))
+                }
+
+                it("calls notificationCenter.post with expected parameters") {
+                    expect(notificationSpy.lastPostSent?.name).to(equal(.themeHasChanged))
+                    expect(notificationSpy.lastPostSent?.object).to(beNil())
                 }
             }
 
@@ -99,6 +141,15 @@ final class DesignSystemSpec: QuickSpec {
                 it("cleans cached color") {
                     expect(storage.cachedColors.count).to(equal(0))
                 }
+
+                it("calls notificationCenter.post only once") {
+                    expect(notificationSpy.postInvokations).to(equal(1))
+                }
+
+                it("calls notificationCenter.post with expected parameters") {
+                    expect(notificationSpy.lastPostSent?.name).to(equal(.themeHasChanged))
+                    expect(notificationSpy.lastPostSent?.object).to(beNil())
+                }
             }
 
             context("when the theme is .theBodyShopLight") {
@@ -113,67 +164,114 @@ final class DesignSystemSpec: QuickSpec {
                 it("cleans cached color") {
                     expect(storage.cachedColors.count).to(equal(0))
                 }
+
+                it("calls notificationCenter.post only once") {
+                    expect(notificationSpy.postInvokations).to(equal(1))
+                }
+
+                it("calls notificationCenter.post with expected parameters") {
+                    expect(notificationSpy.lastPostSent?.name).to(equal(.themeHasChanged))
+                    expect(notificationSpy.lastPostSent?.object).to(beNil())
+                }
             }
         }
 
         describe("#currentTheme") {
+            context("when the theme is not maped in AvailableTheme") {
+                beforeEach {
+                    storage.currentTheme = StubThemeProtocol()
+                }
+
+                it("returns nil") {
+                    expect(systemUnderTest.currentTheme).to(beNil())
+                }
+
+                it("does not call notificationCenter.post") {
+                    expect(notificationSpy.postInvokations).to(equal(0))
+                }
+            }
+
             context("when the theme is .avonDark") {
                 beforeEach {
-                    systemUnderTest.configure(with: .avonDark)
+                    storage.currentTheme = AvonDarkTheme()
                 }
 
                 it("returns an expected theme") {
                     expect(systemUnderTest.currentTheme).to(equal(.avonDark))
                 }
+
+                it("does not call notificationCenter.post") {
+                    expect(notificationSpy.postInvokations).to(equal(0))
+                }
             }
 
             context("when the theme is .avonLight") {
                 beforeEach {
-                    systemUnderTest.configure(with: .avonLight)
+                    storage.currentTheme = AvonLightTheme()
                 }
 
                 it("returns an expected theme") {
                     expect(systemUnderTest.currentTheme).to(equal(.avonLight))
                 }
+
+                it("does not call notificationCenter.post") {
+                    expect(notificationSpy.postInvokations).to(equal(0))
+                }
             }
 
             context("when the theme is .naturaDark") {
                 beforeEach {
-                    systemUnderTest.configure(with: .naturaDark)
+                    storage.currentTheme = NaturaDarkTheme()
                 }
 
                 it("returns an expected theme") {
                     expect(systemUnderTest.currentTheme).to(equal(.naturaDark))
                 }
+
+                it("does not call notificationCenter.post") {
+                    expect(notificationSpy.postInvokations).to(equal(0))
+                }
             }
 
             context("when the theme is .naturaDark") {
                 beforeEach {
-                    systemUnderTest.configure(with: .naturaLight)
+                    storage.currentTheme = NaturaLightTheme()
                 }
 
                 it("returns an expected theme") {
                     expect(systemUnderTest.currentTheme).to(equal(.naturaLight))
                 }
+
+                it("does not call notificationCenter.post") {
+                    expect(notificationSpy.postInvokations).to(equal(0))
+                }
             }
 
             context("when the theme is .theBodyShopDark") {
                 beforeEach {
-                    systemUnderTest.configure(with: .theBodyShopDark)
+                    storage.currentTheme = TheBodyShopDarkTheme()
                 }
 
                 it("returns an expected theme") {
                     expect(systemUnderTest.currentTheme).to(equal(.theBodyShopDark))
                 }
+
+                it("does not call notificationCenter.post") {
+                    expect(notificationSpy.postInvokations).to(equal(0))
+                }
             }
 
             context("when the theme is .theBodyShopLight") {
                 beforeEach {
-                    systemUnderTest.configure(with: .theBodyShopLight)
+                    storage.currentTheme = TheBodyShopLightTheme()
                 }
 
                 it("returns an expected theme") {
                     expect(systemUnderTest.currentTheme).to(equal(.theBodyShopLight))
+                }
+
+                it("does not call notificationCenter.post") {
+                    expect(notificationSpy.postInvokations).to(equal(0))
                 }
             }
         }
