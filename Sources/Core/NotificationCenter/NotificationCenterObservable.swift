@@ -1,4 +1,4 @@
-protocol NotificationCenterObsersable {
+protocol NotificationCenterObservable {
     func removeObserver(_ observer: Any)
     func addObserver(_ observer: Any,
                      selector aSelector: Selector,
@@ -7,4 +7,4 @@ protocol NotificationCenterObsersable {
     )
 }
 
-extension NotificationCenter: NotificationCenterObsersable {}
+extension NotificationCenter: NotificationCenterObservable {}

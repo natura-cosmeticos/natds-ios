@@ -14,7 +14,7 @@ extension NotificationCenterSpy: NotificationCenterPostable {
     }
 }
 
-extension NotificationCenterSpy: NotificationCenterObsersable {
+extension NotificationCenterSpy: NotificationCenterObservable {
     func removeObserver(_ observer: Any) {
         invokedRemoveObserver = true
     }
