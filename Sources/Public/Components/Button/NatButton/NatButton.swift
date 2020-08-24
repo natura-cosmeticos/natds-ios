@@ -2,8 +2,7 @@ import UIKit
 
 /**
   NatButton is a class that represents  button  component from the design system.
-  The button colors changes according with the current Brand configured in the Design system
-  and according with user properties of Light and Dark mode.
+  The button colors changes according with the current theme configured in the Design system.
 
     This button has 3 styles:
     - Contained
@@ -21,10 +20,9 @@ import UIKit
         button.heightAnchor.constraint(equalToConstant: NatButton.Height.medium)
 
  - Requires:
-        It's necessary to configure the Design System current Brand at DesignSystem class
-        or fatalError will be raised.
+        It's necessary to configure the Design System with a theme or fatalError will be raised.
 
-            DesignSystem().configure(with: Brand)
+            DesignSystem().configure(with: AvailableTheme)
 */
 
 public final class NatButton: UIButton, Pulsable {
@@ -32,6 +30,7 @@ public final class NatButton: UIButton, Pulsable {
     // MARK: - Private properties
 
     private let style: Style
+    private let notificationCenter: NotificationCenterObservable
 
     // MARK: - Public properties
 
@@ -43,12 +42,30 @@ public final class NatButton: UIButton, Pulsable {
 
     // MARK: - Inits
 
-    public init(style: Style) {
+    public convenience init(style: Style) {
+        self.init(style: style, notificationCenter: NotificationCenter.default)
+    }
+
+    init(style: Style, notificationCenter: NotificationCenterObservable) {
         self.style = style
+        self.notificationCenter = notificationCenter
 
         super.init(frame: .zero)
 
         style.applyStyle(self)
+
+        notificationCenter.addObserver(
+            self,
+            selector: #selector(themeHasChanged),
+            name: .themeHasChanged,
+            object: nil
+        )
+    }
+
+    // MARK: - Deinits
+
+    deinit {
+        notificationCenter.removeObserver(self)
     }
 
     @available(*, unavailable)
@@ -91,10 +108,12 @@ public final class NatButton: UIButton, Pulsable {
 
         endPulse(layer: layer)
     }
+}
 
-    public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        super.traitCollectionDidChange(previousTraitCollection)
+// MARK: - NotificationCenter
 
+extension NatButton {
+    @objc private func themeHasChanged() {
         style.changeState?(self)
     }
 }

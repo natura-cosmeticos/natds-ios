@@ -16,7 +16,7 @@ final class NatShortSpec: QuickSpec {
 
             applyStyleInvocations = 0
 
-            styleSpy = NatShortcut.Style(
+            styleSpy = .init(
                 applyStyle: { _ in applyStyleInvocations += 1 }
             )
 
@@ -161,7 +161,7 @@ final class NatShortSpec: QuickSpec {
         context("When a notification of .themeHasChange is received") {
             beforeEach {
                 applyStyleInvocations = 0
-                styleSpy = NatShortcut.Style(
+                styleSpy = .init(
                     applyStyle: { _ in applyStyleInvocations += 1 }
                 )
                 systemUnderTest = .init(style: styleSpy)

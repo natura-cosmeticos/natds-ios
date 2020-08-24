@@ -11,6 +11,8 @@ final class NatButtonSpec: QuickSpec {
         var changeStateInvocations: Int!
         var applyTitleInvocations: Int!
 
+        var notificationCenterSpy: NotificationCenterSpy!
+
         var styleSpy: NatButton.Style!
 
         beforeEach {
@@ -20,13 +22,15 @@ final class NatButtonSpec: QuickSpec {
             changeStateInvocations = 0
             applyTitleInvocations = 0
 
-            styleSpy = NatButton.Style(
+            notificationCenterSpy = .init()
+
+            styleSpy = .init(
                 applyStyle: { _ in applyStyleInvocations += 1 },
                 changeState: { _ in changeStateInvocations += 1 },
                 applyTitle: { _, _ in applyTitleInvocations += 1 }
             )
 
-            systemUnderTest = NatButton(style: styleSpy)
+            systemUnderTest = .init(style: styleSpy, notificationCenter: notificationCenterSpy)
         }
 
         describe("#init") {
@@ -44,6 +48,15 @@ final class NatButtonSpec: QuickSpec {
 
             it("has nil sublayers") {
                 expect(systemUnderTest.layer.sublayers).to(beNil())
+            }
+
+            it("calls notificationCenter.addObserver only once") {
+                expect(notificationCenterSpy.addObserverInvocations).to(equal(1))
+            }
+
+            it("registers to excpected notification event without passing objects") {
+                expect(notificationCenterSpy.invokedAddObserver?.name).to(equal(.themeHasChanged))
+                expect(notificationCenterSpy.invokedAddObserver?.object).to(beNil())
             }
         }
 
@@ -148,16 +161,29 @@ final class NatButtonSpec: QuickSpec {
             }
         }
 
-        describe("#traitCollectionDidChange") {
+        context("When a notification of .themeHasChange is received") {
             beforeEach {
-                systemUnderTest.traitCollectionDidChange(nil)
+                applyStyleInvocations = 0
+                changeStateInvocations = 0
+                applyTitleInvocations = 0
+
+                notificationCenterSpy = .init()
+
+                styleSpy = .init(
+                    applyStyle: { _ in applyStyleInvocations += 1 },
+                    changeState: { _ in changeStateInvocations += 1 },
+                    applyTitle: { _, _ in applyTitleInvocations += 1 }
+                )
+                systemUnderTest = .init(style: styleSpy)
+
+                NotificationCenter.default.post(name: .themeHasChanged, object: nil)
             }
 
-            it("applies style again besides init") {
+            it("applies style only once") {
                 expect(applyStyleInvocations).to(equal(1))
             }
 
-            it("calls changeState only once") {
+            fit("calls changeState when a notification is received") {
                 expect(changeStateInvocations).to(equal(1))
             }
 
