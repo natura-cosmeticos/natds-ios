@@ -1,7 +1,6 @@
 /**
   NatShortcut is a class that represents  a component from the design system.
-  The shortcut colors changes according with the current Brand configured in the Design system
-  and according with user properties of Light and Dark mode.
+  The shortcut colors changes according with the current theme configured in the Design system.
 
     This component has 4 styles:
     - Contained with Primary color
@@ -24,7 +23,7 @@
         It's necessary to configure the Design System current Brand at DesignSystem class
         or fatalError will be raised.
 
-            DesignSystem().configure(with: Brand)
+            DesignSystem().configure(with: AvailableTheme)
 */
 
 public final class NatShortcut: UIView {
