@@ -8,8 +8,8 @@ final class NatShortSpec: QuickSpec {
         var systemUnderTest: NatShortcut!
 
         var applyStyleInvocations: Int!
-
         var styleSpy: NatShortcut.Style!
+        var notificationCenterSpy: NotificationCenterSpy!
 
         beforeEach {
             DesignSystem().configure(with: .theBodyShop)
@@ -20,7 +20,8 @@ final class NatShortSpec: QuickSpec {
                 applyStyle: { _ in applyStyleInvocations += 1 }
             )
 
-            systemUnderTest = NatShortcut(style: styleSpy)
+            notificationCenterSpy = .init()
+            systemUnderTest = .init(style: styleSpy, notificationCenter: notificationCenterSpy)
         }
 
         describe("#init") {
@@ -33,6 +34,15 @@ final class NatShortSpec: QuickSpec {
                 let iconView = circleView?.subviews.first as? IconView
 
                 expect(iconView?.icon).to(equal(.outlinedDefaultMockup))
+            }
+
+            it("calls notificationCenter.addObserver only once") {
+                expect(notificationCenterSpy.addObserverInvocations).to(equal(1))
+            }
+
+            it("registers to excpected notification event without passing objects") {
+                expect(notificationCenterSpy.invokedAddObserver?.name).to(equal(.themeHasChanged))
+                expect(notificationCenterSpy.invokedAddObserver?.object).to(beNil())
             }
         }
 
@@ -148,9 +158,15 @@ final class NatShortSpec: QuickSpec {
             }
         }
 
-        describe("#traitCollectionDidChange") {
+        context("When a notification of .themeHasChange is received") {
             beforeEach {
-                systemUnderTest.traitCollectionDidChange(nil)
+                applyStyleInvocations = 0
+                styleSpy = NatShortcut.Style(
+                    applyStyle: { _ in applyStyleInvocations += 1 }
+                )
+                systemUnderTest = .init(style: styleSpy)
+
+                NotificationCenter.default.post(name: .themeHasChanged, object: nil)
             }
 
             it("applies style again besides init") {

@@ -27,13 +27,12 @@
             DesignSystem().configure(with: Brand)
 */
 
-public final class NatShortcut: UIView, Pulsable {
+public final class NatShortcut: UIView {
 
     // MARK: - Private properties
 
     private let circleView: UIView = {
         let view = UIView()
-        let theme = getTheme()
         view.layer.cornerRadius = getTokenFromTheme(\.sizeMediumX) / 2
         view.translatesAutoresizingMaskIntoConstraints = false
 
@@ -60,18 +59,30 @@ public final class NatShortcut: UIView, Pulsable {
     }()
 
     private let style: Style
+    private let notificationCenter: NotificationCenterObservable
     private var action: (() -> Void)?
 
     // MARK: - Inits
 
-    public init(style: Style) {
+    public convenience init(style: Style) {
+        self.init(style: style, notificationCenter: NotificationCenter.default)
+    }
+
+    init(style: Style, notificationCenter: NotificationCenterObservable) {
         self.style = style
+        self.notificationCenter = notificationCenter
 
         super.init(frame: .zero)
 
         style.applyStyle(self)
 
         setup()
+    }
+
+    // MARK: - Deinits
+
+    deinit {
+        notificationCenter.removeObserver(self)
     }
 
     @available(*, unavailable)
@@ -98,12 +109,6 @@ public final class NatShortcut: UIView, Pulsable {
         super.touchesEnded(touches, with: event)
 
         endPulse(layer: circleView.layer)
-    }
-
-    public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        super.traitCollectionDidChange(previousTraitCollection)
-
-        style.applyStyle(self)
     }
 }
 
@@ -156,6 +161,13 @@ extension NatShortcut {
 
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapHandler))
         addGestureRecognizer(tapGesture)
+
+        notificationCenter.addObserver(
+            self,
+            selector: #selector(themeHasChanged),
+            name: .themeHasChanged,
+            object: nil
+        )
     }
 
     private func addConstraints() {
@@ -182,3 +194,15 @@ extension NatShortcut {
         NSLayoutConstraint.activate(constraints)
     }
 }
+
+// MARK: - NotificationCenter
+
+extension NatShortcut {
+    @objc private func themeHasChanged() {
+        style.applyStyle(self)
+    }
+}
+
+// MARK: - Pulsable
+
+extension NatShortcut: Pulsable {}
