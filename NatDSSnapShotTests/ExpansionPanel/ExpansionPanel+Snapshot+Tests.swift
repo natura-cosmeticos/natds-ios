@@ -17,7 +17,7 @@ class ExpansionPanelSnapshotTests: XCTestCase {
         detailMock = builder.detailMock
         otherDetailMock = builder.otherDetailMock
 
-        systemUnderTest = ExpansionPanel(viewAnimating: builder.viewAnimatingMock)
+        systemUnderTest = ExpansionPanel(viewAnimating: builder.viewAnimatingMock, notificationCenter: NotificationCenterSpy())
         systemUnderTest.setSubtitle(builder.subtitleMock)
         systemUnderTest.translatesAutoresizingMaskIntoConstraints = false
         systemUnderTest.layoutIfNeeded()
@@ -46,7 +46,7 @@ class ExpansionPanelSnapshotTests: XCTestCase {
     }
 
     func test_initWithViewAnimating_withLongSubtitle_hasValidSnapshot() {
-        systemUnderTest = ExpansionPanel(viewAnimating: builder.viewAnimatingMock)
+        systemUnderTest = ExpansionPanel(viewAnimating: builder.viewAnimatingMock, notificationCenter: NotificationCenterSpy())
         systemUnderTest.setSubtitle(builder.longSubtitleMock)
         systemUnderTest.translatesAutoresizingMaskIntoConstraints = false
         systemUnderTest.layoutIfNeeded()
@@ -64,7 +64,7 @@ class ExpansionPanelSnapshotTests: XCTestCase {
     }
 
     func test_initWithViewAnimating_withLongSubtitle_andLimitedSize_hasValidSnapshot() {
-        systemUnderTest = ExpansionPanel(viewAnimating: builder.viewAnimatingMock)
+        systemUnderTest = ExpansionPanel(viewAnimating: builder.viewAnimatingMock, notificationCenter: NotificationCenterSpy())
         systemUnderTest.setSubtitle(builder.longSubtitleMock)
         systemUnderTest.translatesAutoresizingMaskIntoConstraints = false
         let view = addsSutOnViewLimitedSize()

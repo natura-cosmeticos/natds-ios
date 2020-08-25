@@ -4,6 +4,7 @@ final class NotificationCenterSpy {
     var postInvocations = 0
     var lastPostSent: (name: NSNotification.Name, object: Any?)?
     var invokedRemoveObserver: Bool?
+    var addObserverInvocations = 0
     var invokedAddObserver: (name: NSNotification.Name?, object: Any?)?
 }
 
@@ -19,10 +20,12 @@ extension NotificationCenterSpy: NotificationCenterObservable {
         invokedRemoveObserver = true
     }
 
-    func addObserver(_ observer: Any, selector aSelector: Selector,
+    func addObserver(_ observer: Any,
+                     selector aSelector: Selector,
                      name aName: NSNotification.Name?,
                      object anObject: Any?) {
 
+        addObserverInvocations += 1
         invokedAddObserver = (aName, anObject)
     }
 }

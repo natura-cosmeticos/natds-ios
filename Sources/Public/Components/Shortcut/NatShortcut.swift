@@ -1,7 +1,6 @@
 /**
   NatShortcut is a class that represents  a component from the design system.
-  The shortcut colors changes according with the current Brand configured in the Design system
-  and according with user properties of Light and Dark mode.
+  The shortcut colors changes according with the current theme configured in the Design system.
 
     This component has 4 styles:
     - Contained with Primary color
@@ -21,19 +20,17 @@
         shortcut.widthAnchor.constraint(equalToConstant: NatShortcut.Widths.maximum)
 
  - Requires:
-        It's necessary to configure the Design System current Brand at DesignSystem class
-        or fatalError will be raised.
+        It's necessary to configure the Design System with a theme or fatalError will be raised.
 
-            DesignSystem().configure(with: Brand)
+            DesignSystem().configure(with: AvailableTheme)
 */
 
-public final class NatShortcut: UIView, Pulsable {
+public final class NatShortcut: UIView {
 
     // MARK: - Private properties
 
     private let circleView: UIView = {
         let view = UIView()
-        let theme = getTheme()
         view.layer.cornerRadius = getTokenFromTheme(\.sizeMediumX) / 2
         view.translatesAutoresizingMaskIntoConstraints = false
 
@@ -60,18 +57,30 @@ public final class NatShortcut: UIView, Pulsable {
     }()
 
     private let style: Style
+    private let notificationCenter: NotificationCenterObservable
     private var action: (() -> Void)?
 
     // MARK: - Inits
 
-    public init(style: Style) {
+    public convenience init(style: Style) {
+        self.init(style: style, notificationCenter: NotificationCenter.default)
+    }
+
+    init(style: Style, notificationCenter: NotificationCenterObservable) {
         self.style = style
+        self.notificationCenter = notificationCenter
 
         super.init(frame: .zero)
 
         style.applyStyle(self)
 
         setup()
+    }
+
+    // MARK: - Deinit
+
+    deinit {
+        notificationCenter.removeObserver(self)
     }
 
     @available(*, unavailable)
@@ -98,12 +107,6 @@ public final class NatShortcut: UIView, Pulsable {
         super.touchesEnded(touches, with: event)
 
         endPulse(layer: circleView.layer)
-    }
-
-    public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        super.traitCollectionDidChange(previousTraitCollection)
-
-        style.applyStyle(self)
     }
 }
 
@@ -156,6 +159,13 @@ extension NatShortcut {
 
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapHandler))
         addGestureRecognizer(tapGesture)
+
+        notificationCenter.addObserver(
+            self,
+            selector: #selector(themeHasChanged),
+            name: .themeHasChanged,
+            object: nil
+        )
     }
 
     private func addConstraints() {
@@ -182,3 +192,15 @@ extension NatShortcut {
         NSLayoutConstraint.activate(constraints)
     }
 }
+
+// MARK: - NotificationCenter
+
+extension NatShortcut {
+    @objc private func themeHasChanged() {
+        style.applyStyle(self)
+    }
+}
+
+// MARK: - Pulsable
+
+extension NatShortcut: Pulsable {}
