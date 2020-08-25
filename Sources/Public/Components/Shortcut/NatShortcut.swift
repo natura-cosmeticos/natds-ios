@@ -77,7 +77,7 @@ public final class NatShortcut: UIView {
         setup()
     }
 
-    // MARK: - Deinits
+    // MARK: - Deinit
 
     deinit {
         notificationCenter.removeObserver(self)

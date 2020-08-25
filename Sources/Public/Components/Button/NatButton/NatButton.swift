@@ -62,7 +62,7 @@ public final class NatButton: UIButton, Pulsable {
         )
     }
 
-    // MARK: - Deinits
+    // MARK: - Deinit
 
     deinit {
         notificationCenter.removeObserver(self)
