@@ -130,6 +130,7 @@
 		845AD7A424E2C4DA006CA226 /* ThemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845AD7A324E2C4DA006CA226 /* ThemeProtocol.swift */; };
 		845AD7A824E2C8E6006CA226 /* AvonDarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845AD7A724E2C8E6006CA226 /* AvonDarkTheme.swift */; };
 		845AD7AA24E2CC82006CA226 /* AvonLightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845AD7A924E2CC82006CA226 /* AvonLightTheme.swift */; };
+		84703F3724F54AA600FE01CA /* NotificationCenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC901924AA187C007DF09D /* NotificationCenterSpy.swift */; };
 		8475413524B542170071E884 /* NatShortcut+Widths+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475413424B542170071E884 /* NatShortcut+Widths+Spec.swift */; };
 		847C829024E36AA6001CE116 /* NaturaDarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C828F24E36AA6001CE116 /* NaturaDarkTheme.swift */; };
 		847C829224E36AB7001CE116 /* NaturaLightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C829124E36AB7001CE116 /* NaturaLightTheme.swift */; };
@@ -1178,6 +1179,14 @@
 			path = Avon;
 			sourceTree = "<group>";
 		};
+		84703F3624F54A8A00FE01CA /* NotificationCenter */ = {
+			isa = PBXGroup;
+			children = (
+				84BC901924AA187C007DF09D /* NotificationCenterSpy.swift */,
+			);
+			path = NotificationCenter;
+			sourceTree = "<group>";
+		};
 		8475413624B5F7FC0071E884 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
@@ -1308,6 +1317,7 @@
 		84BB928724DC6C6100A9BCC8 /* TestHelpers */ = {
 			isa = PBXGroup;
 			children = (
+				84703F3624F54A8A00FE01CA /* NotificationCenter */,
 				263291DB24BCB20D004036C3 /* Badge */,
 				84BB928C24DC75B100A9BCC8 /* Tab */,
 				84A16F0424DDC2F100E80DA0 /* NavigationDrawer */,
@@ -1721,7 +1731,6 @@
 			isa = PBXGroup;
 			children = (
 				84932F1724EAF0510052265F /* ThemeProtocol */,
-				84BC901924AA187C007DF09D /* NotificationCenterSpy.swift */,
 				58907D6C652303C4D5FC5FFE6E8F721A /* ElevationAttributes+Equitable.swift */,
 				DE0ECAE7CBDEFA14BEB1C2BDCC3384DF /* MockStorage.swift */,
 				255B7772A418A4544E0B8F793BEB519D /* UIColor+AsHexString.swift */,
@@ -2477,6 +2486,7 @@
 				84A16F0524DDC30100E80DA0 /* NavigationDrawerDelegateMock.swift in Sources */,
 				84BB92A224DCB73100A9BCC8 /* IconView+Snapshot+Tests.swift in Sources */,
 				84BB928D24DC75D100A9BCC8 /* TabItemViewDelegateMock.swift in Sources */,
+				84703F3724F54AA600FE01CA /* NotificationCenterSpy.swift in Sources */,
 				84BB928524DC69C900A9BCC8 /* Badgeable+Snapshot+Tests.swift in Sources */,
 				84BB92A824DD910C00A9BCC8 /* Icon+Snapshot+Tests.swift in Sources */,
 				84BB928424DC683700A9BCC8 /* NatBadge+Snapshot+Tests.swift in Sources */,
