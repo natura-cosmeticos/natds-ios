@@ -40,7 +40,7 @@ final class NatShortSpec: QuickSpec {
                 expect(notificationCenterSpy.addObserverInvocations).to(equal(1))
             }
 
-            it("registers to excpected notification event without passing objects") {
+            it("registers to expected notification event without passing objects") {
                 expect(notificationCenterSpy.invokedAddObserver?.name).to(equal(.themeHasChanged))
                 expect(notificationCenterSpy.invokedAddObserver?.object).to(beNil())
             }
