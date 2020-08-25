@@ -5,8 +5,7 @@ import UIKit
   Also, it can show or hide a detail view
   This is a component from the design system.
   The panel expands and retracts as user touches the upDownButton,
-  and the border color changes according to the current Brand configured in the Design system
-  and according with user properties of Light and Dark mode.
+  and the border color changes according with the current theme configured in the Design system.
 
     This panel has only 2 public methods to interact with:
 
@@ -26,10 +25,9 @@ import UIKit
         expansionPanel.setDetailView(myDetailView)
 
  - Requires:
-        It's necessary to configure the Design System current Brand at DesignSystem class
-        or fatalError will be raised.
+        It's necessary to configure the Design System with a theme or fatalError will be raised.
 
-            DesignSystem().configure(with: Brand)
+            DesignSystem().configure(with: AvailableTheme)
 */
 
 public class ExpansionPanel: UIView {
