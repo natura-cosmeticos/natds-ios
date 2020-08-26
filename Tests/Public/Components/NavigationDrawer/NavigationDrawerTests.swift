@@ -9,6 +9,9 @@ final class NavigationDrawerTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
+
+        ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
+
         tableView = UITableView()
         delegateMock = NavigationDrawerDelegateMock()
 

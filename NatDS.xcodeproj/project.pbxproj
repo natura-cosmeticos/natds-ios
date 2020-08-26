@@ -71,7 +71,6 @@
 		518E40E608084AD36390CE8A38A1CB5A /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C157151985B2586A5377C35B4FC1F27 /* UICollectionView+Reusable.swift */; };
 		521AFD7AFA9579A0A57971504ABE7145 /* ButtonOutlinedStyle+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8951046F74282531403D6D25AE4E299E /* ButtonOutlinedStyle+Spec.swift */; };
 		525A8C62B68D8C9B0AC882318792D04C /* Pulsable+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC00F737F0234FCBD14533100E96A39E /* Pulsable+Spec.swift */; };
-		5549F0F4D09E073E0FAFBCC6F7B6699A /* ColorsNaturaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60AC8BC2D164D73C71DF5B19BDC28AE1 /* ColorsNaturaTests.swift */; };
 		55A2D6D6BAD3F2F0B352CA80FC656452 /* UICollectionView+ReusableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B6CEC817D03194414588BB22C1833A /* UICollectionView+ReusableTests.swift */; };
 		56B51E3D524A0D2900D7DD3E6CC761E7 /* UIFont+Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA9C4721134BD5277D76AEDED7A01DB /* UIFont+Icon.swift */; };
 		56E21DDCD3217649B6CC5332DB901648 /* TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A44B9A9D7999BD68C1D60499CEF88 /* TextFieldDelegate.swift */; };
@@ -98,7 +97,6 @@
 		7392D4960D4A13B6ADF3AB7372B264F5 /* DesignSystem+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C59F929E88764313134A046BA5C30F /* DesignSystem+Spec.swift */; };
 		758EE01159A6E7AFC7217055678D4ED3 /* FontIconStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D221DC99290B86F7B59C72F4FA77BE4 /* FontIconStyle.swift */; };
 		77C55B339CA403354D76ABF05E283D5A /* ValueTextHighlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFBFE7E7E98BBE7DA3F6565371E522D /* ValueTextHighlight.swift */; };
-		7B00B2BBB09B3E7B317323F17DE99832 /* ColorsNatura.swift in Sources */ = {isa = PBXBuildFile; fileRef = A147DE3520129A5E7B447BAB75AC8F03 /* ColorsNatura.swift */; };
 		7C00D9B09D306A421DBD99953C7BC9E4 /* NatElevation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2775F568C47ADB6D5DA7B7AFA4A41B4E /* NatElevation.swift */; };
 		7CA6BAC353B73AF5D31F09CAF0268EE5 /* DesignSystemFatalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E6D9764598D210D58B32B2AEB0FE9 /* DesignSystemFatalError.swift */; };
 		7E5A9E64BC68581EC58FCA6EB03DF802 /* ContainedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C58A7E1BE25BB61275135C97BD4C757 /* ContainedButton.swift */; };
@@ -352,7 +350,6 @@
 		5D67F65D9E72160E498FBA256C62159F /* IllustrationIconsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllustrationIconsTests.swift; sourceTree = "<group>"; };
 		5F36582C40F1A58052F011027DBD753B /* TheBodyShopFontWeights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheBodyShopFontWeights.swift; sourceTree = "<group>"; };
 		5F485CDE6E86A020B1549C882DC64B38 /* NatButton+Specs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+Specs.swift"; sourceTree = "<group>"; };
-		60AC8BC2D164D73C71DF5B19BDC28AE1 /* ColorsNaturaTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsNaturaTests.swift; sourceTree = "<group>"; };
 		62CDD513F5E78AFAC3E17DD22AB3C6E1 /* FontIconStyleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontIconStyleTests.swift; sourceTree = "<group>"; };
 		674EEA4A2112FC3EF3AE40AA3776A35A /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		6921E739399DFDC850A3FD044E812EEE /* ButtonContainedStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonContainedStyle.swift; sourceTree = "<group>"; };
@@ -454,7 +451,6 @@
 		9F3B9936E46C7C4571BB36673012AFCE /* NatColors+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatColors+Spec.swift"; sourceTree = "<group>"; };
 		9FBF1F1170177B1B22FABD607AA283EB /* TextFieldTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTypeTests.swift; sourceTree = "<group>"; };
 		A0A53F6A9596591A029749DD3C8BF47B /* ButtonTextStyle+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonTextStyle+Spec.swift"; sourceTree = "<group>"; };
-		A147DE3520129A5E7B447BAB75AC8F03 /* ColorsNatura.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsNatura.swift; sourceTree = "<group>"; };
 		A2216A9839DE07735A376736AB143A7F /* TabItemViewDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemViewDelegateMock.swift; sourceTree = "<group>"; };
 		A54E76AA6120032EE8B86EB90B51BFD8 /* NatOpacities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatOpacities.swift; sourceTree = "<group>"; };
 		A59A74845475F2B53E1C0242E26F6DD1 /* NatBorderRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatBorderRadius.swift; sourceTree = "<group>"; };
@@ -580,14 +576,6 @@
 			path = Button;
 			sourceTree = "<group>";
 		};
-		0D4085DA7FCF745EBD2978C872626280 /* Branding */ = {
-			isa = PBXGroup;
-			children = (
-				A147DE3520129A5E7B447BAB75AC8F03 /* ColorsNatura.swift */,
-			);
-			path = Branding;
-			sourceTree = "<group>";
-		};
 		0E3F578D24B8E9C8004B2F9E /* AppBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -610,14 +598,6 @@
 				0E7C160A24C61E45002FF46F /* UINavigationController+Configure+Spec.swift */,
 			);
 			path = AppBar;
-			sourceTree = "<group>";
-		};
-		12097409E99458B51C9B5F2FEF8C5BE8 /* Branding */ = {
-			isa = PBXGroup;
-			children = (
-				60AC8BC2D164D73C71DF5B19BDC28AE1 /* ColorsNaturaTests.swift */,
-			);
-			path = Branding;
 			sourceTree = "<group>";
 		};
 		120E744C293B89D044FF042E87692C6C /* Public */ = {
@@ -834,23 +814,6 @@
 			path = ValueText;
 			sourceTree = "<group>";
 		};
-		4B9866A3E5EF00723E7A0B8040C4C3FE /* DeprecatedWillBeRemoved */ = {
-			isa = PBXGroup;
-			children = (
-				0D4085DA7FCF745EBD2978C872626280 /* Branding */,
-			);
-			path = DeprecatedWillBeRemoved;
-			sourceTree = "<group>";
-		};
-		4E592AD7D888FCA266D09FD363FF41E1 /* Colors */ = {
-			isa = PBXGroup;
-			children = (
-				12097409E99458B51C9B5F2FEF8C5BE8 /* Branding */,
-				144F2AC4381EFDA362F5A39709BEC12E /* NatColorsSpec */,
-			);
-			path = Colors;
-			sourceTree = "<group>";
-		};
 		55C56C56418DE50EB64ADD8E2B4B70F4 /* NatButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -904,14 +867,6 @@
 				9C01EDAF32106E3A72F0D0694D1A156C /* NatDialogController+Spec.swift */,
 			);
 			path = Dialog;
-			sourceTree = "<group>";
-		};
-		6798CC587164639F37DAC471EE3A2841 /* Colors */ = {
-			isa = PBXGroup;
-			children = (
-				4B9866A3E5EF00723E7A0B8040C4C3FE /* DeprecatedWillBeRemoved */,
-			);
-			path = Colors;
 			sourceTree = "<group>";
 		};
 		719A57636DBDBD5D6854EFEC0F362C4C /* NavigationDrawer */ = {
@@ -985,7 +940,7 @@
 		7C4807A858EAC069D38D22195EC3B0B9 /* DesignTokens */ = {
 			isa = PBXGroup;
 			children = (
-				4E592AD7D888FCA266D09FD363FF41E1 /* Colors */,
+				144F2AC4381EFDA362F5A39709BEC12E /* NatColorsSpec */,
 				74585C795FEFCA51C4DF66B639F8CFC8 /* Fonts */,
 				9A39D6F3DC20F5E6041B1A1A86858A3A /* NatFonts */,
 				A6E3877B37EA290C13920BA9754C76C1 /* NatBorderRadius+Spec.swift */,
@@ -1469,7 +1424,6 @@
 		8D17D3D40C2AE04D8D49BFB4530D5BC9 /* DesignTokens */ = {
 			isa = PBXGroup;
 			children = (
-				6798CC587164639F37DAC471EE3A2841 /* Colors */,
 				64B35360D246BD94D64943CAB0591D20 /* Fonts */,
 			);
 			path = DesignTokens;
@@ -2110,7 +2064,6 @@
 				BB3413734DCB562C834B90742EF06929 /* ButtonStyle+Spec.swift in Sources */,
 				92CA17AE519D08B10DAEE8C00A5E3959 /* ButtonTextStyle+Spec.swift in Sources */,
 				84BC900F24AA16FA007DF09D /* DialogFooterView+Spec.swift in Sources */,
-				5549F0F4D09E073E0FAFBCC6F7B6699A /* ColorsNaturaTests.swift in Sources */,
 				26BB817724B931E900617EFC /* NatBadge+Color+Spec.swift in Sources */,
 				84B9330824AB788E00B71BD4 /* NatDialogDismissableConfigurable+Spec.swift in Sources */,
 				0E7C160324C5D274002FF46F /* UINavigationController+Style+Spec.swift in Sources */,
@@ -2223,7 +2176,6 @@
 				845AD7A424E2C4DA006CA226 /* ThemeProtocol.swift in Sources */,
 				000598F48ADE170D305737C11E3F2D99 /* ButtonTextStyle.swift in Sources */,
 				845AD7AA24E2CC82006CA226 /* AvonLightTheme.swift in Sources */,
-				7B00B2BBB09B3E7B317323F17DE99832 /* ColorsNatura.swift in Sources */,
 				40B14F67117654B7854317119E5B3509 /* ConfigurationStorage.swift in Sources */,
 				7E5A9E64BC68581EC58FCA6EB03DF802 /* ContainedButton.swift in Sources */,
 				84BC901C24AB7445007DF09D /* NatDialogDismissableConfigurable.swift in Sources */,
