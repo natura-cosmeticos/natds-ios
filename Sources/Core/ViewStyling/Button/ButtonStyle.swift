@@ -30,7 +30,7 @@ enum ButtonStyle {
         let attributedString = NSMutableAttributedString(string: text.uppercased())
         attributedString.apply(foregroundColor: color)
 
-        let value = getTheme().font.letterSpacings.button
+        let value = getComponentAttributeFromTheme(\.buttonDefaultLetterSpacing)
         attributedString.apply(kernValue: value)
 
         return attributedString

@@ -16,8 +16,15 @@
 public struct NatFonts {
     public static func font(ofSize size: Size, withWeight weight: Weight) -> UIFont {
         .systemFont(
-            ofSize: getTheme().font.sizes[keyPath: size.rawValue],
+            ofSize: size.relatedTextStyle.size,
             weight: weight.rawValue
+        )
+    }
+
+    public static func font(ofSize size: Size) -> UIFont {
+        .systemFont(
+            ofSize: size.relatedTextStyle.size,
+            weight: size.relatedTextStyle.weight
         )
     }
 }
@@ -40,26 +47,26 @@ extension NatFonts {
         case caption
         case overline
 
-        var rawValue: KeyPath<FontSizes, CGFloat> {
-            let keyPath: KeyPath<FontSizes, CGFloat>
+        var relatedTextStyle: TextStyle {
+            let textStyle: TextStyle
 
             switch self {
-            case .heading1: keyPath = \.heading1
-            case .heading2: keyPath = \.heading2
-            case .heading3: keyPath = \.heading3
-            case .heading4: keyPath = \.heading4
-            case .heading5: keyPath = \.heading5
-            case .heading6: keyPath = \.heading6
-            case .subtitle1: keyPath = \.subtitle1
-            case .subtitle2: keyPath = \.subtitle2
-            case .body1: keyPath = \.body1
-            case .body2: keyPath = \.body2
-            case .button: keyPath = \.button
-            case .caption: keyPath = \.caption
-            case .overline: keyPath = \.overline
+            case .heading1: textStyle = .heading1
+            case .heading2: textStyle = .heading2
+            case .heading3: textStyle = .heading3
+            case .heading4: textStyle = .heading4
+            case .heading5: textStyle = .heading5
+            case .heading6: textStyle = .heading6
+            case .subtitle1: textStyle = .subtitle1
+            case .subtitle2: textStyle = .subtitle2
+            case .body1: textStyle = .body1
+            case .body2: textStyle = .body2
+            case .button: textStyle = .button
+            case .caption: textStyle = .caption
+            case .overline: textStyle = .overline
             }
 
-            return keyPath
+            return textStyle
         }
     }
 }
@@ -76,8 +83,8 @@ extension NatFonts {
             let weight: UIFont.Weight
 
             switch self {
-            case .regular: weight = getTheme().font.weights.regular
-            case .medium: weight = getTheme().font.weights.medium
+            case .regular: weight = .regular
+            case .medium: weight = .medium
             case .bold: weight = .bold
             }
 

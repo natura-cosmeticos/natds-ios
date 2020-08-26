@@ -131,6 +131,8 @@
 		845AD7A824E2C8E6006CA226 /* AvonDarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845AD7A724E2C8E6006CA226 /* AvonDarkTheme.swift */; };
 		845AD7AA24E2CC82006CA226 /* AvonLightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845AD7A924E2CC82006CA226 /* AvonLightTheme.swift */; };
 		84703F3724F54AA600FE01CA /* NotificationCenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC901924AA187C007DF09D /* NotificationCenterSpy.swift */; };
+		84703F3924F6D9E400FE01CA /* GetComponentFromTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84703F3824F6D9E400FE01CA /* GetComponentFromTheme.swift */; };
+		84703F3C24F6ECD300FE01CA /* NatFonts+TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84703F3B24F6ECD300FE01CA /* NatFonts+TextStyle.swift */; };
 		8475413524B542170071E884 /* NatShortcut+Widths+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475413424B542170071E884 /* NatShortcut+Widths+Spec.swift */; };
 		847C829024E36AA6001CE116 /* NaturaDarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C828F24E36AA6001CE116 /* NaturaDarkTheme.swift */; };
 		847C829224E36AB7001CE116 /* NaturaLightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C829124E36AB7001CE116 /* NaturaLightTheme.swift */; };
@@ -413,6 +415,8 @@
 		845AD7A324E2C4DA006CA226 /* ThemeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeProtocol.swift; sourceTree = "<group>"; };
 		845AD7A724E2C8E6006CA226 /* AvonDarkTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvonDarkTheme.swift; sourceTree = "<group>"; };
 		845AD7A924E2CC82006CA226 /* AvonLightTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvonLightTheme.swift; sourceTree = "<group>"; };
+		84703F3824F6D9E400FE01CA /* GetComponentFromTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetComponentFromTheme.swift; sourceTree = "<group>"; };
+		84703F3B24F6ECD300FE01CA /* NatFonts+TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatFonts+TextStyle.swift"; sourceTree = "<group>"; };
 		8475413424B542170071E884 /* NatShortcut+Widths+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatShortcut+Widths+Spec.swift"; sourceTree = "<group>"; };
 		847C828F24E36AA6001CE116 /* NaturaDarkTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturaDarkTheme.swift; sourceTree = "<group>"; };
 		847C829124E36AB7001CE116 /* NaturaLightTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturaLightTheme.swift; sourceTree = "<group>"; };
@@ -1187,6 +1191,15 @@
 			path = NotificationCenter;
 			sourceTree = "<group>";
 		};
+		84703F3A24F6ECA700FE01CA /* NatFonts */ = {
+			isa = PBXGroup;
+			children = (
+				E7C1EA361FCA3C4EFEC4858AA4E04143 /* NatFonts.swift */,
+				84703F3B24F6ECD300FE01CA /* NatFonts+TextStyle.swift */,
+			);
+			path = NatFonts;
+			sourceTree = "<group>";
+		};
 		8475413624B5F7FC0071E884 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
@@ -1796,7 +1809,7 @@
 				A59A74845475F2B53E1C0242E26F6DD1 /* NatBorderRadius.swift */,
 				546EF920207BAF8470E811B146A05C0F /* NatColors.swift */,
 				2775F568C47ADB6D5DA7B7AFA4A41B4E /* NatElevation.swift */,
-				E7C1EA361FCA3C4EFEC4858AA4E04143 /* NatFonts.swift */,
+				84703F3A24F6ECA700FE01CA /* NatFonts */,
 				A54E76AA6120032EE8B86EB90B51BFD8 /* NatOpacities.swift */,
 				FB7FB96016F7D02CB5976F54C383CCD6 /* NatSizes.swift */,
 				0268F8E94DAA2428259644D88E375D32 /* NatSpacing.swift */,
@@ -1968,6 +1981,7 @@
 			isa = PBXGroup;
 			children = (
 				84EB6B7624EBFF1000C6A792 /* DeprecatedWillBeRemoved */,
+				84703F3824F6D9E400FE01CA /* GetComponentFromTheme.swift */,
 				84EB6B6E24EB197000C6A792 /* GetTokensFromTheme.swift */,
 				84EB6B7424EBFEC000C6A792 /* GetThemeValidated.swift */,
 				84EB6B8224EEEA6200C6A792 /* GetUIColorFromTokens.swift */,
@@ -2348,6 +2362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26740A4924B3A60C00419526 /* NatBadge+Style.swift in Sources */,
+				84703F3C24F6ECD300FE01CA /* NatFonts+TextStyle.swift in Sources */,
 				BBCC40A29117B4CB675FE57C3B0130E4 /* AssetsHelper.swift in Sources */,
 				844A1E2324AE117400E93AD9 /* NatShortcut.swift in Sources */,
 				AA2218A08849224F57943C49A7CE3DDA /* AvonFont.swift in Sources */,
@@ -2365,6 +2380,7 @@
 				84EB6B7524EBFEC000C6A792 /* GetThemeValidated.swift in Sources */,
 				38DB283DDC43587A2456F690D45DFE67 /* AvonTheme.swift in Sources */,
 				1F40DBA4B8A3C9B0558AD83B5B2884D6 /* ButtonContainedStyle.swift in Sources */,
+				84703F3924F6D9E400FE01CA /* GetComponentFromTheme.swift in Sources */,
 				98C6EB095DD059D51DD9883B943AF889 /* ButtonOutlineStyle.swift in Sources */,
 				14016A20C7BF7046BAFCD2AE53673EB0 /* ButtonStyle.swift in Sources */,
 				84EB6B8524EEEA8E00C6A792 /* GetOrCreatedCachedColor.swift in Sources */,
