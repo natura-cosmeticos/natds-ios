@@ -9,7 +9,7 @@ final class NatDialogControllerSnapshotTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        DesignSystem().configure(with: .natura)
+        ConfigurationStorage.shared.currentTheme = NaturaLightTheme()
 
         superview = .init(frame: .init(x: 0, y: 0, width: 375, height: 600))
         superview.backgroundColor = .white

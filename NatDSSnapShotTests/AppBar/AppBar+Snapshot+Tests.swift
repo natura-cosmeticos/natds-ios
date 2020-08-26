@@ -9,7 +9,8 @@ class AppBarSnapshotTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        DesignSystem().configure(with: .natura)
+        ConfigurationStorage.shared.currentTheme = NaturaLightTheme()
+        
         systemUnderTest = UINavigationController(rootViewController: UIViewController())
     }
 

@@ -9,7 +9,7 @@ final class NatBadgeSnapshotTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        DesignSystem().configure(with: .natura)
+        ConfigurationStorage.shared.currentTheme = NaturaLightTheme()
 
         systemUnderTest = NatBadge(style: .standard, color: .alert)
     }

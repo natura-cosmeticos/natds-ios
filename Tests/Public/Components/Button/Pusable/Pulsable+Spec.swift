@@ -8,7 +8,7 @@ final class PulsableSpec: QuickSpec {
         var pulsableButtonStub: PulsableButtonStub!
 
         beforeEach {
-            DesignSystem().configure(with: .theBodyShop)
+            ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
 
             pulsableButtonStub = PulsableButtonStub(
                 frame: .init(

@@ -12,7 +12,7 @@ final class NatShortcutSnapshotTests: XCTestCase {
         superview = UIView(frame: CGRect(x: 0, y: 0, width: 60, height: 100))
         superview.backgroundColor = .white
 
-        DesignSystem().configure(with: .natura)
+        ConfigurationStorage.shared.currentTheme = NaturaLightTheme()
     }
 
     func test_shortcut_style_contained_primary_hasValidSnapshot() {

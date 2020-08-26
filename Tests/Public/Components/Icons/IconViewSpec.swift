@@ -8,7 +8,7 @@ final class IconViewSpec: QuickSpec {
         var sut: IconView!
 
         beforeEach {
-            DesignSystem().configure(with: .theBodyShop)
+            ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
         }
 
         describe("#init(fontSize: icon:)") {

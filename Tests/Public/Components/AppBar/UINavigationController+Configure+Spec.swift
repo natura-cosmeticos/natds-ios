@@ -9,7 +9,8 @@ final class UINavigationControllerConfigureSpec: QuickSpec {
         var style: UINavigationController.Style!
 
         beforeEach {
-            DesignSystem().configure(with: .theBodyShop)
+            ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
+            
             sut = UINavigationController()
             style = .default
         }

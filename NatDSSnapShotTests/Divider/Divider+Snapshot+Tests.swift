@@ -10,7 +10,7 @@ final class DividerSnapshotTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        DesignSystem().configure(with: .natura)
+        ConfigurationStorage.shared.currentTheme = NaturaLightTheme()
 
         systemUnderTest = Divider()
 

@@ -9,7 +9,8 @@ final class ButtonTextStyleSpec: QuickSpec {
         var button: UIButton!
 
         beforeEach {
-            DesignSystem().configure(with: .theBodyShop)
+            ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
+            
             button = UIButton()
         }
 

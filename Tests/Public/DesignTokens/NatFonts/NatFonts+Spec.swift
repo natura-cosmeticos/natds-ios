@@ -3,15 +3,15 @@ import Nimble
 
 @testable import NatDS
 
-final class NatFontsNaturaSpec: QuickSpec {
+final class NatFontsSpec: QuickSpec {
     override func spec() {
         let systemUnderTest = NatFonts.self
-        let expectedSizes = NaturaFontSizes()
-        let expectedWights = NaturaFontWeights()
+        let expectedSizes = AvonFontSizes()
+        let expectedWights = AvonFontWeights()
         var font: UIFont!
 
         beforeEach {
-            DesignSystem().configure(with: .natura)
+            ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
         }
 
         describe("#font") {
