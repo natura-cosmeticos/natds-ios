@@ -10,7 +10,7 @@ final class NatDialogControllerStandardStyleBuilderSpec: QuickSpec {
 
         beforeEach {
             ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
-            
+
             systemUnderTest = .init()
             viewModel = systemUnderTest.viewModel
         }

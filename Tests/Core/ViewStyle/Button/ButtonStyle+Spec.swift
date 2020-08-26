@@ -10,7 +10,7 @@ final class ButtonStyleSpec: QuickSpec {
 
         beforeEach {
             ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
-            
+
             button = UIButton()
         }
 

@@ -38,7 +38,7 @@ public class FlatButton: UIButton, Pulsable {
         titleLabel?.font = Fonts.button
         contentEdgeInsets = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
 
-        setTitleColor(Colors.Content.highEmphasis, for: .normal)
-        setTitleColor(Colors.Content.highEmphasis.withAlphaComponent(0.48), for: .disabled)
+        setTitleColor(NatColors.highEmphasis, for: .normal)
+        setTitleColor(NatColors.highEmphasis.withAlphaComponent(0.48), for: .disabled)
     }
 }

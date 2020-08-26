@@ -10,7 +10,7 @@ final class DialogFooterViewSpec: QuickSpec {
 
         beforeEach {
             ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
-            
+
             notificationCenterSpy = .init()
             systemUnderTest = .init(notificationCenter: notificationCenterSpy)
         }

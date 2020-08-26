@@ -237,7 +237,6 @@
 		E0F623F11FAFC75EA92353F270449E96 /* TheBodyShopFontLetterSpacings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BA669F1AAFFCA1DE8B8C6CBAFF61DA /* TheBodyShopFontLetterSpacings.swift */; };
 		E4B171E23C40B91B211DB2F64357778D /* ViewStyle+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAE325876E14C91105C5CF9D2E7F1EF /* ViewStyle+Spec.swift */; };
 		E4FCC8108D5F57339F6297CDD676F8DF /* PulseContainerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0F2CA30F4AA6E3F9B482693C997D55 /* PulseContainerLayer.swift */; };
-		E6FD461A93420854906BA6F9E90F89CE /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0F915C266CD0901846F201CD150DB9 /* Colors.swift */; };
 		E70EF1AC4BB7A93A80A500786C1A6497 /* NatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCF632B4501044E5062C574CCBBF74E /* NatButton.swift */; };
 		E891D4E704EDCC6EA9CD3EE125A5D292 /* NatDialogController+StandardStyleBuilder+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7EAA7BDB4A7A15736AF73EF6EBCD74 /* NatDialogController+StandardStyleBuilder+Spec.swift */; };
 		ECA4CB7769FB08CB62C5F8CD79EE6521 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA6561EEF13B1CE57B6CE00222286CB /* ReusableView.swift */; };
@@ -442,7 +441,6 @@
 		85AC3BBD38115B8137B4E1CF7BFB87CE /* NaturaFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaturaFont.swift; sourceTree = "<group>"; };
 		8656CC0789F1E0DACEB77D4C50C2ECC1 /* UITableView+ReusableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+ReusableTests.swift"; sourceTree = "<group>"; };
 		8951046F74282531403D6D25AE4E299E /* ButtonOutlinedStyle+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonOutlinedStyle+Spec.swift"; sourceTree = "<group>"; };
-		8A0F915C266CD0901846F201CD150DB9 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		8BA9C4721134BD5277D76AEDED7A01DB /* UIFont+Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Icon.swift"; sourceTree = "<group>"; };
 		8BEE0086E453EC48CFDC60DBA3C5C989 /* Field.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
 		8D7EAA7BDB4A7A15736AF73EF6EBCD74 /* NatDialogController+StandardStyleBuilder+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogController+StandardStyleBuilder+Spec.swift"; sourceTree = "<group>"; };
@@ -792,7 +790,6 @@
 		36F09CCDCF54198AE6993DB322056B4E /* DeprecatedWillBeRemoved */ = {
 			isa = PBXGroup;
 			children = (
-				8A0F915C266CD0901846F201CD150DB9 /* Colors.swift */,
 				E541D4660533BA7440D7EAFA3C55D613 /* Fonts.swift */,
 			);
 			path = DeprecatedWillBeRemoved;
@@ -2226,7 +2223,6 @@
 				845AD7A424E2C4DA006CA226 /* ThemeProtocol.swift in Sources */,
 				000598F48ADE170D305737C11E3F2D99 /* ButtonTextStyle.swift in Sources */,
 				845AD7AA24E2CC82006CA226 /* AvonLightTheme.swift in Sources */,
-				E6FD461A93420854906BA6F9E90F89CE /* Colors.swift in Sources */,
 				7B00B2BBB09B3E7B317323F17DE99832 /* ColorsNatura.swift in Sources */,
 				40B14F67117654B7854317119E5B3509 /* ConfigurationStorage.swift in Sources */,
 				7E5A9E64BC68581EC58FCA6EB03DF802 /* ContainedButton.swift in Sources */,

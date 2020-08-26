@@ -10,7 +10,7 @@ class AppBarSnapshotTests: XCTestCase {
         super.setUp()
 
         ConfigurationStorage.shared.currentTheme = NaturaLightTheme()
-        
+
         systemUnderTest = UINavigationController(rootViewController: UIViewController())
     }
 

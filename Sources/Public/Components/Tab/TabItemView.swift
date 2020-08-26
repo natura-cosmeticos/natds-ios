@@ -73,9 +73,9 @@ extension TabItemView {
     private func handleState() {
         switch state {
         case .normal:
-            titleLabel.textColor = Colors.Content.mediumEmphasis
+            titleLabel.textColor = NatColors.mediumEmphasis
         case .selected:
-            titleLabel.textColor = Colors.Content.highlight
+            titleLabel.textColor = NatColors.highlight
         }
     }
 }

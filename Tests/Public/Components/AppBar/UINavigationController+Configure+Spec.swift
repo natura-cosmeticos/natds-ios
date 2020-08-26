@@ -10,7 +10,7 @@ final class UINavigationControllerConfigureSpec: QuickSpec {
 
         beforeEach {
             ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
-            
+
             sut = UINavigationController()
             style = .default
         }
