@@ -26,17 +26,9 @@
         label.textColor = NatColors.onPrimary
 
  - Requires:
-        It's necessary to configure the Design System current Brand at DesignSystem class
-        or fatalError will be raised.
+        It's necessary to configure the Design System with a theme or fatalError will be raised.
 
-            DesignSystem().configure(with: Brand)
-
- - Warning
-        This class supports Light and Dark mode. In other words, according with user properties
-        of Light or Dark, a diferent color can be returned.
-
-        Attention with .cgColor, because it doesn`t support dynamically changes
-        of light and dark mode.
+            DesignSystem().configure(with: AvailableTheme)
 */
 
 public struct NatColors {

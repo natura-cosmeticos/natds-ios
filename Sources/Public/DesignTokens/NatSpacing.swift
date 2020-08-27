@@ -12,10 +12,9 @@
         containerView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: NatSpacing.large)
 
  - Requires:
-        It's necessary to configure the Design System current Brand at DesignSystem class
-        or fatalError will be raised.
+        It's necessary to configure the Design System with a theme or fatalError will be raised.
 
-            DesignSystem().configure(with: Brand)
+            DesignSystem().configure(with: AvailableTheme)
 */
 
 public enum NatSpacing {

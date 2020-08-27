@@ -13,9 +13,9 @@ import UIKit
         navigationController.configure(style: .default)
 
  - Requires:
-        It's necessary to configure the Design System current Brand at DesignSystem class
-        or fatalError will be raised.
-            DesignSystem().configure(with: Brand)
+        It's necessary to configure the Design System with a theme or fatalError will be raised.
+
+            DesignSystem().configure(with: AvailableTheme)
 */
 
 public extension UINavigationController {
