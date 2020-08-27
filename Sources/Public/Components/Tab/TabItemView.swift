@@ -19,7 +19,7 @@ class TabItemView: UIView {
 
     private(set) lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = Fonts.button
+        label.font = NatFonts.font(ofSize: .button)
         label.textAlignment = .center
         return label
     }()

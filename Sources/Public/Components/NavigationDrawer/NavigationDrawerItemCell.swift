@@ -42,7 +42,7 @@ public class NavigationDrawerItemCell: UITableViewCell {
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = NatColors.highEmphasis
-        label.font = Fonts.body2
+        label.font = NatFonts.font(ofSize: .body2)
         return label
     }()
 

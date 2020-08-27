@@ -13,7 +13,7 @@ class NSMutableAttributedStringBuilderTests: XCTestCase {
     }
 
     func test_applyFont_returnsAttributedStringWithAppliedFont() {
-        let expectedFont = Fonts.caption
+        let expectedFont = NatFonts.font(ofSize: .caption)
         let range = string.range(for: substring)
 
         let attributedString = NSMutableAttributedString(string: string)
@@ -28,7 +28,7 @@ class NSMutableAttributedStringBuilderTests: XCTestCase {
 
     func test_applyParagraphStyle_returnsAttributedStringWithAppliedParagraphStyle() {
         let expectedParagraphStyle = NSMutableParagraphStyle()
-        expectedParagraphStyle.maximumLineHeight = Fonts.caption.lineHeight
+        expectedParagraphStyle.maximumLineHeight = NatFonts.font(ofSize: .caption).lineHeight
         let range = string.range(for: substring)
 
         let attributedString = NSMutableAttributedString(string: string)
