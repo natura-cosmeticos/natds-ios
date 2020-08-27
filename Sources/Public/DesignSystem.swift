@@ -3,9 +3,11 @@
 
     Exemple of usage:
 
-            DesignSystem().configure(brand: .avon)
+            DesignSystem().configure(brand: .avonLight)
             //or
-            DesignSystem().configure(brand: .theBodyShop)
+            DesignSystem().configure(brand: .theBodyShopLight)
+            //or
+            DesignSystem().configure(brand: .theBodyShopDark)
 
  - Note:
     Current Supported Brands:
@@ -14,10 +16,9 @@
         - The Body Shop
  
  - Requires:
-        It's necessary to configure the Design System current Brand first
-        or fatalError will be raised.
+        It's necessary to configure the Design System with a theme or fatalError will be raised.
 
-            DesignSystem().configure(with: Brand)
+            DesignSystem().configure(with: AvailableTheme)
 */
 
 public final class DesignSystem {

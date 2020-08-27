@@ -9,9 +9,6 @@
       - NaturaLight
       - TheBodyShopDark
       - TheBodyShopLight
-
- - Warning:
-    Under development.
 */
 
 public enum AvailableTheme {

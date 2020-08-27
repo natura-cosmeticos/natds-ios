@@ -21,11 +21,7 @@ public enum NatSizes {
     public static var micro: CGFloat { getTokenFromTheme(\.sizeMicro) }
     public static var tiny: CGFloat { getTokenFromTheme(\.sizeTiny) }
     public static var small: CGFloat { getTokenFromTheme(\.sizeSmall) }
-
-    @available(*, deprecated, message: "Use standard instead")
-    public static var standart: CGFloat { getTokenFromTheme(\.sizeStandard) }
     public static var standard: CGFloat { getTokenFromTheme(\.sizeStandard) }
-
     public static var semi: CGFloat { getTokenFromTheme(\.sizeSemi) }
     public static var semiX: CGFloat { getTokenFromTheme(\.sizeSemiX) }
     public static var medium: CGFloat { getTokenFromTheme(\.sizeMedium) }

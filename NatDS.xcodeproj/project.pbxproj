@@ -737,17 +737,6 @@
 			path = ValueText;
 			sourceTree = "<group>";
 		};
-		55C56C56418DE50EB64ADD8E2B4B70F4 /* NatButton */ = {
-			isa = PBXGroup;
-			children = (
-				D9B397DFEC0D8F0FBBDE7AE09BA83B2D /* NatButton+EdgeInsets.swift */,
-				10C54C550ED4D44A309C43261BF40F55 /* NatButton+Height.swift */,
-				D331FCE6B4B326453609B50D92482230 /* NatButton+Style.swift */,
-				7CCF632B4501044E5062C574CCBBF74E /* NatButton.swift */,
-			);
-			path = NatButton;
-			sourceTree = "<group>";
-		};
 		603A2F49CA3712BCACA1947C6DF47B0B = {
 			isa = PBXGroup;
 			children = (
@@ -1620,7 +1609,10 @@
 		F39AE9E5CB68E8C7A269525355E8E4D3 /* Button */ = {
 			isa = PBXGroup;
 			children = (
-				55C56C56418DE50EB64ADD8E2B4B70F4 /* NatButton */,
+				D9B397DFEC0D8F0FBBDE7AE09BA83B2D /* NatButton+EdgeInsets.swift */,
+				10C54C550ED4D44A309C43261BF40F55 /* NatButton+Height.swift */,
+				D331FCE6B4B326453609B50D92482230 /* NatButton+Style.swift */,
+				7CCF632B4501044E5062C574CCBBF74E /* NatButton.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
