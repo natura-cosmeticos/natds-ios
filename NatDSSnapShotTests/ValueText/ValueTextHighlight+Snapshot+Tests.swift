@@ -10,7 +10,7 @@ final class ValueTextHighlightSnapshotTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        DesignSystem().configure(with: .natura)
+        ConfigurationStorage.shared.currentTheme = NaturaLightTheme()
 
         systemUnderTest = ValueTextHighlight(frame: CGRect(x: 0, y: 10, width: 328, height: 80))
         superview = UIView(frame: CGRect(x: 0, y: 0, width: 328, height: 100))

@@ -8,7 +8,7 @@ final class NatButtonHeightSpec: QuickSpec {
         let systemUnderTest = NatButton.Height.self
 
         beforeEach {
-            DesignSystem().configure(with: .theBodyShop)
+            ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
         }
 
         describe("#small") {

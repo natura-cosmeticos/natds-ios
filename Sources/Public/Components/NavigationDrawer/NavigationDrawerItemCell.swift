@@ -41,20 +41,20 @@ public class NavigationDrawerItemCell: UITableViewCell {
 
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.textColor = Colors.Content.highEmphasis
-        label.font = Fonts.body2
+        label.textColor = NatColors.highEmphasis
+        label.font = NatFonts.font(ofSize: .body2)
         return label
     }()
 
     private lazy var iconView: IconView = {
         let iconView = IconView()
-        iconView.tintColor = Colors.Content.highEmphasis
+        iconView.tintColor = NatColors.highEmphasis
         return iconView
     }()
 
     private lazy var arrowView: IconView = {
         let iconView = IconView()
-        iconView.tintColor = Colors.Content.highEmphasis
+        iconView.tintColor = NatColors.highEmphasis
         return iconView
     }()
 
@@ -142,7 +142,7 @@ private extension NavigationDrawerItemCell {
         arrowView.icon = state == .selected ? .outlinedNavigationArrowtop : .outlinedNavigationArrowbottom
 
         highlightSelectedView.isHidden = state != .selected
-        highlightSelectedView.backgroundColor = hasSubItems ? Colors.Content.lowEmphasis : Colors.secondary
+        highlightSelectedView.backgroundColor = hasSubItems ? NatColors.lowEmphasis : NatColors.secondary
 
         contentView.alpha = state == .disabled ? 0.48 : 1.0
     }

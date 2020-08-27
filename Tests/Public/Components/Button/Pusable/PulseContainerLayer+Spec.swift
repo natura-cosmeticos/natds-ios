@@ -8,7 +8,7 @@ final class PulseContainerLayerSpec: QuickSpec {
         var systemUnderTest: PulseContainerLayer!
 
         beforeEach {
-            DesignSystem().configure(with: .theBodyShop)
+            ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
 
             systemUnderTest = PulseContainerLayer()
         }

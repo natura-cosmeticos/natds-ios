@@ -16,7 +16,7 @@ final class NatButtonSpec: QuickSpec {
         var styleSpy: NatButton.Style!
 
         beforeEach {
-            DesignSystem().configure(with: .theBodyShop)
+            ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
 
             applyStyleInvocations = 0
             changeStateInvocations = 0

@@ -7,9 +7,9 @@ final class NatLogoImagesSpec: QuickSpec {
     override func spec() {
         let systemUnderTest = NatLogoImages.self
 
-        context("when Brand is Avon") {
+        context("when Theme is AvonLight") {
             beforeEach {
-                DesignSystem().configure(with: .avon)
+                ConfigurationStorage.shared.currentTheme = AvonLightTheme()
             }
 
             describe("#horizontal") {
@@ -36,11 +36,11 @@ final class NatLogoImagesSpec: QuickSpec {
                 }
             }
 
-        } // context - when Brand is Avon
+        } // context - when theme is AvonLight
 
-        context("when Brand is Natura") {
+        context("when theme is NaturaLight") {
             beforeEach {
-                DesignSystem().configure(with: .natura)
+                ConfigurationStorage.shared.currentTheme = NaturaLightTheme()
             }
 
             describe("#horizontal") {
@@ -67,11 +67,11 @@ final class NatLogoImagesSpec: QuickSpec {
                 }
             }
 
-        } // context - when Brand is Natura
+        } // context - when theme is NaturaLight
 
         context("when Brand is The Body Shop") {
             beforeEach {
-                DesignSystem().configure(with: .theBodyShop)
+                ConfigurationStorage.shared.currentTheme = TheBodyShopLightTheme()
             }
 
             describe("#horizontal") {
@@ -98,6 +98,6 @@ final class NatLogoImagesSpec: QuickSpec {
                 }
             }
 
-        } // context - when Brand is The Body Shop
+        } // context - when theme is TheBodyShopLight
     }
 }

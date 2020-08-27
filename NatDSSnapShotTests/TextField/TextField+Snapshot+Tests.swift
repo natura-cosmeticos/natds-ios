@@ -10,7 +10,7 @@ final class TextFieldSnapshotTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        DesignSystem().configure(with: .natura)
+        ConfigurationStorage.shared.currentTheme = NaturaLightTheme()
 
         delegateMock = TextFieldDelegateMock()
         systemUnderTest = TextField(frame: CGRect(x: 0, y: 0, width: 328, height: 99))

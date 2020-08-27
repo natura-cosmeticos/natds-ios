@@ -8,14 +8,13 @@ final class DialogStyleSpec: QuickSpec {
         let systemUnderTest = DialogStyle.self
 
         beforeEach {
-            DesignSystem().configure(with: .theBodyShop)
+            ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
         }
 
         describe("#createLabelForTitle") {
             var label: UILabel!
 
             beforeEach {
-                DesignSystem().configure(with: .theBodyShop)
                 label = systemUnderTest.createLabelForTitle(title: "StubText")
             }
 
@@ -63,7 +62,6 @@ final class DialogStyleSpec: QuickSpec {
             var label: UILabel!
 
             beforeEach {
-                DesignSystem().configure(with: .theBodyShop)
                 label = systemUnderTest.createLabelForBody(body: "StubText")
             }
 

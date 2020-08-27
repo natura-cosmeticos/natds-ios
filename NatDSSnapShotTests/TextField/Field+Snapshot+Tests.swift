@@ -9,7 +9,7 @@ final class FieldSnapshotTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        DesignSystem().configure(with: .natura)
+        ConfigurationStorage.shared.currentTheme = NaturaLightTheme()
 
         systemUnderTest = Field(frame: CGRect(x: 0, y: 0, width: 328, height: 56))
         systemUnderTest.backgroundColor = .white

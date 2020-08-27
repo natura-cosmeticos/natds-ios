@@ -57,11 +57,11 @@ extension ChooseBrandViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
         case 0:
-            DesignSystem().configure(with: .avon)
+            DesignSystem().configure(with: .avonLight)
         case 1:
-            DesignSystem().configure(with: .natura)
+            DesignSystem().configure(with: .naturaLight)
         case 2:
-            DesignSystem().configure(with: .theBodyShop)
+            DesignSystem().configure(with: .theBodyShopLight)
         default:
             fatalError("Not implemented")
         }

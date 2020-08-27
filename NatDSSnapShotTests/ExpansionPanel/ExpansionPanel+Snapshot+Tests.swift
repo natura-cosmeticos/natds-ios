@@ -12,7 +12,7 @@ class ExpansionPanelSnapshotTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        DesignSystem().configure(with: .natura)
+        ConfigurationStorage.shared.currentTheme = NaturaLightTheme()
 
         detailMock = builder.detailMock
         otherDetailMock = builder.otherDetailMock

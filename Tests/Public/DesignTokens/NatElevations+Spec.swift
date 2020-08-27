@@ -108,7 +108,7 @@ final class NatElevationsSpec: QuickSpec {
         } // context - when using AvonDark as theme
 
         context("when using NaturaDark as theme") {
-            let tokens = AvonDarkTokens()
+            let tokens = NaturaDarkTokens()
 
             beforeEach {
                 DesignSystem().configure(with: .naturaDark)
@@ -210,7 +210,8 @@ final class NatElevationsSpec: QuickSpec {
             let tokens = TheBodyShopDarkTokens()
 
             beforeEach {
-                DesignSystem().configure(with: .theBodyShop)
+                ConfigurationStorage.shared.currentTheme = TheBodyShopLightTheme()
+
                 view = .init(frame: .init(x: 0, y: 0, width: 200, height: 200))
             }
 

@@ -8,7 +8,8 @@ final class UIViewControllerConfigureSpec: QuickSpec {
         var sut: UIViewController!
 
         beforeEach {
-            DesignSystem().configure(with: .theBodyShop)
+            ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
+
             sut = UIViewController()
         }
 
