@@ -19,10 +19,9 @@ import UIKit
         .build()
 
  - Requires:
-        It's necessary to configure the Design System current Brand at DesignSystem class
-        or fatalError will be raised.
+        It's necessary to configure the Design System with a theme or fatalError will be raised.
 
-            DesignSystem().configure(with: Brand)
+            DesignSystem().configure(with: AvailableTheme)
 */
 
 public final class NatDialogController: UIViewController {
@@ -153,10 +152,9 @@ extension NatDialogController {
             .build()
 
      - Requires:
-            It's necessary to configure the Design System current Brand at DesignSystem class
-            or fatalError will be raised.
+            It's necessary to configure the Design System with a theme or fatalError will be raised.
 
-                DesignSystem().configure(with: Brand)
+                DesignSystem().configure(with: AvailableTheme)
     */
     public static var standardStyleBuilder: StandardStyleBuilder { .init() }
 
@@ -178,10 +176,9 @@ extension NatDialogController {
             .build()
 
      - Requires:
-            It's necessary to configure the Design System current Brand at DesignSystem class
-            or fatalError will be raised.
+            It's necessary to configure the Design System with a theme or fatalError will be raised.
 
-                DesignSystem().configure(with: Brand)
+                DesignSystem().configure(with: AvailableTheme)
     */
     public static var alertStyleBuilder: AlertStyleBuilder { .init() }
 }

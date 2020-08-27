@@ -22,8 +22,8 @@ public class ValueTextHighlight: UIView {
 
     private lazy var valueDescriptionLabel: UILabel = {
         let label = UILabel()
-        label.font = Fonts.body2
-        label.textColor = Colors.Content.mediumEmphasis
+        label.font = NatFonts.font(ofSize: .body2)
+        label.textColor = NatColors.mediumEmphasis
         label.textAlignment = .left
 
         return label
@@ -31,8 +31,8 @@ public class ValueTextHighlight: UIView {
 
     private lazy var valueLabel: UILabel = {
         let label = UILabel()
-        label.font = Fonts.h5
-        label.textColor = Colors.Content.highlight
+        label.font = NatFonts.font(ofSize: .heading5)
+        label.textColor = NatColors.highlight
         label.textAlignment = .right
 
         return label

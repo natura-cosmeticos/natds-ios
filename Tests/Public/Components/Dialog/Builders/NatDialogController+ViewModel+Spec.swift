@@ -8,7 +8,8 @@ final class NatDialogControllerViewModelSpec: QuickSpec {
         var systemUnderTest: NatDialogController.ViewModel!
 
         beforeEach {
-            DesignSystem().configure(with: .theBodyShop)
+            ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
+
             systemUnderTest = .init()
         }
 

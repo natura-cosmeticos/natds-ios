@@ -9,7 +9,8 @@ final class ButtonContainedStyleSpec: QuickSpec {
         var button: UIButton!
 
         beforeEach {
-            DesignSystem().configure(with: .theBodyShop)
+            ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
+
             button = UIButton()
         }
 
@@ -19,11 +20,10 @@ final class ButtonContainedStyleSpec: QuickSpec {
             }
 
             it("returns an expected font") {
-                let size = getTheme().font.sizes.button
-                let weight = getTheme().font.weights.medium
+                let textStyle = NatFonts.TextStyle.button
 
-                expect(button.titleLabel?.font.pointSize).to(equal(size))
-                expect(button.titleLabel?.font.getWeight()).to(equal(weight))
+                expect(button.titleLabel?.font.pointSize).to(equal(textStyle.size))
+                expect(button.titleLabel?.font.getWeight()).to(equal(textStyle.weight))
             }
 
             it("returns an expected backgroundColor") {

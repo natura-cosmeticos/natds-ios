@@ -3,9 +3,11 @@
 
     Exemple of usage:
 
-            DesignSystem().configure(brand: .avon)
+            DesignSystem().configure(brand: .avonLight)
             //or
-            DesignSystem().configure(brand: .theBodyShop)
+            DesignSystem().configure(brand: .theBodyShopLight)
+            //or
+            DesignSystem().configure(brand: .theBodyShopDark)
 
  - Note:
     Current Supported Brands:
@@ -14,10 +16,9 @@
         - The Body Shop
  
  - Requires:
-        It's necessary to configure the Design System current Brand first
-        or fatalError will be raised.
+        It's necessary to configure the Design System with a theme or fatalError will be raised.
 
-            DesignSystem().configure(with: Brand)
+            DesignSystem().configure(with: AvailableTheme)
 */
 
 public final class DesignSystem {
@@ -53,46 +54,5 @@ public final class DesignSystem {
         storage.cachedColors = [:]
 
         notificationCenter.post(name: .themeHasChanged, object: nil)
-    }
-}
-
-// MARK: - Under Refactoring, will be deprecated
-
-extension DesignSystem {
-    public enum Brand {
-        case avon
-        case natura
-        case theBodyShop
-    }
-
-    public func configure(with brand: Brand) {
-        switch brand {
-        case .avon:
-            storage.save(theme: AvonTheme())
-            configure(with: .avonLight)
-        case .natura:
-            storage.save(theme: NaturaTheme())
-            configure(with: .naturaLight)
-        case .theBodyShop:
-            storage.save(theme: TheBodyShopTheme())
-            configure(with: .theBodyShopLight)
-        }
-    }
-
-    public var currentBrand: Brand? {
-        let theme = storage.getTheme()
-        return getBrandFrom(theme: theme)
-    }
-
-    private func getBrandFrom(theme: Theme?) -> Brand? {
-        let brand: Brand?
-
-        switch theme {
-        case is AvonTheme: brand = .avon
-        case is NaturaTheme: brand = .natura
-        case is TheBodyShopTheme: brand = .theBodyShop
-        default: brand = nil
-        }
-        return brand
     }
 }

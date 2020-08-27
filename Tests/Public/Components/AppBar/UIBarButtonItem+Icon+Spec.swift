@@ -9,8 +9,9 @@ final class UIBarButtonItemIconSpec: QuickSpec {
         var sut: UIBarButtonItem!
 
         beforeEach {
-            DesignSystem().configure(with: .theBodyShop)
+            ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
             selector = StubSelector()
+
             sut = UIBarButtonItem(icon: Icon.filledActionAdd, action: #selector(selector.handler), target: selector)
         }
 

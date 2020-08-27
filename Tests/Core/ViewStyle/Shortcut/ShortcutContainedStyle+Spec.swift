@@ -11,7 +11,7 @@ final class ShortcutContainedStyleSpec: QuickSpec {
         var circleView: UIView!
 
         beforeEach {
-            DesignSystem().configure(with: .theBodyShop)
+            ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
 
             shortcut = NatShortcut(style: stubStyle)
             circleView = shortcut.subviews.first

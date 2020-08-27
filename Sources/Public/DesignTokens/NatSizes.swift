@@ -11,21 +11,16 @@
         containerView.heightAncor.constraint(equalToConstant: NatSizes.tiny)
 
  - Requires:
-        It's necessary to configure the Design System current Brand at DesignSystem class
-        or fatalError will be raised.
+        It's necessary to configure the Design System with a theme or fatalError will be raised.
 
-            DesignSystem().configure(with: Brand)
+            DesignSystem().configure(with: AvailableTheme)
 */
 
 public enum NatSizes {
     public static var micro: CGFloat { getTokenFromTheme(\.sizeMicro) }
     public static var tiny: CGFloat { getTokenFromTheme(\.sizeTiny) }
     public static var small: CGFloat { getTokenFromTheme(\.sizeSmall) }
-
-    @available(*, deprecated, message: "Use standard instead")
-    public static var standart: CGFloat { getTokenFromTheme(\.sizeStandard) }
     public static var standard: CGFloat { getTokenFromTheme(\.sizeStandard) }
-
     public static var semi: CGFloat { getTokenFromTheme(\.sizeSemi) }
     public static var semiX: CGFloat { getTokenFromTheme(\.sizeSemiX) }
     public static var medium: CGFloat { getTokenFromTheme(\.sizeMedium) }

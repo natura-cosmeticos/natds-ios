@@ -12,12 +12,15 @@ class ExpansionPanelSnapshotTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        DesignSystem().configure(with: .natura)
+        ConfigurationStorage.shared.currentTheme = NaturaLightTheme()
 
         detailMock = builder.detailMock
         otherDetailMock = builder.otherDetailMock
 
-        systemUnderTest = ExpansionPanel(viewAnimating: builder.viewAnimatingMock, notificationCenter: NotificationCenterSpy())
+        systemUnderTest = ExpansionPanel(
+            viewAnimating: builder.viewAnimatingMock,
+            notificationCenter: NotificationCenterSpy()
+        )
         systemUnderTest.setSubtitle(builder.subtitleMock)
         systemUnderTest.translatesAutoresizingMaskIntoConstraints = false
         systemUnderTest.layoutIfNeeded()
@@ -46,7 +49,10 @@ class ExpansionPanelSnapshotTests: XCTestCase {
     }
 
     func test_initWithViewAnimating_withLongSubtitle_hasValidSnapshot() {
-        systemUnderTest = ExpansionPanel(viewAnimating: builder.viewAnimatingMock, notificationCenter: NotificationCenterSpy())
+        systemUnderTest = ExpansionPanel(
+            viewAnimating: builder.viewAnimatingMock,
+            notificationCenter: NotificationCenterSpy()
+        )
         systemUnderTest.setSubtitle(builder.longSubtitleMock)
         systemUnderTest.translatesAutoresizingMaskIntoConstraints = false
         systemUnderTest.layoutIfNeeded()
@@ -64,7 +70,10 @@ class ExpansionPanelSnapshotTests: XCTestCase {
     }
 
     func test_initWithViewAnimating_withLongSubtitle_andLimitedSize_hasValidSnapshot() {
-        systemUnderTest = ExpansionPanel(viewAnimating: builder.viewAnimatingMock, notificationCenter: NotificationCenterSpy())
+        systemUnderTest = ExpansionPanel(
+            viewAnimating: builder.viewAnimatingMock,
+            notificationCenter: NotificationCenterSpy()
+        )
         systemUnderTest.setSubtitle(builder.longSubtitleMock)
         systemUnderTest.translatesAutoresizingMaskIntoConstraints = false
         let view = addsSutOnViewLimitedSize()

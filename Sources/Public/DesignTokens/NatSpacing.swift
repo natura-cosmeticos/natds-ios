@@ -12,18 +12,15 @@
         containerView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: NatSpacing.large)
 
  - Requires:
-        It's necessary to configure the Design System current Brand at DesignSystem class
-        or fatalError will be raised.
+        It's necessary to configure the Design System with a theme or fatalError will be raised.
 
-            DesignSystem().configure(with: Brand)
+            DesignSystem().configure(with: AvailableTheme)
 */
 
 public enum NatSpacing {
     public static var micro: CGFloat { getTokenFromTheme(\.spacingMicro) }
     public static var tiny: CGFloat { getTokenFromTheme(\.spacingTiny) }
     public static var small: CGFloat { getTokenFromTheme(\.spacingSmall) }
-    @available(*, deprecated, message: "Use .standard instead")
-    public static var standart: CGFloat { getTokenFromTheme(\.spacingStandard) }
     public static var standard: CGFloat { getTokenFromTheme(\.spacingStandard) }
     public static var semi: CGFloat { getTokenFromTheme(\.spacingSemi) }
     public static var large: CGFloat { getTokenFromTheme(\.spacingLarge) }

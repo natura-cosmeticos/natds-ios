@@ -20,22 +20,22 @@ public class NavigationDrawerSubitemCell: UITableViewCell {
 
     private lazy var verticalLineView: UIView = {
         let view = UIView()
-        view.backgroundColor = Colors.Content.highlight.withAlphaComponent(0.12)
+        view.backgroundColor = NatColors.highlight.withAlphaComponent(0.12)
         return view
     }()
 
     private lazy var highlightSelectedView: UIView = {
         let view = UIView()
         view.alpha = 0.16
-        view.backgroundColor = Colors.secondary
+        view.backgroundColor = NatColors.secondary
         view.layer.cornerRadius = 4.0
         return view
     }()
 
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.textColor = Colors.Content.highEmphasis
-        label.font = Fonts.body2
+        label.textColor = NatColors.highEmphasis
+        label.font = NatFonts.font(ofSize: .body2)
         return label
     }()
 

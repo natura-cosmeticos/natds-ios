@@ -8,7 +8,7 @@ final class NatShortcutWidthsSpec: QuickSpec {
         let systemUnderTest = NatShortcut.Widths.self
 
         beforeEach {
-            DesignSystem().configure(with: .theBodyShop)
+            ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
         }
 
         describe("#small") {

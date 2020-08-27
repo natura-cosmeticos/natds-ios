@@ -10,7 +10,7 @@ final class TabItemSnapshotTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        DesignSystem().configure(with: .natura)
+        ConfigurationStorage.shared.currentTheme = NaturaLightTheme()
 
         delegateMock = TabItemViewDelegateMock()
 

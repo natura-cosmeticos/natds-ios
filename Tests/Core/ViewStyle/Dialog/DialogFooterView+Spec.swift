@@ -9,7 +9,8 @@ final class DialogFooterViewSpec: QuickSpec {
         var notificationCenterSpy: NotificationCenterSpy!
 
         beforeEach {
-            DesignSystem().configure(with: .theBodyShop)
+            ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
+
             notificationCenterSpy = .init()
             systemUnderTest = .init(notificationCenter: notificationCenterSpy)
         }

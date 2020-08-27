@@ -13,35 +13,34 @@
         let logoVertical = NatLogoImages.vertical
 
  - Requires:
-        It's necessary to configure the Design System current Brand at DesignSystem class
-        or fatalError will be raised.
+        It's necessary to configure the Design System with a theme or fatalError will be raised.
 
-            DesignSystem().configure(with: Brand)
+            DesignSystem().configure(with: AvailableTheme)
 */
 
 public struct NatLogoImages {
     public static var horizontal: UIImage? {
-        guard let brand = DesignSystem().currentBrand else { return nil }
+        guard let theme = DesignSystem().currentTheme else { return nil }
 
-        switch brand {
-        case .avon:
+        switch theme {
+        case .avonDark, .avonLight:
             return AssetsHelper.image(from: "Logo/Avon/Horizontal")
-        case .natura:
+        case .naturaDark, .naturaLight:
             return AssetsHelper.image(from: "Logo/Natura/Horizontal")
-        case .theBodyShop:
+        case .theBodyShopDark, .theBodyShopLight:
             return AssetsHelper.image(from: "Logo/TheBodyShop/Horizontal")
         }
     }
 
     public static var vertical: UIImage? {
-        guard let brand = DesignSystem().currentBrand else { return nil }
+        guard let theme = DesignSystem().currentTheme else { return nil }
 
-        switch brand {
-        case .avon:
+        switch theme {
+        case .avonDark, .avonLight:
             return AssetsHelper.image(from: "Logo/Avon/Vertical")
-        case .natura:
+        case .naturaDark, .naturaLight:
             return AssetsHelper.image(from: "Logo/Natura/Vertical")
-        case .theBodyShop:
+        case .theBodyShopDark, .theBodyShopLight:
             return AssetsHelper.image(from: "Logo/TheBodyShop/Vertical")
         }
     }

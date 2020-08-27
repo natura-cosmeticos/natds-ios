@@ -10,7 +10,7 @@ final class SearchBarSnapshotTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        DesignSystem().configure(with: .natura)
+        ConfigurationStorage.shared.currentTheme = NaturaLightTheme()
 
         systemUnderTest = SearchBar()
         systemUnderTest.backgroundColor = .white

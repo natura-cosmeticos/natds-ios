@@ -3,15 +3,13 @@ import Nimble
 
 @testable import NatDS
 
-final class NatFontsNaturaSpec: QuickSpec {
+final class NatFontsSpec: QuickSpec {
     override func spec() {
         let systemUnderTest = NatFonts.self
-        let expectedSizes = NaturaFontSizes()
-        let expectedWights = NaturaFontWeights()
         var font: UIFont!
 
         beforeEach {
-            DesignSystem().configure(with: .natura)
+            ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
         }
 
         describe("#font") {
@@ -22,11 +20,13 @@ final class NatFontsNaturaSpec: QuickSpec {
                     }
 
                     it("returns a expect value for size") {
-                        expect(font.pointSize).to(equal(expectedSizes.heading1))
+                        let expected = getComponentAttributeFromTheme(\.heading1FontSize)
+
+                        expect(font.pointSize).to(equal(expected))
                     }
 
                     it("returns a expect value for weight") {
-                        expect(font.getWeight()).to(equal(expectedWights.regular))
+                        expect(font.getWeight()).to(equal(.regular))
                     }
                 }
 
@@ -36,11 +36,13 @@ final class NatFontsNaturaSpec: QuickSpec {
                     }
 
                     it("returns a expect value for size") {
-                        expect(font.pointSize).to(equal(expectedSizes.heading2))
+                        let expected = getComponentAttributeFromTheme(\.heading2FontSize)
+
+                        expect(font.pointSize).to(equal(expected))
                     }
 
                     it("returns a expect value for weight") {
-                        expect(font.getWeight()).to(equal(expectedWights.regular))
+                        expect(font.getWeight()).to(equal(.regular))
                     }
                 }
 
@@ -50,11 +52,13 @@ final class NatFontsNaturaSpec: QuickSpec {
                     }
 
                     it("returns a expect value for size") {
-                        expect(font.pointSize).to(equal(expectedSizes.heading3))
+                        let expected = getComponentAttributeFromTheme(\.heading3FontSize)
+
+                        expect(font.pointSize).to(equal(expected))
                     }
 
                     it("returns a expect value for weight") {
-                        expect(font.getWeight()).to(equal(expectedWights.regular))
+                        expect(font.getWeight()).to(equal(.regular))
                     }
                 }
 
@@ -64,11 +68,13 @@ final class NatFontsNaturaSpec: QuickSpec {
                     }
 
                     it("returns a expect value for size") {
-                        expect(font.pointSize).to(equal(expectedSizes.heading4))
+                        let expected = getComponentAttributeFromTheme(\.heading4FontSize)
+
+                        expect(font.pointSize).to(equal(expected))
                     }
 
                     it("returns a expect value for weight") {
-                        expect(font.getWeight()).to(equal(expectedWights.regular))
+                        expect(font.getWeight()).to(equal(.regular))
                     }
                 }
 
@@ -78,11 +84,13 @@ final class NatFontsNaturaSpec: QuickSpec {
                     }
 
                     it("returns a expect value for size") {
-                        expect(font.pointSize).to(equal(expectedSizes.heading5))
+                        let expected = getComponentAttributeFromTheme(\.heading5FontSize)
+
+                        expect(font.pointSize).to(equal(expected))
                     }
 
                     it("returns a expect value for weight") {
-                        expect(font.getWeight()).to(equal(expectedWights.regular))
+                        expect(font.getWeight()).to(equal(.regular))
                     }
                 }
 
@@ -92,11 +100,13 @@ final class NatFontsNaturaSpec: QuickSpec {
                     }
 
                     it("returns a expect value for size") {
-                        expect(font.pointSize).to(equal(expectedSizes.heading6))
+                        let expected = getComponentAttributeFromTheme(\.heading6FontSize)
+
+                        expect(font.pointSize).to(equal(expected))
                     }
 
                     it("returns a expect value for weight") {
-                        expect(font.getWeight()).to(equal(expectedWights.regular))
+                        expect(font.getWeight()).to(equal(.regular))
                     }
                 }
 
@@ -106,11 +116,13 @@ final class NatFontsNaturaSpec: QuickSpec {
                     }
 
                     it("returns a expect value for size") {
-                        expect(font.pointSize).to(equal(expectedSizes.subtitle1))
+                        let expected = getComponentAttributeFromTheme(\.subtitle1FontSize)
+
+                        expect(font.pointSize).to(equal(expected))
                     }
 
                     it("returns a expect value for weight") {
-                        expect(font.getWeight()).to(equal(expectedWights.regular))
+                        expect(font.getWeight()).to(equal(.regular))
                     }
                 }
 
@@ -120,11 +132,13 @@ final class NatFontsNaturaSpec: QuickSpec {
                     }
 
                     it("returns a expect value for size") {
-                        expect(font.pointSize).to(equal(expectedSizes.subtitle2))
+                        let expected = getComponentAttributeFromTheme(\.subtitle2FontSize)
+
+                        expect(font.pointSize).to(equal(expected))
                     }
 
                     it("returns a expect value for weight") {
-                        expect(font.getWeight()).to(equal(expectedWights.regular))
+                        expect(font.getWeight()).to(equal(.regular))
                     }
                 }
 
@@ -134,11 +148,13 @@ final class NatFontsNaturaSpec: QuickSpec {
                     }
 
                     it("returns a expect value for size") {
-                        expect(font.pointSize).to(equal(expectedSizes.body1))
+                        let expected = getComponentAttributeFromTheme(\.body1FontSize)
+
+                        expect(font.pointSize).to(equal(expected))
                     }
 
                     it("returns a expect value for weight") {
-                        expect(font.getWeight()).to(equal(expectedWights.regular))
+                        expect(font.getWeight()).to(equal(.regular))
                     }
                 }
 
@@ -148,11 +164,13 @@ final class NatFontsNaturaSpec: QuickSpec {
                     }
 
                     it("returns a expect value for size") {
-                        expect(font.pointSize).to(equal(expectedSizes.body2))
+                        let expected = getComponentAttributeFromTheme(\.body2FontSize)
+
+                        expect(font.pointSize).to(equal(expected))
                     }
 
                     it("returns a expect value for weight") {
-                        expect(font.getWeight()).to(equal(expectedWights.regular))
+                        expect(font.getWeight()).to(equal(.regular))
                     }
                 }
 
@@ -162,11 +180,13 @@ final class NatFontsNaturaSpec: QuickSpec {
                     }
 
                     it("returns a expect value for size") {
-                        expect(font.pointSize).to(equal(expectedSizes.button))
+                        let expected = getComponentAttributeFromTheme(\.buttonDefaultFontSize)
+
+                        expect(font.pointSize).to(equal(expected))
                     }
 
                     it("returns a expect value for weight") {
-                        expect(font.getWeight()).to(equal(expectedWights.regular))
+                        expect(font.getWeight()).to(equal(.regular))
                     }
                 }
 
@@ -176,11 +196,13 @@ final class NatFontsNaturaSpec: QuickSpec {
                     }
 
                     it("returns a expect value for size") {
-                        expect(font.pointSize).to(equal(expectedSizes.caption))
+                        let expected = getComponentAttributeFromTheme(\.captionFontSize)
+
+                        expect(font.pointSize).to(equal(expected))
                     }
 
                     it("returns a expect value for weight") {
-                        expect(font.getWeight()).to(equal(expectedWights.regular))
+                        expect(font.getWeight()).to(equal(.regular))
                     }
                 }
 
@@ -190,11 +212,13 @@ final class NatFontsNaturaSpec: QuickSpec {
                     }
 
                     it("returns a expect value for size") {
-                        expect(font.pointSize).to(equal(expectedSizes.overline))
+                        let expected = getComponentAttributeFromTheme(\.overlineFontSize)
+
+                        expect(font.pointSize).to(equal(expected))
                     }
 
                     it("returns a expect value for weight") {
-                        expect(font.getWeight()).to(equal(expectedWights.regular))
+                        expect(font.getWeight()).to(equal(.regular))
                     }
                 }
             } // context - when weight is .regular
@@ -206,11 +230,13 @@ final class NatFontsNaturaSpec: QuickSpec {
                     }
 
                     it("returns a expect value for size") {
-                        expect(font.pointSize).to(equal(expectedSizes.heading1))
+                        let expected = getComponentAttributeFromTheme(\.heading1FontSize)
+
+                        expect(font.pointSize).to(equal(expected))
                     }
 
                     it("returns a expect value for weight") {
-                        expect(font.getWeight()).to(equal(expectedWights.medium))
+                        expect(font.getWeight()).to(equal(.medium))
                     }
                 }
 
@@ -220,11 +246,13 @@ final class NatFontsNaturaSpec: QuickSpec {
                     }
 
                     it("returns a expect value for size") {
-                        expect(font.pointSize).to(equal(expectedSizes.heading2))
+                        let expected = getComponentAttributeFromTheme(\.heading2FontSize)
+
+                        expect(font.pointSize).to(equal(expected))
                     }
 
                     it("returns a expect value for weight") {
-                        expect(font.getWeight()).to(equal(expectedWights.medium))
+                        expect(font.getWeight()).to(equal(.medium))
                     }
                 }
 
@@ -234,11 +262,13 @@ final class NatFontsNaturaSpec: QuickSpec {
                     }
 
                     it("returns a expect value for size") {
-                        expect(font.pointSize).to(equal(expectedSizes.heading3))
+                        let expected = getComponentAttributeFromTheme(\.heading3FontSize)
+
+                        expect(font.pointSize).to(equal(expected))
                     }
 
                     it("returns a expect value for weight") {
-                        expect(font.getWeight()).to(equal(expectedWights.medium))
+                        expect(font.getWeight()).to(equal(.medium))
                     }
                 }
 
@@ -248,11 +278,13 @@ final class NatFontsNaturaSpec: QuickSpec {
                     }
 
                     it("returns a expect value for size") {
-                        expect(font.pointSize).to(equal(expectedSizes.heading4))
+                        let expected = getComponentAttributeFromTheme(\.heading4FontSize)
+
+                        expect(font.pointSize).to(equal(expected))
                     }
 
                     it("returns a expect value for weight") {
-                        expect(font.getWeight()).to(equal(expectedWights.medium))
+                        expect(font.getWeight()).to(equal(.medium))
                     }
                 }
 
@@ -262,11 +294,13 @@ final class NatFontsNaturaSpec: QuickSpec {
                     }
 
                     it("returns a expect value for size") {
-                        expect(font.pointSize).to(equal(expectedSizes.heading5))
+                        let expected = getComponentAttributeFromTheme(\.heading5FontSize)
+
+                        expect(font.pointSize).to(equal(expected))
                     }
 
                     it("returns a expect value for weight") {
-                        expect(font.getWeight()).to(equal(expectedWights.medium))
+                        expect(font.getWeight()).to(equal(.medium))
                     }
                 }
 
@@ -276,11 +310,13 @@ final class NatFontsNaturaSpec: QuickSpec {
                     }
 
                     it("returns a expect value for size") {
-                        expect(font.pointSize).to(equal(expectedSizes.heading6))
+                        let expected = getComponentAttributeFromTheme(\.heading6FontSize)
+
+                        expect(font.pointSize).to(equal(expected))
                     }
 
                     it("returns a expect value for weight") {
-                        expect(font.getWeight()).to(equal(expectedWights.medium))
+                        expect(font.getWeight()).to(equal(.medium))
                     }
                 }
 
@@ -290,11 +326,13 @@ final class NatFontsNaturaSpec: QuickSpec {
                     }
 
                     it("returns a expect value for size") {
-                        expect(font.pointSize).to(equal(expectedSizes.subtitle1))
+                        let expected = getComponentAttributeFromTheme(\.subtitle1FontSize)
+
+                        expect(font.pointSize).to(equal(expected))
                     }
 
                     it("returns a expect value for weight") {
-                        expect(font.getWeight()).to(equal(expectedWights.medium))
+                        expect(font.getWeight()).to(equal(.medium))
                     }
                 }
 
@@ -304,11 +342,13 @@ final class NatFontsNaturaSpec: QuickSpec {
                     }
 
                     it("returns a expect value for size") {
-                        expect(font.pointSize).to(equal(expectedSizes.subtitle2))
+                        let expected = getComponentAttributeFromTheme(\.subtitle2FontSize)
+
+                        expect(font.pointSize).to(equal(expected))
                     }
 
                     it("returns a expect value for weight") {
-                        expect(font.getWeight()).to(equal(expectedWights.medium))
+                        expect(font.getWeight()).to(equal(.medium))
                     }
                 }
 
@@ -318,11 +358,13 @@ final class NatFontsNaturaSpec: QuickSpec {
                     }
 
                     it("returns a expect value for size") {
-                        expect(font.pointSize).to(equal(expectedSizes.body1))
+                        let expected = getComponentAttributeFromTheme(\.body1FontSize)
+
+                        expect(font.pointSize).to(equal(expected))
                     }
 
                     it("returns a expect value for weight") {
-                        expect(font.getWeight()).to(equal(expectedWights.medium))
+                        expect(font.getWeight()).to(equal(.medium))
                     }
                 }
 
@@ -332,11 +374,13 @@ final class NatFontsNaturaSpec: QuickSpec {
                     }
 
                     it("returns a expect value for size") {
-                        expect(font.pointSize).to(equal(expectedSizes.body2))
+                        let expected = getComponentAttributeFromTheme(\.body2FontSize)
+
+                        expect(font.pointSize).to(equal(expected))
                     }
 
                     it("returns a expect value for weight") {
-                        expect(font.getWeight()).to(equal(expectedWights.medium))
+                        expect(font.getWeight()).to(equal(.medium))
                     }
                 }
 
@@ -346,11 +390,13 @@ final class NatFontsNaturaSpec: QuickSpec {
                     }
 
                     it("returns a expect value for size") {
-                        expect(font.pointSize).to(equal(expectedSizes.button))
+                        let expected = getComponentAttributeFromTheme(\.buttonDefaultFontSize)
+
+                        expect(font.pointSize).to(equal(expected))
                     }
 
                     it("returns a expect value for weight") {
-                        expect(font.getWeight()).to(equal(expectedWights.medium))
+                        expect(font.getWeight()).to(equal(.medium))
                     }
                 }
 
@@ -360,11 +406,13 @@ final class NatFontsNaturaSpec: QuickSpec {
                     }
 
                     it("returns a expect value for size") {
-                        expect(font.pointSize).to(equal(expectedSizes.caption))
+                        let expected = getComponentAttributeFromTheme(\.captionFontSize)
+
+                        expect(font.pointSize).to(equal(expected))
                     }
 
                     it("returns a expect value for weight") {
-                        expect(font.getWeight()).to(equal(expectedWights.medium))
+                        expect(font.getWeight()).to(equal(.medium))
                     }
                 }
 
@@ -374,11 +422,13 @@ final class NatFontsNaturaSpec: QuickSpec {
                     }
 
                     it("returns a expect value for size") {
-                        expect(font.pointSize).to(equal(expectedSizes.overline))
+                        let expected = getComponentAttributeFromTheme(\.overlineFontSize)
+
+                        expect(font.pointSize).to(equal(expected))
                     }
 
                     it("returns a expect value for weight") {
-                        expect(font.getWeight()).to(equal(expectedWights.medium))
+                        expect(font.getWeight()).to(equal(.medium))
                     }
                 }
             } // context - when weight is .medium

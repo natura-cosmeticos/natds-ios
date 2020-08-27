@@ -7,6 +7,9 @@ final class NavigationDrawerItemCellTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
+
+        ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
+
         systemUnderTest = NavigationDrawerItemCell()
         systemUnderTest.frame = CGRect(x: 0, y: 0, width: 320, height: 48)
         systemUnderTest.title = "Menu Item"
