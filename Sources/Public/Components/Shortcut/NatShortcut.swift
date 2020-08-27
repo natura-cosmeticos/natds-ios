@@ -183,7 +183,7 @@ extension NatShortcut {
 
             label.topAnchor.constraint(equalTo: circleView.bottomAnchor, constant: getTokenFromTheme(\.sizeTiny)),
             label.trailingAnchor.constraint(equalTo: trailingAnchor),
-            label.bottomAnchor.constraint(equalTo: bottomAnchor),
+            label.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor),
             label.leadingAnchor.constraint(equalTo: leadingAnchor),
             label.widthAnchor.constraint(lessThanOrEqualToConstant: Widths.maximum),
             label.centerXAnchor.constraint(equalTo: centerXAnchor)
