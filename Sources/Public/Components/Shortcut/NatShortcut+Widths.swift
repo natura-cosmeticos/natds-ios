@@ -1,5 +1,5 @@
 extension NatShortcut {
     public enum Widths {
-        static var maximum: CGFloat { getTokenFromTheme(\.sizeLarge) }
+        public static var maximum: CGFloat { getTokenFromTheme(\.sizeLarge) }
     }
 }

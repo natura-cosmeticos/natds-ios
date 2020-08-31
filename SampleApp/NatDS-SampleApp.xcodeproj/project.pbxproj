@@ -28,6 +28,7 @@
 		5C015C21B5CCA24BFE6643ABE6AEF850 /* NatDS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBC24456A172162B3538C51FBFE2BA6 /* NatDS.framework */; };
 		6566B8AD366FC73D95DA1F35979D488C /* NavigationDrawerItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D4B7F03E632BFE339DA40C2269B9D9 /* NavigationDrawerItemViewController.swift */; };
 		6B065E9FA8AEAD33D6341DB8C671D74C /* DialogItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6AF03A3D6B2368E721CAB74F2424A /* DialogItemViewController.swift */; };
+		8402F4E624F932E70018149C /* IconButtonItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402F4E524F932E70018149C /* IconButtonItemViewController.swift */; };
 		8449828124C0C9F200CDA676 /* LogoItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8449828024C0C9F200CDA676 /* LogoItemViewController.swift */; };
 		844A1E2624AE2BCE00E93AD9 /* ShortcutItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A1E2524AE2BCE00E93AD9 /* ShortcutItemViewController.swift */; };
 		9B13D285941681F8967FCC54F3945D5F /* IconCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FBDBE3AD8777A865F1B1E40859758D /* IconCollectionViewCell.swift */; };
@@ -86,6 +87,7 @@
 		6CCE6B3ED45C1E81094E9B4DDAB9D1EC /* SizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeViewController.swift; sourceTree = "<group>"; };
 		729810E32083E04163C749DCF3552FA6 /* DesignSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSection.swift; sourceTree = "<group>"; };
 		73162360481FF4DE5378EBF0DF3B2F1C /* SpacingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacingCell.swift; sourceTree = "<group>"; };
+		8402F4E524F932E70018149C /* IconButtonItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButtonItemViewController.swift; sourceTree = "<group>"; };
 		8449828024C0C9F200CDA676 /* LogoItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoItemViewController.swift; sourceTree = "<group>"; };
 		844A1E2524AE2BCE00E93AD9 /* ShortcutItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutItemViewController.swift; sourceTree = "<group>"; };
 		845C4E23EBB1B07DF334BBA42C272EBB /* ColorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsViewController.swift; sourceTree = "<group>"; };
@@ -217,6 +219,14 @@
 			path = Colors;
 			sourceTree = "<group>";
 		};
+		8402F4E424F932570018149C /* IconButton */ = {
+			isa = PBXGroup;
+			children = (
+				8402F4E524F932E70018149C /* IconButtonItemViewController.swift */,
+			);
+			path = IconButton;
+			sourceTree = "<group>";
+		};
 		844A1E2424AE2B7600E93AD9 /* Shortcut */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +254,7 @@
 				D2D202BFFC95DC39B94A26A5FB172483 /* Divider */,
 				DFD5C58E6C019591057F6663EFBBA044 /* ExpansionPanel */,
 				FE7854E68C30109D4B2988E1E01AE179 /* Field */,
+				8402F4E424F932570018149C /* IconButton */,
 				CDF47F683C800E8289A0310CD7EA0F0C /* Iconography */,
 				FC4556C0DD691C829616B3DDA86F0CBA /* NavigationDrawer */,
 				844A1E2424AE2B7600E93AD9 /* Shortcut */,
@@ -556,6 +567,7 @@
 				B0824E26ADCA40FFA158AA0A35155D71 /* MainViewController.swift in Sources */,
 				6566B8AD366FC73D95DA1F35979D488C /* NavigationDrawerItemViewController.swift in Sources */,
 				18A184686209DD677293C0286EEB0C60 /* OpacityCell.swift in Sources */,
+				8402F4E624F932E70018149C /* IconButtonItemViewController.swift in Sources */,
 				E85844B6881ACA2A4AD480885DC8B068 /* OpacityViewController.swift in Sources */,
 				00CF8C7E79BD696D97099B654E925BE0 /* SampleItem.swift in Sources */,
 				E061B6B85CEFBAE9AE8A8079DEF9E0A4 /* SampleSection.swift in Sources */,
