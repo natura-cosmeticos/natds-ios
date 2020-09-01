@@ -1,8 +1,15 @@
 protocol Pulsable: AnyObject {}
 
 extension Pulsable {
-    func beginPulseAt(point: CGPoint, in layer: CALayer) {
-        let containedPulseLayer = PulseContainerLayer()
+    func beginPulseAt(
+        point: CGPoint,
+        in layer: CALayer,
+        withColor color: UIColor = NatColors.highlight) {
+
+        let opacity = getTokenFromTheme(\.opacity05)
+        let color = color.withAlphaComponent(opacity)
+
+        let containedPulseLayer = PulseContainerLayer(color: color)
         containedPulseLayer.frame = layer.bounds
         containedPulseLayer.cornerRadius = layer.cornerRadius
 

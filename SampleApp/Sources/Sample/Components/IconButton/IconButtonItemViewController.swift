@@ -5,16 +5,14 @@ final class IconButtonItemViewController: UIViewController, SampleItem {
 
     // MARK: - Private properties
 
-    private let iconButton: NatIconButton = {
-        let iconButton = NatIconButton()
-        iconButton.translatesAutoresizingMaskIntoConstraints = false
-
-        return iconButton
-    }()
+    private let iconButton: NatIconButton
 
     // MARK: - Life cycle
 
-    init() {
+    init(iconButton: NatIconButton) {
+        self.iconButton = iconButton
+        iconButton.translatesAutoresizingMaskIntoConstraints = false
+
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -39,17 +37,8 @@ final class IconButtonItemViewController: UIViewController, SampleItem {
         addConstraints()
     }
 
-    private func createStackView() -> UIStackView {
-        let stackView = UIStackView()
-        stackView.axis = .horizontal
-        stackView.distribution = .equalSpacing
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-
-        return stackView
-    }
-
     private func addConstraints() {
-        let circleSize = NatSizes.largeX
+        let circleSize: CGFloat = NatIconButton.Sizes.small
 
         let constraints = [
             iconButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
