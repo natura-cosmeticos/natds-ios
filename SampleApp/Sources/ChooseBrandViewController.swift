@@ -11,6 +11,7 @@ final class ChooseBrandViewController: UIViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.backgroundColor = .clear
 
         return tableView
     }()
@@ -23,11 +24,13 @@ final class ChooseBrandViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Choose a Brand"
+
         setup()
     }
 
     private func setup() {
+        title = "Choose a Brand"
+        view.backgroundColor = NatColors.background
         view.addSubview(tableView)
 
         NSLayoutConstraint.activate([
@@ -47,7 +50,10 @@ extension ChooseBrandViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: UITableViewCell.reuseIdentifier, for: indexPath)
 
+        cell.textLabel?.textColor = NatColors.onBackground
         cell.textLabel?.text = brands[indexPath.row]
+        cell.backgroundColor = .clear
+        cell.selectionStyle = .none
 
         return cell
     }

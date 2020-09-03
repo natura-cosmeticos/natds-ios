@@ -5,20 +5,15 @@ final class IconButtonItemViewController: UIViewController, SampleItem {
 
     // MARK: - Private properties
 
-    private let iconButton: NatIconButton
+    private let iconButton: NatIconButton = {
+        let iconButton = NatIconButton(style: .standardDefault)
+        iconButton.translatesAutoresizingMaskIntoConstraints = false
+
+        return iconButton
+    }()
 
     // MARK: - Life cycle
 
-    init(iconButton: NatIconButton) {
-        self.iconButton = iconButton
-        iconButton.translatesAutoresizingMaskIntoConstraints = false
-
-        super.init(nibName: nil, bundle: nil)
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -1,7 +1,7 @@
 import UIKit
 import NatDS
 
-class MainViewController: UITableViewController {
+final class MainViewController: UITableViewController {
 
     let dataSource = MainDataSource()
 
@@ -14,6 +14,9 @@ class MainViewController: UITableViewController {
         tableView.register(UITableViewCell.self)
         tableView.showsVerticalScrollIndicator = false
         tableView.separatorStyle = .none
+        tableView.backgroundColor = .clear
+
+        view.backgroundColor = NatColors.background
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -31,8 +34,12 @@ class MainViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = dataSource.sections[indexPath.section].items[indexPath.row]
         let cell = tableView.dequeueReusableCell(for: indexPath, cellType: UITableViewCell.self)
+
         cell.textLabel?.text = item.name
+        cell.textLabel?.textColor = NatColors.onBackground
         cell.selectionStyle = .none
+        cell.backgroundColor = .clear
+
         return cell
     }
 
