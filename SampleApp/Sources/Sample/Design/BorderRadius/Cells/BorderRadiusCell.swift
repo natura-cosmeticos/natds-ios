@@ -48,7 +48,7 @@ final class BorderRadiusCell: UITableViewCell {
 
     private func setup() {
         backgroundColor = NatColors.background
-        
+
         contentView.addSubview(label)
         contentView.addSubview(symbolicView)
 

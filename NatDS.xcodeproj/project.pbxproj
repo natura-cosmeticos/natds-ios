@@ -104,6 +104,8 @@
 		845D09952501193500B05760 /* NatIconButton+Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D09942501193500B05760 /* NatIconButton+Sizes.swift */; };
 		845D09982501196D00B05760 /* IconButtonStandardStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D09972501196D00B05760 /* IconButtonStandardStyle.swift */; };
 		845D099A250119AF00B05760 /* UIView+CenterBounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D0999250119AF00B05760 /* UIView+CenterBounds.swift */; };
+		845D099F25011C4100B05760 /* UIView+CenterBounds+Specs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D099D25011BF700B05760 /* UIView+CenterBounds+Specs.swift */; };
+		845D09A22501248500B05760 /* IconButtonStandardStyle+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D09A12501248500B05760 /* IconButtonStandardStyle+Spec.swift */; };
 		84703F3724F54AA600FE01CA /* NotificationCenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC901924AA187C007DF09D /* NotificationCenterSpy.swift */; };
 		84703F3924F6D9E400FE01CA /* GetComponentFromTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84703F3824F6D9E400FE01CA /* GetComponentFromTheme.swift */; };
 		84703F3C24F6ECD300FE01CA /* NatFonts+TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84703F3B24F6ECD300FE01CA /* NatFonts+TextStyle.swift */; };
@@ -119,6 +121,7 @@
 		847C82A424E578D3001CE116 /* NaturaLightTheme+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C82A324E578D3001CE116 /* NaturaLightTheme+Spec.swift */; };
 		847C82A624E57931001CE116 /* TheBodyShopDarkTheme+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C82A524E57931001CE116 /* TheBodyShopDarkTheme+Spec.swift */; };
 		847C82A824E57946001CE116 /* TheBodyShopLightTheme+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C82A724E57946001CE116 /* TheBodyShopLightTheme+Spec.swift */; };
+		848831BC250177D0004C3FA8 /* NatIconButton+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848831BB250177D0004C3FA8 /* NatIconButton+Spec.swift */; };
 		84932F1324EAB9270052265F /* AvailableTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84932F1224EAB9270052265F /* AvailableTheme.swift */; };
 		84932F1624EABB190052265F /* AvailableTheme+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84932F1424EABA280052265F /* AvailableTheme+Spec.swift */; };
 		84932F1A24EAF07B0052265F /* StubThemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84932F1824EAF06B0052265F /* StubThemeProtocol.swift */; };
@@ -344,6 +347,8 @@
 		845D09942501193500B05760 /* NatIconButton+Sizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatIconButton+Sizes.swift"; sourceTree = "<group>"; };
 		845D09972501196D00B05760 /* IconButtonStandardStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButtonStandardStyle.swift; sourceTree = "<group>"; };
 		845D0999250119AF00B05760 /* UIView+CenterBounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CenterBounds.swift"; sourceTree = "<group>"; };
+		845D099D25011BF700B05760 /* UIView+CenterBounds+Specs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CenterBounds+Specs.swift"; sourceTree = "<group>"; };
+		845D09A12501248500B05760 /* IconButtonStandardStyle+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IconButtonStandardStyle+Spec.swift"; sourceTree = "<group>"; };
 		84703F3824F6D9E400FE01CA /* GetComponentFromTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetComponentFromTheme.swift; sourceTree = "<group>"; };
 		84703F3B24F6ECD300FE01CA /* NatFonts+TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatFonts+TextStyle.swift"; sourceTree = "<group>"; };
 		84703F3E24F83EEC00FE01CA /* NatIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatIconButton.swift; sourceTree = "<group>"; };
@@ -358,6 +363,7 @@
 		847C82A324E578D3001CE116 /* NaturaLightTheme+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaturaLightTheme+Spec.swift"; sourceTree = "<group>"; };
 		847C82A524E57931001CE116 /* TheBodyShopDarkTheme+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheBodyShopDarkTheme+Spec.swift"; sourceTree = "<group>"; };
 		847C82A724E57946001CE116 /* TheBodyShopLightTheme+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheBodyShopLightTheme+Spec.swift"; sourceTree = "<group>"; };
+		848831BB250177D0004C3FA8 /* NatIconButton+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatIconButton+Spec.swift"; sourceTree = "<group>"; };
 		84932F1224EAB9270052265F /* AvailableTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableTheme.swift; sourceTree = "<group>"; };
 		84932F1424EABA280052265F /* AvailableTheme+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AvailableTheme+Spec.swift"; sourceTree = "<group>"; };
 		84932F1824EAF06B0052265F /* StubThemeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubThemeProtocol.swift; sourceTree = "<group>"; };
@@ -994,6 +1000,31 @@
 			path = UIView;
 			sourceTree = "<group>";
 		};
+		845D099C25011BC100B05760 /* UIVIew */ = {
+			isa = PBXGroup;
+			children = (
+				FF60BC58D83695B3AC61ABB7BBE49B9C /* UIView+FrameTests.swift */,
+				845D099D25011BF700B05760 /* UIView+CenterBounds+Specs.swift */,
+			);
+			path = UIVIew;
+			sourceTree = "<group>";
+		};
+		845D09A02501240D00B05760 /* IconButton */ = {
+			isa = PBXGroup;
+			children = (
+				845D09A12501248500B05760 /* IconButtonStandardStyle+Spec.swift */,
+			);
+			path = IconButton;
+			sourceTree = "<group>";
+		};
+		845D09A325015F0000B05760 /* IconButton */ = {
+			isa = PBXGroup;
+			children = (
+				848831BB250177D0004C3FA8 /* NatIconButton+Spec.swift */,
+			);
+			path = IconButton;
+			sourceTree = "<group>";
+		};
 		84703F3624F54A8A00FE01CA /* NotificationCenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -1357,6 +1388,7 @@
 				67643298FB5CC3CCB193DC69AF79EC67 /* Dialog */,
 				6759B588024397D1AC93C8D123122D59 /* ExpansionPanel */,
 				3FCB7713DAAB2F827B224E06280AF674 /* Field */,
+				845D09A325015F0000B05760 /* IconButton */,
 				BEE13D19F1A22BF171DC1BAC64B38FA7 /* Icons */,
 				7BEFD3D9F02DCD62D7A24864218DC0D8 /* NavigationDrawer */,
 				84BF066F24B511F600462AC5 /* Shortcut */,
@@ -1577,6 +1609,7 @@
 			children = (
 				00B52FC06F103FA5697F6E2B5CC0A920 /* Button */,
 				DBACC3116710A6183CD3BC637E92D0D7 /* Dialog */,
+				845D09A02501240D00B05760 /* IconButton */,
 				84BF066824B4FEE300462AC5 /* Shortcut */,
 				9EAE325876E14C91105C5CF9D2E7F1EF /* ViewStyle+Spec.swift */,
 			);
@@ -1614,13 +1647,13 @@
 		E3284AABCC53927621EACCBF1C988CA3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				845D099C25011BC100B05760 /* UIVIew */,
 				CAD56BE8AA67D399ED570EA78BFC09E7 /* NSMutableAttributedString+BuilderTests.swift */,
 				AD080B942BE2F7A41B1DEF15B19C34DB /* String+IconTests.swift */,
 				36B6CEC817D03194414588BB22C1833A /* UICollectionView+ReusableTests.swift */,
 				DA25909FD964254E6B99AD359EFD8A5C /* UIColor+HexTests.swift */,
 				F6EAF8A97988FC1AA2F71C29D348A67D /* UIFont+IconTests.swift */,
 				8656CC0789F1E0DACEB77D4C50C2ECC1 /* UITableView+ReusableTests.swift */,
-				FF60BC58D83695B3AC61ABB7BBE49B9C /* UIView+FrameTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1982,8 +2015,10 @@
 				ECDFAB69C926EDC613B5464C8EEFF85D /* NavigationDrawerSubitemCellTests.swift in Sources */,
 				D2063015F26B7E8B3A27602A3B907BCE /* NavigationDrawerTests.swift in Sources */,
 				525A8C62B68D8C9B0AC882318792D04C /* Pulsable+Spec.swift in Sources */,
+				848831BC250177D0004C3FA8 /* NatIconButton+Spec.swift in Sources */,
 				847C829E24E56605001CE116 /* AvonDarkTheme+Spec.swift in Sources */,
 				C24255D434C838206493D9A89581F7C1 /* PulseContainerLayer+Spec.swift in Sources */,
+				845D09A22501248500B05760 /* IconButtonStandardStyle+Spec.swift in Sources */,
 				847C82A824E57946001CE116 /* TheBodyShopLightTheme+Spec.swift in Sources */,
 				3D8762A06C970677D223A561419340A9 /* PulseLayerTests.swift in Sources */,
 				0E7C160B24C61E45002FF46F /* UINavigationController+Configure+Spec.swift in Sources */,
@@ -2016,6 +2051,7 @@
 				8409854A24F02BF60095D6AD /* Notification+Name+ThemeHasChanged+Spec.swift in Sources */,
 				84B9330A24ABC38C00B71BD4 /* NatDialogTitleConfigurable+Spec.swift in Sources */,
 				2625466124C7379800B98A91 /* StubSelector.swift in Sources */,
+				845D099F25011C4100B05760 /* UIView+CenterBounds+Specs.swift in Sources */,
 				84EB6B8124EEC82700C6A792 /* GetOrCreatedCachedColor+Spec.swift in Sources */,
 				E4B171E23C40B91B211DB2F64357778D /* ViewStyle+Spec.swift in Sources */,
 			);

@@ -2,7 +2,7 @@ import Foundation
 
 public final class NatIconButton: UIView {
     public enum State {
-        case eneable
+        case enabled
         case disabled
     }
 
@@ -16,7 +16,7 @@ public final class NatIconButton: UIView {
 
     private let style: Style
     private var action: (() -> Void)?
-    private (set) var currentState: State = .eneable
+    private (set) var currentState: State = .enabled
 
     public init(style: Style) {
         self.style = style
@@ -49,7 +49,7 @@ public final class NatIconButton: UIView {
     public override func layoutSubviews() {
         super.layoutSubviews()
 
-        layer.cornerRadius = bounds.height / 2
+        layer.cornerRadius = NatBorderRadius.circle(viewHeight: bounds.height)
     }
 
     @objc func tapHandler(_ sender: UIGestureRecognizer) {
@@ -62,7 +62,7 @@ public final class NatIconButton: UIView {
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
 
-        guard currentState == .eneable else { return }
+        guard currentState == .enabled else { return }
 
         beginPulseAt(
             point: centerBounds,
@@ -77,6 +77,14 @@ public final class NatIconButton: UIView {
         endPulse(layer: layer)
     }
 
+    public func configure(icon: Icon) {
+        iconView.icon = icon
+    }
+
+    func configure(iconColor: UIColor) {
+        iconView.tintColor = iconColor
+    }
+
     public func configure(action: @escaping () -> Void) {
         self.action = action
     }
@@ -85,14 +93,6 @@ public final class NatIconButton: UIView {
         currentState = state
 
         style.applyStyle(self)
-    }
-
-    public func configure(icon: Icon) {
-        print("icon")
-    }
-
-    func configure(iconColor: UIColor) {
-        iconView.tintColor = iconColor
     }
 }
 extension NatIconButton {

@@ -9,7 +9,7 @@ enum IconButtonStandardStyle {
 
     private static func applyStyle(iconButton: NatIconButton, withColor color: UIColor) {
         switch iconButton.currentState {
-        case .eneable:
+        case .enabled:
             iconButton.configure(iconColor: color)
         case .disabled:
             iconButton.configure(iconColor: getUIColorFromTokens(\.colorMediumEmphasis))
