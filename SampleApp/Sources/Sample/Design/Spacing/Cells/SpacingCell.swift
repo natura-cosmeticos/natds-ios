@@ -90,6 +90,8 @@ final class SpacingCell: UITableViewCell {
     // MARK: - Private methods
 
     private func setup() {
+        backgroundColor = NatColors.background
+
         contentView.addSubview(symbolicViewTopLeft)
         contentView.addSubview(symbolicViewTopRight)
         contentView.addSubview(symbolicViewBottomRight)

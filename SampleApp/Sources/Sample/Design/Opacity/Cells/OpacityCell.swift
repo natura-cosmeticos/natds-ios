@@ -47,6 +47,8 @@ final class OpacityCell: UITableViewCell {
     // MARK: - Private methods
 
     private func setup() {
+        backgroundColor = NatColors.background
+
         contentView.addSubview(label)
         contentView.addSubview(symbolicView)
 

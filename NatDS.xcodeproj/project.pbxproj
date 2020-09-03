@@ -101,6 +101,9 @@
 		845AD7A424E2C4DA006CA226 /* ThemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845AD7A324E2C4DA006CA226 /* ThemeProtocol.swift */; };
 		845AD7A824E2C8E6006CA226 /* AvonDarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845AD7A724E2C8E6006CA226 /* AvonDarkTheme.swift */; };
 		845AD7AA24E2CC82006CA226 /* AvonLightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845AD7A924E2CC82006CA226 /* AvonLightTheme.swift */; };
+		845D09952501193500B05760 /* NatIconButton+Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D09942501193500B05760 /* NatIconButton+Sizes.swift */; };
+		845D09982501196D00B05760 /* IconButtonStandardStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D09972501196D00B05760 /* IconButtonStandardStyle.swift */; };
+		845D099A250119AF00B05760 /* UIView+CenterBounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D0999250119AF00B05760 /* UIView+CenterBounds.swift */; };
 		84703F3724F54AA600FE01CA /* NotificationCenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC901924AA187C007DF09D /* NotificationCenterSpy.swift */; };
 		84703F3924F6D9E400FE01CA /* GetComponentFromTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84703F3824F6D9E400FE01CA /* GetComponentFromTheme.swift */; };
 		84703F3C24F6ECD300FE01CA /* NatFonts+TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84703F3B24F6ECD300FE01CA /* NatFonts+TextStyle.swift */; };
@@ -338,6 +341,9 @@
 		845AD7A324E2C4DA006CA226 /* ThemeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeProtocol.swift; sourceTree = "<group>"; };
 		845AD7A724E2C8E6006CA226 /* AvonDarkTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvonDarkTheme.swift; sourceTree = "<group>"; };
 		845AD7A924E2CC82006CA226 /* AvonLightTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvonLightTheme.swift; sourceTree = "<group>"; };
+		845D09942501193500B05760 /* NatIconButton+Sizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatIconButton+Sizes.swift"; sourceTree = "<group>"; };
+		845D09972501196D00B05760 /* IconButtonStandardStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButtonStandardStyle.swift; sourceTree = "<group>"; };
+		845D0999250119AF00B05760 /* UIView+CenterBounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CenterBounds.swift"; sourceTree = "<group>"; };
 		84703F3824F6D9E400FE01CA /* GetComponentFromTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetComponentFromTheme.swift; sourceTree = "<group>"; };
 		84703F3B24F6ECD300FE01CA /* NatFonts+TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatFonts+TextStyle.swift"; sourceTree = "<group>"; };
 		84703F3E24F83EEC00FE01CA /* NatIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatIconButton.swift; sourceTree = "<group>"; };
@@ -605,6 +611,7 @@
 			children = (
 				012C47A3F04D83B715DD934E2E86BD5C /* Button */,
 				263F97EA92FA5FCB098A752856788881 /* Dialog */,
+				845D09962501195A00B05760 /* IconButton */,
 				84BF066324B4A89B00462AC5 /* Shortcut */,
 				307E705878C6A3A88E39CDC82B799361 /* ViewStyle.swift */,
 			);
@@ -970,6 +977,23 @@
 			path = Avon;
 			sourceTree = "<group>";
 		};
+		845D09962501195A00B05760 /* IconButton */ = {
+			isa = PBXGroup;
+			children = (
+				845D09972501196D00B05760 /* IconButtonStandardStyle.swift */,
+			);
+			path = IconButton;
+			sourceTree = "<group>";
+		};
+		845D099B250119CB00B05760 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				845D0999250119AF00B05760 /* UIView+CenterBounds.swift */,
+				BAB63DBD1A346FC4D5664E5B20CC96D1 /* UIView+Frame.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
 		84703F3624F54A8A00FE01CA /* NotificationCenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -991,6 +1015,7 @@
 			isa = PBXGroup;
 			children = (
 				84703F3E24F83EEC00FE01CA /* NatIconButton.swift */,
+				845D09942501193500B05760 /* NatIconButton+Sizes.swift */,
 			);
 			path = IconButton;
 			sourceTree = "<group>";
@@ -1505,11 +1530,11 @@
 		C407DD19CA7F7CC3BCE18D5E350B251B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				845D099B250119CB00B05760 /* UIView */,
 				AC4E75499E95EC13EB47F2CD9CB26622 /* NSMutableAttributedString+Builder.swift */,
 				DD7122400C6AAB36772A6E365FBD263D /* String+Icon.swift */,
 				3E6444578A8B4B35C37D0B5FA4D8E0F6 /* UIColor+Hex.swift */,
 				8BA9C4721134BD5277D76AEDED7A01DB /* UIFont+Icon.swift */,
-				BAB63DBD1A346FC4D5664E5B20CC96D1 /* UIView+Frame.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -2002,6 +2027,7 @@
 			files = (
 				26740A4924B3A60C00419526 /* NatBadge+Style.swift in Sources */,
 				84703F3C24F6ECD300FE01CA /* NatFonts+TextStyle.swift in Sources */,
+				845D099A250119AF00B05760 /* UIView+CenterBounds.swift in Sources */,
 				BBCC40A29117B4CB675FE57C3B0130E4 /* AssetsHelper.swift in Sources */,
 				844A1E2324AE117400E93AD9 /* NatShortcut.swift in Sources */,
 				265B17EB24AFA12900FD0407 /* NatBadge.swift in Sources */,
@@ -2020,6 +2046,7 @@
 				84EB6B8524EEEA8E00C6A792 /* GetOrCreatedCachedColor.swift in Sources */,
 				845AD7A424E2C4DA006CA226 /* ThemeProtocol.swift in Sources */,
 				000598F48ADE170D305737C11E3F2D99 /* ButtonTextStyle.swift in Sources */,
+				845D09952501193500B05760 /* NatIconButton+Sizes.swift in Sources */,
 				845AD7AA24E2CC82006CA226 /* AvonLightTheme.swift in Sources */,
 				40B14F67117654B7854317119E5B3509 /* ConfigurationStorage.swift in Sources */,
 				84BC901C24AB7445007DF09D /* NatDialogDismissableConfigurable.swift in Sources */,
@@ -2042,6 +2069,7 @@
 				269C886224C23B0100A507BE /* UINavigationController+Configure.swift in Sources */,
 				F01F3CA72313B3C97F42498878234A82 /* FontStyle.swift in Sources */,
 				84EB6B6F24EB197000C6A792 /* GetTokensFromTheme.swift in Sources */,
+				845D09982501196D00B05760 /* IconButtonStandardStyle.swift in Sources */,
 				84BC900624AA163A007DF09D /* DialogStyle.swift in Sources */,
 				7FCD65E56A79CE1AE08A4C86B8DC1303 /* Icon.swift in Sources */,
 				F72BEF338B46182BC440C92CCF3D02B0 /* IconView.swift in Sources */,

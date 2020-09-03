@@ -11,7 +11,7 @@ final class ChooseBrandViewController: UIViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.backgroundColor = .clear
+        tableView.backgroundColor = NatColors.background
 
         return tableView
     }()
@@ -52,8 +52,8 @@ extension ChooseBrandViewController: UITableViewDataSource {
 
         cell.textLabel?.textColor = NatColors.onBackground
         cell.textLabel?.text = brands[indexPath.row]
-        cell.backgroundColor = .clear
         cell.selectionStyle = .none
+        cell.backgroundColor = NatColors.background
 
         return cell
     }

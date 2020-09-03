@@ -7,6 +7,7 @@ final class TypographyCell: UITableViewCell {
 
     private let sizeLabel: UILabel = {
         let label = UILabel()
+        label.textColor = NatColors.onBackground
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label
@@ -14,6 +15,7 @@ final class TypographyCell: UITableViewCell {
 
     private let weightLabel: UILabel = {
         let label = UILabel()
+        label.textColor = NatColors.onBackground
         label.font = NatFonts.font(ofSize: .caption, withWeight: .regular)
         label.textColor = NatColors.mediumEmphasis
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -45,6 +47,8 @@ final class TypographyCell: UITableViewCell {
     // MARK: - Private methods
 
     private func setup() {
+        backgroundColor = NatColors.background
+
         contentView.addSubview(sizeLabel)
         contentView.addSubview(weightLabel)
 

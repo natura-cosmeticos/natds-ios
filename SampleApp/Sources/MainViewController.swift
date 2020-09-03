@@ -14,7 +14,7 @@ final class MainViewController: UITableViewController {
         tableView.register(UITableViewCell.self)
         tableView.showsVerticalScrollIndicator = false
         tableView.separatorStyle = .none
-        tableView.backgroundColor = .clear
+        tableView.backgroundColor = NatColors.background
 
         view.backgroundColor = NatColors.background
     }
@@ -38,7 +38,7 @@ final class MainViewController: UITableViewController {
         cell.textLabel?.text = item.name
         cell.textLabel?.textColor = NatColors.onBackground
         cell.selectionStyle = .none
-        cell.backgroundColor = .clear
+        cell.backgroundColor = NatColors.background
 
         return cell
     }
