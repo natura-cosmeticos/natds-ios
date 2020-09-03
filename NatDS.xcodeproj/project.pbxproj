@@ -122,6 +122,7 @@
 		847C82A624E57931001CE116 /* TheBodyShopDarkTheme+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C82A524E57931001CE116 /* TheBodyShopDarkTheme+Spec.swift */; };
 		847C82A824E57946001CE116 /* TheBodyShopLightTheme+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847C82A724E57946001CE116 /* TheBodyShopLightTheme+Spec.swift */; };
 		848831BC250177D0004C3FA8 /* NatIconButton+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848831BB250177D0004C3FA8 /* NatIconButton+Spec.swift */; };
+		848831BE25018340004C3FA8 /* NatIconButton+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848831BD25018340004C3FA8 /* NatIconButton+Styles.swift */; };
 		84932F1324EAB9270052265F /* AvailableTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84932F1224EAB9270052265F /* AvailableTheme.swift */; };
 		84932F1624EABB190052265F /* AvailableTheme+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84932F1424EABA280052265F /* AvailableTheme+Spec.swift */; };
 		84932F1A24EAF07B0052265F /* StubThemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84932F1824EAF06B0052265F /* StubThemeProtocol.swift */; };
@@ -364,6 +365,7 @@
 		847C82A524E57931001CE116 /* TheBodyShopDarkTheme+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheBodyShopDarkTheme+Spec.swift"; sourceTree = "<group>"; };
 		847C82A724E57946001CE116 /* TheBodyShopLightTheme+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheBodyShopLightTheme+Spec.swift"; sourceTree = "<group>"; };
 		848831BB250177D0004C3FA8 /* NatIconButton+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatIconButton+Spec.swift"; sourceTree = "<group>"; };
+		848831BD25018340004C3FA8 /* NatIconButton+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatIconButton+Styles.swift"; sourceTree = "<group>"; };
 		84932F1224EAB9270052265F /* AvailableTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableTheme.swift; sourceTree = "<group>"; };
 		84932F1424EABA280052265F /* AvailableTheme+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AvailableTheme+Spec.swift"; sourceTree = "<group>"; };
 		84932F1824EAF06B0052265F /* StubThemeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubThemeProtocol.swift; sourceTree = "<group>"; };
@@ -1047,6 +1049,7 @@
 			children = (
 				84703F3E24F83EEC00FE01CA /* NatIconButton.swift */,
 				845D09942501193500B05760 /* NatIconButton+Sizes.swift */,
+				848831BD25018340004C3FA8 /* NatIconButton+Styles.swift */,
 			);
 			path = IconButton;
 			sourceTree = "<group>";
@@ -2137,6 +2140,7 @@
 				841FEABA24C5C1A100C50AFF /* NatLogoImages.swift in Sources */,
 				B16B10A0AA533EF36343B6B8A4AE4DA0 /* NavigationDrawerItemCell.swift in Sources */,
 				A096BCFF55DBEF25B29C30C1537210D5 /* NavigationDrawerSubitemCell.swift in Sources */,
+				848831BE25018340004C3FA8 /* NatIconButton+Styles.swift in Sources */,
 				269C886424C2456B00A507BE /* UINavigationController+Style.swift in Sources */,
 				9D4FF6FB92A6A5BD0AF263A69FF707E4 /* Pulsable.swift in Sources */,
 				E4FCC8108D5F57339F6297CDD676F8DF /* PulseContainerLayer.swift in Sources */,

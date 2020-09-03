@@ -15,11 +15,20 @@ public final class NatIconButton: UIView {
     }()
 
     private let style: Style
+    private let notificationCenter: NotificationCenterObservable
+
     private var action: (() -> Void)?
     private (set) var currentState: State = .enabled
 
-    public init(style: Style) {
+    // MARK: - Inits
+
+    public convenience init(style: Style) {
+        self.init(style: style, notificationCenter: NotificationCenter.default)
+    }
+
+    init(style: Style, notificationCenter: NotificationCenterObservable) {
         self.style = style
+        self.notificationCenter = notificationCenter
 
         super.init(frame: .zero)
 
@@ -32,25 +41,13 @@ public final class NatIconButton: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    private func setup() {
-        addSubview(iconView)
-        addConstraints()
+    // MARK: - Deinit
+
+    deinit {
+        notificationCenter.removeObserver(self)
     }
 
-    private func addConstraints() {
-        let constraints = [
-            iconView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            iconView.centerYAnchor.constraint(equalTo: centerYAnchor)
-        ]
-
-        NSLayoutConstraint.activate(constraints)
-    }
-
-    public override func layoutSubviews() {
-        super.layoutSubviews()
-
-        layer.cornerRadius = NatBorderRadius.circle(viewHeight: bounds.height)
-    }
+    // MARK: - User interactions
 
     @objc func tapHandler(_ sender: UIGestureRecognizer) {
         action?()
@@ -58,6 +55,12 @@ public final class NatIconButton: UIView {
     }
 
     // MARK: - Overrides
+
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+
+        layer.cornerRadius = NatBorderRadius.circle(viewHeight: bounds.height)
+    }
 
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
@@ -76,13 +79,13 @@ public final class NatIconButton: UIView {
 
         endPulse(layer: layer)
     }
+}
 
+// MARK: - Public methods
+
+extension NatIconButton {
     public func configure(icon: Icon) {
         iconView.icon = icon
-    }
-
-    func configure(iconColor: UIColor) {
-        iconView.tintColor = iconColor
     }
 
     public func configure(action: @escaping () -> Void) {
@@ -94,23 +97,47 @@ public final class NatIconButton: UIView {
 
         style.applyStyle(self)
     }
-}
-extension NatIconButton {
-    public struct Style {
-        let applyStyle: (NatIconButton) -> Void
 
-        public static var standardDefault: Style {
-            .init(
-                applyStyle: IconButtonStandardStyle.applyDefaultStyle
-            )
-        }
-
-        public static var standardPrimary: Style {
-            .init(
-                applyStyle: IconButtonStandardStyle.applyPrimaryStyle
-            )
+    public func configure(badgeValue: UInt) {
+        if badgeValue == 0 {
+            removeBadge()
+        } else {
+            configure(badgeStyle: .standard, withColor: .alert)
+            setBadge(count: Int(badgeValue))
         }
     }
 }
 
+// MARK: - Internal methods
+
+extension NatIconButton {
+    func configure(iconColor: UIColor) {
+        iconView.tintColor = iconColor
+    }
+}
+
+// MARK: - Private methods - UI
+
+extension NatIconButton {
+    private func setup() {
+        addSubview(iconView)
+        addConstraints()
+    }
+
+    private func addConstraints() {
+        let constraints = [
+            iconView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            iconView.centerYAnchor.constraint(equalTo: centerYAnchor)
+        ]
+
+        NSLayoutConstraint.activate(constraints)
+    }
+}
+
+// MARK: - Pulsable
+
 extension NatIconButton: Pulsable {}
+
+// MARK: - Badgeable
+
+extension NatIconButton: Badgeable {}
