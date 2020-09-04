@@ -15,7 +15,7 @@ final class NatIconButtonSnapshotTests: XCTestCase {
         ConfigurationStorage.shared.currentTheme = NaturaLightTheme()
     }
 
-    func test_style_standart_color_default_hasValidSnapshot() {
+    func test_style_standard_color_default_hasValidSnapshot() {
         let systemUnderTest = NatIconButton(style: .standardDefault)
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
@@ -24,7 +24,7 @@ final class NatIconButtonSnapshotTests: XCTestCase {
         assertSnapshot(matching: systemUnderTest, as: .recursiveDescription)
     }
 
-    func test_style_standart_color_default_disabled_hasValidSnapshot() {
+    func test_style_standard_color_default_disabled_hasValidSnapshot() {
         let systemUnderTest = NatIconButton(style: .standardDefault)
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
@@ -34,7 +34,7 @@ final class NatIconButtonSnapshotTests: XCTestCase {
         assertSnapshot(matching: superview, as: .image)
     }
 
-    func test_style_standart_color_default_pressed_hasValidSnapshot() {
+    func test_style_standard_color_default_pressed_hasValidSnapshot() {
         let systemUnderTest = NatIconButton(style: .standardDefault)
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
@@ -44,7 +44,7 @@ final class NatIconButtonSnapshotTests: XCTestCase {
         assertSnapshot(matching: systemUnderTest, as: .recursiveDescription)
     }
 
-    func test_style_standart_color_default_tapped_hasValidSnapshot() {
+    func test_style_standard_color_default_tapped_hasValidSnapshot() {
         let systemUnderTest = NatIconButton(style: .standardDefault)
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
@@ -56,7 +56,19 @@ final class NatIconButtonSnapshotTests: XCTestCase {
         assertSnapshot(matching: systemUnderTest, as: .recursiveDescription)
     }
 
-    func test_style_standart_color_primary_hasValidSnapshot() {
+    func test_style_standard_color_default_with_badge_hasValidSnapshot() {
+        let systemUnderTest = NatIconButton(style: .standardDefault)
+        superview.addSubview(systemUnderTest)
+        addConstraints(systemUnderTest)
+
+        systemUnderTest.configure(badgeStyle: .standard, withColor: .alert)
+        systemUnderTest.setBadge(count: 10)
+
+        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: systemUnderTest, as: .recursiveDescription)
+    }
+
+    func test_style_standard_color_primary_hasValidSnapshot() {
         let systemUnderTest = NatIconButton(style: .standardPrimary)
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
@@ -65,7 +77,7 @@ final class NatIconButtonSnapshotTests: XCTestCase {
         assertSnapshot(matching: systemUnderTest, as: .recursiveDescription)
     }
 
-    func test_style_standart_color_primary_disabled_hasValidSnapshot() {
+    func test_style_standard_color_primary_disabled_hasValidSnapshot() {
         let systemUnderTest = NatIconButton(style: .standardPrimary)
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
@@ -75,7 +87,7 @@ final class NatIconButtonSnapshotTests: XCTestCase {
         assertSnapshot(matching: superview, as: .image)
     }
 
-    func test_style_standart_color_primary_pressed_hasValidSnapshot() {
+    func test_style_standard_color_primary_pressed_hasValidSnapshot() {
         let systemUnderTest = NatIconButton(style: .standardPrimary)
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
@@ -85,13 +97,25 @@ final class NatIconButtonSnapshotTests: XCTestCase {
         assertSnapshot(matching: systemUnderTest, as: .recursiveDescription)
     }
 
-    func test_style_standart_color_primary_tapped_hasValidSnapshot() {
+    func test_style_standard_color_primary_tapped_hasValidSnapshot() {
         let systemUnderTest = NatIconButton(style: .standardPrimary)
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
         systemUnderTest.touchesBegan(.init(arrayLiteral: .init()), with: nil)
         systemUnderTest.touchesEnded(.init(), with: nil)
+
+        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: systemUnderTest, as: .recursiveDescription)
+    }
+
+    func test_style_standard_color_primary_with_badge_hasValidSnapshot() {
+        let systemUnderTest = NatIconButton(style: .standardPrimary)
+        superview.addSubview(systemUnderTest)
+        addConstraints(systemUnderTest)
+
+        systemUnderTest.configure(badgeStyle: .standard, withColor: .alert)
+        systemUnderTest.setBadge(count: 10)
 
         assertSnapshot(matching: superview, as: .image)
         assertSnapshot(matching: systemUnderTest, as: .recursiveDescription)
@@ -102,7 +126,7 @@ extension NatIconButtonSnapshotTests {
     private func addConstraints(_ systemUnderTest: UIView) {
         systemUnderTest.translatesAutoresizingMaskIntoConstraints = false
 
-        let circleSize: CGFloat = NatIconButton.Sizes.medium
+        let circleSize: CGFloat = NatIconButton.Sizes.semiX
 
         let constraints = [
             systemUnderTest.centerXAnchor.constraint(equalTo: superview.centerXAnchor),

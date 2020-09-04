@@ -6,7 +6,7 @@ final class IconButtonItemViewController: UIViewController, SampleItem {
     // MARK: - Private properties
 
     private let iconButton: NatIconButton = {
-        let iconButton = NatIconButton(style: .standardDefault)
+        let iconButton = NatIconButton(style: .standardPrimary)
         iconButton.translatesAutoresizingMaskIntoConstraints = false
 
         return iconButton
