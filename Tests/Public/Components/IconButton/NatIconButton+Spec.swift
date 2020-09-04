@@ -42,28 +42,6 @@ final class NatIconButtonSpec: QuickSpec {
             }
         }
 
-        describe("#configure(state:)") {
-            context("when is enabled") {
-                beforeEach {
-                    systemUnderTest.configure(state: .enabled)
-                }
-
-                it("applies style for the second time") {
-                    expect(applyStyleInvocations).to(equal(2))
-                }
-            }
-
-            context("when is disabled") {
-                beforeEach {
-                    systemUnderTest.configure(state: .disabled)
-                }
-
-                it("applies style for the second time") {
-                    expect(applyStyleInvocations).to(equal(2))
-                }
-            }
-        }
-
         describe("#currentState") {
             context("when is enabled") {
                 beforeEach {
@@ -86,15 +64,16 @@ final class NatIconButtonSpec: QuickSpec {
             }
         }
 
-        describe("#configure(icon:)") {
+        describe("#configure(action:)") {
+            var actionInvocations = 0
+
             beforeEach {
-                systemUnderTest.configure(icon: .filledMediaPause)
+                systemUnderTest.configure(action: { actionInvocations += 1 })
+                systemUnderTest.gestureRecognizers?.forEach { $0.sendGesturesEvents() }
             }
 
-            it("returns an expected value") {
-                let iconView = systemUnderTest.subviews.first as? IconView
-
-                expect(iconView?.icon).to(equal(.filledMediaPause))
+            it("stores action and uses it in tap events") {
+                expect(actionInvocations).toEventually(equal(1))
             }
         }
 
@@ -127,6 +106,52 @@ final class NatIconButtonSpec: QuickSpec {
 
                 it("removes sublayer for badge") {
                     expect(systemUnderTest.layer.sublayers?.count).to(equal(1))
+                }
+            }
+        }
+
+        describe("#configure(icon:)") {
+            beforeEach {
+                systemUnderTest.configure(icon: .filledMediaPause)
+            }
+
+            it("returns an expected value") {
+                let iconView = systemUnderTest.subviews.first as? IconView
+
+                expect(iconView?.icon).to(equal(.filledMediaPause))
+            }
+        }
+
+        describe("#configure(iconColor:)") {
+            beforeEach {
+                systemUnderTest.configure(iconColor: .red)
+            }
+
+            it("returns an expected value") {
+                let iconView = systemUnderTest.subviews.first as? IconView
+
+                expect(iconView?.tintColor).to(equal(.red))
+            }
+        }
+
+        describe("#configure(state:)") {
+            context("when is enabled") {
+                beforeEach {
+                    systemUnderTest.configure(state: .enabled)
+                }
+
+                it("applies style for the second time") {
+                    expect(applyStyleInvocations).to(equal(2))
+                }
+            }
+
+            context("when is disabled") {
+                beforeEach {
+                    systemUnderTest.configure(state: .disabled)
+                }
+
+                it("applies style for the second time") {
+                    expect(applyStyleInvocations).to(equal(2))
                 }
             }
         }

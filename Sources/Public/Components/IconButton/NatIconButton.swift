@@ -121,7 +121,11 @@ extension NatIconButton {
 extension NatIconButton {
     private func setup() {
         addSubview(iconView)
+
         addConstraints()
+
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapHandler))
+        addGestureRecognizer(tapGesture)
 
         notificationCenter.addObserver(
             self,
