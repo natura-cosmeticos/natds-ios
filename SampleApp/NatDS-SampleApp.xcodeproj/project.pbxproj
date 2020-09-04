@@ -275,7 +275,7 @@
 				E87CB56433DA6E5473F5C6B643789BA6 /* Opacity */,
 				B2720C821B540A7F455BED15A98C6755 /* Size */,
 				DEA60779BDC024D9AD1244CD29A20E30 /* Spacing */,
-				D1E87FD723F5C0CE6B516C38B689A892 /* Tipography */,
+				D1E87FD723F5C0CE6B516C38B689A892 /* Typography */,
 				729810E32083E04163C749DCF3552FA6 /* DesignSection.swift */,
 			);
 			path = Design;
@@ -377,13 +377,13 @@
 			path = Iconography;
 			sourceTree = "<group>";
 		};
-		D1E87FD723F5C0CE6B516C38B689A892 /* Tipography */ = {
+		D1E87FD723F5C0CE6B516C38B689A892 /* Typography */ = {
 			isa = PBXGroup;
 			children = (
 				B7D68855C6F46E43FC45CF037561B02B /* Cells */,
 				FE39135EC83E5AE456AC7FBF5FE7F9CA /* TypographyViewController.swift */,
 			);
-			path = Tipography;
+			path = Typography;
 			sourceTree = "<group>";
 		};
 		D2D202BFFC95DC39B94A26A5FB172483 /* Divider */ = {
