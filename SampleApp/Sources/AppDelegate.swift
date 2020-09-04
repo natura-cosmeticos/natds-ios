@@ -11,12 +11,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         DesignSystem().configure(with: .naturaLight)
 
-        let navigationController = UINavigationController(
-            rootViewController: ChooseBrandViewController()
-        )
-
         let window = UIWindow()
-        window.rootViewController = navigationController
+        window.rootViewController = CustomSplashViewController()
         window.makeKeyAndVisible()
 
         self.window = window
