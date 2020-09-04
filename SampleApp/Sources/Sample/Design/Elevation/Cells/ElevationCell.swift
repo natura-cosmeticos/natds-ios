@@ -57,7 +57,8 @@ final class ElevationCell: UITableViewCell {
     // MARK: - Private methods
 
     private func setup() {
-        contentView.backgroundColor = NatColors.background
+        backgroundColor = NatColors.background
+
         contentView.addSubview(label)
         contentView.addSubview(symbolicView)
 

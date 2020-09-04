@@ -183,7 +183,7 @@ final class NatButtonSpec: QuickSpec {
                 expect(applyStyleInvocations).to(equal(1))
             }
 
-            fit("calls changeState when a notification is received") {
+            it("calls changeState when a notification is received") {
                 expect(changeStateInvocations).to(equal(1))
             }
 

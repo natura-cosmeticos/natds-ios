@@ -100,7 +100,10 @@ public final class NatShortcut: UIView {
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
 
-        beginPulseAt(point: circleView.center, in: circleView.layer)
+        beginPulseAt(
+            point: .init(x: circleView.bounds.height / 2, y: circleView.bounds.width / 2),
+            in: circleView.layer
+        )
     }
 
     public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -169,7 +172,8 @@ extension NatShortcut {
     }
 
     private func addConstraints() {
-        let circleSize = getTokenFromTheme(\.sizeMediumX)
+        let circleSize = NatSizes.mediumX
+
         let constraints = [
             circleView.topAnchor.constraint(equalTo: topAnchor),
             circleView.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor),
@@ -182,9 +186,9 @@ extension NatShortcut {
             iconView.centerYAnchor.constraint(equalTo: circleView.centerYAnchor),
 
             label.topAnchor.constraint(equalTo: circleView.bottomAnchor, constant: getTokenFromTheme(\.sizeTiny)),
-            label.trailingAnchor.constraint(equalTo: trailingAnchor),
+            label.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor),
             label.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor),
-            label.leadingAnchor.constraint(equalTo: leadingAnchor),
+            label.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor),
             label.widthAnchor.constraint(lessThanOrEqualToConstant: Widths.maximum),
             label.centerXAnchor.constraint(equalTo: centerXAnchor)
         ]

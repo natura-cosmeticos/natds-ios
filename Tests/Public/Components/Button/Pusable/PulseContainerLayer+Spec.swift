@@ -10,7 +10,7 @@ final class PulseContainerLayerSpec: QuickSpec {
         beforeEach {
             ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
 
-            systemUnderTest = PulseContainerLayer()
+            systemUnderTest = PulseContainerLayer(color: NatColors.highlight)
         }
 
         describe("#init") {
@@ -26,9 +26,7 @@ final class PulseContainerLayerSpec: QuickSpec {
 
             it("sets a color to PulseLayer") {
                 let pulseLayer = systemUnderTest.sublayers?.first as? PulseLayer
-
-                let opacity = getTokenFromTheme(\.opacity05)
-                let expectedColor = NatColors.highlight.withAlphaComponent(opacity).cgColor
+                let expectedColor = NatColors.highlight.cgColor
 
                 expect(pulseLayer?.fillColor).to(equal(expectedColor))
             }

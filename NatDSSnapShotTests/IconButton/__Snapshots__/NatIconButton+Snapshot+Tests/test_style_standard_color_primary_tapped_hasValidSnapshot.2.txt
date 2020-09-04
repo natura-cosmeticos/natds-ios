@@ -1,0 +1,5 @@
+<NatDS.NatIconButton; frame = (0 0; 40 40); gestureRecognizers = <NSArray>; layer = <CALayer>>
+   | <NatDS.IconView; frame = (8 8; 24 24); tintColor = UIExtendedSRGBColorSpace 0.956863 0.670588 0.203922 1; layer = <CALayer>>
+   |    | <UILabel; frame = (0 0; 24 24); text = ''; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   | <NatDS.PulseContainerLayer> (layer)
+   |    | <NatDS.PulseLayer> (layer)

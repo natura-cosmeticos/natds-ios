@@ -14,6 +14,7 @@ final class OpacityViewController: UIViewController, SampleItem {
         tableView.allowsSelection = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.dataSource = self
+        tableView.backgroundColor = NatColors.background
 
         return tableView
     }()
