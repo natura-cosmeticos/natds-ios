@@ -32,9 +32,9 @@ public final class NatIconButton: UIView {
 
         super.init(frame: .zero)
 
-        setup()
-
         style.applyStyle(self)
+
+        setup()
     }
 
     required init?(coder: NSCoder) {
@@ -84,27 +84,27 @@ public final class NatIconButton: UIView {
 // MARK: - Public methods
 
 extension NatIconButton {
-    public func configure(icon: Icon) {
-        iconView.icon = icon
-    }
-
     public func configure(action: @escaping () -> Void) {
         self.action = action
+    }
+
+    public func configure(badgeValue: UInt) {
+        if badgeValue <= 0 {
+            removeBadge()
+        } else {
+            configure(badgeStyle: .standard, withColor: .alert)
+            setBadge(count: Int(badgeValue))
+        }
+    }
+
+    public func configure(icon: Icon) {
+        iconView.icon = icon
     }
 
     public func configure(state: State) {
         currentState = state
 
         style.applyStyle(self)
-    }
-
-    public func configure(badgeValue: UInt) {
-        if badgeValue == 0 {
-            removeBadge()
-        } else {
-            configure(badgeStyle: .standard, withColor: .alert)
-            setBadge(count: Int(badgeValue))
-        }
     }
 }
 
@@ -122,6 +122,13 @@ extension NatIconButton {
     private func setup() {
         addSubview(iconView)
         addConstraints()
+
+        notificationCenter.addObserver(
+            self,
+            selector: #selector(themeHasChanged),
+            name: .themeHasChanged,
+            object: nil
+        )
     }
 
     private func addConstraints() {
@@ -141,3 +148,11 @@ extension NatIconButton: Pulsable {}
 // MARK: - Badgeable
 
 extension NatIconButton: Badgeable {}
+
+// MARK: - NotificationCenter
+
+extension NatIconButton {
+    @objc private func themeHasChanged() {
+        style.applyStyle(self)
+    }
+}

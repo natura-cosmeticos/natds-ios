@@ -20,7 +20,7 @@ final class NatIconButtonSpec: QuickSpec {
 
             styleSpy = .init(applyStyle: { _ in applyStyleInvocations += 1 })
 
-            systemUnderTest = .init(style: styleSpy)
+            systemUnderTest = .init(style: styleSpy, notificationCenter: notificationCenterSpy)
         }
 
         describe("#init") {
@@ -33,12 +33,12 @@ final class NatIconButtonSpec: QuickSpec {
             }
 
             it("calls notificationCenter.addObserver only once") {
-//                expect(notificationCenterSpy.addObserverInvocations).to(equal(1))
+                expect(notificationCenterSpy.addObserverInvocations).to(equal(1))
             }
 
             it("registers to expected notification event without passing objects") {
-//                expect(notificationCenterSpy.invokedAddObserver?.name).to(equal(.themeHasChanged))
-//                expect(notificationCenterSpy.invokedAddObserver?.object).to(beNil())
+                expect(notificationCenterSpy.invokedAddObserver?.name).to(equal(.themeHasChanged))
+                expect(notificationCenterSpy.invokedAddObserver?.object).to(beNil())
             }
         }
 
@@ -86,6 +86,51 @@ final class NatIconButtonSpec: QuickSpec {
             }
         }
 
+        describe("#configure(icon:)") {
+            beforeEach {
+                systemUnderTest.configure(icon: .filledMediaPause)
+            }
+
+            it("returns an expected value") {
+                let iconView = systemUnderTest.subviews.first as? IconView
+
+                expect(iconView?.icon).to(equal(.filledMediaPause))
+            }
+        }
+
+        describe("#configure(badgeValue:)") {
+            context("when value is bigger than 0") {
+                beforeEach {
+                    systemUnderTest.configure(badgeValue: 10)
+                }
+
+                it("adds sublayer for badge") {
+                    expect(systemUnderTest.layer.sublayers?.count).to(equal(2))
+                }
+            }
+
+            context("when value is 0") {
+                beforeEach {
+                    systemUnderTest.configure(badgeValue: 0)
+                }
+
+                it("removes sublayer for badge if exists") {
+                    expect(systemUnderTest.layer.sublayers?.count).to(equal(1))
+                }
+            }
+
+            context("when value is bigger than 0 then a 0 value") {
+                beforeEach {
+                    systemUnderTest.configure(badgeValue: 10)
+                    systemUnderTest.configure(badgeValue: 0)
+                }
+
+                it("removes sublayer for badge") {
+                    expect(systemUnderTest.layer.sublayers?.count).to(equal(1))
+                }
+            }
+        }
+
         describe("#touchesBegan") {
             beforeEach {
                 systemUnderTest.touchesBegan(.init(arrayLiteral: .init()), with: nil)
@@ -115,35 +160,21 @@ final class NatIconButtonSpec: QuickSpec {
             }
         }
 
-//        context("When a notification of .themeHasChange is received") {
-//            beforeEach {
-//                applyStyleInvocations = 0
-//                changeStateInvocations = 0
-//                applyTitleInvocations = 0
-//
-//                notificationCenterSpy = .init()
-//
-//                styleSpy = .init(
-//                    applyStyle: { _ in applyStyleInvocations += 1 },
-//                    changeState: { _ in changeStateInvocations += 1 },
-//                    applyTitle: { _, _ in applyTitleInvocations += 1 }
-//                )
-//                systemUnderTest = .init(style: styleSpy)
-//
-//                NotificationCenter.default.post(name: .themeHasChanged, object: nil)
-//            }
-//
-//            it("applies style only once") {
-//                expect(applyStyleInvocations).to(equal(1))
-//            }
-//
-//            fit("calls changeState when a notification is received") {
-//                expect(changeStateInvocations).to(equal(1))
-//            }
-//
-//            it("does not call applyTitle") {
-//                expect(applyTitleInvocations).to(equal(0))
-//            }
-//        }
+        context("When a notification of .themeHasChange is received") {
+            beforeEach {
+                applyStyleInvocations = 0
+
+                notificationCenterSpy = .init()
+
+                styleSpy = .init(applyStyle: { _ in applyStyleInvocations += 1 })
+                systemUnderTest = .init(style: styleSpy)
+
+                NotificationCenter.default.post(name: .themeHasChanged, object: nil)
+            }
+
+            it("applies style for the second time") {
+                expect(applyStyleInvocations).to(equal(2))
+            }
+        }
     }
 }
