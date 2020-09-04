@@ -33,7 +33,7 @@ final class IconButtonItemViewController: UIViewController, SampleItem {
     }
 
     private func addConstraints() {
-        let circleSize: CGFloat = NatIconButton.Sizes.small
+        let circleSize: CGFloat = NatIconButton.Sizes.semiX
 
         let constraints = [
             iconButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
