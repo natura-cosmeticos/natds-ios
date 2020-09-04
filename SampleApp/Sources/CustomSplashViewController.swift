@@ -32,7 +32,7 @@ final class CustomSplashViewController: UIViewController {
     private let longNamelabel: UILabel = {
         let label = UILabel()
         label.font = NatFonts.font(ofSize: .heading6)
-        label.text = "Natura Desgin System"
+        label.text = "Natura Design System"
         label.textColor = .white
         label.alpha = 0
         label.translatesAutoresizingMaskIntoConstraints = false
