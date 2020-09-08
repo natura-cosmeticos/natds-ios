@@ -1,6 +1,9 @@
 import UIKit
 
 extension CustomSplashViewController {
+
+    // MARK: - Private properties
+
     final class GradientBackgroundView: UIView {
         private let gradientLayer: CAGradientLayer = {
             let colorForTop = UIColor.clear.cgColor
@@ -15,6 +18,8 @@ extension CustomSplashViewController {
             return gradientLayer
         }()
 
+        // MARK: - Inits
+
         init() {
             super.init(frame: .zero)
 
@@ -24,6 +29,8 @@ extension CustomSplashViewController {
         required init?(coder aDecoder: NSCoder) {
             fatalError("init(coder:) has not been implemented")
         }
+
+        // MARK: - Overrides
 
         override func layoutSubviews() {
             super.layoutSubviews()

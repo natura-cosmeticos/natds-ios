@@ -30,6 +30,7 @@ final class ChooseBrandViewController: UIViewController {
 
     private func setup() {
         title = "Choose a Brand"
+
         view.backgroundColor = NatColors.background
         view.addSubview(tableView)
 
