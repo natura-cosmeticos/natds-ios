@@ -2,11 +2,22 @@ import UIKit
 import NatDS
 
 final class CustomSplashViewController: UIViewController {
+
+    // MARK: - Private properties
+
     private let backgroundImageView: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "splashBackground"))
         imageView.translatesAutoresizingMaskIntoConstraints = false
 
         return imageView
+    }()
+
+    private let overlayView: GradientBackgroundView = {
+        let view = GradientBackgroundView()
+        view.alpha = 0
+        view.translatesAutoresizingMaskIntoConstraints = false
+
+        return view
     }()
 
     private let logoImageView: UIImageView = {
@@ -40,6 +51,8 @@ final class CustomSplashViewController: UIViewController {
         return label
     }()
 
+    // MARK: - Life cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -54,11 +67,12 @@ final class CustomSplashViewController: UIViewController {
             duration: 2,
             options: .curveEaseIn,
             animations: {
+                self.overlayView.alpha = 1
                 self.logoImageView.alpha = 1
                 self.shortNamelabel.alpha = 1
                 self.longNamelabel.alpha = 1
         }, completion: { _ in
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 let navigationController = UINavigationController(
                     rootViewController: ChooseBrandViewController()
                 )
@@ -68,20 +82,38 @@ final class CustomSplashViewController: UIViewController {
         })
     }
 
+    // MARK: - Overrrides
+
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+}
+
+// MARK: - Private methods - UI
+
+extension CustomSplashViewController {
     private func setup() {
         view.addSubview(backgroundImageView)
+        view.addSubview(overlayView)
         view.addSubview(logoImageView)
         view.addSubview(shortNamelabel)
         view.addSubview(longNamelabel)
 
+        addConstraints()
+    }
+
+    private func addConstraints() {
         NSLayoutConstraint.activate([
             backgroundImageView.topAnchor.constraint(equalTo: view.topAnchor),
             backgroundImageView.rightAnchor.constraint(equalTo: view.rightAnchor),
             backgroundImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             backgroundImageView.leftAnchor.constraint(equalTo: view.leftAnchor),
 
+            overlayView.widthAnchor.constraint(equalTo: backgroundImageView.widthAnchor),
+            overlayView.heightAnchor.constraint(equalTo: backgroundImageView.heightAnchor),
+
             logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            logoImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -60),
+            logoImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -NatSpacing.xLarge),
             logoImageView.widthAnchor.constraint(equalToConstant: NatSizes.veryHuge),
             logoImageView.heightAnchor.constraint(equalToConstant: NatSizes.semi),
 

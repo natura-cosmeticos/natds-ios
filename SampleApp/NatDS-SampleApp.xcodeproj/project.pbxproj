@@ -29,6 +29,7 @@
 		6566B8AD366FC73D95DA1F35979D488C /* NavigationDrawerItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D4B7F03E632BFE339DA40C2269B9D9 /* NavigationDrawerItemViewController.swift */; };
 		6B065E9FA8AEAD33D6341DB8C671D74C /* DialogItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6AF03A3D6B2368E721CAB74F2424A /* DialogItemViewController.swift */; };
 		8402F4E624F932E70018149C /* IconButtonItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402F4E524F932E70018149C /* IconButtonItemViewController.swift */; };
+		8409B9312507B9E2006ED4EA /* CustomSplashViewController+GradientBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409B9302507B9E2006ED4EA /* CustomSplashViewController+GradientBackgroundView.swift */; };
 		8449828124C0C9F200CDA676 /* LogoItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8449828024C0C9F200CDA676 /* LogoItemViewController.swift */; };
 		844A1E2624AE2BCE00E93AD9 /* ShortcutItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A1E2524AE2BCE00E93AD9 /* ShortcutItemViewController.swift */; };
 		84E3B7C82502C88D0056FE57 /* CustomSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E3B7C72502C88D0056FE57 /* CustomSplashViewController.swift */; };
@@ -89,6 +90,7 @@
 		729810E32083E04163C749DCF3552FA6 /* DesignSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSection.swift; sourceTree = "<group>"; };
 		73162360481FF4DE5378EBF0DF3B2F1C /* SpacingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacingCell.swift; sourceTree = "<group>"; };
 		8402F4E524F932E70018149C /* IconButtonItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButtonItemViewController.swift; sourceTree = "<group>"; };
+		8409B9302507B9E2006ED4EA /* CustomSplashViewController+GradientBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomSplashViewController+GradientBackgroundView.swift"; sourceTree = "<group>"; };
 		8449828024C0C9F200CDA676 /* LogoItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoItemViewController.swift; sourceTree = "<group>"; };
 		844A1E2524AE2BCE00E93AD9 /* ShortcutItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutItemViewController.swift; sourceTree = "<group>"; };
 		845C4E23EBB1B07DF334BBA42C272EBB /* ColorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsViewController.swift; sourceTree = "<group>"; };
@@ -206,9 +208,9 @@
 				BBBD9AE748A7F062C343564EE84A8A71 /* Supporting Files */,
 				A9EB78FC7F0EEE4914F65F61B2E74031 /* AppDelegate.swift */,
 				88DF0FA08B4E2EB33C77654A3EC4E83E /* ChooseBrandViewController.swift */,
+				8409B92F2507B9A9006ED4EA /* CustomSplash */,
 				96E03E96B39ADDD9B77FC7C702E3029F /* MainDataSource.swift */,
 				9AFC72AFBBBAAEBA2097DA669BB3792F /* MainViewController.swift */,
-				84E3B7C72502C88D0056FE57 /* CustomSplashViewController.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -228,6 +230,15 @@
 				8402F4E524F932E70018149C /* IconButtonItemViewController.swift */,
 			);
 			path = IconButton;
+			sourceTree = "<group>";
+		};
+		8409B92F2507B9A9006ED4EA /* CustomSplash */ = {
+			isa = PBXGroup;
+			children = (
+				84E3B7C72502C88D0056FE57 /* CustomSplashViewController.swift */,
+				8409B9302507B9E2006ED4EA /* CustomSplashViewController+GradientBackgroundView.swift */,
+			);
+			path = CustomSplash;
 			sourceTree = "<group>";
 		};
 		844A1E2424AE2B7600E93AD9 /* Shortcut */ = {
@@ -576,6 +587,7 @@
 				E061B6B85CEFBAE9AE8A8079DEF9E0A4 /* SampleSection.swift in Sources */,
 				D30EE21E999567FD384CCE8B5D90FAC2 /* SizeCell.swift in Sources */,
 				F73DA218B08455F09195D7D6F4990961 /* SizeViewController.swift in Sources */,
+				8409B9312507B9E2006ED4EA /* CustomSplashViewController+GradientBackgroundView.swift in Sources */,
 				0E0C618824C768B700AF8FBB /* AppBarDetailViewController.swift in Sources */,
 				84E3B7C82502C88D0056FE57 /* CustomSplashViewController.swift in Sources */,
 				06E258AB651CE4F232CAAA3A2D94807C /* SpacingCell.swift in Sources */,
