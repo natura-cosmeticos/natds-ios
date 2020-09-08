@@ -6,7 +6,7 @@ final class CustomSplashViewController: UIViewController {
     // MARK: - Private properties
 
     private let backgroundImageView: UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: "splashBackground"))
+        let imageView = UIImageView(image: UIImage(named: "NATDSBackground"))
         imageView.translatesAutoresizingMaskIntoConstraints = false
 
         return imageView
