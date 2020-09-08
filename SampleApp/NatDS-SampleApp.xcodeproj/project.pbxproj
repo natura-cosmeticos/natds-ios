@@ -207,8 +207,8 @@
 				9DE43D2630BC7A2BC76DE6043192AFF4 /* Sample */,
 				BBBD9AE748A7F062C343564EE84A8A71 /* Supporting Files */,
 				A9EB78FC7F0EEE4914F65F61B2E74031 /* AppDelegate.swift */,
-				88DF0FA08B4E2EB33C77654A3EC4E83E /* ChooseBrandViewController.swift */,
 				8409B92F2507B9A9006ED4EA /* CustomSplash */,
+				842EA8A92508278E009AE473 /* ChooseBrand */,
 				96E03E96B39ADDD9B77FC7C702E3029F /* MainDataSource.swift */,
 				9AFC72AFBBBAAEBA2097DA669BB3792F /* MainViewController.swift */,
 			);
@@ -239,6 +239,14 @@
 				8409B9302507B9E2006ED4EA /* CustomSplashViewController+GradientBackgroundView.swift */,
 			);
 			path = CustomSplash;
+			sourceTree = "<group>";
+		};
+		842EA8A92508278E009AE473 /* ChooseBrand */ = {
+			isa = PBXGroup;
+			children = (
+				88DF0FA08B4E2EB33C77654A3EC4E83E /* ChooseBrandViewController.swift */,
+			);
+			path = ChooseBrand;
 			sourceTree = "<group>";
 		};
 		844A1E2424AE2B7600E93AD9 /* Shortcut */ = {
