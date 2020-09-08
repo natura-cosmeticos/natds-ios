@@ -82,7 +82,7 @@ final class CustomSplashViewController: UIViewController {
         })
     }
 
-    // MARK: - Overrrides
+    // MARK: - Overrides
 
     override var prefersStatusBarHidden: Bool {
         return true
