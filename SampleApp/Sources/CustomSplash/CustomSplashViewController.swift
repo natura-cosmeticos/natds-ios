@@ -109,8 +109,10 @@ extension CustomSplashViewController {
             backgroundImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             backgroundImageView.leftAnchor.constraint(equalTo: view.leftAnchor),
 
-            overlayView.widthAnchor.constraint(equalTo: backgroundImageView.widthAnchor),
-            overlayView.heightAnchor.constraint(equalTo: backgroundImageView.heightAnchor),
+            overlayView.topAnchor.constraint(equalTo: backgroundImageView.topAnchor),
+            overlayView.rightAnchor.constraint(equalTo: backgroundImageView.rightAnchor),
+            overlayView.bottomAnchor.constraint(equalTo: backgroundImageView.bottomAnchor),
+            overlayView.leftAnchor.constraint(equalTo: backgroundImageView.leftAnchor),
 
             logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             logoImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -NatSpacing.xLarge),
