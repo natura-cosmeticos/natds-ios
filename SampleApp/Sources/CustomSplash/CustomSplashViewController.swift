@@ -7,6 +7,7 @@ final class CustomSplashViewController: UIViewController {
 
     private let backgroundImageView: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "NATDSBackground"))
+        imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
 
         return imageView
@@ -22,7 +23,6 @@ final class CustomSplashViewController: UIViewController {
 
     private let logoImageView: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "SplashLogo"))
-        imageView.contentMode = .scaleAspectFit
         imageView.alpha = 0
         imageView.translatesAutoresizingMaskIntoConstraints = false
 
@@ -109,13 +109,13 @@ extension CustomSplashViewController {
             backgroundImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             backgroundImageView.leftAnchor.constraint(equalTo: view.leftAnchor),
 
-            overlayView.widthAnchor.constraint(equalTo: backgroundImageView.widthAnchor),
-            overlayView.heightAnchor.constraint(equalTo: backgroundImageView.heightAnchor),
+            overlayView.topAnchor.constraint(equalTo: backgroundImageView.topAnchor),
+            overlayView.rightAnchor.constraint(equalTo: backgroundImageView.rightAnchor),
+            overlayView.bottomAnchor.constraint(equalTo: backgroundImageView.bottomAnchor),
+            overlayView.leftAnchor.constraint(equalTo: backgroundImageView.leftAnchor),
 
             logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             logoImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -NatSpacing.xLarge),
-            logoImageView.widthAnchor.constraint(equalToConstant: NatSizes.veryHuge),
-            logoImageView.heightAnchor.constraint(equalToConstant: NatSizes.semi),
 
             shortNamelabel.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: NatSpacing.large),
             shortNamelabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
