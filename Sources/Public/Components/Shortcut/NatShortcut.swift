@@ -189,7 +189,7 @@ extension NatShortcut {
             label.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor),
             label.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor),
             label.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor),
-            label.widthAnchor.constraint(lessThanOrEqualToConstant: Widths.maximum),
+            label.widthAnchor.constraint(lessThanOrEqualToConstant: NatSizes.large),
             label.centerXAnchor.constraint(equalTo: centerXAnchor)
         ]
 
