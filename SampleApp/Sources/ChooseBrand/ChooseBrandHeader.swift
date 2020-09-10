@@ -83,8 +83,7 @@ final class ChooseBrandHeader: UITableViewHeaderFooterView {
             versionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: NatSpacing.tiny),
             versionLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
 
-            subTitleLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -NatSpacing.tiny),
-
+            subTitleLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -NatSpacing.tiny)
         ])
     }
 

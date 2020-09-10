@@ -14,16 +14,18 @@ final class ChooseBrandViewController: UIViewController {
         tableView.dataSource = self
         tableView.backgroundColor = .black
         tableView.register(ColorsHeader.self, forHeaderFooterViewReuseIdentifier: ChooseBrandHeader.reuseIdentifier)
+        tableView.register(ChooseBrandCell.self, forCellReuseIdentifier: ChooseBrandCell.reuseIdentifier)
         tableView.sectionHeaderHeight = 128 + 65
-        tableView.rowHeight = 64
+        tableView.rowHeight = 64 + 16
+        tableView.bounces = false
 
         return tableView
     }()
 
     private let brands = [
-        "Avon",
-        "Natura",
-        "The Body Shop"
+        "brand_selection/avon",
+        "brand_selection/natura",
+        "brand_selection/the_body_shop"
     ]
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -32,7 +34,7 @@ final class ChooseBrandViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setNeedsStatusBarAppearanceUpdate()
+
         navigationController?.isNavigationBarHidden = true
     }
 
@@ -53,11 +55,7 @@ final class ChooseBrandViewController: UIViewController {
 //    }
 
     private func setup() {
-//        title = "Choose a Brand"
         tableView.contentInsetAdjustmentBehavior = .never
-
-//        UINavigationBar.appearance().backgroundColor = .white
-//        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
 
         view.backgroundColor = NatColors.background
         view.addSubview(tableView)
@@ -72,20 +70,22 @@ final class ChooseBrandViewController: UIViewController {
 }
 
 extension ChooseBrandViewController: UITableViewDataSource {
-    //    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-    //        20
-    //    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         brands.count
     }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: ChooseBrandHeader.reuseIdentifier, for: indexPath)
 
-        cell.textLabel?.textColor = NatColors.onBackground
-        cell.textLabel?.text = brands[indexPath.row]
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView
+            .dequeueReusableCell(
+                withIdentifier: ChooseBrandCell.reuseIdentifier,
+                for: indexPath
+            ) as? ChooseBrandCell ?? .init()
+
+//        cell.textLabel?.textColor = NatColors.onBackground
+//        cell.textLabel?.text = brands[indexPath.row]
         cell.selectionStyle = .none
-        cell.backgroundColor = NatColors.background
+        cell.configure(imageName: brands[indexPath.row])
+//        cell.backgroundColor = NatColors.background
 
         return cell
     }
