@@ -8,7 +8,7 @@ final class ChooseBrandCell: UITableViewCell {
     private let cardView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
-        view.layer.cornerRadius = 4
+        view.layer.cornerRadius = NatBorderRadius.medium
         view.translatesAutoresizingMaskIntoConstraints = false
 
         return view
@@ -16,7 +16,6 @@ final class ChooseBrandCell: UITableViewCell {
 
     private let brandImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .red
         imageView.translatesAutoresizingMaskIntoConstraints = false
 
         return imageView
@@ -44,7 +43,7 @@ final class ChooseBrandCell: UITableViewCell {
     // MARK: - Private methods
 
     private func setup() {
-        backgroundColor = .blue
+        backgroundColor = .black
 
         contentView.addSubview(cardView)
         cardView.addSubview(brandImageView)
@@ -56,12 +55,7 @@ final class ChooseBrandCell: UITableViewCell {
             cardView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
 
             brandImageView.centerXAnchor.constraint(equalTo: cardView.centerXAnchor),
-            brandImageView.centerYAnchor.constraint(equalTo: cardView.centerYAnchor),
-
-//            brandImageView.topAnchor.constraint(equalTo: cardView.topAnchor, constant: 10),
-//            brandImageView.trailingAnchor.constraint(equalTo: cardView.trailingAnchor, constant: -10),
-//            brandImageView.bottomAnchor.constraint(equalTo: cardView.bottomAnchor, constant: -10),
-//            brandImageView.leadingAnchor.constraint(equalTo: cardView.leadingAnchor, constant: 10)
+            brandImageView.centerYAnchor.constraint(equalTo: cardView.centerYAnchor)
         ])
     }
 }
