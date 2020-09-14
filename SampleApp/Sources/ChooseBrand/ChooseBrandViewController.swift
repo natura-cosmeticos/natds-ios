@@ -29,7 +29,7 @@ final class ChooseBrandViewController: UIViewController {
         "brand_selection/avon",
         "brand_selection/natura",
         "brand_selection/natura&co",
-        "brand_selection/the_body_shop",
+        "brand_selection/the_body_shop"
     ]
 
     // MARK: - Life cycle
