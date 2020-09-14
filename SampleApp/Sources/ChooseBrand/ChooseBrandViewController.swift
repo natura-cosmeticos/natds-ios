@@ -120,8 +120,7 @@ extension ChooseBrandViewController: UITableViewDelegate {
 extension ChooseBrandViewController {
     private func setup() {
         tableView.contentInsetAdjustmentBehavior = .never
-
-        view.backgroundColor = NatColors.background
+        view.backgroundColor = .black
         view.addSubview(tableView)
 
         NSLayoutConstraint.activate([
