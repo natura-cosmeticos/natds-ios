@@ -33,26 +33,35 @@ final class ChooseBrandCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+}
 
-    // MARK: - Public methods
+// MARK: - Internal methods
 
+extension ChooseBrandCell {
     func configure(imageName: String) {
         brandImageView.image = UIImage(named: imageName)
     }
+}
 
-    // MARK: - Private methods
+// MARK: - Private methods - UI
 
+extension ChooseBrandCell {
     private func setup() {
+        selectionStyle = .none
         backgroundColor = .black
 
         contentView.addSubview(cardView)
         cardView.addSubview(brandImageView)
 
+        addConstraints()
+    }
+
+    private func addConstraints() {
         NSLayoutConstraint.activate([
-            cardView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
-            cardView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
-            cardView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
-            cardView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
+            cardView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: NatSpacing.tiny),
+            cardView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -NatSpacing.tiny),
+            cardView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -NatSpacing.tiny),
+            cardView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: NatSpacing.tiny),
 
             brandImageView.centerXAnchor.constraint(equalTo: cardView.centerXAnchor),
             brandImageView.centerYAnchor.constraint(equalTo: cardView.centerYAnchor)

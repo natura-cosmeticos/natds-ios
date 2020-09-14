@@ -3,6 +3,8 @@ import NatDS
 
 final class ChooseBrandViewController: UIViewController {
 
+    // MARK: - Private properties
+
     private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.register(
@@ -15,8 +17,8 @@ final class ChooseBrandViewController: UIViewController {
         tableView.backgroundColor = .black
         tableView.register(ColorsHeader.self, forHeaderFooterViewReuseIdentifier: ChooseBrandHeader.reuseIdentifier)
         tableView.register(ChooseBrandCell.self, forCellReuseIdentifier: ChooseBrandCell.reuseIdentifier)
-        tableView.sectionHeaderHeight = 128 + 65
-        tableView.rowHeight = 64 + 16
+        tableView.sectionHeaderHeight = 193
+        tableView.rowHeight = 80
         tableView.bounces = false
 
         return tableView
@@ -25,12 +27,12 @@ final class ChooseBrandViewController: UIViewController {
     private let brands = [
         "brand_selection/avon",
         "brand_selection/natura",
-        "brand_selection/the_body_shop"
+        "brand_selection/the_body_shop",
+        "brand_selection/aesop",
+        "brand_selection/natura&co"
     ]
 
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        .lightContent
-    }
+    // MARK: - Life cycle
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -50,24 +52,14 @@ final class ChooseBrandViewController: UIViewController {
         setup()
     }
 
-//    override var prefersStatusBarHidden: Bool {
-//        return true
-//    }
+    // MARK: - Overrides
 
-    private func setup() {
-        tableView.contentInsetAdjustmentBehavior = .never
-
-        view.backgroundColor = NatColors.background
-        view.addSubview(tableView)
-
-        NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.topAnchor),
-            tableView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            tableView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor)
-        ])
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
     }
 }
+
+// MARK: - UITableViewDataSource
 
 extension ChooseBrandViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -81,15 +73,13 @@ extension ChooseBrandViewController: UITableViewDataSource {
                 for: indexPath
             ) as? ChooseBrandCell ?? .init()
 
-//        cell.textLabel?.textColor = NatColors.onBackground
-//        cell.textLabel?.text = brands[indexPath.row]
-        cell.selectionStyle = .none
         cell.configure(imageName: brands[indexPath.row])
-//        cell.backgroundColor = NatColors.background
 
         return cell
     }
 }
+
+// MARK: - UITableViewDelegate
 
 extension ChooseBrandViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -101,16 +91,17 @@ extension ChooseBrandViewController: UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let brandThemes: BrandThemes
+
         switch indexPath.row {
-        case 0:
-            DesignSystem().configure(with: .avonLight)
-        case 1:
-            DesignSystem().configure(with: .naturaLight)
-        case 2:
-            DesignSystem().configure(with: .theBodyShopLight)
-        default:
-            fatalError("Not implemented")
+        case 0: brandThemes = .init(light: .avonLight, dark: .avonDark)
+        case 1: brandThemes = .init(light: .naturaLight, dark: .naturaDark)
+        case 2: brandThemes = .init(light: .theBodyShopLight, dark: .theBodyShopDark)
+        default: return
         }
+
+        ThemeManager.shared.currentBrand = brandThemes
+        ThemeManager.shared.setLight()
 
         let viewController = MainViewController()
         navigationController?.navigationBar.barTintColor = NatColors.primary
@@ -119,5 +110,23 @@ extension ChooseBrandViewController: UITableViewDelegate {
             NSAttributedString.Key.foregroundColor: NatColors.onPrimary
         ]
         navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
+// MARK: - Private methods
+
+extension ChooseBrandViewController {
+    private func setup() {
+        tableView.contentInsetAdjustmentBehavior = .never
+
+        view.backgroundColor = NatColors.background
+        view.addSubview(tableView)
+
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            tableView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor)
+        ])
     }
 }

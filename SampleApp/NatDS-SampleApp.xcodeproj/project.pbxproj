@@ -33,6 +33,8 @@
 		842EA8AB25082B60009AE473 /* ChooseBrandHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842EA8AA25082B60009AE473 /* ChooseBrandHeader.swift */; };
 		8449828124C0C9F200CDA676 /* LogoItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8449828024C0C9F200CDA676 /* LogoItemViewController.swift */; };
 		844A1E2624AE2BCE00E93AD9 /* ShortcutItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A1E2524AE2BCE00E93AD9 /* ShortcutItemViewController.swift */; };
+		84A9E9A9250F9CC8006B8A52 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A9E9A8250F9CC8006B8A52 /* ThemeManager.swift */; };
+		84A9E9AC250F9D18006B8A52 /* BrandThemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A9E9AB250F9D18006B8A52 /* BrandThemes.swift */; };
 		84E3B7C82502C88D0056FE57 /* CustomSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E3B7C72502C88D0056FE57 /* CustomSplashViewController.swift */; };
 		84F60D152509402300498C8A /* ChooseBrandCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F60D142509402300498C8A /* ChooseBrandCell.swift */; };
 		9B13D285941681F8967FCC54F3945D5F /* IconCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FBDBE3AD8777A865F1B1E40859758D /* IconCollectionViewCell.swift */; };
@@ -97,6 +99,8 @@
 		8449828024C0C9F200CDA676 /* LogoItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoItemViewController.swift; sourceTree = "<group>"; };
 		844A1E2524AE2BCE00E93AD9 /* ShortcutItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutItemViewController.swift; sourceTree = "<group>"; };
 		845C4E23EBB1B07DF334BBA42C272EBB /* ColorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsViewController.swift; sourceTree = "<group>"; };
+		84A9E9A8250F9CC8006B8A52 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		84A9E9AB250F9D18006B8A52 /* BrandThemes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandThemes.swift; sourceTree = "<group>"; };
 		84E3B7C72502C88D0056FE57 /* CustomSplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSplashViewController.swift; sourceTree = "<group>"; };
 		84F60D142509402300498C8A /* ChooseBrandCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseBrandCell.swift; sourceTree = "<group>"; };
 		88DF0FA08B4E2EB33C77654A3EC4E83E /* ChooseBrandViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseBrandViewController.swift; sourceTree = "<group>"; };
@@ -215,6 +219,7 @@
 				842EA8A92508278E009AE473 /* ChooseBrand */,
 				96E03E96B39ADDD9B77FC7C702E3029F /* MainDataSource.swift */,
 				9AFC72AFBBBAAEBA2097DA669BB3792F /* MainViewController.swift */,
+				84A9E9AA250F9D09006B8A52 /* ThemeManager */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -261,6 +266,15 @@
 				844A1E2524AE2BCE00E93AD9 /* ShortcutItemViewController.swift */,
 			);
 			path = Shortcut;
+			sourceTree = "<group>";
+		};
+		84A9E9AA250F9D09006B8A52 /* ThemeManager */ = {
+			isa = PBXGroup;
+			children = (
+				84A9E9A8250F9CC8006B8A52 /* ThemeManager.swift */,
+				84A9E9AB250F9D18006B8A52 /* BrandThemes.swift */,
+			);
+			path = ThemeManager;
 			sourceTree = "<group>";
 		};
 		84AAD9C60B28018A447D43D10A281470 /* Helper */ = {
@@ -591,6 +605,7 @@
 				04AA815DDD6F9388F3A1010428342BBB /* ElevationViewController.swift in Sources */,
 				C3FB6A19DFD7AF84B435860A0C7F355D /* ExpansionPanelViewController.swift in Sources */,
 				9B13D285941681F8967FCC54F3945D5F /* IconCollectionViewCell.swift in Sources */,
+				84A9E9A9250F9CC8006B8A52 /* ThemeManager.swift in Sources */,
 				F1BDDD1A6BB7FF95ED9BF0D4FF3083A8 /* IconographyItemViewController.swift in Sources */,
 				BD695AAB8C1745298D8F405635E322A7 /* MainDataSource.swift in Sources */,
 				B0824E26ADCA40FFA158AA0A35155D71 /* MainViewController.swift in Sources */,
@@ -613,6 +628,7 @@
 				D2874BA3C6A03754EC9895DC95D6DFE5 /* TypographyCell.swift in Sources */,
 				4FB74E3BCCB54EE2242A9A78778F6024 /* TypographyViewController.swift in Sources */,
 				5A95C641E43BCD63CA21359C8EAFBA25 /* ValueTextHighlightItemViewController.swift in Sources */,
+				84A9E9AC250F9D18006B8A52 /* BrandThemes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
