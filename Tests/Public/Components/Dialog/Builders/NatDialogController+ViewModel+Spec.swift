@@ -8,7 +8,7 @@ final class NatDialogControllerViewModelSpec: QuickSpec {
         var systemUnderTest: NatDialogController.ViewModel!
 
         beforeEach {
-            ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
+            ConfigurationStorage.shared.currentTheme = StubTheme()
 
             systemUnderTest = .init()
         }

@@ -11,7 +11,7 @@ final class NatDialogControllerSpec: QuickSpec {
             let stubView = UIView()
 
             beforeEach {
-                ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
+                ConfigurationStorage.shared.currentTheme = StubTheme()
 
                 let viewModel = NatDialogController.ViewModel()
                 viewModel.bodyView = stubView

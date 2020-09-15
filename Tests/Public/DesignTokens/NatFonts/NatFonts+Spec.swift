@@ -9,7 +9,7 @@ final class NatFontsSpec: QuickSpec {
         var font: UIFont!
 
         beforeEach {
-            ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
+            ConfigurationStorage.shared.currentTheme = StubTheme()
         }
 
         describe("#font") {

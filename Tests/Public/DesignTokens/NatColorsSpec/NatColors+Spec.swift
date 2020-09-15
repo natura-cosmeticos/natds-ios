@@ -5,7 +5,7 @@ import Nimble
 
 final class NatColorsSpec: QuickSpec {
     override func spec() {
-        let stubTheme = StubThemeProtocol()
+        let stubTheme = StubTheme()
 
         beforeEach {
             ConfigurationStorage.shared.currentTheme = stubTheme
