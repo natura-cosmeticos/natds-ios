@@ -1,4 +1,4 @@
-extension TokensProtocol {
+extension Tokens {
     var elevationNone: ElevationAttributes {
         .init(
             shadowColor: nil,

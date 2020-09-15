@@ -1,11 +1,11 @@
 @testable import NatDS
 
-struct StubThemeProtocol: ThemeProtocol {
-    let tokens: TokensProtocol = StubTokensProtocol()
-    let components: ComponentsProtocol = StubComponentsProtocol()
+struct StubThemeProtocol: Theme {
+    let tokens: Tokens = StubTokensProtocol()
+    let components: Components = StubComponentsProtocol()
 }
 
-private struct StubTokensProtocol: TokensProtocol {
+private struct StubTokensProtocol: Tokens {
     let borderRadiusNone: CGFloat = 0
     let borderRadiusSmall: CGFloat = 2
     let borderRadiusMedium: CGFloat = 4
@@ -75,7 +75,7 @@ private struct StubTokensProtocol: TokensProtocol {
     let typographyFontWeightMedium: UIFont.Weight = .medium
 }
 
-private struct StubComponentsProtocol: ComponentsProtocol {
+private struct StubComponentsProtocol: Components {
     let buttonDefaultFontSize: CGFloat = 14
     let buttonDefaultFontWeight: UIFont.Weight = .medium
     let buttonDefaultLetterSpacing: CGFloat = 0.44

@@ -1,6 +1,6 @@
 import Foundation
 
-extension TokensProtocol {
+extension Tokens {
     var opacityTransparent: CGFloat { 0 }
     var opacity01: CGFloat { 0.04 }
     var opacity02: CGFloat { 0.08 }

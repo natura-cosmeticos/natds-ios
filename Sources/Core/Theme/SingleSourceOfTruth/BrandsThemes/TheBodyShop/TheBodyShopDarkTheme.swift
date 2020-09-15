@@ -17,12 +17,12 @@
  *
  */
 
-struct TheBodyShopDarkTheme: ThemeProtocol {
-    let tokens: TokensProtocol = TheBodyShopDarkTokens()
-    let components: ComponentsProtocol = TheBodyShopDarkComponents()
+struct TheBodyShopDarkTheme: Theme {
+    let tokens: Tokens = TheBodyShopDarkTokens()
+    let components: Components = TheBodyShopDarkComponents()
 }
 
-struct TheBodyShopDarkTokens: TokensProtocol {
+struct TheBodyShopDarkTokens: Tokens {
     let borderRadiusNone: CGFloat = 0
     let borderRadiusSmall: CGFloat = 2
     let borderRadiusMedium: CGFloat = 4
@@ -92,7 +92,7 @@ struct TheBodyShopDarkTokens: TokensProtocol {
     let typographyFontWeightMedium: UIFont.Weight = .medium
 }
 
-struct TheBodyShopDarkComponents: ComponentsProtocol {
+struct TheBodyShopDarkComponents: Components {
     let buttonDefaultFontSize: CGFloat = 14
     let buttonDefaultFontWeight: UIFont.Weight = .medium
     let buttonDefaultLetterSpacing: CGFloat = 0.44

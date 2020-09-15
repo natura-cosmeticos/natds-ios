@@ -17,12 +17,12 @@
  *
  */
 
-struct NaturaDarkTheme: ThemeProtocol {
-    let tokens: TokensProtocol = NaturaDarkTokens()
-    let components: ComponentsProtocol = NaturaDarkComponents()
+struct NaturaDarkTheme: Theme {
+    let tokens: Tokens = NaturaDarkTokens()
+    let components: Components = NaturaDarkComponents()
 }
 
-struct NaturaDarkTokens: TokensProtocol {
+struct NaturaDarkTokens: Tokens {
     let borderRadiusNone: CGFloat = 0
     let borderRadiusSmall: CGFloat = 2
     let borderRadiusMedium: CGFloat = 4
@@ -92,7 +92,7 @@ struct NaturaDarkTokens: TokensProtocol {
     let typographyFontWeightMedium: UIFont.Weight = .medium
 }
 
-struct NaturaDarkComponents: ComponentsProtocol {
+struct NaturaDarkComponents: Components {
     let buttonDefaultFontSize: CGFloat = 14
     let buttonDefaultFontWeight: UIFont.Weight = .medium
     let buttonDefaultLetterSpacing: CGFloat = 0.44
