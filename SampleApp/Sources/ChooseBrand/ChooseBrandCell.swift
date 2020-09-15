@@ -59,9 +59,9 @@ extension ChooseBrandCell {
     private func addConstraints() {
         NSLayoutConstraint.activate([
             cardView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: NatSpacing.tiny),
-            cardView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -NatSpacing.tiny),
+            cardView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -NatSpacing.small),
             cardView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -NatSpacing.tiny),
-            cardView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: NatSpacing.tiny),
+            cardView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: NatSpacing.small),
 
             brandImageView.centerXAnchor.constraint(equalTo: cardView.centerXAnchor),
             brandImageView.centerYAnchor.constraint(equalTo: cardView.centerYAnchor)

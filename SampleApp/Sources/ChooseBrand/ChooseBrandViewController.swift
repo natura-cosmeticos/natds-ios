@@ -19,6 +19,7 @@ final class ChooseBrandViewController: UIViewController {
         tableView.register(ChooseBrandCell.self, forCellReuseIdentifier: ChooseBrandCell.reuseIdentifier)
         tableView.sectionHeaderHeight = 193
         tableView.rowHeight = 80
+        tableView.separatorStyle = .none
         tableView.bounces = false
 
         return tableView
