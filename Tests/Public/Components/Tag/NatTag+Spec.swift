@@ -43,7 +43,7 @@ final class NatTagSpec: QuickSpec {
 
             context("when text is empty") {
                 it("sets isHidden to true") {
-                    sut.configure(text: "stub text")
+                    sut.configure(text: "")
 
                     let label = sut.subviews.first as? UILabel
 
