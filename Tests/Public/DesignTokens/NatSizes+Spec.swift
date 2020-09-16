@@ -76,13 +76,13 @@ final class NatSizesSpec: QuickSpec {
 
             describe("#largeXX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.largeXX).to(equal(tokens.sizeLargeXx))
+                    expect(systemUnderTest.largeXX).to(equal(tokens.sizeLargeXX))
                 }
             }
 
             describe("#largeXXX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.largeXXX).to(equal(tokens.sizeLargeXxx))
+                    expect(systemUnderTest.largeXXX).to(equal(tokens.sizeLargeXXX))
                 }
             }
 
@@ -100,13 +100,13 @@ final class NatSizesSpec: QuickSpec {
 
             describe("#hugeXX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.hugeXX).to(equal(tokens.sizeHugeXx))
+                    expect(systemUnderTest.hugeXX).to(equal(tokens.sizeHugeXX))
                 }
             }
 
             describe("#hugeXXX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.hugeXXX).to(equal(tokens.sizeHugeXxx))
+                    expect(systemUnderTest.hugeXXX).to(equal(tokens.sizeHugeXXX))
                 }
             }
 
@@ -186,13 +186,13 @@ final class NatSizesSpec: QuickSpec {
 
             describe("#largeXX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.largeXX).to(equal(tokens.sizeLargeXx))
+                    expect(systemUnderTest.largeXX).to(equal(tokens.sizeLargeXX))
                 }
             }
 
             describe("#largeXXX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.largeXXX).to(equal(tokens.sizeLargeXxx))
+                    expect(systemUnderTest.largeXXX).to(equal(tokens.sizeLargeXXX))
                 }
             }
 
@@ -210,13 +210,13 @@ final class NatSizesSpec: QuickSpec {
 
             describe("#hugeXX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.hugeXX).to(equal(tokens.sizeHugeXx))
+                    expect(systemUnderTest.hugeXX).to(equal(tokens.sizeHugeXX))
                 }
             }
 
             describe("#hugeXXX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.hugeXXX).to(equal(tokens.sizeHugeXxx))
+                    expect(systemUnderTest.hugeXXX).to(equal(tokens.sizeHugeXXX))
                 }
             }
 
@@ -296,13 +296,13 @@ final class NatSizesSpec: QuickSpec {
 
             describe("#largeXX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.largeXX).to(equal(tokens.sizeLargeXx))
+                    expect(systemUnderTest.largeXX).to(equal(tokens.sizeLargeXX))
                 }
             }
 
             describe("#largeXXX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.largeXXX).to(equal(tokens.sizeLargeXxx))
+                    expect(systemUnderTest.largeXXX).to(equal(tokens.sizeLargeXXX))
                 }
             }
 
@@ -320,13 +320,13 @@ final class NatSizesSpec: QuickSpec {
 
             describe("#hugeXX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.hugeXX).to(equal(tokens.sizeHugeXx))
+                    expect(systemUnderTest.hugeXX).to(equal(tokens.sizeHugeXX))
                 }
             }
 
             describe("#hugeXXX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.hugeXXX).to(equal(tokens.sizeHugeXxx))
+                    expect(systemUnderTest.hugeXXX).to(equal(tokens.sizeHugeXXX))
                 }
             }
 
@@ -406,13 +406,13 @@ final class NatSizesSpec: QuickSpec {
 
             describe("#largeXX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.largeXX).to(equal(tokens.sizeLargeXx))
+                    expect(systemUnderTest.largeXX).to(equal(tokens.sizeLargeXX))
                 }
             }
 
             describe("#largeXXX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.largeXXX).to(equal(tokens.sizeLargeXxx))
+                    expect(systemUnderTest.largeXXX).to(equal(tokens.sizeLargeXXX))
                 }
             }
 
@@ -430,13 +430,13 @@ final class NatSizesSpec: QuickSpec {
 
             describe("#hugeXX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.hugeXX).to(equal(tokens.sizeHugeXx))
+                    expect(systemUnderTest.hugeXX).to(equal(tokens.sizeHugeXX))
                 }
             }
 
             describe("#hugeXXX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.hugeXXX).to(equal(tokens.sizeHugeXxx))
+                    expect(systemUnderTest.hugeXXX).to(equal(tokens.sizeHugeXXX))
                 }
             }
 
@@ -516,13 +516,13 @@ final class NatSizesSpec: QuickSpec {
 
             describe("#largeXX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.largeXX).to(equal(tokens.sizeLargeXx))
+                    expect(systemUnderTest.largeXX).to(equal(tokens.sizeLargeXX))
                 }
             }
 
             describe("#largeXXX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.largeXXX).to(equal(tokens.sizeLargeXxx))
+                    expect(systemUnderTest.largeXXX).to(equal(tokens.sizeLargeXXX))
                 }
             }
 
@@ -540,13 +540,13 @@ final class NatSizesSpec: QuickSpec {
 
             describe("#hugeXX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.hugeXX).to(equal(tokens.sizeHugeXx))
+                    expect(systemUnderTest.hugeXX).to(equal(tokens.sizeHugeXX))
                 }
             }
 
             describe("#hugeXXX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.hugeXXX).to(equal(tokens.sizeHugeXxx))
+                    expect(systemUnderTest.hugeXXX).to(equal(tokens.sizeHugeXXX))
                 }
             }
 
@@ -626,13 +626,13 @@ final class NatSizesSpec: QuickSpec {
 
             describe("#largeXX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.largeXX).to(equal(tokens.sizeLargeXx))
+                    expect(systemUnderTest.largeXX).to(equal(tokens.sizeLargeXX))
                 }
             }
 
             describe("#largeXXX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.largeXXX).to(equal(tokens.sizeLargeXxx))
+                    expect(systemUnderTest.largeXXX).to(equal(tokens.sizeLargeXXX))
                 }
             }
 
@@ -650,13 +650,13 @@ final class NatSizesSpec: QuickSpec {
 
             describe("#hugeXX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.hugeXX).to(equal(tokens.sizeHugeXx))
+                    expect(systemUnderTest.hugeXX).to(equal(tokens.sizeHugeXX))
                 }
             }
 
             describe("#hugeXXX") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.hugeXXX).to(equal(tokens.sizeHugeXxx))
+                    expect(systemUnderTest.hugeXXX).to(equal(tokens.sizeHugeXXX))
                 }
             }
 

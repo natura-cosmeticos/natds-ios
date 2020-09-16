@@ -17,36 +17,36 @@
  *
  */
 
-struct TheBodyShopLightTheme: Theme {
-    let tokens: Tokens = TheBodyShopLightTokens()
-    let components: Components = TheBodyShopLightComponents()
+struct AesopDarkTheme: Theme {
+    let tokens: Tokens = AesopDarkTokens()
+    let components: Components = AesopDarkComponents()
 }
 
-struct TheBodyShopLightTokens: Tokens {
+struct AesopDarkTokens: Tokens {
     let borderRadiusNone: CGFloat = 0
     let borderRadiusSmall: CGFloat = 2
     let borderRadiusMedium: CGFloat = 4
     let borderRadiusLarge: CGFloat = 8
-    let colorPrimary = "#004236"
-    let colorOnPrimary = "#FFFFFF"
-    let colorPrimaryLight = "#356D60"
-    let colorOnPrimaryLight = "#FFFFFF"
-    let colorPrimaryDark = "#001D10"
-    let colorOnPrimaryDark = "#FFFFFF"
-    let colorSecondary = "#A55F53"
-    let colorOnSecondary = "#FFFFFF"
-    let colorSecondaryLight = "#D98D7F"
-    let colorOnSecondaryLight = "#FFFFFF"
-    let colorSecondaryDark = "#73342A"
-    let colorOnSecondaryDark = "#FFFFFF"
-    let colorBackground = "#FAFAFA"
-    let colorOnBackground = "#333333"
-    let colorSurface = "#FFFFFF"
-    let colorOnSurface = "#333333"
-    let colorHighlight = "#000000"
-    let colorHighEmphasis = "#333333"
-    let colorMediumEmphasis = "#777777"
-    let colorLowEmphasis = "#BBBBBB"
+    let colorPrimary = "#F1F1F0"
+    let colorOnPrimary = "#000000"
+    let colorPrimaryLight = "#FFFFFF"
+    let colorOnPrimaryLight = "#000000"
+    let colorPrimaryDark = "#BEBEBE"
+    let colorOnPrimaryDark = "#000000"
+    let colorSecondary = "#DDCB91"
+    let colorOnSecondary = "#000000"
+    let colorSecondaryLight = "#FFFEC2"
+    let colorOnSecondaryLight = "#000000"
+    let colorSecondaryDark = "#AA9A63"
+    let colorOnSecondaryDark = "#000000"
+    let colorBackground = "#121212"
+    let colorOnBackground = "#FFFFFF"
+    let colorSurface = "#333333"
+    let colorOnSurface = "#FFFFFF"
+    let colorHighlight = "#FFFFFF"
+    let colorHighEmphasis = "#FAFAFA"
+    let colorMediumEmphasis = "#BBBBBB"
+    let colorLowEmphasis = "#777777"
     let colorLink = "#227BBD"
     let colorOnLink = "#FFFFFF"
     let colorSuccess = "#569A32"
@@ -160,7 +160,7 @@ struct TheBodyShopLightTokens: Tokens {
     let typographyFontWeightMedium: UIFont.Weight = .medium
 }
 
-struct TheBodyShopLightComponents: Components {
+struct AesopDarkComponents: Components {
     let buttonDefaultFontSize: CGFloat = 14
     let buttonDefaultFontWeight: UIFont.Weight = .medium
     let buttonDefaultLetterSpacing: CGFloat = 0.44

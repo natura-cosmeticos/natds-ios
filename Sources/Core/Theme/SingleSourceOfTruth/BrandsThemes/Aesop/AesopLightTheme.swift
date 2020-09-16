@@ -17,27 +17,27 @@
  *
  */
 
-struct TheBodyShopLightTheme: Theme {
-    let tokens: Tokens = TheBodyShopLightTokens()
-    let components: Components = TheBodyShopLightComponents()
+struct AesopLightTheme: Theme {
+    let tokens: Tokens = AesopLightTokens()
+    let components: Components = AesopLightComponents()
 }
 
-struct TheBodyShopLightTokens: Tokens {
+struct AesopLightTokens: Tokens {
     let borderRadiusNone: CGFloat = 0
     let borderRadiusSmall: CGFloat = 2
     let borderRadiusMedium: CGFloat = 4
     let borderRadiusLarge: CGFloat = 8
-    let colorPrimary = "#004236"
+    let colorPrimary = "#262625"
     let colorOnPrimary = "#FFFFFF"
-    let colorPrimaryLight = "#356D60"
+    let colorPrimaryLight = "#4E4E4D"
     let colorOnPrimaryLight = "#FFFFFF"
-    let colorPrimaryDark = "#001D10"
+    let colorPrimaryDark = "#000000"
     let colorOnPrimaryDark = "#FFFFFF"
-    let colorSecondary = "#A55F53"
+    let colorSecondary = "#A6662B"
     let colorOnSecondary = "#FFFFFF"
-    let colorSecondaryLight = "#D98D7F"
-    let colorOnSecondaryLight = "#FFFFFF"
-    let colorSecondaryDark = "#73342A"
+    let colorSecondaryLight = "#DB9457"
+    let colorOnSecondaryLight = "#000000"
+    let colorSecondaryDark = "#733B00"
     let colorOnSecondaryDark = "#FFFFFF"
     let colorBackground = "#FAFAFA"
     let colorOnBackground = "#333333"
@@ -160,7 +160,7 @@ struct TheBodyShopLightTokens: Tokens {
     let typographyFontWeightMedium: UIFont.Weight = .medium
 }
 
-struct TheBodyShopLightComponents: Components {
+struct AesopLightComponents: Components {
     let buttonDefaultFontSize: CGFloat = 14
     let buttonDefaultFontWeight: UIFont.Weight = .medium
     let buttonDefaultLetterSpacing: CGFloat = 0.44

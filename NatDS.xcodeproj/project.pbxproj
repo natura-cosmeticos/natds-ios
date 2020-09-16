@@ -94,6 +94,8 @@
 		840C43422502842900EE9CAD /* NatIconButton+Sizes+Specs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840C43412502842900EE9CAD /* NatIconButton+Sizes+Specs.swift */; };
 		841FEABA24C5C1A100C50AFF /* NatLogoImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841FEAB924C5C1A100C50AFF /* NatLogoImages.swift */; };
 		841FEABC24C5CD6A00C50AFF /* NatLogoImages+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841FEABB24C5CD6A00C50AFF /* NatLogoImages+Spec.swift */; };
+		843123DF25123ED0002A7B6F /* AesopDarkTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843123DE25123ED0002A7B6F /* AesopDarkTokens.swift */; };
+		843123E125123F0C002A7B6F /* AesopLightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843123E025123F0C002A7B6F /* AesopLightTheme.swift */; };
 		84391DE224DB1B8B009D0BE8 /* NatDS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17433A27D62633345ECA245C99114C15 /* NatDS.framework */; };
 		84391DE824DB1C67009D0BE8 /* NatDialogController+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D557EC044D85EC418D42A00C93EEC23D /* NatDialogController+Snapshot+Tests.swift */; };
 		84391DEA24DB477F009D0BE8 /* NatShortcut+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A818BC24B784EA0007C7D5 /* NatShortcut+Snapshot+Tests.swift */; };
@@ -339,6 +341,8 @@
 		840C43412502842900EE9CAD /* NatIconButton+Sizes+Specs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatIconButton+Sizes+Specs.swift"; sourceTree = "<group>"; };
 		841FEAB924C5C1A100C50AFF /* NatLogoImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatLogoImages.swift; sourceTree = "<group>"; };
 		841FEABB24C5CD6A00C50AFF /* NatLogoImages+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatLogoImages+Spec.swift"; sourceTree = "<group>"; };
+		843123DE25123ED0002A7B6F /* AesopDarkTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AesopDarkTokens.swift; sourceTree = "<group>"; };
+		843123E025123F0C002A7B6F /* AesopLightTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AesopLightTheme.swift; sourceTree = "<group>"; };
 		84391DDD24DB1B8B009D0BE8 /* NatDSSnapShotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NatDSSnapShotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84391DE124DB1B8B009D0BE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		844A1E2224AE117400E93AD9 /* NatShortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatShortcut.swift; sourceTree = "<group>"; };
@@ -899,6 +903,15 @@
 			path = EventNames;
 			sourceTree = "<group>";
 		};
+		843123DD25123EB3002A7B6F /* Aesop */ = {
+			isa = PBXGroup;
+			children = (
+				843123DE25123ED0002A7B6F /* AesopDarkTokens.swift */,
+				843123E025123F0C002A7B6F /* AesopLightTheme.swift */,
+			);
+			path = Aesop;
+			sourceTree = "<group>";
+		};
 		84391DDE24DB1B8B009D0BE8 /* NatDSSnapShotTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -966,6 +979,7 @@
 		845AD7A524E2C8C5006CA226 /* BrandsThemes */ = {
 			isa = PBXGroup;
 			children = (
+				843123DD25123EB3002A7B6F /* Aesop */,
 				845AD7A624E2C8D3006CA226 /* Avon */,
 				847C828D24E3613E001CE116 /* Natura */,
 				847C828E24E3614C001CE116 /* TheBodyShop */,
@@ -2062,6 +2076,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26740A4924B3A60C00419526 /* NatBadge+Style.swift in Sources */,
+				843123E125123F0C002A7B6F /* AesopLightTheme.swift in Sources */,
 				84703F3C24F6ECD300FE01CA /* NatFonts+TextStyle.swift in Sources */,
 				845D099A250119AF00B05760 /* UIView+CenterBounds.swift in Sources */,
 				BBCC40A29117B4CB675FE57C3B0130E4 /* AssetsHelper.swift in Sources */,
@@ -2163,6 +2178,7 @@
 				93B1D8CFBB1420174B310CC4906AA2EF /* UIView+Frame.swift in Sources */,
 				77C55B339CA403354D76ABF05E283D5A /* ValueTextHighlight.swift in Sources */,
 				840B6A754236624B9738CBC3D5CFE895 /* ViewAnimatingWrapper.swift in Sources */,
+				843123DF25123ED0002A7B6F /* AesopDarkTokens.swift in Sources */,
 				EE1E7A9F49A18BCD194E0C03FB2F0074 /* ViewStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

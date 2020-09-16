@@ -66,12 +66,12 @@ protocol Tokens {
     var sizeMediumX: CGFloat { get }
     var sizeLarge: CGFloat { get }
     var sizeLargeX: CGFloat { get }
-    var sizeLargeXx: CGFloat { get }
-    var sizeLargeXxx: CGFloat { get }
+    var sizeLargeXX: CGFloat { get }
+    var sizeLargeXXX: CGFloat { get }
     var sizeHuge: CGFloat { get }
     var sizeHugeX: CGFloat { get }
-    var sizeHugeXx: CGFloat { get }
-    var sizeHugeXxx: CGFloat { get }
+    var sizeHugeXX: CGFloat { get }
+    var sizeHugeXXX: CGFloat { get }
     var sizeVeryHuge: CGFloat { get }
     var spacingNone: CGFloat { get }
     var spacingMicro: CGFloat { get }

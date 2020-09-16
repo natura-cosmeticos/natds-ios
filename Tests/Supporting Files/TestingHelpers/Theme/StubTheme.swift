@@ -49,12 +49,12 @@ private struct StubTokens: Tokens {
     let sizeMediumX: CGFloat = 56
     let sizeLarge: CGFloat = 64
     let sizeLargeX: CGFloat = 72
-    let sizeLargeXx: CGFloat = 80
-    let sizeLargeXxx: CGFloat = 88
+    let sizeLargeXX: CGFloat = 80
+    let sizeLargeXXX: CGFloat = 88
     let sizeHuge: CGFloat = 96
     let sizeHugeX: CGFloat = 128
-    let sizeHugeXx: CGFloat = 144
-    let sizeHugeXxx: CGFloat = 192
+    let sizeHugeXX: CGFloat = 144
+    let sizeHugeXXX: CGFloat = 192
     let sizeVeryHuge: CGFloat = 256
     let spacingNone: CGFloat = 0
     let spacingMicro: CGFloat = 4
