@@ -16,6 +16,7 @@ class ComponentsSection: SampleSection {
         NavigationDrawerItemViewController.self,
         ShortcutItemViewController.self,
         TabItemViewController.self,
+        TagViewController.self,
         TextFieldItemViewController.self,
         ValueTextHighlightItemViewController.self
     ]

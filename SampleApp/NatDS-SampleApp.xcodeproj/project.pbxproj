@@ -20,6 +20,7 @@
 		190F96D8AFCE86FA621E6BDD5A3390F2 /* ColorsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF7BFDAFFA13841520A52D2EDE5400D /* ColorsHeaderView.swift */; };
 		1D1DA594D70300F43F7B5F7BD9215C90 /* NatDS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EEBC24456A172162B3538C51FBFE2BA6 /* NatDS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		237BDC613256825FFF9C564C51CEBED6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60F631F3D82A74E2CC246BA76661EF48 /* LaunchScreen.storyboard */; };
+		2600C21E25127D600040C4C4 /* TagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600C21D25127D600040C4C4 /* TagViewController.swift */; };
 		265B17EE24AFBE5500FD0407 /* BadgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265B17ED24AFBE5500FD0407 /* BadgeViewController.swift */; };
 		47382B136831753E7775B5E76392DA56 /* ColorsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD277263F8F3EE00B21A0DE2E9849D97 /* ColorsCell.swift */; };
 		4FB74E3BCCB54EE2242A9A78778F6024 /* TypographyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE39135EC83E5AE456AC7FBF5FE7F9CA /* TypographyViewController.swift */; };
@@ -75,6 +76,7 @@
 		0E0C618924C7749300AF8FBB /* AppBarDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBarDataSource.swift; sourceTree = "<group>"; };
 		0E45136A24BE1DEB002296AE /* AppBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBarViewController.swift; sourceTree = "<group>"; };
 		1E864ED7BB360AA6C6091D7E1053A5ED /* OpacityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpacityViewController.swift; sourceTree = "<group>"; };
+		2600C21D25127D600040C4C4 /* TagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewController.swift; sourceTree = "<group>"; };
 		265B17ED24AFBE5500FD0407 /* BadgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeViewController.swift; sourceTree = "<group>"; };
 		26D4B7F03E632BFE339DA40C2269B9D9 /* NavigationDrawerItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerItemViewController.swift; sourceTree = "<group>"; };
 		2D71CBBDDF4F8308F1C24A8F907CBE25 /* NatDS-SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NatDS-SampleApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,6 +168,14 @@
 				BFCC7C3B8819A99402107EA24F698A53 /* ElevationViewController.swift */,
 			);
 			path = Elevation;
+			sourceTree = "<group>";
+		};
+		2600C21C25127D500040C4C4 /* Tag */ = {
+			isa = PBXGroup;
+			children = (
+				2600C21D25127D600040C4C4 /* TagViewController.swift */,
+			);
+			path = Tag;
 			sourceTree = "<group>";
 		};
 		265B17EC24AFBE2A00FD0407 /* Badge */ = {
@@ -273,6 +283,7 @@
 				FC4556C0DD691C829616B3DDA86F0CBA /* NavigationDrawer */,
 				844A1E2424AE2B7600E93AD9 /* Shortcut */,
 				C420063DEF581D12DAA6D31645B6B382 /* Tab */,
+				2600C21C25127D500040C4C4 /* Tag */,
 				C1D1F3FC973CC3D14F86C680F200601D /* ValueText */,
 				62B703332C6994E56C229AEDFFD1B5EB /* ComponentsSection.swift */,
 				8449828024C0C9F200CDA676 /* LogoItemViewController.swift */,
@@ -571,6 +582,7 @@
 				265B17EE24AFBE5500FD0407 /* BadgeViewController.swift in Sources */,
 				DC40596AEA7EE184F0A1BCD2F3BFF7FC /* DesignSection.swift in Sources */,
 				6B065E9FA8AEAD33D6341DB8C671D74C /* DialogItemViewController.swift in Sources */,
+				2600C21E25127D600040C4C4 /* TagViewController.swift in Sources */,
 				B14E0B8A51D237CFBA1AD574ED6EC10C /* DividerViewController.swift in Sources */,
 				D10339C459C644B3172B6106B51A961C /* ElevationCell.swift in Sources */,
 				04AA815DDD6F9388F3A1010428342BBB /* ElevationViewController.swift in Sources */,
