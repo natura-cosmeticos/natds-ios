@@ -9,6 +9,18 @@ final class AvailableThemeSpec: QuickSpec {
             let systemUnderTest = AvailableTheme.self
 
             it("initializes with expected value") {
+                let availableTheme = systemUnderTest.init(theme: AesopDarkTheme())
+
+                expect(availableTheme).to(equal(.aesopDark))
+            }
+
+            it("initializes with expected value") {
+                let availableTheme = systemUnderTest.init(theme: AesopLightTheme())
+
+                expect(availableTheme).to(equal(.aesopLight))
+            }
+
+            it("initializes with expected value") {
                 let availableTheme = systemUnderTest.init(theme: AvonDarkTheme())
 
                 expect(availableTheme).to(equal(.avonDark))
@@ -53,6 +65,14 @@ final class AvailableThemeSpec: QuickSpec {
 
         describe("#newInstance") {
             let systemUnderTest = AvailableTheme.self
+
+            it("returns a new instance of expected type") {
+                expect(systemUnderTest.aesopDark.newInstance).to(beAnInstanceOf(AesopDarkTheme.self))
+            }
+
+            it("returns a new instance of expected type") {
+                expect(systemUnderTest.aesopLight.newInstance).to(beAnInstanceOf(AesopLightTheme.self))
+            }
 
             it("returns a new instance of expected type") {
                 expect(systemUnderTest.avonDark.newInstance).to(beAnInstanceOf(AvonDarkTheme.self))

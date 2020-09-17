@@ -23,7 +23,7 @@ final class DesignSystemSpec: QuickSpec {
                 expect(storage.currentTheme).to(beNil())
             }
 
-            it("does not call storage.save") {
+            it("does not have chaced colors") {
                 expect(storage.cachedColors.count).to(equal(0))
             }
 
@@ -35,6 +35,52 @@ final class DesignSystemSpec: QuickSpec {
         describe("#configure(theme:)") {
             beforeEach {
                 storage.cachedColors = ["#FFFFFF": .white]
+            }
+
+            context("when the theme is .aesopDark") {
+                beforeEach {
+                    systemUnderTest.configure(with: .aesopDark)
+                }
+
+                it("sets an expected theme") {
+                    expect(storage.currentTheme).to(beAnInstanceOf(AesopDarkTheme.self))
+                }
+
+                it("cleans cached color") {
+                    expect(storage.cachedColors.count).to(equal(0))
+                }
+
+                it("calls notificationCenter.post only once") {
+                    expect(notificationSpy.postInvocations).to(equal(1))
+                }
+
+                it("calls notificationCenter.post with expected parameters") {
+                    expect(notificationSpy.lastPostSent?.name).to(equal(.themeHasChanged))
+                    expect(notificationSpy.lastPostSent?.object).to(beNil())
+                }
+            }
+
+            context("when the theme is .aesopLight") {
+                beforeEach {
+                    systemUnderTest.configure(with: .aesopLight)
+                }
+
+                it("sets an expected theme") {
+                    expect(storage.currentTheme).to(beAnInstanceOf(AesopLightTheme.self))
+                }
+
+                it("cleans cached color") {
+                    expect(storage.cachedColors.count).to(equal(0))
+                }
+
+                it("calls notificationCenter.post only once") {
+                    expect(notificationSpy.postInvocations).to(equal(1))
+                }
+
+                it("calls notificationCenter.post with expected parameters") {
+                    expect(notificationSpy.lastPostSent?.name).to(equal(.themeHasChanged))
+                    expect(notificationSpy.lastPostSent?.object).to(beNil())
+                }
             }
 
             context("when the theme is .avonDark") {

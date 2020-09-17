@@ -14,14 +14,14 @@
 */
 
 public enum AvailableTheme {
+    case aesopDark
+    case aesopLight
     case avonDark
     case avonLight
     case naturaDark
     case naturaLight
     case theBodyShopDark
     case theBodyShopLight
-    case aesopDark
-    case aesopLight
 
     init?(theme: Theme) {
         switch theme {
