@@ -57,6 +57,7 @@ public final class NatTag: UIView {
         backgroundColor = .clear
         addSubview(label)
         addConstraints()
+        isHidden = true
     }
 
     private func addConstraints() {
