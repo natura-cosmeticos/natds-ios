@@ -22,13 +22,13 @@ final class NatOpacitiesSpec: QuickSpec {
 
             describe("#opacity01") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity01).to(equal(tokens.opacity01))
+                    expect(systemUnderTest.opacity01).to(equal(tokens.opacityLower))
                 }
             }
 
             describe("#opacity02") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity02).to(equal(tokens.opacity02))
+                    expect(systemUnderTest.opacity02).to(equal(tokens.opacityVeryLow))
                 }
             }
 
@@ -52,7 +52,7 @@ final class NatOpacitiesSpec: QuickSpec {
 
             describe("#opacity06") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity06).to(equal(tokens.opacity06))
+                    expect(systemUnderTest.opacity06).to(equal(tokens.opacityDisabled))
                 }
             }
 
@@ -64,7 +64,7 @@ final class NatOpacitiesSpec: QuickSpec {
 
             describe("#opacity08") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity08).to(equal(tokens.opacity08))
+                    expect(systemUnderTest.opacity08).to(equal(tokens.opacityMediumHigh))
                 }
             }
 
@@ -102,13 +102,13 @@ final class NatOpacitiesSpec: QuickSpec {
 
             describe("#opacity01") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity01).to(equal(tokens.opacity01))
+                    expect(systemUnderTest.opacity01).to(equal(tokens.opacityLower))
                 }
             }
 
             describe("#opacity02") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity02).to(equal(tokens.opacity02))
+                    expect(systemUnderTest.opacity02).to(equal(tokens.opacityVeryLow))
                 }
             }
 
@@ -132,7 +132,7 @@ final class NatOpacitiesSpec: QuickSpec {
 
             describe("#opacity06") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity06).to(equal(tokens.opacity06))
+                    expect(systemUnderTest.opacity06).to(equal(tokens.opacityDisabled))
                 }
             }
 
@@ -144,7 +144,7 @@ final class NatOpacitiesSpec: QuickSpec {
 
             describe("#opacity08") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity08).to(equal(tokens.opacity08))
+                    expect(systemUnderTest.opacity08).to(equal(tokens.opacityMediumHigh))
                 }
             }
 
@@ -182,13 +182,13 @@ final class NatOpacitiesSpec: QuickSpec {
 
             describe("#opacity01") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity01).to(equal(tokens.opacity01))
+                    expect(systemUnderTest.opacity01).to(equal(tokens.opacityLower))
                 }
             }
 
             describe("#opacity02") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity02).to(equal(tokens.opacity02))
+                    expect(systemUnderTest.opacity02).to(equal(tokens.opacityVeryLow))
                 }
             }
 
@@ -212,7 +212,7 @@ final class NatOpacitiesSpec: QuickSpec {
 
             describe("#opacity06") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity06).to(equal(tokens.opacity06))
+                    expect(systemUnderTest.opacity06).to(equal(tokens.opacityDisabled))
                 }
             }
 
@@ -224,7 +224,7 @@ final class NatOpacitiesSpec: QuickSpec {
 
             describe("#opacity08") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity08).to(equal(tokens.opacity08))
+                    expect(systemUnderTest.opacity08).to(equal(tokens.opacityMediumHigh))
                 }
             }
 
@@ -262,13 +262,13 @@ final class NatOpacitiesSpec: QuickSpec {
 
             describe("#opacity01") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity01).to(equal(tokens.opacity01))
+                    expect(systemUnderTest.opacity01).to(equal(tokens.opacityLower))
                 }
             }
 
             describe("#opacity02") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity02).to(equal(tokens.opacity02))
+                    expect(systemUnderTest.opacity02).to(equal(tokens.opacityVeryLow))
                 }
             }
 
@@ -292,7 +292,7 @@ final class NatOpacitiesSpec: QuickSpec {
 
             describe("#opacity06") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity06).to(equal(tokens.opacity06))
+                    expect(systemUnderTest.opacity06).to(equal(tokens.opacityDisabled))
                 }
             }
 
@@ -304,7 +304,7 @@ final class NatOpacitiesSpec: QuickSpec {
 
             describe("#opacity08") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity08).to(equal(tokens.opacity08))
+                    expect(systemUnderTest.opacity08).to(equal(tokens.opacityMediumHigh))
                 }
             }
 
@@ -342,13 +342,13 @@ final class NatOpacitiesSpec: QuickSpec {
 
             describe("#opacity01") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity01).to(equal(tokens.opacity01))
+                    expect(systemUnderTest.opacity01).to(equal(tokens.opacityLower))
                 }
             }
 
             describe("#opacity02") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity02).to(equal(tokens.opacity02))
+                    expect(systemUnderTest.opacity02).to(equal(tokens.opacityVeryLow))
                 }
             }
 
@@ -372,7 +372,7 @@ final class NatOpacitiesSpec: QuickSpec {
 
             describe("#opacity06") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity06).to(equal(tokens.opacity06))
+                    expect(systemUnderTest.opacity06).to(equal(tokens.opacityDisabled))
                 }
             }
 
@@ -384,7 +384,7 @@ final class NatOpacitiesSpec: QuickSpec {
 
             describe("#opacity08") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity08).to(equal(tokens.opacity08))
+                    expect(systemUnderTest.opacity08).to(equal(tokens.opacityMediumHigh))
                 }
             }
 
@@ -422,13 +422,13 @@ final class NatOpacitiesSpec: QuickSpec {
 
             describe("#opacity01") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity01).to(equal(tokens.opacity01))
+                    expect(systemUnderTest.opacity01).to(equal(tokens.opacityLower))
                 }
             }
 
             describe("#opacity02") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity02).to(equal(tokens.opacity02))
+                    expect(systemUnderTest.opacity02).to(equal(tokens.opacityVeryLow))
                 }
             }
 
@@ -452,7 +452,7 @@ final class NatOpacitiesSpec: QuickSpec {
 
             describe("#opacity06") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity06).to(equal(tokens.opacity06))
+                    expect(systemUnderTest.opacity06).to(equal(tokens.opacityDisabled))
                 }
             }
 
@@ -464,7 +464,7 @@ final class NatOpacitiesSpec: QuickSpec {
 
             describe("#opacity08") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity08).to(equal(tokens.opacity08))
+                    expect(systemUnderTest.opacity08).to(equal(tokens.opacityMediumHigh))
                 }
             }
 

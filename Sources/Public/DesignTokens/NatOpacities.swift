@@ -18,15 +18,15 @@
 
 public enum NatOpacities {
     public static var transparent: CGFloat { getTokenFromTheme(\.opacityTransparent) }
-    public static var opacity01: CGFloat { getTokenFromTheme(\.opacity01) }
-    public static var opacity02: CGFloat { getTokenFromTheme(\.opacity02) }
-    public static var opacity03: CGFloat { getTokenFromTheme(\.opacity03) }
-    public static var opacity04: CGFloat { getTokenFromTheme(\.opacity04) }
-    public static var opacity05: CGFloat { getTokenFromTheme(\.opacity05) }
-    public static var opacity06: CGFloat { getTokenFromTheme(\.opacity06) }
-    public static var opacity07: CGFloat { getTokenFromTheme(\.opacity07) }
-    public static var opacity08: CGFloat { getTokenFromTheme(\.opacity08) }
-    public static var opacity09: CGFloat { getTokenFromTheme(\.opacity09) }
-    public static var opacity10: CGFloat { getTokenFromTheme(\.opacity10) }
-    public static var full: CGFloat { getTokenFromTheme(\.opacityFull) }
+    public static var opacity01: CGFloat { getTokenFromTheme(\.opacityLower) }
+    public static var opacity02: CGFloat { getTokenFromTheme(\.opacityVeryLow) }
+    public static var opacity03: CGFloat { getTokenFromTheme(\.opacityLow) }
+    public static var opacity04: CGFloat { getTokenFromTheme(\.opacityMediumLow) }
+    public static var opacity05: CGFloat { getTokenFromTheme(\.opacityDisabledLow) }
+    public static var opacity06: CGFloat { getTokenFromTheme(\.opacityDisabled) }
+    public static var opacity07: CGFloat { getTokenFromTheme(\.opacityMedium) }
+    public static var opacity08: CGFloat { getTokenFromTheme(\.opacityMediumHigh) }
+    public static var opacity09: CGFloat { getTokenFromTheme(\.opacityHigh) }
+    public static var opacity10: CGFloat { getTokenFromTheme(\.opacityVeryHigh) }
+    public static var full: CGFloat { getTokenFromTheme(\.opacityOpaque) }
 }

@@ -91,17 +91,17 @@ protocol Tokens {
     var typographyFontWeightRegular: UIFont.Weight { get }
     var typographyFontWeightMedium: UIFont.Weight { get }
     var opacityTransparent: CGFloat { get }
-    var opacity01: CGFloat { get }
-    var opacity02: CGFloat { get }
-    var opacity03: CGFloat { get }
-    var opacity04: CGFloat { get }
-    var opacity05: CGFloat { get }
-    var opacity06: CGFloat { get }
-    var opacity07: CGFloat { get }
-    var opacity08: CGFloat { get }
-    var opacity09: CGFloat { get }
-    var opacity10: CGFloat { get }
-    var opacityFull: CGFloat { get }
+    var opacityLower: CGFloat { get }
+    var opacityVeryLow: CGFloat { get }
+    var opacityLow: CGFloat { get }
+    var opacityMediumLow: CGFloat { get }
+    var opacityDisabledLow: CGFloat { get }
+    var opacityDisabled: CGFloat { get }
+    var opacityMedium: CGFloat { get }
+    var opacityMediumHigh: CGFloat { get }
+    var opacityHigh: CGFloat { get }
+    var opacityVeryHigh: CGFloat { get }
+    var opacityOpaque: CGFloat { get }
     var elevationNone: ElevationAttributes { get }
     var elevation01: ElevationAttributes { get }
     var elevation02: ElevationAttributes { get }

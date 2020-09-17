@@ -93,7 +93,7 @@ public final class NatDialogController: UIViewController {
         modalPresentationStyle = .overCurrentContext
         modalTransitionStyle = .crossDissolve
 
-        let opacity = getTokenFromTheme(\.opacity08)
+        let opacity = getTokenFromTheme(\.opacityMediumHigh)
         view.backgroundColor = UIColor.black.withAlphaComponent(opacity)
 
         containerView.layer.cornerRadius = getTokenFromTheme(\.borderRadiusMedium)
