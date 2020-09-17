@@ -23,6 +23,8 @@ public struct NatLogoImages {
         guard let theme = DesignSystem().currentTheme else { return nil }
 
         switch theme {
+        case .aesopDark, .aesopLight:
+            return AssetsHelper.image(from: "Logo/Aesop/Horizontal")
         case .avonDark, .avonLight:
             return AssetsHelper.image(from: "Logo/Avon/Horizontal")
         case .naturaDark, .naturaLight:
@@ -36,6 +38,8 @@ public struct NatLogoImages {
         guard let theme = DesignSystem().currentTheme else { return nil }
 
         switch theme {
+        case .aesopDark, .aesopLight:
+            return AssetsHelper.image(from: "Logo/Aesop/Vertical")
         case .avonDark, .avonLight:
             return AssetsHelper.image(from: "Logo/Avon/Vertical")
         case .naturaDark, .naturaLight:
