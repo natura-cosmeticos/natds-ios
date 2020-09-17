@@ -7,8 +7,8 @@
 
     Exemple of usage:
 
-        containerView.alpha = NatOpacity.opacity02
-        profileView.alpha = NatOpacity.opacity03
+        containerView.alpha = NatOpacity.veryHigh
+        profileView.alpha = NatOpacity.lower
 
  - Requires:
         It's necessary to configure the Design System with a theme or fatalError will be raised.
@@ -17,7 +17,7 @@
 */
 
 public enum NatOpacities {
-    public static var transparent: CGFloat { getTokenFromTheme(\.opacityTransparent) }
+
     public static var opacity01: CGFloat { getTokenFromTheme(\.opacityLower) }
     public static var opacity02: CGFloat { getTokenFromTheme(\.opacityVeryLow) }
     public static var opacity03: CGFloat { getTokenFromTheme(\.opacityLow) }
@@ -29,4 +29,17 @@ public enum NatOpacities {
     public static var opacity09: CGFloat { getTokenFromTheme(\.opacityHigh) }
     public static var opacity10: CGFloat { getTokenFromTheme(\.opacityVeryHigh) }
     public static var full: CGFloat { getTokenFromTheme(\.opacityOpaque) }
+
+    public static var transparent: CGFloat { getTokenFromTheme(\.opacityTransparent) }
+    public static var lower: CGFloat { getTokenFromTheme(\.opacityLower) }
+    public static var veryLow: CGFloat { getTokenFromTheme(\.opacityVeryLow) }
+    public static var low: CGFloat { getTokenFromTheme(\.opacityLow) }
+    public static var mediumLow: CGFloat { getTokenFromTheme(\.opacityMediumLow) }
+    public static var disabledLow: CGFloat { getTokenFromTheme(\.opacityDisabledLow) }
+    public static var disabled: CGFloat { getTokenFromTheme(\.opacityDisabled) }
+    public static var medium: CGFloat { getTokenFromTheme(\.opacityMedium) }
+    public static var mediumHigh: CGFloat { getTokenFromTheme(\.opacityMediumHigh) }
+    public static var high: CGFloat { getTokenFromTheme(\.opacityHigh) }
+    public static var veryHigh: CGFloat { getTokenFromTheme(\.opacityVeryHigh) }
+    public static var opaque: CGFloat { getTokenFromTheme(\.opacityOpaque) }
 }

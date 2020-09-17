@@ -7,6 +7,166 @@ final class NatOpacitiesSpec: QuickSpec {
     override func spec() {
         let systemUnderTest = NatOpacities.self
 
+        context("AesopDark") {
+            let tokens = AesopDarkTokens()
+
+            beforeEach {
+                DesignSystem().configure(with: .aesopDark)
+            }
+
+            describe("#transparent") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.transparent).to(equal(tokens.opacityTransparent))
+                }
+            }
+
+            describe("#lower") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.lower).to(equal(tokens.opacityLower))
+                }
+            }
+
+            describe("#veryLow") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.veryLow).to(equal(tokens.opacityVeryLow))
+                }
+            }
+
+            describe("#low") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.low).to(equal(tokens.opacityLow))
+                }
+            }
+
+            describe("#mediumLow") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.mediumLow).to(equal(tokens.opacityMediumLow))
+                }
+            }
+
+            describe("#disabledLow") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.disabledLow).to(equal(tokens.opacityDisabledLow))
+                }
+            }
+
+            describe("#disabled") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.disabled).to(equal(tokens.opacityDisabled))
+                }
+            }
+
+            describe("#medium") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.medium).to(equal(tokens.opacityMedium))
+                }
+            }
+
+            describe("#mediumHigh") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.mediumHigh).to(equal(tokens.opacityMediumHigh))
+                }
+            }
+
+            describe("#high") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.high).to(equal(tokens.opacityHigh))
+                }
+            }
+
+            describe("#veryHigh") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.veryHigh).to(equal(tokens.opacityVeryHigh))
+                }
+            }
+
+            describe("#opaque") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.opaque).to(equal(tokens.opacityOpaque))
+                }
+            }
+        } // context - when using AesopDark as theme
+
+        context("AesopLight") {
+            let tokens = AesopLightTokens()
+
+            beforeEach {
+                DesignSystem().configure(with: .aesopLight)
+            }
+
+            describe("#transparent") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.transparent).to(equal(tokens.opacityTransparent))
+                }
+            }
+
+            describe("#lower") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.lower).to(equal(tokens.opacityLower))
+                }
+            }
+
+            describe("#veryLow") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.veryLow).to(equal(tokens.opacityVeryLow))
+                }
+            }
+
+            describe("#low") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.low).to(equal(tokens.opacityLow))
+                }
+            }
+
+            describe("#mediumLow") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.mediumLow).to(equal(tokens.opacityMediumLow))
+                }
+            }
+
+            describe("#disabledLow") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.disabledLow).to(equal(tokens.opacityDisabledLow))
+                }
+            }
+
+            describe("#disabled") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.disabled).to(equal(tokens.opacityDisabled))
+                }
+            }
+
+            describe("#medium") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.medium).to(equal(tokens.opacityMedium))
+                }
+            }
+
+            describe("#mediumHigh") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.mediumHigh).to(equal(tokens.opacityMediumHigh))
+                }
+            }
+
+            describe("#high") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.high).to(equal(tokens.opacityHigh))
+                }
+            }
+
+            describe("#veryHigh") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.veryHigh).to(equal(tokens.opacityVeryHigh))
+                }
+            }
+
+            describe("#opaque") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.opaque).to(equal(tokens.opacityOpaque))
+                }
+            }
+        } // context - when using AesopLight as theme
+
         context("AvonDark") {
             let tokens = AvonDarkTokens()
 
@@ -20,69 +180,69 @@ final class NatOpacitiesSpec: QuickSpec {
                 }
             }
 
-            describe("#opacity01") {
+            describe("#lower") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity01).to(equal(tokens.opacityLower))
+                    expect(systemUnderTest.lower).to(equal(tokens.opacityLower))
                 }
             }
 
-            describe("#opacity02") {
+            describe("#veryLow") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity02).to(equal(tokens.opacityVeryLow))
+                    expect(systemUnderTest.veryLow).to(equal(tokens.opacityVeryLow))
                 }
             }
 
-            describe("#opacity03") {
+            describe("#low") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity03).to(equal(tokens.opacity03))
+                    expect(systemUnderTest.low).to(equal(tokens.opacityLow))
                 }
             }
 
-            describe("#opacity04") {
+            describe("#mediumLow") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity04).to(equal(tokens.opacity04))
+                    expect(systemUnderTest.mediumLow).to(equal(tokens.opacityMediumLow))
                 }
             }
 
-            describe("#opacity05") {
+            describe("#disabledLow") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity05).to(equal(tokens.opacity05))
+                    expect(systemUnderTest.disabledLow).to(equal(tokens.opacityDisabledLow))
                 }
             }
 
-            describe("#opacity06") {
+            describe("#disabled") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity06).to(equal(tokens.opacityDisabled))
+                    expect(systemUnderTest.disabled).to(equal(tokens.opacityDisabled))
                 }
             }
 
-            describe("#opacity07") {
+            describe("#medium") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity07).to(equal(tokens.opacity07))
+                    expect(systemUnderTest.medium).to(equal(tokens.opacityMedium))
                 }
             }
 
-            describe("#opacity08") {
+            describe("#mediumHigh") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity08).to(equal(tokens.opacityMediumHigh))
+                    expect(systemUnderTest.mediumHigh).to(equal(tokens.opacityMediumHigh))
                 }
             }
 
-            describe("#opacity09") {
+            describe("#high") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity09).to(equal(tokens.opacity09))
+                    expect(systemUnderTest.high).to(equal(tokens.opacityHigh))
                 }
             }
 
-            describe("#opacity10") {
+            describe("#veryHigh") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity10).to(equal(tokens.opacity10))
+                    expect(systemUnderTest.veryHigh).to(equal(tokens.opacityVeryHigh))
                 }
             }
 
-            describe("#full") {
+            describe("#opaque") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.full).to(equal(tokens.opacityFull))
+                    expect(systemUnderTest.opaque).to(equal(tokens.opacityOpaque))
                 }
             }
         } // context - when using AvonDark as theme
@@ -100,69 +260,69 @@ final class NatOpacitiesSpec: QuickSpec {
                 }
             }
 
-            describe("#opacity01") {
+            describe("#lower") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity01).to(equal(tokens.opacityLower))
+                    expect(systemUnderTest.lower).to(equal(tokens.opacityLower))
                 }
             }
 
-            describe("#opacity02") {
+            describe("#veryLow") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity02).to(equal(tokens.opacityVeryLow))
+                    expect(systemUnderTest.veryLow).to(equal(tokens.opacityVeryLow))
                 }
             }
 
-            describe("#opacity03") {
+            describe("#low") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity03).to(equal(tokens.opacity03))
+                    expect(systemUnderTest.low).to(equal(tokens.opacityLow))
                 }
             }
 
-            describe("#opacity04") {
+            describe("#mediumLow") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity04).to(equal(tokens.opacity04))
+                    expect(systemUnderTest.mediumLow).to(equal(tokens.opacityMediumLow))
                 }
             }
 
-            describe("#opacity05") {
+            describe("#disabledLow") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity05).to(equal(tokens.opacity05))
+                    expect(systemUnderTest.disabledLow).to(equal(tokens.opacityDisabledLow))
                 }
             }
 
-            describe("#opacity06") {
+            describe("#disabled") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity06).to(equal(tokens.opacityDisabled))
+                    expect(systemUnderTest.disabled).to(equal(tokens.opacityDisabled))
                 }
             }
 
-            describe("#opacity07") {
+            describe("#medium") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity07).to(equal(tokens.opacity07))
+                    expect(systemUnderTest.medium).to(equal(tokens.opacityMedium))
                 }
             }
 
-            describe("#opacity08") {
+            describe("#mediumHigh") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity08).to(equal(tokens.opacityMediumHigh))
+                    expect(systemUnderTest.mediumHigh).to(equal(tokens.opacityMediumHigh))
                 }
             }
 
-            describe("#opacity09") {
+            describe("#high") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity09).to(equal(tokens.opacity09))
+                    expect(systemUnderTest.high).to(equal(tokens.opacityHigh))
                 }
             }
 
-            describe("#opacity10") {
+            describe("#veryHigh") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity10).to(equal(tokens.opacity10))
+                    expect(systemUnderTest.veryHigh).to(equal(tokens.opacityVeryHigh))
                 }
             }
 
-            describe("#full") {
+            describe("#opaque") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.full).to(equal(tokens.opacityFull))
+                    expect(systemUnderTest.opaque).to(equal(tokens.opacityOpaque))
                 }
             }
         } // context - when using AvonLight as theme
@@ -180,69 +340,69 @@ final class NatOpacitiesSpec: QuickSpec {
                 }
             }
 
-            describe("#opacity01") {
+            describe("#lower") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity01).to(equal(tokens.opacityLower))
+                    expect(systemUnderTest.lower).to(equal(tokens.opacityLower))
                 }
             }
 
-            describe("#opacity02") {
+            describe("#veryLow") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity02).to(equal(tokens.opacityVeryLow))
+                    expect(systemUnderTest.veryLow).to(equal(tokens.opacityVeryLow))
                 }
             }
 
-            describe("#opacity03") {
+            describe("#low") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity03).to(equal(tokens.opacity03))
+                    expect(systemUnderTest.low).to(equal(tokens.opacityLow))
                 }
             }
 
-            describe("#opacity04") {
+            describe("#mediumLow") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity04).to(equal(tokens.opacity04))
+                    expect(systemUnderTest.mediumLow).to(equal(tokens.opacityMediumLow))
                 }
             }
 
-            describe("#opacity05") {
+            describe("#disabledLow") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity05).to(equal(tokens.opacity05))
+                    expect(systemUnderTest.disabledLow).to(equal(tokens.opacityDisabledLow))
                 }
             }
 
-            describe("#opacity06") {
+            describe("#disabled") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity06).to(equal(tokens.opacityDisabled))
+                    expect(systemUnderTest.disabled).to(equal(tokens.opacityDisabled))
                 }
             }
 
-            describe("#opacity07") {
+            describe("#medium") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity07).to(equal(tokens.opacity07))
+                    expect(systemUnderTest.medium).to(equal(tokens.opacityMedium))
                 }
             }
 
-            describe("#opacity08") {
+            describe("#mediumHigh") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity08).to(equal(tokens.opacityMediumHigh))
+                    expect(systemUnderTest.mediumHigh).to(equal(tokens.opacityMediumHigh))
                 }
             }
 
-            describe("#opacity09") {
+            describe("#high") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity09).to(equal(tokens.opacity09))
+                    expect(systemUnderTest.high).to(equal(tokens.opacityHigh))
                 }
             }
 
-            describe("#opacity10") {
+            describe("#veryHigh") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity10).to(equal(tokens.opacity10))
+                    expect(systemUnderTest.veryHigh).to(equal(tokens.opacityVeryHigh))
                 }
             }
 
-            describe("#full") {
+            describe("#opaque") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.full).to(equal(tokens.opacityFull))
+                    expect(systemUnderTest.opaque).to(equal(tokens.opacityOpaque))
                 }
             }
         } // context - when using NaturaDark as theme
@@ -260,69 +420,69 @@ final class NatOpacitiesSpec: QuickSpec {
                 }
             }
 
-            describe("#opacity01") {
+            describe("#lower") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity01).to(equal(tokens.opacityLower))
+                    expect(systemUnderTest.lower).to(equal(tokens.opacityLower))
                 }
             }
 
-            describe("#opacity02") {
+            describe("#veryLow") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity02).to(equal(tokens.opacityVeryLow))
+                    expect(systemUnderTest.veryLow).to(equal(tokens.opacityVeryLow))
                 }
             }
 
-            describe("#opacity03") {
+            describe("#low") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity03).to(equal(tokens.opacity03))
+                    expect(systemUnderTest.low).to(equal(tokens.opacityLow))
                 }
             }
 
-            describe("#opacity04") {
+            describe("#mediumLow") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity04).to(equal(tokens.opacity04))
+                    expect(systemUnderTest.mediumLow).to(equal(tokens.opacityMediumLow))
                 }
             }
 
-            describe("#opacity05") {
+            describe("#disabledLow") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity05).to(equal(tokens.opacity05))
+                    expect(systemUnderTest.disabledLow).to(equal(tokens.opacityDisabledLow))
                 }
             }
 
-            describe("#opacity06") {
+            describe("#disabled") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity06).to(equal(tokens.opacityDisabled))
+                    expect(systemUnderTest.disabled).to(equal(tokens.opacityDisabled))
                 }
             }
 
-            describe("#opacity07") {
+            describe("#medium") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity07).to(equal(tokens.opacity07))
+                    expect(systemUnderTest.medium).to(equal(tokens.opacityMedium))
                 }
             }
 
-            describe("#opacity08") {
+            describe("#mediumHigh") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity08).to(equal(tokens.opacityMediumHigh))
+                    expect(systemUnderTest.mediumHigh).to(equal(tokens.opacityMediumHigh))
                 }
             }
 
-            describe("#opacity09") {
+            describe("#high") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity09).to(equal(tokens.opacity09))
+                    expect(systemUnderTest.high).to(equal(tokens.opacityHigh))
                 }
             }
 
-            describe("#opacity10") {
+            describe("#veryHigh") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity10).to(equal(tokens.opacity10))
+                    expect(systemUnderTest.veryHigh).to(equal(tokens.opacityVeryHigh))
                 }
             }
 
-            describe("#full") {
+            describe("#opaque") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.full).to(equal(tokens.opacityFull))
+                    expect(systemUnderTest.opaque).to(equal(tokens.opacityOpaque))
                 }
             }
         } // context - when using NaturaLight as theme
@@ -340,69 +500,69 @@ final class NatOpacitiesSpec: QuickSpec {
                 }
             }
 
-            describe("#opacity01") {
+            describe("#lower") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity01).to(equal(tokens.opacityLower))
+                    expect(systemUnderTest.lower).to(equal(tokens.opacityLower))
                 }
             }
 
-            describe("#opacity02") {
+            describe("#veryLow") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity02).to(equal(tokens.opacityVeryLow))
+                    expect(systemUnderTest.veryLow).to(equal(tokens.opacityVeryLow))
                 }
             }
 
-            describe("#opacity03") {
+            describe("#low") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity03).to(equal(tokens.opacity03))
+                    expect(systemUnderTest.low).to(equal(tokens.opacityLow))
                 }
             }
 
-            describe("#opacity04") {
+            describe("#mediumLow") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity04).to(equal(tokens.opacity04))
+                    expect(systemUnderTest.mediumLow).to(equal(tokens.opacityMediumLow))
                 }
             }
 
-            describe("#opacity05") {
+            describe("#disabledLow") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity05).to(equal(tokens.opacity05))
+                    expect(systemUnderTest.disabledLow).to(equal(tokens.opacityDisabledLow))
                 }
             }
 
-            describe("#opacity06") {
+            describe("#disabled") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity06).to(equal(tokens.opacityDisabled))
+                    expect(systemUnderTest.disabled).to(equal(tokens.opacityDisabled))
                 }
             }
 
-            describe("#opacity07") {
+            describe("#medium") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity07).to(equal(tokens.opacity07))
+                    expect(systemUnderTest.medium).to(equal(tokens.opacityMedium))
                 }
             }
 
-            describe("#opacity08") {
+            describe("#mediumHigh") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity08).to(equal(tokens.opacityMediumHigh))
+                    expect(systemUnderTest.mediumHigh).to(equal(tokens.opacityMediumHigh))
                 }
             }
 
-            describe("#opacity09") {
+            describe("#high") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity09).to(equal(tokens.opacity09))
+                    expect(systemUnderTest.high).to(equal(tokens.opacityHigh))
                 }
             }
 
-            describe("#opacity10") {
+            describe("#veryHigh") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity10).to(equal(tokens.opacity10))
+                    expect(systemUnderTest.veryHigh).to(equal(tokens.opacityVeryHigh))
                 }
             }
 
-            describe("#full") {
+            describe("#opaque") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.full).to(equal(tokens.opacityFull))
+                    expect(systemUnderTest.opaque).to(equal(tokens.opacityOpaque))
                 }
             }
         } // context - when using TheBodyShopDark as theme
@@ -420,69 +580,69 @@ final class NatOpacitiesSpec: QuickSpec {
                 }
             }
 
-            describe("#opacity01") {
+            describe("#lower") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity01).to(equal(tokens.opacityLower))
+                    expect(systemUnderTest.lower).to(equal(tokens.opacityLower))
                 }
             }
 
-            describe("#opacity02") {
+            describe("#veryLow") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity02).to(equal(tokens.opacityVeryLow))
+                    expect(systemUnderTest.veryLow).to(equal(tokens.opacityVeryLow))
                 }
             }
 
-            describe("#opacity03") {
+            describe("#low") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity03).to(equal(tokens.opacity03))
+                    expect(systemUnderTest.low).to(equal(tokens.opacityLow))
                 }
             }
 
-            describe("#opacity04") {
+            describe("#mediumLow") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity04).to(equal(tokens.opacity04))
+                    expect(systemUnderTest.mediumLow).to(equal(tokens.opacityMediumLow))
                 }
             }
 
-            describe("#opacity05") {
+            describe("#disabledLow") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity05).to(equal(tokens.opacity05))
+                    expect(systemUnderTest.disabledLow).to(equal(tokens.opacityDisabledLow))
                 }
             }
 
-            describe("#opacity06") {
+            describe("#disabled") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity06).to(equal(tokens.opacityDisabled))
+                    expect(systemUnderTest.disabled).to(equal(tokens.opacityDisabled))
                 }
             }
 
-            describe("#opacity07") {
+            describe("#medium") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity07).to(equal(tokens.opacity07))
+                    expect(systemUnderTest.medium).to(equal(tokens.opacityMedium))
                 }
             }
 
-            describe("#opacity08") {
+            describe("#mediumHigh") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity08).to(equal(tokens.opacityMediumHigh))
+                    expect(systemUnderTest.mediumHigh).to(equal(tokens.opacityMediumHigh))
                 }
             }
 
-            describe("#opacity09") {
+            describe("#high") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity09).to(equal(tokens.opacity09))
+                    expect(systemUnderTest.high).to(equal(tokens.opacityHigh))
                 }
             }
 
-            describe("#opacity10") {
+            describe("#veryHigh") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.opacity10).to(equal(tokens.opacity10))
+                    expect(systemUnderTest.veryHigh).to(equal(tokens.opacityVeryHigh))
                 }
             }
 
-            describe("#full") {
+            describe("#opaque") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.full).to(equal(tokens.opacityFull))
+                    expect(systemUnderTest.opaque).to(equal(tokens.opacityOpaque))
                 }
             }
         } // context - when using TheBodyShopLight as theme
