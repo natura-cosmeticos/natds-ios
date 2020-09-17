@@ -87,6 +87,8 @@
 		80FE219D764217C0520E0C784F9C0C0B /* PulseLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF8919785F0CA6D3AB0AD57F759ED73 /* PulseLayer.swift */; };
 		81AA5DF0A9D5F332072CA1EC9C5CF968 /* NatOpacities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E76AA6120032EE8B86EB90B51BFD8 /* NatOpacities.swift */; };
 		8401A9C024FED41E00B6E762 /* NatIconButton+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8401A9BF24FED41E00B6E762 /* NatIconButton+Snapshot+Tests.swift */; };
+		840265AC2513B05A00A08EBE /* AesopDarkTheme+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840265AB2513B05A00A08EBE /* AesopDarkTheme+Spec.swift */; };
+		840265B42513B06E00A08EBE /* AesopLightTheme+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840265B32513B06E00A08EBE /* AesopLightTheme+Spec.swift */; };
 		8409854724F02B230095D6AD /* Notification+Name+ThemeHasChanged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409854624F02B230095D6AD /* Notification+Name+ThemeHasChanged.swift */; };
 		8409854A24F02BF60095D6AD /* Notification+Name+ThemeHasChanged+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409854924F02BF60095D6AD /* Notification+Name+ThemeHasChanged+Spec.swift */; };
 		8409854C24F030930095D6AD /* NotificationCenterObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409854B24F030930095D6AD /* NotificationCenterObservable.swift */; };
@@ -335,6 +337,8 @@
 		7F9C4251076A01537D0A8CB995DF81EC /* NavigationDrawerSubitemCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerSubitemCellTests.swift; sourceTree = "<group>"; };
 		83C59F929E88764313134A046BA5C30F /* DesignSystem+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DesignSystem+Spec.swift"; sourceTree = "<group>"; };
 		8401A9BF24FED41E00B6E762 /* NatIconButton+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatIconButton+Snapshot+Tests.swift"; sourceTree = "<group>"; };
+		840265AB2513B05A00A08EBE /* AesopDarkTheme+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AesopDarkTheme+Spec.swift"; sourceTree = "<group>"; };
+		840265B32513B06E00A08EBE /* AesopLightTheme+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AesopLightTheme+Spec.swift"; sourceTree = "<group>"; };
 		8409854624F02B230095D6AD /* Notification+Name+ThemeHasChanged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Name+ThemeHasChanged.swift"; sourceTree = "<group>"; };
 		8409854924F02BF60095D6AD /* Notification+Name+ThemeHasChanged+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Name+ThemeHasChanged+Spec.swift"; sourceTree = "<group>"; };
 		8409854B24F030930095D6AD /* NotificationCenterObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterObservable.swift; sourceTree = "<group>"; };
@@ -879,6 +883,15 @@
 			path = IconButton;
 			sourceTree = "<group>";
 		};
+		840265AA2513AFCF00A08EBE /* Aesop */ = {
+			isa = PBXGroup;
+			children = (
+				840265AB2513B05A00A08EBE /* AesopDarkTheme+Spec.swift */,
+				840265B32513B06E00A08EBE /* AesopLightTheme+Spec.swift */,
+			);
+			path = Aesop;
+			sourceTree = "<group>";
+		};
 		8409854824F02BA60095D6AD /* NotificationCenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -1113,6 +1126,7 @@
 		847C829924E56482001CE116 /* BrandsThemes */ = {
 			isa = PBXGroup;
 			children = (
+				840265AA2513AFCF00A08EBE /* Aesop */,
 				847C829A24E5648E001CE116 /* Avon */,
 				847C829B24E56493001CE116 /* Natura */,
 				847C829C24E564B4001CE116 /* TheBodyShop */,
@@ -1986,6 +2000,7 @@
 				521AFD7AFA9579A0A57971504ABE7145 /* ButtonOutlinedStyle+Spec.swift in Sources */,
 				BB3413734DCB562C834B90742EF06929 /* ButtonStyle+Spec.swift in Sources */,
 				92CA17AE519D08B10DAEE8C00A5E3959 /* ButtonTextStyle+Spec.swift in Sources */,
+				840265B42513B06E00A08EBE /* AesopLightTheme+Spec.swift in Sources */,
 				84BC900F24AA16FA007DF09D /* DialogFooterView+Spec.swift in Sources */,
 				26BB817724B931E900617EFC /* NatBadge+Color+Spec.swift in Sources */,
 				84B9330824AB788E00B71BD4 /* NatDialogDismissableConfigurable+Spec.swift in Sources */,
@@ -2005,6 +2020,7 @@
 				5E34A8BE616690B54E3DCDDF5395963E /* NatBorderRadius+Spec.swift in Sources */,
 				B7CCF87E56EA792B3471AD69AF68B23F /* NatButton+EdgeInsets+Spec.swift in Sources */,
 				AA1F5760B92801C89E927B323F7691B7 /* NatButton+Height+Spec.swift in Sources */,
+				840265AC2513B05A00A08EBE /* AesopDarkTheme+Spec.swift in Sources */,
 				19CCAA043E9657B0F68877ABC0F7F90F /* NatButton+Specs.swift in Sources */,
 				84BF066B24B504B200462AC5 /* ShortcutOutlinedStyle+Spec.swift in Sources */,
 				84932F1A24EAF07B0052265F /* StubTheme.swift in Sources */,
