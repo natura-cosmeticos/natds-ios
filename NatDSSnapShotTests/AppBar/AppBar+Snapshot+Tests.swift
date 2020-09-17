@@ -36,6 +36,7 @@ class AppBarSnapshotTests: XCTestCase {
 
     func test_appbar_style_default_rightbuttons_hasValidSnapshot() {
         systemUnderTest.configure(style: .default)
+
         let barButtonItem = UIBarButtonItem(
             icon: .outlinedActionCalendar,
             action: nil,
