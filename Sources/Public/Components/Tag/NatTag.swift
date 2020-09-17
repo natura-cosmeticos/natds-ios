@@ -29,6 +29,7 @@ public final class NatTag: UIView {
         let label = UILabel()
         label.font = NatFonts.font(ofSize: .caption, withWeight: .regular)
         label.textAlignment = .center
+        label.setContentCompressionResistancePriority(.defaultHigh + 1, for: .horizontal)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
