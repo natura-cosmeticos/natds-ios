@@ -11,7 +11,7 @@ enum ButtonOutlinedStyle {
             button.layer.borderColor = NatColors.primary.cgColor
         case .disabled:
             button.layer.borderColor = NatColors.onSurface
-                .withAlphaComponent(NatOpacities.opacity03).cgColor
+                .withAlphaComponent(NatOpacities.low).cgColor
         default: break
         }
     }
