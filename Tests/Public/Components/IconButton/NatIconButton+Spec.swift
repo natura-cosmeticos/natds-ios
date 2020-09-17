@@ -12,7 +12,7 @@ final class NatIconButtonSpec: QuickSpec {
         var styleSpy: NatIconButton.Style!
 
         beforeEach {
-            ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
+            ConfigurationStorage.shared.currentTheme = StubTheme()
 
             applyStyleInvocations = 0
 

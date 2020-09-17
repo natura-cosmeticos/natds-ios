@@ -11,7 +11,7 @@ class NSMutableAttributedStringBuilderTests: XCTestCase {
         string = "Lorem ipsum dolor sit amet."
         substring = "ipsum"
 
-        ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
+        ConfigurationStorage.shared.currentTheme = StubTheme()
     }
 
     func test_applyFont_returnsAttributedStringWithAppliedFont() {

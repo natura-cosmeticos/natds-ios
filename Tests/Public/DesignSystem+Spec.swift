@@ -179,7 +179,7 @@ final class DesignSystemSpec: QuickSpec {
         describe("#currentTheme") {
             context("when the theme is not mapped in AvailableTheme") {
                 beforeEach {
-                    storage.currentTheme = StubThemeProtocol()
+                    storage.currentTheme = StubTheme()
                 }
 
                 it("returns nil") {

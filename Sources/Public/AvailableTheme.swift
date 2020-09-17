@@ -19,7 +19,7 @@ public enum AvailableTheme {
     case theBodyShopDark
     case theBodyShopLight
 
-    init?(theme: ThemeProtocol) {
+    init?(theme: Theme) {
         switch theme {
         case is AvonDarkTheme: self = .avonDark
         case is AvonLightTheme: self = .avonLight
@@ -31,8 +31,8 @@ public enum AvailableTheme {
         }
     }
 
-    var newInstance: ThemeProtocol {
-        let instance: ThemeProtocol
+    var newInstance: Theme {
+        let instance: Theme
 
         switch self {
         case .avonDark: instance = AvonDarkTheme()

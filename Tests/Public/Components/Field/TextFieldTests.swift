@@ -9,7 +9,7 @@ final class TextFieldTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
+        ConfigurationStorage.shared.currentTheme = StubTheme()
 
         delegateMock = TextFieldDelegateMock()
         sut = TextField(frame: CGRect(x: 0, y: 0, width: 328, height: 99))

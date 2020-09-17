@@ -17,12 +17,12 @@
  *
  */
 
-struct AvonDarkTheme: ThemeProtocol {
-    let tokens: TokensProtocol = AvonDarkTokens()
-    let components: ComponentsProtocol = AvonDarkComponents()
+struct AvonDarkTheme: Theme {
+    let tokens: Tokens = AvonDarkTokens()
+    let components: Components = AvonDarkComponents()
 }
 
-struct AvonDarkTokens: TokensProtocol {
+struct AvonDarkTokens: Tokens {
     let borderRadiusNone: CGFloat = 0
     let borderRadiusSmall: CGFloat = 2
     let borderRadiusMedium: CGFloat = 4
@@ -92,7 +92,7 @@ struct AvonDarkTokens: TokensProtocol {
     let typographyFontWeightMedium: UIFont.Weight = .medium
 }
 
-struct AvonDarkComponents: ComponentsProtocol {
+struct AvonDarkComponents: Components {
     let buttonDefaultFontSize: CGFloat = 14
     let buttonDefaultFontWeight: UIFont.Weight = .medium
     let buttonDefaultLetterSpacing: CGFloat = 0.44

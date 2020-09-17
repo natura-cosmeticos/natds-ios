@@ -9,7 +9,7 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
         var button: UIButton!
 
         beforeEach {
-            ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
+            ConfigurationStorage.shared.currentTheme = StubTheme()
 
             button = UIButton()
         }

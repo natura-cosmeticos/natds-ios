@@ -1,4 +1,4 @@
-func getUIColorFromTokens(_ keyPath: KeyPath<TokensProtocol, String>) -> UIColor {
+func getUIColorFromTokens(_ keyPath: KeyPath<Tokens, String>) -> UIColor {
     getOrCreatedCachedColor(
         colorHex: getTokenFromTheme(keyPath),
         storage: ConfigurationStorage.shared,

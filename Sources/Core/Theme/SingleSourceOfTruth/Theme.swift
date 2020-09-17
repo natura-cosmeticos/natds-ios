@@ -17,12 +17,12 @@
  *
  */
 
-protocol ThemeProtocol {
-    var tokens: TokensProtocol { get }
-    var components: ComponentsProtocol { get }
+protocol Theme {
+    var tokens: Tokens { get }
+    var components: Components { get }
 }
 
-protocol TokensProtocol {
+protocol Tokens {
     var borderRadiusNone: CGFloat { get }
     var borderRadiusSmall: CGFloat { get }
     var borderRadiusMedium: CGFloat { get }
@@ -115,7 +115,7 @@ protocol TokensProtocol {
     var elevation10: ElevationAttributes { get }
 }
 
-protocol ComponentsProtocol {
+protocol Components {
     var buttonDefaultFontSize: CGFloat { get }
     var buttonDefaultFontWeight: UIFont.Weight { get }
     var buttonDefaultLetterSpacing: CGFloat { get }

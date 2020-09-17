@@ -27,7 +27,7 @@ final class GetOrCreatedCachedColorSpec: QuickSpec {
             var color: UIColor?
 
             beforeEach {
-                ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
+                ConfigurationStorage.shared.currentTheme = StubTheme()
                 color = systemUnderTest("#000000", store, { fatalError("stub error") })
             }
 
@@ -45,7 +45,7 @@ final class GetOrCreatedCachedColorSpec: QuickSpec {
 
             beforeEach {
                 store.cachedColors["#FFFFFF"] = .white
-                store.currentTheme = StubThemeProtocol()
+                store.currentTheme = StubTheme()
                 color = systemUnderTest("#000000", store, { fatalError("stub error") })
             }
 

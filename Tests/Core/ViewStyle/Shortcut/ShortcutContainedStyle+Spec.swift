@@ -11,7 +11,7 @@ final class ShortcutContainedStyleSpec: QuickSpec {
         var circleView: UIView!
 
         beforeEach {
-            ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
+            ConfigurationStorage.shared.currentTheme = StubTheme()
 
             shortcut = NatShortcut(style: stubStyle)
             circleView = shortcut.subviews.first

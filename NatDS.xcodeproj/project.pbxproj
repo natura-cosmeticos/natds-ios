@@ -99,7 +99,7 @@
 		84391DEA24DB477F009D0BE8 /* NatShortcut+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A818BC24B784EA0007C7D5 /* NatShortcut+Snapshot+Tests.swift */; };
 		84391DED24DB5C1F009D0BE8 /* AppBar+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268E9C6024C8746B006D6142 /* AppBar+Snapshot+Tests.swift */; };
 		844A1E2324AE117400E93AD9 /* NatShortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A1E2224AE117400E93AD9 /* NatShortcut.swift */; };
-		845AD7A424E2C4DA006CA226 /* ThemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845AD7A324E2C4DA006CA226 /* ThemeProtocol.swift */; };
+		845AD7A424E2C4DA006CA226 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845AD7A324E2C4DA006CA226 /* Theme.swift */; };
 		845AD7A824E2C8E6006CA226 /* AvonDarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845AD7A724E2C8E6006CA226 /* AvonDarkTheme.swift */; };
 		845AD7AA24E2CC82006CA226 /* AvonLightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845AD7A924E2CC82006CA226 /* AvonLightTheme.swift */; };
 		845D09952501193500B05760 /* NatIconButton+Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D09942501193500B05760 /* NatIconButton+Sizes.swift */; };
@@ -125,7 +125,7 @@
 		848831BE25018340004C3FA8 /* NatIconButton+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848831BD25018340004C3FA8 /* NatIconButton+Styles.swift */; };
 		84932F1324EAB9270052265F /* AvailableTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84932F1224EAB9270052265F /* AvailableTheme.swift */; };
 		84932F1624EABB190052265F /* AvailableTheme+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84932F1424EABA280052265F /* AvailableTheme+Spec.swift */; };
-		84932F1A24EAF07B0052265F /* StubThemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84932F1824EAF06B0052265F /* StubThemeProtocol.swift */; };
+		84932F1A24EAF07B0052265F /* StubTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84932F1824EAF06B0052265F /* StubTheme.swift */; };
 		84A16EFF24DDBC6D00E80DA0 /* NavigationDrawerItemCell+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A16EFE24DDBC6D00E80DA0 /* NavigationDrawerItemCell+Snapshot+Tests.swift */; };
 		84A16F0124DDBE5500E80DA0 /* NavigationDrawerSubitemCell+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A16F0024DDBE5500E80DA0 /* NavigationDrawerSubitemCell+Snapshot+Tests.swift */; };
 		84A16F0324DDBF6C00E80DA0 /* NavigationDrawer+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A16F0224DDBF6C00E80DA0 /* NavigationDrawer+Snapshot+Tests.swift */; };
@@ -342,7 +342,7 @@
 		84391DDD24DB1B8B009D0BE8 /* NatDSSnapShotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NatDSSnapShotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84391DE124DB1B8B009D0BE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		844A1E2224AE117400E93AD9 /* NatShortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatShortcut.swift; sourceTree = "<group>"; };
-		845AD7A324E2C4DA006CA226 /* ThemeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeProtocol.swift; sourceTree = "<group>"; };
+		845AD7A324E2C4DA006CA226 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		845AD7A724E2C8E6006CA226 /* AvonDarkTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvonDarkTheme.swift; sourceTree = "<group>"; };
 		845AD7A924E2CC82006CA226 /* AvonLightTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvonLightTheme.swift; sourceTree = "<group>"; };
 		845D09942501193500B05760 /* NatIconButton+Sizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatIconButton+Sizes.swift"; sourceTree = "<group>"; };
@@ -367,7 +367,7 @@
 		848831BD25018340004C3FA8 /* NatIconButton+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatIconButton+Styles.swift"; sourceTree = "<group>"; };
 		84932F1224EAB9270052265F /* AvailableTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableTheme.swift; sourceTree = "<group>"; };
 		84932F1424EABA280052265F /* AvailableTheme+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AvailableTheme+Spec.swift"; sourceTree = "<group>"; };
-		84932F1824EAF06B0052265F /* StubThemeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubThemeProtocol.swift; sourceTree = "<group>"; };
+		84932F1824EAF06B0052265F /* StubTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubTheme.swift; sourceTree = "<group>"; };
 		84A16EFE24DDBC6D00E80DA0 /* NavigationDrawerItemCell+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationDrawerItemCell+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		84A16F0024DDBE5500E80DA0 /* NavigationDrawerSubitemCell+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationDrawerSubitemCell+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		84A16F0224DDBF6C00E80DA0 /* NavigationDrawer+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationDrawer+Snapshot+Tests.swift"; sourceTree = "<group>"; };
@@ -957,7 +957,7 @@
 			isa = PBXGroup;
 			children = (
 				847C829724E562B4001CE116 /* DeprecatedWillBeRemoved */,
-				845AD7A324E2C4DA006CA226 /* ThemeProtocol.swift */,
+				845AD7A324E2C4DA006CA226 /* Theme.swift */,
 				845AD7A524E2C8C5006CA226 /* BrandsThemes */,
 			);
 			path = SingleSourceOfTruth;
@@ -1133,12 +1133,12 @@
 			path = TheBodyShop;
 			sourceTree = "<group>";
 		};
-		84932F1724EAF0510052265F /* ThemeProtocol */ = {
+		84932F1724EAF0510052265F /* Theme */ = {
 			isa = PBXGroup;
 			children = (
-				84932F1824EAF06B0052265F /* StubThemeProtocol.swift */,
+				84932F1824EAF06B0052265F /* StubTheme.swift */,
 			);
-			path = ThemeProtocol;
+			path = Theme;
 			sourceTree = "<group>";
 		};
 		84A16EFD24DDBC3200E80DA0 /* NavigationDrawer */ = {
@@ -1515,7 +1515,7 @@
 		B74C0772E6C10FAF9E1EBEDD82A7F0B1 /* TestingHelpers */ = {
 			isa = PBXGroup;
 			children = (
-				84932F1724EAF0510052265F /* ThemeProtocol */,
+				84932F1724EAF0510052265F /* Theme */,
 				58907D6C652303C4D5FC5FFE6E8F721A /* ElevationAttributes+Equitable.swift */,
 				255B7772A418A4544E0B8F793BEB519D /* UIColor+AsHexString.swift */,
 				56F3D70C29CCB183081E1863D791C9D4 /* UIFont+GetWeight.swift */,
@@ -1993,7 +1993,7 @@
 				AA1F5760B92801C89E927B323F7691B7 /* NatButton+Height+Spec.swift in Sources */,
 				19CCAA043E9657B0F68877ABC0F7F90F /* NatButton+Specs.swift in Sources */,
 				84BF066B24B504B200462AC5 /* ShortcutOutlinedStyle+Spec.swift in Sources */,
-				84932F1A24EAF07B0052265F /* StubThemeProtocol.swift in Sources */,
+				84932F1A24EAF07B0052265F /* StubTheme.swift in Sources */,
 				D18DCEC54B0D407538EC7F218CDF25E1 /* NatColors+Spec.swift in Sources */,
 				C4EB3DDBDD3DEFDA5183455CCDB2720F /* NatDialogController+Spec.swift in Sources */,
 				E891D4E704EDCC6EA9CD3EE125A5D292 /* NatDialogController+StandardStyleBuilder+Spec.swift in Sources */,
@@ -2080,7 +2080,7 @@
 				98C6EB095DD059D51DD9883B943AF889 /* ButtonOutlineStyle.swift in Sources */,
 				14016A20C7BF7046BAFCD2AE53673EB0 /* ButtonStyle.swift in Sources */,
 				84EB6B8524EEEA8E00C6A792 /* GetOrCreatedCachedColor.swift in Sources */,
-				845AD7A424E2C4DA006CA226 /* ThemeProtocol.swift in Sources */,
+				845AD7A424E2C4DA006CA226 /* Theme.swift in Sources */,
 				000598F48ADE170D305737C11E3F2D99 /* ButtonTextStyle.swift in Sources */,
 				845D09952501193500B05760 /* NatIconButton+Sizes.swift in Sources */,
 				845AD7AA24E2CC82006CA226 /* AvonLightTheme.swift in Sources */,
