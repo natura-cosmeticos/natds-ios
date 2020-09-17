@@ -5,8 +5,7 @@ import UIKit
   Also, it can show or hide a detail view
   This is a component from the design system.
   The panel expands and retracts as user touches the upDownButton,
-  and the border color changes according to the current Brand configured in the Design system
-  and according with user properties of Light and Dark mode.
+  and the border color changes according with the current theme configured in the Design system.
 
     This panel has only 2 public methods to interact with:
 
@@ -26,14 +25,12 @@ import UIKit
         expansionPanel.setDetailView(myDetailView)
 
  - Requires:
-        It's necessary to configure the Design System current Brand at DesignSystem class
-        or fatalError will be raised.
+        It's necessary to configure the Design System with a theme or fatalError will be raised.
 
-            DesignSystem().configure(with: Brand)
+            DesignSystem().configure(with: AvailableTheme)
 */
 
 public class ExpansionPanel: UIView {
-
     private lazy var subtitleLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
@@ -76,6 +73,7 @@ public class ExpansionPanel: UIView {
     }
 
     private let viewAnimating: ViewAnimating
+    private let notificationCenter: NotificationCenterObservable
 
     private var isExpanded: Bool { !isCollapsed }
     private var isCollapsed: Bool { upDownButton.transform == CGAffineTransform.identity }
@@ -86,18 +84,27 @@ public class ExpansionPanel: UIView {
     // MARK: - Inits
 
     public convenience init() {
-        self.init(viewAnimating: ViewAnimatingWrapper())
+        self.init(viewAnimating: ViewAnimatingWrapper(), notificationCenter: NotificationCenter.default)
     }
 
-    init(viewAnimating: ViewAnimating) {
+    init(viewAnimating: ViewAnimating, notificationCenter: NotificationCenterObservable) {
         self.viewAnimating = viewAnimating
+        self.notificationCenter = notificationCenter
+
         super.init(frame: .zero)
+
         setup()
     }
 
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    // MARK: - Deinit
+
+    deinit {
+        notificationCenter.removeObserver(self)
     }
 
     // MARK: - Public methods
@@ -120,13 +127,6 @@ public class ExpansionPanel: UIView {
         toggle()
     }
 
-    // MARK: - Overrides
-
-    public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        super.traitCollectionDidChange(previousTraitCollection)
-        updateBorderColor()
-    }
-
     // MARK: - Private methods
 
     private func setup() {
@@ -138,6 +138,13 @@ public class ExpansionPanel: UIView {
         addTapToToggle()
         addSubviews()
         setLayout()
+
+        notificationCenter.addObserver(
+            self,
+            selector: #selector(themeHasChanged),
+            name: .themeHasChanged,
+            object: nil
+        )
     }
 
     private func toggle() {
@@ -196,13 +203,11 @@ public class ExpansionPanel: UIView {
     private func updateBorderColor() {
         isExpanded ? setBorderColorActive() : setBorderColorInactive()
     }
-
 }
 
 // MARK: - Expand
 
 extension ExpansionPanel {
-
     private func expand() {
         if let detailView = detailView {
             contentView.addArrangedSubview(detailView)
@@ -231,13 +236,11 @@ extension ExpansionPanel {
         animateChangingBorderColor(from: inactiveBorderColor, to: activeBorderColor)
         setBorderColorActive()
     }
-
 }
 
 // MARK: - Collapse
 
 extension ExpansionPanel {
-
     private func collapse() {
         let previousHeight = frame.size.height
         collapseContentView()
@@ -264,13 +267,11 @@ extension ExpansionPanel {
         animateChangingBorderColor(from: activeBorderColor, to: inactiveBorderColor)
         setBorderColorInactive()
     }
-
 }
 
 // MARK: - Animations
 
 extension ExpansionPanel {
-
     private func animateIncreasingHeight(from previousHeight: CGFloat) {
         let newHeight = frame.size.height
         self.height = previousHeight
@@ -322,5 +323,12 @@ extension ExpansionPanel {
         animation.repeatCount = 1
         layer.add(animation, forKey: "color")
     }
+}
 
+// MARK: - NotificationCenter
+
+extension ExpansionPanel {
+    @objc private func themeHasChanged() {
+        updateBorderColor()
+    }
 }

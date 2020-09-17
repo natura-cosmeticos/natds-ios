@@ -8,7 +8,7 @@ final class NatBadgeSpec: QuickSpec {
         var systemUnderTest: NatBadge!
 
         beforeEach {
-            DesignSystem().configure(with: .natura)
+            ConfigurationStorage.shared.currentTheme = StubTheme()
 
             systemUnderTest = NatBadge(style: .standard, color: .alert)
         }

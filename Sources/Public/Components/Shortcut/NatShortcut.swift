@@ -1,7 +1,6 @@
 /**
   NatShortcut is a class that represents  a component from the design system.
-  The shortcut colors changes according with the current Brand configured in the Design system
-  and according with user properties of Light and Dark mode.
+  The shortcut colors changes according with the current theme configured in the Design system.
 
     This component has 4 styles:
     - Contained with Primary color
@@ -21,27 +20,25 @@
         shortcut.widthAnchor.constraint(equalToConstant: NatShortcut.Widths.maximum)
 
  - Requires:
-        It's necessary to configure the Design System current Brand at DesignSystem class
-        or fatalError will be raised.
+        It's necessary to configure the Design System with a theme or fatalError will be raised.
 
-            DesignSystem().configure(with: Brand)
+            DesignSystem().configure(with: AvailableTheme)
 */
 
-public final class NatShortcut: UIView, Pulsable {
+public final class NatShortcut: UIView {
 
     // MARK: - Private properties
 
     private let circleView: UIView = {
         let view = UIView()
-        let theme = getTheme()
-        view.layer.cornerRadius = theme.borderRadius.circle(viewHeight: theme.sizes.mediumx)
+        view.layer.cornerRadius = getTokenFromTheme(\.sizeMediumX) / 2
         view.translatesAutoresizingMaskIntoConstraints = false
 
         return view
     }()
 
     private let iconView: IconView = {
-        let iconView = IconView(fontSize: getTheme().sizes.semi)
+        let iconView = IconView(fontSize: getTokenFromTheme(\.sizeSemi))
         iconView.icon = .outlinedDefaultMockup
         iconView.translatesAutoresizingMaskIntoConstraints = false
 
@@ -51,7 +48,7 @@ public final class NatShortcut: UIView, Pulsable {
     private let label: UILabel = {
         let label = UILabel()
         label.font = NatFonts.font(ofSize: .caption, withWeight: .regular)
-        label.textColor = getTheme().colors.highEmphasis
+        label.textColor = getUIColorFromTokens(\.colorHighEmphasis)
         label.textAlignment = .center
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -60,18 +57,30 @@ public final class NatShortcut: UIView, Pulsable {
     }()
 
     private let style: Style
+    private let notificationCenter: NotificationCenterObservable
     private var action: (() -> Void)?
 
     // MARK: - Inits
 
-    public init(style: Style) {
+    public convenience init(style: Style) {
+        self.init(style: style, notificationCenter: NotificationCenter.default)
+    }
+
+    init(style: Style, notificationCenter: NotificationCenterObservable) {
         self.style = style
+        self.notificationCenter = notificationCenter
 
         super.init(frame: .zero)
 
         style.applyStyle(self)
 
         setup()
+    }
+
+    // MARK: - Deinit
+
+    deinit {
+        notificationCenter.removeObserver(self)
     }
 
     @available(*, unavailable)
@@ -91,19 +100,16 @@ public final class NatShortcut: UIView, Pulsable {
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
 
-        beginPulseAt(point: circleView.center, in: circleView.layer)
+        beginPulseAt(
+            point: .init(x: circleView.bounds.height / 2, y: circleView.bounds.width / 2),
+            in: circleView.layer
+        )
     }
 
     public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
 
         endPulse(layer: circleView.layer)
-    }
-
-    public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        super.traitCollectionDidChange(previousTraitCollection)
-
-        style.applyStyle(self)
     }
 }
 
@@ -156,10 +162,18 @@ extension NatShortcut {
 
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapHandler))
         addGestureRecognizer(tapGesture)
+
+        notificationCenter.addObserver(
+            self,
+            selector: #selector(themeHasChanged),
+            name: .themeHasChanged,
+            object: nil
+        )
     }
 
     private func addConstraints() {
-        let circleSize = getTheme().sizes.mediumx
+        let circleSize = NatSizes.mediumX
+
         let constraints = [
             circleView.topAnchor.constraint(equalTo: topAnchor),
             circleView.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor),
@@ -171,14 +185,26 @@ extension NatShortcut {
             iconView.centerXAnchor.constraint(equalTo: circleView.centerXAnchor),
             iconView.centerYAnchor.constraint(equalTo: circleView.centerYAnchor),
 
-            label.topAnchor.constraint(equalTo: circleView.bottomAnchor, constant: getTheme().spacing.tiny),
-            label.trailingAnchor.constraint(equalTo: trailingAnchor),
-            label.bottomAnchor.constraint(equalTo: bottomAnchor),
-            label.leadingAnchor.constraint(equalTo: leadingAnchor),
-            label.widthAnchor.constraint(lessThanOrEqualToConstant: Widths.maximum),
+            label.topAnchor.constraint(equalTo: circleView.bottomAnchor, constant: getTokenFromTheme(\.sizeTiny)),
+            label.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor),
+            label.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor),
+            label.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor),
+            label.widthAnchor.constraint(lessThanOrEqualToConstant: NatSizes.large),
             label.centerXAnchor.constraint(equalTo: centerXAnchor)
         ]
 
         NSLayoutConstraint.activate(constraints)
     }
 }
+
+// MARK: - NotificationCenter
+
+extension NatShortcut {
+    @objc private func themeHasChanged() {
+        style.applyStyle(self)
+    }
+}
+
+// MARK: - Pulsable
+
+extension NatShortcut: Pulsable {}

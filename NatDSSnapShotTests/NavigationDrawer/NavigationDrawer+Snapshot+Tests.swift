@@ -11,7 +11,7 @@ final class NavigationDrawerTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        DesignSystem().configure(with: .natura)
+        ConfigurationStorage.shared.currentTheme = NaturaLightTheme()
 
         tableView = UITableView()
         delegateMock = NavigationDrawerDelegateMock()

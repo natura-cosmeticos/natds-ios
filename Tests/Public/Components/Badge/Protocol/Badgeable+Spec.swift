@@ -8,7 +8,7 @@ final class BadgeableSpec: QuickSpec {
         var systemUnderTest: Badgeable!
 
         beforeEach {
-            DesignSystem().configure(with: .natura)
+            ConfigurationStorage.shared.currentTheme = StubTheme()
 
             systemUnderTest = BadgeableStub()
         }

@@ -9,7 +9,8 @@ final class UINavigationControllerConfigureSpec: QuickSpec {
         var style: UINavigationController.Style!
 
         beforeEach {
-            DesignSystem().configure(with: .theBodyShop)
+            ConfigurationStorage.shared.currentTheme = StubTheme()
+
             sut = UINavigationController()
             style = .default
         }
@@ -25,7 +26,7 @@ final class UINavigationControllerConfigureSpec: QuickSpec {
                 expect(sut.navigationBar.barTintColor).to(equal(style.backgroundColor))
             }
             it("applies elevation") {
-                let attributes = getTheme().elevations[keyPath: style.elevation.rawValue]
+                let attributes = getTokenFromTheme(style.elevation.rawValue)
 
                 expect(sut.navigationBar.layer.shadowColor).to(equal(attributes.shadowColor))
                 expect(sut.navigationBar.layer.shadowOffset).to(equal(attributes.shadowOffSet))

@@ -31,7 +31,7 @@ extension SearchBar {
 
     private func setupSearchBar() {
         self.backgroundColor = .clear
-        self.tintColor = Colors.Content.highEmphasis
+        self.tintColor = NatColors.highEmphasis
         self.searchBarStyle = .minimal
         self.autocapitalizationType = .allCharacters
         self.setImage(UIImage(), for: .search, state: .normal)

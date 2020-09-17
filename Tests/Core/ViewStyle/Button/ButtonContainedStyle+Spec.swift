@@ -9,7 +9,8 @@ final class ButtonContainedStyleSpec: QuickSpec {
         var button: UIButton!
 
         beforeEach {
-            DesignSystem().configure(with: .theBodyShop)
+            ConfigurationStorage.shared.currentTheme = StubTheme()
+
             button = UIButton()
         }
 
@@ -19,19 +20,18 @@ final class ButtonContainedStyleSpec: QuickSpec {
             }
 
             it("returns an expected font") {
-                let size = getTheme().font.sizes.button
-                let weight = getTheme().font.weights.medium
+                let textStyle = NatFonts.TextStyle.button
 
-                expect(button.titleLabel?.font.pointSize).to(equal(size))
-                expect(button.titleLabel?.font.getWeight()).to(equal(weight))
+                expect(button.titleLabel?.font.pointSize).to(equal(textStyle.size))
+                expect(button.titleLabel?.font.getWeight()).to(equal(textStyle.weight))
             }
 
             it("returns an expected backgroundColor") {
-                expect(button.backgroundColor).to(equal(getTheme().colors.primary))
+                expect(button.backgroundColor).to(equal(getUIColorFromTokens(\.colorPrimary)))
             }
 
             it("returns an expected cornerRadius") {
-                let borderRadius = getTheme().borderRadius.medium
+                let borderRadius = getTokenFromTheme(\.borderRadiusMedium)
 
                 expect(button.layer.cornerRadius).to(equal(borderRadius))
             }
@@ -70,7 +70,7 @@ final class ButtonContainedStyleSpec: QuickSpec {
                 }
 
                 it("returns an expected backgroundColor") {
-                    expect(button.backgroundColor).to(equal(getTheme().colors.primary))
+                    expect(button.backgroundColor).to(equal(getUIColorFromTokens(\.colorPrimary)))
                 }
             }
 
@@ -87,7 +87,8 @@ final class ButtonContainedStyleSpec: QuickSpec {
                 }
 
                 it("returns an expected backgroundColor") {
-                    let expectedColor = getTheme().colors.onSurface.withAlphaComponent(NatOpacities.opacity02)
+                    let expectedColor = getUIColorFromTokens(\.colorOnSurface)
+                        .withAlphaComponent(getTokenFromTheme(\.opacity02))
 
                     expect(button.backgroundColor).to(equal(expectedColor))
                 }
@@ -122,8 +123,9 @@ final class ButtonContainedStyleSpec: QuickSpec {
 
                 it("returns an expected foregroundColor") {
                     let foregroundColor = attributes[.foregroundColor] as? UIColor
+                    let expectedColor = getUIColorFromTokens(\.colorOnPrimary)
 
-                    expect(foregroundColor).to(equal(NatColors.onPrimary))
+                    expect(foregroundColor).to(equal(expectedColor))
                 }
             }
 
@@ -154,9 +156,11 @@ final class ButtonContainedStyleSpec: QuickSpec {
 
                 it("returns an expected foregroundColor") {
                     let foregroundColor = attributes[.foregroundColor] as? UIColor
+                    let expectedColor = getUIColorFromTokens(\.colorOnSurface)
+                        .withAlphaComponent(getTokenFromTheme(\.opacity08))
 
                     expect(foregroundColor)
-                        .to(equal(NatColors.onSurface.withAlphaComponent(NatOpacities.opacity08)))
+                        .to(equal(expectedColor))
                 }
             }
         }

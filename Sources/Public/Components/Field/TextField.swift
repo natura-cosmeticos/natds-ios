@@ -193,29 +193,29 @@ extension TextField {
         switch state {
         case .enable:
             textField.borderWidth = 1
-            textField.borderColor = getTheme().colors.lowEmphasis
-            titleLabel.textColor = getTheme().colors.mediumEmphasis
-            helperLabel.textColor = getTheme().colors.mediumEmphasis
+            textField.borderColor = getUIColorFromTokens(\.colorLowEmphasis)
+            titleLabel.textColor = getUIColorFromTokens(\.colorMediumEmphasis)
+            helperLabel.textColor = getUIColorFromTokens(\.colorMediumEmphasis)
             helperLabel.text = helper
             iconView.isHidden = true
 
         case .active:
             textField.borderWidth = 2
-            textField.borderColor = getTheme().colors.primary
-            textField.tintColor = getTheme().colors.primary
-            titleLabel.textColor = getTheme().colors.mediumEmphasis
-            helperLabel.textColor = getTheme().colors.mediumEmphasis
+            textField.borderColor = getUIColorFromTokens(\.colorPrimary)
+            textField.tintColor = getUIColorFromTokens(\.colorPrimary)
+            titleLabel.textColor = getUIColorFromTokens(\.colorMediumEmphasis)
+            helperLabel.textColor = getUIColorFromTokens(\.colorMediumEmphasis)
             helperLabel.text = helper
             iconView.isHidden = true
 
         case .error:
             textField.borderWidth = 2
-            textField.borderColor = getTheme().colors.alert
-            textField.tintColor = getTheme().colors.alert
-            titleLabel.textColor = getTheme().colors.alert
-            helperLabel.textColor = getTheme().colors.alert
+            textField.borderColor = getUIColorFromTokens(\.colorAlert)
+            textField.tintColor = getUIColorFromTokens(\.colorAlert)
+            titleLabel.textColor = getUIColorFromTokens(\.colorAlert)
+            helperLabel.textColor = getUIColorFromTokens(\.colorAlert)
             helperLabel.text = error ?? ""
-            iconView.tintColor = getTheme().colors.alert
+            iconView.tintColor = getUIColorFromTokens(\.colorAlert)
             iconView.isHidden = false
         }
     }

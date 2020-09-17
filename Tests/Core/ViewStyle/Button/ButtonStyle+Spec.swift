@@ -9,7 +9,8 @@ final class ButtonStyleSpec: QuickSpec {
         var button: UIButton!
 
         beforeEach {
-            DesignSystem().configure(with: .theBodyShop)
+            ConfigurationStorage.shared.currentTheme = StubTheme()
+
             button = UIButton()
         }
 
@@ -19,10 +20,9 @@ final class ButtonStyleSpec: QuickSpec {
             }
 
             it("returns an expected font") {
-                let size = getTheme().font.sizes.button
-                let weight = getTheme().font.weights.medium
-                expect(button.titleLabel?.font.pointSize).to(equal(size))
-                expect(button.titleLabel?.font.getWeight()).to(equal(weight))
+                let textStyle = NatFonts.TextStyle.button
+                expect(button.titleLabel?.font.pointSize).to(equal(textStyle.size))
+                expect(button.titleLabel?.font.getWeight()).to(equal(textStyle.weight))
             }
 
             it("returns an expected backgroundColor") {
@@ -30,7 +30,7 @@ final class ButtonStyleSpec: QuickSpec {
             }
 
             it("returns an expected cornerRadius") {
-                let borderRadius = getTheme().borderRadius.medium
+                let borderRadius = getTokenFromTheme(\.borderRadiusMedium)
                 expect(button.layer.cornerRadius).to(equal(borderRadius))
             }
 
@@ -110,8 +110,8 @@ final class ButtonStyleSpec: QuickSpec {
 
                 it("returns an expected foregroundColor") {
                     let foregroundColor = attributes[.foregroundColor] as? UIColor
-                    let expectedColor = getTheme().colors.onSurface
-                        .withAlphaComponent(getTheme().opacities.opacity08)
+                    let expectedColor = getUIColorFromTokens(\.colorOnSurface)
+                        .withAlphaComponent(getTokenFromTheme(\.opacity08))
 
                     expect(foregroundColor).to(equal(expectedColor))
                 }

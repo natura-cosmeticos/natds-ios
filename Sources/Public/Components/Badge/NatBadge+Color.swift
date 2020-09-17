@@ -8,14 +8,14 @@ extension NatBadge.Color {
     var box: UIColor {
         switch self {
         case .alert:
-            return getTheme().colors.alert
+            return getUIColorFromTokens(\.colorAlert)
         }
     }
 
     var content: UIColor {
         switch self {
         case .alert:
-            return getTheme().colors.onAlert
+            return getUIColorFromTokens(\.colorOnAlert)
         }
     }
 }

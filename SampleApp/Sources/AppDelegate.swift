@@ -1,5 +1,4 @@
 import UIKit
-import NatDS
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -9,12 +8,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        let navigationController = UINavigationController(
-            rootViewController: ChooseBrandViewController()
-        )
+        ThemeManager.shared.setLight()
 
         let window = UIWindow()
-        window.rootViewController = navigationController
+        window.rootViewController = CustomSplashViewController()
         window.makeKeyAndVisible()
 
         self.window = window

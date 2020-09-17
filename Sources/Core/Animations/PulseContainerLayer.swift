@@ -1,14 +1,13 @@
 final class PulseContainerLayer: CAShapeLayer {
     private let pulseLayer: PulseLayer = PulseLayer()
 
-    override init() {
+    init(color: UIColor) {
         super.init()
 
         masksToBounds = true
         addSublayer(pulseLayer)
 
-        let opacity = getTheme().opacities.opacity05
-        pulseLayer.fillColor = NatColors.highlight.withAlphaComponent(opacity).cgColor
+        pulseLayer.fillColor = color.cgColor
     }
 
     required init?(coder: NSCoder) {

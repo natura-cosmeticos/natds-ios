@@ -28,8 +28,15 @@
 		5C015C21B5CCA24BFE6643ABE6AEF850 /* NatDS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBC24456A172162B3538C51FBFE2BA6 /* NatDS.framework */; };
 		6566B8AD366FC73D95DA1F35979D488C /* NavigationDrawerItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D4B7F03E632BFE339DA40C2269B9D9 /* NavigationDrawerItemViewController.swift */; };
 		6B065E9FA8AEAD33D6341DB8C671D74C /* DialogItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6AF03A3D6B2368E721CAB74F2424A /* DialogItemViewController.swift */; };
+		8402F4E624F932E70018149C /* IconButtonItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402F4E524F932E70018149C /* IconButtonItemViewController.swift */; };
+		8409B9312507B9E2006ED4EA /* CustomSplashViewController+GradientBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409B9302507B9E2006ED4EA /* CustomSplashViewController+GradientBackgroundView.swift */; };
+		842EA8AB25082B60009AE473 /* ChooseBrandHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842EA8AA25082B60009AE473 /* ChooseBrandHeader.swift */; };
 		8449828124C0C9F200CDA676 /* LogoItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8449828024C0C9F200CDA676 /* LogoItemViewController.swift */; };
 		844A1E2624AE2BCE00E93AD9 /* ShortcutItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A1E2524AE2BCE00E93AD9 /* ShortcutItemViewController.swift */; };
+		84A9E9A9250F9CC8006B8A52 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A9E9A8250F9CC8006B8A52 /* ThemeManager.swift */; };
+		84A9E9AC250F9D18006B8A52 /* BrandThemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A9E9AB250F9D18006B8A52 /* BrandThemes.swift */; };
+		84E3B7C82502C88D0056FE57 /* CustomSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E3B7C72502C88D0056FE57 /* CustomSplashViewController.swift */; };
+		84F60D152509402300498C8A /* ChooseBrandCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F60D142509402300498C8A /* ChooseBrandCell.swift */; };
 		9B13D285941681F8967FCC54F3945D5F /* IconCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FBDBE3AD8777A865F1B1E40859758D /* IconCollectionViewCell.swift */; };
 		B0824E26ADCA40FFA158AA0A35155D71 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFC72AFBBBAAEBA2097DA669BB3792F /* MainViewController.swift */; };
 		B14E0B8A51D237CFBA1AD574ED6EC10C /* DividerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F657058E049073E0255E8EE6ED2580B /* DividerViewController.swift */; };
@@ -86,9 +93,16 @@
 		6CCE6B3ED45C1E81094E9B4DDAB9D1EC /* SizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeViewController.swift; sourceTree = "<group>"; };
 		729810E32083E04163C749DCF3552FA6 /* DesignSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSection.swift; sourceTree = "<group>"; };
 		73162360481FF4DE5378EBF0DF3B2F1C /* SpacingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacingCell.swift; sourceTree = "<group>"; };
+		8402F4E524F932E70018149C /* IconButtonItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButtonItemViewController.swift; sourceTree = "<group>"; };
+		8409B9302507B9E2006ED4EA /* CustomSplashViewController+GradientBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomSplashViewController+GradientBackgroundView.swift"; sourceTree = "<group>"; };
+		842EA8AA25082B60009AE473 /* ChooseBrandHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseBrandHeader.swift; sourceTree = "<group>"; };
 		8449828024C0C9F200CDA676 /* LogoItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoItemViewController.swift; sourceTree = "<group>"; };
 		844A1E2524AE2BCE00E93AD9 /* ShortcutItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutItemViewController.swift; sourceTree = "<group>"; };
 		845C4E23EBB1B07DF334BBA42C272EBB /* ColorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsViewController.swift; sourceTree = "<group>"; };
+		84A9E9A8250F9CC8006B8A52 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		84A9E9AB250F9D18006B8A52 /* BrandThemes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandThemes.swift; sourceTree = "<group>"; };
+		84E3B7C72502C88D0056FE57 /* CustomSplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSplashViewController.swift; sourceTree = "<group>"; };
+		84F60D142509402300498C8A /* ChooseBrandCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseBrandCell.swift; sourceTree = "<group>"; };
 		88DF0FA08B4E2EB33C77654A3EC4E83E /* ChooseBrandViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseBrandViewController.swift; sourceTree = "<group>"; };
 		8AD6BDA39D2DFA18294278D33A054F9B /* TabItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemViewController.swift; sourceTree = "<group>"; };
 		96E03E96B39ADDD9B77FC7C702E3029F /* MainDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDataSource.swift; sourceTree = "<group>"; };
@@ -201,9 +215,11 @@
 				9DE43D2630BC7A2BC76DE6043192AFF4 /* Sample */,
 				BBBD9AE748A7F062C343564EE84A8A71 /* Supporting Files */,
 				A9EB78FC7F0EEE4914F65F61B2E74031 /* AppDelegate.swift */,
-				88DF0FA08B4E2EB33C77654A3EC4E83E /* ChooseBrandViewController.swift */,
+				8409B92F2507B9A9006ED4EA /* CustomSplash */,
+				842EA8A92508278E009AE473 /* ChooseBrand */,
 				96E03E96B39ADDD9B77FC7C702E3029F /* MainDataSource.swift */,
 				9AFC72AFBBBAAEBA2097DA669BB3792F /* MainViewController.swift */,
+				84A9E9AA250F9D09006B8A52 /* ThemeManager */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -217,12 +233,48 @@
 			path = Colors;
 			sourceTree = "<group>";
 		};
+		8402F4E424F932570018149C /* IconButton */ = {
+			isa = PBXGroup;
+			children = (
+				8402F4E524F932E70018149C /* IconButtonItemViewController.swift */,
+			);
+			path = IconButton;
+			sourceTree = "<group>";
+		};
+		8409B92F2507B9A9006ED4EA /* CustomSplash */ = {
+			isa = PBXGroup;
+			children = (
+				84E3B7C72502C88D0056FE57 /* CustomSplashViewController.swift */,
+				8409B9302507B9E2006ED4EA /* CustomSplashViewController+GradientBackgroundView.swift */,
+			);
+			path = CustomSplash;
+			sourceTree = "<group>";
+		};
+		842EA8A92508278E009AE473 /* ChooseBrand */ = {
+			isa = PBXGroup;
+			children = (
+				88DF0FA08B4E2EB33C77654A3EC4E83E /* ChooseBrandViewController.swift */,
+				842EA8AA25082B60009AE473 /* ChooseBrandHeader.swift */,
+				84F60D142509402300498C8A /* ChooseBrandCell.swift */,
+			);
+			path = ChooseBrand;
+			sourceTree = "<group>";
+		};
 		844A1E2424AE2B7600E93AD9 /* Shortcut */ = {
 			isa = PBXGroup;
 			children = (
 				844A1E2524AE2BCE00E93AD9 /* ShortcutItemViewController.swift */,
 			);
 			path = Shortcut;
+			sourceTree = "<group>";
+		};
+		84A9E9AA250F9D09006B8A52 /* ThemeManager */ = {
+			isa = PBXGroup;
+			children = (
+				84A9E9A8250F9CC8006B8A52 /* ThemeManager.swift */,
+				84A9E9AB250F9D18006B8A52 /* BrandThemes.swift */,
+			);
+			path = ThemeManager;
 			sourceTree = "<group>";
 		};
 		84AAD9C60B28018A447D43D10A281470 /* Helper */ = {
@@ -244,6 +296,7 @@
 				D2D202BFFC95DC39B94A26A5FB172483 /* Divider */,
 				DFD5C58E6C019591057F6663EFBBA044 /* ExpansionPanel */,
 				FE7854E68C30109D4B2988E1E01AE179 /* Field */,
+				8402F4E424F932570018149C /* IconButton */,
 				CDF47F683C800E8289A0310CD7EA0F0C /* Iconography */,
 				FC4556C0DD691C829616B3DDA86F0CBA /* NavigationDrawer */,
 				844A1E2424AE2B7600E93AD9 /* Shortcut */,
@@ -264,7 +317,7 @@
 				E87CB56433DA6E5473F5C6B643789BA6 /* Opacity */,
 				B2720C821B540A7F455BED15A98C6755 /* Size */,
 				DEA60779BDC024D9AD1244CD29A20E30 /* Spacing */,
-				D1E87FD723F5C0CE6B516C38B689A892 /* Tipography */,
+				D1E87FD723F5C0CE6B516C38B689A892 /* Typography */,
 				729810E32083E04163C749DCF3552FA6 /* DesignSection.swift */,
 			);
 			path = Design;
@@ -366,13 +419,13 @@
 			path = Iconography;
 			sourceTree = "<group>";
 		};
-		D1E87FD723F5C0CE6B516C38B689A892 /* Tipography */ = {
+		D1E87FD723F5C0CE6B516C38B689A892 /* Typography */ = {
 			isa = PBXGroup;
 			children = (
 				B7D68855C6F46E43FC45CF037561B02B /* Cells */,
 				FE39135EC83E5AE456AC7FBF5FE7F9CA /* TypographyViewController.swift */,
 			);
-			path = Tipography;
+			path = Typography;
 			sourceTree = "<group>";
 		};
 		D2D202BFFC95DC39B94A26A5FB172483 /* Divider */ = {
@@ -535,6 +588,7 @@
 				C45042BFA9A69738E74BF45255330A76 /* BorderRadiusCell.swift in Sources */,
 				D8E43C13D4DE5237EBF1AAA69FCF03EF /* BorderRadiusViewController.swift in Sources */,
 				15B75BDE2A9BA5FCCD4E2CFE49AC1055 /* ButtonsItemViewController.swift in Sources */,
+				84F60D152509402300498C8A /* ChooseBrandCell.swift in Sources */,
 				8449828124C0C9F200CDA676 /* LogoItemViewController.swift in Sources */,
 				0E45136B24BE1DEB002296AE /* AppBarViewController.swift in Sources */,
 				0A2178D12DE267C878A84A6ED80350D4 /* ChooseBrandViewController.swift in Sources */,
@@ -551,17 +605,22 @@
 				04AA815DDD6F9388F3A1010428342BBB /* ElevationViewController.swift in Sources */,
 				C3FB6A19DFD7AF84B435860A0C7F355D /* ExpansionPanelViewController.swift in Sources */,
 				9B13D285941681F8967FCC54F3945D5F /* IconCollectionViewCell.swift in Sources */,
+				84A9E9A9250F9CC8006B8A52 /* ThemeManager.swift in Sources */,
 				F1BDDD1A6BB7FF95ED9BF0D4FF3083A8 /* IconographyItemViewController.swift in Sources */,
 				BD695AAB8C1745298D8F405635E322A7 /* MainDataSource.swift in Sources */,
 				B0824E26ADCA40FFA158AA0A35155D71 /* MainViewController.swift in Sources */,
 				6566B8AD366FC73D95DA1F35979D488C /* NavigationDrawerItemViewController.swift in Sources */,
 				18A184686209DD677293C0286EEB0C60 /* OpacityCell.swift in Sources */,
+				8402F4E624F932E70018149C /* IconButtonItemViewController.swift in Sources */,
 				E85844B6881ACA2A4AD480885DC8B068 /* OpacityViewController.swift in Sources */,
 				00CF8C7E79BD696D97099B654E925BE0 /* SampleItem.swift in Sources */,
 				E061B6B85CEFBAE9AE8A8079DEF9E0A4 /* SampleSection.swift in Sources */,
+				842EA8AB25082B60009AE473 /* ChooseBrandHeader.swift in Sources */,
 				D30EE21E999567FD384CCE8B5D90FAC2 /* SizeCell.swift in Sources */,
 				F73DA218B08455F09195D7D6F4990961 /* SizeViewController.swift in Sources */,
+				8409B9312507B9E2006ED4EA /* CustomSplashViewController+GradientBackgroundView.swift in Sources */,
 				0E0C618824C768B700AF8FBB /* AppBarDetailViewController.swift in Sources */,
+				84E3B7C82502C88D0056FE57 /* CustomSplashViewController.swift in Sources */,
 				06E258AB651CE4F232CAAA3A2D94807C /* SpacingCell.swift in Sources */,
 				15CB9B603913EB682989F204523A1472 /* SpacingViewController.swift in Sources */,
 				FD3C1A6EDAD5F31BC9E4984E981C28A8 /* TabItemViewController.swift in Sources */,
@@ -569,6 +628,7 @@
 				D2874BA3C6A03754EC9895DC95D6DFE5 /* TypographyCell.swift in Sources */,
 				4FB74E3BCCB54EE2242A9A78778F6024 /* TypographyViewController.swift in Sources */,
 				5A95C641E43BCD63CA21359C8EAFBA25 /* ValueTextHighlightItemViewController.swift in Sources */,
+				84A9E9AC250F9D18006B8A52 /* BrandThemes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,7 +659,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7.0;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.natura.NatDSSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "match Development net.natura.NatDSSampleApp";
@@ -735,7 +795,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.7.0;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.natura.NatDSSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore net.natura.NatDSSampleApp";

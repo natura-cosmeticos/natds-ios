@@ -19,7 +19,7 @@ enum ButtonStyle {
         )
         let titleForDisabled = createTextForTitle(
             text: title,
-            withColor: NatColors.onSurface.withAlphaComponent(getTheme().opacities.opacity08)
+            withColor: NatColors.onSurface.withAlphaComponent(getTokenFromTheme(\.opacity08))
         )
 
         button.setAttributedTitle(titleForNormal, for: .normal)
@@ -30,7 +30,7 @@ enum ButtonStyle {
         let attributedString = NSMutableAttributedString(string: text.uppercased())
         attributedString.apply(foregroundColor: color)
 
-        let value = getTheme().font.letterSpacings.button
+        let value = getComponentAttributeFromTheme(\.buttonDefaultLetterSpacing)
         attributedString.apply(kernValue: value)
 
         return attributedString

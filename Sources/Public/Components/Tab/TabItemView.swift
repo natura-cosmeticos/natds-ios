@@ -19,7 +19,7 @@ class TabItemView: UIView {
 
     private(set) lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = Fonts.button
+        label.font = NatFonts.font(ofSize: .button)
         label.textAlignment = .center
         return label
     }()
@@ -73,9 +73,9 @@ extension TabItemView {
     private func handleState() {
         switch state {
         case .normal:
-            titleLabel.textColor = Colors.Content.mediumEmphasis
+            titleLabel.textColor = NatColors.mediumEmphasis
         case .selected:
-            titleLabel.textColor = Colors.Content.highlight
+            titleLabel.textColor = NatColors.highlight
         }
     }
 }

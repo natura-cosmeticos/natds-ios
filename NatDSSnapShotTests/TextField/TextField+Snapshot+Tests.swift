@@ -10,7 +10,7 @@ final class TextFieldSnapshotTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        DesignSystem().configure(with: .natura)
+        ConfigurationStorage.shared.currentTheme = NaturaLightTheme()
 
         delegateMock = TextFieldDelegateMock()
         systemUnderTest = TextField(frame: CGRect(x: 0, y: 0, width: 328, height: 99))
@@ -40,7 +40,9 @@ final class TextFieldSnapshotTests: XCTestCase {
 
     func test_state_whenHasErrorAndLargeMessage_returnMultipleErrorLinesStateSnapshot() {
         systemUnderTest.frame = CGRect(x: 0, y: 0, width: 328, height: 119)
-        systemUnderTest.error = "Error: Has an error - this input has an error - Neque porro quisquam est qui dolorem ipsum quia"
+        systemUnderTest.error = """
+        Error: Has an error - this input has an error - Neque porro quisquam est qui dolorem ipsum quia
+        """
         assertSnapshot(matching: systemUnderTest, as: .image)
     }
 

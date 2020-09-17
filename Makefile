@@ -49,9 +49,6 @@ pods_wipe: ## removes Pods folder, clean its cache and reinstall all Cocoapods d
 install_certificates: ## fetch and install certificates for code signing
 	$(FASTLANE) fetch_certificates
 
-test: ## run unit tests
-	$(FASTLANE) test
-
 test_unit: ## run unit tests
 	$(FASTLANE) test_unit
 

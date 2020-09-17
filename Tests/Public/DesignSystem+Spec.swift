@@ -5,175 +5,275 @@ import Nimble
 
 final class DesignSystemSpec: QuickSpec {
     override func spec() {
-        context("when using default storage") {
-            let systemUnderTest = DesignSystem()
+        var storage: ConfigurationStorage!
+        var notificationSpy: NotificationCenterSpy!
+        var systemUnderTest: DesignSystem!
 
-            describe("#configure") {
-                context("when the brand is .avon") {
-                    beforeEach {
-                        systemUnderTest.configure(with: .avon)
-                    }
+        beforeEach {
+            storage = ConfigurationStorage.shared
+            storage.currentTheme = nil
+            storage.cachedColors = [:]
+            notificationSpy = NotificationCenterSpy()
 
-                    it("sets current theme to Avon") {
-                        let theme = getTheme()
+            systemUnderTest = DesignSystem(storage: storage, notificationCenter: notificationSpy)
+        }
 
-                        expect(theme).to(beAnInstanceOf(AvonTheme.self))
-                    }
-                }
-
-                context("when the brand is .natura") {
-                    beforeEach {
-                        systemUnderTest.configure(with: .natura)
-                    }
-
-                    it("sets current theme to Natura") {
-                        let theme = getTheme()
-
-                        expect(theme).to(beAnInstanceOf(NaturaTheme.self))
-                    }
-                }
-
-                context("when the brand is .theBodyShop") {
-                    beforeEach {
-                        systemUnderTest.configure(with: .theBodyShop)
-                    }
-
-                    it("sets current theme to The Body Shop") {
-                        let theme = getTheme()
-
-                        expect(theme).to(beAnInstanceOf(TheBodyShopTheme.self))
-                    }
-                }
-
-                describe("#currentBrand") {
-                    context("when the brand is .avon") {
-                        beforeEach {
-                            systemUnderTest.configure(with: .avon)
-                        }
-
-                        it("returns current brand as Avon") {
-                            let brand = systemUnderTest.currentBrand
-
-                            expect(brand).to(equal(.avon))
-                        }
-                    }
-
-                    context("when the brand is .natura") {
-                        beforeEach {
-                            systemUnderTest.configure(with: .natura)
-                        }
-
-                        it("returns current brand as Natura") {
-                            let brand = systemUnderTest.currentBrand
-
-                            expect(brand).to(equal(.natura))
-                        }
-                    }
-
-                    context("when the brand is .theBodyShop") {
-                        beforeEach {
-                            systemUnderTest.configure(with: .theBodyShop)
-                        }
-
-                        it("returns current brand as The Body Shop") {
-                            let brand = systemUnderTest.currentBrand
-
-                            expect(brand).to(equal(.theBodyShop))
-                        }
-                    }
-                }
+        describe("#init") {
+            it("does not call storage.save") {
+                expect(storage.currentTheme).to(beNil())
             }
-        } // context - When using default storage
 
-        context("when using mock storage to analyze behavior") {
-            var mockStorage: MockStorage!
-            var systemUnderTest: DesignSystem!
+            it("does not call storage.save") {
+                expect(storage.cachedColors.count).to(equal(0))
+            }
 
-            describe("#configure") {
+            it("does not call notificationCenter.post") {
+                expect(notificationSpy.postInvocations).to(equal(0))
+            }
+        }
+
+        describe("#configure(theme:)") {
+            beforeEach {
+                storage.cachedColors = ["#FFFFFF": .white]
+            }
+
+            context("when the theme is .avonDark") {
                 beforeEach {
-                    mockStorage = MockStorage()
-                    systemUnderTest = DesignSystem(storage: mockStorage)
+                    systemUnderTest.configure(with: .avonDark)
                 }
 
-                context("when the brand is .avon") {
-                    it("calls storage.save only once") {
-                        systemUnderTest.configure(with: .avon)
-                        expect(mockStorage.saveInvocations).to(equal(1))
-                    }
+                it("sets an expected theme") {
+                    expect(storage.currentTheme).to(beAnInstanceOf(AvonDarkTheme.self))
                 }
 
-                context("when the brand is .natura") {
-                    it("calls storage.save only once") {
-                        systemUnderTest.configure(with: .natura)
-
-                        expect(mockStorage.saveInvocations).to(equal(1))
-                    }
+                it("cleans cached color") {
+                    expect(storage.cachedColors.count).to(equal(0))
                 }
-                context("when the brand is .theBodyShop") {
-                    it("calls storage.save only once") {
-                        systemUnderTest.configure(with: .theBodyShop)
 
-                        expect(mockStorage.saveInvocations).to(equal(1))
-                    }
+                it("calls notificationCenter.post only once") {
+                    expect(notificationSpy.postInvocations).to(equal(1))
+                }
+
+                it("calls notificationCenter.post with expected parameters") {
+                    expect(notificationSpy.lastPostSent?.name).to(equal(.themeHasChanged))
+                    expect(notificationSpy.lastPostSent?.object).to(beNil())
                 }
             }
 
-            describe("#currentBrand") {
-                context("when the brand is not configured") {
-                    beforeEach {
-                        mockStorage = MockStorage()
-                        systemUnderTest = DesignSystem(storage: mockStorage)
-                    }
-
-                    it("returns nil") {
-                        let brand = systemUnderTest.currentBrand
-
-                        expect(brand).to(beNil())
-                    }
+            context("when the theme is .avonLight") {
+                beforeEach {
+                    systemUnderTest.configure(with: .avonLight)
                 }
 
-                context("when the brand is .avon") {
-                    beforeEach {
-                        mockStorage = MockStorage()
-                        systemUnderTest = DesignSystem(storage: mockStorage)
-                        systemUnderTest.configure(with: .avon)
-                    }
-
-                    it("returns current brand as Avon") {
-                        let brand = systemUnderTest.currentBrand
-
-                        expect(brand).to(equal(.avon))
-                    }
+                it("sets an expected theme") {
+                    expect(storage.currentTheme).to(beAnInstanceOf(AvonLightTheme.self))
                 }
 
-                context("when the brand is .natura") {
-                    beforeEach {
-                        mockStorage = MockStorage()
-                        systemUnderTest = DesignSystem(storage: mockStorage)
-                        systemUnderTest.configure(with: .natura)
-                    }
-
-                    it("returns current brand as Natura") {
-                        let brand = systemUnderTest.currentBrand
-
-                        expect(brand).to(equal(.natura))
-                    }
+                it("cleans cached color") {
+                    expect(storage.cachedColors.count).to(equal(0))
                 }
 
-                context("when the brand is .theBodyShop") {
-                    beforeEach {
-                        mockStorage = MockStorage()
-                        systemUnderTest = DesignSystem(storage: mockStorage)
-                        systemUnderTest.configure(with: .theBodyShop)
-                    }
+                it("calls notificationCenter.post only once") {
+                    expect(notificationSpy.postInvocations).to(equal(1))
+                }
 
-                    it("returns current brand as The Body Shop") {
-                        let brand = systemUnderTest.currentBrand
-
-                        expect(brand).to(equal(.theBodyShop))
-                    }
+                it("calls notificationCenter.post with expected parameters") {
+                    expect(notificationSpy.lastPostSent?.name).to(equal(.themeHasChanged))
+                    expect(notificationSpy.lastPostSent?.object).to(beNil())
                 }
             }
-        } // context - when using custom mock storage to analyze behavior
+
+            context("when the theme is .naturaDark") {
+                beforeEach {
+                    systemUnderTest.configure(with: .naturaDark)
+                }
+
+                it("sets an expected theme") {
+                    expect(storage.currentTheme).to(beAnInstanceOf(NaturaDarkTheme.self))
+                }
+
+                it("cleans cached color") {
+                    expect(storage.cachedColors.count).to(equal(0))
+                }
+
+                it("calls notificationCenter.post only once") {
+                    expect(notificationSpy.postInvocations).to(equal(1))
+                }
+
+                it("calls notificationCenter.post with expected parameters") {
+                    expect(notificationSpy.lastPostSent?.name).to(equal(.themeHasChanged))
+                    expect(notificationSpy.lastPostSent?.object).to(beNil())
+                }
+            }
+
+            context("when the theme is .naturaLight") {
+                beforeEach {
+                    systemUnderTest.configure(with: .naturaLight)
+                }
+
+                it("sets an expected theme") {
+                    expect(storage.currentTheme).to(beAnInstanceOf(NaturaLightTheme.self))
+                }
+
+                it("cleans cached color") {
+                    expect(storage.cachedColors.count).to(equal(0))
+                }
+
+                it("calls notificationCenter.post only once") {
+                    expect(notificationSpy.postInvocations).to(equal(1))
+                }
+
+                it("calls notificationCenter.post with expected parameters") {
+                    expect(notificationSpy.lastPostSent?.name).to(equal(.themeHasChanged))
+                    expect(notificationSpy.lastPostSent?.object).to(beNil())
+                }
+            }
+
+            context("when the theme is .theBodyShopDark") {
+                beforeEach {
+                    systemUnderTest.configure(with: .theBodyShopDark)
+                }
+
+                it("sets an expected theme") {
+                    expect(storage.currentTheme).to(beAnInstanceOf(TheBodyShopDarkTheme.self))
+                }
+
+                it("cleans cached color") {
+                    expect(storage.cachedColors.count).to(equal(0))
+                }
+
+                it("calls notificationCenter.post only once") {
+                    expect(notificationSpy.postInvocations).to(equal(1))
+                }
+
+                it("calls notificationCenter.post with expected parameters") {
+                    expect(notificationSpy.lastPostSent?.name).to(equal(.themeHasChanged))
+                    expect(notificationSpy.lastPostSent?.object).to(beNil())
+                }
+            }
+
+            context("when the theme is .theBodyShopLight") {
+                beforeEach {
+                    systemUnderTest.configure(with: .theBodyShopLight)
+                }
+
+                it("sets an expected theme") {
+                    expect(storage.currentTheme).to(beAnInstanceOf(TheBodyShopLightTheme.self))
+                }
+
+                it("cleans cached color") {
+                    expect(storage.cachedColors.count).to(equal(0))
+                }
+
+                it("calls notificationCenter.post only once") {
+                    expect(notificationSpy.postInvocations).to(equal(1))
+                }
+
+                it("calls notificationCenter.post with expected parameters") {
+                    expect(notificationSpy.lastPostSent?.name).to(equal(.themeHasChanged))
+                    expect(notificationSpy.lastPostSent?.object).to(beNil())
+                }
+            }
+        }
+
+        describe("#currentTheme") {
+            context("when the theme is not mapped in AvailableTheme") {
+                beforeEach {
+                    storage.currentTheme = StubTheme()
+                }
+
+                it("returns nil") {
+                    expect(systemUnderTest.currentTheme).to(beNil())
+                }
+
+                it("does not call notificationCenter.post") {
+                    expect(notificationSpy.postInvocations).to(equal(0))
+                }
+            }
+
+            context("when the theme is .avonDark") {
+                beforeEach {
+                    storage.currentTheme = AvonDarkTheme()
+                }
+
+                it("returns an expected theme") {
+                    expect(systemUnderTest.currentTheme).to(equal(.avonDark))
+                }
+
+                it("does not call notificationCenter.post") {
+                    expect(notificationSpy.postInvocations).to(equal(0))
+                }
+            }
+
+            context("when the theme is .avonLight") {
+                beforeEach {
+                    storage.currentTheme = AvonLightTheme()
+                }
+
+                it("returns an expected theme") {
+                    expect(systemUnderTest.currentTheme).to(equal(.avonLight))
+                }
+
+                it("does not call notificationCenter.post") {
+                    expect(notificationSpy.postInvocations).to(equal(0))
+                }
+            }
+
+            context("when the theme is .naturaDark") {
+                beforeEach {
+                    storage.currentTheme = NaturaDarkTheme()
+                }
+
+                it("returns an expected theme") {
+                    expect(systemUnderTest.currentTheme).to(equal(.naturaDark))
+                }
+
+                it("does not call notificationCenter.post") {
+                    expect(notificationSpy.postInvocations).to(equal(0))
+                }
+            }
+
+            context("when the theme is .naturaDark") {
+                beforeEach {
+                    storage.currentTheme = NaturaLightTheme()
+                }
+
+                it("returns an expected theme") {
+                    expect(systemUnderTest.currentTheme).to(equal(.naturaLight))
+                }
+
+                it("does not call notificationCenter.post") {
+                    expect(notificationSpy.postInvocations).to(equal(0))
+                }
+            }
+
+            context("when the theme is .theBodyShopDark") {
+                beforeEach {
+                    storage.currentTheme = TheBodyShopDarkTheme()
+                }
+
+                it("returns an expected theme") {
+                    expect(systemUnderTest.currentTheme).to(equal(.theBodyShopDark))
+                }
+
+                it("does not call notificationCenter.post") {
+                    expect(notificationSpy.postInvocations).to(equal(0))
+                }
+            }
+
+            context("when the theme is .theBodyShopLight") {
+                beforeEach {
+                    storage.currentTheme = TheBodyShopLightTheme()
+                }
+
+                it("returns an expected theme") {
+                    expect(systemUnderTest.currentTheme).to(equal(.theBodyShopLight))
+                }
+
+                it("does not call notificationCenter.post") {
+                    expect(notificationSpy.postInvocations).to(equal(0))
+                }
+            }
+        }
     }
 }

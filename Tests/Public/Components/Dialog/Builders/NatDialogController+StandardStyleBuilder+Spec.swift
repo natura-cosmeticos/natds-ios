@@ -9,7 +9,8 @@ final class NatDialogControllerStandardStyleBuilderSpec: QuickSpec {
         var viewModel: NatDialogController.ViewModel!
 
         beforeEach {
-            DesignSystem().configure(with: .theBodyShop)
+            ConfigurationStorage.shared.currentTheme = StubTheme()
+
             systemUnderTest = .init()
             viewModel = systemUnderTest.viewModel
         }

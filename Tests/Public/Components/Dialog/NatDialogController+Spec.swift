@@ -11,7 +11,7 @@ final class NatDialogControllerSpec: QuickSpec {
             let stubView = UIView()
 
             beforeEach {
-                DesignSystem().configure(with: .theBodyShop)
+                ConfigurationStorage.shared.currentTheme = StubTheme()
 
                 let viewModel = NatDialogController.ViewModel()
                 viewModel.bodyView = stubView
@@ -34,7 +34,7 @@ final class NatDialogControllerSpec: QuickSpec {
             }
 
             it("sets view.backgroundColor to expected") {
-                let opacity = getTheme().opacities.opacity08
+                let opacity = getTokenFromTheme(\.opacity08)
                 let expectedColor = UIColor.black.withAlphaComponent(opacity)
 
                 expect(systemUnderTest.view.backgroundColor).to(equal(expectedColor))

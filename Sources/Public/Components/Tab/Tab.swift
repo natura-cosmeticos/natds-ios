@@ -27,7 +27,7 @@ public class Tab: UIView {
 
     private lazy var indicatorView: UIView = {
         let view = UIView()
-        view.backgroundColor = Colors.secondary
+        view.backgroundColor = NatColors.secondary
         return view
     }()
 
@@ -124,7 +124,7 @@ extension Tab {
         layer.shadowRadius = 2.0
         layer.shadowOpacity = 0.14
         layer.masksToBounds = false
-        layer.shadowColor = Colors.Content.highlight.cgColor
+        layer.shadowColor = NatColors.highlight.cgColor
         layer.shadowOffset = CGSize(width: 0, height: 3)
     }
 }

@@ -8,16 +8,16 @@ final class NatBadgeColorSpec: QuickSpec {
         let systemUnderTest = NatBadge.Color.self
 
         beforeEach {
-            DesignSystem().configure(with: .theBodyShop)
+            ConfigurationStorage.shared.currentTheme = StubTheme()
         }
 
         describe("#alert") {
             it("returns expected color for box") {
-                expect(systemUnderTest.alert.box).to(equal(getTheme().colors.alert))
+                expect(systemUnderTest.alert.box).to(equal(getUIColorFromTokens(\.colorAlert)))
             }
 
             it("returns expected color for content") {
-                expect(systemUnderTest.alert.content).to(equal(getTheme().colors.onAlert))
+                expect(systemUnderTest.alert.content).to(equal(getUIColorFromTokens(\.colorOnAlert)))
             }
         }
     }

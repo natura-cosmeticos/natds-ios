@@ -4,9 +4,16 @@ excluded_files:
   - ".typo-ci.yml"
   - "NatDS.xcodeproj/project.pbxproj"
   - "SampleApp/NatDS-SampleApp.xcodeproj/project.pbxproj"
+  - "Gemfile.lock"
 excluded_words:
+  - Buildables
+  - cocoapods
+  - cocoapods-downloader
+  - cover
+  - cover-natds
   - DarkHorizontal
   - DarkVertical
+  - downloader
   - enum
   - Horizontal
   - Inits
@@ -15,11 +22,23 @@ excluded_words:
   - Logo-NaturaCosmeticos-DarkHorizontal
   - Logo-NaturaCosmeticos-DarkVertical
   - Logo-NaturaCosmeticos-Horizontal
+  - lproj
   - nat
+  - natds
+  - natds-themes
   - natDialogController
+  - NatOpacities
   - natura
   - NaturaCosmeticos
   - objc
+  - Oeh
+  - Opacities
+  - parallelize
+  - parallelizeBuildables
   - pbxproj
-  - sut
+  - Testables
+  - themes
   - xcassets
+  - xcshareddata
+  - xcscheme
+  - xcschemes

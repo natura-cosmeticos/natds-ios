@@ -7,118 +7,160 @@ final class NatBorderRadiusSpec: QuickSpec {
     override func spec() {
         let systemUnderTest = NatBorderRadius.self
 
-        context("Avon") {
-            let expectedBorderRadius = AvonBorderRadius()
+        context("AvonDark") {
+            let tokens = AvonDarkTokens()
 
             beforeEach {
-                DesignSystem().configure(with: .avon)
+                DesignSystem().configure(with: .avonDark)
             }
 
             describe("#small") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.small).to(equal(expectedBorderRadius.small))
+                    expect(systemUnderTest.small).to(equal(tokens.borderRadiusSmall))
                 }
             }
 
             describe("#medium") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.medium).to(equal(expectedBorderRadius.medium))
+                    expect(systemUnderTest.medium).to(equal(tokens.borderRadiusMedium))
                 }
             }
 
             describe("#large") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.large).to(equal(expectedBorderRadius.large))
+                    expect(systemUnderTest.large).to(equal(tokens.borderRadiusLarge))
                 }
             }
+        } // context - when using AvonDark as theme
 
-            describe("#circle") {
-                it("returns a expect value") {
-                    expect(systemUnderTest.circle(viewHeight: 2))
-                        .to(equal(expectedBorderRadius.circle(viewHeight: 2)))
-                }
-
-                it("returns a expect value") {
-                    expect(systemUnderTest.circle(viewHeight: 1))
-                        .to(equal(expectedBorderRadius.circle(viewHeight: 1)))
-                }
-            }
-        } // context - when using Avon as theme
-
-        context("Natura") {
-            let expectedBorderRadius = NaturaBorderRadius()
+        context("AvonLight") {
+            let tokens = AvonLightTokens()
 
             beforeEach {
-                DesignSystem().configure(with: .natura)
+                DesignSystem().configure(with: .avonLight)
             }
 
             describe("#small") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.small).to(equal(expectedBorderRadius.small))
+                    expect(systemUnderTest.small).to(equal(tokens.borderRadiusSmall))
                 }
             }
 
             describe("#medium") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.medium).to(equal(expectedBorderRadius.medium))
+                    expect(systemUnderTest.medium).to(equal(tokens.borderRadiusMedium))
                 }
             }
 
             describe("#large") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.large).to(equal(expectedBorderRadius.large))
+                    expect(systemUnderTest.large).to(equal(tokens.borderRadiusLarge))
                 }
             }
+        } // context - when using AvonLight as theme
 
-            describe("#circle") {
-                it("returns a expect value") {
-                    expect(systemUnderTest.circle(viewHeight: 2))
-                        .to(equal(expectedBorderRadius.circle(viewHeight: 2)))
-                }
-
-                it("returns a expect value") {
-                    expect(systemUnderTest.circle(viewHeight: 1))
-                        .to(equal(expectedBorderRadius.circle(viewHeight: 1)))
-                }
-            }
-        } // context - when using Natura as theme
-
-        context("when using The Body Shop as theme") {
-            let expectedBorderRadius = TheBodyShopBorderRadius()
+        context("NaturaDark") {
+            let tokens = NaturaDarkTokens()
 
             beforeEach {
-                DesignSystem().configure(with: .theBodyShop)
+                DesignSystem().configure(with: .naturaDark)
             }
 
             describe("#small") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.small).to(equal(expectedBorderRadius.small))
+                    expect(systemUnderTest.small).to(equal(tokens.borderRadiusSmall))
                 }
             }
 
             describe("#medium") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.medium).to(equal(expectedBorderRadius.medium))
+                    expect(systemUnderTest.medium).to(equal(tokens.borderRadiusMedium))
                 }
             }
 
             describe("#large") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.large).to(equal(expectedBorderRadius.large))
+                    expect(systemUnderTest.large).to(equal(tokens.borderRadiusLarge))
+                }
+            }
+        } // context - when using NaturaDark as theme
+
+        context("NaturaLight") {
+            let tokens = NaturaLightTokens()
+
+            beforeEach {
+                DesignSystem().configure(with: .naturaLight)
+            }
+
+            describe("#small") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.small).to(equal(tokens.borderRadiusSmall))
                 }
             }
 
-            describe("#circle") {
+            describe("#medium") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.circle(viewHeight: 2))
-                        .to(equal(expectedBorderRadius.circle(viewHeight: 2)))
-                }
-
-                it("returns a expect value") {
-                    expect(systemUnderTest.circle(viewHeight: 1))
-                        .to(equal(expectedBorderRadius.circle(viewHeight: 1)))
+                    expect(systemUnderTest.medium).to(equal(tokens.borderRadiusMedium))
                 }
             }
-        } // context - when using The Body Shop as theme
+
+            describe("#large") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.large).to(equal(tokens.borderRadiusLarge))
+                }
+            }
+        } // context - when using NaturaLight as theme
+
+        context("TheBodyShopDark") {
+            let tokens = TheBodyShopDarkTokens()
+
+            beforeEach {
+                DesignSystem().configure(with: .theBodyShopDark)
+            }
+
+            describe("#small") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.small).to(equal(tokens.borderRadiusSmall))
+                }
+            }
+
+            describe("#medium") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.medium).to(equal(tokens.borderRadiusMedium))
+                }
+            }
+
+            describe("#large") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.large).to(equal(tokens.borderRadiusLarge))
+                }
+            }
+        } // context - when using TheBodyShopDark as theme
+
+        context("TheBodyShopLight") {
+            let tokens = TheBodyShopLightTokens()
+
+            beforeEach {
+                DesignSystem().configure(with: .theBodyShopLight)
+            }
+
+            describe("#small") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.small).to(equal(tokens.borderRadiusSmall))
+                }
+            }
+
+            describe("#medium") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.medium).to(equal(tokens.borderRadiusMedium))
+                }
+            }
+
+            describe("#large") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.large).to(equal(tokens.borderRadiusLarge))
+                }
+            }
+        } // context - when using TheBodyShopLight as theme
     }
 }

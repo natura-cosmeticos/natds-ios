@@ -11,17 +11,14 @@
         button.layer.cornerRadius = NatBorderRadius.circle(viewHeight: DSSizes.large)
 
  - Requires:
-        It's necessary to configure the Design System current Brand at DesignSystem class
-        or fatalError will be raised.
+        It's necessary to configure the Design System with a theme or fatalError will be raised.
 
-            DesignSystem().configure(with: Brand)
+            DesignSystem().configure(with: AvailableTheme)
 */
 
 public enum NatBorderRadius {
-    public static var small: CGFloat { getTheme().borderRadius.small }
-    public static var medium: CGFloat { getTheme().borderRadius.medium }
-    public static var large: CGFloat { getTheme().borderRadius.large }
-    public static func circle(viewHeight: CGFloat) -> CGFloat {
-        getTheme().borderRadius.circle(viewHeight: viewHeight)
-    }
+    public static var small: CGFloat { getTokenFromTheme(\.borderRadiusSmall) }
+    public static var medium: CGFloat { getTokenFromTheme(\.borderRadiusMedium) }
+    public static var large: CGFloat { getTokenFromTheme(\.borderRadiusLarge) }
+    public static func circle(viewHeight: CGFloat) -> CGFloat { viewHeight / 2 }
 }

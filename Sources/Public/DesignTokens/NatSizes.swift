@@ -11,32 +11,27 @@
         containerView.heightAncor.constraint(equalToConstant: NatSizes.tiny)
 
  - Requires:
-        It's necessary to configure the Design System current Brand at DesignSystem class
-        or fatalError will be raised.
+        It's necessary to configure the Design System with a theme or fatalError will be raised.
 
-            DesignSystem().configure(with: Brand)
+            DesignSystem().configure(with: AvailableTheme)
 */
 
 public enum NatSizes {
-    public static var micro: CGFloat { getTheme().sizes.micro }
-    public static var tiny: CGFloat { getTheme().sizes.tiny }
-    public static var small: CGFloat { getTheme().sizes.small }
-
-    @available(*, deprecated, message: "Use standard instead")
-    public static var standart: CGFloat { getTheme().sizes.standard }
-    public static var standard: CGFloat { getTheme().sizes.standard }
-
-    public static var semi: CGFloat { getTheme().sizes.semi }
-    public static var semiX: CGFloat { getTheme().sizes.semix }
-    public static var medium: CGFloat { getTheme().sizes.medium }
-    public static var mediumX: CGFloat { getTheme().sizes.mediumx }
-    public static var large: CGFloat { getTheme().sizes.large }
-    public static var largeX: CGFloat { getTheme().sizes.largex }
-    public static var largeXX: CGFloat { getTheme().sizes.largexx }
-    public static var largeXXX: CGFloat { getTheme().sizes.largexxx }
-    public static var huge: CGFloat { getTheme().sizes.huge }
-    public static var hugeX: CGFloat { getTheme().sizes.hugex }
-    public static var hugeXX: CGFloat { getTheme().sizes.hugexx }
-    public static var hugeXXX: CGFloat { getTheme().sizes.hugexxx }
-    public static var veryHuge: CGFloat { getTheme().sizes.veryhuge }
+    public static var micro: CGFloat { getTokenFromTheme(\.sizeMicro) }
+    public static var tiny: CGFloat { getTokenFromTheme(\.sizeTiny) }
+    public static var small: CGFloat { getTokenFromTheme(\.sizeSmall) }
+    public static var standard: CGFloat { getTokenFromTheme(\.sizeStandard) }
+    public static var semi: CGFloat { getTokenFromTheme(\.sizeSemi) }
+    public static var semiX: CGFloat { getTokenFromTheme(\.sizeSemiX) }
+    public static var medium: CGFloat { getTokenFromTheme(\.sizeMedium) }
+    public static var mediumX: CGFloat { getTokenFromTheme(\.sizeMediumX) }
+    public static var large: CGFloat { getTokenFromTheme(\.sizeLarge) }
+    public static var largeX: CGFloat { getTokenFromTheme(\.sizeLargeX) }
+    public static var largeXX: CGFloat { getTokenFromTheme(\.sizeLargeXx) }
+    public static var largeXXX: CGFloat { getTokenFromTheme(\.sizeLargeXxx) }
+    public static var huge: CGFloat { getTokenFromTheme(\.sizeHuge) }
+    public static var hugeX: CGFloat { getTokenFromTheme(\.sizeHugeX) }
+    public static var hugeXX: CGFloat { getTokenFromTheme(\.sizeHugeXx) }
+    public static var hugeXXX: CGFloat { getTokenFromTheme(\.sizeHugeXxx) }
+    public static var veryHuge: CGFloat { getTokenFromTheme(\.sizeVeryHuge) }
 }

@@ -8,31 +8,30 @@ final class DialogStyleSpec: QuickSpec {
         let systemUnderTest = DialogStyle.self
 
         beforeEach {
-            DesignSystem().configure(with: .theBodyShop)
+            ConfigurationStorage.shared.currentTheme = StubTheme()
         }
 
         describe("#createLabelForTitle") {
             var label: UILabel!
 
             beforeEach {
-                DesignSystem().configure(with: .theBodyShop)
                 label = systemUnderTest.createLabelForTitle(title: "StubText")
             }
 
             it("returns an expected value for size font") {
-                let expectedSize = getTheme().font.sizes.heading6
+                let expectedSize = NatFonts.TextStyle.heading6.size
 
                 expect(label.font.pointSize).to(equal(expectedSize))
             }
 
             it("returns a expect value for weight") {
-                let expectedWeight = getTheme().font.weights.medium
+                let expectedWeight = NatFonts.TextStyle.heading6.weight
 
                 expect(label.font.getWeight()).to(equal(expectedWeight))
             }
 
             it("returns a expect value for weight") {
-                let expectedColor = getTheme().colors.highEmphasis
+                let expectedColor = getUIColorFromTokens(\.colorHighEmphasis)
                 expect(label.textColor).to(equal(expectedColor))
             }
 
@@ -44,7 +43,7 @@ final class DialogStyleSpec: QuickSpec {
                 let attributedText = label.attributedText
                 let attributes = attributedText!.attributes(at: 0, effectiveRange: nil)
                 let kern = attributes[.kern] as? CGFloat
-                let expectedKern = getTheme().font.letterSpacings.heading6
+                let expectedKern = NatFonts.TextStyle.heading6.letterSpacing
 
                 expect(kern).to(equal(expectedKern))
             }
@@ -53,7 +52,7 @@ final class DialogStyleSpec: QuickSpec {
                 let attributedText = label.attributedText
                 let attributes = attributedText!.attributes(at: 0, effectiveRange: nil)
                 let foregroundColor = attributes[.foregroundColor] as? UIColor
-                let expectedColor = getTheme().colors.highEmphasis
+                let expectedColor = getUIColorFromTokens(\.colorHighEmphasis)
 
                 expect(foregroundColor).to(equal(expectedColor))
             }
@@ -63,24 +62,23 @@ final class DialogStyleSpec: QuickSpec {
             var label: UILabel!
 
             beforeEach {
-                DesignSystem().configure(with: .theBodyShop)
                 label = systemUnderTest.createLabelForBody(body: "StubText")
             }
 
             it("returns an expected value for size font") {
-                let expectedSize = getTheme().font.sizes.body1
+                let expectedSize = NatFonts.TextStyle.body1.size
 
                 expect(label.font.pointSize).to(equal(expectedSize))
             }
 
             it("returns a expect value for weight") {
-                let expectedWeight = getTheme().font.weights.regular
+                let expectedWeight = NatFonts.TextStyle.body1.weight
 
                 expect(label.font.getWeight()).to(equal(expectedWeight))
             }
 
             it("returns a expect value for weight") {
-                let expectedColor = getTheme().colors.highEmphasis
+                let expectedColor = getUIColorFromTokens(\.colorHighEmphasis)
                 expect(label.textColor).to(equal(expectedColor))
             }
 
@@ -92,7 +90,7 @@ final class DialogStyleSpec: QuickSpec {
                 let attributedText = label.attributedText
                 let attributes = attributedText!.attributes(at: 0, effectiveRange: nil)
                 let kern = attributes[.kern] as? CGFloat
-                let expectedKern = getTheme().font.letterSpacings.body1
+                let expectedKern = NatFonts.TextStyle.body1.letterSpacing
 
                 expect(kern).to(equal(expectedKern))
             }
@@ -101,7 +99,7 @@ final class DialogStyleSpec: QuickSpec {
                 let attributedText = label.attributedText
                 let attributes = attributedText!.attributes(at: 0, effectiveRange: nil)
                 let foregroundColor = attributes[.foregroundColor] as? UIColor
-                let expectedColor = getTheme().colors.highEmphasis
+                let expectedColor = getUIColorFromTokens(\.colorHighEmphasis)
 
                 expect(foregroundColor).to(equal(expectedColor))
             }

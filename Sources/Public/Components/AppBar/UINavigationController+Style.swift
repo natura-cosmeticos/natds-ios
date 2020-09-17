@@ -6,12 +6,12 @@ public extension UINavigationController {
 
         var backgroundColor: UIColor {
             switch self {
-            case .default: return getTheme().colors.surface
+            case .default: return getUIColorFromTokens(\.colorSurface)
             }
         }
 
         var titleColor: UIColor {
-            return getTheme().colors.highEmphasis
+            return getUIColorFromTokens(\.colorHighEmphasis)
         }
 
         var elevation: NatElevation.Elevation {

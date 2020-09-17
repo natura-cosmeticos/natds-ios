@@ -9,7 +9,8 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
         var button: UIButton!
 
         beforeEach {
-            DesignSystem().configure(with: .theBodyShop)
+            ConfigurationStorage.shared.currentTheme = StubTheme()
+
             button = UIButton()
         }
 
@@ -19,10 +20,10 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
             }
 
             it("returns an expected font") {
-                let size = getTheme().font.sizes.button
-                let weight = getTheme().font.weights.medium
-                expect(button.titleLabel?.font.pointSize).to(equal(size))
-                expect(button.titleLabel?.font.getWeight()).to(equal(weight))
+                let textStyle = NatFonts.TextStyle.button
+
+                expect(button.titleLabel?.font.pointSize).to(equal(textStyle.size))
+                expect(button.titleLabel?.font.getWeight()).to(equal(textStyle.weight))
             }
 
             it("returns an expected backgroundColor") {
@@ -30,7 +31,7 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
             }
 
             it("returns an expected cornerRadius") {
-                let borderRadius = getTheme().borderRadius.medium
+                let borderRadius = getTokenFromTheme(\.borderRadiusMedium)
 
                 expect(button.layer.cornerRadius).to(equal(borderRadius))
             }
@@ -107,8 +108,9 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
 
                 it("returns an expected foregroundColor") {
                     let foregroundColor = attributes[.foregroundColor] as? UIColor
+                    let expectedColor = getUIColorFromTokens(\.colorOnSurface)
 
-                    expect(foregroundColor).to(equal(getTheme().colors.onSurface))
+                    expect(foregroundColor).to(equal(expectedColor))
                 }
             }
 
@@ -139,9 +141,10 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
 
                 it("returns an expected foregroundColor") {
                     let foregroundColor = attributes[.foregroundColor] as? UIColor
+                    let opacity = getTokenFromTheme(\.opacity08)
 
                     expect(foregroundColor)
-                        .to(equal(NatColors.onSurface.withAlphaComponent(getTheme().opacities.opacity08)))
+                        .to(equal(NatColors.onSurface.withAlphaComponent(opacity)))
                 }
             }
         }

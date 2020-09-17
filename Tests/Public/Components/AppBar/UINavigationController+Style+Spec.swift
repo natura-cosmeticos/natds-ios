@@ -8,7 +8,7 @@ final class UINavigationControllerStyleSpec: QuickSpec {
         var sut: UINavigationController.Style!
 
         beforeEach {
-            DesignSystem().configure(with: .theBodyShop)
+            ConfigurationStorage.shared.currentTheme = StubTheme()
         }
 
         describe("#default") {
@@ -16,11 +16,11 @@ final class UINavigationControllerStyleSpec: QuickSpec {
                 sut = .default
             }
             it("returns expected color for background") {
-                let expectedColor = getTheme().colors.surface
+                let expectedColor = getUIColorFromTokens(\.colorSurface)
                 expect(sut.backgroundColor).to(equal(expectedColor))
             }
             it("returns expected color for title") {
-                let expectedColor = getTheme().colors.highEmphasis
+                let expectedColor = getUIColorFromTokens(\.colorHighEmphasis)
                 expect(sut.titleColor).to(equal(expectedColor))
             }
             it("returns expected elevation") {

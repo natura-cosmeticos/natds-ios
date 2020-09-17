@@ -8,20 +8,20 @@ final class DialogFooterView: UIView {
         let stackView = UIStackView()
         stackView.axis = .horizontal
         stackView.distribution = .fill
-        stackView.spacing = getTheme().spacing.tiny
+        stackView.spacing = getTokenFromTheme(\.sizeTiny)
         stackView.translatesAutoresizingMaskIntoConstraints = false
 
         return stackView
     }()
 
-    private let notificationCenter: NotificationCenterProtocol
+    private let notificationCenter: NotificationCenterObservable
 
     private var actions: [UIButton: ActionHandler] = [:]
     private var isFirstTimeInLayoutSubviews = true
 
     // MARK: - Inits
 
-    init(notificationCenter: NotificationCenterProtocol = NotificationCenter.default) {
+    init(notificationCenter: NotificationCenterObservable = NotificationCenter.default) {
         self.notificationCenter = notificationCenter
 
         super.init(frame: .zero)

@@ -19,10 +19,9 @@ import UIKit
         .build()
 
  - Requires:
-        It's necessary to configure the Design System current Brand at DesignSystem class
-        or fatalError will be raised.
+        It's necessary to configure the Design System with a theme or fatalError will be raised.
 
-            DesignSystem().configure(with: Brand)
+            DesignSystem().configure(with: AvailableTheme)
 */
 
 public final class NatDialogController: UIViewController {
@@ -31,7 +30,7 @@ public final class NatDialogController: UIViewController {
 
     private let containerView: UIView = {
         let view = UIView()
-        ViewStyle.applyElevation(on: view, with: getTheme().elevations.elevation08)
+        ViewStyle.applyElevation(on: view, with: getTokenFromTheme(\.elevation08))
         view.translatesAutoresizingMaskIntoConstraints = false
 
         return view
@@ -40,7 +39,7 @@ public final class NatDialogController: UIViewController {
     private let stackView: UIStackView = {
         let view = UIStackView()
         view.axis = .vertical
-        view.spacing = getTheme().spacing.small
+        view.spacing = getTokenFromTheme(\.sizeSmall)
         view.translatesAutoresizingMaskIntoConstraints = false
 
         return view
@@ -94,11 +93,11 @@ public final class NatDialogController: UIViewController {
         modalPresentationStyle = .overCurrentContext
         modalTransitionStyle = .crossDissolve
 
-        let opacity = getTheme().opacities.opacity08
+        let opacity = getTokenFromTheme(\.opacity08)
         view.backgroundColor = UIColor.black.withAlphaComponent(opacity)
 
-        containerView.layer.cornerRadius = getTheme().borderRadius.medium
-        containerView.backgroundColor = getTheme().colors.surface
+        containerView.layer.cornerRadius = getTokenFromTheme(\.borderRadiusMedium)
+        containerView.backgroundColor = getUIColorFromTokens(\.colorSurface)
 
         view.addSubview(containerView)
         containerView.addSubview(stackView)
@@ -107,7 +106,7 @@ public final class NatDialogController: UIViewController {
     }
 
     private func addConstraints() {
-        let sideMargins = getTheme().spacing.small
+        let sideMargins = getTokenFromTheme(\.sizeSmall)
         let containerViewMinimumWidth = containerView.widthAnchor.constraint(greaterThanOrEqualToConstant: 300)
         containerViewMinimumWidth.priority = .defaultHigh
         let containerViewMinimumHeight = containerView.heightAnchor.constraint(greaterThanOrEqualToConstant: 80)
@@ -153,10 +152,9 @@ extension NatDialogController {
             .build()
 
      - Requires:
-            It's necessary to configure the Design System current Brand at DesignSystem class
-            or fatalError will be raised.
+            It's necessary to configure the Design System with a theme or fatalError will be raised.
 
-                DesignSystem().configure(with: Brand)
+                DesignSystem().configure(with: AvailableTheme)
     */
     public static var standardStyleBuilder: StandardStyleBuilder { .init() }
 
@@ -178,10 +176,9 @@ extension NatDialogController {
             .build()
 
      - Requires:
-            It's necessary to configure the Design System current Brand at DesignSystem class
-            or fatalError will be raised.
+            It's necessary to configure the Design System with a theme or fatalError will be raised.
 
-                DesignSystem().configure(with: Brand)
+                DesignSystem().configure(with: AvailableTheme)
     */
     public static var alertStyleBuilder: AlertStyleBuilder { .init() }
 }

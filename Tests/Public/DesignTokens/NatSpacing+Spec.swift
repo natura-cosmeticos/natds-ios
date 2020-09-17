@@ -7,160 +7,304 @@ final class NatSpacingSpec: QuickSpec {
     override func spec() {
         let systemUnderTest = NatSpacing.self
 
-        context("Avon") {
-            let expectedSpacing = AvonSpacing()
+        context("AvonDark") {
+            let tokens = AvonDarkTokens()
 
             beforeEach {
-                DesignSystem().configure(with: .avon)
+                DesignSystem().configure(with: .avonDark)
             }
 
             describe("#micro") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.micro).to(equal(expectedSpacing.micro))
+                    expect(systemUnderTest.micro).to(equal(tokens.spacingMicro))
                 }
             }
 
             describe("#tiny") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.tiny).to(equal(expectedSpacing.tiny))
+                    expect(systemUnderTest.tiny).to(equal(tokens.spacingTiny))
                 }
             }
 
             describe("#small") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.small).to(equal(expectedSpacing.small))
+                    expect(systemUnderTest.small).to(equal(tokens.spacingSmall))
                 }
             }
 
             describe("#standard") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.standard).to(equal(expectedSpacing.standart))
+                    expect(systemUnderTest.standard).to(equal(tokens.spacingStandard))
                 }
             }
 
             describe("#semi") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.semi).to(equal(expectedSpacing.semi))
+                    expect(systemUnderTest.semi).to(equal(tokens.spacingSemi))
                 }
             }
 
             describe("#large") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.large).to(equal(expectedSpacing.large))
+                    expect(systemUnderTest.large).to(equal(tokens.spacingLarge))
                 }
             }
 
             describe("#xLarge") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.xLarge).to(equal(expectedSpacing.xLarge))
+                    expect(systemUnderTest.xLarge).to(equal(tokens.spacingXLarge))
                 }
             }
-        } // context - when using Avon as theme
+        } // context - when using AvonDark as theme
 
-        context("Natura") {
-            let expectedSpacing = NaturaSpacing()
+        context("AvonLight") {
+            let tokens = AvonLightTokens()
 
             beforeEach {
-                DesignSystem().configure(with: .natura)
+                DesignSystem().configure(with: .avonLight)
             }
 
             describe("#micro") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.micro).to(equal(expectedSpacing.micro))
+                    expect(systemUnderTest.micro).to(equal(tokens.spacingMicro))
                 }
             }
 
             describe("#tiny") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.tiny).to(equal(expectedSpacing.tiny))
+                    expect(systemUnderTest.tiny).to(equal(tokens.spacingTiny))
                 }
             }
 
             describe("#small") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.small).to(equal(expectedSpacing.small))
+                    expect(systemUnderTest.small).to(equal(tokens.spacingSmall))
                 }
             }
 
             describe("#standard") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.standard).to(equal(expectedSpacing.standart))
+                    expect(systemUnderTest.standard).to(equal(tokens.spacingStandard))
                 }
             }
 
             describe("#semi") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.semi).to(equal(expectedSpacing.semi))
+                    expect(systemUnderTest.semi).to(equal(tokens.spacingSemi))
                 }
             }
 
             describe("#large") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.large).to(equal(expectedSpacing.large))
+                    expect(systemUnderTest.large).to(equal(tokens.spacingLarge))
                 }
             }
 
             describe("#xLarge") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.xLarge).to(equal(expectedSpacing.xLarge))
+                    expect(systemUnderTest.xLarge).to(equal(tokens.spacingXLarge))
                 }
             }
-        } // context - when using Natura as theme
+        } // context - when using AvonLight as theme
 
-        context("when using The Body Shop as theme") {
-            let expectedSpacing = TheBodyShopSpacing()
+        context("NaturaDark") {
+            let tokens = NaturaDarkTokens()
 
             beforeEach {
-                DesignSystem().configure(with: .theBodyShop)
+                DesignSystem().configure(with: .naturaDark)
             }
 
             describe("#micro") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.micro).to(equal(4))
-                }
-            }
-
-            describe("#micro") {
-                it("returns a expect value") {
-                    expect(systemUnderTest.micro).to(equal(expectedSpacing.micro))
+                    expect(systemUnderTest.micro).to(equal(tokens.spacingMicro))
                 }
             }
 
             describe("#tiny") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.tiny).to(equal(expectedSpacing.tiny))
+                    expect(systemUnderTest.tiny).to(equal(tokens.spacingTiny))
                 }
             }
 
             describe("#small") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.small).to(equal(expectedSpacing.small))
+                    expect(systemUnderTest.small).to(equal(tokens.spacingSmall))
                 }
             }
 
             describe("#standard") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.standard).to(equal(expectedSpacing.standart))
+                    expect(systemUnderTest.standard).to(equal(tokens.spacingStandard))
                 }
             }
 
             describe("#semi") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.semi).to(equal(expectedSpacing.semi))
+                    expect(systemUnderTest.semi).to(equal(tokens.spacingSemi))
                 }
             }
 
             describe("#large") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.large).to(equal(expectedSpacing.large))
+                    expect(systemUnderTest.large).to(equal(tokens.spacingLarge))
                 }
             }
 
             describe("#xLarge") {
                 it("returns a expect value") {
-                    expect(systemUnderTest.xLarge).to(equal(expectedSpacing.xLarge))
+                    expect(systemUnderTest.xLarge).to(equal(tokens.spacingXLarge))
                 }
             }
-        } // context - when using The Body Shop as theme
+        } // context - when using NaturaDark as theme
+
+        context("NaturaLight") {
+            let tokens = NaturaLightTokens()
+
+            beforeEach {
+                DesignSystem().configure(with: .naturaLight)
+            }
+
+            describe("#micro") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.micro).to(equal(tokens.spacingMicro))
+                }
+            }
+
+            describe("#tiny") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.tiny).to(equal(tokens.spacingTiny))
+                }
+            }
+
+            describe("#small") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.small).to(equal(tokens.spacingSmall))
+                }
+            }
+
+            describe("#standard") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.standard).to(equal(tokens.spacingStandard))
+                }
+            }
+
+            describe("#semi") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.semi).to(equal(tokens.spacingSemi))
+                }
+            }
+
+            describe("#large") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.large).to(equal(tokens.spacingLarge))
+                }
+            }
+
+            describe("#xLarge") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.xLarge).to(equal(tokens.spacingXLarge))
+                }
+            }
+        } // context - when using NaturaLight as theme
+
+        context("TheBodyShopDark") {
+            let tokens = TheBodyShopDarkTokens()
+
+            beforeEach {
+                DesignSystem().configure(with: .theBodyShopDark)
+            }
+
+            describe("#micro") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.micro).to(equal(tokens.spacingMicro))
+                }
+            }
+
+            describe("#tiny") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.tiny).to(equal(tokens.spacingTiny))
+                }
+            }
+
+            describe("#small") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.small).to(equal(tokens.spacingSmall))
+                }
+            }
+
+            describe("#standard") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.standard).to(equal(tokens.spacingStandard))
+                }
+            }
+
+            describe("#semi") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.semi).to(equal(tokens.spacingSemi))
+                }
+            }
+
+            describe("#large") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.large).to(equal(tokens.spacingLarge))
+                }
+            }
+
+            describe("#xLarge") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.xLarge).to(equal(tokens.spacingXLarge))
+                }
+            }
+        } // context - when using TheBodyShopDark as theme
+
+        context("TheBodyShopLight") {
+            let tokens = TheBodyShopLightTokens()
+
+            beforeEach {
+                DesignSystem().configure(with: .theBodyShopDark)
+            }
+
+            describe("#micro") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.micro).to(equal(tokens.spacingMicro))
+                }
+            }
+
+            describe("#tiny") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.tiny).to(equal(tokens.spacingTiny))
+                }
+            }
+
+            describe("#small") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.small).to(equal(tokens.spacingSmall))
+                }
+            }
+
+            describe("#standard") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.standard).to(equal(tokens.spacingStandard))
+                }
+            }
+
+            describe("#semi") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.semi).to(equal(tokens.spacingSemi))
+                }
+            }
+
+            describe("#large") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.large).to(equal(tokens.spacingLarge))
+                }
+            }
+
+            describe("#xLarge") {
+                it("returns a expect value") {
+                    expect(systemUnderTest.xLarge).to(equal(tokens.spacingXLarge))
+                }
+            }
+        } // context - when using TheBodyShopDark as theme
     }
 }

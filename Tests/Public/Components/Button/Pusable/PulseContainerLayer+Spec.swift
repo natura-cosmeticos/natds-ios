@@ -8,8 +8,9 @@ final class PulseContainerLayerSpec: QuickSpec {
         var systemUnderTest: PulseContainerLayer!
 
         beforeEach {
-            DesignSystem().configure(with: .theBodyShop)
-            systemUnderTest = PulseContainerLayer()
+            ConfigurationStorage.shared.currentTheme = StubTheme()
+
+            systemUnderTest = PulseContainerLayer(color: NatColors.highlight)
         }
 
         describe("#init") {
@@ -25,9 +26,7 @@ final class PulseContainerLayerSpec: QuickSpec {
 
             it("sets a color to PulseLayer") {
                 let pulseLayer = systemUnderTest.sublayers?.first as? PulseLayer
-
-                let opacity = getTheme().opacities.opacity05
-                let expectedColor = NatColors.highlight.withAlphaComponent(opacity).cgColor
+                let expectedColor = NatColors.highlight.cgColor
 
                 expect(pulseLayer?.fillColor).to(equal(expectedColor))
             }
