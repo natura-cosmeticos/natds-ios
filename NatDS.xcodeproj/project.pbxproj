@@ -30,7 +30,6 @@
 		1E1CA75D4F2464DBEA0DD722294FFDEB /* NatSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0268F8E94DAA2428259644D88E375D32 /* NatSpacing.swift */; };
 		1F40DBA4B8A3C9B0558AD83B5B2884D6 /* ButtonContainedStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6921E739399DFDC850A3FD044E812EEE /* ButtonContainedStyle.swift */; };
 		2625466124C7379800B98A91 /* StubSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2625465F24C7379400B98A91 /* StubSelector.swift */; };
-		2655155E5437F0880708125E1F9F5BC9 /* Elevations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D49BA63C5E5BFEED327C214620A7657 /* Elevations.swift */; };
 		265B17EB24AFA12900FD0407 /* NatBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265B17EA24AFA12900FD0407 /* NatBadge.swift */; };
 		26740A4924B3A60C00419526 /* NatBadge+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26740A4824B3A60C00419526 /* NatBadge+Style.swift */; };
 		26740A4B24B3A62F00419526 /* NatBadge+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26740A4A24B3A62F00419526 /* NatBadge+Color.swift */; };
@@ -259,7 +258,6 @@
 		02B41F99CB8ACD14C09E1AA323E38C2D /* AssetsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsHelper.swift; sourceTree = "<group>"; };
 		04723CCAA125D20DF5FFBB3D77A939D4 /* ConfigurationStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationStorage.swift; sourceTree = "<group>"; };
 		0B29FF4C598F8297E81A6B6A82ACA4F9 /* IconView+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IconView+Snapshot+Tests.swift"; sourceTree = "<group>"; };
-		0D49BA63C5E5BFEED327C214620A7657 /* Elevations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Elevations.swift; sourceTree = "<group>"; };
 		0D6236D4B7FFC5CF049C20642874B068 /* ButtonContainedStyle+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonContainedStyle+Spec.swift"; sourceTree = "<group>"; };
 		0D8BC0D102CE4444401C0469C861358A /* NatFonts+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatFonts+Spec.swift"; sourceTree = "<group>"; };
 		0E4741DD24BE4C4100BB96FA /* UIViewController+TitleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+TitleStyle.swift"; sourceTree = "<group>"; };
@@ -1387,7 +1385,6 @@
 			isa = PBXGroup;
 			children = (
 				845AD7A224E2C47B006CA226 /* SingleSourceOfTruth */,
-				0D49BA63C5E5BFEED327C214620A7657 /* Elevations.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -2130,7 +2127,6 @@
 				84BC900524AA163A007DF09D /* DialogFooterView.swift in Sources */,
 				269C886824C2483600A507BE /* UIBarButtonItem+Icon.swift in Sources */,
 				6D4DFEB09D32E1F36B9FA29904AE1ED8 /* ElevationAttributes.swift in Sources */,
-				2655155E5437F0880708125E1F9F5BC9 /* Elevations.swift in Sources */,
 				672E84F3438F653B2DF42C2018894304 /* ExpansionPanel+Margin.swift in Sources */,
 				3A65DE112EB34ED5B9F3F1DF7B8D3FBD /* ExpansionPanel.swift in Sources */,
 				84BF066524B4A8BD00462AC5 /* ShortcutOutlinedStyle.swift in Sources */,

@@ -26,7 +26,7 @@ final class UINavigationControllerConfigureSpec: QuickSpec {
                 expect(sut.navigationBar.barTintColor).to(equal(style.backgroundColor))
             }
             it("applies elevation") {
-                let attributes = getTokenFromTheme(style.elevation.rawValue)
+                let attributes = NatElevation.ElevationAttributes.elevation02
 
                 expect(sut.navigationBar.layer.shadowColor).to(equal(attributes.shadowColor))
                 expect(sut.navigationBar.layer.shadowOffset).to(equal(attributes.shadowOffSet))
