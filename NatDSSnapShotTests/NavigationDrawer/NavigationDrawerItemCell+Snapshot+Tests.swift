@@ -72,20 +72,20 @@ final class NavigationDrawerItemCellTests: XCTestCase {
     }
 
     func test_setTagText_hasSnapshotWithTag() {
-        systemUnderTest.tagText = "Novo"
+        systemUnderTest.tagText = "New"
 
         assertSnapshot(matching: systemUnderTest, as: .image)
     }
 
     func test_setTagText_withLargeTitle_hasSnapshotWithTag() {
         systemUnderTest.title = "Menu Item lorem ipsum segum dolor et octum"
-        systemUnderTest.tagText = "Novo"
+        systemUnderTest.tagText = "New"
 
         assertSnapshot(matching: systemUnderTest, as: .image)
     }
 
     func test_setTagTextWithSubItems_hasSnapshotWithTag() {
-        systemUnderTest.tagText = "Novo"
+        systemUnderTest.tagText = "New"
         systemUnderTest.hasSubItems = true
 
         assertSnapshot(matching: systemUnderTest, as: .image)
@@ -93,14 +93,14 @@ final class NavigationDrawerItemCellTests: XCTestCase {
 
     func test_setTagTextWithSubItems_withLargeTitle_hasSnapshotWithTag() {
         systemUnderTest.title = "Menu Item lorem ipsum segum dolor et octum"
-        systemUnderTest.tagText = "Novo"
+        systemUnderTest.tagText = "New"
         systemUnderTest.hasSubItems = true
 
         assertSnapshot(matching: systemUnderTest, as: .image)
     }
 
     func test_setTagTextWithSubItems_hasSelectedSnapshotWithTag() {
-        systemUnderTest.tagText = "Novo"
+        systemUnderTest.tagText = "New"
         systemUnderTest.state = .selected
         systemUnderTest.hasSubItems = true
 
@@ -108,7 +108,7 @@ final class NavigationDrawerItemCellTests: XCTestCase {
     }
 
     func test_setTagTextWithSubItems_hasDisabledSnapshotWithTag() {
-        systemUnderTest.tagText = "Novo"
+        systemUnderTest.tagText = "New"
         systemUnderTest.state = .disabled
         systemUnderTest.hasSubItems = true
 
