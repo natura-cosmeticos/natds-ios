@@ -11,7 +11,7 @@ final class NatTagSpec: QuickSpec {
         var styleSpy: NatTag.Style!
 
         beforeEach {
-            ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
+            ConfigurationStorage.shared.currentTheme = StubTheme()
 
             applyStyleInvocations = 0
 
