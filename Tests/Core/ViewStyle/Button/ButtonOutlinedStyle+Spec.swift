@@ -73,7 +73,7 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
                 }
 
                 it("returns an expected borderColor") {
-                    let color = NatColors.onSurface.withAlphaComponent(NatOpacities.opacity03).cgColor
+                    let color = NatColors.onSurface.withAlphaComponent(NatOpacities.low).cgColor
 
                     expect(button.layer.borderColor).to(equal(color))
                 }
