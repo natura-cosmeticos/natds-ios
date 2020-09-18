@@ -8,7 +8,7 @@ final class PulsableSpec: QuickSpec {
         var pulsableButtonStub: PulsableButtonStub!
 
         beforeEach {
-            ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
+            ConfigurationStorage.shared.currentTheme = StubTheme()
 
             pulsableButtonStub = PulsableButtonStub(
                 frame: .init(

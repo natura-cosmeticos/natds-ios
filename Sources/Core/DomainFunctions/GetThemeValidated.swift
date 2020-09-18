@@ -1,6 +1,6 @@
 func getThemeValidated(
     from storage: ConfigurationStorage,
-    fatalError: () -> Never) -> ThemeProtocol {
+    fatalError: () -> Never) -> Theme {
 
     guard let theme = storage.currentTheme else { fatalError() }
 

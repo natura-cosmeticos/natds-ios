@@ -8,7 +8,7 @@ final class PulseContainerLayerSpec: QuickSpec {
         var systemUnderTest: PulseContainerLayer!
 
         beforeEach {
-            ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
+            ConfigurationStorage.shared.currentTheme = StubTheme()
 
             systemUnderTest = PulseContainerLayer(color: NatColors.highlight)
         }

@@ -1,4 +1,4 @@
-func getTokenFromTheme<T>(_ keyPath: KeyPath<TokensProtocol, T>) -> T {
+func getTokenFromTheme<T>(_ keyPath: KeyPath<Tokens, T>) -> T {
     getThemeValidated(
         from: ConfigurationStorage.shared,
         fatalError: designSystemFatalError

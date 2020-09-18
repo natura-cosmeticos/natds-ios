@@ -8,7 +8,7 @@ final class NavigationDrawerItemCellTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
+        ConfigurationStorage.shared.currentTheme = StubTheme()
 
         systemUnderTest = NavigationDrawerItemCell()
         systemUnderTest.frame = CGRect(x: 0, y: 0, width: 320, height: 48)

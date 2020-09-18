@@ -17,12 +17,12 @@
  *
  */
 
-struct NaturaLightTheme: ThemeProtocol {
-    let tokens: TokensProtocol = NaturaLightTokens()
-    let components: ComponentsProtocol = NaturaLightComponents()
+struct NaturaLightTheme: Theme {
+    let tokens: Tokens = NaturaLightTokens()
+    let components: Components = NaturaLightComponents()
 }
 
-struct NaturaLightTokens: TokensProtocol {
+struct NaturaLightTokens: Tokens {
     let borderRadiusNone: CGFloat = 0
     let borderRadiusSmall: CGFloat = 2
     let borderRadiusMedium: CGFloat = 4
@@ -92,7 +92,7 @@ struct NaturaLightTokens: TokensProtocol {
     let typographyFontWeightMedium: UIFont.Weight = .medium
 }
 
-struct NaturaLightComponents: ComponentsProtocol {
+struct NaturaLightComponents: Components {
     let buttonDefaultFontSize: CGFloat = 14
     let buttonDefaultFontWeight: UIFont.Weight = .medium
     let buttonDefaultLetterSpacing: CGFloat = 0.44

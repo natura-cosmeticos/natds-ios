@@ -23,7 +23,7 @@ final class GetThemeValidatedSpec: QuickSpec {
 
         context("when some theme is stored") {
             it("returns a expect value") {
-                ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
+                ConfigurationStorage.shared.currentTheme = StubTheme()
                 let theme = systemUnderTest(ConfigurationStorage.shared, designSystemFatalError)
 
                 expect(theme).toNot(beNil())

@@ -8,7 +8,7 @@ final class NatIconButtonSizesSpecs: QuickSpec {
         let systemUnderTest = NatIconButton.Sizes.self
 
         beforeEach {
-            ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
+            ConfigurationStorage.shared.currentTheme = StubTheme()
         }
 
         describe("#semi") {
