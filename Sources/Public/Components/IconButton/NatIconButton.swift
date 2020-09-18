@@ -1,5 +1,23 @@
 import Foundation
 
+/**
+    NatIconButton is a class that represents  icon buttons  component from the design system.
+    The button colors changes according with the current theme configured in the Design system.
+
+    This button has 2 styles:
+    - standardDefault
+    - standardPrimary
+
+        Example of usage:
+            let iconButtonDefault = NatIconButton(style: .standardDefault)
+            let iconButtonPrimary = NatIconButton(style: .standardPrimary)
+
+ - Requires:
+    It's necessary to configure the Design System with a theme or fatalError will be raised.
+
+            DesignSystem().configure(with: AvailableTheme)
+ */
+
 public final class NatIconButton: UIView {
     public enum State {
         case enabled
