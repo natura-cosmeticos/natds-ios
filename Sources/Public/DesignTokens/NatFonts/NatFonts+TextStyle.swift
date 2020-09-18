@@ -4,7 +4,6 @@ extension NatFonts {
         let weight: UIFont.Weight
         let letterSpacing: CGFloat
     }
-
 }
 
 extension NatFonts.TextStyle {

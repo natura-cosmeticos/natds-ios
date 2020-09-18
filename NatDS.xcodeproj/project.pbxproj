@@ -185,7 +185,6 @@
 		84EB6B6F24EB197000C6A792 /* GetTokensFromTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB6B6E24EB197000C6A792 /* GetTokensFromTheme.swift */; };
 		84EB6B7524EBFEC000C6A792 /* GetThemeValidated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB6B7424EBFEC000C6A792 /* GetThemeValidated.swift */; };
 		84EB6B7924EC019700C6A792 /* GetThemeValidated+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB6B7824EC019700C6A792 /* GetThemeValidated+Spec.swift */; };
-		84EB6B7D24EC04AA00C6A792 /* Theme+Opacities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB6B7C24EC04AA00C6A792 /* Theme+Opacities.swift */; };
 		84EB6B8124EEC82700C6A792 /* GetOrCreatedCachedColor+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB6B7F24EEC75C00C6A792 /* GetOrCreatedCachedColor+Spec.swift */; };
 		84EB6B8324EEEA6200C6A792 /* GetUIColorFromTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB6B8224EEEA6200C6A792 /* GetUIColorFromTokens.swift */; };
 		84EB6B8524EEEA8E00C6A792 /* GetOrCreatedCachedColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB6B8424EEEA8E00C6A792 /* GetOrCreatedCachedColor.swift */; };
@@ -414,7 +413,6 @@
 		84EB6B6E24EB197000C6A792 /* GetTokensFromTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTokensFromTheme.swift; sourceTree = "<group>"; };
 		84EB6B7424EBFEC000C6A792 /* GetThemeValidated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetThemeValidated.swift; sourceTree = "<group>"; };
 		84EB6B7824EC019700C6A792 /* GetThemeValidated+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GetThemeValidated+Spec.swift"; sourceTree = "<group>"; };
-		84EB6B7C24EC04AA00C6A792 /* Theme+Opacities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Theme+Opacities.swift"; sourceTree = "<group>"; };
 		84EB6B7F24EEC75C00C6A792 /* GetOrCreatedCachedColor+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GetOrCreatedCachedColor+Spec.swift"; sourceTree = "<group>"; };
 		84EB6B8224EEEA6200C6A792 /* GetUIColorFromTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUIColorFromTokens.swift; sourceTree = "<group>"; };
 		84EB6B8424EEEA8E00C6A792 /* GetOrCreatedCachedColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOrCreatedCachedColor.swift; sourceTree = "<group>"; };
@@ -890,6 +888,15 @@
 				840265B32513B06E00A08EBE /* AesopLightTheme+Spec.swift */,
 			);
 			path = Aesop;
+			sourceTree = "<group>";
+		};
+		840265BB2514E04500A08EBE /* NatElevation */ = {
+			isa = PBXGroup;
+			children = (
+				2775F568C47ADB6D5DA7B7AFA4A41B4E /* NatElevation.swift */,
+				D7C267848A6D4A2289C862E53EA54F84 /* ElevationAttributes.swift */,
+			);
+			path = NatElevation;
 			sourceTree = "<group>";
 		};
 		8409854824F02BA60095D6AD /* NotificationCenter */ = {
@@ -1380,9 +1387,7 @@
 			isa = PBXGroup;
 			children = (
 				845AD7A224E2C47B006CA226 /* SingleSourceOfTruth */,
-				84EB6B7C24EC04AA00C6A792 /* Theme+Opacities.swift */,
 				0D49BA63C5E5BFEED327C214620A7657 /* Elevations.swift */,
-				D7C267848A6D4A2289C862E53EA54F84 /* ElevationAttributes.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -1604,7 +1609,7 @@
 			children = (
 				A59A74845475F2B53E1C0242E26F6DD1 /* NatBorderRadius.swift */,
 				546EF920207BAF8470E811B146A05C0F /* NatColors.swift */,
-				2775F568C47ADB6D5DA7B7AFA4A41B4E /* NatElevation.swift */,
+				840265BB2514E04500A08EBE /* NatElevation */,
 				84703F3A24F6ECA700FE01CA /* NatFonts */,
 				A54E76AA6120032EE8B86EB90B51BFD8 /* NatOpacities.swift */,
 				FB7FB96016F7D02CB5976F54C383CCD6 /* NatSizes.swift */,
@@ -2184,7 +2189,6 @@
 				56E21DDCD3217649B6CC5332DB901648 /* TextFieldDelegate.swift in Sources */,
 				E07925C3535D79164EBC061C7D6A6CE4 /* TextFieldType.swift in Sources */,
 				847C829224E36AB7001CE116 /* NaturaLightTheme.swift in Sources */,
-				84EB6B7D24EC04AA00C6A792 /* Theme+Opacities.swift in Sources */,
 				84932F1324EAB9270052265F /* AvailableTheme.swift in Sources */,
 				518E40E608084AD36390CE8A38A1CB5A /* UICollectionView+Reusable.swift in Sources */,
 				37953EE81D12EA2376E8C56E16BC4A29 /* UIColor+Hex.swift in Sources */,
