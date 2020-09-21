@@ -8,7 +8,7 @@ final class NatBadgeColorSpec: QuickSpec {
         let systemUnderTest = NatBadge.Color.self
 
         beforeEach {
-            ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
+            ConfigurationStorage.shared.currentTheme = StubTheme()
         }
 
         describe("#alert") {

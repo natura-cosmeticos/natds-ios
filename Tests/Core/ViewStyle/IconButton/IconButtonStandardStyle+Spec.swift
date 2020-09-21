@@ -11,7 +11,7 @@ final class IconButtonStandardStyleSpec: QuickSpec {
         var iconView: IconView!
 
         beforeEach {
-            ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
+            ConfigurationStorage.shared.currentTheme = StubTheme()
 
             iconButton = NatIconButton(style: stubStyle)
             iconView = iconButton.subviews.first as? IconView

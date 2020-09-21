@@ -1,5 +1,5 @@
 final class ConfigurationStorage {
-    var currentTheme: ThemeProtocol?
+    var currentTheme: Theme?
     var cachedColors: [String: UIColor] = [:]
 
     private init() {}

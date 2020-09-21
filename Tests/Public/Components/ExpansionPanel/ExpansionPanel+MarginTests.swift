@@ -6,7 +6,7 @@ class ExpansionPanelMarginTests: XCTestCase {
     let systemUnderTest = ExpansionPanel.Margin.self
 
     override func setUp() {
-        ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
+        ConfigurationStorage.shared.currentTheme = StubTheme()
     }
 
     func test_horizontalMargin_expectedSpacing() {

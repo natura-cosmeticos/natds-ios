@@ -11,7 +11,7 @@ final class NatDialogBodyConfigurableSpec: QuickSpec {
         var viewModel: NatDialogController.ViewModel!
 
         beforeEach {
-            ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
+            ConfigurationStorage.shared.currentTheme = StubTheme()
 
             systemUnderTest = StubClassWithProtocols()
             viewModel = systemUnderTest.viewModel

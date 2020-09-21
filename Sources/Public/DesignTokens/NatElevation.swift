@@ -35,8 +35,8 @@ extension NatElevation {
         case elevation09
         case elevation10
 
-        var rawValue: KeyPath<TokensProtocol, ElevationAttributes> {
-            let keyPath: KeyPath<TokensProtocol, ElevationAttributes>
+        var rawValue: KeyPath<Tokens, ElevationAttributes> {
+            let keyPath: KeyPath<Tokens, ElevationAttributes>
 
             switch self {
             case .none: keyPath = \.elevationNone

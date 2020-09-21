@@ -12,7 +12,7 @@ final class NatShortSpec: QuickSpec {
         var notificationCenterSpy: NotificationCenterSpy!
 
         beforeEach {
-            ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
+            ConfigurationStorage.shared.currentTheme = StubTheme()
 
             applyStyleInvocations = 0
 

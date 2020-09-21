@@ -8,7 +8,7 @@ final class IconViewSpec: QuickSpec {
         var sut: IconView!
 
         beforeEach {
-            ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
+            ConfigurationStorage.shared.currentTheme = StubTheme()
         }
 
         describe("#init(fontSize: icon:)") {

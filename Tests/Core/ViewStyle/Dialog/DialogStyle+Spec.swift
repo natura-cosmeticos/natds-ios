@@ -8,7 +8,7 @@ final class DialogStyleSpec: QuickSpec {
         let systemUnderTest = DialogStyle.self
 
         beforeEach {
-            ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
+            ConfigurationStorage.shared.currentTheme = StubTheme()
         }
 
         describe("#createLabelForTitle") {

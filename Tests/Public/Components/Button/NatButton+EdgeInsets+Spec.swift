@@ -8,7 +8,7 @@ final class NatButtonEdgeInsetsSpec: QuickSpec {
         let systemUnderTest = NatButton.EdgeInsets.self
 
         beforeEach {
-            ConfigurationStorage.shared.currentTheme = StubThemeProtocol()
+            ConfigurationStorage.shared.currentTheme = StubTheme()
         }
 
         describe("#small") {

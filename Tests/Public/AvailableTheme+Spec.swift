@@ -45,7 +45,7 @@ final class AvailableThemeSpec: QuickSpec {
             }
 
             it("initializes with expected value") {
-                let availableTheme = systemUnderTest.init(theme: StubThemeProtocol())
+                let availableTheme = systemUnderTest.init(theme: StubTheme())
 
                 expect(availableTheme).to(beNil())
             }
