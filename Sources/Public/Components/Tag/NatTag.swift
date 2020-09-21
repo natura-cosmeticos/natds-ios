@@ -1,8 +1,7 @@
 /**
   NatTag is a class that represents  a component from the design system.
 
-  The tag colors changes according with the current Brand configured in the Design system
-  and according with user properties of Light and Dark mode.
+  The tag colors changes according with the current theme configured in the Design system.
 
     This component has 1 style:
     - defaultAlert
