@@ -14,7 +14,7 @@ final class NatTagSnapshotTests: XCTestCase {
 
     func test_tag_style_default_alert_hasValidSnapshot() {
         let sut = NatTag(style: .defaultAlert)
-        sut.configure(text: "Novo")
+        sut.configure(text: "New")
 
         assertSnapshot(matching: sut, as: .image)
     }
