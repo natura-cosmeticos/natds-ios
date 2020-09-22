@@ -4,7 +4,7 @@ import XCTest
 class FontIconStyleTests: XCTestCase {
 
     func test_standard_filename_returnsExpectedFilename() {
-        let expectedFilename = "natds-icons"
+        let expectedFilename = "natds-icons-ios"
         let sut = FontIconStyle.standard
 
         XCTAssertEqual(sut.filename, expectedFilename)

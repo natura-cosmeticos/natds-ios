@@ -3,7 +3,7 @@ enum FontIconStyle: FontStyle {
 
     var filename: String {
         switch self {
-        case .standard: return "natds-icons"
+        case .standard: return "natds-icons-ios"
         }
     }
 
