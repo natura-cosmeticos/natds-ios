@@ -30,7 +30,7 @@ public final class NatDialogController: UIViewController {
 
     private let containerView: UIView = {
         let view = UIView()
-        ViewStyle.applyElevation(on: view, with: .elevation08)
+        ViewStyle.applyElevation(on: view, with: .huge)
         view.translatesAutoresizingMaskIntoConstraints = false
 
         return view

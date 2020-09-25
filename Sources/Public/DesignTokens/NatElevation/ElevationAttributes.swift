@@ -8,102 +8,135 @@ extension NatElevation {
 }
 
 extension NatElevation.ElevationAttributes {
-    static var elevationNone: NatElevation.ElevationAttributes {
+    static var none: NatElevation.ElevationAttributes {
         .init(
             shadowColor: nil,
-            shadowOffSet: .init(width: 0, height: -3),
-            shadowRadius: 3,
-            shadowOpacity: 0
+            shadowOffSet: .init(
+                width: getTokenFromTheme(\.elevationNoneShadowOffsetWidth),
+                height: getTokenFromTheme(\.elevationNoneShadowOffsetHeight)
+            ),
+            shadowRadius: getTokenFromTheme(\.elevationNoneShadowRadius),
+            shadowOpacity: getTokenFromTheme(\.elevationNoneShadowOpacity)
         )
     }
 
-    static var elevation01: NatElevation.ElevationAttributes {
+    static var micro: NatElevation.ElevationAttributes {
         .init(
-            shadowColor: UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor,
-            shadowOffSet: .init(width: 0, height: 1),
-            shadowRadius: 1,
-            shadowOpacity: 0.14
+            shadowColor: getUIColorFromTokens(\.elevationMicroShadowColor).cgColor,
+            shadowOffSet: .init(
+                width: getTokenFromTheme(\.elevationMicroShadowOffsetWidth),
+                height: getTokenFromTheme(\.elevationMicroShadowOffsetHeight)
+            ),
+            shadowRadius: getTokenFromTheme(\.elevationMicroShadowRadius),
+            shadowOpacity: getTokenFromTheme(\.elevationMicroShadowOpacity)
         )
     }
 
-    static var elevation02: NatElevation.ElevationAttributes {
+    static var tiny: NatElevation.ElevationAttributes {
         .init(
-            shadowColor: UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor,
-            shadowOffSet: .init(width: 0, height: 2),
-            shadowRadius: 2,
-            shadowOpacity: 0.14
+            shadowColor: getUIColorFromTokens(\.elevationTinyShadowColor).cgColor,
+            shadowOffSet: .init(
+                width: getTokenFromTheme(\.elevationTinyShadowOffsetWidth),
+                height: getTokenFromTheme(\.elevationTinyShadowOffsetHeight)
+            ),
+            shadowRadius: getTokenFromTheme(\.elevationTinyShadowRadius),
+            shadowOpacity: getTokenFromTheme(\.elevationTinyShadowOpacity)
         )
     }
 
-    static var elevation03: NatElevation.ElevationAttributes {
+    static var small: NatElevation.ElevationAttributes {
         .init(
-            shadowColor: UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor,
-            shadowOffSet: .init(width: 0, height: 3),
-            shadowRadius: 4,
-            shadowOpacity: 0.14
+            shadowColor: getUIColorFromTokens(\.elevationSmallShadowColor).cgColor,
+            shadowOffSet: .init(
+                width: getTokenFromTheme(\.elevationSmallShadowOffsetWidth),
+                height: getTokenFromTheme(\.elevationSmallShadowOffsetHeight)
+            ),
+            shadowRadius: getTokenFromTheme(\.elevationSmallShadowRadius),
+            shadowOpacity: getTokenFromTheme(\.elevationSmallShadowOpacity)
         )
     }
 
-    static var elevation04: NatElevation.ElevationAttributes {
+    static var medium: NatElevation.ElevationAttributes {
         .init(
-            shadowColor: UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor,
-            shadowOffSet: .init(width: 0, height: 4),
-            shadowRadius: 5,
-            shadowOpacity: 0.14
+            shadowColor: getUIColorFromTokens(\.elevationMediumShadowColor).cgColor,
+            shadowOffSet: .init(
+                width: getTokenFromTheme(\.elevationLargeShadowOffsetWidth),
+                height: getTokenFromTheme(\.elevationMediumShadowOffsetHeight)
+            ),
+            shadowRadius: getTokenFromTheme(\.elevationMediumShadowRadius),
+            shadowOpacity: getTokenFromTheme(\.elevationMediumShadowOpacity)
         )
     }
 
-    static var elevation05: NatElevation.ElevationAttributes {
+    static var large: NatElevation.ElevationAttributes {
         .init(
-            shadowColor: UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor,
-            shadowOffSet: .init(width: 0, height: 6),
-            shadowRadius: 10,
-            shadowOpacity: 0.14
+            shadowColor: getUIColorFromTokens(\.elevationLargeShadowColor).cgColor,
+            shadowOffSet: .init(
+                width: getTokenFromTheme(\.elevationLargeShadowOffsetWidth),
+                height: getTokenFromTheme(\.elevationLargeShadowOffsetHeight)
+            ),
+            shadowRadius: getTokenFromTheme(\.elevationLargeShadowRadius),
+            shadowOpacity: getTokenFromTheme(\.elevationLargeShadowOpacity)
         )
     }
 
-    static var elevation06: NatElevation.ElevationAttributes {
+    static var largeX: NatElevation.ElevationAttributes {
         .init(
-            shadowColor: UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor,
-            shadowOffSet: .init(width: 0, height: 8),
-            shadowRadius: 10,
-            shadowOpacity: 0.14
+            shadowColor: getUIColorFromTokens(\.elevationLargeXShadowColor).cgColor,
+            shadowOffSet: .init(
+                width: getTokenFromTheme(\.elevationLargeXShadowOffsetWidth),
+                height: getTokenFromTheme(\.elevationLargeXShadowOffsetWidth)
+            ),
+            shadowRadius: getTokenFromTheme(\.elevationLargeXShadowRadius),
+            shadowOpacity: getTokenFromTheme(\.elevationLargeXShadowOpacity)
         )
     }
 
-    static var elevation07: NatElevation.ElevationAttributes {
+    static var largeXX: NatElevation.ElevationAttributes {
         .init(
-            shadowColor: UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor,
-            shadowOffSet: .init(width: 0, height: 9),
-            shadowRadius: 12,
-            shadowOpacity: 0.14
+            shadowColor: getUIColorFromTokens(\.elevationLargeXXShadowColor).cgColor,
+            shadowOffSet: .init(
+                width: getTokenFromTheme(\.elevationLargeXXShadowOffsetWidth),
+                height: getTokenFromTheme(\.elevationLargeXXShadowOffsetHeight)
+            ),
+            shadowRadius: getTokenFromTheme(\.elevationLargeXXShadowRadius),
+            shadowOpacity: getTokenFromTheme(\.elevationLargeXXShadowOpacity)
         )
     }
 
-    static var elevation08: NatElevation.ElevationAttributes {
+    static var huge: NatElevation.ElevationAttributes {
         .init(
-            shadowColor: UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor,
-            shadowOffSet: .init(width: 0, height: 12),
-            shadowRadius: 17,
-            shadowOpacity: 0.14
+            shadowColor: getUIColorFromTokens(\.elevationHugeShadowColor).cgColor,
+            shadowOffSet: .init(
+                width: getTokenFromTheme(\.elevationHugeShadowOffsetWidth),
+                height: getTokenFromTheme(\.elevationHugeShadowOffsetHeight)
+            ),
+            shadowRadius: getTokenFromTheme(\.elevationHugeShadowRadius),
+            shadowOpacity: getTokenFromTheme(\.elevationHugeShadowOpacity)
         )
     }
 
-    static var elevation09: NatElevation.ElevationAttributes {
+    static var hugeX: NatElevation.ElevationAttributes {
         .init(
-            shadowColor: UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor,
-            shadowOffSet: .init(width: 0, height: 16),
-            shadowRadius: 24,
-            shadowOpacity: 0.14
+            shadowColor: getUIColorFromTokens(\.elevationHugeXShadowColor).cgColor,
+            shadowOffSet: .init(
+                width: getTokenFromTheme(\.elevationHugeXShadowOffsetWidth),
+                height: getTokenFromTheme(\.elevationHugeXShadowOffsetHeight)
+            ),
+            shadowRadius: getTokenFromTheme(\.elevationHugeXShadowRadius),
+            shadowOpacity: getTokenFromTheme(\.elevationHugeXShadowOpacity)
         )
     }
 
-    static var elevation10: NatElevation.ElevationAttributes {
+    static var hugeXX: NatElevation.ElevationAttributes {
         .init(
-            shadowColor: UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor,
-            shadowOffSet: .init(width: 0, height: 24),
-            shadowRadius: 38,
-            shadowOpacity: 0.14
+            shadowColor: getUIColorFromTokens(\.elevationHugeXXShadowColor).cgColor,
+            shadowOffSet: .init(
+                width: getTokenFromTheme(\.elevationHugeXXShadowOffsetWidth),
+                height: getTokenFromTheme(\.elevationHugeXXShadowOffsetHeight)
+            ),
+            shadowRadius: getTokenFromTheme(\.elevationHugeXXShadowRadius),
+            shadowOpacity: getTokenFromTheme(\.elevationHugeXXShadowOpacity)
         )
     }
 }

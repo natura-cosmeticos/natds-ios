@@ -1,7 +1,7 @@
 /**
   NatElevation is a struct that has access to elevation attributes properties from the Design System.
   This properties are used with view.layer to create elevation visual effect.
-  According with the current Brand in the Design System this properties can change.
+  According with the current theme in the Design System this properties can change.
 
     Exemple of usage:
 
@@ -39,17 +39,17 @@ extension NatElevation {
             let attributes: ElevationAttributes
 
             switch self {
-            case .none: attributes = .elevationNone
-            case .elevation01: attributes = .elevation01
-            case .elevation02: attributes = .elevation02
-            case .elevation03: attributes = .elevation03
-            case .elevation04: attributes = .elevation04
-            case .elevation05: attributes = .elevation05
-            case .elevation06: attributes = .elevation06
-            case .elevation07: attributes = .elevation07
-            case .elevation08: attributes = .elevation08
-            case .elevation09: attributes = .elevation09
-            case .elevation10: attributes = .elevation10
+            case .none: attributes = .none
+            case .elevation01: attributes = .micro
+            case .elevation02: attributes = .tiny
+            case .elevation03: attributes = .small
+            case .elevation04: attributes = .medium
+            case .elevation05: attributes = .large
+            case .elevation06: attributes = .largeX
+            case .elevation07: attributes = .largeXX
+            case .elevation08: attributes = .huge
+            case .elevation09: attributes = .hugeX
+            case .elevation10: attributes = .hugeXX
             }
 
             return attributes
