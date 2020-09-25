@@ -8,303 +8,102 @@ final class NatElevationsSpec: QuickSpec {
         let systemUnderTest = NatElevation.self
         var view: UIView!
 
-        context("when using AvonDark as theme") {
-            let elevations = NatElevation.ElevationAttributes.self
+        let elevations = NatElevation.ElevationAttributes.self
 
-            beforeEach {
-                ConfigurationStorage.shared.currentTheme = AvonDarkTheme()
-                view = .init(frame: .init(x: 0, y: 0, width: 200, height: 200))
-            }
+        beforeEach {
+            ConfigurationStorage.shared.currentTheme = StubTheme()
+            view = .init(frame: .init(x: 0, y: 0, width: 200, height: 200))
+        }
 
-            describe("#applyElevation") {
-                describe("#none") {
-                    it("returns an expected value") {
-                        systemUnderTest.apply(on: view, elevation: .none)
+        describe("#applyElevation") {
+            describe("#none") {
+                it("returns an expected value") {
+                    systemUnderTest.apply(on: view, elevation: .none)
 
-                        expect(view.getElevationSet()).to(equal(elevations.elevationNone))
-                    }
-                }
-
-                describe("#elevation01") {
-                    it("returns an expected value") {
-                        systemUnderTest.apply(on: view, elevation: .elevation01)
-
-                        expect(view.getElevationSet()).to(equal(elevations.elevation01))
-                    }
-                }
-
-                describe("#elevation02") {
-                    it("returns an expected value") {
-                        systemUnderTest.apply(on: view, elevation: .elevation02)
-
-                        expect(view.getElevationSet()).to(equal(elevations.elevation02))
-                    }
-                }
-
-                describe("#elevation03") {
-                    it("returns an expected value") {
-                        systemUnderTest.apply(on: view, elevation: .elevation03)
-
-                        expect(view.getElevationSet()).to(equal(elevations.elevation03))
-                    }
-                }
-
-                describe("#elevation04") {
-                    it("returns an expected value") {
-                        systemUnderTest.apply(on: view, elevation: .elevation04)
-
-                        expect(view.getElevationSet()).to(equal(elevations.elevation04))
-                    }
-                }
-
-                describe("#elevation05") {
-                    it("returns an expected value") {
-                        systemUnderTest.apply(on: view, elevation: .elevation05)
-
-                        expect(view.getElevationSet()).to(equal(elevations.elevation05))
-                    }
-                }
-
-                describe("#elevation06") {
-                    it("returns an expected value") {
-                        systemUnderTest.apply(on: view, elevation: .elevation06)
-
-                        expect(view.getElevationSet()).to(equal(elevations.elevation06))
-                    }
-                }
-
-                describe("#elevation07") {
-                    it("returns an expected value") {
-                        systemUnderTest.apply(on: view, elevation: .elevation07)
-
-                        expect(view.getElevationSet()).to(equal(elevations.elevation07))
-                    }
-                }
-
-                describe("#elevation08") {
-                    it("returns an expected value") {
-                        systemUnderTest.apply(on: view, elevation: .elevation08)
-
-                        expect(view.getElevationSet()).to(equal(elevations.elevation08))
-                    }
-                }
-
-                describe("#elevation09") {
-                    it("returns an expected value") {
-                        systemUnderTest.apply(on: view, elevation: .elevation09)
-
-                        expect(view.getElevationSet()).to(equal(elevations.elevation09))
-                    }
-                }
-
-                describe("#elevation010") {
-                    it("returns an expected value") {
-                        systemUnderTest.apply(on: view, elevation: .elevation10)
-
-                        expect(view.getElevationSet()).to(equal(elevations.elevation10))
-                    }
+                    expect(view.getElevationSet()).to(equal(elevations.elevationNone))
                 }
             }
-        } // context - when using AvonDark as theme
 
-        context("when using NaturaDark as theme") {
-            let elevations = NatElevation.ElevationAttributes.self
+            describe("#elevation01") {
+                it("returns an expected value") {
+                    systemUnderTest.apply(on: view, elevation: .elevation01)
 
-            beforeEach {
-                DesignSystem().configure(with: .naturaDark)
-                view = .init(frame: .init(x: 0, y: 0, width: 200, height: 200))
-            }
-
-            describe("#applyElevation") {
-                describe("#none") {
-                    it("returns an expected value") {
-                        systemUnderTest.apply(on: view, elevation: .none)
-
-                        expect(view.getElevationSet()).to(equal(elevations.elevationNone))
-                    }
-                }
-
-                describe("#elevation01") {
-                    it("returns an expected value") {
-                        systemUnderTest.apply(on: view, elevation: .elevation01)
-
-                        expect(view.getElevationSet()).to(equal(elevations.elevation01))
-                    }
-                }
-
-                describe("#elevation02") {
-                    it("returns an expected value") {
-                        systemUnderTest.apply(on: view, elevation: .elevation02)
-
-                        expect(view.getElevationSet()).to(equal(elevations.elevation02))
-                    }
-                }
-
-                describe("#elevation03") {
-                    it("returns an expected value") {
-                        systemUnderTest.apply(on: view, elevation: .elevation03)
-
-                        expect(view.getElevationSet()).to(equal(elevations.elevation03))
-                    }
-                }
-
-                describe("#elevation04") {
-                    it("returns an expected value") {
-                        systemUnderTest.apply(on: view, elevation: .elevation04)
-
-                        expect(view.getElevationSet()).to(equal(elevations.elevation04))
-                    }
-                }
-
-                describe("#elevation05") {
-                    it("returns an expected value") {
-                        systemUnderTest.apply(on: view, elevation: .elevation05)
-
-                        expect(view.getElevationSet()).to(equal(elevations.elevation05))
-                    }
-                }
-
-                describe("#elevation06") {
-                    it("returns an expected value") {
-                        systemUnderTest.apply(on: view, elevation: .elevation06)
-
-                        expect(view.getElevationSet()).to(equal(elevations.elevation06))
-                    }
-                }
-
-                describe("#elevation07") {
-                    it("returns an expected value") {
-                        systemUnderTest.apply(on: view, elevation: .elevation07)
-
-                        expect(view.getElevationSet()).to(equal(elevations.elevation07))
-                    }
-                }
-
-                describe("#elevation08") {
-                    it("returns an expected value") {
-                        systemUnderTest.apply(on: view, elevation: .elevation08)
-
-                        expect(view.getElevationSet()).to(equal(elevations.elevation08))
-                    }
-                }
-
-                describe("#elevation09") {
-                    it("returns an expected value") {
-                        systemUnderTest.apply(on: view, elevation: .elevation09)
-
-                        expect(view.getElevationSet()).to(equal(elevations.elevation09))
-                    }
-                }
-
-                describe("#elevation010") {
-                    it("returns an expected value") {
-                        systemUnderTest.apply(on: view, elevation: .elevation10)
-
-                        expect(view.getElevationSet()).to(equal(elevations.elevation10))
-                    }
+                    expect(view.getElevationSet()).to(equal(elevations.elevation01))
                 }
             }
-        } // context - when using Natura as theme
 
-        context("when using TheBodyShop as theme") {
-            let elevations = NatElevation.ElevationAttributes.self
+            describe("#elevation02") {
+                it("returns an expected value") {
+                    systemUnderTest.apply(on: view, elevation: .elevation02)
 
-            beforeEach {
-                ConfigurationStorage.shared.currentTheme = TheBodyShopLightTheme()
-
-                view = .init(frame: .init(x: 0, y: 0, width: 200, height: 200))
-            }
-
-            describe("#applyElevation") {
-                describe("#none") {
-                    it("returns an expected value") {
-                        systemUnderTest.apply(on: view, elevation: .none)
-
-                        expect(view.getElevationSet()).to(equal(elevations.elevationNone))
-                    }
-                }
-
-                describe("#elevation01") {
-                    it("returns an expected value") {
-                        systemUnderTest.apply(on: view, elevation: .elevation01)
-
-                        expect(view.getElevationSet()).to(equal(elevations.elevation01))
-                    }
-                }
-
-                describe("#elevation02") {
-                    it("returns an expected value") {
-                        systemUnderTest.apply(on: view, elevation: .elevation02)
-
-                        expect(view.getElevationSet()).to(equal(elevations.elevation02))
-                    }
-                }
-
-                describe("#elevation03") {
-                    it("returns an expected value") {
-                        systemUnderTest.apply(on: view, elevation: .elevation03)
-
-                        expect(view.getElevationSet()).to(equal(elevations.elevation03))
-                    }
-                }
-
-                describe("#elevation04") {
-                    it("returns an expected value") {
-                        systemUnderTest.apply(on: view, elevation: .elevation04)
-
-                        expect(view.getElevationSet()).to(equal(elevations.elevation04))
-                    }
-                }
-
-                describe("#elevation05") {
-                    it("returns an expected value") {
-                        systemUnderTest.apply(on: view, elevation: .elevation05)
-
-                        expect(view.getElevationSet()).to(equal(elevations.elevation05))
-                    }
-                }
-
-                describe("#elevation06") {
-                    it("returns an expected value") {
-                        systemUnderTest.apply(on: view, elevation: .elevation06)
-
-                        expect(view.getElevationSet()).to(equal(elevations.elevation06))
-                    }
-                }
-
-                describe("#elevation07") {
-                    it("returns an expected value") {
-                        systemUnderTest.apply(on: view, elevation: .elevation07)
-
-                        expect(view.getElevationSet()).to(equal(elevations.elevation07))
-                    }
-                }
-
-                describe("#elevation08") {
-                    it("returns an expected value") {
-                        systemUnderTest.apply(on: view, elevation: .elevation08)
-
-                        expect(view.getElevationSet()).to(equal(elevations.elevation08))
-                    }
-                }
-
-                describe("#elevation09") {
-                    it("returns an expected value") {
-                        systemUnderTest.apply(on: view, elevation: .elevation09)
-
-                        expect(view.getElevationSet()).to(equal(elevations.elevation09))
-                    }
-                }
-
-                describe("#elevation010") {
-                    it("returns an expected value") {
-                        systemUnderTest.apply(on: view, elevation: .elevation10)
-
-                        expect(view.getElevationSet()).to(equal(elevations.elevation10))
-                    }
+                    expect(view.getElevationSet()).to(equal(elevations.elevation02))
                 }
             }
-        } // context - when using TheBodyShop as theme
+
+            describe("#elevation03") {
+                it("returns an expected value") {
+                    systemUnderTest.apply(on: view, elevation: .elevation03)
+
+                    expect(view.getElevationSet()).to(equal(elevations.elevation03))
+                }
+            }
+
+            describe("#elevation04") {
+                it("returns an expected value") {
+                    systemUnderTest.apply(on: view, elevation: .elevation04)
+
+                    expect(view.getElevationSet()).to(equal(elevations.elevation04))
+                }
+            }
+
+            describe("#elevation05") {
+                it("returns an expected value") {
+                    systemUnderTest.apply(on: view, elevation: .elevation05)
+
+                    expect(view.getElevationSet()).to(equal(elevations.elevation05))
+                }
+            }
+
+            describe("#elevation06") {
+                it("returns an expected value") {
+                    systemUnderTest.apply(on: view, elevation: .elevation06)
+
+                    expect(view.getElevationSet()).to(equal(elevations.elevation06))
+                }
+            }
+
+            describe("#elevation07") {
+                it("returns an expected value") {
+                    systemUnderTest.apply(on: view, elevation: .elevation07)
+
+                    expect(view.getElevationSet()).to(equal(elevations.elevation07))
+                }
+            }
+
+            describe("#elevation08") {
+                it("returns an expected value") {
+                    systemUnderTest.apply(on: view, elevation: .elevation08)
+
+                    expect(view.getElevationSet()).to(equal(elevations.elevation08))
+                }
+            }
+
+            describe("#elevation09") {
+                it("returns an expected value") {
+                    systemUnderTest.apply(on: view, elevation: .elevation09)
+
+                    expect(view.getElevationSet()).to(equal(elevations.elevation09))
+                }
+            }
+
+            describe("#elevation010") {
+                it("returns an expected value") {
+                    systemUnderTest.apply(on: view, elevation: .elevation10)
+
+                    expect(view.getElevationSet()).to(equal(elevations.elevation10))
+                }
+            }
+        }
     }
 }
 
