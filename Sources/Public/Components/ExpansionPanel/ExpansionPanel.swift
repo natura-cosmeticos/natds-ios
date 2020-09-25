@@ -131,7 +131,7 @@ public class ExpansionPanel: UIView {
 
     private func setup() {
         backgroundColor = NatColors.surface
-        NatElevation.apply(on: self, elevation: .elevation01)
+        NatElevation.apply(on: self, elevation: .micro)
         layer.cornerRadius = NatBorderRadius.medium
         layer.borderWidth = 1
         layer.borderColor = inactiveBorderColor.cgColor

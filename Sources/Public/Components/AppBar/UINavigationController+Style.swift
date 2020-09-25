@@ -16,7 +16,7 @@ public extension UINavigationController {
 
         var elevation: NatElevation.Elevation {
             switch self {
-            case .default: return .elevation02
+            case .default: return .tiny
             }
         }
     }

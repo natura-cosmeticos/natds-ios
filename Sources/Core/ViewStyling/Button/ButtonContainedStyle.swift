@@ -8,7 +8,7 @@ enum ButtonContainedStyle {
         switch button.state {
         case .normal:
             button.backgroundColor = NatColors.primary
-            NatElevation.apply(on: button, elevation: .elevation02)
+            NatElevation.apply(on: button, elevation: .tiny)
         case .disabled:
             button.backgroundColor = NatColors.onSurface.withAlphaComponent(NatOpacities.veryLow)
             NatElevation.apply(on: button, elevation: .none)

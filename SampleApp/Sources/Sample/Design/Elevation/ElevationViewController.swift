@@ -23,16 +23,16 @@ final class ElevationViewController: UIViewController, SampleItem {
 
     private let cellsViewModels: [(description: String, value: NatElevation.Elevation)] = [
         ("none", .none),
-        ("elevation01", .elevation01),
-        ("elevation02", .elevation02),
-        ("elevation03", .elevation03),
-        ("elevation04", .elevation04),
-        ("elevation05", .elevation05),
-        ("elevation06", .elevation06),
-        ("elevation07", .elevation07),
-        ("elevation08", .elevation08),
-        ("elevation09", .elevation09),
-        ("elevation10", .elevation10)
+        ("micro", .micro),
+        ("tiny", .tiny),
+        ("small", .small),
+        ("medium", .medium),
+        ("large", .large),
+        ("largeX", .largeX),
+        ("largeXX", .largeXX),
+        ("huge", .huge),
+        ("hugeX", .hugeX),
+        ("hugeXX", .hugeXX)
     ]
 
     // MARK: - Life cycle

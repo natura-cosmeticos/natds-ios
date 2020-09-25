@@ -24,81 +24,81 @@ final class NatElevationsSpec: QuickSpec {
                 }
             }
 
-            describe("#elevation01") {
+            describe("#micro") {
                 it("returns an expected value") {
-                    systemUnderTest.apply(on: view, elevation: .elevation01)
+                    systemUnderTest.apply(on: view, elevation: .micro)
 
                     expect(view.getElevationSet()).to(equal(elevations.micro))
                 }
             }
 
-            describe("#elevation02") {
+            describe("#tiny") {
                 it("returns an expected value") {
-                    systemUnderTest.apply(on: view, elevation: .elevation02)
+                    systemUnderTest.apply(on: view, elevation: .tiny)
 
                     expect(view.getElevationSet()).to(equal(elevations.tiny))
                 }
             }
 
-            describe("#elevation03") {
+            describe("#small") {
                 it("returns an expected value") {
-                    systemUnderTest.apply(on: view, elevation: .elevation03)
+                    systemUnderTest.apply(on: view, elevation: .small)
 
                     expect(view.getElevationSet()).to(equal(elevations.small))
                 }
             }
 
-            describe("#elevation04") {
+            describe("#medium") {
                 it("returns an expected value") {
-                    systemUnderTest.apply(on: view, elevation: .elevation04)
+                    systemUnderTest.apply(on: view, elevation: .medium)
 
                     expect(view.getElevationSet()).to(equal(elevations.medium))
                 }
             }
 
-            describe("#elevation05") {
+            describe("#large") {
                 it("returns an expected value") {
-                    systemUnderTest.apply(on: view, elevation: .elevation05)
+                    systemUnderTest.apply(on: view, elevation: .large)
 
                     expect(view.getElevationSet()).to(equal(elevations.large))
                 }
             }
 
-            describe("#elevation06") {
+            describe("#largeX") {
                 it("returns an expected value") {
-                    systemUnderTest.apply(on: view, elevation: .elevation06)
+                    systemUnderTest.apply(on: view, elevation: .largeX)
 
                     expect(view.getElevationSet()).to(equal(elevations.largeX))
                 }
             }
 
-            describe("#elevation07") {
+            describe("#largeXX") {
                 it("returns an expected value") {
-                    systemUnderTest.apply(on: view, elevation: .elevation07)
+                    systemUnderTest.apply(on: view, elevation: .largeXX)
 
                     expect(view.getElevationSet()).to(equal(elevations.largeXX))
                 }
             }
 
-            describe("#elevation08") {
+            describe("#huge") {
                 it("returns an expected value") {
-                    systemUnderTest.apply(on: view, elevation: .elevation08)
+                    systemUnderTest.apply(on: view, elevation: .huge)
 
                     expect(view.getElevationSet()).to(equal(elevations.huge))
                 }
             }
 
-            describe("#elevation09") {
+            describe("#hugeX") {
                 it("returns an expected value") {
-                    systemUnderTest.apply(on: view, elevation: .elevation09)
+                    systemUnderTest.apply(on: view, elevation: .hugeX)
 
                     expect(view.getElevationSet()).to(equal(elevations.hugeX))
                 }
             }
 
-            describe("#elevation010") {
+            describe("#hugeXX") {
                 it("returns an expected value") {
-                    systemUnderTest.apply(on: view, elevation: .elevation10)
+                    systemUnderTest.apply(on: view, elevation: .hugeXX)
 
                     expect(view.getElevationSet()).to(equal(elevations.hugeXX))
                 }
