@@ -51,6 +51,7 @@ extension NavigationDrawerItemViewController: NavigationDrawerDelegate {
         let model = items[index]
         item.title = model.label
         item.icon = model.icon
+        item.tagText = model.tagText
         if model.disabled {
             item.state = .disabled
         }
@@ -70,18 +71,21 @@ private extension NavigationDrawerItemViewController {
         static func build() -> [Item] {
             let items: [Item] = [
                 Item(label: "Item with no subitems",
-                     icon: .outlinedFinanceShoppingcart,
-                     disabled: false,
-                     subitems: []),
+                     icon: .outlinedFinanceShoppingcart),
+                Item(label: "Item with tag",
+                     icon: .outlinedAlertInfo,
+                     tagText: "New"),
+                Item(label: "Item with very, very, very large title and tag",
+                     icon: .outlinedFinanceCards,
+                     tagText: "New"),
                 Item(label: "Item with one subitem",
                      icon: .outlinedActionNewrequest,
-                     disabled: false,
                      subitems: [
                         Subitem(label: "Subitem 2.1", disabled: false)
                 ]),
                 Item(label: "Item with subitems",
                      icon: .outlinedActionRequest,
-                     disabled: false,
+                     tagText: "New",
                      subitems: [
                         Subitem(label: "Subitem 3.1", disabled: false),
                         Subitem(label: "Subitem 3.2", disabled: false),
@@ -89,18 +93,17 @@ private extension NavigationDrawerItemViewController {
                 ]),
                 Item(label: "Disabled item with no subitem",
                      icon: .outlinedSocialGroupofpeople,
-                     disabled: true,
-                     subitems: []),
+                     disabled: true),
                 Item(label: "Disabled item with subitems",
                      icon: .filledBrandNaturarosacea,
                      disabled: true,
+                     tagText: "New",
                      subitems: [
                         Subitem(label: "Subitem 5.1", disabled: false),
                         Subitem(label: "Subitem 5.2", disabled: false)
                 ]),
                 Item(label: "Item with disabled subitem",
                      icon: .outlinedPlaceBus,
-                     disabled: false,
                      subitems: [
                         Subitem(label: "Subitem 6.1", disabled: true),
                         Subitem(label: "Subitem 6.3", disabled: false),
@@ -116,7 +119,16 @@ private extension NavigationDrawerItemViewController {
         let label: String
         let icon: Icon
         let disabled: Bool
+        let tagText: String?
         let subitems: [Subitem]
+
+        init(label: String, icon: Icon, disabled: Bool = false, tagText: String? = nil, subitems: [Subitem] = []) {
+            self.label = label
+            self.icon = icon
+            self.disabled = disabled
+            self.tagText = tagText
+            self.subitems = subitems
+        }
     }
 
     struct Subitem {

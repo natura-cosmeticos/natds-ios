@@ -34,7 +34,7 @@ public final class DesignSystem {
 
     // MARK: - Public properties
 
-    var currentTheme: AvailableTheme? {
+    public var currentTheme: AvailableTheme? {
         storage
             .currentTheme
             .flatMap(AvailableTheme.init)

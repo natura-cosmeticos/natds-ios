@@ -24,6 +24,16 @@ public class NavigationDrawerItemCell: UITableViewCell {
         }
     }
 
+    public var tagText: String? {
+        didSet {
+            if let text = tagText {
+                tagView.configure(text: text)
+            } else {
+                tagView.isHidden = true
+            }
+        }
+    }
+
     var hasSubItems: Bool = false {
         didSet {
             updateState()
@@ -58,6 +68,11 @@ public class NavigationDrawerItemCell: UITableViewCell {
         return iconView
     }()
 
+    private lazy var tagView: NatTag = {
+        let tagView = NatTag(style: .defaultAlert)
+        return tagView
+    }()
+
     private var labelToHighlightConstraint: NSLayoutConstraint?
 
     public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -66,6 +81,7 @@ public class NavigationDrawerItemCell: UITableViewCell {
             state = .normal
             hasSubItems = false
             icon = .outlinedDefaultMockup
+            tagText = nil
         }
         setup()
     }
@@ -85,6 +101,7 @@ private extension NavigationDrawerItemCell {
         addHighlightSelectedView()
         addIconView()
         addTitleLabel()
+        addTagView()
         addArrowImageView()
     }
 
@@ -102,8 +119,9 @@ private extension NavigationDrawerItemCell {
     func addTitleLabel() {
         contentView.addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        let constraint = titleLabel.trailingAnchor.constraint(equalTo: highlightSelectedView.trailingAnchor,
+        let constraint = titleLabel.trailingAnchor.constraint(lessThanOrEqualTo: highlightSelectedView.trailingAnchor,
                                                               constant: -8.0)
+
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: highlightSelectedView.topAnchor, constant: 12.0),
             titleLabel.bottomAnchor.constraint(equalTo: highlightSelectedView.bottomAnchor, constant: -12.0),
@@ -124,11 +142,18 @@ private extension NavigationDrawerItemCell {
         ])
     }
 
+    func addTagView() {
+        contentView.addSubview(tagView)
+        NSLayoutConstraint.activate([
+            tagView.centerYAnchor.constraint(equalTo: highlightSelectedView.centerYAnchor),
+            tagView.leadingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: 8.0)
+        ])
+    }
+
     func addArrowImageView() {
         contentView.addSubview(arrowView)
         arrowView.translatesAutoresizingMaskIntoConstraints = false
-        let constraint = arrowView.leadingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: 8.0)
-        constraint.priority = .defaultHigh
+        let constraint = arrowView.leadingAnchor.constraint(greaterThanOrEqualTo: tagView.trailingAnchor)
         NSLayoutConstraint.activate([
             arrowView.centerYAnchor.constraint(equalTo: highlightSelectedView.centerYAnchor),
             arrowView.trailingAnchor.constraint(equalTo: highlightSelectedView.trailingAnchor, constant: -8.0),
@@ -146,5 +171,4 @@ private extension NavigationDrawerItemCell {
 
         contentView.alpha = state == .disabled ? 0.48 : 1.0
     }
-
 }
