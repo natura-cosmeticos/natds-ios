@@ -40,7 +40,7 @@ Commitizen will guide you about how to structure you commit
 
 ## Dependencies
 
-- Xcode 11.6+
+- Xcode 12+
 - Homebrew
 - Ruby 2.6.5
 - Bundler
