@@ -5,7 +5,7 @@
 
     All properties returns a CGFloat.
 
-    Exemple of usage:
+    Example of usage:
 
         containerView.alpha = NatOpacity.veryHigh
         profileView.alpha = NatOpacity.lower

@@ -3,7 +3,7 @@
   This properties are used with view.layer to create elevation visual effect.
   According with the current theme in the Design System this properties can change.
 
-    Exemple of usage:
+    Example of usage:
 
         NatElevation.apply(onView: variantCardView, with: elevation09)
 

@@ -2,7 +2,7 @@
   NatFonts is a struct that has methods to create fonts from the Design System tokens.
   According with the current Brand in the Design System this properties can change.
 
-    Exemple of usage:
+    Example of usage:
 
         label.font = NatFonts.font(ofSize: .heading6 withWeight: .regular)
 

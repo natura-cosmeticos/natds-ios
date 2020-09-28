@@ -23,7 +23,7 @@ final class DesignSystemSpec: QuickSpec {
                 expect(storage.currentTheme).to(beNil())
             }
 
-            it("does not have chaced colors") {
+            it("does not have cached colors") {
                 expect(storage.cachedColors.count).to(equal(0))
             }
 

@@ -18,7 +18,7 @@
     - Feedback:
         success, onSuccess, warning, onWarning, alert, onAlert, link, onLink
 
-    Exemple of usage:
+    Example of usage:
 
         let label = UILabel()
         label.backgroundColor = NatColors.primary

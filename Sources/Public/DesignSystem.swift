@@ -1,7 +1,7 @@
 /**
   DesignSystem is a class entry point of configurations for this framework.
 
-    Exemple of usage:
+    Example of usage:
 
             DesignSystem().configure(brand: .avonLight)
             //or

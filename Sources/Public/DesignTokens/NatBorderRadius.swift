@@ -5,7 +5,7 @@
 
     All properties returns a CGFloat.
 
-    Exemple of usage:
+    Example of usage:
 
         containerView.layer.cornerRadius = NatBorderRadius.small
         button.layer.cornerRadius = NatBorderRadius.circle(viewHeight: DSSizes.large)

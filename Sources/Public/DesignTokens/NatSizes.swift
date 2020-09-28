@@ -5,7 +5,7 @@
 
     All properties returns a CGFloat.
 
-    Exemple of usage:
+    Example of usage:
 
         containerView.widthAnchor.constraint(equalToConstant: NatSizes.large)
         containerView.heightAncor.constraint(equalToConstant: NatSizes.tiny)
