@@ -17,27 +17,27 @@
  *
  */
 
-struct NaturaDarkTheme: Theme {
-    let tokens: Tokens = NaturaDarkTokens()
-    let components: Components = NaturaDarkComponents()
+struct AesopDarkTheme: Theme {
+    let tokens: Tokens = AesopDarkTokens()
+    let components: Components = AesopDarkComponents()
 }
 
-struct NaturaDarkTokens: Tokens {
+struct AesopDarkTokens: Tokens {
     let borderRadiusNone: CGFloat = 0
     let borderRadiusSmall: CGFloat = 2
     let borderRadiusMedium: CGFloat = 4
     let borderRadiusLarge: CGFloat = 8
-    let colorPrimary = "#F4AB34"
-    let colorOnPrimary = "#333333"
-    let colorPrimaryLight = "#FEFDE8"
-    let colorOnPrimaryLight = "#333333"
-    let colorPrimaryDark = "#EF8426"
-    let colorOnPrimaryDark = "#333333"
-    let colorSecondary = "#FF6B0B"
+    let colorPrimary = "#F1F1F0"
+    let colorOnPrimary = "#000000"
+    let colorPrimaryLight = "#FFFFFF"
+    let colorOnPrimaryLight = "#000000"
+    let colorPrimaryDark = "#BEBEBE"
+    let colorOnPrimaryDark = "#000000"
+    let colorSecondary = "#DDCB91"
     let colorOnSecondary = "#000000"
-    let colorSecondaryLight = "#FFF8E1"
+    let colorSecondaryLight = "#FFFEC2"
     let colorOnSecondaryLight = "#000000"
-    let colorSecondaryDark = "#FF5808"
+    let colorSecondaryDark = "#AA9A63"
     let colorOnSecondaryDark = "#000000"
     let colorBackground = "#121212"
     let colorOnBackground = "#FFFFFF"
@@ -160,7 +160,7 @@ struct NaturaDarkTokens: Tokens {
     let typographyFontWeightMedium: UIFont.Weight = .medium
 }
 
-struct NaturaDarkComponents: Components {
+struct AesopDarkComponents: Components {
     let buttonDefaultFontSize: CGFloat = 14
     let buttonDefaultFontWeight: UIFont.Weight = .medium
     let buttonDefaultLetterSpacing: CGFloat = 0.44

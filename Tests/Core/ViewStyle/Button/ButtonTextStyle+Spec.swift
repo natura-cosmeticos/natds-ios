@@ -117,7 +117,7 @@ final class ButtonTextStyleSpec: QuickSpec {
                     let foregroundColor = attributes[.foregroundColor] as? UIColor
 
                     expect(foregroundColor)
-                        .to(equal(NatColors.onSurface.withAlphaComponent(getTokenFromTheme(\.opacity08))))
+                        .to(equal(NatColors.onSurface.withAlphaComponent(getTokenFromTheme(\.opacityMediumHigh))))
                 }
             }
         }

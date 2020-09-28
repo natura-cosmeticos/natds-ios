@@ -3,6 +3,8 @@
 
  - Note:
     Supported Themes:
+      - AesopDark
+      - AesopLight
       - AvonDark
       - AvonLight
       - NaturaDark
@@ -12,6 +14,8 @@
 */
 
 public enum AvailableTheme {
+    case aesopDark
+    case aesopLight
     case avonDark
     case avonLight
     case naturaDark
@@ -21,6 +25,8 @@ public enum AvailableTheme {
 
     init?(theme: Theme) {
         switch theme {
+        case is AesopDarkTheme: self = .aesopDark
+        case is AesopLightTheme: self = .aesopLight
         case is AvonDarkTheme: self = .avonDark
         case is AvonLightTheme: self = .avonLight
         case is NaturaDarkTheme: self = .naturaDark
@@ -35,6 +41,8 @@ public enum AvailableTheme {
         let instance: Theme
 
         switch self {
+        case .aesopDark: instance = AesopDarkTheme()
+        case .aesopLight: instance = AesopLightTheme()
         case .avonDark: instance = AvonDarkTheme()
         case .avonLight: instance = AvonLightTheme()
         case .naturaDark: instance = NaturaDarkTheme()

@@ -6,7 +6,7 @@ extension Pulsable {
         in layer: CALayer,
         withColor color: UIColor = NatColors.highlight) {
 
-        let opacity = getTokenFromTheme(\.opacity05)
+        let opacity = getTokenFromTheme(\.opacityDisabledLow)
         let color = color.withAlphaComponent(opacity)
 
         let containedPulseLayer = PulseContainerLayer(color: color)

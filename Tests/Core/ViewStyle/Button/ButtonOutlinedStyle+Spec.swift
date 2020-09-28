@@ -73,7 +73,7 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
                 }
 
                 it("returns an expected borderColor") {
-                    let color = NatColors.onSurface.withAlphaComponent(NatOpacities.opacity03).cgColor
+                    let color = NatColors.onSurface.withAlphaComponent(NatOpacities.low).cgColor
 
                     expect(button.layer.borderColor).to(equal(color))
                 }
@@ -141,7 +141,7 @@ final class ButtonOutlinedStyleSpec: QuickSpec {
 
                 it("returns an expected foregroundColor") {
                     let foregroundColor = attributes[.foregroundColor] as? UIColor
-                    let opacity = getTokenFromTheme(\.opacity08)
+                    let opacity = getTokenFromTheme(\.opacityMediumHigh)
 
                     expect(foregroundColor)
                         .to(equal(NatColors.onSurface.withAlphaComponent(opacity)))

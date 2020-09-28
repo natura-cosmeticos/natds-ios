@@ -55,6 +55,61 @@ protocol Tokens {
     var colorOnWarning: String { get }
     var colorAlert: String { get }
     var colorOnAlert: String { get }
+    var elevationNoneShadowColor: String { get }
+    var elevationNoneShadowOffsetWidth: CGFloat { get }
+    var elevationNoneShadowOffsetHeight: CGFloat { get }
+    var elevationNoneShadowRadius: CGFloat { get }
+    var elevationNoneShadowOpacity: Float { get }
+    var elevationMicroShadowColor: String { get }
+    var elevationMicroShadowOffsetWidth: CGFloat { get }
+    var elevationMicroShadowOffsetHeight: CGFloat { get }
+    var elevationMicroShadowRadius: CGFloat { get }
+    var elevationMicroShadowOpacity: Float { get }
+    var elevationTinyShadowColor: String { get }
+    var elevationTinyShadowOffsetWidth: CGFloat { get }
+    var elevationTinyShadowOffsetHeight: CGFloat { get }
+    var elevationTinyShadowRadius: CGFloat { get }
+    var elevationTinyShadowOpacity: Float { get }
+    var elevationSmallShadowColor: String { get }
+    var elevationSmallShadowOffsetWidth: CGFloat { get }
+    var elevationSmallShadowOffsetHeight: CGFloat { get }
+    var elevationSmallShadowRadius: CGFloat { get }
+    var elevationSmallShadowOpacity: Float { get }
+    var elevationMediumShadowColor: String { get }
+    var elevationMediumShadowOffsetWidth: CGFloat { get }
+    var elevationMediumShadowOffsetHeight: CGFloat { get }
+    var elevationMediumShadowRadius: CGFloat { get }
+    var elevationMediumShadowOpacity: Float { get }
+    var elevationLargeShadowColor: String { get }
+    var elevationLargeShadowOffsetWidth: CGFloat { get }
+    var elevationLargeShadowOffsetHeight: CGFloat { get }
+    var elevationLargeShadowRadius: CGFloat { get }
+    var elevationLargeShadowOpacity: Float { get }
+    var elevationLargeXShadowColor: String { get }
+    var elevationLargeXShadowOffsetWidth: CGFloat { get }
+    var elevationLargeXShadowOffsetHeight: CGFloat { get }
+    var elevationLargeXShadowRadius: CGFloat { get }
+    var elevationLargeXShadowOpacity: Float { get }
+    var elevationLargeXXShadowColor: String { get }
+    var elevationLargeXXShadowOffsetWidth: CGFloat { get }
+    var elevationLargeXXShadowOffsetHeight: CGFloat { get }
+    var elevationLargeXXShadowRadius: CGFloat { get }
+    var elevationLargeXXShadowOpacity: Float { get }
+    var elevationHugeShadowColor: String { get }
+    var elevationHugeShadowOffsetWidth: CGFloat { get }
+    var elevationHugeShadowOffsetHeight: CGFloat { get }
+    var elevationHugeShadowRadius: CGFloat { get }
+    var elevationHugeShadowOpacity: Float { get }
+    var elevationHugeXShadowColor: String { get }
+    var elevationHugeXShadowOffsetWidth: CGFloat { get }
+    var elevationHugeXShadowOffsetHeight: CGFloat { get }
+    var elevationHugeXShadowRadius: CGFloat { get }
+    var elevationHugeXShadowOpacity: Float { get }
+    var elevationHugeXXShadowColor: String { get }
+    var elevationHugeXXShadowOffsetWidth: CGFloat { get }
+    var elevationHugeXXShadowOffsetHeight: CGFloat { get }
+    var elevationHugeXXShadowRadius: CGFloat { get }
+    var elevationHugeXXShadowOpacity: Float { get }
     var sizeNone: CGFloat { get }
     var sizeMicro: CGFloat { get }
     var sizeTiny: CGFloat { get }
@@ -66,12 +121,12 @@ protocol Tokens {
     var sizeMediumX: CGFloat { get }
     var sizeLarge: CGFloat { get }
     var sizeLargeX: CGFloat { get }
-    var sizeLargeXx: CGFloat { get }
-    var sizeLargeXxx: CGFloat { get }
+    var sizeLargeXX: CGFloat { get }
+    var sizeLargeXXX: CGFloat { get }
     var sizeHuge: CGFloat { get }
     var sizeHugeX: CGFloat { get }
-    var sizeHugeXx: CGFloat { get }
-    var sizeHugeXxx: CGFloat { get }
+    var sizeHugeXX: CGFloat { get }
+    var sizeHugeXXX: CGFloat { get }
     var sizeVeryHuge: CGFloat { get }
     var spacingNone: CGFloat { get }
     var spacingMicro: CGFloat { get }
@@ -91,28 +146,17 @@ protocol Tokens {
     var typographyFontWeightRegular: UIFont.Weight { get }
     var typographyFontWeightMedium: UIFont.Weight { get }
     var opacityTransparent: CGFloat { get }
-    var opacity01: CGFloat { get }
-    var opacity02: CGFloat { get }
-    var opacity03: CGFloat { get }
-    var opacity04: CGFloat { get }
-    var opacity05: CGFloat { get }
-    var opacity06: CGFloat { get }
-    var opacity07: CGFloat { get }
-    var opacity08: CGFloat { get }
-    var opacity09: CGFloat { get }
-    var opacity10: CGFloat { get }
-    var opacityFull: CGFloat { get }
-    var elevationNone: ElevationAttributes { get }
-    var elevation01: ElevationAttributes { get }
-    var elevation02: ElevationAttributes { get }
-    var elevation03: ElevationAttributes { get }
-    var elevation04: ElevationAttributes { get }
-    var elevation05: ElevationAttributes { get }
-    var elevation06: ElevationAttributes { get }
-    var elevation07: ElevationAttributes { get }
-    var elevation08: ElevationAttributes { get }
-    var elevation09: ElevationAttributes { get }
-    var elevation10: ElevationAttributes { get }
+    var opacityLower: CGFloat { get }
+    var opacityVeryLow: CGFloat { get }
+    var opacityLow: CGFloat { get }
+    var opacityMediumLow: CGFloat { get }
+    var opacityDisabledLow: CGFloat { get }
+    var opacityDisabled: CGFloat { get }
+    var opacityMedium: CGFloat { get }
+    var opacityMediumHigh: CGFloat { get }
+    var opacityHigh: CGFloat { get }
+    var opacityVeryHigh: CGFloat { get }
+    var opacityOpaque: CGFloat { get }
 }
 
 protocol Components {

@@ -1,20 +1,24 @@
 /**
   DesignSystem is a class entry point of configurations for this framework.
 
-    Exemple of usage:
+    Example of usage:
 
             DesignSystem().configure(brand: .avonLight)
             //or
             DesignSystem().configure(brand: .theBodyShopLight)
             //or
             DesignSystem().configure(brand: .theBodyShopDark)
+            //or
+            DesignSystem().configure(brand: .AesopDark)
+
 
  - Note:
     Current Supported Brands:
+        - Aesop
         - Avon
         - Natura
         - The Body Shop
- 
+
  - Requires:
         It's necessary to configure the Design System with a theme or fatalError will be raised.
 

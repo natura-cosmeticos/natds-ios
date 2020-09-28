@@ -1,7 +1,6 @@
 /**
   NatColors is a struct that has access to colors from the design system.
-  This colors changes according with the current Brand configured in the Design system
-  and according with user properties of Light and Dark mode.
+  This colors changes according with the current theme configured in the Design system.
 
     All properties returns UIColor.
  
@@ -19,7 +18,7 @@
     - Feedback:
         success, onSuccess, warning, onWarning, alert, onAlert, link, onLink
 
-    Exemple of usage:
+    Example of usage:
 
         let label = UILabel()
         label.backgroundColor = NatColors.primary

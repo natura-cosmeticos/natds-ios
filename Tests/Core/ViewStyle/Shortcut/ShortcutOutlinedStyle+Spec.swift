@@ -27,7 +27,7 @@ final class ShortcutOutlinedStyleSpec: QuickSpec {
             }
 
             it("sets an expected circle border color") {
-                let opacity = getTokenFromTheme(\.opacity04)
+                let opacity = getTokenFromTheme(\.opacityMediumLow)
                 let color = getUIColorFromTokens(\.colorPrimary).withAlphaComponent(opacity).cgColor
 
                 expect(circleView?.layer.borderColor).to(equal(color))
@@ -54,7 +54,7 @@ final class ShortcutOutlinedStyleSpec: QuickSpec {
             }
 
             it("sets an expected circle border color") {
-                let opacity = getTokenFromTheme(\.opacity04)
+                let opacity = getTokenFromTheme(\.opacityMediumLow)
                 let color = getUIColorFromTokens(\.colorHighEmphasis).withAlphaComponent(opacity).cgColor
 
                 expect(circleView?.layer.borderColor).to(equal(color))

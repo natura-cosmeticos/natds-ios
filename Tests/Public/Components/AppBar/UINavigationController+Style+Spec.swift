@@ -24,7 +24,7 @@ final class UINavigationControllerStyleSpec: QuickSpec {
                 expect(sut.titleColor).to(equal(expectedColor))
             }
             it("returns expected elevation") {
-                let expectedElevation = NatElevation.Elevation.elevation02
+                let expectedElevation = NatElevation.Elevation.tiny
                 expect(sut.elevation).to(equal(expectedElevation))
             }
         }

@@ -95,7 +95,7 @@ extension ChooseBrandViewController: UITableViewDelegate {
         let brandThemes: BrandThemes
 
         switch indexPath.row {
-        case 0: return
+        case 0: brandThemes = .init(light: .aesopLight, dark: .aesopDark)
         case 1: brandThemes = .init(light: .avonLight, dark: .avonDark)
         case 2: brandThemes = .init(light: .naturaLight, dark: .naturaDark)
         case 3: return

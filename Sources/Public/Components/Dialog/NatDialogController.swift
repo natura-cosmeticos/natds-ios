@@ -2,16 +2,16 @@ import UIKit
 
 /**
   NatDialogController is a class that represents Dialog component from the design system.
-  The colors changes according with the current Brand configured in the Design system
-  and according with user properties of Light and Dark mode.
+  The colors changes according with the current theme configured in the Design system.
 
     Available styles:
     - Standard
-    - Alert(Development)
+    - Alert
 
     To create and configure Dialogs it's necessary use via Dialog Builders this builds are available as class
     properties,
-     Example of usage:
+
+        Example of usage:
 
         let dialog = NatDialogController
         .standardStyleBuilder
@@ -30,7 +30,7 @@ public final class NatDialogController: UIViewController {
 
     private let containerView: UIView = {
         let view = UIView()
-        ViewStyle.applyElevation(on: view, with: getTokenFromTheme(\.elevation08))
+        ViewStyle.applyElevation(on: view, with: .huge)
         view.translatesAutoresizingMaskIntoConstraints = false
 
         return view
@@ -93,7 +93,7 @@ public final class NatDialogController: UIViewController {
         modalPresentationStyle = .overCurrentContext
         modalTransitionStyle = .crossDissolve
 
-        let opacity = getTokenFromTheme(\.opacity08)
+        let opacity = getTokenFromTheme(\.opacityMediumHigh)
         view.backgroundColor = UIColor.black.withAlphaComponent(opacity)
 
         containerView.layer.cornerRadius = getTokenFromTheme(\.borderRadiusMedium)

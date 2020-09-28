@@ -5,7 +5,7 @@
 
     All properties returns a CGFloat.
 
-    Exemple of usage:
+    Example of usage:
 
         containerView.widthAnchor.constraint(equalToConstant: NatSizes.large)
         containerView.heightAncor.constraint(equalToConstant: NatSizes.tiny)
@@ -27,11 +27,11 @@ public enum NatSizes {
     public static var mediumX: CGFloat { getTokenFromTheme(\.sizeMediumX) }
     public static var large: CGFloat { getTokenFromTheme(\.sizeLarge) }
     public static var largeX: CGFloat { getTokenFromTheme(\.sizeLargeX) }
-    public static var largeXX: CGFloat { getTokenFromTheme(\.sizeLargeXx) }
-    public static var largeXXX: CGFloat { getTokenFromTheme(\.sizeLargeXxx) }
+    public static var largeXX: CGFloat { getTokenFromTheme(\.sizeLargeXX) }
+    public static var largeXXX: CGFloat { getTokenFromTheme(\.sizeLargeXXX) }
     public static var huge: CGFloat { getTokenFromTheme(\.sizeHuge) }
     public static var hugeX: CGFloat { getTokenFromTheme(\.sizeHugeX) }
-    public static var hugeXX: CGFloat { getTokenFromTheme(\.sizeHugeXx) }
-    public static var hugeXXX: CGFloat { getTokenFromTheme(\.sizeHugeXxx) }
+    public static var hugeXX: CGFloat { getTokenFromTheme(\.sizeHugeXX) }
+    public static var hugeXXX: CGFloat { getTokenFromTheme(\.sizeHugeXXX) }
     public static var veryHuge: CGFloat { getTokenFromTheme(\.sizeVeryHuge) }
 }

@@ -6,7 +6,7 @@
 
     All properties returns a CGFloat.
 
-    Exemple of usage:
+    Example of usage:
 
         containerView.topAnchor.constraint(equalTo: view.topAnchor, constant: NatSpacing.tiny)
         containerView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: NatSpacing.large)

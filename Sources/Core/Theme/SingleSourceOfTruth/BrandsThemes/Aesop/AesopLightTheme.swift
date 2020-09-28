@@ -17,36 +17,36 @@
  *
  */
 
-struct NaturaDarkTheme: Theme {
-    let tokens: Tokens = NaturaDarkTokens()
-    let components: Components = NaturaDarkComponents()
+struct AesopLightTheme: Theme {
+    let tokens: Tokens = AesopLightTokens()
+    let components: Components = AesopLightComponents()
 }
 
-struct NaturaDarkTokens: Tokens {
+struct AesopLightTokens: Tokens {
     let borderRadiusNone: CGFloat = 0
     let borderRadiusSmall: CGFloat = 2
     let borderRadiusMedium: CGFloat = 4
     let borderRadiusLarge: CGFloat = 8
-    let colorPrimary = "#F4AB34"
-    let colorOnPrimary = "#333333"
-    let colorPrimaryLight = "#FEFDE8"
-    let colorOnPrimaryLight = "#333333"
-    let colorPrimaryDark = "#EF8426"
-    let colorOnPrimaryDark = "#333333"
-    let colorSecondary = "#FF6B0B"
-    let colorOnSecondary = "#000000"
-    let colorSecondaryLight = "#FFF8E1"
+    let colorPrimary = "#262625"
+    let colorOnPrimary = "#FFFFFF"
+    let colorPrimaryLight = "#4E4E4D"
+    let colorOnPrimaryLight = "#FFFFFF"
+    let colorPrimaryDark = "#000000"
+    let colorOnPrimaryDark = "#FFFFFF"
+    let colorSecondary = "#A6662B"
+    let colorOnSecondary = "#FFFFFF"
+    let colorSecondaryLight = "#DB9457"
     let colorOnSecondaryLight = "#000000"
-    let colorSecondaryDark = "#FF5808"
-    let colorOnSecondaryDark = "#000000"
-    let colorBackground = "#121212"
-    let colorOnBackground = "#FFFFFF"
-    let colorSurface = "#333333"
-    let colorOnSurface = "#FFFFFF"
-    let colorHighlight = "#FFFFFF"
-    let colorHighEmphasis = "#FAFAFA"
-    let colorMediumEmphasis = "#BBBBBB"
-    let colorLowEmphasis = "#777777"
+    let colorSecondaryDark = "#733B00"
+    let colorOnSecondaryDark = "#FFFFFF"
+    let colorBackground = "#FAFAFA"
+    let colorOnBackground = "#333333"
+    let colorSurface = "#FFFFFF"
+    let colorOnSurface = "#333333"
+    let colorHighlight = "#000000"
+    let colorHighEmphasis = "#333333"
+    let colorMediumEmphasis = "#777777"
+    let colorLowEmphasis = "#BBBBBB"
     let colorLink = "#227BBD"
     let colorOnLink = "#FFFFFF"
     let colorSuccess = "#569A32"
@@ -160,7 +160,7 @@ struct NaturaDarkTokens: Tokens {
     let typographyFontWeightMedium: UIFont.Weight = .medium
 }
 
-struct NaturaDarkComponents: Components {
+struct AesopLightComponents: Components {
     let buttonDefaultFontSize: CGFloat = 14
     let buttonDefaultFontWeight: UIFont.Weight = .medium
     let buttonDefaultLetterSpacing: CGFloat = 0.44

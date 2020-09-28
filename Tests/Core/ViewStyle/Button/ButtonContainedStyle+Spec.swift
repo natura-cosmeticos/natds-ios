@@ -88,7 +88,7 @@ final class ButtonContainedStyleSpec: QuickSpec {
 
                 it("returns an expected backgroundColor") {
                     let expectedColor = getUIColorFromTokens(\.colorOnSurface)
-                        .withAlphaComponent(getTokenFromTheme(\.opacity02))
+                        .withAlphaComponent(getTokenFromTheme(\.opacityVeryLow))
 
                     expect(button.backgroundColor).to(equal(expectedColor))
                 }
@@ -157,7 +157,7 @@ final class ButtonContainedStyleSpec: QuickSpec {
                 it("returns an expected foregroundColor") {
                     let foregroundColor = attributes[.foregroundColor] as? UIColor
                     let expectedColor = getUIColorFromTokens(\.colorOnSurface)
-                        .withAlphaComponent(getTokenFromTheme(\.opacity08))
+                        .withAlphaComponent(getTokenFromTheme(\.opacityMediumHigh))
 
                     expect(foregroundColor)
                         .to(equal(expectedColor))

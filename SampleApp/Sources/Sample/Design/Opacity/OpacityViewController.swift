@@ -21,17 +21,17 @@ final class OpacityViewController: UIViewController, SampleItem {
 
     private let cellsViewModels: [(description: String, value: CGFloat)] = [
         ("transparent: \(NatOpacities.transparent)", NatOpacities.transparent),
-        ("opacity01: \(NatOpacities.opacity01)", NatOpacities.opacity01),
-        ("opacity02: \(NatOpacities.opacity02)", NatOpacities.opacity02),
-        ("opacity03: \(NatOpacities.opacity03)", NatOpacities.opacity03),
-        ("opacity04: \(NatOpacities.opacity04)", NatOpacities.opacity04),
-        ("opacity05: \(NatOpacities.opacity05)", NatOpacities.opacity05),
-        ("opacity06: \(NatOpacities.opacity06)", NatOpacities.opacity06),
-        ("opacity07: \(NatOpacities.opacity07)", NatOpacities.opacity07),
-        ("opacity08: \(NatOpacities.opacity08)", NatOpacities.opacity08),
-        ("opacity09: \(NatOpacities.opacity09)", NatOpacities.opacity09),
-        ("opacity10: \(NatOpacities.opacity10)", NatOpacities.opacity10),
-        ("full: \(NatOpacities.full)", NatOpacities.full)
+        ("lower: \(NatOpacities.lower)", NatOpacities.lower),
+        ("veryLow: \(NatOpacities.veryLow)", NatOpacities.veryLow),
+        ("low: \(NatOpacities.low)", NatOpacities.low),
+        ("mediumLow: \(NatOpacities.mediumLow)", NatOpacities.mediumLow),
+        ("disabledLow: \(NatOpacities.disabledLow)", NatOpacities.disabledLow),
+        ("disabled: \(NatOpacities.disabled)", NatOpacities.disabled),
+        ("medium: \(NatOpacities.medium)", NatOpacities.medium),
+        ("mediumHigh: \(NatOpacities.mediumHigh)", NatOpacities.mediumHigh),
+        ("high: \(NatOpacities.high)", NatOpacities.high),
+        ("veryHigh: \(NatOpacities.veryHigh)", NatOpacities.veryHigh),
+        ("opaque: \(NatOpacities.opaque)", NatOpacities.opaque)
     ]
 
     // MARK: - Life cycle

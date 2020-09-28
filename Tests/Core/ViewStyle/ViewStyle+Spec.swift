@@ -9,7 +9,7 @@ final class ViewStyleSpecSpec: QuickSpec {
 
         describe("#applyElevation") {
             var view: UIView!
-            let elevationAttributes: ElevationAttributes!  = ElevationAttributes(
+            let elevationAttributes: NatElevation.ElevationAttributes!  = .init(
                 shadowColor: UIColor.red.cgColor,
                 shadowOffSet: .init(width: 123, height: 321),
                 shadowRadius: 333,

@@ -111,7 +111,7 @@ final class ButtonStyleSpec: QuickSpec {
                 it("returns an expected foregroundColor") {
                     let foregroundColor = attributes[.foregroundColor] as? UIColor
                     let expectedColor = getUIColorFromTokens(\.colorOnSurface)
-                        .withAlphaComponent(getTokenFromTheme(\.opacity08))
+                        .withAlphaComponent(getTokenFromTheme(\.opacityMediumHigh))
 
                     expect(foregroundColor).to(equal(expectedColor))
                 }
