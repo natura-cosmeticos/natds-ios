@@ -42,7 +42,8 @@ extension SearchBar {
             return
         }
 
-        textField.backgroundColor = .white
+        textField.backgroundColor = NatColors.surface
+        textField.textColor = NatColors.onSurface
         textField.clearButtonMode = .whileEditing
         textField.borderStyle = .none
         textField.keyboardType = .default
