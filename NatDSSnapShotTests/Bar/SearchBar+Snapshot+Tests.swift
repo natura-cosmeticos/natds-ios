@@ -37,8 +37,16 @@ final class SearchBarSnapshotTests: XCTestCase {
     }
 
     func test_state_whenHasText_expectedCleanButtonIsVisible() {
+        systemUnderTest.setFocusTextField()
         systemUnderTest.text = "NAT NATURA"
 
         assertSnapshot(matching: superview, as: .image)
+    }
+}
+
+private extension SearchBar {
+    func setFocusTextField() {
+        let textField = self.value(forKey: "searchField") as? UITextField
+        textField?.becomeFirstResponder()
     }
 }
