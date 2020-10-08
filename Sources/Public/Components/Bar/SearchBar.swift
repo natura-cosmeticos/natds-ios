@@ -53,8 +53,7 @@ extension SearchBar {
             return
         }
 
-        button.setImage(UIImage(), for: .normal)
         button.titleLabel?.font = .iconFont()
-        button.setTitle(NatDS.Icon.outlinedNavigationClose.rawValue, for: .normal)
+        button.setTitle(NatDS.Icon.outlinedNavigationClose.unicode, for: .normal)
     }
 }
