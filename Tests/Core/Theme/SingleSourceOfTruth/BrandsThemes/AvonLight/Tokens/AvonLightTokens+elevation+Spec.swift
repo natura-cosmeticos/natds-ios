@@ -9,7 +9,7 @@ final class AvonLightTokensElevationSpec: QuickSpec {
 
         describe("#elevationNoneShadowColor") {
             it("returns an expected value") {
-                expect(systemUnderTest.elevationNoneShadowColor).to(match("nil"))
+                expect(systemUnderTest.elevationNoneShadowColor).to(equal("nil"))
             }
         }
 
