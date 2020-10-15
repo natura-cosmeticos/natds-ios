@@ -3,9 +3,9 @@ import Nimble
 
 @testable import NatDS
 
-final class AesopLightTokensElevationSpec: QuickSpec {
+final class AvonDarkTokensElevationSpec: QuickSpec {
     override func spec() {
-        let systemUnderTest = AesopLightTheme().tokens
+        let systemUnderTest = AvonDarkTheme().tokens
 
         describe("#elevationNoneShadowColor") {
             it("returns an expected value") {
