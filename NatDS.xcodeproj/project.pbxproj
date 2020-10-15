@@ -98,6 +98,20 @@
 		79E7FA63253745BC00A831BC /* AesopLightTokens+spacing+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FA62253745BC00A831BC /* AesopLightTokens+spacing+Spec.swift */; };
 		79E7FA68253745F500A831BC /* AesopDarkTokens+typography+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FA67253745F500A831BC /* AesopDarkTokens+typography+Spec.swift */; };
 		79E7FA702537470600A831BC /* AesopLightTokens+typography+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FA6F2537470600A831BC /* AesopLightTokens+typography+Spec.swift */; };
+		79E7FABA25388B7200A831BC /* AvonDarkTokens+borderRadius+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FAB925388B7200A831BC /* AvonDarkTokens+borderRadius+Spec.swift */; };
+		79E7FAC825388BEF00A831BC /* AvonLightTokens+borderRadius+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FAC725388BEF00A831BC /* AvonLightTokens+borderRadius+Spec.swift */; };
+		79E7FACD25388C3A00A831BC /* AvonDarkTokens+color+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FACC25388C3A00A831BC /* AvonDarkTokens+color+Spec.swift */; };
+		79E7FAD225388D0400A831BC /* AvonLightTokens+color+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FAD125388D0400A831BC /* AvonLightTokens+color+Spec.swift */; };
+		79E7FAD725388E4F00A831BC /* AvonDarkTokens+elevation+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FAD625388E4F00A831BC /* AvonDarkTokens+elevation+Spec.swift */; };
+		79E7FADC25388E8C00A831BC /* AvonLightTokens+elevation+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FADB25388E8C00A831BC /* AvonLightTokens+elevation+Spec.swift */; };
+		79E7FAE125388F7500A831BC /* AvonDarkTokens+opacity+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FAE025388F7500A831BC /* AvonDarkTokens+opacity+Spec.swift */; };
+		79E7FAE625388FAA00A831BC /* AvonLightTokens+opacity+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FAE525388FAA00A831BC /* AvonLightTokens+opacity+Spec.swift */; };
+		79E7FAEB253890D200A831BC /* AvonDarkTokens+size+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FAEA253890D200A831BC /* AvonDarkTokens+size+Spec.swift */; };
+		79E7FAF0253890FE00A831BC /* AvonLightTokens+size+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FAEF253890FE00A831BC /* AvonLightTokens+size+Spec.swift */; };
+		79E7FAF52538935B00A831BC /* AvonDarkTokens+spacing+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FAF42538935B00A831BC /* AvonDarkTokens+spacing+Spec.swift */; };
+		79E7FAFA2538938E00A831BC /* AvonLightTokens+spacing+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FAF92538938E00A831BC /* AvonLightTokens+spacing+Spec.swift */; };
+		79E7FAFF253893B900A831BC /* AvonDarkTokens+typography+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FAFE253893B900A831BC /* AvonDarkTokens+typography+Spec.swift */; };
+		79E7FB072538941400A831BC /* AvonLightTokens+typography+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FB062538941400A831BC /* AvonLightTokens+typography+Spec.swift */; };
 		79E7FB1E2538CD9100A831BC /* NaturaDarkTokens+borderRadius+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FB1D2538CD9100A831BC /* NaturaDarkTokens+borderRadius+Spec.swift */; };
 		79E7FB262538CDCC00A831BC /* NaturaLightTokens+borderRadius+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FB252538CDCC00A831BC /* NaturaLightTokens+borderRadius+Spec.swift */; };
 		79E7FB2B2538CE0300A831BC /* NaturaDarkTokens+color+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FB2A2538CE0300A831BC /* NaturaDarkTokens+color+Spec.swift */; };
@@ -379,6 +393,20 @@
 		79E7FA62253745BC00A831BC /* AesopLightTokens+spacing+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AesopLightTokens+spacing+Spec.swift"; sourceTree = "<group>"; };
 		79E7FA67253745F500A831BC /* AesopDarkTokens+typography+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AesopDarkTokens+typography+Spec.swift"; sourceTree = "<group>"; };
 		79E7FA6F2537470600A831BC /* AesopLightTokens+typography+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AesopLightTokens+typography+Spec.swift"; sourceTree = "<group>"; };
+		79E7FAB925388B7200A831BC /* AvonDarkTokens+borderRadius+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AvonDarkTokens+borderRadius+Spec.swift"; sourceTree = "<group>"; };
+		79E7FAC725388BEF00A831BC /* AvonLightTokens+borderRadius+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AvonLightTokens+borderRadius+Spec.swift"; sourceTree = "<group>"; };
+		79E7FACC25388C3A00A831BC /* AvonDarkTokens+color+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AvonDarkTokens+color+Spec.swift"; sourceTree = "<group>"; };
+		79E7FAD125388D0400A831BC /* AvonLightTokens+color+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AvonLightTokens+color+Spec.swift"; sourceTree = "<group>"; };
+		79E7FAD625388E4F00A831BC /* AvonDarkTokens+elevation+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AvonDarkTokens+elevation+Spec.swift"; sourceTree = "<group>"; };
+		79E7FADB25388E8C00A831BC /* AvonLightTokens+elevation+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AvonLightTokens+elevation+Spec.swift"; sourceTree = "<group>"; };
+		79E7FAE025388F7500A831BC /* AvonDarkTokens+opacity+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AvonDarkTokens+opacity+Spec.swift"; sourceTree = "<group>"; };
+		79E7FAE525388FAA00A831BC /* AvonLightTokens+opacity+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AvonLightTokens+opacity+Spec.swift"; sourceTree = "<group>"; };
+		79E7FAEA253890D200A831BC /* AvonDarkTokens+size+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AvonDarkTokens+size+Spec.swift"; sourceTree = "<group>"; };
+		79E7FAEF253890FE00A831BC /* AvonLightTokens+size+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AvonLightTokens+size+Spec.swift"; sourceTree = "<group>"; };
+		79E7FAF42538935B00A831BC /* AvonDarkTokens+spacing+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AvonDarkTokens+spacing+Spec.swift"; sourceTree = "<group>"; };
+		79E7FAF92538938E00A831BC /* AvonLightTokens+spacing+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AvonLightTokens+spacing+Spec.swift"; sourceTree = "<group>"; };
+		79E7FAFE253893B900A831BC /* AvonDarkTokens+typography+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AvonDarkTokens+typography+Spec.swift"; sourceTree = "<group>"; };
+		79E7FB062538941400A831BC /* AvonLightTokens+typography+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AvonLightTokens+typography+Spec.swift"; sourceTree = "<group>"; };
 		79E7FB1D2538CD9100A831BC /* NaturaDarkTokens+borderRadius+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaturaDarkTokens+borderRadius+Spec.swift"; sourceTree = "<group>"; };
 		79E7FB252538CDCC00A831BC /* NaturaLightTokens+borderRadius+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaturaLightTokens+borderRadius+Spec.swift"; sourceTree = "<group>"; };
 		79E7FB2A2538CE0300A831BC /* NaturaDarkTokens+color+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaturaDarkTokens+color+Spec.swift"; sourceTree = "<group>"; };
@@ -925,29 +953,6 @@
 			path = Dialog;
 			sourceTree = "<group>";
 		};
-		79E7FA1125373A9A00A831BC /* Tokens */ = {
-			isa = PBXGroup;
-			children = (
-				79E7FA1225373AA600A831BC /* Aesop */,
-			);
-			path = Tokens;
-			sourceTree = "<group>";
-		};
-		79E7FA1225373AA600A831BC /* Aesop */ = {
-			isa = PBXGroup;
-			children = (
-				79E7FA1325373ABD00A831BC /* BorderRadius */,
-			);
-			path = Aesop;
-			sourceTree = "<group>";
-		};
-		79E7FA1325373ABD00A831BC /* BorderRadius */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = BorderRadius;
-			sourceTree = "<group>";
-		};
 		79E7FA2B25373CF000A831BC /* AesopDark */ = {
 			isa = PBXGroup;
 			children = (
@@ -990,6 +995,43 @@
 				79E7FA582537456500A831BC /* AesopLightTokens+size+Spec.swift */,
 				79E7FA62253745BC00A831BC /* AesopLightTokens+spacing+Spec.swift */,
 				79E7FA6F2537470600A831BC /* AesopLightTokens+typography+Spec.swift */,
+			);
+			path = Tokens;
+			sourceTree = "<group>";
+		};
+		79E7FAB625388A7B00A831BC /* AvonLight */ = {
+			isa = PBXGroup;
+			children = (
+				847C829F24E577AF001CE116 /* AvonLightTheme+Spec.swift */,
+				79E7FAB825388A9400A831BC /* Tokens */,
+			);
+			path = AvonLight;
+			sourceTree = "<group>";
+		};
+		79E7FAB725388A8F00A831BC /* Tokens */ = {
+			isa = PBXGroup;
+			children = (
+				79E7FAB925388B7200A831BC /* AvonDarkTokens+borderRadius+Spec.swift */,
+				79E7FACC25388C3A00A831BC /* AvonDarkTokens+color+Spec.swift */,
+				79E7FAD625388E4F00A831BC /* AvonDarkTokens+elevation+Spec.swift */,
+				79E7FAE025388F7500A831BC /* AvonDarkTokens+opacity+Spec.swift */,
+				79E7FAEA253890D200A831BC /* AvonDarkTokens+size+Spec.swift */,
+				79E7FAF42538935B00A831BC /* AvonDarkTokens+spacing+Spec.swift */,
+				79E7FAFE253893B900A831BC /* AvonDarkTokens+typography+Spec.swift */,
+			);
+			path = Tokens;
+			sourceTree = "<group>";
+		};
+		79E7FAB825388A9400A831BC /* Tokens */ = {
+			isa = PBXGroup;
+			children = (
+				79E7FAC725388BEF00A831BC /* AvonLightTokens+borderRadius+Spec.swift */,
+				79E7FAD125388D0400A831BC /* AvonLightTokens+color+Spec.swift */,
+				79E7FADB25388E8C00A831BC /* AvonLightTokens+elevation+Spec.swift */,
+				79E7FAE525388FAA00A831BC /* AvonLightTokens+opacity+Spec.swift */,
+				79E7FAEF253890FE00A831BC /* AvonLightTokens+size+Spec.swift */,
+				79E7FAF92538938E00A831BC /* AvonLightTokens+spacing+Spec.swift */,
+				79E7FB062538941400A831BC /* AvonLightTokens+typography+Spec.swift */,
 			);
 			path = Tokens;
 			sourceTree = "<group>";
@@ -1311,7 +1353,6 @@
 			isa = PBXGroup;
 			children = (
 				847C829924E56482001CE116 /* BrandsThemes */,
-				79E7FA1125373A9A00A831BC /* Tokens */,
 			);
 			path = SingleSourceOfTruth;
 			sourceTree = "<group>";
@@ -1321,7 +1362,8 @@
 			children = (
 				79E7FA2B25373CF000A831BC /* AesopDark */,
 				79E7FA2C25373D0100A831BC /* AesopLight */,
-				847C829A24E5648E001CE116 /* Avon */,
+				847C829A24E5648E001CE116 /* AvonDark */,
+				79E7FAB625388A7B00A831BC /* AvonLight */,
 				847C829B24E56493001CE116 /* NaturaDark */,
 				79E7FB1A2538CCC500A831BC /* NaturaLight */,
 				847C829C24E564B4001CE116 /* TheBodyShop */,
@@ -1329,13 +1371,13 @@
 			path = BrandsThemes;
 			sourceTree = "<group>";
 		};
-		847C829A24E5648E001CE116 /* Avon */ = {
+		847C829A24E5648E001CE116 /* AvonDark */ = {
 			isa = PBXGroup;
 			children = (
 				847C829D24E56605001CE116 /* AvonDarkTheme+Spec.swift */,
-				847C829F24E577AF001CE116 /* AvonLightTheme+Spec.swift */,
+				79E7FAB725388A8F00A831BC /* Tokens */,
 			);
-			path = Avon;
+			path = AvonDark;
 			sourceTree = "<group>";
 		};
 		847C829B24E56493001CE116 /* NaturaDark */ = {
@@ -2188,6 +2230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79E7FAE125388F7500A831BC /* AvonDarkTokens+opacity+Spec.swift in Sources */,
 				0AF826DF57321D84C4B2EDDFAC49F377 /* AssetsHelperTests.swift in Sources */,
 				0E7C160524C5D3C3002FF46F /* UIViewController+Configure+Spec.swift in Sources */,
 				1A30D78CDFD9F95DDAFF61EDF612261D /* ButtonContainedStyle+Spec.swift in Sources */,
@@ -2208,8 +2251,11 @@
 				84EB6B7924EC019700C6A792 /* GetThemeValidated+Spec.swift in Sources */,
 				5C3B779F94FC59E1F2329996E3E55DF5 /* ElevationAttributes+Equitable.swift in Sources */,
 				291A2ABAA2039E539F7E45F394B8529D /* ExpansionPanel+MarginTests.swift in Sources */,
+				79E7FAD725388E4F00A831BC /* AvonDarkTokens+elevation+Spec.swift in Sources */,
 				841FEABC24C5CD6A00C50AFF /* NatLogoImages+Spec.swift in Sources */,
+				79E7FAEB253890D200A831BC /* AvonDarkTokens+size+Spec.swift in Sources */,
 				346443D54361FCD8E0E7BFAF8FE2D299 /* FontIconStyleTests.swift in Sources */,
+				79E7FACD25388C3A00A831BC /* AvonDarkTokens+color+Spec.swift in Sources */,
 				847C82A024E577AF001CE116 /* AvonLightTheme+Spec.swift in Sources */,
 				84BB928E24DC760600A9BCC8 /* TabItemViewDelegateMock.swift in Sources */,
 				A19D6F5A3F2F85158D4D5B1BD0F60417 /* IconTests.swift in Sources */,
@@ -2225,14 +2271,17 @@
 				84BF066B24B504B200462AC5 /* ShortcutOutlinedStyle+Spec.swift in Sources */,
 				84932F1A24EAF07B0052265F /* StubTheme.swift in Sources */,
 				D18DCEC54B0D407538EC7F218CDF25E1 /* NatColors+Spec.swift in Sources */,
+				79E7FAFA2538938E00A831BC /* AvonLightTokens+spacing+Spec.swift in Sources */,
 				C4EB3DDBDD3DEFDA5183455CCDB2720F /* NatDialogController+Spec.swift in Sources */,
 				E891D4E704EDCC6EA9CD3EE125A5D292 /* NatDialogController+StandardStyleBuilder+Spec.swift in Sources */,
+				79E7FAE625388FAA00A831BC /* AvonLightTokens+opacity+Spec.swift in Sources */,
 				DF58B3DD08824CC1C80C886321CEA0F4 /* NatElevations+Spec.swift in Sources */,
 				84BB928824DC6CA700A9BCC8 /* BadgeableStub.swift in Sources */,
 				FF4C87EAD7ADB8D9EF8F897BA229A3A7 /* NatFonts+Spec.swift in Sources */,
 				79E7FA1D25373B1900A831BC /* AesopLightTokens+borderRadius+Spec.swift in Sources */,
 				79E7FA3B25373FB700A831BC /* AesopLightTokens+color+Spec.swift in Sources */,
 				FAD0A71F10707995BE66A299D98CC33B /* NatOpacities+Spec.swift in Sources */,
+				79E7FAF52538935B00A831BC /* AvonDarkTokens+spacing+Spec.swift in Sources */,
 				60B6A40046E3479DEC3808473AF0D08B /* NatSizes+Spec.swift in Sources */,
 				84932F1624EABB190052265F /* AvailableTheme+Spec.swift in Sources */,
 				165E49381ECDC5C699C3496C7C3EA66A /* NatSpacing+Spec.swift in Sources */,
@@ -2246,6 +2295,7 @@
 				79E7FB2B2538CE0300A831BC /* NaturaDarkTokens+color+Spec.swift in Sources */,
 				95BF20E1FC04C44251D7DCAA9C7E7C60 /* NavigationDrawer+IndexMenuTests.swift in Sources */,
 				79E7FA63253745BC00A831BC /* AesopLightTokens+spacing+Spec.swift in Sources */,
+				79E7FADC25388E8C00A831BC /* AvonLightTokens+elevation+Spec.swift in Sources */,
 				D36E7374F76C10792F8292DCD99800D5 /* NavigationDrawerDelegateMock.swift in Sources */,
 				847C82A224E5786C001CE116 /* NaturaDarkTheme+Spec.swift in Sources */,
 				06B6AF457FA3A8ADB837E7A2BBE53D91 /* NavigationDrawerItemCellTests.swift in Sources */,
@@ -2258,8 +2308,10 @@
 				C24255D434C838206493D9A89581F7C1 /* PulseContainerLayer+Spec.swift in Sources */,
 				845D09A22501248500B05760 /* IconButtonStandardStyle+Spec.swift in Sources */,
 				79E7FA702537470600A831BC /* AesopLightTokens+typography+Spec.swift in Sources */,
+				79E7FAC825388BEF00A831BC /* AvonLightTokens+borderRadius+Spec.swift in Sources */,
 				847C82A824E57946001CE116 /* TheBodyShopLightTheme+Spec.swift in Sources */,
 				3D8762A06C970677D223A561419340A9 /* PulseLayerTests.swift in Sources */,
+				79E7FABA25388B7200A831BC /* AvonDarkTokens+borderRadius+Spec.swift in Sources */,
 				0E7C160B24C61E45002FF46F /* UINavigationController+Configure+Spec.swift in Sources */,
 				79E7FA45253741AD00A831BC /* AesopLightTokens+elevation+Spec.swift in Sources */,
 				79E7FB3A2538CFA200A831BC /* NaturaLightTokens+elevation+Spec.swift in Sources */,
@@ -2282,6 +2334,7 @@
 				5C5DF89CCAB72EC25E1A1BC43D450CB0 /* TabTests.swift in Sources */,
 				CB6F95EF082D5B6EF08A8BC9B7A01427 /* TextFieldDelegateMock.swift in Sources */,
 				79E7FA5E2537458D00A831BC /* AesopDarkTokens+spacing+Spec.swift in Sources */,
+				79E7FAFF253893B900A831BC /* AvonDarkTokens+typography+Spec.swift in Sources */,
 				C3E184D6CD3B52645D0E06A7138CA94E /* TextFieldTests.swift in Sources */,
 				2934666EAAD661E372AA6009BB287275 /* TextFieldTypeTests.swift in Sources */,
 				847C82A424E578D3001CE116 /* NaturaLightTheme+Spec.swift in Sources */,
@@ -2290,15 +2343,18 @@
 				847C82A624E57931001CE116 /* TheBodyShopDarkTheme+Spec.swift in Sources */,
 				84BC900E24AA16EF007DF09D /* DialogStyle+Spec.swift in Sources */,
 				55A2D6D6BAD3F2F0B352CA80FC656452 /* UICollectionView+ReusableTests.swift in Sources */,
+				79E7FAF0253890FE00A831BC /* AvonLightTokens+size+Spec.swift in Sources */,
 				51308DFBAF8D2A3E20B52E3AC688610A /* UIColor+AsHexString.swift in Sources */,
 				10734D11ADA3847CF236F1C8B98F4555 /* UIColor+HexTests.swift in Sources */,
 				00677CE3627142815E32CE84F60D8910 /* UIFont+GetWeight.swift in Sources */,
 				84BF067224B5126800462AC5 /* NatShortcut+Spec.swift in Sources */,
 				84AB67611C0B5D85CBE5CE489FCA4DC6 /* UIFont+IconTests.swift in Sources */,
 				50130A6AE7342A799C5989AF8FE486E8 /* UITableView+ReusableTests.swift in Sources */,
+				79E7FAD225388D0400A831BC /* AvonLightTokens+color+Spec.swift in Sources */,
 				8E7FE7AAE264D40AF9BFF5CE6E5C7AD0 /* UIView+FrameTests.swift in Sources */,
 				79E7FA4A2537449700A831BC /* AesopDarkTokens+opacity+Spec.swift in Sources */,
 				8409854A24F02BF60095D6AD /* Notification+Name+ThemeHasChanged+Spec.swift in Sources */,
+				79E7FB072538941400A831BC /* AvonLightTokens+typography+Spec.swift in Sources */,
 				84B9330A24ABC38C00B71BD4 /* NatDialogTitleConfigurable+Spec.swift in Sources */,
 				2625466124C7379800B98A91 /* StubSelector.swift in Sources */,
 				79E7FB582538D0CD00A831BC /* NaturaLightTokens+spacing+Spec.swift in Sources */,
