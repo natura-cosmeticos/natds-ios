@@ -98,6 +98,20 @@
 		79E7FA63253745BC00A831BC /* AesopLightTokens+spacing+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FA62253745BC00A831BC /* AesopLightTokens+spacing+Spec.swift */; };
 		79E7FA68253745F500A831BC /* AesopDarkTokens+typography+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FA67253745F500A831BC /* AesopDarkTokens+typography+Spec.swift */; };
 		79E7FA702537470600A831BC /* AesopLightTokens+typography+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FA6F2537470600A831BC /* AesopLightTokens+typography+Spec.swift */; };
+		79E7FB1E2538CD9100A831BC /* NaturaDarkTokens+borderRadius+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FB1D2538CD9100A831BC /* NaturaDarkTokens+borderRadius+Spec.swift */; };
+		79E7FB262538CDCC00A831BC /* NaturaLightTokens+borderRadius+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FB252538CDCC00A831BC /* NaturaLightTokens+borderRadius+Spec.swift */; };
+		79E7FB2B2538CE0300A831BC /* NaturaDarkTokens+color+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FB2A2538CE0300A831BC /* NaturaDarkTokens+color+Spec.swift */; };
+		79E7FB302538CE8C00A831BC /* NaturaLightTokens+color+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FB2F2538CE8C00A831BC /* NaturaLightTokens+color+Spec.swift */; };
+		79E7FB352538CF5A00A831BC /* NaturaDarkTokens+elevation+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FB342538CF5A00A831BC /* NaturaDarkTokens+elevation+Spec.swift */; };
+		79E7FB3A2538CFA200A831BC /* NaturaLightTokens+elevation+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FB392538CFA200A831BC /* NaturaLightTokens+elevation+Spec.swift */; };
+		79E7FB3F2538CFDD00A831BC /* NaturaDarkTokens+opacity+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FB3E2538CFDD00A831BC /* NaturaDarkTokens+opacity+Spec.swift */; };
+		79E7FB442538D01100A831BC /* NaturaLightTokens+opacity+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FB432538D01100A831BC /* NaturaLightTokens+opacity+Spec.swift */; };
+		79E7FB492538D04300A831BC /* NaturaDarkTokens+size+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FB482538D04300A831BC /* NaturaDarkTokens+size+Spec.swift */; };
+		79E7FB4E2538D06C00A831BC /* NaturaLightTokens+size+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FB4D2538D06C00A831BC /* NaturaLightTokens+size+Spec.swift */; };
+		79E7FB532538D0A400A831BC /* NaturaDarkTokens+spacing+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FB522538D0A400A831BC /* NaturaDarkTokens+spacing+Spec.swift */; };
+		79E7FB582538D0CD00A831BC /* NaturaLightTokens+spacing+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FB572538D0CD00A831BC /* NaturaLightTokens+spacing+Spec.swift */; };
+		79E7FB5D2538D0F700A831BC /* NaturaDarkTokens+typography+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FB5C2538D0F700A831BC /* NaturaDarkTokens+typography+Spec.swift */; };
+		79E7FB622538D14E00A831BC /* NaturaLightTokens+typography+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FB612538D14E00A831BC /* NaturaLightTokens+typography+Spec.swift */; };
 		7C00D9B09D306A421DBD99953C7BC9E4 /* NatElevation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2775F568C47ADB6D5DA7B7AFA4A41B4E /* NatElevation.swift */; };
 		7CA6BAC353B73AF5D31F09CAF0268EE5 /* DesignSystemFatalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E6D9764598D210D58B32B2AEB0FE9 /* DesignSystemFatalError.swift */; };
 		7FCD65E56A79CE1AE08A4C86B8DC1303 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E2F68D8995E164CB35303ADB9507C /* Icon.swift */; };
@@ -365,6 +379,20 @@
 		79E7FA62253745BC00A831BC /* AesopLightTokens+spacing+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AesopLightTokens+spacing+Spec.swift"; sourceTree = "<group>"; };
 		79E7FA67253745F500A831BC /* AesopDarkTokens+typography+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AesopDarkTokens+typography+Spec.swift"; sourceTree = "<group>"; };
 		79E7FA6F2537470600A831BC /* AesopLightTokens+typography+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AesopLightTokens+typography+Spec.swift"; sourceTree = "<group>"; };
+		79E7FB1D2538CD9100A831BC /* NaturaDarkTokens+borderRadius+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaturaDarkTokens+borderRadius+Spec.swift"; sourceTree = "<group>"; };
+		79E7FB252538CDCC00A831BC /* NaturaLightTokens+borderRadius+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaturaLightTokens+borderRadius+Spec.swift"; sourceTree = "<group>"; };
+		79E7FB2A2538CE0300A831BC /* NaturaDarkTokens+color+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaturaDarkTokens+color+Spec.swift"; sourceTree = "<group>"; };
+		79E7FB2F2538CE8C00A831BC /* NaturaLightTokens+color+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaturaLightTokens+color+Spec.swift"; sourceTree = "<group>"; };
+		79E7FB342538CF5A00A831BC /* NaturaDarkTokens+elevation+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaturaDarkTokens+elevation+Spec.swift"; sourceTree = "<group>"; };
+		79E7FB392538CFA200A831BC /* NaturaLightTokens+elevation+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaturaLightTokens+elevation+Spec.swift"; sourceTree = "<group>"; };
+		79E7FB3E2538CFDD00A831BC /* NaturaDarkTokens+opacity+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaturaDarkTokens+opacity+Spec.swift"; sourceTree = "<group>"; };
+		79E7FB432538D01100A831BC /* NaturaLightTokens+opacity+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaturaLightTokens+opacity+Spec.swift"; sourceTree = "<group>"; };
+		79E7FB482538D04300A831BC /* NaturaDarkTokens+size+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaturaDarkTokens+size+Spec.swift"; sourceTree = "<group>"; };
+		79E7FB4D2538D06C00A831BC /* NaturaLightTokens+size+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaturaLightTokens+size+Spec.swift"; sourceTree = "<group>"; };
+		79E7FB522538D0A400A831BC /* NaturaDarkTokens+spacing+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaturaDarkTokens+spacing+Spec.swift"; sourceTree = "<group>"; };
+		79E7FB572538D0CD00A831BC /* NaturaLightTokens+spacing+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaturaLightTokens+spacing+Spec.swift"; sourceTree = "<group>"; };
+		79E7FB5C2538D0F700A831BC /* NaturaDarkTokens+typography+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaturaDarkTokens+typography+Spec.swift"; sourceTree = "<group>"; };
+		79E7FB612538D14E00A831BC /* NaturaLightTokens+typography+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaturaLightTokens+typography+Spec.swift"; sourceTree = "<group>"; };
 		7CCF632B4501044E5062C574CCBBF74E /* NatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatButton.swift; sourceTree = "<group>"; };
 		7D8E6D9764598D210D58B32B2AEB0FE9 /* DesignSystemFatalError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemFatalError.swift; sourceTree = "<group>"; };
 		7F9C4251076A01537D0A8CB995DF81EC /* NavigationDrawerSubitemCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerSubitemCellTests.swift; sourceTree = "<group>"; };
@@ -966,6 +994,43 @@
 			path = Tokens;
 			sourceTree = "<group>";
 		};
+		79E7FB1A2538CCC500A831BC /* NaturaLight */ = {
+			isa = PBXGroup;
+			children = (
+				847C82A324E578D3001CE116 /* NaturaLightTheme+Spec.swift */,
+				79E7FB1C2538CCD900A831BC /* Tokens */,
+			);
+			path = NaturaLight;
+			sourceTree = "<group>";
+		};
+		79E7FB1B2538CCD200A831BC /* Tokens */ = {
+			isa = PBXGroup;
+			children = (
+				79E7FB1D2538CD9100A831BC /* NaturaDarkTokens+borderRadius+Spec.swift */,
+				79E7FB2A2538CE0300A831BC /* NaturaDarkTokens+color+Spec.swift */,
+				79E7FB342538CF5A00A831BC /* NaturaDarkTokens+elevation+Spec.swift */,
+				79E7FB3E2538CFDD00A831BC /* NaturaDarkTokens+opacity+Spec.swift */,
+				79E7FB482538D04300A831BC /* NaturaDarkTokens+size+Spec.swift */,
+				79E7FB522538D0A400A831BC /* NaturaDarkTokens+spacing+Spec.swift */,
+				79E7FB5C2538D0F700A831BC /* NaturaDarkTokens+typography+Spec.swift */,
+			);
+			path = Tokens;
+			sourceTree = "<group>";
+		};
+		79E7FB1C2538CCD900A831BC /* Tokens */ = {
+			isa = PBXGroup;
+			children = (
+				79E7FB252538CDCC00A831BC /* NaturaLightTokens+borderRadius+Spec.swift */,
+				79E7FB2F2538CE8C00A831BC /* NaturaLightTokens+color+Spec.swift */,
+				79E7FB392538CFA200A831BC /* NaturaLightTokens+elevation+Spec.swift */,
+				79E7FB432538D01100A831BC /* NaturaLightTokens+opacity+Spec.swift */,
+				79E7FB4D2538D06C00A831BC /* NaturaLightTokens+size+Spec.swift */,
+				79E7FB572538D0CD00A831BC /* NaturaLightTokens+spacing+Spec.swift */,
+				79E7FB612538D14E00A831BC /* NaturaLightTokens+typography+Spec.swift */,
+			);
+			path = Tokens;
+			sourceTree = "<group>";
+		};
 		7AB7FF70C9AEA25A8E77912E1563B1EE /* DomainFunctions */ = {
 			isa = PBXGroup;
 			children = (
@@ -1257,7 +1322,8 @@
 				79E7FA2B25373CF000A831BC /* AesopDark */,
 				79E7FA2C25373D0100A831BC /* AesopLight */,
 				847C829A24E5648E001CE116 /* Avon */,
-				847C829B24E56493001CE116 /* Natura */,
+				847C829B24E56493001CE116 /* NaturaDark */,
+				79E7FB1A2538CCC500A831BC /* NaturaLight */,
 				847C829C24E564B4001CE116 /* TheBodyShop */,
 			);
 			path = BrandsThemes;
@@ -1272,13 +1338,13 @@
 			path = Avon;
 			sourceTree = "<group>";
 		};
-		847C829B24E56493001CE116 /* Natura */ = {
+		847C829B24E56493001CE116 /* NaturaDark */ = {
 			isa = PBXGroup;
 			children = (
 				847C82A124E5786C001CE116 /* NaturaDarkTheme+Spec.swift */,
-				847C82A324E578D3001CE116 /* NaturaLightTheme+Spec.swift */,
+				79E7FB1B2538CCD200A831BC /* Tokens */,
 			);
-			path = Natura;
+			path = NaturaDark;
 			sourceTree = "<group>";
 		};
 		847C829C24E564B4001CE116 /* TheBodyShop */ = {
@@ -2128,8 +2194,10 @@
 				521AFD7AFA9579A0A57971504ABE7145 /* ButtonOutlinedStyle+Spec.swift in Sources */,
 				26BFBADB25127397006C22E2 /* NatTag+Spec.swift in Sources */,
 				BB3413734DCB562C834B90742EF06929 /* ButtonStyle+Spec.swift in Sources */,
+				79E7FB5D2538D0F700A831BC /* NaturaDarkTokens+typography+Spec.swift in Sources */,
 				79E7FA68253745F500A831BC /* AesopDarkTokens+typography+Spec.swift in Sources */,
 				92CA17AE519D08B10DAEE8C00A5E3959 /* ButtonTextStyle+Spec.swift in Sources */,
+				79E7FB262538CDCC00A831BC /* NaturaLightTokens+borderRadius+Spec.swift in Sources */,
 				840265B42513B06E00A08EBE /* AesopLightTheme+Spec.swift in Sources */,
 				84BC900F24AA16FA007DF09D /* DialogFooterView+Spec.swift in Sources */,
 				26BB817724B931E900617EFC /* NatBadge+Color+Spec.swift in Sources */,
@@ -2168,10 +2236,14 @@
 				60B6A40046E3479DEC3808473AF0D08B /* NatSizes+Spec.swift in Sources */,
 				84932F1624EABB190052265F /* AvailableTheme+Spec.swift in Sources */,
 				165E49381ECDC5C699C3496C7C3EA66A /* NatSpacing+Spec.swift in Sources */,
+				79E7FB4E2538D06C00A831BC /* NaturaLightTokens+size+Spec.swift in Sources */,
 				26BB817D24B94CFB00617EFC /* Badgeable+Spec.swift in Sources */,
 				84BF066E24B5099700462AC5 /* ShortcutContainedStyle+Spec.swift in Sources */,
+				79E7FB3F2538CFDD00A831BC /* NaturaDarkTokens+opacity+Spec.swift in Sources */,
+				79E7FB352538CF5A00A831BC /* NaturaDarkTokens+elevation+Spec.swift in Sources */,
 				84A818BB24B77FA80007C7D5 /* UIGestureRecognizer+SendGesturesEvent.swift in Sources */,
 				84B9331024ABD16100B71BD4 /* NatDialogController+ViewModel+Spec.swift in Sources */,
+				79E7FB2B2538CE0300A831BC /* NaturaDarkTokens+color+Spec.swift in Sources */,
 				95BF20E1FC04C44251D7DCAA9C7E7C60 /* NavigationDrawer+IndexMenuTests.swift in Sources */,
 				79E7FA63253745BC00A831BC /* AesopLightTokens+spacing+Spec.swift in Sources */,
 				D36E7374F76C10792F8292DCD99800D5 /* NavigationDrawerDelegateMock.swift in Sources */,
@@ -2190,17 +2262,22 @@
 				3D8762A06C970677D223A561419340A9 /* PulseLayerTests.swift in Sources */,
 				0E7C160B24C61E45002FF46F /* UINavigationController+Configure+Spec.swift in Sources */,
 				79E7FA45253741AD00A831BC /* AesopLightTokens+elevation+Spec.swift in Sources */,
+				79E7FB3A2538CFA200A831BC /* NaturaLightTokens+elevation+Spec.swift in Sources */,
 				A0328AF2000431B6155A5A6CD94B1835 /* ReusableViewTests.swift in Sources */,
+				79E7FB492538D04300A831BC /* NaturaDarkTokens+size+Spec.swift in Sources */,
 				84B9330E24ABC6D200B71BD4 /* NatDialogCustomBodyConfigurable+Spec.swift in Sources */,
+				79E7FB532538D0A400A831BC /* NaturaDarkTokens+spacing+Spec.swift in Sources */,
 				6E6C6EC0105FF251940E4C011D611149 /* String+IconTests.swift in Sources */,
 				84B9330C24ABC5FD00B71BD4 /* NatDialogBodyConfigurable+Spec.swift in Sources */,
 				79E7FA1525373ADE00A831BC /* AesopDarkTokens+borderRadius+Spec.swift in Sources */,
+				79E7FB442538D01100A831BC /* NaturaLightTokens+opacity+Spec.swift in Sources */,
 				ECF18B7FA2F5A22C0F919BBBE58FF611 /* TabDelegateMock.swift in Sources */,
 				79E7FA3325373ED200A831BC /* AesopDarkTokens+color+Spec.swift in Sources */,
 				0E7C160724C5D6DC002FF46F /* UIBarButtonItem+Icon+Spec.swift in Sources */,
 				79E7FA402537404000A831BC /* AesopDarkTokens+elevation+Spec.swift in Sources */,
 				840C43422502842900EE9CAD /* NatIconButton+Sizes+Specs.swift in Sources */,
 				26BB817324B9191000617EFC /* NatBadge+Spec.swift in Sources */,
+				79E7FB302538CE8C00A831BC /* NaturaLightTokens+color+Spec.swift in Sources */,
 				D23F82EE5C3333FD06E87016848DCD37 /* TabItemViewTests.swift in Sources */,
 				5C5DF89CCAB72EC25E1A1BC43D450CB0 /* TabTests.swift in Sources */,
 				CB6F95EF082D5B6EF08A8BC9B7A01427 /* TextFieldDelegateMock.swift in Sources */,
@@ -2224,7 +2301,10 @@
 				8409854A24F02BF60095D6AD /* Notification+Name+ThemeHasChanged+Spec.swift in Sources */,
 				84B9330A24ABC38C00B71BD4 /* NatDialogTitleConfigurable+Spec.swift in Sources */,
 				2625466124C7379800B98A91 /* StubSelector.swift in Sources */,
+				79E7FB582538D0CD00A831BC /* NaturaLightTokens+spacing+Spec.swift in Sources */,
 				845D099F25011C4100B05760 /* UIView+CenterBounds+Specs.swift in Sources */,
+				79E7FB622538D14E00A831BC /* NaturaLightTokens+typography+Spec.swift in Sources */,
+				79E7FB1E2538CD9100A831BC /* NaturaDarkTokens+borderRadius+Spec.swift in Sources */,
 				84EB6B8124EEC82700C6A792 /* GetOrCreatedCachedColor+Spec.swift in Sources */,
 				E4B171E23C40B91B211DB2F64357778D /* ViewStyle+Spec.swift in Sources */,
 			);
