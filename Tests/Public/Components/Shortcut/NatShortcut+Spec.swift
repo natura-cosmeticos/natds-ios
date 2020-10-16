@@ -133,45 +133,49 @@ final class NatShortSpec: QuickSpec {
             }
         }
 
-        describe("#touchesBegan") {
+        describe("#tapHandler") {
             beforeEach {
-                systemUnderTest.touchesBegan(.init(arrayLiteral: .init()), with: nil)
+                systemUnderTest.tapHandler(.init())
             }
-
             it("calls beginPulseAt and sublayer for animation is add") {
                 let circleView = systemUnderTest.subviews.first
-
                 expect(circleView?.layer.sublayers?.count).to(equal(2))
+            }
+            it("assures that the gestureRecognizer is UITapGestureRecognizer") {
+                let tapped = systemUnderTest
+                expect(tapped?.gestureRecognizers?.first(where: { $0 is UITapGestureRecognizer})).toNot(beNil())
             }
         }
 
-        describe("#touchesEnded") {
+        describe("#LongPressHandler") {
             beforeEach {
-                systemUnderTest.touchesBegan(.init(arrayLiteral: .init()), with: nil)
-                systemUnderTest.touchesEnded(.init(), with: nil)
+                systemUnderTest.longPressHandler(.init())
             }
 
             it("calls endPulse and sublayer is removed after animation ends") {
                 let circleView = systemUnderTest.subviews.first
-
                 expect(circleView?.layer.sublayers?.count).toEventually(equal(1))
             }
+            it("assures that the gestureRecognizer is UILongPressGestureRecognizer") {
+                let longPressed = systemUnderTest
+                expect(longPressed?.gestureRecognizers?.first(where: { $0 is UILongPressGestureRecognizer})).toNot(beNil())
+            }
         }
 
-        context("When a notification of .themeHasChange is received") {
-            beforeEach {
-                applyStyleInvocations = 0
-                styleSpy = .init(
-                    applyStyle: { _ in applyStyleInvocations += 1 }
-                )
-                systemUnderTest = .init(style: styleSpy)
+    context("When a notification of .themeHasChange is received") {
+        beforeEach {
+            applyStyleInvocations = 0
+            styleSpy = .init(
+                applyStyle: { _ in applyStyleInvocations += 1 }
+            )
+            systemUnderTest = .init(style: styleSpy)
 
-                NotificationCenter.default.post(name: .themeHasChanged, object: nil)
-            }
+            NotificationCenter.default.post(name: .themeHasChanged, object: nil)
+        }
 
-            it("applies style again besides init") {
-                expect(applyStyleInvocations).to(equal(2))
-            }
+        it("applies style again besides init") {
+            expect(applyStyleInvocations).to(equal(2))
         }
     }
+}
 }
