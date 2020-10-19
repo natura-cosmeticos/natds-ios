@@ -28,6 +28,7 @@
 public final class NatShortcut: UIView {
 
     // MARK: - Private properties
+
     private let circleView: UIView = {
         let view = UIView()
         view.layer.cornerRadius = getTokenFromTheme(\.sizeMediumX) / 2
@@ -94,17 +95,10 @@ public final class NatShortcut: UIView {
     }
 
     @objc func longPressHandler(_ sender: UILongPressGestureRecognizer) {
-
         switch sender.state {
-        case .began:
-            beginPulseAt(
-                point: circleView.centerBounds,
-                in: circleView.layer
-            )
-        case .ended:
-            endPulse(layer: circleView.layer)
-        default:
-            break
+        case .began: beginPulseAt(point: circleView.centerBounds, in: circleView.layer)
+        case .ended: endPulse(layer: circleView.layer)
+        default: break
         }
     }
 }
@@ -119,6 +113,7 @@ extension NatShortcut {
     public func configure(icon: Icon) {
         iconView.icon = icon
     }
+
     public func configure(action: @escaping () -> Void) {
         self.action = action
     }
@@ -130,12 +125,15 @@ extension NatShortcut {
     func configure(circleColor color: UIColor) {
         circleView.backgroundColor = color
     }
+
     func configure(circleBorderWidth value: CGFloat) {
         circleView.layer.borderWidth = value
     }
+
     func configure(circleBorderColor color: CGColor) {
         circleView.layer.borderColor = color
     }
+
     func configure(iconColor color: UIColor) {
         iconView.tintColor = color
     }
@@ -148,18 +146,10 @@ extension NatShortcut {
         circleView.addSubview(iconView)
         addSubview(circleView)
         addSubview(label)
+
         addConstraints()
+        addGestures()
 
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapHandler))
-        tapGesture.delaysTouchesBegan = true
-        tapGesture.delaysTouchesEnded = true
-        addGestureRecognizer(tapGesture)
-
-        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(longPressHandler))
-        longPressGesture.minimumPressDuration = 0.7
-        longPressGesture.delaysTouchesBegan = true
-        longPressGesture.delaysTouchesEnded = true
-        addGestureRecognizer(longPressGesture)
         notificationCenter.addObserver(
             self,
             selector: #selector(themeHasChanged),
@@ -167,7 +157,7 @@ extension NatShortcut {
             object: nil
         )
     }
-    
+
     private func addConstraints() {
         let circleSize = NatSizes.mediumX
 
@@ -178,8 +168,10 @@ extension NatShortcut {
             circleView.centerXAnchor.constraint(equalTo: centerXAnchor),
             circleView.widthAnchor.constraint(equalToConstant: circleSize),
             circleView.heightAnchor.constraint(equalToConstant: circleSize),
+
             iconView.centerXAnchor.constraint(equalTo: circleView.centerXAnchor),
             iconView.centerYAnchor.constraint(equalTo: circleView.centerYAnchor),
+
             label.topAnchor.constraint(equalTo: circleView.bottomAnchor, constant: getTokenFromTheme(\.sizeTiny)),
             label.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor),
             label.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor),
@@ -188,6 +180,21 @@ extension NatShortcut {
             label.centerXAnchor.constraint(equalTo: centerXAnchor)
         ]
         NSLayoutConstraint.activate(constraints)
+    }
+
+    private func addGestures() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapHandler))
+        tapGesture.delaysTouchesBegan = true
+        tapGesture.delaysTouchesEnded = true
+
+        addGestureRecognizer(tapGesture)
+
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(longPressHandler))
+        longPressGesture.minimumPressDuration = 0.7
+        longPressGesture.delaysTouchesBegan = true
+        longPressGesture.delaysTouchesEnded = true
+
+        addGestureRecognizer(longPressGesture)
     }
 }
 

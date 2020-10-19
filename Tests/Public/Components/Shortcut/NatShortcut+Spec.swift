@@ -44,6 +44,18 @@ final class NatShortSpec: QuickSpec {
                 expect(notificationCenterSpy.invokedAddObserver?.name).to(equal(.themeHasChanged))
                 expect(notificationCenterSpy.invokedAddObserver?.object).to(beNil())
             }
+
+            it("assures that the gestureRecognizer is UITapGestureRecognizer") {
+                let tapped = systemUnderTest.gestureRecognizers?.first { $0 is UITapGestureRecognizer }
+
+                expect(tapped).toNot(beNil())
+            }
+
+            it("assures that the gestureRecognizer is UILongPressGestureRecognizer") {
+                let longPressed = systemUnderTest.gestureRecognizers?.first { $0 is UILongPressGestureRecognizer }
+
+                expect(longPressed).toNot(beNil())
+            }
         }
 
         describe("#configure(text:)") {
@@ -137,45 +149,59 @@ final class NatShortSpec: QuickSpec {
             beforeEach {
                 systemUnderTest.tapHandler(.init())
             }
+
             it("calls beginPulseAt and sublayer for animation is add") {
                 let circleView = systemUnderTest.subviews.first
-                expect(circleView?.layer.sublayers?.count).to(equal(2))
-            }
-            it("assures that the gestureRecognizer is UITapGestureRecognizer") {
-                let tapped = systemUnderTest
-                expect(tapped?.gestureRecognizers?.first(where: { $0 is UITapGestureRecognizer})).toNot(beNil())
-            }
-        }
 
-        describe("#LongPressHandler") {
-            beforeEach {
-                systemUnderTest.longPressHandler(.init())
+                expect(circleView?.layer.sublayers?.count).to(equal(2))
             }
 
             it("calls endPulse and sublayer is removed after animation ends") {
                 let circleView = systemUnderTest.subviews.first
+
                 expect(circleView?.layer.sublayers?.count).toEventually(equal(1))
             }
-            it("assures that the gestureRecognizer is UILongPressGestureRecognizer") {
-                let longPressed = systemUnderTest
-                expect(longPressed?.gestureRecognizers?.first(where: { $0 is UILongPressGestureRecognizer})).toNot(beNil())
+
+        }
+
+        describe("#LongPressHandler") {
+            beforeEach {
+                let gestureBegan = UILongPressGestureRecognizer()
+                gestureBegan.state = .began
+                systemUnderTest.longPressHandler(gestureBegan)
+
+                let gestureEnded = UILongPressGestureRecognizer()
+                gestureEnded.state = .ended
+                systemUnderTest.longPressHandler(gestureEnded)
+            }
+
+            it("calls beginPulseAt and sublayer for animation is add") {
+                let circleView = systemUnderTest.subviews.first
+
+                expect(circleView?.layer.sublayers?.count).to(equal(2))
+            }
+
+            it("calls endPulse and sublayer is removed after animation ends") {
+                let circleView = systemUnderTest.subviews.first
+
+                expect(circleView?.layer.sublayers?.count).toEventually(equal(1))
             }
         }
 
-    context("When a notification of .themeHasChange is received") {
-        beforeEach {
-            applyStyleInvocations = 0
-            styleSpy = .init(
-                applyStyle: { _ in applyStyleInvocations += 1 }
-            )
-            systemUnderTest = .init(style: styleSpy)
+        context("When a notification of .themeHasChange is received") {
+            beforeEach {
+                applyStyleInvocations = 0
+                styleSpy = .init(
+                    applyStyle: { _ in applyStyleInvocations += 1 }
+                )
+                systemUnderTest = .init(style: styleSpy)
 
-            NotificationCenter.default.post(name: .themeHasChanged, object: nil)
-        }
+                NotificationCenter.default.post(name: .themeHasChanged, object: nil)
+            }
 
-        it("applies style again besides init") {
-            expect(applyStyleInvocations).to(equal(2))
+            it("applies style again besides init") {
+                expect(applyStyleInvocations).to(equal(2))
+            }
         }
     }
-}
 }
