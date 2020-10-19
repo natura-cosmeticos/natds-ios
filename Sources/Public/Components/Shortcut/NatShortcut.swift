@@ -3,26 +3,26 @@
  The shortcut colors changes according with the current theme configured in the Design system.
 
  This component has 4 styles:
- - Contained with Primary color
- - Contained with Default color
- - Outlined with Primary color
- - Outlined with Default color
+    - Contained with Primary color
+    - Contained with Default color
+    - Outlined with Primary color
+    - Outlined with Default color
 
  Example of usage:
 
- let containedPrimary = NatShortcut(style: .containedPrimary)
- let containedDefault = NatShortcut(style: .containedDefault)
- let outlinedPrimary = NatShortcut(style: .outlinedPrimary)
- let outlinedDefault = NatShortcut(style: .outlinedDefault)
+        let containedPrimary = NatShortcut(style: .containedPrimary)
+        let containedDefault = NatShortcut(style: .containedDefault)
+        let outlinedPrimary = NatShortcut(style: .outlinedPrimary)
+        let outlinedDefault = NatShortcut(style: .outlinedDefault)
 
  This shortcut has an enum NatShortcut.Widths with allowed values for width values, if needed:
 
- shortcut.widthAnchor.constraint(equalToConstant: NatShortcut.Widths.maximum)
+        shortcut.widthAnchor.constraint(equalToConstant: NatShortcut.Widths.maximum)
 
  - Requires:
  It's necessary to configure the Design System with a theme or fatalError will be raised.
 
- DesignSystem().configure(with: AvailableTheme)
+        DesignSystem().configure(with: AvailableTheme)
  */
 
 public final class NatShortcut: UIView {
@@ -34,12 +34,14 @@ public final class NatShortcut: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
+
     private let iconView: IconView = {
         let iconView = IconView(fontSize: getTokenFromTheme(\.sizeSemi))
         iconView.icon = .outlinedDefaultMockup
         iconView.translatesAutoresizingMaskIntoConstraints = false
         return iconView
     }()
+
     private let label: UILabel = {
         let label = UILabel()
         label.font = NatFonts.font(ofSize: .caption, withWeight: .regular)
@@ -49,13 +51,17 @@ public final class NatShortcut: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
+
     private let style: Style
     private let notificationCenter: NotificationCenterObservable
     private var action: (() -> Void)?
+
     // MARK: - Inits
+
     public convenience init(style: Style) {
         self.init(style: style, notificationCenter: NotificationCenter.default)
     }
+
     init(style: Style, notificationCenter: NotificationCenterObservable) {
         self.style = style
         self.notificationCenter = notificationCenter
@@ -63,15 +69,20 @@ public final class NatShortcut: UIView {
         style.applyStyle(self)
         setup()
     }
+
     // MARK: - Deinit
+
     deinit {
         notificationCenter.removeObserver(self)
     }
+
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
     // MARK: - User interactions
+
     @objc func tapHandler(_ sender: UITapGestureRecognizer) {
         action?()
 
@@ -81,6 +92,7 @@ public final class NatShortcut: UIView {
         )
         endPulse(layer: circleView.layer)
     }
+
     @objc func longPressHandler(_ sender: UILongPressGestureRecognizer) {
 
         switch sender.state {
