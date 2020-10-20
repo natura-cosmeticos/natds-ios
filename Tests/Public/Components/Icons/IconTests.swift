@@ -111,6 +111,7 @@ extension IconTests {
         case outlinedActionRating = "outlined-action-rating"
         case outlinedActionRecycle = "outlined-action-recycle"
         case outlinedActionRequest = "outlined-action-request"
+        case outlinedActionRequestspecial = "outlined-action-requestspecial"
         case outlinedActionRunningclock = "outlined-action-runningclock"
         case outlinedActionSave = "outlined-action-save"
         case outlinedActionSchedule = "outlined-action-schedule"
@@ -172,6 +173,7 @@ extension IconTests {
         case outlinedContentMirror = "outlined-content-mirror"
         case outlinedContentPassword = "outlined-content-password"
         case outlinedContentPlanb = "outlined-content-planb"
+        case outlinedContentProductshowcase = "outlined-content-productshowcase"
         case outlinedContentProdutivity = "outlined-content-produtivity"
         case outlinedContentReport = "outlined-content-report"
         case outlinedContentStore = "outlined-content-store"
@@ -237,6 +239,9 @@ extension IconTests {
         case outlinedProductMakeup = "outlined-product-makeup"
         case outlinedProductOutlet = "outlined-product-outlet"
         case outlinedProductPerfumery = "outlined-product-perfumery"
+        case outlinedProductPerfumeryfeminine = "outlined-product-perfumeryfeminine"
+        case outlinedProductPerfumerymasculine = "outlined-product-perfumerymasculine"
+        case outlinedProductPerfumerytbs = "outlined-product-perfumerytbs"
         case outlinedProductPromotionproduct = "outlined-product-promotionproduct"
         case outlinedProductScent = "outlined-product-scent"
         case outlinedProductVegan = "outlined-product-vegan"
@@ -252,8 +257,8 @@ extension IconTests {
     }
 
     private func diffBetweenIcons(appIcons: [Icon], testIcons: [IconMirror]) -> [String] {
-        let appIcons = testIcons.map { "\($0)" }
-        let testIcons = appIcons.map { "\($0)" }
+        let appIcons = appIcons.map { "\($0)" }
+        let testIcons = testIcons.map { "\($0)" }
 
         let thisSet = Set(appIcons)
         let otherSet = Set(testIcons)
