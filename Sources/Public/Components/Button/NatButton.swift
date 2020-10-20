@@ -1,29 +1,29 @@
 import UIKit
 
 /**
-  NatButton is a class that represents  button  component from the design system.
-  The button colors changes according with the current theme configured in the Design system.
+ NatButton is a class that represents  button  component from the design system.
+ The button colors changes according with the current theme configured in the Design system.
 
-    This button has 3 styles:
-    - Contained
-    - Outlined
-    - Text
+ This button has 3 styles:
+ - Contained
+ - Outlined
+ - Text
 
-    Example of usage:
+ Example of usage:
 
-        let containedButton = NatButton(style: .contained)
-        let outlinedButton = NatButton(style: .outlined)
-        let textButton = NatButton(style: .text)
+ let containedButton = NatButton(style: .contained)
+ let outlinedButton = NatButton(style: .outlined)
+ let textButton = NatButton(style: .text)
 
-    This button has pre-defined height values with enum NatButton.Height:
+ This button has pre-defined height values with enum NatButton.Height:
 
-        button.heightAnchor.constraint(equalToConstant: NatButton.Height.medium)
+ button.heightAnchor.constraint(equalToConstant: NatButton.Height.medium)
 
  - Requires:
-        It's necessary to configure the Design System with a theme or fatalError will be raised.
+ It's necessary to configure the Design System with a theme or fatalError will be raised.
 
-            DesignSystem().configure(with: AvailableTheme)
-*/
+ DesignSystem().configure(with: AvailableTheme)
+ */
 
 public final class NatButton: UIButton, Pulsable {
 
@@ -82,12 +82,12 @@ public final class NatButton: UIButton, Pulsable {
      When this method is used, it configures title using an attributed string.
 
      If a different state or behavior is needed for configure a title, use native approuch like
-      - setTitle(title: String?, for: UIControl.State)
-      - setAttributedTitle(NSAttributedString?, for: UIControl.State)
+     - setTitle(title: String?, for: UIControl.State)
+     - setAttributedTitle(NSAttributedString?, for: UIControl.State)
 
      - Parameters:
-        - title: This String will be used to configure Normal & Disabled states.
-    */
+     - title: This String will be used to configure Normal & Disabled states.
+     */
     public func configure(title: String) {
         style.applyTitle(title, self)
     }
@@ -99,7 +99,7 @@ public final class NatButton: UIButton, Pulsable {
 
         if let touch = touches.first {
             let point = touch.location(in: self)
-            beginPulseAt(point: point, in: layer)
+            beginPulseAt(point: point, in: layer, endAnimation: false)
         }
     }
 

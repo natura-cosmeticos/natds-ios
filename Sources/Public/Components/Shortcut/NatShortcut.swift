@@ -89,14 +89,14 @@ public final class NatShortcut: UIView {
 
         beginPulseAt(
             point: circleView.centerBounds,
-            in: circleView.layer
+            in: circleView.layer,
+            endAnimation: true
         )
-        endPulse(layer: circleView.layer)
     }
 
     @objc func longPressHandler(_ sender: UILongPressGestureRecognizer) {
         switch sender.state {
-        case .began: beginPulseAt(point: circleView.centerBounds, in: circleView.layer)
+        case .began: beginPulseAt(point: circleView.centerBounds, in: circleView.layer, endAnimation: false)
         case .ended: endPulse(layer: circleView.layer)
         default: break
         }
@@ -184,6 +184,8 @@ extension NatShortcut {
 
     private func addGestures() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapHandler))
+        tapGesture.numberOfTapsRequired = 1
+        tapGesture.numberOfTouchesRequired = 1
         tapGesture.delaysTouchesBegan = true
         tapGesture.delaysTouchesEnded = true
 

@@ -4,7 +4,8 @@ extension Pulsable {
     func beginPulseAt(
         point: CGPoint,
         in layer: CALayer,
-        withColor color: UIColor = NatColors.highlight) {
+        withColor color: UIColor = NatColors.highlight,
+        endAnimation: Bool) {
 
         let opacity = getTokenFromTheme(\.opacityDisabledLow)
         let color = color.withAlphaComponent(opacity)
@@ -15,7 +16,7 @@ extension Pulsable {
 
         layer.insertSublayer(containedPulseLayer, below: nil)
 
-        containedPulseLayer.startPulseAt(point: point)
+        containedPulseLayer.startPulseAt(point: point, endAnimation: endAnimation)
     }
 
     func endPulse(layer: CALayer) {

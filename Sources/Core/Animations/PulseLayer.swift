@@ -79,7 +79,7 @@ class PulseLayer: CAShapeLayer {
         return animation
     }
 
-    private func createStartPulseAnimationGroupBy(point: CGPoint) {
+    private func createStartPulseAnimationGroupBy(point: CGPoint, endAnimation: Bool) {
         CATransaction.begin()
         let animationGroup = CAAnimationGroup()
         animationGroup.duration = kAnimationGroupDuration
@@ -92,6 +92,10 @@ class PulseLayer: CAShapeLayer {
 
         CATransaction.setCompletionBlock { [weak self] in
             self?.startPulseAnimationActive = false
+
+            if endAnimation == true {
+                self?.endPulse()
+            }
         }
 
         self.add(animationGroup, forKey: nil)
@@ -101,12 +105,12 @@ class PulseLayer: CAShapeLayer {
 
 extension PulseLayer {
 
-    func startPulseAt(point: CGPoint) {
+    func startPulseAt(point: CGPoint, endAnimation: Bool) {
         setNeedsLayout()
         self.opacity = 1
 
         startPulseAnimationActive = true
-        createStartPulseAnimationGroupBy(point: point)
+        createStartPulseAnimationGroupBy(point: point, endAnimation: endAnimation)
         pulseStartAnimationTime = CACurrentMediaTime()
     }
 

@@ -88,8 +88,8 @@ public final class NatIconButton: UIView {
         beginPulseAt(
             point: centerBounds,
             in: layer,
-            withColor: iconView.tintColor
-        )
+            withColor: iconView.tintColor,
+            endAnimation: false)
     }
 
     public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
