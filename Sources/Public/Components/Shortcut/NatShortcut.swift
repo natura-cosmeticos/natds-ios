@@ -192,7 +192,7 @@ extension NatShortcut {
         addGestureRecognizer(tapGesture)
 
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(longPressHandler))
-        longPressGesture.minimumPressDuration = 0.7
+        longPressGesture.minimumPressDuration = 0.5
         longPressGesture.delaysTouchesBegan = true
         longPressGesture.delaysTouchesEnded = true
 
