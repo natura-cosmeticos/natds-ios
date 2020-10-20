@@ -99,14 +99,14 @@ public final class NatButton: UIButton, Pulsable {
 
         if let touch = touches.first {
             let point = touch.location(in: self)
-            beginPulseAt(point: point, in: layer, endAnimation: false)
+            addPulseLayerAnimated(at: point, in: layer, removeAfterAnimation: false)
         }
     }
 
     public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
 
-        endPulse(layer: layer)
+        removePulseLayer(layer: layer)
     }
 }
 

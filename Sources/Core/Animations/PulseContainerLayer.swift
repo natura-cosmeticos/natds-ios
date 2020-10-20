@@ -20,8 +20,8 @@ final class PulseContainerLayer: CAShapeLayer {
         }
     }
 
-    func startPulseAt(point: CGPoint, endAnimation: Bool) {
-        pulseLayer.startPulseAt(point: point, endAnimation: endAnimation)
+    func startPulseAt(point: CGPoint, removeAfterAnimation: Bool) {
+        pulseLayer.startPulseAt(point: point, removeAfterAnimation: removeAfterAnimation)
     }
 
     func endPulse() {

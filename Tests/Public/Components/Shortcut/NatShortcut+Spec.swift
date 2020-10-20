@@ -150,18 +150,17 @@ final class NatShortSpec: QuickSpec {
                 systemUnderTest.tapHandler(.init())
             }
 
-            it("calls beginPulseAt and sublayer for animation is add") {
+            it("calls addPulseLayerAnimated and sublayer for animation is add") {
                 let circleView = systemUnderTest.subviews.first
 
                 expect(circleView?.layer.sublayers?.count).to(equal(2))
             }
 
-            it("calls endPulse and sublayer is removed after animation ends") {
+            it("calls removePulseLayer and sublayer is removed after animation ends") {
                 let circleView = systemUnderTest.subviews.first
 
                 expect(circleView?.layer.sublayers?.count).toEventually(equal(1))
             }
-
         }
 
         describe("#LongPressHandler") {
@@ -175,13 +174,13 @@ final class NatShortSpec: QuickSpec {
                 systemUnderTest.longPressHandler(gestureEnded)
             }
 
-            it("calls beginPulseAt and sublayer for animation is add") {
+            it("calls addPulseLayerAnimated and sublayer for animation is add") {
                 let circleView = systemUnderTest.subviews.first
 
                 expect(circleView?.layer.sublayers?.count).to(equal(2))
             }
 
-            it("calls endPulse and sublayer is removed after animation ends") {
+            it("calls removePulseLayer and sublayer is removed after animation ends") {
                 let circleView = systemUnderTest.subviews.first
 
                 expect(circleView?.layer.sublayers?.count).toEventually(equal(1))

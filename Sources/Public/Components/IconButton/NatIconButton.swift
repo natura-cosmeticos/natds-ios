@@ -69,7 +69,7 @@ public final class NatIconButton: UIView {
 
     @objc func tapHandler(_ sender: UIGestureRecognizer) {
         action?()
-        endPulse(layer: layer)
+        removePulseLayer(layer: layer)
     }
 
     // MARK: - Overrides
@@ -85,17 +85,18 @@ public final class NatIconButton: UIView {
 
         guard currentState == .enabled else { return }
 
-        beginPulseAt(
-            point: centerBounds,
+        addPulseLayerAnimated(
+            at: centerBounds,
             in: layer,
             withColor: iconView.tintColor,
-            endAnimation: false)
+            removeAfterAnimation: false
+        )
     }
 
     public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
 
-        endPulse(layer: layer)
+        removePulseLayer(layer: layer)
     }
 }
 

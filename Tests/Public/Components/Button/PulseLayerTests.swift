@@ -15,7 +15,7 @@ class PulseLayerTests: XCTestCase {
         layer.bounds = CGRect(x: 0, y: 0, width: 0, height: 0)
         layer.addSublayer(sut)
 
-        sut.startPulseAt(point: CGPoint(x: 0, y: 0))
+        sut.startPulseAt(point: CGPoint(x: 0, y: 0), removeAfterAnimation: false)
 
         XCTAssertEqual(layer.opacity, 1)
         XCTAssertEqual(layer.bounds, layer.bounds)
@@ -29,7 +29,7 @@ class PulseLayerTests: XCTestCase {
         layer.bounds = CGRect(x: 0, y: 0, width: 0, height: 0)
         layer.addSublayer(sut)
 
-        sut.startPulseAt(point: CGPoint(x: 0, y: 0))
+        sut.startPulseAt(point: CGPoint(x: 0, y: 0), removeAfterAnimation: false)
         sut.endPulse()
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
