@@ -4,24 +4,25 @@ extension Pulsable {
 
     func addPulseLayerAnimated(at point: CGPoint,
                                in layer: CALayer,
-                               withColor color: UIColor = NatColors.highlight,
+                               withColor color: UIColor? = nil,
                                removeAfterAnimation: Bool) {
 
-        let opacity = getTokenFromTheme(\.opacityDisabledLow)
-        let color = color.withAlphaComponent(opacity)
+        let pulseLayer = PulseLayer()
+        pulseLayer.frame = layer.bounds
+        pulseLayer.cornerRadius = layer.cornerRadius
 
-        let containedPulseLayer = PulseContainerLayer(color: color)
-        containedPulseLayer.frame = layer.bounds
-        containedPulseLayer.cornerRadius = layer.cornerRadius
+        if let color = color {
+            pulseLayer.fillColor = color.cgColor
+        }
 
-        layer.insertSublayer(containedPulseLayer, below: nil)
+        layer.insertSublayer(pulseLayer, below: nil)
 
-        containedPulseLayer.startPulseAt(point: point, removeAfterAnimation: removeAfterAnimation)
+        pulseLayer.startPulseAt(point: point, removeAfterAnimation: removeAfterAnimation)
     }
 
     func removePulseLayer(layer: CALayer) {
         layer.sublayers?
-            .compactMap { $0 as? PulseContainerLayer }
+            .compactMap { $0 as? PulseLayer }
             .forEach { $0.endPulse() }
     }
 }

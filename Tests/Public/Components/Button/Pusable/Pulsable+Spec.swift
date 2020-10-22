@@ -19,11 +19,11 @@ final class PulsableSpec: QuickSpec {
         }
 
         describe("#beginPulseAt") {
-            var pulseContainerLayer: PulseContainerLayer!
+            var pulseContainerLayer: PulseLayer!
 
             beforeEach {
                 pulsableButtonStub.touchesBegan(.init(arrayLiteral: .init()), with: nil)
-                pulseContainerLayer = pulsableButtonStub.layer.sublayers?.first as? PulseContainerLayer
+                pulseContainerLayer = pulsableButtonStub.layer.sublayers?.first as? PulseLayer
             }
 
             it("inserts PulseContainerLayer as sublayer") {

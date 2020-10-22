@@ -85,10 +85,13 @@ public final class NatIconButton: UIView {
 
         guard currentState == .enabled else { return }
 
+        let opacity = getTokenFromTheme(\.opacityDisabledLow)
+        let color = iconView.tintColor.withAlphaComponent(opacity)
+
         addPulseLayerAnimated(
             at: centerBounds,
             in: layer,
-            withColor: iconView.tintColor,
+            withColor: color,
             removeAfterAnimation: false
         )
     }
