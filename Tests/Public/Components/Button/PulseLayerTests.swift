@@ -7,6 +7,8 @@ class PulseLayerTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
+        ConfigurationStorage.shared.currentTheme = StubTheme()
+
         sut = PulseLayer()
     }
 
