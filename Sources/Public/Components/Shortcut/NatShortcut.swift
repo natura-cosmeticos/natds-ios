@@ -1,29 +1,29 @@
 /**
-  NatShortcut is a class that represents  a component from the design system.
-  The shortcut colors changes according with the current theme configured in the Design system.
+ NatShortcut is a class that represents  a component from the design system.
+ The shortcut colors changes according with the current theme configured in the Design system.
 
-    This component has 4 styles:
+ This component has 4 styles:
     - Contained with Primary color
     - Contained with Default color
     - Outlined with Primary color
     - Outlined with Default color
 
-    Example of usage:
+ Example of usage:
 
         let containedPrimary = NatShortcut(style: .containedPrimary)
         let containedDefault = NatShortcut(style: .containedDefault)
         let outlinedPrimary = NatShortcut(style: .outlinedPrimary)
         let outlinedDefault = NatShortcut(style: .outlinedDefault)
 
-    This shortcut has an enum NatShortcut.Widths with allowed values for width values, if needed:
+ This shortcut has an enum NatShortcut.Widths with allowed values for width values, if needed:
 
         shortcut.widthAnchor.constraint(equalToConstant: NatShortcut.Widths.maximum)
 
  - Requires:
-        It's necessary to configure the Design System with a theme or fatalError will be raised.
+ It's necessary to configure the Design System with a theme or fatalError will be raised.
 
-            DesignSystem().configure(with: AvailableTheme)
-*/
+        DesignSystem().configure(with: AvailableTheme)
+ */
 
 public final class NatShortcut: UIView {
 
@@ -33,7 +33,6 @@ public final class NatShortcut: UIView {
         let view = UIView()
         view.layer.cornerRadius = getTokenFromTheme(\.sizeMediumX) / 2
         view.translatesAutoresizingMaskIntoConstraints = false
-
         return view
     }()
 
@@ -41,7 +40,6 @@ public final class NatShortcut: UIView {
         let iconView = IconView(fontSize: getTokenFromTheme(\.sizeSemi))
         iconView.icon = .outlinedDefaultMockup
         iconView.translatesAutoresizingMaskIntoConstraints = false
-
         return iconView
     }()
 
@@ -52,7 +50,6 @@ public final class NatShortcut: UIView {
         label.textAlignment = .center
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
-
         return label
     }()
 
@@ -69,11 +66,8 @@ public final class NatShortcut: UIView {
     init(style: Style, notificationCenter: NotificationCenterObservable) {
         self.style = style
         self.notificationCenter = notificationCenter
-
         super.init(frame: .zero)
-
         style.applyStyle(self)
-
         setup()
     }
 
@@ -90,26 +84,20 @@ public final class NatShortcut: UIView {
 
     // MARK: - User interactions
 
-    @objc func tapHandler(_ sender: UIGestureRecognizer) {
+    @objc func tapHandler(_ sender: UITapGestureRecognizer) {
         action?()
-        endPulse(layer: circleView.layer)
+
+        addPulseLayerAnimated(at: circleView.centerBounds, in: circleView.layer, removeAfterAnimation: true)
     }
 
-    // MARK: - Overrides
-
-    public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-
-        beginPulseAt(
-            point: .init(x: circleView.bounds.height / 2, y: circleView.bounds.width / 2),
-            in: circleView.layer
-        )
-    }
-
-    public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesEnded(touches, with: event)
-
-        endPulse(layer: circleView.layer)
+    @objc func longPressHandler(_ sender: UILongPressGestureRecognizer) {
+        switch sender.state {
+        case .began:
+            addPulseLayerAnimated(at: circleView.centerBounds, in: circleView.layer, removeAfterAnimation: false)
+        case .ended:
+            removePulseLayer(layer: circleView.layer)
+        default: break
+        }
     }
 }
 
@@ -154,14 +142,11 @@ extension NatShortcut {
 extension NatShortcut {
     private func setup() {
         circleView.addSubview(iconView)
-
         addSubview(circleView)
         addSubview(label)
 
         addConstraints()
-
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapHandler))
-        addGestureRecognizer(tapGesture)
+        addGestures()
 
         notificationCenter.addObserver(
             self,
@@ -192,8 +177,24 @@ extension NatShortcut {
             label.widthAnchor.constraint(lessThanOrEqualToConstant: NatSizes.large),
             label.centerXAnchor.constraint(equalTo: centerXAnchor)
         ]
-
         NSLayoutConstraint.activate(constraints)
+    }
+
+    private func addGestures() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapHandler))
+        tapGesture.numberOfTapsRequired = 1
+        tapGesture.numberOfTouchesRequired = 1
+        tapGesture.delaysTouchesBegan = true
+        tapGesture.delaysTouchesEnded = true
+
+        addGestureRecognizer(tapGesture)
+
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(longPressHandler))
+        longPressGesture.minimumPressDuration = 0.5
+        longPressGesture.delaysTouchesBegan = true
+        longPressGesture.delaysTouchesEnded = true
+
+        addGestureRecognizer(longPressGesture)
     }
 }
 

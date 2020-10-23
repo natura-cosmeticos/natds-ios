@@ -269,7 +269,7 @@
 		BB3413734DCB562C834B90742EF06929 /* ButtonStyle+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573BBF1E50E0B49397C339D19D5E0D0B /* ButtonStyle+Spec.swift */; };
 		BBCC40A29117B4CB675FE57C3B0130E4 /* AssetsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B41F99CB8ACD14C09E1AA323E38C2D /* AssetsHelper.swift */; };
 		C0F15375EEFCBC922341EBD9DED5A29B /* NatButton+Height.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C54C550ED4D44A309C43261BF40F55 /* NatButton+Height.swift */; };
-		C24255D434C838206493D9A89581F7C1 /* PulseContainerLayer+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478FD68B021B6AA3538B93888BD14648 /* PulseContainerLayer+Spec.swift */; };
+		C24255D434C838206493D9A89581F7C1 /* PulseLayer+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478FD68B021B6AA3538B93888BD14648 /* PulseLayer+Spec.swift */; };
 		C3E184D6CD3B52645D0E06A7138CA94E /* TextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99D4E498664E80E25C8F8C061407424 /* TextFieldTests.swift */; };
 		C4EB3DDBDD3DEFDA5183455CCDB2720F /* NatDialogController+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C01EDAF32106E3A72F0D0694D1A156C /* NatDialogController+Spec.swift */; };
 		CB6F95EF082D5B6EF08A8BC9B7A01427 /* TextFieldDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D521C44E858B4345479E0B193CE2BB9C /* TextFieldDelegateMock.swift */; };
@@ -281,7 +281,6 @@
 		DF58B3DD08824CC1C80C886321CEA0F4 /* NatElevations+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A9D6B3184A3081BD0CDE0B1A351C8F /* NatElevations+Spec.swift */; };
 		E07925C3535D79164EBC061C7D6A6CE4 /* TextFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437B78D88ACFB47EEADED96CDC94C7C5 /* TextFieldType.swift */; };
 		E4B171E23C40B91B211DB2F64357778D /* ViewStyle+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAE325876E14C91105C5CF9D2E7F1EF /* ViewStyle+Spec.swift */; };
-		E4FCC8108D5F57339F6297CDD676F8DF /* PulseContainerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0F2CA30F4AA6E3F9B482693C997D55 /* PulseContainerLayer.swift */; };
 		E70EF1AC4BB7A93A80A500786C1A6497 /* NatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCF632B4501044E5062C574CCBBF74E /* NatButton.swift */; };
 		E891D4E704EDCC6EA9CD3EE125A5D292 /* NatDialogController+StandardStyleBuilder+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7EAA7BDB4A7A15736AF73EF6EBCD74 /* NatDialogController+StandardStyleBuilder+Spec.swift */; };
 		ECA4CB7769FB08CB62C5F8CD79EE6521 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA6561EEF13B1CE57B6CE00222286CB /* ReusableView.swift */; };
@@ -373,7 +372,7 @@
 		437B78D88ACFB47EEADED96CDC94C7C5 /* TextFieldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldType.swift; sourceTree = "<group>"; };
 		438A5C92460A2D83E14DF108D8CD8988 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		45A9D6B3184A3081BD0CDE0B1A351C8F /* NatElevations+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatElevations+Spec.swift"; sourceTree = "<group>"; };
-		478FD68B021B6AA3538B93888BD14648 /* PulseContainerLayer+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PulseContainerLayer+Spec.swift"; sourceTree = "<group>"; };
+		478FD68B021B6AA3538B93888BD14648 /* PulseLayer+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PulseLayer+Spec.swift"; sourceTree = "<group>"; };
 		50D996E4B957C51847075E986215675B /* Divider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Divider.swift; sourceTree = "<group>"; };
 		526CD2A36CE33EBE0E9EFD858C9074DE /* ValueTextHighlight+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ValueTextHighlight+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		52F4D9E1F67A97596AD6E676E979CEC0 /* NatDialogController+StandardStyleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogController+StandardStyleBuilder.swift"; sourceTree = "<group>"; };
@@ -594,7 +593,6 @@
 		EB6A44B9A9D7999BD68C1D60499CEF88 /* TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDelegate.swift; sourceTree = "<group>"; };
 		EBD8F16712FE1A5C351E09A1 /* Pods_NatDSSnapShotTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NatDSSnapShotTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC5970C426475EACCF56EF2C12EB450D /* Pods-NatDSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatDSTests.release.xcconfig"; path = "Target Support Files/Pods-NatDSTests/Pods-NatDSTests.release.xcconfig"; sourceTree = "<group>"; };
-		EF0F2CA30F4AA6E3F9B482693C997D55 /* PulseContainerLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseContainerLayer.swift; sourceTree = "<group>"; };
 		EFD589860DA945AE5563620B305091ED /* NatDS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NatDS.h; sourceTree = "<group>"; };
 		F6EAF8A97988FC1AA2F71C29D348A67D /* UIFont+IconTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+IconTests.swift"; sourceTree = "<group>"; };
 		F6F7B50CF41E6ECBFD7148828549ECBF /* ExpansionPanel+MarginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExpansionPanel+MarginTests.swift"; sourceTree = "<group>"; };
@@ -1382,7 +1380,6 @@
 			isa = PBXGroup;
 			children = (
 				42FC9280C40680336260347DADB5C0F3 /* Pulsable.swift */,
-				EF0F2CA30F4AA6E3F9B482693C997D55 /* PulseContainerLayer.swift */,
 				5AF8919785F0CA6D3AB0AD57F759ED73 /* PulseLayer.swift */,
 			);
 			path = Animations;
@@ -1777,7 +1774,7 @@
 			isa = PBXGroup;
 			children = (
 				BC00F737F0234FCBD14533100E96A39E /* Pulsable+Spec.swift */,
-				478FD68B021B6AA3538B93888BD14648 /* PulseContainerLayer+Spec.swift */,
+				478FD68B021B6AA3538B93888BD14648 /* PulseLayer+Spec.swift */,
 			);
 			path = Pusable;
 			sourceTree = "<group>";
@@ -2375,7 +2372,7 @@
 				848831BC250177D0004C3FA8 /* NatIconButton+Spec.swift in Sources */,
 				79E7FA542537452500A831BC /* AesopDarkTokens+Size+Spec.swift in Sources */,
 				847C829E24E56605001CE116 /* AvonDarkTheme+Spec.swift in Sources */,
-				C24255D434C838206493D9A89581F7C1 /* PulseContainerLayer+Spec.swift in Sources */,
+				C24255D434C838206493D9A89581F7C1 /* PulseLayer+Spec.swift in Sources */,
 				845D09A22501248500B05760 /* IconButtonStandardStyle+Spec.swift in Sources */,
 				79E7FA702537470600A831BC /* AesopLightTokens+Typography+Spec.swift in Sources */,
 				79E7FAC825388BEF00A831BC /* AvonLightTokens+BorderRadius+Spec.swift in Sources */,
@@ -2531,7 +2528,6 @@
 				848831BE25018340004C3FA8 /* NatIconButton+Styles.swift in Sources */,
 				269C886424C2456B00A507BE /* UINavigationController+Style.swift in Sources */,
 				9D4FF6FB92A6A5BD0AF263A69FF707E4 /* Pulsable.swift in Sources */,
-				E4FCC8108D5F57339F6297CDD676F8DF /* PulseContainerLayer.swift in Sources */,
 				80FE219D764217C0520E0C784F9C0C0B /* PulseLayer.swift in Sources */,
 				ECA4CB7769FB08CB62C5F8CD79EE6521 /* ReusableView.swift in Sources */,
 				84EB6B8324EEEA6200C6A792 /* GetUIColorFromTokens.swift in Sources */,

@@ -1,26 +1,28 @@
 protocol Pulsable: AnyObject {}
 
 extension Pulsable {
-    func beginPulseAt(
-        point: CGPoint,
-        in layer: CALayer,
-        withColor color: UIColor = NatColors.highlight) {
 
-        let opacity = getTokenFromTheme(\.opacityDisabledLow)
-        let color = color.withAlphaComponent(opacity)
+    func addPulseLayerAnimated(at point: CGPoint,
+                               in layer: CALayer,
+                               withColor color: UIColor? = nil,
+                               removeAfterAnimation: Bool) {
 
-        let containedPulseLayer = PulseContainerLayer(color: color)
-        containedPulseLayer.frame = layer.bounds
-        containedPulseLayer.cornerRadius = layer.cornerRadius
+        let pulseLayer = PulseLayer()
+        pulseLayer.frame = layer.bounds
+        pulseLayer.cornerRadius = layer.cornerRadius
 
-        layer.insertSublayer(containedPulseLayer, below: nil)
+        if let color = color {
+            pulseLayer.fillColor = color.cgColor
+        }
 
-        containedPulseLayer.startPulseAt(point: point)
+        layer.insertSublayer(pulseLayer, below: nil)
+
+        pulseLayer.startPulseAt(point: point, removeAfterAnimation: removeAfterAnimation)
     }
 
-    func endPulse(layer: CALayer) {
+    func removePulseLayer(layer: CALayer) {
         layer.sublayers?
-            .compactMap { $0 as? PulseContainerLayer }
+            .compactMap { $0 as? PulseLayer }
             .forEach { $0.endPulse() }
     }
 }
