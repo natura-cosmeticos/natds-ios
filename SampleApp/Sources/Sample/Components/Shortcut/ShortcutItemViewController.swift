@@ -33,31 +33,29 @@ final class ShortcutItemViewController: UIViewController, SampleItem {
         view.addSubview(containedPrimaryStackView)
         view.addSubview(outlinedPrimaryStackView)
 
-        let containedPrimary = createShortcuts(style: .containedPrimary, text: "Contained / Primary")
+        let containedPrimary = createShortcuts(style: .containedPrimary, text: "Contained")
         containedPrimary.forEach { containedPrimaryStackView.addArrangedSubview($0) }
 
-        let outlinedPrimary = createShortcuts(style: .outlinedPrimary, text: "Outlined / Primary")
+        let outlinedPrimary = createShortcuts(style: .outlinedPrimary, text: "Outlined")
         outlinedPrimary.forEach { outlinedPrimaryStackView.addArrangedSubview($0) }
 
         addConstraints()
     }
 
     private func createShortcuts(style: NatShortcut.Style, text: String) -> [NatShortcut] {
-        var array: [NatShortcut] = []
-
-        (0...3).forEach { _ in
+        (0...3).map { _ in
             let shortcut = NatShortcut(style: style)
             shortcut.configure(text: text)
-            array.append(shortcut)
-        }
 
-        return array
+            return shortcut
+        }
     }
 
     private func createStackView() -> UIStackView {
         let stackView = UIStackView()
         stackView.axis = .horizontal
-        stackView.distribution = .equalSpacing
+        stackView.distribution = .fillEqually
+        stackView.spacing = NatSpacing.tiny
         stackView.translatesAutoresizingMaskIntoConstraints = false
 
         return stackView
