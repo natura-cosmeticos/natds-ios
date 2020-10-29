@@ -126,14 +126,14 @@ extension NatIconButtonSnapshotTests {
     private func addConstraints(_ systemUnderTest: UIView) {
         systemUnderTest.translatesAutoresizingMaskIntoConstraints = false
 
-        let circleSize: CGFloat = NatIconButton.Sizes.semiX
+        let size: CGFloat = NatIconButton.Sizes.semiX
 
         let constraints = [
             systemUnderTest.centerXAnchor.constraint(equalTo: superview.centerXAnchor),
             systemUnderTest.centerYAnchor.constraint(equalTo: superview.centerYAnchor),
 
-            systemUnderTest.heightAnchor.constraint(equalToConstant: circleSize),
-            systemUnderTest.widthAnchor.constraint(equalToConstant: circleSize)
+            systemUnderTest.heightAnchor.constraint(equalToConstant: size),
+            systemUnderTest.widthAnchor.constraint(equalToConstant: size)
         ]
 
         NSLayoutConstraint.activate(constraints)
