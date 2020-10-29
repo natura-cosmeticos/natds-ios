@@ -33,6 +33,7 @@ public final class NatShortcut: UIView {
         let view = UIView()
         view.layer.cornerRadius = getTokenFromTheme(\.sizeMediumX) / 2
         view.translatesAutoresizingMaskIntoConstraints = false
+
         return view
     }()
 
@@ -40,6 +41,7 @@ public final class NatShortcut: UIView {
         let iconView = IconView(fontSize: getTokenFromTheme(\.sizeSemi))
         iconView.icon = .outlinedDefaultMockup
         iconView.translatesAutoresizingMaskIntoConstraints = false
+
         return iconView
     }()
 
@@ -48,8 +50,8 @@ public final class NatShortcut: UIView {
         label.font = NatFonts.font(ofSize: .caption, withWeight: .regular)
         label.textColor = getUIColorFromTokens(\.colorHighEmphasis)
         label.textAlignment = .center
-        label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
+
         return label
     }()
 
@@ -66,7 +68,9 @@ public final class NatShortcut: UIView {
     init(style: Style, notificationCenter: NotificationCenterObservable) {
         self.style = style
         self.notificationCenter = notificationCenter
+
         super.init(frame: .zero)
+
         style.applyStyle(self)
         setup()
     }
@@ -96,7 +100,8 @@ public final class NatShortcut: UIView {
             addPulseLayerAnimated(at: circleView.centerBounds, in: circleView.layer, removeAfterAnimation: false)
         case .ended:
             removePulseLayer(layer: circleView.layer)
-        default: break
+        default:
+            break
         }
     }
 }
@@ -174,7 +179,6 @@ extension NatShortcut {
             label.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor),
             label.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor),
             label.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor),
-            label.widthAnchor.constraint(lessThanOrEqualToConstant: NatSizes.large),
             label.centerXAnchor.constraint(equalTo: centerXAnchor)
         ]
         NSLayoutConstraint.activate(constraints)

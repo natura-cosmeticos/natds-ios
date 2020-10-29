@@ -1233,7 +1233,7 @@
 				8401A9BE24FED3C900B6E762 /* IconButton */,
 				84BB92A124DCB71400A9BCC8 /* Icons */,
 				84A16EFD24DDBC3200E80DA0 /* NavigationDrawer */,
-				84391DEB24DB4784009D0BE8 /* ShortCut */,
+				84391DEB24DB4784009D0BE8 /* Shortcut */,
 				84BB928924DC734800A9BCC8 /* Tab */,
 				26BFBADC251273AB006C22E2 /* Tag */,
 				84BB929B24DC975E00A9BCC8 /* TextField */,
@@ -1251,12 +1251,12 @@
 			path = Dialog;
 			sourceTree = "<group>";
 		};
-		84391DEB24DB4784009D0BE8 /* ShortCut */ = {
+		84391DEB24DB4784009D0BE8 /* Shortcut */ = {
 			isa = PBXGroup;
 			children = (
 				84A818BC24B784EA0007C7D5 /* NatShortcut+Snapshot+Tests.swift */,
 			);
-			path = ShortCut;
+			path = Shortcut;
 			sourceTree = "<group>";
 		};
 		84391DEC24DB5AE6009D0BE8 /* AppBar */ = {
