@@ -20,32 +20,13 @@
 
 public struct NatLogoImages {
     public static var horizontal: UIImage? {
-        guard let theme = DesignSystem().currentTheme else { return nil }
-
-        switch theme {
-        case .aesopDark, .aesopLight:
-            return AssetsHelper.image(from: "Logo/Aesop/Horizontal")
-        case .avonDark, .avonLight:
-            return AssetsHelper.image(from: "Logo/Avon/Horizontal")
-        case .naturaDark, .naturaLight:
-            return AssetsHelper.image(from: "Logo/Natura/Horizontal")
-        case .theBodyShopDark, .theBodyShopLight:
-            return AssetsHelper.image(from: "Logo/TheBodyShop/Horizontal")
-        }
+        guard let theme = DesignSystem().currentTheme?.newInstance else { return nil }
+        return AssetsHelper.image(from: theme.components.logoHorizontal)
     }
 
     public static var vertical: UIImage? {
-        guard let theme = DesignSystem().currentTheme else { return nil }
+        guard let theme = DesignSystem().currentTheme?.newInstance else { return nil }
 
-        switch theme {
-        case .aesopDark, .aesopLight:
-            return AssetsHelper.image(from: "Logo/Aesop/Vertical")
-        case .avonDark, .avonLight:
-            return AssetsHelper.image(from: "Logo/Avon/Vertical")
-        case .naturaDark, .naturaLight:
-            return AssetsHelper.image(from: "Logo/Natura/Vertical")
-        case .theBodyShopDark, .theBodyShopLight:
-            return AssetsHelper.image(from: "Logo/TheBodyShop/Vertical")
-        }
+        return AssetsHelper.image(from: theme.components.logoVertical)
     }
 }

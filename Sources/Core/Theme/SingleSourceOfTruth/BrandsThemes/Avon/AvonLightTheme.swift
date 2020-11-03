@@ -201,4 +201,6 @@ struct AvonLightComponents: Components {
     let overlineFontSize: CGFloat = 12
     let overlineFontWeight: UIFont.Weight = .medium
     let overlineLetterSpacing: CGFloat = 0.8
+    let logoHorizontal: String = "Logo/Avon/Horizontal"
+    let logoVertical: String = "Logo/Avon/Vertical"
 }
