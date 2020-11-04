@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "aesop-a-oficial.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
