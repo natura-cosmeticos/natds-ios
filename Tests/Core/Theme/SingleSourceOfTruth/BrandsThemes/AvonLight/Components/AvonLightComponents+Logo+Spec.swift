@@ -5,7 +5,7 @@ import Nimble
 
 final class AvonLightComponentsLogoSpec: QuickSpec {
     override func spec() {
-        context("when Theme is AvonLight") {
+        context("when theme is AvonLight") {
             beforeEach {
                 ConfigurationStorage.shared.currentTheme = AvonLightTheme()
             }

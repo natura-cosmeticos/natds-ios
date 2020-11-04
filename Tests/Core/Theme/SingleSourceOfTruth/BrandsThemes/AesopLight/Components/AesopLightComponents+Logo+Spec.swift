@@ -5,7 +5,7 @@ import Nimble
 
 final class AesopLightComponentsLogoSpec: QuickSpec {
     override func spec() {
-        context("when Theme is AesopLight") {
+        context("when theme is AesopLight") {
             beforeEach {
                 ConfigurationStorage.shared.currentTheme = AesopLightTheme()
             }

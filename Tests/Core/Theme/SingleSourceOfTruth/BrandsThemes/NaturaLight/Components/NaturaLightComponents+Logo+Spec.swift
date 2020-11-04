@@ -5,7 +5,7 @@ import Nimble
 
 final class NaturaLightComponentsLogoSpec: QuickSpec {
     override func spec() {
-        context("when Theme is NaturaLight") {
+        context("when theme is NaturaLight") {
             beforeEach {
                 ConfigurationStorage.shared.currentTheme = NaturaLightTheme()
             }

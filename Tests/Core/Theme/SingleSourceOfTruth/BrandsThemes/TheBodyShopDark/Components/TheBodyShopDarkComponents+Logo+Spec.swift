@@ -5,7 +5,7 @@ import Nimble
 
 final class TheBodyShopDarkComponentsLogoSpec: QuickSpec {
     override func spec() {
-        context("when Theme is TheBodyShopDark") {
+        context("when theme is TheBodyShopDark") {
             beforeEach {
                 ConfigurationStorage.shared.currentTheme = TheBodyShopDarkTheme()
             }
