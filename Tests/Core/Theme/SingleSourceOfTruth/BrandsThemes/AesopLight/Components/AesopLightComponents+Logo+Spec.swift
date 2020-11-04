@@ -5,26 +5,24 @@ import Nimble
 
 final class AesopLightComponentsLogoSpec: QuickSpec {
     override func spec() {
-        let systemUnderTest = NatLogoImages.self
-
         context("when Theme is AesopLight") {
             beforeEach {
                 ConfigurationStorage.shared.currentTheme = AesopLightTheme()
             }
 
             describe("#horizontal") {
-                it("returns a expected image") {
-                    let expectedImage = AssetsHelper.image(from: "Logo/Aesop/HorizontalLight")
+                it("returns a expected path") {
+                    let systemUnderTest = getComponentAttributeFromTheme(\.logoHorizontal)
 
-                    expect(systemUnderTest.horizontal).to(equal(expectedImage))
+                    expect(systemUnderTest).to(equal("Logo/Aesop/HorizontalLight"))
                 }
             }
 
             describe("#vertical") {
-                it("returns a expected image") {
-                    let expectedImage = AssetsHelper.image(from: "Logo/Aesop/VerticalLight")
+                it("returns a expected path") {
+                    let systemUnderTest = getComponentAttributeFromTheme(\.logoVertical)
 
-                    expect(systemUnderTest.vertical).to(equal(expectedImage))
+                    expect(systemUnderTest).to(equal("Logo/Aesop/VerticalLight"))
                 }
             }
         }

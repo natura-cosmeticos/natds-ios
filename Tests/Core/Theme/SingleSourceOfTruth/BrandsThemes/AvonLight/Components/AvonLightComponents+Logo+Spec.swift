@@ -5,26 +5,24 @@ import Nimble
 
 final class AvonLightComponentsLogoSpec: QuickSpec {
     override func spec() {
-        let systemUnderTest = NatLogoImages.self
-
         context("when Theme is AvonLight") {
             beforeEach {
                 ConfigurationStorage.shared.currentTheme = AvonLightTheme()
             }
 
             describe("#horizontal") {
-                it("returns a expected image") {
-                    let expectedImage = AssetsHelper.image(from: "Logo/Avon/HorizontalLight")
+                it("returns a expected path") {
+                    let systemUnderTest = getComponentAttributeFromTheme(\.logoHorizontal)
 
-                    expect(systemUnderTest.horizontal).to(equal(expectedImage))
+                    expect(systemUnderTest).to(equal("Logo/Avon/HorizontalLight"))
                 }
             }
 
             describe("#vertical") {
-                it("returns a expected image") {
-                    let expectedImage = AssetsHelper.image(from: "Logo/Avon/VerticalLight")
+                it("returns a expected path") {
+                    let systemUnderTest = getComponentAttributeFromTheme(\.logoVertical)
 
-                    expect(systemUnderTest.vertical).to(equal(expectedImage))
+                    expect(systemUnderTest).to(equal("Logo/Avon/VerticalLight"))
                 }
             }
         }

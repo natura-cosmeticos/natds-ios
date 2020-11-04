@@ -5,26 +5,24 @@ import Nimble
 
 final class NaturaLightComponentsLogoSpec: QuickSpec {
     override func spec() {
-        let systemUnderTest = NatLogoImages.self
-
         context("when Theme is NaturaLight") {
             beforeEach {
                 ConfigurationStorage.shared.currentTheme = NaturaLightTheme()
             }
 
             describe("#horizontal") {
-                it("returns a expected image") {
-                    let expectedImage = AssetsHelper.image(from: "Logo/Natura/HorizontalLight")
+                it("returns a expected path") {
+                    let systemUnderTest = getComponentAttributeFromTheme(\.logoHorizontal)
 
-                    expect(systemUnderTest.horizontal).to(equal(expectedImage))
+                    expect(systemUnderTest).to(equal("Logo/Natura/HorizontalLight"))
                 }
             }
 
             describe("#vertical") {
-                it("returns a expected image") {
-                    let expectedImage = AssetsHelper.image(from: "Logo/Natura/VerticalLight")
+                it("returns a expected path") {
+                    let systemUnderTest = getComponentAttributeFromTheme(\.logoVertical)
 
-                    expect(systemUnderTest.vertical).to(equal(expectedImage))
+                    expect(systemUnderTest).to(equal("Logo/Natura/VerticalLight"))
                 }
             }
         }

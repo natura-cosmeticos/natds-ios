@@ -5,26 +5,24 @@ import Nimble
 
 final class TheBodyShopDarkComponentsLogoSpec: QuickSpec {
     override func spec() {
-        let systemUnderTest = NatLogoImages.self
-
         context("when Theme is TheBodyShopDark") {
             beforeEach {
                 ConfigurationStorage.shared.currentTheme = TheBodyShopDarkTheme()
             }
 
             describe("#horizontal") {
-                it("returns a expected image") {
-                    let expectedImage = AssetsHelper.image(from: "Logo/TheBodyShop/HorizontalDark")
+                it("returns a expected path") {
+                    let systemUnderTest = getComponentAttributeFromTheme(\.logoHorizontal)
 
-                    expect(systemUnderTest.horizontal).to(equal(expectedImage))
+                    expect(systemUnderTest).to(equal("Logo/TheBodyShop/HorizontalDark"))
                 }
             }
 
             describe("#vertical") {
-                it("returns a expected image") {
-                    let expectedImage = AssetsHelper.image(from: "Logo/TheBodyShop/VerticalDark")
+                it("returns a expected path") {
+                    let systemUnderTest = getComponentAttributeFromTheme(\.logoVertical)
 
-                    expect(systemUnderTest.vertical).to(equal(expectedImage))
+                    expect(systemUnderTest).to(equal("Logo/TheBodyShop/VerticalDark"))
                 }
             }
         }
