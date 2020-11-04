@@ -20,13 +20,10 @@
 
 public struct NatLogoImages {
     public static var horizontal: UIImage? {
-        guard let theme = DesignSystem().currentTheme?.newInstance else { return nil }
-        return AssetsHelper.image(from: theme.components.logoHorizontal)
+        AssetsHelper.image(from: getComponentAttributeFromTheme(\.logoHorizontal))
     }
 
     public static var vertical: UIImage? {
-        guard let theme = DesignSystem().currentTheme?.newInstance else { return nil }
-
-        return AssetsHelper.image(from: theme.components.logoVertical)
+        AssetsHelper.image(from: getComponentAttributeFromTheme(\.logoVertical))
     }
 }

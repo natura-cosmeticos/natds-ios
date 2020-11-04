@@ -148,6 +148,8 @@
 		8401A9C024FED41E00B6E762 /* NatIconButton+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8401A9BF24FED41E00B6E762 /* NatIconButton+Snapshot+Tests.swift */; };
 		840265AC2513B05A00A08EBE /* AesopDarkTheme+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840265AB2513B05A00A08EBE /* AesopDarkTheme+Spec.swift */; };
 		840265B42513B06E00A08EBE /* AesopLightTheme+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840265B32513B06E00A08EBE /* AesopLightTheme+Spec.swift */; };
+		8402DA76255310B2005295B5 /* NatLogoImages+AesopLight+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402DA6E25530FD6005295B5 /* NatLogoImages+AesopLight+Spec.swift */; };
+		8402DA7E255311FE005295B5 /* NatLogoImages+AesopDark+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402DA7D255311FE005295B5 /* NatLogoImages+AesopDark+Spec.swift */; };
 		8409854724F02B230095D6AD /* Notification+Name+ThemeHasChanged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409854624F02B230095D6AD /* Notification+Name+ThemeHasChanged.swift */; };
 		8409854A24F02BF60095D6AD /* Notification+Name+ThemeHasChanged+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409854924F02BF60095D6AD /* Notification+Name+ThemeHasChanged+Spec.swift */; };
 		8409854C24F030930095D6AD /* NotificationCenterObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409854B24F030930095D6AD /* NotificationCenterObservable.swift */; };
@@ -455,6 +457,8 @@
 		8401A9BF24FED41E00B6E762 /* NatIconButton+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatIconButton+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		840265AB2513B05A00A08EBE /* AesopDarkTheme+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AesopDarkTheme+Spec.swift"; sourceTree = "<group>"; };
 		840265B32513B06E00A08EBE /* AesopLightTheme+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AesopLightTheme+Spec.swift"; sourceTree = "<group>"; };
+		8402DA6E25530FD6005295B5 /* NatLogoImages+AesopLight+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatLogoImages+AesopLight+Spec.swift"; sourceTree = "<group>"; };
+		8402DA7D255311FE005295B5 /* NatLogoImages+AesopDark+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatLogoImages+AesopDark+Spec.swift"; sourceTree = "<group>"; };
 		8409854624F02B230095D6AD /* Notification+Name+ThemeHasChanged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Name+ThemeHasChanged.swift"; sourceTree = "<group>"; };
 		8409854924F02BF60095D6AD /* Notification+Name+ThemeHasChanged+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Name+ThemeHasChanged+Spec.swift"; sourceTree = "<group>"; };
 		8409854B24F030930095D6AD /* NotificationCenterObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterObservable.swift; sourceTree = "<group>"; };
@@ -1188,6 +1192,23 @@
 			path = NatElevation;
 			sourceTree = "<group>";
 		};
+		8402DA6C25530F5F005295B5 /* NatLogoImages */ = {
+			isa = PBXGroup;
+			children = (
+				8402DA7D255311FE005295B5 /* NatLogoImages+AesopDark+Spec.swift */,
+				8402DA6E25530FD6005295B5 /* NatLogoImages+AesopLight+Spec.swift */,
+			);
+			path = NatLogoImages;
+			sourceTree = "<group>";
+		};
+		8402DA6D25530F9F005295B5 /* Icon */ = {
+			isa = PBXGroup;
+			children = (
+				8402DA6C25530F5F005295B5 /* NatLogoImages */,
+			);
+			path = Icon;
+			sourceTree = "<group>";
+		};
 		8409854824F02BA60095D6AD /* NotificationCenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -1695,6 +1716,7 @@
 		865CF1D076AFEB3A75B360B1D2027787 /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				8402DA6D25530F9F005295B5 /* Icon */,
 				8959EC82EF195A60EF12AFDC0F9CFE75 /* Components */,
 				7C4807A858EAC069D38D22195EC3B0B9 /* DesignTokens */,
 				83C59F929E88764313134A046BA5C30F /* DesignSystem+Spec.swift */,
@@ -2333,6 +2355,7 @@
 				19CCAA043E9657B0F68877ABC0F7F90F /* NatButton+Specs.swift in Sources */,
 				79E7FA4F253744DF00A831BC /* AesopLightTokens+Opacity+Spec.swift in Sources */,
 				84BF066B24B504B200462AC5 /* ShortcutOutlinedStyle+Spec.swift in Sources */,
+				8402DA7E255311FE005295B5 /* NatLogoImages+AesopDark+Spec.swift in Sources */,
 				84932F1A24EAF07B0052265F /* StubTheme.swift in Sources */,
 				D18DCEC54B0D407538EC7F218CDF25E1 /* NatColors+Spec.swift in Sources */,
 				79E7FAFA2538938E00A831BC /* AvonLightTokens+Spacing+Spec.swift in Sources */,
@@ -2406,6 +2429,7 @@
 				D23F82EE5C3333FD06E87016848DCD37 /* TabItemViewTests.swift in Sources */,
 				5C5DF89CCAB72EC25E1A1BC43D450CB0 /* TabTests.swift in Sources */,
 				CB6F95EF082D5B6EF08A8BC9B7A01427 /* TextFieldDelegateMock.swift in Sources */,
+				8402DA76255310B2005295B5 /* NatLogoImages+AesopLight+Spec.swift in Sources */,
 				79E7FB8F2538E26400A831BC /* TheBodyShopDarkTokens+Color+Spec.swift in Sources */,
 				79E7FB992538EC7900A831BC /* TheBodyShopDarkTokens+Elevation+Spec.swift in Sources */,
 				79E7FA5E2537458D00A831BC /* AesopDarkTokens+Spacing+Spec.swift in Sources */,
