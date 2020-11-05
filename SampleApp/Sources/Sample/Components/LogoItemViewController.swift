@@ -30,6 +30,7 @@ final class LogoItemViewController: UIViewController, SampleItem {
         let label = UILabel()
         label.text = "Logo Horizontal"
         label.font = NatFonts.font(ofSize: .heading6, withWeight: .regular)
+        label.textColor = NatColors.highEmphasis
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label
@@ -46,6 +47,7 @@ final class LogoItemViewController: UIViewController, SampleItem {
         let label = UILabel()
         label.text = "Logo Vertical"
         label.font = NatFonts.font(ofSize: .heading6, withWeight: .regular)
+        label.textColor = NatColors.highEmphasis
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label

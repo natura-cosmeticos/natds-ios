@@ -201,4 +201,6 @@ struct TheBodyShopLightComponents: Components {
     let overlineFontSize: CGFloat = 12
     let overlineFontWeight: UIFont.Weight = .medium
     let overlineLetterSpacing: CGFloat = 0.8
+    let logoHorizontal: String = "Logo/TheBodyShop/HorizontalLight"
+    let logoVertical: String = "Logo/TheBodyShop/VerticalLight"
 }

@@ -84,6 +84,20 @@
 		7392D4960D4A13B6ADF3AB7372B264F5 /* DesignSystem+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C59F929E88764313134A046BA5C30F /* DesignSystem+Spec.swift */; };
 		758EE01159A6E7AFC7217055678D4ED3 /* FontIconStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D221DC99290B86F7B59C72F4FA77BE4 /* FontIconStyle.swift */; };
 		77C55B339CA403354D76ABF05E283D5A /* ValueTextHighlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFBFE7E7E98BBE7DA3F6565371E522D /* ValueTextHighlight.swift */; };
+		797E60DC25531625002A59E0 /* NatLogoImages+AvonDark+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797E60DB25531625002A59E0 /* NatLogoImages+AvonDark+Spec.swift */; };
+		797E60EC255316D2002A59E0 /* NatLogoImages+AvonLight+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797E60EB255316D2002A59E0 /* NatLogoImages+AvonLight+Spec.swift */; };
+		797E60F225531742002A59E0 /* NatLogoImages+NaturaDark+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797E60F125531742002A59E0 /* NatLogoImages+NaturaDark+Spec.swift */; };
+		797E60FA2553177B002A59E0 /* NatLogoImages+NaturaLight+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797E60F92553177B002A59E0 /* NatLogoImages+NaturaLight+Spec.swift */; };
+		797E6100255317D4002A59E0 /* NatLogoImages+TheBodyShopDark+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797E60FF255317D4002A59E0 /* NatLogoImages+TheBodyShopDark+Spec.swift */; };
+		797E610825531806002A59E0 /* NatLogoImages+TheBodyShopLight+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797E610725531806002A59E0 /* NatLogoImages+TheBodyShopLight+Spec.swift */; };
+		797E610E25531928002A59E0 /* AesopDarkComponents+Logo+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797E610D25531928002A59E0 /* AesopDarkComponents+Logo+Spec.swift */; };
+		797E6116255319D2002A59E0 /* AesopLightComponents+Logo+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797E6115255319D2002A59E0 /* AesopLightComponents+Logo+Spec.swift */; };
+		797E611D25531BE1002A59E0 /* AvonDarkComponents+Logo+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797E611C25531BE1002A59E0 /* AvonDarkComponents+Logo+Spec.swift */; };
+		797E612625531C20002A59E0 /* AvonLightComponents+Logo+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797E612525531C20002A59E0 /* AvonLightComponents+Logo+Spec.swift */; };
+		797E612F25531C6B002A59E0 /* NaturaDarkComponents+Logo+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797E612E25531C6B002A59E0 /* NaturaDarkComponents+Logo+Spec.swift */; };
+		797E613825531CA7002A59E0 /* NaturaLightComponents+Logo+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797E613725531CA7002A59E0 /* NaturaLightComponents+Logo+Spec.swift */; };
+		797E614125531CF7002A59E0 /* TheBodyShopDarkComponents+Logo+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797E614025531CF7002A59E0 /* TheBodyShopDarkComponents+Logo+Spec.swift */; };
+		797E614A25531D2D002A59E0 /* TheBodyShopLightComponents+Logo+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797E614925531D2D002A59E0 /* TheBodyShopLightComponents+Logo+Spec.swift */; };
 		79E7FA1525373ADE00A831BC /* AesopDarkTokens+BorderRadius+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FA1425373ADE00A831BC /* AesopDarkTokens+BorderRadius+Spec.swift */; };
 		79E7FA1D25373B1900A831BC /* AesopLightTokens+BorderRadius+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FA1C25373B1900A831BC /* AesopLightTokens+BorderRadius+Spec.swift */; };
 		79E7FA3325373ED200A831BC /* AesopDarkTokens+Color+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FA3225373ED200A831BC /* AesopDarkTokens+Color+Spec.swift */; };
@@ -148,13 +162,14 @@
 		8401A9C024FED41E00B6E762 /* NatIconButton+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8401A9BF24FED41E00B6E762 /* NatIconButton+Snapshot+Tests.swift */; };
 		840265AC2513B05A00A08EBE /* AesopDarkTheme+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840265AB2513B05A00A08EBE /* AesopDarkTheme+Spec.swift */; };
 		840265B42513B06E00A08EBE /* AesopLightTheme+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840265B32513B06E00A08EBE /* AesopLightTheme+Spec.swift */; };
+		8402DA76255310B2005295B5 /* NatLogoImages+AesopLight+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402DA6E25530FD6005295B5 /* NatLogoImages+AesopLight+Spec.swift */; };
+		8402DA7E255311FE005295B5 /* NatLogoImages+AesopDark+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402DA7D255311FE005295B5 /* NatLogoImages+AesopDark+Spec.swift */; };
 		8409854724F02B230095D6AD /* Notification+Name+ThemeHasChanged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409854624F02B230095D6AD /* Notification+Name+ThemeHasChanged.swift */; };
 		8409854A24F02BF60095D6AD /* Notification+Name+ThemeHasChanged+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409854924F02BF60095D6AD /* Notification+Name+ThemeHasChanged+Spec.swift */; };
 		8409854C24F030930095D6AD /* NotificationCenterObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409854B24F030930095D6AD /* NotificationCenterObservable.swift */; };
 		840B6A754236624B9738CBC3D5CFE895 /* ViewAnimatingWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7316FE65E814E2D5CA475475CD8D4EA /* ViewAnimatingWrapper.swift */; };
 		840C43422502842900EE9CAD /* NatIconButton+Sizes+Specs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840C43412502842900EE9CAD /* NatIconButton+Sizes+Specs.swift */; };
 		841FEABA24C5C1A100C50AFF /* NatLogoImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841FEAB924C5C1A100C50AFF /* NatLogoImages.swift */; };
-		841FEABC24C5CD6A00C50AFF /* NatLogoImages+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841FEABB24C5CD6A00C50AFF /* NatLogoImages+Spec.swift */; };
 		843123DF25123ED0002A7B6F /* AesopDarkTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843123DE25123ED0002A7B6F /* AesopDarkTokens.swift */; };
 		843123E125123F0C002A7B6F /* AesopLightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843123E025123F0C002A7B6F /* AesopLightTheme.swift */; };
 		84391DE224DB1B8B009D0BE8 /* NatDS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17433A27D62633345ECA245C99114C15 /* NatDS.framework */; };
@@ -392,6 +407,20 @@
 		759689DD6C3696C4726646B8356D3B4D /* TabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemView.swift; sourceTree = "<group>"; };
 		75AA33B684C0A723F3E2F341D0A10EEC /* TabItemViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemViewTests.swift; sourceTree = "<group>"; };
 		75DBB32E272580681677AA85CA5A2649 /* NavigationDrawer+IndexMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationDrawer+IndexMenu.swift"; sourceTree = "<group>"; };
+		797E60DB25531625002A59E0 /* NatLogoImages+AvonDark+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatLogoImages+AvonDark+Spec.swift"; sourceTree = "<group>"; };
+		797E60EB255316D2002A59E0 /* NatLogoImages+AvonLight+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatLogoImages+AvonLight+Spec.swift"; sourceTree = "<group>"; };
+		797E60F125531742002A59E0 /* NatLogoImages+NaturaDark+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatLogoImages+NaturaDark+Spec.swift"; sourceTree = "<group>"; };
+		797E60F92553177B002A59E0 /* NatLogoImages+NaturaLight+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatLogoImages+NaturaLight+Spec.swift"; sourceTree = "<group>"; };
+		797E60FF255317D4002A59E0 /* NatLogoImages+TheBodyShopDark+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatLogoImages+TheBodyShopDark+Spec.swift"; sourceTree = "<group>"; };
+		797E610725531806002A59E0 /* NatLogoImages+TheBodyShopLight+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatLogoImages+TheBodyShopLight+Spec.swift"; sourceTree = "<group>"; };
+		797E610D25531928002A59E0 /* AesopDarkComponents+Logo+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AesopDarkComponents+Logo+Spec.swift"; sourceTree = "<group>"; };
+		797E6115255319D2002A59E0 /* AesopLightComponents+Logo+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AesopLightComponents+Logo+Spec.swift"; sourceTree = "<group>"; };
+		797E611C25531BE1002A59E0 /* AvonDarkComponents+Logo+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AvonDarkComponents+Logo+Spec.swift"; sourceTree = "<group>"; };
+		797E612525531C20002A59E0 /* AvonLightComponents+Logo+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AvonLightComponents+Logo+Spec.swift"; sourceTree = "<group>"; };
+		797E612E25531C6B002A59E0 /* NaturaDarkComponents+Logo+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaturaDarkComponents+Logo+Spec.swift"; sourceTree = "<group>"; };
+		797E613725531CA7002A59E0 /* NaturaLightComponents+Logo+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaturaLightComponents+Logo+Spec.swift"; sourceTree = "<group>"; };
+		797E614025531CF7002A59E0 /* TheBodyShopDarkComponents+Logo+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheBodyShopDarkComponents+Logo+Spec.swift"; sourceTree = "<group>"; };
+		797E614925531D2D002A59E0 /* TheBodyShopLightComponents+Logo+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheBodyShopLightComponents+Logo+Spec.swift"; sourceTree = "<group>"; };
 		79E7FA1425373ADE00A831BC /* AesopDarkTokens+BorderRadius+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AesopDarkTokens+BorderRadius+Spec.swift"; sourceTree = "<group>"; };
 		79E7FA1C25373B1900A831BC /* AesopLightTokens+BorderRadius+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AesopLightTokens+BorderRadius+Spec.swift"; sourceTree = "<group>"; };
 		79E7FA3225373ED200A831BC /* AesopDarkTokens+Color+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AesopDarkTokens+Color+Spec.swift"; sourceTree = "<group>"; };
@@ -455,12 +484,13 @@
 		8401A9BF24FED41E00B6E762 /* NatIconButton+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatIconButton+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		840265AB2513B05A00A08EBE /* AesopDarkTheme+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AesopDarkTheme+Spec.swift"; sourceTree = "<group>"; };
 		840265B32513B06E00A08EBE /* AesopLightTheme+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AesopLightTheme+Spec.swift"; sourceTree = "<group>"; };
+		8402DA6E25530FD6005295B5 /* NatLogoImages+AesopLight+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatLogoImages+AesopLight+Spec.swift"; sourceTree = "<group>"; };
+		8402DA7D255311FE005295B5 /* NatLogoImages+AesopDark+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatLogoImages+AesopDark+Spec.swift"; sourceTree = "<group>"; };
 		8409854624F02B230095D6AD /* Notification+Name+ThemeHasChanged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Name+ThemeHasChanged.swift"; sourceTree = "<group>"; };
 		8409854924F02BF60095D6AD /* Notification+Name+ThemeHasChanged+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Name+ThemeHasChanged+Spec.swift"; sourceTree = "<group>"; };
 		8409854B24F030930095D6AD /* NotificationCenterObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterObservable.swift; sourceTree = "<group>"; };
 		840C43412502842900EE9CAD /* NatIconButton+Sizes+Specs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatIconButton+Sizes+Specs.swift"; sourceTree = "<group>"; };
 		841FEAB924C5C1A100C50AFF /* NatLogoImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatLogoImages.swift; sourceTree = "<group>"; };
-		841FEABB24C5CD6A00C50AFF /* NatLogoImages+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatLogoImages+Spec.swift"; sourceTree = "<group>"; };
 		843123DE25123ED0002A7B6F /* AesopDarkTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AesopDarkTokens.swift; sourceTree = "<group>"; };
 		843123E025123F0C002A7B6F /* AesopLightTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AesopLightTheme.swift; sourceTree = "<group>"; };
 		84391DDD24DB1B8B009D0BE8 /* NatDSSnapShotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NatDSSnapShotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -979,11 +1009,112 @@
 			path = Dialog;
 			sourceTree = "<group>";
 		};
+		797E60E325531650002A59E0 /* Aesop */ = {
+			isa = PBXGroup;
+			children = (
+				8402DA7D255311FE005295B5 /* NatLogoImages+AesopDark+Spec.swift */,
+				8402DA6E25530FD6005295B5 /* NatLogoImages+AesopLight+Spec.swift */,
+			);
+			path = Aesop;
+			sourceTree = "<group>";
+		};
+		797E60E4255316A3002A59E0 /* Avon */ = {
+			isa = PBXGroup;
+			children = (
+				797E60DB25531625002A59E0 /* NatLogoImages+AvonDark+Spec.swift */,
+				797E60EB255316D2002A59E0 /* NatLogoImages+AvonLight+Spec.swift */,
+			);
+			path = Avon;
+			sourceTree = "<group>";
+		};
+		797E60F02553171D002A59E0 /* Natura */ = {
+			isa = PBXGroup;
+			children = (
+				797E60F125531742002A59E0 /* NatLogoImages+NaturaDark+Spec.swift */,
+				797E60F92553177B002A59E0 /* NatLogoImages+NaturaLight+Spec.swift */,
+			);
+			path = Natura;
+			sourceTree = "<group>";
+		};
+		797E60FE255317AB002A59E0 /* TheBodyShop */ = {
+			isa = PBXGroup;
+			children = (
+				797E60FF255317D4002A59E0 /* NatLogoImages+TheBodyShopDark+Spec.swift */,
+				797E610725531806002A59E0 /* NatLogoImages+TheBodyShopLight+Spec.swift */,
+			);
+			path = TheBodyShop;
+			sourceTree = "<group>";
+		};
+		797E610C255318E0002A59E0 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				797E610D25531928002A59E0 /* AesopDarkComponents+Logo+Spec.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		797E611A25531A17002A59E0 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				797E6115255319D2002A59E0 /* AesopLightComponents+Logo+Spec.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		797E611B25531B37002A59E0 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				797E611C25531BE1002A59E0 /* AvonDarkComponents+Logo+Spec.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		797E612425531C02002A59E0 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				797E612525531C20002A59E0 /* AvonLightComponents+Logo+Spec.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		797E612D25531C4D002A59E0 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				797E612E25531C6B002A59E0 /* NaturaDarkComponents+Logo+Spec.swift */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
+		797E613625531C8D002A59E0 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				797E613725531CA7002A59E0 /* NaturaLightComponents+Logo+Spec.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		797E613F25531CD3002A59E0 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				797E614025531CF7002A59E0 /* TheBodyShopDarkComponents+Logo+Spec.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		797E614825531D18002A59E0 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				797E614925531D2D002A59E0 /* TheBodyShopLightComponents+Logo+Spec.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		79E7FA2B25373CF000A831BC /* AesopDark */ = {
 			isa = PBXGroup;
 			children = (
 				840265AB2513B05A00A08EBE /* AesopDarkTheme+Spec.swift */,
 				79E7FA3025373DF900A831BC /* Tokens */,
+				797E610C255318E0002A59E0 /* Components */,
 			);
 			path = AesopDark;
 			sourceTree = "<group>";
@@ -993,6 +1124,7 @@
 			children = (
 				840265B32513B06E00A08EBE /* AesopLightTheme+Spec.swift */,
 				79E7FA3125373E0300A831BC /* Tokens */,
+				797E611A25531A17002A59E0 /* Components */,
 			);
 			path = AesopLight;
 			sourceTree = "<group>";
@@ -1030,6 +1162,7 @@
 			children = (
 				847C829F24E577AF001CE116 /* AvonLightTheme+Spec.swift */,
 				79E7FAB825388A9400A831BC /* Tokens */,
+				797E612425531C02002A59E0 /* Components */,
 			);
 			path = AvonLight;
 			sourceTree = "<group>";
@@ -1067,6 +1200,7 @@
 			children = (
 				847C82A324E578D3001CE116 /* NaturaLightTheme+Spec.swift */,
 				79E7FB1C2538CCD900A831BC /* Tokens */,
+				797E613625531C8D002A59E0 /* Components */,
 			);
 			path = NaturaLight;
 			sourceTree = "<group>";
@@ -1104,6 +1238,7 @@
 			children = (
 				847C82A724E57946001CE116 /* TheBodyShopLightTheme+Spec.swift */,
 				79E7FB7D2538DC5100A831BC /* Tokens */,
+				797E614825531D18002A59E0 /* Components */,
 			);
 			path = TheBodyShopLight;
 			sourceTree = "<group>";
@@ -1186,6 +1321,25 @@
 				D7C267848A6D4A2289C862E53EA54F84 /* ElevationAttributes.swift */,
 			);
 			path = NatElevation;
+			sourceTree = "<group>";
+		};
+		8402DA6C25530F5F005295B5 /* NatLogoImages */ = {
+			isa = PBXGroup;
+			children = (
+				797E60E325531650002A59E0 /* Aesop */,
+				797E60E4255316A3002A59E0 /* Avon */,
+				797E60F02553171D002A59E0 /* Natura */,
+				797E60FE255317AB002A59E0 /* TheBodyShop */,
+			);
+			path = NatLogoImages;
+			sourceTree = "<group>";
+		};
+		8402DA6D25530F9F005295B5 /* Icon */ = {
+			isa = PBXGroup;
+			children = (
+				8402DA6C25530F5F005295B5 /* NatLogoImages */,
+			);
+			path = Icon;
 			sourceTree = "<group>";
 		};
 		8409854824F02BA60095D6AD /* NotificationCenter */ = {
@@ -1439,6 +1593,7 @@
 			children = (
 				847C829D24E56605001CE116 /* AvonDarkTheme+Spec.swift */,
 				79E7FAB725388A8F00A831BC /* Tokens */,
+				797E611B25531B37002A59E0 /* Components */,
 			);
 			path = AvonDark;
 			sourceTree = "<group>";
@@ -1448,6 +1603,7 @@
 			children = (
 				847C82A124E5786C001CE116 /* NaturaDarkTheme+Spec.swift */,
 				79E7FB1B2538CCD200A831BC /* Tokens */,
+				797E612D25531C4D002A59E0 /* Components */,
 			);
 			path = NaturaDark;
 			sourceTree = "<group>";
@@ -1457,6 +1613,7 @@
 			children = (
 				847C82A524E57931001CE116 /* TheBodyShopDarkTheme+Spec.swift */,
 				79E7FB7C2538DC4900A831BC /* Tokens */,
+				797E613F25531CD3002A59E0 /* Components */,
 			);
 			path = TheBodyShopDark;
 			sourceTree = "<group>";
@@ -1695,10 +1852,10 @@
 		865CF1D076AFEB3A75B360B1D2027787 /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				8402DA6D25530F9F005295B5 /* Icon */,
 				8959EC82EF195A60EF12AFDC0F9CFE75 /* Components */,
 				7C4807A858EAC069D38D22195EC3B0B9 /* DesignTokens */,
 				83C59F929E88764313134A046BA5C30F /* DesignSystem+Spec.swift */,
-				841FEABB24C5CD6A00C50AFF /* NatLogoImages+Spec.swift */,
 				84932F1424EABA280052265F /* AvailableTheme+Spec.swift */,
 			);
 			path = Public;
@@ -2294,12 +2451,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				79E7FAE125388F7500A831BC /* AvonDarkTokens+Opacity+Spec.swift in Sources */,
+				797E614125531CF7002A59E0 /* TheBodyShopDarkComponents+Logo+Spec.swift in Sources */,
+				797E611D25531BE1002A59E0 /* AvonDarkComponents+Logo+Spec.swift in Sources */,
 				0AF826DF57321D84C4B2EDDFAC49F377 /* AssetsHelperTests.swift in Sources */,
 				0E7C160524C5D3C3002FF46F /* UIViewController+Configure+Spec.swift in Sources */,
+				797E60EC255316D2002A59E0 /* NatLogoImages+AvonLight+Spec.swift in Sources */,
 				1A30D78CDFD9F95DDAFF61EDF612261D /* ButtonContainedStyle+Spec.swift in Sources */,
 				521AFD7AFA9579A0A57971504ABE7145 /* ButtonOutlinedStyle+Spec.swift in Sources */,
 				26BFBADB25127397006C22E2 /* NatTag+Spec.swift in Sources */,
+				797E613825531CA7002A59E0 /* NaturaLightComponents+Logo+Spec.swift in Sources */,
 				BB3413734DCB562C834B90742EF06929 /* ButtonStyle+Spec.swift in Sources */,
+				797E6116255319D2002A59E0 /* AesopLightComponents+Logo+Spec.swift in Sources */,
+				797E610E25531928002A59E0 /* AesopDarkComponents+Logo+Spec.swift in Sources */,
 				79E7FB5D2538D0F700A831BC /* NaturaDarkTokens+Typography+Spec.swift in Sources */,
 				79E7FA68253745F500A831BC /* AesopDarkTokens+Typography+Spec.swift in Sources */,
 				92CA17AE519D08B10DAEE8C00A5E3959 /* ButtonTextStyle+Spec.swift in Sources */,
@@ -2316,14 +2479,15 @@
 				291A2ABAA2039E539F7E45F394B8529D /* ExpansionPanel+MarginTests.swift in Sources */,
 				79E7FBBC2538EDFD00A831BC /* TheBodyShopLightTokens+Spacing+Spec.swift in Sources */,
 				79E7FAD725388E4F00A831BC /* AvonDarkTokens+Elevation+Spec.swift in Sources */,
-				841FEABC24C5CD6A00C50AFF /* NatLogoImages+Spec.swift in Sources */,
 				79E7FAEB253890D200A831BC /* AvonDarkTokens+Size+Spec.swift in Sources */,
 				346443D54361FCD8E0E7BFAF8FE2D299 /* FontIconStyleTests.swift in Sources */,
 				79E7FACD25388C3A00A831BC /* AvonDarkTokens+Color+Spec.swift in Sources */,
 				847C82A024E577AF001CE116 /* AvonLightTheme+Spec.swift in Sources */,
+				797E612625531C20002A59E0 /* AvonLightComponents+Logo+Spec.swift in Sources */,
 				84BB928E24DC760600A9BCC8 /* TabItemViewDelegateMock.swift in Sources */,
 				A19D6F5A3F2F85158D4D5B1BD0F60417 /* IconTests.swift in Sources */,
 				79E7FA592537456500A831BC /* AesopLightTokens+Size+Spec.swift in Sources */,
+				797E612F25531C6B002A59E0 /* NaturaDarkComponents+Logo+Spec.swift in Sources */,
 				0C4CBA15016075A8E8A7CA6FC6054383 /* IllustrationIconsTests.swift in Sources */,
 				2D7E10D869A68FB9A120F4707A861DF8 /* NSMutableAttributedString+BuilderTests.swift in Sources */,
 				5E34A8BE616690B54E3DCDDF5395963E /* NatBorderRadius+Spec.swift in Sources */,
@@ -2333,10 +2497,12 @@
 				19CCAA043E9657B0F68877ABC0F7F90F /* NatButton+Specs.swift in Sources */,
 				79E7FA4F253744DF00A831BC /* AesopLightTokens+Opacity+Spec.swift in Sources */,
 				84BF066B24B504B200462AC5 /* ShortcutOutlinedStyle+Spec.swift in Sources */,
+				8402DA7E255311FE005295B5 /* NatLogoImages+AesopDark+Spec.swift in Sources */,
 				84932F1A24EAF07B0052265F /* StubTheme.swift in Sources */,
 				D18DCEC54B0D407538EC7F218CDF25E1 /* NatColors+Spec.swift in Sources */,
 				79E7FAFA2538938E00A831BC /* AvonLightTokens+Spacing+Spec.swift in Sources */,
 				C4EB3DDBDD3DEFDA5183455CCDB2720F /* NatDialogController+Spec.swift in Sources */,
+				797E60F225531742002A59E0 /* NatLogoImages+NaturaDark+Spec.swift in Sources */,
 				E891D4E704EDCC6EA9CD3EE125A5D292 /* NatDialogController+StandardStyleBuilder+Spec.swift in Sources */,
 				79E7FAE625388FAA00A831BC /* AvonLightTokens+Opacity+Spec.swift in Sources */,
 				DF58B3DD08824CC1C80C886321CEA0F4 /* NatElevations+Spec.swift in Sources */,
@@ -2378,6 +2544,7 @@
 				79E7FAC825388BEF00A831BC /* AvonLightTokens+BorderRadius+Spec.swift in Sources */,
 				847C82A824E57946001CE116 /* TheBodyShopLightTheme+Spec.swift in Sources */,
 				79E7FBA82538ED0500A831BC /* TheBodyShopLightTokens+Opacity+Spec.swift in Sources */,
+				797E60FA2553177B002A59E0 /* NatLogoImages+NaturaLight+Spec.swift in Sources */,
 				3D8762A06C970677D223A561419340A9 /* PulseLayerTests.swift in Sources */,
 				79E7FABA25388B7200A831BC /* AvonDarkTokens+BorderRadius+Spec.swift in Sources */,
 				0E7C160B24C61E45002FF46F /* UINavigationController+Configure+Spec.swift in Sources */,
@@ -2406,12 +2573,17 @@
 				D23F82EE5C3333FD06E87016848DCD37 /* TabItemViewTests.swift in Sources */,
 				5C5DF89CCAB72EC25E1A1BC43D450CB0 /* TabTests.swift in Sources */,
 				CB6F95EF082D5B6EF08A8BC9B7A01427 /* TextFieldDelegateMock.swift in Sources */,
+				797E614A25531D2D002A59E0 /* TheBodyShopLightComponents+Logo+Spec.swift in Sources */,
+				8402DA76255310B2005295B5 /* NatLogoImages+AesopLight+Spec.swift in Sources */,
 				79E7FB8F2538E26400A831BC /* TheBodyShopDarkTokens+Color+Spec.swift in Sources */,
 				79E7FB992538EC7900A831BC /* TheBodyShopDarkTokens+Elevation+Spec.swift in Sources */,
+				797E60DC25531625002A59E0 /* NatLogoImages+AvonDark+Spec.swift in Sources */,
+				797E6100255317D4002A59E0 /* NatLogoImages+TheBodyShopDark+Spec.swift in Sources */,
 				79E7FA5E2537458D00A831BC /* AesopDarkTokens+Spacing+Spec.swift in Sources */,
 				79E7FAFF253893B900A831BC /* AvonDarkTokens+Typography+Spec.swift in Sources */,
 				C3E184D6CD3B52645D0E06A7138CA94E /* TextFieldTests.swift in Sources */,
 				2934666EAAD661E372AA6009BB287275 /* TextFieldTypeTests.swift in Sources */,
+				797E610825531806002A59E0 /* NatLogoImages+TheBodyShopLight+Spec.swift in Sources */,
 				847C82A424E578D3001CE116 /* NaturaLightTheme+Spec.swift in Sources */,
 				84BC900D24AA16E0007DF09D /* NatDialogController+AlertStyleBuilder+Spec.swift in Sources */,
 				84B9331124ACF28400B71BD4 /* NotificationCenterSpy.swift in Sources */,
