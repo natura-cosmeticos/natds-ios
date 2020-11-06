@@ -31,6 +31,12 @@ public final class NatButton: UIButton, Pulsable {
 
     private let style: Style
     private let notificationCenter: NotificationCenterObservable
+    private lazy var buttonIconView: IconView = {
+        let iconView = IconView(fontSize: NatSizes.standard)
+        iconView.translatesAutoresizingMaskIntoConstraints = false
+
+        return iconView
+    }()
 
     // MARK: - Public properties
 
@@ -93,6 +99,15 @@ public final class NatButton: UIButton, Pulsable {
         style.applyTitle(title, self)
     }
 
+    /**
+     This method has the objetive to set the icon for 2 sides that aways have to be
+     configured in NatButton as default behavior: Right & Left.
+
+     - Parameters:
+     - title:  This String will be used to configure Normal & Disabled states.
+     - icon:          Choose some icon from the libary
+     - iconSide:   This will be used to configure the icon side, It can be right or left side.
+     */
     public func configure(title: String, icon: Icon, iconSide: IconSide) {
         style.applyTitle(title, self)
         buttonIconView.icon = icon
@@ -101,6 +116,8 @@ public final class NatButton: UIButton, Pulsable {
         addSubview(buttonIconView)
         setIconSide(iconSide)
     }
+
+    // MARK: - Private methods
 
     private func setIconSide(_ iconSide: IconSide) {
         guard let title = self.titleLabel else { return }
@@ -120,13 +137,6 @@ public final class NatButton: UIButton, Pulsable {
             self.titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 28)
         }
     }
-
-    private lazy var buttonIconView: IconView = {
-        let iconView = IconView(fontSize: NatSizes.standard)
-        iconView.translatesAutoresizingMaskIntoConstraints = false
-
-        return iconView
-    }()
 
     // MARK: - Overrides
 
