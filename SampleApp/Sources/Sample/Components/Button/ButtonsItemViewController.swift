@@ -146,6 +146,59 @@ final class ButtonsItemViewController: UIViewController, SampleItem {
         let button = NatButton(style: .text)
         button.configure(title: "Disabled Text")
         button.isEnabled = false
+        button.translatesAutoresizingMaskIntoConstraints = false
+
+        return button
+    }()
+
+    private let containedIconStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.spacing = NatSpacing.tiny
+        stackView.distribution = .fillEqually
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+
+        return stackView
+    }()
+
+    private let outlinedIconStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.spacing = NatSpacing.tiny
+        stackView.distribution = .fillEqually
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+
+        return stackView
+    }()
+
+    private let containedIconRightButton: NatButton = {
+        let button = NatButton(style: .contained)
+        button.configure(title: "Contained", icon: .outlinedDefaultMockup, iconSide: .right)
+        button.translatesAutoresizingMaskIntoConstraints = false
+
+        return button
+    }()
+
+    private let containedIconLeftButton: NatButton = {
+        let button = NatButton(style: .contained)
+        button.configure(title: "Contained", icon: .outlinedDefaultMockup, iconSide: .left)
+        button.translatesAutoresizingMaskIntoConstraints = false
+
+        return button
+    }()
+
+    private let outlinedIconRightButton: NatButton = {
+        let button = NatButton(style: .outlined)
+        button.configure(title: "Outlined", icon: .outlinedDefaultMockup, iconSide: .right)
+        button.translatesAutoresizingMaskIntoConstraints = false
+
+        return button
+    }()
+
+    private let outlinedIconLeftButton: NatButton = {
+        let button = NatButton(style: .outlined)
+        button.configure(title: "Outlined", icon: .outlinedDefaultMockup, iconSide: .left)
+        button.translatesAutoresizingMaskIntoConstraints = false
 
         return button
     }()
@@ -172,6 +225,8 @@ final class ButtonsItemViewController: UIViewController, SampleItem {
         containerView.addSubview(disabledStackView)
         containerView.addSubview(disabledStackView)
         containerView.addSubview(fullStackView)
+        containerView.addSubview(containedIconStackView)
+        containerView.addSubview(outlinedIconStackView)
 
         eneabledStackView.addArrangedSubview(containedButton)
         eneabledStackView.addArrangedSubview(outlinedButton)
@@ -187,6 +242,12 @@ final class ButtonsItemViewController: UIViewController, SampleItem {
         fullStackView.addArrangedSubview(disableOutlinedFullButton)
         fullStackView.addArrangedSubview(textFullButton)
         fullStackView.addArrangedSubview(disableTextFullButton)
+
+        containedIconStackView.addArrangedSubview(containedIconLeftButton)
+        containedIconStackView.addArrangedSubview(containedIconRightButton)
+
+        outlinedIconStackView.addArrangedSubview(outlinedIconLeftButton)
+        outlinedIconStackView.addArrangedSubview(outlinedIconRightButton)
 
         addConstraints()
     }
@@ -222,12 +283,18 @@ final class ButtonsItemViewController: UIViewController, SampleItem {
             fullStackView.topAnchor.constraint(equalTo: disabledStackView.bottomAnchor, constant: NatSpacing.small),
             fullStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
             fullStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
-            fullStackView.bottomAnchor.constraint(
-                greaterThanOrEqualTo: containerView.bottomAnchor,
-                constant: -NatSpacing.small
-            ),
 
-            containedFullButton.heightAnchor.constraint(equalToConstant: NatButton.Height.medium)
+            containedFullButton.heightAnchor.constraint(equalToConstant: NatButton.Height.medium),
+
+            containedIconStackView.topAnchor.constraint(equalTo: fullStackView.bottomAnchor, constant: NatSpacing.small),
+            containedIconStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+            containedIconStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+
+            outlinedIconStackView.topAnchor.constraint(equalTo: containedIconStackView.bottomAnchor, constant: NatSpacing.small),
+            outlinedIconStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+            outlinedIconStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+            outlinedIconStackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -NatSpacing.small
+            )
         ]
 
         NSLayoutConstraint.activate(constraints)
