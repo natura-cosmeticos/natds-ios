@@ -37,6 +37,7 @@ public final class NatButton: UIButton, Pulsable {
     public override var isEnabled: Bool {
         didSet {
             style.changeState?(self)
+            buttonIconView.tintColor = titleLabel?.textColor
         }
     }
 
@@ -91,6 +92,41 @@ public final class NatButton: UIButton, Pulsable {
     public func configure(title: String) {
         style.applyTitle(title, self)
     }
+
+    public func configure(title: String, icon: Icon, iconColor: UIColor = .black, iconSide: IconSide) {
+        style.applyTitle(title, self)
+        buttonIconView.icon = icon
+        buttonIconView.tintColor = titleLabel?.textColor
+
+        addSubview(buttonIconView)
+        setIconSide(iconSide)
+    }
+
+    private func setIconSide(_ iconSide: IconSide) {
+        if iconSide == .left {
+            let constraints = [
+                buttonIconView.trailingAnchor.constraint(equalTo: self.titleLabel!.leadingAnchor, constant: -8),
+                buttonIconView.centerYAnchor.constraint(equalTo: centerYAnchor)
+            ]
+            NSLayoutConstraint.activate(constraints)
+            self.titleEdgeInsets = UIEdgeInsets(top: 0, left: 32, bottom: 0, right: 0)
+        } else {
+            let constraints = [
+                buttonIconView.leadingAnchor.constraint(equalTo: self.titleLabel!.trailingAnchor, constant: 8),
+                buttonIconView.centerYAnchor.constraint(equalTo: centerYAnchor)
+            ]
+            NSLayoutConstraint.activate(constraints)
+            self.titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 32)
+        }
+    }
+
+    private lazy var buttonIconView: IconView = {
+        let iconView = IconView(fontSize: NatSizes.standard)
+        iconView.icon = .outlinedDefaultMockup
+        iconView.translatesAutoresizingMaskIntoConstraints = false
+
+        return iconView
+    }()
 
     // MARK: - Overrides
 
