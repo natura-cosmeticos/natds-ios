@@ -119,7 +119,7 @@ final class NatButtonSpec: QuickSpec {
         describe("#configure(title:, icon:, iconSide:)") {
             context("Right side") {
                 beforeEach {
-                    systemUnderTest.configure(title: "stub", icon: .outlinedDefaultMockup, iconSide: .right)
+                    systemUnderTest.configure(icon: .outlinedDefaultMockup, position: .right)
                 }
 
                 it("adds icon to the right side") {
@@ -140,7 +140,7 @@ final class NatButtonSpec: QuickSpec {
 
                 context("Left side") {
                     beforeEach {
-                        systemUnderTest.configure(title: "stub", icon: .outlinedDefaultMockup, iconSide: .left)
+                        systemUnderTest.configure(icon: .outlinedDefaultMockup, position: .left)
                     }
 
                     it("adds icon to the left side") {

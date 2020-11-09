@@ -173,7 +173,8 @@ final class ButtonsItemViewController: UIViewController, SampleItem {
 
     private let containedIconRightButton: NatButton = {
         let button = NatButton(style: .contained)
-        button.configure(title: "Contained", icon: .outlinedDefaultMockup, iconSide: .right)
+        button.configure(title: "Contained")
+        button.configure(icon: .outlinedDefaultMockup, position: .right)
         button.translatesAutoresizingMaskIntoConstraints = false
 
         return button
@@ -181,7 +182,8 @@ final class ButtonsItemViewController: UIViewController, SampleItem {
 
     private let containedIconLeftButton: NatButton = {
         let button = NatButton(style: .contained)
-        button.configure(title: "Contained", icon: .outlinedDefaultMockup, iconSide: .left)
+        button.configure(title: "Contained")
+        button.configure(icon: .outlinedDefaultMockup, position: .left)
         button.translatesAutoresizingMaskIntoConstraints = false
 
         return button
@@ -189,7 +191,8 @@ final class ButtonsItemViewController: UIViewController, SampleItem {
 
     private let outlinedIconRightButton: NatButton = {
         let button = NatButton(style: .outlined)
-        button.configure(title: "Outlined", icon: .outlinedDefaultMockup, iconSide: .right)
+        button.configure(title: "Outlined")
+        button.configure(icon: .outlinedDefaultMockup, position: .right)
         button.translatesAutoresizingMaskIntoConstraints = false
 
         return button
@@ -197,7 +200,8 @@ final class ButtonsItemViewController: UIViewController, SampleItem {
 
     private let outlinedIconLeftButton: NatButton = {
         let button = NatButton(style: .outlined)
-        button.configure(title: "Outlined", icon: .outlinedDefaultMockup, iconSide: .left)
+        button.configure(title: "Outlined")
+        button.configure(icon: .outlinedDefaultMockup, position: .left)
         button.translatesAutoresizingMaskIntoConstraints = false
 
         return button

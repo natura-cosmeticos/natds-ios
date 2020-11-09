@@ -17,7 +17,8 @@ final class NatButtonSnapshotTests: XCTestCase {
 
     func test_icon_right_side_hasValidSnapshot() {
         let systemUnderTest = NatButton(style: .contained)
-        systemUnderTest.configure(title: "Stub", icon: .outlinedDefaultMockup, iconSide: .right)
+        systemUnderTest.configure(title: "stub")
+        systemUnderTest.configure(icon: .outlinedDefaultMockup, position: .right)
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
@@ -27,7 +28,8 @@ final class NatButtonSnapshotTests: XCTestCase {
 
     func test_icon_left_side_hasValidSnapshot() {
         let systemUnderTest = NatButton(style: .contained)
-        systemUnderTest.configure(title: "Stub", icon: .outlinedDefaultMockup, iconSide: .left)
+        systemUnderTest.configure(title: "stub")
+        systemUnderTest.configure(icon: .outlinedDefaultMockup, position: .left)
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 

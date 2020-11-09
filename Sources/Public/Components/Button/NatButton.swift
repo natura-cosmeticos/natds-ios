@@ -83,7 +83,7 @@ public final class NatButton: UIButton, Pulsable {
     // MARK: - Public methods
 
     /**
-     This method has the objetive to set title for 2 states that aways have to be
+     This method has the objective to set title for 2 states that aways have to be
      configured in NatButton as default behavior: Normal & Disabled.
 
      When this method is used, it configures title using an attributed string.
@@ -100,42 +100,19 @@ public final class NatButton: UIButton, Pulsable {
     }
 
     /**
-     This method has the objetive to set the icon for 2 sides that aways have to be
+     This method has the objective to set the icon for 2 sides that aways have to be
      configured in NatButton as default behavior: Right & Left.
 
      - Parameters:
-     - title:  This String will be used to configure Normal & Disabled states.
-     - icon:          Choose some icon from the libary
-     - iconSide:   This will be used to configure the icon side, It can be right or left side.
+     - icon:   Choose some icon from the libary
+     - position:   This will be used to configure the icon side, It can be right or left side.
      */
-    public func configure(title: String, icon: Icon, iconSide: IconSide) {
-        style.applyTitle(title, self)
+
+    public func configure(icon: Icon, position: Position) {
         buttonIconView.icon = icon
         buttonIconView.tintColor = titleLabel?.textColor
 
-        addSubview(buttonIconView)
-        setIconSide(iconSide)
-    }
-
-    // MARK: - Private methods
-
-    private func setIconSide(_ iconSide: IconSide) {
-        guard let title = self.titleLabel else { return }
-        if iconSide == .left {
-            let constraints = [
-                buttonIconView.trailingAnchor.constraint(equalTo: title.leadingAnchor, constant: -4),
-                buttonIconView.centerYAnchor.constraint(equalTo: centerYAnchor)
-            ]
-            NSLayoutConstraint.activate(constraints)
-            self.titleEdgeInsets = UIEdgeInsets(top: 0, left: 28, bottom: 0, right: 0)
-        } else {
-            let constraints = [
-                buttonIconView.leadingAnchor.constraint(equalTo: title.trailingAnchor, constant: 4),
-                buttonIconView.centerYAnchor.constraint(equalTo: centerYAnchor)
-            ]
-            NSLayoutConstraint.activate(constraints)
-            self.titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 28)
-        }
+        setupIconButton(position)
     }
 
     // MARK: - Overrides
@@ -161,5 +138,30 @@ public final class NatButton: UIButton, Pulsable {
 extension NatButton {
     @objc private func themeHasChanged() {
         style.changeState?(self)
+    }
+}
+
+// MARK: - SetIconSide
+
+extension NatButton {
+    private func setupIconButton(_ position: Position) {
+        guard let title = titleLabel else { return }
+        let space = NatSizes.micro
+        let iconSize = NatSizes.standard
+
+        buttonIconView.removeFromSuperview()
+        addSubview(buttonIconView)
+
+        buttonIconView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+
+        switch position {
+        case .left:
+            buttonIconView.trailingAnchor.constraint(equalTo: title.leadingAnchor, constant: -space).isActive = true
+                titleEdgeInsets = .init(top: 0, left: iconSize+space, bottom: 0, right: 0)
+
+        case .right:
+            buttonIconView.leadingAnchor.constraint(equalTo: title.trailingAnchor, constant: space).isActive = true
+            titleEdgeInsets = .init(top: 0, left: 0, bottom: 0, right: iconSize+space)
+        }
     }
 }

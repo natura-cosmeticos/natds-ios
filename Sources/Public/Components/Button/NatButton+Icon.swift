@@ -16,7 +16,7 @@ extension NatButton {
                 DesignSystem().configure(with: AvailableTheme)
     */
 
-    public enum IconSide {
+    public enum Position {
         case left
         case right
     }
