@@ -66,7 +66,7 @@ class ExpansionPanelSnapshotTests: XCTestCase {
         systemUnderTest.translatesAutoresizingMaskIntoConstraints = false
         let view = addsSutOnViewLimitedSize()
 
-        assertSnapshot(matching: view, as: .image)
+        assertSnapshot(matching: view, as: .image(precision: 0.99))
     }
 
     func test_initWithViewAnimating_withLongSubtitle_andLimitedSize_hasValidSnapshot() {
@@ -86,7 +86,7 @@ class ExpansionPanelSnapshotTests: XCTestCase {
 
         tapButton()
 
-        assertSnapshot(matching: view, as: .image)
+        assertSnapshot(matching: view, as: .image(precision: 0.99))
     }
 
     func test_tapButtonTwice_showsButtonPointingDown() {
@@ -95,7 +95,7 @@ class ExpansionPanelSnapshotTests: XCTestCase {
         tapButton()
         tapButton()
 
-        assertSnapshot(matching: view, as: .image)
+        assertSnapshot(matching: view, as: .image(precision: 0.99))
     }
 
     func test_tapButtonThrice_showsButtonPointingUp() {
