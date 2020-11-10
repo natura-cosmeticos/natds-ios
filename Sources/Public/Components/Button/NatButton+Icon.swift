@@ -1,6 +1,6 @@
 extension NatButton {
     /**
-     IconSide is a enum that represents the icon side options for the button component.
+     Position is a enum that represents the icon side options for the button component.
 
         These are all sides allowed for a icon in NatButton:
         - right
