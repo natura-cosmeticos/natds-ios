@@ -31,19 +31,14 @@ public final class NatButton: UIButton, Pulsable {
 
     private let style: Style
     private let notificationCenter: NotificationCenterObservable
-    private lazy var buttonIconView: IconView = {
-        let iconView = IconView(fontSize: NatSizes.standard)
-        iconView.translatesAutoresizingMaskIntoConstraints = false
-
-        return iconView
-    }()
+    private var iconView: IconView?
 
     // MARK: - Public properties
 
     public override var isEnabled: Bool {
         didSet {
             style.changeState?(self)
-            buttonIconView.tintColor = titleLabel?.textColor
+            iconView?.tintColor = titleLabel?.textColor
         }
     }
 
@@ -100,8 +95,7 @@ public final class NatButton: UIButton, Pulsable {
     }
 
     /**
-     This method has the objective to set the icon for 2 sides that aways have to be
-     configured in NatButton as default behavior: Right & Left.
+     This method sets an icon at this button. Icons can be set at 2 sides, right & left.
 
      - Parameters:
      - icon:   Choose some icon from the libary
@@ -109,10 +103,15 @@ public final class NatButton: UIButton, Pulsable {
      */
 
     public func configure(icon: Icon, position: Position) {
-        buttonIconView.icon = icon
-        buttonIconView.tintColor = titleLabel?.textColor
+        iconView?.removeFromSuperview()
 
-        setupIconButton(position)
+        let view = createIconView(icon: icon)
+        addSubview(view)
+        setupConstraints(for: view, at: position)
+
+        iconView = view
+
+        titleEdgeInsets = createTitleEdgeInsets(position)
     }
 
     // MARK: - Overrides
@@ -141,27 +140,45 @@ extension NatButton {
     }
 }
 
-// MARK: - SetIconSide
+// MARK: - Configure IconView
 
 extension NatButton {
-    private func setupIconButton(_ position: Position) {
-        guard let title = titleLabel else { return }
-        let space = NatSizes.micro
-        let iconSize = NatSizes.standard
+    private func createIconView(icon: Icon) -> IconView {
+        let iconView = IconView(fontSize: NatSizes.standard)
+        iconView.translatesAutoresizingMaskIntoConstraints = false
 
-        buttonIconView.removeFromSuperview()
-        addSubview(buttonIconView)
+        iconView.icon = icon
+        iconView.tintColor = titleLabel?.textColor
 
-        buttonIconView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        return iconView
+    }
+
+    private func setupConstraints(for iconView: IconView, at position: Position) {
+        guard
+            let title = titleLabel
+        else { return }
+
+        iconView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
 
         switch position {
         case .left:
-            buttonIconView.trailingAnchor.constraint(equalTo: title.leadingAnchor, constant: -space).isActive = true
-                titleEdgeInsets = .init(top: 0, left: iconSize+space, bottom: 0, right: 0)
+            iconView.trailingAnchor
+                .constraint(equalTo: title.leadingAnchor, constant: -NatSizes.micro).isActive = true
 
         case .right:
-            buttonIconView.leadingAnchor.constraint(equalTo: title.trailingAnchor, constant: space).isActive = true
-            titleEdgeInsets = .init(top: 0, left: 0, bottom: 0, right: iconSize+space)
+            iconView.leadingAnchor
+                .constraint(equalTo: title.trailingAnchor, constant: NatSizes.micro).isActive = true
+        }
+    }
+
+    private func createTitleEdgeInsets(_ position: NatButton.Position) -> UIEdgeInsets {
+        let spaceBetweenIconAndTitle = NatSizes.micro
+        let iconSize = NatSizes.standard
+        let padding = iconSize + spaceBetweenIconAndTitle
+
+        switch position {
+        case .left: return .init(top: 0, left: padding, bottom: 0, right: 0)
+        case .right: return .init(top: 0, left: 0, bottom: 0, right: padding)
         }
     }
 }
