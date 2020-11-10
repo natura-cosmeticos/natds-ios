@@ -257,50 +257,99 @@ final class ButtonsItemViewController: UIViewController, SampleItem {
     }
 
     private func addConstraints() {
+        addConstraintsScrollView()
+        addConstraintsContainerView()
+        addConstraintsEneabledStackView()
+        addConstraintsDisabledStackView()
+        addConstraintsFullStackView()
+        addConstraintsContainedIconStackView()
+        addConstraintsOutlinedIconStackView()
+
+        containedFullButton.heightAnchor.constraint(equalToConstant: NatButton.Height.medium).isActive = true
+    }
+}
+
+extension ButtonsItemViewController {
+    private func addConstraintsScrollView() {
+        let constraints = [
+            scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            scrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor)
+        ]
+        NSLayoutConstraint.activate(constraints)
+    }
+
+    private func addConstraintsContainerView() {
         let containerHeightConstraint = containerView.centerYAnchor
             .constraint(equalTo: scrollView.centerYAnchor)
         containerHeightConstraint.priority = .defaultLow
 
         let constraints = [
-            scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            scrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            scrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-
             containerView.topAnchor.constraint(equalTo: scrollView.topAnchor),
             containerView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -NatSpacing.small),
             containerView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
             containerView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: NatSpacing.small),
             containerView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
-            containerHeightConstraint,
+            containerHeightConstraint
+        ]
+        NSLayoutConstraint.activate(constraints)
+    }
 
+    private func addConstraintsEneabledStackView() {
+        let constraints = [
             eneabledStackView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: NatSpacing.small),
             eneabledStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
             eneabledStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
-            eneabledStackView.heightAnchor.constraint(equalToConstant: NatButton.Height.medium),
+            eneabledStackView.heightAnchor.constraint(equalToConstant: NatButton.Height.medium)
+        ]
+        NSLayoutConstraint.activate(constraints)
+    }
 
+    private func addConstraintsDisabledStackView() {
+        let constraints = [
             disabledStackView.topAnchor.constraint(equalTo: eneabledStackView.bottomAnchor, constant: NatSpacing.small),
             disabledStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
             disabledStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
-            disabledStackView.heightAnchor.constraint(equalToConstant: NatButton.Height.medium),
+            disabledStackView.heightAnchor.constraint(equalToConstant: NatButton.Height.medium)
+        ]
+        NSLayoutConstraint.activate(constraints)
+    }
 
+    private func addConstraintsFullStackView() {
+        let constraints = [
             fullStackView.topAnchor.constraint(equalTo: disabledStackView.bottomAnchor, constant: NatSpacing.small),
             fullStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
-            fullStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+            fullStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor)
+        ]
+        NSLayoutConstraint.activate(constraints)
+    }
 
-            containedFullButton.heightAnchor.constraint(equalToConstant: NatButton.Height.medium),
-
-            containedIconStackView.topAnchor.constraint(equalTo: fullStackView.bottomAnchor, constant: NatSpacing.small),
+    private func addConstraintsContainedIconStackView() {
+        let constraints = [
+            containedIconStackView.topAnchor.constraint(
+                equalTo: fullStackView.bottomAnchor,
+                constant: NatSpacing.small
+            ),
             containedIconStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
-            containedIconStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+            containedIconStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor)
+        ]
+        NSLayoutConstraint.activate(constraints)
+    }
 
-            outlinedIconStackView.topAnchor.constraint(equalTo: containedIconStackView.bottomAnchor, constant: NatSpacing.small),
+    private func addConstraintsOutlinedIconStackView() {
+        let constraints = [
+            outlinedIconStackView.topAnchor.constraint(
+                equalTo: containedIconStackView.bottomAnchor,
+                constant: NatSpacing.small
+            ),
             outlinedIconStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
             outlinedIconStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
-            outlinedIconStackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -NatSpacing.small
+            outlinedIconStackView.bottomAnchor.constraint(
+                equalTo: containerView.bottomAnchor,
+                constant: -NatSpacing.small
             )
         ]
-
         NSLayoutConstraint.activate(constraints)
     }
 }

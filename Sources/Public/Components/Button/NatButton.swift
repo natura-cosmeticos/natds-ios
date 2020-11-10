@@ -137,6 +137,7 @@ public final class NatButton: UIButton, Pulsable {
 extension NatButton {
     @objc private func themeHasChanged() {
         style.changeState?(self)
+        iconView?.tintColor = titleLabel?.textColor
     }
 }
 
