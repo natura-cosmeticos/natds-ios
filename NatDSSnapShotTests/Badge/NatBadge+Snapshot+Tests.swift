@@ -17,18 +17,18 @@ final class NatBadgeSnapshotTests: XCTestCase {
     func test_badge_style_standard_alert_count_100_hasValidSnapshot() {
         systemUnderTest.configure(count: 100)
 
-        assertSnapshot(matching: systemUnderTest, as: .image)
+        assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.99))
     }
 
     func test_badge_style_standard_alert_count_50_hasValidSnapshot() {
         systemUnderTest.configure(count: 50)
 
-        assertSnapshot(matching: systemUnderTest, as: .image)
+        assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.99))
     }
 
     func test_badge_style_standard_alert_count_1_hasValidSnapshot() {
         systemUnderTest.configure(count: 1)
 
-        assertSnapshot(matching: systemUnderTest, as: .image)
+        assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.99))
     }
 }
