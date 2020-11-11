@@ -98,7 +98,7 @@ public final class NatButton: UIButton, Pulsable {
      This method sets an icon at this button. Icons can be set at 2 sides, right & left.
 
      - Parameters:
-     - icon:   Choose some icon from the libary
+     - icon:   Choose some icon from the library
      - position:   This will be used to configure the icon side, It can be right or left side.
      */
 

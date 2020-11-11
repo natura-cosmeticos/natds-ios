@@ -19,7 +19,7 @@ final class ButtonsItemViewController: UIViewController, SampleItem {
         return view
     }()
 
-    private let eneabledStackView: UIStackView = {
+    private let enabledStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
         stackView.spacing = NatSpacing.tiny
@@ -225,16 +225,16 @@ final class ButtonsItemViewController: UIViewController, SampleItem {
 
         scrollView.addSubview(containerView)
 
-        containerView.addSubview(eneabledStackView)
+        containerView.addSubview(enabledStackView)
         containerView.addSubview(disabledStackView)
         containerView.addSubview(disabledStackView)
         containerView.addSubview(fullStackView)
         containerView.addSubview(containedIconStackView)
         containerView.addSubview(outlinedIconStackView)
 
-        eneabledStackView.addArrangedSubview(containedButton)
-        eneabledStackView.addArrangedSubview(outlinedButton)
-        eneabledStackView.addArrangedSubview(textButton)
+        enabledStackView.addArrangedSubview(containedButton)
+        enabledStackView.addArrangedSubview(outlinedButton)
+        enabledStackView.addArrangedSubview(textButton)
 
         disabledStackView.addArrangedSubview(disableContainedButton)
         disabledStackView.addArrangedSubview(disableOutlinedButton)
@@ -259,7 +259,7 @@ final class ButtonsItemViewController: UIViewController, SampleItem {
     private func addConstraints() {
         addConstraintsScrollView()
         addConstraintsContainerView()
-        addConstraintsEneabledStackView()
+        addConstraintsEnabledStackView()
         addConstraintsDisabledStackView()
         addConstraintsFullStackView()
         addConstraintsContainedIconStackView()
@@ -296,19 +296,19 @@ extension ButtonsItemViewController {
         NSLayoutConstraint.activate(constraints)
     }
 
-    private func addConstraintsEneabledStackView() {
+    private func addConstraintsEnabledStackView() {
         let constraints = [
-            eneabledStackView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: NatSpacing.small),
-            eneabledStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
-            eneabledStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
-            eneabledStackView.heightAnchor.constraint(equalToConstant: NatButton.Height.medium)
+            enabledStackView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: NatSpacing.small),
+            enabledStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+            enabledStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+            enabledStackView.heightAnchor.constraint(equalToConstant: NatButton.Height.medium)
         ]
         NSLayoutConstraint.activate(constraints)
     }
 
     private func addConstraintsDisabledStackView() {
         let constraints = [
-            disabledStackView.topAnchor.constraint(equalTo: eneabledStackView.bottomAnchor, constant: NatSpacing.small),
+            disabledStackView.topAnchor.constraint(equalTo: enabledStackView.bottomAnchor, constant: NatSpacing.small),
             disabledStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
             disabledStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
             disabledStackView.heightAnchor.constraint(equalToConstant: NatButton.Height.medium)
