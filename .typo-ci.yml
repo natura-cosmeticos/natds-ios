@@ -33,6 +33,7 @@ excluded_words:
   - objc
   - Oeh
   - Opacities
+  - outlinedDefaultMockup
   - parallelize
   - parallelizeBuildables
   - pbxproj
