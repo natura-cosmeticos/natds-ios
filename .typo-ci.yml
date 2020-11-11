@@ -6,6 +6,7 @@ excluded_files:
   - "SampleApp/NatDS-SampleApp.xcodeproj/project.pbxproj"
   - "Gemfile.lock"
 excluded_words:
+  - aways
   - Buildables
   - cocoapods
   - cocoapods-downloader
