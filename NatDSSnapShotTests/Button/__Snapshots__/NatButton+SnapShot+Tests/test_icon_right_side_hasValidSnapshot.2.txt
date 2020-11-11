@@ -1,0 +1,4 @@
+<NatDS.NatButton; baseClass = UIButton; frame = (0 0; 80 40); opaque = NO; layer = <CALayer>>
+   | <UIButtonLabel; frame = (6.5 11.5; 39.5 17); text = 'STUB'; opaque = NO; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   | <NatDS.IconView; frame = (50 8; 24 24); tintColor = UIExtendedSRGBColorSpace 0.2 0.2 0.2 1; layer = <CALayer>>
+   |    | <UILabel; frame = (0 0; 24 24); text = ''; userInteractionEnabled = NO; layer = <_UILabelLayer>>

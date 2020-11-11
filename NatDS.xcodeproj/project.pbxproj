@@ -98,6 +98,8 @@
 		797E613825531CA7002A59E0 /* NaturaLightComponents+Logo+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797E613725531CA7002A59E0 /* NaturaLightComponents+Logo+Spec.swift */; };
 		797E614125531CF7002A59E0 /* TheBodyShopDarkComponents+Logo+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797E614025531CF7002A59E0 /* TheBodyShopDarkComponents+Logo+Spec.swift */; };
 		797E614A25531D2D002A59E0 /* TheBodyShopLightComponents+Logo+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797E614925531D2D002A59E0 /* TheBodyShopLightComponents+Logo+Spec.swift */; };
+		797E615E255464D1002A59E0 /* NatButton+Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797E615D255464D1002A59E0 /* NatButton+Icon.swift */; };
+		79ACDAB62555D9B500660E68 /* NatButton+SnapShot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ACDAB52555D9B500660E68 /* NatButton+SnapShot+Tests.swift */; };
 		79E7FA1525373ADE00A831BC /* AesopDarkTokens+BorderRadius+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FA1425373ADE00A831BC /* AesopDarkTokens+BorderRadius+Spec.swift */; };
 		79E7FA1D25373B1900A831BC /* AesopLightTokens+BorderRadius+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FA1C25373B1900A831BC /* AesopLightTokens+BorderRadius+Spec.swift */; };
 		79E7FA3325373ED200A831BC /* AesopDarkTokens+Color+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FA3225373ED200A831BC /* AesopDarkTokens+Color+Spec.swift */; };
@@ -421,6 +423,8 @@
 		797E613725531CA7002A59E0 /* NaturaLightComponents+Logo+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NaturaLightComponents+Logo+Spec.swift"; sourceTree = "<group>"; };
 		797E614025531CF7002A59E0 /* TheBodyShopDarkComponents+Logo+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheBodyShopDarkComponents+Logo+Spec.swift"; sourceTree = "<group>"; };
 		797E614925531D2D002A59E0 /* TheBodyShopLightComponents+Logo+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheBodyShopLightComponents+Logo+Spec.swift"; sourceTree = "<group>"; };
+		797E615D255464D1002A59E0 /* NatButton+Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+Icon.swift"; sourceTree = "<group>"; };
+		79ACDAB52555D9B500660E68 /* NatButton+SnapShot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+SnapShot+Tests.swift"; sourceTree = "<group>"; };
 		79E7FA1425373ADE00A831BC /* AesopDarkTokens+BorderRadius+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AesopDarkTokens+BorderRadius+Spec.swift"; sourceTree = "<group>"; };
 		79E7FA1C25373B1900A831BC /* AesopLightTokens+BorderRadius+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AesopLightTokens+BorderRadius+Spec.swift"; sourceTree = "<group>"; };
 		79E7FA3225373ED200A831BC /* AesopDarkTokens+Color+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AesopDarkTokens+Color+Spec.swift"; sourceTree = "<group>"; };
@@ -1109,6 +1113,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		79ACDAB42555D99300660E68 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				79ACDAB52555D9B500660E68 /* NatButton+SnapShot+Tests.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
 		79E7FA2B25373CF000A831BC /* AesopDark */ = {
 			isa = PBXGroup;
 			children = (
@@ -1381,6 +1393,7 @@
 				84391DEC24DB5AE6009D0BE8 /* AppBar */,
 				84BB928324DC680A00A9BCC8 /* Badge */,
 				84BB929224DC7B0800A9BCC8 /* Bar */,
+				79ACDAB42555D99300660E68 /* Button */,
 				84391DE924DB275E009D0BE8 /* Dialog */,
 				84BB929424DC821800A9BCC8 /* Divider */,
 				84BB929624DC8F3600A9BCC8 /* ExpansionPanel */,
@@ -2177,6 +2190,7 @@
 				10C54C550ED4D44A309C43261BF40F55 /* NatButton+Height.swift */,
 				D331FCE6B4B326453609B50D92482230 /* NatButton+Style.swift */,
 				7CCF632B4501044E5062C574CCBBF74E /* NatButton.swift */,
+				797E615D255464D1002A59E0 /* NatButton+Icon.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -2678,6 +2692,7 @@
 				E70EF1AC4BB7A93A80A500786C1A6497 /* NatButton.swift in Sources */,
 				4838BBC57B1464D82D59DE861726268A /* NatColors.swift in Sources */,
 				84BC900224AA15C3007DF09D /* NotificationCenterPostable.swift in Sources */,
+				797E615E255464D1002A59E0 /* NatButton+Icon.swift in Sources */,
 				845AD7A824E2C8E6006CA226 /* AvonDarkTheme.swift in Sources */,
 				0FB003017C3A179872BC65E6E321FD13 /* NatDialogController+StandardStyleBuilder.swift in Sources */,
 				84BC900B24AA169B007DF09D /* DialogViewModel.swift in Sources */,
@@ -2737,6 +2752,7 @@
 				84BB92A224DCB73100A9BCC8 /* IconView+Snapshot+Tests.swift in Sources */,
 				84BB928D24DC75D100A9BCC8 /* TabItemViewDelegateMock.swift in Sources */,
 				84703F3724F54AA600FE01CA /* NotificationCenterSpy.swift in Sources */,
+				79ACDAB62555D9B500660E68 /* NatButton+SnapShot+Tests.swift in Sources */,
 				84BB928524DC69C900A9BCC8 /* Badgeable+Snapshot+Tests.swift in Sources */,
 				84BB92A824DD910C00A9BCC8 /* Icon+Snapshot+Tests.swift in Sources */,
 				84BB928424DC683700A9BCC8 /* NatBadge+Snapshot+Tests.swift in Sources */,

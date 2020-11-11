@@ -116,79 +116,117 @@ final class NatButtonSpec: QuickSpec {
             }
         }
 
-        describe("#touchesBegan") {
-            beforeEach {
-                systemUnderTest.touchesBegan(.init(arrayLiteral: .init()), with: nil)
+        describe("#configure(title:, icon:, iconSide:)") {
+            context("Right side") {
+                beforeEach {
+                    systemUnderTest.configure(icon: .outlinedDefaultMockup, position: .right)
+                }
+
+                it("adds icon to the right side") {
+                    let iconView = systemUnderTest.subviews
+                        .compactMap { $0 as? IconView }
+                        .first
+
+                    expect(iconView?.icon).to(equal(.outlinedDefaultMockup))
+                }
+
+                it("icon color is equal of button label color") {
+                    let iconView = systemUnderTest.subviews
+                        .compactMap { $0 as? IconView }
+                        .first
+
+                    expect(iconView?.tintColor).to(equal(systemUnderTest.titleLabel?.textColor))
+                }
+
+                context("Left side") {
+                    beforeEach {
+                        systemUnderTest.configure(icon: .outlinedDefaultMockup, position: .left)
+                    }
+
+                    it("adds icon to the left side") {
+                        let iconView = systemUnderTest.subviews
+                            .compactMap { $0 as? IconView }
+                            .first
+
+                        expect(iconView?.icon).to(equal(.outlinedDefaultMockup))
+                    }
+                }
             }
 
-            it("applies style only on init") {
-                expect(applyStyleInvocations).to(equal(1))
+            describe("#touchesBegan") {
+                beforeEach {
+                    systemUnderTest.touchesBegan(.init(arrayLiteral: .init()), with: nil)
+                }
+
+                it("applies style only on init") {
+                    expect(applyStyleInvocations).to(equal(1))
+                }
+
+                it("does not call changeState") {
+                    expect(changeStateInvocations).to(equal(0))
+                }
+
+                it("does not call applyTitle") {
+                    expect(applyTitleInvocations).to(equal(0))
+                }
+
+                it("calls beginPulseAt and sublayer for animation is add") {
+                    expect(systemUnderTest.layer.sublayers?.count).to(equal(1))
+                }
             }
 
-            it("does not call changeState") {
-                expect(changeStateInvocations).to(equal(0))
+            describe("#touchesEnded") {
+                beforeEach {
+                    systemUnderTest.touchesBegan(.init(arrayLiteral: .init()), with: nil)
+                    systemUnderTest.touchesEnded(.init(), with: nil)
+                }
+
+                it("applies style only on init") {
+                    expect(applyStyleInvocations).to(equal(1))
+                }
+
+                it("does not call changeState") {
+                    expect(changeStateInvocations).to(equal(0))
+                }
+
+                it("does not call applyTitle") {
+                    expect(applyTitleInvocations).to(equal(0))
+                }
+
+                it("calls endPulse and sublayer is removed after animation ends") {
+                    expect(systemUnderTest.layer.sublayers?.count).toEventually(beNil())
+                }
             }
 
-            it("does not call applyTitle") {
-                expect(applyTitleInvocations).to(equal(0))
-            }
+            context("When a notification of .themeHasChange is received") {
+                beforeEach {
+                    applyStyleInvocations = 0
+                    changeStateInvocations = 0
+                    applyTitleInvocations = 0
 
-            it("calls beginPulseAt and sublayer for animation is add") {
-                expect(systemUnderTest.layer.sublayers?.count).to(equal(1))
-            }
-        }
+                    notificationCenterSpy = .init()
 
-        describe("#touchesEnded") {
-            beforeEach {
-                systemUnderTest.touchesBegan(.init(arrayLiteral: .init()), with: nil)
-                systemUnderTest.touchesEnded(.init(), with: nil)
-            }
+                    styleSpy = .init(
+                        applyStyle: { _ in applyStyleInvocations += 1 },
+                        changeState: { _ in changeStateInvocations += 1 },
+                        applyTitle: { _, _ in applyTitleInvocations += 1 }
+                    )
+                    systemUnderTest = .init(style: styleSpy)
 
-            it("applies style only on init") {
-                expect(applyStyleInvocations).to(equal(1))
-            }
+                    NotificationCenter.default.post(name: .themeHasChanged, object: nil)
+                }
 
-            it("does not call changeState") {
-                expect(changeStateInvocations).to(equal(0))
-            }
+                it("applies style only once") {
+                    expect(applyStyleInvocations).to(equal(1))
+                }
 
-            it("does not call applyTitle") {
-                expect(applyTitleInvocations).to(equal(0))
-            }
+                it("calls changeState when a notification is received") {
+                    expect(changeStateInvocations).to(equal(1))
+                }
 
-            it("calls endPulse and sublayer is removed after animation ends") {
-                expect(systemUnderTest.layer.sublayers?.count).toEventually(beNil())
-            }
-        }
-
-        context("When a notification of .themeHasChange is received") {
-            beforeEach {
-                applyStyleInvocations = 0
-                changeStateInvocations = 0
-                applyTitleInvocations = 0
-
-                notificationCenterSpy = .init()
-
-                styleSpy = .init(
-                    applyStyle: { _ in applyStyleInvocations += 1 },
-                    changeState: { _ in changeStateInvocations += 1 },
-                    applyTitle: { _, _ in applyTitleInvocations += 1 }
-                )
-                systemUnderTest = .init(style: styleSpy)
-
-                NotificationCenter.default.post(name: .themeHasChanged, object: nil)
-            }
-
-            it("applies style only once") {
-                expect(applyStyleInvocations).to(equal(1))
-            }
-
-            it("calls changeState when a notification is received") {
-                expect(changeStateInvocations).to(equal(1))
-            }
-
-            it("does not call applyTitle") {
-                expect(applyTitleInvocations).to(equal(0))
+                it("does not call applyTitle") {
+                    expect(applyTitleInvocations).to(equal(0))
+                }
             }
         }
     }
