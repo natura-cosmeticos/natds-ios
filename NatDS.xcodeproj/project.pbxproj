@@ -100,6 +100,7 @@
 		797E614A25531D2D002A59E0 /* TheBodyShopLightComponents+Logo+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797E614925531D2D002A59E0 /* TheBodyShopLightComponents+Logo+Spec.swift */; };
 		797E615E255464D1002A59E0 /* NatButton+Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797E615D255464D1002A59E0 /* NatButton+Icon.swift */; };
 		79ACDAB62555D9B500660E68 /* NatButton+SnapShot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ACDAB52555D9B500660E68 /* NatButton+SnapShot+Tests.swift */; };
+		79ACDADF255C336E00660E68 /* ProgressIndicatorCircular.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ACDADE255C336E00660E68 /* ProgressIndicatorCircular.swift */; };
 		79E7FA1525373ADE00A831BC /* AesopDarkTokens+BorderRadius+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FA1425373ADE00A831BC /* AesopDarkTokens+BorderRadius+Spec.swift */; };
 		79E7FA1D25373B1900A831BC /* AesopLightTokens+BorderRadius+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FA1C25373B1900A831BC /* AesopLightTokens+BorderRadius+Spec.swift */; };
 		79E7FA3325373ED200A831BC /* AesopDarkTokens+Color+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FA3225373ED200A831BC /* AesopDarkTokens+Color+Spec.swift */; };
@@ -425,6 +426,7 @@
 		797E614925531D2D002A59E0 /* TheBodyShopLightComponents+Logo+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheBodyShopLightComponents+Logo+Spec.swift"; sourceTree = "<group>"; };
 		797E615D255464D1002A59E0 /* NatButton+Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+Icon.swift"; sourceTree = "<group>"; };
 		79ACDAB52555D9B500660E68 /* NatButton+SnapShot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+SnapShot+Tests.swift"; sourceTree = "<group>"; };
+		79ACDADE255C336E00660E68 /* ProgressIndicatorCircular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressIndicatorCircular.swift; sourceTree = "<group>"; };
 		79E7FA1425373ADE00A831BC /* AesopDarkTokens+BorderRadius+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AesopDarkTokens+BorderRadius+Spec.swift"; sourceTree = "<group>"; };
 		79E7FA1C25373B1900A831BC /* AesopLightTokens+BorderRadius+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AesopLightTokens+BorderRadius+Spec.swift"; sourceTree = "<group>"; };
 		79E7FA3225373ED200A831BC /* AesopDarkTokens+Color+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AesopDarkTokens+Color+Spec.swift"; sourceTree = "<group>"; };
@@ -1119,6 +1121,14 @@
 				79ACDAB52555D9B500660E68 /* NatButton+SnapShot+Tests.swift */,
 			);
 			path = Button;
+			sourceTree = "<group>";
+		};
+		79ACDADD255C330400660E68 /* ProgressIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				79ACDADE255C336E00660E68 /* ProgressIndicatorCircular.swift */,
+			);
+			path = ProgressIndicator;
 			sourceTree = "<group>";
 		};
 		79E7FA2B25373CF000A831BC /* AesopDark */ = {
@@ -1915,6 +1925,7 @@
 				EA99DA7A49950566847F2CD983BBD1EA /* Field */,
 				FBCFD36466E6B86E32075C92503882F7 /* Icons */,
 				719A57636DBDBD5D6854EFEC0F362C4C /* NavigationDrawer */,
+				79ACDADD255C330400660E68 /* ProgressIndicator */,
 				844A1E2124AE111D00E93AD9 /* Shortcut */,
 				1C64E7FC7AE243CD11623B12CB2E59B4 /* Tab */,
 				26BFBAD525125195006C22E2 /* Tag */,
@@ -2634,6 +2645,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26740A4924B3A60C00419526 /* NatBadge+Style.swift in Sources */,
+				79ACDADF255C336E00660E68 /* ProgressIndicatorCircular.swift in Sources */,
 				843123E125123F0C002A7B6F /* AesopLightTheme.swift in Sources */,
 				84703F3C24F6ECD300FE01CA /* NatFonts+TextStyle.swift in Sources */,
 				845D099A250119AF00B05760 /* UIView+CenterBounds.swift in Sources */,
