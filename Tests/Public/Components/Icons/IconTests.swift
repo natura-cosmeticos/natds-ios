@@ -251,6 +251,7 @@ extension IconTests {
         case outlinedSocialContact = "outlined-social-contact"
         case outlinedSocialDigitalconsultant = "outlined-social-digitalconsultant"
         case outlinedSocialGroupofpeople = "outlined-social-groupofpeople"
+        case outlinedSocialManagement = "outlined-social-management"
         case outlinedSocialMyprofile = "outlined-social-myprofile"
         case outlinedSocialNetwork = "outlined-social-network"
         case outlinedSocialPerson = "outlined-social-person"
