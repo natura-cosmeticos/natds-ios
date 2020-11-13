@@ -29,7 +29,7 @@ class BadgeableSnapshotTests: XCTestCase {
         systemUnderTest.configure(badgeStyle: .standard, withColor: .alert)
         systemUnderTest.setBadge(count: 100)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.97))
     }
 
     func test_badge_style_standard_alert_count_1_hasValidSnapshot() {
