@@ -31,7 +31,7 @@ class AppBarSnapshotTests: XCTestCase {
         systemUnderTest.configure(style: .default)
         systemUnderTest.visibleViewController?.configure(titleStyle: .title("New Title"))
 
-        assertSnapshot(matching: systemUnderTest, as: .image)
+        assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.97))
     }
 
     func test_appbar_style_default_rightbuttons_hasValidSnapshot() {
