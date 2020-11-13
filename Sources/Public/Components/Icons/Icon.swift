@@ -1,6 +1,6 @@
 // swiftlint:disable type_body_length file_length
 public enum Icon: String, CaseIterable {
-  case filledActionAdd = "filled-action-add"
+    case filledActionAdd = "filled-action-add"
     case filledActionCancel = "filled-action-cancel"
     case filledActionCheck = "filled-action-check"
     case filledActionDelete = "filled-action-delete"
@@ -233,9 +233,9 @@ public enum Icon: String, CaseIterable {
 }
 
 extension Icon {
-  var unicode: String {
-    switch self {
-    case .filledActionAdd: return "\u{EA01}"
+    var unicode: String {
+        switch self {
+        case .filledActionAdd: return "\u{EA01}"
         case .filledActionCancel: return "\u{EA02}"
         case .filledActionCheck: return "\u{EA03}"
         case .filledActionDelete: return "\u{EA04}"
@@ -464,7 +464,6 @@ extension Icon {
         case .outlinedSocialMyprofile: return "\u{EADB}"
         case .outlinedSocialNetwork: return "\u{EADC}"
         case .outlinedSocialPerson: return "\u{EADD}"
-
+        }
     }
-  }
 }
