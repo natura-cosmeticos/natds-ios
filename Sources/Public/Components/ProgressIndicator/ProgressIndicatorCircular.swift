@@ -3,8 +3,8 @@ import UIKit
 
 public class ProgressIndicatorCircular: UIView {
 
-    var circle = UIBezierPath()
-    var semiCircleLayer = CAShapeLayer()
+    private var circle = UIBezierPath()
+    private var semiCircleLayer = CAShapeLayer()
 
     private let circleView: UIView = {
         var view = UIView()
@@ -15,7 +15,7 @@ public class ProgressIndicatorCircular: UIView {
 
     public init() {
         super.init(frame: .zero)
-        configureSemiCircle(semiCircleLayer: semiCircleLayer)
+
         circleView.layer.addSublayer(semiCircleLayer)
         addSubview(circleView)
         setupConstraints()
@@ -23,15 +23,14 @@ public class ProgressIndicatorCircular: UIView {
         semiCircleLayer.add(rotationAnimation(), forKey: "rotationAnimation")
     }
 
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    public func configure(size: Int = 24) {
+        createSemiCircle(semiCircleLayer: semiCircleLayer, size: size)
     }
 
     private func rotationAnimation() -> CABasicAnimation {
         let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
-
         rotationAnimation.fromValue = CGFloat(Double.pi / 2)
-        rotationAnimation.toValue = CGFloat(2.5 * Double.pi)
+        rotationAnimation.toValue = CGFloat(Double.pi * 2.5)
         rotationAnimation.repeatCount = Float.infinity
         rotationAnimation.duration = 3
 
@@ -45,23 +44,22 @@ public class ProgressIndicatorCircular: UIView {
         ])
     }
 
-    private func configureSemiCircle(semiCircleLayer: CAShapeLayer) {
+    private func createSemiCircle(semiCircleLayer: CAShapeLayer, size: Int) {
         circle = UIBezierPath(
             arcCenter: CGPoint.zero,
-            radius: CGFloat(48),
+            radius: CGFloat(size),
             startAngle: CGFloat(Double.pi),
             endAngle: CGFloat(Double.pi * 2.5),
             clockwise: true
         )
 
-        semiCircleLayer.strokeColor = UIColor.red.cgColor
         semiCircleLayer.path = circle.cgPath
         semiCircleLayer.strokeColor = getUIColorFromTokens(\.colorPrimary).cgColor
         semiCircleLayer.fillColor = .none
         semiCircleLayer.lineWidth = 4
-        semiCircleLayer.strokeStart = 0
-        semiCircleLayer.strokeEnd  = 1
-
     }
 
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }

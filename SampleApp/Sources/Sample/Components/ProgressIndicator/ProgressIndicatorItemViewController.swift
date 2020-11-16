@@ -10,7 +10,7 @@ class ProgressIndicatorItemViewController: UIViewController, SampleItem {
         title = Self.name
         setup()
         view.backgroundColor = .white
-
+        progressIndicator.configure(size: 10)
     }
 
     private func setup() {
