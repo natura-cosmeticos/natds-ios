@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name          = 'iNatDS'
+  s.name          = 'NatDS-Swift'
   s.version       = '2.7.0'
   s.summary       = 'Natura Group Design System'
   s.module_name   = 'NatDS'
