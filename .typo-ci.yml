@@ -5,6 +5,7 @@ excluded_files:
   - "NatDS.xcodeproj/project.pbxproj"
   - "SampleApp/NatDS-SampleApp.xcodeproj/project.pbxproj"
   - "Gemfile.lock"
+  - "Icon.swift"
 excluded_words:
   - aways
   - Buildables
