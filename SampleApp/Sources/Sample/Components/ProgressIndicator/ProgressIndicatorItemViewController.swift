@@ -1,4 +1,5 @@
 import NatDS
+import UIKit
 
 class ProgressIndicatorItemViewController: UIViewController, SampleItem {
     static var name = "Progress Indicator"
@@ -8,6 +9,7 @@ class ProgressIndicatorItemViewController: UIViewController, SampleItem {
         super.viewDidLoad()
         title = Self.name
         setup()
+        view.backgroundColor = .white
 
     }
 
