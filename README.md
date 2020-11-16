@@ -1,6 +1,6 @@
 # Natura Design System for iOS
 
-[![Build Status](https://travis-ci.org/natura-cosmeticos/natds-ios.svg)](https://travis-ci.org/natura-cosmeticos/natds-ios)
+[![Build Status](https://app.bitrise.io/app/38848108b04aa71a/status.svg?token=KeP02isBtn73sdE7KEZO4w&branch=master)](https://app.bitrise.io/app/38848108b04aa71a)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/NatDS.svg)](https://img.shields.io/cocoapods/v/NatDS.svg)
 
 
@@ -33,7 +33,7 @@ To integrate NatDS into your Xcode project using CocoaPods, specify it in your `
 
 ```ruby
 target '<Your Target Name>' do
-    pod 'NatDS'
+    pod 'NatDS-Swift'
 end
 ```
 
@@ -41,6 +41,12 @@ Then, run the following command:
 
 ```bash
 $ pod install
+```
+
+Before start using, it's necessary to configure the Design System with a theme or fatalError will be raised.
+
+```swift
+DesignSystem().configure(with: AvailableTheme)
 ```
 
 ### Getting Started
