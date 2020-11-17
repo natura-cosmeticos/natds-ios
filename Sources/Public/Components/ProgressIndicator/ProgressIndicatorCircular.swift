@@ -2,10 +2,8 @@ import Foundation
 import UIKit
 
 public class ProgressIndicatorCircular: UIView {
-
     private var circle = UIBezierPath()
     private var semiCircleLayer = CAShapeLayer()
-
     private let circleView: UIView = {
         var view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -19,13 +17,11 @@ public class ProgressIndicatorCircular: UIView {
         circleView.layer.addSublayer(semiCircleLayer)
         addSubview(circleView)
         setupConstraints()
-
+        isProgressHidden()
         semiCircleLayer.add(rotationAnimation(), forKey: "rotationAnimation")
     }
 
-    public func configure(size: Int = 24) {
-        createSemiCircle(semiCircleLayer: semiCircleLayer, size: size)
-    }
+    // MARK: - Private Methods
 
     private func rotationAnimation() -> CABasicAnimation {
         let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
@@ -57,6 +53,20 @@ public class ProgressIndicatorCircular: UIView {
         semiCircleLayer.strokeColor = getUIColorFromTokens(\.colorPrimary).cgColor
         semiCircleLayer.fillColor = .none
         semiCircleLayer.lineWidth = 4
+    }
+
+    // MARK: - Public Methods
+
+    public func configure(size: Int = 24) {
+        createSemiCircle(semiCircleLayer: semiCircleLayer, size: size)
+    }
+
+    public func isProgressHidden(isProgressIndicatorHidden: Bool = false) {
+        if isProgressIndicatorHidden {
+            circleView.removeFromSuperview()
+        } else {
+            addSubview(circleView)
+        }
     }
 
     required init?(coder: NSCoder) {

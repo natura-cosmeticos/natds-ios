@@ -8,9 +8,9 @@ class ProgressIndicatorItemViewController: UIViewController, SampleItem {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = Self.name
-        setup()
         view.backgroundColor = .white
-        progressIndicator.configure(size: 10)
+        setup()
+        progressIndicator.configure()
     }
 
     private func setup() {
