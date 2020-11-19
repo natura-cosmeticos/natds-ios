@@ -100,6 +100,7 @@
 		797E614125531CF7002A59E0 /* TheBodyShopDarkComponents+Logo+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797E614025531CF7002A59E0 /* TheBodyShopDarkComponents+Logo+Spec.swift */; };
 		797E614A25531D2D002A59E0 /* TheBodyShopLightComponents+Logo+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797E614925531D2D002A59E0 /* TheBodyShopLightComponents+Logo+Spec.swift */; };
 		797E615E255464D1002A59E0 /* NatButton+Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797E615D255464D1002A59E0 /* NatButton+Icon.swift */; };
+		799B683C256720890055B96D /* ProgressIndicatorCircular+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799B683B256720890055B96D /* ProgressIndicatorCircular+Snapshot+Tests.swift */; };
 		79ACDAB62555D9B500660E68 /* NatButton+SnapShot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ACDAB52555D9B500660E68 /* NatButton+SnapShot+Tests.swift */; };
 		79ACDADF255C336E00660E68 /* ProgressIndicatorCircular.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ACDADE255C336E00660E68 /* ProgressIndicatorCircular.swift */; };
 		79E7FA1525373ADE00A831BC /* AesopDarkTokens+BorderRadius+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FA1425373ADE00A831BC /* AesopDarkTokens+BorderRadius+Spec.swift */; };
@@ -427,6 +428,7 @@
 		797E614025531CF7002A59E0 /* TheBodyShopDarkComponents+Logo+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheBodyShopDarkComponents+Logo+Spec.swift"; sourceTree = "<group>"; };
 		797E614925531D2D002A59E0 /* TheBodyShopLightComponents+Logo+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheBodyShopLightComponents+Logo+Spec.swift"; sourceTree = "<group>"; };
 		797E615D255464D1002A59E0 /* NatButton+Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+Icon.swift"; sourceTree = "<group>"; };
+		799B683B256720890055B96D /* ProgressIndicatorCircular+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProgressIndicatorCircular+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		79ACDAB52555D9B500660E68 /* NatButton+SnapShot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+SnapShot+Tests.swift"; sourceTree = "<group>"; };
 		79ACDADE255C336E00660E68 /* ProgressIndicatorCircular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressIndicatorCircular.swift; sourceTree = "<group>"; };
 		79E7FA1425373ADE00A831BC /* AesopDarkTokens+BorderRadius+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AesopDarkTokens+BorderRadius+Spec.swift"; sourceTree = "<group>"; };
@@ -1126,6 +1128,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		799B683725671F0C0055B96D /* ProgressIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				799B683B256720890055B96D /* ProgressIndicatorCircular+Snapshot+Tests.swift */,
+			);
+			path = ProgressIndicator;
+			sourceTree = "<group>";
+		};
 		79ACDAB42555D99300660E68 /* Button */ = {
 			isa = PBXGroup;
 			children = (
@@ -1140,8 +1150,8 @@
 				79ACDADE255C336E00660E68 /* ProgressIndicatorCircular.swift */,
 			);
 			path = ProgressIndicator;
-            sourceTree = "<group>";
-           };
+			sourceTree = "<group>";
+		};
 		79ACDAFC255DAFA300660E68 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
@@ -1429,6 +1439,7 @@
 				8401A9BE24FED3C900B6E762 /* IconButton */,
 				84BB92A124DCB71400A9BCC8 /* Icons */,
 				84A16EFD24DDBC3200E80DA0 /* NavigationDrawer */,
+				799B683725671F0C0055B96D /* ProgressIndicator */,
 				84391DEB24DB4784009D0BE8 /* Shortcut */,
 				84BB928924DC734800A9BCC8 /* Tab */,
 				26BFBADC251273AB006C22E2 /* Tag */,
@@ -2802,6 +2813,7 @@
 				84BB928624DC6B3500A9BCC8 /* BadgeableStub.swift in Sources */,
 				84A16F0124DDBE5500E80DA0 /* NavigationDrawerSubitemCell+Snapshot+Tests.swift in Sources */,
 				84A16EFF24DDBC6D00E80DA0 /* NavigationDrawerItemCell+Snapshot+Tests.swift in Sources */,
+				799B683C256720890055B96D /* ProgressIndicatorCircular+Snapshot+Tests.swift in Sources */,
 				84BB929024DC772D00A9BCC8 /* Tab+Snapshot+Tests.swift in Sources */,
 				84BB928B24DC743300A9BCC8 /* TabItem+Snapshot+Tests.swift in Sources */,
 				84BB929824DC8FA600A9BCC8 /* ExpansionPanel+Snapshot+Tests.swift in Sources */,
