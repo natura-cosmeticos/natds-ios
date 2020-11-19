@@ -729,6 +729,7 @@
 		120E744C293B89D044FF042E87692C6C /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				79ACDAFC255DAFA300660E68 /* Animations */,
 				8F17D4DBF2804B57A4C0A71661E479AF /* Components */,
 				D0A81AF824CDF9690E19EF12D5D38297 /* DesignTokens */,
 				AB858EEAF58ED77E8AD12908C12E22EA /* Extensions */,
@@ -1139,6 +1140,14 @@
 				79ACDADE255C336E00660E68 /* ProgressIndicatorCircular.swift */,
 			);
 			path = ProgressIndicator;
+            sourceTree = "<group>";
+           };
+		79ACDAFC255DAFA300660E68 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				42FC9280C40680336260347DADB5C0F3 /* Pulsable.swift */,
+			);
+			path = Animations;
 			sourceTree = "<group>";
 		};
 		79E7FA2B25373CF000A831BC /* AesopDark */ = {
@@ -1566,7 +1575,6 @@
 		8475413624B5F7FC0071E884 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
-				42FC9280C40680336260347DADB5C0F3 /* Pulsable.swift */,
 				5AF8919785F0CA6D3AB0AD57F759ED73 /* PulseLayer.swift */,
 			);
 			path = Animations;
@@ -2837,7 +2845,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.6.0;
+				MARKETING_VERSION = 2.7.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.natura.NatDS;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -3052,7 +3060,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.6.0;
+				MARKETING_VERSION = 2.7.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.natura.NatDS;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

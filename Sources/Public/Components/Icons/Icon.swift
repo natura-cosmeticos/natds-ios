@@ -1,5 +1,4 @@
 // swiftlint:disable type_body_length file_length
-
 public enum Icon: String, CaseIterable {
     case filledActionAdd = "filled-action-add"
     case filledActionCancel = "filled-action-cancel"
@@ -65,6 +64,7 @@ public enum Icon: String, CaseIterable {
     case outlinedActionEdit = "outlined-action-edit"
     case outlinedActionFavorite = "outlined-action-favorite"
     case outlinedActionFilter = "outlined-action-filter"
+    case outlinedActionFrame = "outlined-action-frame"
     case outlinedActionGridsquare = "outlined-action-gridsquare"
     case outlinedActionHelp = "outlined-action-help"
     case outlinedActionHistory = "outlined-action-history"
@@ -132,6 +132,7 @@ public enum Icon: String, CaseIterable {
     case outlinedContentGallery = "outlined-content-gallery"
     case outlinedContentGift = "outlined-content-gift"
     case outlinedContentGlobal = "outlined-content-global"
+    case outlinedContentHandcare = "outlined-content-handcare"
     case outlinedContentHandglobal = "outlined-content-handglobal"
     case outlinedContentHands = "outlined-content-hands"
     case outlinedContentHealth = "outlined-content-health"
@@ -224,9 +225,11 @@ public enum Icon: String, CaseIterable {
     case outlinedSocialContact = "outlined-social-contact"
     case outlinedSocialDigitalconsultant = "outlined-social-digitalconsultant"
     case outlinedSocialGroupofpeople = "outlined-social-groupofpeople"
+    case outlinedSocialManagement = "outlined-social-management"
     case outlinedSocialMyprofile = "outlined-social-myprofile"
     case outlinedSocialNetwork = "outlined-social-network"
     case outlinedSocialPerson = "outlined-social-person"
+
 }
 
 extension Icon {
@@ -296,6 +299,7 @@ extension Icon {
         case .outlinedActionEdit: return "\u{EA3E}"
         case .outlinedActionFavorite: return "\u{EA3F}"
         case .outlinedActionFilter: return "\u{EA40}"
+        case .outlinedActionFrame: return "\u{EAE4}"
         case .outlinedActionGridsquare: return "\u{EA41}"
         case .outlinedActionHelp: return "\u{EA42}"
         case .outlinedActionHistory: return "\u{EA43}"
@@ -363,6 +367,7 @@ extension Icon {
         case .outlinedContentGallery: return "\u{EA80}"
         case .outlinedContentGift: return "\u{EA81}"
         case .outlinedContentGlobal: return "\u{EA82}"
+        case .outlinedContentHandcare: return "\u{EAE5}"
         case .outlinedContentHandglobal: return "\u{EA83}"
         case .outlinedContentHands: return "\u{EA84}"
         case .outlinedContentHealth: return "\u{EA85}"
@@ -455,6 +460,7 @@ extension Icon {
         case .outlinedSocialContact: return "\u{EAD8}"
         case .outlinedSocialDigitalconsultant: return "\u{EAD9}"
         case .outlinedSocialGroupofpeople: return "\u{EADA}"
+        case .outlinedSocialManagement: return "\u{EAE3}"
         case .outlinedSocialMyprofile: return "\u{EADB}"
         case .outlinedSocialNetwork: return "\u{EADC}"
         case .outlinedSocialPerson: return "\u{EADD}"

@@ -1,11 +1,11 @@
-protocol Pulsable: AnyObject {}
+public protocol Pulsable: AnyObject {}
 
 extension Pulsable {
 
-    func addPulseLayerAnimated(at point: CGPoint,
-                               in layer: CALayer,
-                               withColor color: UIColor? = nil,
-                               removeAfterAnimation: Bool) {
+    public func addPulseLayerAnimated(at point: CGPoint,
+                                      in layer: CALayer,
+                                      withColor color: UIColor? = nil,
+                                      removeAfterAnimation: Bool) {
 
         let pulseLayer = PulseLayer()
         pulseLayer.frame = layer.bounds
@@ -20,7 +20,7 @@ extension Pulsable {
         pulseLayer.startPulseAt(point: point, removeAfterAnimation: removeAfterAnimation)
     }
 
-    func removePulseLayer(layer: CALayer) {
+    public func removePulseLayer(layer: CALayer) {
         layer.sublayers?
             .compactMap { $0 as? PulseLayer }
             .forEach { $0.endPulse() }
