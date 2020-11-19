@@ -7,21 +7,6 @@ class ProgressIndicatorCircularSpec: QuickSpec {
     override func spec() {
         let systemUnderTest = ProgressIndicatorCircular()
 
-        beforeEach {
-            ConfigurationStorage.shared.currentTheme = StubTheme()
-        }
-
-        describe("#configure") {
-            beforeEach {
-                systemUnderTest.configure()
-            }
-
-            it("adds progress indicator") {
-                let count = 0
-                expect(systemUnderTest.subviews.count).to(equal(count+1))
-            }
-        }
-
         describe("#isProgressHidden") {
             beforeEach {
                 systemUnderTest.configure()

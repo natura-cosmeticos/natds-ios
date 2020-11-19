@@ -13,7 +13,6 @@ public class ProgressIndicatorCircular: UIView {
 
     public init() {
         super.init(frame: .zero)
-
         circleView.layer.addSublayer(semiCircleLayer)
         addSubview(circleView)
         setupConstraints()
@@ -40,10 +39,10 @@ public class ProgressIndicatorCircular: UIView {
         ])
     }
 
-    private func createSemiCircle(semiCircleLayer: CAShapeLayer, size: Int) {
+    private func createSemiCircle(semiCircleLayer: CAShapeLayer, radiusSize: CGFloat) {
         circle = UIBezierPath(
             arcCenter: CGPoint.zero,
-            radius: CGFloat(size),
+            radius: radiusSize,
             startAngle: CGFloat(Double.pi),
             endAngle: CGFloat(Double.pi * 2.5),
             clockwise: true
@@ -57,8 +56,8 @@ public class ProgressIndicatorCircular: UIView {
 
     // MARK: - Public Methods
 
-    public func configure(size: Int = 24) {
-        createSemiCircle(semiCircleLayer: semiCircleLayer, size: size)
+    public func configure(radiusSize: CGFloat = NatSizes.standard) {
+        createSemiCircle(semiCircleLayer: semiCircleLayer, radiusSize: radiusSize)
     }
 
     public func isProgressHidden(isProgressIndicatorHidden: Bool = false) {
