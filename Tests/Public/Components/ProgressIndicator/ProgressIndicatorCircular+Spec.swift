@@ -8,6 +8,16 @@ class ProgressIndicatorCircularSpec: QuickSpec {
         let systemUnderTest = ProgressIndicatorCircular()
         DesignSystem().configure(with: .naturaLight)
 
+        describe("#configure") {
+            beforeEach {
+                systemUnderTest.configure()
+            }
+
+            it("adds progress indicator") {
+                expect(systemUnderTest.layer.sublayers?.count).toNot(beNil())
+            }
+        }
+
         describe("#isProgressHidden") {
             beforeEach {
                 systemUnderTest.configure()
