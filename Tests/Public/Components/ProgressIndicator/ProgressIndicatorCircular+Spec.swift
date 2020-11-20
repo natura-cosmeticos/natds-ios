@@ -6,6 +6,7 @@ import Nimble
 class ProgressIndicatorCircularSpec: QuickSpec {
     override func spec() {
         let systemUnderTest = ProgressIndicatorCircular()
+        DesignSystem().configure(with: .naturaLight)
 
         describe("#isProgressHidden") {
             beforeEach {
@@ -13,9 +14,8 @@ class ProgressIndicatorCircularSpec: QuickSpec {
             }
 
             it("removes progress indicator") {
-                let count = systemUnderTest.subviews.count
-                systemUnderTest.isProgressHidden(isProgressIndicatorHidden: true)
-                expect(systemUnderTest.subviews.count).to(equal(count-1))
+                systemUnderTest.isProgressHidden(true)
+                expect(systemUnderTest.subviews.count).to(equal(0))
             }
         }
     }

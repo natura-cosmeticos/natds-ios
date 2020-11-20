@@ -23,8 +23,8 @@ class ProgressIndicatorItemViewController: UIViewController, SampleItem {
         view.backgroundColor = .white
         addProgressIndicator()
         progressIndicator.configure()
-        progressIndicatorSmall.configure(radiusSize: NatSizes.small)
-        progressIndicatorMedium.configure(radiusSize: NatSizes.medium)
+        progressIndicatorSmall.configure()
+        progressIndicatorMedium.configure()
     }
 
     private func addProgressIndicator() {
@@ -39,20 +39,19 @@ class ProgressIndicatorItemViewController: UIViewController, SampleItem {
 
         NSLayoutConstraint.activate([
             stackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
-            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
 
             progressIndicatorSmall.centerXAnchor.constraint(equalTo: stackView.centerXAnchor),
             progressIndicatorSmall.centerYAnchor.constraint(equalTo: stackView.centerYAnchor),
-            progressIndicatorSmall.topAnchor.constraint(equalTo: stackView.topAnchor, constant: 40),
+            progressIndicatorSmall.topAnchor.constraint(equalTo: stackView.topAnchor, constant: 100),
 
             progressIndicator.centerXAnchor.constraint(equalTo: stackView.centerXAnchor),
             progressIndicator.centerYAnchor.constraint(equalTo: stackView.centerYAnchor),
-            progressIndicator.topAnchor.constraint(equalTo: progressIndicatorSmall.topAnchor, constant: 120),
+            progressIndicator.topAnchor.constraint(equalTo: progressIndicatorSmall.topAnchor, constant: 100),
 
             progressIndicatorMedium.centerXAnchor.constraint(equalTo: stackView.centerXAnchor),
             progressIndicatorMedium.centerYAnchor.constraint(equalTo: stackView.centerYAnchor),
-            progressIndicatorMedium.topAnchor.constraint(equalTo: progressIndicator.topAnchor, constant: 150)
+            progressIndicatorMedium.topAnchor.constraint(equalTo: progressIndicator.topAnchor, constant: 100)
         ])
     }
 }

@@ -4,18 +4,10 @@ import UIKit
 public class ProgressIndicatorCircular: UIView {
     private var circle = UIBezierPath()
     private var semiCircleLayer = CAShapeLayer()
-    private let circleView: UIView = {
-        var view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-
-        return view
-    }()
 
     public init() {
         super.init(frame: .zero)
-        circleView.layer.addSublayer(semiCircleLayer)
-        addSubview(circleView)
-        setupConstraints()
+       layer.addSublayer(semiCircleLayer)
         isProgressHidden()
         semiCircleLayer.add(rotationAnimation(), forKey: "rotationAnimation")
     }
@@ -27,22 +19,15 @@ public class ProgressIndicatorCircular: UIView {
         rotationAnimation.fromValue = CGFloat(Double.pi / 2)
         rotationAnimation.toValue = CGFloat(Double.pi * 2.5)
         rotationAnimation.repeatCount = Float.infinity
-        rotationAnimation.duration = 3
+        rotationAnimation.duration = 1
 
         return rotationAnimation
     }
 
-    private func setupConstraints() {
-        NSLayoutConstraint.activate([
-            circleView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            circleView.centerYAnchor.constraint(equalTo: centerYAnchor)
-        ])
-    }
-
-    private func createSemiCircle(semiCircleLayer: CAShapeLayer, radiusSize: CGFloat) {
+    private func createSemiCircle(semiCircleLayer: CAShapeLayer) {
         circle = UIBezierPath(
             arcCenter: CGPoint.zero,
-            radius: radiusSize,
+            radius: NatSizes.standard,
             startAngle: CGFloat(Double.pi),
             endAngle: CGFloat(Double.pi * 2.5),
             clockwise: true
@@ -56,15 +41,15 @@ public class ProgressIndicatorCircular: UIView {
 
     // MARK: - Public Methods
 
-    public func configure(radiusSize: CGFloat = NatSizes.standard) {
-        createSemiCircle(semiCircleLayer: semiCircleLayer, radiusSize: radiusSize)
+    public func configure() {
+        createSemiCircle(semiCircleLayer: semiCircleLayer)
     }
 
-    public func isProgressHidden(isProgressIndicatorHidden: Bool = false) {
+    public func isProgressHidden(_ isProgressIndicatorHidden: Bool = false) {
         if isProgressIndicatorHidden {
-            circleView.removeFromSuperview()
+            removeFromSuperview()
         } else {
-            addSubview(circleView)
+            layer.addSublayer(semiCircleLayer)
         }
     }
 
