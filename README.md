@@ -33,7 +33,7 @@ To integrate NatDS into your Xcode project using CocoaPods, specify it in your `
 
 ```ruby
 target '<Your Target Name>' do
-    pod 'NatDS-Swift'
+    pod 'NatDS'
 end
 ```
 
