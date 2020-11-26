@@ -5,8 +5,8 @@ import Nimble
 
 class ProgressIndicatorCircularSpec: QuickSpec {
     override func spec() {
-        let systemUnderTest = ProgressIndicatorCircular()
         DesignSystem().configure(with: .avonLight)
+        let systemUnderTest = ProgressIndicatorCircular()
 
         describe("#configure") {
             beforeEach {
@@ -14,7 +14,7 @@ class ProgressIndicatorCircularSpec: QuickSpec {
             }
 
             it("adds progress indicator") {
-                expect(systemUnderTest.layer.sublayers?.count).toNot(beNil())
+                expect(systemUnderTest.isHidden).to(beFalse())
             }
         }
 
@@ -24,7 +24,7 @@ class ProgressIndicatorCircularSpec: QuickSpec {
             }
 
             it("removes progress indicator") {
-                expect(systemUnderTest.subviews.count).to(equal(0))
+                expect(systemUnderTest.isHidden).to(beTrue())
             }
         }
     }

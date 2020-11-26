@@ -18,7 +18,7 @@ final class ProgressIndicatorCircularSnapshotTests: XCTestCase {
     func test_progress_indicator_circular_hasValidSnapshot() {
         let systemUnderTest = ProgressIndicatorCircular()
 
-        systemUnderTest.configure()
+        systemUnderTest.configure(state: .showAndStartAnimation)
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
