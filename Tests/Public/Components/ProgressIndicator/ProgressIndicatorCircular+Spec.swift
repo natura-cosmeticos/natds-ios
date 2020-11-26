@@ -6,7 +6,7 @@ import Nimble
 class ProgressIndicatorCircularSpec: QuickSpec {
     override func spec() {
         DesignSystem().configure(with: .avonLight)
-        let systemUnderTest = ProgressIndicatorCircular()
+        let systemUnderTest = NatProgressIndicatorCircular()
 
         describe("#configure") {
             beforeEach {

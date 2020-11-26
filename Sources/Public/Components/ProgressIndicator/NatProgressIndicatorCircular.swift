@@ -1,9 +1,29 @@
-import Foundation
 import UIKit
+/**
+ NatProgressIndicatorCircular is a class that represents  progress indicator circular  component from the design system.
+ The component colors changes according with the current theme configured in the Design system.
 
-public class ProgressIndicatorCircular: UIView {
+ This component has 2 states:
+ - showAndStartAnimation
+ - hideAndStopAnimation
+
+ Example of usage:
+
+ - let activeProgressIndicator = NatProgressIndicator().configure(state: .showAndStartAnimation)
+
+ - let hiddenProgressIndicator = NatProgressIndicator().configure(state: .hideAndStopAnimation)
+
+ This progress indicator has a pre-defined radius value with NatSizes.Standard
+
+ - Requires:
+ It's necessary to configure the Design System with a theme or fatalError will be raised.
+
+ DesignSystem().configure(with: AvailableTheme)
+ */
+
+public class NatProgressIndicatorCircular: UIView {
     private var semiCircleLayer = CAShapeLayer()
-    
+
     private enum Constants {
         static let rotationAnimationKey = "transform.rotation.z"
         static let semiCircleRotationAnimation = "rotationAnimation"
@@ -36,7 +56,7 @@ public class ProgressIndicatorCircular: UIView {
             clockwise: true
         )
     }
-    
+
     private func configureSemiCircle(semiCircleLayer: CAShapeLayer) {
         semiCircleLayer.path = createCirclePath().cgPath
         semiCircleLayer.strokeColor = getUIColorFromTokens(\.colorPrimary).cgColor
@@ -51,12 +71,12 @@ public class ProgressIndicatorCircular: UIView {
     }
 }
 
-extension ProgressIndicatorCircular {
+extension NatProgressIndicatorCircular {
     public enum State {
         case showAndStartAnimation
         case hideAndStopAnimation
     }
-    
+
     public func configure(state: State) {
         switch state {
         case .showAndStartAnimation:

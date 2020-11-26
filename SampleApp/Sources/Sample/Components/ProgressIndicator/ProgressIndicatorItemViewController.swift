@@ -3,7 +3,7 @@ import UIKit
 
 class ProgressIndicatorItemViewController: UIViewController, SampleItem {
     static var name = "Progress Indicator"
-    private let progressIndicator = ProgressIndicatorCircular()
+    private let progressIndicator = NatProgressIndicatorCircular()
 
     override func viewDidLoad() {
         super.viewDidLoad()
