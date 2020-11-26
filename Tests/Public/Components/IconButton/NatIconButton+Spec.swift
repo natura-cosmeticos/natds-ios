@@ -65,15 +65,31 @@ final class NatIconButtonSpec: QuickSpec {
         }
 
         describe("#configure(action:)") {
-            var actionInvocations = 0
+            var actionInvocations: Int!
 
-            beforeEach {
-                systemUnderTest.configure(action: { actionInvocations += 1 })
-                systemUnderTest.gestureRecognizers?.forEach { $0.sendGesturesEvents() }
+            context("when is enabled") {
+                beforeEach {
+                    actionInvocations = 0
+                    systemUnderTest.configure(action: { actionInvocations += 1 })
+                    systemUnderTest.gestureRecognizers?.forEach { $0.sendGesturesEvents() }
+                }
+
+                it("stores action and uses it in tap events") {
+                    expect(actionInvocations).toEventually(equal(1))
+                }
             }
+            
+            context("when is disabled") {
+                beforeEach {
+                    actionInvocations = 0
+                    systemUnderTest.configure(action: { actionInvocations += 1 })
+                    systemUnderTest.configure(state: .disabled)
+                    systemUnderTest.gestureRecognizers?.forEach { $0.sendGesturesEvents() }
+                }
 
-            it("stores action and uses it in tap events") {
-                expect(actionInvocations).toEventually(equal(1))
+                it("stores action and uses it in tap events") {
+                    expect(actionInvocations).toEventually(equal(0))
+                }
             }
         }
 
