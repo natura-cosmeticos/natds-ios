@@ -161,6 +161,7 @@
 		79E7FBC62538EE5700A831BC /* TheBodyShopLightTokens+Typography+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FBC52538EE5700A831BC /* TheBodyShopLightTokens+Typography+Spec.swift */; };
 		7C00D9B09D306A421DBD99953C7BC9E4 /* NatElevation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2775F568C47ADB6D5DA7B7AFA4A41B4E /* NatElevation.swift */; };
 		7CA6BAC353B73AF5D31F09CAF0268EE5 /* DesignSystemFatalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E6D9764598D210D58B32B2AEB0FE9 /* DesignSystemFatalError.swift */; };
+		7D19998925756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19998825756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift */; };
 		7FCD65E56A79CE1AE08A4C86B8DC1303 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E2F68D8995E164CB35303ADB9507C /* Icon.swift */; };
 		80FE219D764217C0520E0C784F9C0C0B /* PulseLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF8919785F0CA6D3AB0AD57F759ED73 /* PulseLayer.swift */; };
 		81AA5DF0A9D5F332072CA1EC9C5CF968 /* NatOpacities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E76AA6120032EE8B86EB90B51BFD8 /* NatOpacities.swift */; };
@@ -488,6 +489,7 @@
 		79E7FBC02538EE3000A831BC /* TheBodyShopDarkTokens+Typography+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheBodyShopDarkTokens+Typography+Spec.swift"; sourceTree = "<group>"; };
 		79E7FBC52538EE5700A831BC /* TheBodyShopLightTokens+Typography+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheBodyShopLightTokens+Typography+Spec.swift"; sourceTree = "<group>"; };
 		7CCF632B4501044E5062C574CCBBF74E /* NatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatButton.swift; sourceTree = "<group>"; };
+		7D19998825756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatProgressIndicatorCircular+Size.swift"; sourceTree = "<group>"; };
 		7D8E6D9764598D210D58B32B2AEB0FE9 /* DesignSystemFatalError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemFatalError.swift; sourceTree = "<group>"; };
 		7F9C4251076A01537D0A8CB995DF81EC /* NavigationDrawerSubitemCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerSubitemCellTests.swift; sourceTree = "<group>"; };
 		83C59F929E88764313134A046BA5C30F /* DesignSystem+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DesignSystem+Spec.swift"; sourceTree = "<group>"; };
@@ -1148,6 +1150,7 @@
 			isa = PBXGroup;
 			children = (
 				79ACDADE255C336E00660E68 /* NatProgressIndicatorCircular.swift */,
+				7D19998825756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift */,
 			);
 			path = ProgressIndicator;
 			sourceTree = "<group>";
@@ -2706,6 +2709,7 @@
 				7CA6BAC353B73AF5D31F09CAF0268EE5 /* DesignSystemFatalError.swift in Sources */,
 				8F808FFBB4549BC4F3895B8CBB23ADB3 /* Divider.swift in Sources */,
 				84703F3F24F83EEC00FE01CA /* NatIconButton.swift in Sources */,
+				7D19998925756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift in Sources */,
 				847C829624E36AE1001CE116 /* TheBodyShopLightTheme.swift in Sources */,
 				84BC900524AA163A007DF09D /* DialogFooterView.swift in Sources */,
 				269C886824C2483600A507BE /* UIBarButtonItem+Icon.swift in Sources */,

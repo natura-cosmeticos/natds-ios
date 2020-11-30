@@ -10,7 +10,7 @@ class ProgressIndicatorCircularSpec: QuickSpec {
 
         describe("#configure") {
             beforeEach {
-                systemUnderTest.configure(state: .showAndStartAnimation)
+                systemUnderTest.configure(with: .showAndStartAnimation)
             }
 
             it("adds progress indicator") {
@@ -20,7 +20,7 @@ class ProgressIndicatorCircularSpec: QuickSpec {
 
         describe("#isProgressHidden") {
             beforeEach {
-                systemUnderTest.configure(state: .hideAndStopAnimation)
+                systemUnderTest.configure(with: .hideAndStopAnimation)
             }
 
             it("removes progress indicator") {

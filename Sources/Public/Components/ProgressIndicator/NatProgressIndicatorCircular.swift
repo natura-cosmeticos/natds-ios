@@ -1,41 +1,71 @@
 import UIKit
 /**
- NatProgressIndicatorCircular is a class that represents  progress indicator circular  component from the design system.
- The component colors changes according with the current theme configured in the Design system.
+ NatProgressIndicatorCircular is a class that represents progress indicator circular component from the Design System.
+ The component colors changes according with the current theme configured in the Design System.
 
- This component has 2 states:
+ This component has 2 actions:
  - showAndStartAnimation
  - hideAndStopAnimation
 
- Example of usage:
+     Example of usage:
+     - progressIndicator.configure(state: .showAndStartAnimation)
+     - hiddenProgressIndicator.configure(state: .hideAndStopAnimation)
 
- - let activeProgressIndicator = NatProgressIndicator().configure(state: .showAndStartAnimation)
-
- - let hiddenProgressIndicator = NatProgressIndicator().configure(state: .hideAndStopAnimation)
-
- This progress indicator has a pre-defined radius value with NatSizes.Standard
+ This progress indicator has a pre-defined radius value with NatSizes.Standard.
+ The constraints for width and height should use the pre-defined size:
+ 
+     Example of usage:
+     - progressIndicator.heightAnchor.constraint(equalToConstant: NatProgressIndicatorCircular.Size.standard)
+     - progressIndicator.widthAnchor.constraint(equalToConstant: NatProgressIndicatorCircular.Size.standard)
 
  - Requires:
- It's necessary to configure the Design System with a theme or fatalError will be raised.
-
- DesignSystem().configure(with: AvailableTheme)
+    It's necessary to configure the Design System with a theme or fatalError will be raised.
+ 
+        DesignSystem().configure(with: AvailableTheme)
  */
 
 public class NatProgressIndicatorCircular: UIView {
+    public enum Action {
+        case showAndStartAnimation
+        case hideAndStopAnimation
+    }
+    
+    // MARK: - Private properties
+    
     private var semiCircleLayer = CAShapeLayer()
 
     private enum Constants {
         static let rotationAnimationKey = "transform.rotation.z"
         static let semiCircleRotationAnimation = "rotationAnimation"
     }
+    
+    // MARK: - Inits
 
     public init() {
         super.init(frame: .zero)
-        layer.addSublayer(semiCircleLayer)
-        configureSemiCircle(semiCircleLayer: semiCircleLayer)
+        clipsToBounds = true
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Public methods
+    
+    public func configure(with action: Action) {
+        switch action {
+        case .showAndStartAnimation:
+            configureSemiCircle(semiCircleLayer: semiCircleLayer)
+            semiCircleLayer.add(rotationAnimation(), forKey: Constants.semiCircleRotationAnimation)
+            layer.addSublayer(semiCircleLayer)
+            isHidden = false
+        case .hideAndStopAnimation:
+            isHidden = true
+            semiCircleLayer.removeAllAnimations()
+        }
     }
 
-    // MARK: - Private Methods
+    // MARK: - Private methods
 
     private func rotationAnimation() -> CABasicAnimation {
         let rotationAnimation = CABasicAnimation(keyPath: Constants.rotationAnimationKey)
@@ -49,8 +79,8 @@ public class NatProgressIndicatorCircular: UIView {
 
     private func createCirclePath() -> UIBezierPath {
         .init(
-            arcCenter: CGPoint.zero,
-            radius: getTokenFromTheme(\.sizeStandard),
+            arcCenter: CGPoint(x: semiCircleLayer.bounds.midX, y: semiCircleLayer.bounds.midY),
+            radius: getTokenFromTheme(\.sizeStandard)-getTokenFromTheme(\.sizeMicro),
             startAngle: CGFloat(Double.pi),
             endAngle: CGFloat(Double.pi * 2.5),
             clockwise: true
@@ -62,29 +92,6 @@ public class NatProgressIndicatorCircular: UIView {
         semiCircleLayer.strokeColor = getUIColorFromTokens(\.colorPrimary).cgColor
         semiCircleLayer.fillColor = .none
         semiCircleLayer.lineWidth = getTokenFromTheme(\.sizeMicro)
-    }
-
-    // MARK: - Public Methods
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-}
-
-extension NatProgressIndicatorCircular {
-    public enum State {
-        case showAndStartAnimation
-        case hideAndStopAnimation
-    }
-
-    public func configure(state: State) {
-        switch state {
-        case .showAndStartAnimation:
-            isHidden = false
-            semiCircleLayer.add(rotationAnimation(), forKey: Constants.semiCircleRotationAnimation)
-        case .hideAndStopAnimation:
-            isHidden = true
-            semiCircleLayer.removeAllAnimations()
-        }
+        semiCircleLayer.position = CGPoint(x: bounds.midX, y: bounds.midY)
     }
 }

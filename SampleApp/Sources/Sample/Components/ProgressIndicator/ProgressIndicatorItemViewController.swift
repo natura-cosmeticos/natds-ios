@@ -10,7 +10,10 @@ class ProgressIndicatorItemViewController: UIViewController, SampleItem {
         title = Self.name
         view.backgroundColor = NatColors.background
         addProgressIndicator()
-        progressIndicator.configure(state: .showAndStartAnimation)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        progressIndicator.configure(with: .showAndStartAnimation)
     }
 
     private func addProgressIndicator() {
@@ -20,8 +23,10 @@ class ProgressIndicatorItemViewController: UIViewController, SampleItem {
 
         NSLayoutConstraint.activate([
             progressIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            progressIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-
+            progressIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            progressIndicator.heightAnchor.constraint(equalToConstant: NatProgressIndicatorCircular.Size.standard),
+            progressIndicator.widthAnchor.constraint(equalToConstant: NatProgressIndicatorCircular.Size.standard)
         ])
+        
     }
 }

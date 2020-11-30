@@ -31,6 +31,8 @@ public final class NatIconButton: UIView {
 
         return iconView
     }()
+    
+    // MARK: - Private properties
 
     private let style: Style
     private let notificationCenter: NotificationCenterObservable
