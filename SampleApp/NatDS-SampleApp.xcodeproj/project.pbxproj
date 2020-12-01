@@ -29,6 +29,7 @@
 		5C015C21B5CCA24BFE6643ABE6AEF850 /* NatDS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBC24456A172162B3538C51FBFE2BA6 /* NatDS.framework */; };
 		6566B8AD366FC73D95DA1F35979D488C /* NavigationDrawerItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D4B7F03E632BFE339DA40C2269B9D9 /* NavigationDrawerItemViewController.swift */; };
 		6B065E9FA8AEAD33D6341DB8C671D74C /* DialogItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6AF03A3D6B2368E721CAB74F2424A /* DialogItemViewController.swift */; };
+		79ACDAE5255C343500660E68 /* ProgressIndicatorItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ACDAE4255C343500660E68 /* ProgressIndicatorItemViewController.swift */; };
 		8402F4E624F932E70018149C /* IconButtonItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402F4E524F932E70018149C /* IconButtonItemViewController.swift */; };
 		8409B9312507B9E2006ED4EA /* CustomSplashViewController+GradientBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409B9302507B9E2006ED4EA /* CustomSplashViewController+GradientBackgroundView.swift */; };
 		842EA8AB25082B60009AE473 /* ChooseBrandHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842EA8AA25082B60009AE473 /* ChooseBrandHeader.swift */; };
@@ -95,6 +96,7 @@
 		6CCE6B3ED45C1E81094E9B4DDAB9D1EC /* SizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeViewController.swift; sourceTree = "<group>"; };
 		729810E32083E04163C749DCF3552FA6 /* DesignSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSection.swift; sourceTree = "<group>"; };
 		73162360481FF4DE5378EBF0DF3B2F1C /* SpacingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacingCell.swift; sourceTree = "<group>"; };
+		79ACDAE4255C343500660E68 /* ProgressIndicatorItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressIndicatorItemViewController.swift; sourceTree = "<group>"; };
 		8402F4E524F932E70018149C /* IconButtonItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButtonItemViewController.swift; sourceTree = "<group>"; };
 		8409B9302507B9E2006ED4EA /* CustomSplashViewController+GradientBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomSplashViewController+GradientBackgroundView.swift"; sourceTree = "<group>"; };
 		842EA8AA25082B60009AE473 /* ChooseBrandHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseBrandHeader.swift; sourceTree = "<group>"; };
@@ -243,6 +245,14 @@
 			path = Colors;
 			sourceTree = "<group>";
 		};
+		79ACDAE3255C33F700660E68 /* ProgressIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				79ACDAE4255C343500660E68 /* ProgressIndicatorItemViewController.swift */,
+			);
+			path = ProgressIndicator;
+			sourceTree = "<group>";
+		};
 		8402F4E424F932570018149C /* IconButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,6 +319,7 @@
 				8402F4E424F932570018149C /* IconButton */,
 				CDF47F683C800E8289A0310CD7EA0F0C /* Iconography */,
 				FC4556C0DD691C829616B3DDA86F0CBA /* NavigationDrawer */,
+				79ACDAE3255C33F700660E68 /* ProgressIndicator */,
 				844A1E2424AE2B7600E93AD9 /* Shortcut */,
 				C420063DEF581D12DAA6D31645B6B382 /* Tab */,
 				2600C21C25127D500040C4C4 /* Tag */,
@@ -606,6 +617,7 @@
 				47382B136831753E7775B5E76392DA56 /* ColorsCell.swift in Sources */,
 				0E0C618A24C7749300AF8FBB /* AppBarDataSource.swift in Sources */,
 				190F96D8AFCE86FA621E6BDD5A3390F2 /* ColorsHeaderView.swift in Sources */,
+				79ACDAE5255C343500660E68 /* ProgressIndicatorItemViewController.swift in Sources */,
 				542BBE6C15A7E0C25DD69346A43430B0 /* ColorsViewController.swift in Sources */,
 				DF627B5ABA0E7336C4F3554132159A83 /* ComponentsSection.swift in Sources */,
 				265B17EE24AFBE5500FD0407 /* BadgeViewController.swift in Sources */,
@@ -671,7 +683,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.8.0;
+				MARKETING_VERSION = 2.8.1;
 				PRODUCT_BUNDLE_IDENTIFIER = net.natura.NatDSSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "match Development net.natura.NatDSSampleApp";
@@ -807,7 +819,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.8.0;
+				MARKETING_VERSION = 2.8.1;
 				PRODUCT_BUNDLE_IDENTIFIER = net.natura.NatDSSampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore net.natura.NatDSSampleApp";

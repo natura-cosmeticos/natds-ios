@@ -31,6 +31,8 @@ public final class NatIconButton: UIView {
 
         return iconView
     }()
+    
+    // MARK: - Private properties
 
     private let style: Style
     private let notificationCenter: NotificationCenterObservable
@@ -68,6 +70,7 @@ public final class NatIconButton: UIView {
     // MARK: - User interactions
 
     @objc func tapHandler(_ sender: UIGestureRecognizer) {
+        guard currentState == .enabled else { return }
         action?()
         removePulseLayer(layer: layer)
     }
