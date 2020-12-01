@@ -2,6 +2,25 @@ import Foundation
 
 public class SearchBar: UISearchBar {
 
+    /**
+      SearchBar is a class that represents  a component from the design system.
+
+      The SearchBar is used in the AppBar and Its colors changes according with the current Brand configured.
+
+        Example of usage:
+        - navigationItem.titleView = appSearchBar
+
+     It's possíble to set some placeholder:
+        Example of usage:
+        - let appSearchBar = SearchBar()
+        - appSearchBar.placeholder = "Type some text"
+
+     - Requires:
+            It's necessary to configure the Design System with a theme or fatalError will be raised.
+
+                DesignSystem().configure(with: AvailableTheme)
+    */
+
     public override init(frame: CGRect) {
         super.init(frame: frame)
         setup()

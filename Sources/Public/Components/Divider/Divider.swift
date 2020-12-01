@@ -1,3 +1,14 @@
+/**
+  Divider is a class that represents Divider component from the design system.
+
+    It has a predetermined height, and to configure its width It's necessary use via constraints
+
+ - Requires:
+        It's necessary to configure the Design System with a theme or fatalError will be raised.
+
+            DesignSystem().configure(with: AvailableTheme)
+*/
+
 public class Divider: UIView {
 
     public init() {

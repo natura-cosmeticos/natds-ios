@@ -1,3 +1,24 @@
+/**
+ TextField is a class that represents a component from the design system.
+ The textfield styles, keyboards, captalization and autocorrection properties changes according with the type choosen.
+
+ This TextField has 3 types:
+ - Text
+ - Name
+ - Number
+
+ Example of usage:
+
+- textField.type = .text
+- textField.type = .name
+- textField.type = .number
+
+ - Requires:
+ It's necessary to configure the Design System with a theme or fatalError will be raised.
+
+ DesignSystem().configure(with: AvailableTheme)
+ */
+
 public class TextField: UIView {
 
     enum State {
@@ -5,6 +26,16 @@ public class TextField: UIView {
         case active
         case error
     }
+
+    /**
+     There are properties that changes the textfield styles as well.
+
+    Properties:
+    - title
+    - placeholder
+    - helper
+    - error
+     */
 
     public var title: String? {
         get { titleLabel.text }

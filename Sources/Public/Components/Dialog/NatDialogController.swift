@@ -1,7 +1,7 @@
 import UIKit
 
 /**
-  NatDialogController is a class that represents Dialog component from the design system.
+  NatDialogController is a class that represents a component from the design system.
   The colors changes according with the current theme configured in the Design system.
 
     Available styles:
@@ -172,7 +172,7 @@ extension NatDialogController {
             let dialog = NatDialogController
             .alertStyleBuilder
             .configure(body: "Body")
-            .configure(primaryTitle: "Title", primaryAction: { print("lol") })
+            .configure(primaryTitle: "Title", primaryAction: { print("some text") })
             .build()
 
      - Requires:
