@@ -20,10 +20,10 @@
 There are properties that changes the textfield styles as well.
 
 Properties:
-- title
-- placeholder
-- helper
-- error
+- title: Label text always displayed above textfield
+- placeholder: Hint text to display when the text is empty
+- helper: Hint text always displayed below textfield
+- error: Text that alerts about an error
 
 Use the methods of TextFieldDelegate protocol to manage the following feature
 

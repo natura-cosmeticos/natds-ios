@@ -1,6 +1,7 @@
 import UIKit
 
 /**
+
   NatDialogController is a class that represents a component from the design system.
   The colors changes according with the current theme configured in the Design system.
 
@@ -8,15 +9,25 @@ import UIKit
     - Standard
     - Alert
 
-    To create and configure Dialogs it's necessary use via Dialog Builders this builds are available as class
-    properties,
+    To create and configure Dialogs it's necessary use Dialog Builders that builds are available as class
+    properties.
 
-        Example of usage:
+    Available elements to configure:
 
-        let dialog = NatDialogController
-        .standardStyleBuilder
-        .configure(...)
-        .build()
+    - Title
+    - Body (Text or Custom view)
+    - Primary Button (must be configured before other buttons)
+    - Secondary Button (Optional)
+
+
+          Example of usage:
+
+             let dialog = NatDialogController
+             .standardStyleBuilder
+             .configure(title: "Title")
+             .configure(body: "Body")
+             .configure(primaryTitle: "Title", primaryAction: { print("Some text") })
+             .build()
 
  - Requires:
         It's necessary to configure the Design System with a theme or fatalError will be raised.
