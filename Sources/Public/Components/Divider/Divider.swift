@@ -10,7 +10,6 @@
 */
 
 public class Divider: UIView {
-
     public init() {
         super.init(frame: .zero)
         setup()

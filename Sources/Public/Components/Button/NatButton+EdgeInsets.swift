@@ -7,7 +7,7 @@ extension NatButton {
         - medium (default)
         - large
 
-        usage example:
+        Usage example:
 
             let button = NatButton(style: .contained)
             button.contentEdgeInsets = NatButton.EdgeInsets.medium

@@ -7,17 +7,36 @@
  - Name
  - Number
 
- Example of usage:
+             Example of usage:
+            - textField.type = .text
+            - textField.type = .name
+            - textField.type = .number
 
-- textField.type = .text
-- textField.type = .name
-- textField.type = .number
+ This TextField has 3 States:
+ - enable
+ - active
+ - error
 
- - Requires:
- It's necessary to configure the Design System with a theme or fatalError will be raised.
+There are properties that changes the textfield styles as well.
 
- DesignSystem().configure(with: AvailableTheme)
- */
+Properties:
+- title
+- placeholder
+- helper
+- error
+
+Use the methods of TextFieldDelegate protocol to manage the following feature
+
+- natTextFieldDidBeginEditing
+- natTextFieldDidEndEditing
+- natTextFieldEditingChanged
+- natTextFieldShouldBeginEditing
+- natTextField
+
+     - Requires:
+     It's necessary to configure the Design System with a theme or fatalError will be raised.
+     DesignSystem().configure(with: AvailableTheme)
+     */
 
 public class TextField: UIView {
 
@@ -26,16 +45,6 @@ public class TextField: UIView {
         case active
         case error
     }
-
-    /**
-     There are properties that changes the textfield styles as well.
-
-    Properties:
-    - title
-    - placeholder
-    - helper
-    - error
-     */
 
     public var title: String? {
         get { titleLabel.text }

@@ -10,17 +10,28 @@ public protocol NavigationDrawerDelegate: AnyObject {
 /**
  NavigationDrawer is a class that represents a component from the design system.
 
- The NavigationDrawerSubitemCell has 3 states:
+ The NavigationDrawerSubitem has 3 states:
+
  - normal
  - disabled
  - selected
 
  An Item has important properties to configure:
- -  label: String
- - icon: Icon
- - disabled: Bool
- - tagText: String?
- - subitems: [Subitem]
+
+ -  label
+ - icon
+ - disabled
+ - tagText
+ - subitems
+
+ Use the methods of NavigationDrawerDelegate protocol to manage the following features:
+
+ - numberOfItems
+ - numberOfSubitems
+ - didSelectItem
+ - didSelectSubitem
+ - configureItem
+ - configureSubitem
 
  - Requires:
  It's necessary to configure the Design System with a theme or fatalError will be raised.

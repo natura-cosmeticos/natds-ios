@@ -1,4 +1,14 @@
 extension NatDialogController {
+    /**
+         AlertStyleBuilder is one of the styles available for NatDialogController componente.
+
+                    Example of usage:
+                         let dialog = NatDialogController
+                         .standardStyleBuilder
+                         .configure(...)
+                         .build()
+
+     */
     public final class AlertStyleBuilder {
 
         // MARK: - NatDialogBuilder

@@ -1,6 +1,5 @@
 @objcMembers
 public class NavigationDrawerItemCell: UITableViewCell {
-
     public enum State: Int {
         case normal
         case disabled

@@ -1,4 +1,10 @@
 extension NatTag {
+    /**
+     Style represents styles values for the NatTag component.
+
+        These are all styles allowed for a NatTag:
+        - defaultAlert
+    */
     public struct Style {
         let applyStyle: (NatTag) -> Void
 

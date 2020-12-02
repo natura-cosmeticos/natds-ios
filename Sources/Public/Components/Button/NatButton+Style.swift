@@ -1,4 +1,24 @@
 extension NatButton {
+
+    /**
+     Style is a enum that represents style values for the button component.
+
+        These are all styles allowed for a NatButton:
+        - contained
+        - outlined
+        - text
+
+             Example of usage:
+                 - let containedButton = NatButton(style: .contained)
+                 - let outlinedButton = NatButton(style: .outlined)
+                 - let textButton = NatButton(style: .text)
+
+     - Requires:
+            It's necessary to configure the Design System with a theme or fatalError will be raised.
+
+                DesignSystem().configure(with: AvailableTheme)
+    */
+
     public struct Style {
         let applyStyle: (NatButton) -> Void
         let changeState: ((NatButton) -> Void)?

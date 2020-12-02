@@ -8,11 +8,11 @@ public protocol TabDelegate: AnyObject {
  Tab is a class that represents a  component from the design system.
  A new tab is inserted using insertTab(title: String) method.
 
- Example of usage:
- - tab.insertTab(title: "Tab One")
+     Example of usage:
+     - tab.insertTab(title: "Tab One")
 
- It's possible to select a tab using the selectedSegmentedIndex property:
- - tab.selectedSegmentedIndex = 1
+     It's possible to select a tab using the selectedSegmentedIndex property:
+     - tab.selectedSegmentedIndex = 1
 
  - Requires:
  It's necessary to configure the Design System with a theme or fatalError will be raised.
