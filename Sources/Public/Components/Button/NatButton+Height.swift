@@ -7,7 +7,7 @@ extension NatButton {
         - medium (should be default)
         - large
 
-        usage example:
+        Usage example:
 
             button.heightAnchor.constraint(equalToConstant: NatButton.Height.medium)
 

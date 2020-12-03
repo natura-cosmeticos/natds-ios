@@ -9,6 +9,7 @@ import Foundation
     - standardPrimary
 
         Example of usage:
+ 
             let iconButtonDefault = NatIconButton(style: .standardDefault)
             let iconButtonPrimary = NatIconButton(style: .standardPrimary)
 
@@ -19,6 +20,13 @@ import Foundation
  */
 
 public final class NatIconButton: UIView {
+    /**
+     State represents states values for the NatIconButton component.
+
+        These are all states allowed for a NatIconButton:
+        - enabled
+        - disabled
+    */
     public enum State {
         case enabled
         case disabled

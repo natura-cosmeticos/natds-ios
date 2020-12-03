@@ -1,4 +1,13 @@
 extension NatShortcut {
+    /**
+     Style represents styles values for the NatShortcut component.
+
+        These are all styles allowed for a NatShortcut:
+        - containedPrimary
+        - containedDefault
+        - outlinedPrimary
+        - outlinedDefault
+    */
     public struct Style {
         let applyStyle: (NatShortcut) -> Void
     }

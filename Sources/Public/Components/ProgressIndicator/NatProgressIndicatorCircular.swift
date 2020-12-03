@@ -7,9 +7,9 @@ import UIKit
  - showAndStartAnimation
  - hideAndStopAnimation
 
-     Example of usage:
-     - progressIndicator.configure(state: .showAndStartAnimation)
-     - hiddenProgressIndicator.configure(state: .hideAndStopAnimation)
+         Example of usage:
+         - progressIndicator.configure(state: .showAndStartAnimation)
+         - hiddenProgressIndicator.configure(state: .hideAndStopAnimation)
 
  This progress indicator has a pre-defined radius value with NatSizes.Standard.
  The constraints for width and height should use the pre-defined size:
@@ -25,31 +25,38 @@ import UIKit
  */
 
 public class NatProgressIndicatorCircular: UIView {
+    /**
+     Action is a enum that represents actions for the NatProgressIndicatorCircular component.
+
+        These are all sizes allowed for a NatProgressIndicatorCircular:
+        - showAndStartAnimation
+        - hideAndStopAnimation
+    */
     public enum Action {
         case showAndStartAnimation
         case hideAndStopAnimation
     }
-    
+
     // MARK: - Private properties
-    
+
     private var semiCircleLayer = CAShapeLayer()
 
     private enum Constants {
         static let rotationAnimationKey = "transform.rotation.z"
         static let semiCircleRotationAnimation = "rotationAnimation"
     }
-    
+
     // MARK: - Inits
 
     public init() {
         super.init(frame: .zero)
         clipsToBounds = true
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     // MARK: - Public methods
     
     public func configure(with action: Action) {

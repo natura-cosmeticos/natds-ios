@@ -2,7 +2,7 @@ extension NatButton {
     /**
      Position is a enum that represents the icon side options for the button component.
 
-        These are all sides allowed for a icon in NatButton:
+        These are all positions allowed for a icon in NatButton:
         - right
         - left
     */

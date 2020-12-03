@@ -5,7 +5,7 @@ extension ExpansionPanel {
         This is the spacing available for a ExpansionPanel margin:
         - horizontalMargin
 
-        usage example:
+        Usage example:
 
             expansionPanel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,
                                                     constant: ExpansionPanel.Margin.horizontalMargin)

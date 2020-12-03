@@ -7,6 +7,38 @@ public protocol NavigationDrawerDelegate: AnyObject {
     func configureSubitem(_ subitem: NavigationDrawerSubitemCell, at index: NavigationDrawer.IndexMenu)
 }
 
+/**
+ NavigationDrawer is a class that represents a component from the design system.
+
+ The NavigationDrawerSubitem has 3 states:
+
+ - normal
+ - disabled
+ - selected
+
+ An Item has important properties to configure:
+
+ -  label
+ - icon
+ - disabled
+ - tagText
+ - subitems
+
+ Use the methods of NavigationDrawerDelegate protocol to manage the following features:
+
+ - numberOfItems
+ - numberOfSubitems
+ - didSelectItem
+ - didSelectSubitem
+ - configureItem
+ - configureSubitem
+
+ - Requires:
+ It's necessary to configure the Design System with a theme or fatalError will be raised.
+
+ DesignSystem().configure(with: AvailableTheme)
+ */
+
 public class NavigationDrawer: UIView {
     public weak var delegate: NavigationDrawerDelegate?
 

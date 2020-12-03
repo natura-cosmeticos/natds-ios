@@ -1,3 +1,43 @@
+/**
+ TextField is a class that represents a component from the design system.
+ The textfield styles, keyboards, capitalization and autocorrection properties changes according with the choosen type.
+
+ This TextField has 3 types:
+ - Text
+ - Name
+ - Number
+
+             Example of usage:
+            - textField.type = .text
+            - textField.type = .name
+            - textField.type = .number
+
+ This TextField has 3 States:
+ - enable
+ - active
+ - error
+
+There are properties that changes the textfield styles as well.
+
+Properties:
+- title: Label text always displayed above textfield
+- placeholder: Hint text to display when the text is empty
+- helper: Hint text always displayed below textfield
+- error: Text that alerts about an error
+
+Use the methods of TextFieldDelegate protocol to manage the following feature
+
+- natTextFieldDidBeginEditing
+- natTextFieldDidEndEditing
+- natTextFieldEditingChanged
+- natTextFieldShouldBeginEditing
+- natTextField
+
+     - Requires:
+     It's necessary to configure the Design System with a theme or fatalError will be raised.
+     DesignSystem().configure(with: AvailableTheme)
+     */
+
 public class TextField: UIView {
 
     enum State {

@@ -1,4 +1,14 @@
 extension NatDialogController {
+    /**
+        StandardStyleBuilder is one of the styles available for NatDialogController component.
+
+                    Example of usage:
+                         let dialog = NatDialogController
+                         .standardStyleBuilder
+                         .configure(...)
+                         .build()
+
+     */
     public final class StandardStyleBuilder {
 
         // MARK: - NatDialogBuilder
