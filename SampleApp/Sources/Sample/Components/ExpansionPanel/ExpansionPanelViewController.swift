@@ -20,7 +20,21 @@ class ExpansionPanelViewController: UIViewController, SampleItem {
         return label
     }()
     // swiftlint:enable line_length
-
+    
+    // TESTING FOR BUGS
+    private lazy var secondPanel: ExpansionPanel = {
+        let expansionPanel = ExpansionPanel()
+        expansionPanel.setSubtitle("Second subtitle")
+        return expansionPanel
+    }()
+    
+    private lazy var secondDetail: UIView = {
+        let view = UIView()
+        view.backgroundColor = .systemPink
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -39,6 +53,17 @@ class ExpansionPanelViewController: UIViewController, SampleItem {
             panel.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -horizontalMargin)
         ])
         panel.setDetailView(detail)
+        
+        view.addSubview(secondPanel)
+        secondPanel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            secondDetail.heightAnchor.constraint(equalToConstant: 50),
+            secondDetail.widthAnchor.constraint(equalToConstant: 100),
+            secondPanel.topAnchor.constraint(equalTo: panel.bottomAnchor, constant: NatSpacing.tiny),
+            secondPanel.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: horizontalMargin),
+            secondPanel.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -horizontalMargin)
+        ])
+        secondPanel.setDetailView(secondDetail)
     }
 
 }
