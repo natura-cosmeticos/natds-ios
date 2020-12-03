@@ -1,5 +1,5 @@
 #!/bin/bash
 set -e
 
-mkdir build
-echo "test deploy" > ./build/test.txt
+gem install jazzy
+jazzy -o build
