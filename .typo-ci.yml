@@ -17,6 +17,7 @@ excluded_words:
   - DarkVertical
   - downloader
   - enum
+  - Enums
   - Horizontal
   - Inits
   - isa
@@ -25,6 +26,7 @@ excluded_words:
   - Logo-NaturaCosmeticos-DarkVertical
   - Logo-NaturaCosmeticos-Horizontal
   - lproj
+  - lunr
   - nat
   - natds
   - natds-themes
