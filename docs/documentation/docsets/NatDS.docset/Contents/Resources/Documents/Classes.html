@@ -17,7 +17,7 @@
     <a title="Classes  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">NatDS 2.8.1 Docs</a> (8% documented)</p>
+        <p><a href="index.html">NatDS 2.8.1 Docs</a> (13% documented)</p>
         <p class="header-right">
           <form role="search" action="search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -392,7 +392,25 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>SearchBar is a class that represents  a component from the design system.</p>
+
+<p>The SearchBar is used in the AppBar and Its colors changes according with the current Brand configured.</p>
+<pre class="highlight swift"><code>       <span class="kt">Example</span> <span class="n">of</span> <span class="nv">usage</span><span class="p">:</span>
+       <span class="o">-</span> <span class="n">navigationItem</span><span class="o">.</span><span class="n">titleView</span> <span class="o">=</span> <span class="n">appSearchBar</span>
+</code></pre>
+
+<p>It&rsquo;s possíble to set some placeholder:</p>
+<pre class="highlight swift"><code>       <span class="kt">Example</span> <span class="n">of</span> <span class="nv">usage</span><span class="p">:</span>
+       <span class="o">-</span> <span class="k">let</span> <span class="nv">appSearchBar</span> <span class="o">=</span> <span class="kt">SearchBar</span><span class="p">()</span>
+       <span class="o">-</span> <span class="n">appSearchBar</span><span class="o">.</span><span class="n">placeholder</span> <span class="o">=</span> <span class="s">"Type some text"</span>
+</code></pre>
+<div class="aside aside-requires">
+    <p class="aside-title">Requires</p>
+    <p>It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.</p>
+<pre class="highlight swift"><code>   <span class="kt">DesignSystem</span><span class="p">()</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="kt">AvailableTheme</span><span class="p">)</span>
+</code></pre>
+
+</div>
 
                         <a href="Classes/SearchBar.html" class="slightly-smaller">See more</a>
                       </div>
@@ -421,32 +439,29 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>NatButton is a class that represents  button  component from the design system.
-The button colors changes according with the current theme configured in the Design system.</p>
+ The button colors changes according with the current theme configured in the Design system.</p>
 
 <p>This button has 3 styles:</p>
 
 <ul>
 <li>Contained</li>
 <li>Outlined</li>
-<li>Text</li>
-</ul>
+<li><p>Text</p>
+<pre class="highlight swift"><code><span class="kt">Example</span> <span class="n">of</span> <span class="nv">usage</span><span class="p">:</span>
+    <span class="o">-</span> <span class="k">let</span> <span class="nv">containedButton</span> <span class="o">=</span> <span class="kt">NatButton</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">contained</span><span class="p">)</span>
+    <span class="o">-</span> <span class="k">let</span> <span class="nv">outlinedButton</span> <span class="o">=</span> <span class="kt">NatButton</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">outlined</span><span class="p">)</span>
+    <span class="o">-</span> <span class="k">let</span> <span class="nv">textButton</span> <span class="o">=</span> <span class="kt">NatButton</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">text</span><span class="p">)</span>
 
-<p>Example of usage:</p>
-
-<p>let containedButton = NatButton(style: .contained)
-let outlinedButton = NatButton(style: .outlined)
-let textButton = NatButton(style: .text)</p>
-
-<p>This button has pre-defined height values with enum NatButton.Height:</p>
-
-<p>button.heightAnchor.constraint(equalToConstant: NatButton.Height.medium)</p>
+<span class="kt">This</span> <span class="n">button</span> <span class="n">has</span> <span class="n">predefined</span> <span class="n">height</span> <span class="n">values</span> <span class="n">with</span> <span class="kd">enum</span> <span class="kt">NatButton</span><span class="o">.</span><span class="kt">Height</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">button</span><span class="o">.</span><span class="n">heightAnchor</span><span class="o">.</span><span class="nf">constraint</span><span class="p">(</span><span class="nv">equalToConstant</span><span class="p">:</span> <span class="kt">NatButton</span><span class="o">.</span><span class="kt">Height</span><span class="o">.</span><span class="n">medium</span><span class="p">)</span>
+</code></pre>
 <div class="aside aside-requires">
     <p class="aside-title">Requires</p>
     It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.
+DesignSystem().configure(with: AvailableTheme)
 
-</div>
-
-<p>DesignSystem().configure(with: AvailableTheme)</p>
+</div></li>
+</ul>
 
                         <a href="Classes/NatButton.html" class="slightly-smaller">See more</a>
                       </div>
@@ -474,7 +489,7 @@ let textButton = NatButton(style: .text)</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>NatDialogController is a class that represents Dialog component from the design system.
+                        <p>NatDialogController is a class that represents a component from the design system.
  The colors changes according with the current theme configured in the Design system.</p>
 
 <p>Available styles:</p>
@@ -484,22 +499,33 @@ let textButton = NatButton(style: .text)</p>
 <li>Alert</li>
 </ul>
 
-<p>To create and configure Dialogs it&rsquo;s necessary use via Dialog Builders this builds are available as class
-   properties,</p>
-<pre class="highlight swift"><code>   <span class="kt">Example</span> <span class="n">of</span> <span class="nv">usage</span><span class="p">:</span>
+<p>To create and configure Dialogs it&rsquo;s necessary use Dialog Builders that builds are available as class
+   properties.</p>
 
-   <span class="k">let</span> <span class="nv">dialog</span> <span class="o">=</span> <span class="kt">NatDialogController</span>
-   <span class="o">.</span><span class="n">standardStyleBuilder</span>
-   <span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
-   <span class="o">.</span><span class="nf">build</span><span class="p">()</span>
+<p>Available elements to configure:</p>
+
+<ul>
+<li>Title</li>
+<li>Body (Text or Custom view)</li>
+<li>Primary Button (must be configured before other buttons)</li>
+<li><p>Secondary Button (Optional)</p>
+<pre class="highlight swift"><code> <span class="kt">Example</span> <span class="n">of</span> <span class="nv">usage</span><span class="p">:</span>
+
+    <span class="k">let</span> <span class="nv">dialog</span> <span class="o">=</span> <span class="kt">NatDialogController</span>
+    <span class="o">.</span><span class="n">standardStyleBuilder</span>
+    <span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="s">"Title"</span><span class="p">)</span>
+    <span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">body</span><span class="p">:</span> <span class="s">"Body"</span><span class="p">)</span>
+    <span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">primaryTitle</span><span class="p">:</span> <span class="s">"Title"</span><span class="p">,</span> <span class="nv">primaryAction</span><span class="p">:</span> <span class="p">{</span> <span class="nf">print</span><span class="p">(</span><span class="s">"Some text"</span><span class="p">)</span> <span class="p">})</span>
+    <span class="o">.</span><span class="nf">build</span><span class="p">()</span>
 </code></pre>
 <div class="aside aside-requires">
     <p class="aside-title">Requires</p>
     <p>It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.</p>
-<pre class="highlight swift"><code>   <span class="kt">DesignSystem</span><span class="p">()</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="kt">AvailableTheme</span><span class="p">)</span>
-</code></pre>
 
-</div>
+<p>DesignSystem().configure(with: AvailableTheme)</p>
+
+</div></li>
+</ul>
 
                         <a href="Classes/NatDialogController.html" class="slightly-smaller">See more</a>
                       </div>
@@ -527,7 +553,16 @@ let textButton = NatButton(style: .text)</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Divider is a class that represents Divider component from the design system.</p>
+
+<p>It has a predetermined height, and to configure its width It&rsquo;s necessary use via constraints</p>
+<div class="aside aside-requires">
+    <p class="aside-title">Requires</p>
+    <p>It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.</p>
+<pre class="highlight swift"><code>   <span class="kt">DesignSystem</span><span class="p">()</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="kt">AvailableTheme</span><span class="p">)</span>
+</code></pre>
+
+</div>
 
                         <a href="Classes/Divider.html" class="slightly-smaller">See more</a>
                       </div>
@@ -611,7 +646,56 @@ let textButton = NatButton(style: .text)</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>TextField is a class that represents a component from the design system.
+ The textfield styles, keyboards, captalization and autocorrection properties changes according with the type choosen.</p>
+
+<p>This TextField has 3 types:</p>
+
+<ul>
+<li>Text</li>
+<li>Name</li>
+<li><p>Number</p>
+<pre class="highlight swift"><code>     <span class="kt">Example</span> <span class="n">of</span> <span class="nv">usage</span><span class="p">:</span>
+    <span class="o">-</span> <span class="n">textField</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="o">.</span><span class="n">text</span>
+    <span class="o">-</span> <span class="n">textField</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="o">.</span><span class="n">name</span>
+    <span class="o">-</span> <span class="n">textField</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="o">.</span><span class="n">number</span>
+</code></pre></li>
+</ul>
+
+<p>This TextField has 3 States:</p>
+
+<ul>
+<li>enable</li>
+<li>active</li>
+<li>error</li>
+</ul>
+
+<p>There are properties that changes the textfield styles as well.</p>
+
+<p>Properties:</p>
+
+<ul>
+<li>title: Label text always displayed above textfield</li>
+<li>placeholder: Hint text to display when the text is empty</li>
+<li>helper: Hint text always displayed below textfield</li>
+<li>error: Text that alerts about an error</li>
+</ul>
+
+<p>Use the methods of TextFieldDelegate protocol to manage the following feature</p>
+
+<ul>
+<li>natTextFieldDidBeginEditing</li>
+<li>natTextFieldDidEndEditing</li>
+<li>natTextFieldEditingChanged</li>
+<li>natTextFieldShouldBeginEditing</li>
+<li><p>natTextField</p>
+<div class="aside aside-requires">
+    <p class="aside-title">Requires</p>
+    It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.
+DesignSystem().configure(with: AvailableTheme)
+
+</div></li>
+</ul>
 
                         <a href="Classes/TextField.html" class="slightly-smaller">See more</a>
                       </div>
@@ -649,9 +733,10 @@ let textButton = NatButton(style: .text)</p>
 <li>standardDefault</li>
 <li><p>standardPrimary</p>
 
-<p>Example of usage:
-       let iconButtonDefault = NatIconButton(style: .standardDefault)
-       let iconButtonPrimary = NatIconButton(style: .standardPrimary)</p>
+<p>Example of usage:</p>
+<pre class="highlight swift"><code>   <span class="k">let</span> <span class="nv">iconButtonDefault</span> <span class="o">=</span> <span class="kt">NatIconButton</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">standardDefault</span><span class="p">)</span>
+   <span class="k">let</span> <span class="nv">iconButtonPrimary</span> <span class="o">=</span> <span class="kt">NatIconButton</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">standardPrimary</span><span class="p">)</span>
+</code></pre>
 <div class="aside aside-requires">
     <p class="aside-title">Requires</p>
     <p>It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.</p>
@@ -689,7 +774,42 @@ let textButton = NatButton(style: .text)</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>NavigationDrawer is a class that represents a component from the design system.</p>
+
+<p>The NavigationDrawerSubitem has 3 states:</p>
+
+<ul>
+<li>normal</li>
+<li>disabled</li>
+<li>selected</li>
+</ul>
+
+<p>An Item has important properties to configure:</p>
+
+<ul>
+<li>label</li>
+<li>icon</li>
+<li>disabled</li>
+<li>tagText</li>
+<li>subitems</li>
+</ul>
+
+<p>Use the methods of NavigationDrawerDelegate protocol to manage the following features:</p>
+
+<ul>
+<li>numberOfItems</li>
+<li>numberOfSubitems</li>
+<li>didSelectItem</li>
+<li>didSelectSubitem</li>
+<li>configureItem</li>
+<li><p>configureSubitem</p></li>
+</ul><div class="aside aside-requires">
+    <p class="aside-title">Requires</p>
+    <p>It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.</p>
+
+</div>
+
+<p>DesignSystem().configure(with: AvailableTheme)</p>
 
                         <a href="Classes/NavigationDrawer.html" class="slightly-smaller">See more</a>
                       </div>
@@ -784,13 +904,10 @@ The component colors changes according with the current theme configured in the 
 <ul>
 <li>showAndStartAnimation</li>
 <li><p>hideAndStopAnimation</p>
-
-<p>Example of usage:</p>
-
-<ul>
-<li>progressIndicator.configure(state: .showAndStartAnimation)</li>
-<li>hiddenProgressIndicator.configure(state: .hideAndStopAnimation)</li>
-</ul></li>
+<pre class="highlight swift"><code><span class="kt">Example</span> <span class="n">of</span> <span class="nv">usage</span><span class="p">:</span>
+<span class="o">-</span> <span class="n">progressIndicator</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">state</span><span class="p">:</span> <span class="o">.</span><span class="n">showAndStartAnimation</span><span class="p">)</span>
+<span class="o">-</span> <span class="n">hiddenProgressIndicator</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">state</span><span class="p">:</span> <span class="o">.</span><span class="n">hideAndStopAnimation</span><span class="p">)</span>
+</code></pre></li>
 </ul>
 
 <p>This progress indicator has a pre-defined radius value with NatSizes.Standard.
@@ -890,7 +1007,21 @@ The shortcut colors changes according with the current theme configured in the D
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Tab is a class that represents a  component from the design system.
+A new tab is inserted using insertTab(title: String) method.</p>
+<pre class="highlight swift"><code><span class="kt">Example</span> <span class="n">of</span> <span class="nv">usage</span><span class="p">:</span>
+<span class="o">-</span> <span class="n">tab</span><span class="o">.</span><span class="nf">insertTab</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="s">"Tab One"</span><span class="p">)</span>
+
+<span class="kt">It</span><span class="err">'</span><span class="n">s</span> <span class="n">possible</span> <span class="n">to</span> <span class="n">select</span> <span class="n">a</span> <span class="n">tab</span> <span class="n">using</span> <span class="n">the</span> <span class="n">selectedSegmentedIndex</span> <span class="nv">property</span><span class="p">:</span>
+<span class="o">-</span> <span class="n">tab</span><span class="o">.</span><span class="n">selectedSegmentedIndex</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre>
+<div class="aside aside-requires">
+    <p class="aside-title">Requires</p>
+    It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.
+
+</div>
+
+<p>DesignSystem().configure(with: AvailableTheme)</p>
 
                         <a href="Classes/Tab.html" class="slightly-smaller">See more</a>
                       </div>
@@ -964,7 +1095,18 @@ The shortcut colors changes according with the current theme configured in the D
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>ValueTextHighlight is a class that represents  a component from the design system.</p>
+<pre class="highlight swift"><code>   <span class="kt">Example</span> <span class="n">of</span> <span class="nv">usage</span><span class="p">:</span>
+   <span class="o">-</span> <span class="n">valueTextHighlight</span><span class="o">.</span><span class="n">valueDescription</span> <span class="o">=</span> <span class="s">"Amount value"</span>
+   <span class="o">-</span> <span class="n">valueTextHighlight</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s">"$40,00"</span>
+</code></pre>
+<div class="aside aside-requires">
+    <p class="aside-title">Requires</p>
+    <p>It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.</p>
+<pre class="highlight swift"><code>   <span class="kt">DesignSystem</span><span class="p">()</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="kt">AvailableTheme</span><span class="p">)</span>
+</code></pre>
+
+</div>
 
                         <a href="Classes/ValueTextHighlight.html" class="slightly-smaller">See more</a>
                       </div>
@@ -1040,7 +1182,7 @@ The shortcut colors changes according with the current theme configured in the D
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2020-12-02)</p>
+          <p>&copy; 2020 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2020-12-03)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
