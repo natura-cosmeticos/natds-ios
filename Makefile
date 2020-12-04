@@ -46,6 +46,10 @@ pods_wipe: ## removes Pods folder, clean its cache and reinstall all Cocoapods d
 	rm -rf ~/Library/Caches/CocoaPods/*
 	$(FASTLANE) pods_install
 
+create_docs: ## creates html docs
+	jazzy
+	bash ./scripts/update_docs.sh
+
 install_certificates: ## fetch and install certificates for code signing
 	$(FASTLANE) fetch_certificates
 
