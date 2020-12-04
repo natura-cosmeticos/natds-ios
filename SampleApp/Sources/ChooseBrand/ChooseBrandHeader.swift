@@ -33,8 +33,10 @@ final class ChooseBrandHeader: UITableViewHeaderFooterView {
 
     private let versionLabel: UILabel = {
         let label = UILabel()
+        let version = "\(Bundle.main.infoDictionary?["CFBundleVersion"] as? String  ?? "")"
+        let shortVersion = "\(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "")"
         label.font = NatFonts.font(ofSize: .caption)
-        label.text = "version \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "")"
+        label.text = "version \(shortVersion) (\(version))"
         label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
 
