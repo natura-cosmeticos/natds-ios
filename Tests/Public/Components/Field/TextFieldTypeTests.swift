@@ -38,4 +38,16 @@ class TextFieldTypeTests: XCTestCase {
         XCTAssertEqual(sut.autoCorrection, expectedAutocorrection)
         XCTAssertEqual(sut.capitalization, expectedCaptalization)
     }
+
+    func test_password_returnsExpectedKeyboardAndTextSettings() {
+        let expectedKeyboard = UIKeyboardType.default
+        let expectedAutocorrection = UITextAutocorrectionType.no
+        let expectedCaptalization = UITextAutocapitalizationType.none
+
+        let sut = TextFieldType.password
+
+        XCTAssertEqual(sut.keyboard, expectedKeyboard)
+        XCTAssertEqual(sut.autoCorrection, expectedAutocorrection)
+        XCTAssertEqual(sut.capitalization, expectedCaptalization)
+    }
 }
