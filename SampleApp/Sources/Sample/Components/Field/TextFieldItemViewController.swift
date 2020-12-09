@@ -47,6 +47,15 @@ class TextFieldItemViewController: UIViewController, SampleItem {
         return field
     }()
 
+    private lazy var passwordTextField: TextField = {
+        let field = TextField()
+        field.title = "Password"
+        field.type = .password
+        field.placeholder = "Type your password"
+        field.delegate = self
+        return field
+    }()
+
     private lazy var errorTextField: TextField = {
         let field = TextField()
         field.title = "Error"
@@ -95,6 +104,7 @@ class TextFieldItemViewController: UIViewController, SampleItem {
         stackView.addArrangedSubview(textField)
         stackView.addArrangedSubview(nameField)
         stackView.addArrangedSubview(numberTextField)
+        stackView.addArrangedSubview(passwordTextField)
         stackView.addArrangedSubview(errorTextField)
         stackView.addArrangedSubview(errorTextFieldMultpleLines)
         stackView.addArrangedSubview(helperTextField)

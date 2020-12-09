@@ -264,6 +264,7 @@ extension TextField {
         self.textField.keyboardType = type.keyboard
         self.textField.autocorrectionType = type.autoCorrection
         self.textField.autocapitalizationType = type.capitalization
+        self.textField.isSecureTextEntry = type == .password
     }
 
     private func changeState() {
