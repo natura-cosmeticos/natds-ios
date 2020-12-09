@@ -177,7 +177,7 @@
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Badge/NatBadge+Color.swift",
-      "line": 19,
+      "line": 20,
       "symbol": "NatBadge.Color.alert",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
@@ -590,98 +590,98 @@
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Field/TextField.swift",
-      "line": 51,
+      "line": 49,
       "symbol": "TextField.title",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Field/TextField.swift",
-      "line": 56,
+      "line": 54,
       "symbol": "TextField.text",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Field/TextField.swift",
-      "line": 61,
+      "line": 59,
       "symbol": "TextField.placeholder",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Field/TextField.swift",
-      "line": 66,
+      "line": 64,
       "symbol": "TextField.helper",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Field/TextField.swift",
-      "line": 72,
+      "line": 70,
       "symbol": "TextField.error",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Field/TextField.swift",
-      "line": 78,
+      "line": 76,
       "symbol": "TextField.type",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Field/TextField.swift",
-      "line": 84,
+      "line": 82,
       "symbol": "TextField.delegate",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Field/TextField.swift",
-      "line": 138,
+      "line": 136,
       "symbol": "TextField.init(frame:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Field/TextField.swift",
-      "line": 152,
+      "line": 150,
       "symbol": "TextField.becomeFirstResponder()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Field/TextField.swift",
-      "line": 157,
+      "line": 155,
       "symbol": "TextField.resignFirstResponder()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Field/TextField.swift",
-      "line": 283,
+      "line": 280,
       "symbol": "TextField.textFieldDidBeginEditing(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Field/TextField.swift",
-      "line": 288,
+      "line": 285,
       "symbol": "TextField.textFieldDidEndEditing(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Field/TextField.swift",
-      "line": 293,
+      "line": 290,
       "symbol": "TextField.textFieldShouldBeginEditing(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Field/TextField.swift",
-      "line": 297,
+      "line": 294,
       "symbol": "TextField.textField(_:shouldChangeCharactersIn:replacementString:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -757,22 +757,15 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Field/TextFieldType.swift",
-      "line": 5,
-      "symbol": "TextFieldType.password(keyboardType:)",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/IconButton/NatIconButton+Sizes.swift",
-      "line": 11,
+      "line": 10,
       "symbol": "NatIconButton.Sizes.semi",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/IconButton/NatIconButton+Sizes.swift",
-      "line": 12,
+      "line": 11,
       "symbol": "NatIconButton.Sizes.semiX",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
@@ -2809,7 +2802,7 @@
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/ProgressIndicator/NatProgressIndicatorCircular+Size.swift",
-      "line": 10,
+      "line": 9,
       "symbol": "NatProgressIndicatorCircular.Size.standard",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
