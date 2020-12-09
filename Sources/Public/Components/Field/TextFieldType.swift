@@ -2,7 +2,7 @@ public enum TextFieldType {
     case text
     case name
     case number
-    case password
+    case password(keyboardType: UIKeyboardType = .default)
 
     var keyboard: UIKeyboardType {
         switch self {
@@ -12,8 +12,8 @@ public enum TextFieldType {
             return .default
         case .number:
             return .numberPad
-        case .password:
-            return .default
+        case let .password(type):
+            return type
         }
     }
 
@@ -42,4 +42,17 @@ public enum TextFieldType {
             return .none
          }
      }
+
+    var secureTextEntry: Bool {
+        switch self {
+        case .text:
+            return false
+        case .name:
+            return false
+        case .number:
+            return false
+        case .password:
+            return true
+        }
+    }
 }
