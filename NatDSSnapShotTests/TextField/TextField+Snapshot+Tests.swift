@@ -54,6 +54,6 @@ final class TextFieldSnapshotTests: XCTestCase {
 
     func test_text_whenTextIsSet_expectedTextFieldIsFilledSnapshot() {
         systemUnderTest.text = "999.999.999-99"
-        assertSnapshot(matching: systemUnderTest, as: .image)
+        assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.97))
     }
 }
