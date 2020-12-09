@@ -1,16 +1,18 @@
 /**
  TextField is a class that represents a component from the design system.
- The textfield styles, keyboards, capitalization and autocorrection properties changes according with the choosen type.
+ The textfield styles, keyboards, capitalization, autocorrection and secureEntry properties changes according with the choosen type.
 
- This TextField has 3 types:
+ This TextField has 4 types:
  - Text
  - Name
  - Number
+ - Password
 
              Example of usage:
             - textField.type = .text
             - textField.type = .name
             - textField.type = .number
+            - textField.type = .password(keyboardType: .numberPad)
 
  This TextField has 3 States:
  - enable
