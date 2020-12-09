@@ -5,300 +5,49 @@
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0" />
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     
-    <script src="../js/lunr.min.js" defer></script>
-    <script src="../js/typeahead.jquery.js" defer></script>
-    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
     <a name="//apple_ref/swift/Struct/NatColors" class="dashAnchor"></a>
     <a title="NatColors Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">NatDS 2.9.0 Docs</a> (13% documented)</p>
-        <p class="header-right">
-          <form role="search" action="../search.json">
-            <input type="text" placeholder="Search documentation" data-typeahead>
-          </form>
+        <p>
+          <a href="../index.html">NatDS 2.9.0 Docs</a>
+          <span class="no-mobile"> (13% documented)</span>
         </p>
+    
+    
       </div>
     </header>
-    <div class="content-wrapper">
-      <p id="breadcrumbs">
-        <a href="../index.html">NatDS Reference</a>
-        <img id="carat" src="../img/carat.png" />
-        NatColors Structure Reference
-      </p>
+    <div id="breadcrumbs-container">
+      <div class="content-wrapper">
+        <p id="breadcrumbs">
+          <span class="no-mobile">
+            <a href="../index.html">NatDS Reference</a>
+            <img id="carat" src="../img/carat.png" />
+          </span>
+          NatColors Structure Reference
+        </p>
+      </div>
     </div>
-    <div class="content-wrapper">
-      <nav class="sidebar">
-        <ul class="nav-groups">
-          <li class="nav-group-name">
-            <a href="../Classes.html">Classes</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Classes/DesignSystem.html">DesignSystem</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/Divider.html">Divider</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/ExpansionPanel.html">ExpansionPanel</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/ExpansionPanel/Margin.html">– Margin</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/IconView.html">IconView</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/NatBadge.html">NatBadge</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/NatBadge/Color.html">– Color</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/NatBadge/Style.html">– Style</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/NatButton.html">NatButton</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/NatButton/EdgeInsets.html">– EdgeInsets</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/NatButton/Height.html">– Height</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/NatButton/Position.html">– Position</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/NatButton/Style.html">– Style</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/NatDialogController.html">NatDialogController</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/NatDialogController/AlertStyleBuilder.html">– AlertStyleBuilder</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/NatDialogController/StandardStyleBuilder.html">– StandardStyleBuilder</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/NatDialogController.html#/s:5NatDS0A16DialogControllerC9ViewModelC">– ViewModel</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/NatIconButton.html">NatIconButton</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/NatIconButton/State.html">– State</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/NatIconButton/Sizes.html">– Sizes</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/NatIconButton/Style.html">– Style</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/NatProgressIndicatorCircular.html">NatProgressIndicatorCircular</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/NatProgressIndicatorCircular/Action.html">– Action</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/NatProgressIndicatorCircular/Size.html">– Size</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/NatShortcut.html">NatShortcut</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/NatShortcut/Style.html">– Style</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/NatTag.html">NatTag</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/NatTag/Style.html">– Style</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/NavigationDrawer.html">NavigationDrawer</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/NavigationDrawer/IndexMenu.html">– IndexMenu</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/NavigationDrawerItemCell.html">NavigationDrawerItemCell</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/NavigationDrawerItemCell/State.html">– State</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/NavigationDrawerSubitemCell.html">NavigationDrawerSubitemCell</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/NavigationDrawerSubitemCell/State.html">– State</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/SearchBar.html">SearchBar</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/Tab.html">Tab</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/TextField.html">TextField</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/ValueTextHighlight.html">ValueTextHighlight</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="../Enums.html">Enumerations</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Enums/AvailableTheme.html">AvailableTheme</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/Icon.html">Icon</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/NatBorderRadius.html">NatBorderRadius</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/NatOpacities.html">NatOpacities</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/NatSizes.html">NatSizes</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/NatSpacing.html">NatSpacing</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/TextFieldType.html">TextFieldType</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="../Extensions.html">Extensions</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Extensions/UIBarButtonItem.html">UIBarButtonItem</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/UICollectionView.html">UICollectionView</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions.html#/c:objc(cs)UICollectionViewCell">UICollectionViewCell</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/UINavigationController.html">UINavigationController</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/UINavigationController/Style.html">– Style</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/UITableView.html">UITableView</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions.html#/c:objc(cs)UITableViewCell">UITableViewCell</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/UIViewController.html">UIViewController</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/UIViewController/TitleStyle.html">– TitleStyle</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="../Protocols.html">Protocols</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Protocols/Badgeable.html">Badgeable</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/NatDialogBodyConfigurable.html">NatDialogBodyConfigurable</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/NatDialogBuilder.html">NatDialogBuilder</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/NatDialogCustomBodyConfigurable.html">NatDialogCustomBodyConfigurable</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/NatDialogDismissableConfigurable.html">NatDialogDismissableConfigurable</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/NatDialogTitleConfigurable.html">NatDialogTitleConfigurable</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/NavigationDrawerDelegate.html">NavigationDrawerDelegate</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/Pulsable.html">Pulsable</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/ReusableView.html">ReusableView</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/TabDelegate.html">TabDelegate</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/TextFieldDelegate.html">TextFieldDelegate</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="../Structs.html">Structures</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Structs.html#/s:5NatDS25DialogButtonConfigurationV">DialogButtonConfiguration</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/IllustrationIcons.html">IllustrationIcons</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/IllustrationIcons/Lined.html">– Lined</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/NatColors.html">NatColors</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/NatElevation.html">NatElevation</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/NatElevation/Elevation.html">– Elevation</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/NatFonts.html">NatFonts</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/NatFonts/Size.html">– Size</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/NatFonts/Weight.html">– Weight</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/NatLogoImages.html">NatLogoImages</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-      <article class="main-content">
-        <section>
-          <section class="section">
-            <h1>NatColors</h1>
-              <div class="declaration">
-                <div class="language">
-                  
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">NatColors</span></code></pre>
+    <div class="wrapper">
+      <div class="article-wrapper">
+        <article class="main-content">
+          <section>
+            <section class="section">
+              <h1>NatColors</h1>
+                <div class="declaration">
+                  <div class="language">
+                    
+                    <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">NatColors</span></code></pre>
 
+                  </div>
                 </div>
-              </div>
-            <p>NatColors is a struct that has access to colors from the design system.
+              <p>NatColors is a struct that has access to colors from the design system.
  This colors changes according with the current theme configured in the Design system.</p>
 
 <p>All properties returns UIColor.</p>
@@ -332,836 +81,1095 @@
 
 </div>
 
+            </section>
+            <section class="section task-group-section">
+              <div class="task-group">
+                <div class="task-name-container">
+                  <a name="/Primary"></a>
+                  <a name="//apple_ref/swift/Section/Primary" class="dashAnchor"></a>
+                  <div class="section-name-container">
+                    <a class="section-name-link" href="#/Primary"></a>
+                    <h3 class="section-name"><p>Primary</p>
+</h3>
+                  </div>
+                </div>
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS0A6ColorsV7primarySo7UIColorCvpZ"></a>
+                      <a name="//apple_ref/swift/Variable/primary" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A6ColorsV7primarySo7UIColorCvpZ">primary</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">primary</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS0A6ColorsV9onPrimarySo7UIColorCvpZ"></a>
+                      <a name="//apple_ref/swift/Variable/onPrimary" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A6ColorsV9onPrimarySo7UIColorCvpZ">onPrimary</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">onPrimary</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS0A6ColorsV11primaryDarkSo7UIColorCvpZ"></a>
+                      <a name="//apple_ref/swift/Variable/primaryDark" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A6ColorsV11primaryDarkSo7UIColorCvpZ">primaryDark</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">primaryDark</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS0A6ColorsV13onPrimaryDarkSo7UIColorCvpZ"></a>
+                      <a name="//apple_ref/swift/Variable/onPrimaryDark" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A6ColorsV13onPrimaryDarkSo7UIColorCvpZ">onPrimaryDark</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">onPrimaryDark</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS0A6ColorsV12primaryLightSo7UIColorCvpZ"></a>
+                      <a name="//apple_ref/swift/Variable/primaryLight" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A6ColorsV12primaryLightSo7UIColorCvpZ">primaryLight</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">primaryLight</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS0A6ColorsV14onPrimaryLightSo7UIColorCvpZ"></a>
+                      <a name="//apple_ref/swift/Variable/onPrimaryLight" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A6ColorsV14onPrimaryLightSo7UIColorCvpZ">onPrimaryLight</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">onPrimaryLight</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="task-group">
+                <div class="task-name-container">
+                  <a name="/Secundary"></a>
+                  <a name="//apple_ref/swift/Section/Secundary" class="dashAnchor"></a>
+                  <div class="section-name-container">
+                    <a class="section-name-link" href="#/Secundary"></a>
+                    <h3 class="section-name"><p>Secundary</p>
+</h3>
+                  </div>
+                </div>
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS0A6ColorsV9secondarySo7UIColorCvpZ"></a>
+                      <a name="//apple_ref/swift/Variable/secondary" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A6ColorsV9secondarySo7UIColorCvpZ">secondary</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">secondary</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS0A6ColorsV11onSecondarySo7UIColorCvpZ"></a>
+                      <a name="//apple_ref/swift/Variable/onSecondary" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A6ColorsV11onSecondarySo7UIColorCvpZ">onSecondary</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">onSecondary</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS0A6ColorsV13secondaryDarkSo7UIColorCvpZ"></a>
+                      <a name="//apple_ref/swift/Variable/secondaryDark" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A6ColorsV13secondaryDarkSo7UIColorCvpZ">secondaryDark</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">secondaryDark</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS0A6ColorsV15onSecondaryDarkSo7UIColorCvpZ"></a>
+                      <a name="//apple_ref/swift/Variable/onSecondaryDark" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A6ColorsV15onSecondaryDarkSo7UIColorCvpZ">onSecondaryDark</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">onSecondaryDark</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS0A6ColorsV14secondaryLightSo7UIColorCvpZ"></a>
+                      <a name="//apple_ref/swift/Variable/secondaryLight" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A6ColorsV14secondaryLightSo7UIColorCvpZ">secondaryLight</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">secondaryLight</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS0A6ColorsV16onSecondaryLightSo7UIColorCvpZ"></a>
+                      <a name="//apple_ref/swift/Variable/onSecondaryLight" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A6ColorsV16onSecondaryLightSo7UIColorCvpZ">onSecondaryLight</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">onSecondaryLight</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="task-group">
+                <div class="task-name-container">
+                  <a name="/Surface"></a>
+                  <a name="//apple_ref/swift/Section/Surface" class="dashAnchor"></a>
+                  <div class="section-name-container">
+                    <a class="section-name-link" href="#/Surface"></a>
+                    <h3 class="section-name"><p>Surface</p>
+</h3>
+                  </div>
+                </div>
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS0A6ColorsV10backgroundSo7UIColorCvpZ"></a>
+                      <a name="//apple_ref/swift/Variable/background" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A6ColorsV10backgroundSo7UIColorCvpZ">background</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">background</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS0A6ColorsV12onBackgroundSo7UIColorCvpZ"></a>
+                      <a name="//apple_ref/swift/Variable/onBackground" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A6ColorsV12onBackgroundSo7UIColorCvpZ">onBackground</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">onBackground</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS0A6ColorsV7surfaceSo7UIColorCvpZ"></a>
+                      <a name="//apple_ref/swift/Variable/surface" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A6ColorsV7surfaceSo7UIColorCvpZ">surface</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">surface</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS0A6ColorsV9onSurfaceSo7UIColorCvpZ"></a>
+                      <a name="//apple_ref/swift/Variable/onSurface" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A6ColorsV9onSurfaceSo7UIColorCvpZ">onSurface</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">onSurface</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="task-group">
+                <div class="task-name-container">
+                  <a name="/Content"></a>
+                  <a name="//apple_ref/swift/Section/Content" class="dashAnchor"></a>
+                  <div class="section-name-container">
+                    <a class="section-name-link" href="#/Content"></a>
+                    <h3 class="section-name"><p>Content</p>
+</h3>
+                  </div>
+                </div>
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS0A6ColorsV9highlightSo7UIColorCvpZ"></a>
+                      <a name="//apple_ref/swift/Variable/highlight" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A6ColorsV9highlightSo7UIColorCvpZ">highlight</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">highlight</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS0A6ColorsV12highEmphasisSo7UIColorCvpZ"></a>
+                      <a name="//apple_ref/swift/Variable/highEmphasis" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A6ColorsV12highEmphasisSo7UIColorCvpZ">highEmphasis</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">highEmphasis</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS0A6ColorsV14mediumEmphasisSo7UIColorCvpZ"></a>
+                      <a name="//apple_ref/swift/Variable/mediumEmphasis" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A6ColorsV14mediumEmphasisSo7UIColorCvpZ">mediumEmphasis</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">mediumEmphasis</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS0A6ColorsV11lowEmphasisSo7UIColorCvpZ"></a>
+                      <a name="//apple_ref/swift/Variable/lowEmphasis" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A6ColorsV11lowEmphasisSo7UIColorCvpZ">lowEmphasis</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">lowEmphasis</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="task-group">
+                <div class="task-name-container">
+                  <a name="/Feedback"></a>
+                  <a name="//apple_ref/swift/Section/Feedback" class="dashAnchor"></a>
+                  <div class="section-name-container">
+                    <a class="section-name-link" href="#/Feedback"></a>
+                    <h3 class="section-name"><p>Feedback</p>
+</h3>
+                  </div>
+                </div>
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS0A6ColorsV7successSo7UIColorCvpZ"></a>
+                      <a name="//apple_ref/swift/Variable/success" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A6ColorsV7successSo7UIColorCvpZ">success</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">success</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS0A6ColorsV9onSuccessSo7UIColorCvpZ"></a>
+                      <a name="//apple_ref/swift/Variable/onSuccess" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A6ColorsV9onSuccessSo7UIColorCvpZ">onSuccess</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">onSuccess</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS0A6ColorsV7warningSo7UIColorCvpZ"></a>
+                      <a name="//apple_ref/swift/Variable/warning" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A6ColorsV7warningSo7UIColorCvpZ">warning</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">warning</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS0A6ColorsV9onWarningSo7UIColorCvpZ"></a>
+                      <a name="//apple_ref/swift/Variable/onWarning" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A6ColorsV9onWarningSo7UIColorCvpZ">onWarning</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">onWarning</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS0A6ColorsV5alertSo7UIColorCvpZ"></a>
+                      <a name="//apple_ref/swift/Variable/alert" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A6ColorsV5alertSo7UIColorCvpZ">alert</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">alert</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS0A6ColorsV7onAlertSo7UIColorCvpZ"></a>
+                      <a name="//apple_ref/swift/Variable/onAlert" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A6ColorsV7onAlertSo7UIColorCvpZ">onAlert</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">onAlert</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS0A6ColorsV4linkSo7UIColorCvpZ"></a>
+                      <a name="//apple_ref/swift/Variable/link" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A6ColorsV4linkSo7UIColorCvpZ">link</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">link</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS0A6ColorsV6onLinkSo7UIColorCvpZ"></a>
+                      <a name="//apple_ref/swift/Variable/onLink" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A6ColorsV6onLinkSo7UIColorCvpZ">onLink</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">onLink</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
           </section>
-          <section class="section task-group-section">
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Primary"></a>
-                <a name="//apple_ref/swift/Section/Primary" class="dashAnchor"></a>
-                <div class="section-name-container">
-                  <a class="section-name-link" href="#/Primary"></a>
-                  <h3 class="section-name"><p>Primary</p>
-</h3>
-                </div>
-              </div>
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5NatDS0A6ColorsV7primarySo7UIColorCvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/primary" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5NatDS0A6ColorsV7primarySo7UIColorCvpZ">primary</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">primary</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
+        </article>
+      </div>
+      <div class="nav-wrapper">
+        <nav class="nav-bottom">
+          <ul class="nav-groups">
+            <li class="nav-group-name">
+              <a href="../Classes.html">Classes</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Classes/DesignSystem.html">DesignSystem</a>
                 </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5NatDS0A6ColorsV9onPrimarySo7UIColorCvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/onPrimary" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5NatDS0A6ColorsV9onPrimarySo7UIColorCvpZ">onPrimary</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">onPrimary</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
+                <li class="nav-group-task">
+                  <a href="../Classes/Divider.html">Divider</a>
                 </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5NatDS0A6ColorsV11primaryDarkSo7UIColorCvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/primaryDark" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5NatDS0A6ColorsV11primaryDarkSo7UIColorCvpZ">primaryDark</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">primaryDark</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
+                <li class="nav-group-task">
+                  <a href="../Classes/ExpansionPanel.html">ExpansionPanel</a>
                 </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5NatDS0A6ColorsV13onPrimaryDarkSo7UIColorCvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/onPrimaryDark" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5NatDS0A6ColorsV13onPrimaryDarkSo7UIColorCvpZ">onPrimaryDark</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">onPrimaryDark</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
+                <li class="nav-group-task">
+                  <a href="../Classes/ExpansionPanel/Margin.html">– Margin</a>
                 </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5NatDS0A6ColorsV12primaryLightSo7UIColorCvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/primaryLight" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5NatDS0A6ColorsV12primaryLightSo7UIColorCvpZ">primaryLight</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">primaryLight</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
+                <li class="nav-group-task">
+                  <a href="../Classes/IconView.html">IconView</a>
                 </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5NatDS0A6ColorsV14onPrimaryLightSo7UIColorCvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/onPrimaryLight" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5NatDS0A6ColorsV14onPrimaryLightSo7UIColorCvpZ">onPrimaryLight</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">onPrimaryLight</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
+                <li class="nav-group-task">
+                  <a href="../Classes/NatBadge.html">NatBadge</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NatBadge/Color.html">– Color</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NatBadge/Style.html">– Style</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NatButton.html">NatButton</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NatButton/EdgeInsets.html">– EdgeInsets</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NatButton/Height.html">– Height</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NatButton/Position.html">– Position</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NatButton/Style.html">– Style</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NatDialogController.html">NatDialogController</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NatDialogController/AlertStyleBuilder.html">– AlertStyleBuilder</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NatDialogController/StandardStyleBuilder.html">– StandardStyleBuilder</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NatDialogController.html#/s:5NatDS0A16DialogControllerC9ViewModelC">– ViewModel</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NatIconButton.html">NatIconButton</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NatIconButton/State.html">– State</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NatIconButton/Sizes.html">– Sizes</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NatIconButton/Style.html">– Style</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NatProgressIndicatorCircular.html">NatProgressIndicatorCircular</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NatProgressIndicatorCircular/Action.html">– Action</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NatProgressIndicatorCircular/Size.html">– Size</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NatShortcut.html">NatShortcut</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NatShortcut/Style.html">– Style</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NatTag.html">NatTag</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NatTag/Style.html">– Style</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NavigationDrawer.html">NavigationDrawer</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NavigationDrawer/IndexMenu.html">– IndexMenu</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NavigationDrawerItemCell.html">NavigationDrawerItemCell</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NavigationDrawerItemCell/State.html">– State</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NavigationDrawerSubitemCell.html">NavigationDrawerSubitemCell</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NavigationDrawerSubitemCell/State.html">– State</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/SearchBar.html">SearchBar</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/Tab.html">Tab</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/TextField.html">TextField</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/ValueTextHighlight.html">ValueTextHighlight</a>
                 </li>
               </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Secundary"></a>
-                <a name="//apple_ref/swift/Section/Secundary" class="dashAnchor"></a>
-                <div class="section-name-container">
-                  <a class="section-name-link" href="#/Secundary"></a>
-                  <h3 class="section-name"><p>Secundary</p>
-</h3>
-                </div>
-              </div>
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5NatDS0A6ColorsV9secondarySo7UIColorCvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/secondary" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5NatDS0A6ColorsV9secondarySo7UIColorCvpZ">secondary</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">secondary</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Enums.html">Enumerations</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Enums/AvailableTheme.html">AvailableTheme</a>
                 </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5NatDS0A6ColorsV11onSecondarySo7UIColorCvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/onSecondary" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5NatDS0A6ColorsV11onSecondarySo7UIColorCvpZ">onSecondary</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">onSecondary</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
+                <li class="nav-group-task">
+                  <a href="../Enums/Icon.html">Icon</a>
                 </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5NatDS0A6ColorsV13secondaryDarkSo7UIColorCvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/secondaryDark" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5NatDS0A6ColorsV13secondaryDarkSo7UIColorCvpZ">secondaryDark</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">secondaryDark</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
+                <li class="nav-group-task">
+                  <a href="../Enums/NatBorderRadius.html">NatBorderRadius</a>
                 </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5NatDS0A6ColorsV15onSecondaryDarkSo7UIColorCvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/onSecondaryDark" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5NatDS0A6ColorsV15onSecondaryDarkSo7UIColorCvpZ">onSecondaryDark</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">onSecondaryDark</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
+                <li class="nav-group-task">
+                  <a href="../Enums/NatOpacities.html">NatOpacities</a>
                 </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5NatDS0A6ColorsV14secondaryLightSo7UIColorCvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/secondaryLight" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5NatDS0A6ColorsV14secondaryLightSo7UIColorCvpZ">secondaryLight</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">secondaryLight</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
+                <li class="nav-group-task">
+                  <a href="../Enums/NatSizes.html">NatSizes</a>
                 </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5NatDS0A6ColorsV16onSecondaryLightSo7UIColorCvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/onSecondaryLight" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5NatDS0A6ColorsV16onSecondaryLightSo7UIColorCvpZ">onSecondaryLight</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">onSecondaryLight</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
+                <li class="nav-group-task">
+                  <a href="../Enums/NatSpacing.html">NatSpacing</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/TextFieldType.html">TextFieldType</a>
                 </li>
               </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Surface"></a>
-                <a name="//apple_ref/swift/Section/Surface" class="dashAnchor"></a>
-                <div class="section-name-container">
-                  <a class="section-name-link" href="#/Surface"></a>
-                  <h3 class="section-name"><p>Surface</p>
-</h3>
-                </div>
-              </div>
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5NatDS0A6ColorsV10backgroundSo7UIColorCvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/background" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5NatDS0A6ColorsV10backgroundSo7UIColorCvpZ">background</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">background</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Extensions.html">Extensions</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Extensions/UIBarButtonItem.html">UIBarButtonItem</a>
                 </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5NatDS0A6ColorsV12onBackgroundSo7UIColorCvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/onBackground" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5NatDS0A6ColorsV12onBackgroundSo7UIColorCvpZ">onBackground</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">onBackground</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
+                <li class="nav-group-task">
+                  <a href="../Extensions/UICollectionView.html">UICollectionView</a>
                 </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5NatDS0A6ColorsV7surfaceSo7UIColorCvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/surface" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5NatDS0A6ColorsV7surfaceSo7UIColorCvpZ">surface</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">surface</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
+                <li class="nav-group-task">
+                  <a href="../Extensions.html#/c:objc(cs)UICollectionViewCell">UICollectionViewCell</a>
                 </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5NatDS0A6ColorsV9onSurfaceSo7UIColorCvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/onSurface" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5NatDS0A6ColorsV9onSurfaceSo7UIColorCvpZ">onSurface</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">onSurface</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
+                <li class="nav-group-task">
+                  <a href="../Extensions/UINavigationController.html">UINavigationController</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/UINavigationController/Style.html">– Style</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/UITableView.html">UITableView</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions.html#/c:objc(cs)UITableViewCell">UITableViewCell</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/UIViewController.html">UIViewController</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/UIViewController/TitleStyle.html">– TitleStyle</a>
                 </li>
               </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Content"></a>
-                <a name="//apple_ref/swift/Section/Content" class="dashAnchor"></a>
-                <div class="section-name-container">
-                  <a class="section-name-link" href="#/Content"></a>
-                  <h3 class="section-name"><p>Content</p>
-</h3>
-                </div>
-              </div>
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5NatDS0A6ColorsV9highlightSo7UIColorCvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/highlight" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5NatDS0A6ColorsV9highlightSo7UIColorCvpZ">highlight</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">highlight</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Protocols.html">Protocols</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Protocols/Badgeable.html">Badgeable</a>
                 </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5NatDS0A6ColorsV12highEmphasisSo7UIColorCvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/highEmphasis" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5NatDS0A6ColorsV12highEmphasisSo7UIColorCvpZ">highEmphasis</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">highEmphasis</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
+                <li class="nav-group-task">
+                  <a href="../Protocols/NatDialogBodyConfigurable.html">NatDialogBodyConfigurable</a>
                 </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5NatDS0A6ColorsV14mediumEmphasisSo7UIColorCvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/mediumEmphasis" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5NatDS0A6ColorsV14mediumEmphasisSo7UIColorCvpZ">mediumEmphasis</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">mediumEmphasis</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
+                <li class="nav-group-task">
+                  <a href="../Protocols/NatDialogBuilder.html">NatDialogBuilder</a>
                 </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5NatDS0A6ColorsV11lowEmphasisSo7UIColorCvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/lowEmphasis" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5NatDS0A6ColorsV11lowEmphasisSo7UIColorCvpZ">lowEmphasis</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">lowEmphasis</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
+                <li class="nav-group-task">
+                  <a href="../Protocols/NatDialogCustomBodyConfigurable.html">NatDialogCustomBodyConfigurable</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/NatDialogDismissableConfigurable.html">NatDialogDismissableConfigurable</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/NatDialogTitleConfigurable.html">NatDialogTitleConfigurable</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/NavigationDrawerDelegate.html">NavigationDrawerDelegate</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/Pulsable.html">Pulsable</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/ReusableView.html">ReusableView</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/TabDelegate.html">TabDelegate</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Protocols/TextFieldDelegate.html">TextFieldDelegate</a>
                 </li>
               </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Feedback"></a>
-                <a name="//apple_ref/swift/Section/Feedback" class="dashAnchor"></a>
-                <div class="section-name-container">
-                  <a class="section-name-link" href="#/Feedback"></a>
-                  <h3 class="section-name"><p>Feedback</p>
-</h3>
-                </div>
-              </div>
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5NatDS0A6ColorsV7successSo7UIColorCvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/success" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5NatDS0A6ColorsV7successSo7UIColorCvpZ">success</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">success</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Structs.html">Structures</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Structs.html#/s:5NatDS25DialogButtonConfigurationV">DialogButtonConfiguration</a>
                 </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5NatDS0A6ColorsV9onSuccessSo7UIColorCvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/onSuccess" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5NatDS0A6ColorsV9onSuccessSo7UIColorCvpZ">onSuccess</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">onSuccess</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
+                <li class="nav-group-task">
+                  <a href="../Structs/IllustrationIcons.html">IllustrationIcons</a>
                 </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5NatDS0A6ColorsV7warningSo7UIColorCvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/warning" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5NatDS0A6ColorsV7warningSo7UIColorCvpZ">warning</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">warning</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
+                <li class="nav-group-task">
+                  <a href="../Structs/IllustrationIcons/Lined.html">– Lined</a>
                 </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5NatDS0A6ColorsV9onWarningSo7UIColorCvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/onWarning" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5NatDS0A6ColorsV9onWarningSo7UIColorCvpZ">onWarning</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">onWarning</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
+                <li class="nav-group-task">
+                  <a href="../Structs/NatColors.html">NatColors</a>
                 </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5NatDS0A6ColorsV5alertSo7UIColorCvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/alert" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5NatDS0A6ColorsV5alertSo7UIColorCvpZ">alert</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">alert</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
+                <li class="nav-group-task">
+                  <a href="../Structs/NatElevation.html">NatElevation</a>
                 </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5NatDS0A6ColorsV7onAlertSo7UIColorCvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/onAlert" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5NatDS0A6ColorsV7onAlertSo7UIColorCvpZ">onAlert</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">onAlert</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
+                <li class="nav-group-task">
+                  <a href="../Structs/NatElevation/Elevation.html">– Elevation</a>
                 </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5NatDS0A6ColorsV4linkSo7UIColorCvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/link" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5NatDS0A6ColorsV4linkSo7UIColorCvpZ">link</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">link</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
+                <li class="nav-group-task">
+                  <a href="../Structs/NatFonts.html">NatFonts</a>
                 </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5NatDS0A6ColorsV6onLinkSo7UIColorCvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/onLink" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5NatDS0A6ColorsV6onLinkSo7UIColorCvpZ">onLink</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">onLink</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
+                <li class="nav-group-task">
+                  <a href="../Structs/NatFonts/Size.html">– Size</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Structs/NatFonts/Weight.html">– Weight</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Structs/NatLogoImages.html">NatLogoImages</a>
                 </li>
               </ul>
-            </div>
-          </section>
-        </section>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2020-12-04)</p>
+          <p>&copy; 2020 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2020-12-09)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
-      </article>
+      </div>
     </div>
   </body>
 </div>

@@ -47,7 +47,7 @@ pods_wipe: ## removes Pods folder, clean its cache and reinstall all Cocoapods d
 	$(FASTLANE) pods_install
 
 create_docs: ## creates html docs
-	jazzy
+	jazzy --theme=jony
 	bash ./scripts/update_docs.sh
 
 install_certificates: ## fetch and install certificates for code signing
