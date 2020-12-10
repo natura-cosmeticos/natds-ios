@@ -6,13 +6,13 @@
 
 ## What for
 
-Library with iOS components defined by [Natura Group Design System Team](https://zeroheight.com/08f80f4e1/p/335165-natds--natura-design-system).
+Library with iOS components defined by [Natura Group Design System Team](https://natds.natura.design/docs).
 
 
 ## Tech Stack
 
 - __Swift 5__
-- Supports iOS __10__ to __13__
+- Supports iOS __10__ to __14__
 - CocoaPods
 - Fastlane
 - Bitrise (CI)
