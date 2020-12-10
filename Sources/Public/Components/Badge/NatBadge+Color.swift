@@ -15,7 +15,6 @@ extension NatBadge {
                 DesignSystem().configure(with: AvailableTheme)
     */
 
-
     public enum Color {
         case alert
     }

@@ -1,6 +1,6 @@
 /**
  TextField is a class that represents a component from the design system.
- The textfield styles, keyboards, capitalization and autocorrection properties changes according with the choosen type.
+ The textfield styles, keyboards, capitalization and autocorrection properties changes according with the chosen type.
 
  This TextField has 3 types:
  - Text
@@ -264,6 +264,7 @@ extension TextField {
         self.textField.keyboardType = type.keyboard
         self.textField.autocorrectionType = type.autoCorrection
         self.textField.autocapitalizationType = type.capitalization
+        self.textField.isSecureTextEntry = type == .password
     }
 
     private func changeState() {

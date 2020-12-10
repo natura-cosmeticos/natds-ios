@@ -177,6 +177,7 @@
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Badge/NatBadge+Color.swift",
+
       "line": 20,
       "symbol": "NatBadge.Color.alert",
       "symbol_kind": "source.lang.swift.decl.enumelement",

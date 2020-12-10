@@ -31,6 +31,7 @@ class Field: UITextField {
     override init(frame: CGRect) {
         super.init(frame: frame)
         font = NatFonts.font(ofSize: .body1, withWeight: .regular)
+        textColor = getUIColorFromTokens(\.colorHighEmphasis)
         layer.cornerRadius = 4
         layer.borderWidth = borderWidth
         layer.borderColor = borderColor.cgColor

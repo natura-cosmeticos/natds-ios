@@ -55,4 +55,4 @@ DesignSystem().configure(with: AvailableTheme)
 
 ## How to contribute
 
-[Help us to grow!](docs/how-to-contribute.md)
+[Help us grow!](docs/how-to-contribute.md)
