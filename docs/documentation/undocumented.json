@@ -660,28 +660,28 @@
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Field/TextField.swift",
-      "line": 280,
+      "line": 281,
       "symbol": "TextField.textFieldDidBeginEditing(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Field/TextField.swift",
-      "line": 285,
+      "line": 286,
       "symbol": "TextField.textFieldDidEndEditing(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Field/TextField.swift",
-      "line": 290,
+      "line": 291,
       "symbol": "TextField.textFieldShouldBeginEditing(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Field/TextField.swift",
-      "line": 294,
+      "line": 295,
       "symbol": "TextField.textField(_:shouldChangeCharactersIn:replacementString:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -753,6 +753,13 @@
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Field/TextFieldType.swift",
       "line": 4,
       "symbol": "TextFieldType.number",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Field/TextFieldType.swift",
+      "line": 5,
+      "symbol": "TextFieldType.password",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
