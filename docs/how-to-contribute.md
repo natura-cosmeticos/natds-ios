@@ -79,7 +79,6 @@ After documenting your code, you'll also have to update the documentation files.
 make create_docs
 ```
 
-
 ### Review criteria
 
 Fine, now you should be asking yourself which criteria will be checked before merging the PR. Here are some of them:
