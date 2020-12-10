@@ -59,13 +59,13 @@ There are many other types that you can use to tag your commits: `build:`, `chor
 #### Tool to help:
 You can add an CLI to help you writing your commits. [Commitizen](https://github.com/commitizen/cz-cli) is the tool we use :)
 
-##### Install the CLI
+To install the CLI, run:
 
 ```bash
 npm install -g commitizen
 ```
 
-##### Do your work and commit
+To commit your work with Commitizen, run:
 
 ```bash
 git add .
@@ -74,12 +74,18 @@ git cz
 
 Commitizen will guide you about how to structure you commit.
 
+After documenting your code, you'll also have to update the documentation files. To do that, run:
+```bash
+make create_docs
+```
+
+
 ### Review criteria
 
 Fine, now you should be asking yourself which criteria will be checked before merging the PR. Here are some of them:
 
 - Your code is covered by tests
-- Your code is well strcutured, respecting SOLID principles
+- Your code is well structured, respecting SOLID principles
 - Your code passed our automatic verifications (you can check the pipeline flow link in your PR)
 - You've added a sample of the increment to the Sample App (remember to update the tests related to it)
 - You have made the corresponding changes to the documentation
