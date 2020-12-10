@@ -16,8 +16,9 @@ Library with iOS components defined by [Natura Group Design System Team](https:/
 - CocoaPods
 - Fastlane
 - Bitrise (CI)
-- Git-LFS (https://git-lfs.github.com/)
+- [Git-LFS](https://git-lfs.github.com/)
 - Swiftlint
+- [Jazzy](https://github.com/realm/jazzy) for documentation
 
 ### How to Install
 
