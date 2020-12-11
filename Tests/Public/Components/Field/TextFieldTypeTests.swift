@@ -40,11 +40,11 @@ class TextFieldTypeTests: XCTestCase {
     }
 
     func test_password_returnsExpectedKeyboardAndTextSettings() {
-        let expectedKeyboard = UIKeyboardType.default
+        let expectedKeyboard = UIKeyboardType.numberPad
         let expectedAutocorrection = UITextAutocorrectionType.no
         let expectedCapitalization = UITextAutocapitalizationType.none
 
-        let sut = TextFieldType.password
+        let sut = TextFieldType.password(keyboardType: .numberPad)
 
         XCTAssertEqual(sut.keyboard, expectedKeyboard)
         XCTAssertEqual(sut.autoCorrection, expectedAutocorrection)

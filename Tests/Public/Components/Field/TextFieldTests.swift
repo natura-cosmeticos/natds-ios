@@ -28,17 +28,17 @@ final class TextFieldTests: XCTestCase {
         XCTAssertEqual(sut.textField.keyboardType, expectedType.keyboard)
         XCTAssertEqual(sut.textField.autocorrectionType, expectedType.autoCorrection)
         XCTAssertEqual(sut.textField.autocapitalizationType, expectedType.capitalization)
-        XCTAssertEqual(sut.textField.isSecureTextEntry, false)
+        XCTAssertEqual(sut.textField.isSecureTextEntry, expectedType.secureTextEntry)
     }
 
     func test_type_whenTypeIsPassword_expectedTypeSetup() {
-        let expectedType = TextFieldType.password
+        let expectedType = TextFieldType.password()
         sut.type = expectedType
 
         XCTAssertEqual(sut.textField.keyboardType, expectedType.keyboard)
         XCTAssertEqual(sut.textField.autocorrectionType, expectedType.autoCorrection)
         XCTAssertEqual(sut.textField.autocapitalizationType, expectedType.capitalization)
-        XCTAssertEqual(sut.textField.isSecureTextEntry, true)
+        XCTAssertEqual(sut.textField.isSecureTextEntry, expectedType.secureTextEntry)
     }
 
     func test_textFieldDelegate_whenHasDelegateAndCallDidEndEditing_expectInvokeTextFieldDelegate() {

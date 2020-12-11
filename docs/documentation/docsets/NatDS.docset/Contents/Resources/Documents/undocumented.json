@@ -177,7 +177,11 @@
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Badge/NatBadge+Color.swift",
+<<<<<<< HEAD
+      "line": 20,
+=======
       "line": 19,
+>>>>>>> master
       "symbol": "NatBadge.Color.alert",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
@@ -758,14 +762,22 @@
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/IconButton/NatIconButton+Sizes.swift",
+<<<<<<< HEAD
+      "line": 10,
+=======
       "line": 11,
+>>>>>>> master
       "symbol": "NatIconButton.Sizes.semi",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/IconButton/NatIconButton+Sizes.swift",
+<<<<<<< HEAD
+      "line": 11,
+=======
       "line": 12,
+>>>>>>> master
       "symbol": "NatIconButton.Sizes.semiX",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
@@ -2802,7 +2814,11 @@
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/ProgressIndicator/NatProgressIndicatorCircular+Size.swift",
+<<<<<<< HEAD
+      "line": 9,
+=======
       "line": 10,
+>>>>>>> master
       "symbol": "NatProgressIndicatorCircular.Size.standard",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
