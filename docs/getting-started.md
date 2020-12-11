@@ -1,4 +1,4 @@
-# Getting Started - Nat Design System - WIP
+# Getting Started - Nat Design System
 
 ## Themes
 After following the steps to use NatDS with Cocoapods in your project, its necessary to configure the Design System with a theme or `fatalError` will be raised.
@@ -37,7 +37,7 @@ Lineheight: Medium (1.5)
 
 You can set these attributes manually in your code or .xib, or you can use the `Heading 1` typography token, that has exactly these attributes:
 
-```
+```swift
 NatFonts.font(ofSize: .heading1, withWeight: .regular)
 ```
 

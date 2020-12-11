@@ -8,7 +8,6 @@
 
 Library with iOS components defined by [Natura Group Design System Team](https://natds.natura.design/docs).
 
-
 ## Tech Stack
 
 - __Swift 5__
@@ -20,7 +19,7 @@ Library with iOS components defined by [Natura Group Design System Team](https:/
 - Swiftlint
 - [Jazzy](https://github.com/realm/jazzy) for documentation
 
-### How to Install
+## How to Install
 
 ### CocoaPods
 
@@ -50,9 +49,11 @@ Before start using, it's necessary to configure the Design System with a theme o
 DesignSystem().configure(with: AvailableTheme)
 ```
 
-### Getting Started
+## Getting started
 
-[Start using our lib](docs/getting-started.md).
+[Check how to start using our lib](docs/getting-started.md).
+
+
 
 ## How to contribute
 
