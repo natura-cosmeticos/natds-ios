@@ -19,7 +19,7 @@ Design tokens are the most basic portion of our DS. They are all the basic attri
 - Color​
 - Elevation​
 - Fonts
-- Icons (documentation in progress)
+- [Icons](using-icons.md)
 - Opacity​
 - Size​s
 - Spacing​

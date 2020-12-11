@@ -1,7 +1,7 @@
 # How to use Design System icons
 We use a proprietary icon library, so, through an organized system, categories and names, we provide access to the icons supported by Nat Design System.
 
-The icon library, which is available at [Natura Design System](https://zeroheight.com/28db352be/p/94367e-icon-library/b/6154b9) website, contains all the icons names and images. You can also check the icons by running the [Sample App](docs/how-to-contribute.md/##sample) in a simulator.
+The icon library, which is available at [Natura Design System](https://zeroheight.com/28db352be/p/94367e-icon-library/b/6154b9) website, contains all the icons names and images. You can also check the icons by running the [Sample App](how-to-contribute.md) in a simulator.
 
 ## How to use
 The icons are provided by the NatDS pod as the type `Icon`. They can be used as an `IconView` or inside a `NatIconButton`.
