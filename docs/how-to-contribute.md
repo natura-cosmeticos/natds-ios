@@ -26,7 +26,7 @@ Follow the steps below before opening the project.
 
 ---
 
-## Sample
+## Sample App
 
 We have provided a sample project in the repository. To use it, download the repository, run `pod install` to download the required libraries and open `NatDS.xcworkspace`. You'll see two schemes: `NatDS` and `NatDS-SampleApp` - select `NatDS-SampleApp` and then build & run! Source files for this application are in the NatDS-SampleApp/Sources directory i the project navigator.
 
