@@ -660,28 +660,44 @@
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Field/TextField.swift",
+<<<<<<< HEAD
       "line": 283,
+=======
+      "line": 281,
+>>>>>>> master
       "symbol": "TextField.textFieldDidBeginEditing(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Field/TextField.swift",
+<<<<<<< HEAD
       "line": 288,
+=======
+      "line": 286,
+>>>>>>> master
       "symbol": "TextField.textFieldDidEndEditing(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Field/TextField.swift",
+<<<<<<< HEAD
       "line": 293,
+=======
+      "line": 291,
+>>>>>>> master
       "symbol": "TextField.textFieldShouldBeginEditing(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Field/TextField.swift",
+<<<<<<< HEAD
       "line": 297,
+=======
+      "line": 295,
+>>>>>>> master
       "symbol": "TextField.textField(_:shouldChangeCharactersIn:replacementString:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -759,7 +775,11 @@
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Field/TextFieldType.swift",
       "line": 5,
+<<<<<<< HEAD
       "symbol": "TextFieldType.password(keyboardType:)",
+=======
+      "symbol": "TextFieldType.password",
+>>>>>>> master
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
