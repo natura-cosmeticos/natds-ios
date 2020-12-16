@@ -28,21 +28,11 @@
 public final class NatShortcut: UIView {
 
     // MARK: - Private properties
-
-    private let circleView: UIView = {
-        let view = UIView()
-        view.layer.cornerRadius = getTokenFromTheme(\.sizeMediumX) / 2
+    
+    private let shortcutView: ShortcutView = {
+        let view = ShortcutView(icon: .outlinedDefaultMockup)
         view.translatesAutoresizingMaskIntoConstraints = false
-
         return view
-    }()
-
-    private let iconView: IconView = {
-        let iconView = IconView(fontSize: getTokenFromTheme(\.sizeSemi))
-        iconView.icon = .outlinedDefaultMockup
-        iconView.translatesAutoresizingMaskIntoConstraints = false
-
-        return iconView
     }()
 
     private let label: UILabel = {
@@ -91,15 +81,15 @@ public final class NatShortcut: UIView {
     @objc func tapHandler(_ sender: UITapGestureRecognizer) {
         action?()
 
-        addPulseLayerAnimated(at: circleView.centerBounds, in: circleView.layer, removeAfterAnimation: true)
+        addPulseLayerAnimated(at: shortcutView.centerBounds, in: shortcutView.layer, removeAfterAnimation: true)
     }
 
     @objc func longPressHandler(_ sender: UILongPressGestureRecognizer) {
         switch sender.state {
         case .began:
-            addPulseLayerAnimated(at: circleView.centerBounds, in: circleView.layer, removeAfterAnimation: false)
+            addPulseLayerAnimated(at: shortcutView.centerBounds, in: shortcutView.layer, removeAfterAnimation: true)
         case .ended:
-            removePulseLayer(layer: circleView.layer)
+            removePulseLayer(layer: shortcutView.layer)
         default:
             break
         }
@@ -114,11 +104,15 @@ extension NatShortcut {
     }
 
     public func configure(icon: Icon) {
-        iconView.icon = icon
+        shortcutView.configure(icon: icon)
     }
 
     public func configure(action: @escaping () -> Void) {
         self.action = action
+    }
+    
+    public func configure(badgeValue: UInt) {
+        shortcutView.configure(badgeValue: badgeValue)
     }
 }
 
@@ -126,19 +120,19 @@ extension NatShortcut {
 
 extension NatShortcut {
     func configure(circleColor color: UIColor) {
-        circleView.backgroundColor = color
+        shortcutView.backgroundColor = color
     }
 
     func configure(circleBorderWidth value: CGFloat) {
-        circleView.layer.borderWidth = value
+        shortcutView.layer.borderWidth = value
     }
 
     func configure(circleBorderColor color: CGColor) {
-        circleView.layer.borderColor = color
+        shortcutView.layer.borderColor = color
     }
 
     func configure(iconColor color: UIColor) {
-        iconView.tintColor = color
+        shortcutView.configure(iconColor: color)
     }
 }
 
@@ -146,8 +140,7 @@ extension NatShortcut {
 
 extension NatShortcut {
     private func setup() {
-        circleView.addSubview(iconView)
-        addSubview(circleView)
+        addSubview(shortcutView)
         addSubview(label)
 
         addConstraints()
@@ -165,17 +158,14 @@ extension NatShortcut {
         let circleSize = NatSizes.mediumX
 
         let constraints = [
-            circleView.topAnchor.constraint(equalTo: topAnchor),
-            circleView.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor),
-            circleView.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor),
-            circleView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            circleView.widthAnchor.constraint(equalToConstant: circleSize),
-            circleView.heightAnchor.constraint(equalToConstant: circleSize),
+            shortcutView.topAnchor.constraint(equalTo: topAnchor),
+            shortcutView.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor),
+            shortcutView.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor),
+            shortcutView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            shortcutView.widthAnchor.constraint(equalToConstant: circleSize),
+            shortcutView.heightAnchor.constraint(equalToConstant: circleSize),
 
-            iconView.centerXAnchor.constraint(equalTo: circleView.centerXAnchor),
-            iconView.centerYAnchor.constraint(equalTo: circleView.centerYAnchor),
-
-            label.topAnchor.constraint(equalTo: circleView.bottomAnchor, constant: getTokenFromTheme(\.sizeTiny)),
+            label.topAnchor.constraint(equalTo: shortcutView.bottomAnchor, constant: getTokenFromTheme(\.sizeTiny)),
             label.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor),
             label.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor),
             label.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor),
