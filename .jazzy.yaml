@@ -1,3 +1,4 @@
 #jazzy config file
 
 output: docs/documentation
+documentation: Docs/*.md

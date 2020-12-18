@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>How to contribute  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0" />
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="How to contribute  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p>
+          <a href="index.html">NatDS 2.10.1 Docs</a>
+          <span class="no-mobile"> (13% documented)</span>
+        </p>
+    
+    
+      </div>
+    </header>
+    <div id="breadcrumbs-container">
+      <div class="content-wrapper">
+        <p id="breadcrumbs">
+          <span class="no-mobile">
+            <a href="index.html">NatDS Reference</a>
+            <img id="carat" src="img/carat.png" />
+          </span>
+          How to contribute  Reference
+        </p>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="article-wrapper">
+        <article class="main-content">
+          <section>
+            <section class="section">
+              
+              <h1 id='how-to-contribute' class='heading'>How to contribute</h1>
+
+<p>Are you feeling that you can help us with anything in the project? Just get closer!!</p>
+<h2 id='create-a-pr-to-contribute-to-the-project' class='heading'>Create a PR to contribute to the project</h2>
+
+<p>We will review your PR checking some criteria and, if everything is fine, a new version for the library will be published with your contribution. Setup the project and start coding:</p>
+<h2 id='project-setup' class='heading'>Project setup</h2>
+
+<p>Follow the steps below before opening the project.</p>
+
+<p>Installing dependencies:</p>
+
+<ol>
+<li>Install project dependencies:
+<code>
+make setup
+</code></li>
+<li>## Natura employees only:
+Note: before running this command, please contact System Team to request the required credentials</li>
+</ol>
+<pre class="highlight plaintext"><code>   make install_certificates
+</code></pre>
+
+<ol>
+<li>Done! Open project on Xcode using <em>.xcworkspace</em></li>
+</ol>
+
+<hr>
+<h2 id='sample-app' class='heading'>Sample App</h2>
+
+<p>We have provided a sample project in the repository. To use it, download the repository, run <code>pod install</code> to download the required libraries and open <code>NatDS.xcworkspace</code>. You&rsquo;ll see two schemes: <code>NatDS</code> and <code>NatDS-SampleApp</code> - select <code>NatDS-SampleApp</code> and then build &amp; run! Source files for this application are in the NatDS-SampleApp/Sources directory i the project navigator.</p>
+
+<hr>
+<h2 id='dependencies' class='heading'>Dependencies</h2>
+
+<ul>
+<li>Xcode 12+</li>
+<li>Homebrew</li>
+<li>Ruby 2.6.5</li>
+<li>Bundler</li>
+</ul>
+<h2 id='a-href-https-git-lfs-github-com-git-lfs-a' class='heading'>- <a href="https://git-lfs.github.com/">Git-LFS</a></h2>
+<h2 id='contributing' class='heading'>Contributing</h2>
+<h3 id='commits-structure' class='heading'>Commits structure</h3>
+
+<p>After developing your contribution, we recommend the usage of <a href="https://www.conventionalcommits.org/en/v1.0.0/">Conversional Commits</a> to commit your work.</p>
+
+<p>The most common types the we use are:</p>
+
+<ul>
+<li>If you&rsquo;re adding a new feature, your commit should look like: <code>feat: [Short Description] [long description if you need]</code></li>
+<li>If you&rsquo;re fixing a bug, your commit should look like: <code>bug: [Short Description] [long description if you need]</code></li>
+<li>If you&rsquo;re adding tests, your commit should look like: <code>test: [Short Description] [long description if you need]</code></li>
+</ul>
+
+<p>There are many other types that you can use to tag your commits: <code>build:</code>, <code>chore:</code>, <code>ci:</code>, <code>docs:</code>, <code>style:</code>, <code>refactor:</code>, <code>perf:</code>; 
+<a href="https://www.conventionalcommits.org/en/v1.0.0/">here you can find more info about it</a>.</p>
+<h4 id='tool-to-help' class='heading'>Tool to help:</h4>
+
+<p>You can add an CLI to help you writing your commits. <a href="https://github.com/commitizen/cz-cli">Commitizen</a> is the tool we use :)</p>
+
+<p>To install the CLI, run:</p>
+<pre class="highlight shell"><code>npm <span class="nb">install</span> <span class="nt">-g</span> commitizen
+</code></pre>
+
+<p>To commit your work with Commitizen, run:</p>
+<pre class="highlight shell"><code>git add <span class="nb">.</span>
+git cz
+</code></pre>
+
+<p>Commitizen will guide you about how to structure you commit.</p>
+
+<p>After documenting your code, you&rsquo;ll also have to update the documentation files. To do that, run:</p>
+<pre class="highlight shell"><code>make create_docs
+</code></pre>
+<h3 id='review-criteria' class='heading'>Review criteria</h3>
+
+<p>Fine, now you should be asking yourself which criteria will be checked before merging the PR. Here are some of them:</p>
+
+<ul>
+<li>Your code is covered by tests</li>
+<li>Your code is well structured, respecting SOLID principles</li>
+<li>Your code passed our automatic verifications (you can check the pipeline flow link in your PR)</li>
+<li>You&rsquo;ve added a sample of the increment to the Sample App (remember to update the tests related to it)</li>
+<li>You have made the corresponding changes to the documentation</li>
+<li>Your changes don&rsquo;t generate new warnings</li>
+<li>The component works fine with dark mode enabled</li>
+<li>Your code uses Design System design tokens</li>
+</ul>
+
+<p>Is there something that you think could be different in the lib and you want to let us know?
+Feel free to open an issue and explain your point. We&rsquo;ll be happy to get in touch! :)</p>
+
+            </section>
+          </section>
+        </article>
+      </div>
+      <div class="nav-wrapper">
+        <nav class="nav-bottom">
+          <ul class="nav-groups">
+            <li class="nav-group-name">
+              <a href="Guides.html">Guides</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="getting-started.html">Getting started</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="how-to-contribute.html">How to contribute</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="how-to-use-icons.html">How to use icons</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="Classes.html">Classes</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="Classes/DesignSystem.html">DesignSystem</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/Divider.html">Divider</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/ExpansionPanel.html">ExpansionPanel</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/ExpansionPanel/Margin.html">– Margin</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/IconView.html">IconView</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatBadge.html">NatBadge</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatBadge/Color.html">– Color</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatBadge/Style.html">– Style</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatButton.html">NatButton</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatButton/EdgeInsets.html">– EdgeInsets</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatButton/Height.html">– Height</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatButton/Position.html">– Position</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatButton/Style.html">– Style</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatDialogController.html">NatDialogController</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatDialogController/AlertStyleBuilder.html">– AlertStyleBuilder</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatDialogController/StandardStyleBuilder.html">– StandardStyleBuilder</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatDialogController.html#/s:5NatDS0A16DialogControllerC9ViewModelC">– ViewModel</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatIconButton.html">NatIconButton</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatIconButton/State.html">– State</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatIconButton/Sizes.html">– Sizes</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatIconButton/Style.html">– Style</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatProgressIndicatorCircular.html">NatProgressIndicatorCircular</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatProgressIndicatorCircular/Action.html">– Action</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatProgressIndicatorCircular/Size.html">– Size</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatShortcut.html">NatShortcut</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatShortcut/Style.html">– Style</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatTag.html">NatTag</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatTag/Style.html">– Style</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NavigationDrawer.html">NavigationDrawer</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NavigationDrawer/IndexMenu.html">– IndexMenu</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NavigationDrawerItemCell.html">NavigationDrawerItemCell</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NavigationDrawerItemCell/State.html">– State</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NavigationDrawerSubitemCell.html">NavigationDrawerSubitemCell</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NavigationDrawerSubitemCell/State.html">– State</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/SearchBar.html">SearchBar</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/Tab.html">Tab</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/TextField.html">TextField</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/ValueTextHighlight.html">ValueTextHighlight</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="Enums.html">Enumerations</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="Enums/AvailableTheme.html">AvailableTheme</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/Icon.html">Icon</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/NatBorderRadius.html">NatBorderRadius</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/NatOpacities.html">NatOpacities</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/NatSizes.html">NatSizes</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/NatSpacing.html">NatSpacing</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/TextFieldType.html">TextFieldType</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="Extensions.html">Extensions</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="Extensions/UIBarButtonItem.html">UIBarButtonItem</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Extensions/UICollectionView.html">UICollectionView</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Extensions.html#/c:objc(cs)UICollectionViewCell">UICollectionViewCell</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Extensions/UINavigationController.html">UINavigationController</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Extensions/UINavigationController/Style.html">– Style</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Extensions/UITableView.html">UITableView</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Extensions.html#/c:objc(cs)UITableViewCell">UITableViewCell</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Extensions/UIViewController.html">UIViewController</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Extensions/UIViewController/TitleStyle.html">– TitleStyle</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="Protocols.html">Protocols</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="Protocols/Badgeable.html">Badgeable</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/NatDialogBodyConfigurable.html">NatDialogBodyConfigurable</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/NatDialogBuilder.html">NatDialogBuilder</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/NatDialogCustomBodyConfigurable.html">NatDialogCustomBodyConfigurable</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/NatDialogDismissableConfigurable.html">NatDialogDismissableConfigurable</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/NatDialogTitleConfigurable.html">NatDialogTitleConfigurable</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/NavigationDrawerDelegate.html">NavigationDrawerDelegate</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/Pulsable.html">Pulsable</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/ReusableView.html">ReusableView</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/TabDelegate.html">TabDelegate</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Protocols/TextFieldDelegate.html">TextFieldDelegate</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="Structs.html">Structures</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="Structs.html#/s:5NatDS25DialogButtonConfigurationV">DialogButtonConfiguration</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Structs/IllustrationIcons.html">IllustrationIcons</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Structs/IllustrationIcons/Lined.html">– Lined</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Structs/NatColors.html">NatColors</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Structs/NatElevation.html">NatElevation</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Structs/NatElevation/Elevation.html">– Elevation</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Structs/NatFonts.html">NatFonts</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Structs/NatFonts/Size.html">– Size</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Structs/NatFonts/Weight.html">– Weight</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Structs/NatLogoImages.html">NatLogoImages</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-wrapper">
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2020-12-17)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </div>
+    </div>
+  </body>
+</div>
+</html>
