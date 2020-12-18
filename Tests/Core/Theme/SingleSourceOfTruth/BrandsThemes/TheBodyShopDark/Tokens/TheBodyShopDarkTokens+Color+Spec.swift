@@ -9,7 +9,7 @@ final class TheBodyShopDarkTokensColorSpec: QuickSpec {
 
         describe("#colorPrimary") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorPrimary).to(equal("#62B3AE"))
+                expect(systemUnderTest.colorPrimary).to(equal("#7CC4BC"))
             }
         }
 
@@ -21,7 +21,7 @@ final class TheBodyShopDarkTokensColorSpec: QuickSpec {
 
         describe("#colorPrimaryLight") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorPrimaryLight).to(equal("#94E5E0"))
+                expect(systemUnderTest.colorPrimaryLight).to(equal("#AEF7EE"))
             }
         }
 
@@ -33,7 +33,7 @@ final class TheBodyShopDarkTokensColorSpec: QuickSpec {
 
         describe("#colorPrimaryDark") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorPrimaryDark).to(equal("#2F837F"))
+                expect(systemUnderTest.colorPrimaryDark).to(equal("#4C938C"))
             }
         }
 
@@ -45,7 +45,7 @@ final class TheBodyShopDarkTokensColorSpec: QuickSpec {
 
         describe("#colorSecondary") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorSecondary).to(equal("#D2AD93"))
+                expect(systemUnderTest.colorSecondary).to(equal("#F3F1A5"))
             }
         }
 
@@ -57,7 +57,7 @@ final class TheBodyShopDarkTokensColorSpec: QuickSpec {
 
         describe("#colorSecondaryLight") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorSecondaryLight).to(equal("#FFDFC4"))
+                expect(systemUnderTest.colorSecondaryLight).to(equal("#FFFFD7"))
             }
         }
 
@@ -69,7 +69,7 @@ final class TheBodyShopDarkTokensColorSpec: QuickSpec {
 
         describe("#colorSecondaryDark") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorSecondaryDark).to(equal("#A07E65"))
+                expect(systemUnderTest.colorSecondaryDark).to(equal("#BFBF75"))
             }
         }
 
