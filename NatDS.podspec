@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name          = 'NatDS'
-  s.version       = '2.10.1'
+  s.version       = '2.11.0'
   s.summary       = 'Natura Group Design System'
   s.description   = <<-DESC
                     Natura Design System helps designers and developers work faster and smarter, ensuring brand consistency and scalability.
