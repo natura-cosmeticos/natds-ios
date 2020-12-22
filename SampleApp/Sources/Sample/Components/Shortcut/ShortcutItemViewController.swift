@@ -7,6 +7,8 @@ final class ShortcutItemViewController: UIViewController, SampleItem {
 
     private lazy var containedPrimaryStackView = createStackView()
     private lazy var outlinedPrimaryStackView = createStackView()
+    private lazy var containedPrimaryBadgeStackView = createStackView()
+    private lazy var outlinedPrimaryBadgeStackView = createStackView()
 
     // MARK: - Life cycle
 
@@ -32,21 +34,34 @@ final class ShortcutItemViewController: UIViewController, SampleItem {
 
         view.addSubview(containedPrimaryStackView)
         view.addSubview(outlinedPrimaryStackView)
+        view.addSubview(containedPrimaryBadgeStackView)
+        view.addSubview(outlinedPrimaryBadgeStackView)
 
         let containedPrimary = createShortcuts(style: .containedPrimary, text: "Contained")
         containedPrimary.forEach { containedPrimaryStackView.addArrangedSubview($0) }
 
         let outlinedPrimary = createShortcuts(style: .outlinedPrimary, text: "Outlined")
         outlinedPrimary.forEach { outlinedPrimaryStackView.addArrangedSubview($0) }
+        
+        let containedPrimaryBadge = createShortcuts(style: .containedPrimary, text: "Contained", shouldShowBadge: true)
+        containedPrimaryBadge.forEach { containedPrimaryBadgeStackView.addArrangedSubview($0) }
+
+        let outlinedPrimaryBadge = createShortcuts(style: .outlinedPrimary, text: "Outlined", shouldShowBadge: true)
+        outlinedPrimaryBadge.forEach { outlinedPrimaryBadgeStackView.addArrangedSubview($0) }
 
         addConstraints()
     }
 
-    private func createShortcuts(style: NatShortcut.Style, text: String) -> [NatShortcut] {
-        (0...3).map { _ in
+    private func createShortcuts(style: NatShortcut.Style, text: String, shouldShowBadge: Bool = false) -> [NatShortcut] {
+        (0...3).map { value in
             let shortcut = NatShortcut(style: style)
             shortcut.configure(text: text)
-
+            
+            if shouldShowBadge {
+                let badgeValues: [UInt] = [1, 25, 99, 100]
+                shortcut.configure(badgeValue: badgeValues[value])
+            }
+            
             return shortcut
         }
     }
@@ -83,7 +98,21 @@ final class ShortcutItemViewController: UIViewController, SampleItem {
                 constant: NatSpacing.small
             ),
             outlinedPrimaryStackView.widthAnchor.constraint(equalTo: containedPrimaryStackView.widthAnchor),
-            outlinedPrimaryStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            outlinedPrimaryStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
+            containedPrimaryBadgeStackView.topAnchor.constraint(
+                equalTo: outlinedPrimaryStackView.bottomAnchor,
+                constant: NatSpacing.small
+            ),
+            containedPrimaryBadgeStackView.widthAnchor.constraint(equalTo: containedPrimaryStackView.widthAnchor),
+            containedPrimaryBadgeStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
+            outlinedPrimaryBadgeStackView.topAnchor.constraint(
+                equalTo: containedPrimaryBadgeStackView.bottomAnchor,
+                constant: NatSpacing.small
+            ),
+            outlinedPrimaryBadgeStackView.widthAnchor.constraint(equalTo: containedPrimaryStackView.widthAnchor),
+            outlinedPrimaryBadgeStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ]
 
         NSLayoutConstraint.activate(constraints)
