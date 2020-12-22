@@ -139,6 +139,10 @@ extension NatIconButton {
 
         style.applyStyle(self)
     }
+
+    public func configure(icon: String) {
+        iconView.iconLabel.text = icon
+    }
 }
 
 // MARK: - Internal methods

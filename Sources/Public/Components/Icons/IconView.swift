@@ -12,7 +12,7 @@ public class IconView: UIView {
         }
     }
 
-    private lazy var iconLabel: UILabel = {
+    public lazy var iconLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = aligment
         label.font = .iconFont()
