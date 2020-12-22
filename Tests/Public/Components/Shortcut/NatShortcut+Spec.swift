@@ -30,7 +30,8 @@ final class NatShortSpec: QuickSpec {
             }
 
             it("sets a default icon") {
-                let circleView = systemUnderTest.subviews.first
+                let shortcutView = systemUnderTest.subviews.first
+                let circleView = shortcutView?.subviews.first
                 let iconView = circleView?.subviews.first as? IconView
 
                 expect(iconView?.icon).to(equal(.outlinedDefaultMockup))
@@ -76,7 +77,8 @@ final class NatShortSpec: QuickSpec {
             }
 
             it("sets icon to iconView") {
-                let circleView = systemUnderTest.subviews.first
+                let shortcutView = systemUnderTest.subviews.first
+                let circleView = shortcutView?.subviews.first
                 let iconView = circleView?.subviews.first as? IconView
 
                 expect(iconView?.icon).to(equal(.filledActionAdd))
@@ -125,7 +127,8 @@ final class NatShortSpec: QuickSpec {
             }
 
             it("sets tintColor to iconView") {
-                let circleView = systemUnderTest.subviews.first
+                let shortcutView = systemUnderTest.subviews.first
+                let circleView = shortcutView?.subviews.first
                 let iconView = circleView?.subviews.first as? IconView
 
                 expect(iconView?.tintColor).to(equal(.red))
