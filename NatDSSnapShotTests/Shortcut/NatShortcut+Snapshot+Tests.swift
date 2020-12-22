@@ -32,6 +32,16 @@ final class NatShortcutSnapshotTests: XCTestCase {
 
         assertSnapshot(matching: superview, as: .image)
     }
+    
+    func test_shortcut_style_contained_primary_with_badge_hasValidSnapshot() {
+        let systemUnderTest = createSystemUnderTest(style: .containedPrimary, text: "Contained", badgeValue: 10)
+
+        superview.addSubview(systemUnderTest)
+        addConstraints(systemUnderTest)
+
+        assertSnapshot(matching: superview, as: .image)
+    }
+    
 
     func test_shortcut_style_contained_default_hasValidSnapshot() {
         let systemUnderTest = createSystemUnderTest(style: .containedDefault, text: "Contained")
@@ -44,6 +54,15 @@ final class NatShortcutSnapshotTests: XCTestCase {
 
     func test_shortcut_style_contained_default_with_ellipsis_hasValidSnapshot() {
         let systemUnderTest = createSystemUnderTest(style: .containedDefault, text: "Contained / Default")
+
+        superview.addSubview(systemUnderTest)
+        addConstraints(systemUnderTest)
+
+        assertSnapshot(matching: superview, as: .image)
+    }
+    
+    func test_shortcut_style_contained_default_with_badge_hasValidSnapshot() {
+        let systemUnderTest = createSystemUnderTest(style: .containedDefault, text: "Contained", badgeValue: 10)
 
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
@@ -68,6 +87,15 @@ final class NatShortcutSnapshotTests: XCTestCase {
 
         assertSnapshot(matching: superview, as: .image)
     }
+    
+    func test_shortcut_style_outlined_primary_with_badge_hasValidSnapshot() {
+        let systemUnderTest = createSystemUnderTest(style: .outlinedPrimary, text: "Outlined", badgeValue: 10)
+
+        superview.addSubview(systemUnderTest)
+        addConstraints(systemUnderTest)
+
+        assertSnapshot(matching: superview, as: .image)
+    }
 
     func test_shortcut_style_outlined_default_hasValidSnapshot() {
         let systemUnderTest = createSystemUnderTest(style: .containedDefault, text: "Outlined")
@@ -86,12 +114,22 @@ final class NatShortcutSnapshotTests: XCTestCase {
 
         assertSnapshot(matching: superview, as: .image)
     }
+    
+    func test_shortcut_style_outlined_default_with_badge_hasValidSnapshot() {
+        let systemUnderTest = createSystemUnderTest(style: .outlinedDefault, text: "Outlined", badgeValue: 10)
+
+        superview.addSubview(systemUnderTest)
+        addConstraints(systemUnderTest)
+
+        assertSnapshot(matching: superview, as: .image)
+    }
 }
 
 extension NatShortcutSnapshotTests {
-    private func createSystemUnderTest(style: NatShortcut.Style, text: String) -> NatShortcut {
+    private func createSystemUnderTest(style: NatShortcut.Style, text: String, badgeValue: UInt = 0) -> NatShortcut {
         let systemUnderTest = NatShortcut(style: style)
         systemUnderTest.configure(text: text)
+        systemUnderTest.configure(badgeValue: badgeValue)
         systemUnderTest.translatesAutoresizingMaskIntoConstraints = false
 
         return systemUnderTest

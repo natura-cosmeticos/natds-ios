@@ -147,6 +147,39 @@ final class NatShortSpec: QuickSpec {
                 expect(actionInvocations).toEventually(equal(1))
             }
         }
+        
+        describe("#configure(badgeValue:)") {
+            context("when value is bigger than 0") {
+                beforeEach {
+                    systemUnderTest.configure(badgeValue: 10)
+                }
+
+                it("adds sublayer for badge") {
+                    expect(systemUnderTest.subviews.first?.layer.sublayers?.count).to(equal(2))
+                }
+            }
+
+            context("when value is 0") {
+                beforeEach {
+                    systemUnderTest.configure(badgeValue: 0)
+                }
+
+                it("removes sublayer for badge if exists") {
+                    expect(systemUnderTest.subviews.first?.layer.sublayers?.count).to(equal(1))
+                }
+            }
+
+            context("when value is bigger than 0 then a 0 value") {
+                beforeEach {
+                    systemUnderTest.configure(badgeValue: 10)
+                    systemUnderTest.configure(badgeValue: 0)
+                }
+
+                it("removes sublayer for badge") {
+                    expect(systemUnderTest.subviews.first?.layer.sublayers?.count).to(equal(1))
+                }
+            }
+        }
 
         describe("#tapHandler") {
             beforeEach {
