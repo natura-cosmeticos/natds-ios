@@ -9,6 +9,16 @@ public class IconView: UIView {
     public var icon: Icon? {
         didSet {
             iconLabel.text = icon?.unicode
+            if let _ = icon {
+                shouldShowDefaultIcon = false
+            }
+        }
+    }
+    
+    public var shouldShowDefaultIcon = true {
+        didSet {
+            defaultImageView.isHidden = !shouldShowDefaultIcon
+            iconLabel.isHidden = shouldShowDefaultIcon
         }
     }
 
@@ -20,9 +30,11 @@ public class IconView: UIView {
     }()
 
     internal lazy var defaultImageView: UIImageView = {
-        let image = UIImageView()
-        image.image = UIImage(named: "IconOutlinedDefaultMockup")
-        return image
+        let imageView = UIImageView()
+        let image = AssetsHelper.image(from: "Icons/IconOutlinedDefaultMockup")?.withRenderingMode(.alwaysTemplate)
+        imageView.tintColor = .systemRed
+        imageView.image = image
+        return imageView
     }()
 
     public override init(frame: CGRect) {
@@ -61,21 +73,5 @@ public class IconView: UIView {
             defaultImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
             defaultImageView.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
-    }
-
-    internal func shouldHideDefaultIcon( _ isHidden: Bool = false) {
-        if isHidden {
-            defaultImageView.removeFromSuperview()
-        } else {
-            defaultImageView.removeFromSuperview()
-            addSubview(defaultImageView)
-            defaultImageView.translatesAutoresizingMaskIntoConstraints = false
-            NSLayoutConstraint.activate([
-                defaultImageView.topAnchor.constraint(equalTo: topAnchor),
-                defaultImageView.bottomAnchor.constraint(equalTo: bottomAnchor),
-                defaultImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
-                defaultImageView.trailingAnchor.constraint(equalTo: trailingAnchor)
-            ])
-        }
     }
 }
