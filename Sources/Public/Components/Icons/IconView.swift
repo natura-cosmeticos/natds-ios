@@ -31,8 +31,7 @@ public class IconView: UIView {
 
     internal lazy var defaultImageView: UIImageView = {
         let imageView = UIImageView()
-        let image = AssetsHelper.image(from: "Icons/IconOutlinedDefaultMockup")?.withRenderingMode(.alwaysTemplate)
-        imageView.tintColor = .systemRed
+        let image = AssetsHelper.image(from: "Icons/IconOutlinedDefaultMockup")
         imageView.image = image
         return imageView
     }()
