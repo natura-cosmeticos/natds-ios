@@ -289,6 +289,9 @@
 		B7CCF87E56EA792B3471AD69AF68B23F /* NatButton+EdgeInsets+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF10A178B1E50604C97B543CD204939B /* NatButton+EdgeInsets+Spec.swift */; };
 		BB3413734DCB562C834B90742EF06929 /* ButtonStyle+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573BBF1E50E0B49397C339D19D5E0D0B /* ButtonStyle+Spec.swift */; };
 		BBCC40A29117B4CB675FE57C3B0130E4 /* AssetsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B41F99CB8ACD14C09E1AA323E38C2D /* AssetsHelper.swift */; };
+		BEDF93202593B4FF00F54C50 /* NatSelectionControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF931F2593B4FF00F54C50 /* NatSelectionControl.swift */; };
+		BEDF93252593B5CE00F54C50 /* NatSelectionControl+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF93242593B5CE00F54C50 /* NatSelectionControl+Style.swift */; };
+		BEDF932A2593BE8000F54C50 /* NatSelectionControl+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF93292593BE8000F54C50 /* NatSelectionControl+State.swift */; };
 		C0F15375EEFCBC922341EBD9DED5A29B /* NatButton+Height.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C54C550ED4D44A309C43261BF40F55 /* NatButton+Height.swift */; };
 		C24255D434C838206493D9A89581F7C1 /* PulseLayer+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478FD68B021B6AA3538B93888BD14648 /* PulseLayer+Spec.swift */; };
 		C3E184D6CD3B52645D0E06A7138CA94E /* TextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99D4E498664E80E25C8F8C061407424 /* TextFieldTests.swift */; };
@@ -607,6 +610,9 @@
 		BAB63DBD1A346FC4D5664E5B20CC96D1 /* UIView+Frame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Frame.swift"; sourceTree = "<group>"; };
 		BC00F737F0234FCBD14533100E96A39E /* Pulsable+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pulsable+Spec.swift"; sourceTree = "<group>"; };
 		BC6A871B0A080C7AB0127CF2EA0D9153 /* natds-icons-ios.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "natds-icons-ios.ttf"; sourceTree = "<group>"; };
+		BEDF931F2593B4FF00F54C50 /* NatSelectionControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatSelectionControl.swift; sourceTree = "<group>"; };
+		BEDF93242593B5CE00F54C50 /* NatSelectionControl+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatSelectionControl+Style.swift"; sourceTree = "<group>"; };
+		BEDF93292593BE8000F54C50 /* NatSelectionControl+State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatSelectionControl+State.swift"; sourceTree = "<group>"; };
 		BF8DC06D81E2DEFAF54C74410DAD95D8 /* NatButton+Height+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+Height+Spec.swift"; sourceTree = "<group>"; };
 		C58B1BFBC101D26CBEC7E3448F9B33D2 /* ExpansionPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpansionPanel.swift; sourceTree = "<group>"; };
 		CAD56BE8AA67D399ED570EA78BFC09E7 /* NSMutableAttributedString+BuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+BuilderTests.swift"; sourceTree = "<group>"; };
@@ -1947,9 +1953,8 @@
 		8F17D4DBF2804B57A4C0A71661E479AF /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				84703F3D24F83AB900FE01CA /* IconButton */,
-				265B17E924AFA0DA00FD0407 /* Badge */,
 				0E3F578D24B8E9C8004B2F9E /* AppBar */,
+				265B17E924AFA0DA00FD0407 /* Badge */,
 				AAA7C27FE8E04EF2103505C58C128D34 /* Bar */,
 				F39AE9E5CB68E8C7A269525355E8E4D3 /* Button */,
 				78FE21C8815B7AED38811BF6BEB37BF0 /* Dialog */,
@@ -1957,8 +1962,10 @@
 				9A95973E20D8800C2A72454FF93AEC3F /* ExpansionPanel */,
 				EA99DA7A49950566847F2CD983BBD1EA /* Field */,
 				FBCFD36466E6B86E32075C92503882F7 /* Icons */,
+				84703F3D24F83AB900FE01CA /* IconButton */,
 				719A57636DBDBD5D6854EFEC0F362C4C /* NavigationDrawer */,
 				79ACDADD255C330400660E68 /* ProgressIndicator */,
+				BEDF931B2593815900F54C50 /* SelectionControl */,
 				844A1E2124AE111D00E93AD9 /* Shortcut */,
 				1C64E7FC7AE243CD11623B12CB2E59B4 /* Tab */,
 				26BFBAD525125195006C22E2 /* Tag */,
@@ -2079,6 +2086,16 @@
 				8D17D3D40C2AE04D8D49BFB4530D5BC9 /* DesignTokens */,
 			);
 			path = Theme;
+			sourceTree = "<group>";
+		};
+		BEDF931B2593815900F54C50 /* SelectionControl */ = {
+			isa = PBXGroup;
+			children = (
+				BEDF931F2593B4FF00F54C50 /* NatSelectionControl.swift */,
+				BEDF93242593B5CE00F54C50 /* NatSelectionControl+Style.swift */,
+				BEDF93292593BE8000F54C50 /* NatSelectionControl+State.swift */,
+			);
+			path = SelectionControl;
 			sourceTree = "<group>";
 		};
 		BEE13D19F1A22BF171DC1BAC64B38FA7 /* Icons */ = {
@@ -2688,9 +2705,11 @@
 				265B17EB24AFA12900FD0407 /* NatBadge.swift in Sources */,
 				84BC901624AA17C0007DF09D /* NatDialogCustomBodyConfigurable.swift in Sources */,
 				84BC901824AA17C0007DF09D /* NatDialogBuilder.swift in Sources */,
+				BEDF93202593B4FF00F54C50 /* NatSelectionControl.swift in Sources */,
 				84BC901524AA17C0007DF09D /* NatDialogBodyConfigurable.swift in Sources */,
 				847C829024E36AA6001CE116 /* NaturaDarkTheme.swift in Sources */,
 				8409854C24F030930095D6AD /* NotificationCenterObservable.swift in Sources */,
+				BEDF93252593B5CE00F54C50 /* NatSelectionControl+Style.swift in Sources */,
 				26740A4B24B3A62F00419526 /* NatBadge+Color.swift in Sources */,
 				26BB817924B944D100617EFC /* Badgeable.swift in Sources */,
 				84EB6B7524EBFEC000C6A792 /* GetThemeValidated.swift in Sources */,
@@ -2740,6 +2759,7 @@
 				4838BBC57B1464D82D59DE861726268A /* NatColors.swift in Sources */,
 				84BC900224AA15C3007DF09D /* NotificationCenterPostable.swift in Sources */,
 				797E615E255464D1002A59E0 /* NatButton+Icon.swift in Sources */,
+				BEDF932A2593BE8000F54C50 /* NatSelectionControl+State.swift in Sources */,
 				845AD7A824E2C8E6006CA226 /* AvonDarkTheme.swift in Sources */,
 				0FB003017C3A179872BC65E6E321FD13 /* NatDialogController+StandardStyleBuilder.swift in Sources */,
 				84BC900B24AA169B007DF09D /* DialogViewModel.swift in Sources */,
