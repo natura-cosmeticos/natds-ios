@@ -12,11 +12,17 @@ public class IconView: UIView {
         }
     }
 
-    public lazy var iconLabel: UILabel = {
+    internal lazy var iconLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = aligment
         label.font = .iconFont()
         return label
+    }()
+
+    internal lazy var defaultImageView: UIImageView = {
+        let image = UIImageView()
+        image.image = UIImage(named: "IconOutlinedDefaultMockup")
+        return image
     }()
 
     public override init(frame: CGRect) {
@@ -42,12 +48,34 @@ public class IconView: UIView {
 
     private func setup() {
         addSubview(iconLabel)
+        addSubview(defaultImageView)
         iconLabel.translatesAutoresizingMaskIntoConstraints = false
+        defaultImageView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             iconLabel.topAnchor.constraint(equalTo: topAnchor),
             iconLabel.bottomAnchor.constraint(equalTo: bottomAnchor),
             iconLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
-            iconLabel.trailingAnchor.constraint(equalTo: trailingAnchor)
+            iconLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
+            defaultImageView.topAnchor.constraint(equalTo: topAnchor),
+            defaultImageView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            defaultImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            defaultImageView.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
+    }
+
+    internal func shouldHideDefaultIcon( _ isHidden: Bool = false) {
+        if isHidden {
+            defaultImageView.removeFromSuperview()
+        } else {
+            defaultImageView.removeFromSuperview()
+            addSubview(defaultImageView)
+            defaultImageView.translatesAutoresizingMaskIntoConstraints = false
+            NSLayoutConstraint.activate([
+                defaultImageView.topAnchor.constraint(equalTo: topAnchor),
+                defaultImageView.bottomAnchor.constraint(equalTo: bottomAnchor),
+                defaultImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
+                defaultImageView.trailingAnchor.constraint(equalTo: trailingAnchor)
+            ])
+        }
     }
 }
