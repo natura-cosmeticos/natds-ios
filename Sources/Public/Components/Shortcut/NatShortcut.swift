@@ -1,6 +1,6 @@
 /**
- NatShortcut is a class that represents  a component from the design system.
- The shortcut colors changes according with the current theme configured in the Design system.
+ NatShortcut is a class that represents a component from the design system.
+ The shortcut colors change according to the current theme configured in the Design System.
 
  This component has 4 styles:
     - Contained with Primary color
@@ -14,10 +14,6 @@
         let containedDefault = NatShortcut(style: .containedDefault)
         let outlinedPrimary = NatShortcut(style: .outlinedPrimary)
         let outlinedDefault = NatShortcut(style: .outlinedDefault)
-
- This shortcut has an enum NatShortcut.Widths with allowed values for width values, if needed:
-
-        shortcut.widthAnchor.constraint(equalToConstant: NatShortcut.Widths.maximum)
 
  - Requires:
  It's necessary to configure the Design System with a theme or fatalError will be raised.
@@ -99,18 +95,25 @@ public final class NatShortcut: UIView {
 // MARK: - Public methods
 
 extension NatShortcut {
+    /// Configures text for shortcut bottom label.
+    /// - Parameter text: A string with the text to display on the label.
     public func configure(text: String) {
         label.text = text
     }
-
+    /// Configures an icon to the shortcut.
+    /// - Parameter icon: An option from Design System's icon options.
     public func configure(icon: Icon) {
         shortcutView.configure(icon: icon)
     }
 
+    /// Configures an action to be executed when shortcut receives a tap.
+    /// - Parameter action: A block of code containing the shortcut actions.
     public func configure(action: @escaping () -> Void) {
         self.action = action
     }
     
+    /// Configures a badge to the shortcut.
+    /// - Parameter badgeValue: An UInt value for the badge. If the value is less than 1, the badge will be hidden, and if it's more than 99, the value will be shortened to '99+'.
     public func configure(badgeValue: UInt) {
         shortcutView.configure(badgeValue: badgeValue)
     }
