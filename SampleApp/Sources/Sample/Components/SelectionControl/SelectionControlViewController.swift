@@ -24,7 +24,7 @@ final class SelectionControlViewController: UIViewController, SampleItem {
     }()
     
     private let checkboxSelectionControl: NatSelectionControl = {
-        let checkbox = NatSelectionControl(style: .checkbox)
+        let checkbox = NatSelectionControl(style: .checkbox, text: "Enabled with label")
         checkbox.translatesAutoresizingMaskIntoConstraints = false
 
         return checkbox

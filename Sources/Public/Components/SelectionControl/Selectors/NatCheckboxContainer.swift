@@ -54,10 +54,13 @@ class NatCheckboxContainer: UIControl, Pulsable {
     }
 
     private func addConstraints() {
+        let padding: CGFloat = 10
+
         translatesAutoresizingMaskIntoConstraints = false
+        widthAnchor.constraint(equalToConstant: 40).isActive = true
+        heightAnchor.constraint(equalToConstant: 40).isActive = true
 
-        let padding: CGFloat = 20
-
+        checkbox.translatesAutoresizingMaskIntoConstraints = false
         checkbox.leadingAnchor.constraint(equalTo: leadingAnchor, constant: padding).isActive = true
         checkbox.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -padding).isActive = true
         checkbox.topAnchor.constraint(equalTo: topAnchor, constant: padding).isActive = true

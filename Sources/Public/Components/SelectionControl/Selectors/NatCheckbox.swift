@@ -45,10 +45,6 @@ final class NatCheckbox: UIControl {
 
     private func setup() {
         backgroundColor = .clear
-
-        translatesAutoresizingMaskIntoConstraints = false
-        widthAnchor.constraint(equalToConstant: 20).isActive = true
-        heightAnchor.constraint(equalToConstant: 20).isActive = true
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
