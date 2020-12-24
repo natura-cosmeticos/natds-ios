@@ -1,7 +1,7 @@
 import UIKit
 
 final class NatCheckbox: UIControl {
-    
+
     var onTouchesBegan: ((Set<UITouch>) -> Void)?
     var onTouchesEnded: ((Set<UITouch>) -> Void)?
 
@@ -55,7 +55,7 @@ final class NatCheckbox: UIControl {
         super.touchesBegan(touches, with: event)
         feedbackGenerator = UIImpactFeedbackGenerator(style: .light)
         feedbackGenerator?.prepare()
-        
+
         onTouchesBegan?(touches)
     }
 
@@ -67,7 +67,7 @@ final class NatCheckbox: UIControl {
             feedbackGenerator?.impactOccurred()
             feedbackGenerator = nil
         }
-        
+
         onTouchesEnded?(touches)
     }
 
@@ -83,17 +83,18 @@ final class NatCheckbox: UIControl {
     }
 
     override func draw(_ rect: CGRect) {
-
         let borderWidth: CGFloat = 2
-
-        let newRect = rect.insetBy(dx: borderWidth / 2, dy: borderWidth / 2)
+        let dxy = borderWidth / 2
+        let newRect = rect.insetBy(dx: dxy, dy: dxy)
 
         let context = UIGraphicsGetCurrentContext()
-        context?.setStrokeColor(style.borderColor(isSelected).cgColor)
+        context?.setStrokeColor(style.borderColor(isSelected, isEnabled: isEnabled).cgColor)
         context?.setLineWidth(borderWidth)
 
         let roundedSquare = UIBezierPath(roundedRect: newRect, cornerRadius: 2)
-        style.backgroundColor(isSelected).setFill()
+
+        style.backgroundColor(isSelected, isEnabled: isEnabled).setFill()
+
         roundedSquare.fill()
 
         context?.addPath(roundedSquare.cgPath)
@@ -125,7 +126,6 @@ final class NatCheckbox: UIControl {
         bezierPath.fill()
     }
     //swiftlint:enable line_length
-
 }
 
 extension NatCheckbox {
@@ -144,12 +144,20 @@ extension NatCheckbox {
         let checkedBackgroundColor: UIColor
         let checkmarkColor: UIColor
 
-        func borderColor(_ isSelected: Bool) -> UIColor {
-            isSelected ? checkedBorderColor : uncheckedBorderColor
+        func borderColor(_ isSelected: Bool, isEnabled: Bool) -> UIColor {
+            if isEnabled {
+                return isSelected ? checkedBorderColor : uncheckedBorderColor
+            } else {
+                return NatColors.lowEmphasis
+            }
         }
 
-        func backgroundColor(_ isSelected: Bool) -> UIColor {
-            isSelected ? checkedBackgroundColor : uncheckedBackgroundColor
+        func backgroundColor(_ isSelected: Bool, isEnabled: Bool) -> UIColor {
+            if isEnabled {
+                return isSelected ? checkedBackgroundColor : uncheckedBackgroundColor
+            } else {
+                return isSelected ? NatColors.lowEmphasis : .clear
+            }
         }
     }
 }

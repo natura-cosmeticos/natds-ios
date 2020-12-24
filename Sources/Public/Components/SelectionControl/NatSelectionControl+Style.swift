@@ -31,6 +31,14 @@ class NatCheckboxContainer: UIControl, Pulsable {
         }
     }
 
+    override var isEnabled: Bool {
+        get {
+            checkbox.isEnabled
+        } set {
+            checkbox.isEnabled = newValue
+        }
+    }
+
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
         setup()
@@ -47,13 +55,12 @@ class NatCheckboxContainer: UIControl, Pulsable {
     }
 
     private func setup() {
-
         addSubview(checkbox)
 
         checkbox.onTouchesBegan = { [unowned self] touches in
-            addPulseLayerAnimated(at: checkbox.center, in: layer,
-                                  withColor: isSelected ? unselectedPulsableColor : selectedPulsableColor,
-                                  removeAfterAnimation: false)
+            self.addPulseLayerAnimated(at: checkbox.center, in: layer,
+                                       withColor: isSelected ? unselectedPulsableColor : selectedPulsableColor,
+                                       removeAfterAnimation: false)
         }
 
         checkbox.onTouchesEnded = { [unowned self] touches in
@@ -62,7 +69,7 @@ class NatCheckboxContainer: UIControl, Pulsable {
 
         addConstraints()
     }
-    
+
     private func addConstraints() {
         translatesAutoresizingMaskIntoConstraints = false
 
