@@ -1,6 +1,9 @@
 import UIKit
 
 final class NatCheckbox: UIControl {
+    
+    var onTouchesBegan: ((Set<UITouch>) -> Void)?
+    var onTouchesEnded: ((Set<UITouch>) -> Void)?
 
     let style: Style
     let increasedTouchRadius: CGFloat = 5
@@ -26,7 +29,7 @@ final class NatCheckbox: UIControl {
     override init(frame: CGRect = .zero) {
         self.style = Style.default
         super.init(frame: frame)
-        
+
         setup()
     }
 
@@ -52,6 +55,8 @@ final class NatCheckbox: UIControl {
         super.touchesBegan(touches, with: event)
         feedbackGenerator = UIImpactFeedbackGenerator(style: .light)
         feedbackGenerator?.prepare()
+        
+        onTouchesBegan?(touches)
     }
 
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -62,6 +67,8 @@ final class NatCheckbox: UIControl {
             feedbackGenerator?.impactOccurred()
             feedbackGenerator = nil
         }
+        
+        onTouchesEnded?(touches)
     }
 
     override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {

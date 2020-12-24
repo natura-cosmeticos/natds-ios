@@ -35,7 +35,7 @@ extension NatSelectionControl {
 
     private func setupCheckbox() {
         let margin: CGFloat = 8
-        
+
         selectorView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: margin).isActive = true
         selectorView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -margin).isActive = true
         selectorView.topAnchor.constraint(equalTo: topAnchor, constant: margin).isActive = true
