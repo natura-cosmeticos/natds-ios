@@ -4,6 +4,11 @@ public class NatSelectionControl: UIView {
 
     private let style: Style
 
+    private lazy var selectorView: UIControl = {
+        let view = style.getSelector()
+        return view
+    }()
+
     public init(style: Style) {
         self.style = style
         super.init(frame: .zero)
@@ -16,18 +21,24 @@ public class NatSelectionControl: UIView {
     }
 
     private func setup() {
-        self.backgroundColor = .red
-
-        let selectorView = style.getSelectorView()
         addSubview(selectorView)
+        setupStyle()
+    }
+}
 
-        selectorView.translatesAutoresizingMaskIntoConstraints = false
-        selectorView.widthAnchor.constraint(equalToConstant: 20).isActive = true
-        selectorView.heightAnchor.constraint(equalToConstant: 20).isActive = true
+extension NatSelectionControl {
+    private func setupStyle() {
+        switch style {
+        case .checkbox: setupCheckbox()
+        }
+    }
+
+    private func setupCheckbox() {
+        let margin: CGFloat = 8
         
-        selectorView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0).isActive = true
-        selectorView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0).isActive = true
-        selectorView.topAnchor.constraint(equalTo: topAnchor, constant: 0).isActive = true
-        selectorView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0).isActive = true
+        selectorView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: margin).isActive = true
+        selectorView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -margin).isActive = true
+        selectorView.topAnchor.constraint(equalTo: topAnchor, constant: margin).isActive = true
+        selectorView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -margin).isActive = true
     }
 }
