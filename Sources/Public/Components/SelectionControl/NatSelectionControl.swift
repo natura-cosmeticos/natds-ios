@@ -21,7 +21,7 @@ public class NatSelectionControl: UIView {
     }
 
     private let style: Style
-    private var text: String?
+    private(set) var text: String?
 
     private lazy var selectorView: UIControl = {
         let view = style.getSelector()

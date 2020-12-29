@@ -289,6 +289,7 @@
 		B7CCF87E56EA792B3471AD69AF68B23F /* NatButton+EdgeInsets+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF10A178B1E50604C97B543CD204939B /* NatButton+EdgeInsets+Spec.swift */; };
 		BB3413734DCB562C834B90742EF06929 /* ButtonStyle+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573BBF1E50E0B49397C339D19D5E0D0B /* ButtonStyle+Spec.swift */; };
 		BBCC40A29117B4CB675FE57C3B0130E4 /* AssetsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B41F99CB8ACD14C09E1AA323E38C2D /* AssetsHelper.swift */; };
+		BE272C38259B758800060AF8 /* SelectionControl+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE272C33259B757400060AF8 /* SelectionControl+Spec.swift */; };
 		BEAFF23D259517DC00B9C9B5 /* NatCheckboxContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAFF23C259517DC00B9C9B5 /* NatCheckboxContainer.swift */; };
 		BEDF93202593B4FF00F54C50 /* NatSelectionControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF931F2593B4FF00F54C50 /* NatSelectionControl.swift */; };
 		BEDF93252593B5CE00F54C50 /* NatSelectionControl+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF93242593B5CE00F54C50 /* NatSelectionControl+Style.swift */; };
@@ -612,6 +613,7 @@
 		BAB63DBD1A346FC4D5664E5B20CC96D1 /* UIView+Frame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Frame.swift"; sourceTree = "<group>"; };
 		BC00F737F0234FCBD14533100E96A39E /* Pulsable+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pulsable+Spec.swift"; sourceTree = "<group>"; };
 		BC6A871B0A080C7AB0127CF2EA0D9153 /* natds-icons-ios.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "natds-icons-ios.ttf"; sourceTree = "<group>"; };
+		BE272C33259B757400060AF8 /* SelectionControl+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelectionControl+Spec.swift"; sourceTree = "<group>"; };
 		BEAFF23C259517DC00B9C9B5 /* NatCheckboxContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatCheckboxContainer.swift; sourceTree = "<group>"; };
 		BEDF931F2593B4FF00F54C50 /* NatSelectionControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatSelectionControl.swift; sourceTree = "<group>"; };
 		BEDF93242593B5CE00F54C50 /* NatSelectionControl+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatSelectionControl+Style.swift"; sourceTree = "<group>"; };
@@ -2096,6 +2098,7 @@
 		BE272C2F259B67C300060AF8 /* SelectionControl */ = {
 			isa = PBXGroup;
 			children = (
+				BE272C33259B757400060AF8 /* SelectionControl+Spec.swift */,
 			);
 			path = SelectionControl;
 			sourceTree = "<group>";
@@ -2626,6 +2629,7 @@
 				95BF20E1FC04C44251D7DCAA9C7E7C60 /* NavigationDrawer+IndexMenuTests.swift in Sources */,
 				79E7FA63253745BC00A831BC /* AesopLightTokens+Spacing+Spec.swift in Sources */,
 				79E7FADC25388E8C00A831BC /* AvonLightTokens+Elevation+Spec.swift in Sources */,
+				BE272C38259B758800060AF8 /* SelectionControl+Spec.swift in Sources */,
 				D36E7374F76C10792F8292DCD99800D5 /* NavigationDrawerDelegateMock.swift in Sources */,
 				847C82A224E5786C001CE116 /* NaturaDarkTheme+Spec.swift in Sources */,
 				06B6AF457FA3A8ADB837E7A2BBE53D91 /* NavigationDrawerItemCellTests.swift in Sources */,
