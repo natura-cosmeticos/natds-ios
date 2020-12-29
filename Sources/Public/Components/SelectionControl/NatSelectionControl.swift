@@ -47,7 +47,7 @@ public class NatSelectionControl: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     // MARK: - View Setup
 
     private func setup() {

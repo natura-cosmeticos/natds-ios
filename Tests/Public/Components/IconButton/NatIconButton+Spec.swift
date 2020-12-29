@@ -78,7 +78,7 @@ final class NatIconButtonSpec: QuickSpec {
                     expect(actionInvocations).toEventually(equal(1))
                 }
             }
-            
+
             context("when is disabled") {
                 beforeEach {
                     actionInvocations = 0

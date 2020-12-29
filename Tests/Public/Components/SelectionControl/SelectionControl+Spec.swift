@@ -49,5 +49,5 @@ final class SelectionControlSpec: QuickSpec {
                 }
             }
         }
-    } 
+    }
 }

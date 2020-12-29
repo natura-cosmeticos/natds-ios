@@ -1,8 +1,6 @@
 import NatDS
 import UIKit
 
-//swiftlint:disable trailing_whitespace
-
 final class SelectionControlViewController: UIViewController, SampleItem {
 
     static let name = "Selection Control"
@@ -22,7 +20,7 @@ final class SelectionControlViewController: UIViewController, SampleItem {
 
         return view
     }()
-    
+
     private let stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
@@ -32,14 +30,14 @@ final class SelectionControlViewController: UIViewController, SampleItem {
 
         return stackView
     }()
-    
+
     private let enabledUnselectedSelectionControl: NatSelectionControl = {
         let checkbox = NatSelectionControl(style: .checkbox, text: nil)
         checkbox.translatesAutoresizingMaskIntoConstraints = false
 
         return checkbox
     }()
-    
+
     private let enabledSelectedSelectionControl: NatSelectionControl = {
         let checkbox = NatSelectionControl(style: .checkbox, text: nil)
         checkbox.isSelected = true
@@ -47,7 +45,7 @@ final class SelectionControlViewController: UIViewController, SampleItem {
 
         return checkbox
     }()
-    
+
     private let disabledUnselectedSelectionControl: NatSelectionControl = {
         let checkbox = NatSelectionControl(style: .checkbox, text: nil)
         checkbox.isSelected = false
@@ -65,14 +63,14 @@ final class SelectionControlViewController: UIViewController, SampleItem {
 
         return checkbox
     }()
-        
+
     private let enabledUnselectedLabelSelectionControl: NatSelectionControl = {
         let checkbox = NatSelectionControl(style: .checkbox, text: "Enabled unselected with label")
         checkbox.translatesAutoresizingMaskIntoConstraints = false
 
         return checkbox
     }()
-    
+
     private let enabledSelectedLabelSelectionControl: NatSelectionControl = {
         let checkbox = NatSelectionControl(style: .checkbox, text: "Enabled selected with label")
         checkbox.isSelected = true
@@ -80,7 +78,7 @@ final class SelectionControlViewController: UIViewController, SampleItem {
 
         return checkbox
     }()
-    
+
     private let disabledUnselectedLabelSelectionControl: NatSelectionControl = {
         let checkbox = NatSelectionControl(style: .checkbox, text: "Disabled unselected with label")
         checkbox.isSelected = false
@@ -110,11 +108,11 @@ final class SelectionControlViewController: UIViewController, SampleItem {
         title = Self.name
         view.backgroundColor = NatColors.background
         view.addSubview(scrollView)
-        
+
         scrollView.addSubview(containerView)
 
         containerView.addSubview(stackView)
-        
+
         stackView.addArrangedSubview(enabledUnselectedSelectionControl)
         stackView.addArrangedSubview(enabledSelectedSelectionControl)
         stackView.addArrangedSubview(disabledUnselectedSelectionControl)
@@ -123,17 +121,17 @@ final class SelectionControlViewController: UIViewController, SampleItem {
         stackView.addArrangedSubview(enabledSelectedLabelSelectionControl)
         stackView.addArrangedSubview(disabledUnselectedLabelSelectionControl)
         stackView.addArrangedSubview(disabledSelectedLabelSelectionControl)
-        
+
         addConstraints()
     }
 }
 
 extension SelectionControlViewController {
-    
+
     private func addConstraints() {
         let containerHeightConstraint = containerView.centerYAnchor.constraint(equalTo: scrollView.centerYAnchor)
         containerHeightConstraint.priority = .defaultLow
-        
+
         let constraints = [
             scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             scrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
@@ -155,7 +153,7 @@ extension SelectionControlViewController {
                 constant: -NatSpacing.small
             )
         ]
-        
+
         NSLayoutConstraint.activate(constraints)
     }
 }
