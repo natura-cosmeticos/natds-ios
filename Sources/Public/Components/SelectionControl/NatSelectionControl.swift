@@ -2,6 +2,24 @@ import Foundation
 
 public class NatSelectionControl: UIView {
 
+    public var isSelected: Bool {
+        get {
+            selectorView.isSelected
+        }
+        set {
+            selectorView.isSelected = newValue
+        }
+    }
+
+    public var isEnabled: Bool {
+        get {
+            selectorView.isEnabled
+        }
+        set {
+            selectorView.isEnabled = newValue
+        }
+    }
+
     private let style: Style
     private var text: String?
 
@@ -13,6 +31,7 @@ public class NatSelectionControl: UIView {
     private lazy var label: UILabel = {
         let label = UILabel()
         label.font = NatFonts.font(ofSize: .body2, withWeight: .regular)
+        label.textColor = NatColors.highEmphasis
         label.text = text
         return label
     }()
@@ -28,6 +47,8 @@ public class NatSelectionControl: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    // MARK: - View Setup
 
     private func setup() {
         addSubview(selectorView)
