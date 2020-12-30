@@ -8,7 +8,7 @@ final class NatCheckbox: UIControl {
     let style: Style
     let increasedTouchRadius: CGFloat = 5
 
-    var useHapticFeedback: Bool = true
+    var isHapticFeedbackEnabled: Bool = false
 
     private var feedbackGenerator: UIImpactFeedbackGenerator?
 
@@ -59,7 +59,7 @@ final class NatCheckbox: UIControl {
         isSelected.toggle()
         sendActions(for: .valueChanged)
 
-        if useHapticFeedback {
+        if isHapticFeedbackEnabled {
             feedbackGenerator?.impactOccurred()
             feedbackGenerator = nil
         }

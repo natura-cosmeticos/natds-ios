@@ -10,7 +10,7 @@ extension NatSelectionControl {
 
 extension NatSelectionControl.Style {
 
-    func getSelector() -> UIControl {
+    func getSelector() -> NatSelector {
         switch self {
         case .checkbox: return NatCheckboxContainer()
         }

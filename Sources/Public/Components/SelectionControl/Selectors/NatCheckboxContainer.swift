@@ -1,6 +1,10 @@
 import UIKit
 
-class NatCheckboxContainer: UIControl, Pulsable {
+protocol NatSelector: UIControl, Pulsable {
+    var isHapticFeedbackEnabled: Bool { get set }
+}
+
+class NatCheckboxContainer: UIControl, NatSelector {
 
     let checkbox = NatCheckbox()
     let selectedPulsableColor: UIColor = NatColors.primary.withAlphaComponent(0.2)
@@ -9,7 +13,8 @@ class NatCheckboxContainer: UIControl, Pulsable {
     override var isSelected: Bool {
         get {
             checkbox.isSelected
-        } set {
+        }
+        set {
             checkbox.isSelected = newValue
         }
     }
@@ -17,8 +22,18 @@ class NatCheckboxContainer: UIControl, Pulsable {
     override var isEnabled: Bool {
         get {
             checkbox.isEnabled
-        } set {
+        }
+        set {
             checkbox.isEnabled = newValue
+        }
+    }
+    
+    var isHapticFeedbackEnabled: Bool {
+        get {
+            checkbox.isHapticFeedbackEnabled
+        }
+        set {
+            checkbox.isHapticFeedbackEnabled = newValue
         }
     }
 

@@ -20,10 +20,19 @@ public class NatSelectionControl: UIView {
         }
     }
 
+    public var isHapticFeedbackEnabled: Bool {
+        get {
+            selectorView.isHapticFeedbackEnabled
+        }
+        set {
+            selectorView.isHapticFeedbackEnabled = newValue
+        }
+    }
+
     private let style: Style
     private(set) var text: String?
 
-    private lazy var selectorView: UIControl = {
+    private lazy var selectorView: NatSelector = {
         let view = style.getSelector()
         return view
     }()
