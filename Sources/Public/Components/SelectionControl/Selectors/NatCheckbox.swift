@@ -5,11 +5,11 @@ final class NatCheckbox: UIControl {
     var onTouchesBegan: ((Set<UITouch>) -> Void)?
     var onTouchesEnded: ((Set<UITouch>) -> Void)?
 
-    let style: Style
-    let increasedTouchRadius: CGFloat = 5
-
     var isHapticFeedbackEnabled: Bool = false
 
+    private var style = Style.default
+    private let increasedTouchRadius: CGFloat = 5
+    private let notificationCenter: NotificationCenterObservable
     private var feedbackGenerator: UIImpactFeedbackGenerator?
 
     override var isSelected: Bool {
@@ -19,8 +19,10 @@ final class NatCheckbox: UIControl {
         }
     }
 
-    init(style: Style) {
+    init(style: Style, notificationCenter: NotificationCenterObservable = NotificationCenter.default) {
         self.style = style
+        self.notificationCenter = notificationCenter
+
         super.init(frame: .zero)
 
         setup()
@@ -28,11 +30,16 @@ final class NatCheckbox: UIControl {
 
     override init(frame: CGRect = .zero) {
         self.style = Style.default
+        self.notificationCenter = NotificationCenter.default
         super.init(frame: frame)
 
         setup()
     }
 
+    deinit {
+        notificationCenter.removeObserver(self)
+    }
+    
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -45,6 +52,13 @@ final class NatCheckbox: UIControl {
 
     private func setup() {
         backgroundColor = .clear
+
+        notificationCenter.addObserver(
+            self,
+            selector: #selector(themeHasChanged),
+            name: .themeHasChanged,
+            object: nil
+        )
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -125,35 +139,7 @@ final class NatCheckbox: UIControl {
 }
 
 extension NatCheckbox {
-    struct Style {
-        static let `default`: Style = {
-            Style(uncheckedBorderColor: NatColors.mediumEmphasis,
-                  uncheckedBackgroundColor: .clear,
-                  checkedBorderColor: NatColors.primary,
-                  checkedBackgroundColor: NatColors.primary,
-                  checkmarkColor: .white)
-        }()
-
-        let uncheckedBorderColor: UIColor
-        let uncheckedBackgroundColor: UIColor
-        let checkedBorderColor: UIColor
-        let checkedBackgroundColor: UIColor
-        let checkmarkColor: UIColor
-
-        func borderColor(_ isSelected: Bool, isEnabled: Bool) -> UIColor {
-            if isEnabled {
-                return isSelected ? checkedBorderColor : uncheckedBorderColor
-            } else {
-                return NatColors.lowEmphasis
-            }
-        }
-
-        func backgroundColor(_ isSelected: Bool, isEnabled: Bool) -> UIColor {
-            if isEnabled {
-                return isSelected ? checkedBackgroundColor : uncheckedBackgroundColor
-            } else {
-                return isSelected ? NatColors.lowEmphasis : .clear
-            }
-        }
+    @objc private func themeHasChanged() {
+        style = Style.default
     }
 }
