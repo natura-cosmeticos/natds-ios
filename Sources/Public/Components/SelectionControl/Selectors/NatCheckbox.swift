@@ -113,8 +113,6 @@ final class NatCheckbox: UIControl {
 
         if isSelected {
             drawCheckmark(frame: rect)
-        } else {
-
         }
     }
 

@@ -7,8 +7,8 @@ protocol NatSelector: UIControl, Pulsable {
 class NatCheckboxContainer: UIControl, NatSelector {
 
     let checkbox = NatCheckbox()
-    let selectedPulsableColor: UIColor = NatColors.primary.withAlphaComponent(0.2)
-    let unselectedPulsableColor: UIColor = NatColors.mediumEmphasis.withAlphaComponent(0.2)
+    let selectedPulsableColor: UIColor = getUIColorFromTokens(\.colorPrimary).withAlphaComponent(0.2)
+    let unselectedPulsableColor: UIColor = getUIColorFromTokens(\.colorMediumEmphasis).withAlphaComponent(0.2)
 
     override var isSelected: Bool {
         get {
@@ -27,7 +27,7 @@ class NatCheckboxContainer: UIControl, NatSelector {
             checkbox.isEnabled = newValue
         }
     }
-    
+
     var isHapticFeedbackEnabled: Bool {
         get {
             checkbox.isHapticFeedbackEnabled
@@ -70,10 +70,11 @@ class NatCheckboxContainer: UIControl, NatSelector {
 
     private func addConstraints() {
         let padding: CGFloat = 10
+        let size = getTokenFromTheme(\.sizeSemiX)
 
         translatesAutoresizingMaskIntoConstraints = false
-        widthAnchor.constraint(equalToConstant: 40).isActive = true
-        heightAnchor.constraint(equalToConstant: 40).isActive = true
+        widthAnchor.constraint(equalToConstant: size).isActive = true
+        heightAnchor.constraint(equalToConstant: size).isActive = true
 
         checkbox.translatesAutoresizingMaskIntoConstraints = false
         checkbox.leadingAnchor.constraint(equalTo: leadingAnchor, constant: padding).isActive = true

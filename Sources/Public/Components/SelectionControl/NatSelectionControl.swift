@@ -40,7 +40,7 @@ public class NatSelectionControl: UIView {
     private lazy var label: UILabel = {
         let label = UILabel()
         label.font = NatFonts.font(ofSize: .body2, withWeight: .regular)
-        label.textColor = NatColors.highEmphasis
+        label.textColor = getUIColorFromTokens(\.colorHighEmphasis)
         label.text = text
         return label
     }()

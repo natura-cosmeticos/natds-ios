@@ -4,10 +4,10 @@ extension NatCheckbox {
         // MARK: Static Properties
         
         static var `default`: Style {
-            Style(uncheckedBorderColor: NatColors.mediumEmphasis,
+            Style(uncheckedBorderColor: getUIColorFromTokens(\.colorMediumEmphasis),
                   uncheckedBackgroundColor: .clear,
-                  checkedBorderColor: NatColors.primary,
-                  checkedBackgroundColor: NatColors.primary,
+                  checkedBorderColor: getUIColorFromTokens(\.colorPrimary),
+                  checkedBackgroundColor: getUIColorFromTokens(\.colorPrimary),
                   checkmarkColor: .white)
         }
         
@@ -22,7 +22,7 @@ extension NatCheckbox {
         // MARK: Public Methods
 
         func borderColor(_ isSelected: Bool, isEnabled: Bool) -> UIColor {
-            isEnabled ? enabledBorderColor(isSelected) : NatColors.lowEmphasis
+            isEnabled ? enabledBorderColor(isSelected) : getUIColorFromTokens(\.colorLowEmphasis)
         }
 
         func backgroundColor(_ isSelected: Bool, isEnabled: Bool) -> UIColor {
@@ -40,7 +40,7 @@ extension NatCheckbox {
         }
 
         private func disabledBackgroundColor(_ isSelected: Bool) -> UIColor {
-            isSelected ? NatColors.lowEmphasis : .clear
+            isSelected ? getUIColorFromTokens(\.colorLowEmphasis) : .clear
         }
     }
 }
