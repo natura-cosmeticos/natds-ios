@@ -9,7 +9,7 @@ public class IconView: UIView {
     public var icon: Icon? {
         didSet {
             iconLabel.text = icon?.unicode
-            if let _ = icon {
+            if icon != nil {
                 shouldShowDefaultIcon = false
             }
         }
@@ -17,8 +17,12 @@ public class IconView: UIView {
     
     public var shouldShowDefaultIcon = true {
         didSet {
-            defaultImageView.isHidden = !shouldShowDefaultIcon
-            iconLabel.isHidden = shouldShowDefaultIcon
+            setup()
+            if !shouldShowDefaultIcon {
+                defaultImageView.removeFromSuperview()
+            } else {
+                iconLabel.removeFromSuperview()
+            }
         }
     }
 

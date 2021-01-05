@@ -150,6 +150,7 @@ extension NatIconButton {
 extension NatIconButton {
     func configure(iconColor: UIColor) {
         iconView.tintColor = iconColor
+        iconView.defaultImageView.tintedColor = iconColor
     }
 }
 
