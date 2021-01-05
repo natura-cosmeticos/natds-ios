@@ -44,7 +44,7 @@ final class SelectionControlSpec: QuickSpec {
                     expect(sut.isSelected).to(equal(false))
                 }
 
-                it("has no text") {
+                it("has text") {
                     expect(sut.text).to(equal("label text"))
                 }
             }
