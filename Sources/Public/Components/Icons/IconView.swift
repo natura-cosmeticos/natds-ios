@@ -15,6 +15,15 @@ public class IconView: UIView {
         }
     }
     
+    public var iconText: String? {
+        didSet {
+            iconLabel.text = iconText
+            if iconText != nil {
+                shouldShowDefaultIcon = false
+            }
+        }
+    }
+    
     public var shouldShowDefaultIcon = true {
         didSet {
             setup()
