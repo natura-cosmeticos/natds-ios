@@ -174,6 +174,7 @@ extension NatShortcut {
             label.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor),
             label.centerXAnchor.constraint(equalTo: centerXAnchor)
         ]
+
         NSLayoutConstraint.activate(constraints)
     }
 
