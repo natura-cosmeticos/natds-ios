@@ -1,9 +1,9 @@
 enum IconsSource: String {
-    case NatDS
+    case natDS
 
     var identifier: String {
         switch self {
-        case .NatDS: return "org.cocoapods.NatDSIcons"
+        case .natDS: return "org.cocoapods.NatDSIcons"
         }
     }
 }

@@ -23,7 +23,7 @@ public class IconView: UIView {
             }
         }
     }
-    
+
     public var shouldShowDefaultIcon = true {
         didSet {
             setup()

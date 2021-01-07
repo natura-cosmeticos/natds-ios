@@ -99,7 +99,7 @@ public final class NatButton: UIButton, Pulsable {
      - position:   This will be used to configure the icon side, It can be right or left side.
      */
 
-    public func configure(icon: Icon, position: Position) {
+    public func configure(icon: String?, position: Position) {
         iconView?.removeFromSuperview()
 
         let view = createIconView(icon: icon)
@@ -141,11 +141,10 @@ extension NatButton {
 // MARK: - Configure IconView
 
 extension NatButton {
-    private func createIconView(icon: Icon) -> IconView {
+    private func createIconView(icon: String?) -> IconView {
         let iconView = IconView(fontSize: NatSizes.standard)
         iconView.translatesAutoresizingMaskIntoConstraints = false
-
-        iconView.icon = icon
+        iconView.iconText = icon
         iconView.tintColor = titleLabel?.textColor
 
         return iconView

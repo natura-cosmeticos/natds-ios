@@ -119,7 +119,7 @@ final class NatButtonSpec: QuickSpec {
         describe("#configure(title:, icon:, iconSide:)") {
             context("Right side") {
                 beforeEach {
-                    systemUnderTest.configure(icon: .outlinedDefaultMockup, position: .right)
+                    systemUnderTest.configure(icon: nil, position: .right)
                 }
 
                 it("adds icon to the right side") {
@@ -127,7 +127,7 @@ final class NatButtonSpec: QuickSpec {
                         .compactMap { $0 as? IconView }
                         .first
 
-                    expect(iconView?.icon).to(equal(.outlinedDefaultMockup))
+                    expect(iconView?.defaultImageView.isHidden).to(beFalse())
                 }
 
                 it("icon color is equal of button label color") {
@@ -140,7 +140,7 @@ final class NatButtonSpec: QuickSpec {
 
                 context("Left side") {
                     beforeEach {
-                        systemUnderTest.configure(icon: .outlinedDefaultMockup, position: .left)
+                        systemUnderTest.configure(icon: nil, position: .left)
                     }
 
                     it("adds icon to the left side") {
@@ -148,7 +148,7 @@ final class NatButtonSpec: QuickSpec {
                             .compactMap { $0 as? IconView }
                             .first
 
-                        expect(iconView?.icon).to(equal(.outlinedDefaultMockup))
+                        expect(iconView?.defaultImageView.isHidden).to(beFalse())
                     }
                 }
             }

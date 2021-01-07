@@ -13,7 +13,7 @@ class AssetsHelper {
 
     private static func registerFont(_ name: String) {
         var error: Unmanaged<CFError>?
-        guard let bundle = Bundle(identifier: IconsSource.NatDS.identifier) else {
+        guard let bundle = Bundle(identifier: IconsSource.natDS.identifier) else {
             return
         }
 
