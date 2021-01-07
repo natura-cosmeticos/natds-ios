@@ -1,9 +1,8 @@
 import NatDS
+import NatDSIcons
 
 class IconographyItemViewController: UIViewController, SampleItem {
-    static var name = "Iconography"
-
-    private let icons: [Icon] = Icon.allCases
+    static var name = "Iconography"    
 
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -25,6 +24,12 @@ class IconographyItemViewController: UIViewController, SampleItem {
         setup()
     }
 
+    private func getAllIcons() -> [String] {
+        var icons: [String] = []
+        NatDSIcons.Icon.allCases.forEach { icons.append(getIcon(icon: $0)) }
+        return icons
+    }
+    
     private func setup() {
         view.backgroundColor = NatColors.background
         view.addSubview(collectionView)
@@ -40,14 +45,14 @@ class IconographyItemViewController: UIViewController, SampleItem {
 
 extension IconographyItemViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        icons.count
+        getAllIcons().count
     }
 
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let view = collectionView.dequeueReusableCell(for: indexPath, cellType: IconCollectionViewCell.self)
 
-        view.icon = icons[indexPath.row]
+        view.icon = getAllIcons()[indexPath.row]
         return view
     }
 }
