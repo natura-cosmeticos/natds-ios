@@ -68,6 +68,7 @@ public class IconView: UIView {
     public override func tintColorDidChange() {
         super.tintColorDidChange()
         iconLabel.textColor = tintColor
+        defaultImageView.tintedColor = tintColor
     }
 
     private func setup() {

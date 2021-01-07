@@ -13,13 +13,13 @@ final class IconViewSnapshotTests: XCTestCase {
     }
 
     func test_init_hasValidSnapshot() {
-        systemUnderTest.icon = .filledActionAdd
+        systemUnderTest.shouldShowDefaultIcon = true
 
         assertSnapshot(matching: systemUnderTest, as: .image)
     }
 
     func test_tintColor_hasSnapshotWithCustomColor() {
-        systemUnderTest.icon = .filledActionAdd
+        systemUnderTest.shouldShowDefaultIcon = true
         systemUnderTest.tintColor = .red
 
         assertSnapshot(matching: systemUnderTest, as: .image)

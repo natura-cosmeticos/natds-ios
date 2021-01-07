@@ -12,13 +12,4 @@ class AssetsHelperTests: XCTestCase {
         let image = AssetsHelper.image(from: "")
         XCTAssertNil(image)
     }
-
-    func test_loadFont_whenIsFontIconStyle_loadFontSuccessfully() {
-        let iconsFont = FontIconStyle.standard
-        AssetsHelper.loadFont(iconsFont)
-
-        let font = UIFont(name: iconsFont.name, size: 24)
-        XCTAssertEqual(font?.fontName, iconsFont.name)
-        XCTAssertEqual(font?.familyName, iconsFont.familyName)
-    }
 }
