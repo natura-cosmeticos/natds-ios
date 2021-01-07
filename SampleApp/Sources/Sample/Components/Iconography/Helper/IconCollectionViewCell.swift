@@ -1,9 +1,9 @@
 import NatDS
 
 class IconCollectionViewCell: UICollectionViewCell {
-    var icon: Icon? {
+    var icon: String? {
         didSet {
-            iconView.icon = icon
+            iconView.iconText = icon
         }
     }
 

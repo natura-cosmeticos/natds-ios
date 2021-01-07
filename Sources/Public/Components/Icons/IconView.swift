@@ -15,6 +15,15 @@ public class IconView: UIView {
         }
     }
     
+    public var iconText: String? {
+        didSet {
+            iconLabel.text = iconText
+            if iconText != nil {
+                shouldShowDefaultIcon = false
+            }
+        }
+    }
+    
     public var shouldShowDefaultIcon = true {
         didSet {
             setup()
@@ -59,6 +68,7 @@ public class IconView: UIView {
     public override func tintColorDidChange() {
         super.tintColorDidChange()
         iconLabel.textColor = tintColor
+        defaultImageView.tintedColor = tintColor
     }
 
     private func setup() {

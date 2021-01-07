@@ -39,6 +39,7 @@
 		84A9E9AC250F9D18006B8A52 /* BrandThemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A9E9AB250F9D18006B8A52 /* BrandThemes.swift */; };
 		84E3B7C82502C88D0056FE57 /* CustomSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E3B7C72502C88D0056FE57 /* CustomSplashViewController.swift */; };
 		84F60D152509402300498C8A /* ChooseBrandCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F60D142509402300498C8A /* ChooseBrandCell.swift */; };
+		877F22F92578C46BFE34404C /* Pods_NatDS_SampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28DD6817F24C672DD593A2C6 /* Pods_NatDS_SampleApp.framework */; };
 		9B13D285941681F8967FCC54F3945D5F /* IconCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FBDBE3AD8777A865F1B1E40859758D /* IconCollectionViewCell.swift */; };
 		B0824E26ADCA40FFA158AA0A35155D71 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFC72AFBBBAAEBA2097DA669BB3792F /* MainViewController.swift */; };
 		B14E0B8A51D237CFBA1AD574ED6EC10C /* DividerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F657058E049073E0255E8EE6ED2580B /* DividerViewController.swift */; };
@@ -84,10 +85,12 @@
 		2600C21D25127D600040C4C4 /* TagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewController.swift; sourceTree = "<group>"; };
 		265B17ED24AFBE5500FD0407 /* BadgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeViewController.swift; sourceTree = "<group>"; };
 		26D4B7F03E632BFE339DA40C2269B9D9 /* NavigationDrawerItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerItemViewController.swift; sourceTree = "<group>"; };
+		28DD6817F24C672DD593A2C6 /* Pods_NatDS_SampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NatDS_SampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D71CBBDDF4F8308F1C24A8F907CBE25 /* NatDS-SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NatDS-SampleApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3336D64DBE111BD9CEB3EAF55A72897A /* IconographyItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconographyItemViewController.swift; sourceTree = "<group>"; };
 		35E9FC28C9F42A1770BF5C6983ECF749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3ECE4EA4030547C9B71419A660386C4A /* ValueTextHighlightItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueTextHighlightItemViewController.swift; sourceTree = "<group>"; };
+		4A2B0F08335F3D1022330EA1 /* Pods-NatDS-SampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatDS-SampleApp.debug.xcconfig"; path = "Target Support Files/Pods-NatDS-SampleApp/Pods-NatDS-SampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4CBBBC99CEDEAD9957C2FDFCDCF340E4 /* ElevationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevationCell.swift; sourceTree = "<group>"; };
 		4F3D5DE37D2013D4BADC0F54FAEDE3F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A620BF5125BD5A9285A07613BD28359 /* TypographyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypographyCell.swift; sourceTree = "<group>"; };
@@ -116,6 +119,7 @@
 		9F657058E049073E0255E8EE6ED2580B /* DividerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerViewController.swift; sourceTree = "<group>"; };
 		A9EB78FC7F0EEE4914F65F61B2E74031 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B02CD4C57B8F31F4FB76CB430C3A9F39 /* TextFieldItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldItemViewController.swift; sourceTree = "<group>"; };
+		B1BC66E6ED8AE395834CB159 /* Pods-NatDS-SampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatDS-SampleApp.release.xcconfig"; path = "Target Support Files/Pods-NatDS-SampleApp/Pods-NatDS-SampleApp.release.xcconfig"; sourceTree = "<group>"; };
 		BAE1310620FE9C1F53F4420EEBB52174 /* ExpansionPanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpansionPanelViewController.swift; sourceTree = "<group>"; };
 		BFCC7C3B8819A99402107EA24F698A53 /* ElevationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevationViewController.swift; sourceTree = "<group>"; };
 		C3ECCCD44B56293C5FBF0660526ABA56 /* BorderRadiusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderRadiusViewController.swift; sourceTree = "<group>"; };
@@ -139,12 +143,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C015C21B5CCA24BFE6643ABE6AEF850 /* NatDS.framework in Frameworks */,
+				877F22F92578C46BFE34404C /* Pods_NatDS_SampleApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		009B1386B8ECFA38A8AF4373 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4A2B0F08335F3D1022330EA1 /* Pods-NatDS-SampleApp.debug.xcconfig */,
+				B1BC66E6ED8AE395834CB159 /* Pods-NatDS-SampleApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
+			sourceTree = "<group>";
+		};
 		00BA79FB1659D007DB8720B65080C439 /* Dialog */ = {
 			isa = PBXGroup;
 			children = (
@@ -489,6 +504,7 @@
 				F2174DEEE59502836CB34FDA60D30A21 /* Frameworks */,
 				0F9EB0B48CDC91FB1CA02458F9570578 /* Products */,
 				42CA660B6D99BC41804F8F3DFFF846E2 /* Sources */,
+				009B1386B8ECFA38A8AF4373 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -505,6 +521,7 @@
 			isa = PBXGroup;
 			children = (
 				EEBC24456A172162B3538C51FBFE2BA6 /* NatDS.framework */,
+				28DD6817F24C672DD593A2C6 /* Pods_NatDS_SampleApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -540,10 +557,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7D6EB1D13A33A47974DF145EA3BC839F /* Build configuration list for PBXNativeTarget "NatDS-SampleApp" */;
 			buildPhases = (
+				3189B340242D657AD9C83744 /* [CP] Check Pods Manifest.lock */,
 				DF2C6BF7A45019FBD56F14E3C3ECDE7E /* Sources */,
 				648B131410E9C0915BF9C08FDE33DD36 /* Frameworks */,
 				B904DAECF952AB0D904B29291A79794E /* Resources */,
 				BA7D257147E394ADC9BAB095B2BD4E65 /* Embed Frameworks */,
+				6D1BA6CEFBC096856EC7C8BC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -598,6 +617,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3189B340242D657AD9C83744 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NatDS-SampleApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D1BA6CEFBC096856EC7C8BC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NatDS-SampleApp/Pods-NatDS-SampleApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NatDS-SampleApp/Pods-NatDS-SampleApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NatDS-SampleApp/Pods-NatDS-SampleApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DF2C6BF7A45019FBD56F14E3C3ECDE7E /* Sources */ = {
@@ -672,6 +733,7 @@
 /* Begin XCBuildConfiguration section */
 		019A913675636B94392D5270062B2DCA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A2B0F08335F3D1022330EA1 /* Pods-NatDS-SampleApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -808,6 +870,7 @@
 		};
 		D00D945FE925C86C6319D2CF4D40F044 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1BC66E6ED8AE395834CB159 /* Pods-NatDS-SampleApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
