@@ -69,17 +69,17 @@ class NatCheckboxContainer: UIControl, NatSelector {
     }
 
     private func addConstraints() {
-        let padding: CGFloat = 10
-        let size = getTokenFromTheme(\.sizeSemiX)
+        let checkboxSize = getTokenFromTheme(\.sizeStandard)
+        let gridSize = getTokenFromTheme(\.sizeSemiX)
 
         translatesAutoresizingMaskIntoConstraints = false
-        widthAnchor.constraint(equalToConstant: size).isActive = true
-        heightAnchor.constraint(equalToConstant: size).isActive = true
+        widthAnchor.constraint(equalToConstant: gridSize).isActive = true
+        heightAnchor.constraint(equalToConstant: gridSize).isActive = true
 
         checkbox.translatesAutoresizingMaskIntoConstraints = false
-        checkbox.leadingAnchor.constraint(equalTo: leadingAnchor, constant: padding).isActive = true
-        checkbox.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -padding).isActive = true
-        checkbox.topAnchor.constraint(equalTo: topAnchor, constant: padding).isActive = true
-        checkbox.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -padding).isActive = true
+        checkbox.widthAnchor.constraint(equalToConstant: checkboxSize).isActive = true
+        checkbox.heightAnchor.constraint(equalToConstant: checkboxSize).isActive = true
+        checkbox.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        checkbox.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
     }
 }

@@ -69,14 +69,14 @@ public class NatSelectionControl: UIView {
 
     private func addSelectorConstraints() {
         selectorView.translatesAutoresizingMaskIntoConstraints = false
-        selectorView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 4).isActive = true
+        selectorView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: getTokenFromTheme(\.spacingTiny)).isActive = true
         selectorView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         selectorView.heightAnchor.constraint(equalTo: heightAnchor).isActive = true
     }
 
     private func addLabelConstraints() {
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.leadingAnchor.constraint(equalTo: selectorView.trailingAnchor, constant: 8).isActive = true
+        label.leadingAnchor.constraint(equalTo: selectorView.trailingAnchor, constant: getTokenFromTheme(\.spacingMicro)).isActive = true
         label.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         label.centerYAnchor.constraint(equalTo: selectorView.centerYAnchor).isActive = true
         label.heightAnchor.constraint(equalTo: heightAnchor).isActive = true

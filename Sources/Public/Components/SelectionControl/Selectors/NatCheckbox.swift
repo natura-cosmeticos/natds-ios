@@ -94,7 +94,7 @@ final class NatCheckbox: UIControl {
 
     override func draw(_ rect: CGRect) {
         let borderWidth: CGFloat = 2
-        let dxy = borderWidth / 2
+        let dxy = borderWidth
         let newRect = rect.insetBy(dx: dxy, dy: dxy)
 
         let context = UIGraphicsGetCurrentContext()
