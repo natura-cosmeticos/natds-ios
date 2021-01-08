@@ -33,7 +33,7 @@ final class NatShortSpec: QuickSpec {
                 let circleView = systemUnderTest.subviews.first
                 let iconView = circleView?.subviews.first as? IconView
 
-                expect(iconView?.icon).to(equal(.outlinedDefaultMockup))
+                expect(iconView?.defaultImageView.isHidden).to(beFalse())
             }
 
             it("calls notificationCenter.addObserver only once") {
@@ -72,14 +72,14 @@ final class NatShortSpec: QuickSpec {
 
         describe("#configure(icon:)") {
             beforeEach {
-                systemUnderTest.configure(icon: .filledActionAdd)
+                systemUnderTest.configure(icon: nil)
             }
 
             it("sets icon to iconView") {
                 let circleView = systemUnderTest.subviews.first
                 let iconView = circleView?.subviews.first as? IconView
 
-                expect(iconView?.icon).to(equal(.filledActionAdd))
+                expect(iconView?.defaultImageView.isHidden).to(beFalse())
             }
         }
 

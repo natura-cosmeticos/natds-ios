@@ -21,7 +21,7 @@ final class NatShortcutSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.97))
     }
 
     func test_shortcut_style_contained_primary_with_ellipsis_hasValidSnapshot() {
@@ -30,7 +30,7 @@ final class NatShortcutSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.97))
     }
 
     func test_shortcut_style_contained_default_hasValidSnapshot() {
@@ -39,7 +39,7 @@ final class NatShortcutSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.97))
     }
 
     func test_shortcut_style_contained_default_with_ellipsis_hasValidSnapshot() {
@@ -48,7 +48,7 @@ final class NatShortcutSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.97))
     }
 
     func test_shortcut_style_outlined_primary_hasValidSnapshot() {
@@ -57,7 +57,7 @@ final class NatShortcutSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.97))
     }
 
     func test_shortcut_style_outlined_primary_with_ellipsis_hasValidSnapshot() {
@@ -66,7 +66,7 @@ final class NatShortcutSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.97))
     }
 
     func test_shortcut_style_outlined_default_hasValidSnapshot() {
@@ -75,7 +75,7 @@ final class NatShortcutSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.97))
     }
 
     func test_shortcut_style_outlined_default_with_ellipsis_hasValidSnapshot() {
@@ -84,7 +84,7 @@ final class NatShortcutSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.97))
     }
 }
 
