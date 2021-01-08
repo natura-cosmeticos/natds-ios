@@ -32,14 +32,14 @@ final class SelectionControlViewController: UIViewController, SampleItem {
     }()
 
     private let enabledUnselectedSelectionControl: NatSelectionControl = {
-        let checkbox = NatSelectionControl(style: .checkbox, text: nil)
+        let checkbox = NatSelectionControl(style: .checkbox)
         checkbox.translatesAutoresizingMaskIntoConstraints = false
 
         return checkbox
     }()
 
     private let enabledSelectedSelectionControl: NatSelectionControl = {
-        let checkbox = NatSelectionControl(style: .checkbox, text: nil)
+        let checkbox = NatSelectionControl(style: .checkbox)
         checkbox.isSelected = true
         checkbox.translatesAutoresizingMaskIntoConstraints = false
 
@@ -47,7 +47,7 @@ final class SelectionControlViewController: UIViewController, SampleItem {
     }()
 
     private let disabledUnselectedSelectionControl: NatSelectionControl = {
-        let checkbox = NatSelectionControl(style: .checkbox, text: nil)
+        let checkbox = NatSelectionControl(style: .checkbox)
         checkbox.isSelected = false
         checkbox.isEnabled = false
         checkbox.translatesAutoresizingMaskIntoConstraints = false
@@ -56,7 +56,7 @@ final class SelectionControlViewController: UIViewController, SampleItem {
     }()
 
     private let disabledSelectedSelectionControl: NatSelectionControl = {
-        let checkbox = NatSelectionControl(style: .checkbox, text: nil)
+        let checkbox = NatSelectionControl(style: .checkbox)
         checkbox.isSelected = true
         checkbox.isEnabled = false
         checkbox.translatesAutoresizingMaskIntoConstraints = false
