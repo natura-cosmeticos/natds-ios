@@ -11,9 +11,6 @@
  Example of usage:
 
         let containedPrimary = NatShortcut(style: .containedPrimary)
-        let containedDefault = NatShortcut(style: .containedDefault)
-        let outlinedPrimary = NatShortcut(style: .outlinedPrimary)
-        let outlinedDefault = NatShortcut(style: .outlinedDefault)
 
  - Requires:
  It's necessary to configure the Design System with a theme or fatalError will be raised.

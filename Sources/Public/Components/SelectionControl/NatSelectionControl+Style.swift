@@ -1,8 +1,13 @@
-import Foundation
 import UIKit
 
 extension NatSelectionControl {
+    /**
+     Style represents styles values for the NatSelectionControl component.
 
+        These are all styles allowed for a NatSelectionControl:
+        - checkbox
+    */
+    
     public enum Style {
         case checkbox
     }
