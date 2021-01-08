@@ -30,7 +30,8 @@ final class NatShortSpec: QuickSpec {
             }
 
             it("sets a default icon") {
-                let circleView = systemUnderTest.subviews.first
+                let shortcutView = systemUnderTest.subviews.first
+                let circleView = shortcutView?.subviews.first
                 let iconView = circleView?.subviews.first as? IconView
 
                 expect(iconView?.icon).to(equal(.outlinedDefaultMockup))
@@ -76,7 +77,8 @@ final class NatShortSpec: QuickSpec {
             }
 
             it("sets icon to iconView") {
-                let circleView = systemUnderTest.subviews.first
+                let shortcutView = systemUnderTest.subviews.first
+                let circleView = shortcutView?.subviews.first
                 let iconView = circleView?.subviews.first as? IconView
 
                 expect(iconView?.icon).to(equal(.filledActionAdd))
@@ -125,7 +127,8 @@ final class NatShortSpec: QuickSpec {
             }
 
             it("sets tintColor to iconView") {
-                let circleView = systemUnderTest.subviews.first
+                let shortcutView = systemUnderTest.subviews.first
+                let circleView = shortcutView?.subviews.first
                 let iconView = circleView?.subviews.first as? IconView
 
                 expect(iconView?.tintColor).to(equal(.red))
@@ -142,6 +145,39 @@ final class NatShortSpec: QuickSpec {
 
             it("stores action and uses it in tap events") {
                 expect(actionInvocations).toEventually(equal(1))
+            }
+        }
+        
+        describe("#configure(badgeValue:)") {
+            context("when value is bigger than 0") {
+                beforeEach {
+                    systemUnderTest.configure(badgeValue: 10)
+                }
+
+                it("adds sublayer for badge") {
+                    expect(systemUnderTest.subviews.first?.layer.sublayers?.count).to(equal(2))
+                }
+            }
+
+            context("when value is 0") {
+                beforeEach {
+                    systemUnderTest.configure(badgeValue: 0)
+                }
+
+                it("removes sublayer for badge if exists") {
+                    expect(systemUnderTest.subviews.first?.layer.sublayers?.count).to(equal(1))
+                }
+            }
+
+            context("when value is bigger than 0 then a 0 value") {
+                beforeEach {
+                    systemUnderTest.configure(badgeValue: 10)
+                    systemUnderTest.configure(badgeValue: 0)
+                }
+
+                it("removes sublayer for badge") {
+                    expect(systemUnderTest.subviews.first?.layer.sublayers?.count).to(equal(1))
+                }
             }
         }
 
