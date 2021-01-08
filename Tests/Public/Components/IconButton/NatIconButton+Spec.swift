@@ -78,7 +78,7 @@ final class NatIconButtonSpec: QuickSpec {
                     expect(actionInvocations).toEventually(equal(1))
                 }
             }
-            
+
             context("when is disabled") {
                 beforeEach {
                     actionInvocations = 0
@@ -128,13 +128,13 @@ final class NatIconButtonSpec: QuickSpec {
 
         describe("#configure(icon:)") {
             beforeEach {
-                systemUnderTest.configure(icon: .filledMediaPause)
+                systemUnderTest.configure(icon: nil)
             }
 
             it("returns an expected value") {
                 let iconView = systemUnderTest.subviews.first as? IconView
 
-                expect(iconView?.icon).to(equal(.filledMediaPause))
+                expect(iconView?.defaultImageView.isHidden).to(beFalse())
             }
         }
 
