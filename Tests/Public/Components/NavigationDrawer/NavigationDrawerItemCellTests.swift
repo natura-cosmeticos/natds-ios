@@ -16,7 +16,13 @@ final class NavigationDrawerItemCellTests: XCTestCase {
     }
 
     func test_init_hasADefaultIcon() {
-        XCTAssertEqual(systemUnderTest.icon, .outlinedDefaultMockup)
+       let iconView = systemUnderTest.subviews
+            .compactMap { $0 as? IconView }
+            .first
+
+        if let iconView = iconView {
+            XCTAssertFalse(iconView.defaultImageView.isHidden)
+        }
     }
 
     func test_init_hasSelectionStyleAsNone() {

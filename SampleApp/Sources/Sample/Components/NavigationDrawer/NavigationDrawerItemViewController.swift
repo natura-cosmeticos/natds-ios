@@ -1,4 +1,5 @@
 import NatDS
+import NatDSIcons
 
 class NavigationDrawerItemViewController: UIViewController, SampleItem {
     static var name = "Navigation Drawer"
@@ -71,20 +72,20 @@ private extension NavigationDrawerItemViewController {
         static func build() -> [Item] {
             let items: [Item] = [
                 Item(label: "Item with no subitems",
-                     icon: .outlinedFinanceShoppingcart),
+                     icon: NatDSIcons.getIcon(icon: .outlinedFinanceShoppingcart)),
                 Item(label: "Item with tag",
-                     icon: .outlinedAlertInfo,
+                     icon: NatDSIcons.getIcon(icon: .outlinedAlertInfo),
                      tagText: "New"),
                 Item(label: "Item with very, very, very large title and tag",
-                     icon: .outlinedFinanceCards,
+                     icon: NatDSIcons.getIcon(icon: .outlinedFinanceCards),
                      tagText: "New"),
                 Item(label: "Item with one subitem",
-                     icon: .outlinedActionNewrequest,
+                     icon: NatDSIcons.getIcon(icon: .outlinedActionNewrequest),
                      subitems: [
                         Subitem(label: "Subitem 2.1", disabled: false)
                 ]),
-                Item(label: "Item with subitems",
-                     icon: .outlinedActionRequest,
+                Item(label: "Item with very, very, very large title and tag",
+                     icon: NatDSIcons.getIcon(icon: .outlinedActionRequest),
                      tagText: "New",
                      subitems: [
                         Subitem(label: "Subitem 3.1", disabled: false),
@@ -92,10 +93,10 @@ private extension NavigationDrawerItemViewController {
                         Subitem(label: "Subitem 3.3", disabled: false)
                 ]),
                 Item(label: "Disabled item with no subitem",
-                     icon: .outlinedSocialGroupofpeople,
+                     icon: NatDSIcons.getIcon(icon: .outlinedSocialGroupofpeople),
                      disabled: true),
                 Item(label: "Disabled item with subitems",
-                     icon: .filledBrandNaturarosacea,
+                     icon: NatDSIcons.getIcon(icon: .filledBrandNaturarosacea),
                      disabled: true,
                      tagText: "New",
                      subitems: [
@@ -103,7 +104,7 @@ private extension NavigationDrawerItemViewController {
                         Subitem(label: "Subitem 5.2", disabled: false)
                 ]),
                 Item(label: "Item with disabled subitem",
-                     icon: .outlinedPlaceBus,
+                   icon: NatDSIcons.getIcon(icon: .outlinedPlaceBus),
                      subitems: [
                         Subitem(label: "Subitem 6.1", disabled: true),
                         Subitem(label: "Subitem 6.3", disabled: false),
@@ -117,12 +118,12 @@ private extension NavigationDrawerItemViewController {
 
     struct Item {
         let label: String
-        let icon: Icon
+        let icon: String?
         let disabled: Bool
         let tagText: String?
         let subitems: [Subitem]
 
-        init(label: String, icon: Icon, disabled: Bool = false, tagText: String? = nil, subitems: [Subitem] = []) {
+        init(label: String, icon: String?, disabled: Bool = false, tagText: String? = nil, subitems: [Subitem] = []) {
             self.label = label
             self.icon = icon
             self.disabled = disabled
