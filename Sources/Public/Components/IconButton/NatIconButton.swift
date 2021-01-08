@@ -34,7 +34,6 @@ public final class NatIconButton: UIView {
 
     private let iconView: IconView = {
         let iconView = IconView(fontSize: NatSizes.standard)
-        //iconView.icon = .outlinedDefaultMockup
         iconView.translatesAutoresizingMaskIntoConstraints = false
 
         return iconView
@@ -130,17 +129,13 @@ extension NatIconButton {
         }
     }
 
-    public func configure(icon: Icon) {
-        iconView.icon = icon
-    }
-
     public func configure(state: State) {
         currentState = state
 
         style.applyStyle(self)
     }
 
-    public func configure(icon: String) {
+    public func configure(icon: String?) {
         iconView.iconLabel.text = icon
     }
 }
