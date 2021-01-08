@@ -45,6 +45,7 @@
 		B5D960A174519D837D9855D4B0A6711B /* TextFieldItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02CD4C57B8F31F4FB76CB430C3A9F39 /* TextFieldItemViewController.swift */; };
 		BAD502BF80890F0D5ADA1B7671F5E4D1 /* AppSearchBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65EAA4E8148EBDC96E68E9E054CED31 /* AppSearchBarViewController.swift */; };
 		BD695AAB8C1745298D8F405635E322A7 /* MainDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E03E96B39ADDD9B77FC7C702E3029F /* MainDataSource.swift */; };
+		BEDF93312593C65800F54C50 /* SelectionControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF93302593C65800F54C50 /* SelectionControlViewController.swift */; };
 		C3FB6A19DFD7AF84B435860A0C7F355D /* ExpansionPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE1310620FE9C1F53F4420EEBB52174 /* ExpansionPanelViewController.swift */; };
 		C45042BFA9A69738E74BF45255330A76 /* BorderRadiusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0DC29437C7F5B9950A6FDE4E0E7786 /* BorderRadiusCell.swift */; };
 		D10339C459C644B3172B6106B51A961C /* ElevationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBBC99CEDEAD9957C2FDFCDCF340E4 /* ElevationCell.swift */; };
@@ -117,6 +118,7 @@
 		A9EB78FC7F0EEE4914F65F61B2E74031 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B02CD4C57B8F31F4FB76CB430C3A9F39 /* TextFieldItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldItemViewController.swift; sourceTree = "<group>"; };
 		BAE1310620FE9C1F53F4420EEBB52174 /* ExpansionPanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpansionPanelViewController.swift; sourceTree = "<group>"; };
+		BEDF93302593C65800F54C50 /* SelectionControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionControlViewController.swift; sourceTree = "<group>"; };
 		BFCC7C3B8819A99402107EA24F698A53 /* ElevationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevationViewController.swift; sourceTree = "<group>"; };
 		C3ECCCD44B56293C5FBF0660526ABA56 /* BorderRadiusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderRadiusViewController.swift; sourceTree = "<group>"; };
 		C7FBDBE3AD8777A865F1B1E40859758D /* IconCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 				CDF47F683C800E8289A0310CD7EA0F0C /* Iconography */,
 				FC4556C0DD691C829616B3DDA86F0CBA /* NavigationDrawer */,
 				79ACDAE3255C33F700660E68 /* ProgressIndicator */,
+				BEDF932F2593C63700F54C50 /* SelectionControl */,
 				844A1E2424AE2B7600E93AD9 /* Shortcut */,
 				C420063DEF581D12DAA6D31645B6B382 /* Tab */,
 				2600C21C25127D500040C4C4 /* Tag */,
@@ -405,6 +408,14 @@
 				EB193A88212A44D97B2A08002B40993F /* ButtonsItemViewController.swift */,
 			);
 			path = Button;
+			sourceTree = "<group>";
+		};
+		BEDF932F2593C63700F54C50 /* SelectionControl */ = {
+			isa = PBXGroup;
+			children = (
+				BEDF93302593C65800F54C50 /* SelectionControlViewController.swift */,
+			);
+			path = SelectionControl;
 			sourceTree = "<group>";
 		};
 		C1D1F3FC973CC3D14F86C680F200601D /* ValueText */ = {
@@ -647,6 +658,7 @@
 				84E3B7C82502C88D0056FE57 /* CustomSplashViewController.swift in Sources */,
 				06E258AB651CE4F232CAAA3A2D94807C /* SpacingCell.swift in Sources */,
 				15CB9B603913EB682989F204523A1472 /* SpacingViewController.swift in Sources */,
+				BEDF93312593C65800F54C50 /* SelectionControlViewController.swift in Sources */,
 				FD3C1A6EDAD5F31BC9E4984E981C28A8 /* TabItemViewController.swift in Sources */,
 				B5D960A174519D837D9855D4B0A6711B /* TextFieldItemViewController.swift in Sources */,
 				D2874BA3C6A03754EC9895DC95D6DFE5 /* TypographyCell.swift in Sources */,
