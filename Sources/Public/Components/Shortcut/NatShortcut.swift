@@ -39,7 +39,6 @@ public final class NatShortcut: UIView {
 
     private let iconView: IconView = {
         let iconView = IconView(fontSize: getTokenFromTheme(\.sizeSemi))
-        iconView.icon = .outlinedDefaultMockup
         iconView.translatesAutoresizingMaskIntoConstraints = false
 
         return iconView
@@ -113,8 +112,8 @@ extension NatShortcut {
         label.text = text
     }
 
-    public func configure(icon: Icon) {
-        iconView.icon = icon
+    public func configure(icon: String?) {
+        iconView.iconText = icon
     }
 
     public func configure(action: @escaping () -> Void) {
