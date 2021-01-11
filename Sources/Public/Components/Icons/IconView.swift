@@ -5,15 +5,6 @@ public class IconView: UIView {
             iconLabel.textAlignment = aligment
         }
     }
-
-    public var icon: Icon? {
-        didSet {
-            iconLabel.text = icon?.unicode
-            if icon != nil {
-                shouldShowDefaultIcon = false
-            }
-        }
-    }
     
     public var iconText: String? {
         didSet {

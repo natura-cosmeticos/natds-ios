@@ -93,10 +93,13 @@ public final class NatButton: UIButton, Pulsable {
 
     /**
      This method sets an icon at this button. Icons can be set at 2 sides, right & left.
+     Example of usage:
+
+            button.configure(getIcon(icon: .outlinedAlertNotification), position: .left)
 
      - Parameters:
-     - icon:   Choose some icon from the library
-     - position:   This will be used to configure the icon side, It can be right or left side.
+     - icon:   Choose an icon from NatDSIcons
+     - position:   This will be used to configure the icon alignmemt - it can be right or left side.
      */
 
     public func configure(icon: String?, position: Position) {

@@ -108,14 +108,23 @@ public final class NatShortcut: UIView {
 // MARK: - Public methods
 
 extension NatShortcut {
+    /// Sets the text for the shortcut title
+    /// - Parameter text: A string with the title text
     public func configure(text: String) {
         label.text = text
     }
-
+    
+    /// Sets an icon for the shortcut view
+    /// - Parameter icon: An icon from NatDSIcons.
+    /// Example of usage:
+    ///
+    ///     shortcut.configure(icon: getIcon(icon: .outlinedAlertNotification))
     public func configure(icon: String?) {
         iconView.iconText = icon
     }
-
+    
+    /// Sets the functionality for the shortcut.
+    /// - Parameter action: A block of functionality to be executed when the shorcut is pressed
     public func configure(action: @escaping () -> Void) {
         self.action = action
     }
