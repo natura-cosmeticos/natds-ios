@@ -23,16 +23,9 @@ public final class NatShortcut: UIView {
     // MARK: - Private properties
     
     private let shortcutView: ShortcutView = {
-        let view = ShortcutView(icon: .outlinedDefaultMockup)
+        let view = ShortcutView(icon: nil)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
-    }()
-
-    private let iconView: IconView = {
-        let iconView = IconView(fontSize: getTokenFromTheme(\.sizeSemi))
-        iconView.translatesAutoresizingMaskIntoConstraints = false
-
-        return iconView
     }()
 
     private let label: UILabel = {
@@ -105,18 +98,13 @@ extension NatShortcut {
     ///
     ///     shortcut.configure(icon: getIcon(icon: .outlinedAlertNotification))
     public func configure(icon: String?) {
-        iconView.iconText = icon
+        shortcutView.configure(icon: icon)
     }
 
     /// Configures text for shortcut bottom label.
     /// - Parameter text: A string with the text to display on the label.
     public func configure(text: String) {
         label.text = text
-    }
-    /// Configures an icon to the shortcut.
-    /// - Parameter icon: An option from Design System's icon options.
-    public func configure(icon: Icon) {
-        shortcutView.configure(icon: icon)
     }
 
     /// Sets the functionality for the shortcut.
