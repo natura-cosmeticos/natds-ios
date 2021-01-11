@@ -49,12 +49,19 @@ Before start using, it's necessary to configure the Design System with a theme o
 DesignSystem().configure(with: AvailableTheme)
 ```
 
-## Getting started
-
-[Check how to start using our lib](docs/Getting%20started.md)
-
 ## Icons
-[Check how to use icons](docs/How%20to%20use%20icons.md)
+Since version `3.0.0` NatDS iOS has no longer NatDS Icons. To use NatDS Icons, you MUST add a new pod to your project. You must specify it in your `Podfile`:
+
+```ruby
+target '<Your Target Name>' do
+    pod 'NatDSIcons'    
+end
+```
+
+[Check the documentation on how to use icons.](docs/How%20to%20use%20icons.md)
+
+## Getting started
+[Check how to start using our lib.](docs/Getting%20started.md)
 
 ## How to contribute
 
