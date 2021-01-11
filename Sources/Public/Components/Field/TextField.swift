@@ -129,7 +129,7 @@ public class TextField: UIView {
 
     private lazy var iconImageView: UIImageView = {
         let iconView = UIImageView()
-        let image = AssetsHelper.image(from: "Icons/IconOutlinedActionCancel")
+        let image = AssetsPath.iconOutlinedActionCancel.rawValue
         iconView.image = image
         iconView.translatesAutoresizingMaskIntoConstraints = false
         iconView.heightAnchor.constraint(equalToConstant: getTokenFromTheme(\.sizeSmall)).isActive = true

@@ -48,7 +48,7 @@ public class ExpansionPanel: UIView {
         iconView.tintedColor = getUIColorFromTokens(\.colorHighEmphasis)
         button.tintColor = getUIColorFromTokens(\.colorOnBackground)
         button.addTarget(self, action: #selector(didTapUpDownButton), for: .touchUpInside)
-        button.setImage(AssetsHelper.image(from: "Icons/IconOutlinedNavigationArrowBottom"), for: .normal)
+        button.setImage(AssetsPath.iconOutlinedNavigationArrowBottom.rawValue, for: .normal)
         return button
     }()
 

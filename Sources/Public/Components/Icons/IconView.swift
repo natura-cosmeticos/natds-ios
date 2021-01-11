@@ -44,7 +44,7 @@ public class IconView: UIView {
 
     internal lazy var defaultImageView: UIImageView = {
         let imageView = UIImageView()
-        let image = AssetsHelper.image(from: "Icons/IconOutlinedDefaultMockup")
+        let image = AssetsPath.iconOutlinedDefaultMockup.rawValue
         imageView.image = image
         return imageView
     }()
