@@ -58,7 +58,7 @@ public class NatProgressIndicatorCircular: UIView {
     }
 
     // MARK: - Public methods
-    
+
     public func configure(with action: Action) {
         switch action {
         case .showAndStartAnimation:

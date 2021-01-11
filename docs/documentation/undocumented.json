@@ -2843,6 +2843,20 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/penelope.araujo/Desktop/natds-ios/Sources/Public/Components/SelectionControl/NatSelectionControl+Style.swift",
+      "line": 12,
+      "symbol": "NatSelectionControl.Style.checkbox",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/natds-ios/Sources/Public/Components/SelectionControl/NatSelectionControl.swift",
+      "line": 71,
+      "symbol": "NatSelectionControl.init(style:text:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/penelope.araujo/Desktop/natds-ios/Sources/Public/Components/Shortcut/NatShortcut+Style.swift",
       "line": 17,
       "symbol": "NatShortcut.Style.containedPrimary",
@@ -2872,30 +2886,65 @@
     },
     {
       "file": "/Users/penelope.araujo/Desktop/natds-ios/Sources/Public/Components/Shortcut/NatShortcut.swift",
-      "line": 64,
+      "line": 47,
       "symbol": "NatShortcut.init(style:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/penelope.araujo/Desktop/natds-ios/Sources/Public/Components/Shortcut/NatShortcut.swift",
-      "line": 112,
-      "symbol": "NatShortcut.configure(text:)",
+      "file": "/Users/penelope.araujo/Desktop/natds-ios/Sources/Public/Components/Shortcut/ShortcutView.swift",
+      "line": 1,
+      "symbol": "ShortcutView",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/natds-ios/Sources/Public/Components/Shortcut/ShortcutView.swift",
+      "line": 18,
+      "symbol": "ShortcutView.init(frame:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/penelope.araujo/Desktop/natds-ios/Sources/Public/Components/Shortcut/NatShortcut.swift",
-      "line": 116,
-      "symbol": "NatShortcut.configure(icon:)",
+      "file": "/Users/penelope.araujo/Desktop/natds-ios/Sources/Public/Components/Shortcut/ShortcutView.swift",
+      "line": 23,
+      "symbol": "ShortcutView.init(icon:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/penelope.araujo/Desktop/natds-ios/Sources/Public/Components/Shortcut/NatShortcut.swift",
-      "line": 120,
-      "symbol": "NatShortcut.configure(action:)",
+      "file": "/Users/penelope.araujo/Desktop/natds-ios/Sources/Public/Components/Shortcut/ShortcutView.swift",
+      "line": 33,
+      "symbol": "ShortcutView.layoutSubviews()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/natds-ios/Sources/Public/Components/Shortcut/ShortcutView.swift",
+      "line": 60,
+      "symbol": "ShortcutView.configure(icon:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/natds-ios/Sources/Public/Components/Shortcut/ShortcutView.swift",
+      "line": 64,
+      "symbol": "ShortcutView.configure(iconColor:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/natds-ios/Sources/Public/Components/Shortcut/ShortcutView.swift",
+      "line": 68,
+      "symbol": "ShortcutView.configure(badgeValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/natds-ios/Sources/Public/Components/Shortcut/ShortcutView.swift",
+      "line": 78,
+      "symbol": "ShortcutView",
+      "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {

@@ -8,13 +8,13 @@ final class ShortcutOutlinedStyleSpec: QuickSpec {
         let systemUnderTest = ShortcutOutlinedStyle.self
         var shortcut: NatShortcut!
         let stubStyle = NatShortcut.Style { _ in }
-        var circleView: UIView!
+        var shortcutView: UIView!
 
         beforeEach {
             ConfigurationStorage.shared.currentTheme = StubTheme()
 
             shortcut = NatShortcut(style: stubStyle)
-            circleView = shortcut.subviews.first
+            shortcutView = shortcut.subviews.first
         }
 
         describe("#applyPrimaryStyle") {
@@ -23,21 +23,22 @@ final class ShortcutOutlinedStyleSpec: QuickSpec {
             }
 
             it("sets an expected circle color") {
-                expect(circleView?.backgroundColor).to(equal(getUIColorFromTokens(\.colorSurface)))
+                expect(shortcutView?.backgroundColor).to(equal(getUIColorFromTokens(\.colorSurface)))
             }
 
             it("sets an expected circle border color") {
                 let opacity = getTokenFromTheme(\.opacityMediumLow)
                 let color = getUIColorFromTokens(\.colorPrimary).withAlphaComponent(opacity).cgColor
 
-                expect(circleView?.layer.borderColor).to(equal(color))
+                expect(shortcutView?.layer.borderColor).to(equal(color))
             }
 
             it("sets an expected circle border width") {
-                expect(circleView?.layer.borderWidth).to(equal(1))
+                expect(shortcutView?.layer.borderWidth).to(equal(1))
             }
 
             it("sets an expected icon color") {
+                let circleView = shortcutView?.subviews.first
                 let iconView = circleView?.subviews.first as? IconView
 
                 expect(iconView?.tintColor).to(equal(getUIColorFromTokens(\.colorPrimary)))
@@ -50,21 +51,22 @@ final class ShortcutOutlinedStyleSpec: QuickSpec {
             }
 
             it("sets an expected circle color") {
-                expect(circleView?.backgroundColor).to(equal(getUIColorFromTokens(\.colorSurface)))
+                expect(shortcutView?.backgroundColor).to(equal(getUIColorFromTokens(\.colorSurface)))
             }
 
             it("sets an expected circle border color") {
                 let opacity = getTokenFromTheme(\.opacityMediumLow)
                 let color = getUIColorFromTokens(\.colorHighEmphasis).withAlphaComponent(opacity).cgColor
 
-                expect(circleView?.layer.borderColor).to(equal(color))
+                expect(shortcutView?.layer.borderColor).to(equal(color))
             }
 
             it("sets an expected circle border width") {
-                expect(circleView?.layer.borderWidth).to(equal(1))
+                expect(shortcutView?.layer.borderWidth).to(equal(1))
             }
 
             it("sets an expected icon color") {
+                let circleView = shortcutView?.subviews.first
                 let iconView = circleView?.subviews.first as? IconView
 
                 expect(iconView?.tintColor).to(equal(getUIColorFromTokens(\.colorHighEmphasis)))

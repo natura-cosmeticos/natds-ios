@@ -11,7 +11,7 @@ class ProgressIndicatorItemViewController: UIViewController, SampleItem {
         view.backgroundColor = NatColors.background
         addProgressIndicator()
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         progressIndicator.configure(with: .showAndStartAnimation)
     }
@@ -27,6 +27,6 @@ class ProgressIndicatorItemViewController: UIViewController, SampleItem {
             progressIndicator.heightAnchor.constraint(equalToConstant: NatProgressIndicatorCircular.Size.standard),
             progressIndicator.widthAnchor.constraint(equalToConstant: NatProgressIndicatorCircular.Size.standard)
         ])
-        
+
     }
 }
