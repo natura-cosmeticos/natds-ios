@@ -18,22 +18,22 @@ final class NatButtonSnapshotTests: XCTestCase {
     func test_icon_right_side_hasValidSnapshot() {
         let systemUnderTest = NatButton(style: .contained)
         systemUnderTest.configure(title: "stub")
-        systemUnderTest.configure(icon: .outlinedDefaultMockup, position: .right)
+        systemUnderTest.configure(icon: nil, position: .right)
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.97))
         assertSnapshot(matching: systemUnderTest, as: .recursiveDescription)
     }
 
     func test_icon_left_side_hasValidSnapshot() {
         let systemUnderTest = NatButton(style: .contained)
         systemUnderTest.configure(title: "stub")
-        systemUnderTest.configure(icon: .outlinedDefaultMockup, position: .left)
+        systemUnderTest.configure(icon: nil, position: .left)
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.97))
         assertSnapshot(matching: systemUnderTest, as: .recursiveDescription)
     }
 }

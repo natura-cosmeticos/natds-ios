@@ -40,13 +40,15 @@ public class ExpansionPanel: UIView {
     }()
 
     private lazy var upDownButton: UIButton = {
-        let size: CGFloat = NatSizes.standard
-        let button = UIButton(type: .system)
-        button.tintColor = NatColors.onBackground
-        button.titleLabel?.font = .iconFont(ofSize: size)
-        button.setTitle(Icon.outlinedNavigationArrowbottom.unicode, for: .normal)
-        button.layer.cornerRadius = NatBorderRadius.circle(viewHeight: size)
+        let button = UIButton()
+        let iconView = UIImageView()
+        iconView.translatesAutoresizingMaskIntoConstraints = false
+        iconView.heightAnchor.constraint(equalToConstant: 12).isActive = true
+        iconView.widthAnchor.constraint(equalToConstant: 12).isActive = true
+        iconView.tintedColor = getUIColorFromTokens(\.colorHighEmphasis)
+        button.tintColor = getUIColorFromTokens(\.colorOnBackground)
         button.addTarget(self, action: #selector(didTapUpDownButton), for: .touchUpInside)
+        button.setImage(AssetsPath.iconOutlinedNavigationArrowBottom.rawValue, for: .normal)
         return button
     }()
 

@@ -20,9 +20,9 @@ public class ShortcutView: UIView {
         setup()
     }
     
-    public convenience init(icon: Icon? = nil) {
+    public convenience init(icon: String? = nil) {
         self.init()
-        defer { self.iconView.icon = icon }
+        defer { self.iconView.iconText = icon }
     }
 
     @available(*, unavailable)
@@ -57,8 +57,8 @@ public class ShortcutView: UIView {
         NSLayoutConstraint.activate(constraints)
     }
     
-    public func configure(icon: Icon) {
-        iconView.icon = icon
+    public func configure(icon: String?) {
+        iconView.iconText = icon
     }
     
     public func configure(iconColor color: UIColor) {

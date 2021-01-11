@@ -20,7 +20,7 @@ final class NatIconButtonSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.97))
         assertSnapshot(matching: systemUnderTest, as: .recursiveDescription)
     }
 
@@ -31,7 +31,7 @@ final class NatIconButtonSnapshotTests: XCTestCase {
 
         systemUnderTest.configure(state: .disabled)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.97))
     }
 
     func test_style_standard_color_default_pressed_hasValidSnapshot() {
@@ -52,7 +52,7 @@ final class NatIconButtonSnapshotTests: XCTestCase {
         systemUnderTest.touchesBegan(.init(arrayLiteral: .init()), with: nil)
         systemUnderTest.touchesEnded(.init(), with: nil)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.97))
         assertSnapshot(matching: systemUnderTest, as: .recursiveDescription)
     }
 
@@ -64,7 +64,7 @@ final class NatIconButtonSnapshotTests: XCTestCase {
         systemUnderTest.configure(badgeStyle: .standard, withColor: .alert)
         systemUnderTest.setBadge(count: 10)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.97))
         assertSnapshot(matching: systemUnderTest, as: .recursiveDescription)
     }
 
@@ -73,7 +73,7 @@ final class NatIconButtonSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.97))
         assertSnapshot(matching: systemUnderTest, as: .recursiveDescription)
     }
 
@@ -84,7 +84,7 @@ final class NatIconButtonSnapshotTests: XCTestCase {
 
         systemUnderTest.configure(state: .disabled)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.97))
     }
 
     func test_style_standard_color_primary_pressed_hasValidSnapshot() {
@@ -105,7 +105,7 @@ final class NatIconButtonSnapshotTests: XCTestCase {
         systemUnderTest.touchesBegan(.init(arrayLiteral: .init()), with: nil)
         systemUnderTest.touchesEnded(.init(), with: nil)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.97))
         assertSnapshot(matching: systemUnderTest, as: .recursiveDescription)
     }
 
@@ -117,7 +117,7 @@ final class NatIconButtonSnapshotTests: XCTestCase {
         systemUnderTest.configure(badgeStyle: .standard, withColor: .alert)
         systemUnderTest.setBadge(count: 10)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.97))
         assertSnapshot(matching: systemUnderTest, as: .recursiveDescription)
     }
 }

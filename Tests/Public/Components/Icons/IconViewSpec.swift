@@ -13,11 +13,11 @@ final class IconViewSpec: QuickSpec {
 
         describe("#init(fontSize: icon:)") {
             beforeEach {
-                sut = IconView(fontSize: 25, icon: Icon.filledActionAdd)
+                sut = IconView(fontSize: 25)
             }
 
             it("sets expected icon") {
-                expect(sut.icon).to(equal(Icon.filledActionAdd))
+                expect(sut.defaultImageView.isHidden).toNot(beTrue())
             }
         }
     }

@@ -1,10 +1,8 @@
 /**
  TextField is a class that represents a component from the design system.
-<<<<<<< HEAD
- The textfield styles, keyboards, capitalization, autocorrection and secureEntry properties changes according with the choosen type.
-=======
+
  The textfield styles, keyboards, capitalization and autocorrection properties changes according with the chosen type.
->>>>>>> master
+
 
  This TextField has 4 types:
  - Text
@@ -129,13 +127,14 @@ public class TextField: UIView {
         return label
     }()
 
-    private lazy var iconView: IconView = {
-        let font = NatFonts.font(ofSize: .caption, withWeight: .regular)
-        let iconView = IconView(fontSize: font.pointSize)
-        iconView.aligment = .left
-        iconView.icon = Icon.outlinedActionCancel
+    private lazy var iconImageView: UIImageView = {
+        let iconView = UIImageView()
+        let image = AssetsPath.iconOutlinedActionCancel.rawValue
+        iconView.image = image
         iconView.translatesAutoresizingMaskIntoConstraints = false
-        iconView.widthAnchor.constraint(greaterThanOrEqualToConstant: 16).isActive = true
+        iconView.heightAnchor.constraint(equalToConstant: getTokenFromTheme(\.sizeSmall)).isActive = true
+        iconView.widthAnchor.constraint(equalToConstant: getTokenFromTheme(\.sizeSmall)).isActive = true
+
         return iconView
     }()
 
@@ -171,7 +170,7 @@ extension TextField {
         addTitleLabel()
         addTextField()
         addStackView()
-        stackView.addArrangedSubview(iconView)
+        stackView.addArrangedSubview(iconImageView)
         stackView.addArrangedSubview(helperLabel)
 
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
@@ -243,7 +242,7 @@ extension TextField {
             titleLabel.textColor = getUIColorFromTokens(\.colorMediumEmphasis)
             helperLabel.textColor = getUIColorFromTokens(\.colorMediumEmphasis)
             helperLabel.text = helper
-            iconView.isHidden = true
+            iconImageView.isHidden = true
 
         case .active:
             textField.borderWidth = 2
@@ -252,7 +251,7 @@ extension TextField {
             titleLabel.textColor = getUIColorFromTokens(\.colorMediumEmphasis)
             helperLabel.textColor = getUIColorFromTokens(\.colorMediumEmphasis)
             helperLabel.text = helper
-            iconView.isHidden = true
+            iconImageView.isHidden = true
 
         case .error:
             textField.borderWidth = 2
@@ -261,8 +260,9 @@ extension TextField {
             titleLabel.textColor = getUIColorFromTokens(\.colorAlert)
             helperLabel.textColor = getUIColorFromTokens(\.colorAlert)
             helperLabel.text = error ?? ""
-            iconView.tintColor = getUIColorFromTokens(\.colorAlert)
-            iconView.isHidden = false
+            stackView.spacing = getTokenFromTheme(\.sizeMicro)
+            iconImageView.tintedColor = getUIColorFromTokens(\.colorAlert)
+            iconImageView.isHidden = false
         }
     }
 

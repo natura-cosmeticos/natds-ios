@@ -44,7 +44,6 @@ extension SearchBar {
     private func setup() {
         setupSearchBar()
         setupTextField()
-        setupClearButton()
     }
 
     private func setupSearchBar() {
@@ -65,14 +64,5 @@ extension SearchBar {
         textField.clearButtonMode = .whileEditing
         textField.borderStyle = .none
         textField.keyboardType = .default
-    }
-
-    private func setupClearButton() {
-        guard let button = textField?.value(forKey: "clearButton") as? UIButton else {
-            return
-        }
-
-        button.titleLabel?.font = .iconFont()
-        button.setTitle(NatDS.Icon.outlinedNavigationClose.unicode, for: .normal)
     }
 }

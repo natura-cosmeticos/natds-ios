@@ -13,7 +13,9 @@ class AssetsHelper {
 
     private static func registerFont(_ name: String) {
         var error: Unmanaged<CFError>?
-        let bundle = Bundle(for: self)
+        guard let bundle = Bundle(identifier: IconsSource.natDS.identifier) else {
+            return
+        }
 
         guard let pathForResource = bundle.url(forResource: name, withExtension: "ttf") else {
             return

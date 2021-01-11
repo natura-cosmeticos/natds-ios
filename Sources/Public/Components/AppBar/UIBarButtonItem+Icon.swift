@@ -1,7 +1,7 @@
 import UIKit
 
 public extension UIBarButtonItem {
-    convenience init(icon: Icon, action: Selector?, target: AnyObject?) {
+    convenience init(icon: String?, action: Selector?, target: AnyObject?) {
         let iconView = IconView(fontSize: 24, icon: icon)
         self.init(customView: iconView)
         let tap = UITapGestureRecognizer(target: target, action: action)

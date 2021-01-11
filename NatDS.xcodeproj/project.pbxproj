@@ -73,7 +73,6 @@
 		5E34A8BE616690B54E3DCDDF5395963E /* NatBorderRadius+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E3877B37EA290C13920BA9754C76C1 /* NatBorderRadius+Spec.swift */; };
 		604835F2975D92A9D2EF46132C17C0A5 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6FF51FEADFA402D3EDC3FE828081CC /* Tab.swift */; };
 		60B6A40046E3479DEC3808473AF0D08B /* NatSizes+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37416A32D8AD942A180B5FDF1A82192B /* NatSizes+Spec.swift */; };
-		65E0C105942614AA1438FEA773B255B9 /* natds-icons-ios.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BC6A871B0A080C7AB0127CF2EA0D9153 /* natds-icons-ios.ttf */; };
 		672E84F3438F653B2DF42C2018894304 /* ExpansionPanel+Margin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92374A53F43E8BA6129F16B7AB1F4F0 /* ExpansionPanel+Margin.swift */; };
 		67BB06E023B48B85454BD2B38E60B156 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 438A5C92460A2D83E14DF108D8CD8988 /* Images.xcassets */; };
 		69C11E581C612BD00EC0590B5FE51930 /* NatDialogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F52062B7DB3FCB23FA74EEE5EA52FDF /* NatDialogController.swift */; };
@@ -103,6 +102,7 @@
 		799B683C256720890055B96D /* ProgressIndicatorCircular+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799B683B256720890055B96D /* ProgressIndicatorCircular+Snapshot+Tests.swift */; };
 		79ACDAB62555D9B500660E68 /* NatButton+SnapShot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ACDAB52555D9B500660E68 /* NatButton+SnapShot+Tests.swift */; };
 		79ACDADF255C336E00660E68 /* NatProgressIndicatorCircular.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ACDADE255C336E00660E68 /* NatProgressIndicatorCircular.swift */; };
+		79B6AC6C25AC8BF90027F7D6 /* AssetsPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B6AC6B25AC8BF90027F7D6 /* AssetsPath.swift */; };
 		79E7FA1525373ADE00A831BC /* AesopDarkTokens+BorderRadius+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FA1425373ADE00A831BC /* AesopDarkTokens+BorderRadius+Spec.swift */; };
 		79E7FA1D25373B1900A831BC /* AesopLightTokens+BorderRadius+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FA1C25373B1900A831BC /* AesopLightTokens+BorderRadius+Spec.swift */; };
 		79E7FA3325373ED200A831BC /* AesopDarkTokens+Color+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FA3225373ED200A831BC /* AesopDarkTokens+Color+Spec.swift */; };
@@ -162,8 +162,9 @@
 		7C00D9B09D306A421DBD99953C7BC9E4 /* NatElevation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2775F568C47ADB6D5DA7B7AFA4A41B4E /* NatElevation.swift */; };
 		7CA6BAC353B73AF5D31F09CAF0268EE5 /* DesignSystemFatalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E6D9764598D210D58B32B2AEB0FE9 /* DesignSystemFatalError.swift */; };
 		7D19998925756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19998825756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift */; };
+		7D3D59152593D1B600C9197B /* UIImageView+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3D59142593D1B500C9197B /* UIImageView+UIColor.swift */; };
+		7D5F149A25A782AB007986EE /* IconsSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5F149925A782AB007986EE /* IconsSource.swift */; };
 		7D8F3E6A258A81C1003A7DEB /* ShortcutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F3E69258A81C1003A7DEB /* ShortcutView.swift */; };
-		7FCD65E56A79CE1AE08A4C86B8DC1303 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0E2F68D8995E164CB35303ADB9507C /* Icon.swift */; };
 		80FE219D764217C0520E0C784F9C0C0B /* PulseLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF8919785F0CA6D3AB0AD57F759ED73 /* PulseLayer.swift */; };
 		81AA5DF0A9D5F332072CA1EC9C5CF968 /* NatOpacities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E76AA6120032EE8B86EB90B51BFD8 /* NatOpacities.swift */; };
 		8401A9C024FED41E00B6E762 /* NatIconButton+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8401A9BF24FED41E00B6E762 /* NatIconButton+Snapshot+Tests.swift */; };
@@ -217,7 +218,6 @@
 		84A16F0524DDC30100E80DA0 /* NavigationDrawerDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92BFB29E97D8520D6B67E8883AB9A08 /* NavigationDrawerDelegateMock.swift */; };
 		84A16F0624DDC61000E80DA0 /* ValueTextHighlight+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526CD2A36CE33EBE0E9EFD858C9074DE /* ValueTextHighlight+Snapshot+Tests.swift */; };
 		84A818BB24B77FA80007C7D5 /* UIGestureRecognizer+SendGesturesEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A818BA24B77FA80007C7D5 /* UIGestureRecognizer+SendGesturesEvent.swift */; };
-		84AB67611C0B5D85CBE5CE489FCA4DC6 /* UIFont+IconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EAF8A97988FC1AA2F71C29D348A67D /* UIFont+IconTests.swift */; };
 		84B9330824AB788E00B71BD4 /* NatDialogDismissableConfigurable+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9330724AB788E00B71BD4 /* NatDialogDismissableConfigurable+Spec.swift */; };
 		84B9330A24ABC38C00B71BD4 /* NatDialogTitleConfigurable+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9330924ABC38C00B71BD4 /* NatDialogTitleConfigurable+Spec.swift */; };
 		84B9330C24ABC5FD00B71BD4 /* NatDialogBodyConfigurable+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9330B24ABC5FD00B71BD4 /* NatDialogBodyConfigurable+Spec.swift */; };
@@ -242,7 +242,6 @@
 		84BB929E24DCA6C500A9BCC8 /* TextField+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BB929D24DCA6C500A9BCC8 /* TextField+Snapshot+Tests.swift */; };
 		84BB92A024DCA7E300A9BCC8 /* TextFieldDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D521C44E858B4345479E0B193CE2BB9C /* TextFieldDelegateMock.swift */; };
 		84BB92A224DCB73100A9BCC8 /* IconView+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B29FF4C598F8297E81A6B6A82ACA4F9 /* IconView+Snapshot+Tests.swift */; };
-		84BB92A824DD910C00A9BCC8 /* Icon+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BB92A724DD910C00A9BCC8 /* Icon+Snapshot+Tests.swift */; };
 		84BC900224AA15C3007DF09D /* NotificationCenterPostable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC900124AA15C3007DF09D /* NotificationCenterPostable.swift */; };
 		84BC900524AA163A007DF09D /* DialogFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC900324AA163A007DF09D /* DialogFooterView.swift */; };
 		84BC900624AA163A007DF09D /* DialogStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BC900424AA163A007DF09D /* DialogStyle.swift */; };
@@ -280,7 +279,6 @@
 		9D4FF6FB92A6A5BD0AF263A69FF707E4 /* Pulsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FC9280C40680336260347DADB5C0F3 /* Pulsable.swift */; };
 		A0328AF2000431B6155A5A6CD94B1835 /* ReusableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8840C572761772CBDD3A270B8FE2203 /* ReusableViewTests.swift */; };
 		A096BCFF55DBEF25B29C30C1537210D5 /* NavigationDrawerSubitemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E863AFC8E9DA103F33E2D48577058242 /* NavigationDrawerSubitemCell.swift */; };
-		A19D6F5A3F2F85158D4D5B1BD0F60417 /* IconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE41CCB3978D56C1CB091FFBF9B03AF7 /* IconTests.swift */; };
 		A7FA51D049147DE098A2D1EB /* Pods_NatDSSnapShotTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD8F16712FE1A5C351E09A1 /* Pods_NatDSSnapShotTests.framework */; };
 		AA1F5760B92801C89E927B323F7691B7 /* NatButton+Height+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8DC06D81E2DEFAF54C74410DAD95D8 /* NatButton+Height+Spec.swift */; };
 		AAA3820978AE27C3A6ED940916227C9D /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759689DD6C3696C4726646B8356D3B4D /* TabItemView.swift */; };
@@ -440,6 +438,7 @@
 		799B683B256720890055B96D /* ProgressIndicatorCircular+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProgressIndicatorCircular+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		79ACDAB52555D9B500660E68 /* NatButton+SnapShot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+SnapShot+Tests.swift"; sourceTree = "<group>"; };
 		79ACDADE255C336E00660E68 /* NatProgressIndicatorCircular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatProgressIndicatorCircular.swift; sourceTree = "<group>"; };
+		79B6AC6B25AC8BF90027F7D6 /* AssetsPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsPath.swift; sourceTree = "<group>"; };
 		79E7FA1425373ADE00A831BC /* AesopDarkTokens+BorderRadius+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AesopDarkTokens+BorderRadius+Spec.swift"; sourceTree = "<group>"; };
 		79E7FA1C25373B1900A831BC /* AesopLightTokens+BorderRadius+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AesopLightTokens+BorderRadius+Spec.swift"; sourceTree = "<group>"; };
 		79E7FA3225373ED200A831BC /* AesopDarkTokens+Color+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AesopDarkTokens+Color+Spec.swift"; sourceTree = "<group>"; };
@@ -498,6 +497,8 @@
 		79E7FBC52538EE5700A831BC /* TheBodyShopLightTokens+Typography+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheBodyShopLightTokens+Typography+Spec.swift"; sourceTree = "<group>"; };
 		7CCF632B4501044E5062C574CCBBF74E /* NatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatButton.swift; sourceTree = "<group>"; };
 		7D19998825756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatProgressIndicatorCircular+Size.swift"; sourceTree = "<group>"; };
+		7D3D59142593D1B500C9197B /* UIImageView+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+UIColor.swift"; sourceTree = "<group>"; };
+		7D5F149925A782AB007986EE /* IconsSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsSource.swift; sourceTree = "<group>"; };
 		7D8E6D9764598D210D58B32B2AEB0FE9 /* DesignSystemFatalError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemFatalError.swift; sourceTree = "<group>"; };
 		7D8F3E69258A81C1003A7DEB /* ShortcutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutView.swift; sourceTree = "<group>"; };
 		7F9C4251076A01537D0A8CB995DF81EC /* NavigationDrawerSubitemCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerSubitemCellTests.swift; sourceTree = "<group>"; };
@@ -556,7 +557,6 @@
 		84BB928A24DC743300A9BCC8 /* TabItem+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TabItem+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		84BB928F24DC772D00A9BCC8 /* Tab+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tab+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		84BB929D24DCA6C500A9BCC8 /* TextField+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Snapshot+Tests.swift"; sourceTree = "<group>"; };
-		84BB92A724DD910C00A9BCC8 /* Icon+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Icon+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		84BC8FF824AA13B8007DF09D /* NatDialogController+AlertStyleBuilder+Spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NatDialogController+AlertStyleBuilder+Spec.swift"; sourceTree = "<group>"; };
 		84BC8FFA24AA14C0007DF09D /* DialogFooterView+Spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DialogFooterView+Spec.swift"; sourceTree = "<group>"; };
 		84BC8FFB24AA14C0007DF09D /* DialogStyle+Spec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DialogStyle+Spec.swift"; sourceTree = "<group>"; };
@@ -609,7 +609,6 @@
 		AC44AC684E1D6DB6F7BF21E7660666AD /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
 		AC4E75499E95EC13EB47F2CD9CB26622 /* NSMutableAttributedString+Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Builder.swift"; sourceTree = "<group>"; };
 		AD080B942BE2F7A41B1DEF15B19C34DB /* String+IconTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+IconTests.swift"; sourceTree = "<group>"; };
-		AE41CCB3978D56C1CB091FFBF9B03AF7 /* IconTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTests.swift; sourceTree = "<group>"; };
 		B92374A53F43E8BA6129F16B7AB1F4F0 /* ExpansionPanel+Margin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExpansionPanel+Margin.swift"; sourceTree = "<group>"; };
 		B92BFB29E97D8520D6B67E8883AB9A08 /* NavigationDrawerDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerDelegateMock.swift; sourceTree = "<group>"; };
 		B949EB43F40A2086C7BA7CFE2358A9DA /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
@@ -638,7 +637,6 @@
 		D7316FE65E814E2D5CA475475CD8D4EA /* ViewAnimatingWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewAnimatingWrapper.swift; sourceTree = "<group>"; };
 		D7C267848A6D4A2289C862E53EA54F84 /* ElevationAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevationAttributes.swift; sourceTree = "<group>"; };
 		D9B397DFEC0D8F0FBBDE7AE09BA83B2D /* NatButton+EdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+EdgeInsets.swift"; sourceTree = "<group>"; };
-		DA0E2F68D8995E164CB35303ADB9507C /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
 		DA25909FD964254E6B99AD359EFD8A5C /* UIColor+HexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HexTests.swift"; sourceTree = "<group>"; };
 		DD7122400C6AAB36772A6E365FBD263D /* String+Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Icon.swift"; sourceTree = "<group>"; };
 		E2274F3C7AE245CDA327DD2C /* Pods-NatDSSnapShotTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatDSSnapShotTests.debug.xcconfig"; path = "Target Support Files/Pods-NatDSSnapShotTests/Pods-NatDSSnapShotTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -652,7 +650,6 @@
 		EBD8F16712FE1A5C351E09A1 /* Pods_NatDSSnapShotTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NatDSSnapShotTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC5970C426475EACCF56EF2C12EB450D /* Pods-NatDSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatDSTests.release.xcconfig"; path = "Target Support Files/Pods-NatDSTests/Pods-NatDSTests.release.xcconfig"; sourceTree = "<group>"; };
 		EFD589860DA945AE5563620B305091ED /* NatDS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NatDS.h; sourceTree = "<group>"; };
-		F6EAF8A97988FC1AA2F71C29D348A67D /* UIFont+IconTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+IconTests.swift"; sourceTree = "<group>"; };
 		F6F7B50CF41E6ECBFD7148828549ECBF /* ExpansionPanel+MarginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExpansionPanel+MarginTests.swift"; sourceTree = "<group>"; };
 		F988EE601584B907D997288958055215 /* SearchBar+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchBar+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		FADDEC4E472D2A193BED0EBF058A67E8 /* ViewAnimatingMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewAnimatingMock.swift; sourceTree = "<group>"; };
@@ -1376,6 +1373,14 @@
 			path = DesignTokens;
 			sourceTree = "<group>";
 		};
+		7D5F149825A78220007986EE /* IconSource */ = {
+			isa = PBXGroup;
+			children = (
+				7D5F149925A782AB007986EE /* IconsSource.swift */,
+			);
+			path = IconSource;
+			sourceTree = "<group>";
+		};
 		8401A9BE24FED3C900B6E762 /* IconButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -1820,7 +1825,6 @@
 		84BB92A124DCB71400A9BCC8 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
-				84BB92A724DD910C00A9BCC8 /* Icon+Snapshot+Tests.swift */,
 				0B29FF4C598F8297E81A6B6A82ACA4F9 /* IconView+Snapshot+Tests.swift */,
 			);
 			path = Icons;
@@ -2056,6 +2060,7 @@
 			isa = PBXGroup;
 			children = (
 				02B41F99CB8ACD14C09E1AA323E38C2D /* AssetsHelper.swift */,
+				79B6AC6B25AC8BF90027F7D6 /* AssetsPath.swift */,
 				6DA6561EEF13B1CE57B6CE00222286CB /* ReusableView.swift */,
 			);
 			path = Helpers;
@@ -2132,7 +2137,6 @@
 		BEE13D19F1A22BF171DC1BAC64B38FA7 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
-				AE41CCB3978D56C1CB091FFBF9B03AF7 /* IconTests.swift */,
 				5D67F65D9E72160E498FBA256C62159F /* IllustrationIconsTests.swift */,
 				0E7C160824C5E614002FF46F /* IconViewSpec.swift */,
 			);
@@ -2156,6 +2160,7 @@
 				DD7122400C6AAB36772A6E365FBD263D /* String+Icon.swift */,
 				3E6444578A8B4B35C37D0B5FA4D8E0F6 /* UIColor+Hex.swift */,
 				8BA9C4721134BD5277D76AEDED7A01DB /* UIFont+Icon.swift */,
+				7D3D59142593D1B500C9197B /* UIImageView+UIColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -2209,7 +2214,6 @@
 			isa = PBXGroup;
 			children = (
 				438A5C92460A2D83E14DF108D8CD8988 /* Images.xcassets */,
-				BC6A871B0A080C7AB0127CF2EA0D9153 /* natds-icons-ios.ttf */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -2241,7 +2245,6 @@
 				AD080B942BE2F7A41B1DEF15B19C34DB /* String+IconTests.swift */,
 				36B6CEC817D03194414588BB22C1833A /* UICollectionView+ReusableTests.swift */,
 				DA25909FD964254E6B99AD359EFD8A5C /* UIColor+HexTests.swift */,
-				F6EAF8A97988FC1AA2F71C29D348A67D /* UIFont+IconTests.swift */,
 				8656CC0789F1E0DACEB77D4C50C2ECC1 /* UITableView+ReusableTests.swift */,
 			);
 			path = Extensions;
@@ -2258,6 +2261,7 @@
 				B054E7B09C6DBF531CFF71F300EEB33C /* Helpers */,
 				84BC900024AA1594007DF09D /* NotificationCenter */,
 				84EB6B7B24EC045400C6A792 /* Theme */,
+				7D5F149825A78220007986EE /* IconSource */,
 				215336A1A94CD82887726AF1581EC21D /* ViewStyling */,
 				1D45CCA3C5409387E4DBC5C70415468A /* Wrappers */,
 			);
@@ -2302,7 +2306,6 @@
 		FBCFD36466E6B86E32075C92503882F7 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
-				DA0E2F68D8995E164CB35303ADB9507C /* Icon.swift */,
 				D1A1DDA4A78343DB58AF747FF9DC2B66 /* IconView.swift */,
 				D4969844F4A007C92B7C67A4FA020C85 /* IllustrationIcons.swift */,
 				841FEAB924C5C1A100C50AFF /* NatLogoImages.swift */,
@@ -2432,7 +2435,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				67BB06E023B48B85454BD2B38E60B156 /* Images.xcassets in Resources */,
-				65E0C105942614AA1438FEA773B255B9 /* natds-icons-ios.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2591,7 +2593,6 @@
 				847C82A024E577AF001CE116 /* AvonLightTheme+Spec.swift in Sources */,
 				797E612625531C20002A59E0 /* AvonLightComponents+Logo+Spec.swift in Sources */,
 				84BB928E24DC760600A9BCC8 /* TabItemViewDelegateMock.swift in Sources */,
-				A19D6F5A3F2F85158D4D5B1BD0F60417 /* IconTests.swift in Sources */,
 				79E7FA592537456500A831BC /* AesopLightTokens+Size+Spec.swift in Sources */,
 				797E612F25531C6B002A59E0 /* NaturaDarkComponents+Logo+Spec.swift in Sources */,
 				0C4CBA15016075A8E8A7CA6FC6054383 /* IllustrationIconsTests.swift in Sources */,
@@ -2704,7 +2705,6 @@
 				00677CE3627142815E32CE84F60D8910 /* UIFont+GetWeight.swift in Sources */,
 				84BF067224B5126800462AC5 /* NatShortcut+Spec.swift in Sources */,
 				79E7FB7F2538DC8E00A831BC /* TheBodyShopDarkTokens+BorderRadius+Spec.swift in Sources */,
-				84AB67611C0B5D85CBE5CE489FCA4DC6 /* UIFont+IconTests.swift in Sources */,
 				50130A6AE7342A799C5989AF8FE486E8 /* UITableView+ReusableTests.swift in Sources */,
 				79E7FAD225388D0400A831BC /* AvonLightTokens+Color+Spec.swift in Sources */,
 				8E7FE7AAE264D40AF9BFF5CE6E5C7AD0 /* UIView+FrameTests.swift in Sources */,
@@ -2741,6 +2741,7 @@
 				BEDF93202593B4FF00F54C50 /* NatSelectionControl.swift in Sources */,
 				84BC901524AA17C0007DF09D /* NatDialogBodyConfigurable.swift in Sources */,
 				847C829024E36AA6001CE116 /* NaturaDarkTheme.swift in Sources */,
+				7D5F149A25A782AB007986EE /* IconsSource.swift in Sources */,
 				7D8F3E6A258A81C1003A7DEB /* ShortcutView.swift in Sources */,
 				8409854C24F030930095D6AD /* NotificationCenterObservable.swift in Sources */,
 				BEDF93252593B5CE00F54C50 /* NatSelectionControl+Style.swift in Sources */,
@@ -2779,7 +2780,6 @@
 				84EB6B6F24EB197000C6A792 /* GetTokensFromTheme.swift in Sources */,
 				845D09982501196D00B05760 /* IconButtonStandardStyle.swift in Sources */,
 				84BC900624AA163A007DF09D /* DialogStyle.swift in Sources */,
-				7FCD65E56A79CE1AE08A4C86B8DC1303 /* Icon.swift in Sources */,
 				F72BEF338B46182BC440C92CCF3D02B0 /* IconView.swift in Sources */,
 				847C829424E36AD1001CE116 /* TheBodyShopDarkTheme.swift in Sources */,
 				5737265E1EA6FD9BF1004F1CC1333F29 /* IllustrationIcons.swift in Sources */,
@@ -2805,11 +2805,13 @@
 				2600C22025129C880040C4C4 /* NatTag+Style.swift in Sources */,
 				81AA5DF0A9D5F332072CA1EC9C5CF968 /* NatOpacities.swift in Sources */,
 				6F66306180843E285A6B82D8788835D2 /* NatSizes.swift in Sources */,
+				79B6AC6C25AC8BF90027F7D6 /* AssetsPath.swift in Sources */,
 				1E1CA75D4F2464DBEA0DD722294FFDEB /* NatSpacing.swift in Sources */,
 				84BC901724AA17C0007DF09D /* NatDialogTitleConfigurable.swift in Sources */,
 				84BF066224B4A62400462AC5 /* NatShortcut+Style.swift in Sources */,
 				BE7C39B5259CC77200E82405 /* NatCheckbox+Style.swift in Sources */,
 				84BC900C24AA169B007DF09D /* DialogButtonConfiguration.swift in Sources */,
+				7D3D59152593D1B600C9197B /* UIImageView+UIColor.swift in Sources */,
 				13070104FE3F89CB14F76D621EF9A7F1 /* NavigationDrawer+IndexMenu.swift in Sources */,
 				84F709FF1D1DFC32BA4E9CB1803A6E30 /* NavigationDrawer.swift in Sources */,
 				841FEABA24C5C1A100C50AFF /* NatLogoImages.swift in Sources */,
@@ -2857,7 +2859,6 @@
 				84703F3724F54AA600FE01CA /* NotificationCenterSpy.swift in Sources */,
 				79ACDAB62555D9B500660E68 /* NatButton+SnapShot+Tests.swift in Sources */,
 				84BB928524DC69C900A9BCC8 /* Badgeable+Snapshot+Tests.swift in Sources */,
-				84BB92A824DD910C00A9BCC8 /* Icon+Snapshot+Tests.swift in Sources */,
 				84BB928424DC683700A9BCC8 /* NatBadge+Snapshot+Tests.swift in Sources */,
 				26BFBADE251273BA006C22E2 /* NatTag+Snapshot+Tests.swift in Sources */,
 				84BB929724DC8FA300A9BCC8 /* ExpansionPanelBuilder.swift in Sources */,

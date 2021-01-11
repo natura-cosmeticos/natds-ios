@@ -18,7 +18,7 @@ public protocol NavigationDrawerDelegate: AnyObject {
 
  An Item has important properties to configure:
 
- -  label
+ - label
  - icon
  - disabled
  - tagText

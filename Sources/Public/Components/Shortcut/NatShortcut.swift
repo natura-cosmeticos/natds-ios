@@ -23,7 +23,7 @@ public final class NatShortcut: UIView {
     // MARK: - Private properties
     
     private let shortcutView: ShortcutView = {
-        let view = ShortcutView(icon: .outlinedDefaultMockup)
+        let view = ShortcutView(icon: nil)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -91,20 +91,24 @@ public final class NatShortcut: UIView {
 
 // MARK: - Public methods
 
-extension NatShortcut {
+extension NatShortcut {    
+    /// Sets an icon for the shortcut view
+    /// - Parameter icon: An icon from NatDSIcons.
+    /// Example of usage:
+    ///
+    ///     shortcut.configure(icon: getIcon(icon: .outlinedAlertNotification))
+    public func configure(icon: String?) {
+        shortcutView.configure(icon: icon)
+    }
+
     /// Configures text for shortcut bottom label.
     /// - Parameter text: A string with the text to display on the label.
     public func configure(text: String) {
         label.text = text
     }
-    /// Configures an icon to the shortcut.
-    /// - Parameter icon: An option from Design System's icon options.
-    public func configure(icon: Icon) {
-        shortcutView.configure(icon: icon)
-    }
 
-    /// Configures an action to be executed when shortcut receives a tap.
-    /// - Parameter action: A block of code containing the shortcut actions.
+    /// Sets the functionality for the shortcut.
+    /// - Parameter action: A block of functionality to be executed when the shorcut is pressed
     public func configure(action: @escaping () -> Void) {
         self.action = action
     }

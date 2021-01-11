@@ -17,9 +17,9 @@ public class NavigationDrawerItemCell: UITableViewCell {
         set { titleLabel.text = newValue }
     }
 
-    public var icon: Icon = .outlinedDefaultMockup {
+    public var icon: String? = nil {
         didSet {
-            iconView.icon = icon
+            iconView.iconText = icon
         }
     }
 
@@ -61,9 +61,13 @@ public class NavigationDrawerItemCell: UITableViewCell {
         return iconView
     }()
 
-    private lazy var arrowView: IconView = {
-        let iconView = IconView()
-        iconView.tintColor = NatColors.highEmphasis
+    private lazy var arrowView: UIImageView = {
+        let iconView = UIImageView()
+        iconView.translatesAutoresizingMaskIntoConstraints = false
+        iconView.heightAnchor.constraint(equalToConstant: 12).isActive = true
+        iconView.widthAnchor.constraint(equalToConstant: 12).isActive = true
+        iconView.tintedColor = getUIColorFromTokens(\.colorHighEmphasis)
+
         return iconView
     }()
 
@@ -79,7 +83,7 @@ public class NavigationDrawerItemCell: UITableViewCell {
         defer {
             state = .normal
             hasSubItems = false
-            icon = .outlinedDefaultMockup
+            icon = nil
             tagText = nil
         }
         setup()
@@ -152,7 +156,9 @@ private extension NavigationDrawerItemCell {
     func addArrowImageView() {
         contentView.addSubview(arrowView)
         arrowView.translatesAutoresizingMaskIntoConstraints = false
-        let constraint = arrowView.leadingAnchor.constraint(greaterThanOrEqualTo: tagView.trailingAnchor)
+        let constraint = arrowView.leadingAnchor.constraint(
+            greaterThanOrEqualTo: tagView.trailingAnchor,
+            constant: getTokenFromTheme(\.spacingTiny))
         NSLayoutConstraint.activate([
             arrowView.centerYAnchor.constraint(equalTo: highlightSelectedView.centerYAnchor),
             arrowView.trailingAnchor.constraint(equalTo: highlightSelectedView.trailingAnchor, constant: -8.0),
@@ -163,7 +169,8 @@ private extension NavigationDrawerItemCell {
     }
 
     func updateState() {
-        arrowView.icon = state == .selected ? .outlinedNavigationArrowtop : .outlinedNavigationArrowbottom
+        arrowView.image = state == .selected ?
+            AssetsPath.iconOutlinedNavigationArrowTop.rawValue : AssetsPath.iconOutlinedNavigationArrowBottom.rawValue
 
         highlightSelectedView.isHidden = state != .selected
         highlightSelectedView.backgroundColor = hasSubItems ? NatColors.lowEmphasis : NatColors.secondary
