@@ -7,6 +7,7 @@ enum AssetsPath {
     case iconOutlinedNavigationArrowTop
     
 }
+
 extension AssetsPath: RawRepresentable {
     typealias RawValue = UIImage?
 
