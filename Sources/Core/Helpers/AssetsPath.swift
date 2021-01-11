@@ -5,7 +5,7 @@ enum AssetsPath {
     case iconOutlinedDefaultMockup
     case iconOutlinedNavigationArrowBottom
     case iconOutlinedNavigationArrowTop
-    case iconOutlinedNavigationClose
+    
 }
 extension AssetsPath: RawRepresentable {
     typealias RawValue = UIImage?
@@ -20,8 +20,6 @@ extension AssetsPath: RawRepresentable {
             self = .iconOutlinedNavigationArrowBottom
         case AssetsHelper.image(from: "Icons/IconOutlinedNavigationArrowTop"):
             self = .iconOutlinedNavigationArrowTop
-        case AssetsHelper.image(from: "Icons/IconOutlinedNavigationClose"):
-            self = .iconOutlinedNavigationClose
         default: return nil
         }
     }
@@ -36,8 +34,6 @@ extension AssetsPath: RawRepresentable {
             return AssetsHelper.image(from: "Icons/IconOutlinedNavigationArrowBottom")
         case .iconOutlinedNavigationArrowTop:
             return AssetsHelper.image(from: "Icons/IconOutlinedNavigationArrowTop")
-        case .iconOutlinedNavigationClose:
-            return AssetsHelper.image(from: "Icons/IconOutlinedNavigationClose")
         }
     }
 }
