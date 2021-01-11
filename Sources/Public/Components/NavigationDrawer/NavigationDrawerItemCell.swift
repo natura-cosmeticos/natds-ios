@@ -170,8 +170,7 @@ private extension NavigationDrawerItemCell {
 
     func updateState() {
         arrowView.image = state == .selected ?
-            AssetsHelper.image(from: "Icons/IconOutlinedNavigationArrowTop") :
-            AssetsHelper.image(from: "Icons/IconOutlinedNavigationArrowBottom")
+            AssetsPath.iconOutlinedNavigationArrowTop.rawValue : AssetsPath.iconOutlinedNavigationArrowBottom.rawValue
 
         highlightSelectedView.isHidden = state != .selected
         highlightSelectedView.backgroundColor = hasSubItems ? NatColors.lowEmphasis : NatColors.secondary
