@@ -51,10 +51,11 @@ DesignSystem().configure(with: AvailableTheme)
 
 ## Getting started
 
-[Check how to start using our lib](docs/Getting-started.md).
+[Check how to start using our lib](docs/Getting%20started.md)
 
-
+## Icons
+[Check how to use icons](docs/How%20to%20use%20icons.md)
 
 ## How to contribute
 
-[Help us grow!](docs/How-to-contribute.md)
+[Help us grow!](docs/How%20to%20contribute.md)
