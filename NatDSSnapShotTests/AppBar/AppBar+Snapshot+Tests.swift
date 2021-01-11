@@ -38,12 +38,12 @@ class AppBarSnapshotTests: XCTestCase {
         systemUnderTest.configure(style: .default)
 
         let barButtonItem = UIBarButtonItem(
-            icon: .outlinedActionCalendar,
+            icon: nil,
             action: nil,
             target: nil
         )
         let barButtonItemWithBadge = UIBarButtonItem(
-            icon: .outlinedAlertNotification,
+            icon: nil,
             action: nil,
             target: nil
         )

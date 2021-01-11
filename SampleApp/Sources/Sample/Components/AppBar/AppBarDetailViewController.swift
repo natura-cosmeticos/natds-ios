@@ -1,5 +1,6 @@
 import NatDS
 import UIKit
+import NatDSIcons
 
 class AppBarDetailViewController: UITableViewController {
     private var appBarStyle: UINavigationController.Style
@@ -67,11 +68,11 @@ class AppBarDetailViewController: UITableViewController {
         case .noneBarItems:
             configure(buttons: [UIBarButtonItem]())
         case .twoBarItems:
-            let calendarBarButtonItem = UIBarButtonItem(icon: .outlinedActionCalendar,
-                                                action: #selector(calendarBarButtonItemHandler),
-                                                target: self)
+            let calendarBarButtonItem = UIBarButtonItem(icon: getIcon(icon: .outlinedActionCalendar),
+                                                        action: #selector(calendarBarButtonItemHandler),
+                                                        target: self)
 
-            let notificationBarButtonItem = UIBarButtonItem(icon: .outlinedAlertNotification,
+            let notificationBarButtonItem = UIBarButtonItem(icon: getIcon(icon: .outlinedAlertNotification),
                                                          action: #selector(notificationBarButtonItemHandler),
                                                          target: self)
             notificationBarButtonItem.setBadgeValue(9)

@@ -12,13 +12,13 @@ final class UIBarButtonItemIconSpec: QuickSpec {
             ConfigurationStorage.shared.currentTheme = StubTheme()
             selector = StubSelector()
 
-            sut = UIBarButtonItem(icon: Icon.filledActionAdd, action: #selector(selector.handler), target: selector)
+            sut = UIBarButtonItem(icon: nil, action: #selector(selector.handler), target: selector)
         }
 
         describe("#init") {
             it("sets expected icon") {
                 let customView = sut.customView as? IconView
-                expect(customView?.icon).to(equal(Icon.filledActionAdd))
+                expect(customView?.defaultImageView.isHidden).toNot(beTrue())
             }
             it("sets expected selector") {
                 let tap = sut.customView?.gestureRecognizers?.first

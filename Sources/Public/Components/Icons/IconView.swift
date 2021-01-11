@@ -53,10 +53,10 @@ public class IconView: UIView {
         super.init(frame: frame)
         setup()
     }
-
-    public convenience init(fontSize: CGFloat, icon: Icon? = nil) {
+    
+    public convenience init(fontSize: CGFloat, icon: String? = nil) {
         self.init()
-        defer { self.icon = icon }
+        defer { self.iconText = icon }
         iconLabel.font = .iconFont(ofSize: fontSize)
     }
 
