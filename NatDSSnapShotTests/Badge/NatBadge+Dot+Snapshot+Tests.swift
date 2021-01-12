@@ -15,7 +15,7 @@ final class NatBadgeDotSnapshotTests: XCTestCase {
     }
 
     func test_badge_style_dot_alert_hasValidSnapshot() {
-        systemUnderTest.configureDot()
+        systemUnderTest.configure(showDot: true)
 
         assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.97))
     }

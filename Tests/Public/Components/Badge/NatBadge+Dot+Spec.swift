@@ -16,7 +16,7 @@ final class NatBadgeDotSpec: QuickSpec {
         describe("#configureDot()") {
 
             beforeEach {
-                systemUnderTest.configureDot()
+                systemUnderTest.configure(showDot: true)
             }
 
             it("hides badge") {
