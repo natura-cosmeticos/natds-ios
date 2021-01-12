@@ -28,6 +28,10 @@ extension Badgeable {
         badge?.configure(count: count)
     }
 
+    public func setBadgeDot() {
+        badge?.configureDot()
+    }
+
     public func removeBadge() {
        badge?.removeFromSuperview()
     }

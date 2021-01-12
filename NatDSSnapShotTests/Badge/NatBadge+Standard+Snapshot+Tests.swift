@@ -3,7 +3,7 @@ import SnapshotTesting
 
 @testable import NatDS
 
-final class NatBadgeSnapshotTests: XCTestCase {
+final class NatBadgeStandardSnapshotTests: XCTestCase {
     var systemUnderTest: NatBadge!
 
     override func setUp() {

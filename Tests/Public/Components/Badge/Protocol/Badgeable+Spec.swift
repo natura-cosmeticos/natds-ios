@@ -43,6 +43,18 @@ final class BadgeableSpec: QuickSpec {
             }
         }
 
+        describe("#setBadgeDot()") {
+
+            beforeEach {
+                systemUnderTest.configure(badgeStyle: .dot, withColor: .alert)
+                systemUnderTest.setBadgeDot()
+            }
+
+            it("sets badge dot") {
+                expect(systemUnderTest?.isHidden).to(beFalse())
+            }
+        }
+
         describe("#removeBadge()") {
             beforeEach {
                 systemUnderTest.configure(badgeStyle: .standard, withColor: .alert)
