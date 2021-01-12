@@ -17,5 +17,6 @@ extension NatBadge {
 
     public enum Style {
         case standard
+        case dot
     }
 }

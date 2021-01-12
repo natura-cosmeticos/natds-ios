@@ -4,6 +4,12 @@ import NatDS
 class BadgeViewController: UIViewController, SampleItem {
     static var name: String = "Badge"
 
+    private lazy var dotExample: NatBadge = {
+        let standard = NatBadge(style: .dot, color: .alert)
+        standard.configureDot()
+        return standard
+    }()
+
     private lazy var oneCharStandard: NatBadge = {
         let standard = NatBadge(style: .standard, color: .alert)
         standard.configure(count: 9)
@@ -22,6 +28,16 @@ class BadgeViewController: UIViewController, SampleItem {
         return standard
     }()
 
+    private lazy var stackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.spacing = NatSpacing.large
+        stackView.distribution = .fillProportionally
+        stackView.alignment = .top
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -31,17 +47,16 @@ class BadgeViewController: UIViewController, SampleItem {
         title = Self.name
         view.backgroundColor = NatColors.background
 
-        view.addSubview(oneCharStandard)
-        view.addSubview(twoCharStandard)
-        view.addSubview(threeCharStandard)
+        view.addSubview(stackView)
+        stackView.addArrangedSubview(dotExample)
+        stackView.addArrangedSubview(oneCharStandard)
+        stackView.addArrangedSubview(twoCharStandard)
+        stackView.addArrangedSubview(threeCharStandard)
 
         let constraints = [
-            oneCharStandard.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            oneCharStandard.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 48),
-            twoCharStandard.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            twoCharStandard.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            threeCharStandard.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            threeCharStandard.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -48)
+            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            stackView.heightAnchor.constraint(equalToConstant: 12)
         ]
 
         NSLayoutConstraint.activate(constraints)

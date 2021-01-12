@@ -73,6 +73,17 @@ public final class NatBadge: UIView {
         NSLayoutConstraint.activate(constraints)
     }
 
+    private func addDotConstraints() {
+        translatesAutoresizingMaskIntoConstraints = false
+
+        let constraints = [
+            self.widthAnchor.constraint(equalToConstant: 8),
+            self.heightAnchor.constraint(equalToConstant: 8)
+        ]
+
+        NSLayoutConstraint.activate(constraints)
+    }
+
     // MARK: - Public methods
 
     override public func draw(_ rect: CGRect) {
@@ -80,6 +91,9 @@ public final class NatBadge: UIView {
 
         switch style {
         case .standard:
+            path = UIBezierPath(roundedRect: CGRect(origin: .zero, size: bounds.size),
+                                cornerRadius: NatBorderRadius.circle(viewHeight: bounds.size.height))
+        case .dot:
             path = UIBezierPath(roundedRect: CGRect(origin: .zero, size: bounds.size),
                                 cornerRadius: NatBorderRadius.circle(viewHeight: bounds.size.height))
         }
@@ -103,5 +117,11 @@ public final class NatBadge: UIView {
 
         label.text = text
         isHidden = text == nil
+    }
+
+    public func configureDot() {
+        if case .dot = style {
+            addDotConstraints()
+        }
     }
 }
