@@ -17,7 +17,7 @@
       <div class="content-wrapper">
         <p>
           <a href="../index.html">NatDS 2.12.0 Docs</a>
-          <span class="no-mobile"> (14% documented)</span>
+          <span class="no-mobile"> (23% documented)</span>
         </p>
     
     
@@ -164,6 +164,55 @@ The shortcut colors change according to the current theme configured in the Desi
                   <li class="item">
                     <div>
                       <code>
+                      <a name="/s:5NatDS0A8ShortcutC9configure4iconySSSg_tF"></a>
+                      <a name="//apple_ref/swift/Method/configure(icon:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A8ShortcutC9configure4iconySSSg_tF">configure(icon:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Sets an icon for the shortcut view</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="nv">icon</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>icon</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>An icon from NatDSIcons.
+Example of usage:</p>
+
+<p>shortcut.configure(icon: getIcon(icon: .outlinedAlertNotification))</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
                       <a name="/s:5NatDS0A8ShortcutC9configure4textySS_tF"></a>
                       <a name="//apple_ref/swift/Method/configure(text:)" class="dashAnchor"></a>
                       <a class="token" href="#/s:5NatDS0A8ShortcutC9configure4textySS_tF">configure(text:<wbr>)</a>
@@ -210,52 +259,6 @@ The shortcut colors change according to the current theme configured in the Desi
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/s:5NatDS0A8ShortcutC9configure4iconyAA4IconO_tF"></a>
-                      <a name="//apple_ref/swift/Method/configure(icon:)" class="dashAnchor"></a>
-                      <a class="token" href="#/s:5NatDS0A8ShortcutC9configure4iconyAA4IconO_tF">configure(icon:<wbr>)</a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          <p>Configures an icon to the shortcut.</p>
-
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="nv">icon</span><span class="p">:</span> <span class="kt"><a href="../Enums/Icon.html">Icon</a></span><span class="p">)</span></code></pre>
-
-                          </div>
-                        </div>
-                        <div>
-                          <h4>Parameters</h4>
-                          <table class="graybox">
-                            <tbody>
-                              <tr>
-                                <td>
-                                  <code>
-                                  <em>icon</em>
-                                  </code>
-                                </td>
-                                <td>
-                                  <div>
-                                    <p>An option from Design System&rsquo;s icon options.</p>
-                                  </div>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </section>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div>
-                      <code>
                       <a name="/s:5NatDS0A8ShortcutC9configure6actionyyyc_tF"></a>
                       <a name="//apple_ref/swift/Method/configure(action:)" class="dashAnchor"></a>
                       <a class="token" href="#/s:5NatDS0A8ShortcutC9configure6actionyyyc_tF">configure(action:<wbr>)</a>
@@ -266,7 +269,7 @@ The shortcut colors change according to the current theme configured in the Desi
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Configures an action to be executed when shortcut receives a tap.</p>
+                          <p>Sets the functionality for the shortcut.</p>
 
                         </div>
                         <div class="declaration">
@@ -289,7 +292,7 @@ The shortcut colors change according to the current theme configured in the Desi
                                 </td>
                                 <td>
                                   <div>
-                                    <p>A block of code containing the shortcut actions.</p>
+                                    <p>A block of functionality to be executed when the shorcut is pressed</p>
                                   </div>
                                 </td>
                               </tr>
@@ -503,9 +506,6 @@ The shortcut colors change according to the current theme configured in the Desi
                   <a href="../Enums/AvailableTheme.html">AvailableTheme</a>
                 </li>
                 <li class="nav-group-task">
-                  <a href="../Enums/Icon.html">Icon</a>
-                </li>
-                <li class="nav-group-task">
                   <a href="../Enums/NatBorderRadius.html">NatBorderRadius</a>
                 </li>
                 <li class="nav-group-task">
@@ -632,7 +632,7 @@ The shortcut colors change according to the current theme configured in the Desi
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2021-01-08)</p>
+          <p>&copy; 2021 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2021-01-12)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </div>

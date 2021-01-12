@@ -2851,14 +2851,7 @@
     },
     {
       "file": "/Users/penelope.araujo/Desktop/natds-ios/Sources/Public/Components/SelectionControl/NatSelectionControl.swift",
-      "line": 51,
-      "symbol": "NatSelectionControl.isHapticFeedbackEnabled",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/penelope.araujo/Desktop/natds-ios/Sources/Public/Components/SelectionControl/NatSelectionControl.swift",
-      "line": 76,
+      "line": 71,
       "symbol": "NatSelectionControl.init(style:text:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

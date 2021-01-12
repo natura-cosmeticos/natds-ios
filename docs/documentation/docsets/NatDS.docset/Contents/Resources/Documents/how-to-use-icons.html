@@ -16,7 +16,7 @@
       <div class="content-wrapper">
         <p>
           <a href="index.html">NatDS 2.12.0 Docs</a>
-          <span class="no-mobile"> (14% documented)</span>
+          <span class="no-mobile"> (23% documented)</span>
         </p>
     
     
@@ -41,22 +41,44 @@
               
               <h1 id='how-to-use-design-system-icons' class='heading'>How to use Design System icons</h1>
 
-<p>We use a proprietary icon library, so, through an organized system, categories and names, we provide access to the icons supported by Nat Design System.</p>
+<p>We use a proprietary icon library, so, through an organized system, categories and names, we provide access to the icons supported by Natura Design System.</p>
 
-<p>The icon library, which is available at <a href="https://zeroheight.com/28db352be/p/94367e-icon-library/b/6154b9">Natura Design System</a> website, contains all the icons names and images. You can also check the icons by running the <a href="how-to-contribute.md">Sample App</a> in a simulator.</p>
-<h2 id='how-to-use' class='heading'>How to use</h2>
+<p>The icon library, which is available at <a href="https://ds.natura.design/28db352be/p/94367e-icon-library/b/6154b9">Natura Design System</a> website, contains all the icons names and images. You can also check the icons by running the <a href="how%20to%20contribute.md">Sample App</a> in a simulator.</p>
+<h2 id='getting-started' class='heading'>Getting started</h2>
 
-<p>The icons are provided by the NatDS pod as the type <code><a href="Enums/Icon.html">Icon</a></code>. They can be used as an <code><a href="Classes/IconView.html">IconView</a></code> or inside a <code><a href="Classes/NatIconButton.html">NatIconButton</a></code>.</p>
-<h3 id='view' class='heading'>View</h3>
-
-<p>To use an icon as an UIView, you can use the <code><a href="Classes/IconView.html">IconView</a></code>. By default, it must use the size token <code>standard</code>; then you must provide the icon name as a parameter:</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">iconView</span> <span class="o">=</span> <span class="kt">IconView</span><span class="p">(</span><span class="nv">fontSize</span><span class="p">:</span> <span class="kt">NatSizes</span><span class="o">.</span><span class="n">standard</span><span class="p">,</span> <span class="nv">icon</span><span class="p">:</span> <span class="o">.</span><span class="n">outlinedActionLove</span><span class="p">)</span>
+<p>Since version <code>3.0.0</code>, the icons are provided by the NatDSIcons library, available at <a href="https://cocoapods.org/pods/NatDSIcons">Cocoapods</a>. It means that you have to add NatDSIcons on your <code>Podfile</code>:</p>
+<pre class="highlight ruby"><code><span class="n">target</span> <span class="s1">'&lt;Your Target Name&gt;'</span> <span class="k">do</span>
+    <span class="n">pod</span> <span class="s1">'NatDSIcons'</span>
+<span class="k">end</span>
 </code></pre>
-<h3 id='button' class='heading'>Button</h3>
 
-<p>To use an icon as a button, the <code><a href="Classes/NatIconButton.html">NatIconButton</a></code>component is the right choice. It&rsquo;s necessary to set a style (<code>default</code> or <code>primary</code>) and, then, to set the icon name as a parameter, as shown below:</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">iconButton</span> <span class="o">=</span> <span class="kt">NatIconButton</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">standardDefault</span><span class="p">)</span>
-<span class="n">iconButton</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">icon</span><span class="p">:</span> <span class="o">.</span><span class="n">filledActionCheck</span><span class="p">)</span>
+<p>And import NatDSIcons on the files that use icons:</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">NatDSIcons</span>
+</code></pre>
+
+<p>With NatDSIcons, all icon options from the library are listed as Icon type options. To use them, you must use the function <code>getIcon(icon: Icon) -&gt; String</code>, sending the chosen icon as a parameter. </p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">icon</span> <span class="o">=</span> <span class="nf">getIcon</span><span class="p">(</span><span class="nv">icon</span><span class="p">:</span> <span class="o">.</span><span class="n">outlinedActionCancel</span><span class="p">)</span>
+</code></pre>
+
+<blockquote>
+<p>As the icons are provided by NatDSIcons as strings, you MUST use it with NatDS to show the actual icon.</p>
+</blockquote>
+
+<hr>
+<h2 id='how-to-use-icons-with-natds' class='heading'>How to use icons with NatDS</h2>
+
+<p>When NatDS components expect an icon, the icon parameter is sent as a <code>String</code> type. To use the icons with NatDS components, you can send the <code>getIcon(icon: Icon) -&gt; String</code> function as a parameter.</p>
+
+<p>Example of usage with a component:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">button</span> <span class="o">=</span> <span class="kt">NatButton</span><span class="p">()</span>
+<span class="n">button</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nf">getIcon</span><span class="p">(</span><span class="nv">icon</span><span class="p">:</span> <span class="o">.</span><span class="n">outlinedAlertNotification</span><span class="p">),</span> <span class="nv">position</span><span class="p">:</span> <span class="o">.</span><span class="n">left</span><span class="p">)</span>
+</code></pre>
+
+<hr>
+<h2 id='how-to-use-an-icon-as-an-uiview' class='heading'>How to use an icon as an UIView</h2>
+
+<p>To use an icon as an <code>UIView</code>, you can use the <code><a href="Classes/IconView.html">IconView</a></code>. By default, it must use the size token <code>standard</code>; then you must provide the icon name as a parameter:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">iconView</span> <span class="o">=</span> <span class="kt">IconView</span><span class="p">(</span><span class="nv">fontSize</span><span class="p">:</span> <span class="kt">NatSizes</span><span class="o">.</span><span class="n">standard</span><span class="p">,</span> <span class="nv">icon</span><span class="p">:</span> <span class="nf">getIcon</span><span class="p">(</span><span class="nv">icon</span><span class="p">:</span> <span class="o">.</span><span class="n">outlinedAlertNotification</span><span class="p">))</span>
 </code></pre>
 
             </section>
@@ -215,9 +237,6 @@
                   <a href="Enums/AvailableTheme.html">AvailableTheme</a>
                 </li>
                 <li class="nav-group-task">
-                  <a href="Enums/Icon.html">Icon</a>
-                </li>
-                <li class="nav-group-task">
                   <a href="Enums/NatBorderRadius.html">NatBorderRadius</a>
                 </li>
                 <li class="nav-group-task">
@@ -344,7 +363,7 @@
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2021-01-08)</p>
+          <p>&copy; 2021 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2021-01-12)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </div>
