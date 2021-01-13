@@ -6,7 +6,6 @@ class BadgeViewController: UIViewController, SampleItem {
 
     private lazy var dotExample: NatBadge = {
         let standard = NatBadge(style: .dot, color: .alert)
-        standard.configure(showDot: true)
         return standard
     }()
 

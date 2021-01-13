@@ -47,7 +47,6 @@ final class BadgeableSpec: QuickSpec {
 
             beforeEach {
                 systemUnderTest.configure(badgeStyle: .dot, withColor: .alert)
-                systemUnderTest.setBadge(showDot: true)
             }
 
             it("sets badge dot") {

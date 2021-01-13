@@ -56,11 +56,15 @@ public final class NatBadge: UIView {
         backgroundColor = .clear
         if case .standard = style {
             addSubview(label)
-            addConstraints()
+            addLabelConstraints()
+        }
+
+        if case .dot = style {
+            addDotConstraints()
         }
     }
 
-    private func addConstraints() {
+    private func addLabelConstraints() {
         translatesAutoresizingMaskIntoConstraints = false
 
         let constraints = [
@@ -117,15 +121,5 @@ public final class NatBadge: UIView {
 
         label.text = text
         isHidden = text == nil
-    }
-
-    public func configure(showDot: Bool) {
-        if showDot {
-            if case .dot = style {
-                addDotConstraints()
-            } else {
-                removeFromSuperview()
-            }
-        }
     }
 }

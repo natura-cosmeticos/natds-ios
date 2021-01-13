@@ -41,8 +41,6 @@ class BadgeableSnapshotTests: XCTestCase {
 
     func test_badge_style_dot_alert_count_1_hasValidSnapshot() {
         systemUnderTest.configure(badgeStyle: .dot, withColor: .alert)
-        systemUnderTest.setBadge(showDot: true)
-
         assertSnapshot(matching: superview, as: .image)
     }
 }

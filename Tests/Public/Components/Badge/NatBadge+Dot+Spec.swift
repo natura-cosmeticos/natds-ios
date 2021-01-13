@@ -14,11 +14,6 @@ final class NatBadgeDotSpec: QuickSpec {
         }
 
         describe("#configureDot()") {
-
-            beforeEach {
-                systemUnderTest.configure(showDot: true)
-            }
-
             it("hides badge") {
                 expect(systemUnderTest?.isHidden).to(beFalse())
             }
