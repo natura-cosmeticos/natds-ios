@@ -4,27 +4,31 @@ import NatDS
 class BadgeViewController: UIViewController, SampleItem {
     static var name: String = "Badge"
 
-    private lazy var dotExample: NatBadge = {
-        let standard = NatBadge(style: .dot, color: .alert)
-        return standard
+    private lazy var badgeableViewDot: BadgeableView = {
+        let view = BadgeableView(frame: .init(x: 0, y: 0, width: 24, height: 24))
+        view.configure(badgeStyle: .dot, withColor: .alert)
+        return view
     }()
 
-    private lazy var oneCharStandard: NatBadge = {
-        let standard = NatBadge(style: .standard, color: .alert)
-        standard.configure(count: 9)
-        return standard
+    private lazy var badgeableViewOneChartStandard: BadgeableView = {
+        let view = BadgeableView(frame: .init(x: 0, y: 0, width: 24, height: 24))
+        view.configure(badgeStyle: .standard, withColor: .alert)
+        view.setBadge(count: 9)
+        return view
     }()
 
-    private lazy var twoCharStandard: NatBadge = {
-        let standard = NatBadge(style: .standard, color: .alert)
-        standard.configure(count: 99)
-        return standard
+    private lazy var badgeableViewTwoCharStandard: BadgeableView = {
+        let view = BadgeableView(frame: .init(x: 0, y: 0, width: 24, height: 24))
+        view.configure(badgeStyle: .standard, withColor: .alert)
+        view.setBadge(count: 99)
+        return view
     }()
 
-    private lazy var threeCharStandard: NatBadge = {
-        let standard = NatBadge(style: .standard, color: .alert)
-        standard.configure(count: 100)
-        return standard
+    private lazy var badgeableViewThreeCharStandard: BadgeableView = {
+        let view = BadgeableView(frame: .init(x: 0, y: 0, width: 24, height: 24))
+        view.configure(badgeStyle: .standard, withColor: .alert)
+        view.setBadge(count: 999)
+        return view
     }()
 
     private lazy var stackView: UIStackView = {
@@ -47,10 +51,10 @@ class BadgeViewController: UIViewController, SampleItem {
         view.backgroundColor = NatColors.background
 
         view.addSubview(stackView)
-        stackView.addArrangedSubview(dotExample)
-        stackView.addArrangedSubview(oneCharStandard)
-        stackView.addArrangedSubview(twoCharStandard)
-        stackView.addArrangedSubview(threeCharStandard)
+        stackView.addArrangedSubview(badgeableViewDot)
+        stackView.addArrangedSubview(badgeableViewOneChartStandard)
+        stackView.addArrangedSubview(badgeableViewTwoCharStandard)
+        stackView.addArrangedSubview(badgeableViewThreeCharStandard)
 
         let constraints = [
             stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
