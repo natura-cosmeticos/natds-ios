@@ -1,23 +1,24 @@
 /**
-  NatBadge is a class that represents  a component from the design system.
+ NatBadge is a class that represents a component from the Design System.
 
-  The badge colors changes according with the current Brand configured in the Design system
-  and according with user properties of Light and Dark mode.
+ The badge colors change according to the current brand configured in the Design System and according to the user's properties of Light and Dark mode.
 
-    This component has 1 style:
-    - Standard
+ This component has 2 styles:
+ - Standard
+ - Dot
 
-    And 1 color:
-    - Alert
+ And 1 color:
+ - Alert
 
-    Example of usage:
+ Example of usage:
+ 
         let badge = NatBadge(style: .standard, color: .alert)
 
  - Requires:
-        It's necessary to configure the Design System with a theme or fatalError will be raised.
+ It's necessary to configure the Design System with a theme or fatalError will be raised.
  
-            DesignSystem().configure(with: AvailableTheme)
-*/
+        DesignSystem().configure(with: AvailableTheme)
+ */
 
 public final class NatBadge: UIView {
 
@@ -56,11 +57,15 @@ public final class NatBadge: UIView {
         backgroundColor = .clear
         if case .standard = style {
             addSubview(label)
-            addConstraints()
+            addLabelConstraints()
+        }
+
+        if case .dot = style {
+            addDotConstraints()
         }
     }
 
-    private func addConstraints() {
+    private func addLabelConstraints() {
         translatesAutoresizingMaskIntoConstraints = false
 
         let constraints = [
@@ -68,6 +73,17 @@ public final class NatBadge: UIView {
             label.topAnchor.constraint(equalTo: topAnchor),
             label.bottomAnchor.constraint(equalTo: bottomAnchor),
             label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 4)
+        ]
+
+        NSLayoutConstraint.activate(constraints)
+    }
+
+    private func addDotConstraints() {
+        translatesAutoresizingMaskIntoConstraints = false
+
+        let constraints = [
+            self.widthAnchor.constraint(equalToConstant: 8),
+            self.heightAnchor.constraint(equalToConstant: 8)
         ]
 
         NSLayoutConstraint.activate(constraints)
@@ -82,13 +98,16 @@ public final class NatBadge: UIView {
         case .standard:
             path = UIBezierPath(roundedRect: CGRect(origin: .zero, size: bounds.size),
                                 cornerRadius: NatBorderRadius.circle(viewHeight: bounds.size.height))
+        case .dot:
+            path = UIBezierPath(roundedRect: CGRect(origin: .zero, size: bounds.size),
+                                cornerRadius: NatBorderRadius.circle(viewHeight: bounds.size.height))
         }
 
         color.box.set()
         path?.fill()
     }
 
-    public func configure(count: Int) {
+    internal func configure(count: Int) {
         var text: String?
         if case .standard = style {
             switch count {

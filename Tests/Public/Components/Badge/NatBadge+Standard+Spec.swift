@@ -3,7 +3,7 @@ import Nimble
 
 @testable import NatDS
 
-final class NatBadgeSpec: QuickSpec {
+final class NatBadgeStandardSpec: QuickSpec {
     override func spec() {
         var systemUnderTest: NatBadge!
 
