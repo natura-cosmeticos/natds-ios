@@ -28,12 +28,13 @@ And how can this be used by applications? First of all, it is worth remembering 
 
 For example: you need to add text to a view that will be styled with the following attributes:
 
-```Font Family: Roboto, sans-serif
+```
+Font Family: Roboto, sans-serif
 Font Size: 96sp
 Letter Spacing: 0.015625
 Font weight: Regular
 Lineheight: Medium (1.5)
-````
+```
 
 You can set these attributes manually in your code or .xib, or you can use the `Heading 1` typography token, that has exactly these attributes:
 

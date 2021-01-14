@@ -18,24 +18,24 @@ And import NatDSIcons on the files that use icons:
 import NatDSIcons
 ```
 
-With NatDSIcons, all icon options from the library are listed as Icon type options. To use them, you must use the function `getIcon(icon: Icon) -> String`, sending the chosen icon as a parameter. 
+With NatDSIcons, all icon options from the library are listed as Icon type options. To use them, you must use the function `getIcon(_ icon: Icon) -> String`, sending the chosen icon as a parameter. 
 
 ```swift
-let icon = getIcon(icon: .outlinedActionCancel)
+let icon = getIcon(.outlinedActionCancel)
 ```
 
-> As the icons are provided by NatDSIcons as strings, you MUST use it with NatDS to show the actual icon.
+> NOTE: As the icons are provided by NatDSIcons as strings, you MUST use it with NatDS to show the actual icon.
 
 ---
 
 ## How to use icons with NatDS
-When NatDS components expect an icon, the icon parameter is sent as a `String` type. To use the icons with NatDS components, you can send the `getIcon(icon: Icon) -> String` function as a parameter.
+When NatDS components expect an icon, the icon parameter is sent as a `String` type. To use the icons with NatDS components, you can send the `getIcon(_ icon: Icon) -> String` function as a parameter.
 
 Example of usage with a component:
 
 ```swift
 let button = NatButton()
-button.configure(getIcon(icon: .outlinedAlertNotification), position: .left)
+button.configure(getIcon(.outlinedAlertNotification), position: .left)
 ```
 
 ---
@@ -44,5 +44,5 @@ button.configure(getIcon(icon: .outlinedAlertNotification), position: .left)
 To use an icon as an `UIView`, you can use the `IconView`. By default, it must use the size token `standard`; then you must provide the icon name as a parameter:
 
 ```swift
-let iconView = IconView(fontSize: NatSizes.standard, icon: getIcon(icon: .outlinedAlertNotification))
+let iconView = IconView(fontSize: NatSizes.standard, icon: getIcon(.outlinedAlertNotification))
 ```
