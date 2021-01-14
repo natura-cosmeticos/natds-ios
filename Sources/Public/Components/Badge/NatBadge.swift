@@ -107,7 +107,7 @@ public final class NatBadge: UIView {
         path?.fill()
     }
 
-    public func configure(count: Int) {
+    internal func configure(count: Int) {
         var text: String?
         if case .standard = style {
             switch count {
