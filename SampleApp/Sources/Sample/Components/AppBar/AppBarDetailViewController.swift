@@ -68,11 +68,11 @@ class AppBarDetailViewController: UITableViewController {
         case .noneBarItems:
             configure(buttons: [UIBarButtonItem]())
         case .twoBarItems:
-            let calendarBarButtonItem = UIBarButtonItem(icon: getIcon(icon: .outlinedActionCalendar),
+            let calendarBarButtonItem = UIBarButtonItem(icon: getIcon(.outlinedActionCalendar),
                                                         action: #selector(calendarBarButtonItemHandler),
                                                         target: self)
 
-            let notificationBarButtonItem = UIBarButtonItem(icon: getIcon(icon: .outlinedAlertNotification),
+            let notificationBarButtonItem = UIBarButtonItem(icon: getIcon(.outlinedAlertNotification),
                                                          action: #selector(notificationBarButtonItemHandler),
                                                          target: self)
             notificationBarButtonItem.setBadgeValue(9)
