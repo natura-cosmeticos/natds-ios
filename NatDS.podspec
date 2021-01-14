@@ -12,8 +12,7 @@ Pod::Spec.new do |s|
   s.source        = { :git => 'https://github.com/natura-cosmeticos/natds-ios.git', :tag => s.version }
   s.source_files  = 'Sources/**/*.{swift,h,m}'
 
-  s.resources           = ['Sources/**/*.xcassets', 'Sources/Resources/*.{ttf}']
-  s.ios.resource_bundle = { 'NatDS' => ['Sources/**/*.png', 'Sources/**/*.{ttf}'] }
+  s.resources           = ['Sources/**/*.xcassets']
 
   s.swift_version = '5.0' 
   s.platform      = :ios, '10.0'
