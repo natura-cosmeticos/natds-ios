@@ -72,20 +72,20 @@ private extension NavigationDrawerItemViewController {
         static func build() -> [Item] {
             let items: [Item] = [
                 Item(label: "Item with no subitems",
-                     icon: NatDSIcons.getIcon(icon: .outlinedFinanceShoppingcart)),
+                     icon: NatDSIcons.getIcon(.outlinedFinanceShoppingcart)),
                 Item(label: "Item with tag",
-                     icon: NatDSIcons.getIcon(icon: .outlinedAlertInfo),
+                     icon: NatDSIcons.getIcon(.outlinedAlertInfo),
                      tagText: "New"),
                 Item(label: "Item with very, very, very large title and tag",
-                     icon: NatDSIcons.getIcon(icon: .outlinedFinanceCards),
+                     icon: NatDSIcons.getIcon(.outlinedFinanceCards),
                      tagText: "New"),
                 Item(label: "Item with one subitem",
-                     icon: NatDSIcons.getIcon(icon: .outlinedActionNewrequest),
+                     icon: NatDSIcons.getIcon(.outlinedActionNewrequest),
                      subitems: [
                         Subitem(label: "Subitem 2.1", disabled: false)
                 ]),
                 Item(label: "Item with very, very, very large title and tag",
-                     icon: NatDSIcons.getIcon(icon: .outlinedActionRequest),
+                     icon: NatDSIcons.getIcon(.outlinedActionRequest),
                      tagText: "New",
                      subitems: [
                         Subitem(label: "Subitem 3.1", disabled: false),
@@ -93,10 +93,10 @@ private extension NavigationDrawerItemViewController {
                         Subitem(label: "Subitem 3.3", disabled: false)
                 ]),
                 Item(label: "Disabled item with no subitem",
-                     icon: NatDSIcons.getIcon(icon: .outlinedSocialGroupofpeople),
+                     icon: NatDSIcons.getIcon(.outlinedSocialGroupofpeople),
                      disabled: true),
                 Item(label: "Disabled item with subitems",
-                     icon: NatDSIcons.getIcon(icon: .filledBrandNaturarosacea),
+                     icon: NatDSIcons.getIcon(.filledBrandNaturarosacea),
                      disabled: true,
                      tagText: "New",
                      subitems: [
@@ -104,7 +104,7 @@ private extension NavigationDrawerItemViewController {
                         Subitem(label: "Subitem 5.2", disabled: false)
                 ]),
                 Item(label: "Item with disabled subitem",
-                   icon: NatDSIcons.getIcon(icon: .outlinedPlaceBus),
+                     icon: NatDSIcons.getIcon(.outlinedPlaceBus),
                      subitems: [
                         Subitem(label: "Subitem 6.1", disabled: true),
                         Subitem(label: "Subitem 6.3", disabled: false),
