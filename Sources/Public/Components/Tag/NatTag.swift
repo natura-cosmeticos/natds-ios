@@ -65,8 +65,8 @@ public final class NatTag: UIView {
 
         let constraints = [
             label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -getTokenFromTheme(\.sizeTiny)),
-            label.topAnchor.constraint(equalTo: topAnchor, constant: getTokenFromTheme(\.sizeMicro)),
-            label.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -getTokenFromTheme(\.sizeMicro)),
+            label.topAnchor.constraint(equalTo: topAnchor, constant: getTokenFromTheme(\.sizeNone)),
+            label.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -getTokenFromTheme(\.sizeNone)),
             label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: getTokenFromTheme(\.sizeTiny))
         ]
 
