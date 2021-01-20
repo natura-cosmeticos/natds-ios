@@ -20,6 +20,8 @@ public final class NatTag: UIView {
 
     enum Position {
         case `default`
+        case left
+        case right
     }
 
     // MARK: - Private properties
@@ -81,6 +83,16 @@ public final class NatTag: UIView {
             case .default:
                 path = UIBezierPath(roundedRect: CGRect(origin: .zero, size: size),
                                     cornerRadius: NatBorderRadius.circle(viewHeight: size.height))
+            case .left:
+                path = UIBezierPath(roundedRect: CGRect(origin: .zero, size: size),
+                                    byRoundingCorners: [.topLeft, .bottomLeft],
+                                    cornerRadii: CGSize(width: NatBorderRadius.circle(viewHeight: size.height),
+                                                        height: NatBorderRadius.circle(viewHeight: size.height)))
+            case .right:
+                path = UIBezierPath(roundedRect: CGRect(origin: .zero, size: size),
+                                    byRoundingCorners: [.topRight, .bottomRight],
+                                    cornerRadii: CGSize(width: NatBorderRadius.circle(viewHeight: size.height),
+                                                        height: NatBorderRadius.circle(viewHeight: size.height)))
             }
 
             color.set()
