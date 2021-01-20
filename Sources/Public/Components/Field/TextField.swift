@@ -138,6 +138,25 @@ public class TextField: UIView {
         return iconView
     }()
 
+    private lazy var iconVisibility: UIImage? = {
+        let icon = AssetsPath.iconOutlinedActionVisibility.rawValue
+
+        return icon
+    }()
+
+    private lazy var iconButtonVisibility: NatIconButton = {
+        let iconButton = NatIconButton(style: .standardDefault)
+        iconButton.configure(icon: iconVisibility)
+        iconButton.configure {
+            self.setIconVisibility()
+        }
+        iconButton.translatesAutoresizingMaskIntoConstraints = false
+        iconButton.heightAnchor.constraint(equalToConstant: getTokenFromTheme(\.sizeStandard)).isActive = true
+        iconButton.widthAnchor.constraint(equalToConstant: getTokenFromTheme(\.sizeStandard)).isActive = true
+
+        return iconButton
+    }()
+
     public override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -180,6 +199,7 @@ extension TextField {
 
         handleState()
         handleTextFieldType()
+//        showVisibilityIcon(type.showVisibilityIcon)
     }
 
     private func addTitleLabel() {
@@ -270,7 +290,7 @@ extension TextField {
         self.textField.keyboardType = type.keyboard
         self.textField.autocorrectionType = type.autoCorrection
         self.textField.autocapitalizationType = type.capitalization
-        self.textField.isSecureTextEntry = type.secureTextEntry
+        //self.textField.isSecureTextEntry = type.secureTextEntry
     }
 
     private func changeState() {
@@ -278,6 +298,32 @@ extension TextField {
             self.state = .error
         } else {
             self.state = isEditing ? .active : .enable
+        }
+    }
+
+    private func setIconVisibility() {
+        if iconVisibility == AssetsPath.iconOutlinedActionVisibility.rawValue {
+            iconVisibility = AssetsPath.iconOutlinedActionVisibilityOff.rawValue
+            iconButtonVisibility.configure(icon: iconVisibility)
+            self.textField.isSecureTextEntry = false
+        } else {
+            iconVisibility = AssetsPath.iconOutlinedActionVisibility.rawValue
+            iconButtonVisibility.configure(icon: iconVisibility)
+            self.textField.isSecureTextEntry = true
+        }
+    }
+
+    public func showVisibilityIcon(_ visibility: Bool) {
+
+        if visibility {
+        addSubview(iconButtonVisibility)
+
+        let constraints = [
+            iconButtonVisibility.centerYAnchor.constraint(equalTo: textField.centerYAnchor),
+            iconButtonVisibility.trailingAnchor.constraint(equalTo: textField.trailingAnchor, constant: -12)
+        ]
+
+        NSLayoutConstraint.activate(constraints)
         }
     }
 }

@@ -55,4 +55,17 @@ public enum TextFieldType {
             return true
         }
     }
+
+    var showVisibilityIcon: Bool {
+        switch self {
+        case .text:
+            return false
+        case .name:
+            return false
+        case .number:
+            return false
+        case .password:
+            return true
+        }
+    }
 }

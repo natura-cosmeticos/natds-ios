@@ -2,10 +2,11 @@ import UIKit
 
 enum AssetsPath {
     case iconOutlinedActionCancel
+    case iconOutlinedActionVisibility
+    case iconOutlinedActionVisibilityOff
     case iconOutlinedDefaultMockup
     case iconOutlinedNavigationArrowBottom
     case iconOutlinedNavigationArrowTop
-    
 }
 
 extension AssetsPath: RawRepresentable {
@@ -15,6 +16,10 @@ extension AssetsPath: RawRepresentable {
         switch rawValue {
         case AssetsHelper.image(from: "Icons/IconOutlinedActionCancel"):
             self = .iconOutlinedActionCancel
+        case AssetsHelper.image(from: "Icons/IconOutlinedActionVisibility"):
+            self = .iconOutlinedActionVisibility
+        case AssetsHelper.image(from: "Icons/IconOutlinedActionVisibilityOff"):
+            self = .iconOutlinedActionVisibilityOff
         case AssetsHelper.image(from: "Icons/IconOutlinedDefaultMockup"):
             self = .iconOutlinedDefaultMockup
         case AssetsHelper.image(from: "Icons/IconOutlinedNavigationArrowBottom"):
@@ -29,6 +34,10 @@ extension AssetsPath: RawRepresentable {
         switch self {
         case .iconOutlinedActionCancel:
             return AssetsHelper.image(from: "Icons/IconOutlinedActionCancel")
+        case .iconOutlinedActionVisibility:
+            return AssetsHelper.image(from: "Icons/IconOutlinedActionVisibility")
+        case .iconOutlinedActionVisibilityOff:
+            return AssetsHelper.image(from: "Icons/IconOutlinedActionVisibilityOff")
         case .iconOutlinedDefaultMockup:
             return AssetsHelper.image(from: "Icons/IconOutlinedDefaultMockup")
         case .iconOutlinedNavigationArrowBottom:
