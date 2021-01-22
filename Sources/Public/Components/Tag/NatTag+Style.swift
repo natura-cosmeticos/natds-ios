@@ -2,7 +2,7 @@ extension NatTag {
     /**
      Style represents styles values for the NatTag component.
 
-        These are all styles allowed for a NatTag:
+        These are all allowed styles for a NatTag:
         - default (centered)
         - left
         - right

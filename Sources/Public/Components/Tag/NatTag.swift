@@ -1,12 +1,14 @@
 /**
-  NatTag is a class that represents  a component from the design system.
-
-  The tag colors changes according with the current theme configured in the Design system.
-
-    This component has 1 style:
-    - defaultAlert
-
-    Example of usage:
+ NatTag is a class that represents a component from the design system.
+ The tag colors change according to the current theme configured to the design system.
+ 
+ These all the available styles for NatTag:
+ - defaultAlert
+ - leftAlert
+ - rightAlert
+ 
+ Example of usage:
+ 
         let badge = NatTag(style: .defaultAlert)
 
  - Requires:
