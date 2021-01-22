@@ -146,7 +146,7 @@ public class TextField: UIView {
 
     private lazy var iconButtonVisibility: NatIconButton = {
         let iconButton = NatIconButton(style: .standardDefault)
-        iconButton.configure(icon: iconVisibility)
+        iconButton.configure(iconImage: iconVisibility)
         iconButton.configure {
             self.setIconVisibility()
         }
@@ -301,14 +301,14 @@ extension TextField {
         }
     }
 
-    private func setIconVisibility() {
+    internal func setIconVisibility() {
         if iconVisibility == AssetsPath.iconOutlinedActionVisibility.rawValue {
             iconVisibility = AssetsPath.iconOutlinedActionVisibilityOff.rawValue
-            iconButtonVisibility.configure(icon: iconVisibility)
+            iconButtonVisibility.configure(iconImage: iconVisibility)
             self.textField.isSecureTextEntry = false
         } else {
             iconVisibility = AssetsPath.iconOutlinedActionVisibility.rawValue
-            iconButtonVisibility.configure(icon: iconVisibility)
+            iconButtonVisibility.configure(iconImage: iconVisibility)
             self.textField.isSecureTextEntry = true
         }
     }

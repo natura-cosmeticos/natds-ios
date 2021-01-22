@@ -150,8 +150,8 @@ extension NatIconButton {
         iconView.iconLabel.text = icon
     }
 
-    internal func configure(icon: UIImage?) {
-        iconView.defaultImageView.image = icon
+    internal func configure(iconImage: UIImage?) {
+        iconView.defaultImageView.image = iconImage
         translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate(constraints)
