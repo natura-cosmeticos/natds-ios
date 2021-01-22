@@ -62,7 +62,7 @@ class TextFieldItemViewController: UIViewController, SampleItem {
         field.type = .password(keyboardType: .numberPad)
         field.placeholder = "Type your password (only numbers)"
         field.delegate = self
-        field.showVisibilityIcon(true)
+        field.showVisibilityIcon()
         return field
     }()
 

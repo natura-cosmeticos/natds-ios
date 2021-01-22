@@ -199,7 +199,7 @@ extension TextField {
 
         handleState()
         handleTextFieldType()
-//        showVisibilityIcon(type.showVisibilityIcon)
+        showVisibilityIcon()
     }
 
     private func addTitleLabel() {
@@ -290,7 +290,7 @@ extension TextField {
         self.textField.keyboardType = type.keyboard
         self.textField.autocorrectionType = type.autoCorrection
         self.textField.autocapitalizationType = type.capitalization
-        //self.textField.isSecureTextEntry = type.secureTextEntry
+        self.textField.isSecureTextEntry = type.secureTextEntry
     }
 
     private func changeState() {
@@ -313,9 +313,8 @@ extension TextField {
         }
     }
 
-    public func showVisibilityIcon(_ visibility: Bool) {
-
-        if visibility {
+    public func showVisibilityIcon() {
+        if self.type.secureTextEntry {
         addSubview(iconButtonVisibility)
 
         let constraints = [
