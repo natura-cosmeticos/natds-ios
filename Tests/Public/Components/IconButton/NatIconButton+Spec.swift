@@ -138,6 +138,18 @@ final class NatIconButtonSpec: QuickSpec {
             }
         }
 
+        describe("#configure(iconImage:)") {
+            beforeEach {
+                systemUnderTest.configure(iconImage: AssetsPath.iconOutlinedActionVisibility.rawValue)
+            }
+
+            it("returns an expected value") {
+                let iconView = systemUnderTest.subviews.first as? IconView
+
+                expect(iconView?.defaultImageView.image).to(equal(AssetsPath.iconOutlinedActionVisibility.rawValue))
+            }
+        }
+
         describe("#configure(iconColor:)") {
             beforeEach {
                 systemUnderTest.configure(iconColor: .red)

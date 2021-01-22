@@ -10,37 +10,37 @@
  - Number
  - Password
 
-             Example of usage:
-            - textField.type = .text
-            - textField.type = .name
-            - textField.type = .number
-            - textField.type = .password(keyboardType: .numberPad)
+ Example of usage:
+ - textField.type = .text
+ - textField.type = .name
+ - textField.type = .number
+ - textField.type = .password(keyboardType: .numberPad)
 
  This TextField has 3 States:
  - enable
  - active
  - error
 
-There are properties that changes the textfield styles as well.
+ There are properties that changes the textfield styles as well.
 
-Properties:
-- title: Label text always displayed above textfield
-- placeholder: Hint text to display when the text is empty
-- helper: Hint text always displayed below textfield
-- error: Text that alerts about an error
+ Properties:
+ - title: Label text always displayed above textfield
+ - placeholder: Hint text to display when the text is empty
+ - helper: Hint text always displayed below textfield
+ - error: Text that alerts about an error
 
-Use the methods of TextFieldDelegate protocol to manage the following feature
+ Use the methods of TextFieldDelegate protocol to manage the following feature
 
-- natTextFieldDidBeginEditing
-- natTextFieldDidEndEditing
-- natTextFieldEditingChanged
-- natTextFieldShouldBeginEditing
-- natTextField
+ - natTextFieldDidBeginEditing
+ - natTextFieldDidEndEditing
+ - natTextFieldEditingChanged
+ - natTextFieldShouldBeginEditing
+ - natTextField
 
-     - Requires:
-     It's necessary to configure the Design System with a theme or fatalError will be raised.
-     DesignSystem().configure(with: AvailableTheme)
-     */
+ - Requires:
+ It's necessary to configure the Design System with a theme or fatalError will be raised.
+ DesignSystem().configure(with: AvailableTheme)
+ */
 
 public class TextField: UIView {
 
@@ -138,6 +138,25 @@ public class TextField: UIView {
         return iconView
     }()
 
+    private lazy var iconVisibility: UIImage? = {
+        let icon = AssetsPath.iconOutlinedActionVisibility.rawValue
+
+        return icon
+    }()
+
+    private lazy var iconButtonVisibility: NatIconButton = {
+        let iconButton = NatIconButton(style: .standardDefault)
+        iconButton.configure(iconImage: iconVisibility)
+        iconButton.configure {
+            self.setIconVisibility()
+        }
+        iconButton.translatesAutoresizingMaskIntoConstraints = false
+        iconButton.heightAnchor.constraint(equalToConstant: getTokenFromTheme(\.sizeStandard)).isActive = true
+        iconButton.widthAnchor.constraint(equalToConstant: getTokenFromTheme(\.sizeStandard)).isActive = true
+
+        return iconButton
+    }()
+
     public override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -180,6 +199,7 @@ extension TextField {
 
         handleState()
         handleTextFieldType()
+        showVisibilityIcon()
     }
 
     private func addTitleLabel() {
@@ -278,6 +298,31 @@ extension TextField {
             self.state = .error
         } else {
             self.state = isEditing ? .active : .enable
+        }
+    }
+
+    internal func setIconVisibility() {
+        if iconVisibility == AssetsPath.iconOutlinedActionVisibility.rawValue {
+            iconVisibility = AssetsPath.iconOutlinedActionVisibilityOff.rawValue
+            iconButtonVisibility.configure(iconImage: iconVisibility)
+            self.textField.isSecureTextEntry = false
+        } else {
+            iconVisibility = AssetsPath.iconOutlinedActionVisibility.rawValue
+            iconButtonVisibility.configure(iconImage: iconVisibility)
+            self.textField.isSecureTextEntry = true
+        }
+    }
+
+    public func showVisibilityIcon() {
+        if self.type.secureTextEntry {
+            addSubview(iconButtonVisibility)
+
+            let constraints = [
+                iconButtonVisibility.centerYAnchor.constraint(equalTo: textField.centerYAnchor),
+                iconButtonVisibility.trailingAnchor.constraint(equalTo: textField.trailingAnchor, constant: -12)
+            ]
+
+            NSLayoutConstraint.activate(constraints)
         }
     }
 }

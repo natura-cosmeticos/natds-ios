@@ -149,6 +149,13 @@ extension NatIconButton {
     public func configure(icon: String?) {
         iconView.iconLabel.text = icon
     }
+
+    internal func configure(iconImage: UIImage?) {
+        iconView.defaultImageView.image = iconImage
+        translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate(constraints)
+    }
 }
 
 // MARK: - Internal methods
