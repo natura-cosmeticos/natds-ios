@@ -28,9 +28,9 @@ class TagViewController: UIViewController, SampleItem {
         view.backgroundColor = NatColors.background
 
         view.addSubview(stackView)
-        stackView.addArrangedSubview(createTag(style: .defaultAlert, text: "Alerta"))
-        stackView.addArrangedSubview(createTag(style: .leftAlert, text: "Alerta"))
-        stackView.addArrangedSubview(createTag(style: .rightAlert, text: "Alerta"))
+        stackView.addArrangedSubview(createTag(style: .defaultAlert, text: "Alert"))
+        stackView.addArrangedSubview(createTag(style: .leftAlert, text: "Alert"))
+        stackView.addArrangedSubview(createTag(style: .rightAlert, text: "Alert"))
 
         let constraints = [
             stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
