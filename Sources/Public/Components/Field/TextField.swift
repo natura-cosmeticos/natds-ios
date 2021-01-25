@@ -140,7 +140,6 @@ public class TextField: UIView {
 
     private lazy var iconVisibility: UIImage? = {
         let icon = AssetsPath.iconOutlinedActionVisibility.rawValue
-
         return icon
     }()
 
@@ -316,6 +315,7 @@ extension TextField {
     public func showVisibilityIcon() {
         if self.type.secureTextEntry {
             addSubview(iconButtonVisibility)
+            textField.fitPaddingToPasswordButton()
 
             let constraints = [
                 iconButtonVisibility.centerYAnchor.constraint(equalTo: textField.centerYAnchor),
