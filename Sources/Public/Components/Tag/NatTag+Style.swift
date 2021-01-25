@@ -2,23 +2,38 @@ extension NatTag {
     /**
      Style represents styles values for the NatTag component.
 
-        These are all styles allowed for a NatTag:
-        - defaultAlert
+        These are all allowed styles for a NatTag:
+        - default (centered)
+        - left
+        - right
     */
+
     public struct Style {
         let applyStyle: (NatTag) -> Void
 
         public static var defaultAlert: NatTag.Style {
-            .init(
-                applyStyle: NatTagStyle.applyDefaultAlert
-            )
+            .init { tag in
+                NatTagStyle.applyAlert(position: .default, on: tag)
+            }
+        }
+        
+        public static var leftAlert: NatTag.Style {
+            .init { tag in
+                NatTagStyle.applyAlert(position: .left, on: tag)
+            }
+        }
+
+        public static var rightAlert: NatTag.Style {
+            .init { tag in
+                NatTagStyle.applyAlert(position: .right, on: tag)
+            }
         }
     }
 }
 
 enum NatTagStyle {
-    static func applyDefaultAlert(on tag: NatTag) {
-        tag.configure(path: getUIColorFromTokens(\.colorAlert), position: .default)
+    static func applyAlert(position: NatTag.Position, on tag: NatTag) {
+        tag.configure(path: getUIColorFromTokens(\.colorAlert), position: position)
         tag.configure(textColor: getUIColorFromTokens(\.colorOnAlert))
     }
 }

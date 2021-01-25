@@ -1,12 +1,14 @@
 /**
-  NatTag is a class that represents  a component from the design system.
-
-  The tag colors changes according with the current theme configured in the Design system.
-
-    This component has 1 style:
-    - defaultAlert
-
-    Example of usage:
+ NatTag is a class that represents a component from the design system.
+ The tag colors change according to the current theme configured to the design system.
+ 
+ These all the available styles for NatTag:
+ - defaultAlert
+ - leftAlert
+ - rightAlert
+ 
+ Example of usage:
+ 
         let badge = NatTag(style: .defaultAlert)
 
  - Requires:
@@ -20,6 +22,8 @@ public final class NatTag: UIView {
 
     enum Position {
         case `default`
+        case left
+        case right
     }
 
     // MARK: - Private properties
@@ -65,8 +69,8 @@ public final class NatTag: UIView {
 
         let constraints = [
             label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -getTokenFromTheme(\.sizeTiny)),
-            label.topAnchor.constraint(equalTo: topAnchor, constant: getTokenFromTheme(\.sizeMicro)),
-            label.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -getTokenFromTheme(\.sizeMicro)),
+            label.topAnchor.constraint(equalTo: topAnchor, constant: getTokenFromTheme(\.sizeNone)),
+            label.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -getTokenFromTheme(\.sizeNone)),
             label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: getTokenFromTheme(\.sizeTiny))
         ]
 
@@ -81,6 +85,16 @@ public final class NatTag: UIView {
             case .default:
                 path = UIBezierPath(roundedRect: CGRect(origin: .zero, size: size),
                                     cornerRadius: NatBorderRadius.circle(viewHeight: size.height))
+            case .left:
+                path = UIBezierPath(roundedRect: CGRect(origin: .zero, size: size),
+                                    byRoundingCorners: [.topLeft, .bottomLeft],
+                                    cornerRadii: CGSize(width: NatBorderRadius.circle(viewHeight: size.height),
+                                                        height: NatBorderRadius.circle(viewHeight: size.height)))
+            case .right:
+                path = UIBezierPath(roundedRect: CGRect(origin: .zero, size: size),
+                                    byRoundingCorners: [.topRight, .bottomRight],
+                                    cornerRadii: CGSize(width: NatBorderRadius.circle(viewHeight: size.height),
+                                                        height: NatBorderRadius.circle(viewHeight: size.height)))
             }
 
             color.set()
