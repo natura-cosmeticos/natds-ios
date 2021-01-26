@@ -147,7 +147,7 @@ extension NatIconButton {
     ///
     ///     iconButton.configure(icon: getIcon(icon: .outlinedAlertNotification))
     public func configure(icon: String?) {
-        iconView.iconLabel.text = icon
+        iconView.iconText = icon
     }
 
     internal func configure(iconImage: UIImage?) {

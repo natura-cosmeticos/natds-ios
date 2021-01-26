@@ -22,7 +22,7 @@ class Field: UITextField {
         }
     }
 
-    private let padding = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+    private var padding = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
 
     convenience init() {
         self.init(frame: .zero)
@@ -53,4 +53,8 @@ class Field: UITextField {
     override func editingRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: padding)
     }
+
+    func fitPaddingToPasswordButton() {
+        padding = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 40)
+ }
 }
