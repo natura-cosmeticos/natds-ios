@@ -65,14 +65,14 @@ final class SelectionControlViewController: UIViewController, SampleItem {
     }()
 
     private let enabledUnselectedLabelSelectionControl: NatSelectionControl = {
-        let checkbox = NatSelectionControl(style: .checkbox, text: "Enabled unselected with label")
+        let checkbox = NatSelectionControl(style: .radioButton, text: "Radio")
         checkbox.translatesAutoresizingMaskIntoConstraints = false
 
         return checkbox
     }()
 
     private let enabledSelectedLabelSelectionControl: NatSelectionControl = {
-        let checkbox = NatSelectionControl(style: .checkbox, text: "Enabled selected with label")
+        let checkbox = NatSelectionControl(style: .radioButton, text: "Enabled selected with label")
         checkbox.isSelected = true
         checkbox.translatesAutoresizingMaskIntoConstraints = false
 
