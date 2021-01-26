@@ -1,9 +1,5 @@
 import UIKit
 
-//protocol NatSelector: UIControl, Pulsable {
-//    var isHapticFeedbackEnabled: Bool { get set }
-//}
-
 class NatRadioButtonContainer: UIControl, NatSelector {
 
     let radioButton = NatRadioButton()
