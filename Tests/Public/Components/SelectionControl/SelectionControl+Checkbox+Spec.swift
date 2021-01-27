@@ -3,7 +3,7 @@ import Nimble
 
 @testable import NatDS
 
-final class SelectionControlSpec: QuickSpec {
+final class SelectionControlCheckboxSpec: QuickSpec {
 
     override func spec() {
         var sut: NatSelectionControl!
