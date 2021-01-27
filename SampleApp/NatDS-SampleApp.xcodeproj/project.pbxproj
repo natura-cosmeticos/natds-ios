@@ -33,6 +33,7 @@
 		79B6AC8A25AF87500027F7D6 /* BadgeableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B6AC8925AF87500027F7D6 /* BadgeableView.swift */; };
 		79FC599025CAE5D0001CCB56 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC598F25CAE5D0001CCB56 /* CardViewController.swift */; };
 		79FC59E625DAB5A7001CCB56 /*  ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC59E525DAB5A6001CCB56 /*  ImageViewController.swift */; };
+		7DF4B35425BF602A005D6056 /* SelectionControlSwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF4B35325BF602A005D6056 /* SelectionControlSwitchViewController.swift */; };
 		8402F4E624F932E70018149C /* IconButtonItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402F4E524F932E70018149C /* IconButtonItemViewController.swift */; };
 		8409B9312507B9E2006ED4EA /* CustomSplashViewController+GradientBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409B9302507B9E2006ED4EA /* CustomSplashViewController+GradientBackgroundView.swift */; };
 		842EA8AB25082B60009AE473 /* ChooseBrandHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842EA8AA25082B60009AE473 /* ChooseBrandHeader.swift */; };
@@ -107,6 +108,7 @@
 		79B6AC8925AF87500027F7D6 /* BadgeableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeableView.swift; sourceTree = "<group>"; };
 		79FC598F25CAE5D0001CCB56 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		79FC59E525DAB5A6001CCB56 /*  ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " ImageViewController.swift"; sourceTree = "<group>"; };
+		7DF4B35325BF602A005D6056 /* SelectionControlSwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionControlSwitchViewController.swift; sourceTree = "<group>"; };
 		8402F4E524F932E70018149C /* IconButtonItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButtonItemViewController.swift; sourceTree = "<group>"; };
 		8409B9302507B9E2006ED4EA /* CustomSplashViewController+GradientBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomSplashViewController+GradientBackgroundView.swift"; sourceTree = "<group>"; };
 		842EA8AA25082B60009AE473 /* ChooseBrandHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseBrandHeader.swift; sourceTree = "<group>"; };
@@ -454,6 +456,7 @@
 			isa = PBXGroup;
 			children = (
 				BEDF93302593C65800F54C50 /* SelectionControlViewController.swift */,
+				7DF4B35325BF602A005D6056 /* SelectionControlSwitchViewController.swift */,
 			);
 			path = SelectionControl;
 			sourceTree = "<group>";
@@ -752,6 +755,7 @@
 				79FC59E625DAB5A7001CCB56 /*  ImageViewController.swift in Sources */,
 				D2874BA3C6A03754EC9895DC95D6DFE5 /* TypographyCell.swift in Sources */,
 				4FB74E3BCCB54EE2242A9A78778F6024 /* TypographyViewController.swift in Sources */,
+				7DF4B35425BF602A005D6056 /* SelectionControlSwitchViewController.swift in Sources */,
 				5A95C641E43BCD63CA21359C8EAFBA25 /* ValueTextHighlightItemViewController.swift in Sources */,
 				84A9E9AC250F9D18006B8A52 /* BrandThemes.swift in Sources */,
 			);

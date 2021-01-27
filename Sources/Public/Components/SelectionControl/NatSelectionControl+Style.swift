@@ -11,6 +11,7 @@ extension NatSelectionControl {
     public enum Style {
         case checkbox
         case radioButton
+        case `switch`
     }
 }
 
@@ -19,6 +20,7 @@ extension NatSelectionControl.Style {
         switch self {
         case .checkbox: return NatCheckboxContainer()
         case .radioButton: return NatRadioButtonContainer()
+        case .switch: return NatSwitchContainer()
         }
     }
 }
