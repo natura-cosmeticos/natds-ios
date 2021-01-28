@@ -1,6 +1,6 @@
-extension NatCheckbox {
+extension NatRadioButton {
     struct Style {
-        
+
         // MARK: Static Properties
 
         static var `default`: Style {
