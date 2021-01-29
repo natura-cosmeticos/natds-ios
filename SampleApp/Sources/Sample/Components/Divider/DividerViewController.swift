@@ -30,7 +30,7 @@ class DividerViewController: UIViewController, SampleItem {
 
     private let labelFullBleed: UILabel = {
         let label = UILabel()
-        label.text = " Full Bleed"
+        label.text = " Full-bleed"
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label
