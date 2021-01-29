@@ -1,15 +1,18 @@
 /**
-  Divider is a class that represents Divider component from the design system.
+ Divider is a class that represents Divider component from the design system.
 
-    It has a predetermined height, and to configure its width It's necessary use via constraints
+ It has a predetermined height, and to configure its width It's necessary use via constraints
 
  - Requires:
-        It's necessary to configure the Design System with a theme or fatalError will be raised.
+ It's necessary to configure the Design System with a theme or fatalError will be raised.
 
-            DesignSystem().configure(with: AvailableTheme)
-*/
+ DesignSystem().configure(with: AvailableTheme)
+ */
 
 public class Divider: UIView {
+
+    private var dividerLine = UIView()
+
     public init() {
         super.init(frame: .zero)
         setup()
@@ -19,20 +22,33 @@ public class Divider: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-}
-
-extension Divider {
 
     private func setup() {
-        backgroundColor = getUIColorFromTokens(\.colorHighlight).withAlphaComponent(0.12)
+        dividerLine.translatesAutoresizingMaskIntoConstraints = false
+        dividerLine.backgroundColor = getUIColorFromTokens(\.colorLowEmphasis)
+        addSubview(dividerLine)
         addConstraints()
     }
 
     private func addConstraints() {
-        translatesAutoresizingMaskIntoConstraints = false
-
         NSLayoutConstraint.activate([
-            heightAnchor.constraint(equalToConstant: 1)
+            dividerLine.heightAnchor.constraint(equalToConstant: 1)
         ])
     }
+
+    public func configure(style: Styles) {
+        addDividerStyle(style)
+    }
+
+    private func addDividerStyle(_ style: Styles) {
+
+        let constraints = [
+            dividerLine.topAnchor.constraint(equalTo: topAnchor),
+            dividerLine.leadingAnchor.constraint(equalTo: leadingAnchor, constant: style.spaceRight),
+            dividerLine.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -style.spaceLeft)
+        ]
+
+        NSLayoutConstraint.activate(constraints)
+    }
+
 }

@@ -167,6 +167,7 @@
 		79FC595D25C1A854001CCB56 /* SelectionControl+RadioButton+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC595C25C1A854001CCB56 /* SelectionControl+RadioButton+Spec.swift */; };
 		79FC596325C1AAD5001CCB56 /* SelectionControl+Checkbox+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC596225C1AAD5001CCB56 /* SelectionControl+Checkbox+Snapshot+Tests.swift */; };
 		79FC596B25C1AE5D001CCB56 /* SelectionControl+RadioButton+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC596A25C1AE5D001CCB56 /* SelectionControl+RadioButton+Snapshot+Tests.swift */; };
+		79FC597325C3332C001CCB56 /* Divider+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC597225C3332C001CCB56 /* Divider+Style.swift */; };
 		7C00D9B09D306A421DBD99953C7BC9E4 /* NatElevation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2775F568C47ADB6D5DA7B7AFA4A41B4E /* NatElevation.swift */; };
 		7CA6BAC353B73AF5D31F09CAF0268EE5 /* DesignSystemFatalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E6D9764598D210D58B32B2AEB0FE9 /* DesignSystemFatalError.swift */; };
 		7D19998925756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19998825756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift */; };
@@ -511,6 +512,7 @@
 		79FC595C25C1A854001CCB56 /* SelectionControl+RadioButton+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelectionControl+RadioButton+Spec.swift"; sourceTree = "<group>"; };
 		79FC596225C1AAD5001CCB56 /* SelectionControl+Checkbox+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelectionControl+Checkbox+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		79FC596A25C1AE5D001CCB56 /* SelectionControl+RadioButton+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelectionControl+RadioButton+Snapshot+Tests.swift"; sourceTree = "<group>"; };
+		79FC597225C3332C001CCB56 /* Divider+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Divider+Style.swift"; sourceTree = "<group>"; };
 		7CCF632B4501044E5062C574CCBBF74E /* NatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatButton.swift; sourceTree = "<group>"; };
 		7D19998825756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatProgressIndicatorCircular+Size.swift"; sourceTree = "<group>"; };
 		7D3D59142593D1B500C9197B /* UIImageView+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+UIColor.swift"; sourceTree = "<group>"; };
@@ -2130,6 +2132,7 @@
 			isa = PBXGroup;
 			children = (
 				50D996E4B957C51847075E986215675B /* Divider.swift */,
+				79FC597225C3332C001CCB56 /* Divider+Style.swift */,
 			);
 			path = Divider;
 			sourceTree = "<group>";
@@ -2769,6 +2772,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26740A4924B3A60C00419526 /* NatBadge+Style.swift in Sources */,
+				79FC597325C3332C001CCB56 /* Divider+Style.swift in Sources */,
 				79ACDADF255C336E00660E68 /* NatProgressIndicatorCircular.swift in Sources */,
 				843123E125123F0C002A7B6F /* AesopLightTheme.swift in Sources */,
 				84703F3C24F6ECD300FE01CA /* NatFonts+TextStyle.swift in Sources */,
