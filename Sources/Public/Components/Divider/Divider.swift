@@ -3,6 +3,17 @@
 
  It has a predetermined height, and to configure its width It's necessary use via constraints
 
+ The Divider componet has 3 styles:
+ - Full-bleed
+ - Middle
+ - Inset
+
+     Example of usage:
+
+         divider.configure(style: .full-bleed)
+         divider.configure(style: .middle)
+         divider.configure(style: .inset)
+
  - Requires:
  It's necessary to configure the Design System with a theme or fatalError will be raised.
 

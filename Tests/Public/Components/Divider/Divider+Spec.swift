@@ -20,6 +20,13 @@ final class DividerSpec: QuickSpec {
 
                 expect(dividerView?.backgroundColor).to(equal(NatColors.lowEmphasis))
             }
+
+            it("returns an expected height") {
+                let dividerView = systemUnderTest.subviews.first
+                systemUnderTest.layoutIfNeeded()
+
+                expect(dividerView?.height).to(equal(1))
+            }
         }
     }
 }
