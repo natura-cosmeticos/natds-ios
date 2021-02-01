@@ -31,6 +31,7 @@ class DividerViewController: UIViewController, SampleItem {
     private let labelFullBleed: UILabel = {
         let label = UILabel()
         label.text = " Full-bleed"
+        label.textColor = NatColors.highEmphasis
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label
@@ -39,6 +40,7 @@ class DividerViewController: UIViewController, SampleItem {
     private let labelMiddle: UILabel = {
         let label = UILabel()
         label.text = " Middle"
+        label.textColor = NatColors.highEmphasis
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label
@@ -47,6 +49,7 @@ class DividerViewController: UIViewController, SampleItem {
     private let labelInset: UILabel = {
         let label = UILabel()
         label.text = " Inset"
+        label.textColor = NatColors.highEmphasis
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label
