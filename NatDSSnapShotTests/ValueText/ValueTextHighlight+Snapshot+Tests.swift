@@ -22,6 +22,6 @@ final class ValueTextHighlightSnapshotTests: XCTestCase {
         systemUnderTest.valueDescription = "You are transferring"
         systemUnderTest.value = "$ 43,00"
 
-        assertSnapshot(matching: superview, as: .image(precision: 0.97))
+        assertSnapshot(matching: superview, as: .image)
     }
 }

@@ -4,30 +4,53 @@ import SnapshotTesting
 @testable import NatDS
 
 final class DividerSnapshotTests: XCTestCase {
-    var systemUnderTest: Divider!
     var superview: UIView!
 
     override func setUp() {
         super.setUp()
 
-        ConfigurationStorage.shared.currentTheme = NaturaLightTheme()
-
-        systemUnderTest = Divider()
-
-        superview = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 3))
+        superview = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
         superview.backgroundColor = .white
-        superview.addSubview(systemUnderTest)
 
-        let constraints = [
-            systemUnderTest.topAnchor.constraint(equalTo: superview.topAnchor, constant: 1),
-            systemUnderTest.leadingAnchor.constraint(equalTo: superview.leadingAnchor),
-            systemUnderTest.trailingAnchor.constraint(equalTo: superview.trailingAnchor)
-        ]
-
-        NSLayoutConstraint.activate(constraints)
+        ConfigurationStorage.shared.currentTheme = NaturaLightTheme()
     }
 
-    func test_init_hasValidSnapshot() {
+    func test_divider_full_bleed_hasValidSnapshot() {
+        let systemUnderTest = Divider()
+        systemUnderTest.configure(style: .fullBleed)
+        superview.addSubview(systemUnderTest)
+        addConstraints(systemUnderTest)
+
         assertSnapshot(matching: superview, as: .image)
+    }
+
+    func test_divider_full_middle_hasValidSnapshot() {
+        let systemUnderTest = Divider()
+        systemUnderTest.configure(style: .middle)
+        superview.addSubview(systemUnderTest)
+        addConstraints(systemUnderTest)
+
+        assertSnapshot(matching: superview, as: .image)
+    }
+
+    func test_divider_full_inset_hasValidSnapshot() {
+        let systemUnderTest = Divider()
+        systemUnderTest.configure(style: .inset)
+        superview.addSubview(systemUnderTest)
+        addConstraints(systemUnderTest)
+
+        assertSnapshot(matching: superview, as: .image)
+    }
+
+    private func addConstraints(_ systemUnderTest: UIView) {
+
+        systemUnderTest.translatesAutoresizingMaskIntoConstraints = false
+
+        let constraints = [
+            systemUnderTest.centerYAnchor.constraint(equalTo: superview.centerYAnchor),
+            systemUnderTest.trailingAnchor.constraint(equalTo: superview.trailingAnchor),
+            systemUnderTest.leadingAnchor.constraint(equalTo: superview.leadingAnchor)
+        ]
+        NSLayoutConstraint.activate(constraints)
     }
 }

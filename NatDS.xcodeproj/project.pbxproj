@@ -167,6 +167,9 @@
 		79FC595D25C1A854001CCB56 /* SelectionControl+RadioButton+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC595C25C1A854001CCB56 /* SelectionControl+RadioButton+Spec.swift */; };
 		79FC596325C1AAD5001CCB56 /* SelectionControl+Checkbox+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC596225C1AAD5001CCB56 /* SelectionControl+Checkbox+Snapshot+Tests.swift */; };
 		79FC596B25C1AE5D001CCB56 /* SelectionControl+RadioButton+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC596A25C1AE5D001CCB56 /* SelectionControl+RadioButton+Snapshot+Tests.swift */; };
+		79FC597325C3332C001CCB56 /* Divider+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC597225C3332C001CCB56 /* Divider+Style.swift */; };
+		79FC597925C83E17001CCB56 /* Divider+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC597825C83E17001CCB56 /* Divider+Spec.swift */; };
+		79FC598125C845E4001CCB56 /* Divider+Styles+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC598025C845E4001CCB56 /* Divider+Styles+Spec.swift */; };
 		7C00D9B09D306A421DBD99953C7BC9E4 /* NatElevation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2775F568C47ADB6D5DA7B7AFA4A41B4E /* NatElevation.swift */; };
 		7CA6BAC353B73AF5D31F09CAF0268EE5 /* DesignSystemFatalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E6D9764598D210D58B32B2AEB0FE9 /* DesignSystemFatalError.swift */; };
 		7D19998925756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19998825756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift */; };
@@ -511,6 +514,9 @@
 		79FC595C25C1A854001CCB56 /* SelectionControl+RadioButton+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelectionControl+RadioButton+Spec.swift"; sourceTree = "<group>"; };
 		79FC596225C1AAD5001CCB56 /* SelectionControl+Checkbox+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelectionControl+Checkbox+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		79FC596A25C1AE5D001CCB56 /* SelectionControl+RadioButton+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelectionControl+RadioButton+Snapshot+Tests.swift"; sourceTree = "<group>"; };
+		79FC597225C3332C001CCB56 /* Divider+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Divider+Style.swift"; sourceTree = "<group>"; };
+		79FC597825C83E17001CCB56 /* Divider+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Divider+Spec.swift"; sourceTree = "<group>"; };
+		79FC598025C845E4001CCB56 /* Divider+Styles+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Divider+Styles+Spec.swift"; sourceTree = "<group>"; };
 		7CCF632B4501044E5062C574CCBBF74E /* NatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatButton.swift; sourceTree = "<group>"; };
 		7D19998825756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatProgressIndicatorCircular+Size.swift"; sourceTree = "<group>"; };
 		7D3D59142593D1B500C9197B /* UIImageView+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+UIColor.swift"; sourceTree = "<group>"; };
@@ -1373,6 +1379,15 @@
 			path = SelectionControl;
 			sourceTree = "<group>";
 		};
+		79FC597725C83DF4001CCB56 /* Divider */ = {
+			isa = PBXGroup;
+			children = (
+				79FC597825C83E17001CCB56 /* Divider+Spec.swift */,
+				79FC598025C845E4001CCB56 /* Divider+Styles+Spec.swift */,
+			);
+			path = Divider;
+			sourceTree = "<group>";
+		};
 		7AB7FF70C9AEA25A8E77912E1563B1EE /* DomainFunctions */ = {
 			isa = PBXGroup;
 			children = (
@@ -1981,6 +1996,7 @@
 				26BB817124B918FB00617EFC /* Badge */,
 				37C041B132E91C20059E887D83DD7E4E /* Button */,
 				67643298FB5CC3CCB193DC69AF79EC67 /* Dialog */,
+				79FC597725C83DF4001CCB56 /* Divider */,
 				6759B588024397D1AC93C8D123122D59 /* ExpansionPanel */,
 				3FCB7713DAAB2F827B224E06280AF674 /* Field */,
 				845D09A325015F0000B05760 /* IconButton */,
@@ -2130,6 +2146,7 @@
 			isa = PBXGroup;
 			children = (
 				50D996E4B957C51847075E986215675B /* Divider.swift */,
+				79FC597225C3332C001CCB56 /* Divider+Style.swift */,
 			);
 			path = Divider;
 			sourceTree = "<group>";
@@ -2633,6 +2650,7 @@
 				797E612625531C20002A59E0 /* AvonLightComponents+Logo+Spec.swift in Sources */,
 				84BB928E24DC760600A9BCC8 /* TabItemViewDelegateMock.swift in Sources */,
 				79E7FA592537456500A831BC /* AesopLightTokens+Size+Spec.swift in Sources */,
+				79FC598125C845E4001CCB56 /* Divider+Styles+Spec.swift in Sources */,
 				797E612F25531C6B002A59E0 /* NaturaDarkComponents+Logo+Spec.swift in Sources */,
 				0C4CBA15016075A8E8A7CA6FC6054383 /* IllustrationIconsTests.swift in Sources */,
 				2D7E10D869A68FB9A120F4707A861DF8 /* NSMutableAttributedString+BuilderTests.swift in Sources */,
@@ -2695,6 +2713,7 @@
 				797E60FA2553177B002A59E0 /* NatLogoImages+NaturaLight+Spec.swift in Sources */,
 				3D8762A06C970677D223A561419340A9 /* PulseLayerTests.swift in Sources */,
 				79FC595D25C1A854001CCB56 /* SelectionControl+RadioButton+Spec.swift in Sources */,
+				79FC597925C83E17001CCB56 /* Divider+Spec.swift in Sources */,
 				79E7FABA25388B7200A831BC /* AvonDarkTokens+BorderRadius+Spec.swift in Sources */,
 				0E7C160B24C61E45002FF46F /* UINavigationController+Configure+Spec.swift in Sources */,
 				79B6AC7D25AE1BDC0027F7D6 /* NatBadge+Dot+Spec.swift in Sources */,
@@ -2769,6 +2788,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26740A4924B3A60C00419526 /* NatBadge+Style.swift in Sources */,
+				79FC597325C3332C001CCB56 /* Divider+Style.swift in Sources */,
 				79ACDADF255C336E00660E68 /* NatProgressIndicatorCircular.swift in Sources */,
 				843123E125123F0C002A7B6F /* AesopLightTheme.swift in Sources */,
 				84703F3C24F6ECD300FE01CA /* NatFonts+TextStyle.swift in Sources */,
