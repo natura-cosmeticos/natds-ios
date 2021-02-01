@@ -26,11 +26,15 @@ public class ValueTextHighlight: UIView {
     }
 
     private lazy var topDivider: Divider = {
-        return Divider()
+        let divider = Divider()
+        divider.configure(style: .fullBleed)
+        return divider
     }()
 
     private lazy var bottomDivider: Divider = {
-        return Divider()
+        let divider = Divider()
+        divider.configure(style: .fullBleed)
+        return divider
     }()
 
     private lazy var valueDescriptionLabel: UILabel = {
