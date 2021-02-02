@@ -1255,21 +1255,21 @@
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/SelectionControl/NatSelectionControl+Style.swift",
-      "line": 12,
+      "line": 14,
       "symbol": "NatSelectionControl.Style.checkbox",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/SelectionControl/NatSelectionControl+Style.swift",
-      "line": 13,
+      "line": 15,
       "symbol": "NatSelectionControl.Style.radioButton",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/SelectionControl/NatSelectionControl.swift",
-      "line": 71,
+      "line": 73,
       "symbol": "NatSelectionControl.init(style:text:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

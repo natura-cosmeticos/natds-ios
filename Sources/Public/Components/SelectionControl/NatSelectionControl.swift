@@ -9,10 +9,12 @@ import UIKit
  Example of usage:
         
         NatSelectionControl(style: .checkbox)
+        NatSelectionControl(style: .radioButton)
  
  And it can be configured with a label:
         
         NatSelectionControl(style: .checkbox, text: "The text for the label")
+        NatSelectionControl(style: .radioButton, text: "The text for the label")
 
  - Requires:
     It's necessary to configure the Design System with a theme or fatalError will be raised.

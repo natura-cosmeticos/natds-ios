@@ -6,6 +6,8 @@ extension NatSelectionControl {
 
         These are all styles allowed for a NatSelectionControl:
         - checkbox
+        - radioButton
+
     */
     
     public enum Style {
