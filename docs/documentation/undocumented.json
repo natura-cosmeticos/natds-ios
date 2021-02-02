@@ -554,6 +554,34 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Divider/Divider+Style.swift",
+      "line": 3,
+      "symbol": "Divider.Styles",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Divider/Divider+Style.swift",
+      "line": 4,
+      "symbol": "Divider.Styles.fullBleed",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Divider/Divider+Style.swift",
+      "line": 5,
+      "symbol": "Divider.Styles.inset",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Divider/Divider+Style.swift",
+      "line": 6,
+      "symbol": "Divider.Styles.middle",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Divider/Divider.swift",
       "line": 27,
       "symbol": "Divider.init()",
@@ -1226,6 +1254,27 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/SelectionControl/NatSelectionControl+Style.swift",
+      "line": 12,
+      "symbol": "NatSelectionControl.Style.checkbox",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/SelectionControl/NatSelectionControl+Style.swift",
+      "line": 13,
+      "symbol": "NatSelectionControl.Style.radioButton",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/SelectionControl/NatSelectionControl.swift",
+      "line": 71,
+      "symbol": "NatSelectionControl.init(style:text:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Shortcut/NatShortcut+Style.swift",
       "line": 17,
       "symbol": "NatShortcut.Style.containedPrimary",
@@ -1258,6 +1307,62 @@
       "line": 47,
       "symbol": "NatShortcut.init(style:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Shortcut/ShortcutView.swift",
+      "line": 1,
+      "symbol": "ShortcutView",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Shortcut/ShortcutView.swift",
+      "line": 18,
+      "symbol": "ShortcutView.init(frame:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Shortcut/ShortcutView.swift",
+      "line": 23,
+      "symbol": "ShortcutView.init(icon:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Shortcut/ShortcutView.swift",
+      "line": 33,
+      "symbol": "ShortcutView.layoutSubviews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Shortcut/ShortcutView.swift",
+      "line": 60,
+      "symbol": "ShortcutView.configure(icon:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Shortcut/ShortcutView.swift",
+      "line": 64,
+      "symbol": "ShortcutView.configure(iconColor:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Shortcut/ShortcutView.swift",
+      "line": 68,
+      "symbol": "ShortcutView.configure(badgeValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Shortcut/ShortcutView.swift",
+      "line": 78,
+      "symbol": "ShortcutView",
+      "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {

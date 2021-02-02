@@ -1,6 +1,22 @@
 import UIKit
 
 class NatRadioButtonContainer: UIControl, NatSelector {
+    /**
+     NatRadioButton is a class that represents  selection control radio button  component from the design system.
+     The radio button colors changes according with the current theme configured in the Design system.
+
+    This radio button has these status:
+    - isSelected
+    - isEnabled
+
+            Example of usage:
+                - radioButton.isSelected = true
+                - radioButton.isEnabled = true
+
+     - Requires:
+     It's necessary to configure the Design System with a theme or fatalError will be raised.
+     DesignSystem().configure(with: AvailableTheme)
+     */
 
     let radioButton = NatRadioButton()
     let selectedPulsableColor: UIColor = getUIColorFromTokens(\.colorPrimary).withAlphaComponent(0.2)

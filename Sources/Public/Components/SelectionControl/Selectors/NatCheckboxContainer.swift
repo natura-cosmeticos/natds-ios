@@ -5,6 +5,22 @@ protocol NatSelector: UIControl, Pulsable {
 }
 
 class NatCheckboxContainer: UIControl, NatSelector {
+    /**
+     NatCheckbox is a class that represents  selection control checkbox  component from the design system.
+     The checkbox colors changes according with the current theme configured in the Design system.
+
+    This checkbox has these status:
+    - isSelected
+    - isEnabled
+
+            Example of usage:
+                - checkbox.isSelected = true
+                - checkbox.isEnabled = true
+
+     - Requires:
+     It's necessary to configure the Design System with a theme or fatalError will be raised.
+     DesignSystem().configure(with: AvailableTheme)
+     */
 
     let checkbox = NatCheckbox()
     let selectedPulsableColor: UIColor = getUIColorFromTokens(\.colorPrimary).withAlphaComponent(0.2)
