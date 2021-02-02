@@ -16,7 +16,7 @@
     <header>
       <div class="content-wrapper">
         <p>
-          <a href="index.html">NatDS 2.12.0 Docs</a>
+          <a href="index.html">NatDS 3.2.0 Docs</a>
           <span class="no-mobile"> (23% documented)</span>
         </p>
     
@@ -88,15 +88,15 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>NatBadge is a class that represents  a component from the design system.</p>
+                          <p>NatBadge is a class that represents a component from the Design System.</p>
 
-<p>The badge colors changes according with the current Brand configured in the Design system
- and according with user properties of Light and Dark mode.</p>
+<p>The badge colors change according to the current brand configured in the Design System and according to the user&rsquo;s properties of Light and Dark mode.</p>
 
-<p>This component has 1 style:</p>
+<p>This component has 2 styles:</p>
 
 <ul>
 <li>Standard</li>
+<li>Dot</li>
 </ul>
 
 <p>And 1 color:</p>
@@ -105,13 +105,14 @@
 <li>Alert</li>
 </ul>
 
-<p>Example of usage:
-       let badge = NatBadge(style: .standard, color: .alert)</p>
+<p>Example of usage:</p>
+<pre class="highlight swift"><code>   <span class="k">let</span> <span class="nv">badge</span> <span class="o">=</span> <span class="kt">NatBadge</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">standard</span><span class="p">,</span> <span class="nv">color</span><span class="p">:</span> <span class="o">.</span><span class="n">alert</span><span class="p">)</span>
+</code></pre>
 <div class="aside aside-requires">
     <p class="aside-title">Requires</p>
     <p>It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.</p>
-<pre class="highlight swift"><code>   <span class="kt">DesignSystem</span><span class="p">()</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="kt">AvailableTheme</span><span class="p">)</span>
-</code></pre>
+
+<p>DesignSystem().configure(with: AvailableTheme)</p>
 
 </div>
 
@@ -305,13 +306,26 @@ DesignSystem().configure(with: AvailableTheme)
                           <p>Divider is a class that represents Divider component from the design system.</p>
 
 <p>It has a predetermined height, and to configure its width It&rsquo;s necessary use via constraints</p>
-<div class="aside aside-requires">
+
+<p>The Divider componet has 3 styles:</p>
+
+<ul>
+<li>Full-bleed</li>
+<li>Middle</li>
+<li><p>Inset</p>
+
+<p>Example of usage:</p>
+<pre class="highlight swift"><code><span class="n">divider</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">full</span><span class="o">-</span><span class="n">bleed</span><span class="p">)</span>
+<span class="n">divider</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">middle</span><span class="p">)</span>
+<span class="n">divider</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">inset</span><span class="p">)</span>
+</code></pre></li>
+</ul><div class="aside aside-requires">
     <p class="aside-title">Requires</p>
     <p>It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.</p>
-<pre class="highlight swift"><code>   <span class="kt">DesignSystem</span><span class="p">()</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="kt">AvailableTheme</span><span class="p">)</span>
-</code></pre>
 
 </div>
+
+<p>DesignSystem().configure(with: AvailableTheme)</p>
 
                           <a href="Classes/Divider.html" class="slightly-smaller">See more</a>
                         </div>
@@ -405,13 +419,16 @@ DesignSystem().configure(with: AvailableTheme)
 <li>Text</li>
 <li>Name</li>
 <li>Number</li>
-<li><p>Password</p>
-<pre class="highlight swift"><code>     <span class="kt">Example</span> <span class="n">of</span> <span class="nv">usage</span><span class="p">:</span>
-    <span class="o">-</span> <span class="n">textField</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="o">.</span><span class="n">text</span>
-    <span class="o">-</span> <span class="n">textField</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="o">.</span><span class="n">name</span>
-    <span class="o">-</span> <span class="n">textField</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="o">.</span><span class="n">number</span>
-    <span class="o">-</span> <span class="n">textField</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="o">.</span><span class="nf">password</span><span class="p">(</span><span class="nv">keyboardType</span><span class="p">:</span> <span class="o">.</span><span class="n">numberPad</span><span class="p">)</span>
-</code></pre></li>
+<li>Password</li>
+</ul>
+
+<p>Example of usage:</p>
+
+<ul>
+<li>textField.type = .text</li>
+<li>textField.type = .name</li>
+<li>textField.type = .number</li>
+<li>textField.type = .password(keyboardType: .numberPad)</li>
 </ul>
 
 <p>This TextField has 3 States:</p>
@@ -440,14 +457,13 @@ DesignSystem().configure(with: AvailableTheme)
 <li>natTextFieldDidEndEditing</li>
 <li>natTextFieldEditingChanged</li>
 <li>natTextFieldShouldBeginEditing</li>
-<li><p>natTextField</p>
-<div class="aside aside-requires">
+<li><p>natTextField</p></li>
+</ul><div class="aside aside-requires">
     <p class="aside-title">Requires</p>
-    It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.
-DesignSystem().configure(with: AvailableTheme)
+    <p>It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.
+DesignSystem().configure(with: AvailableTheme)</p>
 
-</div></li>
-</ul>
+</div>
 
                           <a href="Classes/TextField.html" class="slightly-smaller">See more</a>
                         </div>
@@ -692,56 +708,6 @@ The constraints for width and height should use the pre-defined size:</p>
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/c:@M@NatDS@objc(cs)NatSelectionControl"></a>
-                      <a name="//apple_ref/swift/Class/NatSelectionControl" class="dashAnchor"></a>
-                      <a class="token" href="#/c:@M@NatDS@objc(cs)NatSelectionControl">NatSelectionControl</a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          <p>NatSelectionControl is a class that represents Design System&rsquo;s selection control component.
-The component colors changes according with the current theme configured in the Design System.</p>
-
-<p>The component has 1 style:</p>
-
-<ul>
-<li>Checkbox</li>
-</ul>
-
-<p>Example of usage:</p>
-<pre class="highlight swift"><code>   <span class="kt">NatSelectionControl</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">checkbox</span><span class="p">)</span>
-</code></pre>
-
-<p>And it can be configured with a label:</p>
-<pre class="highlight swift"><code>   <span class="kt">NatSelectionControl</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">checkbox</span><span class="p">,</span> <span class="nv">text</span><span class="p">:</span> <span class="s">"The text for the label"</span><span class="p">)</span>
-</code></pre>
-<div class="aside aside-requires">
-    <p class="aside-title">Requires</p>
-    <p>It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.</p>
-
-<p>DesignSystem().configure(with: AvailableTheme)</p>
-
-</div>
-
-                          <a href="Classes/NatSelectionControl.html" class="slightly-smaller">See more</a>
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">NatSelectionControl</span> <span class="p">:</span> <span class="kt">UIView</span></code></pre>
-
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div>
-                      <code>
                       <a name="/c:@M@NatDS@objc(cs)NatShortcut"></a>
                       <a name="//apple_ref/swift/Class/NatShortcut" class="dashAnchor"></a>
                       <a class="token" href="#/c:@M@NatDS@objc(cs)NatShortcut">NatShortcut</a>
@@ -783,35 +749,6 @@ The shortcut colors change according to the current theme configured in the Desi
                             <p class="aside-title">Swift</p>
                             <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">NatShortcut</span> <span class="p">:</span> <span class="kt">UIView</span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">NatShortcut</span><span class="p">:</span> <span class="kt"><a href="Protocols/Pulsable.html">Pulsable</a></span></code></pre>
-
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div>
-                      <code>
-                      <a name="/c:@M@NatDS@objc(cs)ShortcutView"></a>
-                      <a name="//apple_ref/swift/Class/ShortcutView" class="dashAnchor"></a>
-                      <a class="token" href="#/c:@M@NatDS@objc(cs)ShortcutView">ShortcutView</a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          <p>Undocumented</p>
-
-                          <a href="Classes/ShortcutView.html" class="slightly-smaller">See more</a>
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ShortcutView</span> <span class="p">:</span> <span class="kt">UIView</span></code></pre>
-<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">ShortcutView</span><span class="p">:</span> <span class="kt"><a href="Protocols/Badgeable.html">Badgeable</a></span></code></pre>
 
                           </div>
                         </div>
@@ -873,18 +810,20 @@ A new tab is inserted using insertTab(title: String) method.</p>
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>NatTag is a class that represents  a component from the design system.</p>
+                          <p>NatTag is a class that represents a component from the design system.
+The tag colors change according to the current theme configured to the design system.</p>
 
-<p>The tag colors changes according with the current theme configured in the Design system.</p>
-
-<p>This component has 1 style:</p>
+<p>These all the available styles for NatTag:</p>
 
 <ul>
 <li>defaultAlert</li>
+<li>leftAlert</li>
+<li>rightAlert</li>
 </ul>
 
-<p>Example of usage:
-       let badge = NatTag(style: .defaultAlert)</p>
+<p>Example of usage:</p>
+<pre class="highlight swift"><code>   <span class="k">let</span> <span class="nv">badge</span> <span class="o">=</span> <span class="kt">NatTag</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">defaultAlert</span><span class="p">)</span>
+</code></pre>
 <div class="aside aside-requires">
     <p class="aside-title">Requires</p>
     <p>It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.</p>
@@ -1100,12 +1039,6 @@ A new tab is inserted using insertTab(title: String) method.</p>
                   <a href="Classes/NatProgressIndicatorCircular/Size.html">– Size</a>
                 </li>
                 <li class="nav-group-task">
-                  <a href="Classes/NatSelectionControl.html">NatSelectionControl</a>
-                </li>
-                <li class="nav-group-task">
-                  <a href="Classes/NatSelectionControl/Style.html">– Style</a>
-                </li>
-                <li class="nav-group-task">
                   <a href="Classes/NatShortcut.html">NatShortcut</a>
                 </li>
                 <li class="nav-group-task">
@@ -1137,9 +1070,6 @@ A new tab is inserted using insertTab(title: String) method.</p>
                 </li>
                 <li class="nav-group-task">
                   <a href="Classes/SearchBar.html">SearchBar</a>
-                </li>
-                <li class="nav-group-task">
-                  <a href="Classes/ShortcutView.html">ShortcutView</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="Classes/Tab.html">Tab</a>
@@ -1285,7 +1215,7 @@ A new tab is inserted using insertTab(title: String) method.</p>
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2021-01-12)</p>
+          <p>&copy; 2021 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2021-02-02)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </div>

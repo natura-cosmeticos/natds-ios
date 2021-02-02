@@ -177,36 +177,36 @@
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Badge/NatBadge+Color.swift",
-      "line": 19,
+      "line": 15,
       "symbol": "NatBadge.Color.alert",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Badge/NatBadge+Style.swift",
-      "line": 19,
+      "line": 16,
       "symbol": "NatBadge.Style.standard",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
+      "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Badge/NatBadge+Style.swift",
+      "line": 17,
+      "symbol": "NatBadge.Style.dot",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Badge/NatBadge.swift",
-      "line": 41,
+      "line": 42,
       "symbol": "NatBadge.init(style:color:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Badge/NatBadge.swift",
-      "line": 78,
+      "line": 94,
       "symbol": "NatBadge.draw(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Badge/NatBadge.swift",
-      "line": 91,
-      "symbol": "NatBadge.configure(count:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -555,8 +555,15 @@
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Divider/Divider.swift",
-      "line": 13,
+      "line": 27,
       "symbol": "Divider.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Divider/Divider.swift",
+      "line": 50,
+      "symbol": "Divider.configure(style:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -639,49 +646,56 @@
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Field/TextField.swift",
-      "line": 141,
+      "line": 159,
       "symbol": "TextField.init(frame:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Field/TextField.swift",
-      "line": 155,
+      "line": 173,
       "symbol": "TextField.becomeFirstResponder()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Field/TextField.swift",
-      "line": 160,
+      "line": 178,
       "symbol": "TextField.resignFirstResponder()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Field/TextField.swift",
-      "line": 287,
+      "line": 315,
+      "symbol": "TextField.showVisibilityIcon()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Field/TextField.swift",
+      "line": 332,
       "symbol": "TextField.textFieldDidBeginEditing(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Field/TextField.swift",
-      "line": 292,
+      "line": 337,
       "symbol": "TextField.textFieldDidEndEditing(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Field/TextField.swift",
-      "line": 297,
+      "line": 342,
       "symbol": "TextField.textFieldShouldBeginEditing(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Field/TextField.swift",
-      "line": 301,
+      "line": 346,
       "symbol": "TextField.textField(_:shouldChangeCharactersIn:replacementString:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -1212,20 +1226,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/SelectionControl/NatSelectionControl+Style.swift",
-      "line": 12,
-      "symbol": "NatSelectionControl.Style.checkbox",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/SelectionControl/NatSelectionControl.swift",
-      "line": 71,
-      "symbol": "NatSelectionControl.init(style:text:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Shortcut/NatShortcut+Style.swift",
       "line": 17,
       "symbol": "NatShortcut.Style.containedPrimary",
@@ -1258,62 +1258,6 @@
       "line": 47,
       "symbol": "NatShortcut.init(style:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Shortcut/ShortcutView.swift",
-      "line": 1,
-      "symbol": "ShortcutView",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Shortcut/ShortcutView.swift",
-      "line": 18,
-      "symbol": "ShortcutView.init(frame:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Shortcut/ShortcutView.swift",
-      "line": 23,
-      "symbol": "ShortcutView.init(icon:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Shortcut/ShortcutView.swift",
-      "line": 33,
-      "symbol": "ShortcutView.layoutSubviews()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Shortcut/ShortcutView.swift",
-      "line": 60,
-      "symbol": "ShortcutView.configure(icon:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Shortcut/ShortcutView.swift",
-      "line": 64,
-      "symbol": "ShortcutView.configure(iconColor:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Shortcut/ShortcutView.swift",
-      "line": 68,
-      "symbol": "ShortcutView.configure(badgeValue:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Shortcut/ShortcutView.swift",
-      "line": 78,
-      "symbol": "ShortcutView",
-      "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
@@ -1360,28 +1304,42 @@
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Tag/NatTag+Style.swift",
-      "line": 11,
+      "line": 14,
       "symbol": "NatTag.Style.defaultAlert",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
+      "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Tag/NatTag+Style.swift",
+      "line": 20,
+      "symbol": "NatTag.Style.leftAlert",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Tag/NatTag+Style.swift",
+      "line": 26,
+      "symbol": "NatTag.Style.rightAlert",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Tag/NatTag.swift",
-      "line": 41,
+      "line": 45,
       "symbol": "NatTag.init(style:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Tag/NatTag.swift",
-      "line": 97,
+      "line": 111,
       "symbol": "NatTag.draw(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/Tag/NatTag.swift",
-      "line": 101,
+      "line": 115,
       "symbol": "NatTag.configure(text:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -1402,7 +1360,7 @@
     },
     {
       "file": "/Users/lavitorpires/Documents/Natds/natds-ios-master/Sources/Public/Components/ValueText/ValueTextHighlight.swift",
-      "line": 54,
+      "line": 58,
       "symbol": "ValueTextHighlight.init(frame:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

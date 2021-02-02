@@ -16,7 +16,7 @@
     <header>
       <div class="content-wrapper">
         <p>
-          <a href="../index.html">NatDS 2.12.0 Docs</a>
+          <a href="../index.html">NatDS 3.2.0 Docs</a>
           <span class="no-mobile"> (23% documented)</span>
         </p>
     
@@ -58,13 +58,16 @@
 <li>Text</li>
 <li>Name</li>
 <li>Number</li>
-<li><p>Password</p>
-<pre class="highlight swift"><code>     <span class="kt">Example</span> <span class="n">of</span> <span class="nv">usage</span><span class="p">:</span>
-    <span class="o">-</span> <span class="n">textField</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="o">.</span><span class="n">text</span>
-    <span class="o">-</span> <span class="n">textField</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="o">.</span><span class="n">name</span>
-    <span class="o">-</span> <span class="n">textField</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="o">.</span><span class="n">number</span>
-    <span class="o">-</span> <span class="n">textField</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="o">.</span><span class="nf">password</span><span class="p">(</span><span class="nv">keyboardType</span><span class="p">:</span> <span class="o">.</span><span class="n">numberPad</span><span class="p">)</span>
-</code></pre></li>
+<li>Password</li>
+</ul>
+
+<p>Example of usage:</p>
+
+<ul>
+<li>textField.type = .text</li>
+<li>textField.type = .name</li>
+<li>textField.type = .number</li>
+<li>textField.type = .password(keyboardType: .numberPad)</li>
 </ul>
 
 <p>This TextField has 3 States:</p>
@@ -93,14 +96,13 @@
 <li>natTextFieldDidEndEditing</li>
 <li>natTextFieldEditingChanged</li>
 <li>natTextFieldShouldBeginEditing</li>
-<li><p>natTextField</p>
-<div class="aside aside-requires">
+<li><p>natTextField</p></li>
+</ul><div class="aside aside-requires">
     <p class="aside-title">Requires</p>
-    It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.
-DesignSystem().configure(with: AvailableTheme)
+    <p>It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.
+DesignSystem().configure(with: AvailableTheme)</p>
 
-</div></li>
-</ul>
+</div>
 
             </section>
             <section class="section task-group-section">
@@ -381,6 +383,33 @@ DesignSystem().configure(with: AvailableTheme)
                   <li class="item">
                     <div>
                       <code>
+                      <a name="/s:5NatDS9TextFieldC18showVisibilityIconyyF"></a>
+                      <a name="//apple_ref/swift/Method/showVisibilityIcon()" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS9TextFieldC18showVisibilityIconyyF">showVisibilityIcon()</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">showVisibilityIcon</span><span class="p">()</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
                       <a name="/c:@CM@NatDS@objc(cs)TextField(im)textFieldDidBeginEditing:"></a>
                       <a name="//apple_ref/swift/Method/textFieldDidBeginEditing(_:)" class="dashAnchor"></a>
                       <a class="token" href="#/c:@CM@NatDS@objc(cs)TextField(im)textFieldDidBeginEditing:">textFieldDidBeginEditing(_:<wbr>)</a>
@@ -587,12 +616,6 @@ DesignSystem().configure(with: AvailableTheme)
                   <a href="../Classes/NatProgressIndicatorCircular/Size.html">– Size</a>
                 </li>
                 <li class="nav-group-task">
-                  <a href="../Classes/NatSelectionControl.html">NatSelectionControl</a>
-                </li>
-                <li class="nav-group-task">
-                  <a href="../Classes/NatSelectionControl/Style.html">– Style</a>
-                </li>
-                <li class="nav-group-task">
                   <a href="../Classes/NatShortcut.html">NatShortcut</a>
                 </li>
                 <li class="nav-group-task">
@@ -624,9 +647,6 @@ DesignSystem().configure(with: AvailableTheme)
                 </li>
                 <li class="nav-group-task">
                   <a href="../Classes/SearchBar.html">SearchBar</a>
-                </li>
-                <li class="nav-group-task">
-                  <a href="../Classes/ShortcutView.html">ShortcutView</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Classes/Tab.html">Tab</a>
@@ -772,7 +792,7 @@ DesignSystem().configure(with: AvailableTheme)
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2021-01-12)</p>
+          <p>&copy; 2021 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2021-02-02)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </div>
