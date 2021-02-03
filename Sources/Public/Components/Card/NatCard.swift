@@ -1,4 +1,14 @@
 import UIKit
+/**
+ NatCard is a class that represents Card component from the design system.
+
+ It's necessary instantiate and set its constraints.
+
+ - Requires:
+ It's necessary to configure the Design System with a theme or fatalError will be raised.
+
+ DesignSystem().configure(with: AvailableTheme)
+ */
 
 public final class NatCard: UIView {
 
