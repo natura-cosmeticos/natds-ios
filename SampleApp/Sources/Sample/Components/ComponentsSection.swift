@@ -7,6 +7,7 @@ class ComponentsSection: SampleSection {
         AppSearchBarViewController.self,
         BadgeViewController.self,
         ButtonsItemViewController.self,
+        CardViewController.self,
         DialogItemViewController.self,
         DividerViewController.self,
         ExpansionPanelViewController.self,

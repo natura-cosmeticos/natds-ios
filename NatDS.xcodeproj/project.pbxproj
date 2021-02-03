@@ -170,6 +170,7 @@
 		79FC597325C3332C001CCB56 /* Divider+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC597225C3332C001CCB56 /* Divider+Style.swift */; };
 		79FC597925C83E17001CCB56 /* Divider+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC597825C83E17001CCB56 /* Divider+Spec.swift */; };
 		79FC598125C845E4001CCB56 /* Divider+Styles+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC598025C845E4001CCB56 /* Divider+Styles+Spec.swift */; };
+		79FC598A25CAE199001CCB56 /* NatCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC598925CAE198001CCB56 /* NatCard.swift */; };
 		7C00D9B09D306A421DBD99953C7BC9E4 /* NatElevation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2775F568C47ADB6D5DA7B7AFA4A41B4E /* NatElevation.swift */; };
 		7CA6BAC353B73AF5D31F09CAF0268EE5 /* DesignSystemFatalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E6D9764598D210D58B32B2AEB0FE9 /* DesignSystemFatalError.swift */; };
 		7D19998925756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19998825756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift */; };
@@ -517,6 +518,7 @@
 		79FC597225C3332C001CCB56 /* Divider+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Divider+Style.swift"; sourceTree = "<group>"; };
 		79FC597825C83E17001CCB56 /* Divider+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Divider+Spec.swift"; sourceTree = "<group>"; };
 		79FC598025C845E4001CCB56 /* Divider+Styles+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Divider+Styles+Spec.swift"; sourceTree = "<group>"; };
+		79FC598925CAE198001CCB56 /* NatCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatCard.swift; sourceTree = "<group>"; };
 		7CCF632B4501044E5062C574CCBBF74E /* NatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatButton.swift; sourceTree = "<group>"; };
 		7D19998825756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatProgressIndicatorCircular+Size.swift"; sourceTree = "<group>"; };
 		7D3D59142593D1B500C9197B /* UIImageView+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+UIColor.swift"; sourceTree = "<group>"; };
@@ -1388,6 +1390,14 @@
 			path = Divider;
 			sourceTree = "<group>";
 		};
+		79FC598825CAE181001CCB56 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				79FC598925CAE198001CCB56 /* NatCard.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
 		7AB7FF70C9AEA25A8E77912E1563B1EE /* DomainFunctions */ = {
 			isa = PBXGroup;
 			children = (
@@ -2026,6 +2036,7 @@
 				265B17E924AFA0DA00FD0407 /* Badge */,
 				AAA7C27FE8E04EF2103505C58C128D34 /* Bar */,
 				F39AE9E5CB68E8C7A269525355E8E4D3 /* Button */,
+				79FC598825CAE181001CCB56 /* Card */,
 				78FE21C8815B7AED38811BF6BEB37BF0 /* Dialog */,
 				B765E7CB5E163C38B6106556601A6CCA /* Divider */,
 				9A95973E20D8800C2A72454FF93AEC3F /* ExpansionPanel */,
@@ -2837,6 +2848,7 @@
 				4612CED8B9691035EFA62E01E2B30FD6 /* Field.swift in Sources */,
 				84BC900824AA1678007DF09D /* NatDialogController+AlertStyleBuilder.swift in Sources */,
 				84BF066724B4A8DA00462AC5 /* ShortcutContainedStyle.swift in Sources */,
+				79FC598A25CAE199001CCB56 /* NatCard.swift in Sources */,
 				758EE01159A6E7AFC7217055678D4ED3 /* FontIconStyle.swift in Sources */,
 				269C886224C23B0100A507BE /* UINavigationController+Configure.swift in Sources */,
 				F01F3CA72313B3C97F42498878234A82 /* FontStyle.swift in Sources */,
