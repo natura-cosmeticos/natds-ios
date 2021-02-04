@@ -2,7 +2,12 @@ import UIKit
 /**
  NatCard is a class that represents Card component from the design system.
 
- It's necessary instantiate and set its constraints.
+ It's necessary instantiate and set its height and widht constraints.
+
+ Example of usage:
+
+     card.configure(elevation: true)
+     card.configure(borderRadius: true)
 
  - Requires:
  It's necessary to configure the Design System with a theme or fatalError will be raised.
@@ -14,7 +19,9 @@ public final class NatCard: UIView {
 
     public init() {
         super.init(frame: .zero)
-        setup()
+        self.backgroundColor = getUIColorFromTokens(\.colorSurface)
+
+        setupPadding()
     }
 
     @available(*, unavailable)
@@ -22,12 +29,20 @@ public final class NatCard: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    private func setup() {
-        self.backgroundColor = getUIColorFromTokens(\.colorSurface)
-        self.layer.cornerRadius = getTokenFromTheme(\.borderRadiusMedium)
-        NatElevation.apply(on: self, elevation: .micro)
-
+    private func setupPadding() {
         let padding = getTokenFromTheme(\.sizeSmall)
         bounds = frame.inset(by: UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding))
+    }
+
+    public func configure(elevation: Bool) {
+        if elevation {
+            NatElevation.apply(on: self, elevation: .micro)
+        }
+    }
+
+    public func configure(borderRadius: Bool) {
+        if borderRadius {
+            self.layer.cornerRadius = getTokenFromTheme(\.borderRadiusMedium)
+        }
     }
 }

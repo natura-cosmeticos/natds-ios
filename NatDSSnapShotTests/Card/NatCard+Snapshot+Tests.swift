@@ -10,13 +10,41 @@ final class NatCardSnapshotTests: XCTestCase {
         super.setUp()
 
         superview = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
-        superview.backgroundColor = .white
 
         ConfigurationStorage.shared.currentTheme = NaturaLightTheme()
+        superview.backgroundColor = NatColors.background
     }
 
-    func test_NatCard_hasValidSnapshot() {
+    func test_NatCard_basic_hasValidSnapshot() {
         let systemUnderTest = NatCard()
+        superview.addSubview(systemUnderTest)
+        addConstraints(systemUnderTest)
+
+        assertSnapshot(matching: superview, as: .image)
+    }
+
+    func test_NatCard_with_elevation_hasValidSnapshot() {
+        let systemUnderTest = NatCard()
+        systemUnderTest.configure(elevation: true)
+        superview.addSubview(systemUnderTest)
+        addConstraints(systemUnderTest)
+
+        assertSnapshot(matching: superview, as: .image)
+    }
+
+    func test_NatCard_with_border_Radius_hasValidSnapshot() {
+        let systemUnderTest = NatCard()
+        systemUnderTest.configure(borderRadius: true)
+        superview.addSubview(systemUnderTest)
+        addConstraints(systemUnderTest)
+
+        assertSnapshot(matching: superview, as: .image)
+    }
+
+    func test_NatCard_with_elevation_and_border_Radius_hasValidSnapshot() {
+        let systemUnderTest = NatCard()
+        systemUnderTest.configure(elevation: true)
+        systemUnderTest.configure(borderRadius: true)
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 

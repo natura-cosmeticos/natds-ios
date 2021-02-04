@@ -107,7 +107,7 @@ final class NatElevationsSpec: QuickSpec {
     }
 }
 
-fileprivate extension UIView {
+internal extension UIView {
     func getElevationSet() -> NatElevation.ElevationAttributes {
         .init(
             shadowColor: layer.shadowColor,
