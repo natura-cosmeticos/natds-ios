@@ -13,6 +13,7 @@ import UIKit
  It's necessary to configure the Design System with a theme or fatalError will be raised.
 
  DesignSystem().configure(with: AvailableTheme)
+ 
  */
 
 public final class NatCard: UIView {
