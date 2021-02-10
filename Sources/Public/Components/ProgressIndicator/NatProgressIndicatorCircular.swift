@@ -59,16 +59,24 @@ public class NatProgressIndicatorCircular: UIView {
 
     // MARK: - Public methods
 
-    public func configure(with action: Action) {
+    public func configure(with action: Action, size: Size = .large) {
         switch action {
         case .showAndStartAnimation:
-            configureSemiCircle(semiCircleLayer: semiCircleLayer)
+            configureSemiCircle(semiCircleLayer: semiCircleLayer, size: size.value)
             semiCircleLayer.add(rotationAnimation(), forKey: Constants.semiCircleRotationAnimation)
             layer.addSublayer(semiCircleLayer)
             isHidden = false
         case .hideAndStopAnimation:
             isHidden = true
             semiCircleLayer.removeAllAnimations()
+        }
+    }
+
+    public func configure(useBackgroundLayer: Bool) {
+        if useBackgroundLayer {
+            backgroundColor = .blue
+            layer.cornerRadius = frame.size.width/2
+            clipsToBounds = true
         }
     }
 
@@ -84,18 +92,32 @@ public class NatProgressIndicatorCircular: UIView {
         return rotationAnimation
     }
 
-    private func createCirclePath() -> UIBezierPath {
-        .init(
+    private func createCirclePath(size: CGFloat) -> UIBezierPath {
+
+        let circlePath = UIBezierPath(
             arcCenter: CGPoint(x: semiCircleLayer.bounds.midX, y: semiCircleLayer.bounds.midY),
-            radius: getTokenFromTheme(\.sizeStandard)-getTokenFromTheme(\.sizeMicro),
+            radius: CGFloat(size/2),
             startAngle: CGFloat(Double.pi),
             endAngle: CGFloat(Double.pi * 2.5),
-            clockwise: true
-        )
+            clockwise: true)
+
+        return circlePath
     }
 
-    private func configureSemiCircle(semiCircleLayer: CAShapeLayer) {
-        semiCircleLayer.path = createCirclePath().cgPath
+    private func createCircleBackground(size: CGFloat) -> UIBezierPath {
+
+        let circleBackground = UIBezierPath(
+            arcCenter: CGPoint(x: semiCircleLayer.bounds.midX, y: semiCircleLayer.bounds.midY),
+            radius: CGFloat(size/2 + 4),
+            startAngle: CGFloat(Double.pi),
+            endAngle: CGFloat(Double.pi * 2.5),
+            clockwise: true)
+
+        return circleBackground
+    }
+
+    private func configureSemiCircle(semiCircleLayer: CAShapeLayer, size: CGFloat) {
+        semiCircleLayer.path = createCirclePath(size: size).cgPath
         semiCircleLayer.strokeColor = getUIColorFromTokens(\.colorPrimary).cgColor
         semiCircleLayer.fillColor = .none
         semiCircleLayer.lineWidth = getTokenFromTheme(\.sizeMicro)

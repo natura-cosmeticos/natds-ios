@@ -13,7 +13,8 @@ class ProgressIndicatorItemViewController: UIViewController, SampleItem {
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        progressIndicator.configure(with: .showAndStartAnimation)
+        progressIndicator.configure(with: .showAndStartAnimation, size: .small)
+        progressIndicator.configure(useBackgroundLayer: true)
     }
 
     private func addProgressIndicator() {
@@ -24,8 +25,8 @@ class ProgressIndicatorItemViewController: UIViewController, SampleItem {
         NSLayoutConstraint.activate([
             progressIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             progressIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            progressIndicator.heightAnchor.constraint(equalToConstant: NatProgressIndicatorCircular.Size.standard),
-            progressIndicator.widthAnchor.constraint(equalToConstant: NatProgressIndicatorCircular.Size.standard)
+            progressIndicator.heightAnchor.constraint(equalToConstant: 100),
+            progressIndicator.widthAnchor.constraint(equalToConstant: 100)
         ])
 
     }
