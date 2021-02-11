@@ -114,7 +114,6 @@ platform :ios do
       distribute_external: false,
       skip_submission: true,
       skip_waiting_for_build_processing: true,
-      username: "systemteamopensource@natura.net",
     )
 
     clean_build_artifacts
