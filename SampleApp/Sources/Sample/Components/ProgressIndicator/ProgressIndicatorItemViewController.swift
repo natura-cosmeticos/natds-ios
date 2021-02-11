@@ -8,7 +8,7 @@ class ProgressIndicatorItemViewController: UIViewController, SampleItem {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = Self.name
-        view.backgroundColor = .blue//NatColors.background
+        view.backgroundColor = NatColors.background
         addProgressIndicator()
     }
 

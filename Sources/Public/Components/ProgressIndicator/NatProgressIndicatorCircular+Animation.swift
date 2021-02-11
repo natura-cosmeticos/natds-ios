@@ -22,17 +22,17 @@ extension NatProgressIndicatorCircular {
             strokeFreezeAnimation()
         ]
         animation.repeatCount = .infinity
-        
+
         return animation
     }
-    
+
     private func strokeStartAnimation() -> CABasicAnimation {
         let animation = CABasicAnimation(keyPath: Constants.strokeStart)
         animation.duration = 1
         animation.fromValue = 0
         animation.toValue = 0.15
         animation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
-        
+
         return animation
     }
 

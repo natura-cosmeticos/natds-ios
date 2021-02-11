@@ -40,7 +40,7 @@ public class NatProgressIndicatorCircular: UIView {
     // MARK: - Private properties
 
     private var semiCircleLayer = CAShapeLayer()
-    private var circleLayer = CAShapeLayer()
+    internal var circleLayer = CAShapeLayer()
 
     // MARK: - Inits
 
