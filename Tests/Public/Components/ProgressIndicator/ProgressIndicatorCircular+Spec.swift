@@ -37,6 +37,11 @@ class ProgressIndicatorCircularSpec: QuickSpec {
             it("adds backgroundLayer") {
                 expect(systemUnderTest.circleLayer.fillColor).to(equal(UIColor.white.cgColor))
             }
+
+            it("removes backgroundLayer") {
+                systemUnderTest.configure(useBackgroundLayer: false)
+                expect(systemUnderTest.circleLayer.fillColor).to(equal(UIColor.clear.cgColor))
+            }
         }
 
         describe("#isProgressHidden") {

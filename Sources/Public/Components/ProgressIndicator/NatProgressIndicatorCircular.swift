@@ -70,6 +70,8 @@ public class NatProgressIndicatorCircular: UIView {
         if useBackgroundLayer {
             circleLayer.fillColor =  UIColor.white.cgColor
             clipsToBounds = true
+        } else {
+            circleLayer.fillColor =  UIColor.clear.cgColor
         }
     }
 
