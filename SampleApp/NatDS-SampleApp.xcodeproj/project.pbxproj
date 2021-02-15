@@ -33,6 +33,8 @@
 		79B6AC8A25AF87500027F7D6 /* BadgeableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B6AC8925AF87500027F7D6 /* BadgeableView.swift */; };
 		79FC599025CAE5D0001CCB56 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC598F25CAE5D0001CCB56 /* CardViewController.swift */; };
 		79FC59E625DAB5A7001CCB56 /*  ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC59E525DAB5A6001CCB56 /*  ImageViewController.swift */; };
+		7D75A45A25DB0BA50050ACA9 /* AvatarItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D75A45925DB0BA50050ACA9 /* AvatarItemViewController.swift */; };
+		7D75A46825DD60E30050ACA9 /* UIImage+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D75A46725DD60E30050ACA9 /* UIImage+UIColor.swift */; };
 		8402F4E624F932E70018149C /* IconButtonItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402F4E524F932E70018149C /* IconButtonItemViewController.swift */; };
 		8409B9312507B9E2006ED4EA /* CustomSplashViewController+GradientBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409B9302507B9E2006ED4EA /* CustomSplashViewController+GradientBackgroundView.swift */; };
 		842EA8AB25082B60009AE473 /* ChooseBrandHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842EA8AA25082B60009AE473 /* ChooseBrandHeader.swift */; };
@@ -107,6 +109,8 @@
 		79B6AC8925AF87500027F7D6 /* BadgeableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeableView.swift; sourceTree = "<group>"; };
 		79FC598F25CAE5D0001CCB56 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		79FC59E525DAB5A6001CCB56 /*  ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " ImageViewController.swift"; sourceTree = "<group>"; };
+		7D75A45925DB0BA50050ACA9 /* AvatarItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarItemViewController.swift; sourceTree = "<group>"; };
+		7D75A46725DD60E30050ACA9 /* UIImage+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIImage+UIColor.swift"; path = "../../../Sources/Core/Extensions/UIImage+UIColor.swift"; sourceTree = "<group>"; };
 		8402F4E524F932E70018149C /* IconButtonItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButtonItemViewController.swift; sourceTree = "<group>"; };
 		8409B9302507B9E2006ED4EA /* CustomSplashViewController+GradientBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomSplashViewController+GradientBackgroundView.swift"; sourceTree = "<group>"; };
 		842EA8AA25082B60009AE473 /* ChooseBrandHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseBrandHeader.swift; sourceTree = "<group>"; };
@@ -248,6 +252,7 @@
 		42CA660B6D99BC41804F8F3DFFF846E2 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				7D75A46625DD60D50050ACA9 /* Extensions */,
 				9DE43D2630BC7A2BC76DE6043192AFF4 /* Sample */,
 				BBBD9AE748A7F062C343564EE84A8A71 /* Supporting Files */,
 				A9EB78FC7F0EEE4914F65F61B2E74031 /* AppDelegate.swift */,
@@ -291,6 +296,22 @@
 				79FC59E525DAB5A6001CCB56 /*  ImageViewController.swift */,
 			);
 			path = Image;
+			sourceTree = "<group>";
+		};
+		7D75A45825DB0B940050ACA9 /* Avatar */ = {
+			isa = PBXGroup;
+			children = (
+				7D75A45925DB0BA50050ACA9 /* AvatarItemViewController.swift */,
+			);
+			path = Avatar;
+			sourceTree = "<group>";
+		};
+		7D75A46625DD60D50050ACA9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7D75A46725DD60E30050ACA9 /* UIImage+UIColor.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		8402F4E424F932570018149C /* IconButton */ = {
@@ -348,6 +369,7 @@
 		86D88A8EB08915984C5FB6D277F7A6FA /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				7D75A45825DB0B940050ACA9 /* Avatar */,
 				265B17EC24AFBE2A00FD0407 /* Badge */,
 				0E3F579024B90E79004B2F9E /* AppBar */,
 				D8DBFA16188C4BCC7FE097B676C32FF8 /* Bar */,
@@ -736,6 +758,7 @@
 				8402F4E624F932E70018149C /* IconButtonItemViewController.swift in Sources */,
 				E85844B6881ACA2A4AD480885DC8B068 /* OpacityViewController.swift in Sources */,
 				00CF8C7E79BD696D97099B654E925BE0 /* SampleItem.swift in Sources */,
+				7D75A46825DD60E30050ACA9 /* UIImage+UIColor.swift in Sources */,
 				E061B6B85CEFBAE9AE8A8079DEF9E0A4 /* SampleSection.swift in Sources */,
 				79FC599025CAE5D0001CCB56 /* CardViewController.swift in Sources */,
 				842EA8AB25082B60009AE473 /* ChooseBrandHeader.swift in Sources */,
@@ -750,6 +773,7 @@
 				FD3C1A6EDAD5F31BC9E4984E981C28A8 /* TabItemViewController.swift in Sources */,
 				B5D960A174519D837D9855D4B0A6711B /* TextFieldItemViewController.swift in Sources */,
 				79FC59E625DAB5A7001CCB56 /*  ImageViewController.swift in Sources */,
+				7D75A45A25DB0BA50050ACA9 /* AvatarItemViewController.swift in Sources */,
 				D2874BA3C6A03754EC9895DC95D6DFE5 /* TypographyCell.swift in Sources */,
 				4FB74E3BCCB54EE2242A9A78778F6024 /* TypographyViewController.swift in Sources */,
 				5A95C641E43BCD63CA21359C8EAFBA25 /* ValueTextHighlightItemViewController.swift in Sources */,
