@@ -2,10 +2,11 @@ import UIKit
 
 public class NatImage: UIView {
 
-    private lazy var defaultImageView: UIImageView = {
+    internal lazy var defaultImageView: UIImageView = {
         let imageView = UIImageView()
         let image = AssetsPath.iconOutlinedProductEmptyBackground.rawValue
         imageView.image = image
+        
         return imageView
     }()
 
@@ -39,7 +40,7 @@ public class NatImage: UIView {
         if setOverlay {
             overlay.layer.backgroundColor = NatColors
                 .onSurface
-                .withAlphaComponent(getTokenFromTheme(\.opacityHigh))
+                .withAlphaComponent(getTokenFromTheme(\.opacityMedium))
                 .cgColor
 
             setFullConstraints(to: overlay)
@@ -53,25 +54,20 @@ public class NatImage: UIView {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
 
-        if let setImage = setImage {
+        defaultImageView.removeFromSuperview()
 
-            image.image = setImage
-            defaultImageView.removeFromSuperview()
-            
-            addSubview(image)
-            sendSubviewToBack(image)
+        image.image = setImage ?? defaultImageView.image
 
-            setFullConstraints(to: image)
+        addSubview(image)
+        sendSubviewToBack(image)
 
-        } else {
-            addDefaultImage()
-        }
+        setFullConstraints(to: image)
     }
 
     private func addDefaultImage() {
         addSubview(defaultImageView)
         defaultImageView.translatesAutoresizingMaskIntoConstraints = false
-
+        
         setFullConstraints(to: defaultImageView)
 
     }

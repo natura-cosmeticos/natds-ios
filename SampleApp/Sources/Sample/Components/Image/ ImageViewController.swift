@@ -11,7 +11,6 @@ class ImageViewController: UIViewController, SampleItem {
         title = Self.name
         view.backgroundColor = NatColors.background
         image.configure(setBorderRadius: true)
-        image.configure(setOverlay: false)
         setup()
     }
 
