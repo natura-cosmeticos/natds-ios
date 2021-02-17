@@ -1,11 +1,11 @@
 import UIKit
 /**
  NatProgressIndicatorCircular is a class that represents progress indicator circular component from the Design System.
- The component colors changes according with the current theme configured in the Design System.
+ The component colors changes according to the current theme configured in the Design System.
 
  This component has 2 actions:
- - showAndStartAnimation
- - hideAndStopAnimation
+    - showAndStartAnimation
+    - hideAndStopAnimation
 
  Example of usage:
  - progressIndicator.configure(state: .showAndStartAnimation)
