@@ -102,7 +102,12 @@ platform :ios do
         xcodeproj: "SampleApp/NatDS-SampleApp.xcodeproj"
       )
     end
-    
+
+    app_store_connect_api_key(
+      key_id: ENV["APP_STORE_CONNECT_KEY_ID"], 
+      issuer_id: ENV["APP_STORE_CONNECT_ISSUER_ID"],
+      key_filepath: ENV["APP_STORE_CONNECT_API_KEY_FILE_PATH"])
+
     build_ipa(
       scheme: options[:scheme],
       method: options[:method], 
@@ -114,7 +119,6 @@ platform :ios do
       distribute_external: false,
       skip_submission: true,
       skip_waiting_for_build_processing: true,
-      username: "systemteamopensource@natura.net",
     )
 
     clean_build_artifacts
