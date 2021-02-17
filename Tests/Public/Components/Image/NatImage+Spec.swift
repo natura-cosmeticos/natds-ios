@@ -63,13 +63,13 @@ final class NatImageSpec: QuickSpec {
             }
 
             it("returns set image") {
-                systemUnderTest.configure(setImage: AssetsPath.iconOutlinedDefaultMockup.rawValue)
+                systemUnderTest.configure(setImage: AssetsPath.iconOutlinedDefaultMockupBackground.rawValue)
 
                 let setImage = systemUnderTest.subviews
                     .compactMap { $0 as? UIImageView }
                     .first
 
-                expect(setImage?.image).to(equal(AssetsPath.iconOutlinedDefaultMockup.rawValue))
+                expect(setImage?.image).to(equal(AssetsPath.iconOutlinedDefaultMockupBackground.rawValue))
             }
 
         }

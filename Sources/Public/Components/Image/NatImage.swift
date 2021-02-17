@@ -67,7 +67,7 @@ public class NatImage: UIView {
     private func addDefaultImage() {
         addSubview(defaultImageView)
         defaultImageView.translatesAutoresizingMaskIntoConstraints = false
-        
+
         setFullConstraints(to: defaultImageView)
 
     }
