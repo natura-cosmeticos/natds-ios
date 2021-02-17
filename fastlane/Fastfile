@@ -104,9 +104,9 @@ platform :ios do
     end
 
     app_store_connect_api_key(
-      key_id: $APP_STORE_CONNECT_KEY_ID, 
-      issuer_id: $APP_STORE_CONNECT_ISSUER_ID,
-      key_filepath: $BITRISEIO_APP_STORE_CONNECT_API_KEY_URL)
+      key_id: ENV["APP_STORE_CONNECT_KEY_ID"], 
+      issuer_id: ENV["APP_STORE_CONNECT_ISSUER_ID"],
+      key_filepath: ENV["BITRISEIO_APP_STORE_CONNECT_API_KEY_URL"])
 
     build_ipa(
       scheme: options[:scheme],
