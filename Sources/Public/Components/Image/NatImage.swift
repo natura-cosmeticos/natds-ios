@@ -26,7 +26,6 @@ public class NatImage: UIView {
             self.layoutIfNeeded()
             layer.cornerRadius = getTokenFromTheme(\.borderRadiusMedium)
             clipsToBounds = true
-
         } else {
             layer.cornerRadius = 0
         }
@@ -42,20 +41,18 @@ public class NatImage: UIView {
                 .onSurface
                 .withAlphaComponent(getTokenFromTheme(\.opacityMedium))
                 .cgColor
-
             setFullConstraints(to: overlay)
-
         } else {
             overlay.layer.backgroundColor = UIColor.clear.cgColor
         }
     }
 
     public func configure(setImage: UIImage?) {
+        defaultImageView.removeFromSuperview()
+        
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-
-        defaultImageView.removeFromSuperview()
-
+        image.contentMode = .scaleAspectFit
         image.image = setImage ?? defaultImageView.image
 
         addSubview(image)
@@ -69,7 +66,6 @@ public class NatImage: UIView {
         defaultImageView.translatesAutoresizingMaskIntoConstraints = false
 
         setFullConstraints(to: defaultImageView)
-
     }
 
     private func setFullConstraints(to object: AnyObject) {

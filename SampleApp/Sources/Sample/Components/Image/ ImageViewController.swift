@@ -24,5 +24,4 @@ class ImageViewController: UIViewController, SampleItem {
             image.widthAnchor.constraint(equalToConstant: 200)
         ])
     }
-
 }
