@@ -17,7 +17,7 @@ final class ImageSnapshotTests: XCTestCase {
 
     func test_image_defaultImage_fallback_hasValidSnapshot() {
         let systemUnderTest = NatImage()
-        systemUnderTest.configure(setImage: UIImage(named: "worngImage"))
+        systemUnderTest.configure(setImage: UIImage(named: "wrongImage"))
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 

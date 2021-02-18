@@ -53,7 +53,7 @@ final class NatImageSpec: QuickSpec {
             }
 
             it("returns defaultImage as fallback") {
-                systemUnderTest.configure(setImage: UIImage(named: "worngImage"))
+                systemUnderTest.configure(setImage: UIImage(named: "wrongImage"))
 
                 let defaultImage = systemUnderTest.subviews
                     .compactMap { $0 as? UIImageView }
