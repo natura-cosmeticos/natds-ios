@@ -26,7 +26,7 @@ final class CardViewController: UIViewController, SampleItem {
             card.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             card.heightAnchor.constraint(equalToConstant: 200),
             card.widthAnchor.constraint(equalToConstant: 200)
-            ]
+        ]
 
         NSLayoutConstraint.activate(constraints)
     }

@@ -1,8 +1,8 @@
 import UIKit
 /**
- NatCard is a class that represents Card component from the design system.
+ NatCard is a class that represents the Card component from the design system.
 
- It's necessary instantiate and set its height and widht constraints.
+ It's necessary to instantiate and set its height and width constraints.
 
  Example of usage:
 
@@ -34,15 +34,21 @@ public final class NatCard: UIView {
         bounds = frame.inset(by: UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding))
     }
 
+    // MARK: - Public methods
+    
     public func configure(elevation: Bool) {
         if elevation {
             NatElevation.apply(on: self, elevation: .micro)
+        } else {
+            NatElevation.apply(on: self, elevation: .none)
         }
     }
 
     public func configure(borderRadius: Bool) {
         if borderRadius {
             self.layer.cornerRadius = getTokenFromTheme(\.borderRadiusMedium)
+        } else {
+            self.layer.cornerRadius = getTokenFromTheme(\.borderRadiusNone)
         }
     }
 }
