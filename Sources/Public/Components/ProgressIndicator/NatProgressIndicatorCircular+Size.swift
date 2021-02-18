@@ -1,12 +1,17 @@
 extension NatProgressIndicatorCircular {
-    /**
-     Size is a enum that represents sizes values for the NatProgressIndicatorCircular component.
-     It helps to configure height and width constraints.
+    public enum Size: CGFloat {
+        case standard
+        case semi
+        case medium
+        case large
 
-        These are all sizes allowed for a NatProgressIndicatorCircular:
-        - standard
-    */
-    public enum Size {
-        public static var standard: CGFloat { getTokenFromTheme(\.sizeMedium) }
+        var value: CGFloat {
+            switch self {
+            case .standard: return getTokenFromTheme(\.sizeStandard)
+            case .semi: return getTokenFromTheme(\.sizeSemi)
+            case .medium: return getTokenFromTheme(\.sizeMedium)
+            case .large: return getTokenFromTheme(\.sizeLarge)
+            }
+        }
     }
 }

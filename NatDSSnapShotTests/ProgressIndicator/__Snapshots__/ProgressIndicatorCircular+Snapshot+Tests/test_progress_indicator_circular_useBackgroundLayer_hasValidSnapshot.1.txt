@@ -1,0 +1,4 @@
+<UIView; frame = (0 0; 200 200); layer = <CALayer>>
+   | <NatDS.NatProgressIndicatorCircular; frame = (50 50; 100 100); clipsToBounds = YES; layer = <CALayer>>
+   |    | <CAShapeLayer> (layer)
+   |    |    | <CAShapeLayer> (layer)

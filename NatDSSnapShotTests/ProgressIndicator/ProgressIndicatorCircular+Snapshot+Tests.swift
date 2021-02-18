@@ -13,16 +13,26 @@ final class ProgressIndicatorCircularSnapshotTests: XCTestCase {
         superview.backgroundColor = .white
 
         ConfigurationStorage.shared.currentTheme = NaturaLightTheme()
+        superview.backgroundColor = getUIColorFromTokens(\.colorBackground)
     }
 
     func test_progress_indicator_circular_hasValidSnapshot() {
         let systemUnderTest = NatProgressIndicatorCircular()
-
         systemUnderTest.configure(with: .showAndStartAnimation)
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image(precision: 0.97))
+        assertSnapshot(matching: superview, as: .recursiveDescription)
+    }
+
+    func test_progress_indicator_circular_useBackgroundLayer_hasValidSnapshot() {
+        let systemUnderTest = NatProgressIndicatorCircular()
+        systemUnderTest.configure(with: .showAndStartAnimation)
+        systemUnderTest.configure(useBackgroundLayer: true)
+        superview.addSubview(systemUnderTest)
+        addConstraints(systemUnderTest)
+
+        assertSnapshot(matching: superview, as: .recursiveDescription)
     }
 
     private func addConstraints(_ systemUnderTest: UIView) {
@@ -30,9 +40,13 @@ final class ProgressIndicatorCircularSnapshotTests: XCTestCase {
         systemUnderTest.translatesAutoresizingMaskIntoConstraints = false
 
         let constraints = [
-            systemUnderTest.topAnchor.constraint(equalTo: superview.topAnchor, constant: 40),
+            systemUnderTest.topAnchor.constraint(equalTo: superview.topAnchor, constant: 50),
+            systemUnderTest.leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: 50),
+
             systemUnderTest.centerXAnchor.constraint(equalTo: superview.centerXAnchor),
-            systemUnderTest.centerYAnchor.constraint(equalTo: superview.centerYAnchor)
+            systemUnderTest.centerYAnchor.constraint(equalTo: superview.centerYAnchor),
+            systemUnderTest.heightAnchor.constraint(equalToConstant: 100),
+            systemUnderTest.widthAnchor.constraint(equalToConstant: 100)
         ]
         NSLayoutConstraint.activate(constraints)
     }

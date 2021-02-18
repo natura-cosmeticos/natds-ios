@@ -1,37 +1,37 @@
 import UIKit
 /**
  NatProgressIndicatorCircular is a class that represents progress indicator circular component from the Design System.
- The component colors changes according with the current theme configured in the Design System.
+ The component colors changes according to the current theme configured in the Design System.
 
  This component has 2 actions:
- - showAndStartAnimation
- - hideAndStopAnimation
+    - showAndStartAnimation
+    - hideAndStopAnimation
 
-         Example of usage:
-         - progressIndicator.configure(state: .showAndStartAnimation)
-         - hiddenProgressIndicator.configure(state: .hideAndStopAnimation)
+ Example of usage:
+ - progressIndicator.configure(state: .showAndStartAnimation)
+ - hiddenProgressIndicator.configure(state: .hideAndStopAnimation)
 
  This progress indicator has a pre-defined radius value with NatSizes.Standard.
  The constraints for width and height should use the pre-defined size:
  
-     Example of usage:
-     - progressIndicator.heightAnchor.constraint(equalToConstant: NatProgressIndicatorCircular.Size.standard)
-     - progressIndicator.widthAnchor.constraint(equalToConstant: NatProgressIndicatorCircular.Size.standard)
+ Example of usage:
+ - progressIndicator.heightAnchor.constraint(equalToConstant: NatProgressIndicatorCircular.Size.standard)
+ - progressIndicator.widthAnchor.constraint(equalToConstant: NatProgressIndicatorCircular.Size.standard)
 
  - Requires:
-    It's necessary to configure the Design System with a theme or fatalError will be raised.
+ It's necessary to configure the Design System with a theme or fatalError will be raised.
  
-        DesignSystem().configure(with: AvailableTheme)
+ DesignSystem().configure(with: AvailableTheme)
  */
 
 public class NatProgressIndicatorCircular: UIView {
     /**
      Action is a enum that represents actions for the NatProgressIndicatorCircular component.
 
-        These are all sizes allowed for a NatProgressIndicatorCircular:
-        - showAndStartAnimation
-        - hideAndStopAnimation
-    */
+     These are all sizes allowed for a NatProgressIndicatorCircular:
+     - showAndStartAnimation
+     - hideAndStopAnimation
+     */
     public enum Action {
         case showAndStartAnimation
         case hideAndStopAnimation
@@ -40,11 +40,7 @@ public class NatProgressIndicatorCircular: UIView {
     // MARK: - Private properties
 
     private var semiCircleLayer = CAShapeLayer()
-
-    private enum Constants {
-        static let rotationAnimationKey = "transform.rotation.z"
-        static let semiCircleRotationAnimation = "rotationAnimation"
-    }
+    internal var circleLayer = CAShapeLayer()
 
     // MARK: - Inits
 
@@ -59,12 +55,10 @@ public class NatProgressIndicatorCircular: UIView {
 
     // MARK: - Public methods
 
-    public func configure(with action: Action) {
+    public func configure(with action: Action, size: Size = .medium) {
         switch action {
         case .showAndStartAnimation:
-            configureSemiCircle(semiCircleLayer: semiCircleLayer)
-            semiCircleLayer.add(rotationAnimation(), forKey: Constants.semiCircleRotationAnimation)
-            layer.addSublayer(semiCircleLayer)
+            addCircleAndSemiCircle(size: size.value)
             isHidden = false
         case .hideAndStopAnimation:
             isHidden = true
@@ -72,33 +66,61 @@ public class NatProgressIndicatorCircular: UIView {
         }
     }
 
+    public func configure(useBackgroundLayer: Bool) {
+        if useBackgroundLayer {
+            circleLayer.fillColor =  UIColor.white.cgColor
+            clipsToBounds = true
+        } else {
+            circleLayer.fillColor =  UIColor.clear.cgColor
+        }
+    }
+
     // MARK: - Private methods
 
-    private func rotationAnimation() -> CABasicAnimation {
-        let rotationAnimation = CABasicAnimation(keyPath: Constants.rotationAnimationKey)
-        rotationAnimation.fromValue = CGFloat(Double.pi / 2)
-        rotationAnimation.toValue = CGFloat(Double.pi * 2.5)
-        rotationAnimation.repeatCount = Float.infinity
-        rotationAnimation.duration = 1
+    private func createCirclePath(size: CGFloat) -> UIBezierPath {
 
-        return rotationAnimation
+        let circlePath = UIBezierPath(
+            arcCenter: CGPoint(x: circleLayer.bounds.midX, y: circleLayer.bounds.midY),
+            radius: CGFloat(size/2),
+            startAngle: CGFloat(0),
+            endAngle: CGFloat(Double.pi * 2),
+            clockwise: true)
+
+        return circlePath
     }
 
-    private func createCirclePath() -> UIBezierPath {
-        .init(
-            arcCenter: CGPoint(x: semiCircleLayer.bounds.midX, y: semiCircleLayer.bounds.midY),
-            radius: getTokenFromTheme(\.sizeStandard)-getTokenFromTheme(\.sizeMicro),
-            startAngle: CGFloat(Double.pi),
-            endAngle: CGFloat(Double.pi * 2.5),
-            clockwise: true
-        )
-    }
-
-    private func configureSemiCircle(semiCircleLayer: CAShapeLayer) {
-        semiCircleLayer.path = createCirclePath().cgPath
+    private func configureSemiCircle(semiCircleLayer: CAShapeLayer, size: CGFloat) {
+        semiCircleLayer.path = createCirclePath(size: size).cgPath
         semiCircleLayer.strokeColor = getUIColorFromTokens(\.colorPrimary).cgColor
         semiCircleLayer.fillColor = .none
         semiCircleLayer.lineWidth = getTokenFromTheme(\.sizeMicro)
-        semiCircleLayer.position = CGPoint(x: bounds.midX, y: bounds.midY)
+        semiCircleLayer.position = CGPoint(x: circleLayer.bounds.midX, y: circleLayer.bounds.midY)
+    }
+
+    private func createCircleBackground(size: CGFloat) -> UIBezierPath {
+
+        let circleBackground = UIBezierPath(
+            arcCenter: CGPoint(x: circleLayer.bounds.midX, y: circleLayer.bounds.midY),
+            radius: CGFloat(size/2 + getTokenFromTheme(\.sizeTiny)),
+            startAngle: CGFloat(Double.pi),
+            endAngle: CGFloat(Double.pi * 3),
+            clockwise: true)
+
+        return circleBackground
+    }
+
+    private func configureCircleBackground(circleLayer: CAShapeLayer, size: CGFloat) {
+        circleLayer.path = createCircleBackground(size: size).cgPath
+        circleLayer.position = CGPoint(x: bounds.midX, y: bounds.midY)
+
+        circleLayer.addSublayer(semiCircleLayer)
+    }
+
+    private func addCircleAndSemiCircle(size: CGFloat) {
+        configureSemiCircle(semiCircleLayer: semiCircleLayer, size: size)
+        semiCircleLayer.add(rotationAnimation(), forKey: Constants.rotationAnimationKey)
+        semiCircleLayer.add(springAnimation(), forKey: Constants.springAnimationKey)
+        configureCircleBackground(circleLayer: circleLayer, size: size)
+        layer.addSublayer(circleLayer)
     }
 }

@@ -176,6 +176,9 @@
 		79FC59DD25DAB0BE001CCB56 /* NatImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC59DC25DAB0BE001CCB56 /* NatImage.swift */; };
 		79FC59E925DB1257001CCB56 /* NatImage+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC59E825DB1256001CCB56 /* NatImage+Spec.swift */; };
 		79FC59F225DD57E3001CCB56 /* Image+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC59F125DD57E3001CCB56 /* Image+Snapshot+Tests.swift */; };
+		79FC59C125D45DAE001CCB56 /* NatProgressIndicatorCircular+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC59C025D45DAE001CCB56 /* NatProgressIndicatorCircular+Constants.swift */; };
+		79FC59C925D45E7D001CCB56 /* NatProgressIndicatorCircular+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC59C825D45E7D001CCB56 /* NatProgressIndicatorCircular+Animation.swift */; };
+		79FC59D425D57A3F001CCB56 /* ProgressIndicatorCircular+Size+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC59D325D57A3E001CCB56 /* ProgressIndicatorCircular+Size+Spec.swift */; };
 		7C00D9B09D306A421DBD99953C7BC9E4 /* NatElevation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2775F568C47ADB6D5DA7B7AFA4A41B4E /* NatElevation.swift */; };
 		7CA6BAC353B73AF5D31F09CAF0268EE5 /* DesignSystemFatalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E6D9764598D210D58B32B2AEB0FE9 /* DesignSystemFatalError.swift */; };
 		7D19998925756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19998825756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift */; };
@@ -529,6 +532,9 @@
 		79FC59DC25DAB0BE001CCB56 /* NatImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatImage.swift; sourceTree = "<group>"; };
 		79FC59E825DB1256001CCB56 /* NatImage+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatImage+Spec.swift"; sourceTree = "<group>"; };
 		79FC59F125DD57E3001CCB56 /* Image+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Snapshot+Tests.swift"; sourceTree = "<group>"; };
+		79FC59C025D45DAE001CCB56 /* NatProgressIndicatorCircular+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatProgressIndicatorCircular+Constants.swift"; sourceTree = "<group>"; };
+		79FC59C825D45E7D001CCB56 /* NatProgressIndicatorCircular+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatProgressIndicatorCircular+Animation.swift"; sourceTree = "<group>"; };
+		79FC59D325D57A3E001CCB56 /* ProgressIndicatorCircular+Size+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProgressIndicatorCircular+Size+Spec.swift"; sourceTree = "<group>"; };
 		7CCF632B4501044E5062C574CCBBF74E /* NatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatButton.swift; sourceTree = "<group>"; };
 		7D19998825756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatProgressIndicatorCircular+Size.swift"; sourceTree = "<group>"; };
 		7D3D59142593D1B500C9197B /* UIImageView+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+UIColor.swift"; sourceTree = "<group>"; };
@@ -1073,6 +1079,7 @@
 			isa = PBXGroup;
 			children = (
 				790D3F852564181A007A9CA1 /* ProgressIndicatorCircular+Spec.swift */,
+				79FC59D325D57A3E001CCB56 /* ProgressIndicatorCircular+Size+Spec.swift */,
 			);
 			path = ProgressIndicator;
 			sourceTree = "<group>";
@@ -1197,6 +1204,8 @@
 			isa = PBXGroup;
 			children = (
 				79ACDADE255C336E00660E68 /* NatProgressIndicatorCircular.swift */,
+				79FC59C825D45E7D001CCB56 /* NatProgressIndicatorCircular+Animation.swift */,
+				79FC59C025D45DAE001CCB56 /* NatProgressIndicatorCircular+Constants.swift */,
 				7D19998825756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift */,
 			);
 			path = ProgressIndicator;
@@ -2786,6 +2795,7 @@
 				0E7C160B24C61E45002FF46F /* UINavigationController+Configure+Spec.swift in Sources */,
 				79B6AC7D25AE1BDC0027F7D6 /* NatBadge+Dot+Spec.swift in Sources */,
 				79E7FA45253741AD00A831BC /* AesopLightTokens+Elevation+Spec.swift in Sources */,
+				79FC59D425D57A3F001CCB56 /* ProgressIndicatorCircular+Size+Spec.swift in Sources */,
 				79E7FB3A2538CFA200A831BC /* NaturaLightTokens+Elevation+Spec.swift in Sources */,
 				A0328AF2000431B6155A5A6CD94B1835 /* ReusableViewTests.swift in Sources */,
 				79E7FB492538D04300A831BC /* NaturaDarkTokens+Size+Spec.swift in Sources */,
@@ -2946,7 +2956,9 @@
 				7D3D59152593D1B600C9197B /* UIImageView+UIColor.swift in Sources */,
 				13070104FE3F89CB14F76D621EF9A7F1 /* NavigationDrawer+IndexMenu.swift in Sources */,
 				84F709FF1D1DFC32BA4E9CB1803A6E30 /* NavigationDrawer.swift in Sources */,
+				79FC59C125D45DAE001CCB56 /* NatProgressIndicatorCircular+Constants.swift in Sources */,
 				841FEABA24C5C1A100C50AFF /* NatLogoImages.swift in Sources */,
+				79FC59C925D45E7D001CCB56 /* NatProgressIndicatorCircular+Animation.swift in Sources */,
 				B16B10A0AA533EF36343B6B8A4AE4DA0 /* NavigationDrawerItemCell.swift in Sources */,
 				A096BCFF55DBEF25B29C30C1537210D5 /* NavigationDrawerSubitemCell.swift in Sources */,
 				848831BE25018340004C3FA8 /* NatIconButton+Styles.swift in Sources */,
