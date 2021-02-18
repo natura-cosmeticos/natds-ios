@@ -5,8 +5,10 @@ enum AssetsPath {
     case iconOutlinedActionVisibility
     case iconOutlinedActionVisibilityOff
     case iconOutlinedDefaultMockup
+    case iconOutlinedDefaultMockupBackground
     case iconOutlinedNavigationArrowBottom
     case iconOutlinedNavigationArrowTop
+    case iconOutlinedProductEmptyBackground
 }
 
 extension AssetsPath: RawRepresentable {
@@ -22,10 +24,14 @@ extension AssetsPath: RawRepresentable {
             self = .iconOutlinedActionVisibilityOff
         case AssetsHelper.image(from: "Icons/IconOutlinedDefaultMockup"):
             self = .iconOutlinedDefaultMockup
+        case AssetsHelper.image(from: "Icons/IconOutlinedDefaultMockupBackground"):
+            self = .iconOutlinedDefaultMockupBackground
         case AssetsHelper.image(from: "Icons/IconOutlinedNavigationArrowBottom"):
             self = .iconOutlinedNavigationArrowBottom
         case AssetsHelper.image(from: "Icons/IconOutlinedNavigationArrowTop"):
             self = .iconOutlinedNavigationArrowTop
+        case AssetsHelper.image(from: "Icons/IconOutlinedProductEmptyBackground"):
+            self = .iconOutlinedProductEmptyBackground
         default: return nil
         }
     }
@@ -40,10 +46,14 @@ extension AssetsPath: RawRepresentable {
             return AssetsHelper.image(from: "Icons/IconOutlinedActionVisibilityOff")
         case .iconOutlinedDefaultMockup:
             return AssetsHelper.image(from: "Icons/IconOutlinedDefaultMockup")
+        case .iconOutlinedDefaultMockupBackground:
+            return AssetsHelper.image(from: "Icons/IconOutlinedDefaultMockupBackground")
         case .iconOutlinedNavigationArrowBottom:
             return AssetsHelper.image(from: "Icons/IconOutlinedNavigationArrowBottom")
         case .iconOutlinedNavigationArrowTop:
             return AssetsHelper.image(from: "Icons/IconOutlinedNavigationArrowTop")
+        case .iconOutlinedProductEmptyBackground:
+            return AssetsHelper.image(from: "Icons/IconOutlinedProductEmptyBackground")
         }
     }
 }

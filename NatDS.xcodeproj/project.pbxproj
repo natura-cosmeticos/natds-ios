@@ -173,6 +173,9 @@
 		79FC598A25CAE199001CCB56 /* NatCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC598925CAE198001CCB56 /* NatCard.swift */; };
 		79FC599E25CB21D5001CCB56 /* NatCard+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC599D25CB21D4001CCB56 /* NatCard+Spec.swift */; };
 		79FC59A725CB2B53001CCB56 /* NatCard+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC59A625CB2B52001CCB56 /* NatCard+Snapshot+Tests.swift */; };
+		79FC59DD25DAB0BE001CCB56 /* NatImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC59DC25DAB0BE001CCB56 /* NatImage.swift */; };
+		79FC59E925DB1257001CCB56 /* NatImage+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC59E825DB1256001CCB56 /* NatImage+Spec.swift */; };
+		79FC59F225DD57E3001CCB56 /* Image+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC59F125DD57E3001CCB56 /* Image+Snapshot+Tests.swift */; };
 		7C00D9B09D306A421DBD99953C7BC9E4 /* NatElevation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2775F568C47ADB6D5DA7B7AFA4A41B4E /* NatElevation.swift */; };
 		7CA6BAC353B73AF5D31F09CAF0268EE5 /* DesignSystemFatalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E6D9764598D210D58B32B2AEB0FE9 /* DesignSystemFatalError.swift */; };
 		7D19998925756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19998825756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift */; };
@@ -523,6 +526,9 @@
 		79FC598925CAE198001CCB56 /* NatCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatCard.swift; sourceTree = "<group>"; };
 		79FC599D25CB21D4001CCB56 /* NatCard+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatCard+Spec.swift"; sourceTree = "<group>"; };
 		79FC59A625CB2B52001CCB56 /* NatCard+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatCard+Snapshot+Tests.swift"; sourceTree = "<group>"; };
+		79FC59DC25DAB0BE001CCB56 /* NatImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatImage.swift; sourceTree = "<group>"; };
+		79FC59E825DB1256001CCB56 /* NatImage+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatImage+Spec.swift"; sourceTree = "<group>"; };
+		79FC59F125DD57E3001CCB56 /* Image+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		7CCF632B4501044E5062C574CCBBF74E /* NatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatButton.swift; sourceTree = "<group>"; };
 		7D19998825756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatProgressIndicatorCircular+Size.swift"; sourceTree = "<group>"; };
 		7D3D59142593D1B500C9197B /* UIImageView+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+UIColor.swift"; sourceTree = "<group>"; };
@@ -1418,6 +1424,30 @@
 			path = Card;
 			sourceTree = "<group>";
 		};
+		79FC59DB25DAB0A6001CCB56 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				79FC59DC25DAB0BE001CCB56 /* NatImage.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		79FC59E725DB1231001CCB56 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				79FC59E825DB1256001CCB56 /* NatImage+Spec.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		79FC59F025DD57B0001CCB56 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				79FC59F125DD57E3001CCB56 /* Image+Snapshot+Tests.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
 		7AB7FF70C9AEA25A8E77912E1563B1EE /* DomainFunctions */ = {
 			isa = PBXGroup;
 			children = (
@@ -1543,6 +1573,7 @@
 				84BB929624DC8F3600A9BCC8 /* ExpansionPanel */,
 				8401A9BE24FED3C900B6E762 /* IconButton */,
 				84BB92A124DCB71400A9BCC8 /* Icons */,
+				79FC59F025DD57B0001CCB56 /* Image */,
 				84A16EFD24DDBC3200E80DA0 /* NavigationDrawer */,
 				799B683725671F0C0055B96D /* ProgressIndicator */,
 				79FC596125C1AAAA001CCB56 /* SelectionControl */,
@@ -2033,6 +2064,7 @@
 				3FCB7713DAAB2F827B224E06280AF674 /* Field */,
 				845D09A325015F0000B05760 /* IconButton */,
 				BEE13D19F1A22BF171DC1BAC64B38FA7 /* Icons */,
+				79FC59E725DB1231001CCB56 /* Image */,
 				7BEFD3D9F02DCD62D7A24864218DC0D8 /* NavigationDrawer */,
 				790D3F84256417E2007A9CA1 /* ProgressIndicator */,
 				BE272C2F259B67C300060AF8 /* SelectionControl */,
@@ -2065,6 +2097,7 @@
 				EA99DA7A49950566847F2CD983BBD1EA /* Field */,
 				FBCFD36466E6B86E32075C92503882F7 /* Icons */,
 				84703F3D24F83AB900FE01CA /* IconButton */,
+				79FC59DB25DAB0A6001CCB56 /* Image */,
 				719A57636DBDBD5D6854EFEC0F362C4C /* NavigationDrawer */,
 				79ACDADD255C330400660E68 /* ProgressIndicator */,
 				BEDF931B2593815900F54C50 /* SelectionControl */,
@@ -2709,6 +2742,7 @@
 				FF4C87EAD7ADB8D9EF8F897BA229A3A7 /* NatFonts+Spec.swift in Sources */,
 				79E7FA1D25373B1900A831BC /* AesopLightTokens+BorderRadius+Spec.swift in Sources */,
 				79E7FA3B25373FB700A831BC /* AesopLightTokens+Color+Spec.swift in Sources */,
+				79FC59E925DB1257001CCB56 /* NatImage+Spec.swift in Sources */,
 				FAD0A71F10707995BE66A299D98CC33B /* NatOpacities+Spec.swift in Sources */,
 				79E7FB942538EB8000A831BC /* TheBodyShopLightTokens+Color+Spec.swift in Sources */,
 				79E7FAF52538935B00A831BC /* AvonDarkTokens+Spacing+Spec.swift in Sources */,
@@ -2925,6 +2959,7 @@
 				10953079D3A781AA63E2E03A93F222C4 /* String+Icon.swift in Sources */,
 				604835F2975D92A9D2EF46132C17C0A5 /* Tab.swift in Sources */,
 				AAA3820978AE27C3A6ED940916227C9D /* TabItemView.swift in Sources */,
+				79FC59DD25DAB0BE001CCB56 /* NatImage.swift in Sources */,
 				8409854724F02B230095D6AD /* Notification+Name+ThemeHasChanged.swift in Sources */,
 				5C0716F242EFC1AF6A61CBE257DA7CFE /* TextField.swift in Sources */,
 				56E21DDCD3217649B6CC5332DB901648 /* TextFieldDelegate.swift in Sources */,
@@ -2976,6 +3011,7 @@
 				84BB929524DC82EC00A9BCC8 /* Divider+Snapshot+Tests.swift in Sources */,
 				84BB928624DC6B3500A9BCC8 /* BadgeableStub.swift in Sources */,
 				84A16F0124DDBE5500E80DA0 /* NavigationDrawerSubitemCell+Snapshot+Tests.swift in Sources */,
+				79FC59F225DD57E3001CCB56 /* Image+Snapshot+Tests.swift in Sources */,
 				84A16EFF24DDBC6D00E80DA0 /* NavigationDrawerItemCell+Snapshot+Tests.swift in Sources */,
 				799B683C256720890055B96D /* ProgressIndicatorCircular+Snapshot+Tests.swift in Sources */,
 				84BB929024DC772D00A9BCC8 /* Tab+Snapshot+Tests.swift in Sources */,
