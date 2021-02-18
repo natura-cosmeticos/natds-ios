@@ -170,6 +170,9 @@
 		79FC597325C3332C001CCB56 /* Divider+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC597225C3332C001CCB56 /* Divider+Style.swift */; };
 		79FC597925C83E17001CCB56 /* Divider+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC597825C83E17001CCB56 /* Divider+Spec.swift */; };
 		79FC598125C845E4001CCB56 /* Divider+Styles+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC598025C845E4001CCB56 /* Divider+Styles+Spec.swift */; };
+		79FC598A25CAE199001CCB56 /* NatCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC598925CAE198001CCB56 /* NatCard.swift */; };
+		79FC599E25CB21D5001CCB56 /* NatCard+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC599D25CB21D4001CCB56 /* NatCard+Spec.swift */; };
+		79FC59A725CB2B53001CCB56 /* NatCard+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC59A625CB2B52001CCB56 /* NatCard+Snapshot+Tests.swift */; };
 		79FC59DD25DAB0BE001CCB56 /* NatImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC59DC25DAB0BE001CCB56 /* NatImage.swift */; };
 		79FC59E925DB1257001CCB56 /* NatImage+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC59E825DB1256001CCB56 /* NatImage+Spec.swift */; };
 		79FC59F225DD57E3001CCB56 /* Image+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC59F125DD57E3001CCB56 /* Image+Snapshot+Tests.swift */; };
@@ -520,6 +523,9 @@
 		79FC597225C3332C001CCB56 /* Divider+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Divider+Style.swift"; sourceTree = "<group>"; };
 		79FC597825C83E17001CCB56 /* Divider+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Divider+Spec.swift"; sourceTree = "<group>"; };
 		79FC598025C845E4001CCB56 /* Divider+Styles+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Divider+Styles+Spec.swift"; sourceTree = "<group>"; };
+		79FC598925CAE198001CCB56 /* NatCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatCard.swift; sourceTree = "<group>"; };
+		79FC599D25CB21D4001CCB56 /* NatCard+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatCard+Spec.swift"; sourceTree = "<group>"; };
+		79FC59A625CB2B52001CCB56 /* NatCard+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatCard+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		79FC59DC25DAB0BE001CCB56 /* NatImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatImage.swift; sourceTree = "<group>"; };
 		79FC59E825DB1256001CCB56 /* NatImage+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatImage+Spec.swift"; sourceTree = "<group>"; };
 		79FC59F125DD57E3001CCB56 /* Image+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Snapshot+Tests.swift"; sourceTree = "<group>"; };
@@ -1394,6 +1400,30 @@
 			path = Divider;
 			sourceTree = "<group>";
 		};
+		79FC598825CAE181001CCB56 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				79FC598925CAE198001CCB56 /* NatCard.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		79FC599C25CB21AC001CCB56 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				79FC599D25CB21D4001CCB56 /* NatCard+Spec.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		79FC59A525CB2B1A001CCB56 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				79FC59A625CB2B52001CCB56 /* NatCard+Snapshot+Tests.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
 		79FC59DB25DAB0A6001CCB56 /* Image */ = {
 			isa = PBXGroup;
 			children = (
@@ -1537,6 +1567,7 @@
 				84BB928324DC680A00A9BCC8 /* Badge */,
 				84BB929224DC7B0800A9BCC8 /* Bar */,
 				79ACDAB42555D99300660E68 /* Button */,
+				79FC59A525CB2B1A001CCB56 /* Card */,
 				84391DE924DB275E009D0BE8 /* Dialog */,
 				84BB929424DC821800A9BCC8 /* Divider */,
 				84BB929624DC8F3600A9BCC8 /* ExpansionPanel */,
@@ -2026,6 +2057,7 @@
 				0E7C160024C5D214002FF46F /* AppBar */,
 				26BB817124B918FB00617EFC /* Badge */,
 				37C041B132E91C20059E887D83DD7E4E /* Button */,
+				79FC599C25CB21AC001CCB56 /* Card */,
 				67643298FB5CC3CCB193DC69AF79EC67 /* Dialog */,
 				79FC597725C83DF4001CCB56 /* Divider */,
 				6759B588024397D1AC93C8D123122D59 /* ExpansionPanel */,
@@ -2058,6 +2090,7 @@
 				265B17E924AFA0DA00FD0407 /* Badge */,
 				AAA7C27FE8E04EF2103505C58C128D34 /* Bar */,
 				F39AE9E5CB68E8C7A269525355E8E4D3 /* Button */,
+				79FC598825CAE181001CCB56 /* Card */,
 				78FE21C8815B7AED38811BF6BEB37BF0 /* Dialog */,
 				B765E7CB5E163C38B6106556601A6CCA /* Divider */,
 				9A95973E20D8800C2A72454FF93AEC3F /* ExpansionPanel */,
@@ -2656,6 +2689,7 @@
 				1A30D78CDFD9F95DDAFF61EDF612261D /* ButtonContainedStyle+Spec.swift in Sources */,
 				521AFD7AFA9579A0A57971504ABE7145 /* ButtonOutlinedStyle+Spec.swift in Sources */,
 				26BFBADB25127397006C22E2 /* NatTag+Spec.swift in Sources */,
+				79FC599E25CB21D5001CCB56 /* NatCard+Spec.swift in Sources */,
 				797E613825531CA7002A59E0 /* NaturaLightComponents+Logo+Spec.swift in Sources */,
 				BB3413734DCB562C834B90742EF06929 /* ButtonStyle+Spec.swift in Sources */,
 				797E6116255319D2002A59E0 /* AesopLightComponents+Logo+Spec.swift in Sources */,
@@ -2871,6 +2905,7 @@
 				4612CED8B9691035EFA62E01E2B30FD6 /* Field.swift in Sources */,
 				84BC900824AA1678007DF09D /* NatDialogController+AlertStyleBuilder.swift in Sources */,
 				84BF066724B4A8DA00462AC5 /* ShortcutContainedStyle.swift in Sources */,
+				79FC598A25CAE199001CCB56 /* NatCard.swift in Sources */,
 				758EE01159A6E7AFC7217055678D4ED3 /* FontIconStyle.swift in Sources */,
 				269C886224C23B0100A507BE /* UINavigationController+Configure.swift in Sources */,
 				F01F3CA72313B3C97F42498878234A82 /* FontStyle.swift in Sources */,
@@ -2965,6 +3000,7 @@
 				79B6AC8525AE1E520027F7D6 /* NatBadge+Dot+Snapshot+Tests.swift in Sources */,
 				84BB929724DC8FA300A9BCC8 /* ExpansionPanelBuilder.swift in Sources */,
 				8401A9C024FED41E00B6E762 /* NatIconButton+Snapshot+Tests.swift in Sources */,
+				79FC59A725CB2B53001CCB56 /* NatCard+Snapshot+Tests.swift in Sources */,
 				84BB929324DC7B9800A9BCC8 /* SearchBar+Snapshot+Tests.swift in Sources */,
 				84BB929E24DCA6C500A9BCC8 /* TextField+Snapshot+Tests.swift in Sources */,
 				84A16F0324DDBF6C00E80DA0 /* NavigationDrawer+Snapshot+Tests.swift in Sources */,
