@@ -1,8 +1,6 @@
 /**
  TextField is a class that represents a component from the design system.
-
- The textfield styles, keyboards, capitalization and autocorrection properties changes according with the chosen type.
-
+ The textField styles, keyboards, capitalization and autocorrection properties changes according to the chosen type.
 
  This TextField has 4 types:
  - Text
@@ -11,11 +9,12 @@
  - Password
 
  Example of usage:
- - textField.type = .text
- - textField.type = .name
- - textField.type = .number
- - textField.type = .password(keyboardType: .numberPad)
-
+ 
+        textField.type = .text
+        textField.type = .name
+        textField.type = .number
+        textField.type = .password(keyboardType: .numberPad
+ 
  This TextField has 3 States:
  - enable
  - active
@@ -24,13 +23,12 @@
  There are properties that changes the textfield styles as well.
 
  Properties:
- - title: Label text always displayed above textfield
- - placeholder: Hint text to display when the text is empty
- - helper: Hint text always displayed below textfield
- - error: Text that alerts about an error
+ - `title`: Label text always displayed above textfield
+ - `placeholder`: Hint text to display when the text is empty
+ - `helper`: Hint text always displayed below textfield
+ - `error`: Text that alerts about an error
 
- Use the methods of TextFieldDelegate protocol to manage the following feature
-
+ Use the methods of TextFieldDelegate protocol to manage the following feature:
  - natTextFieldDidBeginEditing
  - natTextFieldDidEndEditing
  - natTextFieldEditingChanged
@@ -39,7 +37,8 @@
 
  - Requires:
  It's necessary to configure the Design System with a theme or fatalError will be raised.
- DesignSystem().configure(with: AvailableTheme)
+        
+        DesignSystem().configure(with: AvailableTheme)
  */
 
 public class TextField: UIView {
@@ -49,34 +48,40 @@ public class TextField: UIView {
         case active
         case error
     }
-
+    
+    /// Label text that is always displayed above textfield
     public var title: String? {
         get { titleLabel.text }
         set { titleLabel.text = newValue }
     }
-
+    
+    /// The text from the textfield
     public var text: String? {
         get { textField.text }
         set { textField.text = newValue }
     }
-
+    
+    /// Hint text to display when the textfield is empty
     public var placeholder: String? {
         get { textField.placeholder }
         set { textField.placeholder = newValue}
     }
-
+    
+    /// Hint text that is always displayed below textfield
     public var helper: String? {
         didSet {
             helperLabel.text = helper
         }
     }
-
+    
+    /// Text that alerts about an error
     public var error: String? {
         didSet {
             changeState()
         }
     }
-
+    
+    /// The type of the textfield, chosen from the `TextFieldType` enum
     public var type: TextFieldType = .text {
         didSet {
             handleTextFieldType()

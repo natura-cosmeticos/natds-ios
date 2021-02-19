@@ -1,22 +1,22 @@
 extension NatButton {
     /**
-      EdgeInsets is a enum that represents contentEdgeInsets values of button component.
-
-        These are all edgeInsets allowed for a NatButton:
-        - small
-        - medium (default)
-        - large
-
-        Usage example:
-
+     EdgeInsets is a enum that represents `contentEdgeInsets` values of button component.
+     
+     These are all `edgeInsets allowed for a NatButton:
+     - small
+     - medium (default)
+     - large
+     
+     Example of usage:
+     
             let button = NatButton(style: .contained)
             button.contentEdgeInsets = NatButton.EdgeInsets.medium
 
      - Requires:
-            It's necessary to configure the Design System with a theme or fatalError will be raised.
-
-                DesignSystem().configure(with: AvailableTheme)
-    */
+     It's necessary to configure the Design System with a theme or fatalError will be raised.
+     
+            DesignSystem().configure(with: AvailableTheme)
+     */
 
     public enum EdgeInsets {
         public static var small: UIEdgeInsets { .init(spacing: 8) }

@@ -17,7 +17,7 @@
       <div class="content-wrapper">
         <p>
           <a href="../index.html">NatDS 3.2.0 Docs</a>
-          <span class="no-mobile"> (23% documented)</span>
+          <span class="no-mobile"> (26% documented)</span>
         </p>
     
     
@@ -48,9 +48,8 @@
 
                   </div>
                 </div>
-              <p>TextField is a class that represents a component from the design system.</p>
-
-<p>The textfield styles, keyboards, capitalization and autocorrection properties changes according with the chosen type.</p>
+              <p>TextField is a class that represents a component from the design system.
+The textField styles, keyboards, capitalization and autocorrection properties changes according to the chosen type.</p>
 
 <p>This TextField has 4 types:</p>
 
@@ -62,13 +61,11 @@
 </ul>
 
 <p>Example of usage:</p>
-
-<ul>
-<li>textField.type = .text</li>
-<li>textField.type = .name</li>
-<li>textField.type = .number</li>
-<li>textField.type = .password(keyboardType: .numberPad)</li>
-</ul>
+<pre class="highlight swift"><code>   <span class="n">textField</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="o">.</span><span class="n">text</span>
+   <span class="n">textField</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="o">.</span><span class="n">name</span>
+   <span class="n">textField</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="o">.</span><span class="n">number</span>
+   <span class="n">textField</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="o">.</span><span class="nf">password</span><span class="p">(</span><span class="nv">keyboardType</span><span class="p">:</span> <span class="o">.</span><span class="n">numberPad</span>
+</code></pre>
 
 <p>This TextField has 3 States:</p>
 
@@ -83,13 +80,13 @@
 <p>Properties:</p>
 
 <ul>
-<li>title: Label text always displayed above textfield</li>
-<li>placeholder: Hint text to display when the text is empty</li>
-<li>helper: Hint text always displayed below textfield</li>
-<li>error: Text that alerts about an error</li>
+<li><code>title</code>: Label text always displayed above textfield</li>
+<li><code>placeholder</code>: Hint text to display when the text is empty</li>
+<li><code>helper</code>: Hint text always displayed below textfield</li>
+<li><code>error</code>: Text that alerts about an error</li>
 </ul>
 
-<p>Use the methods of TextFieldDelegate protocol to manage the following feature</p>
+<p>Use the methods of TextFieldDelegate protocol to manage the following feature:</p>
 
 <ul>
 <li>natTextFieldDidBeginEditing</li>
@@ -99,8 +96,9 @@
 <li><p>natTextField</p></li>
 </ul><div class="aside aside-requires">
     <p class="aside-title">Requires</p>
-    <p>It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.
-DesignSystem().configure(with: AvailableTheme)</p>
+    <p>It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.</p>
+
+<p>DesignSystem().configure(with: AvailableTheme)</p>
 
 </div>
 
@@ -121,7 +119,7 @@ DesignSystem().configure(with: AvailableTheme)</p>
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Undocumented</p>
+                          <p>Label text that is always displayed above textfield</p>
 
                         </div>
                         <div class="declaration">
@@ -148,7 +146,7 @@ DesignSystem().configure(with: AvailableTheme)</p>
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Undocumented</p>
+                          <p>The text from the textfield</p>
 
                         </div>
                         <div class="declaration">
@@ -175,7 +173,7 @@ DesignSystem().configure(with: AvailableTheme)</p>
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Undocumented</p>
+                          <p>Hint text to display when the textfield is empty</p>
 
                         </div>
                         <div class="declaration">
@@ -202,7 +200,7 @@ DesignSystem().configure(with: AvailableTheme)</p>
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Undocumented</p>
+                          <p>Hint text that is always displayed below textfield</p>
 
                         </div>
                         <div class="declaration">
@@ -229,7 +227,7 @@ DesignSystem().configure(with: AvailableTheme)</p>
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Undocumented</p>
+                          <p>Text that alerts about an error</p>
 
                         </div>
                         <div class="declaration">
@@ -256,7 +254,7 @@ DesignSystem().configure(with: AvailableTheme)</p>
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Undocumented</p>
+                          <p>The type of the textfield, chosen from the <code><a href="../Enums/TextFieldType.html">TextFieldType</a></code> enum</p>
 
                         </div>
                         <div class="declaration">
@@ -613,6 +611,9 @@ DesignSystem().configure(with: AvailableTheme)</p>
                   <a href="../Classes/NatIconButton/Style.html">– Style</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="../Classes/NatImage.html">NatImage</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Classes/NatProgressIndicatorCircular.html">NatProgressIndicatorCircular</a>
                 </li>
                 <li class="nav-group-task">
@@ -807,7 +808,7 @@ DesignSystem().configure(with: AvailableTheme)</p>
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2021-02-09)</p>
+          <p>&copy; 2021 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2021-02-19)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </div>

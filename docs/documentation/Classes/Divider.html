@@ -17,7 +17,7 @@
       <div class="content-wrapper">
         <p>
           <a href="../index.html">NatDS 3.2.0 Docs</a>
-          <span class="no-mobile"> (23% documented)</span>
+          <span class="no-mobile"> (26% documented)</span>
         </p>
     
     
@@ -47,29 +47,29 @@
 
                   </div>
                 </div>
-              <p>Divider is a class that represents Divider component from the design system.</p>
-
-<p>It has a predetermined height, and to configure its width It&rsquo;s necessary use via constraints</p>
+              <p>Divider is a class that represents Divider component from the design system.
+ It has a predetermined height and it&rsquo;s necessary to configure its width using constraints.</p>
 
 <p>The Divider componet has 3 styles:</p>
 
 <ul>
-<li>Full-bleed</li>
-<li>Middle</li>
-<li><p>Inset</p>
+<li>full-bleed</li>
+<li>middle</li>
+<li>inset</li>
+</ul>
 
 <p>Example of usage:</p>
-<pre class="highlight swift"><code><span class="n">divider</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">full</span><span class="o">-</span><span class="n">bleed</span><span class="p">)</span>
-<span class="n">divider</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">middle</span><span class="p">)</span>
-<span class="n">divider</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">inset</span><span class="p">)</span>
-</code></pre></li>
-</ul><div class="aside aside-requires">
+<pre class="highlight swift"><code>     <span class="n">divider</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">full</span><span class="o">-</span><span class="n">bleed</span><span class="p">)</span>
+     <span class="n">divider</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">middle</span><span class="p">)</span>
+     <span class="n">divider</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">inset</span><span class="p">)</span>
+</code></pre>
+<div class="aside aside-requires">
     <p class="aside-title">Requires</p>
     <p>It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.</p>
+<pre class="highlight swift"><code><span class="kt">DesignSystem</span><span class="p">()</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="kt">AvailableTheme</span><span class="p">)</span>
+</code></pre>
 
 </div>
-
-<p>DesignSystem().configure(with: AvailableTheme)</p>
 
             </section>
             <section class="section task-group-section">
@@ -102,6 +102,19 @@
                       </section>
                     </div>
                   </li>
+                </ul>
+              </div>
+              <div class="task-group">
+                <div class="task-name-container">
+                  <a name="/Public%20methods"></a>
+                  <a name="//apple_ref/swift/Section/Public methods" class="dashAnchor"></a>
+                  <div class="section-name-container">
+                    <a class="section-name-link" href="#/Public%20methods"></a>
+                    <h3 class="section-name"><p>Public methods</p>
+</h3>
+                  </div>
+                </div>
+                <ul>
                   <li class="item">
                     <div>
                       <code>
@@ -115,7 +128,7 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Undocumented</p>
+                          <p>Sets a style for the divider</p>
 
                         </div>
                         <div class="declaration">
@@ -125,6 +138,25 @@
                             <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="kt"><a href="../Classes/Divider/Styles.html">Styles</a></span><span class="p">)</span></code></pre>
 
                           </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>style</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>an option from the available styles for divider</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
                         </div>
                       </section>
                     </div>
@@ -142,7 +174,16 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Undocumented</p>
+                          <p>Style is a enum that represents style values for the divider component.
+Each style has a predefined spacing from right and left margins on the screen.</p>
+
+<p>These are all styles allowed for a Divider:</p>
+
+<ul>
+<li>full-bleed</li>
+<li>inset</li>
+<li>middle</li>
+</ul>
 
                           <a href="../Classes/Divider/Styles.html" class="slightly-smaller">See more</a>
                         </div>
@@ -251,6 +292,9 @@
                 </li>
                 <li class="nav-group-task">
                   <a href="../Classes/NatIconButton/Style.html">– Style</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NatImage.html">NatImage</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Classes/NatProgressIndicatorCircular.html">NatProgressIndicatorCircular</a>
@@ -447,7 +491,7 @@
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2021-02-09)</p>
+          <p>&copy; 2021 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2021-02-19)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </div>

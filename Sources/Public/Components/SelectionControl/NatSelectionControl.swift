@@ -1,21 +1,22 @@
 import UIKit
 /**
  NatSelectionControl is a class that represents Design System's selection control component.
- The component colors changes according with the current theme configured in the Design System.
+ The component colors changes according to the current theme configured in the Design System.
  
- The component has 1 style:
-    - Checkbox
+ The component has 2 styles:
+ - checkbox
+ - radio
  
  Example of usage:
         
-        NatSelectionControl(style: .checkbox)
+        NatSelectionControl(style: .radioButton)
  
  And it can be configured with a label:
         
         NatSelectionControl(style: .checkbox, text: "The text for the label")
 
  - Requires:
-    It's necessary to configure the Design System with a theme or fatalError will be raised.
+ It's necessary to configure the Design System with a theme or fatalError will be raised.
  
         DesignSystem().configure(with: AvailableTheme)
  */

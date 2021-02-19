@@ -17,7 +17,7 @@
       <div class="content-wrapper">
         <p>
           <a href="../index.html">NatDS 3.2.0 Docs</a>
-          <span class="no-mobile"> (23% documented)</span>
+          <span class="no-mobile"> (26% documented)</span>
         </p>
     
     
@@ -48,29 +48,32 @@
                   </div>
                 </div>
               <p>NatButton is a class that represents  button  component from the design system.
- The button colors changes according with the current theme configured in the Design system.</p>
+The button colors changes according with the current theme configured in the Design system.</p>
 
 <p>This button has 3 styles:</p>
 
 <ul>
 <li>Contained</li>
 <li>Outlined</li>
-<li><p>Text</p>
-<pre class="highlight swift"><code><span class="kt">Example</span> <span class="n">of</span> <span class="nv">usage</span><span class="p">:</span>
-    <span class="o">-</span> <span class="k">let</span> <span class="nv">containedButton</span> <span class="o">=</span> <span class="kt">NatButton</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">contained</span><span class="p">)</span>
-    <span class="o">-</span> <span class="k">let</span> <span class="nv">outlinedButton</span> <span class="o">=</span> <span class="kt">NatButton</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">outlined</span><span class="p">)</span>
-    <span class="o">-</span> <span class="k">let</span> <span class="nv">textButton</span> <span class="o">=</span> <span class="kt">NatButton</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<li>Text</li>
+</ul>
 
-<span class="kt">This</span> <span class="n">button</span> <span class="n">has</span> <span class="n">predefined</span> <span class="n">height</span> <span class="n">values</span> <span class="n">with</span> <span class="kd">enum</span> <span class="kt">NatButton</span><span class="o">.</span><span class="kt">Height</span><span class="p">:</span>
-    <span class="o">-</span> <span class="n">button</span><span class="o">.</span><span class="n">heightAnchor</span><span class="o">.</span><span class="nf">constraint</span><span class="p">(</span><span class="nv">equalToConstant</span><span class="p">:</span> <span class="kt">NatButton</span><span class="o">.</span><span class="kt">Height</span><span class="o">.</span><span class="n">medium</span><span class="p">)</span>
+<p>Example of usage:</p>
+<pre class="highlight swift"><code>   <span class="k">let</span> <span class="nv">containedButton</span> <span class="o">=</span> <span class="kt">NatButton</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">contained</span><span class="p">)</span>
+   <span class="k">let</span> <span class="nv">outlinedButton</span> <span class="o">=</span> <span class="kt">NatButton</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">outlined</span><span class="p">)</span>
+   <span class="k">let</span> <span class="nv">textButton</span> <span class="o">=</span> <span class="kt">NatButton</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</code></pre>
+
+<p>This button has predefined height values with enum <code><a href="../Classes/NatButton/Height.html">NatButton.Height</a></code>:</p>
+<pre class="highlight swift"><code>   <span class="n">button</span><span class="o">.</span><span class="n">heightAnchor</span><span class="o">.</span><span class="nf">constraint</span><span class="p">(</span><span class="nv">equalToConstant</span><span class="p">:</span> <span class="kt">NatButton</span><span class="o">.</span><span class="kt">Height</span><span class="o">.</span><span class="n">medium</span><span class="p">)</span>
 </code></pre>
 <div class="aside aside-requires">
     <p class="aside-title">Requires</p>
-    It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.
-DesignSystem().configure(with: AvailableTheme)
+    <p>It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.</p>
 
-</div></li>
-</ul>
+<p>DesignSystem().configure(with: AvailableTheme)</p>
+
+</div>
 
             </section>
             <section class="section task-group-section">
@@ -318,9 +321,9 @@ Example of usage:</p>
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>EdgeInsets is a enum that represents contentEdgeInsets values of button component.</p>
+                          <p>EdgeInsets is a enum that represents <code>contentEdgeInsets</code> values of button component.</p>
 
-<p>These are all edgeInsets allowed for a NatButton:</p>
+<p>These are all `edgeInsets allowed for a NatButton:</p>
 
 <ul>
 <li>small</li>
@@ -328,15 +331,15 @@ Example of usage:</p>
 <li>large</li>
 </ul>
 
-<p>Usage example:</p>
+<p>Example of usage:</p>
 <pre class="highlight swift"><code>   <span class="k">let</span> <span class="nv">button</span> <span class="o">=</span> <span class="kt">NatButton</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">contained</span><span class="p">)</span>
    <span class="n">button</span><span class="o">.</span><span class="n">contentEdgeInsets</span> <span class="o">=</span> <span class="kt">NatButton</span><span class="o">.</span><span class="kt">EdgeInsets</span><span class="o">.</span><span class="n">medium</span>
 </code></pre>
 <div class="aside aside-requires">
     <p class="aside-title">Requires</p>
     <p>It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.</p>
-<pre class="highlight swift"><code>   <span class="kt">DesignSystem</span><span class="p">()</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="kt">AvailableTheme</span><span class="p">)</span>
-</code></pre>
+
+<p>DesignSystem().configure(with: AvailableTheme)</p>
 
 </div>
 
@@ -376,14 +379,14 @@ Example of usage:</p>
 <li>large</li>
 </ul>
 
-<p>Usage example:</p>
+<p>Example of usage:</p>
 <pre class="highlight swift"><code>   <span class="n">button</span><span class="o">.</span><span class="n">heightAnchor</span><span class="o">.</span><span class="nf">constraint</span><span class="p">(</span><span class="nv">equalToConstant</span><span class="p">:</span> <span class="kt">NatButton</span><span class="o">.</span><span class="kt">Height</span><span class="o">.</span><span class="n">medium</span><span class="p">)</span>
 </code></pre>
 <div class="aside aside-requires">
     <p class="aside-title">Requires</p>
     <p>It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.</p>
-<pre class="highlight swift"><code>   <span class="kt">DesignSystem</span><span class="p">()</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="kt">AvailableTheme</span><span class="p">)</span>
-</code></pre>
+
+<p>DesignSystem().configure(with: AvailableTheme)</p>
 
 </div>
 
@@ -455,11 +458,13 @@ Example of usage:</p>
 <ul>
 <li>contained</li>
 <li>outlined</li>
-<li><p>text</p>
-<pre class="highlight swift"><code><span class="kt">Example</span> <span class="n">of</span> <span class="nv">usage</span><span class="p">:</span>
-    <span class="o">-</span> <span class="k">let</span> <span class="nv">containedButton</span> <span class="o">=</span> <span class="kt">NatButton</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">contained</span><span class="p">)</span>
-    <span class="o">-</span> <span class="k">let</span> <span class="nv">outlinedButton</span> <span class="o">=</span> <span class="kt">NatButton</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">outlined</span><span class="p">)</span>
-    <span class="o">-</span> <span class="k">let</span> <span class="nv">textButton</span> <span class="o">=</span> <span class="kt">NatButton</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<li>text</li>
+</ul>
+
+<p>Example of usage:</p>
+<pre class="highlight swift"><code>   <span class="k">let</span> <span class="nv">containedButton</span> <span class="o">=</span> <span class="kt">NatButton</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">contained</span><span class="p">)</span>
+   <span class="k">let</span> <span class="nv">outlinedButton</span> <span class="o">=</span> <span class="kt">NatButton</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">outlined</span><span class="p">)</span>
+   <span class="k">let</span> <span class="nv">textButton</span> <span class="o">=</span> <span class="kt">NatButton</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">text</span><span class="p">)</span>
 </code></pre>
 <div class="aside aside-requires">
     <p class="aside-title">Requires</p>
@@ -467,8 +472,7 @@ Example of usage:</p>
 
 <p>DesignSystem().configure(with: AvailableTheme)</p>
 
-</div></li>
-</ul>
+</div>
 
                           <a href="../Classes/NatButton/Style.html" class="slightly-smaller">See more</a>
                         </div>
@@ -577,6 +581,9 @@ Example of usage:</p>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Classes/NatIconButton/Style.html">– Style</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NatImage.html">NatImage</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Classes/NatProgressIndicatorCircular.html">NatProgressIndicatorCircular</a>
@@ -773,7 +780,7 @@ Example of usage:</p>
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2021-02-09)</p>
+          <p>&copy; 2021 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2021-02-19)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </div>

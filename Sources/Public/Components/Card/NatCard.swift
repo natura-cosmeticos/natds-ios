@@ -1,8 +1,7 @@
 import UIKit
 /**
  NatCard is a class that represents the Card component from the design system.
-
- It's necessary to instantiate and set its height and width constraints.
+ It's necessary to instantiate it and set its height and width constraints.
 
  Example of usage:
 
@@ -36,6 +35,8 @@ public final class NatCard: UIView {
 
     // MARK: - Public methods
     
+    /// Sets if the card has elevation
+    /// - Parameter elevation: a bool that indicates if the card has elevation
     public func configure(elevation: Bool) {
         if elevation {
             NatElevation.apply(on: self, elevation: .micro)
@@ -43,7 +44,9 @@ public final class NatCard: UIView {
             NatElevation.apply(on: self, elevation: .none)
         }
     }
-
+    
+    /// Sets if the card has rounded corners
+    /// - Parameter borderRadius: a bool that indicates if the card has rounded corners
     public func configure(borderRadius: Bool) {
         if borderRadius {
             self.layer.cornerRadius = getTokenFromTheme(\.borderRadiusMedium)
