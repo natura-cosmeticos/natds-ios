@@ -19,18 +19,11 @@ public final class NatCard: UIView {
     public init() {
         super.init(frame: .zero)
         self.backgroundColor = getUIColorFromTokens(\.colorSurface)
-
-        setupPadding()
     }
 
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-
-    private func setupPadding() {
-        let padding = getTokenFromTheme(\.sizeSmall)
-        bounds = frame.inset(by: UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding))
     }
 
     // MARK: - Public methods

@@ -68,7 +68,7 @@ public class NatProgressIndicatorCircular: UIView {
 
     public func configure(useBackgroundLayer: Bool) {
         if useBackgroundLayer {
-            circleLayer.fillColor =  UIColor.white.cgColor
+            circleLayer.fillColor =  UIColor(hex: getTokenFromTheme(\.colorSurface))?.cgColor
             clipsToBounds = true
         } else {
             circleLayer.fillColor =  UIColor.clear.cgColor
@@ -101,7 +101,7 @@ public class NatProgressIndicatorCircular: UIView {
 
         let circleBackground = UIBezierPath(
             arcCenter: CGPoint(x: circleLayer.bounds.midX, y: circleLayer.bounds.midY),
-            radius: CGFloat(size/2 + getTokenFromTheme(\.sizeTiny)),
+            radius: CGFloat(size/2 + getTokenFromTheme(\.sizeMicro)),
             startAngle: CGFloat(Double.pi),
             endAngle: CGFloat(Double.pi * 3),
             clockwise: true)
