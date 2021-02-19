@@ -1,11 +1,27 @@
-public class IconView: UIView {
+/**
+ IconView is a class that helps the usage of icons with the Design System, as an `UIView` that displays an icon.
+ The icons are not available with `NatDS`; it's necessary to use the icon library `NatDSIcons`.
+ 
+ Example of usage:
+ 
+        let iconView = IconView()
+ 
+ - Requires:
+ It's necessary to configure the Design System with a theme or fatalError will be raised.
+        
+        DesignSystem().configure(with: AvailableTheme)
+ */
 
+public class IconView: UIView {
+    
+    /// The alignment of the icon inside the view
     public var aligment: NSTextAlignment = .center {
         didSet {
             iconLabel.textAlignment = aligment
         }
     }
     
+    /// The string that comes from `NatDSIcons` and it's translated as an icon
     public var iconText: String? {
         didSet {
             iconLabel.text = iconText
@@ -15,6 +31,8 @@ public class IconView: UIView {
         }
     }
 
+    
+    /// Sets if should show a default icon or a customized icon
     public var shouldShowDefaultIcon = true {
         didSet {
             setup()

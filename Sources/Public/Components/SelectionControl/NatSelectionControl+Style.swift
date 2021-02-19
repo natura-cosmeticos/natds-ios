@@ -3,11 +3,11 @@ import UIKit
 extension NatSelectionControl {
     /**
      Style represents styles values for the NatSelectionControl component.
-
-        These are all styles allowed for a NatSelectionControl:
-        - checkbox
-    */
-    
+     
+     These are all styles allowed for a NatSelectionControl:
+     - checkbox
+     - radioButton
+     */
     public enum Style {
         case checkbox
         case radioButton
@@ -15,7 +15,6 @@ extension NatSelectionControl {
 }
 
 extension NatSelectionControl.Style {
-
     func getSelector() -> NatSelector {
         switch self {
         case .checkbox: return NatCheckboxContainer()

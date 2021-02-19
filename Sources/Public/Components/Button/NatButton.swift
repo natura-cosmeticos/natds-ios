@@ -1,25 +1,27 @@
 import UIKit
-
 /**
  NatButton is a class that represents  button  component from the design system.
  The button colors changes according with the current theme configured in the Design system.
-
-This button has 3 styles:
-- Contained
-- Outlined
-- Text
-
-        Example of usage:
-            - let containedButton = NatButton(style: .contained)
-            - let outlinedButton = NatButton(style: .outlined)
-            - let textButton = NatButton(style: .text)
-
-        This button has predefined height values with enum NatButton.Height:
-            - button.heightAnchor.constraint(equalToConstant: NatButton.Height.medium)
-
+ 
+ This button has 3 styles:
+ - Contained
+ - Outlined
+ - Text
+ 
+ Example of usage:
+ 
+        let containedButton = NatButton(style: .contained)
+        let outlinedButton = NatButton(style: .outlined)
+        let textButton = NatButton(style: .text)
+ 
+ This button has predefined height values with enum `NatButton.Height`:
+ 
+        button.heightAnchor.constraint(equalToConstant: NatButton.Height.medium)
+ 
  - Requires:
  It's necessary to configure the Design System with a theme or fatalError will be raised.
- DesignSystem().configure(with: AvailableTheme)
+        
+        DesignSystem().configure(with: AvailableTheme)
  */
 
 public final class NatButton: UIButton, Pulsable {

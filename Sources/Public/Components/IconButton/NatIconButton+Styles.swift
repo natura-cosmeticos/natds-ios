@@ -2,10 +2,10 @@ extension NatIconButton {
     /**
      Style represents styles values for the NatIconButton component.
      
-        These are all styles allowed for a NatIconButton:
-        - standardDefault
-        - standardPrimary
-    */
+     These are all styles allowed for a NatIconButton:
+     - standardDefault
+     - standardPrimary
+     */
     public struct Style {
         let applyStyle: (NatIconButton) -> Void
 

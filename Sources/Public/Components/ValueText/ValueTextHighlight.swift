@@ -1,17 +1,17 @@
 import Foundation
-
 /**
- ValueTextHighlight is a class that represents  a component from the design system.
-
-        Example of usage:
-        - valueTextHighlight.valueDescription = "Amount value"
-        - valueTextHighlight.value = "$40,00"
-
+ ValueTextHighlight is a class that represents a component from the design system.
+ 
+ Example of usage:
+ 
+        valueTextHighlight.valueDescription = "Amount value"
+        valueTextHighlight.value = "$40,00"
+ 
  - Requires:
-        It's necessary to configure the Design System with a theme or fatalError will be raised.
-
-            DesignSystem().configure(with: AvailableTheme)
-*/
+ It's necessary to configure the Design System with a theme or fatalError will be raised.
+ 
+        DesignSystem().configure(with: AvailableTheme)
+ */
 
 public class ValueTextHighlight: UIView {
 

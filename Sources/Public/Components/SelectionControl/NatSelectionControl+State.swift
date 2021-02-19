@@ -1,5 +1,4 @@
 extension NatSelectionControl {
-
     enum Selection {
         case selected
         case unselected

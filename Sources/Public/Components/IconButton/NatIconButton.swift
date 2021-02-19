@@ -2,13 +2,13 @@ import Foundation
 
 /**
     NatIconButton is a class that represents  icon buttons  component from the design system.
-    The button colors changes according with the current theme configured in the Design system.
+    The button colors changes according to the current theme configured in the Design System.
 
     This button has 2 styles:
     - standardDefault
     - standardPrimary
 
-        Example of usage:
+    Example of usage:
  
             let iconButtonDefault = NatIconButton(style: .standardDefault)
             let iconButtonPrimary = NatIconButton(style: .standardPrimary)
@@ -21,12 +21,12 @@ import Foundation
 
 public final class NatIconButton: UIView {
     /**
-     State represents states values for the NatIconButton component.
-
-        These are all states allowed for a NatIconButton:
-        - enabled
-        - disabled
-    */
+     State represents state values for NatIconButton component.
+     
+     These are all states allowed for a NatIconButton:
+     - enabled
+     - disabled
+     */
     public enum State {
         case enabled
         case disabled
@@ -142,10 +142,7 @@ extension NatIconButton {
     }
 
     /// Sets an icon for the button view.
-    /// - Parameter icon: An icon from NatDSIcons
-    /// Example of usage:
-    ///
-    ///     iconButton.configure(icon: getIcon(icon: .outlinedAlertNotification))
+    /// - Parameter icon: An icon from NatDSIcons, using the function `getIcon` from NatDSIcons
     public func configure(icon: String?) {
         iconView.iconText = icon
     }
