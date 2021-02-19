@@ -52,7 +52,6 @@ public class NatImage: UIView {
         
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.contentMode = .scaleAspectFit
         image.image = setImage ?? defaultImageView.image
 
         addSubview(image)
