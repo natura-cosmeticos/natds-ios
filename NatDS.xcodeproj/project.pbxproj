@@ -173,12 +173,12 @@
 		79FC598A25CAE199001CCB56 /* NatCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC598925CAE198001CCB56 /* NatCard.swift */; };
 		79FC599E25CB21D5001CCB56 /* NatCard+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC599D25CB21D4001CCB56 /* NatCard+Spec.swift */; };
 		79FC59A725CB2B53001CCB56 /* NatCard+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC59A625CB2B52001CCB56 /* NatCard+Snapshot+Tests.swift */; };
-		79FC59DD25DAB0BE001CCB56 /* NatImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC59DC25DAB0BE001CCB56 /* NatImage.swift */; };
-		79FC59E925DB1257001CCB56 /* NatImage+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC59E825DB1256001CCB56 /* NatImage+Spec.swift */; };
-		79FC59F225DD57E3001CCB56 /* Image+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC59F125DD57E3001CCB56 /* Image+Snapshot+Tests.swift */; };
 		79FC59C125D45DAE001CCB56 /* NatProgressIndicatorCircular+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC59C025D45DAE001CCB56 /* NatProgressIndicatorCircular+Constants.swift */; };
 		79FC59C925D45E7D001CCB56 /* NatProgressIndicatorCircular+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC59C825D45E7D001CCB56 /* NatProgressIndicatorCircular+Animation.swift */; };
 		79FC59D425D57A3F001CCB56 /* ProgressIndicatorCircular+Size+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC59D325D57A3E001CCB56 /* ProgressIndicatorCircular+Size+Spec.swift */; };
+		79FC59DD25DAB0BE001CCB56 /* NatImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC59DC25DAB0BE001CCB56 /* NatImage.swift */; };
+		79FC59E925DB1257001CCB56 /* NatImage+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC59E825DB1256001CCB56 /* NatImage+Spec.swift */; };
+		79FC59F225DD57E3001CCB56 /* Image+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC59F125DD57E3001CCB56 /* Image+Snapshot+Tests.swift */; };
 		7C00D9B09D306A421DBD99953C7BC9E4 /* NatElevation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2775F568C47ADB6D5DA7B7AFA4A41B4E /* NatElevation.swift */; };
 		7CA6BAC353B73AF5D31F09CAF0268EE5 /* DesignSystemFatalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E6D9764598D210D58B32B2AEB0FE9 /* DesignSystemFatalError.swift */; };
 		7D19998925756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19998825756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift */; };
@@ -529,12 +529,12 @@
 		79FC598925CAE198001CCB56 /* NatCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatCard.swift; sourceTree = "<group>"; };
 		79FC599D25CB21D4001CCB56 /* NatCard+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatCard+Spec.swift"; sourceTree = "<group>"; };
 		79FC59A625CB2B52001CCB56 /* NatCard+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatCard+Snapshot+Tests.swift"; sourceTree = "<group>"; };
-		79FC59DC25DAB0BE001CCB56 /* NatImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatImage.swift; sourceTree = "<group>"; };
-		79FC59E825DB1256001CCB56 /* NatImage+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatImage+Spec.swift"; sourceTree = "<group>"; };
-		79FC59F125DD57E3001CCB56 /* Image+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		79FC59C025D45DAE001CCB56 /* NatProgressIndicatorCircular+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatProgressIndicatorCircular+Constants.swift"; sourceTree = "<group>"; };
 		79FC59C825D45E7D001CCB56 /* NatProgressIndicatorCircular+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatProgressIndicatorCircular+Animation.swift"; sourceTree = "<group>"; };
 		79FC59D325D57A3E001CCB56 /* ProgressIndicatorCircular+Size+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProgressIndicatorCircular+Size+Spec.swift"; sourceTree = "<group>"; };
+		79FC59DC25DAB0BE001CCB56 /* NatImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatImage.swift; sourceTree = "<group>"; };
+		79FC59E825DB1256001CCB56 /* NatImage+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatImage+Spec.swift"; sourceTree = "<group>"; };
+		79FC59F125DD57E3001CCB56 /* Image+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		7CCF632B4501044E5062C574CCBBF74E /* NatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatButton.swift; sourceTree = "<group>"; };
 		7D19998825756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatProgressIndicatorCircular+Size.swift"; sourceTree = "<group>"; };
 		7D3D59142593D1B500C9197B /* UIImageView+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+UIColor.swift"; sourceTree = "<group>"; };
@@ -3069,7 +3069,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.2.0;
+				MARKETING_VERSION = 3.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.natura.NatDS;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -3284,7 +3284,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.2.0;
+				MARKETING_VERSION = 3.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.natura.NatDS;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
