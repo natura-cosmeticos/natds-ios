@@ -6,7 +6,7 @@ public final class NatAvatar: UIView {
 
     // MARK: - Private properties
     
-    private let circleView: UIView = {
+    internal let circleView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = getUIColorFromTokens(\.colorPrimary)
@@ -18,7 +18,6 @@ public final class NatAvatar: UIView {
         label.textColor = getUIColorFromTokens(\.colorOnPrimary)
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
-
         return label
     }()
     
@@ -28,18 +27,25 @@ public final class NatAvatar: UIView {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
+    
+    private let iconView: IconView = {
+        let iconView = IconView()
+        iconView.translatesAutoresizingMaskIntoConstraints = false
+        iconView.tintColor = getUIColorFromTokens(\.colorOnPrimary)
+        return iconView
+    }()
 
-    private let style: Style
+    internal let size: Size
     private let notificationCenter: NotificationCenterObservable
 
     // MARK: - Inits
 
-    public convenience init(style: Style) {
-        self.init(style: style, notificationCenter: NotificationCenter.default)
+    public convenience init(size: Size = .medium) {
+        self.init(size: size, notificationCenter: NotificationCenter.default)
     }
 
-    init(style: Style, notificationCenter: NotificationCenterObservable) {
-        self.style = style
+    init(size: Size = .medium, notificationCenter: NotificationCenterObservable) {
+        self.size = size
         self.notificationCenter = notificationCenter
 
         super.init(frame: .zero)
@@ -56,35 +62,56 @@ public final class NatAvatar: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    public override func layoutSubviews() {
+        circleView.layer.cornerRadius = size.value / 2
+        label.font = size.font
+    }
 }
 
 // MARK: - Public methods
 
 extension NatAvatar {
     public func configure(initials: String) {
-        label.text = initials
+        label.text = initials.maxCharCount(2)
+        
+        imageView.isHidden = true
+        label.isHidden = false
+        iconView.isHidden = true
     }
 
     public func configure(image: UIImage?) {
+        guard let image = image else {
+            configureDefaultIcon()
+            return
+        }
+        
         imageView.image = image
+        
+        imageView.isHidden = false
+        label.isHidden = true
+        iconView.isHidden = true
     }
-}
-
-// MARK: - Internal methods
-
-extension NatAvatar {
-
+    
+    public func configure(icon: String?) {
+        iconView.iconText = icon
+        
+        imageView.isHidden = true
+        label.isHidden = true
+        iconView.isHidden = false
+    }
 }
 
 // MARK: - Private methods - UI
 
 extension NatAvatar {
     private func setup() {
-        setupUI()
-        
         addSubview(circleView)
         addSubview(label)
-        circleView.addSubview(imageView)
+        addSubview(imageView)
+        addSubview(iconView)
+        
+        iconView.shouldShowDefaultIcon = true
 
         addConstraints()
 
@@ -96,14 +123,12 @@ extension NatAvatar {
         )
     }
     
-    private func setupUI() {
-        circleView.layer.cornerRadius = style.size / 2
-        label.font = style.font
+    private func configureDefaultIcon() {
+        // TODO"
     }
-    
 
     private func addConstraints() {
-        let circleSize = style.size
+        let circleSize = size.value
 
         let constraints = [
             circleView.topAnchor.constraint(equalTo: topAnchor),
@@ -118,7 +143,12 @@ extension NatAvatar {
             imageView.bottomAnchor.constraint(equalTo: circleView.bottomAnchor),
             imageView.trailingAnchor.constraint(equalTo: circleView.trailingAnchor),
             imageView.leadingAnchor.constraint(equalTo: circleView.leadingAnchor),
-
+            
+            iconView.topAnchor.constraint(equalTo: circleView.topAnchor, constant: getTokenFromTheme(\.spacingTiny)),
+            iconView.bottomAnchor.constraint(equalTo: circleView.bottomAnchor, constant: -getTokenFromTheme(\.spacingTiny)),
+            iconView.trailingAnchor.constraint(equalTo: circleView.trailingAnchor, constant: -getTokenFromTheme(\.spacingTiny)),
+            iconView.leadingAnchor.constraint(equalTo: circleView.leadingAnchor, constant: getTokenFromTheme(\.spacingTiny)),
+            
             label.centerXAnchor.constraint(equalTo: circleView.centerXAnchor),
             label.centerYAnchor.constraint(equalTo: circleView.centerYAnchor)
         ]
@@ -131,6 +161,6 @@ extension NatAvatar {
 
 extension NatAvatar {
     @objc private func themeHasChanged() {
-        // TODO:
+        self.setup()
     }
 }

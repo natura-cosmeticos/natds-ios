@@ -1,13 +1,15 @@
 import UIKit
 import NatDS
+import NatDSIcons
 
 class AvatarItemViewController: UIViewController, SampleItem {
     static var name = "Avatar"
     
-    private lazy var smallStackView = createStackView()
+    private lazy var standardStackView = createStackView()
+    private lazy var semiStackView = createStackView()
+    private lazy var semixStackView = createStackView()
     private lazy var mediumStackView = createStackView()
-    private lazy var largeStackView = createStackView()
-    private lazy var largeXStackView = createStackView()
+    private lazy var largexxxStackView = createStackView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,29 +20,47 @@ class AvatarItemViewController: UIViewController, SampleItem {
     }
     
     private func setup() {
-        view.addSubview(smallStackView)
+        view.addSubview(standardStackView)
+        view.addSubview(semiStackView)
+        view.addSubview(semixStackView)
         view.addSubview(mediumStackView)
-        view.addSubview(largeStackView)
-        view.addSubview(largeXStackView)
+        view.addSubview(largexxxStackView)
         
-        let smallAvatars = createAvatars(style: .small, image: IllustrationIcons.Lined.sad?.tintedWithColor(NatColors.onPrimary) ?? UIImage(), initials: "DS")
-        smallAvatars.forEach { smallStackView.addArrangedSubview($0) }
+        let standardAvatars = createAvatars(size: .standard,
+                                            image: IllustrationIcons.Lined.sad?.tintedWithColor(NatColors.onPrimary) ?? UIImage(),
+                                            initials: "DS")
+        standardAvatars.forEach { standardStackView.addArrangedSubview($0) }
 
-        let mediumAvatars = createAvatars(style: .medium, image: IllustrationIcons.Lined.sad?.tintedWithColor(NatColors.onPrimary) ?? UIImage(), initials: "DS")
+        let semiAvatars = createAvatars(size: .semi,
+                                        image: IllustrationIcons.Lined.sad?.tintedWithColor(NatColors.onPrimary) ?? UIImage(),
+                                        initials: "DS")
+        semiAvatars.forEach { semiStackView.addArrangedSubview($0) }
+        
+        let semixAvatars = createAvatars(size: .semiX,
+                                         image: IllustrationIcons.Lined.sad?.tintedWithColor(NatColors.onPrimary) ?? UIImage(),
+                                         initials: "DS")
+        semixAvatars.forEach { semixStackView.addArrangedSubview($0) }
+        
+        let mediumAvatars = createAvatars(size: .medium,
+                                          image: IllustrationIcons.Lined.sad?.tintedWithColor(NatColors.onPrimary) ?? UIImage(),
+                                          initials: "DS")
         mediumAvatars.forEach { mediumStackView.addArrangedSubview($0) }
-        
-        let largeAvatars = createAvatars(style: .large, image: IllustrationIcons.Lined.sad?.tintedWithColor(NatColors.onPrimary) ?? UIImage(), initials: "DS")
-        largeAvatars.forEach { largeStackView.addArrangedSubview($0) }
 
-        let largeXAvatars = createAvatars(style: .largeX, image: IllustrationIcons.Lined.sad?.tintedWithColor(NatColors.onPrimary) ?? UIImage(), initials: "DS")
-        largeXAvatars.forEach { largeXStackView.addArrangedSubview($0) }
+        let largexxxAvatars = createAvatars(size: .largeXXX,
+                                            image: IllustrationIcons.Lined.sad?.tintedWithColor(NatColors.onPrimary) ?? UIImage(),
+                                            initials: "DS")
+        largexxxAvatars.forEach { largexxxStackView.addArrangedSubview($0) }
 
         addConstraints()
     }
     
-    private func createAvatars(style: NatAvatar.Style, image: UIImage, initials: String) -> [NatAvatar] {
+    private func createAvatars(size: NatAvatar.Size, image: UIImage, initials: String) -> [NatAvatar] {
         (0...2).map { value in
-            let avatar = NatAvatar(style: style)
+            let avatar = NatAvatar(size: size)
+            
+            if value == 0 {
+                avatar.configure(icon: getIcon(.outlinedSocialPerson))
+            }
             
             if value == 1 {
                 avatar.configure(initials: initials)
@@ -65,40 +85,52 @@ class AvatarItemViewController: UIViewController, SampleItem {
     
     private func addConstraints() {
         let constraints = [
-            smallStackView.topAnchor.constraint(
+            // STANDARD
+            standardStackView.topAnchor.constraint(
                 equalTo: view.safeAreaLayoutGuide.topAnchor,
                 constant: NatSpacing.small
             ),
-            smallStackView.trailingAnchor.constraint(
+            standardStackView.trailingAnchor.constraint(
                 equalTo: view.safeAreaLayoutGuide.trailingAnchor,
                 constant: -NatSpacing.standard
             ),
-            smallStackView.leadingAnchor.constraint(
+            standardStackView.leadingAnchor.constraint(
                 equalTo: view.safeAreaLayoutGuide.leadingAnchor,
                 constant: NatSpacing.standard
             ),
-            smallStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            standardStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
 
-            mediumStackView.topAnchor.constraint(
-                equalTo: smallStackView.bottomAnchor,
-                constant: NatSpacing.small
+            // SEMI
+            semiStackView.topAnchor.constraint(
+                equalTo: standardStackView.bottomAnchor,
+                constant: NatSpacing.standard
             ),
-            mediumStackView.widthAnchor.constraint(equalTo: smallStackView.widthAnchor),
+            semiStackView.widthAnchor.constraint(equalTo: standardStackView.widthAnchor),
+            semiStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
+            // SEMIX
+            semixStackView.topAnchor.constraint(
+                equalTo: semiStackView.bottomAnchor,
+                constant: NatSpacing.standard
+            ),
+            semixStackView.widthAnchor.constraint(equalTo: semiStackView.widthAnchor),
+            semixStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
+            // MEDIUM
+            mediumStackView.topAnchor.constraint(
+                equalTo: semixStackView.bottomAnchor,
+                constant: NatSpacing.standard
+            ),
+            mediumStackView.widthAnchor.constraint(equalTo: semixStackView.widthAnchor),
             mediumStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            largeStackView.topAnchor.constraint(
+            // LARGEXXX
+            largexxxStackView.topAnchor.constraint(
                 equalTo: mediumStackView.bottomAnchor,
-                constant: NatSpacing.small
+                constant: NatSpacing.standard
             ),
-            largeStackView.widthAnchor.constraint(equalTo: mediumStackView.widthAnchor),
-            largeStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            
-            largeXStackView.topAnchor.constraint(
-                equalTo: largeStackView.bottomAnchor,
-                constant: NatSpacing.small
-            ),
-            largeXStackView.widthAnchor.constraint(equalTo: largeStackView.widthAnchor),
-            largeXStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            largexxxStackView.widthAnchor.constraint(equalTo: mediumStackView.widthAnchor),
+            largexxxStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ]
 
         NSLayoutConstraint.activate(constraints)

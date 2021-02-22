@@ -1,35 +1,40 @@
 extension NatAvatar {
-    public enum Style {
-        case small
+    public enum Size {
+        case standard
+        case semi
+        case semiX
         case medium
-        case large
-        case largeX
+        case largeXXX
     }
 }
 
-extension NatAvatar.Style {
-    var size: CGFloat {
+extension NatAvatar.Size {
+    var value: CGFloat {
         switch self {
-        case .small:
-            return getTokenFromTheme(\.sizeSmall)
+        case .standard:
+            return getTokenFromTheme(\.sizeStandard)
+        case .semi:
+            return getTokenFromTheme(\.sizeSemi)
+        case .semiX:
+            return getTokenFromTheme(\.sizeSemiX)
         case .medium:
             return getTokenFromTheme(\.sizeMedium)
-        case .large:
-            return getTokenFromTheme(\.sizeLarge)
-        case .largeX:
-            return getTokenFromTheme(\.sizeLargeX)
+        case .largeXXX:
+            return getTokenFromTheme(\.sizeLargeXXX)
         }
     }
     
     var font: UIFont {
         switch self {
-        case .small:
-            return NatFonts.font(ofSize: .heading6)
+        case .standard:
+            return NatFonts.font(ofSize: .caption)
+        case .semi:
+            return NatFonts.font(ofSize: .body1)
+        case .semiX:
+            return NatFonts.font(ofSize: .body1)
         case .medium:
             return NatFonts.font(ofSize: .heading6)
-        case .large:
-            return NatFonts.font(ofSize: .heading6)
-        case .largeX:
+        case .largeXXX:
             return NatFonts.font(ofSize: .heading6)
         }
     }
