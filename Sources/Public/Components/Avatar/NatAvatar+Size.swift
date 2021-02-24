@@ -1,5 +1,5 @@
 extension NatAvatar {
-    public enum Size {
+    public enum Size: CaseIterable {
         case standard
         case semi
         case semiX
@@ -27,11 +27,14 @@ extension NatAvatar.Size {
     var font: UIFont {
         switch self {
         case .standard:
-            return NatFonts.font(ofSize: .caption)
+//            return NatFonts.font(ofSize: .caption)
+            return NatFonts.font(ofSize: .heading6)
         case .semi:
-            return NatFonts.font(ofSize: .body1)
+//            return NatFonts.font(ofSize: .body1)
+            return NatFonts.font(ofSize: .heading6)
         case .semiX:
-            return NatFonts.font(ofSize: .body1)
+//            return NatFonts.font(ofSize: .body1)
+            return NatFonts.font(ofSize: .heading6)
         case .medium:
             return NatFonts.font(ofSize: .heading6)
         case .largeXXX:

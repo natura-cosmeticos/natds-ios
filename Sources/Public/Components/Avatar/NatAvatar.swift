@@ -28,9 +28,11 @@ public final class NatAvatar: UIView {
         return imageView
     }()
     
-    private let iconView: IconView = {
+    private var iconView: IconView = {
         let iconView = IconView()
         iconView.translatesAutoresizingMaskIntoConstraints = false
+        // TODO: mudar pra outlined social person
+        iconView.shouldShowDefaultIcon = true
         iconView.tintColor = getUIColorFromTokens(\.colorOnPrimary)
         return iconView
     }()
@@ -40,11 +42,11 @@ public final class NatAvatar: UIView {
 
     // MARK: - Inits
 
-    public convenience init(size: Size = .medium) {
+    public convenience init(size: Size = .standard) {
         self.init(size: size, notificationCenter: NotificationCenter.default)
     }
 
-    init(size: Size = .medium, notificationCenter: NotificationCenterObservable) {
+    init(size: Size = .standard, notificationCenter: NotificationCenterObservable) {
         self.size = size
         self.notificationCenter = notificationCenter
 
@@ -72,8 +74,8 @@ public final class NatAvatar: UIView {
 // MARK: - Public methods
 
 extension NatAvatar {
-    public func configure(initials: String) {
-        label.text = initials.maxCharCount(2)
+    public func configure(name: String) {
+        label.text = name.initials
         
         imageView.isHidden = true
         label.isHidden = false
@@ -82,10 +84,9 @@ extension NatAvatar {
 
     public func configure(image: UIImage?) {
         guard let image = image else {
-            configureDefaultIcon()
+            configureWithIcon()
             return
         }
-        
         imageView.image = image
         
         imageView.isHidden = false
@@ -93,12 +94,10 @@ extension NatAvatar {
         iconView.isHidden = true
     }
     
-    public func configure(icon: String?) {
-        iconView.iconText = icon
-        
+    public func configureWithIcon() {
+        iconView.isHidden = false
         imageView.isHidden = true
         label.isHidden = true
-        iconView.isHidden = false
     }
 }
 
@@ -110,10 +109,9 @@ extension NatAvatar {
         addSubview(label)
         addSubview(imageView)
         addSubview(iconView)
-        
-        iconView.shouldShowDefaultIcon = true
 
         addConstraints()
+        configureWithIcon()
 
         notificationCenter.addObserver(
             self,
@@ -121,10 +119,6 @@ extension NatAvatar {
             name: .themeHasChanged,
             object: nil
         )
-    }
-    
-    private func configureDefaultIcon() {
-        // TODO"
     }
 
     private func addConstraints() {

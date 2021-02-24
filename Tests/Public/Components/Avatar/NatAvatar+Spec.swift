@@ -27,7 +27,7 @@ final class NatAvatarSpec: QuickSpec {
         
         describe("#configure: initials") {
             beforeEach {
-                systemUnderTest.configure(initials: "DS")
+                systemUnderTest.configure(name: "Design System")
             }
 
             it("show initials label") {
@@ -35,6 +35,13 @@ final class NatAvatarSpec: QuickSpec {
                     .compactMap { $0 as? UILabel }
                     .first
                 expect(initialsLabel?.isHidden).to(beFalse())
+            }
+            
+            it("show only two characters on initials label") {
+                let initialsLabel = systemUnderTest.subviews
+                    .compactMap { $0 as? UILabel }
+                    .first
+                expect(initialsLabel?.text?.count).to(equal(2))
             }
             
             it("returns expected color for initials label") {
@@ -90,7 +97,7 @@ final class NatAvatarSpec: QuickSpec {
         
         describe("#configure: icon") {
             beforeEach {
-                systemUnderTest.configure(icon: nil)
+                systemUnderTest.configureWithIcon()
             }
             
             it("shows icon view") {
