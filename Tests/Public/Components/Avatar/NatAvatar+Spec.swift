@@ -5,14 +5,31 @@ import Nimble
 
 final class NatAvatarSpec: QuickSpec {
     override func spec() {
-        
         var systemUnderTest: NatAvatar!
+        var initialsLabel: UILabel?
+        var imageView: UIImageView?
+        var iconImageView: UIImageView?
+        
+        func getItemsFromView() {
+            initialsLabel = systemUnderTest.subviews
+                .compactMap { $0 as? UILabel }
+                .first
+            
+            imageView = systemUnderTest.subviews
+                .compactMap { $0 as? UIImageView }
+                .first
+            
+            iconImageView = systemUnderTest.subviews
+                .compactMap { $0 as? UIImageView }
+                .last
+        }
 
         beforeEach {
             ConfigurationStorage.shared.currentTheme = StubTheme()
 
             systemUnderTest = NatAvatar(size: .medium)
             systemUnderTest.layoutSubviews()
+            getItemsFromView()
         }
 
         describe("#init") {
@@ -31,39 +48,23 @@ final class NatAvatarSpec: QuickSpec {
             }
 
             it("show initials label") {
-                let initialsLabel = systemUnderTest.subviews
-                    .compactMap { $0 as? UILabel }
-                    .first
                 expect(initialsLabel?.isHidden).to(beFalse())
             }
             
             it("show only two characters on initials label") {
-                let initialsLabel = systemUnderTest.subviews
-                    .compactMap { $0 as? UILabel }
-                    .first
                 expect(initialsLabel?.text?.count).to(equal(2))
             }
             
             it("returns expected color for initials label") {
-                let initialsLabel = systemUnderTest.subviews
-                    .compactMap { $0 as? UILabel }
-                    .first
-
                 expect(initialsLabel?.textColor).to(equal(getUIColorFromTokens(\.colorOnPrimary)))
             }
             
             it("hides image view") {
-                let imageView = systemUnderTest.subviews
-                    .compactMap { $0 as? UIImageView }
-                    .first
                 expect(imageView?.isHidden).to(beTrue())
             }
             
             it("hides icon view") {
-                let iconView = systemUnderTest.subviews
-                    .compactMap { $0 as? IconView }
-                    .first
-                expect(iconView?.isHidden).to(beTrue())
+                expect(iconImageView?.isHidden).to(beTrue())
             }
         }
         
@@ -73,60 +74,55 @@ final class NatAvatarSpec: QuickSpec {
             }
 
             it("shows image view") {
-                let imageView = systemUnderTest.subviews
-                    .compactMap { $0 as? UIImageView
-                    }
-                    .first
                 expect(imageView?.isHidden).to(beFalse())
             }
             
             it("hides initials view") {
-                let initialsLabel = systemUnderTest.subviews
-                    .compactMap { $0 as? UILabel }
-                    .first
                 expect(initialsLabel?.isHidden).to(beTrue())
             }
             
             it("hides icon view") {
-                let iconView = systemUnderTest.subviews
-                    .compactMap { $0 as? IconView }
-                    .first
-                expect(iconView?.isHidden).to(beTrue())
+                expect(iconImageView?.isHidden).to(beTrue())
+            }
+        }
+        
+        describe("#configure: nil image") {
+            beforeEach {
+                systemUnderTest.configure(image: nil)
+            }
+            
+            it("shows default icon view as a fallback") {
+                expect(iconImageView?.isHidden).to(beFalse())
+            }
+            
+            it("hides image view") {
+                expect(imageView?.isHidden).to(beTrue())
+            }
+            
+            it("hides initials view") {
+                expect(initialsLabel?.isHidden).to(beTrue())
             }
         }
         
         describe("#configure: icon") {
             beforeEach {
-                systemUnderTest.configureWithIcon()
+                systemUnderTest.configureWithDefaultIcon()
             }
             
             it("shows icon view") {
-                let iconView = systemUnderTest.subviews
-                    .compactMap { $0 as? IconView }
-                    .first
-                expect(iconView?.isHidden).to(beFalse())
-            }
-            
-            it("has the expected icon color") {
-                let iconView = systemUnderTest.subviews
-                    .compactMap { $0 as? IconView }
-                    .first
-                expect(iconView?.iconLabel.textColor).to(equal(getUIColorFromTokens(\.colorOnPrimary)))
+                expect(iconImageView?.isHidden).to(beFalse())
             }
 
             it("hides image view") {
-                let imageView = systemUnderTest.subviews
-                    .compactMap { $0 as? UIImageView
-                    }
-                    .first
                 expect(imageView?.isHidden).to(beTrue())
             }
             
             it("hides initials view") {
-                let initialsLabel = systemUnderTest.subviews
-                    .compactMap { $0 as? UILabel }
-                    .first
                 expect(initialsLabel?.isHidden).to(beTrue())
+            }
+            
+            it("has the expected icon color") {
+                expect(iconImageView?.tintedColor).to(equal(getUIColorFromTokens(\.colorOnPrimary)))
             }
         }
     }

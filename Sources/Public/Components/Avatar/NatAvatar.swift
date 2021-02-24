@@ -28,12 +28,11 @@ public final class NatAvatar: UIView {
         return imageView
     }()
     
-    private var iconView: IconView = {
-        let iconView = IconView()
+    private var defaultIconView: UIImageView = {
+        let iconView = UIImageView()
         iconView.translatesAutoresizingMaskIntoConstraints = false
-        // TODO: mudar pra outlined social person
-        iconView.shouldShowDefaultIcon = true
-        iconView.tintColor = getUIColorFromTokens(\.colorOnPrimary)
+        iconView.image = AssetsPath.iconOutlinedSocialPerson.rawValue
+        iconView.tintedColor = getUIColorFromTokens(\.colorOnPrimary)
         return iconView
     }()
 
@@ -67,6 +66,7 @@ public final class NatAvatar: UIView {
     
     public override func layoutSubviews() {
         circleView.layer.cornerRadius = size.value / 2
+        imageView.layer.cornerRadius = size.value / 2
         label.font = size.font
     }
 }
@@ -79,23 +79,23 @@ extension NatAvatar {
         
         imageView.isHidden = true
         label.isHidden = false
-        iconView.isHidden = true
+        defaultIconView.isHidden = true
     }
 
     public func configure(image: UIImage?) {
         guard let image = image else {
-            configureWithIcon()
+            configureWithDefaultIcon()
             return
         }
         imageView.image = image
         
         imageView.isHidden = false
         label.isHidden = true
-        iconView.isHidden = true
+        defaultIconView.isHidden = true
     }
     
-    public func configureWithIcon() {
-        iconView.isHidden = false
+    public func configureWithDefaultIcon() {
+        defaultIconView.isHidden = false
         imageView.isHidden = true
         label.isHidden = true
     }
@@ -108,10 +108,10 @@ extension NatAvatar {
         addSubview(circleView)
         addSubview(label)
         addSubview(imageView)
-        addSubview(iconView)
+        addSubview(defaultIconView)
 
         addConstraints()
-        configureWithIcon()
+        configureWithDefaultIcon()
 
         notificationCenter.addObserver(
             self,
@@ -138,10 +138,14 @@ extension NatAvatar {
             imageView.trailingAnchor.constraint(equalTo: circleView.trailingAnchor),
             imageView.leadingAnchor.constraint(equalTo: circleView.leadingAnchor),
             
-            iconView.topAnchor.constraint(equalTo: circleView.topAnchor, constant: getTokenFromTheme(\.spacingTiny)),
-            iconView.bottomAnchor.constraint(equalTo: circleView.bottomAnchor, constant: -getTokenFromTheme(\.spacingTiny)),
-            iconView.trailingAnchor.constraint(equalTo: circleView.trailingAnchor, constant: -getTokenFromTheme(\.spacingTiny)),
-            iconView.leadingAnchor.constraint(equalTo: circleView.leadingAnchor, constant: getTokenFromTheme(\.spacingTiny)),
+            defaultIconView.topAnchor.constraint(equalTo: circleView.topAnchor,
+                                                 constant: getTokenFromTheme(\.spacingTiny)),
+            defaultIconView.bottomAnchor.constraint(equalTo: circleView.bottomAnchor,
+                                                    constant: -getTokenFromTheme(\.spacingTiny)),
+            defaultIconView.trailingAnchor.constraint(equalTo: circleView.trailingAnchor,
+                                                      constant: -getTokenFromTheme(\.spacingTiny)),
+            defaultIconView.leadingAnchor.constraint(equalTo: circleView.leadingAnchor,
+                                                     constant: getTokenFromTheme(\.spacingTiny)),
             
             label.centerXAnchor.constraint(equalTo: circleView.centerXAnchor),
             label.centerYAnchor.constraint(equalTo: circleView.centerYAnchor)
