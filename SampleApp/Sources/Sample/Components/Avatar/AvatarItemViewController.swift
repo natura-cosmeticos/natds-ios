@@ -28,42 +28,42 @@ class AvatarItemViewController: UIViewController, SampleItem {
         
         let standardAvatars = createAvatars(size: .standard,
                                             image: IllustrationIcons.Lined.sad?.tintedWithColor(NatColors.onPrimary) ?? UIImage(),
-                                            initials: "DS")
+                                            name: "Natura Design System")
         standardAvatars.forEach { standardStackView.addArrangedSubview($0) }
 
         let semiAvatars = createAvatars(size: .semi,
                                         image: IllustrationIcons.Lined.sad?.tintedWithColor(NatColors.onPrimary) ?? UIImage(),
-                                        initials: "DS")
+                                        name: "Natura Design System")
         semiAvatars.forEach { semiStackView.addArrangedSubview($0) }
         
         let semixAvatars = createAvatars(size: .semiX,
                                          image: IllustrationIcons.Lined.sad?.tintedWithColor(NatColors.onPrimary) ?? UIImage(),
-                                         initials: "DS")
+                                         name: "Natura Design System")
         semixAvatars.forEach { semixStackView.addArrangedSubview($0) }
         
         let mediumAvatars = createAvatars(size: .medium,
                                           image: IllustrationIcons.Lined.sad?.tintedWithColor(NatColors.onPrimary) ?? UIImage(),
-                                          initials: "DS")
+                                          name: "Natura Design System")
         mediumAvatars.forEach { mediumStackView.addArrangedSubview($0) }
 
         let largexxxAvatars = createAvatars(size: .largeXXX,
                                             image: IllustrationIcons.Lined.sad?.tintedWithColor(NatColors.onPrimary) ?? UIImage(),
-                                            initials: "DS")
+                                            name: "Natura Design System")
         largexxxAvatars.forEach { largexxxStackView.addArrangedSubview($0) }
 
         addConstraints()
     }
     
-    private func createAvatars(size: NatAvatar.Size, image: UIImage, initials: String) -> [NatAvatar] {
+    private func createAvatars(size: NatAvatar.Size, image: UIImage, name: String) -> [NatAvatar] {
         (0...2).map { value in
             let avatar = NatAvatar(size: size)
             
             if value == 0 {
-                avatar.configure(icon: getIcon(.outlinedSocialPerson))
+                avatar.configureWithDefaultIcon()
             }
             
             if value == 1 {
-                avatar.configure(initials: initials)
+                avatar.configure(name: name)
             }
             
             if value == 2 {
