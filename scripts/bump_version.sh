@@ -6,8 +6,15 @@ if \
     { git log "$( git describe --tags --abbrev=0 )..HEAD" --format='%b' | grep -q -E '^BREAKING CHANGE:' ; }
 then
     npx standard-version
-    VERSION_NUMBER=$(cat ./version.txt) pod trunk push NatDS.podspec
-    xcrun agvtool new-marketing-version $(cat ./version.txt)
+    VERSION=$(cat ./version.txt)
+    VERSION_NUMBER=VERSION pod trunk push NatDS.podspec
+    xcrun agvtool new-marketing-version $VERSION
+    cd SampleApp
+    xcrun agvtool new-marketing-version $VERSION
+    git add NatDSSnapShotTests/Info.plist
+    git add SampleApp/Sources/Supporting Files/Info.plist
+    git add Supporting Files/Info.plist
+    git add Tests/Supporting Files/Info.plist
     git push --follow-tags origin HEAD
 else
     echo "No applicable changes since the previous tag, skipping..."
