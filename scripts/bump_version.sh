@@ -6,7 +6,7 @@ if \
     { git log "$( git describe --tags --abbrev=0 )..HEAD" --format='%b' | grep -q -E '^BREAKING CHANGE:' ; }
 then
     npx standard-version
-    VERSION_NUMBER=$(cat ./version.txt) pod lib lint
+    VERSION_NUMBER=$(cat ./version.txt) pod trunk push NatDS.podspec
     xcrun agvtool new-marketing-version $(cat ./version.txt)
     git push --follow-tags origin HEAD
 else
