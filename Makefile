@@ -67,5 +67,8 @@ release_alpha: ## builds the app using scheme and sends it to Test Flight
 update_patch: ## Updates SampleApp and DS Lib versions with next Patch (Y.Y.X) number, also tag and commit.
 	$(FASTLANE) update_patch
 
+bump_version: 
+	bash ./scripts/bump_version.sh
+
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
