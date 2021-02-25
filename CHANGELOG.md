@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.3.3](https://github.com/natura-cosmeticos/natds-ios/compare/3.3.2...3.3.3) (2021-02-25)
+
+
+### Bug Fixes
+
+* 🐛 Updates bump version script ([9767790](https://github.com/natura-cosmeticos/natds-ios/commit/9767790dde4d960ee2a4e79512adec7dfbbbe7cf))
+
 ### [3.3.2](https://github.com/natura-cosmeticos/natds-ios/compare/3.3.1...3.3.2) (2021-02-25)
 
 
