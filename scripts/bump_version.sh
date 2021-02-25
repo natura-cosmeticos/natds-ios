@@ -7,7 +7,7 @@ if \
 then
     npx standard-version
     VERSION=$(cat ./version.txt)
-    VERSION_NUMBER=VERSION pod spec lint
+    VERSION_NUMBER=$VERSION pod trunk push NatDS.podspec
     xcrun agvtool new-marketing-version $VERSION
     cd SampleApp
     xcrun agvtool new-marketing-version $VERSION
@@ -16,7 +16,6 @@ then
     git add SampleApp/Sources/Supporting\ Files/Info.plist
     git add Supporting\ Files/Info.plist
     git add Tests/Supporting\ Files/Info.plist
-    # COMMIT UPDATED PLIST FILES
     git push --follow-tags origin HEAD
 else
     echo "No applicable changes since the previous tag, skipping..."
