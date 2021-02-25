@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.license       = 'ISC'
   s.author        = { 'System Team - Natura SA' => 'systemteamopensource@natura.net' }
 
-  s.source        = { :git => 'https://github.com/natura-cosmeticos/natds-ios.git', :tag => s.version }
+  s.source        = { :git => 'https://github.com/natura-cosmeticos/natds-ios.git', :tag => '#{ ENV['VERSION_NUMBER'] }' }
   s.source_files  = 'Sources/**/*.{swift,h,m}'
 
   s.resources           = ['Sources/**/*.xcassets']
