@@ -7,7 +7,7 @@ if \
 then
     npx standard-version
     VERSION=$(cat ./version.txt)
-    VERSION_NUMBER=VERSION pod lib lint
+    VERSION_NUMBER=VERSION pod trunk push NatDS.podspec
     xcrun agvtool new-marketing-version $VERSION
     cd SampleApp
     xcrun agvtool new-marketing-version $VERSION
