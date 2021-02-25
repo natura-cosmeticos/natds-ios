@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.3.4](https://github.com/natura-cosmeticos/natds-ios/compare/3.3.3...3.3.4) (2021-02-25)
+
+
+### Bug Fixes
+
+* fix tag variable on podspec ([adc7e33](https://github.com/natura-cosmeticos/natds-ios/commit/adc7e332e3ca75e57e92a16b6a4e3ac7ff3d71ef))
+
 ### [3.3.3](https://github.com/natura-cosmeticos/natds-ios/compare/3.3.2...3.3.3) (2021-02-25)
 
 
