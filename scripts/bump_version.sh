@@ -15,7 +15,7 @@ then
     git add SampleApp/Sources/Supporting\ Files/Info.plist
     git add Supporting\ Files/Info.plist
     git add Tests/Supporting\ Files/Info.plist
-    git commit -m "Updates Info.plist"
+    git commit -m "chore: updates version on Info.plist files"
     git push --follow-tags origin HEAD
     VERSION_NUMBER=$VERSION pod trunk push NatDS.podspec
 else
