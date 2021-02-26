@@ -28,7 +28,7 @@ final class NatAvatarSpec: QuickSpec {
             ConfigurationStorage.shared.currentTheme = StubTheme()
 
             systemUnderTest = NatAvatar(size: .medium)
-            systemUnderTest.layoutSubviews()
+            systemUnderTest.layoutIfNeeded()
             getItemsFromView()
         }
 
