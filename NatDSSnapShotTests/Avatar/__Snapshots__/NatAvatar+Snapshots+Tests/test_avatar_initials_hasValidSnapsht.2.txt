@@ -1,0 +1,5 @@
+<NatDS.NatAvatar; frame = (0 0; 48 48); layer = <CALayer>>
+   | <UIView; frame = (0 0; 48 48); layer = <CALayer>>
+   | <UILabel; frame = (10.5 12; 27 24); text = 'NS'; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   | <UIImageView; frame = (0 0; 48 48); hidden = YES; userInteractionEnabled = NO; layer = <CALayer>>
+   | <UIImageView; frame = (8 8; 32 32); hidden = YES; opaque = NO; userInteractionEnabled = NO; tintColor = UIExtendedSRGBColorSpace 0.2 0.2 0.2 1; layer = <CALayer>>
