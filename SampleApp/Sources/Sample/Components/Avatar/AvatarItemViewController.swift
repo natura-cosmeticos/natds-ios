@@ -27,27 +27,27 @@ class AvatarItemViewController: UIViewController, SampleItem {
         view.addSubview(largexxxStackView)
         
         let standardAvatars = createAvatars(size: .standard,
-                                            image: IllustrationIcons.Lined.sad?.tintedWithColor(NatColors.onPrimary) ?? UIImage(),
+                                            image: UIImage(),
                                             name: "Natura Design System")
         standardAvatars.forEach { standardStackView.addArrangedSubview($0) }
 
         let semiAvatars = createAvatars(size: .semi,
-                                        image: IllustrationIcons.Lined.sad?.tintedWithColor(NatColors.onPrimary) ?? UIImage(),
+                                        image: UIImage(),
                                         name: "Natura Design System")
         semiAvatars.forEach { semiStackView.addArrangedSubview($0) }
         
         let semixAvatars = createAvatars(size: .semiX,
-                                         image: IllustrationIcons.Lined.sad?.tintedWithColor(NatColors.onPrimary) ?? UIImage(),
+                                         image: UIImage(),
                                          name: "Natura Design System")
         semixAvatars.forEach { semixStackView.addArrangedSubview($0) }
         
         let mediumAvatars = createAvatars(size: .medium,
-                                          image: IllustrationIcons.Lined.sad?.tintedWithColor(NatColors.onPrimary) ?? UIImage(),
+                                          image: UIImage(),
                                           name: "Natura Design System")
         mediumAvatars.forEach { mediumStackView.addArrangedSubview($0) }
 
         let largexxxAvatars = createAvatars(size: .largeXXX,
-                                            image: IllustrationIcons.Lined.sad?.tintedWithColor(NatColors.onPrimary) ?? UIImage(),
+                                            image: UIImage(),
                                             name: "Natura Design System")
         largexxxAvatars.forEach { largexxxStackView.addArrangedSubview($0) }
 
