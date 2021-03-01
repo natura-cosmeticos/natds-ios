@@ -184,6 +184,8 @@
 		7D17AB1B25E91C380070FD31 /* NatAvatar+Snapshots+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D17AB1A25E91C380070FD31 /* NatAvatar+Snapshots+Tests.swift */; };
 		7D19998925756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19998825756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift */; };
 		7D3D59152593D1B600C9197B /* UIImageView+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3D59142593D1B500C9197B /* UIImageView+UIColor.swift */; };
+		7D5120BA25E9914100557E21 /* NatAvatar+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5120B925E9914100557E21 /* NatAvatar+Style.swift */; };
+		7D5120BF25E997CD00557E21 /* NatAvatar+Styles+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5120BE25E997CD00557E21 /* NatAvatar+Styles+Spec.swift */; };
 		7D5F149A25A782AB007986EE /* IconsSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5F149925A782AB007986EE /* IconsSource.swift */; };
 		7D75A43925DB00130050ACA9 /* NatAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D75A43825DB00130050ACA9 /* NatAvatar.swift */; };
 		7D75A44125DB00230050ACA9 /* NatAvatar+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D75A44025DB00230050ACA9 /* NatAvatar+Size.swift */; };
@@ -545,6 +547,8 @@
 		7D17AB1A25E91C380070FD31 /* NatAvatar+Snapshots+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatAvatar+Snapshots+Tests.swift"; sourceTree = "<group>"; };
 		7D19998825756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatProgressIndicatorCircular+Size.swift"; sourceTree = "<group>"; };
 		7D3D59142593D1B500C9197B /* UIImageView+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+UIColor.swift"; sourceTree = "<group>"; };
+		7D5120B925E9914100557E21 /* NatAvatar+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatAvatar+Style.swift"; sourceTree = "<group>"; };
+		7D5120BE25E997CD00557E21 /* NatAvatar+Styles+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatAvatar+Styles+Spec.swift"; sourceTree = "<group>"; };
 		7D5F149925A782AB007986EE /* IconsSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsSource.swift; sourceTree = "<group>"; };
 		7D75A43825DB00130050ACA9 /* NatAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatAvatar.swift; sourceTree = "<group>"; };
 		7D75A44025DB00230050ACA9 /* NatAvatar+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatAvatar+Size.swift"; sourceTree = "<group>"; };
@@ -1525,6 +1529,7 @@
 			children = (
 				7D75A43825DB00130050ACA9 /* NatAvatar.swift */,
 				7D75A44025DB00230050ACA9 /* NatAvatar+Size.swift */,
+				7D5120B925E9914100557E21 /* NatAvatar+Style.swift */,
 			);
 			path = Avatar;
 			sourceTree = "<group>";
@@ -1534,6 +1539,7 @@
 			children = (
 				7DAF750825E4342E0094F865 /* NatAvatar+Spec.swift */,
 				7D9EEB8A25E6A3D300CEF6BC /* NatAvatar+Sizes+Spec.swift */,
+				7D5120BE25E997CD00557E21 /* NatAvatar+Styles+Spec.swift */,
 			);
 			path = Avatar;
 			sourceTree = "<group>";
@@ -2812,6 +2818,7 @@
 				84B9331024ABD16100B71BD4 /* NatDialogController+ViewModel+Spec.swift in Sources */,
 				79E7FB2B2538CE0300A831BC /* NaturaDarkTokens+Color+Spec.swift in Sources */,
 				95BF20E1FC04C44251D7DCAA9C7E7C60 /* NavigationDrawer+IndexMenuTests.swift in Sources */,
+				7D5120BF25E997CD00557E21 /* NatAvatar+Styles+Spec.swift in Sources */,
 				79E7FA63253745BC00A831BC /* AesopLightTokens+Spacing+Spec.swift in Sources */,
 				79E7FADC25388E8C00A831BC /* AvonLightTokens+Elevation+Spec.swift in Sources */,
 				BE272C38259B758800060AF8 /* SelectionControl+Checkbox+Spec.swift in Sources */,
@@ -2955,6 +2962,7 @@
 				6D4DFEB09D32E1F36B9FA29904AE1ED8 /* ElevationAttributes.swift in Sources */,
 				672E84F3438F653B2DF42C2018894304 /* ExpansionPanel+Margin.swift in Sources */,
 				3A65DE112EB34ED5B9F3F1DF7B8D3FBD /* ExpansionPanel.swift in Sources */,
+				7D5120BA25E9914100557E21 /* NatAvatar+Style.swift in Sources */,
 				84BF066524B4A8BD00462AC5 /* ShortcutOutlinedStyle.swift in Sources */,
 				4612CED8B9691035EFA62E01E2B30FD6 /* Field.swift in Sources */,
 				84BC900824AA1678007DF09D /* NatDialogController+AlertStyleBuilder.swift in Sources */,

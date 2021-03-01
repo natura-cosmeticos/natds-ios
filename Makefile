@@ -58,14 +58,18 @@ test_unit: ## run unit tests
 
 test_snapshot: ## run snapshot tests
 	$(FASTLANE) test_snapshot
+
 build_ipa: ## builds the ipa file for environment (Ad Hoc)
 	$(FASTLANE) build_ipa
 
 release_alpha: ## builds the app using scheme and sends it to Test Flight
 	$(FASTLANE) release_alpha
 
-update_patch: ## Updates SampleApp and DS Lib versions with next Patch (Y.Y.X) number, also tag and commit.
+update_patch: ## updates SampleApp and DS Lib versions with next Patch (Y.Y.X) number, also tag and commit
 	$(FASTLANE) update_patch
+
+bump_version: ## releases new version of NatDS
+	bash ./scripts/bump_version.sh
 
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'

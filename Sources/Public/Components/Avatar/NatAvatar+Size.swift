@@ -1,4 +1,20 @@
 extension NatAvatar {
+    /**
+     Size is a enum that represents size values for NatAvatar component.
+     
+     These are all sizes allowed for a NatAvatar:
+     - standard
+     - semi
+     - semiX
+     - medium
+     - largeXXX
+     
+     - Requires:
+     It's necessary to configure the Design System with a theme or fatalError will be raised.
+     
+            DesignSystem().configure(with: AvailableTheme)
+     */
+
     public enum Size: CaseIterable {
         case standard
         case semi

@@ -1,5 +1,34 @@
 /**
- Docs
+
+ NatAvatar is a class that represents a component from the Design System.
+ The avatar colors change according to the current brand configured in the Design System.
+
+ It has 3 styles:
+ - Icon
+ - Letter
+ - Image
+ 
+ And 5 sizes:
+ - standard
+ - semi
+ - semiX
+ - medium
+ - largeXXX
+ 
+ The default size is `standard` and the default type is `Icon`.
+ The component's size is not changeable, but it's type can change according to the configuration methods called after its initialization.
+
+ Example of usage:
+ 
+        // using default configuration:
+        let avatar = NatAvatar()
+        // or:
+        let avatar = NatAvatar(size: .medium, style: .image)
+
+ - Requires:
+ It's necessary to configure the Design System with a theme or fatalError will be raised.
+ 
+        DesignSystem().configure(with: AvailableTheme)
  */
 
 public final class NatAvatar: UIView {
@@ -37,16 +66,19 @@ public final class NatAvatar: UIView {
     }()
 
     internal let size: Size
+    internal var style: Style
+
     private let notificationCenter: NotificationCenterObservable
 
     // MARK: - Inits
 
-    public convenience init(size: Size = .standard) {
-        self.init(size: size, notificationCenter: NotificationCenter.default)
+    public convenience init(size: Size = .standard, style: Style = .icon) {
+        self.init(size: size, style: style, notificationCenter: NotificationCenter.default)
     }
 
-    init(size: Size = .standard, notificationCenter: NotificationCenterObservable) {
+    init(size: Size = .standard, style: Style = .icon, notificationCenter: NotificationCenterObservable) {
         self.size = size
+        self.style = style
         self.notificationCenter = notificationCenter
 
         super.init(frame: .zero)
@@ -65,6 +97,7 @@ public final class NatAvatar: UIView {
     }
     
     public override func layoutSubviews() {
+        super.layoutSubviews()
         circleView.layer.cornerRadius = size.value / 2
         imageView.layer.cornerRadius = size.value / 2
         label.font = size.font
@@ -74,15 +107,22 @@ public final class NatAvatar: UIView {
 // MARK: - Public methods
 
 extension NatAvatar {
+    /// Sets the label text for NatAvatar with `letter` type
+    /// - Parameter name: a string with the full name for the avatar or the initials with 2 characters. If the name has more than 2 words, the initials will be the first letter from the first and last names
     public func configure(name: String) {
-        label.text = name.initials
+        style = .letter
         
+        label.text = name.count <= 2 ? name : name.initials
+
         imageView.isHidden = true
         label.isHidden = false
         defaultIconView.isHidden = true
     }
-
+    
+    /// Sets an image for NatAvatar with `image` type
+    /// - Parameter image: an UIImage with the image to be displayed. If image is `nil`, the component will show the default icon
     public func configure(image: UIImage?) {
+        style = .image
         guard let image = image else {
             configureWithDefaultIcon()
             return
@@ -94,7 +134,9 @@ extension NatAvatar {
         defaultIconView.isHidden = true
     }
     
+    /// Sets the default icon for NatAvatar with `icon` type. The icon cannot be customized
     public func configureWithDefaultIcon() {
+        style = .icon
         defaultIconView.isHidden = false
         imageView.isHidden = true
         label.isHidden = true
@@ -111,7 +153,10 @@ extension NatAvatar {
         addSubview(defaultIconView)
 
         addConstraints()
-        configureWithDefaultIcon()
+
+        if style == .icon {
+            configureWithDefaultIcon()
+        }
 
         notificationCenter.addObserver(
             self,
