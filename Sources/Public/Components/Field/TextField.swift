@@ -42,12 +42,6 @@
  */
 
 public class TextField: UIView {
-
-    enum State {
-        case enable
-        case active
-        case error
-    }
     
     /// Label text that is always displayed above textfield
     public var title: String? {
@@ -77,7 +71,7 @@ public class TextField: UIView {
     /// Text that alerts about an error
     public var error: String? {
         didSet {
-            changeState()
+            configure(feedback: .error, with: error)
         }
     }
     
@@ -87,18 +81,51 @@ public class TextField: UIView {
             handleTextFieldType()
         }
     }
-
-    public weak var delegate: TextFieldDelegate?
-
-    private(set) var state: State = .enable {
+    
+    public var required: Bool = false {
         didSet {
-            handleState()
+            handleRequired()
+        }
+    }
+    
+    public var readOnly: Bool = false {
+        didSet {
+            self.interactionState = readOnly ? .readOnly : .enabled
+            self.textField.isEnabled = !readOnly
+        }
+    }
+    
+    public var isEnabled: Bool = true {
+        didSet {
+            self.interactionState = isEnabled ? .enabled : .disabled
+            self.textField.isEnabled = isEnabled
         }
     }
 
+    public weak var delegate: TextFieldDelegate?
+    
     private var isEditing: Bool = false {
         didSet {
-            changeState()
+            self.interactionState = isEditing ? .active : .enabled
+        }
+    }
+    
+    private(set) var interactionState: InteractionState = .enabled {
+        didSet {
+            handleInteractionState()
+            handleInteractionStateStyle()
+        }
+    }
+    
+    private(set) var feedbackState: FeedbackState = .none {
+        didSet {
+            handleFeedbackStyle()
+        }
+    }
+    
+    private var size: Size = .mediumX {
+        didSet {
+            self.setNeedsDisplay()
         }
     }
 
@@ -201,7 +228,10 @@ extension TextField {
 
         textField.addTarget(self, action: #selector(handleEditingChanged), for: .editingChanged)
 
-        handleState()
+        handleRequired()
+        handleInteractionState()
+        handleInteractionStateStyle()
+        handleFeedbackStyle()
         handleTextFieldType()
         showVisibilityIcon()
     }
@@ -227,7 +257,7 @@ extension TextField {
             textField.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 4),
             textField.leadingAnchor.constraint(equalTo: leadingAnchor),
             textField.trailingAnchor.constraint(equalTo: trailingAnchor),
-            textField.heightAnchor.constraint(equalToConstant: 56)
+            textField.heightAnchor.constraint(equalToConstant: size.value)
         ]
 
         NSLayoutConstraint.activate(constraints)
@@ -257,17 +287,21 @@ extension TextField {
     @objc private func handleEditingChanged() {
         delegate?.natTextFieldEditingChanged?(self)
     }
-
-    private func handleState() {
-        switch state {
-        case .enable:
+    
+    private func handleInteractionState() {
+        
+        
+    }
+    
+    private func handleInteractionStateStyle() {
+        switch interactionState {
+        case .enabled:
             textField.borderWidth = 1
             textField.borderColor = getUIColorFromTokens(\.colorLowEmphasis)
             titleLabel.textColor = getUIColorFromTokens(\.colorMediumEmphasis)
             helperLabel.textColor = getUIColorFromTokens(\.colorMediumEmphasis)
             helperLabel.text = helper
-            iconImageView.isHidden = true
-
+            
         case .active:
             textField.borderWidth = 2
             textField.borderColor = getUIColorFromTokens(\.colorPrimary)
@@ -275,18 +309,57 @@ extension TextField {
             titleLabel.textColor = getUIColorFromTokens(\.colorMediumEmphasis)
             helperLabel.textColor = getUIColorFromTokens(\.colorMediumEmphasis)
             helperLabel.text = helper
-            iconImageView.isHidden = true
-
+            
+        case .readOnly:
+            // TODO: corrigir tokens
+            textField.borderWidth = 1
+            textField.borderColor = getUIColorFromTokens(\.colorLowEmphasis)
+            titleLabel.textColor = getUIColorFromTokens(\.colorMediumEmphasis)
+            helperLabel.textColor = getUIColorFromTokens(\.colorMediumEmphasis)
+            textField.backgroundColor = getUIColorFromTokens(\.colorLowEmphasis)
+            helperLabel.text = helper
+            
+        case .disabled:
+            // TODO: corrigir tokens
+            textField.borderWidth = 1
+            textField.borderColor = getUIColorFromTokens(\.colorLowEmphasis).withAlphaComponent(0.25)
+            titleLabel.textColor = getUIColorFromTokens(\.colorMediumEmphasis).withAlphaComponent(0.25)
+            helperLabel.textColor = getUIColorFromTokens(\.colorMediumEmphasis).withAlphaComponent(0.25)
+            textField.backgroundColor = .white
+            helperLabel.text = helper
+            
+        default:
+            return
+        }
+    }
+    
+    private func handleFeedbackStyle() {
+        switch feedbackState {
         case .error:
             textField.borderWidth = 2
             textField.borderColor = getUIColorFromTokens(\.colorAlert)
             textField.tintColor = getUIColorFromTokens(\.colorAlert)
             titleLabel.textColor = getUIColorFromTokens(\.colorAlert)
             helperLabel.textColor = getUIColorFromTokens(\.colorAlert)
-            helperLabel.text = error ?? ""
+            helperLabel.text = helper
             stackView.spacing = getTokenFromTheme(\.sizeMicro)
             iconImageView.tintedColor = getUIColorFromTokens(\.colorAlert)
             iconImageView.isHidden = false
+            
+        case .success: // TODO: AJEITAR, TA IGUAL ERRO
+            textField.borderWidth = 1
+            textField.borderColor = getUIColorFromTokens(\.colorAlert)
+            textField.tintColor = getUIColorFromTokens(\.colorAlert)
+            titleLabel.textColor = getUIColorFromTokens(\.colorAlert)
+            helperLabel.textColor = getUIColorFromTokens(\.colorAlert)
+            helperLabel.text = helper
+            stackView.spacing = getTokenFromTheme(\.sizeMicro)
+            iconImageView.tintedColor = getUIColorFromTokens(\.colorAlert)
+            iconImageView.isHidden = false
+            
+        default: // TODO
+            iconImageView.isHidden = true
+            return
         }
     }
 
@@ -295,14 +368,6 @@ extension TextField {
         self.textField.autocorrectionType = type.autoCorrection
         self.textField.autocapitalizationType = type.capitalization
         self.textField.isSecureTextEntry = type.secureTextEntry
-    }
-
-    private func changeState() {
-        if error != nil {
-            self.state = .error
-        } else {
-            self.state = isEditing ? .active : .enable
-        }
     }
 
     internal func setIconVisibility() {
@@ -330,6 +395,12 @@ extension TextField {
             NSLayoutConstraint.activate(constraints)
         }
     }
+    
+    private func handleRequired() {
+        if required {
+            title?.append("*")
+        }
+    }
 }
 
 extension TextField: UITextFieldDelegate {
@@ -352,5 +423,26 @@ extension TextField: UITextFieldDelegate {
                           shouldChangeCharactersIn range: NSRange,
                           replacementString string: String) -> Bool {
         return delegate?.natTextField?(self, changeCharInRange: range, string: string) ?? true
+    }
+}
+
+extension TextField {
+    // MARK: - Public Methods
+    
+    public func configure(feedback state: FeedbackState, with text: String?) {
+        feedbackState = state
+        helper = text
+    }
+    
+    public func configure(helperText: String) {
+        helper = helperText
+    }
+    
+    public func configure(required: Bool) {
+        self.required = required
+    }
+    
+    public func configure(readOnly: Bool) {
+        self.readOnly = readOnly
     }
 }
