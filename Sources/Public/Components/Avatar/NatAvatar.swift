@@ -68,18 +68,13 @@ public final class NatAvatar: UIView {
     internal let size: Size
     internal var style: Style
 
-    private let notificationCenter: NotificationCenterObservable
-
     // MARK: - Inits
 
-    public convenience init(size: Size = .standard, style: Style = .icon) {
-        self.init(size: size, style: style, notificationCenter: NotificationCenter.default)
-    }
 
-    init(size: Size = .standard, style: Style = .icon, notificationCenter: NotificationCenterObservable) {
+
+    public init(size: Size = .standard, style: Style = .icon) {
         self.size = size
         self.style = style
-        self.notificationCenter = notificationCenter
 
         super.init(frame: .zero)
         setup()
@@ -87,9 +82,6 @@ public final class NatAvatar: UIView {
 
     // MARK: - Deinit
 
-    deinit {
-        notificationCenter.removeObserver(self)
-    }
 
     @available(*, unavailable)
     required init?(coder: NSCoder) {
@@ -108,7 +100,8 @@ public final class NatAvatar: UIView {
 
 extension NatAvatar {
     /// Sets the label text for NatAvatar with `letter` type
-    /// - Parameter name: a string with the full name for the avatar or the initials with 2 characters. If the name has more than 2 words, the initials will be the first letter from the first and last names
+    /// - Parameter name: a string with the full name for the avatar or the initials with 2 characters.
+    /// If the name has more than 2 words, the initials will be the first letter from the first and last names
     public func configure(name: String) {
         style = .letter
         
@@ -157,13 +150,6 @@ extension NatAvatar {
         if style == .icon {
             configureWithDefaultIcon()
         }
-
-        notificationCenter.addObserver(
-            self,
-            selector: #selector(themeHasChanged),
-            name: .themeHasChanged,
-            object: nil
-        )
     }
 
     private func addConstraints() {
@@ -197,13 +183,5 @@ extension NatAvatar {
         ]
 
         NSLayoutConstraint.activate(constraints)
-    }
-}
-
-// MARK: - NotificationCenter
-
-extension NatAvatar {
-    @objc private func themeHasChanged() {
-        self.setup()
     }
 }
