@@ -52,13 +52,13 @@ class NatRadioButtonContainer: UIControl, NatSelector {
         addSubview(radioButton)
 
         radioButton.onTouchesBegan = { [unowned self] touches in
-            self.addPulseLayerAnimated(at: radioButton.center, in: layer,
-                                       withColor: isSelected ? unselectedPulsableColor : selectedPulsableColor,
+            self.addPulseLayerAnimated(at: self.radioButton.center, in: self.layer,
+                                       withColor: self.isSelected ? self.unselectedPulsableColor : self.selectedPulsableColor,
                                        removeAfterAnimation: false)
         }
 
         radioButton.onTouchesEnded = { [unowned self] touches in
-            self.removePulseLayer(layer: layer)
+            self.removePulseLayer(layer: self.layer)
         }
 
         addConstraints()
