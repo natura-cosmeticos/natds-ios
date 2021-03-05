@@ -112,8 +112,7 @@ final class NatCheckbox: UIControl {
         context?.fillPath()
 
         if isSelected {
-            //drawCheckmark(frame: rect)
-            drawIndeterminateCheck(frame: rect)
+            drawCheckmark(frame: rect)
         }
     }
 
@@ -135,19 +134,6 @@ final class NatCheckbox: UIControl {
         bezierPath.fill()
     }
     //swiftlint:enable line_length
-
-    private func drawIndeterminateCheck(frame: CGRect) {
-        guard let context = UIGraphicsGetCurrentContext() else { return }
-        let lineWidth: CGFloat = 3
-        let startingPoint = CGPoint(x: 6, y: frame.midY)
-        let endingPoint = CGPoint(x: frame.size.width - 6, y: frame.midY)
-
-        context.setLineWidth(lineWidth)
-        context.setStrokeColor(NatColors.background.cgColor)
-        context.move(to: startingPoint )
-        context.addLine(to: endingPoint )
-        context.strokePath()
-    }
 }
 
 extension NatCheckbox {
