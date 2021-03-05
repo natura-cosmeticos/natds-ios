@@ -33,6 +33,15 @@ class NatRadioButtonContainer: UIControl, NatSelector {
         }
     }
 
+    var isIndeterminate: Bool {
+        get {
+            radioButton.isIndeterminate
+        }
+        set {
+            radioButton.isIndeterminate = newValue
+        }
+    }
+
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
         setup()

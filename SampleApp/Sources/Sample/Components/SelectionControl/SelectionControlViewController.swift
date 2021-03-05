@@ -169,10 +169,20 @@ final class SelectionControlViewController: UIViewController, SampleItem {
         return checkbox
     }()
 
-    private let disabledSelectedLabelCheckbox: NatSelectionControl = {
-        let checkbox = NatSelectionControl(style: .checkbox)
-        checkbox.isSelected = true
-        checkbox.isEnabled = false
+//    private let disabledSelectedLabelCheckbox: NatSelectionControl = {
+//        let checkbox = NatSelectionControl(style: .checkbox)
+//        checkbox.isSelected = true
+//        checkbox.isEnabled = false
+//        checkbox.translatesAutoresizingMaskIntoConstraints = false
+//
+//        return checkbox
+//    }()
+
+    private let disabledSelectedLabelCheckbox: NatCheckbox = {
+        let checkbox = NatCheckbox()
+        checkbox.configure(isSelected: true)
+        checkbox.configure(isEnabled: false)
+        checkbox.configure(isIndeterminate: true)
         checkbox.translatesAutoresizingMaskIntoConstraints = false
 
         return checkbox
@@ -240,7 +250,7 @@ final class SelectionControlViewController: UIViewController, SampleItem {
         radioButton.isSelected = true
         radioButton.isEnabled = false
         radioButton.translatesAutoresizingMaskIntoConstraints = false
-
+        
         return radioButton
     }()
 

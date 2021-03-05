@@ -6,6 +6,7 @@ final class NatRadioButton: UIControl {
     var onTouchesEnded: ((Set<UITouch>) -> Void)?
 
     var isHapticFeedbackEnabled: Bool = false
+    var isIndeterminate: Bool = false
 
     private var style = Style.default
     private let increasedTouchRadius: CGFloat = 5

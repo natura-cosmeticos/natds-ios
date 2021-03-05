@@ -105,6 +105,7 @@
 		79B6AC6C25AC8BF90027F7D6 /* AssetsPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B6AC6B25AC8BF90027F7D6 /* AssetsPath.swift */; };
 		79B6AC7D25AE1BDC0027F7D6 /* NatBadge+Dot+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B6AC7C25AE1BDC0027F7D6 /* NatBadge+Dot+Spec.swift */; };
 		79B6AC8525AE1E520027F7D6 /* NatBadge+Dot+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B6AC8425AE1E520027F7D6 /* NatBadge+Dot+Snapshot+Tests.swift */; };
+		79D4C8E925F2B5100027E74E /* NatCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D4C8E825F2B5100027E74E /* NatCheckbox.swift */; };
 		79E7FA1525373ADE00A831BC /* AesopDarkTokens+BorderRadius+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FA1425373ADE00A831BC /* AesopDarkTokens+BorderRadius+Spec.swift */; };
 		79E7FA1D25373B1900A831BC /* AesopLightTokens+BorderRadius+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FA1C25373B1900A831BC /* AesopLightTokens+BorderRadius+Spec.swift */; };
 		79E7FA3325373ED200A831BC /* AesopDarkTokens+Color+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FA3225373ED200A831BC /* AesopDarkTokens+Color+Spec.swift */; };
@@ -161,8 +162,8 @@
 		79E7FBBC2538EDFD00A831BC /* TheBodyShopLightTokens+Spacing+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FBBB2538EDFD00A831BC /* TheBodyShopLightTokens+Spacing+Spec.swift */; };
 		79E7FBC12538EE3000A831BC /* TheBodyShopDarkTokens+Typography+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FBC02538EE3000A831BC /* TheBodyShopDarkTokens+Typography+Spec.swift */; };
 		79E7FBC62538EE5700A831BC /* TheBodyShopLightTokens+Typography+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FBC52538EE5700A831BC /* TheBodyShopLightTokens+Typography+Spec.swift */; };
-		79FC593A25BF5894001CCB56 /* NatRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC593925BF5894001CCB56 /* NatRadioButton.swift */; };
-		79FC593F25BF58C7001CCB56 /* NatRadioButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC593E25BF58C7001CCB56 /* NatRadioButton+Style.swift */; };
+		79FC593A25BF5894001CCB56 /* NatRadioButtonControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC593925BF5894001CCB56 /* NatRadioButtonControl.swift */; };
+		79FC593F25BF58C7001CCB56 /* NatRadioButtonControl+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC593E25BF58C7001CCB56 /* NatRadioButtonControl+Style.swift */; };
 		79FC594425BF58E4001CCB56 /* NatRadioButtonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC594325BF58E4001CCB56 /* NatRadioButtonContainer.swift */; };
 		79FC595D25C1A854001CCB56 /* SelectionControl+RadioButton+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC595C25C1A854001CCB56 /* SelectionControl+RadioButton+Spec.swift */; };
 		79FC596325C1AAD5001CCB56 /* SelectionControl+Checkbox+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC596225C1AAD5001CCB56 /* SelectionControl+Checkbox+Snapshot+Tests.swift */; };
@@ -309,12 +310,12 @@
 		BB3413734DCB562C834B90742EF06929 /* ButtonStyle+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573BBF1E50E0B49397C339D19D5E0D0B /* ButtonStyle+Spec.swift */; };
 		BBCC40A29117B4CB675FE57C3B0130E4 /* AssetsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B41F99CB8ACD14C09E1AA323E38C2D /* AssetsHelper.swift */; };
 		BE272C38259B758800060AF8 /* SelectionControl+Checkbox+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE272C33259B757400060AF8 /* SelectionControl+Checkbox+Spec.swift */; };
-		BE7C39B5259CC77200E82405 /* NatCheckbox+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7C39B4259CC77200E82405 /* NatCheckbox+Style.swift */; };
+		BE7C39B5259CC77200E82405 /* NatCheckboxControl+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7C39B4259CC77200E82405 /* NatCheckboxControl+Style.swift */; };
 		BEAFF23D259517DC00B9C9B5 /* NatCheckboxContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAFF23C259517DC00B9C9B5 /* NatCheckboxContainer.swift */; };
 		BEDF93202593B4FF00F54C50 /* NatSelectionControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF931F2593B4FF00F54C50 /* NatSelectionControl.swift */; };
 		BEDF93252593B5CE00F54C50 /* NatSelectionControl+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF93242593B5CE00F54C50 /* NatSelectionControl+Style.swift */; };
 		BEDF932A2593BE8000F54C50 /* NatSelectionControl+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF93292593BE8000F54C50 /* NatSelectionControl+State.swift */; };
-		BEDF93372593D28400F54C50 /* NatCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF93362593D28400F54C50 /* NatCheckbox.swift */; };
+		BEDF93372593D28400F54C50 /* NatCheckboxControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF93362593D28400F54C50 /* NatCheckboxControl.swift */; };
 		C0F15375EEFCBC922341EBD9DED5A29B /* NatButton+Height.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C54C550ED4D44A309C43261BF40F55 /* NatButton+Height.swift */; };
 		C24255D434C838206493D9A89581F7C1 /* PulseLayer+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478FD68B021B6AA3538B93888BD14648 /* PulseLayer+Spec.swift */; };
 		C3E184D6CD3B52645D0E06A7138CA94E /* TextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99D4E498664E80E25C8F8C061407424 /* TextFieldTests.swift */; };
@@ -461,6 +462,7 @@
 		79B6AC6B25AC8BF90027F7D6 /* AssetsPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsPath.swift; sourceTree = "<group>"; };
 		79B6AC7C25AE1BDC0027F7D6 /* NatBadge+Dot+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatBadge+Dot+Spec.swift"; sourceTree = "<group>"; };
 		79B6AC8425AE1E520027F7D6 /* NatBadge+Dot+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatBadge+Dot+Snapshot+Tests.swift"; sourceTree = "<group>"; };
+		79D4C8E825F2B5100027E74E /* NatCheckbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatCheckbox.swift; sourceTree = "<group>"; };
 		79E7FA1425373ADE00A831BC /* AesopDarkTokens+BorderRadius+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AesopDarkTokens+BorderRadius+Spec.swift"; sourceTree = "<group>"; };
 		79E7FA1C25373B1900A831BC /* AesopLightTokens+BorderRadius+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AesopLightTokens+BorderRadius+Spec.swift"; sourceTree = "<group>"; };
 		79E7FA3225373ED200A831BC /* AesopDarkTokens+Color+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AesopDarkTokens+Color+Spec.swift"; sourceTree = "<group>"; };
@@ -517,8 +519,8 @@
 		79E7FBBB2538EDFD00A831BC /* TheBodyShopLightTokens+Spacing+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheBodyShopLightTokens+Spacing+Spec.swift"; sourceTree = "<group>"; };
 		79E7FBC02538EE3000A831BC /* TheBodyShopDarkTokens+Typography+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheBodyShopDarkTokens+Typography+Spec.swift"; sourceTree = "<group>"; };
 		79E7FBC52538EE5700A831BC /* TheBodyShopLightTokens+Typography+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheBodyShopLightTokens+Typography+Spec.swift"; sourceTree = "<group>"; };
-		79FC593925BF5894001CCB56 /* NatRadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatRadioButton.swift; sourceTree = "<group>"; };
-		79FC593E25BF58C7001CCB56 /* NatRadioButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatRadioButton+Style.swift"; sourceTree = "<group>"; };
+		79FC593925BF5894001CCB56 /* NatRadioButtonControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatRadioButtonControl.swift; sourceTree = "<group>"; };
+		79FC593E25BF58C7001CCB56 /* NatRadioButtonControl+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatRadioButtonControl+Style.swift"; sourceTree = "<group>"; };
 		79FC594325BF58E4001CCB56 /* NatRadioButtonContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatRadioButtonContainer.swift; sourceTree = "<group>"; };
 		79FC595C25C1A854001CCB56 /* SelectionControl+RadioButton+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelectionControl+RadioButton+Spec.swift"; sourceTree = "<group>"; };
 		79FC596225C1AAD5001CCB56 /* SelectionControl+Checkbox+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelectionControl+Checkbox+Snapshot+Tests.swift"; sourceTree = "<group>"; };
@@ -655,12 +657,12 @@
 		BAB63DBD1A346FC4D5664E5B20CC96D1 /* UIView+Frame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Frame.swift"; sourceTree = "<group>"; };
 		BC00F737F0234FCBD14533100E96A39E /* Pulsable+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pulsable+Spec.swift"; sourceTree = "<group>"; };
 		BE272C33259B757400060AF8 /* SelectionControl+Checkbox+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelectionControl+Checkbox+Spec.swift"; sourceTree = "<group>"; };
-		BE7C39B4259CC77200E82405 /* NatCheckbox+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatCheckbox+Style.swift"; sourceTree = "<group>"; };
+		BE7C39B4259CC77200E82405 /* NatCheckboxControl+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatCheckboxControl+Style.swift"; sourceTree = "<group>"; };
 		BEAFF23C259517DC00B9C9B5 /* NatCheckboxContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatCheckboxContainer.swift; sourceTree = "<group>"; };
 		BEDF931F2593B4FF00F54C50 /* NatSelectionControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatSelectionControl.swift; sourceTree = "<group>"; };
 		BEDF93242593B5CE00F54C50 /* NatSelectionControl+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatSelectionControl+Style.swift"; sourceTree = "<group>"; };
 		BEDF93292593BE8000F54C50 /* NatSelectionControl+State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatSelectionControl+State.swift"; sourceTree = "<group>"; };
-		BEDF93362593D28400F54C50 /* NatCheckbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatCheckbox.swift; sourceTree = "<group>"; };
+		BEDF93362593D28400F54C50 /* NatCheckboxControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatCheckboxControl.swift; sourceTree = "<group>"; };
 		BF8DC06D81E2DEFAF54C74410DAD95D8 /* NatButton+Height+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+Height+Spec.swift"; sourceTree = "<group>"; };
 		C58B1BFBC101D26CBEC7E3448F9B33D2 /* ExpansionPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpansionPanel.swift; sourceTree = "<group>"; };
 		CAD56BE8AA67D399ED570EA78BFC09E7 /* NSMutableAttributedString+BuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+BuilderTests.swift"; sourceTree = "<group>"; };
@@ -1384,8 +1386,8 @@
 		79FC593825BF56E0001CCB56 /* NatRadioButton */ = {
 			isa = PBXGroup;
 			children = (
-				79FC593925BF5894001CCB56 /* NatRadioButton.swift */,
-				79FC593E25BF58C7001CCB56 /* NatRadioButton+Style.swift */,
+				79FC593925BF5894001CCB56 /* NatRadioButtonControl.swift */,
+				79FC593E25BF58C7001CCB56 /* NatRadioButtonControl+Style.swift */,
 				79FC594325BF58E4001CCB56 /* NatRadioButtonContainer.swift */,
 			);
 			path = NatRadioButton;
@@ -2258,8 +2260,9 @@
 			isa = PBXGroup;
 			children = (
 				79FC593825BF56E0001CCB56 /* NatRadioButton */,
-				BEDF93362593D28400F54C50 /* NatCheckbox.swift */,
-				BE7C39B4259CC77200E82405 /* NatCheckbox+Style.swift */,
+				79D4C8E825F2B5100027E74E /* NatCheckbox.swift */,
+				BEDF93362593D28400F54C50 /* NatCheckboxControl.swift */,
+				BE7C39B4259CC77200E82405 /* NatCheckboxControl+Style.swift */,
 				BEAFF23C259517DC00B9C9B5 /* NatCheckboxContainer.swift */,
 			);
 			path = Selectors;
@@ -2870,7 +2873,7 @@
 				79ACDADF255C336E00660E68 /* NatProgressIndicatorCircular.swift in Sources */,
 				843123E125123F0C002A7B6F /* AesopLightTheme.swift in Sources */,
 				84703F3C24F6ECD300FE01CA /* NatFonts+TextStyle.swift in Sources */,
-				BEDF93372593D28400F54C50 /* NatCheckbox.swift in Sources */,
+				BEDF93372593D28400F54C50 /* NatCheckboxControl.swift in Sources */,
 				845D099A250119AF00B05760 /* UIView+CenterBounds.swift in Sources */,
 				BBCC40A29117B4CB675FE57C3B0130E4 /* AssetsHelper.swift in Sources */,
 				844A1E2324AE117400E93AD9 /* NatShortcut.swift in Sources */,
@@ -2898,7 +2901,7 @@
 				845D09952501193500B05760 /* NatIconButton+Sizes.swift in Sources */,
 				845AD7AA24E2CC82006CA226 /* AvonLightTheme.swift in Sources */,
 				40B14F67117654B7854317119E5B3509 /* ConfigurationStorage.swift in Sources */,
-				79FC593A25BF5894001CCB56 /* NatRadioButton.swift in Sources */,
+				79FC593A25BF5894001CCB56 /* NatRadioButtonControl.swift in Sources */,
 				84BC901C24AB7445007DF09D /* NatDialogDismissableConfigurable.swift in Sources */,
 				AB9CCFDF8B930FD49AFAEAE1BB5CA718 /* DesignSystem.swift in Sources */,
 				7CA6BAC353B73AF5D31F09CAF0268EE5 /* DesignSystemFatalError.swift in Sources */,
@@ -2951,7 +2954,8 @@
 				1E1CA75D4F2464DBEA0DD722294FFDEB /* NatSpacing.swift in Sources */,
 				84BC901724AA17C0007DF09D /* NatDialogTitleConfigurable.swift in Sources */,
 				84BF066224B4A62400462AC5 /* NatShortcut+Style.swift in Sources */,
-				BE7C39B5259CC77200E82405 /* NatCheckbox+Style.swift in Sources */,
+				79D4C8E925F2B5100027E74E /* NatCheckbox.swift in Sources */,
+				BE7C39B5259CC77200E82405 /* NatCheckboxControl+Style.swift in Sources */,
 				84BC900C24AA169B007DF09D /* DialogButtonConfiguration.swift in Sources */,
 				7D3D59152593D1B600C9197B /* UIImageView+UIColor.swift in Sources */,
 				13070104FE3F89CB14F76D621EF9A7F1 /* NavigationDrawer+IndexMenu.swift in Sources */,
@@ -2988,7 +2992,7 @@
 				840B6A754236624B9738CBC3D5CFE895 /* ViewAnimatingWrapper.swift in Sources */,
 				843123DF25123ED0002A7B6F /* AesopDarkTokens.swift in Sources */,
 				EE1E7A9F49A18BCD194E0C03FB2F0074 /* ViewStyle.swift in Sources */,
-				79FC593F25BF58C7001CCB56 /* NatRadioButton+Style.swift in Sources */,
+				79FC593F25BF58C7001CCB56 /* NatRadioButtonControl+Style.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

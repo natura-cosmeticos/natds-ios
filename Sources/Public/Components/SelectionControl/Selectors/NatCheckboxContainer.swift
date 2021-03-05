@@ -2,11 +2,12 @@ import UIKit
 
 protocol NatSelector: UIControl, Pulsable {
     var isHapticFeedbackEnabled: Bool { get set }
+    var isIndeterminate: Bool { get set }
 }
 
 class NatCheckboxContainer: UIControl, NatSelector {
 
-    let checkbox = NatCheckbox()
+    let checkbox = NatCheckboxControl()
     let selectedPulsableColor: UIColor = getUIColorFromTokens(\.colorPrimary).withAlphaComponent(0.2)
     let unselectedPulsableColor: UIColor = getUIColorFromTokens(\.colorMediumEmphasis).withAlphaComponent(0.2)
 
@@ -34,6 +35,15 @@ class NatCheckboxContainer: UIControl, NatSelector {
         }
         set {
             checkbox.isHapticFeedbackEnabled = newValue
+        }
+    }
+
+    var isIndeterminate: Bool {
+        get {
+            checkbox.isIndeterminate
+        }
+        set {
+            checkbox.isIndeterminate = newValue
         }
     }
 

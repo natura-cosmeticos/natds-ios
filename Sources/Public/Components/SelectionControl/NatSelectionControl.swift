@@ -8,17 +8,17 @@ import UIKit
  - radio
  
  Example of usage:
-        
-        NatSelectionControl(style: .radioButton)
+
+ NatSelectionControl(style: .radioButton)
  
  And it can be configured with a label:
-        
-        NatSelectionControl(style: .checkbox, text: "The text for the label")
+
+ NatSelectionControl(style: .checkbox, text: "The text for the label")
 
  - Requires:
  It's necessary to configure the Design System with a theme or fatalError will be raised.
  
-        DesignSystem().configure(with: AvailableTheme)
+ DesignSystem().configure(with: AvailableTheme)
  */
 
 public class NatSelectionControl: UIView {
@@ -50,6 +50,15 @@ public class NatSelectionControl: UIView {
         }
         set {
             selectorView.isHapticFeedbackEnabled = newValue
+        }
+    }
+
+    public var isIndeterminate: Bool {
+        get {
+            selectorView.isIndeterminate
+        }
+        set {
+            selectorView.isIndeterminate = newValue
         }
     }
 
@@ -104,5 +113,9 @@ public class NatSelectionControl: UIView {
         label.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         label.centerYAnchor.constraint(equalTo: selectorView.centerYAnchor).isActive = true
         label.heightAnchor.constraint(equalTo: heightAnchor).isActive = true
+    }
+
+    public func configure(text: String?) {
+        label.text = text
     }
 }
