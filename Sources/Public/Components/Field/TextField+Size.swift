@@ -1,5 +1,5 @@
 extension TextField {
-    public enum Size {
+    public enum Size: CaseIterable {
         case medium
         case mediumX
         

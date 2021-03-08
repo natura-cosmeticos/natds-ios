@@ -71,7 +71,7 @@ class TextFieldItemViewController: UIViewController, SampleItem {
         let field = TextField()
         field.title = "Error"
         field.placeholder = "Input with error"
-        field.configure(feedback: .error, with: "Opss... this input has an error!")
+        field.configure(state: .error, with: "Opss... this input has an error!")
         field.delegate = self
         return field
     }()
@@ -80,7 +80,7 @@ class TextFieldItemViewController: UIViewController, SampleItem {
         let field = TextField()
         field.title = "Error"
         field.placeholder = "Input with error"
-        field.configure(feedback: .error, with: "Opss... this input has an error - Neque porro quisquam est qui dolorem ipsum quia dolor sit amet.")
+        field.configure(state: .error, with: "Opss... this input has an error - Neque porro quisquam est qui dolorem ipsum quia dolor sit amet.")
         field.delegate = self
         return field
     }()
@@ -119,7 +119,7 @@ class TextFieldItemViewController: UIViewController, SampleItem {
         field.title = "Success"
         field.type = .text
         field.placeholder = "Input with success"
-        field.configure(feedback: .success, with: "Success message validating what's typed.")
+        field.configure(state: .success, with: "Success message validating what's typed.")
         field.delegate = self
         return field
     }()
@@ -129,7 +129,7 @@ class TextFieldItemViewController: UIViewController, SampleItem {
         field.title = "Success"
         field.type = .text
         field.placeholder = "Input with success"
-        field.configure(feedback: .success, with: "A very, very long success message validating what's typed and giving more info.")
+        field.configure(state: .success, with: "A very, very long success message validating what's typed and giving more info.")
         field.delegate = self
         return field
     }()

@@ -74,7 +74,7 @@ public class TextField: UIView {
     /// Text that alerts about an error
     public var error: String? {
         didSet {
-            configure(feedback: .error, with: error)
+            configure(state: .error, with: error)
         }
     }
     
@@ -118,13 +118,13 @@ public class TextField: UIView {
         }
     }
     
-    private(set) var feedbackState: FeedbackState = .none {
+    private(set) var state: FeedbackState = .none {
         didSet {
             handleFeedbackStyle()
         }
     }
     
-    private var size: Size = .mediumX {
+    public var size: Size = .mediumX {
         didSet {
             self.setNeedsDisplay()
         }
@@ -317,15 +317,9 @@ extension TextField {
     }
     
     private func handleInteractionState() {
-        if interactionState == .disabled || interactionState == .readOnly {
-            textField.isEnabled = false
-            iconButtonGeneral.isUserInteractionEnabled = false
-            iconButtonVisibility.isUserInteractionEnabled = false
-        } else {
-            textField.isEnabled = true
-            iconButtonGeneral.isUserInteractionEnabled = true
-            iconButtonVisibility.isUserInteractionEnabled = true
-        }
+        textField.isEnabled = self.interactionState.isUserInteractionEnabled
+        iconButtonGeneral.isUserInteractionEnabled = self.interactionState.isUserInteractionEnabled
+        iconButtonVisibility.isUserInteractionEnabled = self.interactionState.isUserInteractionEnabled
     }
     
     private func handleInteractionStateStyle() {
@@ -396,7 +390,7 @@ extension TextField {
     }
     
     private func handleFeedbackStyle() {
-        switch feedbackState {
+        switch state {
         case .error:
             textField.borderWidth = 2
             textField.borderColor = getUIColorFromTokens(\.colorAlert)
@@ -435,9 +429,6 @@ extension TextField {
         self.textField.autocorrectionType = type.autoCorrection
         self.textField.autocapitalizationType = type.capitalization
         self.textField.isSecureTextEntry = type.secureTextEntry
-        if type.needsRedraw {
-            self.setNeedsDisplay()
-        }
     }
     
     private func handleRequired() {
@@ -530,12 +521,24 @@ extension TextField: UITextFieldDelegate {
 extension TextField {
     // MARK: - Public Methods
     
+    public func configure(title: String) {
+        self.title = title
+    }
+    
+    public func configure(placeholder: String) {
+        self.placeholder = placeholder
+    }
+    
     public func configure(size: Size) {
         self.size = size
     }
     
-    public func configure(feedback state: FeedbackState, with text: String?) {
-        self.feedbackState = state
+    public func configure(type: TextFieldType) {
+        self.type = type
+    }
+    
+    public func configure(state: FeedbackState, with text: String?) {
+        self.state = state
         self.helper = text
     }
     
