@@ -44,6 +44,11 @@ final class CheckboxSpec: QuickSpec {
                     sut.configure(text: "label text")
                     expect(sut.checkbox.labelComponent).to(equal("label text"))
                 }
+
+                it("starts indeterminate") {
+                    sut.configure(isIndeterminate: true)
+                    expect(sut.checkbox.isIndeterminate).to(equal(true))
+                }
             }
         }
     }
