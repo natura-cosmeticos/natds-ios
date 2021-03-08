@@ -21,7 +21,7 @@ final class ImageSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.99))
     }
 
     func test_image_added_hasValidSnapshot() {
