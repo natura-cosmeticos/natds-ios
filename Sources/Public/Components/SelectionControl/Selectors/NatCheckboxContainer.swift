@@ -3,6 +3,7 @@ import UIKit
 protocol NatSelector: UIControl, Pulsable {
     var isHapticFeedbackEnabled: Bool { get set }
     var isIndeterminate: Bool { get set }
+    var labelComponent: String? { get set }
 }
 
 class NatCheckboxContainer: UIControl, NatSelector {
@@ -44,6 +45,15 @@ class NatCheckboxContainer: UIControl, NatSelector {
         }
         set {
             checkbox.isIndeterminate = newValue
+        }
+    }
+
+    var labelComponent: String? {
+        get {
+            checkbox.labelComponent
+        }
+        set {
+            checkbox.labelComponent = newValue
         }
     }
 

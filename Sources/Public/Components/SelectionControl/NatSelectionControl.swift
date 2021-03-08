@@ -53,12 +53,22 @@ public class NatSelectionControl: UIView {
         }
     }
 
+    /// Attribute that sets and checks if indeterminate state is selected
     public var isIndeterminate: Bool {
         get {
             selectorView.isIndeterminate
         }
         set {
             selectorView.isIndeterminate = newValue
+        }
+    }
+
+    public var labelComponent: String? {
+        get {
+            selectorView.labelComponent
+        }
+        set {
+            selectorView.labelComponent = newValue ?? ""
         }
     }
 
@@ -102,14 +112,16 @@ public class NatSelectionControl: UIView {
 
     private func addSelectorConstraints() {
         selectorView.translatesAutoresizingMaskIntoConstraints = false
-        selectorView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: getTokenFromTheme(\.spacingTiny)).isActive = true
+        selectorView.leadingAnchor.constraint(equalTo: leadingAnchor,
+                                              constant: getTokenFromTheme(\.spacingTiny)).isActive = true
         selectorView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         selectorView.heightAnchor.constraint(equalTo: heightAnchor).isActive = true
     }
 
     private func addLabelConstraints() {
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.leadingAnchor.constraint(equalTo: selectorView.trailingAnchor, constant: getTokenFromTheme(\.spacingMicro)).isActive = true
+        label.leadingAnchor.constraint(equalTo: selectorView.trailingAnchor,
+                                       constant: getTokenFromTheme(\.spacingMicro)).isActive = true
         label.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         label.centerYAnchor.constraint(equalTo: selectorView.centerYAnchor).isActive = true
         label.heightAnchor.constraint(equalTo: heightAnchor).isActive = true
@@ -117,5 +129,6 @@ public class NatSelectionControl: UIView {
 
     public func configure(text: String?) {
         label.text = text
+        labelComponent = text
     }
 }

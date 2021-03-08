@@ -1,5 +1,21 @@
 import UIKit
 
+/**
+ NatCheckbox is a class that represents the Checkbox component from the design system.
+
+ Example of usage:
+
+        checkbox.configure(isSelected: true)
+        checkbox.configure(isEnabled: true)
+        checkbox.configure(text: "Example with label")
+        checkbox.configure(isIndeterminate: true)
+
+ - Requires:
+ It's necessary to configure the Design System with a theme or fatalError will be raised.
+
+        DesignSystem().configure(with: AvailableTheme)
+ */
+
 public final class NatCheckbox: UIView {
 
     public var checkbox = NatSelectionControl(style: .checkbox)
@@ -28,73 +44,24 @@ public final class NatCheckbox: UIView {
             checkbox.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
     }
-    
+
+    /// Attribute that sets a label to the component
     public func configure(text: String?) {
         checkbox.configure(text: text)
     }
 
+    /// Attribute that sets and checks if the component is selected.
     public func configure(isSelected: Bool) {
         checkbox.isSelected = isSelected
     }
 
+    /// Attribute that sets and checks if the component is enabled.
     public func configure(isEnabled: Bool) {
         checkbox.isEnabled = isEnabled
     }
 
+    /// Attribute that sets and checks if indeterminate state is selected
     public func configure(isIndeterminate: Bool) {
         checkbox.isIndeterminate = isIndeterminate
     }
 }
-
-//
-//class CheckboxVitor: UIView {
-//
-//    NatChecboxControl
-//
-//
-//
-//    isselected: Bool = false {
-//
-//    didSet {
-//
-//    natcheckbox.isselected = isselected
-//
-//    }
-//
-//    }
-//
-//
-//
-//    init()
-//
-//
-//
-//    setup()
-//
-//    addsubview(natcheckbox)
-//
-//    addconstrints()
-//
-//
-//
-//    public configure(text: String?) {
-//
-//        natcheckboxcontrol.configure(text: text)
-//
-//    }
-//
-//
-//
-//    public func configure(isSelected: Bool) {
-//
-//        natcheckbox.isselected = isselected
-//
-//    }
-//
-//
-//
-//    button.isEnabled
-//
-//
-//
-//}

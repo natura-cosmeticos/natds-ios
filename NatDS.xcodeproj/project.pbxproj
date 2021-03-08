@@ -106,6 +106,7 @@
 		79B6AC7D25AE1BDC0027F7D6 /* NatBadge+Dot+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B6AC7C25AE1BDC0027F7D6 /* NatBadge+Dot+Spec.swift */; };
 		79B6AC8525AE1E520027F7D6 /* NatBadge+Dot+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B6AC8425AE1E520027F7D6 /* NatBadge+Dot+Snapshot+Tests.swift */; };
 		79D4C8E925F2B5100027E74E /* NatCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D4C8E825F2B5100027E74E /* NatCheckbox.swift */; };
+		79D4C90025F6B2000027E74E /* Checkbox+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D4C8FF25F6B2000027E74E /* Checkbox+Spec.swift */; };
 		79E7FA1525373ADE00A831BC /* AesopDarkTokens+BorderRadius+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FA1425373ADE00A831BC /* AesopDarkTokens+BorderRadius+Spec.swift */; };
 		79E7FA1D25373B1900A831BC /* AesopLightTokens+BorderRadius+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FA1C25373B1900A831BC /* AesopLightTokens+BorderRadius+Spec.swift */; };
 		79E7FA3325373ED200A831BC /* AesopDarkTokens+Color+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E7FA3225373ED200A831BC /* AesopDarkTokens+Color+Spec.swift */; };
@@ -463,6 +464,7 @@
 		79B6AC7C25AE1BDC0027F7D6 /* NatBadge+Dot+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatBadge+Dot+Spec.swift"; sourceTree = "<group>"; };
 		79B6AC8425AE1E520027F7D6 /* NatBadge+Dot+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatBadge+Dot+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		79D4C8E825F2B5100027E74E /* NatCheckbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatCheckbox.swift; sourceTree = "<group>"; };
+		79D4C8FF25F6B2000027E74E /* Checkbox+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Checkbox+Spec.swift"; sourceTree = "<group>"; };
 		79E7FA1425373ADE00A831BC /* AesopDarkTokens+BorderRadius+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AesopDarkTokens+BorderRadius+Spec.swift"; sourceTree = "<group>"; };
 		79E7FA1C25373B1900A831BC /* AesopLightTokens+BorderRadius+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AesopLightTokens+BorderRadius+Spec.swift"; sourceTree = "<group>"; };
 		79E7FA3225373ED200A831BC /* AesopDarkTokens+Color+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AesopDarkTokens+Color+Spec.swift"; sourceTree = "<group>"; };
@@ -1219,6 +1221,14 @@
 				42FC9280C40680336260347DADB5C0F3 /* Pulsable.swift */,
 			);
 			path = Animations;
+			sourceTree = "<group>";
+		};
+		79D4C8F625F6B1B00027E74E /* Checkbox */ = {
+			isa = PBXGroup;
+			children = (
+				79D4C8FF25F6B2000027E74E /* Checkbox+Spec.swift */,
+			);
+			path = Checkbox;
 			sourceTree = "<group>";
 		};
 		79E7FA2B25373CF000A831BC /* AesopDark */ = {
@@ -2069,6 +2079,7 @@
 				26BB817124B918FB00617EFC /* Badge */,
 				37C041B132E91C20059E887D83DD7E4E /* Button */,
 				79FC599C25CB21AC001CCB56 /* Card */,
+				79D4C8F625F6B1B00027E74E /* Checkbox */,
 				67643298FB5CC3CCB193DC69AF79EC67 /* Dialog */,
 				79FC597725C83DF4001CCB56 /* Divider */,
 				6759B588024397D1AC93C8D123122D59 /* ExpansionPanel */,
@@ -2715,6 +2726,7 @@
 				26BB817724B931E900617EFC /* NatBadge+Color+Spec.swift in Sources */,
 				84B9330824AB788E00B71BD4 /* NatDialogDismissableConfigurable+Spec.swift in Sources */,
 				0E7C160324C5D274002FF46F /* UINavigationController+Style+Spec.swift in Sources */,
+				79D4C90025F6B2000027E74E /* Checkbox+Spec.swift in Sources */,
 				7392D4960D4A13B6ADF3AB7372B264F5 /* DesignSystem+Spec.swift in Sources */,
 				0E7C160924C5E614002FF46F /* IconViewSpec.swift in Sources */,
 				84EB6B7924EC019700C6A792 /* GetThemeValidated+Spec.swift in Sources */,

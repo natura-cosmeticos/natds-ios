@@ -7,6 +7,7 @@ final class NatCheckboxControl: UIControl {
 
     var isHapticFeedbackEnabled: Bool = false
     var isIndeterminate: Bool = false
+    var labelComponent: String?
 
     private var style = Style.default
     private let increasedTouchRadius: CGFloat = 5
@@ -40,7 +41,7 @@ final class NatCheckboxControl: UIControl {
     deinit {
         notificationCenter.removeObserver(self)
     }
-    
+
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -114,7 +115,7 @@ final class NatCheckboxControl: UIControl {
 
         if isSelected && isIndeterminate {
             drawIndeterminateCheck(frame: rect)
-        } else {
+        } else if isSelected {
             drawCheckmark(frame: rect)
         }
     }
