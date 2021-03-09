@@ -18,7 +18,7 @@ final class TextFieldTypesSpec: QuickSpec {
                 systemUnderTest.configure(type: .number)
             }
             
-            it("shows number keyboard") {
+            it("returns expected configuration") {
                 expect(systemUnderTest.textField.keyboardType).to(equal(UIKeyboardType.numberPad))
                 expect(systemUnderTest.textField.autocorrectionType).to(equal(UITextAutocorrectionType.no))
                 expect(systemUnderTest.textField.autocapitalizationType).to(equal(UITextAutocapitalizationType.none))
@@ -31,11 +31,33 @@ final class TextFieldTypesSpec: QuickSpec {
                 systemUnderTest.configure(type: .password())
             }
             
-            it("shows number keyboard") {
+            it("returns expected configuration") {
                 expect(systemUnderTest.textField.keyboardType).to(equal(UIKeyboardType.default))
                 expect(systemUnderTest.textField.autocorrectionType).to(equal(UITextAutocorrectionType.no))
                 expect(systemUnderTest.textField.autocapitalizationType).to(equal(UITextAutocapitalizationType.none))
                 expect(systemUnderTest.textField.isSecureTextEntry).to(beTrue())
+            }
+        }
+        
+        describe("#type: password with visibility on") {
+            var iconButtonVisibility: NatIconButton?
+            
+            beforeEach {
+                systemUnderTest.configure(type: .password())
+                systemUnderTest.showVisibilityIcon()
+                
+                iconButtonVisibility = systemUnderTest.subviews
+                    .compactMap { $0 as? NatIconButton }
+                    .first
+                
+                iconButtonVisibility?.gestureRecognizers?.first?.sendGesturesEvents()
+            }
+            
+            it("shows password on visibility icon tap") {
+                expect(systemUnderTest.textField.keyboardType).to(equal(UIKeyboardType.default))
+                expect(systemUnderTest.textField.autocorrectionType).to(equal(UITextAutocorrectionType.no))
+                expect(systemUnderTest.textField.autocapitalizationType).to(equal(UITextAutocapitalizationType.none))
+                expect(systemUnderTest.textField.isSecureTextEntry).to(beFalse())
             }
         }
         
@@ -44,7 +66,7 @@ final class TextFieldTypesSpec: QuickSpec {
                 systemUnderTest.configure(type: .name)
             }
             
-            it("shows number keyboard") {
+            it("returns expected configuration") {
                 expect(systemUnderTest.textField.keyboardType).to(equal(UIKeyboardType.default))
                 expect(systemUnderTest.textField.autocorrectionType).to(equal(UITextAutocorrectionType.no))
                 expect(systemUnderTest.textField.autocapitalizationType).to(equal(UITextAutocapitalizationType.words))
@@ -57,7 +79,7 @@ final class TextFieldTypesSpec: QuickSpec {
                 systemUnderTest.configure(type: .text)
             }
             
-            it("shows number keyboard") {
+            it("returns expected configuration") {
                 expect(systemUnderTest.textField.keyboardType).to(equal(UIKeyboardType.default))
                 expect(systemUnderTest.textField.autocorrectionType).to(equal(UITextAutocorrectionType.yes))
                 expect(systemUnderTest.textField.autocapitalizationType).to(equal(UITextAutocapitalizationType.none))

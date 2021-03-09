@@ -223,7 +223,7 @@ public class TextField: UIView {
     
     public override func layoutSubviews() {
         super.layoutSubviews()
-        setup()
+        addTextField()
     }
 }
 
