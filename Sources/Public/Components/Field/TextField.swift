@@ -243,8 +243,6 @@ public extension TextField {
 extension TextField {
 
     private func setup() {
-        backgroundColor = .clear
-
         addTitleLabel()
         addTextField()
         addStackView()
@@ -261,7 +259,6 @@ extension TextField {
         handleInteractionStateStyle()
         handleFeedbackStyle()
         handleTextFieldType()
-        showVisibilityIcon()
     }
 
     private func addTitleLabel() {
