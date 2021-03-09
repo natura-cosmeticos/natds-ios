@@ -21,6 +21,7 @@ import UIKit
  DesignSystem().configure(with: AvailableTheme)
  */
 
+@available(*, deprecated, message: "For checkbox use Checkbox() method itself instead")
 public class NatSelectionControl: UIView {
     
     /// Attribute that sets and checks if the component is selected.
