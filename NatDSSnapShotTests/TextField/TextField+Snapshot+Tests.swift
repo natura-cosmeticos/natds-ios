@@ -24,12 +24,12 @@ final class TextFieldSnapshotTests: XCTestCase {
     
     func test_size_whenHasMediumSize_returnMediumSizeSnapshot() {
         systemUnderTest.configure(size: .medium)
-        assertSnapshot(matching: systemUnderTest, as: .image)
+        assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.99))
     }
     
     func test_size_whenHasMediumXSize_returnMediumXSizeSnapshot() {
         systemUnderTest.configure(size: .mediumX)
-        assertSnapshot(matching: systemUnderTest, as: .image)
+        assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.99))
     }
     
     func test_title_whenIsRequired_returnRequiredTitleSnapshot() {

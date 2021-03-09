@@ -43,6 +43,8 @@
 
 public class TextField: UIView {
     
+    // MARK: - Public vars
+    
     /// Label text that is always displayed above textfield
     public var title: String? {
         get { titleLabel.text }
@@ -102,8 +104,19 @@ public class TextField: UIView {
             self.interactionState = isEnabled ? .enabled : .disabled
         }
     }
-
+    
+    public var size: Size = .mediumX {
+        didSet {
+            updateTextFieldHeightConstraint()
+            layoutIfNeeded()
+        }
+    }
+    
     public weak var delegate: TextFieldDelegate?
+    
+    // MARK: - Private vars
+
+    private var textFieldHeightConstraint: NSLayoutConstraint?
     
     private var isEditing: Bool = false {
         didSet {
@@ -121,12 +134,6 @@ public class TextField: UIView {
     private(set) var state: FeedbackState = .none {
         didSet {
             handleFeedbackStyle()
-        }
-    }
-    
-    public var size: Size = .mediumX {
-        didSet {
-            self.setNeedsDisplay()
         }
     }
 
@@ -148,7 +155,6 @@ public class TextField: UIView {
         stackView.distribution = .fillProportionally
         stackView.axis = .horizontal
         stackView.alignment = .top
-
         return stackView
     }()
 
@@ -220,11 +226,6 @@ public class TextField: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    public override func layoutSubviews() {
-        super.layoutSubviews()
-        addTextField()
-    }
 }
 
 public extension TextField {
@@ -278,14 +279,17 @@ extension TextField {
         addSubview(textField)
         textField.translatesAutoresizingMaskIntoConstraints = false
 
-        let constraints = [
+        NSLayoutConstraint.activate([
             textField.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 4),
             textField.leadingAnchor.constraint(equalTo: leadingAnchor),
             textField.trailingAnchor.constraint(equalTo: trailingAnchor),
-            textField.heightAnchor.constraint(equalToConstant: size.value)
-        ]
-
-        NSLayoutConstraint.activate(constraints)
+        ])
+        updateTextFieldHeightConstraint()
+    }
+    
+    private func updateTextFieldHeightConstraint() {
+        textFieldHeightConstraint = textField.heightAnchor.constraint(equalToConstant: size.value)
+        textFieldHeightConstraint?.isActive = true
     }
 
     private func addStackView() {
@@ -437,18 +441,20 @@ extension TextField {
         }
     }
     
-    internal func setIconVisibility() {
-        if iconVisibility == AssetsPath.iconOutlinedActionVisibility.rawValue {
-            iconVisibility = AssetsPath.iconOutlinedActionVisibilityOff.rawValue
-            iconButtonVisibility.configure(iconImage: iconVisibility)
-            self.textField.isSecureTextEntry = false
-        } else {
-            iconVisibility = AssetsPath.iconOutlinedActionVisibility.rawValue
-            iconButtonVisibility.configure(iconImage: iconVisibility)
-            self.textField.isSecureTextEntry = true
-        }
+    private func addIconButtonGeneral() {
+        addSubview(iconButtonGeneral)
+        self.iconButtonGeneral.centerYAnchor.constraint(equalTo: textField.centerYAnchor).isActive = true
+        self.iconButtonGeneral.trailingAnchor.constraint(equalTo: textField.trailingAnchor, constant: -12).isActive = true
     }
-
+    
+    private func addActionImage() {
+        addSubview(actionImageView)
+        actionImageView.trailingAnchor.constraint(equalTo: textField.trailingAnchor).isActive = true
+        actionImageView.topAnchor.constraint(equalTo: textField.topAnchor).isActive = true
+        actionImageView.bottomAnchor.constraint(equalTo: textField.bottomAnchor).isActive = true
+        actionImageView.widthAnchor.constraint(equalToConstant: getTokenFromTheme(\.sizeLarge)).isActive = true
+    }
+    
     public func showVisibilityIcon() {
         if self.type.secureTextEntry {
             if self.subviews.contains(iconButtonGeneral) {
@@ -472,18 +478,16 @@ extension TextField {
         }
     }
     
-    private func addIconButtonGeneral() {
-        addSubview(iconButtonGeneral)
-        self.iconButtonGeneral.centerYAnchor.constraint(equalTo: textField.centerYAnchor).isActive = true
-        self.iconButtonGeneral.trailingAnchor.constraint(equalTo: textField.trailingAnchor, constant: -12).isActive = true
-    }
-    
-    private func addActionImage() {
-        addSubview(actionImageView)
-        actionImageView.trailingAnchor.constraint(equalTo: textField.trailingAnchor).isActive = true
-        actionImageView.topAnchor.constraint(equalTo: textField.topAnchor).isActive = true
-        actionImageView.bottomAnchor.constraint(equalTo: textField.bottomAnchor).isActive = true
-        actionImageView.widthAnchor.constraint(equalToConstant: getTokenFromTheme(\.sizeLarge)).isActive = true
+    internal func setIconVisibility() {
+        if iconVisibility == AssetsPath.iconOutlinedActionVisibility.rawValue {
+            iconVisibility = AssetsPath.iconOutlinedActionVisibilityOff.rawValue
+            iconButtonVisibility.configure(iconImage: iconVisibility)
+            self.textField.isSecureTextEntry = false
+        } else {
+            iconVisibility = AssetsPath.iconOutlinedActionVisibility.rawValue
+            iconButtonVisibility.configure(iconImage: iconVisibility)
+            self.textField.isSecureTextEntry = true
+        }
     }
 }
 
