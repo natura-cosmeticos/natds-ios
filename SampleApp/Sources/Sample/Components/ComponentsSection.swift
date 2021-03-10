@@ -15,6 +15,7 @@ class ComponentsSection: SampleSection {
         IconButtonItemViewController.self,
         IconographyItemViewController.self,
         ImageViewController.self,
+        ListItemViewController.self,
         LogoItemViewController.self,
         NavigationDrawerItemViewController.self,
         ProgressIndicatorItemViewController.self,
