@@ -61,7 +61,7 @@ final class NatAvatarSpec: QuickSpec {
             }
             
             it("hides image view") {
-                expect(imageView?.isHidden).to(beTrue())
+                expect(imageView?.isHidden).to(beFalse())
             }
             
             it("hides icon view") {

@@ -80,6 +80,10 @@ public class IconView: UIView {
         defaultImageView.tintedColor = tintColor
     }
 
+    public func setFontSize(size: UIFont) {
+        iconLabel.font = .iconFont(ofSize: size.pointSize)
+    }
+
     private func setup() {
         addSubview(iconLabel)
         addSubview(defaultImageView)

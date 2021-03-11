@@ -43,15 +43,15 @@ extension NatAvatar.Size {
     var font: UIFont {
         switch self {
         case .standard:
-            return NatFonts.font(ofSize: .overline)
+            return NatFonts.font(ofSize: .caption)
         case .semi:
-            return NatFonts.font(ofSize: .button)
+            return NatFonts.font(ofSize: .body2)
         case .semiX:
-            return NatFonts.font(ofSize: .subtitle2)
-        case .medium:
             return NatFonts.font(ofSize: .heading6)
-        case .largeXXX:
+        case .medium:
             return NatFonts.font(ofSize: .heading5)
+        case .largeXXX:
+            return NatFonts.font(ofSize: .heading3)
         }
     }
 }

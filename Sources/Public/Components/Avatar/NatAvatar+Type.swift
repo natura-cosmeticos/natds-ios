@@ -4,7 +4,7 @@ extension NatAvatar {
 
         These are the allowed styles for a NatAvatar:
         - icon
-        - letter
+        - label
         - image
 
      - Requires:
@@ -12,9 +12,9 @@ extension NatAvatar {
 
                 DesignSystem().configure(with: AvailableTheme)
     */
-    public enum Style: CaseIterable {
+    public enum Types: CaseIterable {
         case icon
-        case letter
+        case label
         case image
     }
 }

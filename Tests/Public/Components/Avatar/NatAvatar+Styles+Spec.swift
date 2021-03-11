@@ -5,17 +5,16 @@ import Nimble
 
 final class NatAvatarStylesSpec: QuickSpec {
     override func spec() {
-        let systemUnderTest = NatAvatar.Style.self
+        let systemUnderTest = NatAvatar.Types.self
         
         beforeEach {
             ConfigurationStorage.shared.currentTheme = StubTheme()
         }
         
-        describe("#all styles") {
+        describe("#all types") {
             it("has 3 possible sizes") {
                 expect(systemUnderTest.allCases.count).to(equal(3))
             }
-            
         }
     }
 }

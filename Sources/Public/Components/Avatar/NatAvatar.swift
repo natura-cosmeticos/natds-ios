@@ -20,15 +20,15 @@
 
  Example of usage:
  
-        // using default configuration:
-        let avatar = NatAvatar()
-        // or:
-        let avatar = NatAvatar(size: .medium, style: .image)
+ // using default configuration:
+ let avatar = NatAvatar()
+ // or:
+ let avatar = NatAvatar(size: .medium, style: .image)
 
  - Requires:
  It's necessary to configure the Design System with a theme or fatalError will be raised.
  
-        DesignSystem().configure(with: AvailableTheme)
+ DesignSystem().configure(with: AvailableTheme)
  */
 
 public final class NatAvatar: UIView {
@@ -52,29 +52,42 @@ public final class NatAvatar: UIView {
     
     private let imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAspectFill
+        imageView.layer.masksToBounds = false
+        imageView.layer.cornerRadius = imageView.frame.height/2
+        imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
     private var defaultIconView: UIImageView = {
         let iconView = UIImageView()
-        iconView.translatesAutoresizingMaskIntoConstraints = false
-        iconView.image = AssetsPath.iconOutlinedSocialPerson.rawValue
+        iconView.image = AssetsPath.iconOutlinedDefaultMockup.rawValue
         iconView.tintedColor = getUIColorFromTokens(\.colorOnPrimary)
+        iconView.translatesAutoresizingMaskIntoConstraints = false
+        return iconView
+    }()
+
+    private let iconView: IconView = {
+        let iconView = IconView(fontSize: NatSizes.standard)
+        iconView.tintColor = getUIColorFromTokens(\.colorOnPrimary)
+        iconView.translatesAutoresizingMaskIntoConstraints = false
+
         return iconView
     }()
 
     internal let size: Size
-    internal var style: Style
+    internal var type: Types
+    internal var fallBackIcon: String?
+
 
     // MARK: - Inits
 
 
 
-    public init(size: Size = .standard, style: Style = .icon) {
+    public init(size: Size = .medium, type: Types = .icon) {
         self.size = size
-        self.style = style
+        self.type = type
 
         super.init(frame: .zero)
         setup()
@@ -93,29 +106,34 @@ public final class NatAvatar: UIView {
         circleView.layer.cornerRadius = size.value / 2
         imageView.layer.cornerRadius = size.value / 2
         label.font = size.font
+        iconView.setFontSize(size: size.font)
     }
 }
 
 // MARK: - Public methods
 
 extension NatAvatar {
-    /// Sets the label text for NatAvatar with `letter` type
+
+
+
+    /// Sets the label text for NatAvatar with `label` type
     /// - Parameter name: a string with the full name for the avatar or the initials with 2 characters.
     /// If the name has more than 2 words, the initials will be the first letter from the first and last names
     public func configure(name: String) {
-        style = .letter
+        type = .label
         
         label.text = name.count <= 2 ? name : name.initials
 
-        imageView.isHidden = true
+        imageView.isHidden = false
         label.isHidden = false
         defaultIconView.isHidden = true
+        iconView.isHidden = true
     }
     
     /// Sets an image for NatAvatar with `image` type
     /// - Parameter image: an UIImage with the image to be displayed. If image is `nil`, the component will show the default icon
     public func configure(image: UIImage?) {
-        style = .image
+        type = .image
         guard let image = image else {
             configureWithDefaultIcon()
             return
@@ -125,14 +143,82 @@ extension NatAvatar {
         imageView.isHidden = false
         label.isHidden = true
         defaultIconView.isHidden = true
+        iconView.isHidden = true
+
     }
-    
+
+    public func configure(imageURL: URL?) {
+        type = .image
+
+        if let image = imageURL {
+
+            do {
+                _ = try Data(contentsOf: image)
+
+                imageView.load(url: image)
+
+                imageView.isHidden = false
+                label.isHidden = true
+                defaultIconView.isHidden = true
+                iconView.isHidden = true
+
+            } catch {
+                defaultFallback(icon: fallBackIcon)
+            }
+        }
+    }
+
+    public func configure(setFallbackIcon: String?) {
+        fallBackIcon = setFallbackIcon
+        if let icon = fallBackIcon {
+            configure(icon: icon)
+            imageView.isHidden = false
+            label.isHidden = true
+            defaultIconView.isHidden = true
+            iconView.isHidden = false
+        } else {
+            defaultFallback(icon: fallBackIcon)
+        }
+    }
+
+    public func configure(icon: String?) {
+        iconView.iconText = icon
+    }
+
     /// Sets the default icon for NatAvatar with `icon` type. The icon cannot be customized
     public func configureWithDefaultIcon() {
-        style = .icon
+        type = .icon
         defaultIconView.isHidden = false
         imageView.isHidden = true
         label.isHidden = true
+        iconView.isHidden = true
+    }
+
+    private func defaultFallback(icon: String?) {
+        if let icon = icon {
+            configure(setFallbackIcon: icon)
+
+            imageView.isHidden = true
+            label.isHidden = true
+            defaultIconView.isHidden = true
+            iconView.isHidden = false
+        } else {
+            if let name = label.text {
+                configure(name: name)
+
+                imageView.isHidden = true
+                label.isHidden = false
+                defaultIconView.isHidden = true
+                iconView.isHidden = true
+            } else {
+                configure(name: "NA")
+
+                imageView.isHidden = true
+                label.isHidden = false
+                defaultIconView.isHidden = true
+                iconView.isHidden = true
+            }
+        }
     }
 }
 
@@ -142,14 +228,11 @@ extension NatAvatar {
     private func setup() {
         addSubview(circleView)
         addSubview(label)
+        addSubview(iconView)
         addSubview(imageView)
         addSubview(defaultIconView)
 
         addConstraints()
-
-        if style == .icon {
-            configureWithDefaultIcon()
-        }
     }
 
     private func addConstraints() {
@@ -170,18 +253,41 @@ extension NatAvatar {
             imageView.leadingAnchor.constraint(equalTo: circleView.leadingAnchor),
             
             defaultIconView.topAnchor.constraint(equalTo: circleView.topAnchor,
-                                                 constant: getTokenFromTheme(\.spacingTiny)),
+                                                 constant: getTokenFromTheme(\.spacingMicro)),
             defaultIconView.bottomAnchor.constraint(equalTo: circleView.bottomAnchor,
-                                                    constant: -getTokenFromTheme(\.spacingTiny)),
+                                                    constant: -getTokenFromTheme(\.spacingMicro)),
             defaultIconView.trailingAnchor.constraint(equalTo: circleView.trailingAnchor,
-                                                      constant: -getTokenFromTheme(\.spacingTiny)),
+                                                      constant: -getTokenFromTheme(\.spacingMicro)),
             defaultIconView.leadingAnchor.constraint(equalTo: circleView.leadingAnchor,
-                                                     constant: getTokenFromTheme(\.spacingTiny)),
-            
+                                                     constant: getTokenFromTheme(\.spacingMicro)),
+
+            iconView.topAnchor.constraint(equalTo: circleView.topAnchor,
+                                          constant: getTokenFromTheme(\.spacingMicro)),
+            iconView.bottomAnchor.constraint(equalTo: circleView.bottomAnchor,
+                                             constant: -getTokenFromTheme(\.spacingMicro)),
+            iconView.trailingAnchor.constraint(equalTo: circleView.trailingAnchor,
+                                               constant: -getTokenFromTheme(\.spacingMicro)),
+            iconView.leadingAnchor.constraint(equalTo: circleView.leadingAnchor,
+                                              constant: getTokenFromTheme(\.spacingMicro)),
+
             label.centerXAnchor.constraint(equalTo: circleView.centerXAnchor),
             label.centerYAnchor.constraint(equalTo: circleView.centerYAnchor)
         ]
 
         NSLayoutConstraint.activate(constraints)
+    }
+}
+
+extension UIImageView {
+    func load(url: URL) {
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self?.image = image
+                    }
+                }
+            }
+        }
     }
 }

@@ -65,9 +65,9 @@ class AvatarItemViewController: UIViewController, SampleItem {
             if value == 1 {
                 avatar.configure(name: name)
             }
-            
+
             if value == 2 {
-                avatar.configure(image: image)
+                avatar.configure(image: UIImage(named: "NATDSBackground"))
             }
             return avatar
         }

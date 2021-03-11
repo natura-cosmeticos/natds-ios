@@ -21,7 +21,7 @@ final class NatAvatarSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
         
-        assertSnapshot(matching: superview, as: .image(precision: 0.97))
+        assertSnapshot(matching: superview, as: .image)
         assertSnapshot(matching: systemUnderTest, as: .recursiveDescription)
     }
     
@@ -31,7 +31,7 @@ final class NatAvatarSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
         
-        assertSnapshot(matching: superview, as: .image(precision: 0.97))
+        assertSnapshot(matching: superview, as: .image)
         assertSnapshot(matching: systemUnderTest, as: .recursiveDescription)
     }
     
@@ -41,7 +41,7 @@ final class NatAvatarSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
         
-        assertSnapshot(matching: superview, as: .image(precision: 0.97))
+        assertSnapshot(matching: superview, as: .image)
         assertSnapshot(matching: systemUnderTest, as: .recursiveDescription)
     }
     
@@ -51,7 +51,7 @@ final class NatAvatarSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
         
-        assertSnapshot(matching: superview, as: .image(precision: 0.97))
+        assertSnapshot(matching: superview, as: .image)
         assertSnapshot(matching: systemUnderTest, as: .recursiveDescription)
     }
 }
