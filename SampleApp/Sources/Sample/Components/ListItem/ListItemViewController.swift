@@ -36,13 +36,43 @@ class ListItemViewController: UIViewController, SampleItem {
 
 extension ListItemViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 6
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: NatListItemCell = tableView.dequeueReusableCell(withIdentifier: "id", for: indexPath) as! NatListItemCell
-        cell.configure(divider: .inset)
+
+        switch indexPath.row {
+        case 0:
+            cell.configure(onClick: false)
+            cell.textLabel?.text = "Onclick false"
+            cell.configure(divider: .inset)
+        case 1:
+            cell.configure(onClick: true)
+            cell.textLabel?.text = "Onclick true"
+            cell.configure(divider: .inset)
+        case 2:
+            cell.textLabel?.text = "Selected cell"
+            cell.configure(divider: .inset)
+        case 3:
+            cell.configure(divider: .inset)
+            cell.textLabel?.text = "Divider inset"
+        case 4:
+            cell.configure(divider: .middle)
+            cell.textLabel?.text = "Divider middle"
+        case 5:
+            cell.configure(divider: .fullBleed)
+            cell.textLabel?.text = "Divider fullbleed"
+        default:
+            cell.configure(divider: .inset)
+        }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == 2 {
+            cell.setSelected(true, animated: true)
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

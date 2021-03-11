@@ -1,7 +1,7 @@
 /**
  DOCS
  */
-public final class NatListItemCell: UITableViewCell {
+open class NatListItemCell: UITableViewCell {
     
     // MARK: - Attributes
     
@@ -25,7 +25,7 @@ public final class NatListItemCell: UITableViewCell {
         setup()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
