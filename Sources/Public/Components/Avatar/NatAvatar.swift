@@ -42,7 +42,7 @@ public final class NatAvatar: UIView {
         return view
     }()
 
-    private let label: UILabel = {
+    internal let label: UILabel = {
         let label = UILabel()
         label.textColor = getUIColorFromTokens(\.colorOnPrimary)
         label.textAlignment = .center
@@ -50,7 +50,7 @@ public final class NatAvatar: UIView {
         return label
     }()
     
-    private let imageView: UIImageView = {
+    internal let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.layer.masksToBounds = false
@@ -60,7 +60,7 @@ public final class NatAvatar: UIView {
         return imageView
     }()
     
-    private var defaultIconView: UIImageView = {
+    internal var defaultIconView: UIImageView = {
         let iconView = UIImageView()
         iconView.image = AssetsPath.iconOutlinedDefaultMockup.rawValue
         iconView.tintedColor = getUIColorFromTokens(\.colorOnPrimary)
@@ -68,7 +68,7 @@ public final class NatAvatar: UIView {
         return iconView
     }()
 
-    private let iconView: IconView = {
+    internal let iconView: IconView = {
         let iconView = IconView(fontSize: NatSizes.standard)
         iconView.tintColor = getUIColorFromTokens(\.colorOnPrimary)
         iconView.translatesAutoresizingMaskIntoConstraints = false

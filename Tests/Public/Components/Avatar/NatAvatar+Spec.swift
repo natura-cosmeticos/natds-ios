@@ -67,6 +67,11 @@ final class NatAvatarSpec: QuickSpec {
             it("hides icon view") {
                 expect(iconImageView?.isHidden).to(beTrue())
             }
+
+            it("name is set") {
+                systemUnderTest.configure(name: "Design System")
+                expect(systemUnderTest.label.text).to(equal("DS"))
+            }
         }
         
         describe("#configure: image") {
@@ -109,7 +114,7 @@ final class NatAvatarSpec: QuickSpec {
             beforeEach {
                 systemUnderTest.configureWithDefaultIcon()
             }
-            
+
             it("shows icon view") {
                 expect(iconImageView?.isHidden).to(beFalse())
             }
@@ -124,6 +129,25 @@ final class NatAvatarSpec: QuickSpec {
             
             it("has the expected icon color") {
                 expect(iconImageView?.tintedColor).to(equal(getUIColorFromTokens(\.colorOnPrimary)))
+            }
+        }
+
+        describe("#defaultFallback") {
+            beforeEach {
+                systemUnderTest = NatAvatar(size: .medium)
+            }
+
+            it("name is set") {
+                let url = URL(string: "http://www")
+                systemUnderTest.configure(imageURL: url)
+                systemUnderTest.configure(name: "Design System")
+                expect(systemUnderTest.label.text).to(equal("DS"))
+            }
+
+            it("no name is set") {
+                let url = URL(string: "http://www")
+                systemUnderTest.configure(imageURL: url)
+                expect(systemUnderTest.label.text).to(equal("NA"))
             }
         }
     }
