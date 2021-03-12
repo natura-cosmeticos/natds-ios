@@ -193,6 +193,7 @@
 		7D8F3E6A258A81C1003A7DEB /* ShortcutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F3E69258A81C1003A7DEB /* ShortcutView.swift */; };
 		7D9838BD25F8F70300A99628 /* NatListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9838BC25F8F70300A99628 /* NatListItem.swift */; };
 		7DE2B10725FBD57300C5CBC0 /* NatListItem+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2B10625FBD57300C5CBC0 /* NatListItem+Spec.swift */; };
+		7DE2B11625FBFBAB00C5CBC0 /* NatListItemCell+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2B11525FBFBAB00C5CBC0 /* NatListItemCell+Snapshot+Tests.swift */; };
 		7D98388325F6450A00A99628 /* TextField+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D98388225F6450A00A99628 /* TextField+Spec.swift */; };
 		7D98388825F6A15400A99628 /* TextField+Sizes+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D98388725F6A15400A99628 /* TextField+Sizes+Spec.swift */; };
 		7D98388D25F6A26900A99628 /* TextField+InteractionStates+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D98388C25F6A26900A99628 /* TextField+InteractionStates+Spec.swift */; };
@@ -564,6 +565,7 @@
 		7D8F3E69258A81C1003A7DEB /* ShortcutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutView.swift; sourceTree = "<group>"; };
 		7D9838BC25F8F70300A99628 /* NatListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatListItem.swift; sourceTree = "<group>"; };
 		7DE2B10625FBD57300C5CBC0 /* NatListItem+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatListItem+Spec.swift"; sourceTree = "<group>"; };
+		7DE2B11525FBFBAB00C5CBC0 /* NatListItemCell+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatListItemCell+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		7D98388225F6450A00A99628 /* TextField+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Spec.swift"; sourceTree = "<group>"; };
 		7D98388725F6A15400A99628 /* TextField+Sizes+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Sizes+Spec.swift"; sourceTree = "<group>"; };
 		7D98388C25F6A26900A99628 /* TextField+InteractionStates+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+InteractionStates+Spec.swift"; sourceTree = "<group>"; };
@@ -1564,6 +1566,14 @@
 			path = List;
 			sourceTree = "<group>";
 		};
+		7DE2B11425FBFB5F00C5CBC0 /* ListItem */ = {
+			isa = PBXGroup;
+			children = (
+				7DE2B11525FBFBAB00C5CBC0 /* NatListItemCell+Snapshot+Tests.swift */,
+			);
+			path = ListItem;
+			sourceTree = "<group>";
+		};
 		8401A9BE24FED3C900B6E762 /* IconButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -1648,6 +1658,7 @@
 				8401A9BE24FED3C900B6E762 /* IconButton */,
 				84BB92A124DCB71400A9BCC8 /* Icons */,
 				79FC59F025DD57B0001CCB56 /* Image */,
+				7DE2B11425FBFB5F00C5CBC0 /* ListItem */,
 				84A16EFD24DDBC3200E80DA0 /* NavigationDrawer */,
 				799B683725671F0C0055B96D /* ProgressIndicator */,
 				79FC596125C1AAAA001CCB56 /* SelectionControl */,
@@ -3104,6 +3115,7 @@
 				84BB929E24DCA6C500A9BCC8 /* TextField+Snapshot+Tests.swift in Sources */,
 				84A16F0324DDBF6C00E80DA0 /* NavigationDrawer+Snapshot+Tests.swift in Sources */,
 				84A16F0624DDC61000E80DA0 /* ValueTextHighlight+Snapshot+Tests.swift in Sources */,
+				7DE2B11625FBFBAB00C5CBC0 /* NatListItemCell+Snapshot+Tests.swift in Sources */,
 				84BB929A24DC935700A9BCC8 /* ViewAnimatingMock.swift in Sources */,
 				84BB92A024DCA7E300A9BCC8 /* TextFieldDelegateMock.swift in Sources */,
 				79D4C90625F6C7FC0027E74E /* Checkbox+Snapshot+Tests.swift in Sources */,
