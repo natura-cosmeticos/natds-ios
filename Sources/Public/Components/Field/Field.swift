@@ -41,15 +41,6 @@ class Field: UITextField {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
-        if keyboardType == .numberPad {
-            return super.canPerformAction(action, withSender: sender)
-                && (action == #selector(UIResponderStandardEditActions.cut)
-                        || action == #selector(UIResponderStandardEditActions.copy))
-        }
-        return true
-    }
 
     override func textRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: padding)
