@@ -1,6 +1,29 @@
 /**
- DOCS
+ NatListItemCell is a class that representes the component List Item from Natura Design System.
+ It inherits from UITableViewCell, being used inside UITableViews.
+ It has the basic behavior for table cells according to the Design System:
+     - a predefined selected color overlay
+     - a ripple effect on touch
+     - and a bottom divider
+ 
+    Example of usage:
+ 
+            tableView.register(NatListItemCell.self, forCellReuseIdentifier: "id")
+            cell.configure(onClick: false)
+            cell.configure(divider: .inset)
+ 
+    NatListItemCell can also be used as a base for your custom cell:
+ 
+         class CustomCell: NatListItemCell {
+            // your custom code for the cell
+         }
+
+ - Requires:
+    It's necessary to configure the Design System with a theme or fatalError will be raised.
+
+            DesignSystem().configure(with: AvailableTheme)
  */
+
 open class NatListItemCell: UITableViewCell {
     
     // MARK: - Attributes
@@ -81,15 +104,21 @@ open class NatListItemCell: UITableViewCell {
     
     // MARK: - Public methods
     
+    /// Sets if the cell is clicable or not. If false, the interaction is disabled
+    /// - Parameter onClick: a bool that indicates if the cell is clicable
     public func configure(onClick: Bool) {
         self.isUserInteractionEnabled = onClick
     }
     
+    /// Sets the divider style for the cell. By default, the cell doesn't have a divider
+    /// To use the divider, you must configure your tableView as `tableView.separatorStyle = .none`
+    /// - Parameter divider: an option from divider styles enum
     public func configure(divider: Divider.Styles) {
         self.divider.configure(style: divider)
         addDivider()
     }
     
+    /// Removes the divider from the cell
     public func configureRemoveDivider() {
         if contentView.subviews.contains(divider) {
             divider.removeFromSuperview()
