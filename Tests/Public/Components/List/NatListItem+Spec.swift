@@ -24,7 +24,8 @@ final class ListItemSpec: QuickSpec {
             }
             
             it("returns default divider: .none") {
-                let dividerView = systemUnderTest.subviews
+                
+                let dividerView = systemUnderTest.contentView.subviews
                     .compactMap { $0 as? Divider }
                     .first
                 expect(dividerView).to(beNil())
@@ -47,7 +48,7 @@ final class ListItemSpec: QuickSpec {
             }
             
             it("adds a divider to the cell") {
-                let dividerView = systemUnderTest.subviews
+                let dividerView = systemUnderTest.contentView.subviews
                     .compactMap { $0 as? Divider }
                     .first
                 expect(dividerView).toNot(beNil())
@@ -61,7 +62,7 @@ final class ListItemSpec: QuickSpec {
             }
             
             it("removes divider from cell") {
-                let dividerView = systemUnderTest.subviews
+                let dividerView = systemUnderTest.contentView.subviews
                     .compactMap { $0 as? Divider }
                     .first
                 expect(dividerView).to(beNil())

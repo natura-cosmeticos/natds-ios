@@ -91,7 +91,7 @@ open class NatListItemCell: UITableViewCell {
     }
     
     public func configureRemoveDivider() {
-        if subviews.contains(divider) {
+        if contentView.subviews.contains(divider) {
             divider.removeFromSuperview()
         }
     }
