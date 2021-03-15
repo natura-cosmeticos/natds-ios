@@ -65,9 +65,11 @@ open class NatListItemCell: UITableViewCell {
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
 
-        if let touch = touches.first {
-            let point = touch.location(in: self)
-            addPulseLayerAnimated(at: point, in: self.contentView.layer, removeAfterAnimation: true)
+        if !isSelected {
+            if let touch = touches.first {
+                let point = touch.location(in: self)
+                addPulseLayerAnimated(at: point, in: self.contentView.layer, removeAfterAnimation: true)
+            }
         }
     }
 
