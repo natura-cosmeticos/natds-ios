@@ -185,6 +185,18 @@ class TextFieldItemViewController: UIViewController, SampleItem {
         return field
     }()
     
+    private lazy var actionImageTextField: TextField = {
+        let field = TextField()
+        field.title = "Action with image"
+        field.type = .text
+        field.placeholder = "Image has action on touch"
+        field.configure(image: UIImage(named: "ImageAreaLimit")) {
+            print("That's the image action")
+        }
+        field.delegate = self
+        return field
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -220,6 +232,7 @@ class TextFieldItemViewController: UIViewController, SampleItem {
         stackView.addArrangedSubview(readOnlyTextField)
         stackView.addArrangedSubview(filledTextField)
         stackView.addArrangedSubview(actionIconTextField)
+        stackView.addArrangedSubview(actionImageTextField)
     }
 
     private func addConstraints() {

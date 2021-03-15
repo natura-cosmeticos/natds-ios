@@ -484,9 +484,9 @@ extension TextField {
     
     private func addActionImage() {
         addSubview(actionImageView)
-        actionImageView.trailingAnchor.constraint(equalTo: textField.trailingAnchor).isActive = true
-        actionImageView.topAnchor.constraint(equalTo: textField.topAnchor).isActive = true
-        actionImageView.bottomAnchor.constraint(equalTo: textField.bottomAnchor).isActive = true
+        actionImageView.trailingAnchor.constraint(equalTo: textField.trailingAnchor, constant: -0.5).isActive = true
+        actionImageView.topAnchor.constraint(equalTo: textField.topAnchor, constant: 2).isActive = true
+        actionImageView.bottomAnchor.constraint(equalTo: textField.bottomAnchor, constant: -2).isActive = true
         actionImageView.widthAnchor.constraint(equalToConstant: getTokenFromTheme(\.sizeLarge)).isActive = true
     }
 
@@ -497,7 +497,7 @@ extension TextField {
             }
             
             addSubview(iconButtonVisibility)
-            textField.fitPaddingToPasswordButton()
+            textField.fitPaddingToIconButton()
 
             let constraints = [
                 iconButtonVisibility.centerYAnchor.constraint(equalTo: textField.centerYAnchor),
@@ -621,7 +621,7 @@ extension TextField {
     public func configure(icon: String?, with action: @escaping () -> Void) {
         configureRemoveAction()
         hideVisibilityIcon()
-        textField.fitPaddingToPasswordButton()
+        textField.fitPaddingToIconButton()
         addIconButtonGeneral()
         iconButtonGeneral.configure(action: action)
 
@@ -639,12 +639,11 @@ extension TextField {
     public func configure(image: UIImage?, with action: @escaping () -> Void) {
         configureRemoveAction()
         hideVisibilityIcon()
-        textField.fitPaddingToPasswordButton()
-        addIconButtonGeneral()
+        textField.fitPaddingToImage()
         addActionImage()
         actionImageView.image = image
-        iconButtonGeneral.configure(action: action)
-        iconButtonGeneral.alpha = 0
+        actionImageView.isClickable = true
+        actionImageView.callback = action
     }
     
     /// Sets a remote image to be displayed inside the textField box, aligned with the right edge, and the action to be executed when it is tapped.
@@ -654,12 +653,11 @@ extension TextField {
     public func configure(remoteImageURL: URL, with action: @escaping () -> Void) {
         configureRemoveAction()
         hideVisibilityIcon()
-        textField.fitPaddingToPasswordButton()
-        addIconButtonGeneral()
+        textField.fitPaddingToImage()
         addActionImage()
         actionImageView.load(url: remoteImageURL)
-        iconButtonGeneral.configure(action: action)
-        iconButtonGeneral.alpha = 0
+        actionImageView.isClickable = true
+        actionImageView.callback = action
     }
     
     /// Removes the action item, whether it's an icon or an image
