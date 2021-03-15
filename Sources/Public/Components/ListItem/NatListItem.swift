@@ -67,7 +67,7 @@ open class NatListItemCell: UITableViewCell {
 
         if let touch = touches.first {
             let point = touch.location(in: self)
-            addPulseLayerAnimated(at: point, in: self.contentView.layer, removeAfterAnimation: false)
+            addPulseLayerAnimated(at: point, in: self.contentView.layer, removeAfterAnimation: true)
         }
     }
 
