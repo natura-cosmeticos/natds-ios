@@ -72,6 +72,7 @@ extension ListItemViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row == 2 {
             cell.setSelected(true, animated: true)
+            tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
         }
     }
     
