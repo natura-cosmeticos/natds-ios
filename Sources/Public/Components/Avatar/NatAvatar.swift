@@ -4,7 +4,7 @@
 
  It has 3 styles:
  - Icon
- - Letter
+ - Label
  - Image
  
  And 5 sizes:
@@ -138,7 +138,9 @@ extension NatAvatar {
         iconView.isHidden = true
 
     }
-
+    
+    /// Sets a remote image for NatAvatar with `image` type
+    /// - Parameter imageURL: a URL containing an image
     public func configure(imageURL: URL?) {
         type = .image
 
@@ -155,7 +157,9 @@ extension NatAvatar {
             }
         }
     }
-
+    
+    /// Configures an icon as a fallback. It will appear if the configuration with the remote image fails.
+    /// - Parameter setFallbackIcon: An icon from NatDSIcons, which is sent as a string. Example: `getIcon(.outlinedDefaultMockup)`
     public func configure(setFallbackIcon: String?) {
         fallBackIcon = setFallbackIcon
         if let icon = fallBackIcon {
@@ -169,7 +173,9 @@ extension NatAvatar {
             defaultFallback(icon: fallBackIcon)
         }
     }
-
+    
+    /// Sets an icon for NatAvatar with `icon` type
+    /// - Parameter icon: An icon from NatDSIcons, which is sent as a string. Example: `getIcon(.outlinedDefaultMockup)`
     public func configure(icon: String?) {
         iconView.iconText = icon
     }
@@ -182,7 +188,11 @@ extension NatAvatar {
         label.isHidden = true
         iconView.isHidden = true
     }
+}
 
+// MARK: - Private methods
+
+extension NatAvatar {
     private func defaultFallback(icon: String?) {
         if let icon = icon {
             configure(setFallbackIcon: icon)
@@ -209,11 +219,7 @@ extension NatAvatar {
             }
         }
     }
-}
-
-// MARK: - Private methods - UI
-
-extension NatAvatar {
+    
     private func setup() {
         addSubview(circleView)
         addSubview(label)
