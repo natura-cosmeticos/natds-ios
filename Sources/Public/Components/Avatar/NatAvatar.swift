@@ -1,5 +1,4 @@
 /**
-
  NatAvatar is a class that represents a component from the Design System.
  The avatar colors change according to the current brand configured in the Design System.
 
@@ -20,15 +19,15 @@
 
  Example of usage:
  
- // using default configuration:
- let avatar = NatAvatar()
- // or:
- let avatar = NatAvatar(size: .medium, style: .image)
+     // using default configuration:
+     let avatar = NatAvatar()
+     // or:
+     let avatar = NatAvatar(size: .medium, style: .image)
 
  - Requires:
  It's necessary to configure the Design System with a theme or fatalError will be raised.
  
- DesignSystem().configure(with: AvailableTheme)
+        DesignSystem().configure(with: AvailableTheme)
  */
 
 public final class NatAvatar: UIView {
@@ -80,10 +79,7 @@ public final class NatAvatar: UIView {
     internal var type: Types
     internal var fallBackIcon: String?
 
-
     // MARK: - Inits
-
-
 
     public init(size: Size = .medium, type: Types = .icon) {
         self.size = size
@@ -94,7 +90,6 @@ public final class NatAvatar: UIView {
     }
 
     // MARK: - Deinit
-
 
     @available(*, unavailable)
     required init?(coder: NSCoder) {
@@ -113,9 +108,6 @@ public final class NatAvatar: UIView {
 // MARK: - Public methods
 
 extension NatAvatar {
-
-
-
     /// Sets the label text for NatAvatar with `label` type
     /// - Parameter name: a string with the full name for the avatar or the initials with 2 characters.
     /// If the name has more than 2 words, the initials will be the first letter from the first and last names
@@ -151,17 +143,13 @@ extension NatAvatar {
         type = .image
 
         if let image = imageURL {
-
             do {
                 _ = try Data(contentsOf: image)
-
                 imageView.load(url: image)
-
                 imageView.isHidden = false
                 label.isHidden = true
                 defaultIconView.isHidden = true
                 iconView.isHidden = true
-
             } catch {
                 defaultFallback(icon: fallBackIcon)
             }
@@ -172,6 +160,7 @@ extension NatAvatar {
         fallBackIcon = setFallbackIcon
         if let icon = fallBackIcon {
             configure(icon: icon)
+            
             imageView.isHidden = false
             label.isHidden = true
             defaultIconView.isHidden = true
@@ -247,10 +236,10 @@ extension NatAvatar {
             circleView.heightAnchor.constraint(equalToConstant: circleSize),
             circleView.bottomAnchor.constraint(equalTo: bottomAnchor),
             
-            imageView.topAnchor.constraint(equalTo: circleView.topAnchor),
-            imageView.bottomAnchor.constraint(equalTo: circleView.bottomAnchor),
-            imageView.trailingAnchor.constraint(equalTo: circleView.trailingAnchor),
-            imageView.leadingAnchor.constraint(equalTo: circleView.leadingAnchor),
+            imageView.topAnchor.constraint(equalTo: circleView.topAnchor, constant: -2),
+            imageView.bottomAnchor.constraint(equalTo: circleView.bottomAnchor, constant: 2),
+            imageView.trailingAnchor.constraint(equalTo: circleView.trailingAnchor, constant: 2),
+            imageView.leadingAnchor.constraint(equalTo: circleView.leadingAnchor, constant: -2),
             
             defaultIconView.topAnchor.constraint(equalTo: circleView.topAnchor,
                                                  constant: getTokenFromTheme(\.spacingMicro)),
