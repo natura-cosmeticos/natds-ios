@@ -231,8 +231,8 @@ public class TextField: UIView {
             self.setIconVisibility()
         }
         iconButton.translatesAutoresizingMaskIntoConstraints = false
-        iconButton.heightAnchor.constraint(equalToConstant: getTokenFromTheme(\.sizeStandard)).isActive = true
-        iconButton.widthAnchor.constraint(equalToConstant: getTokenFromTheme(\.sizeStandard)).isActive = true
+        iconButton.heightAnchor.constraint(equalToConstant: getTokenFromTheme(\.sizeSemi)).isActive = true
+        iconButton.widthAnchor.constraint(equalToConstant: getTokenFromTheme(\.sizeSemi)).isActive = true
 
         return iconButton
     }()
@@ -240,8 +240,8 @@ public class TextField: UIView {
     private lazy var iconButtonGeneral: NatIconButton = {
         let iconButton = NatIconButton(style: .standardDefault)
         iconButton.translatesAutoresizingMaskIntoConstraints = false
-        iconButton.heightAnchor.constraint(equalToConstant: getTokenFromTheme(\.sizeStandard)).isActive = true
-        iconButton.widthAnchor.constraint(equalToConstant: getTokenFromTheme(\.sizeStandard)).isActive = true
+        iconButton.heightAnchor.constraint(equalToConstant: getTokenFromTheme(\.sizeSemi)).isActive = true
+        iconButton.widthAnchor.constraint(equalToConstant: getTokenFromTheme(\.sizeSemi)).isActive = true
         return iconButton
     }()
     
