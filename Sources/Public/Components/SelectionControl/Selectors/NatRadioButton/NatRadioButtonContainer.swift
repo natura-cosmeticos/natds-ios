@@ -2,7 +2,7 @@ import UIKit
 
 class NatRadioButtonContainer: UIControl, NatSelector {
 
-    let radioButton = NatRadioButton()
+    let radioButton = NatRadioButtonControl()
     let selectedPulsableColor: UIColor = getUIColorFromTokens(\.colorPrimary).withAlphaComponent(0.2)
     let unselectedPulsableColor: UIColor = getUIColorFromTokens(\.colorMediumEmphasis).withAlphaComponent(0.2)
 
@@ -50,6 +50,16 @@ class NatRadioButtonContainer: UIControl, NatSelector {
             radioButton.labelComponent = newValue
         }
     }
+
+    var isGrouped: Bool {
+        get {
+            radioButton.isGrouped
+        }
+        set {
+            radioButton.isGrouped = newValue
+        }
+    }
+
 
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)

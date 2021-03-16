@@ -4,6 +4,7 @@ protocol NatSelector: UIControl, Pulsable {
     var isHapticFeedbackEnabled: Bool { get set }
     var isIndeterminate: Bool { get set }
     var labelComponent: String? { get set }
+    var isGrouped: Bool { get set }
 }
 
 class NatCheckboxContainer: UIControl, NatSelector {
@@ -54,6 +55,15 @@ class NatCheckboxContainer: UIControl, NatSelector {
         }
         set {
             checkbox.labelComponent = newValue
+        }
+    }
+
+    var isGrouped: Bool {
+        get {
+            false
+        }
+        set {
+            self.isGrouped = false
         }
     }
 

@@ -6,7 +6,7 @@ extension UIImageView {
     
     @objc var callback: SimpleClosure {
         get {
-            return objc_getAssociatedObject(self, &actionKey) as! SimpleClosure
+            return (objc_getAssociatedObject(self, &actionKey) as? SimpleClosure)!
         }
         set {
             objc_setAssociatedObject(self, &actionKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)

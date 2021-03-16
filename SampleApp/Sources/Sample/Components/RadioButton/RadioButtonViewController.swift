@@ -32,67 +32,108 @@ final class RadioButtonViewController: UIViewController, SampleItem {
         return stackView
     }()
 
-    private let enabledUnselectedRadioButton: NatSelectionControl = {
-        let radioButton = NatSelectionControl(style: .radioButton)
+    private let groupStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.spacing = NatSpacing.tiny
+        stackView.distribution = .fillEqually
+        stackView.alignment = .leading
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+
+        return stackView
+    }()
+
+    private let groupFirstRadioButton: NatRadioButton = {
+        let radioButton = NatRadioButton()
+        radioButton.configure(isSelected: true)
+        radioButton.configure(text: "Group")
         radioButton.translatesAutoresizingMaskIntoConstraints = false
 
         return radioButton
     }()
 
-    private let enabledSelectedRadioButton: NatSelectionControl = {
-        let radioButton = NatSelectionControl(style: .radioButton)
-        radioButton.isSelected = true
+    private let groupSecondRadioButton: NatRadioButton = {
+        let radioButton = NatRadioButton()
+        radioButton.configure(text: "Group")
         radioButton.translatesAutoresizingMaskIntoConstraints = false
 
         return radioButton
     }()
 
-    private let disabledUnselectedRadioButton: NatSelectionControl = {
-        let radioButton = NatSelectionControl(style: .radioButton)
-        radioButton.isSelected = false
-        radioButton.isEnabled = false
+    private let groupThirdRadioButton: NatRadioButton = {
+        let radioButton = NatRadioButton()
+        radioButton.configure(text: "Group")
         radioButton.translatesAutoresizingMaskIntoConstraints = false
 
         return radioButton
     }()
 
-    private let disabledSelectedRadioButton: NatSelectionControl = {
-        let radioButton = NatSelectionControl(style: .radioButton)
-        radioButton.isSelected = true
-        radioButton.isEnabled = false
+    private let enabledUnselectedRadioButton: NatRadioButton = {
+        let radioButton = NatRadioButton()
         radioButton.translatesAutoresizingMaskIntoConstraints = false
 
         return radioButton
     }()
 
-    private let enabledUnselectedLabelRadioButton: NatSelectionControl = {
-        let radioButton = NatSelectionControl(style: .radioButton, text: "Enabled unselected with label")
+    private let enabledSelectedRadioButton: NatRadioButton = {
+        let radioButton = NatRadioButton()
+        radioButton.configure(isSelected: true)
         radioButton.translatesAutoresizingMaskIntoConstraints = false
 
         return radioButton
     }()
 
-    private let enabledSelectedLabelRadioButton: NatSelectionControl = {
-        let radioButton = NatSelectionControl(style: .radioButton, text: "Enabled selected with label")
-        radioButton.isSelected = true
+    private let disabledUnselectedRadioButton: NatRadioButton = {
+        let radioButton = NatRadioButton()
+        radioButton.configure(isSelected: false)
+        radioButton.configure(isEnabled: false)
         radioButton.translatesAutoresizingMaskIntoConstraints = false
 
         return radioButton
     }()
 
-    private let disabledUnselectedLabelRadioButton: NatSelectionControl = {
-        let radioButton = NatSelectionControl(style: .radioButton, text: "Disabled unselected with label")
-        radioButton.isSelected = false
-        radioButton.isEnabled = false
+    private let disabledSelectedRadioButton: NatRadioButton = {
+        let radioButton = NatRadioButton()
+        radioButton.configure(isSelected: true)
+        radioButton.configure(isEnabled: false)
         radioButton.translatesAutoresizingMaskIntoConstraints = false
 
         return radioButton
     }()
 
-    private let disabledSelectedLabelRadioButton: NatSelectionControl = {
-        let radioButton = NatSelectionControl(style: .radioButton, text: "Disabled selected with label")
-        radioButton.isSelected = true
-        radioButton.isEnabled = false
+    private let enabledUnselectedLabelRadioButton: NatRadioButton = {
+        let radioButton = NatRadioButton()
+        radioButton.configure(text: "Enabled unselected with label")
+        radioButton.translatesAutoresizingMaskIntoConstraints = false
+
+        return radioButton
+    }()
+
+    private let enabledSelectedLabelRadioButton: NatRadioButton = {
+
+        let radioButton = NatRadioButton()
+        radioButton.configure(text: "Enabled selected with label")
+        radioButton.configure(isSelected: true)
+        radioButton.translatesAutoresizingMaskIntoConstraints = false
+
+        return radioButton
+    }()
+
+    private let disabledUnselectedLabelRadioButton: NatRadioButton = {
+        let radioButton = NatRadioButton()
+        radioButton.configure(text: "Disabled unselected with label")
+        radioButton.configure(isSelected: false)
+        radioButton.configure(isEnabled: false)
+        radioButton.translatesAutoresizingMaskIntoConstraints = false
+
+        return radioButton
+    }()
+
+    private let disabledSelectedLabelRadioButton: NatRadioButton = {
+        let radioButton = NatRadioButton()
+        radioButton.configure(text: "Disabled selected with label")
+        radioButton.configure(isSelected: true)
+        radioButton.configure(isEnabled: false)
         radioButton.translatesAutoresizingMaskIntoConstraints = false
 
         return radioButton
@@ -106,13 +147,23 @@ final class RadioButtonViewController: UIViewController, SampleItem {
     // MARK: - Private methods
 
     private func setup() {
+
+        let group = [groupFirstRadioButton, groupSecondRadioButton, groupThirdRadioButton]
+        groupFirstRadioButton.configure(group: group)
+        groupSecondRadioButton.configure(group: group)
+        groupThirdRadioButton.configure(group: group)
+
         title = Self.name
         view.backgroundColor = NatColors.background
         view.addSubview(scrollView)
 
         scrollView.addSubview(containerView)
-
+        containerView.addSubview(groupStackView)
         containerView.addSubview(stackView)
+
+        groupStackView.addArrangedSubview(groupFirstRadioButton)
+        groupStackView.addArrangedSubview(groupSecondRadioButton)
+        groupStackView.addArrangedSubview(groupThirdRadioButton)
 
         stackView.addArrangedSubview(enabledUnselectedRadioButton)
         stackView.addArrangedSubview(enabledSelectedRadioButton)
@@ -146,13 +197,13 @@ extension RadioButtonViewController {
             containerView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
             containerHeightConstraint,
 
-            stackView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: NatSpacing.small),
+            groupStackView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: NatSpacing.small),
+            groupStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+            groupStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+
+            stackView.topAnchor.constraint(equalTo: groupStackView.bottomAnchor, constant: NatSpacing.small),
             stackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
-            stackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
-            stackView.bottomAnchor.constraint(
-                greaterThanOrEqualTo: containerView.bottomAnchor,
-                constant: -NatSpacing.small
-            )
+            stackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor)
         ]
 
         NSLayoutConstraint.activate(constraints)

@@ -1,6 +1,6 @@
 import UIKit
 
-final class NatRadioButton: UIControl {
+final class NatRadioButtonControl: UIControl {
 
     var onTouchesBegan: ((Set<UITouch>) -> Void)?
     var onTouchesEnded: ((Set<UITouch>) -> Void)?
@@ -8,6 +8,7 @@ final class NatRadioButton: UIControl {
     var isHapticFeedbackEnabled: Bool = false
     var isIndeterminate: Bool = false
     var labelComponent: String?
+    var isGrouped: Bool = false
 
     private var style = Style.default
     private let increasedTouchRadius: CGFloat = 5
@@ -16,7 +17,7 @@ final class NatRadioButton: UIControl {
 
     override var isSelected: Bool {
         didSet {
-            self.setNeedsDisplay()
+            self.setNeedsDisplay() 
             super.isSelected = isSelected
         }
     }
@@ -69,6 +70,10 @@ final class NatRadioButton: UIControl {
         feedbackGenerator?.prepare()
 
         onTouchesBegan?(touches)
+
+        if self.isGrouped {
+            NotificationCenter.default.post(name: .stateHasChanged, object: nil)
+        }
     }
 
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -136,7 +141,7 @@ final class NatRadioButton: UIControl {
     }
 }
 
-extension NatRadioButton {
+extension NatRadioButtonControl {
     @objc internal func themeHasChanged() {
         style = Style.default
     }
