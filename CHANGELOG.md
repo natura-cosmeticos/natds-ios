@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.6.0](https://github.com/natura-cosmeticos/natds-ios/compare/3.5.0...3.6.0) (2021-03-16)
+
+
+### Features
+
+* add list item component ([5d0f3e9](https://github.com/natura-cosmeticos/natds-ios/commit/5d0f3e9e7b58610aa288b17f991ac109659cc498))
+* update list item for sample app ([eb04538](https://github.com/natura-cosmeticos/natds-ios/commit/eb045381ad8b6ff205bb5aba2f0171e2cd11c5b9))
+
+
+### Bug Fixes
+
+* fix animation for selected cell ([517ea72](https://github.com/natura-cosmeticos/natds-ios/commit/517ea722d940a0bacb9b16588bd8cefc0ae0f511))
+* fix animation when cell is selected ([78b0d99](https://github.com/natura-cosmeticos/natds-ios/commit/78b0d99d7dab44686686d221a8f9e9a82dfddfdf))
+* fix cell selection in sample app ([60940bb](https://github.com/natura-cosmeticos/natds-ios/commit/60940bb1261538b2cc985c1769221cd63a5bb23d))
+* fix deprecated notice for checkbox ([92155c1](https://github.com/natura-cosmeticos/natds-ios/commit/92155c1b4a6e4711e6e4dc8110f22cc0965dc149))
+* fix onClick default state and animation func ([d472f5c](https://github.com/natura-cosmeticos/natds-ios/commit/d472f5c6cf83da686c58feef3b7ae1a73636e6d6))
+
 ## [3.5.0](https://github.com/natura-cosmeticos/natds-ios/compare/3.4.0...3.5.0) (2021-03-16)
 
 
