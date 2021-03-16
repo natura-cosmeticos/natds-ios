@@ -23,6 +23,7 @@ class ListItemViewController: UIViewController, SampleItem {
         
         tableView.register(NatListItemCell.self, forCellReuseIdentifier: "id")
         tableView.separatorStyle = .none
+        tableView.allowsMultipleSelection = true
         view.addSubview(tableView)
 
         NSLayoutConstraint.activate([
@@ -44,8 +45,7 @@ extension ListItemViewController: UITableViewDelegate, UITableViewDataSource {
 
         switch indexPath.row {
         case 0:
-            cell.configure(onClick: false)
-            cell.textLabel?.text = "Onclick false"
+            cell.textLabel?.text = "Onclick false (default)"
             cell.configure(divider: .inset)
         case 1:
             cell.configure(onClick: true)

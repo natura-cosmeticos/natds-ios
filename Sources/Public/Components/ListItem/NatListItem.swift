@@ -41,6 +41,8 @@ open class NatListItemCell: UITableViewCell {
         return divider
     }()
     
+    private var onClick: Bool = false
+    
     // MARK: - Overrides
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -54,7 +56,7 @@ open class NatListItemCell: UITableViewCell {
     
     public override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        if selected {
+        if selected && onClick {
             overlayView.backgroundColor = getUIColorFromTokens(\.colorPrimary)
                 .withAlphaComponent(getTokenFromTheme(\.opacityMediumLow))
         } else {
@@ -65,7 +67,7 @@ open class NatListItemCell: UITableViewCell {
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
 
-        if !isSelected {
+        if !isSelected && onClick {
             if let touch = touches.first {
                 let point = touch.location(in: self)
                 addPulseLayerAnimated(at: point, in: self.contentView.layer, removeAfterAnimation: true)
@@ -106,10 +108,10 @@ open class NatListItemCell: UITableViewCell {
     
     // MARK: - Public methods
     
-    /// Sets if the cell is clicable or not. If false, the interaction is disabled
+    /// Sets if the cell is clicable or not.
     /// - Parameter onClick: a bool that indicates if the cell is clicable
     public func configure(onClick: Bool) {
-        self.isUserInteractionEnabled = onClick
+        self.onClick = onClick
     }
     
     /// Sets the divider style for the cell. By default, the cell doesn't have a divider
