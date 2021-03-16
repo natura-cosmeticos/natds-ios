@@ -9,19 +9,18 @@ import UIKit
  
  Example of usage:
 
- NatSelectionControl(style: .radioButton)
+        NatSelectionControl(style: .radioButton)
  
  And it can be configured with a label:
 
- NatSelectionControl(style: .checkbox, text: "The text for the label")
+        NatSelectionControl(style: .checkbox, text: "The text for the label")
 
  - Requires:
  It's necessary to configure the Design System with a theme or fatalError will be raised.
  
- DesignSystem().configure(with: AvailableTheme)
+        DesignSystem().configure(with: AvailableTheme)
  */
 
-@available(*, deprecated, message: "For checkbox use Checkbox() method itself instead")
 public class NatSelectionControl: UIView {
     
     /// Attribute that sets and checks if the component is selected.
