@@ -46,7 +46,6 @@
 		26BFBADB25127397006C22E2 /* NatTag+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BFBAD925127380006C22E2 /* NatTag+Spec.swift */; };
 		26BFBADE251273BA006C22E2 /* NatTag+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BFBADD251273BA006C22E2 /* NatTag+Snapshot+Tests.swift */; };
 		291A2ABAA2039E539F7E45F394B8529D /* ExpansionPanel+MarginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F7B50CF41E6ECBFD7148828549ECBF /* ExpansionPanel+MarginTests.swift */; };
-		2934666EAAD661E372AA6009BB287275 /* TextFieldTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF1F1170177B1B22FABD607AA283EB /* TextFieldTypeTests.swift */; };
 		2D7E10D869A68FB9A120F4707A861DF8 /* NSMutableAttributedString+BuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD56BE8AA67D399ED570EA78BFC09E7 /* NSMutableAttributedString+BuilderTests.swift */; };
 		346443D54361FCD8E0E7BFAF8FE2D299 /* FontIconStyleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CDD513F5E78AFAC3E17DD22AB3C6E1 /* FontIconStyleTests.swift */; };
 		37953EE81D12EA2376E8C56E16BC4A29 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6444578A8B4B35C37D0B5FA4D8E0F6 /* UIColor+Hex.swift */; };
@@ -186,8 +185,18 @@
 		7CA6BAC353B73AF5D31F09CAF0268EE5 /* DesignSystemFatalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E6D9764598D210D58B32B2AEB0FE9 /* DesignSystemFatalError.swift */; };
 		7D19998925756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19998825756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift */; };
 		7D3D59152593D1B600C9197B /* UIImageView+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3D59142593D1B500C9197B /* UIImageView+UIColor.swift */; };
+		7D43162225ED9477004AE34F /* TextField+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D43162125ED9477004AE34F /* TextField+Size.swift */; };
+		7D43162D25EE8944004AE34F /* TextField+FeedbackState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D43162C25EE8944004AE34F /* TextField+FeedbackState.swift */; };
+		7D43165925F2A16F004AE34F /* UIImageView+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D43165825F2A16F004AE34F /* UIImageView+URL.swift */; };
+		7D5120D025ED7CE200557E21 /* TextField+InteractionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5120CF25ED7CE200557E21 /* TextField+InteractionState.swift */; };
 		7D5F149A25A782AB007986EE /* IconsSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5F149925A782AB007986EE /* IconsSource.swift */; };
 		7D8F3E6A258A81C1003A7DEB /* ShortcutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F3E69258A81C1003A7DEB /* ShortcutView.swift */; };
+		7D98388325F6450A00A99628 /* TextField+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D98388225F6450A00A99628 /* TextField+Spec.swift */; };
+		7D98388825F6A15400A99628 /* TextField+Sizes+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D98388725F6A15400A99628 /* TextField+Sizes+Spec.swift */; };
+		7D98388D25F6A26900A99628 /* TextField+InteractionStates+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D98388C25F6A26900A99628 /* TextField+InteractionStates+Spec.swift */; };
+		7D98389225F6A69B00A99628 /* TextField+States+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D98389125F6A69B00A99628 /* TextField+States+Spec.swift */; };
+		7D98389725F6A6FA00A99628 /* TextField+Types+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D98389625F6A6FA00A99628 /* TextField+Types+Spec.swift */; };
+		7DE2B12C26000BA600C5CBC0 /* UIImageView+Clickable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2B12B26000BA600C5CBC0 /* UIImageView+Clickable.swift */; };
 		80FE219D764217C0520E0C784F9C0C0B /* PulseLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF8919785F0CA6D3AB0AD57F759ED73 /* PulseLayer.swift */; };
 		81AA5DF0A9D5F332072CA1EC9C5CF968 /* NatOpacities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E76AA6120032EE8B86EB90B51BFD8 /* NatOpacities.swift */; };
 		8401A9C024FED41E00B6E762 /* NatIconButton+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8401A9BF24FED41E00B6E762 /* NatIconButton+Snapshot+Tests.swift */; };
@@ -320,7 +329,7 @@
 		BEDF93372593D28400F54C50 /* NatCheckboxControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDF93362593D28400F54C50 /* NatCheckboxControl.swift */; };
 		C0F15375EEFCBC922341EBD9DED5A29B /* NatButton+Height.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C54C550ED4D44A309C43261BF40F55 /* NatButton+Height.swift */; };
 		C24255D434C838206493D9A89581F7C1 /* PulseLayer+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478FD68B021B6AA3538B93888BD14648 /* PulseLayer+Spec.swift */; };
-		C3E184D6CD3B52645D0E06A7138CA94E /* TextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99D4E498664E80E25C8F8C061407424 /* TextFieldTests.swift */; };
+		C3E184D6CD3B52645D0E06A7138CA94E /* TextFieldDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99D4E498664E80E25C8F8C061407424 /* TextFieldDelegateTests.swift */; };
 		C4EB3DDBDD3DEFDA5183455CCDB2720F /* NatDialogController+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C01EDAF32106E3A72F0D0694D1A156C /* NatDialogController+Spec.swift */; };
 		CB6F95EF082D5B6EF08A8BC9B7A01427 /* TextFieldDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D521C44E858B4345479E0B193CE2BB9C /* TextFieldDelegateMock.swift */; };
 		CF14752D6F385AD399A59F275DEB1ED7 /* NatBorderRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A74845475F2B53E1C0242E26F6DD1 /* NatBorderRadius.swift */; };
@@ -544,9 +553,19 @@
 		7CCF632B4501044E5062C574CCBBF74E /* NatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatButton.swift; sourceTree = "<group>"; };
 		7D19998825756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatProgressIndicatorCircular+Size.swift"; sourceTree = "<group>"; };
 		7D3D59142593D1B500C9197B /* UIImageView+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+UIColor.swift"; sourceTree = "<group>"; };
+		7D43162125ED9477004AE34F /* TextField+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Size.swift"; sourceTree = "<group>"; };
+		7D43162C25EE8944004AE34F /* TextField+FeedbackState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+FeedbackState.swift"; sourceTree = "<group>"; };
+		7D43165825F2A16F004AE34F /* UIImageView+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+URL.swift"; sourceTree = "<group>"; };
+		7D5120CF25ED7CE200557E21 /* TextField+InteractionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+InteractionState.swift"; sourceTree = "<group>"; };
 		7D5F149925A782AB007986EE /* IconsSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsSource.swift; sourceTree = "<group>"; };
 		7D8E6D9764598D210D58B32B2AEB0FE9 /* DesignSystemFatalError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemFatalError.swift; sourceTree = "<group>"; };
 		7D8F3E69258A81C1003A7DEB /* ShortcutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutView.swift; sourceTree = "<group>"; };
+		7D98388225F6450A00A99628 /* TextField+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Spec.swift"; sourceTree = "<group>"; };
+		7D98388725F6A15400A99628 /* TextField+Sizes+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Sizes+Spec.swift"; sourceTree = "<group>"; };
+		7D98388C25F6A26900A99628 /* TextField+InteractionStates+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+InteractionStates+Spec.swift"; sourceTree = "<group>"; };
+		7D98389125F6A69B00A99628 /* TextField+States+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+States+Spec.swift"; sourceTree = "<group>"; };
+		7D98389625F6A6FA00A99628 /* TextField+Types+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Types+Spec.swift"; sourceTree = "<group>"; };
+		7DE2B12B26000BA600C5CBC0 /* UIImageView+Clickable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Clickable.swift"; sourceTree = "<group>"; };
 		7F9C4251076A01537D0A8CB995DF81EC /* NavigationDrawerSubitemCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerSubitemCellTests.swift; sourceTree = "<group>"; };
 		83C59F929E88764313134A046BA5C30F /* DesignSystem+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DesignSystem+Spec.swift"; sourceTree = "<group>"; };
 		8401A9BF24FED41E00B6E762 /* NatIconButton+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatIconButton+Snapshot+Tests.swift"; sourceTree = "<group>"; };
@@ -643,14 +662,13 @@
 		9C01EDAF32106E3A72F0D0694D1A156C /* NatDialogController+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogController+Spec.swift"; sourceTree = "<group>"; };
 		9EAE325876E14C91105C5CF9D2E7F1EF /* ViewStyle+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewStyle+Spec.swift"; sourceTree = "<group>"; };
 		9F3B9936E46C7C4571BB36673012AFCE /* NatColors+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatColors+Spec.swift"; sourceTree = "<group>"; };
-		9FBF1F1170177B1B22FABD607AA283EB /* TextFieldTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTypeTests.swift; sourceTree = "<group>"; };
 		A0A53F6A9596591A029749DD3C8BF47B /* ButtonTextStyle+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonTextStyle+Spec.swift"; sourceTree = "<group>"; };
 		A2216A9839DE07735A376736AB143A7F /* TabItemViewDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemViewDelegateMock.swift; sourceTree = "<group>"; };
 		A54E76AA6120032EE8B86EB90B51BFD8 /* NatOpacities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatOpacities.swift; sourceTree = "<group>"; };
 		A59A74845475F2B53E1C0242E26F6DD1 /* NatBorderRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatBorderRadius.swift; sourceTree = "<group>"; };
 		A6E3877B37EA290C13920BA9754C76C1 /* NatBorderRadius+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatBorderRadius+Spec.swift"; sourceTree = "<group>"; };
 		A8840C572761772CBDD3A270B8FE2203 /* ReusableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewTests.swift; sourceTree = "<group>"; };
-		A99D4E498664E80E25C8F8C061407424 /* TextFieldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTests.swift; sourceTree = "<group>"; };
+		A99D4E498664E80E25C8F8C061407424 /* TextFieldDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDelegateTests.swift; sourceTree = "<group>"; };
 		AB85B5288F76E27BCDF2A11BC05D3238 /* NavigationDrawerItemCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerItemCellTests.swift; sourceTree = "<group>"; };
 		AC44AC684E1D6DB6F7BF21E7660666AD /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
 		AC4E75499E95EC13EB47F2CD9CB26622 /* NSMutableAttributedString+Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Builder.swift"; sourceTree = "<group>"; };
@@ -989,8 +1007,12 @@
 		3FCB7713DAAB2F827B224E06280AF674 /* Field */ = {
 			isa = PBXGroup;
 			children = (
-				A99D4E498664E80E25C8F8C061407424 /* TextFieldTests.swift */,
-				9FBF1F1170177B1B22FABD607AA283EB /* TextFieldTypeTests.swift */,
+				A99D4E498664E80E25C8F8C061407424 /* TextFieldDelegateTests.swift */,
+				7D98388225F6450A00A99628 /* TextField+Spec.swift */,
+				7D98389625F6A6FA00A99628 /* TextField+Types+Spec.swift */,
+				7D98389125F6A69B00A99628 /* TextField+States+Spec.swift */,
+				7D98388725F6A15400A99628 /* TextField+Sizes+Spec.swift */,
+				7D98388C25F6A26900A99628 /* TextField+InteractionStates+Spec.swift */,
 			);
 			path = Field;
 			sourceTree = "<group>";
@@ -2317,6 +2339,8 @@
 				3E6444578A8B4B35C37D0B5FA4D8E0F6 /* UIColor+Hex.swift */,
 				8BA9C4721134BD5277D76AEDED7A01DB /* UIFont+Icon.swift */,
 				7D3D59142593D1B500C9197B /* UIImageView+UIColor.swift */,
+				7D43165825F2A16F004AE34F /* UIImageView+URL.swift */,
+				7DE2B12B26000BA600C5CBC0 /* UIImageView+Clickable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -2431,6 +2455,9 @@
 				674EEA4A2112FC3EF3AE40AA3776A35A /* TextField.swift */,
 				EB6A44B9A9D7999BD68C1D60499CEF88 /* TextFieldDelegate.swift */,
 				437B78D88ACFB47EEADED96CDC94C7C5 /* TextFieldType.swift */,
+				7D5120CF25ED7CE200557E21 /* TextField+InteractionState.swift */,
+				7D43162C25EE8944004AE34F /* TextField+FeedbackState.swift */,
+				7D43162125ED9477004AE34F /* TextField+Size.swift */,
 			);
 			path = Field;
 			sourceTree = "<group>";
@@ -2726,6 +2753,7 @@
 				79FC599E25CB21D5001CCB56 /* NatCard+Spec.swift in Sources */,
 				797E613825531CA7002A59E0 /* NaturaLightComponents+Logo+Spec.swift in Sources */,
 				BB3413734DCB562C834B90742EF06929 /* ButtonStyle+Spec.swift in Sources */,
+				7D98389225F6A69B00A99628 /* TextField+States+Spec.swift in Sources */,
 				797E6116255319D2002A59E0 /* AesopLightComponents+Logo+Spec.swift in Sources */,
 				797E610E25531928002A59E0 /* AesopDarkComponents+Logo+Spec.swift in Sources */,
 				79E7FB5D2538D0F700A831BC /* NaturaDarkTokens+Typography+Spec.swift in Sources */,
@@ -2773,6 +2801,7 @@
 				E891D4E704EDCC6EA9CD3EE125A5D292 /* NatDialogController+StandardStyleBuilder+Spec.swift in Sources */,
 				79E7FAE625388FAA00A831BC /* AvonLightTokens+Opacity+Spec.swift in Sources */,
 				DF58B3DD08824CC1C80C886321CEA0F4 /* NatElevations+Spec.swift in Sources */,
+				7D98388325F6450A00A99628 /* TextField+Spec.swift in Sources */,
 				84BB928824DC6CA700A9BCC8 /* BadgeableStub.swift in Sources */,
 				FF4C87EAD7ADB8D9EF8F897BA229A3A7 /* NatFonts+Spec.swift in Sources */,
 				79E7FA1D25373B1900A831BC /* AesopLightTokens+BorderRadius+Spec.swift in Sources */,
@@ -2789,10 +2818,12 @@
 				79E7FB872538E10800A831BC /* TheBodyShopLightTokens+BorderRadius+Spec.swift in Sources */,
 				84BF066E24B5099700462AC5 /* ShortcutContainedStyle+Spec.swift in Sources */,
 				79E7FB3F2538CFDD00A831BC /* NaturaDarkTokens+Opacity+Spec.swift in Sources */,
+				7D98389725F6A6FA00A99628 /* TextField+Types+Spec.swift in Sources */,
 				79E7FB352538CF5A00A831BC /* NaturaDarkTokens+Elevation+Spec.swift in Sources */,
 				84A818BB24B77FA80007C7D5 /* UIGestureRecognizer+SendGesturesEvent.swift in Sources */,
 				84B9331024ABD16100B71BD4 /* NatDialogController+ViewModel+Spec.swift in Sources */,
 				79E7FB2B2538CE0300A831BC /* NaturaDarkTokens+Color+Spec.swift in Sources */,
+				7D98388D25F6A26900A99628 /* TextField+InteractionStates+Spec.swift in Sources */,
 				95BF20E1FC04C44251D7DCAA9C7E7C60 /* NavigationDrawer+IndexMenuTests.swift in Sources */,
 				79E7FA63253745BC00A831BC /* AesopLightTokens+Spacing+Spec.swift in Sources */,
 				79E7FADC25388E8C00A831BC /* AvonLightTokens+Elevation+Spec.swift in Sources */,
@@ -2854,11 +2885,11 @@
 				797E6100255317D4002A59E0 /* NatLogoImages+TheBodyShopDark+Spec.swift in Sources */,
 				79E7FA5E2537458D00A831BC /* AesopDarkTokens+Spacing+Spec.swift in Sources */,
 				79E7FAFF253893B900A831BC /* AvonDarkTokens+Typography+Spec.swift in Sources */,
-				C3E184D6CD3B52645D0E06A7138CA94E /* TextFieldTests.swift in Sources */,
-				2934666EAAD661E372AA6009BB287275 /* TextFieldTypeTests.swift in Sources */,
+				C3E184D6CD3B52645D0E06A7138CA94E /* TextFieldDelegateTests.swift in Sources */,
 				797E610825531806002A59E0 /* NatLogoImages+TheBodyShopLight+Spec.swift in Sources */,
 				847C82A424E578D3001CE116 /* NaturaLightTheme+Spec.swift in Sources */,
 				84BC900D24AA16E0007DF09D /* NatDialogController+AlertStyleBuilder+Spec.swift in Sources */,
+				7D98388825F6A15400A99628 /* TextField+Sizes+Spec.swift in Sources */,
 				84B9331124ACF28400B71BD4 /* NotificationCenterSpy.swift in Sources */,
 				847C82A624E57931001CE116 /* TheBodyShopDarkTheme+Spec.swift in Sources */,
 				84BC900E24AA16EF007DF09D /* DialogStyle+Spec.swift in Sources */,
@@ -2898,6 +2929,7 @@
 				84703F3C24F6ECD300FE01CA /* NatFonts+TextStyle.swift in Sources */,
 				BEDF93372593D28400F54C50 /* NatCheckboxControl.swift in Sources */,
 				845D099A250119AF00B05760 /* UIView+CenterBounds.swift in Sources */,
+				7DE2B12C26000BA600C5CBC0 /* UIImageView+Clickable.swift in Sources */,
 				BBCC40A29117B4CB675FE57C3B0130E4 /* AssetsHelper.swift in Sources */,
 				844A1E2324AE117400E93AD9 /* NatShortcut.swift in Sources */,
 				265B17EB24AFA12900FD0407 /* NatBadge.swift in Sources */,
@@ -2917,8 +2949,10 @@
 				1F40DBA4B8A3C9B0558AD83B5B2884D6 /* ButtonContainedStyle.swift in Sources */,
 				84703F3924F6D9E400FE01CA /* GetComponentFromTheme.swift in Sources */,
 				98C6EB095DD059D51DD9883B943AF889 /* ButtonOutlineStyle.swift in Sources */,
+				7D43162225ED9477004AE34F /* TextField+Size.swift in Sources */,
 				14016A20C7BF7046BAFCD2AE53673EB0 /* ButtonStyle.swift in Sources */,
 				84EB6B8524EEEA8E00C6A792 /* GetOrCreatedCachedColor.swift in Sources */,
+				7D43162D25EE8944004AE34F /* TextField+FeedbackState.swift in Sources */,
 				845AD7A424E2C4DA006CA226 /* Theme.swift in Sources */,
 				000598F48ADE170D305737C11E3F2D99 /* ButtonTextStyle.swift in Sources */,
 				845D09952501193500B05760 /* NatIconButton+Sizes.swift in Sources */,
@@ -2932,6 +2966,7 @@
 				84703F3F24F83EEC00FE01CA /* NatIconButton.swift in Sources */,
 				7D19998925756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift in Sources */,
 				847C829624E36AE1001CE116 /* TheBodyShopLightTheme.swift in Sources */,
+				7D43165925F2A16F004AE34F /* UIImageView+URL.swift in Sources */,
 				84BC900524AA163A007DF09D /* DialogFooterView.swift in Sources */,
 				269C886824C2483600A507BE /* UIBarButtonItem+Icon.swift in Sources */,
 				6D4DFEB09D32E1F36B9FA29904AE1ED8 /* ElevationAttributes.swift in Sources */,
@@ -3016,6 +3051,7 @@
 				843123DF25123ED0002A7B6F /* AesopDarkTokens.swift in Sources */,
 				EE1E7A9F49A18BCD194E0C03FB2F0074 /* ViewStyle.swift in Sources */,
 				79FC593F25BF58C7001CCB56 /* NatRadioButtonControl+Style.swift in Sources */,
+				7D5120D025ED7CE200557E21 /* TextField+InteractionState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

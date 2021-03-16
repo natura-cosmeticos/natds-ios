@@ -1,5 +1,6 @@
 import UIKit
 import NatDS
+import NatDSIcons
 
 class TextFieldItemViewController: UIViewController, SampleItem {
     static var name: String = "Text Field"
@@ -16,7 +17,7 @@ class TextFieldItemViewController: UIViewController, SampleItem {
         let stack = UIStackView()
         stack.axis = .vertical
         stack.spacing = 8
-        stack.distribution = .equalSpacing
+        stack.distribution = .fillProportionally
         return stack
     }()
 
@@ -58,7 +59,7 @@ class TextFieldItemViewController: UIViewController, SampleItem {
 
     private lazy var numberPasswordTextField: TextField = {
         let field = TextField()
-        field.title = "Number password"
+        field.title = "Password - Only numbers"
         field.type = .password(keyboardType: .numberPad)
         field.placeholder = "Type your password (only numbers)"
         field.delegate = self
@@ -70,7 +71,7 @@ class TextFieldItemViewController: UIViewController, SampleItem {
         let field = TextField()
         field.title = "Error"
         field.placeholder = "Input with error"
-        field.error = "Opss... this input has an error"
+        field.configure(state: .error, with: "Opss... this input has an error!")
         field.delegate = self
         return field
     }()
@@ -79,7 +80,7 @@ class TextFieldItemViewController: UIViewController, SampleItem {
         let field = TextField()
         field.title = "Error"
         field.placeholder = "Input with error"
-        field.error = "Opss... this input has an error - Neque porro quisquam est qui dolorem ipsum quia dolor sit amet"
+        field.configure(state: .error, with: "Opss... this input has an error - Neque porro quisquam est qui dolorem ipsum quia dolor sit amet.")
         field.delegate = self
         return field
     }()
@@ -92,7 +93,110 @@ class TextFieldItemViewController: UIViewController, SampleItem {
         field.delegate = self
         return field
     }()
+    
+    private lazy var mediumTextField: TextField = {
+        let field = TextField()
+        field.configure(size: .medium)
+        field.title = "Medium Size"
+        field.type = .text
+        field.placeholder = "A text field with height size medium"
+        field.delegate = self
+        return field
+    }()
+    
+    private lazy var mediumXTextField: TextField = {
+        let field = TextField()
+        field.configure(size: .mediumX)
+        field.title = "MediumX Size (Default)"
+        field.type = .text
+        field.placeholder = "A text field with height size mediumX"
+        field.delegate = self
+        return field
+    }()
+    
+    private lazy var successTextField: TextField = {
+        let field = TextField()
+        field.title = "Success"
+        field.type = .text
+        field.placeholder = "Input with success"
+        field.configure(state: .success, with: "Success message validating what's typed.")
+        field.delegate = self
+        return field
+    }()
+    
+    private lazy var longSuccessTextField: TextField = {
+        let field = TextField()
+        field.title = "Success"
+        field.type = .text
+        field.placeholder = "Input with success"
+        field.configure(state: .success, with: "A very, very long success message validating what's typed and giving more info.")
+        field.delegate = self
+        return field
+    }()
+    
+    private lazy var requiredTextField: TextField = {
+        let field = TextField()
+        field.title = "Required"
+        field.type = .text
+        field.placeholder = "This text field is required"
+        field.configure(required: true)
+        field.delegate = self
+        return field
+    }()
+    
+    private lazy var disabledTextField: TextField = {
+        let field = TextField()
+        field.title = "Disabled"
+        field.type = .text
+        field.placeholder = "Disabled input"
+        field.delegate = self
+        field.configure(isEnabled: false)
+        return field
+    }()
+    
+    private lazy var readOnlyTextField: TextField = {
+        let field = TextField()
+        field.title = "Read only"
+        field.type = .text
+        field.text = "Input is read-only"
+        field.delegate = self
+        field.configure(readOnly: true)
+        return field
+    }()
 
+    private lazy var filledTextField: TextField = {
+        let field = TextField()
+        field.title = "Filled"
+        field.type = .text
+        field.text = "Filled text field"
+        field.delegate = self
+        return field
+    }()
+    
+    private lazy var actionIconTextField: TextField = {
+        let field = TextField()
+        field.title = "Action with icon"
+        field.type = .text
+        field.placeholder = "Icon has action on touch"
+        field.configure(icon: getIcon(.outlinedDefaultMockup)) {
+            print("That's the icon action")
+        }
+        field.delegate = self
+        return field
+    }()
+    
+    private lazy var actionImageTextField: TextField = {
+        let field = TextField()
+        field.title = "Action with image"
+        field.type = .text
+        field.placeholder = "Image has action on touch"
+        field.configure(image: UIImage(named: "ImageAreaLimit")) {
+            print("That's the image action")
+        }
+        field.delegate = self
+        return field
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -119,6 +223,16 @@ class TextFieldItemViewController: UIViewController, SampleItem {
         stackView.addArrangedSubview(errorTextField)
         stackView.addArrangedSubview(errorTextFieldMultpleLines)
         stackView.addArrangedSubview(helperTextField)
+        stackView.addArrangedSubview(mediumTextField)
+        stackView.addArrangedSubview(mediumXTextField)
+        stackView.addArrangedSubview(successTextField)
+        stackView.addArrangedSubview(longSuccessTextField)
+        stackView.addArrangedSubview(requiredTextField)
+        stackView.addArrangedSubview(disabledTextField)
+        stackView.addArrangedSubview(readOnlyTextField)
+        stackView.addArrangedSubview(filledTextField)
+        stackView.addArrangedSubview(actionIconTextField)
+        stackView.addArrangedSubview(actionImageTextField)
     }
 
     private func addConstraints() {
