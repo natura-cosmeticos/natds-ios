@@ -4,5 +4,5 @@
    | <NatDS.IconView; frame = (4 4; 40 40); hidden = YES; tintColor = UIExtendedSRGBColorSpace 0.2 0.2 0.2 1; layer = <CALayer>>
    |    | <UILabel; frame = (0 0; 40 40); userInteractionEnabled = NO; layer = <_UILabelLayer>>
    |    | <UIImageView; frame = (0 0; 40 40); opaque = NO; userInteractionEnabled = NO; tintColor = UIExtendedSRGBColorSpace 0.2 0.2 0.2 1; layer = <CALayer>>
-   | <UIImageView; frame = (0 0; 48 48); clipsToBounds = YES; userInteractionEnabled = NO; layer = <CALayer>>
+   | <UIImageView; frame = (-2 -2; 52 52); clipsToBounds = YES; userInteractionEnabled = NO; layer = <CALayer>>
    | <UIImageView; frame = (4 4; 40 40); hidden = YES; opaque = NO; userInteractionEnabled = NO; tintColor = UIExtendedSRGBColorSpace 0.2 0.2 0.2 1; layer = <CALayer>>
