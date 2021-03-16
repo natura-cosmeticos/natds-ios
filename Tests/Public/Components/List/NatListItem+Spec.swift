@@ -19,8 +19,8 @@ final class ListItemSpec: QuickSpec {
                 expect(systemUnderTest.isSelected).to(beFalse())
             }
 
-            it("returns default onClick: on") {
-                expect(systemUnderTest.isUserInteractionEnabled).to(beTrue())
+            it("returns default onClick: off") {
+                expect(systemUnderTest.onClick).to(beFalse())
             }
             
             it("returns default divider: .none") {
@@ -34,11 +34,11 @@ final class ListItemSpec: QuickSpec {
         
         describe("#configure(onClick:)") {
             beforeEach {
-                systemUnderTest.configure(onClick: false)
+                systemUnderTest.configure(onClick: true)
             }
             
-            it("sets onClick to false") {
-                expect(systemUnderTest.isUserInteractionEnabled).to(beFalse())
+            it("sets onClick to true") {
+                expect(systemUnderTest.onClick).to(beTrue())
             }
         }
         

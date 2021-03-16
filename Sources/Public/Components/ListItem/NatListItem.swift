@@ -41,7 +41,7 @@ open class NatListItemCell: UITableViewCell {
         return divider
     }()
     
-    private var onClick: Bool = false
+    internal var onClick: Bool = false
     
     // MARK: - Overrides
     

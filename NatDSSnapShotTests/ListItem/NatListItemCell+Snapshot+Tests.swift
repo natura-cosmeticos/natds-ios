@@ -23,6 +23,7 @@ final class NatListItemCellSnapshotTests: XCTestCase {
     
     func test_listItem_selected_hasValidSnapshot() {
         let systemUnderTest = NatListItemCell()
+        systemUnderTest.configure(onClick: true)
         systemUnderTest.isSelected = true
 
         assertSnapshot(matching: systemUnderTest, as: .image)
