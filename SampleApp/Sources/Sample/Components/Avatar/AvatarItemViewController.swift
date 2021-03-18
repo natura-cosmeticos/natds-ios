@@ -4,28 +4,28 @@ import NatDSIcons
 
 class AvatarItemViewController: UIViewController, SampleItem {
     static var name = "Avatar"
-    
+
     private lazy var standardStackView = createStackView()
     private lazy var semiStackView = createStackView()
     private lazy var semixStackView = createStackView()
     private lazy var mediumStackView = createStackView()
     private lazy var largexxxStackView = createStackView()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         title = Self.name
         view.backgroundColor = NatColors.background
-        
+
         setup()
     }
-    
+
     private func setup() {
         view.addSubview(standardStackView)
         view.addSubview(semiStackView)
         view.addSubview(semixStackView)
         view.addSubview(mediumStackView)
         view.addSubview(largexxxStackView)
-        
+
         let standardAvatars = createAvatars(size: .standard,
                                             image: UIImage(),
                                             name: "Natura Design System")
@@ -35,12 +35,12 @@ class AvatarItemViewController: UIViewController, SampleItem {
                                         image: UIImage(),
                                         name: "Natura Design System")
         semiAvatars.forEach { semiStackView.addArrangedSubview($0) }
-        
+
         let semixAvatars = createAvatars(size: .semiX,
                                          image: UIImage(),
                                          name: "Natura Design System")
         semixAvatars.forEach { semixStackView.addArrangedSubview($0) }
-        
+
         let mediumAvatars = createAvatars(size: .medium,
                                           image: UIImage(),
                                           name: "Natura Design System")
@@ -53,15 +53,15 @@ class AvatarItemViewController: UIViewController, SampleItem {
 
         addConstraints()
     }
-    
+
     private func createAvatars(size: NatAvatar.Size, image: UIImage, name: String) -> [NatAvatar] {
         (0...2).map { value in
             let avatar = NatAvatar(size: size)
-            
+
             if value == 0 {
                 avatar.configureWithDefaultIcon()
             }
-            
+
             if value == 1 {
                 avatar.configure(name: name)
             }
@@ -82,7 +82,7 @@ class AvatarItemViewController: UIViewController, SampleItem {
 
         return stackView
     }
-    
+
     private func addConstraints() {
         let constraints = [
             // STANDARD
@@ -107,7 +107,7 @@ class AvatarItemViewController: UIViewController, SampleItem {
             ),
             semiStackView.widthAnchor.constraint(equalTo: standardStackView.widthAnchor),
             semiStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            
+
             // SEMIX
             semixStackView.topAnchor.constraint(
                 equalTo: semiStackView.bottomAnchor,
@@ -115,7 +115,7 @@ class AvatarItemViewController: UIViewController, SampleItem {
             ),
             semixStackView.widthAnchor.constraint(equalTo: semiStackView.widthAnchor),
             semixStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            
+
             // MEDIUM
             mediumStackView.topAnchor.constraint(
                 equalTo: semixStackView.bottomAnchor,
@@ -123,7 +123,7 @@ class AvatarItemViewController: UIViewController, SampleItem {
             ),
             mediumStackView.widthAnchor.constraint(equalTo: semixStackView.widthAnchor),
             mediumStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            
+
             // LARGEXXX
             largexxxStackView.topAnchor.constraint(
                 equalTo: mediumStackView.bottomAnchor,
@@ -135,5 +135,5 @@ class AvatarItemViewController: UIViewController, SampleItem {
 
         NSLayoutConstraint.activate(constraints)
     }
-    
+
 }

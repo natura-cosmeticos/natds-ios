@@ -5,7 +5,7 @@ import SnapshotTesting
 
 final class NatAvatarSnapshotTests: XCTestCase {
     var superview: UIView!
-    
+
     override func setUp() {
         super.setUp()
 
@@ -14,43 +14,43 @@ final class NatAvatarSnapshotTests: XCTestCase {
 
         ConfigurationStorage.shared.currentTheme = NaturaLightTheme()
     }
-    
+
     func test_avatar_initials_hasValidSnapsht() {
         let systemUnderTest = NatAvatar(size: .medium)
         systemUnderTest.configure(name: "Natura Design System")
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
-        
+
         assertSnapshot(matching: superview, as: .image)
         assertSnapshot(matching: systemUnderTest, as: .recursiveDescription)
     }
-    
+
     func test_avatar_icon_hasValidSnapshot() {
         let systemUnderTest = NatAvatar(size: .medium)
         systemUnderTest.configureWithDefaultIcon()
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
-        
+
         assertSnapshot(matching: superview, as: .image)
         assertSnapshot(matching: systemUnderTest, as: .recursiveDescription)
     }
-    
+
     func test_avatar_image_hasValidSnapshot() {
         let systemUnderTest = NatAvatar(size: .medium)
         systemUnderTest.configure(image: UIImage())
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
-        
+
         assertSnapshot(matching: superview, as: .image)
         assertSnapshot(matching: systemUnderTest, as: .recursiveDescription)
     }
-    
+
     func test_avatar_nil_image_hasValidSnapshot() {
         let systemUnderTest = NatAvatar(size: .medium)
         systemUnderTest.configure(image: nil)
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
-        
+
         assertSnapshot(matching: superview, as: .image)
         assertSnapshot(matching: systemUnderTest, as: .recursiveDescription)
     }

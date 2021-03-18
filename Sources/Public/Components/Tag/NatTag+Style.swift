@@ -16,7 +16,7 @@ extension NatTag {
                 NatTagStyle.applyAlert(position: .default, on: tag)
             }
         }
-        
+
         public static var leftAlert: NatTag.Style {
             .init { tag in
                 NatTagStyle.applyAlert(position: .left, on: tag)

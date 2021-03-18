@@ -39,7 +39,7 @@ extension NatAvatar.Size {
             return getTokenFromTheme(\.sizeLargeXXX)
         }
     }
-    
+
     var font: UIFont {
         switch self {
         case .standard:

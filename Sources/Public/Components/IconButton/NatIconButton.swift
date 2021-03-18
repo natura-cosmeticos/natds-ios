@@ -121,7 +121,7 @@ extension NatIconButton {
     public func configure(action: @escaping () -> Void) {
         self.action = action
     }
-    
+
     /// Sets a badge for the icon button
     /// - Parameter badgeValue: A UInt indicating a value for the badge
     public func configure(badgeValue: UInt) {
@@ -132,7 +132,7 @@ extension NatIconButton {
             setBadge(count: Int(badgeValue))
         }
     }
-    
+
     /// Sets the state of the icon button.
     /// - Parameter state: An option from State enum: enabled or disabled
     public func configure(state: State) {

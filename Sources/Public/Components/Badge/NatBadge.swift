@@ -1,7 +1,8 @@
 /**
  NatBadge is a class that represents a component from the Design System.
 
- The badge colors change according to the current brand configured in the Design System and according to the user's properties of Light and Dark mode.
+ The badge colors change according to the current brand configured in the Design System.
+ They also change according to the user's properties of Light and Dark mode.
 
  This component has 2 styles:
  - Standard

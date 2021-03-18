@@ -7,7 +7,7 @@ class TagViewController: UIViewController, SampleItem {
     private let defaultTagView = NatTag(style: .defaultAlert)
     private let leftTagView = NatTag(style: .leftAlert)
     private let rightTagView = NatTag(style: .rightAlert)
-    
+
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
@@ -39,7 +39,7 @@ class TagViewController: UIViewController, SampleItem {
 
         NSLayoutConstraint.activate(constraints)
     }
-    
+
     private func createTag(style: NatTag.Style, text: String) -> NatTag {
         let tag = NatTag(style: style)
         tag.configure(text: text)

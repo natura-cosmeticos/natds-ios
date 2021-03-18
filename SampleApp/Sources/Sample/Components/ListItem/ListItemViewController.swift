@@ -1,3 +1,4 @@
+// swiftlint:disable force_cast
 import UIKit
 import NatDS
 
@@ -20,7 +21,7 @@ class ListItemViewController: UIViewController, SampleItem {
     private func setup() {
         tableView.delegate = self
         tableView.dataSource = self
-        
+
         tableView.register(NatListItemCell.self, forCellReuseIdentifier: "id")
         tableView.separatorStyle = .none
         tableView.allowsMultipleSelection = true
@@ -39,9 +40,10 @@ extension ListItemViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 6
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: NatListItemCell = tableView.dequeueReusableCell(withIdentifier: "id", for: indexPath) as! NatListItemCell
+        let cell: NatListItemCell = tableView.dequeueReusableCell(withIdentifier: "id",
+                                                                  for: indexPath) as! NatListItemCell
 
         switch indexPath.row {
         case 0:
@@ -68,14 +70,14 @@ extension ListItemViewController: UITableViewDelegate, UITableViewDataSource {
         }
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row == 2 {
             cell.setSelected(true, animated: true)
             tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
         }
     }
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return NatSizes.medium
     }

@@ -15,7 +15,8 @@
  - largeXXX
  
  The default size is `standard` and the default type is `Icon`.
- The component's size is not changeable, but it's type can change according to the configuration methods called after its initialization.
+ The component's size is not changeable.
+ It's type can change according to the configuration methods called after its initialization.
 
  Example of usage:
  
@@ -33,7 +34,7 @@
 public final class NatAvatar: UIView {
 
     // MARK: - Private properties
-    
+
     internal let circleView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -48,7 +49,7 @@ public final class NatAvatar: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
+
     internal let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
@@ -58,7 +59,7 @@ public final class NatAvatar: UIView {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
-    
+
     internal var defaultIconView: UIImageView = {
         let iconView = UIImageView()
         iconView.image = AssetsPath.iconOutlinedDefaultMockup.rawValue
@@ -95,7 +96,7 @@ public final class NatAvatar: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     public override func layoutSubviews() {
         super.layoutSubviews()
         circleView.layer.cornerRadius = size.value / 2
@@ -113,7 +114,6 @@ extension NatAvatar {
     /// If the name has more than 2 words, the initials will be the first letter from the first and last names
     public func configure(name: String) {
         type = .label
-        
         label.text = name.count <= 2 ? name : name.initials
 
         imageView.isHidden = false
@@ -121,9 +121,10 @@ extension NatAvatar {
         defaultIconView.isHidden = true
         iconView.isHidden = true
     }
-    
+
     /// Sets an image for NatAvatar with `image` type
-    /// - Parameter image: an UIImage with the image to be displayed. If image is `nil`, the component will show the default icon
+    /// - Parameter image: an UIImage with the image to be displayed.
+    /// If image is `nil`, the component will show the default icon
     public func configure(image: UIImage?) {
         type = .image
         guard let image = image else {
@@ -131,14 +132,14 @@ extension NatAvatar {
             return
         }
         imageView.image = image
-        
+
         imageView.isHidden = false
         label.isHidden = true
         defaultIconView.isHidden = true
         iconView.isHidden = true
 
     }
-    
+
     /// Sets a remote image for NatAvatar with `image` type
     /// - Parameter imageURL: a URL containing an image
     public func configure(imageURL: URL?) {
@@ -157,14 +158,15 @@ extension NatAvatar {
             }
         }
     }
-    
+
     /// Configures an icon as a fallback. It will appear if the configuration with the remote image fails.
-    /// - Parameter setFallbackIcon: An icon from NatDSIcons, which is sent as a string. Example: `getIcon(.outlinedDefaultMockup)`
+    /// - Parameter setFallbackIcon: An icon from NatDSIcons, which is sent as a string.
+    /// Example: `getIcon(.outlinedDefaultMockup)`
     public func configure(setFallbackIcon: String?) {
         fallBackIcon = setFallbackIcon
         if let icon = fallBackIcon {
             configure(icon: icon)
-            
+
             imageView.isHidden = false
             label.isHidden = true
             defaultIconView.isHidden = true
@@ -173,7 +175,7 @@ extension NatAvatar {
             defaultFallback(icon: fallBackIcon)
         }
     }
-    
+
     /// Sets an icon for NatAvatar with `icon` type
     /// - Parameter icon: An icon from NatDSIcons, which is sent as a string. Example: `getIcon(.outlinedDefaultMockup)`
     public func configure(icon: String?) {
@@ -219,7 +221,7 @@ extension NatAvatar {
             }
         }
     }
-    
+
     private func setup() {
         addSubview(circleView)
         addSubview(label)
@@ -241,12 +243,12 @@ extension NatAvatar {
             circleView.widthAnchor.constraint(equalToConstant: circleSize),
             circleView.heightAnchor.constraint(equalToConstant: circleSize),
             circleView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            
+
             imageView.topAnchor.constraint(equalTo: circleView.topAnchor, constant: -2),
             imageView.bottomAnchor.constraint(equalTo: circleView.bottomAnchor, constant: 2),
             imageView.trailingAnchor.constraint(equalTo: circleView.trailingAnchor, constant: 2),
             imageView.leadingAnchor.constraint(equalTo: circleView.leadingAnchor, constant: -2),
-            
+
             defaultIconView.topAnchor.constraint(equalTo: circleView.topAnchor,
                                                  constant: getTokenFromTheme(\.spacingMicro)),
             defaultIconView.bottomAnchor.constraint(equalTo: circleView.bottomAnchor,
@@ -270,19 +272,5 @@ extension NatAvatar {
         ]
 
         NSLayoutConstraint.activate(constraints)
-    }
-}
-
-extension UIImageView {
-    func load(url: URL) {
-        DispatchQueue.global().async { [weak self] in
-            if let data = try? Data(contentsOf: url) {
-                if let image = UIImage(data: data) {
-                    DispatchQueue.main.async {
-                        self?.image = image
-                    }
-                }
-            }
-        }
     }
 }

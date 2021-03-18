@@ -16,6 +16,7 @@ enum AssetsPath {
 extension AssetsPath: RawRepresentable {
     typealias RawValue = UIImage?
 
+    // swiftlint:disable:next cyclomatic_complexity
     init?(rawValue: RawValue) {
         switch rawValue {
         case AssetsHelper.image(from: "Icons/IconOutlinedActionCancel"):

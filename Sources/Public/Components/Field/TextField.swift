@@ -1,3 +1,5 @@
+// swiftlint:disable line_length
+// swiftlint:disable file_length
 /**
  TextField is a class that represents a component from the design system.
  
@@ -72,15 +74,15 @@
  */
 
 public class TextField: UIView {
-    
+
     // MARK: - Public vars
-    
+
     /// A string with the text to be always displayed above textfield
     public var title: String? {
         get { titleLabel.text }
         set { titleLabel.text = newValue }
     }
-    
+
     /// A string with the text inside the textField
     public var text: String? {
         get { textField.text }
@@ -89,56 +91,55 @@ public class TextField: UIView {
             interactionState = text != nil ? .filled : .enabled
         }
     }
-    
+
     /// A string with the hint text to be displayed when the textField is empty
     public var placeholder: String? {
         get { textField.placeholder }
         set { textField.placeholder = newValue}
     }
-    
+
     /// A string with a helper text to be displayed below textField
     public var helper: String? {
         didSet {
             helperLabel.text = helper
         }
     }
-    
+
     /// A string with a text that alerts about an error. It triggers the state `.error` for the textField.
     public var error: String? {
         didSet {
             configure(state: .error, with: error)
         }
     }
-    
+
     /// The type of the textfield, chosen from the `TextFieldType` enum
     public var type: TextFieldType = .text {
         didSet {
             handleTextFieldType()
         }
     }
-    
+
     /// A boolean that indicates if filling the textField is mandatory
     public var required: Bool = false {
         didSet {
             handleRequired()
         }
     }
-    
+
     /// A boolean that indicates if the textField is filled with info that can't be changed
     public var readOnly: Bool = false {
         didSet {
             self.interactionState = readOnly ? .readOnly : .enabled
         }
     }
-    
+
     /// A boolean that indicates if the textField is enabled or disabled
     public var isEnabled: Bool = true {
         didSet {
             self.interactionState = isEnabled ? .enabled : .disabled
         }
     }
-    
-    
+
     /// The size of the textfield, chosen from the `TextField.Size` enum
     public var size: Size = .mediumX {
         didSet {
@@ -146,26 +147,26 @@ public class TextField: UIView {
             layoutIfNeeded()
         }
     }
-    
+
     public weak var delegate: TextFieldDelegate?
-    
+
     // MARK: - Private vars
 
     private var textFieldHeightConstraint: NSLayoutConstraint?
-    
+
     private var isEditing: Bool = false {
         didSet {
             self.interactionState = isEditing ? .active : .enabled
         }
     }
-    
+
     private(set) var interactionState: InteractionState = .enabled {
         didSet {
             handleInteractionState()
             handleInteractionStateStyle()
         }
     }
-    
+
     private(set) var state: FeedbackState = .none {
         didSet {
             handleFeedbackStyle()
@@ -213,7 +214,7 @@ public class TextField: UIView {
         let icon = AssetsPath.iconOutlinedActionVisibility.rawValue
         return icon
     }()
-    
+
     private lazy var iconCheck: UIImage? = {
         let icon = AssetsPath.iconOutlinedActionCheck.rawValue
         return icon
@@ -236,7 +237,7 @@ public class TextField: UIView {
 
         return iconButton
     }()
-    
+
     private lazy var iconButtonGeneral: NatIconButton = {
         let iconButton = NatIconButton(style: .standardDefault)
         iconButton.translatesAutoresizingMaskIntoConstraints = false
@@ -244,7 +245,7 @@ public class TextField: UIView {
         iconButton.widthAnchor.constraint(equalToConstant: getTokenFromTheme(\.sizeSemi)).isActive = true
         return iconButton
     }()
-    
+
     private lazy var actionImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -317,11 +318,11 @@ extension TextField {
         NSLayoutConstraint.activate([
             textField.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 4),
             textField.leadingAnchor.constraint(equalTo: leadingAnchor),
-            textField.trailingAnchor.constraint(equalTo: trailingAnchor),
+            textField.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
         updateTextFieldHeightConstraint()
     }
-    
+
     private func updateTextFieldHeightConstraint() {
         textFieldHeightConstraint = textField.heightAnchor.constraint(equalToConstant: size.value)
         textFieldHeightConstraint?.isActive = true
@@ -351,13 +352,14 @@ extension TextField {
     @objc private func handleEditingChanged() {
         delegate?.natTextFieldEditingChanged?(self)
     }
-    
+
     private func handleInteractionState() {
         textField.isEnabled = self.interactionState.isUserInteractionEnabled
         iconButtonGeneral.isUserInteractionEnabled = self.interactionState.isUserInteractionEnabled
         iconButtonVisibility.isUserInteractionEnabled = self.interactionState.isUserInteractionEnabled
     }
-    
+
+    // swiftlint:disable function_body_length
     private func handleInteractionStateStyle() {
         switch interactionState {
         case .enabled:
@@ -373,7 +375,7 @@ extension TextField {
             textField.attributedPlaceholder = NSAttributedString(string: placeholder ?? "",
                                                                  attributes: [NSAttributedString.Key.foregroundColor:
                                                                                 getUIColorFromTokens(\.colorMediumEmphasis)])
-            
+
         case .active:
             textField.borderWidth = 2
             textField.borderColor = getUIColorFromTokens(\.colorPrimary)
@@ -386,7 +388,7 @@ extension TextField {
             textField.attributedPlaceholder = NSAttributedString(string: placeholder ?? "",
                                                                  attributes: [NSAttributedString.Key.foregroundColor:
                                                                                 getUIColorFromTokens(\.colorMediumEmphasis)])
-            
+
         case .readOnly:
             textField.borderWidth = 1
             textField.borderColor = getUIColorFromTokens(\.colorLowEmphasis)
@@ -397,7 +399,7 @@ extension TextField {
             textField.textColor = getUIColorFromTokens(\.colorHighEmphasis)
             iconButtonVisibility.tintColor = getUIColorFromTokens(\.colorHighEmphasis)
             iconButtonGeneral.configure(iconColor: getUIColorFromTokens(\.colorHighEmphasis))
-            
+
         case .disabled:
             textField.borderWidth = 1
             textField.borderColor = getUIColorFromTokens(\.colorLowEmphasis)
@@ -411,7 +413,7 @@ extension TextField {
             textField.attributedPlaceholder = NSAttributedString(string: placeholder ?? "",
                                                                  attributes: [NSAttributedString.Key.foregroundColor:
                                                                                 getUIColorFromTokens(\.colorLowEmphasis)])
-            
+
         case .filled:
             textField.borderWidth = 1
             textField.borderColor = getUIColorFromTokens(\.colorHighEmphasis)
@@ -424,7 +426,7 @@ extension TextField {
             textField.backgroundColor = .clear
         }
     }
-    
+
     private func handleFeedbackStyle() {
         switch state {
         case .error:
@@ -439,7 +441,7 @@ extension TextField {
             feedbackIconImageView.contentMode = .scaleAspectFit
             feedbackIconImageView.tintedColor = getUIColorFromTokens(\.colorAlert)
             feedbackIconImageView.isHidden = false
-            
+
         case .success:
             textField.borderWidth = 1
             textField.borderColor = getUIColorFromTokens(\.colorSuccess)
@@ -452,7 +454,7 @@ extension TextField {
             feedbackIconImageView.contentMode = .scaleAspectFit
             feedbackIconImageView.tintedColor = getUIColorFromTokens(\.colorSuccess)
             feedbackIconImageView.isHidden = false
-            
+
         default:
             handleInteractionStateStyle()
             feedbackIconImageView.isHidden = true
@@ -466,7 +468,7 @@ extension TextField {
         self.textField.autocapitalizationType = type.capitalization
         self.textField.isSecureTextEntry = type.secureTextEntry
     }
-    
+
     private func handleRequired() {
         if required {
             guard let title = title else { return }
@@ -475,13 +477,13 @@ extension TextField {
             }
         }
     }
-    
+
     private func addIconButtonGeneral() {
         addSubview(iconButtonGeneral)
         self.iconButtonGeneral.centerYAnchor.constraint(equalTo: textField.centerYAnchor).isActive = true
         self.iconButtonGeneral.trailingAnchor.constraint(equalTo: textField.trailingAnchor, constant: -12).isActive = true
     }
-    
+
     private func addActionImage() {
         addSubview(actionImageView)
         actionImageView.trailingAnchor.constraint(equalTo: textField.trailingAnchor, constant: -0.5).isActive = true
@@ -495,7 +497,7 @@ extension TextField {
             if self.subviews.contains(iconButtonGeneral) {
                 self.iconButtonGeneral.removeFromSuperview()
             }
-            
+
             addSubview(iconButtonVisibility)
             textField.fitPaddingToIconButton()
 
@@ -506,13 +508,13 @@ extension TextField {
             NSLayoutConstraint.activate(constraints)
         }
     }
-    
+
     public func hideVisibilityIcon() {
         if self.subviews.contains(iconButtonVisibility) {
             self.iconButtonVisibility.removeFromSuperview()
         }
     }
-    
+
     internal func setIconVisibility() {
         if iconVisibility == AssetsPath.iconOutlinedActionVisibility.rawValue {
             iconVisibility = AssetsPath.iconOutlinedActionVisibilityOff.rawValue
@@ -529,7 +531,7 @@ extension TextField {
 extension TextField: UITextFieldDelegate {
 
     // MARK: - Delegates
-    
+
     public func textFieldDidBeginEditing(_ textField: UITextField) {
         self.isEditing = true
         delegate?.natTextFieldDidBeginEditing?(self)
@@ -556,31 +558,31 @@ extension TextField: UITextFieldDelegate {
 
 extension TextField {
     // MARK: - Public Methods
-    
+
     /// Sets the textField title, displayed above the textField box
     /// - Parameter title: A string with the text for the title
     public func configure(title: String) {
         self.title = title
     }
-    
+
     /// Sets the textField placeholder, a hint text displayed inside the textField box when it is empy
     /// - Parameter placeholder: A string with the text for the placeholder
     public func configure(placeholder: String) {
         self.placeholder = placeholder
     }
-    
+
     /// Sets the textField size, which changes it's height
     /// - Parameter size: An option from `TextField.Size` enum
     public func configure(size: Size) {
         self.size = size
     }
-    
+
     /// Sets the textField type, which changes it's configuration for keyboard, secure text, capitalization and autocorrection
     /// - Parameter type: An option from `TextFieldType`
     public func configure(type: TextFieldType) {
         self.type = type
     }
-    
+
     /// Sets the state of the textField and a text to describe the state
     /// - Parameters:
     ///   - state: An option from `TextField.FeedbackState`: error, success or none
@@ -589,31 +591,31 @@ extension TextField {
         self.state = state
         self.helper = text
     }
-    
+
     /// Sets if the textField is required, when its filling is mandatory
     /// - Parameter required: A boolean indicating if the textField is required
     public func configure(required: Bool) {
         self.required = required
     }
-    
+
     /// Sets if the textField is enabled or disabled
     /// - Parameter isEnabled: A boolean indicating if the textField is enabled
     public func configure(isEnabled: Bool) {
         self.isEnabled = isEnabled
     }
-    
+
     /// Sets if the textField is read only
     /// - Parameter readOnly: A boolean indicating if the textField is read only
     public func configure(readOnly: Bool) {
         self.readOnly = readOnly
     }
-    
+
     /// Sets a helper text to be displayed below the textField box
     /// - Parameter helperText: A string with the helper text
     public func configure(helperText: String) {
         self.helper = helperText
     }
-    
+
     /// Sets an icon to be displayed inside the textField box, aligned with it's right side, and the action to be executed when the icon is tapped.
     /// - Parameters:
     ///   - icon: An icon from NatDSIcons, which is sent as a string. Example: `getIcon(.outlinedDefaultMockup)`
@@ -631,7 +633,7 @@ extension TextField {
             iconButtonGeneral.configure(icon: icon)
         }
     }
-    
+
     /// Sets a local image to be displayed inside the textField box, aligned with the right side, and the action to be executed when it is tapped.
     /// - Parameters:
     ///   - image: An UIImage to be displayed in the textField right edge
@@ -645,7 +647,7 @@ extension TextField {
         actionImageView.isClickable = true
         actionImageView.callback = action
     }
-    
+
     /// Sets a remote image to be displayed inside the textField box, aligned with the right edge, and the action to be executed when it is tapped.
     /// - Parameters:
     ///   - remoteImageURL: A URL that contains the remote address to the image. Example: `URL(string: "http://myimage")!`
@@ -659,7 +661,7 @@ extension TextField {
         actionImageView.isClickable = true
         actionImageView.callback = action
     }
-    
+
     /// Removes the action item, whether it's an icon or an image
     public func configureRemoveAction() {
         if self.subviews.contains(iconButtonGeneral) {
@@ -669,12 +671,12 @@ extension TextField {
             actionImageView.removeFromSuperview()
         }
     }
-    
+
     /// Sets the eye icon to show and hide the textField content. It can only be used if the textField has the `password` type.
     public func configureShowVisibilityIcon() {
         showVisibilityIcon()
     }
-    
+
     /// Removes the eye icon from `password` type textFields.
     public func configureRemoveVisibilityIcon() {
         hideVisibilityIcon()

@@ -13,14 +13,14 @@
  */
 
 public class IconView: UIView {
-    
+
     /// The alignment of the icon inside the view
     public var aligment: NSTextAlignment = .center {
         didSet {
             iconLabel.textAlignment = aligment
         }
     }
-    
+
     /// The string that comes from `NatDSIcons` and it's translated as an icon
     public var iconText: String? {
         didSet {
@@ -31,7 +31,6 @@ public class IconView: UIView {
         }
     }
 
-    
     /// Sets if should show a default icon or a customized icon
     public var shouldShowDefaultIcon = true {
         didSet {
@@ -62,7 +61,7 @@ public class IconView: UIView {
         super.init(frame: frame)
         setup()
     }
-    
+
     public convenience init(fontSize: CGFloat, icon: String? = nil) {
         self.init()
         defer { self.iconText = icon }
