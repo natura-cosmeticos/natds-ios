@@ -149,9 +149,9 @@ final class RadioButtonViewController: UIViewController, SampleItem {
     private func setup() {
 
         let group = [groupFirstRadioButton, groupSecondRadioButton, groupThirdRadioButton]
-        groupFirstRadioButton.configure(group: group)
-        groupSecondRadioButton.configure(group: group)
-        groupThirdRadioButton.configure(group: group)
+        groupFirstRadioButton.configure(addToGroup: group)
+        groupSecondRadioButton.configure(addToGroup: group)
+        groupThirdRadioButton.configure(addToGroup: group)
 
         title = Self.name
         view.backgroundColor = NatColors.background
@@ -197,13 +197,13 @@ extension RadioButtonViewController {
             containerView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
             containerHeightConstraint,
 
-            groupStackView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: NatSpacing.small),
-            groupStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
-            groupStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
-
-            stackView.topAnchor.constraint(equalTo: groupStackView.bottomAnchor, constant: NatSpacing.small),
+            stackView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: NatSpacing.small),
             stackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
-            stackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor)
+            stackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+
+            groupStackView.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: NatSpacing.small),
+            groupStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+            groupStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor)
         ]
 
         NSLayoutConstraint.activate(constraints)

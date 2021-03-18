@@ -8,6 +8,7 @@ import UIKit
  radioButton.configure(isSelected: true)
  radioButton.configure(isEnabled: true)
  radioButton.configure(text: "Example with label")
+ radioButton.configure(addToGroup: natRadioButtonGroup)
 
  - Requires:
  It's necessary to configure the Design System with a theme or fatalError will be raised.
@@ -79,9 +80,10 @@ public final class NatRadioButton: UIView {
         radioButton.isEnabled = isEnabled
     }
 
-    public func configure(group: [NatRadioButton]) {
+    /// Attribute that adds the radioButton is a group.
+    public func configure(addToGroup: [NatRadioButton]) {
         self.configureAddObserver()
         radioButton.isGrouped = true
-        self.group = group
+        self.group = addToGroup
     }
 }

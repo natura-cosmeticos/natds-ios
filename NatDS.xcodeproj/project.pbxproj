@@ -99,6 +99,7 @@
 		797E614A25531D2D002A59E0 /* TheBodyShopLightComponents+Logo+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797E614925531D2D002A59E0 /* TheBodyShopLightComponents+Logo+Spec.swift */; };
 		797E615E255464D1002A59E0 /* NatButton+Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797E615D255464D1002A59E0 /* NatButton+Icon.swift */; };
 		798CD29C25FFCC4A00F49768 /* NatRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798CD29B25FFCC4A00F49768 /* NatRadioButton.swift */; };
+		798CD2E82603831B00F49768 /* RadioButton+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798CD2E72603831B00F49768 /* RadioButton+Spec.swift */; };
 		799B683C256720890055B96D /* ProgressIndicatorCircular+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799B683B256720890055B96D /* ProgressIndicatorCircular+Snapshot+Tests.swift */; };
 		79ACDAB62555D9B500660E68 /* NatButton+SnapShot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ACDAB52555D9B500660E68 /* NatButton+SnapShot+Tests.swift */; };
 		79ACDADF255C336E00660E68 /* NatProgressIndicatorCircular.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ACDADE255C336E00660E68 /* NatProgressIndicatorCircular.swift */; };
@@ -472,6 +473,7 @@
 		797E614925531D2D002A59E0 /* TheBodyShopLightComponents+Logo+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheBodyShopLightComponents+Logo+Spec.swift"; sourceTree = "<group>"; };
 		797E615D255464D1002A59E0 /* NatButton+Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+Icon.swift"; sourceTree = "<group>"; };
 		798CD29B25FFCC4A00F49768 /* NatRadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatRadioButton.swift; sourceTree = "<group>"; };
+		798CD2E72603831B00F49768 /* RadioButton+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RadioButton+Spec.swift"; sourceTree = "<group>"; };
 		799B683B256720890055B96D /* ProgressIndicatorCircular+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProgressIndicatorCircular+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		79ACDAB52555D9B500660E68 /* NatButton+SnapShot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+SnapShot+Tests.swift"; sourceTree = "<group>"; };
 		79ACDADE255C336E00660E68 /* NatProgressIndicatorCircular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatProgressIndicatorCircular.swift; sourceTree = "<group>"; };
@@ -1218,6 +1220,14 @@
 				797E614925531D2D002A59E0 /* TheBodyShopLightComponents+Logo+Spec.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		798CD2D32603822500F49768 /* RadioButton */ = {
+			isa = PBXGroup;
+			children = (
+				798CD2E72603831B00F49768 /* RadioButton+Spec.swift */,
+			);
+			path = RadioButton;
 			sourceTree = "<group>";
 		};
 		799B683725671F0C0055B96D /* ProgressIndicator */ = {
@@ -2157,6 +2167,7 @@
 				7DE2B10525FBD55100C5CBC0 /* List */,
 				7BEFD3D9F02DCD62D7A24864218DC0D8 /* NavigationDrawer */,
 				790D3F84256417E2007A9CA1 /* ProgressIndicator */,
+				798CD2D32603822500F49768 /* RadioButton */,
 				BE272C2F259B67C300060AF8 /* SelectionControl */,
 				84BF066F24B511F600462AC5 /* Shortcut */,
 				28B8CBEE15559C8DBD459A3FC53141DB /* Tab */,
@@ -2779,6 +2790,7 @@
 			files = (
 				79E7FAE125388F7500A831BC /* AvonDarkTokens+Opacity+Spec.swift in Sources */,
 				797E614125531CF7002A59E0 /* TheBodyShopDarkComponents+Logo+Spec.swift in Sources */,
+				798CD2E82603831B00F49768 /* RadioButton+Spec.swift in Sources */,
 				797E611D25531BE1002A59E0 /* AvonDarkComponents+Logo+Spec.swift in Sources */,
 				0AF826DF57321D84C4B2EDDFAC49F377 /* AssetsHelperTests.swift in Sources */,
 				0E7C160524C5D3C3002FF46F /* UIViewController+Configure+Spec.swift in Sources */,
