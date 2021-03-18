@@ -60,6 +60,14 @@ class NatRadioButtonContainer: UIControl, NatSelector {
         }
     }
 
+    var groupId: Int {
+        get {
+            radioButton.groupId
+        }
+        set {
+            radioButton.groupId = newValue
+        }
+    }
 
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)

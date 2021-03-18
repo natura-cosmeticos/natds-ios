@@ -55,11 +55,13 @@ public final class NatRadioButton: UIView {
     }
 
     @objc internal func stateHasChanged(_ notification: Notification) {
-        let selectedButton = group.filter { $0.radioButton.isSelected }.first
-
-        for rButton in group where rButton.radioButton != selectedButton {
-            rButton.radioButton.isSelected = false
-
+        if let id = notification.userInfo?["id"] as? Int {
+            if radioButton.groupId == id {
+                let selectedButton = group.filter { $0.radioButton.isSelected }.first
+                for rButton in group where rButton.radioButton != selectedButton {
+                    rButton.radioButton.isSelected = false
+                }
+            }
         }
     }
 
@@ -84,6 +86,7 @@ public final class NatRadioButton: UIView {
     public func configure(addToGroup: [NatRadioButton]) {
         self.configureAddObserver()
         radioButton.isGrouped = true
+        radioButton.groupId = addToGroup.hashValue
         self.group = addToGroup
     }
 }

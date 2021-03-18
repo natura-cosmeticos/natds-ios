@@ -78,6 +78,12 @@ public class NatSelectionControl: UIView {
         }
     }
 
+    internal var groupId: Int = 0 {
+        didSet {
+            selectorView.groupId = groupId
+        }
+    }
+
     private let style: Style
     private(set) var text: String?
     private var notificationCenter: NotificationCenterObservable

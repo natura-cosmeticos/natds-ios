@@ -9,6 +9,7 @@ final class NatRadioButtonControl: UIControl {
     var isIndeterminate: Bool = false
     var labelComponent: String?
     var isGrouped: Bool = false
+    var groupId: Int = 0
 
     private var style = Style.default
     private let increasedTouchRadius: CGFloat = 5
@@ -72,7 +73,8 @@ final class NatRadioButtonControl: UIControl {
         onTouchesBegan?(touches)
 
         if self.isGrouped {
-            NotificationCenter.default.post(name: .stateHasChanged, object: nil)
+            let groupId: [String: Int] = ["id": self.groupId]
+            NotificationCenter.default.post(name: .stateHasChanged, object: nil, userInfo: groupId)
         }
     }
 
