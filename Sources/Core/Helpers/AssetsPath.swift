@@ -2,6 +2,7 @@ import UIKit
 
 enum AssetsPath {
     case iconOutlinedActionCancel
+    case iconOutlinedActionCheck
     case iconOutlinedActionVisibility
     case iconOutlinedActionVisibilityOff
     case iconOutlinedDefaultMockup
@@ -19,6 +20,8 @@ extension AssetsPath: RawRepresentable {
         switch rawValue {
         case AssetsHelper.image(from: "Icons/IconOutlinedActionCancel"):
             self = .iconOutlinedActionCancel
+        case AssetsHelper.image(from: "Icons/IconOutlinedActionCheck"):
+            self = .iconOutlinedActionCheck
         case AssetsHelper.image(from: "Icons/IconOutlinedActionVisibility"):
             self = .iconOutlinedActionVisibility
         case AssetsHelper.image(from: "Icons/IconOutlinedActionVisibilityOff"):
@@ -43,6 +46,8 @@ extension AssetsPath: RawRepresentable {
         switch self {
         case .iconOutlinedActionCancel:
             return AssetsHelper.image(from: "Icons/IconOutlinedActionCancel")
+        case .iconOutlinedActionCheck:
+            return AssetsHelper.image(from: "Icons/IconOutlinedActionCheck")
         case .iconOutlinedActionVisibility:
             return AssetsHelper.image(from: "Icons/IconOutlinedActionVisibility")
         case .iconOutlinedActionVisibilityOff:

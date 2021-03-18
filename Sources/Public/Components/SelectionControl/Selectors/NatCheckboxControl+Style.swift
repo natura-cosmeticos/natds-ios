@@ -1,4 +1,4 @@
-extension NatCheckbox {
+extension NatCheckboxControl {
     struct Style {
         
         // MARK: Static Properties

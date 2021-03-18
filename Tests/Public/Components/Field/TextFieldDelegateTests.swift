@@ -2,7 +2,7 @@ import XCTest
 
 @testable import NatDS
 
-final class TextFieldTests: XCTestCase {
+final class TextFieldDelegateTests: XCTestCase {
     var delegateMock: TextFieldDelegateMock!
     var sut: TextField!
 
@@ -19,26 +19,6 @@ final class TextFieldTests: XCTestCase {
         sut.placeholder = "Placeholder"
         sut.helper = "Helper Text"
         sut.delegate = delegateMock
-    }
-
-    func test_type_whenTypeIsText_expectedTypeSetup() {
-        let expectedType = TextFieldType.text
-        sut.type = expectedType
-
-        XCTAssertEqual(sut.textField.keyboardType, expectedType.keyboard)
-        XCTAssertEqual(sut.textField.autocorrectionType, expectedType.autoCorrection)
-        XCTAssertEqual(sut.textField.autocapitalizationType, expectedType.capitalization)
-        XCTAssertEqual(sut.textField.isSecureTextEntry, expectedType.secureTextEntry)
-    }
-
-    func test_type_whenTypeIsPassword_expectedTypeSetup() {
-        let expectedType = TextFieldType.password()
-        sut.type = expectedType
-
-        XCTAssertEqual(sut.textField.keyboardType, expectedType.keyboard)
-        XCTAssertEqual(sut.textField.autocorrectionType, expectedType.autoCorrection)
-        XCTAssertEqual(sut.textField.autocapitalizationType, expectedType.capitalization)
-        XCTAssertEqual(sut.textField.isSecureTextEntry, expectedType.secureTextEntry)
     }
 
     func test_textFieldDelegate_whenHasDelegateAndCallDidEndEditing_expectInvokeTextFieldDelegate() {

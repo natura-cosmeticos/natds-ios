@@ -8,11 +8,11 @@ import UIKit
  - radio
  
  Example of usage:
-        
+
         NatSelectionControl(style: .radioButton)
  
  And it can be configured with a label:
-        
+
         NatSelectionControl(style: .checkbox, text: "The text for the label")
 
  - Requires:
@@ -50,6 +50,25 @@ public class NatSelectionControl: UIView {
         }
         set {
             selectorView.isHapticFeedbackEnabled = newValue
+        }
+    }
+
+    /// Attribute that sets and checks if indeterminate state is selected
+    public var isIndeterminate: Bool {
+        get {
+            selectorView.isIndeterminate
+        }
+        set {
+            selectorView.isIndeterminate = newValue
+        }
+    }
+
+    public var labelComponent: String? {
+        get {
+            selectorView.labelComponent
+        }
+        set {
+            selectorView.labelComponent = newValue ?? ""
         }
     }
 
@@ -93,16 +112,23 @@ public class NatSelectionControl: UIView {
 
     private func addSelectorConstraints() {
         selectorView.translatesAutoresizingMaskIntoConstraints = false
-        selectorView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: getTokenFromTheme(\.spacingTiny)).isActive = true
+        selectorView.leadingAnchor.constraint(equalTo: leadingAnchor,
+                                              constant: getTokenFromTheme(\.spacingTiny)).isActive = true
         selectorView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         selectorView.heightAnchor.constraint(equalTo: heightAnchor).isActive = true
     }
 
     private func addLabelConstraints() {
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.leadingAnchor.constraint(equalTo: selectorView.trailingAnchor, constant: getTokenFromTheme(\.spacingMicro)).isActive = true
+        label.leadingAnchor.constraint(equalTo: selectorView.trailingAnchor,
+                                       constant: getTokenFromTheme(\.spacingMicro)).isActive = true
         label.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         label.centerYAnchor.constraint(equalTo: selectorView.centerYAnchor).isActive = true
         label.heightAnchor.constraint(equalTo: heightAnchor).isActive = true
+    }
+
+    public func configure(text: String?) {
+        label.text = text
+        labelComponent = text
     }
 }

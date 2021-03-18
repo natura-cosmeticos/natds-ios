@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A9D71BBD2386DFEE00CDEC1D"
+               BlueprintIdentifier = "8AD1E3FCEC6DC17EE835E4DCD640CB2D"
                BuildableName = "NatDS-SampleApp.app"
                BlueprintName = "NatDS-SampleApp"
                ReferencedContainer = "container:NatDS-SampleApp.xcodeproj">
@@ -44,7 +44,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A9D71BBD2386DFEE00CDEC1D"
+            BlueprintIdentifier = "8AD1E3FCEC6DC17EE835E4DCD640CB2D"
             BuildableName = "NatDS-SampleApp.app"
             BlueprintName = "NatDS-SampleApp"
             ReferencedContainer = "container:NatDS-SampleApp.xcodeproj">
@@ -61,7 +61,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A9D71BBD2386DFEE00CDEC1D"
+            BlueprintIdentifier = "8AD1E3FCEC6DC17EE835E4DCD640CB2D"
             BuildableName = "NatDS-SampleApp.app"
             BlueprintName = "NatDS-SampleApp"
             ReferencedContainer = "container:NatDS-SampleApp.xcodeproj">

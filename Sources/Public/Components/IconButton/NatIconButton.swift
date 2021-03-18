@@ -32,7 +32,7 @@ public final class NatIconButton: UIView {
         case disabled
     }
 
-    private let iconView: IconView = {
+    internal let iconView: IconView = {
         let iconView = IconView(fontSize: NatSizes.standard)
         iconView.translatesAutoresizingMaskIntoConstraints = false
 
