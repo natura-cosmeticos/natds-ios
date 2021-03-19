@@ -39,7 +39,7 @@ public final class NatTag: UIView {
 
     private let style: Style
     private var drawPath: DrawPath?
-    private var size: Size = .small
+    private var tagColor: Color = .primary
 
     // MARK: - Inits
 
@@ -72,9 +72,7 @@ public final class NatTag: UIView {
             label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -getTokenFromTheme(\.sizeTiny)),
             label.topAnchor.constraint(equalTo: topAnchor, constant: getTokenFromTheme(\.sizeNone)),
             label.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -getTokenFromTheme(\.sizeNone)),
-            label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: getTokenFromTheme(\.sizeTiny)),
-
-            self.heightAnchor.constraint(equalToConstant: size.value)
+            label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: getTokenFromTheme(\.sizeTiny))
         ]
 
         NSLayoutConstraint.activate(constraints)
@@ -100,7 +98,7 @@ public final class NatTag: UIView {
                                                         height: NatBorderRadius.circle(viewHeight: size.height)))
             }
 
-            color.set()
+            self.tagColor.tag.set()
             path.fill()
         }
     }
@@ -120,7 +118,12 @@ public final class NatTag: UIView {
         isHidden = text.isEmpty
     }
 
-    public func configure(size: Size) {
-        self.size = size
+    public func configure(size: Size = .small) {
+        heightAnchor.constraint(equalToConstant: size.value).isActive = true
+    }
+
+    public func configure(color: Color = .primary) {
+        tagColor = color
+        configure(textColor: color.label)
     }
 }

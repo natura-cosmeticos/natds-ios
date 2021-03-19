@@ -20,37 +20,37 @@ extension NatTag {
         case warning
         case link
 
-        var tag: String {
+        var tag: UIColor {
             switch self {
             case .primary:
-                return getTokenFromTheme(\.colorPrimary)
+                return getUIColorFromTokens(\.colorPrimary)
             case .secondary:
-                return getTokenFromTheme(\.colorSecondary)
+                return getUIColorFromTokens(\.colorSecondary)
             case .success:
-                return getTokenFromTheme(\.colorSuccess)
+                return getUIColorFromTokens(\.colorSuccess)
             case .alert:
-                return getTokenFromTheme(\.colorAlert)
+                return getUIColorFromTokens(\.colorAlert)
             case .warning:
-                return getTokenFromTheme(\.colorWarning)
+                return getUIColorFromTokens(\.colorWarning)
             case .link:
-                return getTokenFromTheme(\.colorLink)
+                return getUIColorFromTokens(\.colorLink)
             }
         }
 
-        var label: String {
+        var label: UIColor {
             switch self {
             case .primary:
-                return getTokenFromTheme(\.colorOnPrimary)
+                return getUIColorFromTokens(\.colorOnPrimary)
             case .secondary:
-                return getTokenFromTheme(\.colorOnSecondary)
+                return getUIColorFromTokens(\.colorOnSecondary)
             case .success:
-                return getTokenFromTheme(\.colorOnSuccess)
+                return getUIColorFromTokens(\.colorOnSuccess)
             case .alert:
-                return getTokenFromTheme(\.colorOnAlert)
+                return getUIColorFromTokens(\.colorOnAlert)
             case .warning:
-                return getTokenFromTheme(\.colorOnWarning)
+                return getUIColorFromTokens(\.colorOnWarning)
             case .link:
-                return getTokenFromTheme(\.colorOnLink)
+                return getUIColorFromTokens(\.colorOnLink)
             }
         }
     }
