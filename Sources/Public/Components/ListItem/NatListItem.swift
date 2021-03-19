@@ -25,35 +25,35 @@
  */
 
 open class NatListItemCell: UITableViewCell {
-    
+
     // MARK: - Attributes
-    
+
     private var overlayView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = getUIColorFromTokens(\.colorPrimary).withAlphaComponent(getTokenFromTheme(\.opacityLow))
         return view
     }()
-    
+
     private var divider: Divider = {
         let divider = Divider()
         divider.translatesAutoresizingMaskIntoConstraints = false
         return divider
     }()
-    
+
     internal var onClick: Bool = false
-    
+
     // MARK: - Overrides
-    
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setup()
     }
-    
+
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     public override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         if selected && onClick {
@@ -63,7 +63,7 @@ open class NatListItemCell: UITableViewCell {
             overlayView.backgroundColor = .clear
         }
     }
-    
+
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
 
@@ -80,16 +80,16 @@ open class NatListItemCell: UITableViewCell {
 
         removePulseLayer(layer: self.contentView.layer)
     }
-    
+
     // MARK: - Private methods
-    
+
     private func setup() {
         backgroundColor = getUIColorFromTokens(\.colorBackground)
         contentView.backgroundColor = getUIColorFromTokens(\.colorBackground)
         selectionStyle = .none
         setupOverlay()
     }
-    
+
     private func setupOverlay() {
         addSubview(overlayView)
         bringSubviewToFront(overlayView)
@@ -98,22 +98,22 @@ open class NatListItemCell: UITableViewCell {
         overlayView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         overlayView.topAnchor.constraint(equalTo: topAnchor).isActive = true
     }
-    
+
     private func addDivider() {
         contentView.addSubview(divider)
         divider.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         divider.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         divider.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
-    
+
     // MARK: - Public methods
-    
+
     /// Sets if the cell is clicable or not.
     /// - Parameter onClick: a bool that indicates if the cell is clicable
     public func configure(onClick: Bool) {
         self.onClick = onClick
     }
-    
+
     /// Sets the divider style for the cell. By default, the cell doesn't have a divider
     /// To use the divider, you must configure your tableView as `tableView.separatorStyle = .none`
     /// - Parameter divider: an option from divider styles enum
@@ -121,7 +121,7 @@ open class NatListItemCell: UITableViewCell {
         self.divider.configure(style: divider)
         addDivider()
     }
-    
+
     /// Removes the divider from the cell
     public func configureRemoveDivider() {
         if contentView.subviews.contains(divider) {

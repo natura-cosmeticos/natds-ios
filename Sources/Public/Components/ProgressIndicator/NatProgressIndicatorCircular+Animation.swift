@@ -42,7 +42,7 @@ extension NatProgressIndicatorCircular {
         animation.fromValue = 0
         animation.toValue = 1
         animation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
-        
+
         return animation
     }
 
@@ -56,7 +56,7 @@ extension NatProgressIndicatorCircular {
 
         return animation
     }
-    
+
     private func strokeFreezeAnimation() -> CABasicAnimation {
         let animation = CABasicAnimation(keyPath: Constants.strokeEnd)
         animation.beginTime = 1
@@ -64,7 +64,7 @@ extension NatProgressIndicatorCircular {
         animation.fromValue = 1
         animation.toValue = 1
         animation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
-        
+
         return animation
     }
 }

@@ -133,6 +133,7 @@ final class CheckboxViewController: UIViewController, SampleItem {
         return checkbox
     }()
 
+    // swiftlint:disable:next identifier_name
     private let indeterminateDisabledSelectedLabelCheckbox: NatCheckbox = {
         let checkbox = NatCheckbox()
         checkbox.configure(isSelected: true)

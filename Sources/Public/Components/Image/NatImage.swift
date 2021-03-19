@@ -6,7 +6,7 @@ public class NatImage: UIView {
         let imageView = UIImageView()
         let image = AssetsPath.iconOutlinedProductEmptyBackground.rawValue
         imageView.image = image
-        
+
         return imageView
     }()
 
@@ -49,7 +49,7 @@ public class NatImage: UIView {
 
     public func configure(setImage: UIImage?) {
         defaultImageView.removeFromSuperview()
-        
+
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.image = setImage ?? defaultImageView.image

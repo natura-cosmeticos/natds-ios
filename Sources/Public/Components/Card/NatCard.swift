@@ -27,7 +27,7 @@ public final class NatCard: UIView {
     }
 
     // MARK: - Public methods
-    
+
     /// Sets if the card has elevation
     /// - Parameter elevation: a bool that indicates if the card has elevation
     public func configure(elevation: Bool) {
@@ -37,7 +37,7 @@ public final class NatCard: UIView {
             NatElevation.apply(on: self, elevation: .none)
         }
     }
-    
+
     /// Sets if the card has rounded corners
     /// - Parameter borderRadius: a bool that indicates if the card has rounded corners
     public func configure(borderRadius: Bool) {

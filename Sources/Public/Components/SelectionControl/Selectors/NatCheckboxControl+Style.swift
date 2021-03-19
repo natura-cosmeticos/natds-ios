@@ -1,6 +1,6 @@
 extension NatCheckboxControl {
     struct Style {
-        
+
         // MARK: Static Properties
 
         static var `default`: Style {

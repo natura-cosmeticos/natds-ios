@@ -34,7 +34,7 @@ public class Divider: UIView {
     }
 
     // MARK: - Private methods
-    
+
     private func setup() {
         dividerLine.translatesAutoresizingMaskIntoConstraints = false
         dividerLine.backgroundColor = getUIColorFromTokens(\.colorLowEmphasis)
@@ -47,22 +47,22 @@ public class Divider: UIView {
             dividerLine.heightAnchor.constraint(equalToConstant: 1)
         ])
     }
-    
+
     // MARK: - Public methods
-    
+
     /// Sets a style for the divider
     /// - Parameter style: an option from the available styles for divider
     public func configure(style: Styles) {
         addDividerStyle(style)
     }
-    
+
     private func addDividerStyle(_ style: Styles) {
         let constraints = [
             dividerLine.topAnchor.constraint(equalTo: topAnchor),
             dividerLine.leadingAnchor.constraint(equalTo: leadingAnchor, constant: style.spaceRight),
             dividerLine.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -style.spaceLeft)
         ]
-        
+
         NSLayoutConstraint.activate(constraints)
     }
 }

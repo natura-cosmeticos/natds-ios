@@ -2,7 +2,7 @@ import NatDS
 import NatDSIcons
 
 class IconographyItemViewController: UIViewController, SampleItem {
-    static var name = "Iconography"    
+    static var name = "Iconography"
 
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -29,7 +29,7 @@ class IconographyItemViewController: UIViewController, SampleItem {
         NatDSIcons.Icon.allCases.forEach { icons.append(getIcon($0)) }
         return icons
     }
-    
+
     private func setup() {
         view.backgroundColor = NatColors.background
         view.addSubview(collectionView)

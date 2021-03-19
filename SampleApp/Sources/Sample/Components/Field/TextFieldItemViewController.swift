@@ -80,7 +80,8 @@ class TextFieldItemViewController: UIViewController, SampleItem {
         let field = TextField()
         field.title = "Error"
         field.placeholder = "Input with error"
-        field.configure(state: .error, with: "Opss... this input has an error - Neque porro quisquam est qui dolorem ipsum quia dolor sit amet.")
+        field.configure(state: .error,
+                        with: "Opss... this input has an error - Neque porro quisquam est qui dolorem ipsum quia dolor sit amet.")
         field.delegate = self
         return field
     }()
@@ -93,7 +94,7 @@ class TextFieldItemViewController: UIViewController, SampleItem {
         field.delegate = self
         return field
     }()
-    
+
     private lazy var mediumTextField: TextField = {
         let field = TextField()
         field.configure(size: .medium)
@@ -103,7 +104,7 @@ class TextFieldItemViewController: UIViewController, SampleItem {
         field.delegate = self
         return field
     }()
-    
+
     private lazy var mediumXTextField: TextField = {
         let field = TextField()
         field.configure(size: .mediumX)
@@ -113,7 +114,7 @@ class TextFieldItemViewController: UIViewController, SampleItem {
         field.delegate = self
         return field
     }()
-    
+
     private lazy var successTextField: TextField = {
         let field = TextField()
         field.title = "Success"
@@ -123,17 +124,18 @@ class TextFieldItemViewController: UIViewController, SampleItem {
         field.delegate = self
         return field
     }()
-    
+
     private lazy var longSuccessTextField: TextField = {
         let field = TextField()
         field.title = "Success"
         field.type = .text
         field.placeholder = "Input with success"
-        field.configure(state: .success, with: "A very, very long success message validating what's typed and giving more info.")
+        field.configure(state: .success,
+                        with: "A very, very long success message validating what's typed and giving more info.")
         field.delegate = self
         return field
     }()
-    
+
     private lazy var requiredTextField: TextField = {
         let field = TextField()
         field.title = "Required"
@@ -143,7 +145,7 @@ class TextFieldItemViewController: UIViewController, SampleItem {
         field.delegate = self
         return field
     }()
-    
+
     private lazy var disabledTextField: TextField = {
         let field = TextField()
         field.title = "Disabled"
@@ -153,7 +155,7 @@ class TextFieldItemViewController: UIViewController, SampleItem {
         field.configure(isEnabled: false)
         return field
     }()
-    
+
     private lazy var readOnlyTextField: TextField = {
         let field = TextField()
         field.title = "Read only"
@@ -172,7 +174,7 @@ class TextFieldItemViewController: UIViewController, SampleItem {
         field.delegate = self
         return field
     }()
-    
+
     private lazy var actionIconTextField: TextField = {
         let field = TextField()
         field.title = "Action with icon"
@@ -184,7 +186,7 @@ class TextFieldItemViewController: UIViewController, SampleItem {
         field.delegate = self
         return field
     }()
-    
+
     private lazy var actionImageTextField: TextField = {
         let field = TextField()
         field.title = "Action with image"
@@ -196,7 +198,7 @@ class TextFieldItemViewController: UIViewController, SampleItem {
         field.delegate = self
         return field
     }()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()

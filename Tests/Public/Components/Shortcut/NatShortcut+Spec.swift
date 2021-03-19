@@ -147,7 +147,7 @@ final class NatShortSpec: QuickSpec {
                 expect(actionInvocations).toEventually(equal(1))
             }
         }
-        
+
         describe("#configure(badgeValue:)") {
             context("when value is bigger than 0") {
                 beforeEach {

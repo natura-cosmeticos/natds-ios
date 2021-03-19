@@ -32,7 +32,7 @@ final class NatShortcutSnapshotTests: XCTestCase {
 
         assertSnapshot(matching: superview, as: .image(precision: 0.97))
     }
-    
+
     func test_shortcut_style_contained_primary_with_badge_hasValidSnapshot() {
         let systemUnderTest = createSystemUnderTest(style: .containedPrimary, text: "Contained", badgeValue: 10)
 
@@ -41,7 +41,6 @@ final class NatShortcutSnapshotTests: XCTestCase {
 
         assertSnapshot(matching: superview, as: .image(precision: 0.97))
     }
-    
 
     func test_shortcut_style_contained_default_hasValidSnapshot() {
         let systemUnderTest = createSystemUnderTest(style: .containedDefault, text: "Contained")
@@ -60,7 +59,7 @@ final class NatShortcutSnapshotTests: XCTestCase {
 
         assertSnapshot(matching: superview, as: .image(precision: 0.97))
     }
-    
+
     func test_shortcut_style_contained_default_with_badge_hasValidSnapshot() {
         let systemUnderTest = createSystemUnderTest(style: .containedDefault, text: "Contained", badgeValue: 10)
 
@@ -87,7 +86,7 @@ final class NatShortcutSnapshotTests: XCTestCase {
 
         assertSnapshot(matching: superview, as: .image(precision: 0.97))
     }
-    
+
     func test_shortcut_style_outlined_primary_with_badge_hasValidSnapshot() {
         let systemUnderTest = createSystemUnderTest(style: .outlinedPrimary, text: "Outlined", badgeValue: 10)
 
@@ -114,7 +113,7 @@ final class NatShortcutSnapshotTests: XCTestCase {
 
         assertSnapshot(matching: superview, as: .image(precision: 0.97))
     }
-    
+
     func test_shortcut_style_outlined_default_with_badge_hasValidSnapshot() {
         let systemUnderTest = createSystemUnderTest(style: .outlinedDefault, text: "Outlined", badgeValue: 10)
 
