@@ -54,6 +54,7 @@ extension ListItemViewController: UITableViewDelegate, UITableViewDataSource {
             cell.textLabel?.text = "Onclick true"
             cell.configure(divider: .inset)
         case 2:
+            cell.configure(onClick: true)
             cell.textLabel?.text = "Selected cell"
             cell.configure(divider: .inset)
         case 3:

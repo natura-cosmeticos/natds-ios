@@ -59,7 +59,7 @@ class AvatarItemViewController: UIViewController, SampleItem {
             let avatar = NatAvatar(size: size)
 
             if value == 0 {
-                avatar.configureWithDefaultIcon()
+                avatar.configure(icon: getIcon(.outlinedDefaultMockup))
             }
 
             if value == 1 {

@@ -179,13 +179,20 @@ extension NatAvatar {
     /// Sets an icon for NatAvatar with `icon` type
     /// - Parameter icon: An icon from NatDSIcons, which is sent as a string. Example: `getIcon(.outlinedDefaultMockup)`
     public func configure(icon: String?) {
+        type = .icon
         iconView.iconText = icon
+        iconView.isHidden = false
+        
+        defaultIconView.isHidden = true
+        imageView.isHidden = true
+        label.isHidden = true
     }
 
-    /// Sets the default icon for NatAvatar with `icon` type. The icon cannot be customized
+    /// Sets the default icon `outlinedDefaultMock` for NatAvatar.
     public func configureWithDefaultIcon() {
         type = .icon
         defaultIconView.isHidden = false
+        
         imageView.isHidden = true
         label.isHidden = true
         iconView.isHidden = true
