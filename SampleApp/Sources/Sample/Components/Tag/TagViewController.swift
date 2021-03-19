@@ -34,7 +34,7 @@ class TagViewController: UIViewController, SampleItem {
 
         let constraints = [
             stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ]
 
         NSLayoutConstraint.activate(constraints)

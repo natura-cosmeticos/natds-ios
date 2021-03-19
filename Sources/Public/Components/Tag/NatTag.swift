@@ -39,6 +39,7 @@ public final class NatTag: UIView {
 
     private let style: Style
     private var drawPath: DrawPath?
+    private var size: Size = .small
 
     // MARK: - Inits
 
@@ -71,7 +72,9 @@ public final class NatTag: UIView {
             label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -getTokenFromTheme(\.sizeTiny)),
             label.topAnchor.constraint(equalTo: topAnchor, constant: getTokenFromTheme(\.sizeNone)),
             label.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -getTokenFromTheme(\.sizeNone)),
-            label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: getTokenFromTheme(\.sizeTiny))
+            label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: getTokenFromTheme(\.sizeTiny)),
+
+            self.heightAnchor.constraint(equalToConstant: size.value)
         ]
 
         NSLayoutConstraint.activate(constraints)
@@ -117,4 +120,7 @@ public final class NatTag: UIView {
         isHidden = text.isEmpty
     }
 
+    public func configure(size: Size) {
+        self.size = size
+    }
 }
