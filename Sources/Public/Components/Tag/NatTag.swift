@@ -9,7 +9,7 @@
  
  Example of usage:
  
- let badge = NatTag(style: .defaultAlert)
+ let tag = NatTag(style: .defaultAlert)
  
  - Requires:
  It's necessary to configure the Design System with a theme or fatalError will be raised.
@@ -46,7 +46,8 @@ public final class NatTag: UIView {
     public init(style: Style) {
         self.style = style
         super.init(frame: .zero)
-        
+        self.contentScaleFactor = UIScreen.main.scale
+
         style.applyStyle(self)
         setup()
     }

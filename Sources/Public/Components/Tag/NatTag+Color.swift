@@ -1,7 +1,7 @@
 extension NatTag {
     /**
      Size is an enum that represents the possible colors for the NatTag.
-     The default size is `Primary`.
+     The default color is `Primary`.
 
      These are all colors allowed for a NatTag:
      - primary
