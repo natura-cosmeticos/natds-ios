@@ -13,13 +13,19 @@ final class NatIconButtonSizesSpecs: QuickSpec {
 
         describe("#semi") {
             it("returns an expected value") {
-                expect(systemUnderTest.semi).to(equal(getTokenFromTheme(\.sizeSemi)))
+                expect(systemUnderTest.semi.value).to(equal(getTokenFromTheme(\.sizeSemi)))
+            }
+        }
+
+        describe("#semiX") {
+            it("returns an expected value") {
+                expect(systemUnderTest.semiX.value).to(equal(getTokenFromTheme(\.sizeSemiX)))
             }
         }
 
         describe("#medium") {
             it("returns an expected value") {
-                expect(systemUnderTest.semiX).to(equal(getTokenFromTheme(\.sizeSemiX)))
+                expect(systemUnderTest.medium.value).to(equal(getTokenFromTheme(\.sizeMedium)))
             }
         }
     }
