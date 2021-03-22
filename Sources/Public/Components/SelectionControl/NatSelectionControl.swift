@@ -32,7 +32,7 @@ public class NatSelectionControl: UIView {
             selectorView.isSelected = newValue
         }
     }
-    
+
     /// Attribute that sets and checks if the component is enabled.
     public var isEnabled: Bool {
         get {
@@ -42,7 +42,7 @@ public class NatSelectionControl: UIView {
             selectorView.isEnabled = newValue
         }
     }
-    
+
     /// Attribute that sets and checks if haptic feedback for touch is enabled.
     public var isHapticFeedbackEnabled: Bool {
         get {

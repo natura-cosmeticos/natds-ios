@@ -59,7 +59,7 @@ final class NatColorsSpec: QuickSpec {
                     expect(NatColors.onPrimaryLight).to(equal(expectedColor))
                 }
             }
-        } //describe - colors from Primary
+        }
 
         describe("colors from Secondary") {
             describe("#secondary") {

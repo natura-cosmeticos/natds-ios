@@ -21,7 +21,7 @@
 public final class NatShortcut: UIView {
 
     // MARK: - Private properties
-    
+
     private let shortcutView: ShortcutView = {
         let view = ShortcutView(icon: nil)
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -91,7 +91,7 @@ public final class NatShortcut: UIView {
 
 // MARK: - Public methods
 
-extension NatShortcut {    
+extension NatShortcut {
     /// Sets an icon for the shortcut view
     /// - Parameter icon: An icon from NatDSIcons.
     /// Example of usage:
@@ -112,9 +112,10 @@ extension NatShortcut {
     public func configure(action: @escaping () -> Void) {
         self.action = action
     }
-    
+
     /// Configures a badge to the shortcut.
-    /// - Parameter badgeValue: An UInt value for the badge. If the value is less than 1, the badge will be hidden, and if it's more than 99, the value will be shortened to '99+'.
+    /// - Parameter badgeValue: An UInt value for the badge. If the value is less than 1, the badge will be hidden.
+    /// If it's more than 99, the value will be shortened to '99+'.
     public func configure(badgeValue: UInt) {
         shortcutView.configure(badgeValue: badgeValue)
     }

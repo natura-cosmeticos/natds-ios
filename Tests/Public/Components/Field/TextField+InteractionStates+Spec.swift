@@ -10,7 +10,7 @@ final class TextFieldInteractionStatesSpec: QuickSpec {
         beforeEach {
             ConfigurationStorage.shared.currentTheme = StubTheme()
         }
-        
+
         describe("#all interaction states") {
             it("has 5 possible states") {
                 expect(systemUnderTest.allCases.count).to(equal(5))

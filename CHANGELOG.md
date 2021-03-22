@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.7.0](https://github.com/natura-cosmeticos/natds-ios/compare/3.6.0...3.7.0) (2021-03-19)
+
+
+### Features
+
+* 🎸 Adds image from url ([38310db](https://github.com/natura-cosmeticos/natds-ios/commit/38310db635d306524b2292fe74a9b732a4b20d8d))
+* add avatar component ([ec50831](https://github.com/natura-cosmeticos/natds-ios/commit/ec508318267736b44ade5834b155f8aebb9d87e1))
+* add avatar component ([9f81f4e](https://github.com/natura-cosmeticos/natds-ios/commit/9f81f4e561f3b0e45e299f8024b4527db7e6d015))
+* add sizes from mvp to avatar ([5ec3964](https://github.com/natura-cosmeticos/natds-ios/commit/5ec396446d66deb7407b3bf1a772552e4a4429c6))
+* fix iconView for avatar ([9719419](https://github.com/natura-cosmeticos/natds-ios/commit/971941918f1e3171dc741a3fad5bd9387060d4dd))
+
+
+### Bug Fixes
+
+* remove default icon when setting new icon ([725ce9e](https://github.com/natura-cosmeticos/natds-ios/commit/725ce9edf3a46476ce25b61b6b3b85746b9487c2))
+
 ## [3.6.0](https://github.com/natura-cosmeticos/natds-ios/compare/3.5.0...3.6.0) (2021-03-16)
 
 

@@ -1,3 +1,4 @@
+// swiftlint:disable line_length
 /**
  TextFieldType is an enum that represents the possible types for a TextField.
  The chosen type indicates what kind of content will be received from the textField, and adjusts keyboard, autocorrection, capitalization and security for the textField input.

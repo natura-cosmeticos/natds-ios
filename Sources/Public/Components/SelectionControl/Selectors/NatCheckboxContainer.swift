@@ -95,13 +95,13 @@ class NatCheckboxContainer: UIControl, NatSelector {
     private func setup() {
         addSubview(checkbox)
 
-        checkbox.onTouchesBegan = { [unowned self] touches in
+        checkbox.onTouchesBegan = { [unowned self] _ in
             self.addPulseLayerAnimated(at: self.checkbox.center, in: self.layer,
-                                       withColor: self.isSelected ? self.unselectedPulsableColor : self.selectedPulsableColor,
+                                       withColor: isSelected ? unselectedPulsableColor : selectedPulsableColor,
                                        removeAfterAnimation: false)
         }
 
-        checkbox.onTouchesEnded = { [unowned self] touches in
+        checkbox.onTouchesEnded = { [unowned self] _ in
             self.removePulseLayer(layer: self.layer)
         }
 
