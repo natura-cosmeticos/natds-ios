@@ -19,7 +19,7 @@ final class NatTagSnapshotTests: XCTestCase {
 
         assertSnapshot(matching: sut, as: .image)
     }
-    
+
     func test_tag_style_left_alert_hasValidSnapshot() {
         let sut = NatTag(style: .leftAlert)
         sut.configure(text: "New")
@@ -27,12 +27,12 @@ final class NatTagSnapshotTests: XCTestCase {
 
         assertSnapshot(matching: sut, as: .image)
     }
-    
+
     func test_tag_style_right_alert_hasValidSnapshot() {
         let sut = NatTag(style: .rightAlert)
         sut.configure(text: "New")
         sut.configure(color: .alert)
-        
+
         assertSnapshot(matching: sut, as: .image)
     }
 

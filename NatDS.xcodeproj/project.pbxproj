@@ -186,13 +186,18 @@
 		79FC59F225DD57E3001CCB56 /* Image+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC59F125DD57E3001CCB56 /* Image+Snapshot+Tests.swift */; };
 		7C00D9B09D306A421DBD99953C7BC9E4 /* NatElevation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2775F568C47ADB6D5DA7B7AFA4A41B4E /* NatElevation.swift */; };
 		7CA6BAC353B73AF5D31F09CAF0268EE5 /* DesignSystemFatalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E6D9764598D210D58B32B2AEB0FE9 /* DesignSystemFatalError.swift */; };
+		7D17AB1B25E91C380070FD31 /* NatAvatar+Snapshots+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D17AB1A25E91C380070FD31 /* NatAvatar+Snapshots+Tests.swift */; };
 		7D19998925756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19998825756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift */; };
 		7D3D59152593D1B600C9197B /* UIImageView+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3D59142593D1B500C9197B /* UIImageView+UIColor.swift */; };
 		7D43162225ED9477004AE34F /* TextField+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D43162125ED9477004AE34F /* TextField+Size.swift */; };
 		7D43162D25EE8944004AE34F /* TextField+FeedbackState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D43162C25EE8944004AE34F /* TextField+FeedbackState.swift */; };
 		7D43165925F2A16F004AE34F /* UIImageView+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D43165825F2A16F004AE34F /* UIImageView+URL.swift */; };
 		7D5120D025ED7CE200557E21 /* TextField+InteractionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5120CF25ED7CE200557E21 /* TextField+InteractionState.swift */; };
+		7D5120BA25E9914100557E21 /* NatAvatar+Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5120B925E9914100557E21 /* NatAvatar+Type.swift */; };
+		7D5120BF25E997CD00557E21 /* NatAvatar+Styles+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5120BE25E997CD00557E21 /* NatAvatar+Styles+Spec.swift */; };
 		7D5F149A25A782AB007986EE /* IconsSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5F149925A782AB007986EE /* IconsSource.swift */; };
+		7D75A43925DB00130050ACA9 /* NatAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D75A43825DB00130050ACA9 /* NatAvatar.swift */; };
+		7D75A44125DB00230050ACA9 /* NatAvatar+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D75A44025DB00230050ACA9 /* NatAvatar+Size.swift */; };
 		7D8F3E6A258A81C1003A7DEB /* ShortcutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F3E69258A81C1003A7DEB /* ShortcutView.swift */; };
 		7D98388325F6450A00A99628 /* TextField+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D98388225F6450A00A99628 /* TextField+Spec.swift */; };
 		7D98388825F6A15400A99628 /* TextField+Sizes+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D98388725F6A15400A99628 /* TextField+Sizes+Spec.swift */; };
@@ -203,6 +208,9 @@
 		7DE2B10725FBD57300C5CBC0 /* NatListItem+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2B10625FBD57300C5CBC0 /* NatListItem+Spec.swift */; };
 		7DE2B11625FBFBAB00C5CBC0 /* NatListItemCell+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2B11525FBFBAB00C5CBC0 /* NatListItemCell+Snapshot+Tests.swift */; };
 		7DE2B12C26000BA600C5CBC0 /* UIImageView+Clickable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2B12B26000BA600C5CBC0 /* UIImageView+Clickable.swift */; };
+		7D9EEB8B25E6A3D300CEF6BC /* NatAvatar+Sizes+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9EEB8A25E6A3D300CEF6BC /* NatAvatar+Sizes+Spec.swift */; };
+		7DAF750925E4342E0094F865 /* NatAvatar+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAF750825E4342E0094F865 /* NatAvatar+Spec.swift */; };
+		7DAF750E25E5AF830094F865 /* String+Initials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAF750D25E5AF830094F865 /* String+Initials.swift */; };
 		80FE219D764217C0520E0C784F9C0C0B /* PulseLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF8919785F0CA6D3AB0AD57F759ED73 /* PulseLayer.swift */; };
 		81AA5DF0A9D5F332072CA1EC9C5CF968 /* NatOpacities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E76AA6120032EE8B86EB90B51BFD8 /* NatOpacities.swift */; };
 		8401A9C024FED41E00B6E762 /* NatIconButton+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8401A9BF24FED41E00B6E762 /* NatIconButton+Snapshot+Tests.swift */; };
@@ -560,13 +568,18 @@
 		79FC59E825DB1256001CCB56 /* NatImage+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatImage+Spec.swift"; sourceTree = "<group>"; };
 		79FC59F125DD57E3001CCB56 /* Image+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		7CCF632B4501044E5062C574CCBBF74E /* NatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatButton.swift; sourceTree = "<group>"; };
+		7D17AB1A25E91C380070FD31 /* NatAvatar+Snapshots+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatAvatar+Snapshots+Tests.swift"; sourceTree = "<group>"; };
 		7D19998825756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatProgressIndicatorCircular+Size.swift"; sourceTree = "<group>"; };
 		7D3D59142593D1B500C9197B /* UIImageView+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+UIColor.swift"; sourceTree = "<group>"; };
 		7D43162125ED9477004AE34F /* TextField+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Size.swift"; sourceTree = "<group>"; };
 		7D43162C25EE8944004AE34F /* TextField+FeedbackState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+FeedbackState.swift"; sourceTree = "<group>"; };
 		7D43165825F2A16F004AE34F /* UIImageView+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+URL.swift"; sourceTree = "<group>"; };
 		7D5120CF25ED7CE200557E21 /* TextField+InteractionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+InteractionState.swift"; sourceTree = "<group>"; };
+		7D5120B925E9914100557E21 /* NatAvatar+Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatAvatar+Type.swift"; sourceTree = "<group>"; };
+		7D5120BE25E997CD00557E21 /* NatAvatar+Styles+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatAvatar+Styles+Spec.swift"; sourceTree = "<group>"; };
 		7D5F149925A782AB007986EE /* IconsSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsSource.swift; sourceTree = "<group>"; };
+		7D75A43825DB00130050ACA9 /* NatAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatAvatar.swift; sourceTree = "<group>"; };
+		7D75A44025DB00230050ACA9 /* NatAvatar+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatAvatar+Size.swift"; sourceTree = "<group>"; };
 		7D8E6D9764598D210D58B32B2AEB0FE9 /* DesignSystemFatalError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemFatalError.swift; sourceTree = "<group>"; };
 		7D8F3E69258A81C1003A7DEB /* ShortcutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutView.swift; sourceTree = "<group>"; };
 		7D98388225F6450A00A99628 /* TextField+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Spec.swift"; sourceTree = "<group>"; };
@@ -578,6 +591,9 @@
 		7DE2B10625FBD57300C5CBC0 /* NatListItem+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatListItem+Spec.swift"; sourceTree = "<group>"; };
 		7DE2B11525FBFBAB00C5CBC0 /* NatListItemCell+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatListItemCell+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		7DE2B12B26000BA600C5CBC0 /* UIImageView+Clickable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Clickable.swift"; sourceTree = "<group>"; };
+		7D9EEB8A25E6A3D300CEF6BC /* NatAvatar+Sizes+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatAvatar+Sizes+Spec.swift"; sourceTree = "<group>"; };
+		7DAF750825E4342E0094F865 /* NatAvatar+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatAvatar+Spec.swift"; sourceTree = "<group>"; };
+		7DAF750D25E5AF830094F865 /* String+Initials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Initials.swift"; sourceTree = "<group>"; };
 		7F9C4251076A01537D0A8CB995DF81EC /* NavigationDrawerSubitemCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerSubitemCellTests.swift; sourceTree = "<group>"; };
 		83C59F929E88764313134A046BA5C30F /* DesignSystem+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DesignSystem+Spec.swift"; sourceTree = "<group>"; };
 		8401A9BF24FED41E00B6E762 /* NatIconButton+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatIconButton+Snapshot+Tests.swift"; sourceTree = "<group>"; };
@@ -1551,6 +1567,14 @@
 			path = DesignTokens;
 			sourceTree = "<group>";
 		};
+		7D17AB1925E91C070070FD31 /* Avatar */ = {
+			isa = PBXGroup;
+			children = (
+				7D17AB1A25E91C380070FD31 /* NatAvatar+Snapshots+Tests.swift */,
+			);
+			path = Avatar;
+			sourceTree = "<group>";
+		};
 		7D5F149825A78220007986EE /* IconSource */ = {
 			isa = PBXGroup;
 			children = (
@@ -1581,6 +1605,26 @@
 				7DE2B11525FBFBAB00C5CBC0 /* NatListItemCell+Snapshot+Tests.swift */,
 			);
 			path = ListItem;
+			sourceTree = "<group>";
+		};
+		7D75A43725DAFF3F0050ACA9 /* Avatar */ = {
+			isa = PBXGroup;
+			children = (
+				7D75A43825DB00130050ACA9 /* NatAvatar.swift */,
+				7D75A44025DB00230050ACA9 /* NatAvatar+Size.swift */,
+				7D5120B925E9914100557E21 /* NatAvatar+Type.swift */,
+			);
+			path = Avatar;
+			sourceTree = "<group>";
+		};
+		7DAF74FF25E433690094F865 /* Avatar */ = {
+			isa = PBXGroup;
+			children = (
+				7DAF750825E4342E0094F865 /* NatAvatar+Spec.swift */,
+				7D9EEB8A25E6A3D300CEF6BC /* NatAvatar+Sizes+Spec.swift */,
+				7D5120BE25E997CD00557E21 /* NatAvatar+Styles+Spec.swift */,
+			);
+			path = Avatar;
 			sourceTree = "<group>";
 		};
 		8401A9BE24FED3C900B6E762 /* IconButton */ = {
@@ -1656,6 +1700,7 @@
 			isa = PBXGroup;
 			children = (
 				84391DEC24DB5AE6009D0BE8 /* AppBar */,
+				7D17AB1925E91C070070FD31 /* Avatar */,
 				84BB928324DC680A00A9BCC8 /* Badge */,
 				84BB929224DC7B0800A9BCC8 /* Bar */,
 				79ACDAB42555D99300660E68 /* Button */,
@@ -2148,6 +2193,7 @@
 		8959EC82EF195A60EF12AFDC0F9CFE75 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				7DAF74FF25E433690094F865 /* Avatar */,
 				0E7C160024C5D214002FF46F /* AppBar */,
 				26BB817124B918FB00617EFC /* Badge */,
 				37C041B132E91C20059E887D83DD7E4E /* Button */,
@@ -2183,6 +2229,7 @@
 			isa = PBXGroup;
 			children = (
 				0E3F578D24B8E9C8004B2F9E /* AppBar */,
+				7D75A43725DAFF3F0050ACA9 /* Avatar */,
 				265B17E924AFA0DA00FD0407 /* Badge */,
 				AAA7C27FE8E04EF2103505C58C128D34 /* Bar */,
 				F39AE9E5CB68E8C7A269525355E8E4D3 /* Button */,
@@ -2383,6 +2430,7 @@
 				7D3D59142593D1B500C9197B /* UIImageView+UIColor.swift */,
 				7D43165825F2A16F004AE34F /* UIImageView+URL.swift */,
 				7DE2B12B26000BA600C5CBC0 /* UIImageView+Clickable.swift */,
+				7DAF750D25E5AF830094F865 /* String+Initials.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -2803,6 +2851,7 @@
 				92CA17AE519D08B10DAEE8C00A5E3959 /* ButtonTextStyle+Spec.swift in Sources */,
 				79E7FB262538CDCC00A831BC /* NaturaLightTokens+BorderRadius+Spec.swift in Sources */,
 				840265B42513B06E00A08EBE /* AesopLightTheme+Spec.swift in Sources */,
+				7DAF750925E4342E0094F865 /* NatAvatar+Spec.swift in Sources */,
 				84BC900F24AA16FA007DF09D /* DialogFooterView+Spec.swift in Sources */,
 				26BB817724B931E900617EFC /* NatBadge+Color+Spec.swift in Sources */,
 				84B9330824AB788E00B71BD4 /* NatDialogDismissableConfigurable+Spec.swift in Sources */,
@@ -2838,6 +2887,7 @@
 				D18DCEC54B0D407538EC7F218CDF25E1 /* NatColors+Spec.swift in Sources */,
 				79E7FAFA2538938E00A831BC /* AvonLightTokens+Spacing+Spec.swift in Sources */,
 				C4EB3DDBDD3DEFDA5183455CCDB2720F /* NatDialogController+Spec.swift in Sources */,
+				7D9EEB8B25E6A3D300CEF6BC /* NatAvatar+Sizes+Spec.swift in Sources */,
 				790D3F862564181A007A9CA1 /* ProgressIndicatorCircular+Spec.swift in Sources */,
 				797E60F225531742002A59E0 /* NatLogoImages+NaturaDark+Spec.swift in Sources */,
 				E891D4E704EDCC6EA9CD3EE125A5D292 /* NatDialogController+StandardStyleBuilder+Spec.swift in Sources */,
@@ -2867,6 +2917,7 @@
 				79E7FB2B2538CE0300A831BC /* NaturaDarkTokens+Color+Spec.swift in Sources */,
 				7D98388D25F6A26900A99628 /* TextField+InteractionStates+Spec.swift in Sources */,
 				95BF20E1FC04C44251D7DCAA9C7E7C60 /* NavigationDrawer+IndexMenuTests.swift in Sources */,
+				7D5120BF25E997CD00557E21 /* NatAvatar+Styles+Spec.swift in Sources */,
 				79E7FA63253745BC00A831BC /* AesopLightTokens+Spacing+Spec.swift in Sources */,
 				79E7FADC25388E8C00A831BC /* AvonLightTokens+Elevation+Spec.swift in Sources */,
 				BE272C38259B758800060AF8 /* SelectionControl+Checkbox+Spec.swift in Sources */,
@@ -3017,6 +3068,7 @@
 				6D4DFEB09D32E1F36B9FA29904AE1ED8 /* ElevationAttributes.swift in Sources */,
 				672E84F3438F653B2DF42C2018894304 /* ExpansionPanel+Margin.swift in Sources */,
 				3A65DE112EB34ED5B9F3F1DF7B8D3FBD /* ExpansionPanel.swift in Sources */,
+				7D5120BA25E9914100557E21 /* NatAvatar+Type.swift in Sources */,
 				84BF066524B4A8BD00462AC5 /* ShortcutOutlinedStyle.swift in Sources */,
 				4612CED8B9691035EFA62E01E2B30FD6 /* Field.swift in Sources */,
 				84BC900824AA1678007DF09D /* NatDialogController+AlertStyleBuilder.swift in Sources */,
@@ -3062,6 +3114,7 @@
 				84BC900C24AA169B007DF09D /* DialogButtonConfiguration.swift in Sources */,
 				7D3D59152593D1B600C9197B /* UIImageView+UIColor.swift in Sources */,
 				13070104FE3F89CB14F76D621EF9A7F1 /* NavigationDrawer+IndexMenu.swift in Sources */,
+				7D75A43925DB00130050ACA9 /* NatAvatar.swift in Sources */,
 				84F709FF1D1DFC32BA4E9CB1803A6E30 /* NavigationDrawer.swift in Sources */,
 				798CD2F02605151B00F49768 /* NatTag+Size.swift in Sources */,
 				79FC59C125D45DAE001CCB56 /* NatProgressIndicatorCircular+Constants.swift in Sources */,
@@ -3071,6 +3124,7 @@
 				A096BCFF55DBEF25B29C30C1537210D5 /* NavigationDrawerSubitemCell.swift in Sources */,
 				848831BE25018340004C3FA8 /* NatIconButton+Styles.swift in Sources */,
 				269C886424C2456B00A507BE /* UINavigationController+Style.swift in Sources */,
+				7D75A44125DB00230050ACA9 /* NatAvatar+Size.swift in Sources */,
 				9D4FF6FB92A6A5BD0AF263A69FF707E4 /* Pulsable.swift in Sources */,
 				80FE219D764217C0520E0C784F9C0C0B /* PulseLayer.swift in Sources */,
 				ECA4CB7769FB08CB62C5F8CD79EE6521 /* ReusableView.swift in Sources */,
@@ -3093,6 +3147,7 @@
 				269C886624C2480800A507BE /* UIViewController+Configure.swift in Sources */,
 				93B1D8CFBB1420174B310CC4906AA2EF /* UIView+Frame.swift in Sources */,
 				77C55B339CA403354D76ABF05E283D5A /* ValueTextHighlight.swift in Sources */,
+				7DAF750E25E5AF830094F865 /* String+Initials.swift in Sources */,
 				840B6A754236624B9738CBC3D5CFE895 /* ViewAnimatingWrapper.swift in Sources */,
 				843123DF25123ED0002A7B6F /* AesopDarkTokens.swift in Sources */,
 				EE1E7A9F49A18BCD194E0C03FB2F0074 /* ViewStyle.swift in Sources */,
@@ -3118,6 +3173,7 @@
 				79ACDAB62555D9B500660E68 /* NatButton+SnapShot+Tests.swift in Sources */,
 				84BB928524DC69C900A9BCC8 /* Badgeable+Snapshot+Tests.swift in Sources */,
 				84BB928424DC683700A9BCC8 /* NatBadge+Standard+Snapshot+Tests.swift in Sources */,
+				7D17AB1B25E91C380070FD31 /* NatAvatar+Snapshots+Tests.swift in Sources */,
 				26BFBADE251273BA006C22E2 /* NatTag+Snapshot+Tests.swift in Sources */,
 				79B6AC8525AE1E520027F7D6 /* NatBadge+Dot+Snapshot+Tests.swift in Sources */,
 				84BB929724DC8FA300A9BCC8 /* ExpansionPanelBuilder.swift in Sources */,

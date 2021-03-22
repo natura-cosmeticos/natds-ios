@@ -42,7 +42,7 @@ final class ShortcutItemViewController: UIViewController, SampleItem {
 
         let outlinedPrimary = createShortcuts(style: .outlinedPrimary, text: "Outlined")
         outlinedPrimary.forEach { outlinedPrimaryStackView.addArrangedSubview($0) }
-        
+
         let containedPrimaryBadge = createShortcuts(style: .containedPrimary, text: "Contained", shouldShowBadge: true)
         containedPrimaryBadge.forEach { containedPrimaryBadgeStackView.addArrangedSubview($0) }
 
@@ -52,16 +52,17 @@ final class ShortcutItemViewController: UIViewController, SampleItem {
         addConstraints()
     }
 
-    private func createShortcuts(style: NatShortcut.Style, text: String, shouldShowBadge: Bool = false) -> [NatShortcut] {
+    private func createShortcuts(style: NatShortcut.Style, text: String,
+                                 shouldShowBadge: Bool = false) -> [NatShortcut] {
         (0...3).map { value in
             let shortcut = NatShortcut(style: style)
             shortcut.configure(text: text)
-            
+
             if shouldShowBadge {
                 let badgeValues: [UInt] = [1, 25, 99, 100]
                 shortcut.configure(badgeValue: badgeValues[value])
             }
-            
+
             return shortcut
         }
     }
@@ -99,14 +100,14 @@ final class ShortcutItemViewController: UIViewController, SampleItem {
             ),
             outlinedPrimaryStackView.widthAnchor.constraint(equalTo: containedPrimaryStackView.widthAnchor),
             outlinedPrimaryStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            
+
             containedPrimaryBadgeStackView.topAnchor.constraint(
                 equalTo: outlinedPrimaryStackView.bottomAnchor,
                 constant: NatSpacing.small
             ),
             containedPrimaryBadgeStackView.widthAnchor.constraint(equalTo: containedPrimaryStackView.widthAnchor),
             containedPrimaryBadgeStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            
+
             outlinedPrimaryBadgeStackView.topAnchor.constraint(
                 equalTo: containedPrimaryBadgeStackView.bottomAnchor,
                 constant: NatSpacing.small

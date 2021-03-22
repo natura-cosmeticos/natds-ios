@@ -10,7 +10,7 @@ final class TextFieldSizesSpec: QuickSpec {
         beforeEach {
             ConfigurationStorage.shared.currentTheme = StubTheme()
         }
-        
+
         describe("#all sizes") {
             it("has 2 possible sizes") {
                 expect(systemUnderTest.allCases.count).to(equal(2))

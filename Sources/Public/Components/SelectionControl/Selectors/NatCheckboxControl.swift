@@ -120,7 +120,7 @@ final class NatCheckboxControl: UIControl {
         }
     }
 
-    //swiftlint:disable line_length
+    // swiftlint:disable line_length
     private func drawCheckmark(frame: CGRect) {
         let bezierPath = UIBezierPath()
         bezierPath.move(to: CGPoint(x: frame.minX + 0.26000 * frame.width, y: frame.minY + 0.50000 * frame.height))
@@ -137,7 +137,7 @@ final class NatCheckboxControl: UIControl {
         style.checkmarkColor.setFill()
         bezierPath.fill()
     }
-    //swiftlint:enable line_length
+    // swiftlint:enable line_length
 
     private func drawIndeterminateCheck(frame: CGRect) {
             guard let context = UIGraphicsGetCurrentContext() else { return }

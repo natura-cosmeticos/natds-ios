@@ -57,7 +57,7 @@ class Field: UITextField {
     func fitPaddingToIconButton() {
         padding = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 40)
     }
-    
+
     func fitPaddingToImage() {
         padding = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 80)
     }

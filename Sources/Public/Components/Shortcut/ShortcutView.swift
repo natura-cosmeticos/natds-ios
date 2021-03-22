@@ -19,17 +19,17 @@ public class ShortcutView: UIView {
         super.init(frame: frame)
         setup()
     }
-    
+
     public convenience init(icon: String? = nil) {
-        self.init()
         defer { self.iconView.iconText = icon }
+        self.init()
     }
 
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     public override func layoutSubviews() {
         super.layoutSubviews()
 
@@ -39,7 +39,7 @@ public class ShortcutView: UIView {
     private func setup() {
         circleView.addSubview(iconView)
         addSubview(circleView)
-        
+
         let circleSize = NatSizes.mediumX
 
         let constraints = [
@@ -53,18 +53,18 @@ public class ShortcutView: UIView {
             iconView.centerXAnchor.constraint(equalTo: circleView.centerXAnchor),
             iconView.centerYAnchor.constraint(equalTo: circleView.centerYAnchor)
         ]
-        
+
         NSLayoutConstraint.activate(constraints)
     }
-    
+
     public func configure(icon: String?) {
         iconView.iconText = icon
     }
-    
+
     public func configure(iconColor color: UIColor) {
         iconView.tintColor = color
     }
-    
+
     public func configure(badgeValue: UInt) {
         if badgeValue <= 0 {
             removeBadge()
