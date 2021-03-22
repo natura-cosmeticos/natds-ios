@@ -586,7 +586,8 @@ extension TextField {
     /// Sets the state of the textField and a text to describe the state
     /// - Parameters:
     ///   - state: An option from `TextField.FeedbackState`: error, success or none
-    ///   - text: A string with the text to be displayed below the textField box. If the state is `error` or `success`, the text will have a small icon next to it. If the state is  `none`, the text will be displayed as a helper text.
+    ///   - text: A string with the text to be displayed below the textField box. If the state is `error` or `success`,
+    ///    the text will have a small icon next to it. If the state is  `none`, the text will be displayed as a helper text.
     public func configure(state: FeedbackState, with text: String?) {
         self.state = state
         self.helper = text

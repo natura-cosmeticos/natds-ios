@@ -4,6 +4,8 @@ protocol NatSelector: UIControl, Pulsable {
     var isHapticFeedbackEnabled: Bool { get set }
     var isIndeterminate: Bool { get set }
     var labelComponent: String? { get set }
+    var isGrouped: Bool { get set }
+    var groupId: Int { get set }
 }
 
 class NatCheckboxContainer: UIControl, NatSelector {
@@ -57,6 +59,24 @@ class NatCheckboxContainer: UIControl, NatSelector {
         }
     }
 
+    var isGrouped: Bool {
+        get {
+            false
+        }
+        set {
+            self.isGrouped = false
+        }
+    }
+
+    var groupId: Int {
+        get {
+            0
+        }
+        set {
+            self.groupId = 0
+        }
+    }
+
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
         setup()
@@ -72,14 +92,16 @@ class NatCheckboxContainer: UIControl, NatSelector {
         layer.cornerRadius = frame.size.width / 2
     }
 
+    // swiftlint:disable line_length
     private func setup() {
         addSubview(checkbox)
 
         checkbox.onTouchesBegan = { [unowned self] _ in
             self.addPulseLayerAnimated(at: self.checkbox.center, in: self.layer,
-                                       withColor: isSelected ? unselectedPulsableColor : selectedPulsableColor,
+                                       withColor: self.isSelected ? self.unselectedPulsableColor : self.selectedPulsableColor,
                                        removeAfterAnimation: false)
         }
+        // swiftlint:enable line_length
 
         checkbox.onTouchesEnded = { [unowned self] _ in
             self.removePulseLayer(layer: self.layer)
