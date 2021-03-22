@@ -89,7 +89,7 @@ class NatRadioButtonContainer: UIControl, NatSelector {
 
         radioButton.onTouchesBegan = { [unowned self] _ in
             self.addPulseLayerAnimated(at: self.radioButton.center, in: self.layer,
-                                       withColor: isSelected ? unselectedPulsableColor : selectedPulsableColor,
+                                       withColor: self.isSelected ? self.unselectedPulsableColor : self.selectedPulsableColor,
                                        removeAfterAnimation: false)
         }
 

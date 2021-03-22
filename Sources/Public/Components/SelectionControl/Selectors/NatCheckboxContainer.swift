@@ -97,7 +97,7 @@ class NatCheckboxContainer: UIControl, NatSelector {
 
         checkbox.onTouchesBegan = { [unowned self] _ in
             self.addPulseLayerAnimated(at: self.checkbox.center, in: self.layer,
-                                       withColor: isSelected ? unselectedPulsableColor : selectedPulsableColor,
+                                       withColor: self.isSelected ? self.unselectedPulsableColor : self.selectedPulsableColor,
                                        removeAfterAnimation: false)
         }
 
