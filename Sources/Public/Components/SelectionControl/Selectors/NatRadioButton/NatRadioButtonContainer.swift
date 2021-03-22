@@ -84,14 +84,15 @@ class NatRadioButtonContainer: UIControl, NatSelector {
         layer.cornerRadius = frame.size.width / 2
     }
 
+    // swiftlint:disable line_length
     private func setup() {
         addSubview(radioButton)
-
         radioButton.onTouchesBegan = { [unowned self] _ in
             self.addPulseLayerAnimated(at: self.radioButton.center, in: self.layer,
                                        withColor: self.isSelected ? self.unselectedPulsableColor : self.selectedPulsableColor,
                                        removeAfterAnimation: false)
         }
+        // swiftlint:enable line_length
 
         radioButton.onTouchesEnded = { [unowned self] _ in
             self.removePulseLayer(layer: self.layer)

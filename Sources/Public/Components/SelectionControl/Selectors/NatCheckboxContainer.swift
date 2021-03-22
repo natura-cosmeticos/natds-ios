@@ -92,6 +92,7 @@ class NatCheckboxContainer: UIControl, NatSelector {
         layer.cornerRadius = frame.size.width / 2
     }
 
+    // swiftlint:disable line_length
     private func setup() {
         addSubview(checkbox)
 
@@ -100,6 +101,7 @@ class NatCheckboxContainer: UIControl, NatSelector {
                                        withColor: self.isSelected ? self.unselectedPulsableColor : self.selectedPulsableColor,
                                        removeAfterAnimation: false)
         }
+        // swiftlint:enable line_length
 
         checkbox.onTouchesEnded = { [unowned self] _ in
             self.removePulseLayer(layer: self.layer)
