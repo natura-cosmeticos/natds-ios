@@ -32,8 +32,8 @@ public final class NatIconButton: UIView {
         case disabled
     }
 
-    internal let iconView: IconView = {
-        let iconView = IconView(fontSize: NatSizes.standard)
+    internal lazy var iconView: IconView = {
+        let iconView = IconView(fontSize: size.fontSize)
         iconView.translatesAutoresizingMaskIntoConstraints = false
 
         return iconView
@@ -46,15 +46,17 @@ public final class NatIconButton: UIView {
 
     private var action: (() -> Void)?
     private (set) var currentState: State = .enabled
+    private var size: Sizes = .semi
 
     // MARK: - Inits
 
-    public convenience init(style: Style) {
-        self.init(style: style, notificationCenter: NotificationCenter.default)
+    public convenience init(style: Style, size: Sizes? = .semi) {
+        self.init(style: style, size: size, notificationCenter: NotificationCenter.default)
     }
 
-    init(style: Style, notificationCenter: NotificationCenterObservable) {
+    init(style: Style, size: Sizes?, notificationCenter: NotificationCenterObservable) {
         self.style = style
+        self.size = size ?? .semi
         self.notificationCenter = notificationCenter
 
         super.init(frame: .zero)
@@ -96,7 +98,7 @@ public final class NatIconButton: UIView {
         guard currentState == .enabled else { return }
 
         let opacity = getTokenFromTheme(\.opacityDisabledLow)
-        let color = iconView.tintColor.withAlphaComponent(opacity)
+        let color = getUIColorFromTokens(\.colorHighlight).withAlphaComponent(opacity)
 
         addPulseLayerAnimated(
             at: centerBounds,
@@ -147,17 +149,26 @@ extension NatIconButton {
         iconView.iconText = icon
     }
 
-    internal func configure(iconImage: UIImage?) {
-        iconView.defaultImageView.image = iconImage
-        translatesAutoresizingMaskIntoConstraints = false
-
-        NSLayoutConstraint.activate(constraints)
+    public func configure(background: Backgrounds) {
+        self.backgroundColor = background.color
+        if background.hasElevation {
+            NatElevation.apply(on: self, elevation: .medium)
+        } else {
+            NatElevation.apply(on: self, elevation: .none)
+        }
     }
 }
 
 // MARK: - Internal methods
 
 extension NatIconButton {
+    internal func configure(iconImage: UIImage?) {
+        iconView.defaultImageView.image = iconImage
+        translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate(constraints)
+    }
+
     func configure(iconColor: UIColor) {
         iconView.tintColor = iconColor
         iconView.defaultImageView.tintedColor = iconColor
@@ -186,7 +197,9 @@ extension NatIconButton {
     private func addConstraints() {
         let constraints = [
             iconView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            iconView.centerYAnchor.constraint(equalTo: centerYAnchor)
+            iconView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            self.heightAnchor.constraint(equalToConstant: size.value),
+            self.widthAnchor.constraint(equalToConstant: size.value)
         ]
 
         NSLayoutConstraint.activate(constraints)
