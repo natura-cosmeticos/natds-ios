@@ -8,6 +8,8 @@ final class NatCheckboxControl: UIControl {
     var isHapticFeedbackEnabled: Bool = false
     var isIndeterminate: Bool = false
     var labelComponent: String?
+    internal var isGrouped: Bool = false
+    internal var groupId: Int = 0
 
     private var style = Style.default
     private let increasedTouchRadius: CGFloat = 5

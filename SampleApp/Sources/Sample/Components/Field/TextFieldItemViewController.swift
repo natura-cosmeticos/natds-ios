@@ -76,6 +76,7 @@ class TextFieldItemViewController: UIViewController, SampleItem {
         return field
     }()
 
+    // swiftlint:disable line_length
     private lazy var errorTextFieldMultpleLines: TextField = {
         let field = TextField()
         field.title = "Error"
@@ -85,6 +86,7 @@ class TextFieldItemViewController: UIViewController, SampleItem {
         field.delegate = self
         return field
     }()
+    // swiftlint:enable line_length
 
     private lazy var helperTextField: TextField = {
         let field = TextField()
