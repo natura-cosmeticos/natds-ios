@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.8.1](https://github.com/natura-cosmeticos/natds-ios/compare/3.8.0...3.8.1) (2021-03-23)
+
+
+### Bug Fixes
+
+* fix warnings to release radio button group ([b330876](https://github.com/natura-cosmeticos/natds-ios/commit/b330876ea87b92b6a59a40b313f4702560b1b6e6))
+
 ## [3.8.0](https://github.com/natura-cosmeticos/natds-ios/compare/3.7.0...3.8.0) (2021-03-22)
 
 

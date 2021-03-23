@@ -61,19 +61,19 @@ class NatCheckboxContainer: UIControl, NatSelector {
 
     var isGrouped: Bool {
         get {
-            false
+            checkbox.isGrouped
         }
         set {
-            self.isGrouped = false
+            checkbox.isGrouped = newValue
         }
     }
 
     var groupId: Int {
         get {
-            0
+            checkbox.groupId
         }
         set {
-            self.groupId = 0
+            checkbox.groupId = newValue
         }
     }
 
