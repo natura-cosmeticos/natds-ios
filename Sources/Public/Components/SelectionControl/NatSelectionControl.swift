@@ -72,8 +72,21 @@ public class NatSelectionControl: UIView {
         }
     }
 
+    internal var isGrouped: Bool = false {
+        didSet {
+            selectorView.isGrouped = isGrouped
+        }
+    }
+
+    internal var groupId: Int = 0 {
+        didSet {
+            selectorView.groupId = groupId
+        }
+    }
+
     private let style: Style
     private(set) var text: String?
+    private var notificationCenter: NotificationCenterObservable
 
     private lazy var selectorView: NatSelector = {
         let view = style.getSelector()
@@ -91,13 +104,30 @@ public class NatSelectionControl: UIView {
     public init(style: Style, text: String? = nil) {
         self.style = style
         self.text = text
+        self.notificationCenter = NotificationCenter.default
         super.init(frame: .zero)
+        setup()
+    }
+
+    init(style: Style,
+         text: String? = nil,
+         notificationCenter: NotificationCenterObservable = NotificationCenter.default) {
+
+        self.notificationCenter = notificationCenter
+        self.style = style
+        self.text = text
+        super.init(frame: .zero)
+
         setup()
     }
 
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    deinit {
+        notificationCenter.removeObserver(self)
     }
 
     // MARK: - View Setup
@@ -108,6 +138,11 @@ public class NatSelectionControl: UIView {
 
         addSubview(label)
         addLabelConstraints()
+    }
+
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+        self.setNeedsDisplay()
     }
 
     private func addSelectorConstraints() {

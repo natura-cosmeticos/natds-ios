@@ -42,6 +42,7 @@ extension ListItemViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
         let cell: NatListItemCell = (tableView.dequeueReusableCell(withIdentifier: "id", for: indexPath) as? NatListItemCell)!
 
         switch indexPath.row {

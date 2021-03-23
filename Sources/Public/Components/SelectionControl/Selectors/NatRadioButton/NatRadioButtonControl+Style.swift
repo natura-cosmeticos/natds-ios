@@ -1,4 +1,4 @@
-extension NatRadioButton {
+extension NatRadioButtonControl {
     struct Style {
 
         // MARK: Static Properties

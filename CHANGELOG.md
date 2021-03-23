@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.8.0](https://github.com/natura-cosmeticos/natds-ios/compare/3.7.0...3.8.0) (2021-03-22)
+
+
+### Features
+
+* 🎸 Adds radioButton group ([3a663f9](https://github.com/natura-cosmeticos/natds-ios/commit/3a663f96eb9428a55cd164e2922b184c54ee2f9b))
+
 ## [3.7.0](https://github.com/natura-cosmeticos/natds-ios/compare/3.6.0...3.7.0) (2021-03-19)
 
 
