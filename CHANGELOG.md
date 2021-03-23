@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.9.0](https://github.com/natura-cosmeticos/natds-ios/compare/3.8.1...3.9.0) (2021-03-23)
+
+
+### Features
+
+* 🎸 Updates NatTag with colors ([1908ad5](https://github.com/natura-cosmeticos/natds-ios/commit/1908ad5fa94d9b5deadac09680fdf76c2f1ba58a))
+* 🎸 Updates NatTag with sizes small and standard ([ea30cab](https://github.com/natura-cosmeticos/natds-ios/commit/ea30cab8b37f8e500fe38887853f038f3ec30c6e))
+
 ### [3.8.1](https://github.com/natura-cosmeticos/natds-ios/compare/3.8.0...3.8.1) (2021-03-23)
 
 
