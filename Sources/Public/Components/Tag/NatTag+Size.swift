@@ -7,7 +7,7 @@ extension NatTag {
      - small
      - standard
      */
-    
+
     public enum Size: CaseIterable {
         case small
         case standard
