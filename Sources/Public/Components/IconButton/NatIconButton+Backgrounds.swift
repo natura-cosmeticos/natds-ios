@@ -1,8 +1,15 @@
 extension NatIconButton {
+
     /**
-     docs
+     Background represents style values for the NatIconButton component, which apply different colors for the icon.
+     
+     These are all the backgrounds allowed for a NatIconButton:
+     - inherit (default)
+     - float
+     - overlay
      */
-    public enum Backgrounds {
+
+    public enum Background {
         case float
         case inherit
         case overlay

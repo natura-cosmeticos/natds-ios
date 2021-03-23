@@ -1,13 +1,14 @@
 extension NatIconButton {
+
     /**
-     Sizes is a enum that represents sizes values for the NatIconButton component.
-     It helps to configure height and width constraints.
+     Sizes is a enum that represents size values for the NatIconButton component.
      
      These are all sizes allowed for a NatIconButton:
      - semi (default)
      - semiX
      - medium
      */
+
     public enum Sizes {
         case semi
         case semiX

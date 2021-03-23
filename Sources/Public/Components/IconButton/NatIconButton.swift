@@ -1,17 +1,26 @@
 import Foundation
 
 /**
-    NatIconButton is a class that represents  icon buttons  component from the design system.
-    The button colors changes according to the current theme configured in the Design System.
-
-    This button has 2 styles:
-    - standardDefault
-    - standardPrimary
-
-    Example of usage:
+ NatIconButton is a class that represent the icon button component from the design system.
+ The button colors change according to the current theme configured.
  
-            let iconButtonDefault = NatIconButton(style: .standardDefault)
-            let iconButtonPrimary = NatIconButton(style: .standardPrimary)
+ The icon button has two styles, which change the icon color:
+ - standardDefault (icon has `highEmphasis` color)
+ - standardPrimary (icon has `primary` color)
+ 
+ The icon button can have three different sizes (with size `semi` as default):
+ - semi
+ - semiX
+ - medium
+ > Note: the size can only be changed at `init()`
+ 
+ Example of usage:
+        
+        // An icon with default color and size
+        let defaultIconButton = NatIconButton(style: .standardDefault)
+
+        // An icon button with primary color and medium size
+        let primaryIconButton = NatIconButton(style: .standardPrimary, size: .medium)
 
  - Requires:
     It's necessary to configure the Design System with a theme or fatalError will be raised.
@@ -118,7 +127,8 @@ public final class NatIconButton: UIView {
 // MARK: - Public methods
 
 extension NatIconButton {
-    /// Sets the functionality for the icon button.
+
+    /// Sets the functionality for the icon button
     /// - Parameter action: A block of functionality to be executed when the icon button is pressed
     public func configure(action: @escaping () -> Void) {
         self.action = action
@@ -135,21 +145,23 @@ extension NatIconButton {
         }
     }
 
-    /// Sets the state of the icon button.
-    /// - Parameter state: An option from State enum: enabled or disabled
+    /// Sets the state of the icon button
+    /// - Parameter state: An option from State enum: enabled (default) or disabled
     public func configure(state: State) {
         currentState = state
 
         style.applyStyle(self)
     }
 
-    /// Sets an icon for the button view.
+    /// Sets an icon for the button view
     /// - Parameter icon: An icon from NatDSIcons, using the function `getIcon` from NatDSIcons
     public func configure(icon: String?) {
         iconView.iconText = icon
     }
 
-    public func configure(background: Backgrounds) {
+    /// Sets the background style for the icon button
+    /// - Parameter background: An option from Background enum: inherit (default), float or overlay
+    public func configure(background: Background) {
         self.backgroundColor = background.color
         if background.hasElevation {
             NatElevation.apply(on: self, elevation: .medium)

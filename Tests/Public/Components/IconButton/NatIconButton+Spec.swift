@@ -183,7 +183,7 @@ final class NatIconButtonSpec: QuickSpec {
                 }
             }
         }
-        
+
         describe("#configure(background:)") {
             context("when is set to overlay") {
                 beforeEach {
