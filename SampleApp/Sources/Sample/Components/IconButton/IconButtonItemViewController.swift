@@ -151,14 +151,14 @@ final class IconButtonItemViewController: UIViewController, SampleItem {
         view.addSubview(iconButton)
         iconButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         iconButton.centerXAnchor.constraint(equalTo: view.leadingAnchor, constant: 24).isActive = true
-        
+
         let label = UILabel()
         label.text = text
         label.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(label)
         label.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         label.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 60).isActive = true
-        
+
         view.isUserInteractionEnabled = true
         return view
     }

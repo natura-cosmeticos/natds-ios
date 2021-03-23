@@ -1,6 +1,6 @@
-<NatDS.NatIconButton; frame = (0 0; 40 40); gestureRecognizers = <NSArray>; layer = <CALayer>>
+<NatDS.NatIconButton; frame = (0 0; 32 32); gestureRecognizers = <NSArray>; layer = <CALayer>>
    | <NatDS.PulseLayer> (layer)
    |    | <CAShapeLayer> (layer)
-   | <NatDS.IconView; frame = (8 8; 24 24); tintColor = UIExtendedSRGBColorSpace 0.2 0.2 0.2 1; layer = <CALayer>>
+   | <NatDS.IconView; frame = (4 4; 24 24); tintColor = UIExtendedSRGBColorSpace 0.2 0.2 0.2 1; layer = <CALayer>>
    |    | <UILabel; frame = (0 0; 24 24); userInteractionEnabled = NO; layer = <_UILabelLayer>>
    |    | <UIImageView; frame = (0 0; 24 24); opaque = NO; userInteractionEnabled = NO; tintColor = UIExtendedSRGBColorSpace 0.2 0.2 0.2 1; layer = <CALayer>>
