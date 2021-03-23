@@ -182,7 +182,7 @@ extension NatAvatar {
         type = .icon
         iconView.iconText = icon
         iconView.isHidden = false
-        
+
         defaultIconView.isHidden = true
         imageView.isHidden = true
         label.isHidden = true
@@ -192,7 +192,7 @@ extension NatAvatar {
     public func configureWithDefaultIcon() {
         type = .icon
         defaultIconView.isHidden = false
-        
+
         imageView.isHidden = true
         label.isHidden = true
         iconView.isHidden = true
