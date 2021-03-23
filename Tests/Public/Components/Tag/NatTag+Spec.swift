@@ -66,5 +66,54 @@ final class NatTagSpec: QuickSpec {
             }
         }
 
+        describe("#configure(color:)") {
+            it("sets primary") {
+                sut.configure(color: .primary)
+                expect(sut.tagColor.tag).to(equal(getUIColorFromTokens(\.colorPrimary)))
+                expect(sut.label.textColor).to(equal(getUIColorFromTokens(\.colorOnPrimary)))
+            }
+
+            it("sets secondary") {
+                sut.configure(color: .secondary)
+                expect(sut.tagColor.tag).to(equal(getUIColorFromTokens(\.colorSecondary)))
+                expect(sut.label.textColor).to(equal(getUIColorFromTokens(\.colorOnSecondary)))
+            }
+
+            it("sets success") {
+                sut.configure(color: .success)
+                expect(sut.tagColor.tag).to(equal(getUIColorFromTokens(\.colorSuccess)))
+                expect(sut.label.textColor).to(equal(getUIColorFromTokens(\.colorOnSuccess)))
+            }
+
+            it("sets alert") {
+                sut.configure(color: .alert)
+                expect(sut.tagColor.tag).to(equal(getUIColorFromTokens(\.colorAlert)))
+                expect(sut.label.textColor).to(equal(getUIColorFromTokens(\.colorOnAlert)))
+            }
+
+            it("sets warning") {
+                sut.configure(color: .warning)
+                expect(sut.tagColor.tag).to(equal(getUIColorFromTokens(\.colorWarning)))
+                expect(sut.label.textColor).to(equal(getUIColorFromTokens(\.colorOnWarning)))
+            }
+
+            it("sets link") {
+                sut.configure(color: .link)
+                expect(sut.tagColor.tag).to(equal(getUIColorFromTokens(\.colorLink)))
+                expect(sut.label.textColor).to(equal(getUIColorFromTokens(\.colorOnLink)))
+            }
+        }
+
+        describe("#NatTag.Size") {
+            it("sets small") {
+                let sizes = NatTag.Size.self
+                expect(sizes.small.value).to(equal(getTokenFromTheme(\.sizeSmall)))
+            }
+
+            it("sets standard") {
+                let sizes = NatTag.Size.self
+                expect(sizes.standard.value).to(equal(getTokenFromTheme(\.sizeStandard)))
+            }
+        }
     }
 }

@@ -98,6 +98,9 @@
 		797E614125531CF7002A59E0 /* TheBodyShopDarkComponents+Logo+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797E614025531CF7002A59E0 /* TheBodyShopDarkComponents+Logo+Spec.swift */; };
 		797E614A25531D2D002A59E0 /* TheBodyShopLightComponents+Logo+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797E614925531D2D002A59E0 /* TheBodyShopLightComponents+Logo+Spec.swift */; };
 		797E615E255464D1002A59E0 /* NatButton+Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797E615D255464D1002A59E0 /* NatButton+Icon.swift */; };
+		798CD2F02605151B00F49768 /* NatTag+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798CD2EF2605151B00F49768 /* NatTag+Size.swift */; };
+		798CD2F5260519C000F49768 /* NatTag+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798CD2F4260519C000F49768 /* NatTag+Color.swift */; };
+		798CD2FA2608CB4000F49768 /* NatTag+Color+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798CD2F92608CB4000F49768 /* NatTag+Color+Snapshot+Tests.swift */; };
 		798CD29C25FFCC4A00F49768 /* NatRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798CD29B25FFCC4A00F49768 /* NatRadioButton.swift */; };
 		798CD2E82603831B00F49768 /* RadioButton+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798CD2E72603831B00F49768 /* RadioButton+Spec.swift */; };
 		799B683C256720890055B96D /* ProgressIndicatorCircular+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799B683B256720890055B96D /* ProgressIndicatorCircular+Snapshot+Tests.swift */; };
@@ -480,6 +483,9 @@
 		797E614025531CF7002A59E0 /* TheBodyShopDarkComponents+Logo+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheBodyShopDarkComponents+Logo+Spec.swift"; sourceTree = "<group>"; };
 		797E614925531D2D002A59E0 /* TheBodyShopLightComponents+Logo+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TheBodyShopLightComponents+Logo+Spec.swift"; sourceTree = "<group>"; };
 		797E615D255464D1002A59E0 /* NatButton+Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+Icon.swift"; sourceTree = "<group>"; };
+		798CD2EF2605151B00F49768 /* NatTag+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatTag+Size.swift"; sourceTree = "<group>"; };
+		798CD2F4260519C000F49768 /* NatTag+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatTag+Color.swift"; sourceTree = "<group>"; };
+		798CD2F92608CB4000F49768 /* NatTag+Color+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatTag+Color+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		798CD29B25FFCC4A00F49768 /* NatRadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatRadioButton.swift; sourceTree = "<group>"; };
 		798CD2E72603831B00F49768 /* RadioButton+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RadioButton+Spec.swift"; sourceTree = "<group>"; };
 		799B683B256720890055B96D /* ProgressIndicatorCircular+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProgressIndicatorCircular+Snapshot+Tests.swift"; sourceTree = "<group>"; };
@@ -958,6 +964,8 @@
 			isa = PBXGroup;
 			children = (
 				26BFBAD625125246006C22E2 /* NatTag.swift */,
+				798CD2EF2605151B00F49768 /* NatTag+Size.swift */,
+				798CD2F4260519C000F49768 /* NatTag+Color.swift */,
 				2600C21F25129C880040C4C4 /* NatTag+Style.swift */,
 			);
 			path = Tag;
@@ -975,6 +983,7 @@
 			isa = PBXGroup;
 			children = (
 				26BFBADD251273BA006C22E2 /* NatTag+Snapshot+Tests.swift */,
+				798CD2F92608CB4000F49768 /* NatTag+Color+Snapshot+Tests.swift */,
 			);
 			path = Tag;
 			sourceTree = "<group>";
@@ -3052,6 +3061,7 @@
 				7D43162225ED9477004AE34F /* TextField+Size.swift in Sources */,
 				14016A20C7BF7046BAFCD2AE53673EB0 /* ButtonStyle.swift in Sources */,
 				84EB6B8524EEEA8E00C6A792 /* GetOrCreatedCachedColor.swift in Sources */,
+				798CD2F5260519C000F49768 /* NatTag+Color.swift in Sources */,
 				7D43162D25EE8944004AE34F /* TextField+FeedbackState.swift in Sources */,
 				845AD7A424E2C4DA006CA226 /* Theme.swift in Sources */,
 				000598F48ADE170D305737C11E3F2D99 /* ButtonTextStyle.swift in Sources */,
@@ -3122,6 +3132,7 @@
 				13070104FE3F89CB14F76D621EF9A7F1 /* NavigationDrawer+IndexMenu.swift in Sources */,
 				7D75A43925DB00130050ACA9 /* NatAvatar.swift in Sources */,
 				84F709FF1D1DFC32BA4E9CB1803A6E30 /* NavigationDrawer.swift in Sources */,
+				798CD2F02605151B00F49768 /* NatTag+Size.swift in Sources */,
 				79FC59C125D45DAE001CCB56 /* NatProgressIndicatorCircular+Constants.swift in Sources */,
 				841FEABA24C5C1A100C50AFF /* NatLogoImages.swift in Sources */,
 				79FC59C925D45E7D001CCB56 /* NatProgressIndicatorCircular+Animation.swift in Sources */,
@@ -3169,6 +3180,7 @@
 				84391DEA24DB477F009D0BE8 /* NatShortcut+Snapshot+Tests.swift in Sources */,
 				79FC596B25C1AE5D001CCB56 /* SelectionControl+RadioButton+Snapshot+Tests.swift in Sources */,
 				84BB929124DC788D00A9BCC8 /* TabDelegateMock.swift in Sources */,
+				798CD2FA2608CB4000F49768 /* NatTag+Color+Snapshot+Tests.swift in Sources */,
 				84BB929C24DC97EE00A9BCC8 /* Field+Snapshot+Tests.swift in Sources */,
 				84A16F0524DDC30100E80DA0 /* NavigationDrawerDelegateMock.swift in Sources */,
 				84BB92A224DCB73100A9BCC8 /* IconView+Snapshot+Tests.swift in Sources */,

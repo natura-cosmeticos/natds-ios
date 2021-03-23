@@ -9,13 +9,13 @@
  
  Example of usage:
  
-        let badge = NatTag(style: .defaultAlert)
-
+ let tag = NatTag(style: .defaultAlert)
+ 
  - Requires:
-        It's necessary to configure the Design System with a theme or fatalError will be raised.
-
-            DesignSystem().configure(with: AvailableTheme)
-*/
+ It's necessary to configure the Design System with a theme or fatalError will be raised.
+ 
+ DesignSystem().configure(with: AvailableTheme)
+ */
 
 public final class NatTag: UIView {
     typealias DrawPath = (_ size: CGSize) -> Void
@@ -28,7 +28,7 @@ public final class NatTag: UIView {
 
     // MARK: - Private properties
 
-    private lazy var label: UILabel = {
+    internal lazy var label: UILabel = {
         let label = UILabel()
         label.font = NatFonts.font(ofSize: .caption, withWeight: .regular)
         label.textAlignment = .center
@@ -39,12 +39,14 @@ public final class NatTag: UIView {
 
     private let style: Style
     private var drawPath: DrawPath?
+    internal var tagColor: Color = .primary
 
     // MARK: - Inits
 
     public init(style: Style) {
         self.style = style
         super.init(frame: .zero)
+        self.contentScaleFactor = UIScreen.main.scale
 
         style.applyStyle(self)
         setup()
@@ -97,7 +99,7 @@ public final class NatTag: UIView {
                                                         height: NatBorderRadius.circle(viewHeight: size.height)))
             }
 
-            color.set()
+            self.tagColor.tag.set()
             path.fill()
         }
     }
@@ -112,9 +114,20 @@ public final class NatTag: UIView {
         drawPath?(bounds.size)
     }
 
+    /// Attribute that sets a label to the component
     public func configure(text: String) {
         label.text = text
         isHidden = text.isEmpty
     }
 
+    /// Attribute that sets a size to the component
+    public func configure(size: Size = .small) {
+        heightAnchor.constraint(equalToConstant: size.value).isActive = true
+    }
+
+    /// Attribute that sets a color to the component
+    public func configure(color: Color = .primary) {
+        tagColor = color
+        configure(textColor: color.label)
+    }
 }
