@@ -4,12 +4,14 @@ import NatDS
 class CounterViewController: UIViewController, SampleItem {
     static var name: String = "Counter"
 
-    let counter = NatCounter()
+    let counter = NatCounter(size: .semi)
 
     override func viewDidLoad() {
         title = Self.name
         view.backgroundColor = NatColors.background
 
+        counter.configure(label: "Label example")
+        counter.configure(disableSubtractButton: true)
         setup()
     }
 
@@ -19,8 +21,6 @@ class CounterViewController: UIViewController, SampleItem {
         NSLayoutConstraint.activate([
             counter.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             counter.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-//            counter.heightAnchor.constraint(equalToConstant: 200),
-//            counter.widthAnchor.constraint(equalToConstant: 200)
         ])
     }
 }

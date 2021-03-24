@@ -1,8 +1,10 @@
 import UIKit
 
 enum AssetsPath {
+    case iconOutlinedActionAdd
     case iconOutlinedActionCancel
     case iconOutlinedActionCheck
+    case iconOutlinedActionSubtract
     case iconOutlinedActionVisibility
     case iconOutlinedActionVisibilityOff
     case iconOutlinedDefaultMockup
@@ -19,10 +21,14 @@ extension AssetsPath: RawRepresentable {
     // swiftlint:disable:next cyclomatic_complexity
     init?(rawValue: RawValue) {
         switch rawValue {
+        case AssetsHelper.image(from: "Icons/IconOutlinedActionAdd"):
+            self = .iconOutlinedActionAdd
         case AssetsHelper.image(from: "Icons/IconOutlinedActionCancel"):
             self = .iconOutlinedActionCancel
         case AssetsHelper.image(from: "Icons/IconOutlinedActionCheck"):
             self = .iconOutlinedActionCheck
+        case AssetsHelper.image(from: "Icons/IconOutlinedActionSubtract"):
+            self = .iconOutlinedActionSubtract
         case AssetsHelper.image(from: "Icons/IconOutlinedActionVisibility"):
             self = .iconOutlinedActionVisibility
         case AssetsHelper.image(from: "Icons/IconOutlinedActionVisibilityOff"):
@@ -45,10 +51,14 @@ extension AssetsPath: RawRepresentable {
 
     var rawValue: RawValue {
         switch self {
+        case .iconOutlinedActionAdd:
+            return AssetsHelper.image(from: "Icons/IconOutlinedActionAdd")
         case .iconOutlinedActionCancel:
             return AssetsHelper.image(from: "Icons/IconOutlinedActionCancel")
         case .iconOutlinedActionCheck:
             return AssetsHelper.image(from: "Icons/IconOutlinedActionCheck")
+        case .iconOutlinedActionSubtract:
+            return AssetsHelper.image(from: "Icons/IconOutlinedActionSubtract")
         case .iconOutlinedActionVisibility:
             return AssetsHelper.image(from: "Icons/IconOutlinedActionVisibility")
         case .iconOutlinedActionVisibilityOff:

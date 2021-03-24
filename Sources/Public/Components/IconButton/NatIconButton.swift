@@ -35,7 +35,6 @@ public final class NatIconButton: UIView {
     internal let iconView: IconView = {
         let iconView = IconView(fontSize: NatSizes.standard)
         iconView.translatesAutoresizingMaskIntoConstraints = false
-
         return iconView
     }()
 

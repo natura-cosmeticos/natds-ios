@@ -5,8 +5,13 @@ import UIKit
  */
 
 final class NatCounterButton: UIView, Pulsable {
+    public enum State {
+        case enabled
+        case disabled
+    }
 
     private var action: (() -> Void)?
+    internal var currentState: State = .enabled
 
     internal let iconView: IconView = {
         let iconView = IconView(fontSize: NatSizes.micro)
@@ -17,33 +22,38 @@ final class NatCounterButton: UIView, Pulsable {
 
     init() {
         super.init(frame: .zero)
-        setup()
+        setupLayout()
+        setupConstraints()
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func setup() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapHandler))
-        addGestureRecognizer(tapGesture)
-
-        border
-
+    func setupConstraints() {
         translatesAutoresizingMaskIntoConstraints = false
 
         addSubview(iconView)
 
         NSLayoutConstraint.activate([
-            heightAnchor.constraint(equalToConstant: 40),
-            widthAnchor.constraint(equalToConstant: 32),
-
             iconView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            iconView.centerXAnchor.constraint(equalTo: centerXAnchor)
+            iconView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            iconView.heightAnchor.constraint(equalToConstant: 20),
+            iconView.widthAnchor.constraint(equalToConstant: 20)
         ])
     }
 
+    func setupLayout() {
+        clipsToBounds = true
+        layer.borderColor = NatColors.highEmphasis.cgColor
+        layer.borderWidth = 0.5
+
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapHandler))
+        addGestureRecognizer(tapGesture)
+    }
+
     @objc func tapHandler(_ sender: UIGestureRecognizer) {
+        guard currentState == .enabled else { return }
         action?()
     }
 
@@ -56,11 +66,18 @@ final class NatCounterButton: UIView, Pulsable {
         translatesAutoresizingMaskIntoConstraints = false
     }
 
+    internal func configure(height: CGFloat, width: CGFloat) {
+        NSLayoutConstraint.activate([
+            heightAnchor.constraint(equalToConstant: height),
+            widthAnchor.constraint(equalToConstant: width)
+        ])
+    }
+
     internal override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
+        guard currentState == .enabled else { return }
 
-        let opacity = getTokenFromTheme(\.opacityDisabledLow)
-        let color = iconView.tintColor.withAlphaComponent(opacity)
+        let color = getUIColorFromTokens(\.colorHighEmphasis).withAlphaComponent(0.2)
 
         addPulseLayerAnimated(
             at: centerBounds,
