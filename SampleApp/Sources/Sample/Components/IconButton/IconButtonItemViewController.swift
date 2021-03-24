@@ -34,10 +34,26 @@ final class IconButtonItemViewController: UIViewController, SampleItem {
         return iconButton
     }()
 
+    private let iconButtonDefaultStyleDisabled: NatIconButton = {
+        let iconButton = NatIconButton(style: .standardDefault)
+        iconButton.translatesAutoresizingMaskIntoConstraints = false
+        iconButton.configure(icon: getIcon(.outlinedDefaultMockup))
+        iconButton.configure(state: .disabled)
+        return iconButton
+    }()
+
     private let iconButtonPrimaryStyle: NatIconButton = {
         let iconButton = NatIconButton(style: .standardPrimary)
         iconButton.translatesAutoresizingMaskIntoConstraints = false
         iconButton.configure(icon: getIcon(.outlinedDefaultMockup))
+        return iconButton
+    }()
+
+    private let iconButtonPrimaryStyleDisabled: NatIconButton = {
+        let iconButton = NatIconButton(style: .standardPrimary)
+        iconButton.translatesAutoresizingMaskIntoConstraints = false
+        iconButton.configure(icon: getIcon(.outlinedDefaultMockup))
+        iconButton.configure(state: .disabled)
         return iconButton
     }()
 
@@ -57,11 +73,29 @@ final class IconButtonItemViewController: UIViewController, SampleItem {
         return iconButton
     }()
 
+    private let iconButtonFloatBackgroundDisabled: NatIconButton = {
+        let iconButton = NatIconButton(style: .standardDefault)
+        iconButton.translatesAutoresizingMaskIntoConstraints = false
+        iconButton.configure(icon: getIcon(.outlinedDefaultMockup))
+        iconButton.configure(background: .float)
+        iconButton.configure(state: .disabled)
+        return iconButton
+    }()
+
     private let iconButtonOverlayBackground: NatIconButton = {
         let iconButton = NatIconButton(style: .standardDefault)
         iconButton.translatesAutoresizingMaskIntoConstraints = false
         iconButton.configure(icon: getIcon(.outlinedDefaultMockup))
         iconButton.configure(background: .overlay)
+        return iconButton
+    }()
+
+    private let iconButtonOverlayBackgroundDisabled: NatIconButton = {
+        let iconButton = NatIconButton(style: .standardDefault)
+        iconButton.translatesAutoresizingMaskIntoConstraints = false
+        iconButton.configure(icon: getIcon(.outlinedDefaultMockup))
+        iconButton.configure(background: .overlay)
+        iconButton.configure(state: .disabled)
         return iconButton
     }()
 
@@ -108,11 +142,22 @@ final class IconButtonItemViewController: UIViewController, SampleItem {
 
         stackView.addArrangedSubview(createIconButtonView(iconButtonDefaultStyle,
                                                           text: "Color high emphasis (default)"))
-        stackView.addArrangedSubview(createIconButtonView(iconButtonPrimaryStyle, text: "Color primary"))
+        stackView.addArrangedSubview(createIconButtonView(iconButtonDefaultStyleDisabled,
+                                                          text: "Color high emphasis (disabled)"))
+        stackView.addArrangedSubview(createIconButtonView(iconButtonPrimaryStyle,
+                                                          text: "Color primary"))
+        stackView.addArrangedSubview(createIconButtonView(iconButtonPrimaryStyleDisabled,
+                                                          text: "Color primary (disabled)"))
         stackView.addArrangedSubview(createIconButtonView(iconButtonInheritBackground,
                                                           text: "Inherit background (default)"))
-        stackView.addArrangedSubview(createIconButtonView(iconButtonFloatBackground, text: "Float background"))
-        stackView.addArrangedSubview(createIconButtonView(iconButtonOverlayBackground, text: "Overlay background"))
+        stackView.addArrangedSubview(createIconButtonView(iconButtonFloatBackground,
+                                                          text: "Float background"))
+        stackView.addArrangedSubview(createIconButtonView(iconButtonFloatBackgroundDisabled,
+                                                          text: "Float background (disabled)"))
+        stackView.addArrangedSubview(createIconButtonView(iconButtonOverlayBackground,
+                                                          text: "Overlay background"))
+        stackView.addArrangedSubview(createIconButtonView(iconButtonOverlayBackgroundDisabled,
+                                                          text: "Overlay background (disabled)"))
         stackView.addArrangedSubview(createIconButtonView(iconButtonSizeSemi, text: "Size semi (default)"))
         stackView.addArrangedSubview(createIconButtonView(iconButtonSizeSemiX, text: "Size semiX"))
         stackView.addArrangedSubview(createIconButtonView(iconButtonSizeMedium, text: "Size medium"))
