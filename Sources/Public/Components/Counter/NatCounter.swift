@@ -6,13 +6,9 @@ import UIKit
 
 public final class NatCounter: UIView {
 
-    /**
-     State represents state values for NatCounter component.
-
-     These are all states allowed for a NatCounter:
-     - enabled
-     - disabled
-     */
+    private var numCounter: Int = 0
+    private var subtractDisabledSet: Bool = false
+    private var addDisabledSet: Bool = false
 
     let stackViewContainer: UIStackView = {
         let stackView = UIStackView()
@@ -55,11 +51,9 @@ public final class NatCounter: UIView {
         return label
     }()
 
-    var numCounter: Int = 0
-
     let subtractView: NatCounterButton = {
         let view = NatCounterButton()
-        view.configure(iconImage: AssetsPath.iconOutlinedActionSubtract.rawValue)
+        view.configure(iconLabel: "-")
         view.layer.borderWidth = 0.5
         view.layer.borderColor = NatColors.highEmphasis.cgColor
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -69,55 +63,13 @@ public final class NatCounter: UIView {
 
     let addView: NatCounterButton = {
         let view = NatCounterButton()
-        view.configure(iconImage: AssetsPath.iconOutlinedActionAdd.rawValue)
+        view.configure(iconLabel: "+")
         view.layer.borderWidth = 0.5
         view.layer.borderColor = NatColors.highEmphasis.cgColor
         view.translatesAutoresizingMaskIntoConstraints = false
 
         return view
     }()
-
-    public func configure(label: String?) {
-        self.label.text = label
-    }
-
-    public enum State {
-        case enabled
-        case disabled
-    }
-
-    /// Sets the state of the icon button.
-    /// - Parameter state: An option from State enum: enabled or disabled
-    public func configure(disableAddButton: Bool) {
-        if disableAddButton {
-            addView.currentState = .disabled
-            addView.iconView.tintColor = getUIColorFromTokens(\.colorMediumEmphasis)
-        } else {
-            addView.currentState = .enabled
-        }
-    }
-
-    public func configure(disableSubtractButton: Bool) {
-        if disableSubtractButton {
-            subtractView.currentState = .disabled
-            subtractView.iconView.tintColor = getUIColorFromTokens(\.colorMediumEmphasis)
-        } else {
-            subtractView.currentState = .enabled
-        }
-    }
-
-    public func configure(disableButtons: Bool) {
-        if disableButtons {
-            subtractView.currentState = .disabled
-            addView.currentState = .disabled
-            subtractView.iconView.tintColor = getUIColorFromTokens(\.colorMediumEmphasis)
-            addView.iconView.tintColor = getUIColorFromTokens(\.colorMediumEmphasis)
-
-        } else {
-            addView.currentState = .enabled
-            subtractView.currentState = .enabled
-        }
-    }
 
     private var size: Size
     // MARK: - Inits
@@ -136,7 +88,55 @@ public final class NatCounter: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func setupButtons() {
+    // MARK: - Public methods
+
+    /// Sets the label of NatCounter component
+    /// - Parameter label: text always displayed above NatCounter
+    public func configure(label: String?) {
+        self.label.text = label
+    }
+
+    /// Sets the state of CounterButtons
+    /// - Parameter button: An option from CounterButtonType enum: subtract, add or all
+    /// - Parameter state: An option from State enum: enabled or disabled
+    public func configure(button: CounterButtonType, state: State) {
+
+        switch state {
+        case .enabled:
+            switch button {
+            case .subtract:
+                subtractView.currentState = .enabled
+            case .add:
+                addView.currentState = .enabled
+            case .all:
+                subtractView.currentState = .enabled
+                addView.currentState = .enabled
+            }
+
+        case .disabled:
+            switch button {
+            case .subtract:
+                subtractView.currentState = .disabled
+                subtractView.iconLabel.textColor = getUIColorFromTokens(\.colorMediumEmphasis)
+                subtractDisabledSet = true
+            case .add:
+                addView.currentState = .disabled
+                addView.iconLabel.textColor = getUIColorFromTokens(\.colorMediumEmphasis)
+                addDisabledSet = true
+            case .all:
+                subtractView.currentState = .disabled
+                addView.currentState = .disabled
+                subtractView.iconLabel.textColor = getUIColorFromTokens(\.colorMediumEmphasis)
+                addView.iconLabel.textColor = getUIColorFromTokens(\.colorMediumEmphasis)
+                subtractDisabledSet = true
+                addDisabledSet = true
+            }
+        }
+    }
+
+    // MARK: - Private methods
+
+    private func setupButtons() {
         let borderRadius = getTokenFromTheme(\.borderRadiusMedium)
 
         switch size {
@@ -172,18 +172,41 @@ public final class NatCounter: UIView {
                                  sizeHeight: sizeHeight)
         }
 
+        self.checkLimit()
+
         subtractView.configure {
+            self.checkLimit()
             self.numCounter -= 1
             self.numCounterLabel.text = "\(self.numCounter)"
         }
 
         addView.configure {
+            self.checkLimit()
             self.numCounter += 1
             self.numCounterLabel.text = "\(self.numCounter)"
         }
     }
 
-    func setupConstraints() {
+    private func checkLimit() {
+
+        if subtractDisabledSet == false {
+            if numCounter <= 1 {
+                subtractView.currentState = .disabled
+            } else if numCounter > 0 {
+                subtractView.currentState = .enabled
+            }
+        }
+
+        if addDisabledSet == false {
+            if numCounter >= 98 {
+                addView.currentState = .disabled
+            } else if numCounter < 99 {
+                addView.currentState = .enabled
+            }
+        }
+    }
+
+    private func setupConstraints() {
         addSubview(label)
         addSubview(stackViewContainer)
 
@@ -213,7 +236,6 @@ extension UIView {
                       radius: CGFloat,
                       sizeWidth: CGFloat,
                       sizeHeight: CGFloat) {
-
         let path = UIBezierPath(roundedRect: CGRect(origin: .zero, size: CGSize(width: sizeWidth, height: sizeHeight)),
                                 byRoundingCorners: corners,
                                 cornerRadii: CGSize(width: radius, height: radius))
