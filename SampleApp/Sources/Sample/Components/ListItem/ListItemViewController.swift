@@ -21,9 +21,10 @@ class ListItemViewController: UIViewController, SampleItem {
         tableView.delegate = self
         tableView.dataSource = self
 
-        tableView.register(NatListItemCell.self, forCellReuseIdentifier: "id")
+        tableView.register(SampleCustomCell.self, forCellReuseIdentifier: "id")
         tableView.separatorStyle = .none
         tableView.allowsMultipleSelection = true
+
         view.addSubview(tableView)
 
         NSLayoutConstraint.activate([
@@ -42,30 +43,30 @@ extension ListItemViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let cell: NatListItemCell = (tableView.dequeueReusableCell(withIdentifier: "id",
-                                                                   for: indexPath) as? NatListItemCell)!
+        let cell: SampleCustomCell = (tableView.dequeueReusableCell(withIdentifier: "id",
+                                                                           for: indexPath) as? SampleCustomCell)!
 
         switch indexPath.row {
         case 0:
-            cell.textLabel?.text = "Onclick false (default)"
+            cell.title = "Onclick false (default)"
             cell.configure(divider: .inset)
         case 1:
             cell.configure(onClick: true)
-            cell.textLabel?.text = "Onclick true"
+            cell.title = "Onclick true"
             cell.configure(divider: .inset)
         case 2:
             cell.configure(onClick: true)
-            cell.textLabel?.text = "Selected cell"
+            cell.title = "Selected cell"
             cell.configure(divider: .inset)
         case 3:
             cell.configure(divider: .inset)
-            cell.textLabel?.text = "Divider inset"
+            cell.title = "Divider inset"
         case 4:
             cell.configure(divider: .middle)
-            cell.textLabel?.text = "Divider middle"
+            cell.title = "Divider middle"
         case 5:
             cell.configure(divider: .fullBleed)
-            cell.textLabel?.text = "Divider fullbleed"
+            cell.title = "Divider fullbleed"
         default:
             cell.configure(divider: .inset)
         }
