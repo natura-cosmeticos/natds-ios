@@ -206,22 +206,23 @@ public final class NatCounter: UIView {
         self.checkLimit()
 
         subtractView.configure {
-            self.checkLimit()
             self.numCounter -= 1
             self.numCounterLabel.text = "\(self.numCounter)"
+            print(self.numCounter)
+            self.checkLimit()
         }
 
         addView.configure {
-            self.checkLimit()
             self.numCounter += 1
             self.numCounterLabel.text = "\(self.numCounter)"
+            print(self.numCounter)
+            self.checkLimit()
         }
     }
 
     private func checkLimit() {
-
         if subtractDisabledSet == false {
-            if numCounter <= 1 {
+            if numCounter == 0 {
                 subtractView.currentState = .disabled
             } else if numCounter > 0 {
                 subtractView.currentState = .enabled
@@ -229,7 +230,7 @@ public final class NatCounter: UIView {
         }
 
         if addDisabledSet == false {
-            if numCounter >= 98 {
+            if numCounter == 99 {
                 addView.currentState = .disabled
             } else if numCounter < 99 {
                 addView.currentState = .enabled
