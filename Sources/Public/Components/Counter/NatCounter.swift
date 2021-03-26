@@ -208,14 +208,12 @@ public final class NatCounter: UIView {
         subtractView.configure {
             self.numCounter -= 1
             self.numCounterLabel.text = "\(self.numCounter)"
-            print(self.numCounter)
             self.checkLimit()
         }
 
         addView.configure {
             self.numCounter += 1
             self.numCounterLabel.text = "\(self.numCounter)"
-            print(self.numCounter)
             self.checkLimit()
         }
     }
