@@ -7,7 +7,6 @@ extension NatCounter {
      - add
      - subtract
      - all
-     - none
      */
 
     public enum CounterButtonType {

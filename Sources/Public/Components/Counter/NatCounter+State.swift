@@ -12,5 +12,4 @@ extension NatCounter {
         case enabled
         case disabled
     }
-
 }

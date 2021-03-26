@@ -1,9 +1,5 @@
 import UIKit
 
-/**
- DOCS
- */
-
 final class NatCounterButton: UIView, Pulsable {
     public enum State {
         case enabled

@@ -1,7 +1,39 @@
 import UIKit
 
 /**
- DOCS
+ NatCounter is a class that represents a component from the design system.
+
+ It can be configured with 2 different sizes:
+ - Semi (default)
+ - Medium
+
+ Example of usage:
+
+            let counter = NatCounter()
+            let counter = NatCounter(size: .semi)
+            let counter = NatCounter(size: .medium)
+
+ NatCounter has 2 states:
+ - enabled
+ - disabled
+
+ Use the method configure to disable Its buttons:
+
+ NatCounter has 3 types of button to disable:
+ - add
+ - subtract
+ - all
+
+ Example of usage:
+
+        counter.configure(button: .add, state: .disabled)
+        counter.configure(button: .subtract, state: .disabled)
+        counter.configure(button: .all, state: .disabled)
+
+ - Requires:
+ It's necessary to configure the Design System with a theme or fatalError will be raised.
+
+        DesignSystem().configure(with: AvailableTheme)
  */
 
 public final class NatCounter: UIView {
