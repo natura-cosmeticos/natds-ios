@@ -34,9 +34,10 @@
 		79D4C8F525F69DB80027E74E /* RadioButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D4C8F425F69DB80027E74E /* RadioButtonViewController.swift */; };
 		79FC599025CAE5D0001CCB56 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC598F25CAE5D0001CCB56 /* CardViewController.swift */; };
 		79FC59E625DAB5A7001CCB56 /*  ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC59E525DAB5A6001CCB56 /*  ImageViewController.swift */; };
-		7D9838C825F9127400A99628 /* ListItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9838C725F9127400A99628 /* ListItemViewController.swift */; };
+		7D60A49E260CF97400A23C1A /* SampleCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D60A49D260CF97400A23C1A /* SampleCustomCell.swift */; };
 		7D75A45A25DB0BA50050ACA9 /* AvatarItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D75A45925DB0BA50050ACA9 /* AvatarItemViewController.swift */; };
 		7D75A46825DD60E30050ACA9 /* UIImage+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D75A46725DD60E30050ACA9 /* UIImage+UIColor.swift */; };
+		7D9838C825F9127400A99628 /* ListItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9838C725F9127400A99628 /* ListItemViewController.swift */; };
 		8402F4E624F932E70018149C /* IconButtonItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402F4E524F932E70018149C /* IconButtonItemViewController.swift */; };
 		8409B9312507B9E2006ED4EA /* CustomSplashViewController+GradientBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409B9302507B9E2006ED4EA /* CustomSplashViewController+GradientBackgroundView.swift */; };
 		842EA8AB25082B60009AE473 /* ChooseBrandHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842EA8AA25082B60009AE473 /* ChooseBrandHeader.swift */; };
@@ -112,9 +113,10 @@
 		79D4C8F425F69DB80027E74E /* RadioButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonViewController.swift; sourceTree = "<group>"; };
 		79FC598F25CAE5D0001CCB56 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		79FC59E525DAB5A6001CCB56 /*  ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " ImageViewController.swift"; sourceTree = "<group>"; };
-		7D9838C725F9127400A99628 /* ListItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemViewController.swift; sourceTree = "<group>"; };
+		7D60A49D260CF97400A23C1A /* SampleCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCustomCell.swift; sourceTree = "<group>"; };
 		7D75A45925DB0BA50050ACA9 /* AvatarItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarItemViewController.swift; sourceTree = "<group>"; };
 		7D75A46725DD60E30050ACA9 /* UIImage+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIImage+UIColor.swift"; path = "../../../Sources/Core/Extensions/UIImage+UIColor.swift"; sourceTree = "<group>"; };
+		7D9838C725F9127400A99628 /* ListItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemViewController.swift; sourceTree = "<group>"; };
 		8402F4E524F932E70018149C /* IconButtonItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButtonItemViewController.swift; sourceTree = "<group>"; };
 		8409B9302507B9E2006ED4EA /* CustomSplashViewController+GradientBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomSplashViewController+GradientBackgroundView.swift"; sourceTree = "<group>"; };
 		842EA8AA25082B60009AE473 /* ChooseBrandHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseBrandHeader.swift; sourceTree = "<group>"; };
@@ -310,14 +312,6 @@
 			path = Image;
 			sourceTree = "<group>";
 		};
-		7D9838C625F9126000A99628 /* ListItem */ = {
-			isa = PBXGroup;
-			children = (
-				7D9838C725F9127400A99628 /* ListItemViewController.swift */,
-			);
-			path = ListItem;
-			sourceTree = "<group>";
-		};
 		7D75A45825DB0B940050ACA9 /* Avatar */ = {
 			isa = PBXGroup;
 			children = (
@@ -332,6 +326,15 @@
 				7D75A46725DD60E30050ACA9 /* UIImage+UIColor.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7D9838C625F9126000A99628 /* ListItem */ = {
+			isa = PBXGroup;
+			children = (
+				7D9838C725F9127400A99628 /* ListItemViewController.swift */,
+				7D60A49D260CF97400A23C1A /* SampleCustomCell.swift */,
+			);
+			path = ListItem;
 			sourceTree = "<group>";
 		};
 		8402F4E424F932570018149C /* IconButton */ = {
@@ -765,6 +768,7 @@
 				265B17EE24AFBE5500FD0407 /* BadgeViewController.swift in Sources */,
 				DC40596AEA7EE184F0A1BCD2F3BFF7FC /* DesignSection.swift in Sources */,
 				7D9838C825F9127400A99628 /* ListItemViewController.swift in Sources */,
+				7D60A49E260CF97400A23C1A /* SampleCustomCell.swift in Sources */,
 				6B065E9FA8AEAD33D6341DB8C671D74C /* DialogItemViewController.swift in Sources */,
 				2600C21E25127D600040C4C4 /* TagViewController.swift in Sources */,
 				B14E0B8A51D237CFBA1AD574ED6EC10C /* DividerViewController.swift in Sources */,
