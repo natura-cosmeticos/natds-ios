@@ -171,6 +171,7 @@
 		79EA0C46260CD7DC00742C0A /* NatCounter+CounterButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EA0C45260CD7DB00742C0A /* NatCounter+CounterButtonType.swift */; };
 		79EA0C4B260CD9DB00742C0A /* NatCounter+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EA0C4A260CD9DB00742C0A /* NatCounter+State.swift */; };
 		79EA0C57260E21E700742C0A /* NatCounter+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EA0C56260E21E700742C0A /* NatCounter+Spec.swift */; };
+		79EA0C66260E6F3D00742C0A /* NatCounter+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EA0C65260E6F3D00742C0A /* NatCounter+Snapshot+Tests.swift */; };
 		79FC593A25BF5894001CCB56 /* NatRadioButtonControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC593925BF5894001CCB56 /* NatRadioButtonControl.swift */; };
 		79FC593F25BF58C7001CCB56 /* NatRadioButtonControl+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC593E25BF58C7001CCB56 /* NatRadioButtonControl+Style.swift */; };
 		79FC594425BF58E4001CCB56 /* NatRadioButtonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC594325BF58E4001CCB56 /* NatRadioButtonContainer.swift */; };
@@ -559,6 +560,7 @@
 		79EA0C45260CD7DB00742C0A /* NatCounter+CounterButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatCounter+CounterButtonType.swift"; sourceTree = "<group>"; };
 		79EA0C4A260CD9DB00742C0A /* NatCounter+State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatCounter+State.swift"; sourceTree = "<group>"; };
 		79EA0C56260E21E700742C0A /* NatCounter+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatCounter+Spec.swift"; sourceTree = "<group>"; };
+		79EA0C65260E6F3D00742C0A /* NatCounter+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatCounter+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		79FC593925BF5894001CCB56 /* NatRadioButtonControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatRadioButtonControl.swift; sourceTree = "<group>"; };
 		79FC593E25BF58C7001CCB56 /* NatRadioButtonControl+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatRadioButtonControl+Style.swift"; sourceTree = "<group>"; };
 		79FC594325BF58E4001CCB56 /* NatRadioButtonContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatRadioButtonContainer.swift; sourceTree = "<group>"; };
@@ -1491,6 +1493,14 @@
 			path = Counter;
 			sourceTree = "<group>";
 		};
+		79EA0C64260E6EFD00742C0A /* Counter */ = {
+			isa = PBXGroup;
+			children = (
+				79EA0C65260E6F3D00742C0A /* NatCounter+Snapshot+Tests.swift */,
+			);
+			path = Counter;
+			sourceTree = "<group>";
+		};
 		79FC593825BF56E0001CCB56 /* NatRadioButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -1742,6 +1752,7 @@
 				79ACDAB42555D99300660E68 /* Button */,
 				79FC59A525CB2B1A001CCB56 /* Card */,
 				79D4C90425F6C7C60027E74E /* Checkbox */,
+				79EA0C64260E6EFD00742C0A /* Counter */,
 				84391DE924DB275E009D0BE8 /* Dialog */,
 				84BB929424DC821800A9BCC8 /* Divider */,
 				84BB929624DC8F3600A9BCC8 /* ExpansionPanel */,
@@ -3213,6 +3224,7 @@
 				84A16F0524DDC30100E80DA0 /* NavigationDrawerDelegateMock.swift in Sources */,
 				84BB92A224DCB73100A9BCC8 /* IconView+Snapshot+Tests.swift in Sources */,
 				84BB928D24DC75D100A9BCC8 /* TabItemViewDelegateMock.swift in Sources */,
+				79EA0C66260E6F3D00742C0A /* NatCounter+Snapshot+Tests.swift in Sources */,
 				84703F3724F54AA600FE01CA /* NotificationCenterSpy.swift in Sources */,
 				79ACDAB62555D9B500660E68 /* NatButton+SnapShot+Tests.swift in Sources */,
 				84BB928524DC69C900A9BCC8 /* Badgeable+Snapshot+Tests.swift in Sources */,

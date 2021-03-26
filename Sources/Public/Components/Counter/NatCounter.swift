@@ -17,9 +17,7 @@ import UIKit
  - enabled
  - disabled
 
- Use the method configure to disable Its buttons:
-
- NatCounter has 3 types of button to disable:
+ Use the method configure to disable Its buttons, NatCounter has 3 types of button to disable:
  - add
  - subtract
  - all
@@ -103,7 +101,8 @@ public final class NatCounter: UIView {
         return view
     }()
 
-    private var size: Size
+    internal var size: Size
+
     // MARK: - Inits
 
     public init(size: Size = .semi) {
