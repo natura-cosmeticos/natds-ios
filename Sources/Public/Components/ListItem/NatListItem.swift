@@ -26,7 +26,12 @@
          }
 
  - Important:
- You should call `commonInit()` after setting custom views code inside the `init(style:, reuseIdentifier:)` override.
+ If you create a custom cell that inherits from NatListItemCell, you should follow the steps:
+ 
+    1. Create your custom cell with custom views
+    2. Override the function `init(style:, reuseIdentifier:)`
+    3. Call `commonInit()` inside the override
+
  Otherwise, the cell will not have the expected behavior for a NatListItemCell.
 
  - Requires:
@@ -53,6 +58,7 @@ open class NatListItemCell: UITableViewCell {
     }()
 
     internal var onClick: Bool = false
+    var feedbackStyle: FeedbackStyle = .ripple
 
     // MARK: - Init
     /**
@@ -60,7 +66,6 @@ open class NatListItemCell: UITableViewCell {
      */
     @objc open func commonInit() {
         setup()
-        selectionStyle = .none
     }
 
     open override func awakeFromNib() {
@@ -83,7 +88,7 @@ open class NatListItemCell: UITableViewCell {
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
 
-        if !isSelected && onClick {
+        if !isSelected && onClick && feedbackStyle == .ripple {
             if let touch = touches.first {
                 let point = touch.location(in: self)
                 addPulseLayerAnimated(at: point, in: self.contentView.layer, removeAfterAnimation: true)
@@ -103,6 +108,12 @@ open class NatListItemCell: UITableViewCell {
     /// - Parameter onClick: a bool that indicates if the cell is clicable
     public func configure(onClick: Bool) {
         self.onClick = onClick
+    }
+
+    /// Sets the feedback style for the cell after the touch.
+    /// - Parameter feedbackStyle: an option from `FeedbackStyle` enum
+    public func configure(feedbackStyle: FeedbackStyle) {
+        self.feedbackStyle = feedbackStyle
     }
 
     /// Sets the divider style for the cell. By default, the cell doesn't have a divider

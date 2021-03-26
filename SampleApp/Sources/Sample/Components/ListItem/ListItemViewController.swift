@@ -38,13 +38,13 @@ class ListItemViewController: UIViewController, SampleItem {
 
 extension ListItemViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return 8
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cell: SampleCustomCell = (tableView.dequeueReusableCell(withIdentifier: "id",
-                                                                           for: indexPath) as? SampleCustomCell)!
+                                                                    for: indexPath) as? SampleCustomCell)!
 
         switch indexPath.row {
         case 0:
@@ -56,15 +56,24 @@ extension ListItemViewController: UITableViewDelegate, UITableViewDataSource {
             cell.configure(divider: .inset)
         case 2:
             cell.configure(onClick: true)
-            cell.title = "Selected cell"
+            cell.title = "Feedback ripple (default for onClick true)"
             cell.configure(divider: .inset)
         case 3:
+            cell.configure(onClick: true)
+            cell.configure(feedbackStyle: .selection)
+            cell.title = "Feedback selection"
+            cell.configure(divider: .inset)
+        case 4:
+            cell.configure(onClick: true)
+            cell.title = "Selected cell"
+            cell.configure(divider: .inset)
+        case 5:
             cell.configure(divider: .inset)
             cell.title = "Divider inset"
-        case 4:
+        case 6:
             cell.configure(divider: .middle)
             cell.title = "Divider middle"
-        case 5:
+        case 7:
             cell.configure(divider: .fullBleed)
             cell.title = "Divider fullbleed"
         default:
@@ -74,7 +83,7 @@ extension ListItemViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.row == 2 {
+        if indexPath.row == 4 {
             cell.setSelected(true, animated: true)
             tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
         }
