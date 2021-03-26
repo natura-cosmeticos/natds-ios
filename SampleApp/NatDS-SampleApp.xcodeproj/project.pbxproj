@@ -35,6 +35,7 @@
 		79EA0C1E260A314500742C0A /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EA0C1D260A314500742C0A /* CounterViewController.swift */; };
 		79FC599025CAE5D0001CCB56 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC598F25CAE5D0001CCB56 /* CardViewController.swift */; };
 		79FC59E625DAB5A7001CCB56 /*  ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC59E525DAB5A6001CCB56 /*  ImageViewController.swift */; };
+		7D60A49E260CF97400A23C1A /* SampleCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D60A49D260CF97400A23C1A /* SampleCustomCell.swift */; };
 		7D75A45A25DB0BA50050ACA9 /* AvatarItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D75A45925DB0BA50050ACA9 /* AvatarItemViewController.swift */; };
 		7D75A46825DD60E30050ACA9 /* UIImage+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D75A46725DD60E30050ACA9 /* UIImage+UIColor.swift */; };
 		7D9838C825F9127400A99628 /* ListItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9838C725F9127400A99628 /* ListItemViewController.swift */; };
@@ -114,6 +115,7 @@
 		79EA0C1D260A314500742C0A /* CounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
 		79FC598F25CAE5D0001CCB56 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		79FC59E525DAB5A6001CCB56 /*  ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " ImageViewController.swift"; sourceTree = "<group>"; };
+		7D60A49D260CF97400A23C1A /* SampleCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCustomCell.swift; sourceTree = "<group>"; };
 		7D75A45925DB0BA50050ACA9 /* AvatarItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarItemViewController.swift; sourceTree = "<group>"; };
 		7D75A46725DD60E30050ACA9 /* UIImage+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIImage+UIColor.swift"; path = "../../../Sources/Core/Extensions/UIImage+UIColor.swift"; sourceTree = "<group>"; };
 		7D9838C725F9127400A99628 /* ListItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemViewController.swift; sourceTree = "<group>"; };
@@ -340,6 +342,7 @@
 			isa = PBXGroup;
 			children = (
 				7D9838C725F9127400A99628 /* ListItemViewController.swift */,
+				7D60A49D260CF97400A23C1A /* SampleCustomCell.swift */,
 			);
 			path = ListItem;
 			sourceTree = "<group>";
@@ -776,6 +779,7 @@
 				265B17EE24AFBE5500FD0407 /* BadgeViewController.swift in Sources */,
 				DC40596AEA7EE184F0A1BCD2F3BFF7FC /* DesignSection.swift in Sources */,
 				7D9838C825F9127400A99628 /* ListItemViewController.swift in Sources */,
+				7D60A49E260CF97400A23C1A /* SampleCustomCell.swift in Sources */,
 				6B065E9FA8AEAD33D6341DB8C671D74C /* DialogItemViewController.swift in Sources */,
 				2600C21E25127D600040C4C4 /* TagViewController.swift in Sources */,
 				B14E0B8A51D237CFBA1AD574ED6EC10C /* DividerViewController.swift in Sources */,

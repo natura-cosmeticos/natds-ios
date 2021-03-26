@@ -73,6 +73,8 @@ public class NavigationDrawerItemCell: UITableViewCell {
 
     private lazy var tagView: NatTag = {
         let tagView = NatTag(style: .defaultAlert)
+        tagView.configure(color: .alert)
+
         return tagView
     }()
 

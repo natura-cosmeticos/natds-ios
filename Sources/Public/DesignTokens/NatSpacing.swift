@@ -18,6 +18,7 @@
 */
 
 public enum NatSpacing {
+    public static var none: CGFloat { getTokenFromTheme(\.spacingNone) }
     public static var micro: CGFloat { getTokenFromTheme(\.spacingMicro) }
     public static var tiny: CGFloat { getTokenFromTheme(\.spacingTiny) }
     public static var small: CGFloat { getTokenFromTheme(\.spacingSmall) }

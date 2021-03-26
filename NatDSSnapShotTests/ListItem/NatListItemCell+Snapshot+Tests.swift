@@ -3,26 +3,34 @@ import SnapshotTesting
 
 @testable import NatDS
 
+class CustomCell: NatListItemCell {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        commonInit()
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
 final class NatListItemCellSnapshotTests: XCTestCase {
-    var systemUnderTest: NatListItemCell!
+    var systemUnderTest: CustomCell!
 
     override func setUp() {
         super.setUp()
         ConfigurationStorage.shared.currentTheme = NaturaLightTheme()
 
-        systemUnderTest = NatListItemCell()
-        systemUnderTest.frame = CGRect(x: 0, y: 0, width: 320, height: 48)
+        systemUnderTest = CustomCell()
     }
 
     func test_listItem_unselected_hasValidSnapshot() {
-        let systemUnderTest = NatListItemCell()
         systemUnderTest.isSelected = false
 
         assertSnapshot(matching: systemUnderTest, as: .image)
     }
 
     func test_listItem_selected_hasValidSnapshot() {
-        let systemUnderTest = NatListItemCell()
         systemUnderTest.configure(onClick: true)
         systemUnderTest.isSelected = true
 
@@ -30,21 +38,18 @@ final class NatListItemCellSnapshotTests: XCTestCase {
     }
 
     func test_listItem_fullbleedDivider_hasValidSnapshot() {
-        let systemUnderTest = NatListItemCell()
         systemUnderTest.configure(divider: .fullBleed)
 
         assertSnapshot(matching: systemUnderTest, as: .image)
     }
 
     func test_listItem_insetDivider_hasValidSnapshot() {
-        let systemUnderTest = NatListItemCell()
         systemUnderTest.configure(divider: .inset)
 
         assertSnapshot(matching: systemUnderTest, as: .image)
     }
 
     func test_listItem_middleDivider_hasValidSnapshot() {
-        let systemUnderTest = NatListItemCell()
         systemUnderTest.configure(divider: .middle)
 
         assertSnapshot(matching: systemUnderTest, as: .image)

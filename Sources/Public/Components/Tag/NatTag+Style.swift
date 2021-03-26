@@ -33,7 +33,7 @@ extension NatTag {
 
 enum NatTagStyle {
     static func applyAlert(position: NatTag.Position, on tag: NatTag) {
-        tag.configure(path: getUIColorFromTokens(\.colorAlert), position: position)
-        tag.configure(textColor: getUIColorFromTokens(\.colorOnAlert))
+        tag.configure(path: getUIColorFromTokens(\.colorPrimary), position: position)
+        tag.configure(textColor: getUIColorFromTokens(\.colorOnPrimary))
     }
 }
