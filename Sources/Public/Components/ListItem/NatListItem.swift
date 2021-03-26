@@ -7,13 +7,7 @@
      - a ripple effect on touch
      - and a bottom divider
  
-    Example of usage:
- 
-            tableView.register(NatListItemCell.self, forCellReuseIdentifier: "id")
-            cell.configure(onClick: false)
-            cell.configure(divider: .inset)
- 
-    NatListItemCell can also be used as a base for your custom cell:
+ NatListItemCell should be used as a base for your custom cell:
  
          class CustomCell: NatListItemCell {
             // your code for custom cell
@@ -26,7 +20,7 @@
          }
 
  - Important:
- If you create a custom cell that inherits from NatListItemCell, you should follow the steps:
+ To create a custom cell that inherits from NatListItemCell, you should follow the steps:
  
     1. Create your custom cell with custom views
     2. Override the function `init(style:, reuseIdentifier:)`
