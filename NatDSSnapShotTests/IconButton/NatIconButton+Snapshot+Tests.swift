@@ -63,8 +63,7 @@ final class NatIconButtonSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        systemUnderTest.configure(badgeStyle: .standard, withColor: .alert)
-        systemUnderTest.setBadge(count: 10)
+        systemUnderTest.configure(badgeValue: UInt(10))
 
         assertSnapshot(matching: superview, as: .image(precision: 0.97))
         assertSnapshot(matching: systemUnderTest, as: .recursiveDescription)
@@ -154,8 +153,7 @@ final class NatIconButtonSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        systemUnderTest.configure(badgeStyle: .standard, withColor: .alert)
-        systemUnderTest.setBadge(count: 10)
+        systemUnderTest.configure(badgeValue: UInt(10))
 
         assertSnapshot(matching: superview, as: .image(precision: 0.97))
         assertSnapshot(matching: systemUnderTest, as: .recursiveDescription)

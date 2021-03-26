@@ -198,6 +198,7 @@ final class IconButtonItemViewController: UIViewController, SampleItem {
         iconButton.centerXAnchor.constraint(equalTo: view.leadingAnchor, constant: 24).isActive = true
 
         let label = UILabel()
+        label.textColor = NatColors.highEmphasis
         label.text = text
         label.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(label)

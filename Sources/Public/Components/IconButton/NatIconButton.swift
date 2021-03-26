@@ -113,7 +113,7 @@ public final class NatIconButton: UIView {
             at: centerBounds,
             in: layer,
             withColor: color,
-            removeAfterAnimation: false
+            removeAfterAnimation: true
         )
     }
 
