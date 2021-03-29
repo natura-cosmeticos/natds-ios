@@ -1,6 +1,28 @@
 import Foundation
 
 /**
+ - NOTE:
+ This component is available in the following variants:
+ - ✅ Standard
+ With the following attribute status:
+ - Size:
+    - ✅ `Semi`
+    - ✅ `SemiX`
+    - ✅ `Medium`
+ - Icon color:
+    - ✅ `HighEmphasis`
+    - ✅ `Primary`
+ - Background style:
+    - ✅ `Inherit`
+    - ✅ `Float`
+    - ✅ `Overlay`
+ - ✅ Disabled
+ - ✅ Onclick
+ - ✅ Icon
+ - Interaction state:
+    - ✅ `Enabled`
+    - ✅ `Press`
+ 
  NatIconButton is a class that represent the icon button component from the design system.
  The button colors change according to the current theme configured.
  
