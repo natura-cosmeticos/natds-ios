@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.9.2](https://github.com/natura-cosmeticos/natds-ios/compare/3.9.1...3.9.2) (2021-03-26)
+
+
+### Bug Fixes
+
+* fix list item to allow subclassing ([de4af2c](https://github.com/natura-cosmeticos/natds-ios/commit/de4af2c819a73f891b97f016d814c424230897ca))
+* update list item with feedback style ([e0bea23](https://github.com/natura-cosmeticos/natds-ios/commit/e0bea2366492d10df8632e595b6dfb818a2c656f))
+
+### [3.9.1](https://github.com/natura-cosmeticos/natds-ios/compare/3.9.0...3.9.1) (2021-03-26)
+
+
+### Bug Fixes
+
+* add missing token spcing none to public access ([1fd7fb5](https://github.com/natura-cosmeticos/natds-ios/commit/1fd7fb5a4dc6301039661c89690f2944d9dba8d8))
+
 ## [3.9.0](https://github.com/natura-cosmeticos/natds-ios/compare/3.8.1...3.9.0) (2021-03-23)
 
 
