@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.10.0](https://github.com/natura-cosmeticos/natds-ios/compare/3.9.2...3.10.0) (2021-03-29)
+
+
+### Features
+
+* add background and size attribute to icon button ([f9c95ba](https://github.com/natura-cosmeticos/natds-ios/commit/f9c95ba84719787d7908ad7c443568eab7c911da))
+
+
+### Bug Fixes
+
+* fix animation bug + update badge tests ([83c1f2d](https://github.com/natura-cosmeticos/natds-ios/commit/83c1f2dff176f91a19047e9e3302b2d3dfae415f))
+
 ### [3.9.2](https://github.com/natura-cosmeticos/natds-ios/compare/3.9.1...3.9.2) (2021-03-26)
 
 
