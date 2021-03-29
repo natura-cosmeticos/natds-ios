@@ -222,16 +222,21 @@ public final class NatCounter: UIView {
         if subtractDisabledSet == false {
             if numCounter == 0 {
                 subtractView.currentState = .disabled
+                subtractView.iconLabel.textColor = getUIColorFromTokens(\.colorMediumEmphasis)
             } else if numCounter > 0 {
                 subtractView.currentState = .enabled
+                subtractView.iconLabel.textColor = getUIColorFromTokens(\.colorHighEmphasis)
             }
         }
 
         if addDisabledSet == false {
             if numCounter == 99 {
                 addView.currentState = .disabled
+                addView.iconLabel.textColor = getUIColorFromTokens(\.colorMediumEmphasis)
+
             } else if numCounter < 99 {
                 addView.currentState = .enabled
+                addView.iconLabel.textColor = getUIColorFromTokens(\.colorHighEmphasis)
             }
         }
     }

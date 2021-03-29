@@ -34,7 +34,7 @@ class CounterViewController: UIViewController, SampleItem {
 
     let addDisabledSemiCounter: NatCounter = {
         let counter = NatCounter(size: .semi)
-        counter.configure(label: "add Disabled Semi")
+        counter.configure(label: "Add Disabled Semi")
         counter.configure(button: .add, state: .disabled)
         counter.translatesAutoresizingMaskIntoConstraints = false
 
