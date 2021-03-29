@@ -1,11 +1,13 @@
 extension NatIconButton {
+
     /**
-     Style represents styles values for the NatIconButton component.
+     Style represents style values for the NatIconButton component, which apply different colors for the icon.
      
      These are all styles allowed for a NatIconButton:
-     - standardDefault
-     - standardPrimary
+     - standardDefault (default: icon has `highEmphasis` color)
+     - standardPrimary (icon has `primary` color)
      */
+
     public struct Style {
         let applyStyle: (NatIconButton) -> Void
 
