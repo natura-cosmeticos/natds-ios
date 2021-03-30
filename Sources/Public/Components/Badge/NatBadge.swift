@@ -153,24 +153,24 @@ public final class NatBadge: UIView {
             layer.addSublayer(circleLayerContainer)
             layer.addSublayer(centerCircleLayer)
 
-            let animation = CABasicAnimation(keyPath: "transform.scale")
+            let sacleAnimation = CABasicAnimation(keyPath: "transform.scale")
 
-            animation.toValue = 1.5
-            animation.duration = 0.8
-            animation.timingFunction = CAMediaTimingFunction(name: .easeOut)
-            animation.autoreverses = true
-            animation.repeatCount = Float.infinity
+            sacleAnimation.toValue = 1.5
+            sacleAnimation.duration = 0.8
+            sacleAnimation.timingFunction = CAMediaTimingFunction(name: .easeOut)
+            sacleAnimation.autoreverses = true
+            sacleAnimation.repeatCount = Float.infinity
 
-            backgroundCircleLayer.add(animation, forKey: "pulsing")
+            backgroundCircleLayer.add(sacleAnimation, forKey: "pulsing")
 
-            let animation2 = CABasicAnimation(keyPath: "opacity")
-            animation2.fromValue = 0.2
-            animation2.toValue = 1.0
-            animation2.duration = 0.8
-            animation2.repeatDuration = .infinity
-            animation2.autoreverses = true
-            animation2.timingFunction = CAMediaTimingFunction(name: .easeOut)
-            backgroundCircleLayer.add(animation2, forKey: "fade")
+            let opacityAnimation = CABasicAnimation(keyPath: "opacity")
+            opacityAnimation.fromValue = 0.2
+            opacityAnimation.toValue = 1.0
+            opacityAnimation.duration = 0.8
+            opacityAnimation.repeatDuration = .infinity
+            opacityAnimation.autoreverses = true
+            opacityAnimation.timingFunction = CAMediaTimingFunction(name: .easeOut)
+            backgroundCircleLayer.add(opacityAnimation, forKey: "opacity")
         }
     }
 
@@ -195,5 +195,3 @@ public final class NatBadge: UIView {
         isHidden = text == nil
     }
 }
-
-extension NatBadge: Pulsable {}
