@@ -12,21 +12,21 @@ class BadgeViewController: UIViewController, SampleItem {
 
     private lazy var badgeableViewOneChartStandard: BadgeableView = {
         let view = BadgeableView(frame: .init(x: 0, y: 0, width: 24, height: 24))
-        view.configure(badgeStyle: .standard, withColor: .alert)
+        view.configure(badgeStyle: .standard, withColor: .primary)
         view.setBadge(count: 9)
         return view
     }()
 
     private lazy var badgeableViewTwoCharStandard: BadgeableView = {
         let view = BadgeableView(frame: .init(x: 0, y: 0, width: 24, height: 24))
-        view.configure(badgeStyle: .standard, withColor: .alert)
+        view.configure(badgeStyle: .standard, withColor: .secondary)
         view.setBadge(count: 99)
         return view
     }()
 
     private lazy var badgeableViewThreeCharStandard: BadgeableView = {
         let view = BadgeableView(frame: .init(x: 0, y: 0, width: 24, height: 24))
-        view.configure(badgeStyle: .standard, withColor: .alert)
+        view.configure(badgeStyle: .standard, withColor: .success)
         view.setBadge(count: 999)
         return view
     }()
