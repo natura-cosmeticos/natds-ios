@@ -6,7 +6,7 @@ class BadgeViewController: UIViewController, SampleItem {
 
     private lazy var badgeableViewDot: BadgeableView = {
         let view = BadgeableView(frame: .init(x: 0, y: 0, width: 24, height: 24))
-        view.configure(badgeStyle: .dot, withColor: .alert)
+        view.configure(badgeStyle: .pulse, withColor: .alert)
         return view
     }()
 

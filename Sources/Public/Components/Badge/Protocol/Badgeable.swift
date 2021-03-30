@@ -14,7 +14,7 @@ extension Badgeable {
 
         let constraints = [
             badge.trailingAnchor.constraint(equalTo: trailingAnchor),
-            badge.topAnchor.constraint(equalTo: topAnchor, constant: 0.1)
+            badge.topAnchor.constraint(equalTo: topAnchor, constant: 0.1),
         ]
 
         NSLayoutConstraint.activate(constraints)

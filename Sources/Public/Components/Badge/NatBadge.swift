@@ -64,6 +64,10 @@ public final class NatBadge: UIView {
         if case .dot = style {
             addDotConstraints()
         }
+
+        if case .pulse = style {
+            addDotConstraints()
+        }
     }
 
     private func addLabelConstraints() {
@@ -99,14 +103,80 @@ public final class NatBadge: UIView {
         case .standard:
             path = UIBezierPath(roundedRect: CGRect(origin: .zero, size: bounds.size),
                                 cornerRadius: NatBorderRadius.circle(viewHeight: bounds.size.height))
+            color.box.set()
+            path?.fill()
+
         case .dot:
             path = UIBezierPath(roundedRect: CGRect(origin: .zero, size: bounds.size),
                                 cornerRadius: NatBorderRadius.circle(viewHeight: bounds.size.height))
-        }
+            color.box.set()
+            path?.fill()
 
-        color.box.set()
-        path?.fill()
+        case .pulse:
+
+            let circlePath = UIBezierPath(
+                arcCenter: CGPoint(x: bounds.midX, y: bounds.midY),
+                radius: CGFloat(8/2),
+                startAngle: CGFloat(0),
+                endAngle: CGFloat(Double.pi * 2),
+                clockwise: true)
+
+            let circleBackground = UIBezierPath(
+                arcCenter: CGPoint(x: centerCircleLayer.bounds.midX, y: centerCircleLayer.bounds.midY),
+                radius: CGFloat(10/2),
+                startAngle: CGFloat(Double.pi),
+                endAngle: CGFloat(Double.pi * 3),
+                clockwise: true)
+
+            let circleContainer = UIBezierPath(
+                arcCenter: CGPoint(x: bounds.midX, y: bounds.midY),
+                radius: CGFloat(10/2),
+                startAngle: CGFloat(Double.pi),
+                endAngle: CGFloat(Double.pi * 3),
+                clockwise: true)
+
+
+            centerCircleLayer.path = circlePath.cgPath
+            centerCircleLayer.fillColor = color.box.cgColor
+            centerCircleLayer.position = CGPoint(x: circleLayerContainer.bounds.midX, y: circleLayerContainer.bounds.midY)
+
+            backgroundCircleLayer.path = circleBackground.cgPath
+            backgroundCircleLayer.position = CGPoint(x: circleLayerContainer.bounds.midX,
+                                                     y: circleLayerContainer.bounds.midY)
+            backgroundCircleLayer.fillColor = color.box.withAlphaComponent(getTokenFromTheme(\.opacityMedium)).cgColor
+
+            circleLayerContainer.path = circleContainer.cgPath
+            circleLayerContainer.position = CGPoint(x: bounds.midX, y: bounds.midY)
+            circleLayerContainer.fillColor = UIColor.clear.cgColor
+
+            circleLayerContainer.addSublayer(backgroundCircleLayer)
+            layer.addSublayer(circleLayerContainer)
+            layer.addSublayer(centerCircleLayer)
+
+            let animation = CABasicAnimation(keyPath: "transform.scale")
+
+            animation.toValue = 1.5
+            animation.duration = 0.8
+            animation.timingFunction = CAMediaTimingFunction(name: .easeOut)
+            animation.autoreverses = true
+            animation.repeatCount = Float.infinity
+
+            backgroundCircleLayer.add(animation, forKey: "pulsing")
+
+            let animation2 = CABasicAnimation(keyPath: "opacity")
+            animation2.fromValue = 0.2
+            animation2.toValue = 1.0
+            animation2.duration = 0.8
+            animation2.repeatDuration = .infinity
+            animation2.autoreverses = true
+            animation2.timingFunction = CAMediaTimingFunction(name: .easeOut)
+            backgroundCircleLayer.add(animation2, forKey: "fade")
+        }
     }
+
+    private var centerCircleLayer = CAShapeLayer()
+    private var backgroundCircleLayer = CAShapeLayer()
+    private var circleLayerContainer = CAShapeLayer()
 
     internal func configure(count: Int) {
         var text: String?
@@ -125,3 +195,5 @@ public final class NatBadge: UIView {
         isHidden = text == nil
     }
 }
+
+extension NatBadge: Pulsable {}
