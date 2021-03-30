@@ -9,7 +9,7 @@ class CounterViewController: UIViewController, SampleItem {
         stackView.axis = .vertical
         stackView.spacing = NatSpacing.semi
         stackView.distribution = .equalCentering
-        stackView.alignment = .center
+        stackView.alignment = .leading
         stackView.translatesAutoresizingMaskIntoConstraints = false
 
         return stackView

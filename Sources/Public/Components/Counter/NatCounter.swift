@@ -56,8 +56,6 @@ public final class NatCounter: UIView {
 
     let numCounterLabelView: UIView = {
         let view = UIView()
-        view.layer.borderWidth = 0.5
-        view.layer.borderColor = NatColors.highEmphasis.cgColor
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -165,6 +163,11 @@ public final class NatCounter: UIView {
         }
     }
 
+    /// Returns the value of counter
+    public func getValue() -> Int {
+        return numCounter
+    }
+
     // MARK: - Private methods
 
     private func setupButtons() {
@@ -251,7 +254,7 @@ public final class NatCounter: UIView {
         stackViewContainer.addArrangedSubview(addView)
 
         NSLayoutConstraint.activate([
-            stackViewContainer.topAnchor.constraint(equalTo: topAnchor, constant: 20),
+            stackViewContainer.topAnchor.constraint(equalTo: topAnchor, constant: 24),
             stackViewContainer.leadingAnchor.constraint(equalTo: leadingAnchor),
             stackViewContainer.trailingAnchor.constraint(equalTo: trailingAnchor),
             stackViewContainer.bottomAnchor.constraint(equalTo: bottomAnchor),
