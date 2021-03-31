@@ -9,6 +9,7 @@ class ComponentsSection: SampleSection {
         BadgeViewController.self,
         ButtonsItemViewController.self,
         CardViewController.self,
+        CounterViewController.self,
         CheckboxViewController.self,
         DialogItemViewController.self,
         DividerViewController.self,

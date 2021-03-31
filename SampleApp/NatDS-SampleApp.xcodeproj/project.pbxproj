@@ -32,6 +32,7 @@
 		79ACDAE5255C343500660E68 /* ProgressIndicatorItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ACDAE4255C343500660E68 /* ProgressIndicatorItemViewController.swift */; };
 		79B6AC8A25AF87500027F7D6 /* BadgeableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B6AC8925AF87500027F7D6 /* BadgeableView.swift */; };
 		79D4C8F525F69DB80027E74E /* RadioButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D4C8F425F69DB80027E74E /* RadioButtonViewController.swift */; };
+		79EA0C1E260A314500742C0A /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EA0C1D260A314500742C0A /* CounterViewController.swift */; };
 		79FC599025CAE5D0001CCB56 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC598F25CAE5D0001CCB56 /* CardViewController.swift */; };
 		79FC59E625DAB5A7001CCB56 /*  ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC59E525DAB5A6001CCB56 /*  ImageViewController.swift */; };
 		7D60A49E260CF97400A23C1A /* SampleCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D60A49D260CF97400A23C1A /* SampleCustomCell.swift */; };
@@ -111,6 +112,7 @@
 		79ACDAE4255C343500660E68 /* ProgressIndicatorItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressIndicatorItemViewController.swift; sourceTree = "<group>"; };
 		79B6AC8925AF87500027F7D6 /* BadgeableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeableView.swift; sourceTree = "<group>"; };
 		79D4C8F425F69DB80027E74E /* RadioButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonViewController.swift; sourceTree = "<group>"; };
+		79EA0C1D260A314500742C0A /* CounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
 		79FC598F25CAE5D0001CCB56 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		79FC59E525DAB5A6001CCB56 /*  ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " ImageViewController.swift"; sourceTree = "<group>"; };
 		7D60A49D260CF97400A23C1A /* SampleCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCustomCell.swift; sourceTree = "<group>"; };
@@ -296,6 +298,14 @@
 			path = RadioButton;
 			sourceTree = "<group>";
 		};
+		79EA0C1C260A312800742C0A /* Counter */ = {
+			isa = PBXGroup;
+			children = (
+				79EA0C1D260A314500742C0A /* CounterViewController.swift */,
+			);
+			path = Counter;
+			sourceTree = "<group>";
+		};
 		79FC598E25CAE538001CCB56 /* Card */ = {
 			isa = PBXGroup;
 			children = (
@@ -399,6 +409,7 @@
 				BD3CB0F80322B0EA8970D31ABDFB1318 /* Button */,
 				79FC598E25CAE538001CCB56 /* Card */,
 				BEDF932F2593C63700F54C50 /* Checkbox */,
+				79EA0C1C260A312800742C0A /* Counter */,
 				00BA79FB1659D007DB8720B65080C439 /* Dialog */,
 				D2D202BFFC95DC39B94A26A5FB172483 /* Divider */,
 				DFD5C58E6C019591057F6663EFBBA044 /* ExpansionPanel */,
@@ -794,6 +805,7 @@
 				F73DA218B08455F09195D7D6F4990961 /* SizeViewController.swift in Sources */,
 				8409B9312507B9E2006ED4EA /* CustomSplashViewController+GradientBackgroundView.swift in Sources */,
 				0E0C618824C768B700AF8FBB /* AppBarDetailViewController.swift in Sources */,
+				79EA0C1E260A314500742C0A /* CounterViewController.swift in Sources */,
 				84E3B7C82502C88D0056FE57 /* CustomSplashViewController.swift in Sources */,
 				06E258AB651CE4F232CAAA3A2D94807C /* SpacingCell.swift in Sources */,
 				15CB9B603913EB682989F204523A1472 /* SpacingViewController.swift in Sources */,
