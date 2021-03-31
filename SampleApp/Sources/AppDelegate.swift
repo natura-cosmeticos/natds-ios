@@ -11,7 +11,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ThemeManager.shared.setLight()
 
         let window = UIWindow()
-        window.rootViewController = CustomSplashViewController()
+//        window.rootViewController = CustomSplashViewController()
+        window.rootViewController = RatingItemViewController()
         window.makeKeyAndVisible()
 
         self.window = window
