@@ -17,6 +17,13 @@ class CounterViewController: UIViewController, SampleItem {
 
     let enableMediumCounter: NatCounter = {
         let counter = NatCounter(size: .medium)
+        counter.translatesAutoresizingMaskIntoConstraints = false
+
+        return counter
+    }()
+
+    let enableMediumCounterWithLabel: NatCounter = {
+        let counter = NatCounter(size: .medium)
         counter.configure(label: "All Enabled Medium")
         counter.translatesAutoresizingMaskIntoConstraints = false
 
@@ -60,6 +67,7 @@ class CounterViewController: UIViewController, SampleItem {
         view.addSubview(stackView)
 
         stackView.addArrangedSubview(enableMediumCounter)
+        stackView.addArrangedSubview(enableMediumCounterWithLabel)
         stackView.addArrangedSubview(subtractDisabledMediumCounter)
         stackView.addArrangedSubview(addDisabledSemiCounter)
         stackView.addArrangedSubview(allDisabledSemiCounter)
