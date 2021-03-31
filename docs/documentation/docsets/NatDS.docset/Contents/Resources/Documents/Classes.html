@@ -16,8 +16,8 @@
     <header>
       <div class="content-wrapper">
         <p>
-          <a href="index.html">NatDS 3.2.0 Docs</a>
-          <span class="no-mobile"> (26% documented)</span>
+          <a href="index.html">NatDS  Docs</a>
+          <span class="no-mobile"> (32% documented)</span>
         </p>
     
     
@@ -90,6 +90,71 @@ The icons are not available with <code>NatDS</code>; it&rsquo;s necessary to use
                   <li class="item">
                     <div>
                       <code>
+                      <a name="/c:@M@NatDS@objc(cs)NatAvatar"></a>
+                      <a name="//apple_ref/swift/Class/NatAvatar" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@NatDS@objc(cs)NatAvatar">NatAvatar</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>NatAvatar is a class that represents a component from the Design System.
+The avatar colors change according to the current brand configured in the Design System.</p>
+
+<p>It has 3 styles:</p>
+
+<ul>
+<li>Icon</li>
+<li>Label</li>
+<li>Image</li>
+</ul>
+
+<p>And 5 sizes:</p>
+
+<ul>
+<li>standard</li>
+<li>semi</li>
+<li>semiX</li>
+<li>medium</li>
+<li>largeXXX</li>
+</ul>
+
+<p>The default size is <code>standard</code> and the default type is <code>Icon</code>.
+The component&rsquo;s size is not changeable.
+It&rsquo;s type can change according to the configuration methods called after its initialization.</p>
+
+<p>Example of usage:</p>
+<pre class="highlight swift"><code><span class="c1">// using default configuration:</span>
+<span class="k">let</span> <span class="nv">avatar</span> <span class="o">=</span> <span class="kt">NatAvatar</span><span class="p">()</span>
+<span class="c1">// or:</span>
+<span class="k">let</span> <span class="nv">avatar</span> <span class="o">=</span> <span class="kt">NatAvatar</span><span class="p">(</span><span class="nv">size</span><span class="p">:</span> <span class="o">.</span><span class="n">medium</span><span class="p">,</span> <span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">image</span><span class="p">)</span>
+</code></pre>
+<div class="aside aside-requires">
+    <p class="aside-title">Requires</p>
+    <p>It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.</p>
+
+<p>DesignSystem().configure(with: AvailableTheme)</p>
+
+</div>
+
+                          <a href="Classes/NatAvatar.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">NatAvatar</span> <span class="p">:</span> <span class="kt">UIView</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
                       <a name="/c:@M@NatDS@objc(cs)NatBadge"></a>
                       <a name="//apple_ref/swift/Class/NatBadge" class="dashAnchor"></a>
                       <a class="token" href="#/c:@M@NatDS@objc(cs)NatBadge">NatBadge</a>
@@ -102,7 +167,8 @@ The icons are not available with <code>NatDS</code>; it&rsquo;s necessary to use
                         <div class="abstract">
                           <p>NatBadge is a class that represents a component from the Design System.</p>
 
-<p>The badge colors change according to the current brand configured in the Design System and according to the user&rsquo;s properties of Light and Dark mode.</p>
+<p>The badge colors change according to the current brand configured in the Design System.
+They also change according to the user&rsquo;s properties of Light and Dark mode.</p>
 
 <p>This component has 2 styles:</p>
 
@@ -465,32 +531,65 @@ It&rsquo;s necessary to instantiate it and set its height and width constraints.
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>TextField is a class that represents a component from the design system.
-The textField styles, keyboards, capitalization and autocorrection properties changes according to the chosen type.</p>
+                          <p>TextField is a class that represents a component from the design system.</p>
+
+<p>It can be configured with 2 different sizes:</p>
+
+<ul>
+<li>MediumX (default)</li>
+<li>Medium</li>
+</ul>
+
+<p>Example of usage:</p>
+<pre class="highlight swift"><code>       <span class="k">let</span> <span class="nv">textField</span> <span class="o">=</span> <span class="kt">TextField</span><span class="p">()</span>
+       <span class="n">textfield</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">size</span><span class="p">:</span> <span class="o">.</span><span class="n">medium</span><span class="p">)</span>
+</code></pre>
+
+<p>The textField styles, keyboards, capitalization and autocorrection properties changes according to the chosen type.</p>
 
 <p>This TextField has 4 types:</p>
 
 <ul>
-<li>Text</li>
+<li>Text (default type)</li>
 <li>Name</li>
 <li>Number</li>
 <li>Password</li>
 </ul>
 
 <p>Example of usage:</p>
-<pre class="highlight swift"><code>   <span class="n">textField</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="o">.</span><span class="n">text</span>
-   <span class="n">textField</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="o">.</span><span class="n">name</span>
-   <span class="n">textField</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="o">.</span><span class="n">number</span>
-   <span class="n">textField</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="o">.</span><span class="nf">password</span><span class="p">(</span><span class="nv">keyboardType</span><span class="p">:</span> <span class="o">.</span><span class="n">numberPad</span>
+<pre class="highlight swift"><code>   <span class="n">textField</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">type</span><span class="p">:</span> <span class="o">.</span><span class="n">text</span><span class="p">)</span>
+   <span class="n">textField</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">type</span><span class="p">:</span> <span class="o">.</span><span class="nf">password</span><span class="p">(</span><span class="nv">keyboardType</span><span class="p">:</span> <span class="o">.</span><span class="n">numberPad</span><span class="p">)</span>
 </code></pre>
 
-<p>This TextField has 3 States:</p>
+<p>The TextField has 3 states for feedback, that can be configured with a message:</p>
 
 <ul>
-<li>enable</li>
-<li>active</li>
-<li>error</li>
+<li>Error</li>
+<li>Success</li>
+<li>None (clear error/success states)</li>
 </ul>
+
+<p>Example of usage:</p>
+<pre class="highlight swift"><code>   <span class="n">textField</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">state</span><span class="p">:</span> <span class="o">.</span><span class="n">error</span><span class="p">,</span> <span class="nv">with</span><span class="p">:</span> <span class="s">"Error"</span><span class="p">)</span>
+</code></pre>
+
+<p>It also can be configured as a required field, &lsquo;read-only&rsquo; field or disabled textField. Each interaction state has its pre-defined style:</p>
+<pre class="highlight swift"><code>   <span class="n">textField</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">isEnabled</span><span class="p">:</span> <span class="kc">false</span><span class="p">)</span>
+   <span class="n">textField</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">readOnly</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+   <span class="n">textField</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">required</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+</code></pre>
+
+<p>The TextField also has an action item on the right, which can be configured with an icon from NatDSIcons, a local image or a remote image:</p>
+<pre class="highlight swift"><code>   <span class="n">textField</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">icon</span><span class="p">:</span> <span class="nf">getIcon</span><span class="p">(</span><span class="o">.</span><span class="n">outlinedDefaultMockup</span><span class="p">))</span> <span class="p">{</span>
+       <span class="c1">// action</span>
+   <span class="p">}</span>
+   <span class="n">field</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="s">"imageName"</span><span class="p">))</span> <span class="p">{</span>
+       <span class="c1">// action</span>
+   <span class="p">}</span>
+   <span class="n">field</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">remoteImageURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"urlForImage"</span><span class="p">))</span> <span class="p">{</span>
+       <span class="c1">// action</span>
+   <span class="p">}</span>
+</code></pre>
 
 <p>There are properties that changes the textfield styles as well.</p>
 
@@ -546,19 +645,69 @@ The textField styles, keyboards, capitalization and autocorrection properties ch
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>NatIconButton is a class that represents  icon buttons  component from the design system.
-   The button colors changes according to the current theme configured in the Design System.</p>
+                          <div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This component is available in the following variants:
 
-<p>This button has 2 styles:</p>
+</div><ul>
+<li>✅ Standard
+With the following attribute status:</li>
+<li>Size:
 
 <ul>
-<li>standardDefault</li>
-<li>standardPrimary</li>
+<li>✅ <code>Semi</code></li>
+<li>✅ <code>SemiX</code></li>
+<li>✅ <code>Medium</code></li>
+</ul></li>
+<li>Icon color:
+
+<ul>
+<li>✅ <code>HighEmphasis</code></li>
+<li>✅ <code>Primary</code></li>
+</ul></li>
+<li>Background style:
+
+<ul>
+<li>✅ <code>Inherit</code></li>
+<li>✅ <code>Float</code></li>
+<li>✅ <code>Overlay</code></li>
+</ul></li>
+<li>✅ Disabled</li>
+<li>✅ Onclick</li>
+<li>✅ Icon</li>
+<li>Interaction state:
+
+<ul>
+<li>✅ <code>Enabled</code></li>
+<li>✅ <code>Press</code></li>
+</ul></li>
+</ul>
+
+<p>NatIconButton is a class that represent the icon button component from the design system.
+The button colors change according to the current theme configured.</p>
+
+<p>The icon button has two styles, which change the icon color:</p>
+
+<ul>
+<li>standardDefault (icon has <code>highEmphasis</code> color)</li>
+<li>standardPrimary (icon has <code>primary</code> color)</li>
+</ul>
+
+<p>The icon button can have three different sizes (with size <code>semi</code> as default):</p>
+
+<ul>
+<li>semi</li>
+<li>semiX</li>
+<li>medium
+&gt; Note: the size can only be changed at <code>init()</code></li>
 </ul>
 
 <p>Example of usage:</p>
-<pre class="highlight swift"><code>       <span class="k">let</span> <span class="nv">iconButtonDefault</span> <span class="o">=</span> <span class="kt">NatIconButton</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">standardDefault</span><span class="p">)</span>
-       <span class="k">let</span> <span class="nv">iconButtonPrimary</span> <span class="o">=</span> <span class="kt">NatIconButton</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">standardPrimary</span><span class="p">)</span>
+<pre class="highlight swift"><code>   <span class="c1">// An icon with default color and size</span>
+   <span class="k">let</span> <span class="nv">defaultIconButton</span> <span class="o">=</span> <span class="kt">NatIconButton</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">standardDefault</span><span class="p">)</span>
+
+   <span class="c1">// An icon button with primary color and medium size</span>
+   <span class="k">let</span> <span class="nv">primaryIconButton</span> <span class="o">=</span> <span class="kt">NatIconButton</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">standardPrimary</span><span class="p">,</span> <span class="nv">size</span><span class="p">:</span> <span class="o">.</span><span class="n">medium</span><span class="p">)</span>
 </code></pre>
 <div class="aside aside-requires">
     <p class="aside-title">Requires</p>
@@ -605,6 +754,73 @@ The textField styles, keyboards, capitalization and autocorrection properties ch
                           <div class="language">
                             <p class="aside-title">Swift</p>
                             <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">NatImage</span> <span class="p">:</span> <span class="kt">UIView</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@M@NatDS@objc(cs)NatListItemCell"></a>
+                      <a name="//apple_ref/swift/Class/NatListItemCell" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@NatDS@objc(cs)NatListItemCell">NatListItemCell</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>NatListItemCell is a class that representes the component List Item from Natura Design System.
+It inherits from UITableViewCell, being used inside UITableViews.</p>
+
+<p>It has the basic behavior for table cells according to the Design System:
+    - a predefined selected color overlay
+    - a ripple effect on touch
+    - and a bottom divider</p>
+
+<p>NatListItemCell should be used as a base for your custom cell:</p>
+<pre class="highlight swift"><code>    <span class="kd">class</span> <span class="kt">CustomCell</span><span class="p">:</span> <span class="kt">NatListItemCell</span> <span class="p">{</span>
+       <span class="c1">// your code for custom cell</span>
+
+        <span class="k">override</span> <span class="nf">init</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="kt">UITableViewCell</span><span class="o">.</span><span class="kt">CellStyle</span><span class="p">,</span> <span class="nv">reuseIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="p">{</span>
+           <span class="k">super</span><span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="n">style</span><span class="p">,</span> <span class="nv">reuseIdentifier</span><span class="p">:</span> <span class="n">reuseIdentifier</span><span class="p">)</span>
+           <span class="c1">// your code for initializing custom cell</span>
+           <span class="nf">commonInit</span><span class="p">()</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre>
+<div class="aside aside-important">
+    <p class="aside-title">Important</p>
+    To create a custom cell that inherits from NatListItemCell, you should follow the steps:
+
+</div>
+
+<ol>
+<li>Create your custom cell with custom views</li>
+<li>Override the function <code>init(style:, reuseIdentifier:)</code></li>
+<li>Call <code>commonInit()</code> inside the override</li>
+</ol>
+
+<p>Otherwise, the cell will not have the expected behavior for a NatListItemCell.</p>
+<div class="aside aside-requires">
+    <p class="aside-title">Requires</p>
+    <p>It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.</p>
+<pre class="highlight swift"><code>   <span class="kt">DesignSystem</span><span class="p">()</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="kt">AvailableTheme</span><span class="p">)</span>
+</code></pre>
+
+</div>
+
+                          <a href="Classes/NatListItemCell.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">NatListItemCell</span> <span class="p">:</span> <span class="kt">UITableViewCell</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">NatListItemCell</span><span class="p">:</span> <span class="kt"><a href="Protocols/Pulsable.html">Pulsable</a></span></code></pre>
 
                           </div>
                         </div>
@@ -846,6 +1062,90 @@ The component colors changes according to the current theme configured in the De
                   <li class="item">
                     <div>
                       <code>
+                      <a name="/c:@M@NatDS@objc(cs)NatCheckbox"></a>
+                      <a name="//apple_ref/swift/Class/NatCheckbox" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@NatDS@objc(cs)NatCheckbox">NatCheckbox</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>NatCheckbox is a class that represents the Checkbox component from the design system.</p>
+
+<p>Example of usage:</p>
+<pre class="highlight swift"><code>   <span class="n">checkbox</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">isSelected</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+   <span class="n">checkbox</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">isEnabled</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+   <span class="n">checkbox</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">text</span><span class="p">:</span> <span class="s">"Example with label"</span><span class="p">)</span>
+   <span class="n">checkbox</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">isIndeterminate</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+</code></pre>
+<div class="aside aside-requires">
+    <p class="aside-title">Requires</p>
+    <p>It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.</p>
+
+<p>DesignSystem().configure(with: AvailableTheme)</p>
+
+</div>
+
+                          <a href="Classes/NatCheckbox.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">NatCheckbox</span> <span class="p">:</span> <span class="kt">UIView</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@M@NatDS@objc(cs)NatRadioButton"></a>
+                      <a name="//apple_ref/swift/Class/NatRadioButton" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@NatDS@objc(cs)NatRadioButton">NatRadioButton</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>NatRadioButton is a class that represents the RadioButton component from the design system.</p>
+
+<p>Example of usage:</p>
+
+<p>radioButton.configure(isSelected: true)
+radioButton.configure(isEnabled: true)
+radioButton.configure(text: &ldquo;Example with label&rdquo;)
+radioButton.configure(addToGroup: natRadioButtonGroup)</p>
+<div class="aside aside-requires">
+    <p class="aside-title">Requires</p>
+    It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.
+
+</div>
+
+<p>DesignSystem().configure(with: AvailableTheme)</p>
+
+                          <a href="Classes/NatRadioButton.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">NatRadioButton</span> <span class="p">:</span> <span class="kt">UIView</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
                       <a name="/c:@M@NatDS@objc(cs)NatShortcut"></a>
                       <a name="//apple_ref/swift/Class/NatShortcut" class="dashAnchor"></a>
                       <a class="token" href="#/c:@M@NatDS@objc(cs)NatShortcut">NatShortcut</a>
@@ -989,15 +1289,15 @@ The tag colors change according to the current theme configured to the design sy
 </ul>
 
 <p>Example of usage:</p>
-<pre class="highlight swift"><code>   <span class="k">let</span> <span class="nv">badge</span> <span class="o">=</span> <span class="kt">NatTag</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">defaultAlert</span><span class="p">)</span>
-</code></pre>
+
+<p>let tag = NatTag(style: .defaultAlert)</p>
 <div class="aside aside-requires">
     <p class="aside-title">Requires</p>
-    <p>It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.</p>
-<pre class="highlight swift"><code>   <span class="kt">DesignSystem</span><span class="p">()</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="kt">AvailableTheme</span><span class="p">)</span>
-</code></pre>
+    It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.
 
 </div>
+
+<p>DesignSystem().configure(with: AvailableTheme)</p>
 
                           <a href="Classes/NatTag.html" class="slightly-smaller">See more</a>
                         </div>
@@ -1153,6 +1453,15 @@ The tag colors change according to the current theme configured to the design sy
                   <a href="Classes/IconView.html">IconView</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="Classes/NatAvatar.html">NatAvatar</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatAvatar/Size.html">– Size</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatAvatar/Types.html">– Types</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="Classes/NatBadge.html">NatBadge</a>
                 </li>
                 <li class="nav-group-task">
@@ -1180,6 +1489,9 @@ The tag colors change according to the current theme configured to the design sy
                   <a href="Classes/NatCard.html">NatCard</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="Classes/NatCheckbox.html">NatCheckbox</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="Classes/NatDialogController.html">NatDialogController</a>
                 </li>
                 <li class="nav-group-task">
@@ -1198,6 +1510,9 @@ The tag colors change according to the current theme configured to the design sy
                   <a href="Classes/NatIconButton/State.html">– State</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="Classes/NatIconButton/Background.html">– Background</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="Classes/NatIconButton/Sizes.html">– Sizes</a>
                 </li>
                 <li class="nav-group-task">
@@ -1207,6 +1522,12 @@ The tag colors change according to the current theme configured to the design sy
                   <a href="Classes/NatImage.html">NatImage</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="Classes/NatListItemCell.html">NatListItemCell</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatListItemCell/FeedbackStyle.html">– FeedbackStyle</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="Classes/NatProgressIndicatorCircular.html">NatProgressIndicatorCircular</a>
                 </li>
                 <li class="nav-group-task">
@@ -1214,6 +1535,9 @@ The tag colors change according to the current theme configured to the design sy
                 </li>
                 <li class="nav-group-task">
                   <a href="Classes/NatProgressIndicatorCircular/Size.html">– Size</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatRadioButton.html">NatRadioButton</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="Classes/NatSelectionControl.html">NatSelectionControl</a>
@@ -1229,6 +1553,12 @@ The tag colors change according to the current theme configured to the design sy
                 </li>
                 <li class="nav-group-task">
                   <a href="Classes/NatTag.html">NatTag</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatTag/Color.html">– Color</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatTag/Size.html">– Size</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="Classes/NatTag/Style.html">– Style</a>
@@ -1262,6 +1592,15 @@ The tag colors change according to the current theme configured to the design sy
                 </li>
                 <li class="nav-group-task">
                   <a href="Classes/TextField.html">TextField</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/TextField/FeedbackState.html">– FeedbackState</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/TextField/InteractionState.html">– InteractionState</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/TextField/Size.html">– Size</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="Classes/ValueTextHighlight.html">ValueTextHighlight</a>
@@ -1396,12 +1735,20 @@ The tag colors change according to the current theme configured to the design sy
                 </li>
               </ul>
             </li>
+            <li class="nav-group-name">
+              <a href="Typealiases.html">Type Aliases</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="Typealiases.html#/s:5NatDS13SimpleClosurea">SimpleClosure</a>
+                </li>
+              </ul>
+            </li>
           </ul>
         </nav>
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2021-02-19)</p>
+          <p>&copy; 2021 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2021-03-29)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </div>

@@ -16,8 +16,8 @@
     <header>
       <div class="content-wrapper">
         <p>
-          <a href="../index.html">NatDS 3.2.0 Docs</a>
-          <span class="no-mobile"> (26% documented)</span>
+          <a href="../index.html">NatDS  Docs</a>
+          <span class="no-mobile"> (32% documented)</span>
         </p>
     
     
@@ -48,32 +48,65 @@
 
                   </div>
                 </div>
-              <p>TextField is a class that represents a component from the design system.
-The textField styles, keyboards, capitalization and autocorrection properties changes according to the chosen type.</p>
+              <p>TextField is a class that represents a component from the design system.</p>
+
+<p>It can be configured with 2 different sizes:</p>
+
+<ul>
+<li>MediumX (default)</li>
+<li>Medium</li>
+</ul>
+
+<p>Example of usage:</p>
+<pre class="highlight swift"><code>       <span class="k">let</span> <span class="nv">textField</span> <span class="o">=</span> <span class="kt">TextField</span><span class="p">()</span>
+       <span class="n">textfield</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">size</span><span class="p">:</span> <span class="o">.</span><span class="n">medium</span><span class="p">)</span>
+</code></pre>
+
+<p>The textField styles, keyboards, capitalization and autocorrection properties changes according to the chosen type.</p>
 
 <p>This TextField has 4 types:</p>
 
 <ul>
-<li>Text</li>
+<li>Text (default type)</li>
 <li>Name</li>
 <li>Number</li>
 <li>Password</li>
 </ul>
 
 <p>Example of usage:</p>
-<pre class="highlight swift"><code>   <span class="n">textField</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="o">.</span><span class="n">text</span>
-   <span class="n">textField</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="o">.</span><span class="n">name</span>
-   <span class="n">textField</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="o">.</span><span class="n">number</span>
-   <span class="n">textField</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="o">.</span><span class="nf">password</span><span class="p">(</span><span class="nv">keyboardType</span><span class="p">:</span> <span class="o">.</span><span class="n">numberPad</span>
+<pre class="highlight swift"><code>   <span class="n">textField</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">type</span><span class="p">:</span> <span class="o">.</span><span class="n">text</span><span class="p">)</span>
+   <span class="n">textField</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">type</span><span class="p">:</span> <span class="o">.</span><span class="nf">password</span><span class="p">(</span><span class="nv">keyboardType</span><span class="p">:</span> <span class="o">.</span><span class="n">numberPad</span><span class="p">)</span>
 </code></pre>
 
-<p>This TextField has 3 States:</p>
+<p>The TextField has 3 states for feedback, that can be configured with a message:</p>
 
 <ul>
-<li>enable</li>
-<li>active</li>
-<li>error</li>
+<li>Error</li>
+<li>Success</li>
+<li>None (clear error/success states)</li>
 </ul>
+
+<p>Example of usage:</p>
+<pre class="highlight swift"><code>   <span class="n">textField</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">state</span><span class="p">:</span> <span class="o">.</span><span class="n">error</span><span class="p">,</span> <span class="nv">with</span><span class="p">:</span> <span class="s">"Error"</span><span class="p">)</span>
+</code></pre>
+
+<p>It also can be configured as a required field, &lsquo;read-only&rsquo; field or disabled textField. Each interaction state has its pre-defined style:</p>
+<pre class="highlight swift"><code>   <span class="n">textField</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">isEnabled</span><span class="p">:</span> <span class="kc">false</span><span class="p">)</span>
+   <span class="n">textField</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">readOnly</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+   <span class="n">textField</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">required</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+</code></pre>
+
+<p>The TextField also has an action item on the right, which can be configured with an icon from NatDSIcons, a local image or a remote image:</p>
+<pre class="highlight swift"><code>   <span class="n">textField</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">icon</span><span class="p">:</span> <span class="nf">getIcon</span><span class="p">(</span><span class="o">.</span><span class="n">outlinedDefaultMockup</span><span class="p">))</span> <span class="p">{</span>
+       <span class="c1">// action</span>
+   <span class="p">}</span>
+   <span class="n">field</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="s">"imageName"</span><span class="p">))</span> <span class="p">{</span>
+       <span class="c1">// action</span>
+   <span class="p">}</span>
+   <span class="n">field</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">remoteImageURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"urlForImage"</span><span class="p">))</span> <span class="p">{</span>
+       <span class="c1">// action</span>
+   <span class="p">}</span>
+</code></pre>
 
 <p>There are properties that changes the textfield styles as well.</p>
 
@@ -105,6 +138,15 @@ The textField styles, keyboards, capitalization and autocorrection properties ch
             </section>
             <section class="section task-group-section">
               <div class="task-group">
+                <div class="task-name-container">
+                  <a name="/Public%20vars"></a>
+                  <a name="//apple_ref/swift/Section/Public vars" class="dashAnchor"></a>
+                  <div class="section-name-container">
+                    <a class="section-name-link" href="#/Public%20vars"></a>
+                    <h3 class="section-name"><p>Public vars</p>
+</h3>
+                  </div>
+                </div>
                 <ul>
                   <li class="item">
                     <div>
@@ -119,7 +161,7 @@ The textField styles, keyboards, capitalization and autocorrection properties ch
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Label text that is always displayed above textfield</p>
+                          <p>A string with the text to be always displayed above textfield</p>
 
                         </div>
                         <div class="declaration">
@@ -146,7 +188,7 @@ The textField styles, keyboards, capitalization and autocorrection properties ch
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>The text from the textfield</p>
+                          <p>A string with the text inside the textField</p>
 
                         </div>
                         <div class="declaration">
@@ -173,7 +215,7 @@ The textField styles, keyboards, capitalization and autocorrection properties ch
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Hint text to display when the textfield is empty</p>
+                          <p>A string with the hint text to be displayed when the textField is empty</p>
 
                         </div>
                         <div class="declaration">
@@ -200,7 +242,7 @@ The textField styles, keyboards, capitalization and autocorrection properties ch
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Hint text that is always displayed below textfield</p>
+                          <p>A string with a helper text to be displayed below textField</p>
 
                         </div>
                         <div class="declaration">
@@ -227,7 +269,7 @@ The textField styles, keyboards, capitalization and autocorrection properties ch
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Text that alerts about an error</p>
+                          <p>A string with a text that alerts about an error. It triggers the state <code>.error</code> for the textField.</p>
 
                         </div>
                         <div class="declaration">
@@ -271,6 +313,114 @@ The textField styles, keyboards, capitalization and autocorrection properties ch
                   <li class="item">
                     <div>
                       <code>
+                      <a name="/s:5NatDS9TextFieldC8requiredSbvp"></a>
+                      <a name="//apple_ref/swift/Property/required" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS9TextFieldC8requiredSbvp">required</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>A boolean that indicates if filling the textField is mandatory</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">required</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS9TextFieldC8readOnlySbvp"></a>
+                      <a name="//apple_ref/swift/Property/readOnly" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS9TextFieldC8readOnlySbvp">readOnly</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>A boolean that indicates if the textField is filled with info that can&rsquo;t be changed</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">readOnly</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS9TextFieldC9isEnabledSbvp"></a>
+                      <a name="//apple_ref/swift/Property/isEnabled" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS9TextFieldC9isEnabledSbvp">isEnabled</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>A boolean that indicates if the textField is enabled or disabled</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isEnabled</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS9TextFieldC4sizeAC4SizeOvp"></a>
+                      <a name="//apple_ref/swift/Property/size" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS9TextFieldC4sizeAC4SizeOvp">size</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>The size of the textfield, chosen from the <code><a href="../Classes/TextField/Size.html">TextField.Size</a></code> enum</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">size</span><span class="p">:</span> <span class="kt"><a href="../Classes/TextField/Size.html">Size</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
                       <a name="/s:5NatDS9TextFieldC8delegateAA0cD8Delegate_pSgvp"></a>
                       <a name="//apple_ref/swift/Property/delegate" class="dashAnchor"></a>
                       <a class="token" href="#/s:5NatDS9TextFieldC8delegateAA0cD8Delegate_pSgvp">delegate</a>
@@ -295,6 +445,19 @@ The textField styles, keyboards, capitalization and autocorrection properties ch
                       </section>
                     </div>
                   </li>
+                </ul>
+              </div>
+              <div class="task-group">
+                <div class="task-name-container">
+                  <a name="/Private%20vars"></a>
+                  <a name="//apple_ref/swift/Section/Private vars" class="dashAnchor"></a>
+                  <div class="section-name-container">
+                    <a class="section-name-link" href="#/Private%20vars"></a>
+                    <h3 class="section-name"><p>Private vars</p>
+</h3>
+                  </div>
+                </div>
+                <ul>
                   <li class="item">
                     <div>
                       <code>
@@ -316,6 +479,109 @@ The textField styles, keyboards, capitalization and autocorrection properties ch
                           <div class="language">
                             <p class="aside-title">Swift</p>
                             <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="nf">init</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS9TextFieldC13FeedbackStateO"></a>
+                      <a name="//apple_ref/swift/Enum/FeedbackState" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS9TextFieldC13FeedbackStateO">FeedbackState</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>FeedbackState is an enum that represents the possible states for a TextField.
+The chosen state indicates the type of feedback should be displayed, and sets the style for the textField.
+The <code><a href="../Classes/TextField.html#/s:5NatDS9TextFieldC5errorSSSgvp">error</a></code> and <code>success</code> states also display an icon with the corresponding color and image.
+The <code>none</code> state clears the textField if they&rsquo;re already configured with another state.</p>
+
+<p>These are all states allowed for a TextField:</p>
+
+<ul>
+<li>error</li>
+<li>success</li>
+<li>none</li>
+</ul>
+
+                          <a href="../Classes/TextField/FeedbackState.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">FeedbackState</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS9TextFieldC16InteractionStateO"></a>
+                      <a name="//apple_ref/swift/Enum/InteractionState" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS9TextFieldC16InteractionStateO">InteractionState</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                          <a href="../Classes/TextField/InteractionState.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">InteractionState</span> <span class="p">:</span> <span class="kt">CaseIterable</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS9TextFieldC4SizeO"></a>
+                      <a name="//apple_ref/swift/Enum/Size" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS9TextFieldC4SizeO">Size</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Size is an enum that represents the possible sizes for the TextField height.
+The default size is <code>mediumX</code>.</p>
+
+<p>These are all sizes allowed for a TextField:</p>
+
+<ul>
+<li>medium</li>
+<li>mediumX</li>
+</ul>
+
+                          <a href="../Classes/TextField/Size.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Size</span> <span class="p">:</span> <span class="kt">CaseIterable</span></code></pre>
 
                           </div>
                         </div>
@@ -405,6 +671,46 @@ The textField styles, keyboards, capitalization and autocorrection properties ch
                       </section>
                     </div>
                   </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS9TextFieldC18hideVisibilityIconyyF"></a>
+                      <a name="//apple_ref/swift/Method/hideVisibilityIcon()" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS9TextFieldC18hideVisibilityIconyyF">hideVisibilityIcon()</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">hideVisibilityIcon</span><span class="p">()</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="task-group">
+                <div class="task-name-container">
+                  <a name="/Delegates"></a>
+                  <a name="//apple_ref/swift/Section/Delegates" class="dashAnchor"></a>
+                  <div class="section-name-container">
+                    <a class="section-name-link" href="#/Delegates"></a>
+                    <h3 class="section-name"><p>Delegates</p>
+</h3>
+                  </div>
+                </div>
+                <ul>
                   <li class="item">
                     <div>
                       <code>
@@ -517,6 +823,701 @@ The textField styles, keyboards, capitalization and autocorrection properties ch
                   </li>
                 </ul>
               </div>
+              <div class="task-group">
+                <div class="task-name-container">
+                  <a name="/Public%20Methods"></a>
+                  <a name="//apple_ref/swift/Section/Public Methods" class="dashAnchor"></a>
+                  <div class="section-name-container">
+                    <a class="section-name-link" href="#/Public%20Methods"></a>
+                    <h3 class="section-name"><p>Public Methods</p>
+</h3>
+                  </div>
+                </div>
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS9TextFieldC9configure5titleySS_tF"></a>
+                      <a name="//apple_ref/swift/Method/configure(title:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS9TextFieldC9configure5titleySS_tF">configure(title:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Sets the textField title, displayed above the textField box</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>title</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>A string with the text for the title</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS9TextFieldC9configure11placeholderySS_tF"></a>
+                      <a name="//apple_ref/swift/Method/configure(placeholder:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS9TextFieldC9configure11placeholderySS_tF">configure(placeholder:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Sets the textField placeholder, a hint text displayed inside the textField box when it is empy</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="nv">placeholder</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>placeholder</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>A string with the text for the placeholder</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS9TextFieldC9configure4sizeyAC4SizeO_tF"></a>
+                      <a name="//apple_ref/swift/Method/configure(size:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS9TextFieldC9configure4sizeyAC4SizeO_tF">configure(size:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Sets the textField size, which changes it&rsquo;s height</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="nv">size</span><span class="p">:</span> <span class="kt"><a href="../Classes/TextField/Size.html">Size</a></span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>size</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>An option from <code><a href="../Classes/TextField/Size.html">TextField.Size</a></code> enum</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS9TextFieldC9configure4typeyAA0cD4TypeO_tF"></a>
+                      <a name="//apple_ref/swift/Method/configure(type:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS9TextFieldC9configure4typeyAA0cD4TypeO_tF">configure(type:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Sets the textField type, which changes it&rsquo;s configuration for keyboard, secure text, capitalization and autocorrection</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Enums/TextFieldType.html">TextFieldType</a></span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>type</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>An option from <code><a href="../Enums/TextFieldType.html">TextFieldType</a></code></p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS9TextFieldC9configure5state4withyAC13FeedbackStateO_SSSgtF"></a>
+                      <a name="//apple_ref/swift/Method/configure(state:with:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS9TextFieldC9configure5state4withyAC13FeedbackStateO_SSSgtF">configure(state:<wbr>with:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Sets the state of the textField and a text to describe the state</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="nv">state</span><span class="p">:</span> <span class="kt"><a href="../Classes/TextField/FeedbackState.html">FeedbackState</a></span><span class="p">,</span> <span class="n">with</span> <span class="nv">text</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>state</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>An option from <code><a href="../Classes/TextField/FeedbackState.html">TextField.FeedbackState</a></code>: error, success or none</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>text</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>A string with the text to be displayed below the textField box. If the state is <code><a href="../Classes/TextField.html#/s:5NatDS9TextFieldC5errorSSSgvp">error</a></code> or <code>success</code>,
+the text will have a small icon next to it. If the state is  <code>none</code>, the text will be displayed as a helper text.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS9TextFieldC9configure8requiredySb_tF"></a>
+                      <a name="//apple_ref/swift/Method/configure(required:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS9TextFieldC9configure8requiredySb_tF">configure(required:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Sets if the textField is required, when its filling is mandatory</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="nv">required</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>required</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>A boolean indicating if the textField is required</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS9TextFieldC9configure9isEnabledySb_tF"></a>
+                      <a name="//apple_ref/swift/Method/configure(isEnabled:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS9TextFieldC9configure9isEnabledySb_tF">configure(isEnabled:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Sets if the textField is enabled or disabled</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="nv">isEnabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>isEnabled</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>A boolean indicating if the textField is enabled</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS9TextFieldC9configure8readOnlyySb_tF"></a>
+                      <a name="//apple_ref/swift/Method/configure(readOnly:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS9TextFieldC9configure8readOnlyySb_tF">configure(readOnly:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Sets if the textField is read only</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="nv">readOnly</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>readOnly</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>A boolean indicating if the textField is read only</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS9TextFieldC9configure06helperC0ySS_tF"></a>
+                      <a name="//apple_ref/swift/Method/configure(helperText:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS9TextFieldC9configure06helperC0ySS_tF">configure(helperText:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Sets a helper text to be displayed below the textField box</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="nv">helperText</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>helperText</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>A string with the helper text</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS9TextFieldC9configure4icon4withySSSg_yyctF"></a>
+                      <a name="//apple_ref/swift/Method/configure(icon:with:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS9TextFieldC9configure4icon4withySSSg_yyctF">configure(icon:<wbr>with:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Sets an icon to be displayed inside the textField box, aligned with it&rsquo;s right side, and the action to be executed when the icon is tapped.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="nv">icon</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="n">with</span> <span class="nv">action</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>icon</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>An icon from NatDSIcons, which is sent as a string. Example: <code>getIcon(.outlinedDefaultMockup)</code></p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>action</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>A block of code to be executed when the icon receives a tap.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS9TextFieldC9configure5image4withySo7UIImageCSg_yyctF"></a>
+                      <a name="//apple_ref/swift/Method/configure(image:with:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS9TextFieldC9configure5image4withySo7UIImageCSg_yyctF">configure(image:<wbr>with:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Sets a local image to be displayed inside the textField box, aligned with the right side, and the action to be executed when it is tapped.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?,</span> <span class="n">with</span> <span class="nv">action</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>image</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>An UIImage to be displayed in the textField right edge</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>action</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>A block of code to be executed when the image is tapped</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS9TextFieldC9configure14remoteImageURL4withy10Foundation0H0V_yyctF"></a>
+                      <a name="//apple_ref/swift/Method/configure(remoteImageURL:with:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS9TextFieldC9configure14remoteImageURL4withy10Foundation0H0V_yyctF">configure(remoteImageURL:<wbr>with:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Sets a remote image to be displayed inside the textField box, aligned with the right edge, and the action to be executed when it is tapped.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="nv">remoteImageURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="n">with</span> <span class="nv">action</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>remoteImageURL</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>A URL that contains the remote address to the image. Example: <code>URL(string: &quot;http://myimage&quot;)!</code></p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>action</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>A block of code the be executed when the image is tapped</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS9TextFieldC21configureRemoveActionyyF"></a>
+                      <a name="//apple_ref/swift/Method/configureRemoveAction()" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS9TextFieldC21configureRemoveActionyyF">configureRemoveAction()</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Removes the action item, whether it&rsquo;s an icon or an image</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configureRemoveAction</span><span class="p">()</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS9TextFieldC27configureShowVisibilityIconyyF"></a>
+                      <a name="//apple_ref/swift/Method/configureShowVisibilityIcon()" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS9TextFieldC27configureShowVisibilityIconyyF">configureShowVisibilityIcon()</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Sets the eye icon to show and hide the textField content. It can only be used if the textField has the <code>password</code> type.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configureShowVisibilityIcon</span><span class="p">()</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS9TextFieldC29configureRemoveVisibilityIconyyF"></a>
+                      <a name="//apple_ref/swift/Method/configureRemoveVisibilityIcon()" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS9TextFieldC29configureRemoveVisibilityIconyyF">configureRemoveVisibilityIcon()</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Removes the eye icon from <code>password</code> type textFields.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configureRemoveVisibilityIcon</span><span class="p">()</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </section>
           </section>
         </article>
@@ -560,6 +1561,15 @@ The textField styles, keyboards, capitalization and autocorrection properties ch
                   <a href="../Classes/IconView.html">IconView</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="../Classes/NatAvatar.html">NatAvatar</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NatAvatar/Size.html">– Size</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NatAvatar/Types.html">– Types</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Classes/NatBadge.html">NatBadge</a>
                 </li>
                 <li class="nav-group-task">
@@ -587,6 +1597,9 @@ The textField styles, keyboards, capitalization and autocorrection properties ch
                   <a href="../Classes/NatCard.html">NatCard</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="../Classes/NatCheckbox.html">NatCheckbox</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Classes/NatDialogController.html">NatDialogController</a>
                 </li>
                 <li class="nav-group-task">
@@ -605,6 +1618,9 @@ The textField styles, keyboards, capitalization and autocorrection properties ch
                   <a href="../Classes/NatIconButton/State.html">– State</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="../Classes/NatIconButton/Background.html">– Background</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Classes/NatIconButton/Sizes.html">– Sizes</a>
                 </li>
                 <li class="nav-group-task">
@@ -614,6 +1630,12 @@ The textField styles, keyboards, capitalization and autocorrection properties ch
                   <a href="../Classes/NatImage.html">NatImage</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="../Classes/NatListItemCell.html">NatListItemCell</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NatListItemCell/FeedbackStyle.html">– FeedbackStyle</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Classes/NatProgressIndicatorCircular.html">NatProgressIndicatorCircular</a>
                 </li>
                 <li class="nav-group-task">
@@ -621,6 +1643,9 @@ The textField styles, keyboards, capitalization and autocorrection properties ch
                 </li>
                 <li class="nav-group-task">
                   <a href="../Classes/NatProgressIndicatorCircular/Size.html">– Size</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NatRadioButton.html">NatRadioButton</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Classes/NatSelectionControl.html">NatSelectionControl</a>
@@ -636,6 +1661,12 @@ The textField styles, keyboards, capitalization and autocorrection properties ch
                 </li>
                 <li class="nav-group-task">
                   <a href="../Classes/NatTag.html">NatTag</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NatTag/Color.html">– Color</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NatTag/Size.html">– Size</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Classes/NatTag/Style.html">– Style</a>
@@ -669,6 +1700,15 @@ The textField styles, keyboards, capitalization and autocorrection properties ch
                 </li>
                 <li class="nav-group-task">
                   <a href="../Classes/TextField.html">TextField</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/TextField/FeedbackState.html">– FeedbackState</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/TextField/InteractionState.html">– InteractionState</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/TextField/Size.html">– Size</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Classes/ValueTextHighlight.html">ValueTextHighlight</a>
@@ -803,12 +1843,20 @@ The textField styles, keyboards, capitalization and autocorrection properties ch
                 </li>
               </ul>
             </li>
+            <li class="nav-group-name">
+              <a href="../Typealiases.html">Type Aliases</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Typealiases.html#/s:5NatDS13SimpleClosurea">SimpleClosure</a>
+                </li>
+              </ul>
+            </li>
           </ul>
         </nav>
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2021-02-19)</p>
+          <p>&copy; 2021 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2021-03-29)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </div>

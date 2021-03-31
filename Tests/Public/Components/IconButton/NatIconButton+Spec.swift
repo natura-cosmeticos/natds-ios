@@ -20,7 +20,7 @@ final class NatIconButtonSpec: QuickSpec {
 
             styleSpy = .init(applyStyle: { _ in applyStyleInvocations += 1 })
 
-            systemUnderTest = .init(style: styleSpy, notificationCenter: notificationCenterSpy)
+            systemUnderTest = .init(style: styleSpy, size: .semi, notificationCenter: notificationCenterSpy)
         }
 
         describe("#init") {
@@ -180,6 +180,31 @@ final class NatIconButtonSpec: QuickSpec {
 
                 it("applies style for the second time") {
                     expect(applyStyleInvocations).to(equal(2))
+                }
+            }
+        }
+
+        describe("#configure(background:)") {
+            context("when is set to overlay") {
+                beforeEach {
+                    systemUnderTest.configure(background: .overlay)
+                }
+
+                it("applies overlay style") {
+                    let expectedColor = NatColors.highlight.withAlphaComponent(NatOpacities.disabledLow)
+                    expect(systemUnderTest.backgroundColor).to(equal(expectedColor))
+                }
+            }
+
+            context("when is set to float") {
+                beforeEach {
+                    systemUnderTest.configure(background: .float)
+                }
+
+                it("applies float style") {
+                    let expectedColor = NatColors.surface
+                    expect(systemUnderTest.backgroundColor).to(equal(expectedColor))
+                    expect(systemUnderTest.getElevationSet()).to(equal(NatElevation.ElevationAttributes.medium))
                 }
             }
         }
