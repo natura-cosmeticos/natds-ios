@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.11.0](https://github.com/natura-cosmeticos/natds-ios/compare/3.10.0...3.11.0) (2021-03-31)
+
+
+### Features
+
+* 🎸 WIP - Creates counter component ([8aa2604](https://github.com/natura-cosmeticos/natds-ios/commit/8aa2604f62be3f999546ce7587f7d0e638c6072b))
+
 ## [3.10.0](https://github.com/natura-cosmeticos/natds-ios/compare/3.9.2...3.10.0) (2021-03-29)
 
 
