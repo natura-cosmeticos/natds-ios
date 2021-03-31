@@ -7,26 +7,33 @@
  This component has 2 styles:
  - Standard
  - Dot
+ - Pulse
 
- And 1 color:
+ And colors:
  - Alert
+ - Primary
+ - Secondary
+ - Success
 
  Example of usage:
  
-        let badge = NatBadge(style: .standard, color: .alert)
+ let badge = NatBadge(style: .standard, color: .alert)
 
  - Requires:
  It's necessary to configure the Design System with a theme or fatalError will be raised.
  
-        DesignSystem().configure(with: AvailableTheme)
+ DesignSystem().configure(with: AvailableTheme)
  */
 
 public final class NatBadge: UIView {
 
     // MARK: - Private properties
 
-    private let style: Style
+    internal var centerCircleLayer = CAShapeLayer()
+    internal var backgroundCircleLayer = CAShapeLayer()
+    internal var circleLayerContainer = CAShapeLayer()
 
+    private let style: Style
     private let color: Color
 
     private lazy var label: UILabel = {
@@ -114,69 +121,13 @@ public final class NatBadge: UIView {
 
         case .pulse:
 
-            let circlePath = UIBezierPath(
-                arcCenter: CGPoint(x: bounds.midX, y: bounds.midY),
-                radius: CGFloat(8/2),
-                startAngle: CGFloat(0),
-                endAngle: CGFloat(Double.pi * 2),
-                clockwise: true)
-
-            let circleBackground = UIBezierPath(
-                arcCenter: CGPoint(x: centerCircleLayer.bounds.midX, y: centerCircleLayer.bounds.midY),
-                radius: CGFloat(10/2),
-                startAngle: CGFloat(Double.pi),
-                endAngle: CGFloat(Double.pi * 3),
-                clockwise: true)
-
-            let circleContainer = UIBezierPath(
-                arcCenter: CGPoint(x: bounds.midX, y: bounds.midY),
-                radius: CGFloat(10/2),
-                startAngle: CGFloat(Double.pi),
-                endAngle: CGFloat(Double.pi * 3),
-                clockwise: true)
-
-
-            centerCircleLayer.path = circlePath.cgPath
+            drawPulse()
+            scaleAnimation()
+            opacityAnimation()
             centerCircleLayer.fillColor = color.box.cgColor
-            centerCircleLayer.position = CGPoint(x: circleLayerContainer.bounds.midX, y: circleLayerContainer.bounds.midY)
-
-            backgroundCircleLayer.path = circleBackground.cgPath
-            backgroundCircleLayer.position = CGPoint(x: circleLayerContainer.bounds.midX,
-                                                     y: circleLayerContainer.bounds.midY)
             backgroundCircleLayer.fillColor = color.box.withAlphaComponent(getTokenFromTheme(\.opacityMedium)).cgColor
-
-            circleLayerContainer.path = circleContainer.cgPath
-            circleLayerContainer.position = CGPoint(x: bounds.midX, y: bounds.midY)
-            circleLayerContainer.fillColor = UIColor.clear.cgColor
-
-            circleLayerContainer.addSublayer(backgroundCircleLayer)
-            layer.addSublayer(circleLayerContainer)
-            layer.addSublayer(centerCircleLayer)
-
-            let sacleAnimation = CABasicAnimation(keyPath: "transform.scale")
-
-            sacleAnimation.toValue = 1.5
-            sacleAnimation.duration = 0.8
-            sacleAnimation.timingFunction = CAMediaTimingFunction(name: .easeOut)
-            sacleAnimation.autoreverses = true
-            sacleAnimation.repeatCount = Float.infinity
-
-            backgroundCircleLayer.add(sacleAnimation, forKey: "pulsing")
-
-            let opacityAnimation = CABasicAnimation(keyPath: "opacity")
-            opacityAnimation.fromValue = 0.2
-            opacityAnimation.toValue = 1.0
-            opacityAnimation.duration = 0.8
-            opacityAnimation.repeatDuration = .infinity
-            opacityAnimation.autoreverses = true
-            opacityAnimation.timingFunction = CAMediaTimingFunction(name: .easeOut)
-            backgroundCircleLayer.add(opacityAnimation, forKey: "opacity")
         }
     }
-
-    private var centerCircleLayer = CAShapeLayer()
-    private var backgroundCircleLayer = CAShapeLayer()
-    private var circleLayerContainer = CAShapeLayer()
 
     internal func configure(count: Int) {
         var text: String?

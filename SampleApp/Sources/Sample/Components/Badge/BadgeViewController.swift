@@ -6,7 +6,13 @@ class BadgeViewController: UIViewController, SampleItem {
 
     private lazy var badgeableViewDot: BadgeableView = {
         let view = BadgeableView(frame: .init(x: 0, y: 0, width: 24, height: 24))
-        view.configure(badgeStyle: .pulse, withColor: .alert)
+        view.configure(badgeStyle: .dot, withColor: .alert)
+        return view
+    }()
+
+    private lazy var badgeableViewPulse: BadgeableView = {
+        let view = BadgeableView(frame: .init(x: 0, y: 0, width: 24, height: 24))
+        view.configure(badgeStyle: .pulse, withColor: .success)
         return view
     }()
 
@@ -52,6 +58,7 @@ class BadgeViewController: UIViewController, SampleItem {
 
         view.addSubview(stackView)
         stackView.addArrangedSubview(badgeableViewDot)
+        stackView.addArrangedSubview(badgeableViewPulse)
         stackView.addArrangedSubview(badgeableViewOneChartStandard)
         stackView.addArrangedSubview(badgeableViewTwoCharStandard)
         stackView.addArrangedSubview(badgeableViewThreeCharStandard)
