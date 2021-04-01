@@ -23,7 +23,7 @@ class RatingItemViewController: UIViewController, SampleItem {
     let stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.spacing = NatSpacing.standard
+        stackView.spacing = NatSpacing.small
         stackView.alignment = .leading
         stackView.distribution = .fillProportionally
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -33,19 +33,19 @@ class RatingItemViewController: UIViewController, SampleItem {
 
     let inputRatingWithHint: NatRating = {
         let rating = NatRating(style: .input)
-        rating.configure(text: "Input size Semi (default)")
+        rating.configure(text: "Hint placeholder")
         return rating
     }()
 
     let inputRatingWithHintSemiX: NatRating = {
         let rating = NatRating(style: .input, size: .semiX)
-        rating.configure(text: "Input size SemiX")
+        rating.configure(text: "Hint placeholder")
         return rating
     }()
 
     let inputRatingWithHintMedium: NatRating = {
         let rating = NatRating(style: .input, size: .medium)
-        rating.configure(text: "Input size Medium")
+        rating.configure(text: "Hint placeholder")
         return rating
     }()
 
@@ -56,11 +56,6 @@ class RatingItemViewController: UIViewController, SampleItem {
         return rating
     }()
 
-    let readOnlyRatingSmall: NatRating = {
-        let rating = NatRating(style: .readOnly, size: .small)
-        return rating
-    }()
-
     let readOnlyRating: NatRating = {
         let rating = NatRating(style: .readOnly)
         rating.configure(rate: 2)
@@ -68,14 +63,14 @@ class RatingItemViewController: UIViewController, SampleItem {
     }()
 
     let counterRating: NatRating = {
-        let rating = NatRating(style: .counter, size: .semiX)
-        rating.configure(text: "Counter Left (default)")
+        let rating = NatRating(style: .counter)
+        rating.configure(text: "Hint placeholder")
         return rating
     }()
 
     let counterRatingRight: NatRating = {
-        let rating = NatRating(style: .counter, size: .small, alignment: .right)
-        rating.configure(text: "Counter Right")
+        let rating = NatRating(style: .counter, alignment: .right)
+        rating.configure(text: "Hint placeholder")
         return rating
     }()
 
@@ -124,13 +119,38 @@ class RatingItemViewController: UIViewController, SampleItem {
     }
 
     private func addStackViewItems() {
-        stackView.addArrangedSubview(inputRatingWithHint)
-        stackView.addArrangedSubview(inputRatingWithHintSemiX)
-        stackView.addArrangedSubview(inputRatingWithHintMedium)
-        stackView.addArrangedSubview(inputRating)
-        stackView.addArrangedSubview(readOnlyRating)
-        stackView.addArrangedSubview(readOnlyRatingSmall)
-        stackView.addArrangedSubview(counterRating)
-        stackView.addArrangedSubview(counterRatingRight)
+        stackView.addArrangedSubview(createViewWithDescription("Input with hint (default)",
+                                                               rating: inputRatingWithHint))
+        stackView.addArrangedSubview(createViewWithDescription("Input with hint size Semi X",
+                                                               rating: inputRatingWithHintSemiX))
+        stackView.addArrangedSubview(createViewWithDescription("Input with hint size Medium",
+                                                               rating: inputRatingWithHintMedium))
+        stackView.addArrangedSubview(createViewWithDescription("Input disabled",
+                                                               rating: inputRating))
+        stackView.addArrangedSubview(createViewWithDescription("Read only default",
+                                                               rating: readOnlyRating))
+        stackView.addArrangedSubview(createViewWithDescription("Counter left (default)",
+                                                               rating: counterRating))
+        stackView.addArrangedSubview(createViewWithDescription("Counter right",
+                                                               rating: counterRatingRight))
+    }
+
+    private func createViewWithDescription(_ text: String, rating: NatRating) -> UIView {
+        let view = UIView()
+        let label = UILabel()
+        label.text = text
+        label.textColor = NatColors.highEmphasis
+        label.font = NatFonts.font(ofSize: .body1)
+        view.addSubview(label)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: NatSpacing.micro).isActive = true
+        label.topAnchor.constraint(equalTo: view.topAnchor, constant: NatSpacing.small).isActive = true
+        view.addSubview(rating)
+        rating.translatesAutoresizingMaskIntoConstraints = false
+        rating.topAnchor.constraint(equalTo: label.bottomAnchor, constant: NatSpacing.micro).isActive = true
+        rating.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: NatSpacing.micro).isActive = true
+        rating.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -NatSpacing.micro).isActive = true
+        rating.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -NatSpacing.micro).isActive = true
+        return view
     }
 }

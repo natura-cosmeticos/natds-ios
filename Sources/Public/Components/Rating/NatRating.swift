@@ -60,13 +60,6 @@ public final class NatRating: UIView {
 
     // MARK: - Touches
 
-    public override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesMoved(touches, with: event)
-        if style == .input {
-            handleTouchAtLocation(withTouches: touches)
-        }
-    }
-
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         if style == .input {
@@ -75,7 +68,9 @@ public final class NatRating: UIView {
     }
 
     public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        removePulseLayer(layer: touchedStar.layer)
+        if style == .input {
+            removePulseLayer(layer: touchedStar.layer)
+        }
     }
 
     private func handleTouchAtLocation(withTouches touches: Set<UITouch>) {
