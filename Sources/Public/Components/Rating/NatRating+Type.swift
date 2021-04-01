@@ -9,17 +9,18 @@ extension NatRating {
             case .readOnly:
                 let image = AssetsPath.iconFilledActionRating.rawValue
                 return image?.tintedWithColor(getUIColorFromTokens(\.colorMediumEmphasis))
-//                return image?.tintedWithColor(UIColor(red: 0.47, green: 0.47, blue: 0.47, alpha: 1.00)) // #77777
             default:
                 let image = AssetsPath.iconOutlinedActionRating.rawValue
                 return image?.tintedWithColor(getUIColorFromTokens(\.colorMediumEmphasis))
-//                return image?.tintedWithColor(UIColor(red: 0.47, green: 0.47, blue: 0.47, alpha: 1.00)) // #77777
             }
         }
 
-        var filledStarImage: UIImage? {
+        func filledStarImage(for state: State) -> UIImage? {
             let image = AssetsPath.iconFilledActionRating.rawValue
-            return image?.tintedWithColor(UIColor(red: 0.97, green: 0.71, blue: 0.27, alpha: 1.00)) // #F8B546
+            if self == .input, state == .disabled {
+                return image?.tintedWithColor(getUIColorFromTokens(\.colorMediumEmphasis))
+            }
+            return image?.tintedWithColor(UIColor(red: 0.97, green: 0.71, blue: 0.27, alpha: 1.00))
         }
 
         var font: UIFont {

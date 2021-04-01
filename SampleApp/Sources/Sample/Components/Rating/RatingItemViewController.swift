@@ -51,6 +51,8 @@ class RatingItemViewController: UIViewController, SampleItem {
 
     let inputRating: NatRating = {
         let rating = NatRating(style: .input)
+        rating.configure(rate: 3)
+        rating.configure(state: .disabled)
         return rating
     }()
 
@@ -61,6 +63,7 @@ class RatingItemViewController: UIViewController, SampleItem {
 
     let readOnlyRating: NatRating = {
         let rating = NatRating(style: .readOnly)
+        rating.configure(rate: 2)
         return rating
     }()
 

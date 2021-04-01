@@ -5,14 +5,23 @@ DOCS
 public final class NatRating: UIView {
 
     private var style: Style
+    private var state: State = .enabled {
+        didSet {
+            updateStarViewsState()
+            isUserInteractionEnabled = state.isInteractionEnabled
+        }
+    }
     private var size: Size
     private var alignment: Alignment
-    private var starViewsArray: [IconView] = []
-
     private var ratingValue: Int = 0 {
         didSet {
-            // TODO: update stars
+            updateStarViewsState()
         }
+    }
+    
+    private var starViewsArray: [IconView] = []
+    private var touchedStar: IconView {
+        return starViewsArray[ratingValue-1]
     }
 
     private var stackView: UIStackView = {
@@ -65,21 +74,22 @@ public final class NatRating: UIView {
         }
     }
 
+    public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        removePulseLayer(layer: touchedStar.layer)
+    }
+
     private func handleTouchAtLocation(withTouches touches: Set<UITouch>) {
         let touchLocation = touches.first
         let location = touchLocation?.location(in: stackView)
-        var intRating: Int = 0
 
-        starViewsArray.forEach { (iconView) in
+        starViewsArray.enumerated().forEach { (index, iconView) in
             if (location?.x)! > iconView.frame.origin.x {
-                let index = starViewsArray.firstIndex(of: iconView)
-                intRating = index! + 1
-                ratingValue = Int(intRating)
-                iconView.defaultImageView.image = style.filledStarImage
-            } else {
-                iconView.defaultImageView.image = style.emptyStarImage
+                ratingValue = index + 1
             }
         }
+        addPulseLayerAnimated(at: touchedStar.centerBounds,
+                              in: touchedStar.layer,
+                              removeAfterAnimation: true)
     }
 
     // MARK: - Public methods
@@ -90,6 +100,10 @@ public final class NatRating: UIView {
 
     public func configure(rate: Int) {
         ratingValue = rate
+    }
+
+    public func configure(state: State) {
+        self.state = state
     }
 
     public func getValue() -> Int {
@@ -111,6 +125,8 @@ public final class NatRating: UIView {
 
     private func createStarIconView(with image: UIImage?) -> IconView {
         let iconView = IconView(fontSize: size.value)
+        iconView.layer.cornerRadius = NatBorderRadius.circle(viewHeight: size.value)
+        iconView.clipsToBounds = true
         iconView.translatesAutoresizingMaskIntoConstraints = false
         iconView.heightAnchor.constraint(equalToConstant: size.value).isActive = true
         iconView.widthAnchor.constraint(equalToConstant: size.value).isActive = true
@@ -122,7 +138,7 @@ public final class NatRating: UIView {
 
     private func createStarViews() {
         if style == .counter {
-            let iconView = createStarIconView(with: style.filledStarImage)
+            let iconView = createStarIconView(with: style.filledStarImage(for: state))
             stackView.spacing = getTokenFromTheme(\.spacingMicro)
             if alignment == .left {
                 stackView.addArrangedSubview(iconView)
@@ -157,4 +173,18 @@ public final class NatRating: UIView {
             stackView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         }
     }
+    
+    private func updateStarViewsState() {
+        starViewsArray.enumerated().forEach { (index, iconView) in
+            if index < ratingValue {
+                iconView.defaultImageView.image = style.filledStarImage(for: state)
+            } else {
+                iconView.defaultImageView.image = style.emptyStarImage
+            }
+        }
+    }
 }
+
+// MARK: - Extensions 
+
+extension NatRating: Pulsable {}
