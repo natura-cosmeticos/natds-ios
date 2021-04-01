@@ -4,6 +4,9 @@ extension NatBadge {
 
      These are the allowed colors for a NatBadge:
      - Alert
+     - Primary
+     - Secondary
+     - Success
 
      - Requires:
      It's necessary to configure the Design System with a theme or fatalError will be raised.

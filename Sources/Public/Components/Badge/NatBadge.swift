@@ -4,7 +4,7 @@
  The badge colors change according to the current brand configured in the Design System.
  They also change according to the user's properties of Light and Dark mode.
 
- This component has 2 styles:
+ This component has 3 styles:
  - Standard
  - Dot
  - Pulse
