@@ -1,31 +1,47 @@
-/**
- NatBadge is a class that represents a component from the Design System.
-
- The badge colors change according to the current brand configured in the Design System.
- They also change according to the user's properties of Light and Dark mode.
-
- This component has 3 styles:
- - Standard
- - Dot
- - Pulse
-
- And colors:
- - Alert
- - Primary
- - Secondary
- - Success
-
- Example of usage:
- 
- let badge = NatBadge(style: .standard, color: .alert)
-
- - Requires:
- It's necessary to configure the Design System with a theme or fatalError will be raised.
- 
- DesignSystem().configure(with: AvailableTheme)
- */
-
 public final class NatBadge: UIView {
+    /**
+     NatBadge is a class that represents a component from the Design System.
+
+     The badge colors change according to the current brand configured in the Design System.
+     They also change according to the user's properties of Light and Dark mode.
+
+     This component has 3 styles:
+     - Standard
+     - Dot
+     - Pulse
+
+     And colors:
+     - Alert
+     - Primary
+     - Secondary
+     - Success
+
+     This component is available in the following variants:
+     - ✅ Standard
+     - ✅ Dot
+     - ✅ Pulse
+     With the following attributes:
+     - Color:
+        - ✅ `Alert`
+        - ✅ `Primary`
+        - ✅ `Secondary`
+        - ✅ `Success`
+     - Limit:
+        - ✅ `max9`
+        - ✅ `max99`
+        - ✅ `unlimited`
+
+     Example of usage:
+
+     let badge = NatBadge(style: .standard, color: .alert)
+     badge.configure(limit: .unlimited)
+
+     - Requires:
+     It's necessary to configure the Design System with a theme or fatalError will be raised.
+
+     DesignSystem().configure(with: AvailableTheme)
+     */
+
 
     // MARK: - Private properties
 
@@ -35,6 +51,7 @@ public final class NatBadge: UIView {
 
     private let style: Style
     private let color: Color
+    private var badgeCount = 0
 
     private lazy var label: UILabel = {
         let label = UILabel()
@@ -131,17 +148,26 @@ public final class NatBadge: UIView {
 
     internal func configure(count: Int) {
         var text: String?
-        if case .standard = style {
-            switch count {
-            case ...0:
-                break
-            case 1...99:
-                text = "\(count)"
-            default:
+
+        badgeCount = count
+        text = "\(count)"
+        label.text = text
+        isHidden = text == nil
+    }
+
+    internal func configure(limit: Limit) {
+        var text: String?
+
+        if badgeCount != 0 {
+            switch limit {
+            case .max9:
+                text = "9+"
+            case .max99:
                 text = "99+"
+            case .unlimited:
+                text = "\(badgeCount)"
             }
         }
-
         label.text = text
         isHidden = text == nil
     }

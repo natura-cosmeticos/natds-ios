@@ -29,7 +29,31 @@ class BadgeableSnapshotTests: XCTestCase {
         systemUnderTest.configure(badgeStyle: .standard, withColor: .alert)
         systemUnderTest.setBadge(count: 100)
 
-        assertSnapshot(matching: superview, as: .image(precision: 0.97))
+        assertSnapshot(matching: superview, as: .image(precision: 0.99))
+    }
+
+    func test_badge_style_standard_alert_limit_max9_hasValidSnapshot() {
+        systemUnderTest.configure(badgeStyle: .standard, withColor: .alert)
+        systemUnderTest.setBadge(count: 100)
+        systemUnderTest.configure(limit: .max9)
+
+        assertSnapshot(matching: superview, as: .image(precision: 0.99))
+    }
+
+    func test_badge_style_standard_alert_limit_max99_hasValidSnapshot() {
+        systemUnderTest.configure(badgeStyle: .standard, withColor: .alert)
+        systemUnderTest.setBadge(count: 100)
+        systemUnderTest.configure(limit: .max99)
+
+        assertSnapshot(matching: superview, as: .image(precision: 0.99))
+    }
+
+    func test_badge_style_standard_alert_limit_unlimited_hasValidSnapshot() {
+        systemUnderTest.configure(badgeStyle: .standard, withColor: .alert)
+        systemUnderTest.setBadge(count: 100)
+        systemUnderTest.configure(limit: .unlimited)
+
+        assertSnapshot(matching: superview, as: .image(precision: 0.99))
     }
 
     func test_badge_style_standard_alert_count_1_hasValidSnapshot() {

@@ -14,7 +14,7 @@ extension Badgeable {
 
         let constraints = [
             badge.trailingAnchor.constraint(equalTo: trailingAnchor),
-            badge.topAnchor.constraint(equalTo: topAnchor, constant: 0.1),
+            badge.topAnchor.constraint(equalTo: topAnchor, constant: 0.1)
         ]
 
         NSLayoutConstraint.activate(constraints)
@@ -30,5 +30,9 @@ extension Badgeable {
 
     public func removeBadge() {
        badge?.removeFromSuperview()
+    }
+
+    public func configure(limit: NatBadge.Limit) {
+        badge?.configure(limit: limit)
     }
 }

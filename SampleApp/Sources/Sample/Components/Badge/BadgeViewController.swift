@@ -19,28 +19,31 @@ class BadgeViewController: UIViewController, SampleItem {
     private lazy var badgeableViewOneChartStandard: BadgeableView = {
         let view = BadgeableView(frame: .init(x: 0, y: 0, width: 24, height: 24))
         view.configure(badgeStyle: .standard, withColor: .primary)
-        view.setBadge(count: 9)
+        view.setBadge(count: 100)
+        view.configure(limit: .max9)
         return view
     }()
 
     private lazy var badgeableViewTwoCharStandard: BadgeableView = {
         let view = BadgeableView(frame: .init(x: 0, y: 0, width: 24, height: 24))
         view.configure(badgeStyle: .standard, withColor: .secondary)
-        view.setBadge(count: 99)
+        view.setBadge(count: 100)
+        view.configure(limit: .max99)
         return view
     }()
 
     private lazy var badgeableViewThreeCharStandard: BadgeableView = {
         let view = BadgeableView(frame: .init(x: 0, y: 0, width: 24, height: 24))
         view.configure(badgeStyle: .standard, withColor: .success)
-        view.setBadge(count: 999)
+        view.setBadge(count: 1000)
+        view.configure(limit: .unlimited)
         return view
     }()
 
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
-        stackView.spacing = NatSpacing.large
+        stackView.spacing = NatSpacing.xLarge
         stackView.distribution = .fillProportionally
         stackView.alignment = .top
         stackView.translatesAutoresizingMaskIntoConstraints = false
