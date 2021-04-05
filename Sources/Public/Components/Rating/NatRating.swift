@@ -1,5 +1,65 @@
 /**
-DOCS
+ - NOTE:
+ This component is available in the following variants:
+ - ✅ Counter
+ - ✅ Input
+ - ✅ Read-only
+
+ With the following attribute status:
+ - Hint ✅
+ - Size:
+    - ✅ `Small`
+    - ✅ `Standard`
+    - ✅ `Semi`
+    - ✅ `SemiX`
+    - ✅ `Medium`
+ - Alignment:
+    - ✅ `Right`
+    - ✅ `Left`
+ - ✅ Disabled
+ - ✅ Rate
+ - Interaction state:
+    - ✅ `Enabled`
+    - ✅ `Press`
+ 
+ NatRating is a class that represent the rating component from the design system.
+ The colors are default and doesn't change according to the current theme configured.
+ 
+ The component has three different variants, represented by the enum Style:
+ - Input
+ - Counter
+ - Read-only
+ 
+ > Note: the style should be set at `init()`.
+ 
+ There are five different sizes for the rating stars:
+ - Small
+ - Standard
+ - Semi
+ - SemiX (default)
+ - Medium
+
+ > Note: the size can only be changed at `init()`.
+ The sizes `small` and `standard` should only be used with `counter` and `readOnly` variants.
+ 
+ > Note: For the variant `Counter`, the alignment can be `right` or `left` (default).
+ The aligment should be set at `init()`.
+ 
+ Example of usage:
+        
+        let rating = NatRating(style: .input, size: .medium)
+        rating.configure(text: "Placeholder")
+
+        let rating = NatRating(style: .counter, alignment: .right)
+        rating.configure(text: "Placeholder")
+ 
+        let rating = NatRating(style: .readOnly)
+        rating.configure(rate: 3)
+
+ - Requires:
+    It's necessary to configure the Design System with a theme or fatalError will be raised.
+
+            DesignSystem().configure(with: AvailableTheme)
  */
 
 public final class NatRating: UIView {
@@ -91,20 +151,35 @@ public final class NatRating: UIView {
 
     // MARK: - Public methods
 
+    /// Sets the text for the hint label (if style is input) or description label (if style is counter).
+    /// Note: for counter ratings, if the text isn't set, the component will only display a single colored star.
+    ///
+    /// - Parameter text: a String with the text to be displayed
     public func configure(text: String) {
         hintLabel.text = text
     }
 
+    /// Sets the rate value to be shown as colored stars in the component.
+    /// Useful for disabled inputs and readOnly variants.
+    ///
+    /// - Parameter rate: an Int with range from 0 to 5
     public func configure(rate: Int) {
         if style != .counter {
             ratingValue = rate
         }
     }
 
+    /// Sets the state for the component.
+    /// If it's disabled, the visual style for input variant will be changed.
+    ///
+    /// - Parameter state: an option from `State` enum
     public func configure(state: State) {
         self.state = state
     }
 
+    /// A function to get the input value from the used
+    ///
+    /// - Returns: an Int representing the selected value; range from 1 to 5
     public func getValue() -> Int {
         return ratingValue
     }
@@ -183,7 +258,7 @@ public final class NatRating: UIView {
             }
         }
     }
-    
+
     private func handleInteractionState() {
         if style == .input {
             isUserInteractionEnabled = state.isInteractionEnabled

@@ -1,4 +1,13 @@
 extension NatRating {
+    /**
+     Style represents variants for NatRating, which apply different structures for the component.
+     
+     These are all styles allowed for a NatIconButton:
+     - input (has 5 stars and expects an input from the user; can have a hint text label)
+     - counter (has 1 star and shows a label with the description for the component)
+     - readOnly (has 5 stars and can show a value, only for reading purposes)
+     */
+
     public enum Style {
         case input
         case counter

@@ -1,20 +1,17 @@
 extension NatRating {
+    /**
+     Alignment represents alignment options for NatRating component (`counter`).
+     
+     These are all alignments allowed for a NatRating:
+     - right (default)
+     - left
+     
+     > Note: alignment configuration apply only to `counter` style NatRatings.
+     This attribute must be set at `init()`.
+     */
+
     public enum Alignment {
         case left
         case right
-    }
-}
-
-extension NatRating {
-    public enum State {
-        case enabled
-        case disabled
-
-        var isInteractionEnabled: Bool {
-            switch self {
-            case .enabled: return true
-            case .disabled: return false
-            }
-        }
     }
 }

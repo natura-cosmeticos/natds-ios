@@ -1,4 +1,17 @@
 extension NatRating {
+    /**
+     Size represents size values for NatRating component.
+     
+     These are all sizes allowed for a NatRating:
+     - small
+     - standard
+     - semi (default)
+     - semiX
+     - medium
+     
+     > Note: the `small` and `standard` sizes should only be applied to `counter` and `readOnly` styles.
+     */
+
     public enum Size {
         case small
         case standard
