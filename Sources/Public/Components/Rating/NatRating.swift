@@ -5,12 +5,14 @@ DOCS
 public final class NatRating: UIView {
 
     private var style: Style
+
     private var state: State = .enabled {
         didSet {
             updateStarViewsState()
-            isUserInteractionEnabled = state.isInteractionEnabled
+            handleInteractionState()
         }
     }
+
     private var size: Size
     private var alignment: Alignment
     private var ratingValue: Int = 0 {
@@ -18,7 +20,7 @@ public final class NatRating: UIView {
             updateStarViewsState()
         }
     }
-    
+
     private var starViewsArray: [IconView] = []
     private var touchedStar: IconView {
         return starViewsArray[ratingValue-1]
@@ -94,7 +96,9 @@ public final class NatRating: UIView {
     }
 
     public func configure(rate: Int) {
-        ratingValue = rate
+        if style != .counter {
+            ratingValue = rate
+        }
     }
 
     public func configure(state: State) {
@@ -116,6 +120,7 @@ public final class NatRating: UIView {
 
         createStarViews()
         addConstraints()
+        handleInteractionState()
     }
 
     private func createStarIconView(with image: UIImage?) -> IconView {
@@ -168,7 +173,7 @@ public final class NatRating: UIView {
             stackView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         }
     }
-    
+
     private func updateStarViewsState() {
         starViewsArray.enumerated().forEach { (index, iconView) in
             if index < ratingValue {
@@ -176,6 +181,14 @@ public final class NatRating: UIView {
             } else {
                 iconView.defaultImageView.image = style.emptyStarImage
             }
+        }
+    }
+    
+    private func handleInteractionState() {
+        if style == .input {
+            isUserInteractionEnabled = state.isInteractionEnabled
+        } else {
+            isUserInteractionEnabled = false
         }
     }
 }

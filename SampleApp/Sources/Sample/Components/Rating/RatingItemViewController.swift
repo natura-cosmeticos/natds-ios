@@ -49,7 +49,7 @@ class RatingItemViewController: UIViewController, SampleItem {
         return rating
     }()
 
-    let inputRating: NatRating = {
+    let inputRatingDisabled: NatRating = {
         let rating = NatRating(style: .input)
         rating.configure(rate: 3)
         rating.configure(state: .disabled)
@@ -126,7 +126,7 @@ class RatingItemViewController: UIViewController, SampleItem {
         stackView.addArrangedSubview(createViewWithDescription("Input with hint size Medium",
                                                                rating: inputRatingWithHintMedium))
         stackView.addArrangedSubview(createViewWithDescription("Input disabled",
-                                                               rating: inputRating))
+                                                               rating: inputRatingDisabled))
         stackView.addArrangedSubview(createViewWithDescription("Read only default",
                                                                rating: readOnlyRating))
         stackView.addArrangedSubview(createViewWithDescription("Counter left (default)",

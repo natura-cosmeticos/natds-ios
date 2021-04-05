@@ -213,6 +213,9 @@
 		7D75A43925DB00130050ACA9 /* NatAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D75A43825DB00130050ACA9 /* NatAvatar.swift */; };
 		7D75A44125DB00230050ACA9 /* NatAvatar+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D75A44025DB00230050ACA9 /* NatAvatar+Size.swift */; };
 		7D8F3E6A258A81C1003A7DEB /* ShortcutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F3E69258A81C1003A7DEB /* ShortcutView.swift */; };
+		7D903892261B4ED6005A3D0A /* NatRating+Input+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D903891261B4ED6005A3D0A /* NatRating+Input+Spec.swift */; };
+		7D90389F261B62A5005A3D0A /* NatRating+ReadOnly+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D90389E261B62A5005A3D0A /* NatRating+ReadOnly+Spec.swift */; };
+		7D9038AF261B6707005A3D0A /* NatRating+Counter+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9038AE261B6707005A3D0A /* NatRating+Counter+Spec.swift */; };
 		7D98388325F6450A00A99628 /* TextField+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D98388225F6450A00A99628 /* TextField+Spec.swift */; };
 		7D98388825F6A15400A99628 /* TextField+Sizes+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D98388725F6A15400A99628 /* TextField+Sizes+Spec.swift */; };
 		7D98388D25F6A26900A99628 /* TextField+InteractionStates+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D98388C25F6A26900A99628 /* TextField+InteractionStates+Spec.swift */; };
@@ -224,12 +227,6 @@
 		7DAF750E25E5AF830094F865 /* String+Initials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAF750D25E5AF830094F865 /* String+Initials.swift */; };
 		7DC81CB126121EAC006BE689 /* NatRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC81CB026121EAC006BE689 /* NatRating.swift */; };
 		7DC81CB6261223CC006BE689 /* UIImage+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC81CB5261223CC006BE689 /* UIImage+UIColor.swift */; };
-		7DE2B10725FBD57300C5CBC0 /* NatListItem+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2B10625FBD57300C5CBC0 /* NatListItem+Spec.swift */; };
-		7DE2B11625FBFBAB00C5CBC0 /* NatListItemCell+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2B11525FBFBAB00C5CBC0 /* NatListItemCell+Snapshot+Tests.swift */; };
-		7DE2B12C26000BA600C5CBC0 /* UIImageView+Clickable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2B12B26000BA600C5CBC0 /* UIImageView+Clickable.swift */; };
-		7D9EEB8B25E6A3D300CEF6BC /* NatAvatar+Sizes+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9EEB8A25E6A3D300CEF6BC /* NatAvatar+Sizes+Spec.swift */; };
-		7DAF750925E4342E0094F865 /* NatAvatar+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAF750825E4342E0094F865 /* NatAvatar+Spec.swift */; };
-		7DAF750E25E5AF830094F865 /* String+Initials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAF750D25E5AF830094F865 /* String+Initials.swift */; };
 		7DE2B10725FBD57300C5CBC0 /* NatListItem+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2B10625FBD57300C5CBC0 /* NatListItem+Spec.swift */; };
 		7DE2B11625FBFBAB00C5CBC0 /* NatListItemCell+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2B11525FBFBAB00C5CBC0 /* NatListItemCell+Snapshot+Tests.swift */; };
 		7DE2B12C26000BA600C5CBC0 /* UIImageView+Clickable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2B12B26000BA600C5CBC0 /* UIImageView+Clickable.swift */; };
@@ -618,6 +615,9 @@
 		7D75A44025DB00230050ACA9 /* NatAvatar+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatAvatar+Size.swift"; sourceTree = "<group>"; };
 		7D8E6D9764598D210D58B32B2AEB0FE9 /* DesignSystemFatalError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemFatalError.swift; sourceTree = "<group>"; };
 		7D8F3E69258A81C1003A7DEB /* ShortcutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutView.swift; sourceTree = "<group>"; };
+		7D903891261B4ED6005A3D0A /* NatRating+Input+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatRating+Input+Spec.swift"; sourceTree = "<group>"; };
+		7D90389E261B62A5005A3D0A /* NatRating+ReadOnly+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatRating+ReadOnly+Spec.swift"; sourceTree = "<group>"; };
+		7D9038AE261B6707005A3D0A /* NatRating+Counter+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatRating+Counter+Spec.swift"; sourceTree = "<group>"; };
 		7D98388225F6450A00A99628 /* TextField+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Spec.swift"; sourceTree = "<group>"; };
 		7D98388725F6A15400A99628 /* TextField+Sizes+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Sizes+Spec.swift"; sourceTree = "<group>"; };
 		7D98388C25F6A26900A99628 /* TextField+InteractionStates+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+InteractionStates+Spec.swift"; sourceTree = "<group>"; };
@@ -629,12 +629,6 @@
 		7DAF750D25E5AF830094F865 /* String+Initials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Initials.swift"; sourceTree = "<group>"; };
 		7DC81CB026121EAC006BE689 /* NatRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatRating.swift; sourceTree = "<group>"; };
 		7DC81CB5261223CC006BE689 /* UIImage+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+UIColor.swift"; sourceTree = "<group>"; };
-		7DE2B10625FBD57300C5CBC0 /* NatListItem+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatListItem+Spec.swift"; sourceTree = "<group>"; };
-		7DE2B11525FBFBAB00C5CBC0 /* NatListItemCell+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatListItemCell+Snapshot+Tests.swift"; sourceTree = "<group>"; };
-		7DE2B12B26000BA600C5CBC0 /* UIImageView+Clickable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Clickable.swift"; sourceTree = "<group>"; };
-		7D9EEB8A25E6A3D300CEF6BC /* NatAvatar+Sizes+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatAvatar+Sizes+Spec.swift"; sourceTree = "<group>"; };
-		7DAF750825E4342E0094F865 /* NatAvatar+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatAvatar+Spec.swift"; sourceTree = "<group>"; };
-		7DAF750D25E5AF830094F865 /* String+Initials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Initials.swift"; sourceTree = "<group>"; };
 		7DE2B10625FBD57300C5CBC0 /* NatListItem+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatListItem+Spec.swift"; sourceTree = "<group>"; };
 		7DE2B11525FBFBAB00C5CBC0 /* NatListItemCell+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatListItemCell+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		7DE2B12B26000BA600C5CBC0 /* UIImageView+Clickable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Clickable.swift"; sourceTree = "<group>"; };
@@ -1674,6 +1668,16 @@
 			path = Avatar;
 			sourceTree = "<group>";
 		};
+		7D903890261B4EB6005A3D0A /* Rating */ = {
+			isa = PBXGroup;
+			children = (
+				7D903891261B4ED6005A3D0A /* NatRating+Input+Spec.swift */,
+				7D90389E261B62A5005A3D0A /* NatRating+ReadOnly+Spec.swift */,
+				7D9038AE261B6707005A3D0A /* NatRating+Counter+Spec.swift */,
+			);
+			path = Rating;
+			sourceTree = "<group>";
+		};
 		7D9838BB25F8F5CD00A99628 /* ListItem */ = {
 			isa = PBXGroup;
 			children = (
@@ -2306,6 +2310,7 @@
 				7BEFD3D9F02DCD62D7A24864218DC0D8 /* NavigationDrawer */,
 				790D3F84256417E2007A9CA1 /* ProgressIndicator */,
 				798CD2D32603822500F49768 /* RadioButton */,
+				7D903890261B4EB6005A3D0A /* Rating */,
 				BE272C2F259B67C300060AF8 /* SelectionControl */,
 				84BF066F24B511F600462AC5 /* Shortcut */,
 				28B8CBEE15559C8DBD459A3FC53141DB /* Tab */,
@@ -2970,6 +2975,7 @@
 				79E7FACD25388C3A00A831BC /* AvonDarkTokens+Color+Spec.swift in Sources */,
 				847C82A024E577AF001CE116 /* AvonLightTheme+Spec.swift in Sources */,
 				797E612625531C20002A59E0 /* AvonLightComponents+Logo+Spec.swift in Sources */,
+				7D9038AF261B6707005A3D0A /* NatRating+Counter+Spec.swift in Sources */,
 				84BB928E24DC760600A9BCC8 /* TabItemViewDelegateMock.swift in Sources */,
 				79E7FA592537456500A831BC /* AesopLightTokens+Size+Spec.swift in Sources */,
 				79FC598125C845E4001CCB56 /* Divider+Styles+Spec.swift in Sources */,
@@ -3056,6 +3062,7 @@
 				6E6C6EC0105FF251940E4C011D611149 /* String+IconTests.swift in Sources */,
 				79E7FBB22538ED8900A831BC /* TheBodyShopLightTokens+Size+Spec.swift in Sources */,
 				84B9330C24ABC5FD00B71BD4 /* NatDialogBodyConfigurable+Spec.swift in Sources */,
+				7D90389F261B62A5005A3D0A /* NatRating+ReadOnly+Spec.swift in Sources */,
 				79E7FA1525373ADE00A831BC /* AesopDarkTokens+BorderRadius+Spec.swift in Sources */,
 				79E7FB442538D01100A831BC /* NaturaLightTokens+Opacity+Spec.swift in Sources */,
 				ECF18B7FA2F5A22C0F919BBBE58FF611 /* TabDelegateMock.swift in Sources */,
@@ -3070,6 +3077,7 @@
 				79E7FBAD2538ED5D00A831BC /* TheBodyShopDarkTokens+Size+Spec.swift in Sources */,
 				79E7FB302538CE8C00A831BC /* NaturaLightTokens+Color+Spec.swift in Sources */,
 				D23F82EE5C3333FD06E87016848DCD37 /* TabItemViewTests.swift in Sources */,
+				7D903892261B4ED6005A3D0A /* NatRating+Input+Spec.swift in Sources */,
 				5C5DF89CCAB72EC25E1A1BC43D450CB0 /* TabTests.swift in Sources */,
 				CB6F95EF082D5B6EF08A8BC9B7A01427 /* TextFieldDelegateMock.swift in Sources */,
 				797E614A25531D2D002A59E0 /* TheBodyShopLightComponents+Logo+Spec.swift in Sources */,
