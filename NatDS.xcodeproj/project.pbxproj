@@ -216,6 +216,9 @@
 		7D903892261B4ED6005A3D0A /* NatRating+Input+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D903891261B4ED6005A3D0A /* NatRating+Input+Spec.swift */; };
 		7D90389F261B62A5005A3D0A /* NatRating+ReadOnly+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D90389E261B62A5005A3D0A /* NatRating+ReadOnly+Spec.swift */; };
 		7D9038AF261B6707005A3D0A /* NatRating+Counter+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9038AE261B6707005A3D0A /* NatRating+Counter+Spec.swift */; };
+		7D9038B5261B8062005A3D0A /* NatRating+Input+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9038B4261B8062005A3D0A /* NatRating+Input+Snapshot+Tests.swift */; };
+		7D9038BD261B9402005A3D0A /* NatRating+Counter+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9038BC261B9402005A3D0A /* NatRating+Counter+Snapshot+Tests.swift */; };
+		7D9038C2261B951D005A3D0A /* NatRating+ReadOnly+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9038C1261B951D005A3D0A /* NatRating+ReadOnly+Snapshot+Tests.swift */; };
 		7D98388325F6450A00A99628 /* TextField+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D98388225F6450A00A99628 /* TextField+Spec.swift */; };
 		7D98388825F6A15400A99628 /* TextField+Sizes+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D98388725F6A15400A99628 /* TextField+Sizes+Spec.swift */; };
 		7D98388D25F6A26900A99628 /* TextField+InteractionStates+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D98388C25F6A26900A99628 /* TextField+InteractionStates+Spec.swift */; };
@@ -618,6 +621,9 @@
 		7D903891261B4ED6005A3D0A /* NatRating+Input+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatRating+Input+Spec.swift"; sourceTree = "<group>"; };
 		7D90389E261B62A5005A3D0A /* NatRating+ReadOnly+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatRating+ReadOnly+Spec.swift"; sourceTree = "<group>"; };
 		7D9038AE261B6707005A3D0A /* NatRating+Counter+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatRating+Counter+Spec.swift"; sourceTree = "<group>"; };
+		7D9038B4261B8062005A3D0A /* NatRating+Input+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatRating+Input+Snapshot+Tests.swift"; sourceTree = "<group>"; };
+		7D9038BC261B9402005A3D0A /* NatRating+Counter+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatRating+Counter+Snapshot+Tests.swift"; sourceTree = "<group>"; };
+		7D9038C1261B951D005A3D0A /* NatRating+ReadOnly+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatRating+ReadOnly+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		7D98388225F6450A00A99628 /* TextField+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Spec.swift"; sourceTree = "<group>"; };
 		7D98388725F6A15400A99628 /* TextField+Sizes+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Sizes+Spec.swift"; sourceTree = "<group>"; };
 		7D98388C25F6A26900A99628 /* TextField+InteractionStates+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+InteractionStates+Spec.swift"; sourceTree = "<group>"; };
@@ -1678,6 +1684,16 @@
 			path = Rating;
 			sourceTree = "<group>";
 		};
+		7D9038B3261B8000005A3D0A /* Rating */ = {
+			isa = PBXGroup;
+			children = (
+				7D9038B4261B8062005A3D0A /* NatRating+Input+Snapshot+Tests.swift */,
+				7D9038BC261B9402005A3D0A /* NatRating+Counter+Snapshot+Tests.swift */,
+				7D9038C1261B951D005A3D0A /* NatRating+ReadOnly+Snapshot+Tests.swift */,
+			);
+			path = Rating;
+			sourceTree = "<group>";
+		};
 		7D9838BB25F8F5CD00A99628 /* ListItem */ = {
 			isa = PBXGroup;
 			children = (
@@ -1813,6 +1829,7 @@
 				7DE2B11425FBFB5F00C5CBC0 /* ListItem */,
 				84A16EFD24DDBC3200E80DA0 /* NavigationDrawer */,
 				799B683725671F0C0055B96D /* ProgressIndicator */,
+				7D9038B3261B8000005A3D0A /* Rating */,
 				79FC596125C1AAAA001CCB56 /* SelectionControl */,
 				84391DEB24DB4784009D0BE8 /* Shortcut */,
 				84BB928924DC734800A9BCC8 /* Tab */,
@@ -3292,6 +3309,7 @@
 				84A16F0524DDC30100E80DA0 /* NavigationDrawerDelegateMock.swift in Sources */,
 				84BB92A224DCB73100A9BCC8 /* IconView+Snapshot+Tests.swift in Sources */,
 				84BB928D24DC75D100A9BCC8 /* TabItemViewDelegateMock.swift in Sources */,
+				7D9038BD261B9402005A3D0A /* NatRating+Counter+Snapshot+Tests.swift in Sources */,
 				79EA0C66260E6F3D00742C0A /* NatCounter+Snapshot+Tests.swift in Sources */,
 				84703F3724F54AA600FE01CA /* NotificationCenterSpy.swift in Sources */,
 				79ACDAB62555D9B500660E68 /* NatButton+SnapShot+Tests.swift in Sources */,
@@ -3302,6 +3320,7 @@
 				79B6AC8525AE1E520027F7D6 /* NatBadge+Dot+Snapshot+Tests.swift in Sources */,
 				84BB929724DC8FA300A9BCC8 /* ExpansionPanelBuilder.swift in Sources */,
 				8401A9C024FED41E00B6E762 /* NatIconButton+Snapshot+Tests.swift in Sources */,
+				7D9038B5261B8062005A3D0A /* NatRating+Input+Snapshot+Tests.swift in Sources */,
 				79FC59A725CB2B53001CCB56 /* NatCard+Snapshot+Tests.swift in Sources */,
 				84BB929324DC7B9800A9BCC8 /* SearchBar+Snapshot+Tests.swift in Sources */,
 				84BB929E24DCA6C500A9BCC8 /* TextField+Snapshot+Tests.swift in Sources */,
@@ -3313,6 +3332,7 @@
 				79D4C90625F6C7FC0027E74E /* Checkbox+Snapshot+Tests.swift in Sources */,
 				84391DED24DB5C1F009D0BE8 /* AppBar+Snapshot+Tests.swift in Sources */,
 				84BB929524DC82EC00A9BCC8 /* Divider+Snapshot+Tests.swift in Sources */,
+				7D9038C2261B951D005A3D0A /* NatRating+ReadOnly+Snapshot+Tests.swift in Sources */,
 				84BB928624DC6B3500A9BCC8 /* BadgeableStub.swift in Sources */,
 				84A16F0124DDBE5500E80DA0 /* NavigationDrawerSubitemCell+Snapshot+Tests.swift in Sources */,
 				79FC59F225DD57E3001CCB56 /* Image+Snapshot+Tests.swift in Sources */,
