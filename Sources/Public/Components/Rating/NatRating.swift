@@ -146,6 +146,8 @@ public final class NatRating: UIView {
         }
         addPulseLayerAnimated(at: touchedStar.centerBounds,
                               in: touchedStar.layer,
+                              withColor: getUIColorFromTokens(\.colorHighEmphasis)
+                                .withAlphaComponent(getTokenFromTheme(\.opacityLow)),
                               removeAfterAnimation: true)
     }
 
