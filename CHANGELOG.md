@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.12.0](https://github.com/natura-cosmeticos/natds-ios/compare/3.11.0...3.12.0) (2021-04-07)
+
+
+### Features
+
+* 🎸 Adds colors ([9b3bb3d](https://github.com/natura-cosmeticos/natds-ios/commit/9b3bb3d79aecda39c2ee318814761c1b044eedb4))
+* 🎸 Adds pulse animation ([368b15b](https://github.com/natura-cosmeticos/natds-ios/commit/368b15b3366c3b09707a7f96b52b7bb2fc9ae06a))
+
+
+### Bug Fixes
+
+* fix logic for badges with limits ([78c4151](https://github.com/natura-cosmeticos/natds-ios/commit/78c4151b52bade011099e990f72625846f7a47f9))
+
 ## [3.11.0](https://github.com/natura-cosmeticos/natds-ios/compare/3.10.0...3.11.0) (2021-03-31)
 
 
