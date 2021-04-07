@@ -96,7 +96,9 @@ final class NatIconButtonSpec: QuickSpec {
         describe("#configure(badgeValue:)") {
             context("when value is bigger than 0") {
                 beforeEach {
-                    systemUnderTest.configure(badgeValue: 10)
+                    let badge = NatBadge(style: .standard, color: .alert)
+                    badge.configure(count: 10)
+                    systemUnderTest.configure(badge: badge)
                 }
 
                 it("adds sublayer for badge") {
@@ -106,7 +108,9 @@ final class NatIconButtonSpec: QuickSpec {
 
             context("when value is 0") {
                 beforeEach {
-                    systemUnderTest.configure(badgeValue: 0)
+                    let badge = NatBadge(style: .standard, color: .alert)
+                    badge.configure(count: 0)
+                    systemUnderTest.configure(badge: badge)
                 }
 
                 it("removes sublayer for badge if exists") {
@@ -115,9 +119,12 @@ final class NatIconButtonSpec: QuickSpec {
             }
 
             context("when value is bigger than 0 then a 0 value") {
-                beforeEach {
-                    systemUnderTest.configure(badgeValue: 10)
-                    systemUnderTest.configure(badgeValue: 0)
+                beforeEach {let badge = NatBadge(style: .standard, color: .alert)
+                    badge.configure(count: 10)
+                    badge.configure(count: 0)
+                    systemUnderTest.configure(badge: badge)
+//                    systemUnderTest.configure(badgeValue: 10)
+//                    systemUnderTest.configure(badgeValue: 0)
                 }
 
                 it("removes sublayer for badge") {

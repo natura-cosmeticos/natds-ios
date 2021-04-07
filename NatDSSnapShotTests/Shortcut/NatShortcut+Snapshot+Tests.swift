@@ -125,10 +125,12 @@ final class NatShortcutSnapshotTests: XCTestCase {
 }
 
 extension NatShortcutSnapshotTests {
-    private func createSystemUnderTest(style: NatShortcut.Style, text: String, badgeValue: UInt = 0) -> NatShortcut {
+    private func createSystemUnderTest(style: NatShortcut.Style, text: String, badgeValue: Int = 0) -> NatShortcut {
         let systemUnderTest = NatShortcut(style: style)
         systemUnderTest.configure(text: text)
-        systemUnderTest.configure(badgeValue: badgeValue)
+        let badge = NatBadge(style: .standard, color: .alert)
+        badge.configure(count: badgeValue)
+        systemUnderTest.configure(badge: badge)
         systemUnderTest.translatesAutoresizingMaskIntoConstraints = false
 
         return systemUnderTest
