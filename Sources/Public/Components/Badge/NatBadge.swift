@@ -1,33 +1,55 @@
 /**
+ This component is available in the following variants:
+    - ✅ Standard
+    - ✅ Dot
+    - ✅ Pulse
+ 
+ With the following attributes:
+    - Color:
+        - ✅ `Alert`
+        - ✅ `Primary`
+        - ✅ `Secondary`
+        - ✅ `Success`
+    - Limit:
+        - ✅ `max9`
+        - ✅ `max99`
+        - ✅ `unlimited`
+ 
  NatBadge is a class that represents a component from the Design System.
-
+ 
  The badge colors change according to the current brand configured in the Design System.
  They also change according to the user's properties of Light and Dark mode.
-
- This component has 2 styles:
- - Standard
- - Dot
-
- And 1 color:
- - Alert
-
+ 
+ NatBadge has three variants: `standard`, `dot` and `pulse`.
+ It can be configured with colors `alert`, `primary`, `secondary` and `success`.
+ 
  Example of usage:
  
         let badge = NatBadge(style: .standard, color: .alert)
-
+        badge.configure(limit: .unlimited)
+ 
  - Requires:
  It's necessary to configure the Design System with a theme or fatalError will be raised.
  
         DesignSystem().configure(with: AvailableTheme)
- */
+*/
 
 public final class NatBadge: UIView {
 
     // MARK: - Private properties
 
-    private let style: Style
+    internal var centerCircleLayer = CAShapeLayer()
+    internal var backgroundCircleLayer = CAShapeLayer()
+    internal var circleLayerContainer = CAShapeLayer()
 
+    private let style: Style
     private let color: Color
+    private var value = 0
+    private var limit: Limit = .unlimited {
+        didSet {
+            configure(count: value)
+        }
+    }
 
     private lazy var label: UILabel = {
         let label = UILabel()
@@ -62,6 +84,10 @@ public final class NatBadge: UIView {
         }
 
         if case .dot = style {
+            addDotConstraints()
+        }
+
+        if case .pulse = style {
             addDotConstraints()
         }
     }
@@ -99,29 +125,47 @@ public final class NatBadge: UIView {
         case .standard:
             path = UIBezierPath(roundedRect: CGRect(origin: .zero, size: bounds.size),
                                 cornerRadius: NatBorderRadius.circle(viewHeight: bounds.size.height))
+            color.box.set()
+            path?.fill()
+
         case .dot:
             path = UIBezierPath(roundedRect: CGRect(origin: .zero, size: bounds.size),
                                 cornerRadius: NatBorderRadius.circle(viewHeight: bounds.size.height))
-        }
+            color.box.set()
+            path?.fill()
 
-        color.box.set()
-        path?.fill()
+        case .pulse:
+
+            drawPulse()
+            scaleAnimation()
+            opacityAnimation()
+            centerCircleLayer.fillColor = color.box.cgColor
+            backgroundCircleLayer.fillColor = color.box.withAlphaComponent(getTokenFromTheme(\.opacityMedium)).cgColor
+        }
     }
 
     internal func configure(count: Int) {
-        var text: String?
-        if case .standard = style {
-            switch count {
-            case ...0:
-                break
-            case 1...99:
-                text = "\(count)"
-            default:
-                text = "99+"
-            }
+        value = count
+        isHidden = count <= 0
+
+        if count <= 0 {
+            label.text = nil
+            return
         }
 
-        label.text = text
-        isHidden = text == nil
+        guard let maxValue = limit.maxValue else {
+            label.text = "\(count)"
+            return
+        }
+
+        if count <= maxValue {
+            label.text = "\(count)"
+        } else {
+            label.text = limit.text
+        }
+    }
+
+    internal func configure(limit: Limit) {
+        self.limit = limit
     }
 }

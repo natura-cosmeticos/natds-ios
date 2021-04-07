@@ -41,6 +41,7 @@ final class NatBadgeStandardSpec: QuickSpec {
             context("when count is smaller or equal to zero") {
                 beforeEach {
                     systemUnderTest.configure(count: 0)
+                    systemUnderTest.configure(limit: .unlimited)
                 }
 
                 it("does not set count to label") {
@@ -63,16 +64,38 @@ final class NatBadgeStandardSpec: QuickSpec {
                 }
             }
 
-            context("when count is bigger than 99") {
+            context("when limit is max9") {
                 beforeEach {
                     systemUnderTest.configure(count: 100)
+                    systemUnderTest.configure(limit: .max9)
+                }
+
+                it("sets 9+ to label") {
+                    expect(label?.text).to(equal("9+"))
+                }
+            }
+
+            context("when limit is max99") {
+                beforeEach {
+                    systemUnderTest.configure(count: 100)
+                    systemUnderTest.configure(limit: .max99)
                 }
 
                 it("sets 99+ to label") {
                     expect(label?.text).to(equal("99+"))
                 }
             }
-        }
 
+            context("when limit is unlimited") {
+                beforeEach {
+                    systemUnderTest.configure(count: 100)
+                    systemUnderTest.configure(limit: .unlimited)
+                }
+
+                it("sets 100 to label") {
+                    expect(label?.text).to(equal("100"))
+                }
+            }
+        }
     }
 }
