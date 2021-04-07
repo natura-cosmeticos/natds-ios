@@ -75,7 +75,10 @@ class AppBarDetailViewController: UITableViewController {
             let notificationBarButtonItem = UIBarButtonItem(icon: getIcon(.outlinedAlertNotification),
                                                          action: #selector(notificationBarButtonItemHandler),
                                                          target: self)
-            notificationBarButtonItem.setBadgeValue(9)
+
+            let badge = NatBadge(style: .standard, color: .alert)
+            badge.configure(count: 9)
+            notificationBarButtonItem.configure(badge: badge)
 
             let barItems = [notificationBarButtonItem, calendarBarButtonItem]
             configure(buttons: barItems)

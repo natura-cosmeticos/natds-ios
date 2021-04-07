@@ -29,7 +29,7 @@ extension Badgeable {
     }
 
     public func removeBadge() {
-       badge?.removeFromSuperview()
+        badge?.removeFromSuperview()
     }
 
     public func configure(limit: NatBadge.Limit) {

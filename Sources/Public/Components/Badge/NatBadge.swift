@@ -51,6 +51,10 @@ public final class NatBadge: UIView {
         }
     }
 
+    internal var shouldAppear: Bool {
+        return (style != .standard || (style == .standard && value > 0))
+    }
+
     private lazy var label: UILabel = {
         let label = UILabel()
         label.font = NatFonts.font(ofSize: .caption, withWeight: .regular)
@@ -144,7 +148,7 @@ public final class NatBadge: UIView {
         }
     }
 
-    internal func configure(count: Int) {
+    public func configure(count: Int) {
         value = count
         isHidden = count <= 0
 
@@ -165,7 +169,7 @@ public final class NatBadge: UIView {
         }
     }
 
-    internal func configure(limit: Limit) {
+    public func configure(limit: Limit) {
         self.limit = limit
     }
 }

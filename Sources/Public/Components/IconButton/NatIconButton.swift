@@ -155,14 +155,39 @@ extension NatIconButton {
         self.action = action
     }
 
-    /// Sets a badge for the icon button
-    /// - Parameter badgeValue: A UInt indicating a value for the badge
+    @available(*, deprecated, message: "Use configure(badge:) instead")
     public func configure(badgeValue: UInt) {
         if badgeValue <= 0 {
             removeBadge()
         } else {
             configure(badgeStyle: .standard, withColor: .alert)
             setBadge(count: Int(badgeValue))
+        }
+    }
+
+    /// Configures a badge to the icon button.
+    /// - Parameter badge: A badge from the design system.
+    /// The badge must be created and configured before setting it to the icon button.
+    ///
+    /// Example:
+    ///         let badge = NatBadge(style: .standard, color: .primary)
+    ///         badge.configure(limit: .max99)
+    ///         badge.configure(count: 100)
+    ///         iconButton.configure(badge: badge)
+    public func configure(badge: NatBadge) {
+        if let badge = subviews.compactMap({ $0 as? NatBadge }).first {
+            badge.removeFromSuperview()
+        }
+        
+        if badge.shouldAppear {
+            addSubview(badge)
+
+            let constraints = [
+                badge.trailingAnchor.constraint(equalTo: trailingAnchor),
+                badge.topAnchor.constraint(equalTo: topAnchor, constant: 0.1)
+            ]
+
+            NSLayoutConstraint.activate(constraints)
         }
     }
 
