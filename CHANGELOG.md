@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.13.0](https://github.com/natura-cosmeticos/natds-ios/compare/3.12.0...3.13.0) (2021-04-08)
+
+
+### Features
+
+* add rating component ([36a5bc4](https://github.com/natura-cosmeticos/natds-ios/commit/36a5bc4caeb645917717e5cafbf43f50c6b79023))
+
+
+### Bug Fixes
+
+* fix ripple color on rating touch ([953534d](https://github.com/natura-cosmeticos/natds-ios/commit/953534d9d25b7969d4ed9eeda2b2abef9e39d339))
+
 ## [3.12.0](https://github.com/natura-cosmeticos/natds-ios/compare/3.11.0...3.12.0) (2021-04-07)
 
 
