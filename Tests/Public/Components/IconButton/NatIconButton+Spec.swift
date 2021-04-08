@@ -119,12 +119,11 @@ final class NatIconButtonSpec: QuickSpec {
             }
 
             context("when value is bigger than 0 then a 0 value") {
-                beforeEach {let badge = NatBadge(style: .standard, color: .alert)
+                beforeEach {
+                    let badge = NatBadge(style: .standard, color: .alert)
                     badge.configure(count: 10)
                     badge.configure(count: 0)
                     systemUnderTest.configure(badge: badge)
-//                    systemUnderTest.configure(badgeValue: 10)
-//                    systemUnderTest.configure(badgeValue: 0)
                 }
 
                 it("removes sublayer for badge") {
