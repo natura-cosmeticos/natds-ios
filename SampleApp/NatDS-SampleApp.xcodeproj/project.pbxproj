@@ -39,6 +39,7 @@
 		7D75A45A25DB0BA50050ACA9 /* AvatarItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D75A45925DB0BA50050ACA9 /* AvatarItemViewController.swift */; };
 		7D75A46825DD60E30050ACA9 /* UIImage+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D75A46725DD60E30050ACA9 /* UIImage+UIColor.swift */; };
 		7D9838C825F9127400A99628 /* ListItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9838C725F9127400A99628 /* ListItemViewController.swift */; };
+		7DC81CBC261227DA006BE689 /* RatingItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC81CBB261227DA006BE689 /* RatingItemViewController.swift */; };
 		8402F4E624F932E70018149C /* IconButtonItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402F4E524F932E70018149C /* IconButtonItemViewController.swift */; };
 		8409B9312507B9E2006ED4EA /* CustomSplashViewController+GradientBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409B9302507B9E2006ED4EA /* CustomSplashViewController+GradientBackgroundView.swift */; };
 		842EA8AB25082B60009AE473 /* ChooseBrandHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842EA8AA25082B60009AE473 /* ChooseBrandHeader.swift */; };
@@ -119,6 +120,7 @@
 		7D75A45925DB0BA50050ACA9 /* AvatarItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarItemViewController.swift; sourceTree = "<group>"; };
 		7D75A46725DD60E30050ACA9 /* UIImage+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIImage+UIColor.swift"; path = "../../../Sources/Core/Extensions/UIImage+UIColor.swift"; sourceTree = "<group>"; };
 		7D9838C725F9127400A99628 /* ListItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemViewController.swift; sourceTree = "<group>"; };
+		7DC81CBB261227DA006BE689 /* RatingItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingItemViewController.swift; sourceTree = "<group>"; };
 		8402F4E524F932E70018149C /* IconButtonItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButtonItemViewController.swift; sourceTree = "<group>"; };
 		8409B9302507B9E2006ED4EA /* CustomSplashViewController+GradientBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomSplashViewController+GradientBackgroundView.swift"; sourceTree = "<group>"; };
 		842EA8AA25082B60009AE473 /* ChooseBrandHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseBrandHeader.swift; sourceTree = "<group>"; };
@@ -347,6 +349,14 @@
 			path = ListItem;
 			sourceTree = "<group>";
 		};
+		7DC81CBA261227CA006BE689 /* Rating */ = {
+			isa = PBXGroup;
+			children = (
+				7DC81CBB261227DA006BE689 /* RatingItemViewController.swift */,
+			);
+			path = Rating;
+			sourceTree = "<group>";
+		};
 		8402F4E424F932570018149C /* IconButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -420,6 +430,7 @@
 				7D9838C625F9126000A99628 /* ListItem */,
 				FC4556C0DD691C829616B3DDA86F0CBA /* NavigationDrawer */,
 				79ACDAE3255C33F700660E68 /* ProgressIndicator */,
+				7DC81CBA261227CA006BE689 /* Rating */,
 				79D4C8F325F68DD50027E74E /* RadioButton */,
 				844A1E2424AE2B7600E93AD9 /* Shortcut */,
 				C420063DEF581D12DAA6D31645B6B382 /* Tab */,
@@ -785,6 +796,7 @@
 				B14E0B8A51D237CFBA1AD574ED6EC10C /* DividerViewController.swift in Sources */,
 				D10339C459C644B3172B6106B51A961C /* ElevationCell.swift in Sources */,
 				04AA815DDD6F9388F3A1010428342BBB /* ElevationViewController.swift in Sources */,
+				7DC81CBC261227DA006BE689 /* RatingItemViewController.swift in Sources */,
 				C3FB6A19DFD7AF84B435860A0C7F355D /* ExpansionPanelViewController.swift in Sources */,
 				9B13D285941681F8967FCC54F3945D5F /* IconCollectionViewCell.swift in Sources */,
 				84A9E9A9250F9CC8006B8A52 /* ThemeManager.swift in Sources */,

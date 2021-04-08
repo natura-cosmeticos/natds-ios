@@ -2,9 +2,11 @@ import UIKit
 
 enum AssetsPath {
     case iconOutlinedActionAdd
+    case iconFilledActionRating
     case iconOutlinedActionCancel
     case iconOutlinedActionCheck
     case iconOutlinedActionSubtract
+    case iconOutlinedActionRating
     case iconOutlinedActionVisibility
     case iconOutlinedActionVisibilityOff
     case iconOutlinedDefaultMockup
@@ -23,12 +25,16 @@ extension AssetsPath: RawRepresentable {
         switch rawValue {
         case AssetsHelper.image(from: "Icons/IconOutlinedActionAdd"):
             self = .iconOutlinedActionAdd
+        case AssetsHelper.image(from: "Icons/IconFilledActionRating"):
+            self = .iconFilledActionRating
         case AssetsHelper.image(from: "Icons/IconOutlinedActionCancel"):
             self = .iconOutlinedActionCancel
         case AssetsHelper.image(from: "Icons/IconOutlinedActionCheck"):
             self = .iconOutlinedActionCheck
         case AssetsHelper.image(from: "Icons/IconOutlinedActionSubtract"):
             self = .iconOutlinedActionSubtract
+        case AssetsHelper.image(from: "Icons/IconOutlinedActionRating"):
+            self = .iconOutlinedActionRating
         case AssetsHelper.image(from: "Icons/IconOutlinedActionVisibility"):
             self = .iconOutlinedActionVisibility
         case AssetsHelper.image(from: "Icons/IconOutlinedActionVisibilityOff"):
@@ -53,12 +59,16 @@ extension AssetsPath: RawRepresentable {
         switch self {
         case .iconOutlinedActionAdd:
             return AssetsHelper.image(from: "Icons/IconOutlinedActionAdd")
+        case .iconFilledActionRating:
+            return AssetsHelper.image(from: "Icons/IconFilledActionRating")
         case .iconOutlinedActionCancel:
             return AssetsHelper.image(from: "Icons/IconOutlinedActionCancel")
         case .iconOutlinedActionCheck:
             return AssetsHelper.image(from: "Icons/IconOutlinedActionCheck")
         case .iconOutlinedActionSubtract:
             return AssetsHelper.image(from: "Icons/IconOutlinedActionSubtract")
+        case .iconOutlinedActionRating:
+            return AssetsHelper.image(from: "Icons/IconOutlinedActionRating")
         case .iconOutlinedActionVisibility:
             return AssetsHelper.image(from: "Icons/IconOutlinedActionVisibility")
         case .iconOutlinedActionVisibilityOff:
