@@ -57,15 +57,15 @@ public class ShortcutView: UIView {
         NSLayoutConstraint.activate(constraints)
     }
 
-    public func configure(icon: String?) {
+    internal func configure(icon: String?) {
         iconView.iconText = icon
     }
 
-    public func configure(iconColor color: UIColor) {
+    internal func configure(iconColor color: UIColor) {
         iconView.tintColor = color
     }
 
-    public func configure(badgeValue: UInt) {
+    internal func configure(badgeValue: UInt) {
         if badgeValue <= 0 {
             removeBadge()
         } else {

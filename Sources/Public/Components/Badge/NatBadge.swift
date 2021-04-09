@@ -51,7 +51,7 @@ public final class NatBadge: UIView {
         }
     }
 
-    internal var shouldAppear: Bool {
+    private var shouldAppear: Bool {
         return (style != .standard || (style == .standard && value > 0))
     }
 
@@ -120,7 +120,7 @@ public final class NatBadge: UIView {
         NSLayoutConstraint.activate(constraints)
     }
 
-    // MARK: - Public methods
+    // MARK: - UI methods
 
     override public func draw(_ rect: CGRect) {
         let path: UIBezierPath?
@@ -147,6 +147,24 @@ public final class NatBadge: UIView {
             backgroundCircleLayer.fillColor = color.box.withAlphaComponent(getTokenFromTheme(\.opacityMedium)).cgColor
         }
     }
+
+    // MARK: - Internal methods
+
+    internal func addToView(_ view: UIView) {
+        if let existingBadge = view.subviews.compactMap({
+            $0 as? NatBadge
+        }).first {
+            existingBadge.removeFromSuperview()
+        }
+
+        if shouldAppear {
+            view.addSubview(self)
+            trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+            topAnchor.constraint(equalTo: view.topAnchor, constant: 0.1).isActive = true
+        }
+    }
+
+    // MARK: - Public methods
 
     public func configure(count: Int) {
         value = count

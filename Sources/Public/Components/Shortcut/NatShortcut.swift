@@ -117,25 +117,15 @@ extension NatShortcut {
     /// - Parameter badge: A badge from the design system.
     /// The badge must be created and configured before setting it to the shortcut.
     ///
-    /// Example:
-    ///         let badge = NatBadge(style: .standard, color: .primary)
-    ///         badge.configure(limit: .max99)
-    ///         badge.configure(count: 100)
-    ///         shortcut.configure(badge: badge)
+    /// Example of usage:
+    /// ```
+    /// let badge = NatBadge(style: .standard, color: .primary)
+    /// badge.configure(limit: .max99)
+    /// badge.configure(count: 100)
+    /// shortcut.configure(badge: badge)
+    /// ```
     public func configure(badge: NatBadge) {
-        if let badge = shortcutView.subviews.compactMap({ $0 as? NatBadge }).first {
-            badge.removeFromSuperview()
-        }
-        if badge.shouldAppear {
-            shortcutView.addSubview(badge)
-
-            let constraints = [
-                badge.trailingAnchor.constraint(equalTo: shortcutView.trailingAnchor),
-                badge.topAnchor.constraint(equalTo: shortcutView.topAnchor, constant: 0.1)
-            ]
-
-            NSLayoutConstraint.activate(constraints)
-        }
+        badge.addToView(shortcutView)
     }
 
     @available(*, deprecated, message: "Use configure(badge:) instead")

@@ -19,26 +19,16 @@ public extension UIBarButtonItem {
     /// - Parameter badge: A badge from the design system.
     /// The badge must be created and configured before setting it to the icon button.
     ///
-    /// Example:
-    ///         let badge = NatBadge(style: .standard, color: .primary)
-    ///         badge.configure(limit: .max99)
-    ///         badge.configure(count: 100)
-    ///         barButtonItem.configure(badge: badge)
+    /// Example of usage:
+    /// ```
+    /// let badge = NatBadge(style: .standard, color: .primary)
+    /// badge.configure(limit: .max99)
+    /// badge.configure(count: 100)
+    /// barButtonItem.configure(badge: badge)
+    /// ```
     func configure(badge: NatBadge) {
-        if let badge = customView?.subviews.compactMap({ $0 as? NatBadge }).first {
-            badge.removeFromSuperview()
-        }
         guard let customView = customView else { return }
-        if badge.shouldAppear {
-            customView.addSubview(badge)
-
-            let constraints = [
-                badge.trailingAnchor.constraint(equalTo: customView.trailingAnchor),
-                badge.topAnchor.constraint(equalTo: customView.topAnchor, constant: 0.1)
-            ]
-
-            NSLayoutConstraint.activate(constraints)
-        }
+        badge.addToView(customView)
     }
 }
 
