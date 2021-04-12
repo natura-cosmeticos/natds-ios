@@ -1,6 +1,7 @@
 enum DialogStyle {
     static func createLabelForTitle(title: String) -> UILabel {
         let label = UILabel()
+        label.numberOfLines = 0
         label.font = NatFonts.font(ofSize: .heading6, withWeight: .medium)
 
         let color = getUIColorFromTokens(\.colorHighEmphasis)
