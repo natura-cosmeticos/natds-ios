@@ -42,6 +42,7 @@ public class ValueTextHighlight: UIView {
         label.font = NatFonts.font(ofSize: .body2)
         label.textColor = NatColors.mediumEmphasis
         label.textAlignment = .left
+        label.numberOfLines = 0
 
         return label
     }()
