@@ -114,8 +114,21 @@ extension NatShortcut {
     }
 
     /// Configures a badge to the shortcut.
-    /// - Parameter badgeValue: An UInt value for the badge. If the value is less than 1, the badge will be hidden.
-    /// If it's more than 99, the value will be shortened to '99+'.
+    /// - Parameter badge: A badge from the design system.
+    /// The badge must be created and configured before setting it to the shortcut.
+    ///
+    /// Example of usage:
+    /// ```
+    /// let badge = NatBadge(style: .standard, color: .primary)
+    /// badge.configure(limit: .max99)
+    /// badge.configure(count: 100)
+    /// shortcut.configure(badge: badge)
+    /// ```
+    public func configure(badge: NatBadge) {
+        badge.addToView(shortcutView)
+    }
+
+    @available(*, deprecated, message: "Use configure(badge:) instead")
     public func configure(badgeValue: UInt) {
         shortcutView.configure(badgeValue: badgeValue)
     }

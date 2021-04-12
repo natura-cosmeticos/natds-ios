@@ -48,7 +48,10 @@ class AppBarSnapshotTests: XCTestCase {
             target: nil
         )
 
-        barButtonItemWithBadge.setBadgeValue(99)
+        let badge = NatBadge(style: .standard, color: .alert)
+        badge.configure(count: 99)
+        barButtonItemWithBadge.configure(badge: badge)
+
         systemUnderTest.visibleViewController?.configure(buttons: [barButtonItemWithBadge, barButtonItem])
 
         assertSnapshot(matching: systemUnderTest, as: .image)

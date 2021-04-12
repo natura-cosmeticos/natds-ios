@@ -59,8 +59,10 @@ final class ShortcutItemViewController: UIViewController, SampleItem {
             shortcut.configure(text: text)
 
             if shouldShowBadge {
-                let badgeValues: [UInt] = [1, 25, 99, 100]
-                shortcut.configure(badgeValue: badgeValues[value])
+                let badgeValues = [1, 25, 99, 100]
+                let badge = NatBadge(style: .standard, color: .alert)
+                badge.configure(count: badgeValues[value])
+                shortcut.configure(badge: badge)
             }
 
             return shortcut
