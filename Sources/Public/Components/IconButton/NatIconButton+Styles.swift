@@ -6,6 +6,7 @@ extension NatIconButton {
      These are all styles allowed for a NatIconButton:
      - standardDefault (default: icon has `highEmphasis` color)
      - standardPrimary (icon has `primary` color)
+     - standardLight (icon has `surface` color)
      */
 
     public struct Style {

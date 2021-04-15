@@ -198,13 +198,7 @@ extension NatIconButton {
     /// Sets the background style for the icon button
     /// - Parameter background: An option from Background enum: inherit (default), float or overlay
     public func configure(background: Background) {
-        self.backgroundStyle = background
-        self.backgroundColor = background.color
-        if background.hasElevation {
-            NatElevation.apply(on: self, elevation: .medium)
-        } else {
-            NatElevation.apply(on: self, elevation: .none)
-        }
+        backgroundStyle = background
 
         style.applyStyle(self)
     }
@@ -223,6 +217,14 @@ extension NatIconButton {
     func configure(iconColor: UIColor) {
         iconView.tintColor = iconColor
         iconView.defaultImageView.tintedColor = iconColor
+    }
+
+    func configure(backgroundColor: UIColor) {
+        self.backgroundColor = backgroundColor
+    }
+
+    func configure(backgroundElevation: NatElevation.Elevation) {
+        NatElevation.apply(on: self, elevation: backgroundElevation)
     }
 }
 

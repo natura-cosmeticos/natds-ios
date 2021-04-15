@@ -56,6 +56,21 @@ final class IconButtonItemViewController: UIViewController, SampleItem {
         iconButton.configure(state: .disabled)
         return iconButton
     }()
+    
+    private let iconButtonLightStyle: NatIconButton = {
+        let iconButton = NatIconButton(style: .standardLight)
+        iconButton.translatesAutoresizingMaskIntoConstraints = false
+        iconButton.configure(icon: getIcon(.outlinedDefaultMockup))
+        return iconButton
+    }()
+
+    private let iconButtonLightStyleDisabled: NatIconButton = {
+        let iconButton = NatIconButton(style: .standardLight)
+        iconButton.translatesAutoresizingMaskIntoConstraints = false
+        iconButton.configure(icon: getIcon(.outlinedDefaultMockup))
+        iconButton.configure(state: .disabled)
+        return iconButton
+    }()
 
     private let iconButtonInheritBackground: NatIconButton = {
         let iconButton = NatIconButton(style: .standardDefault)
@@ -148,6 +163,10 @@ final class IconButtonItemViewController: UIViewController, SampleItem {
                                                           text: "Color primary"))
         stackView.addArrangedSubview(createIconButtonView(iconButtonPrimaryStyleDisabled,
                                                           text: "Color primary (disabled)"))
+        stackView.addArrangedSubview(createIconButtonView(iconButtonLightStyle,
+                                                          text: "Color light"))
+        stackView.addArrangedSubview(createIconButtonView(iconButtonLightStyleDisabled,
+                                                          text: "Color light (disabled)"))
         stackView.addArrangedSubview(createIconButtonView(iconButtonInheritBackground,
                                                           text: "Inherit background (default)"))
         stackView.addArrangedSubview(createIconButtonView(iconButtonFloatBackground,
@@ -158,9 +177,12 @@ final class IconButtonItemViewController: UIViewController, SampleItem {
                                                           text: "Overlay background"))
         stackView.addArrangedSubview(createIconButtonView(iconButtonOverlayBackgroundDisabled,
                                                           text: "Overlay background (disabled)"))
-        stackView.addArrangedSubview(createIconButtonView(iconButtonSizeSemi, text: "Size semi (default)"))
-        stackView.addArrangedSubview(createIconButtonView(iconButtonSizeSemiX, text: "Size semiX"))
-        stackView.addArrangedSubview(createIconButtonView(iconButtonSizeMedium, text: "Size medium"))
+        stackView.addArrangedSubview(createIconButtonView(iconButtonSizeSemi,
+                                                          text: "Size semi (default)"))
+        stackView.addArrangedSubview(createIconButtonView(iconButtonSizeSemiX,
+                                                          text: "Size semiX"))
+        stackView.addArrangedSubview(createIconButtonView(iconButtonSizeMedium,
+                                                          text: "Size medium"))
     }
 
     private func addConstraints() {
