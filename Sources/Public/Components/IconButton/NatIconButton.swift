@@ -72,6 +72,7 @@ public final class NatIconButton: UIView {
     // MARK: - Private properties
 
     private let style: Style
+    internal var backgroundStyle: Background = .inherit
     private let notificationCenter: NotificationCenterObservable
 
     private var action: (() -> Void)?
@@ -197,12 +198,15 @@ extension NatIconButton {
     /// Sets the background style for the icon button
     /// - Parameter background: An option from Background enum: inherit (default), float or overlay
     public func configure(background: Background) {
+        self.backgroundStyle = background
         self.backgroundColor = background.color
         if background.hasElevation {
             NatElevation.apply(on: self, elevation: .medium)
         } else {
             NatElevation.apply(on: self, elevation: .none)
         }
+
+        style.applyStyle(self)
     }
 }
 

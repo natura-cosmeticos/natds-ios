@@ -23,6 +23,13 @@ extension NatIconButton {
             }
         }
 
+        var disabledIconColor: UIColor {
+            switch self {
+            case .overlay: return getUIColorFromTokens(\.colorLowEmphasis)
+            default: return getUIColorFromTokens(\.colorMediumEmphasis)
+            }
+        }
+
         var hasElevation: Bool {
             switch self {
             case .float: return true

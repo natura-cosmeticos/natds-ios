@@ -1,18 +1,26 @@
 enum IconButtonStandardStyle {
     static func applyDefaultStyle(iconButton: NatIconButton) {
-        applyStyle(iconButton: iconButton, withColor: getUIColorFromTokens(\.colorHighEmphasis))
+        applyStyle(iconButton: iconButton,
+                   withColor: getUIColorFromTokens(\.colorHighEmphasis))
     }
 
     static func applyPrimaryStyle(iconButton: NatIconButton) {
-        applyStyle(iconButton: iconButton, withColor: getUIColorFromTokens(\.colorPrimary))
+        applyStyle(iconButton: iconButton,
+                   withColor: getUIColorFromTokens(\.colorPrimary))
     }
 
-    private static func applyStyle(iconButton: NatIconButton, withColor color: UIColor) {
+    static func applyLightStyle(iconButton: NatIconButton) {
+        applyStyle(iconButton: iconButton,
+                   withColor: getUIColorFromTokens(\.colorSurface))
+    }
+
+    private static func applyStyle(iconButton: NatIconButton,
+                                   withColor color: UIColor) {
         switch iconButton.currentState {
         case .enabled:
             iconButton.configure(iconColor: color)
         case .disabled:
-            iconButton.configure(iconColor: getUIColorFromTokens(\.colorMediumEmphasis))
+            iconButton.configure(iconColor: iconButton.backgroundStyle.disabledIconColor)
         }
     }
 }

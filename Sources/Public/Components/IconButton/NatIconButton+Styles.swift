@@ -22,5 +22,11 @@ extension NatIconButton {
                 applyStyle: IconButtonStandardStyle.applyPrimaryStyle
             )
         }
+
+        public static var standardLight: Style {
+            .init(
+                applyStyle: IconButtonStandardStyle.applyLightStyle
+            )
+        }
     }
 }
