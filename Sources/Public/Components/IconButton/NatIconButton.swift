@@ -12,6 +12,7 @@ import Foundation
  - Icon color:
     - ✅ `HighEmphasis`
     - ✅ `Primary`
+    - ✅ `Light`
  - Background style:
     - ✅ `Inherit`
     - ✅ `Float`
@@ -29,6 +30,7 @@ import Foundation
  The icon button has two styles, which change the icon color:
  - standardDefault (icon has `highEmphasis` color)
  - standardPrimary (icon has `primary` color)
+ - standardLight (icon has `surface` color)
  
  The icon button can have three different sizes (with size `semi` as default):
  - semi
