@@ -196,9 +196,8 @@ final class NatIconButtonSpec: QuickSpec {
                     systemUnderTest.configure(background: .overlay)
                 }
 
-                it("applies overlay style") {
-                    let expectedColor = NatColors.highlight.withAlphaComponent(NatOpacities.disabledLow)
-                    expect(systemUnderTest.backgroundColor).to(equal(expectedColor))
+                it("applies style for the second time") {
+                    expect(applyStyleInvocations).to(equal(2))
                 }
             }
 
@@ -207,10 +206,8 @@ final class NatIconButtonSpec: QuickSpec {
                     systemUnderTest.configure(background: .float)
                 }
 
-                it("applies float style") {
-                    let expectedColor = NatColors.surface
-                    expect(systemUnderTest.backgroundColor).to(equal(expectedColor))
-                    expect(systemUnderTest.getElevationSet()).to(equal(NatElevation.ElevationAttributes.medium))
+                it("applies style for the second time") {
+                    expect(applyStyleInvocations).to(equal(2))
                 }
             }
         }
