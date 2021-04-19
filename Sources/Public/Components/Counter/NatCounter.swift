@@ -1,32 +1,33 @@
 import UIKit
 
 /**
- NatCounter is a class that represents a component from the design system.
+ - NOTE:
+ This component is available in the following variants:
+ - ✅ Standard
 
- It can be configured with 2 different sizes:
+ With the following attribute status:
+ - ✅ Label
+ - Disabled:
+    - ✅ `Subtract`
+    - ✅ `Add`
+    - ✅ `Both`
+ - Size:
+    - ✅ `Semi`
+    - ✅ `Medium`
+ - Interaction state:
+    - ✅ `Enabled`
+    - ✅ `Press`
+ 
+ NatCounter is a class that represents the counter component from the design system.
+
+ It can be configured with the sizes:
  - Semi (default)
  - Medium
 
  Example of usage:
 
             let counter = NatCounter()
-            let counter = NatCounter(size: .semi)
             let counter = NatCounter(size: .medium)
-
- NatCounter has 2 states:
- - enabled
- - disabled
-
- Use the method configure to disable Its buttons, NatCounter has 3 types of button to disable:
- - add
- - subtract
- - all
-
- Example of usage:
-
-        counter.configure(button: .add, state: .disabled)
-        counter.configure(button: .subtract, state: .disabled)
-        counter.configure(button: .all, state: .disabled)
 
  - Requires:
  It's necessary to configure the Design System with a theme or fatalError will be raised.
@@ -128,6 +129,11 @@ public final class NatCounter: UIView {
     /// Sets the state of CounterButtons
     /// - Parameter button: An option from CounterButtonType enum: subtract, add or all
     /// - Parameter state: An option from State enum: enabled or disabled
+    /// ```
+    /// counter.configure(button: .add, state: .disabled)
+    /// counter.configure(button: .subtract, state: .disabled)
+    /// counter.configure(button: .all, state: .disabled)
+    /// ```
     public func configure(button: CounterButtonType, state: State) {
 
         switch state {

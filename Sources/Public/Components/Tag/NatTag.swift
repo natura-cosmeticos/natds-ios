@@ -1,20 +1,40 @@
 /**
- NatTag is a class that represents a component from the design system.
- The tag colors change according to the current theme configured to the design system.
+ - NOTE:
+ This component is available in the following variants:
+ - ✅ Standard
+
+ With the following attribute status:
+ - Position:
+    - ✅ `Center`
+    - ✅ `Left`
+    - ✅ `Right`
+ - Color:
+    - ✅ `Primary`
+    - ✅ `Secondary`
+    - ✅ `Success`
+    - ✅ `Alert`
+    - ✅ `Warning`
+    - ✅ `Link`
+ - Size:
+    - ✅ `Small`
+    - ✅ `Standard`
  
- These all the available styles for NatTag:
+ NatTag is a class that represents the tag component from the design system.
+ The tag colors change according to the current theme configured.
+ 
+ These all the available styles for a NatTag:
  - defaultAlert
  - leftAlert
  - rightAlert
  
  Example of usage:
  
- let tag = NatTag(style: .defaultAlert)
+        let tag = NatTag(style: .defaultAlert)
  
  - Requires:
  It's necessary to configure the Design System with a theme or fatalError will be raised.
  
- DesignSystem().configure(with: AvailableTheme)
+        DesignSystem().configure(with: AvailableTheme)
  */
 
 public final class NatTag: UIView {
@@ -114,18 +134,18 @@ public final class NatTag: UIView {
         drawPath?(bounds.size)
     }
 
-    /// Attribute that sets a label to the component
+    /// Configures a text for the component's label. The tag adjusts its width to match the text length.
     public func configure(text: String) {
         label.text = text
         isHidden = text.isEmpty
     }
 
-    /// Attribute that sets a size to the component
+    /// Configures a size to the component, which changes the tag's height and padding.
     public func configure(size: Size = .small) {
         heightAnchor.constraint(equalToConstant: size.value).isActive = true
     }
 
-    /// Attribute that sets a color to the component
+    /// Configures a color for the component's background.
     public func configure(color: Color = .primary) {
         tagColor = color
         configure(textColor: color.label)
