@@ -4,6 +4,7 @@ import Foundation
  - NOTE:
  This component is available in the following variants:
  - ✅ Standard
+
  With the following attribute status:
  - Size:
     - ✅ `Semi`
