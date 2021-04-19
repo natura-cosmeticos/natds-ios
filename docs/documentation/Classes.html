@@ -17,7 +17,7 @@
       <div class="content-wrapper">
         <p>
           <a href="index.html">NatDS  Docs</a>
-          <span class="no-mobile"> (32% documented)</span>
+          <span class="no-mobile"> (33% documented)</span>
         </p>
     
     
@@ -165,26 +165,45 @@ It&rsquo;s type can change according to the configuration methods called after i
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>NatBadge is a class that represents a component from the Design System.</p>
+                          <p>This component is available in the following variants:</p>
+
+<ul>
+<li>✅ Standard</li>
+<li>✅ Dot</li>
+<li>✅ Pulse</li>
+</ul>
+
+<p>With the following attributes:</p>
+
+<ul>
+<li>Color:
+
+<ul>
+<li>✅ <code>Alert</code></li>
+<li>✅ <code>Primary</code></li>
+<li>✅ <code>Secondary</code></li>
+<li>✅ <code>Success</code></li>
+</ul></li>
+<li>Limit:
+
+<ul>
+<li>✅ <code>max9</code></li>
+<li>✅ <code>max99</code></li>
+<li>✅ <code>unlimited</code></li>
+</ul></li>
+</ul>
+
+<p>NatBadge is a class that represents a component from the Design System.</p>
 
 <p>The badge colors change according to the current brand configured in the Design System.
 They also change according to the user&rsquo;s properties of Light and Dark mode.</p>
 
-<p>This component has 2 styles:</p>
-
-<ul>
-<li>Standard</li>
-<li>Dot</li>
-</ul>
-
-<p>And 1 color:</p>
-
-<ul>
-<li>Alert</li>
-</ul>
+<p>NatBadge has three variants: <code>standard</code>, <code>dot</code> and <code>pulse</code>.
+It can be configured with colors <code>alert</code>, <code>primary</code>, <code>secondary</code> and <code>success</code>.</p>
 
 <p>Example of usage:</p>
 <pre class="highlight swift"><code>   <span class="k">let</span> <span class="nv">badge</span> <span class="o">=</span> <span class="kt">NatBadge</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">standard</span><span class="p">,</span> <span class="nv">color</span><span class="p">:</span> <span class="o">.</span><span class="n">alert</span><span class="p">)</span>
+   <span class="n">badge</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">limit</span><span class="p">:</span> <span class="o">.</span><span class="n">unlimited</span><span class="p">)</span>
 </code></pre>
 <div class="aside aside-requires">
     <p class="aside-title">Requires</p>
@@ -342,6 +361,86 @@ It&rsquo;s necessary to instantiate it and set its height and width constraints.
                           <div class="language">
                             <p class="aside-title">Swift</p>
                             <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">NatCard</span> <span class="p">:</span> <span class="kt">UIView</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@M@NatDS@objc(cs)NatCounter"></a>
+                      <a name="//apple_ref/swift/Class/NatCounter" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@NatDS@objc(cs)NatCounter">NatCounter</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This component is available in the following variants:
+
+</div><ul>
+<li>✅ Standard</li>
+</ul>
+
+<p>With the following attribute status:</p>
+
+<ul>
+<li>✅ Label</li>
+<li>Disabled:
+
+<ul>
+<li>✅ <code>Subtract</code></li>
+<li>✅ <code>Add</code></li>
+<li>✅ <code>Both</code></li>
+</ul></li>
+<li>Size:
+
+<ul>
+<li>✅ <code>Semi</code></li>
+<li>✅ <code>Medium</code></li>
+</ul></li>
+<li>Interaction state:
+
+<ul>
+<li>✅ <code>Enabled</code></li>
+<li>✅ <code>Press</code></li>
+</ul></li>
+</ul>
+
+<p>NatCounter is a class that represents the counter component from the design system.</p>
+
+<p>It can be configured with the sizes:</p>
+
+<ul>
+<li>Semi (default)</li>
+<li>Medium</li>
+</ul>
+
+<p>Example of usage:</p>
+<pre class="highlight swift"><code>       <span class="k">let</span> <span class="nv">counter</span> <span class="o">=</span> <span class="kt">NatCounter</span><span class="p">()</span>
+       <span class="k">let</span> <span class="nv">counter</span> <span class="o">=</span> <span class="kt">NatCounter</span><span class="p">(</span><span class="nv">size</span><span class="p">:</span> <span class="o">.</span><span class="n">medium</span><span class="p">)</span>
+</code></pre>
+<div class="aside aside-requires">
+    <p class="aside-title">Requires</p>
+    <p>It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.</p>
+
+<p>DesignSystem().configure(with: AvailableTheme)</p>
+
+</div>
+
+                          <a href="Classes/NatCounter.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">NatCounter</span> <span class="p">:</span> <span class="kt">UIView</span></code></pre>
 
                           </div>
                         </div>
@@ -650,8 +749,12 @@ It&rsquo;s necessary to instantiate it and set its height and width constraints.
     This component is available in the following variants:
 
 </div><ul>
-<li>✅ Standard
-With the following attribute status:</li>
+<li>✅ Standard</li>
+</ul>
+
+<p>With the following attribute status:</p>
+
+<ul>
 <li>Size:
 
 <ul>
@@ -664,6 +767,7 @@ With the following attribute status:</li>
 <ul>
 <li>✅ <code>HighEmphasis</code></li>
 <li>✅ <code>Primary</code></li>
+<li>✅ <code>Light</code></li>
 </ul></li>
 <li>Background style:
 
@@ -691,6 +795,7 @@ The button colors change according to the current theme configured.</p>
 <ul>
 <li>standardDefault (icon has <code>highEmphasis</code> color)</li>
 <li>standardPrimary (icon has <code>primary</code> color)</li>
+<li>standardLight (icon has <code>surface</code> color)</li>
 </ul>
 
 <p>The icon button can have three different sizes (with size <code>semi</code> as default):</p>
@@ -1011,6 +1116,123 @@ The constraints for width and height should use the pre-defined size:</p>
                   <li class="item">
                     <div>
                       <code>
+                      <a name="/c:@M@NatDS@objc(cs)NatRating"></a>
+                      <a name="//apple_ref/swift/Class/NatRating" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@NatDS@objc(cs)NatRating">NatRating</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This component is available in the following variants:
+
+</div><ul>
+<li>✅ Counter</li>
+<li>✅ Input</li>
+<li>✅ Read-only</li>
+</ul>
+
+<p>With the following attribute status:</p>
+
+<ul>
+<li>Hint ✅</li>
+<li>Size:
+
+<ul>
+<li>✅ <code>Small</code></li>
+<li>✅ <code>Standard</code></li>
+<li>✅ <code>Semi</code></li>
+<li>✅ <code>SemiX</code></li>
+<li>✅ <code>Medium</code></li>
+</ul></li>
+<li>Alignment:
+
+<ul>
+<li>✅ <code>Right</code></li>
+<li>✅ <code>Left</code></li>
+</ul></li>
+<li>✅ Disabled</li>
+<li>✅ Rate</li>
+<li>Interaction state:
+
+<ul>
+<li>✅ <code>Enabled</code></li>
+<li>✅ <code>Press</code></li>
+</ul></li>
+</ul>
+
+<p>NatRating is a class that represent the rating component from the design system.
+The colors are default and doesn&rsquo;t change according to the current theme configured.</p>
+
+<p>The component has three different variants, represented by the enum Style:</p>
+
+<ul>
+<li>Input</li>
+<li>Counter</li>
+<li>Read-only</li>
+</ul>
+
+<blockquote>
+<p>Note: the style should be set at <code>init()</code>.</p>
+</blockquote>
+
+<p>There are five different sizes for the rating stars:</p>
+
+<ul>
+<li>Small</li>
+<li>Standard</li>
+<li>Semi</li>
+<li>SemiX (default)</li>
+<li>Medium</li>
+</ul>
+
+<blockquote>
+<p>Note: the size can only be changed at <code>init()</code>.
+The sizes <code>small</code> and <code>standard</code> should only be used with <code>counter</code> and <code>readOnly</code> variants.</p>
+
+<p>Note: For the variant <code>Counter</code>, the alignment can be <code>right</code> or <code>left</code> (default).
+The aligment should be set at <code>init()</code>.</p>
+</blockquote>
+
+<p>Example of usage:</p>
+<pre class="highlight swift"><code>   <span class="k">let</span> <span class="nv">rating</span> <span class="o">=</span> <span class="kt">NatRating</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">input</span><span class="p">,</span> <span class="nv">size</span><span class="p">:</span> <span class="o">.</span><span class="n">medium</span><span class="p">)</span>
+   <span class="n">rating</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">text</span><span class="p">:</span> <span class="s">"Placeholder"</span><span class="p">)</span>
+
+   <span class="k">let</span> <span class="nv">rating</span> <span class="o">=</span> <span class="kt">NatRating</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">counter</span><span class="p">,</span> <span class="nv">alignment</span><span class="p">:</span> <span class="o">.</span><span class="n">right</span><span class="p">)</span>
+   <span class="n">rating</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">text</span><span class="p">:</span> <span class="s">"Placeholder"</span><span class="p">)</span>
+
+   <span class="k">let</span> <span class="nv">rating</span> <span class="o">=</span> <span class="kt">NatRating</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">readOnly</span><span class="p">)</span>
+   <span class="n">rating</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">rate</span><span class="p">:</span> <span class="mi">3</span><span class="p">)</span>
+</code></pre>
+<div class="aside aside-requires">
+    <p class="aside-title">Requires</p>
+    <p>It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.</p>
+<pre class="highlight swift"><code>   <span class="kt">DesignSystem</span><span class="p">()</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="kt">AvailableTheme</span><span class="p">)</span>
+</code></pre>
+
+</div>
+
+                          <a href="Classes/NatRating.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">NatRating</span> <span class="p">:</span> <span class="kt">UIView</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">NatRating</span><span class="p">:</span> <span class="kt"><a href="Protocols/Pulsable.html">Pulsable</a></span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
                       <a name="/c:@M@NatDS@objc(cs)NatSelectionControl"></a>
                       <a name="//apple_ref/swift/Class/NatSelectionControl" class="dashAnchor"></a>
                       <a class="token" href="#/c:@M@NatDS@objc(cs)NatSelectionControl">NatSelectionControl</a>
@@ -1277,10 +1499,46 @@ A new tab is inserted using insertTab(title: String) method.</p>
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>NatTag is a class that represents a component from the design system.
-The tag colors change according to the current theme configured to the design system.</p>
+                          <div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This component is available in the following variants:
 
-<p>These all the available styles for NatTag:</p>
+</div><ul>
+<li>✅ Standard</li>
+</ul>
+
+<p>With the following attribute status:</p>
+
+<ul>
+<li>Position:
+
+<ul>
+<li>✅ <code>Center</code></li>
+<li>✅ <code>Left</code></li>
+<li>✅ <code>Right</code></li>
+</ul></li>
+<li>Color:
+
+<ul>
+<li>✅ <code>Primary</code></li>
+<li>✅ <code>Secondary</code></li>
+<li>✅ <code>Success</code></li>
+<li>✅ <code>Alert</code></li>
+<li>✅ <code>Warning</code></li>
+<li>✅ <code>Link</code></li>
+</ul></li>
+<li>Size:
+
+<ul>
+<li>✅ <code>Small</code></li>
+<li>✅ <code>Standard</code></li>
+</ul></li>
+</ul>
+
+<p>NatTag is a class that represents the tag component from the design system.
+The tag colors change according to the current theme configured.</p>
+
+<p>These all the available styles for a NatTag:</p>
 
 <ul>
 <li>defaultAlert</li>
@@ -1289,15 +1547,15 @@ The tag colors change according to the current theme configured to the design sy
 </ul>
 
 <p>Example of usage:</p>
-
-<p>let tag = NatTag(style: .defaultAlert)</p>
+<pre class="highlight swift"><code>   <span class="k">let</span> <span class="nv">tag</span> <span class="o">=</span> <span class="kt">NatTag</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">defaultAlert</span><span class="p">)</span>
+</code></pre>
 <div class="aside aside-requires">
     <p class="aside-title">Requires</p>
-    It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.
-
-</div>
+    <p>It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.</p>
 
 <p>DesignSystem().configure(with: AvailableTheme)</p>
+
+</div>
 
                           <a href="Classes/NatTag.html" class="slightly-smaller">See more</a>
                         </div>
@@ -1468,6 +1726,9 @@ The tag colors change according to the current theme configured to the design sy
                   <a href="Classes/NatBadge/Color.html">– Color</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="Classes/NatBadge/Limit.html">– Limit</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="Classes/NatBadge/Style.html">– Style</a>
                 </li>
                 <li class="nav-group-task">
@@ -1490,6 +1751,18 @@ The tag colors change according to the current theme configured to the design sy
                 </li>
                 <li class="nav-group-task">
                   <a href="Classes/NatCheckbox.html">NatCheckbox</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatCounter.html">NatCounter</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatCounter/CounterButtonType.html">– CounterButtonType</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatCounter/Size.html">– Size</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatCounter/State.html">– State</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="Classes/NatDialogController.html">NatDialogController</a>
@@ -1538,6 +1811,21 @@ The tag colors change according to the current theme configured to the design sy
                 </li>
                 <li class="nav-group-task">
                   <a href="Classes/NatRadioButton.html">NatRadioButton</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatRating.html">NatRating</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatRating/Alignment.html">– Alignment</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatRating/Size.html">– Size</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatRating/State.html">– State</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatRating/Style.html">– Style</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="Classes/NatSelectionControl.html">NatSelectionControl</a>
@@ -1748,7 +2036,7 @@ The tag colors change according to the current theme configured to the design sy
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2021-03-29)</p>
+          <p>&copy; 2021 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2021-04-19)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </div>
