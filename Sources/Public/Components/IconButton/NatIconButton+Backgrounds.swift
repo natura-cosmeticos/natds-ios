@@ -14,20 +14,40 @@ extension NatIconButton {
         case inherit
         case overlay
 
-        var color: UIColor {
+        var enabledColor: UIColor {
             switch self {
             case .float: return getUIColorFromTokens(\.colorSurface)
             case .inherit: return .clear
             case .overlay: return getUIColorFromTokens(\.colorHighlight)
-                .withAlphaComponent(getTokenFromTheme(\.opacityDisabledLow))
+                .withAlphaComponent(getTokenFromTheme(\.opacityMediumHigh))
             }
         }
 
-        var hasElevation: Bool {
+        var disabledColor: UIColor {
             switch self {
-            case .float: return true
-            default: return false
+            case .float: return getUIColorFromTokens(\.colorLowEmphasis)
+            case .inherit: return .clear
+            case .overlay: return getUIColorFromTokens(\.colorHighlight)
+                .withAlphaComponent(getTokenFromTheme(\.opacityMediumHigh))
             }
+        }
+
+        var disabledIconColor: UIColor {
+            switch self {
+            case .overlay: return getUIColorFromTokens(\.colorLowEmphasis)
+            default: return getUIColorFromTokens(\.colorMediumEmphasis)
+            }
+        }
+
+        var enabledElevation: NatElevation.Elevation {
+            switch self {
+            case .float: return .medium
+            default: return .none
+            }
+        }
+
+        var disabledElevation: NatElevation.Elevation {
+            return .none
         }
     }
 }

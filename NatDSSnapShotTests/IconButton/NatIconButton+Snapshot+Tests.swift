@@ -198,6 +198,47 @@ final class NatIconButtonSnapshotTests: XCTestCase {
 
         assertSnapshot(matching: superview, as: .image(precision: 0.99))
     }
+
+    // MARK: - Color light
+
+    func test_style_standard_color_light_hasValidSnapshot() {
+        let systemUnderTest = NatIconButton(style: .standardLight)
+        superview.addSubview(systemUnderTest)
+        addConstraints(systemUnderTest)
+
+        assertSnapshot(matching: superview, as: .image(precision: 0.97))
+        assertSnapshot(matching: systemUnderTest, as: .recursiveDescription)
+    }
+
+    func test_style_standard_color_light_disabled_hasValidSnapshot() {
+        let systemUnderTest = NatIconButton(style: .standardLight)
+        superview.addSubview(systemUnderTest)
+        addConstraints(systemUnderTest)
+
+        systemUnderTest.configure(state: .disabled)
+
+        assertSnapshot(matching: superview, as: .image(precision: 0.97))
+    }
+
+    func test_style_standard_color_light_with_float_background_hasValidSnapshot() {
+        let systemUnderTest = NatIconButton(style: .standardLight)
+        superview.addSubview(systemUnderTest)
+        addConstraints(systemUnderTest)
+
+        systemUnderTest.configure(background: .float)
+
+        assertSnapshot(matching: superview, as: .image(precision: 0.99))
+    }
+
+    func test_style_standard_color_light_with_overlay_background_hasValidSnapshot() {
+        let systemUnderTest = NatIconButton(style: .standardLight)
+        superview.addSubview(systemUnderTest)
+        addConstraints(systemUnderTest)
+
+        systemUnderTest.configure(background: .overlay)
+
+        assertSnapshot(matching: superview, as: .image(precision: 0.99))
+    }
 }
 
 extension NatIconButtonSnapshotTests {

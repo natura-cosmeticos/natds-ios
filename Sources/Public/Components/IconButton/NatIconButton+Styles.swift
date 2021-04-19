@@ -6,6 +6,7 @@ extension NatIconButton {
      These are all styles allowed for a NatIconButton:
      - standardDefault (default: icon has `highEmphasis` color)
      - standardPrimary (icon has `primary` color)
+     - standardLight (icon has `surface` color)
      */
 
     public struct Style {
@@ -20,6 +21,12 @@ extension NatIconButton {
         public static var standardPrimary: Style {
             .init(
                 applyStyle: IconButtonStandardStyle.applyPrimaryStyle
+            )
+        }
+
+        public static var standardLight: Style {
+            .init(
+                applyStyle: IconButtonStandardStyle.applyLightStyle
             )
         }
     }

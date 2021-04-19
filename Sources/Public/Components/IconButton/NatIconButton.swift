@@ -12,6 +12,7 @@ import Foundation
  - Icon color:
     - ✅ `HighEmphasis`
     - ✅ `Primary`
+    - ✅ `Light`
  - Background style:
     - ✅ `Inherit`
     - ✅ `Float`
@@ -29,6 +30,7 @@ import Foundation
  The icon button has two styles, which change the icon color:
  - standardDefault (icon has `highEmphasis` color)
  - standardPrimary (icon has `primary` color)
+ - standardLight (icon has `surface` color)
  
  The icon button can have three different sizes (with size `semi` as default):
  - semi
@@ -72,6 +74,7 @@ public final class NatIconButton: UIView {
     // MARK: - Private properties
 
     private let style: Style
+    internal var backgroundStyle: Background = .inherit
     private let notificationCenter: NotificationCenterObservable
 
     private var action: (() -> Void)?
@@ -197,12 +200,9 @@ extension NatIconButton {
     /// Sets the background style for the icon button
     /// - Parameter background: An option from Background enum: inherit (default), float or overlay
     public func configure(background: Background) {
-        self.backgroundColor = background.color
-        if background.hasElevation {
-            NatElevation.apply(on: self, elevation: .medium)
-        } else {
-            NatElevation.apply(on: self, elevation: .none)
-        }
+        backgroundStyle = background
+
+        style.applyStyle(self)
     }
 }
 
@@ -219,6 +219,14 @@ extension NatIconButton {
     func configure(iconColor: UIColor) {
         iconView.tintColor = iconColor
         iconView.defaultImageView.tintedColor = iconColor
+    }
+
+    func configure(backgroundColor: UIColor) {
+        self.backgroundColor = backgroundColor
+    }
+
+    func configure(backgroundElevation: NatElevation.Elevation) {
+        NatElevation.apply(on: self, elevation: backgroundElevation)
     }
 }
 
