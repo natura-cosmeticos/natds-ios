@@ -129,6 +129,8 @@ public final class NatCounter: UIView {
     /// Sets the state of CounterButtons
     /// - Parameter button: An option from CounterButtonType enum: subtract, add or all
     /// - Parameter state: An option from State enum: enabled or disabled
+    ///
+    /// Example of usage:
     /// ```
     /// counter.configure(button: .add, state: .disabled)
     /// counter.configure(button: .subtract, state: .disabled)
