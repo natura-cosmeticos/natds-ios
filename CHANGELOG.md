@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.13.3](https://github.com/natura-cosmeticos/natds-ios/compare/3.13.2...3.13.3) (2021-04-19)
+
+
+### Bug Fixes
+
+* add missing light style for iconButton ([d9dcc7e](https://github.com/natura-cosmeticos/natds-ios/commit/d9dcc7e949f11cb940f7f57cff5248f9d363dea1))
+* fix overlay and disabled colors ([0f82bbf](https://github.com/natura-cosmeticos/natds-ios/commit/0f82bbfcaaf47f129d6c9b7795b8478a5d86745b))
+
 ### [3.13.2](https://github.com/natura-cosmeticos/natds-ios/compare/3.13.1...3.13.2) (2021-04-12)
 
 
