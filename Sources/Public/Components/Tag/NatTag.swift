@@ -109,12 +109,12 @@ public final class NatTag: UIView {
                                     cornerRadius: NatBorderRadius.circle(viewHeight: size.height))
             case .left:
                 path = UIBezierPath(roundedRect: CGRect(origin: .zero, size: size),
-                                    byRoundingCorners: [.topLeft, .bottomLeft],
+                                    byRoundingCorners: [.topRight, .bottomRight],
                                     cornerRadii: CGSize(width: NatBorderRadius.circle(viewHeight: size.height),
                                                         height: NatBorderRadius.circle(viewHeight: size.height)))
             case .right:
                 path = UIBezierPath(roundedRect: CGRect(origin: .zero, size: size),
-                                    byRoundingCorners: [.topRight, .bottomRight],
+                                    byRoundingCorners: [.topLeft, .bottomLeft],
                                     cornerRadii: CGSize(width: NatBorderRadius.circle(viewHeight: size.height),
                                                         height: NatBorderRadius.circle(viewHeight: size.height)))
             }
