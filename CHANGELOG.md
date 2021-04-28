@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.13.5](https://github.com/natura-cosmeticos/natds-ios/compare/3.13.4...3.13.5) (2021-04-28)
+
+
+### Bug Fixes
+
+* fix cocoapods, remove unused code ([c0056dd](https://github.com/natura-cosmeticos/natds-ios/commit/c0056dd7360832b8fc7477f6bbcf00c4bc2dfcd9))
+
 ### [3.13.4](https://github.com/natura-cosmeticos/natds-ios/compare/3.13.3...3.13.4) (2021-04-26)
 
 
