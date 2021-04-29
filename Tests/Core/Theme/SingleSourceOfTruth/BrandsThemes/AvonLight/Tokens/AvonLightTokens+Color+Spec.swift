@@ -9,7 +9,7 @@ final class AvonLightTokensColorSpec: QuickSpec {
 
         describe("#colorPrimary") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorPrimary).to(equal("#DE0085"))
+                expect(systemUnderTest.colorPrimary).to(equal("#7F28C4"))
             }
         }
 
@@ -21,7 +21,7 @@ final class AvonLightTokensColorSpec: QuickSpec {
 
         describe("#colorPrimaryLight") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorPrimaryLight).to(equal("#FF56B5"))
+                expect(systemUnderTest.colorPrimaryLight).to(equal("#B35BF8"))
             }
         }
 
@@ -33,49 +33,49 @@ final class AvonLightTokensColorSpec: QuickSpec {
 
         describe("#colorPrimaryDark") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorPrimaryDark).to(equal("#A70058"))
+                expect(systemUnderTest.colorPrimaryDark).to(equal("#4B0092"))
             }
         }
 
         describe("#colorOnPrimaryDark") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorOnPrimaryDark).to(equal("#FFFFFF"))
+                expect(systemUnderTest.colorOnPrimaryDark).to(equal("#000000"))
             }
         }
 
         describe("#colorSecondary") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorSecondary).to(equal("#E9E9E9"))
+                expect(systemUnderTest.colorSecondary).to(equal("#E2197C"))
             }
         }
 
         describe("#colorOnSecondary") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorOnSecondary).to(equal("#333333"))
+                expect(systemUnderTest.colorOnSecondary).to(equal("#FFFFFF"))
             }
         }
 
         describe("#colorSecondaryLight") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorSecondaryLight).to(equal("#FFFFFF"))
+                expect(systemUnderTest.colorSecondaryLight).to(equal("#FF5EAB"))
             }
         }
 
         describe("#colorOnSecondaryLight") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorOnSecondaryLight).to(equal("#333333"))
+                expect(systemUnderTest.colorOnSecondaryLight).to(equal("#000000"))
             }
         }
 
         describe("#colorSecondaryDark") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorSecondaryDark).to(equal("#B7B7B7"))
+                expect(systemUnderTest.colorSecondaryDark).to(equal("#AA0050"))
             }
         }
 
         describe("#colorOnSecondaryDark") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorOnSecondaryDark).to(equal("#333333"))
+                expect(systemUnderTest.colorOnSecondaryDark).to(equal("#FFFFFF"))
             }
         }
 
