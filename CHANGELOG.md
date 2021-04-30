@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0](https://github.com/natura-cosmeticos/natds-ios/compare/3.13.5...4.0.0) (2021-04-30)
+
+
+### ⚠ BREAKING CHANGES
+
+* Change primary and secondary colors for Avon
+
+### Bug Fixes
+
+* update color tokens for avon theme ([8fd0ee7](https://github.com/natura-cosmeticos/natds-ios/commit/8fd0ee7ee124e9beeac1e876794ece49d156b838))
+
 ### [3.13.5](https://github.com/natura-cosmeticos/natds-ios/compare/3.13.4...3.13.5) (2021-04-28)
 
 
