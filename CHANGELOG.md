@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.0.1](https://github.com/natura-cosmeticos/natds-ios/compare/4.0.0...4.0.1) (2021-05-03)
+
+
+### Bug Fixes
+
+* fix checkbox label number of lines ([7919d60](https://github.com/natura-cosmeticos/natds-ios/commit/7919d60fc9c77c5df89e1a4c5a95e1b955181bc0))
+
 ## [4.0.0](https://github.com/natura-cosmeticos/natds-ios/compare/3.13.5...4.0.0) (2021-04-30)
 
 
