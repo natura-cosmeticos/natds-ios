@@ -98,6 +98,7 @@ public class NatSelectionControl: UIView {
         label.font = NatFonts.font(ofSize: .body2, withWeight: .regular)
         label.textColor = getUIColorFromTokens(\.colorHighEmphasis)
         label.text = text
+        label.numberOfLines = 0
         return label
     }()
 
