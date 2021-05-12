@@ -14,5 +14,36 @@ extension TextField {
         case error
         case success
         case none
+        
+        var borderWidth: CGFloat {
+            switch self {
+            case .error:
+                return 2
+            default:
+                return 1
+            }
+        }
+
+        var tintColor: UIColor {
+            switch self {
+            case .error:
+                return getUIColorFromTokens(\.colorAlert)
+            case .success:
+                return getUIColorFromTokens(\.colorSuccess)
+            default:
+                return .clear
+            }
+        }
+
+        var helperIcon: UIImage? {
+            switch self {
+            case .error:
+                return AssetsPath.iconOutlinedActionCancel.rawValue
+            case .success:
+                return AssetsPath.iconOutlinedActionCheck.rawValue
+            default:
+                return nil
+            }
+        }
     }
 }
