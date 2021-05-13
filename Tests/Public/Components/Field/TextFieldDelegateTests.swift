@@ -22,30 +22,30 @@ final class TextFieldDelegateTests: XCTestCase {
     }
 
     func test_textFieldDelegate_whenHasDelegateAndCallDidEndEditing_expectInvokeTextFieldDelegate() {
-        sut.textFieldDidEndEditing(sut.textField)
+        delegateMock.textFieldDidEndEditing(sut.textField)
 
         XCTAssertEqual(delegateMock.invokedDidEndEditing.count, 1)
-        XCTAssertEqual(delegateMock.invokedDidEndEditing.field, sut)
+        XCTAssertEqual(delegateMock.invokedDidEndEditing.field, sut.textField)
     }
 
     func test_textFieldDelegate_whenHasDelegateAndCallDidBeginEditing_expectInvokeTextFieldDelegate() {
-        sut.textFieldDidBeginEditing(sut.textField)
+        delegateMock.textFieldDidBeginEditing(sut.textField)
 
         XCTAssertEqual(delegateMock.invokedDidBeginEditing.count, 1)
-        XCTAssertEqual(delegateMock.invokedDidBeginEditing.field, sut)
+        XCTAssertEqual(delegateMock.invokedDidBeginEditing.field, sut.textField)
     }
 
     func test_textFieldDelegate_whenHasDelegateAndCallShouldBeginEditing_expectInvokeTextFieldDelegate() {
-        _ = sut.textFieldShouldBeginEditing(sut.textField)
+        _ = delegateMock.textFieldShouldBeginEditing(sut.textField)
 
         XCTAssertEqual(delegateMock.invokedDidShouldBeginEditing.count, 1)
-        XCTAssertEqual(delegateMock.invokedDidShouldBeginEditing.field, sut)
+        XCTAssertEqual(delegateMock.invokedDidShouldBeginEditing.field, sut.textField)
     }
 
     func test_textFieldDelegate_whenHasDelegateAndCallShouldChangeCharacterInRange_expectInvokeTextFieldDelegate() {
-        _ = sut.textField(sut.textField, shouldChangeCharactersIn: NSRange(), replacementString: "")
+        _ = delegateMock.textField(sut.textField, shouldChangeCharactersIn: NSRange(), replacementString: "")
 
         XCTAssertEqual(delegateMock.invokedTextFieldChangeCharInRange.count, 1)
-        XCTAssertEqual(delegateMock.invokedTextFieldChangeCharInRange.field, sut)
+        XCTAssertEqual(delegateMock.invokedTextFieldChangeCharInRange.field, sut.textField)
     }
 }
