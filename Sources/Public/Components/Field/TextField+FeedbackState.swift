@@ -14,7 +14,7 @@ extension TextField {
         case error
         case success
         case none
-        
+
         var borderWidth: CGFloat {
             switch self {
             case .error:

@@ -17,9 +17,8 @@ public enum TextFieldType {
 
     var keyboard: UIKeyboardType {
         switch self {
-        case .text:
-            return .default
-        case .name:
+        case .text,
+             .name:
             return .default
         case .number:
             return .numberPad
@@ -32,38 +31,26 @@ public enum TextFieldType {
         switch self {
         case .text:
             return .yes
-        case .name:
-            return .no
-        case .number:
-            return .no
-        case .password:
+        default:
             return .no
         }
     }
 
     var capitalization: UITextAutocapitalizationType {
          switch self {
-         case .text:
-             return .none
          case .name:
             return .words
-         case .number:
-             return .none
-         case .password:
+         default:
             return .none
          }
      }
 
     var secureTextEntry: Bool {
         switch self {
-        case .text:
-            return false
-        case .name:
-            return false
-        case .number:
-            return false
         case .password:
             return true
+        default:
+            return false
         }
     }
 }

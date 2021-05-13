@@ -8,7 +8,8 @@ extension TextField {
 
         var isUserInteractionEnabled: Bool {
             switch self {
-            case .disabled, .readOnly:
+            case .disabled,
+                 .readOnly:
                 return false
             default:
                 return true
@@ -26,7 +27,9 @@ extension TextField {
 
         var borderColor: UIColor {
             switch self {
-            case .enabled, .readOnly, .disabled:
+            case .enabled,
+                 .readOnly,
+                 .disabled:
                 return getUIColorFromTokens(\.colorLowEmphasis)
             case .active:
                 return getUIColorFromTokens(\.colorPrimary)
@@ -110,7 +113,8 @@ extension TextField {
 
         var placeholderTextColor: UIColor {
             switch self {
-            case .enabled, .active:
+            case .enabled,
+                 .active:
                 return getUIColorFromTokens(\.colorMediumEmphasis)
             default:
                 return getUIColorFromTokens(\.colorLowEmphasis)
