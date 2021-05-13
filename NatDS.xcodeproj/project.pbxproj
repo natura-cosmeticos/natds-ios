@@ -64,7 +64,6 @@
 		525A8C62B68D8C9B0AC882318792D04C /* Pulsable+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC00F737F0234FCBD14533100E96A39E /* Pulsable+Spec.swift */; };
 		55A2D6D6BAD3F2F0B352CA80FC656452 /* UICollectionView+ReusableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B6CEC817D03194414588BB22C1833A /* UICollectionView+ReusableTests.swift */; };
 		56B51E3D524A0D2900D7DD3E6CC761E7 /* UIFont+Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA9C4721134BD5277D76AEDED7A01DB /* UIFont+Icon.swift */; };
-		56E21DDCD3217649B6CC5332DB901648 /* TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6A44B9A9D7999BD68C1D60499CEF88 /* TextFieldDelegate.swift */; };
 		5737265E1EA6FD9BF1004F1CC1333F29 /* IllustrationIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4969844F4A007C92B7C67A4FA020C85 /* IllustrationIcons.swift */; };
 		5C0716F242EFC1AF6A61CBE257DA7CFE /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674EEA4A2112FC3EF3AE40AA3776A35A /* TextField.swift */; };
 		5C3B779F94FC59E1F2329996E3E55DF5 /* ElevationAttributes+Equitable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58907D6C652303C4D5FC5FFE6E8F721A /* ElevationAttributes+Equitable.swift */; };
@@ -791,7 +790,6 @@
 		E863AFC8E9DA103F33E2D48577058242 /* NavigationDrawerSubitemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerSubitemCell.swift; sourceTree = "<group>"; };
 		E99F543F7F6AC44B9A4E1341942EE0E0 /* TabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabTests.swift; sourceTree = "<group>"; };
 		EA6C2225E568F933653803F970EF3103 /* Pods_NatDSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NatDSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB6A44B9A9D7999BD68C1D60499CEF88 /* TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDelegate.swift; sourceTree = "<group>"; };
 		EBD8F16712FE1A5C351E09A1 /* Pods_NatDSSnapShotTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NatDSSnapShotTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC5970C426475EACCF56EF2C12EB450D /* Pods-NatDSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatDSTests.release.xcconfig"; path = "Target Support Files/Pods-NatDSTests/Pods-NatDSTests.release.xcconfig"; sourceTree = "<group>"; };
 		EFD589860DA945AE5563620B305091ED /* NatDS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NatDS.h; sourceTree = "<group>"; };
@@ -2680,7 +2678,6 @@
 			children = (
 				8BEE0086E453EC48CFDC60DBA3C5C989 /* Field.swift */,
 				674EEA4A2112FC3EF3AE40AA3776A35A /* TextField.swift */,
-				EB6A44B9A9D7999BD68C1D60499CEF88 /* TextFieldDelegate.swift */,
 				437B78D88ACFB47EEADED96CDC94C7C5 /* TextFieldType.swift */,
 				7D5120CF25ED7CE200557E21 /* TextField+InteractionState.swift */,
 				7D43162C25EE8944004AE34F /* TextField+FeedbackState.swift */,
@@ -3294,7 +3291,6 @@
 				8409854724F02B230095D6AD /* Notification+Name+ThemeHasChanged.swift in Sources */,
 				5C0716F242EFC1AF6A61CBE257DA7CFE /* TextField.swift in Sources */,
 				79EA0C20260A85DE00742C0A /* NatCounterButton.swift in Sources */,
-				56E21DDCD3217649B6CC5332DB901648 /* TextFieldDelegate.swift in Sources */,
 				E07925C3535D79164EBC061C7D6A6CE4 /* TextFieldType.swift in Sources */,
 				847C829224E36AB7001CE116 /* NaturaLightTheme.swift in Sources */,
 				84932F1324EAB9270052265F /* AvailableTheme.swift in Sources */,

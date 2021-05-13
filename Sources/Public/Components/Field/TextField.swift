@@ -33,6 +33,8 @@
  Example of usage:
  
         textField.configure(state: .error, with: "Error")
+        // to clear the state:
+        textField.configure(state: .none)
  
  It also can be configured as a required field, 'read-only' field or disabled textField. Each interaction state has its pre-defined style:
  
@@ -59,13 +61,10 @@
  - `placeholder`: Hint text to display when the text is empty
  - `helper`: Hint text always displayed below textfield
  - `error`: Text that alerts about an error
-
- Use the methods of TextFieldDelegate protocol to manage the following feature:
- - natTextFieldDidBeginEditing
- - natTextFieldDidEndEditing
- - natTextFieldEditingChanged
- - natTextFieldShouldBeginEditing
- - natTextField
+ 
+ To manage the TextField, use UITextFieldDelegate protocol.
+ 
+        textField.delegate = yourDelegate
 
  - Requires:
  It's necessary to configure the Design System with a theme or fatalError will be raised.
@@ -148,7 +147,11 @@ public class TextField: UIView {
         }
     }
 
-    public weak var delegate: TextFieldDelegate?
+    public weak var delegate: UITextFieldDelegate? {
+        didSet {
+            self.textField.delegate = delegate
+        }
+    }
 
     // MARK: - Private vars
 
@@ -182,7 +185,7 @@ public class TextField: UIView {
 
     public private(set) lazy var textField: Field = {
         let field = Field()
-        field.delegate = self
+        field.delegate = self.delegate
         return field
     }()
 
@@ -279,7 +282,8 @@ extension TextField {
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         addGestureRecognizer(tapRecognizer)
 
-        textField.addTarget(self, action: #selector(handleEditingChanged), for: .editingChanged)
+        textField.addTarget(self, action: #selector(handleBeginEditing), for: .editingDidBegin)
+        textField.addTarget(self, action: #selector(handleEndEditing), for: .editingDidEnd)
 
         handleRequired()
         handleInteractionState()
@@ -338,8 +342,15 @@ extension TextField {
         becomeFirstResponder()
     }
 
-    @objc private func handleEditingChanged() {
-        delegate?.natTextFieldEditingChanged?(self)
+    @objc private func handleBeginEditing() {
+        self.isEditing = true
+    }
+
+    @objc private func handleEndEditing() {
+        self.isEditing = false
+        if let isEmpty = textField.text?.isEmpty, !isEmpty {
+            self.interactionState = .filled
+        }
     }
 
     private func handleInteractionState() {
@@ -450,34 +461,6 @@ extension TextField {
             iconButtonVisibility.configure(iconImage: iconVisibility)
             self.textField.isSecureTextEntry = true
         }
-    }
-}
-
-extension TextField: UITextFieldDelegate {
-
-    // MARK: - Delegates
-
-    public func textFieldDidBeginEditing(_ textField: UITextField) {
-        self.isEditing = true
-        delegate?.natTextFieldDidBeginEditing?(self)
-    }
-
-    public func textFieldDidEndEditing(_ textField: UITextField) {
-        self.isEditing = false
-        delegate?.natTextFieldDidEndEditing?(self)
-        if let isEmpty = textField.text?.isEmpty, !isEmpty {
-            self.interactionState = .filled
-        }
-    }
-
-    public func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        return delegate?.natTextFieldShouldBeginEditing?(self) ?? true
-    }
-
-    public func textField(_ textField: UITextField,
-                          shouldChangeCharactersIn range: NSRange,
-                          replacementString string: String) -> Bool {
-        return delegate?.natTextField?(self, changeCharInRange: range, string: string) ?? true
     }
 }
 
@@ -606,5 +589,10 @@ extension TextField {
     /// Removes the eye icon from `password` type textFields.
     public func configureRemoveVisibilityIcon() {
         hideVisibilityIcon()
+    }
+    
+    /// Sets a delegate for the TextField
+    public func configure(delegate: UITextFieldDelegate?) {
+        self.textField.delegate = delegate
     }
 }

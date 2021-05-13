@@ -264,4 +264,4 @@ class TextFieldItemViewController: UIViewController, SampleItem {
     }
 }
 
-extension TextFieldItemViewController: TextFieldDelegate {}
+extension TextFieldItemViewController: UITextFieldDelegate {}
