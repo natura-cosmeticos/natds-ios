@@ -213,24 +213,6 @@ public class TextField: UIView {
         return iconView
     }()
 
-    private lazy var iconVisibility: UIImage? = {
-        let icon = AssetsPath.iconOutlinedActionVisibility.rawValue
-        return icon
-    }()
-
-    private lazy var iconButtonVisibility: NatIconButton = {
-        let iconButton = NatIconButton(style: .standardDefault)
-        iconButton.configure(iconImage: iconVisibility)
-        iconButton.configure {
-            self.setIconVisibility()
-        }
-        iconButton.translatesAutoresizingMaskIntoConstraints = false
-        iconButton.heightAnchor.constraint(equalToConstant: getTokenFromTheme(\.sizeSemi)).isActive = true
-        iconButton.widthAnchor.constraint(equalToConstant: getTokenFromTheme(\.sizeSemi)).isActive = true
-
-        return iconButton
-    }()
-
     private lazy var iconButtonGeneral: NatIconButton = {
         let iconButton = NatIconButton(style: .standardDefault)
         iconButton.translatesAutoresizingMaskIntoConstraints = false
@@ -356,7 +338,6 @@ extension TextField {
     private func handleInteractionState() {
         textField.isEnabled = self.interactionState.isUserInteractionEnabled
         iconButtonGeneral.isUserInteractionEnabled = self.interactionState.isUserInteractionEnabled
-        iconButtonVisibility.isUserInteractionEnabled = self.interactionState.isUserInteractionEnabled
     }
 
     private func handleInteractionStateStyle() {
@@ -372,7 +353,6 @@ extension TextField {
         titleLabel.textColor = interactionState.titleTextColor
         helperLabel.textColor = interactionState.helperLabelTextColor
         iconButtonGeneral.configure(iconColor: interactionState.iconColor)
-        iconButtonVisibility.tintColor = interactionState.iconColor
 
         helperLabel.text = helper
     }
@@ -426,41 +406,6 @@ extension TextField {
         actionImageView.topAnchor.constraint(equalTo: textField.topAnchor, constant: 2).isActive = true
         actionImageView.bottomAnchor.constraint(equalTo: textField.bottomAnchor, constant: -2).isActive = true
         actionImageView.widthAnchor.constraint(equalToConstant: getTokenFromTheme(\.sizeLarge)).isActive = true
-    }
-
-    public func showVisibilityIcon() {
-        if self.type.secureTextEntry {
-            if self.subviews.contains(iconButtonGeneral) {
-                self.iconButtonGeneral.removeFromSuperview()
-            }
-
-            addSubview(iconButtonVisibility)
-            textField.fitPaddingToIconButton()
-
-            let constraints = [
-                iconButtonVisibility.centerYAnchor.constraint(equalTo: textField.centerYAnchor),
-                iconButtonVisibility.trailingAnchor.constraint(equalTo: textField.trailingAnchor, constant: -12)
-            ]
-            NSLayoutConstraint.activate(constraints)
-        }
-    }
-
-    public func hideVisibilityIcon() {
-        if self.subviews.contains(iconButtonVisibility) {
-            self.iconButtonVisibility.removeFromSuperview()
-        }
-    }
-
-    internal func setIconVisibility() {
-        if iconVisibility == AssetsPath.iconOutlinedActionVisibility.rawValue {
-            iconVisibility = AssetsPath.iconOutlinedActionVisibilityOff.rawValue
-            iconButtonVisibility.configure(iconImage: iconVisibility)
-            self.textField.isSecureTextEntry = false
-        } else {
-            iconVisibility = AssetsPath.iconOutlinedActionVisibility.rawValue
-            iconButtonVisibility.configure(iconImage: iconVisibility)
-            self.textField.isSecureTextEntry = true
-        }
     }
 }
 
@@ -531,7 +476,6 @@ extension TextField {
     ///   - action: A block of code to be executed when the icon receives a tap.
     public func configure(icon: String?, with action: @escaping () -> Void) {
         configureRemoveAction()
-        hideVisibilityIcon()
         textField.fitPaddingToIconButton()
         addIconButtonGeneral()
         iconButtonGeneral.configure(action: action)
@@ -549,7 +493,6 @@ extension TextField {
     ///   - action: A block of code to be executed when the image is tapped
     public func configure(image: UIImage?, with action: @escaping () -> Void) {
         configureRemoveAction()
-        hideVisibilityIcon()
         textField.fitPaddingToImage()
         addActionImage()
         actionImageView.image = image
@@ -563,7 +506,6 @@ extension TextField {
     ///   - action: A block of code the be executed when the image is tapped
     public func configure(remoteImageURL: URL, with action: @escaping () -> Void) {
         configureRemoveAction()
-        hideVisibilityIcon()
         textField.fitPaddingToImage()
         addActionImage()
         actionImageView.load(url: remoteImageURL)
@@ -579,16 +521,6 @@ extension TextField {
         if self.subviews.contains(actionImageView) {
             actionImageView.removeFromSuperview()
         }
-    }
-
-    /// Sets the eye icon to show and hide the textField content. It can only be used if the textField has the `password` type.
-    public func configureShowVisibilityIcon() {
-        showVisibilityIcon()
-    }
-
-    /// Removes the eye icon from `password` type textFields.
-    public func configureRemoveVisibilityIcon() {
-        hideVisibilityIcon()
     }
     
     /// Sets a delegate for the TextField
