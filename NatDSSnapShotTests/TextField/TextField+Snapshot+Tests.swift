@@ -112,21 +112,6 @@ final class TextFieldSnapshotTests: XCTestCase {
         assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.97))
     }
 
-    func test_password_whenVisibilityIconIsSet_expectedShowIconOutlinedActionVisibility() {
-        systemUnderTest.type = .password(keyboardType: .default)
-        systemUnderTest.text = "999.999.999-99"
-        systemUnderTest.showVisibilityIcon()
-        assertSnapshot(matching: systemUnderTest, as: .image)
-    }
-
-    func test_password_whenVisibilityIconIsSet_expectedShowIconOutlinedActionVisibilityOff() {
-        systemUnderTest.type = .password(keyboardType: .default)
-        systemUnderTest.text = "999.999.999-99"
-        systemUnderTest.showVisibilityIcon()
-        systemUnderTest.setIconVisibility()
-        assertSnapshot(matching: systemUnderTest, as: .image)
-    }
-
     func test_actionIcon_whenHasActionIcon_showsExpectedIconButtonSnapshot() {
         systemUnderTest.configure(icon: nil) {}
         assertSnapshot(matching: systemUnderTest, as: .image)

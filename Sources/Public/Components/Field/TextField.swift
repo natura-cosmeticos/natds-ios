@@ -522,7 +522,7 @@ extension TextField {
             actionImageView.removeFromSuperview()
         }
     }
-    
+
     /// Sets a delegate for the TextField
     public func configure(delegate: UITextFieldDelegate?) {
         self.textField.delegate = delegate

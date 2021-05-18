@@ -114,7 +114,8 @@ extension TextField {
         var placeholderTextColor: UIColor {
             switch self {
             case .enabled,
-                 .active:
+                 .active,
+                 .readOnly:
                 return getUIColorFromTokens(\.colorMediumEmphasis)
             default:
                 return getUIColorFromTokens(\.colorLowEmphasis)
