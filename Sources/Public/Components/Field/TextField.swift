@@ -1,6 +1,36 @@
 // swiftlint:disable line_length
 // swiftlint:disable file_length
 /**
+ - NOTE:
+ This component is available in the following variants:
+ - ✅ Standard
+
+ With the following attribute status:
+ - ✅ Disabled
+ - ✅ Read-only
+ - ✅ Helper text
+ - Size:
+    - ✅ `MediumX`
+    - ✅ `Medium`
+ - Style:
+    - ✅ `Outlined`
+ - Interaction state:
+    - ✅ `Enabled`
+    - ✅ `Active (focus)`
+    - ✅ `Filled `
+ - Feedback state:
+    - ✅ `Error`
+    - ✅ `Success`
+ - Action:
+    - ✅ `None`
+    - ✅ `Icon button`
+    - ✅ `Image`
+ - Type:
+    - ✅ `Text`
+    - ✅ `Password`
+    - ✅ `Number`
+    - ❌ `Multiline`
+ 
  TextField is a class that represents a component from the design system.
  
  It can be configured with 2 different sizes:
@@ -44,15 +74,9 @@
  
  The TextField also has an action item on the right, which can be configured with an icon from NatDSIcons, a local image or a remote image:
  
-        textField.configure(icon: getIcon(.outlinedDefaultMockup)) {
-            // action
-        }
-        field.configure(image: UIImage(named: "imageName")) {
-            // action
-        }
-        field.configure(remoteImageURL: URL(string: "urlForImage")) {
-            // action
-        }
+        textField.configure(icon: getIcon(.outlinedDefaultMockup)) { action }
+        textField.configure(image: UIImage(named: "imageName")) { action }
+        textField.configure(remoteImageURL: URL(string: "urlForImage")) { action }
 
  There are properties that changes the textfield styles as well.
 
@@ -62,7 +86,7 @@
  - `helper`: Hint text always displayed below textfield
  - `error`: Text that alerts about an error
  
- To manage the TextField, use UITextFieldDelegate protocol.
+ To manage the TextField, use UITextFieldDelegate protocol as usual.
  
         textField.delegate = yourDelegate
 
