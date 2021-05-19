@@ -528,3 +528,12 @@ extension TextField {
         self.textField.delegate = delegate
     }
 }
+
+extension TextField {
+    // MARK: - Internal methods
+
+    /// Internal method as a helper to run snapshot tests.
+    internal func setIsEditing(_ isEditing: Bool) {
+        self.isEditing = isEditing
+    }
+}

@@ -19,7 +19,7 @@ final class TextFieldSnapshotTests: XCTestCase {
         systemUnderTest.title = "Label"
         systemUnderTest.placeholder = "Placeholder"
         systemUnderTest.helper = "Helper Text"
-        systemUnderTest.delegate = delegateMock
+        systemUnderTest.delegate = self
     }
 
     func test_size_whenHasMediumSize_returnMediumSizeSnapshot() {
@@ -38,12 +38,12 @@ final class TextFieldSnapshotTests: XCTestCase {
     }
 
     func test_state_whenHasNoFocus_returnEnableStateSnapshot() {
-        systemUnderTest.textFieldDidEndEditing(systemUnderTest.textField)
+        systemUnderTest.setIsEditing(false)
         assertSnapshot(matching: systemUnderTest, as: .image)
     }
 
     func test_state_whenHasFocus_returnActiveStateSnapshot() {
-        systemUnderTest.textFieldDidBeginEditing(systemUnderTest.textField)
+        systemUnderTest.setIsEditing(true)
         assertSnapshot(matching: systemUnderTest, as: .image)
     }
 
@@ -123,3 +123,5 @@ final class TextFieldSnapshotTests: XCTestCase {
         assertSnapshot(matching: systemUnderTest, as: .image)
     }
 }
+
+extension TextFieldSnapshotTests: UITextFieldDelegate {}
