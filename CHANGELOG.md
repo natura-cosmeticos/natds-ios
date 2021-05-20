@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.0.0](https://github.com/natura-cosmeticos/natds-ios/compare/4.0.1...5.0.0) (2021-05-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* Methods for showing and hiding visibility icon on TextFields were removed.
+* Change TextField's delegate from TextFieldDelegate to UITextFieldDelegate and remove old file
+
+### Bug Fixes
+
+* remove password visibility configuration for textfield ([9b23ecc](https://github.com/natura-cosmeticos/natds-ios/commit/9b23ecccdc22886161fbcc7f0aef088beed5bfe4))
+
+
+* change TextField delegate to UITextFieldDelegate ([3b12f37](https://github.com/natura-cosmeticos/natds-ios/commit/3b12f37a23d042c2fee3bc1580816c1ca3d0076d))
+
 ### [4.0.1](https://github.com/natura-cosmeticos/natds-ios/compare/4.0.0...4.0.1) (2021-05-03)
 
 
