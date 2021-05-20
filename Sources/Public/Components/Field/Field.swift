@@ -1,6 +1,6 @@
-class Field: UITextField {
+public final class Field: UITextField {
 
-    override var placeholder: String? {
+    public override var placeholder: String? {
         didSet {
             let attrPlaceholder = NSMutableAttributedString(string: placeholder ?? "")
                 .apply(font: NatFonts.font(ofSize: .body1, withWeight: .regular))
@@ -42,15 +42,15 @@ class Field: UITextField {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func textRect(forBounds bounds: CGRect) -> CGRect {
+    public override func textRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: padding)
     }
 
-    override func placeholderRect(forBounds bounds: CGRect) -> CGRect {
+    public override func placeholderRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: padding)
     }
 
-    override func editingRect(forBounds bounds: CGRect) -> CGRect {
+    public override func editingRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: padding)
     }
 

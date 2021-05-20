@@ -1,6 +1,36 @@
 // swiftlint:disable line_length
 // swiftlint:disable file_length
 /**
+ - NOTE:
+ This component is available in the following variants:
+ - ✅ Standard
+
+ With the following attribute status:
+ - ✅ Disabled
+ - ✅ Read-only
+ - ✅ Helper text
+ - Size:
+    - ✅ `MediumX`
+    - ✅ `Medium`
+ - Style:
+    - ✅ `Outlined`
+ - Interaction state:
+    - ✅ `Enabled`
+    - ✅ `Active (focus)`
+    - ✅ `Filled `
+ - Feedback state:
+    - ✅ `Error`
+    - ✅ `Success`
+ - Action:
+    - ✅ `None`
+    - ✅ `Icon button`
+    - ✅ `Image`
+ - Type:
+    - ✅ `Text`
+    - ✅ `Password`
+    - ✅ `Number`
+    - ❌ `Multiline`
+ 
  TextField is a class that represents a component from the design system.
  
  It can be configured with 2 different sizes:
@@ -33,6 +63,8 @@
  Example of usage:
  
         textField.configure(state: .error, with: "Error")
+        // to clear the state:
+        textField.configure(state: .none)
  
  It also can be configured as a required field, 'read-only' field or disabled textField. Each interaction state has its pre-defined style:
  
@@ -42,15 +74,9 @@
  
  The TextField also has an action item on the right, which can be configured with an icon from NatDSIcons, a local image or a remote image:
  
-        textField.configure(icon: getIcon(.outlinedDefaultMockup)) {
-            // action
-        }
-        field.configure(image: UIImage(named: "imageName")) {
-            // action
-        }
-        field.configure(remoteImageURL: URL(string: "urlForImage")) {
-            // action
-        }
+        textField.configure(icon: getIcon(.outlinedDefaultMockup)) { action }
+        textField.configure(image: UIImage(named: "imageName")) { action }
+        textField.configure(remoteImageURL: URL(string: "urlForImage")) { action }
 
  There are properties that changes the textfield styles as well.
 
@@ -59,13 +85,10 @@
  - `placeholder`: Hint text to display when the text is empty
  - `helper`: Hint text always displayed below textfield
  - `error`: Text that alerts about an error
-
- Use the methods of TextFieldDelegate protocol to manage the following feature:
- - natTextFieldDidBeginEditing
- - natTextFieldDidEndEditing
- - natTextFieldEditingChanged
- - natTextFieldShouldBeginEditing
- - natTextField
+ 
+ To manage the TextField, use UITextFieldDelegate protocol as usual.
+ 
+        textField.delegate = yourDelegate
 
  - Requires:
  It's necessary to configure the Design System with a theme or fatalError will be raised.
@@ -148,7 +171,11 @@ public class TextField: UIView {
         }
     }
 
-    public weak var delegate: TextFieldDelegate?
+    public weak var delegate: UITextFieldDelegate? {
+        didSet {
+            self.textField.delegate = delegate
+        }
+    }
 
     // MARK: - Private vars
 
@@ -180,9 +207,9 @@ public class TextField: UIView {
         return label
     }()
 
-    private(set) lazy var textField: Field = {
+    public private(set) lazy var textField: Field = {
         let field = Field()
-        field.delegate = self
+        field.delegate = self.delegate
         return field
     }()
 
@@ -208,34 +235,6 @@ public class TextField: UIView {
         iconView.heightAnchor.constraint(equalToConstant: getTokenFromTheme(\.sizeSmall)).isActive = true
         iconView.widthAnchor.constraint(equalToConstant: getTokenFromTheme(\.sizeSmall)).isActive = true
         return iconView
-    }()
-
-    private lazy var iconVisibility: UIImage? = {
-        let icon = AssetsPath.iconOutlinedActionVisibility.rawValue
-        return icon
-    }()
-
-    private lazy var iconCheck: UIImage? = {
-        let icon = AssetsPath.iconOutlinedActionCheck.rawValue
-        return icon
-    }()
-
-    private lazy var iconCancel: UIImage? = {
-        let icon = AssetsPath.iconOutlinedActionCancel.rawValue
-        return icon
-    }()
-
-    private lazy var iconButtonVisibility: NatIconButton = {
-        let iconButton = NatIconButton(style: .standardDefault)
-        iconButton.configure(iconImage: iconVisibility)
-        iconButton.configure {
-            self.setIconVisibility()
-        }
-        iconButton.translatesAutoresizingMaskIntoConstraints = false
-        iconButton.heightAnchor.constraint(equalToConstant: getTokenFromTheme(\.sizeSemi)).isActive = true
-        iconButton.widthAnchor.constraint(equalToConstant: getTokenFromTheme(\.sizeSemi)).isActive = true
-
-        return iconButton
     }()
 
     private lazy var iconButtonGeneral: NatIconButton = {
@@ -289,7 +288,8 @@ extension TextField {
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         addGestureRecognizer(tapRecognizer)
 
-        textField.addTarget(self, action: #selector(handleEditingChanged), for: .editingChanged)
+        textField.addTarget(self, action: #selector(handleBeginEditing), for: .editingDidBegin)
+        textField.addTarget(self, action: #selector(handleEndEditing), for: .editingDidEnd)
 
         handleRequired()
         handleInteractionState()
@@ -307,7 +307,6 @@ extension TextField {
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
             titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor)
         ]
-
         NSLayoutConstraint.activate(constraints)
     }
 
@@ -315,11 +314,12 @@ extension TextField {
         addSubview(textField)
         textField.translatesAutoresizingMaskIntoConstraints = false
 
-        NSLayoutConstraint.activate([
+        let constraints = [
             textField.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 4),
             textField.leadingAnchor.constraint(equalTo: leadingAnchor),
             textField.trailingAnchor.constraint(equalTo: trailingAnchor)
-        ])
+        ]
+        NSLayoutConstraint.activate(constraints)
         updateTextFieldHeightConstraint()
     }
 
@@ -338,7 +338,6 @@ extension TextField {
             stackView.bottomAnchor.constraint(equalTo: bottomAnchor),
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor)
         ]
-
         NSLayoutConstraint.activate(constraints)
     }
 }
@@ -349,124 +348,65 @@ extension TextField {
         becomeFirstResponder()
     }
 
-    @objc private func handleEditingChanged() {
-        delegate?.natTextFieldEditingChanged?(self)
+    @objc private func handleBeginEditing() {
+        self.isEditing = true
+    }
+
+    @objc private func handleEndEditing() {
+        self.isEditing = false
+        if let isEmpty = textField.text?.isEmpty, !isEmpty {
+            self.interactionState = .filled
+        }
     }
 
     private func handleInteractionState() {
         textField.isEnabled = self.interactionState.isUserInteractionEnabled
         iconButtonGeneral.isUserInteractionEnabled = self.interactionState.isUserInteractionEnabled
-        iconButtonVisibility.isUserInteractionEnabled = self.interactionState.isUserInteractionEnabled
     }
 
-    // swiftlint:disable function_body_length
     private func handleInteractionStateStyle() {
-        switch interactionState {
-        case .enabled:
-            textField.borderWidth = 1
-            textField.borderColor = getUIColorFromTokens(\.colorLowEmphasis)
-            titleLabel.textColor = getUIColorFromTokens(\.colorMediumEmphasis)
-            helperLabel.textColor = getUIColorFromTokens(\.colorMediumEmphasis)
-            helperLabel.text = helper
-            iconButtonVisibility.tintColor = getUIColorFromTokens(\.colorHighlight)
-            iconButtonGeneral.configure(iconColor: getUIColorFromTokens(\.colorHighlight))
-            textField.textColor = getUIColorFromTokens(\.colorHighEmphasis)
-            textField.backgroundColor = .clear
-            textField.attributedPlaceholder = NSAttributedString(string: placeholder ?? "",
-                                                                 attributes: [NSAttributedString.Key.foregroundColor:
-                                                                                getUIColorFromTokens(\.colorMediumEmphasis)])
+        textField.borderWidth = interactionState.borderWidth
+        textField.borderColor = interactionState.borderColor
+        textField.textColor = interactionState.textColor
+        textField.backgroundColor = interactionState.textFieldBackgroundColor
+        textField.tintColor = interactionState.textFieldTintColor
+        textField.attributedPlaceholder = NSAttributedString(string: placeholder ?? "",
+                                                             attributes: [NSAttributedString.Key.foregroundColor:
+                                                                            interactionState.placeholderTextColor])
 
-        case .active:
-            textField.borderWidth = 2
-            textField.borderColor = getUIColorFromTokens(\.colorPrimary)
-            textField.tintColor = getUIColorFromTokens(\.colorPrimary)
-            titleLabel.textColor = getUIColorFromTokens(\.colorMediumEmphasis)
-            helperLabel.textColor = getUIColorFromTokens(\.colorMediumEmphasis)
-            helperLabel.text = helper
-            textField.textColor = getUIColorFromTokens(\.colorHighEmphasis)
-            textField.backgroundColor = .clear
-            textField.attributedPlaceholder = NSAttributedString(string: placeholder ?? "",
-                                                                 attributes: [NSAttributedString.Key.foregroundColor:
-                                                                                getUIColorFromTokens(\.colorMediumEmphasis)])
+        titleLabel.textColor = interactionState.titleTextColor
+        helperLabel.textColor = interactionState.helperLabelTextColor
+        iconButtonGeneral.configure(iconColor: interactionState.iconColor)
 
-        case .readOnly:
-            textField.borderWidth = 1
-            textField.borderColor = getUIColorFromTokens(\.colorLowEmphasis)
-            titleLabel.textColor = getUIColorFromTokens(\.colorMediumEmphasis)
-            helperLabel.textColor = getUIColorFromTokens(\.colorMediumEmphasis)
-            textField.backgroundColor = getUIColorFromTokens(\.colorLowEmphasis).withAlphaComponent(0.25)
-            helperLabel.text = helper
-            textField.textColor = getUIColorFromTokens(\.colorHighEmphasis)
-            iconButtonVisibility.tintColor = getUIColorFromTokens(\.colorHighEmphasis)
-            iconButtonGeneral.configure(iconColor: getUIColorFromTokens(\.colorHighEmphasis))
-
-        case .disabled:
-            textField.borderWidth = 1
-            textField.borderColor = getUIColorFromTokens(\.colorLowEmphasis)
-            textField.textColor = getUIColorFromTokens(\.colorLowEmphasis)
-            titleLabel.textColor = getUIColorFromTokens(\.colorLowEmphasis)
-            helperLabel.textColor = getUIColorFromTokens(\.colorLowEmphasis)
-            helperLabel.text = helper
-            iconButtonVisibility.tintColor = getUIColorFromTokens(\.colorLowEmphasis)
-            iconButtonGeneral.configure(iconColor: getUIColorFromTokens(\.colorLowEmphasis))
-            textField.backgroundColor = .clear
-            textField.attributedPlaceholder = NSAttributedString(string: placeholder ?? "",
-                                                                 attributes: [NSAttributedString.Key.foregroundColor:
-                                                                                getUIColorFromTokens(\.colorLowEmphasis)])
-
-        case .filled:
-            textField.borderWidth = 1
-            textField.borderColor = getUIColorFromTokens(\.colorHighEmphasis)
-            titleLabel.textColor = getUIColorFromTokens(\.colorMediumEmphasis)
-            helperLabel.textColor = getUIColorFromTokens(\.colorMediumEmphasis)
-            helperLabel.text = helper
-            iconButtonVisibility.tintColor = getUIColorFromTokens(\.colorHighEmphasis)
-            iconButtonGeneral.configure(iconColor: getUIColorFromTokens(\.colorHighEmphasis))
-            textField.textColor = getUIColorFromTokens(\.colorHighEmphasis)
-            textField.backgroundColor = .clear
-        }
+        helperLabel.text = helper
     }
 
     private func handleFeedbackStyle() {
-        switch state {
-        case .error:
-            textField.borderWidth = 2
-            textField.borderColor = getUIColorFromTokens(\.colorAlert)
-            textField.tintColor = getUIColorFromTokens(\.colorAlert)
-            titleLabel.textColor = getUIColorFromTokens(\.colorAlert)
-            helperLabel.textColor = getUIColorFromTokens(\.colorAlert)
-            helperLabel.text = helper
-            stackView.spacing = getTokenFromTheme(\.sizeMicro)
-            feedbackIconImageView.image = iconCancel
-            feedbackIconImageView.contentMode = .scaleAspectFit
-            feedbackIconImageView.tintedColor = getUIColorFromTokens(\.colorAlert)
-            feedbackIconImageView.isHidden = false
-
-        case .success:
-            textField.borderWidth = 1
-            textField.borderColor = getUIColorFromTokens(\.colorSuccess)
-            textField.tintColor = getUIColorFromTokens(\.colorSuccess)
-            titleLabel.textColor = getUIColorFromTokens(\.colorSuccess)
-            helperLabel.textColor = getUIColorFromTokens(\.colorSuccess)
-            helperLabel.text = helper
-            stackView.spacing = getTokenFromTheme(\.sizeMicro)
-            feedbackIconImageView.image = iconCheck
-            feedbackIconImageView.contentMode = .scaleAspectFit
-            feedbackIconImageView.tintedColor = getUIColorFromTokens(\.colorSuccess)
-            feedbackIconImageView.isHidden = false
-
-        default:
+        if state == .none {
             handleInteractionStateStyle()
             feedbackIconImageView.isHidden = true
             return
         }
+
+        textField.borderWidth = state.borderWidth
+        textField.borderColor = state.tintColor
+        textField.tintColor = state.tintColor
+        titleLabel.textColor = state.tintColor
+        helperLabel.textColor = state.tintColor
+        helperLabel.text = helper
+
+        stackView.spacing = getTokenFromTheme(\.sizeMicro)
+        feedbackIconImageView.image = state.helperIcon
+        feedbackIconImageView.contentMode = .scaleAspectFit
+        feedbackIconImageView.tintedColor = state.tintColor
+        feedbackIconImageView.isHidden = false
     }
 
     private func handleTextFieldType() {
-        self.textField.keyboardType = type.keyboard
-        self.textField.autocorrectionType = type.autoCorrection
-        self.textField.autocapitalizationType = type.capitalization
-        self.textField.isSecureTextEntry = type.secureTextEntry
+        textField.keyboardType = type.keyboard
+        textField.autocorrectionType = type.autoCorrection
+        textField.autocapitalizationType = type.capitalization
+        textField.isSecureTextEntry = type.secureTextEntry
     }
 
     private func handleRequired() {
@@ -480,8 +420,8 @@ extension TextField {
 
     private func addIconButtonGeneral() {
         addSubview(iconButtonGeneral)
-        self.iconButtonGeneral.centerYAnchor.constraint(equalTo: textField.centerYAnchor).isActive = true
-        self.iconButtonGeneral.trailingAnchor.constraint(equalTo: textField.trailingAnchor, constant: -12).isActive = true
+        iconButtonGeneral.centerYAnchor.constraint(equalTo: textField.centerYAnchor).isActive = true
+        iconButtonGeneral.trailingAnchor.constraint(equalTo: textField.trailingAnchor, constant: -12).isActive = true
     }
 
     private func addActionImage() {
@@ -490,69 +430,6 @@ extension TextField {
         actionImageView.topAnchor.constraint(equalTo: textField.topAnchor, constant: 2).isActive = true
         actionImageView.bottomAnchor.constraint(equalTo: textField.bottomAnchor, constant: -2).isActive = true
         actionImageView.widthAnchor.constraint(equalToConstant: getTokenFromTheme(\.sizeLarge)).isActive = true
-    }
-
-    public func showVisibilityIcon() {
-        if self.type.secureTextEntry {
-            if self.subviews.contains(iconButtonGeneral) {
-                self.iconButtonGeneral.removeFromSuperview()
-            }
-
-            addSubview(iconButtonVisibility)
-            textField.fitPaddingToIconButton()
-
-            let constraints = [
-                iconButtonVisibility.centerYAnchor.constraint(equalTo: textField.centerYAnchor),
-                iconButtonVisibility.trailingAnchor.constraint(equalTo: textField.trailingAnchor, constant: -12)
-            ]
-            NSLayoutConstraint.activate(constraints)
-        }
-    }
-
-    public func hideVisibilityIcon() {
-        if self.subviews.contains(iconButtonVisibility) {
-            self.iconButtonVisibility.removeFromSuperview()
-        }
-    }
-
-    internal func setIconVisibility() {
-        if iconVisibility == AssetsPath.iconOutlinedActionVisibility.rawValue {
-            iconVisibility = AssetsPath.iconOutlinedActionVisibilityOff.rawValue
-            iconButtonVisibility.configure(iconImage: iconVisibility)
-            self.textField.isSecureTextEntry = false
-        } else {
-            iconVisibility = AssetsPath.iconOutlinedActionVisibility.rawValue
-            iconButtonVisibility.configure(iconImage: iconVisibility)
-            self.textField.isSecureTextEntry = true
-        }
-    }
-}
-
-extension TextField: UITextFieldDelegate {
-
-    // MARK: - Delegates
-
-    public func textFieldDidBeginEditing(_ textField: UITextField) {
-        self.isEditing = true
-        delegate?.natTextFieldDidBeginEditing?(self)
-    }
-
-    public func textFieldDidEndEditing(_ textField: UITextField) {
-        self.isEditing = false
-        delegate?.natTextFieldDidEndEditing?(self)
-        if let isEmpty = textField.text?.isEmpty, !isEmpty {
-            self.interactionState = .filled
-        }
-    }
-
-    public func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        return delegate?.natTextFieldShouldBeginEditing?(self) ?? true
-    }
-
-    public func textField(_ textField: UITextField,
-                          shouldChangeCharactersIn range: NSRange,
-                          replacementString string: String) -> Bool {
-        return delegate?.natTextField?(self, changeCharInRange: range, string: string) ?? true
     }
 }
 
@@ -623,7 +500,6 @@ extension TextField {
     ///   - action: A block of code to be executed when the icon receives a tap.
     public func configure(icon: String?, with action: @escaping () -> Void) {
         configureRemoveAction()
-        hideVisibilityIcon()
         textField.fitPaddingToIconButton()
         addIconButtonGeneral()
         iconButtonGeneral.configure(action: action)
@@ -641,7 +517,6 @@ extension TextField {
     ///   - action: A block of code to be executed when the image is tapped
     public func configure(image: UIImage?, with action: @escaping () -> Void) {
         configureRemoveAction()
-        hideVisibilityIcon()
         textField.fitPaddingToImage()
         addActionImage()
         actionImageView.image = image
@@ -655,7 +530,6 @@ extension TextField {
     ///   - action: A block of code the be executed when the image is tapped
     public func configure(remoteImageURL: URL, with action: @escaping () -> Void) {
         configureRemoveAction()
-        hideVisibilityIcon()
         textField.fitPaddingToImage()
         addActionImage()
         actionImageView.load(url: remoteImageURL)
@@ -673,13 +547,17 @@ extension TextField {
         }
     }
 
-    /// Sets the eye icon to show and hide the textField content. It can only be used if the textField has the `password` type.
-    public func configureShowVisibilityIcon() {
-        showVisibilityIcon()
+    /// Sets a delegate for the TextField
+    public func configure(delegate: UITextFieldDelegate?) {
+        self.textField.delegate = delegate
     }
+}
 
-    /// Removes the eye icon from `password` type textFields.
-    public func configureRemoveVisibilityIcon() {
-        hideVisibilityIcon()
+extension TextField {
+    // MARK: - Internal methods
+
+    /// Internal method as a helper to run snapshot tests.
+    internal func setIsEditing(_ isEditing: Bool) {
+        self.isEditing = isEditing
     }
 }
