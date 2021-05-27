@@ -1,3 +1,5 @@
+import UIKit
+
 enum ButtonOutlinedStyle {
     static func applyStyle(on button: UIButton) {
         ButtonStyle.applyStyle(on: button)
