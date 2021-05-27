@@ -739,7 +739,7 @@
 		90FE1ED739157F95D9EBBE9BD71B94E0 /* NavigationDrawer+IndexMenuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationDrawer+IndexMenuTests.swift"; sourceTree = "<group>"; };
 		93C1C3FD73F0E5F31735966CB48D7B16 /* FontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyle.swift; sourceTree = "<group>"; };
 		951DBA41C4F1A24B4EB8567B5CD0878C /* Pods-NatDSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatDSTests.debug.xcconfig"; path = "Target Support Files/Pods-NatDSTests/Pods-NatDSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		96344B6190992C63D2FA4A82A57D520E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96344B6190992C63D2FA4A82A57D520E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Sources/Supporting Files/Info.plist"; sourceTree = SOURCE_ROOT; };
 		9C01EDAF32106E3A72F0D0694D1A156C /* NatDialogController+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogController+Spec.swift"; sourceTree = "<group>"; };
 		9EAE325876E14C91105C5CF9D2E7F1EF /* ViewStyle+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewStyle+Spec.swift"; sourceTree = "<group>"; };
 		9F3B9936E46C7C4571BB36673012AFCE /* NatColors+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatColors+Spec.swift"; sourceTree = "<group>"; };
@@ -792,7 +792,7 @@
 		EA6C2225E568F933653803F970EF3103 /* Pods_NatDSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NatDSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBD8F16712FE1A5C351E09A1 /* Pods_NatDSSnapShotTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NatDSSnapShotTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC5970C426475EACCF56EF2C12EB450D /* Pods-NatDSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatDSTests.release.xcconfig"; path = "Target Support Files/Pods-NatDSTests/Pods-NatDSTests.release.xcconfig"; sourceTree = "<group>"; };
-		EFD589860DA945AE5563620B305091ED /* NatDS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NatDS.h; sourceTree = "<group>"; };
+		EFD589860DA945AE5563620B305091ED /* NatDS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NatDS.h; path = "Sources/Supporting Files/NatDS.h"; sourceTree = SOURCE_ROOT; };
 		F6F7B50CF41E6ECBFD7148828549ECBF /* ExpansionPanel+MarginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExpansionPanel+MarginTests.swift"; sourceTree = "<group>"; };
 		F988EE601584B907D997288958055215 /* SearchBar+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchBar+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		FADDEC4E472D2A193BED0EBF058A67E8 /* ViewAnimatingMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewAnimatingMock.swift; sourceTree = "<group>"; };
@@ -3389,7 +3389,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Supporting Files/Info.plist";
+				INFOPLIST_FILE = "Sources/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3604,7 +3604,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Supporting Files/Info.plist";
+				INFOPLIST_FILE = "Sources/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
