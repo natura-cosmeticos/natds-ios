@@ -10,11 +10,10 @@ let package = Package(
     products: [
         .library(
             name: "NatDS",
-            targets: ["NatDS"]),
+            targets: ["NatDS"])
     ],
     targets: [
         .target(
             name: "NatDS",
-            path: "Sources"),
-    ]
-)
+            path: "Sources")
+    ])

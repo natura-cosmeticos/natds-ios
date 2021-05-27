@@ -2591,8 +2591,8 @@
 				EFD589860DA945AE5563620B305091ED /* NatDS.h */,
 			);
 			name = "Supporting Files";
-			path = "../Supporting Files";
-			sourceTree = "<group>";
+			path = "Sources/Supporting Files";
+			sourceTree = SOURCE_ROOT;
 		};
 		DBACC3116710A6183CD3BC637E92D0D7 /* Dialog */ = {
 			isa = PBXGroup;
