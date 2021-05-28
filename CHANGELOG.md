@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.1.0](https://github.com/natura-cosmeticos/natds-ios/compare/5.0.0...5.1.0) (2021-05-28)
+
+
+### Features
+
+* add configuration file to support swift package manager ([4102b09](https://github.com/natura-cosmeticos/natds-ios/commit/4102b0936d15d9f7f3509d18c94346b59fd87ed8))
+
+
+### Bug Fixes
+
+* attempt to fix compile time error when using natds with spm ([358ad0d](https://github.com/natura-cosmeticos/natds-ios/commit/358ad0daf0a10be9570de401db03a5e4846de4ea))
+* fix folder structure to get header files correctly ([03617e6](https://github.com/natura-cosmeticos/natds-ios/commit/03617e6e63a267ee5e2a2f72f5914dabda2c71d0))
+* fix path for source files in the package config ([26c8e17](https://github.com/natura-cosmeticos/natds-ios/commit/26c8e17c47cc6091f5b9c5b30ad770fbf3628280))
+
 ## [5.0.0](https://github.com/natura-cosmeticos/natds-ios/compare/4.0.1...5.0.0) (2021-05-20)
 
 
