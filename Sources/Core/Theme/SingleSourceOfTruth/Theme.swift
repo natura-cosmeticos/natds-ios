@@ -23,6 +23,10 @@ protocol Theme {
 }
 
 protocol Tokens {
+    var assetBrandNeutralA: String { get }
+    var assetBrandNeutralB: String { get }
+    var assetBrandCustomA: String { get }
+    var assetBrandCustomB: String { get }
     var borderRadiusNone: CGFloat { get }
     var borderRadiusSmall: CGFloat { get }
     var borderRadiusMedium: CGFloat { get }
