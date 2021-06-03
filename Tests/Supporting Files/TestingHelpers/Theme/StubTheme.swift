@@ -6,6 +6,10 @@ struct StubTheme: Theme {
 }
 
 private struct StubTokens: Tokens {
+    let assetBrandNeutralA = "avon-a-official"
+    let assetBrandNeutralB = "avon-a-official"
+    let assetBrandCustomA = "avon-a-custom"
+    let assetBrandCustomB = "avon-a-custom"
     let borderRadiusNone: CGFloat = 0
     let borderRadiusSmall: CGFloat = 2
     let borderRadiusMedium: CGFloat = 4
@@ -184,6 +188,4 @@ private struct StubComponents: Components {
     let overlineFontSize: CGFloat = 12
     let overlineFontWeight: UIFont.Weight = .medium
     let overlineLetterSpacing: CGFloat = 0.8
-    let logoHorizontal: String = "Logo/Avon/Horizontal"
-    let logoVertical: String = "Logo/Avon/Vertical"
 }

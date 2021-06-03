@@ -205,6 +205,4 @@ protocol Components {
     var overlineFontSize: CGFloat { get }
     var overlineFontWeight: UIFont.Weight { get }
     var overlineLetterSpacing: CGFloat { get }
-    var logoHorizontal: String { get }
-    var logoVertical: String { get }
 }

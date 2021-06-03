@@ -205,6 +205,4 @@ struct AvonDarkComponents: Components {
     let overlineFontSize: CGFloat = 12
     let overlineFontWeight: UIFont.Weight = .medium
     let overlineLetterSpacing: CGFloat = 0.8
-    let logoHorizontal: String = "Logo/Avon/HorizontalDark"
-    let logoVertical: String = "Logo/Avon/VerticalDark"
 }

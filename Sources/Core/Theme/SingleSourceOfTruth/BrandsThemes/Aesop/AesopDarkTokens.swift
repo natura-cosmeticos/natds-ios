@@ -205,6 +205,4 @@ struct AesopDarkComponents: Components {
     let overlineFontSize: CGFloat = 12
     let overlineFontWeight: UIFont.Weight = .medium
     let overlineLetterSpacing: CGFloat = 0.8
-    let logoHorizontal: String = "Logo/Aesop/HorizontalDark"
-    let logoVertical: String = "Logo/Aesop/VerticalDark"
 }
