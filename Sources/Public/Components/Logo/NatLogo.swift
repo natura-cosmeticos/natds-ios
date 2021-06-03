@@ -1,5 +1,5 @@
 public final class NatLogo: UIView {
-    
+
     var size: Size = .veryHuge
 
     var model: Model = .modelA {
@@ -22,7 +22,7 @@ public final class NatLogo: UIView {
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
-    
+
     // MARK: - Inits
 
     public init(size: Size? = .veryHuge) {
@@ -35,7 +35,7 @@ public final class NatLogo: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     // MARK: - Private methods
 
     private func setup() {
@@ -72,9 +72,5 @@ public final class NatLogo: UIView {
 
     public func configure(color: Color) {
         self.color = color
-    }
-
-    public func configure(size: Size) {
-        self.size = size
     }
 }

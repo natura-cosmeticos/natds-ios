@@ -3,6 +3,11 @@ class AssetsHelper {
         let bundle = Bundle(for: self)
         return UIImage(named: name, in: bundle, compatibleWith: nil)
     }
+    
+    static func logo(from token: String) -> UIImage? {
+        let logoToken = "Logo/"+token
+        return self.image(from: logoToken)
+    }
 
     static func loadFont(_ font: FontStyle) {
         let fontNames = UIFont.fontNames(forFamilyName: font.familyName)
