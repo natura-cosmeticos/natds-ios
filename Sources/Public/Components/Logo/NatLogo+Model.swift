@@ -1,6 +1,10 @@
 extension NatLogo {
     /**
-DOCS
+     Model is a enum that represents model options for NatLogo image.
+     
+     These are all model options:
+     - modelA (A)
+     - modelB (B)
      */
 
     public enum Model {

@@ -1,6 +1,19 @@
 extension NatLogo {
     /**
-DOCS
+     Size is a enum that represents size values for NatLogo.
+     
+     These are all size options:
+     - veryHuge (default)
+     - hugeXXX
+     - hugeXX
+     - hugeX
+     - huge
+     - largeXXX
+     - largeXX
+     - largeX
+     - large
+     - mediumX
+     - medium
      */
 
     public enum Size {

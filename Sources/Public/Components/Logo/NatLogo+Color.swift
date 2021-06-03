@@ -1,6 +1,13 @@
 extension NatLogo {
     /**
-     DOCS
+     Color is a enum that represents color values for NatLogo.
+     
+     These are all color options:
+     - neutral (default)
+     - primary
+     - secondary
+     - highlight
+     - surface
      */
 
     public enum Color {

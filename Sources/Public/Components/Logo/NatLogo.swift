@@ -1,22 +1,58 @@
+/**
+ - NOTE:
+ This component is available in the following variants:
+ - ✅ Base
+
+ With the following attribute status:
+ - Model:
+    - ✅ `A`
+    - ✅ `B`
+ - Color:
+    - ✅ `Neutral`
+    - ✅ `Primary`
+    - ✅ `Secondary`
+    - ✅ `Highlight`
+    - ✅ `Surface`
+ - Size:
+    - ✅ `Medium` to `Veryhuge`
+ 
+ NatLogo represents Design System's `logo` component.
+ The logo image changes according to the configured theme and it has different model, color and size options.
+ The default model is `A`; the default size is `veryHuge`; and the default color is `neutral`.
+
+ > Note: the size can only be changed at `init()`
+ 
+ Example of usage:
+        
+        let logo = NatLogo(size: .medium)
+        logo.configure(color: .primary)
+        logo.configure(model: .modelB)
+
+ - Requires:
+    It's necessary to configure the Design System with a theme or fatalError will be raised.
+
+            DesignSystem().configure(with: AvailableTheme)
+ */
+
 public final class NatLogo: UIView {
 
-    var size: Size = .veryHuge
+    private var size: Size = .veryHuge
 
-    var model: Model = .modelA {
+    private var model: Model = .modelA {
         didSet {
             updateImage()
         }
     }
 
-    var color: Color = .neutral {
+    private var color: Color = .neutral {
         didSet {
             updateImage()
         }
     }
 
-    var logoImage: UIImage?
+    private var logoImage: UIImage?
 
-    lazy var logoImageView: UIImageView = {
+    lazy private var logoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
@@ -66,10 +102,14 @@ public final class NatLogo: UIView {
 
     // MARK: - Public methods
 
+    /// Configures a model for the logo
+    /// - Parameter model: an option from `Model` enum
     public func configure(model: Model) {
         self.model = model
     }
 
+    /// Configures a color for the logo
+    /// - Parameter color: an option from `Color` enum
     public func configure(color: Color) {
         self.color = color
     }
