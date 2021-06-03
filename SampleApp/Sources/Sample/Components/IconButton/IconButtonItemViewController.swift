@@ -56,7 +56,7 @@ final class IconButtonItemViewController: UIViewController, SampleItem {
         iconButton.configure(state: .disabled)
         return iconButton
     }()
-    
+
     private let iconButtonLightStyle: NatIconButton = {
         let iconButton = NatIconButton(style: .standardLight)
         iconButton.translatesAutoresizingMaskIntoConstraints = false

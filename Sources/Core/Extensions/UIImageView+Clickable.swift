@@ -1,4 +1,3 @@
-// swiftlint:disable force_cast
 public typealias SimpleClosure = (() -> Void)
 private var tappableKey: UInt8 = 0
 private var actionKey: UInt8 = 1
