@@ -1,33 +1,59 @@
-//
-//  NatLogo+Spec.swift
-//  NatDSTests
-//
-//  Created by Penélope Araújo on 03/06/21.
-//  Copyright © 2021 Natura. All rights reserved.
-//
+import Quick
+import Nimble
 
-import XCTest
+@testable import NatDS
 
-class NatLogo_Spec: QuickSpec {
+final class NatLogoSpec: QuickSpec {
+    override func spec() {
+        var systemUnderTest: NatLogo!
+        ConfigurationStorage.shared.currentTheme = StubTheme()
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+        describe("#init") {
+            beforeEach {
+                systemUnderTest = NatLogo()
+            }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+            it("has an expected size") {
+                expect(systemUnderTest.size.value).to(equal(getTokenFromTheme(\.sizeVeryHuge)))
+            }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+            it("has an expected color") {
+                expect(systemUnderTest.color).to(equal(.neutral))
+            }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+            it("has an expected model") {
+                expect(systemUnderTest.model).to(equal(.modelA))
+            }
+        }
+
+        describe("#init with custom size") {
+            beforeEach {
+                systemUnderTest = NatLogo(size: .medium)
+            }
+
+            it("has the configured size") {
+                expect(systemUnderTest.size.value).to(equal(getTokenFromTheme(\.sizeMedium)))
+            }
+        }
+
+        describe("#configure: color") {
+            beforeEach {
+                systemUnderTest.configure(color: .primary)
+            }
+
+            it("applies the configured color") {
+                expect(systemUnderTest.color.value).to(equal(getUIColorFromTokens(\.colorPrimary)))
+            }
+        }
+
+        describe("#configure: model") {
+            beforeEach {
+                systemUnderTest.configure(model: .modelB)
+            }
+
+            it("applies the configured model") {
+                expect(systemUnderTest.model).to(equal(.modelB))
+            }
         }
     }
-
 }

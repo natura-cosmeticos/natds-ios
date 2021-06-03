@@ -10,19 +10,35 @@ final class TheBodyShopDarkComponentsLogoSpec: QuickSpec {
                 ConfigurationStorage.shared.currentTheme = TheBodyShopDarkTheme()
             }
 
-            describe("#horizontal") {
+            describe("#customA") {
                 it("returns a expected path") {
-                    let systemUnderTest = getComponentAttributeFromTheme(\.logoHorizontal)
+                    let systemUnderTest = getTokenFromTheme(\.assetBrandCustomA)
 
-                    expect(systemUnderTest).to(equal("Logo/TheBodyShop/HorizontalDark"))
+                    expect(systemUnderTest).to(equal("thebodyshop-a-custom"))
                 }
             }
 
-            describe("#vertical") {
+            describe("#customB") {
                 it("returns a expected path") {
-                    let systemUnderTest = getComponentAttributeFromTheme(\.logoVertical)
+                    let systemUnderTest = getTokenFromTheme(\.assetBrandCustomB)
 
-                    expect(systemUnderTest).to(equal("Logo/TheBodyShop/VerticalDark"))
+                    expect(systemUnderTest).to(equal("thebodyshop-b-custom"))
+                }
+            }
+            
+            describe("#neutralA") {
+                it("returns a expected path") {
+                    let systemUnderTest = getTokenFromTheme(\.assetBrandNeutralA)
+
+                    expect(systemUnderTest).to(equal("thebodyshop-a-official-dark"))
+                }
+            }
+            
+            describe("#neutralB") {
+                it("returns a expected path") {
+                    let systemUnderTest = getTokenFromTheme(\.assetBrandNeutralB)
+
+                    expect(systemUnderTest).to(equal("thebodyshop-b-official-dark"))
                 }
             }
         }

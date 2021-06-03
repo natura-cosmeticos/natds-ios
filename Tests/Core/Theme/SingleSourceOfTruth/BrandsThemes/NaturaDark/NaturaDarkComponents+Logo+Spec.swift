@@ -10,19 +10,35 @@ final class NaturaDarkComponentsLogoSpec: QuickSpec {
                 ConfigurationStorage.shared.currentTheme = NaturaDarkTheme()
             }
 
-            describe("#horizontal") {
+            describe("#customA") {
                 it("returns a expected path") {
-                    let systemUnderTest = getComponentAttributeFromTheme(\.logoHorizontal)
+                    let systemUnderTest = getTokenFromTheme(\.assetBrandCustomA)
 
-                    expect(systemUnderTest).to(equal("Logo/Natura/HorizontalDark"))
+                    expect(systemUnderTest).to(equal("natura-a-custom"))
                 }
             }
 
-            describe("#vertical") {
+            describe("#customB") {
                 it("returns a expected path") {
-                    let systemUnderTest = getComponentAttributeFromTheme(\.logoVertical)
+                    let systemUnderTest = getTokenFromTheme(\.assetBrandCustomB)
 
-                    expect(systemUnderTest).to(equal("Logo/Natura/VerticalDark"))
+                    expect(systemUnderTest).to(equal("natura-b-custom"))
+                }
+            }
+            
+            describe("#neutralA") {
+                it("returns a expected path") {
+                    let systemUnderTest = getTokenFromTheme(\.assetBrandNeutralA)
+
+                    expect(systemUnderTest).to(equal("natura-a-official-dark"))
+                }
+            }
+            
+            describe("#neutralB") {
+                it("returns a expected path") {
+                    let systemUnderTest = getTokenFromTheme(\.assetBrandNeutralB)
+
+                    expect(systemUnderTest).to(equal("natura-b-official-dark"))
                 }
             }
         }

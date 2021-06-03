@@ -36,15 +36,15 @@
 
 public final class NatLogo: UIView {
 
-    private var size: Size = .veryHuge
+    private(set) var size: Size = .veryHuge
 
-    private var model: Model = .modelA {
+    var model: Model = .modelA {
         didSet {
             updateImage()
         }
     }
 
-    private var color: Color = .neutral {
+    var color: Color = .neutral {
         didSet {
             updateImage()
         }

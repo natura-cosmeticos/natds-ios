@@ -10,19 +10,35 @@ final class AesopLightComponentsLogoSpec: QuickSpec {
                 ConfigurationStorage.shared.currentTheme = AesopLightTheme()
             }
 
-            describe("#horizontal") {
+            describe("#customA") {
                 it("returns a expected path") {
-                    let systemUnderTest = getComponentAttributeFromTheme(\.logoHorizontal)
+                    let systemUnderTest = getTokenFromTheme(\.assetBrandCustomA)
 
-                    expect(systemUnderTest).to(equal("Logo/Aesop/HorizontalLight"))
+                    expect(systemUnderTest).to(equal("aesop-a-custom"))
                 }
             }
 
-            describe("#vertical") {
+            describe("#customB") {
                 it("returns a expected path") {
-                    let systemUnderTest = getComponentAttributeFromTheme(\.logoVertical)
+                    let systemUnderTest = getTokenFromTheme(\.assetBrandCustomB)
 
-                    expect(systemUnderTest).to(equal("Logo/Aesop/VerticalLight"))
+                    expect(systemUnderTest).to(equal("aesop-a-custom"))
+                }
+            }
+
+            describe("#neutralA") {
+                it("returns a expected path") {
+                    let systemUnderTest = getTokenFromTheme(\.assetBrandNeutralA)
+
+                    expect(systemUnderTest).to(equal("aesop-a-official"))
+                }
+            }
+
+            describe("#neutralB") {
+                it("returns a expected path") {
+                    let systemUnderTest = getTokenFromTheme(\.assetBrandNeutralB)
+
+                    expect(systemUnderTest).to(equal("aesop-a-official"))
                 }
             }
         }
