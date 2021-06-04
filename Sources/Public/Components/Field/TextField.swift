@@ -207,8 +207,8 @@ public class TextField: UIView {
         return label
     }()
 
-    public private(set) lazy var textField: Field = {
-        let field = Field()
+    public private(set) lazy var textField: NatField = {
+        let field = NatField()
         field.delegate = self.delegate
         return field
     }()
