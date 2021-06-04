@@ -199,6 +199,7 @@
 		7C00D9B09D306A421DBD99953C7BC9E4 /* NatElevation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2775F568C47ADB6D5DA7B7AFA4A41B4E /* NatElevation.swift */; };
 		7CA6BAC353B73AF5D31F09CAF0268EE5 /* DesignSystemFatalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E6D9764598D210D58B32B2AEB0FE9 /* DesignSystemFatalError.swift */; };
 		7D0537D2266979110078AC98 /* NatLogo+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0537D1266979110078AC98 /* NatLogo+Spec.swift */; };
+		7D0537DB266AB2B80078AC98 /* Logo+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0537DA266AB2B80078AC98 /* Logo+Snapshot+Tests.swift */; };
 		7D17AB1B25E91C380070FD31 /* NatAvatar+Snapshots+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D17AB1A25E91C380070FD31 /* NatAvatar+Snapshots+Tests.swift */; };
 		7D19998925756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19998825756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift */; };
 		7D31C1102614BC1700EED32A /* NatRating+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D31C10F2614BC1700EED32A /* NatRating+Style.swift */; };
@@ -613,6 +614,7 @@
 		79FC59F125DD57E3001CCB56 /* Image+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		7CCF632B4501044E5062C574CCBBF74E /* NatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatButton.swift; sourceTree = "<group>"; };
 		7D0537D1266979110078AC98 /* NatLogo+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatLogo+Spec.swift"; sourceTree = "<group>"; };
+		7D0537DA266AB2B80078AC98 /* Logo+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Logo+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		7D17AB1A25E91C380070FD31 /* NatAvatar+Snapshots+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatAvatar+Snapshots+Tests.swift"; sourceTree = "<group>"; };
 		7D19998825756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatProgressIndicatorCircular+Size.swift"; sourceTree = "<group>"; };
 		7D31C10F2614BC1700EED32A /* NatRating+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatRating+Style.swift"; sourceTree = "<group>"; };
@@ -1677,6 +1679,14 @@
 			path = Logo;
 			sourceTree = "<group>";
 		};
+		7D0537D9266AB29A0078AC98 /* Logo */ = {
+			isa = PBXGroup;
+			children = (
+				7D0537DA266AB2B80078AC98 /* Logo+Snapshot+Tests.swift */,
+			);
+			path = Logo;
+			sourceTree = "<group>";
+		};
 		7D17AB1925E91C070070FD31 /* Avatar */ = {
 			isa = PBXGroup;
 			children = (
@@ -1868,6 +1878,7 @@
 				84BB92A124DCB71400A9BCC8 /* Icons */,
 				79FC59F025DD57B0001CCB56 /* Image */,
 				7DE2B11425FBFB5F00C5CBC0 /* ListItem */,
+				7D0537D9266AB29A0078AC98 /* Logo */,
 				84A16EFD24DDBC3200E80DA0 /* NavigationDrawer */,
 				799B683725671F0C0055B96D /* ProgressIndicator */,
 				7D9038B3261B8000005A3D0A /* Rating */,
@@ -3381,6 +3392,7 @@
 				7DE2B11625FBFBAB00C5CBC0 /* NatListItemCell+Snapshot+Tests.swift in Sources */,
 				84BB929A24DC935700A9BCC8 /* ViewAnimatingMock.swift in Sources */,
 				84BB92A024DCA7E300A9BCC8 /* TextFieldDelegateMock.swift in Sources */,
+				7D0537DB266AB2B80078AC98 /* Logo+Snapshot+Tests.swift in Sources */,
 				79D4C90625F6C7FC0027E74E /* Checkbox+Snapshot+Tests.swift in Sources */,
 				84391DED24DB5C1F009D0BE8 /* AppBar+Snapshot+Tests.swift in Sources */,
 				84BB929524DC82EC00A9BCC8 /* Divider+Snapshot+Tests.swift in Sources */,
