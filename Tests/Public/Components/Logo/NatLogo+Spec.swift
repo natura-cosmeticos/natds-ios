@@ -38,6 +38,7 @@ final class NatLogoSpec: QuickSpec {
 
         describe("#configure: color") {
             beforeEach {
+                systemUnderTest = NatLogo()
                 systemUnderTest.configure(color: .primary)
             }
 
@@ -48,6 +49,7 @@ final class NatLogoSpec: QuickSpec {
 
         describe("#configure: model") {
             beforeEach {
+                systemUnderTest = NatLogo()
                 systemUnderTest.configure(model: .modelB)
             }
 

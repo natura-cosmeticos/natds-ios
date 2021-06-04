@@ -82,7 +82,6 @@ public final class NatLogo: UIView {
 
     private func addConstraints() {
         let constraints = [
-            heightAnchor.constraint(equalToConstant: size.value),
             widthAnchor.constraint(equalToConstant: size.value),
             logoImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
             logoImageView.trailingAnchor.constraint(equalTo: trailingAnchor),
