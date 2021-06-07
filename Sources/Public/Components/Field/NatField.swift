@@ -1,4 +1,4 @@
-public final class Field: UITextField {
+public final class NatField: UITextField {
 
     public override var placeholder: String? {
         didSet {

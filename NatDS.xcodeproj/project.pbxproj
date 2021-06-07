@@ -52,7 +52,7 @@
 		3A65DE112EB34ED5B9F3F1DF7B8D3FBD /* ExpansionPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58B1BFBC101D26CBEC7E3448F9B33D2 /* ExpansionPanel.swift */; };
 		3D8762A06C970677D223A561419340A9 /* PulseLayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2381FCF8210ECD9A4895ECA9ED41B0FB /* PulseLayerTests.swift */; };
 		40B14F67117654B7854317119E5B3509 /* ConfigurationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04723CCAA125D20DF5FFBB3D77A939D4 /* ConfigurationStorage.swift */; };
-		4612CED8B9691035EFA62E01E2B30FD6 /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEE0086E453EC48CFDC60DBA3C5C989 /* Field.swift */; };
+		4612CED8B9691035EFA62E01E2B30FD6 /* NatField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEE0086E453EC48CFDC60DBA3C5C989 /* NatField.swift */; };
 		47A806814516D6365DE9967251BA94E8 /* NatDS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17433A27D62633345ECA245C99114C15 /* NatDS.framework */; };
 		4838BBC57B1464D82D59DE861726268A /* NatColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546EF920207BAF8470E811B146A05C0F /* NatColors.swift */; };
 		4A59C326E069798EF1B4E61751F3F73D /* Pods_NatDSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6C2225E568F933653803F970EF3103 /* Pods_NatDSTests.framework */; };
@@ -733,7 +733,7 @@
 		8656CC0789F1E0DACEB77D4C50C2ECC1 /* UITableView+ReusableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+ReusableTests.swift"; sourceTree = "<group>"; };
 		8951046F74282531403D6D25AE4E299E /* ButtonOutlinedStyle+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonOutlinedStyle+Spec.swift"; sourceTree = "<group>"; };
 		8BA9C4721134BD5277D76AEDED7A01DB /* UIFont+Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Icon.swift"; sourceTree = "<group>"; };
-		8BEE0086E453EC48CFDC60DBA3C5C989 /* Field.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
+		8BEE0086E453EC48CFDC60DBA3C5C989 /* NatField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatField.swift; sourceTree = "<group>"; };
 		8D7EAA7BDB4A7A15736AF73EF6EBCD74 /* NatDialogController+StandardStyleBuilder+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogController+StandardStyleBuilder+Spec.swift"; sourceTree = "<group>"; };
 		8F52062B7DB3FCB23FA74EEE5EA52FDF /* NatDialogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatDialogController.swift; sourceTree = "<group>"; };
 		90FE1ED739157F95D9EBBE9BD71B94E0 /* NavigationDrawer+IndexMenuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationDrawer+IndexMenuTests.swift"; sourceTree = "<group>"; };
@@ -2676,7 +2676,7 @@
 		EA99DA7A49950566847F2CD983BBD1EA /* Field */ = {
 			isa = PBXGroup;
 			children = (
-				8BEE0086E453EC48CFDC60DBA3C5C989 /* Field.swift */,
+				8BEE0086E453EC48CFDC60DBA3C5C989 /* NatField.swift */,
 				674EEA4A2112FC3EF3AE40AA3776A35A /* TextField.swift */,
 				437B78D88ACFB47EEADED96CDC94C7C5 /* TextFieldType.swift */,
 				7D5120CF25ED7CE200557E21 /* TextField+InteractionState.swift */,
@@ -3217,7 +3217,7 @@
 				79EA0C4B260CD9DB00742C0A /* NatCounter+State.swift in Sources */,
 				7D60A4A0260E208E00A23C1A /* NatListItem+Feedback.swift in Sources */,
 				84BF066524B4A8BD00462AC5 /* ShortcutOutlinedStyle.swift in Sources */,
-				4612CED8B9691035EFA62E01E2B30FD6 /* Field.swift in Sources */,
+				4612CED8B9691035EFA62E01E2B30FD6 /* NatField.swift in Sources */,
 				84BC900824AA1678007DF09D /* NatDialogController+AlertStyleBuilder.swift in Sources */,
 				84BF066724B4A8DA00462AC5 /* ShortcutContainedStyle.swift in Sources */,
 				79FC598A25CAE199001CCB56 /* NatCard.swift in Sources */,
