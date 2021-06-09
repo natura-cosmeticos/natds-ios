@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.2.0](https://github.com/natura-cosmeticos/natds-ios/compare/5.1.1...5.2.0) (2021-06-09)
+
+
+### Features
+
+* adds new logo files and update themes with commons' files for logo ([d6e4c15](https://github.com/natura-cosmeticos/natds-ios/commit/d6e4c15ce69040e8a6c2444a8378d18f263c720f))
+* adds new NatLogo component ([728cf9a](https://github.com/natura-cosmeticos/natds-ios/commit/728cf9aeb246cae285ff5be242d6bfcf74d1ce2c))
+
 ### [5.1.1](https://github.com/natura-cosmeticos/natds-ios/compare/5.1.0...5.1.1) (2021-06-07)
 
 ## [5.1.0](https://github.com/natura-cosmeticos/natds-ios/compare/5.0.0...5.1.0) (2021-05-28)
