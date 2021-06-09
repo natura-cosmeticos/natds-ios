@@ -18,12 +18,13 @@
             DesignSystem().configure(with: AvailableTheme)
 */
 
+@available(*, deprecated, message: "Use NatLogo component instead")
 public struct NatLogoImages {
     public static var horizontal: UIImage? {
-        AssetsHelper.image(from: getComponentAttributeFromTheme(\.logoHorizontal))
+        AssetsHelper.logo(from: getTokenFromTheme(\.assetBrandNeutralA))
     }
 
     public static var vertical: UIImage? {
-        AssetsHelper.image(from: getComponentAttributeFromTheme(\.logoVertical))
+        AssetsHelper.logo(from: getTokenFromTheme(\.assetBrandNeutralB))
     }
 }

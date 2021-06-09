@@ -10,19 +10,35 @@ final class AesopDarkComponentsLogoSpec: QuickSpec {
                 ConfigurationStorage.shared.currentTheme = AesopDarkTheme()
             }
 
-            describe("#horizontal") {
+            describe("#customA") {
                 it("returns a expected path") {
-                    let systemUnderTest = getComponentAttributeFromTheme(\.logoHorizontal)
+                    let systemUnderTest = getTokenFromTheme(\.assetBrandCustomA)
 
-                    expect(systemUnderTest).to(equal("Logo/Aesop/HorizontalDark"))
+                    expect(systemUnderTest).to(equal("aesop-a-custom"))
                 }
             }
 
-            describe("#vertical") {
+            describe("#customB") {
                 it("returns a expected path") {
-                    let systemUnderTest = getComponentAttributeFromTheme(\.logoVertical)
+                    let systemUnderTest = getTokenFromTheme(\.assetBrandCustomB)
 
-                    expect(systemUnderTest).to(equal("Logo/Aesop/VerticalDark"))
+                    expect(systemUnderTest).to(equal("aesop-a-custom"))
+                }
+            }
+            
+            describe("#neutralA") {
+                it("returns a expected path") {
+                    let systemUnderTest = getTokenFromTheme(\.assetBrandNeutralA)
+
+                    expect(systemUnderTest).to(equal("aesop-a-official-dark"))
+                }
+            }
+            
+            describe("#neutralB") {
+                it("returns a expected path") {
+                    let systemUnderTest = getTokenFromTheme(\.assetBrandNeutralB)
+
+                    expect(systemUnderTest).to(equal("aesop-a-official-dark"))
                 }
             }
         }

@@ -10,19 +10,35 @@ final class TheBodyShopLightComponentsLogoSpec: QuickSpec {
                 ConfigurationStorage.shared.currentTheme = TheBodyShopLightTheme()
             }
 
-            describe("#horizontal") {
+            describe("#customA") {
                 it("returns a expected path") {
-                    let systemUnderTest = getComponentAttributeFromTheme(\.logoHorizontal)
+                    let systemUnderTest = getTokenFromTheme(\.assetBrandCustomA)
 
-                    expect(systemUnderTest).to(equal("Logo/TheBodyShop/HorizontalLight"))
+                    expect(systemUnderTest).to(equal("thebodyshop-a-custom"))
                 }
             }
 
-            describe("#vertical") {
+            describe("#customB") {
                 it("returns a expected path") {
-                    let systemUnderTest = getComponentAttributeFromTheme(\.logoVertical)
+                    let systemUnderTest = getTokenFromTheme(\.assetBrandCustomB)
 
-                    expect(systemUnderTest).to(equal("Logo/TheBodyShop/VerticalLight"))
+                    expect(systemUnderTest).to(equal("thebodyshop-b-custom"))
+                }
+            }
+            
+            describe("#neutralA") {
+                it("returns a expected path") {
+                    let systemUnderTest = getTokenFromTheme(\.assetBrandNeutralA)
+
+                    expect(systemUnderTest).to(equal("thebodyshop-a-official"))
+                }
+            }
+            
+            describe("#neutralB") {
+                it("returns a expected path") {
+                    let systemUnderTest = getTokenFromTheme(\.assetBrandNeutralB)
+
+                    expect(systemUnderTest).to(equal("thebodyshop-b-official"))
                 }
             }
         }

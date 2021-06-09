@@ -198,6 +198,8 @@
 		79FC59F225DD57E3001CCB56 /* Image+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC59F125DD57E3001CCB56 /* Image+Snapshot+Tests.swift */; };
 		7C00D9B09D306A421DBD99953C7BC9E4 /* NatElevation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2775F568C47ADB6D5DA7B7AFA4A41B4E /* NatElevation.swift */; };
 		7CA6BAC353B73AF5D31F09CAF0268EE5 /* DesignSystemFatalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E6D9764598D210D58B32B2AEB0FE9 /* DesignSystemFatalError.swift */; };
+		7D0537D2266979110078AC98 /* NatLogo+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0537D1266979110078AC98 /* NatLogo+Spec.swift */; };
+		7D0537DB266AB2B80078AC98 /* Logo+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0537DA266AB2B80078AC98 /* Logo+Snapshot+Tests.swift */; };
 		7D17AB1B25E91C380070FD31 /* NatAvatar+Snapshots+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D17AB1A25E91C380070FD31 /* NatAvatar+Snapshots+Tests.swift */; };
 		7D19998925756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19998825756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift */; };
 		7D31C1102614BC1700EED32A /* NatRating+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D31C10F2614BC1700EED32A /* NatRating+Style.swift */; };
@@ -215,6 +217,10 @@
 		7D60A4A0260E208E00A23C1A /* NatListItem+Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D60A49F260E208E00A23C1A /* NatListItem+Feedback.swift */; };
 		7D75A43925DB00130050ACA9 /* NatAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D75A43825DB00130050ACA9 /* NatAvatar.swift */; };
 		7D75A44125DB00230050ACA9 /* NatAvatar+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D75A44025DB00230050ACA9 /* NatAvatar+Size.swift */; };
+		7D86C195266533F600FC4C53 /* NatLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86C194266533F600FC4C53 /* NatLogo.swift */; };
+		7D86C19A26654CF100FC4C53 /* NatLogo+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86C19926654CF100FC4C53 /* NatLogo+Color.swift */; };
+		7D86C19F26654CFB00FC4C53 /* NatLogo+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86C19E26654CFB00FC4C53 /* NatLogo+Model.swift */; };
+		7D86C1A426654D0700FC4C53 /* NatLogo+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86C1A326654D0700FC4C53 /* NatLogo+Size.swift */; };
 		7D8F3E6A258A81C1003A7DEB /* ShortcutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F3E69258A81C1003A7DEB /* ShortcutView.swift */; };
 		7D903892261B4ED6005A3D0A /* NatRating+Input+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D903891261B4ED6005A3D0A /* NatRating+Input+Spec.swift */; };
 		7D90389F261B62A5005A3D0A /* NatRating+ReadOnly+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D90389E261B62A5005A3D0A /* NatRating+ReadOnly+Spec.swift */; };
@@ -607,6 +613,8 @@
 		79FC59E825DB1256001CCB56 /* NatImage+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatImage+Spec.swift"; sourceTree = "<group>"; };
 		79FC59F125DD57E3001CCB56 /* Image+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		7CCF632B4501044E5062C574CCBBF74E /* NatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatButton.swift; sourceTree = "<group>"; };
+		7D0537D1266979110078AC98 /* NatLogo+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatLogo+Spec.swift"; sourceTree = "<group>"; };
+		7D0537DA266AB2B80078AC98 /* Logo+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Logo+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		7D17AB1A25E91C380070FD31 /* NatAvatar+Snapshots+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatAvatar+Snapshots+Tests.swift"; sourceTree = "<group>"; };
 		7D19998825756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatProgressIndicatorCircular+Size.swift"; sourceTree = "<group>"; };
 		7D31C10F2614BC1700EED32A /* NatRating+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatRating+Style.swift"; sourceTree = "<group>"; };
@@ -624,6 +632,10 @@
 		7D60A49F260E208E00A23C1A /* NatListItem+Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatListItem+Feedback.swift"; sourceTree = "<group>"; };
 		7D75A43825DB00130050ACA9 /* NatAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatAvatar.swift; sourceTree = "<group>"; };
 		7D75A44025DB00230050ACA9 /* NatAvatar+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatAvatar+Size.swift"; sourceTree = "<group>"; };
+		7D86C194266533F600FC4C53 /* NatLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatLogo.swift; sourceTree = "<group>"; };
+		7D86C19926654CF100FC4C53 /* NatLogo+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatLogo+Color.swift"; sourceTree = "<group>"; };
+		7D86C19E26654CFB00FC4C53 /* NatLogo+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatLogo+Model.swift"; sourceTree = "<group>"; };
+		7D86C1A326654D0700FC4C53 /* NatLogo+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatLogo+Size.swift"; sourceTree = "<group>"; };
 		7D8E6D9764598D210D58B32B2AEB0FE9 /* DesignSystemFatalError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemFatalError.swift; sourceTree = "<group>"; };
 		7D8F3E69258A81C1003A7DEB /* ShortcutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutView.swift; sourceTree = "<group>"; };
 		7D903891261B4ED6005A3D0A /* NatRating+Input+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatRating+Input+Spec.swift"; sourceTree = "<group>"; };
@@ -1659,6 +1671,22 @@
 			path = DesignTokens;
 			sourceTree = "<group>";
 		};
+		7D0537D0266978E00078AC98 /* Logo */ = {
+			isa = PBXGroup;
+			children = (
+				7D0537D1266979110078AC98 /* NatLogo+Spec.swift */,
+			);
+			path = Logo;
+			sourceTree = "<group>";
+		};
+		7D0537D9266AB29A0078AC98 /* Logo */ = {
+			isa = PBXGroup;
+			children = (
+				7D0537DA266AB2B80078AC98 /* Logo+Snapshot+Tests.swift */,
+			);
+			path = Logo;
+			sourceTree = "<group>";
+		};
 		7D17AB1925E91C070070FD31 /* Avatar */ = {
 			isa = PBXGroup;
 			children = (
@@ -1683,6 +1711,17 @@
 				7D5120B925E9914100557E21 /* NatAvatar+Type.swift */,
 			);
 			path = Avatar;
+			sourceTree = "<group>";
+		};
+		7D86C193266533E700FC4C53 /* Logo */ = {
+			isa = PBXGroup;
+			children = (
+				7D86C194266533F600FC4C53 /* NatLogo.swift */,
+				7D86C19926654CF100FC4C53 /* NatLogo+Color.swift */,
+				7D86C19E26654CFB00FC4C53 /* NatLogo+Model.swift */,
+				7D86C1A326654D0700FC4C53 /* NatLogo+Size.swift */,
+			);
+			path = Logo;
 			sourceTree = "<group>";
 		};
 		7D903890261B4EB6005A3D0A /* Rating */ = {
@@ -1839,6 +1878,7 @@
 				84BB92A124DCB71400A9BCC8 /* Icons */,
 				79FC59F025DD57B0001CCB56 /* Image */,
 				7DE2B11425FBFB5F00C5CBC0 /* ListItem */,
+				7D0537D9266AB29A0078AC98 /* Logo */,
 				84A16EFD24DDBC3200E80DA0 /* NavigationDrawer */,
 				799B683725671F0C0055B96D /* ProgressIndicator */,
 				7D9038B3261B8000005A3D0A /* Rating */,
@@ -2337,6 +2377,7 @@
 				BEE13D19F1A22BF171DC1BAC64B38FA7 /* Icons */,
 				79FC59E725DB1231001CCB56 /* Image */,
 				7DE2B10525FBD55100C5CBC0 /* List */,
+				7D0537D0266978E00078AC98 /* Logo */,
 				7BEFD3D9F02DCD62D7A24864218DC0D8 /* NavigationDrawer */,
 				790D3F84256417E2007A9CA1 /* ProgressIndicator */,
 				798CD2D32603822500F49768 /* RadioButton */,
@@ -2375,6 +2416,7 @@
 				84703F3D24F83AB900FE01CA /* IconButton */,
 				79FC59DB25DAB0A6001CCB56 /* Image */,
 				7D9838BB25F8F5CD00A99628 /* ListItem */,
+				7D86C193266533E700FC4C53 /* Logo */,
 				719A57636DBDBD5D6854EFEC0F362C4C /* NavigationDrawer */,
 				79ACDADD255C330400660E68 /* ProgressIndicator */,
 				7DC81CAF26121E9B006BE689 /* Rating */,
@@ -3139,6 +3181,7 @@
 				8E7FE7AAE264D40AF9BFF5CE6E5C7AD0 /* UIView+FrameTests.swift in Sources */,
 				79E7FA4A2537449700A831BC /* AesopDarkTokens+Opacity+Spec.swift in Sources */,
 				8409854A24F02BF60095D6AD /* Notification+Name+ThemeHasChanged+Spec.swift in Sources */,
+				7D0537D2266979110078AC98 /* NatLogo+Spec.swift in Sources */,
 				79E7FB072538941400A831BC /* AvonLightTokens+Typography+Spec.swift in Sources */,
 				84B9330A24ABC38C00B71BD4 /* NatDialogTitleConfigurable+Spec.swift in Sources */,
 				2625466124C7379800B98A91 /* StubSelector.swift in Sources */,
@@ -3203,6 +3246,7 @@
 				AB9CCFDF8B930FD49AFAEAE1BB5CA718 /* DesignSystem.swift in Sources */,
 				7CA6BAC353B73AF5D31F09CAF0268EE5 /* DesignSystemFatalError.swift in Sources */,
 				8F808FFBB4549BC4F3895B8CBB23ADB3 /* Divider.swift in Sources */,
+				7D86C195266533F600FC4C53 /* NatLogo.swift in Sources */,
 				84703F3F24F83EEC00FE01CA /* NatIconButton.swift in Sources */,
 				7D19998925756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift in Sources */,
 				847C829624E36AE1001CE116 /* TheBodyShopLightTheme.swift in Sources */,
@@ -3228,6 +3272,7 @@
 				84EB6B6F24EB197000C6A792 /* GetTokensFromTheme.swift in Sources */,
 				845D09982501196D00B05760 /* IconButtonStandardStyle.swift in Sources */,
 				84BC900624AA163A007DF09D /* DialogStyle.swift in Sources */,
+				7D86C19F26654CFB00FC4C53 /* NatLogo+Model.swift in Sources */,
 				F72BEF338B46182BC440C92CCF3D02B0 /* IconView.swift in Sources */,
 				847C829424E36AD1001CE116 /* TheBodyShopDarkTheme.swift in Sources */,
 				5737265E1EA6FD9BF1004F1CC1333F29 /* IllustrationIcons.swift in Sources */,
@@ -3273,6 +3318,7 @@
 				841FEABA24C5C1A100C50AFF /* NatLogoImages.swift in Sources */,
 				79FC59C925D45E7D001CCB56 /* NatProgressIndicatorCircular+Animation.swift in Sources */,
 				B16B10A0AA533EF36343B6B8A4AE4DA0 /* NavigationDrawerItemCell.swift in Sources */,
+				7D86C19A26654CF100FC4C53 /* NatLogo+Color.swift in Sources */,
 				A096BCFF55DBEF25B29C30C1537210D5 /* NavigationDrawerSubitemCell.swift in Sources */,
 				848831BE25018340004C3FA8 /* NatIconButton+Styles.swift in Sources */,
 				269C886424C2456B00A507BE /* UINavigationController+Style.swift in Sources */,
@@ -3304,6 +3350,7 @@
 				7DAF750E25E5AF830094F865 /* String+Initials.swift in Sources */,
 				840B6A754236624B9738CBC3D5CFE895 /* ViewAnimatingWrapper.swift in Sources */,
 				843123DF25123ED0002A7B6F /* AesopDarkTokens.swift in Sources */,
+				7D86C1A426654D0700FC4C53 /* NatLogo+Size.swift in Sources */,
 				EE1E7A9F49A18BCD194E0C03FB2F0074 /* ViewStyle.swift in Sources */,
 				79EA0C3E260B861400742C0A /* NatCounter+Size.swift in Sources */,
 				79FC593F25BF58C7001CCB56 /* NatRadioButtonControl+Style.swift in Sources */,
@@ -3345,6 +3392,7 @@
 				7DE2B11625FBFBAB00C5CBC0 /* NatListItemCell+Snapshot+Tests.swift in Sources */,
 				84BB929A24DC935700A9BCC8 /* ViewAnimatingMock.swift in Sources */,
 				84BB92A024DCA7E300A9BCC8 /* TextFieldDelegateMock.swift in Sources */,
+				7D0537DB266AB2B80078AC98 /* Logo+Snapshot+Tests.swift in Sources */,
 				79D4C90625F6C7FC0027E74E /* Checkbox+Snapshot+Tests.swift in Sources */,
 				84391DED24DB5C1F009D0BE8 /* AppBar+Snapshot+Tests.swift in Sources */,
 				84BB929524DC82EC00A9BCC8 /* Divider+Snapshot+Tests.swift in Sources */,

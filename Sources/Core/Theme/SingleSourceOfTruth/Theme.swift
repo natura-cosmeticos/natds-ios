@@ -23,6 +23,10 @@ protocol Theme {
 }
 
 protocol Tokens {
+    var assetBrandNeutralA: String { get }
+    var assetBrandNeutralB: String { get }
+    var assetBrandCustomA: String { get }
+    var assetBrandCustomB: String { get }
     var borderRadiusNone: CGFloat { get }
     var borderRadiusSmall: CGFloat { get }
     var borderRadiusMedium: CGFloat { get }
@@ -201,6 +205,4 @@ protocol Components {
     var overlineFontSize: CGFloat { get }
     var overlineFontWeight: UIFont.Weight { get }
     var overlineLetterSpacing: CGFloat { get }
-    var logoHorizontal: String { get }
-    var logoVertical: String { get }
 }

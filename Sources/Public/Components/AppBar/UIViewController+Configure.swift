@@ -26,7 +26,7 @@ public extension UIViewController {
             navigationItem.titleView = nil
             title = string
         case .logo:
-            let logo = NatLogoImages.horizontal
+            let logo = AssetsHelper.logo(from: getTokenFromTheme(\.assetBrandNeutralA))
             let imageView = UIImageView(image: logo)
 
             imageView.translatesAutoresizingMaskIntoConstraints = false
