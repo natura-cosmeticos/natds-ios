@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.3.0](https://github.com/natura-cosmeticos/natds-ios/compare/5.2.0...5.3.0) (2021-06-21)
+
+
+### Features
+
+* added capability to set value and listening changes to NatCounter ([be6b4d6](https://github.com/natura-cosmeticos/natds-ios/commit/be6b4d6fcd5f55708de371cb38e683eff59b4291))
+
 ## [5.2.0](https://github.com/natura-cosmeticos/natds-ios/compare/5.1.1...5.2.0) (2021-06-09)
 
 
