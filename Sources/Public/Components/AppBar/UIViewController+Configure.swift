@@ -20,6 +20,7 @@ import UIKit
 */
 
 public extension UIViewController {
+    @available(*, deprecated, message: "TitleStyle is deprecated, check AppBar documentation")
     func configure(titleStyle: TitleStyle) {
         switch titleStyle {
         case .title(let string):

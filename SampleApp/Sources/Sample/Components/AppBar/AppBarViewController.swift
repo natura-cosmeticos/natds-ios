@@ -4,8 +4,9 @@ import UIKit
 class AppBarViewController: UITableViewController, SampleItem {
     static var name: String = "App Bar"
 
-    private let dataSource: [(title: String, style: UINavigationController.Style)] = [
-        (title: "Default", style: .default)
+    private let dataSource: [(title: String, style: UINavigationController.AppBarStyle)] = [
+        (title: "Base", style: .base),
+        (title: "Standard", style: .standard)
     ]
 
     override func viewDidLoad() {
