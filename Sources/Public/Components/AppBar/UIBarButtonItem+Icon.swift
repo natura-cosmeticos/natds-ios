@@ -23,7 +23,7 @@ public extension UIBarButtonItem {
     /// ```
     /// let badge = NatBadge(style: .standard, color: .primary)
     /// badge.configure(limit: .max99)
-    /// badge.configure(count: 100)
+    /// badge.configure(count: 100)p
     /// barButtonItem.configure(badge: badge)
     /// ```
     func configure(badge: NatBadge) {
