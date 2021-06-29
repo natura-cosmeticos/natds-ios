@@ -6,4 +6,9 @@ extension UIViewController {
         case logo
         case title(String)
     }
+
+    public enum TitlePosition {
+        case left(String)
+        case center(String)
+    }
 }

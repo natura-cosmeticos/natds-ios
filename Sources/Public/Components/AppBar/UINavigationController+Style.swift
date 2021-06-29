@@ -5,9 +5,4 @@ public extension UINavigationController {
         case base
         case standard
     }
-    
-    enum Position {
-        case left
-        case right
-    }
 }

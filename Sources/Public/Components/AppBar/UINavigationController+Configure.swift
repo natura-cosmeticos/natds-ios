@@ -25,7 +25,7 @@ public extension UINavigationController {
     func configure(style: AppBarStyle) {
         clearNavigationBarView()
         if style == .base {
-        
+
         } else {
             // adicionar a view do titulo e deixar os espacos pras actions (1 esquerda e 3 direita)
             // permitir os botoes e tudo mais
@@ -48,21 +48,6 @@ public extension UINavigationController {
             NatElevation.apply(on: navigationBar, elevation: .none)
         }
     }
-
-    func configure(contentPosition: Position) {
-        clearNavigationBarView()
-        configure(style: .standard)
-        if contentPosition == .left {
-            
-        }
-        
-    }
-
-    func configure(actionRight: [UIView]) {
-        
-    }
-
-    func configure(actionLeft: UIView) {}
 
     // Essa func foi substituída pela primeira dessa classe. Pq Style virou AppBarStyle, e são outros estilos
 //    func configure(style: Style) {

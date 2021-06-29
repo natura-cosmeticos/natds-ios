@@ -20,6 +20,49 @@ import UIKit
 */
 
 public extension UIViewController {
+
+    func configure(actionRight items: [UIView]) {
+        var barButtonItems: [UIBarButtonItem] = []
+        if items.count <= 3 {
+            items.forEach { item in
+                barButtonItems.append(UIBarButtonItem(customView: item))
+            }
+            navigationItem.rightBarButtonItems = barButtonItems
+        }
+    }
+
+    func configure(actionLeft item: UIView) {
+        let barButtonItem = UIBarButtonItem(customView: item)
+        navigationItem.leftBarButtonItem = barButtonItem
+    }
+
+    func configure(position: TitlePosition) {
+        switch position {
+        case .left(let string):
+            let titleLabel = UILabel()
+            titleLabel.text = string
+            titleLabel.textAlignment = .left
+            titleLabel.textColor = self.navigationController?.navigationBar.tintColor
+            titleLabel.translatesAutoresizingMaskIntoConstraints = false
+
+            navigationItem.titleView = titleLabel
+
+            guard let containerView = self.navigationItem.titleView?.superview else { return }
+            if let navigationBar = navigationController?.navigationBar {
+                NSLayoutConstraint.activate([
+                    titleLabel.leadingAnchor.constraint(equalTo: navigationBar.leadingAnchor,
+                                                        constant: NatSizes.semi),
+                    titleLabel.topAnchor.constraint(equalTo: containerView.topAnchor),
+                    titleLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
+                    titleLabel.widthAnchor.constraint(lessThanOrEqualToConstant: NatSizes.hugeX)
+                ])
+            }
+        case .center(let string):
+            navigationItem.titleView = nil
+            title = string
+        }
+    }
+
     @available(*, deprecated, message: "TitleStyle is deprecated, check AppBar documentation")
     func configure(titleStyle: TitleStyle) {
         switch titleStyle {

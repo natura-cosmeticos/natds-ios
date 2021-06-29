@@ -73,6 +73,26 @@ class AppBarDetailViewController: UITableViewController {
             self.navigationController?.configure(elevation: true)
         case .elevationFalse:
             self.navigationController?.configure(elevation: false)
+        case.oneActionRight:
+            let iconButton = NatIconButton(style: .standardDefault, size: .semi)
+            iconButton.configure(icon: getIcon(.outlinedDefaultMockup))
+            self.configure(actionRight: [iconButton])
+        case .threeActionsRight:
+            let iconButton = NatIconButton(style: .standardDefault, size: .semi)
+            iconButton.configure(icon: getIcon(.outlinedDefaultMockup))
+            let avatar = NatAvatar(size: .semi, type: .label)
+            avatar.configure(name: "Design System")
+            let button = NatButton(style: .contained)
+            button.configure(title: "Tap")
+            self.configure(actionRight: [iconButton, avatar, button])
+        case .oneActionLeft:
+            let iconButton = NatIconButton(style: .standardDefault, size: .semi)
+            iconButton.configure(icon: getIcon(.outlinedDefaultMockup))
+            self.configure(actionLeft: iconButton)
+        case .positionCenter:
+            self.configure(position: .center("Center"))
+        case .positionLeft:
+            self.configure(position: .left("Left"))
         default:
             return
         }
