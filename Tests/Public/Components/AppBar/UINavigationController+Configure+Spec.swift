@@ -35,33 +35,35 @@ final class UINavigationControllerConfigureSpec: QuickSpec {
             }
         }
 
-        describe("configure(elevation: true)") {
-            beforeEach {
-                sut.configure(elevation: true)
-            }
-            it("applies elevation") {
-                let attributes = NatElevation.ElevationAttributes.tiny
+        describe("configure(elevation:)") {
+            context("when elevation is true") {
+                beforeEach {
+                    sut.configure(elevation: true)
+                }
+                it("applies elevation") {
+                    let attributes = NatElevation.ElevationAttributes.tiny
 
-                expect(sut.navigationBar.layer.shadowColor).to(equal(attributes.shadowColor))
-                expect(sut.navigationBar.layer.shadowOffset).to(equal(attributes.shadowOffSet))
-                expect(sut.navigationBar.layer.shadowRadius).to(equal(attributes.shadowRadius))
-                expect(sut.navigationBar.layer.shadowOpacity).to(equal(attributes.shadowOpacity))
-                expect(sut.navigationBar.layer.masksToBounds).to(beFalse())
+                    expect(sut.navigationBar.layer.shadowColor).to(equal(attributes.shadowColor))
+                    expect(sut.navigationBar.layer.shadowOffset).to(equal(attributes.shadowOffSet))
+                    expect(sut.navigationBar.layer.shadowRadius).to(equal(attributes.shadowRadius))
+                    expect(sut.navigationBar.layer.shadowOpacity).to(equal(attributes.shadowOpacity))
+                    expect(sut.navigationBar.layer.masksToBounds).to(beFalse())
+                }
             }
-        }
 
-        describe("configure(elevation: false)") {
-            beforeEach {
-                sut.configure(elevation: false)
-            }
-            it("removes elevation") {
-                let attributes = NatElevation.ElevationAttributes.none
+            context("when elevation is false") {
+                beforeEach {
+                    sut.configure(elevation: false)
+                }
+                it("removes elevation") {
+                    let attributes = NatElevation.ElevationAttributes.none
 
-                expect(sut.navigationBar.layer.shadowColor).to(beNil())
-                expect(sut.navigationBar.layer.shadowOffset).to(equal(attributes.shadowOffSet))
-                expect(sut.navigationBar.layer.shadowRadius).to(equal(attributes.shadowRadius))
-                expect(sut.navigationBar.layer.shadowOpacity).to(equal(attributes.shadowOpacity))
-                expect(sut.navigationBar.layer.masksToBounds).to(beFalse())
+                    expect(sut.navigationBar.layer.shadowColor).to(beNil())
+                    expect(sut.navigationBar.layer.shadowOffset).to(equal(attributes.shadowOffSet))
+                    expect(sut.navigationBar.layer.shadowRadius).to(equal(attributes.shadowRadius))
+                    expect(sut.navigationBar.layer.shadowOpacity).to(equal(attributes.shadowOpacity))
+                    expect(sut.navigationBar.layer.masksToBounds).to(beFalse())
+                }
             }
         }
     }
