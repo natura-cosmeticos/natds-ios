@@ -13,7 +13,6 @@
 		0AF826DF57321D84C4B2EDDFAC49F377 /* AssetsHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DAA7E13F0D9435753C08228E164289 /* AssetsHelperTests.swift */; };
 		0C4CBA15016075A8E8A7CA6FC6054383 /* IllustrationIconsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D67F65D9E72160E498FBA256C62159F /* IllustrationIconsTests.swift */; };
 		0E4741DE24BE4C4100BB96FA /* UIViewController+TitleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4741DD24BE4C4100BB96FA /* UIViewController+TitleStyle.swift */; };
-		0E7C160324C5D274002FF46F /* UINavigationController+Style+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7C160124C5D237002FF46F /* UINavigationController+Style+Spec.swift */; };
 		0E7C160524C5D3C3002FF46F /* UIViewController+Configure+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7C160424C5D3C3002FF46F /* UIViewController+Configure+Spec.swift */; };
 		0E7C160724C5D6DC002FF46F /* UIBarButtonItem+Icon+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7C160624C5D6DC002FF46F /* UIBarButtonItem+Icon+Spec.swift */; };
 		0E7C160924C5E614002FF46F /* IconViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7C160824C5E614002FF46F /* IconViewSpec.swift */; };
@@ -426,7 +425,6 @@
 		0D6236D4B7FFC5CF049C20642874B068 /* ButtonContainedStyle+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonContainedStyle+Spec.swift"; sourceTree = "<group>"; };
 		0D8BC0D102CE4444401C0469C861358A /* NatFonts+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatFonts+Spec.swift"; sourceTree = "<group>"; };
 		0E4741DD24BE4C4100BB96FA /* UIViewController+TitleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+TitleStyle.swift"; sourceTree = "<group>"; };
-		0E7C160124C5D237002FF46F /* UINavigationController+Style+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Style+Spec.swift"; sourceTree = "<group>"; };
 		0E7C160424C5D3C3002FF46F /* UIViewController+Configure+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Configure+Spec.swift"; sourceTree = "<group>"; };
 		0E7C160624C5D6DC002FF46F /* UIBarButtonItem+Icon+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Icon+Spec.swift"; sourceTree = "<group>"; };
 		0E7C160824C5E614002FF46F /* IconViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconViewSpec.swift; sourceTree = "<group>"; };
@@ -893,7 +891,6 @@
 			isa = PBXGroup;
 			children = (
 				2625465E24C7378300B98A91 /* Stub */,
-				0E7C160124C5D237002FF46F /* UINavigationController+Style+Spec.swift */,
 				0E7C160424C5D3C3002FF46F /* UIViewController+Configure+Spec.swift */,
 				0E7C160624C5D6DC002FF46F /* UIBarButtonItem+Icon+Spec.swift */,
 				0E7C160A24C61E45002FF46F /* UINavigationController+Configure+Spec.swift */,
@@ -3035,7 +3032,6 @@
 				84BC900F24AA16FA007DF09D /* DialogFooterView+Spec.swift in Sources */,
 				26BB817724B931E900617EFC /* NatBadge+Color+Spec.swift in Sources */,
 				84B9330824AB788E00B71BD4 /* NatDialogDismissableConfigurable+Spec.swift in Sources */,
-				0E7C160324C5D274002FF46F /* UINavigationController+Style+Spec.swift in Sources */,
 				79D4C90025F6B2000027E74E /* Checkbox+Spec.swift in Sources */,
 				7392D4960D4A13B6ADF3AB7372B264F5 /* DesignSystem+Spec.swift in Sources */,
 				0E7C160924C5E614002FF46F /* IconViewSpec.swift in Sources */,
