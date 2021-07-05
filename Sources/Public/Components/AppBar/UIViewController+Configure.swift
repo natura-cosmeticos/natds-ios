@@ -1,18 +1,12 @@
-import UIKit
-
 /**
-  This is an extension that modifies the navigationItem titleView according to design system.
-
-  The titleView changes according with the current Brand configured in the Design system
-  and according with user properties of Light and Dark mode.
-
-    This component has 2 styles:
-    - Title
-    - Logo
-
-    Example of usage:
-        viewController.configure(titleStyle: .logo)
-
+ This is an extension that modifies the navigationBar views according to the Design System.
+ It represents the component AppBar - Top.
+ 
+ Examples of usage:
+ 
+        viewController.configure(actionRight: [iconButton, customView])
+        viewController.configure(actionLeft: iconButton)
+ 
  - Requires:
         It's necessary to configure the Design System with a theme or fatalError will be raised.
  
@@ -20,7 +14,12 @@ import UIKit
 */
 
 public extension UIViewController {
-
+    
+    /// Sets the action right items for the navigation bar
+    /// The items can be any of UIView, including other components from the Design System
+    /// The max number of items that can be configured is 3.
+    ///
+    /// - Parameter items: an array of UIViews
     func configure(actionRight items: [UIView]) {
         var barButtonItems: [UIBarButtonItem] = []
         if items.count <= 3 {
@@ -30,12 +29,19 @@ public extension UIViewController {
             navigationItem.rightBarButtonItems = barButtonItems
         }
     }
-
+    
+    /// Sets the action left item for the navigation bar
+    /// If there's a 'back' action already in use, it overrides it
+    /// The item can be any UIView, including other componentes from the Design System
+    ///
+    /// - Parameter item: an UIView
     func configure(actionLeft item: UIView) {
         let barButtonItem = UIBarButtonItem(customView: item)
         navigationItem.leftBarButtonItem = barButtonItem
     }
-
+    
+    /// Sets the position for the titleView in the navigation bar
+    /// - Parameter position: an option from `TitlePosition` enum
     func configure(position: TitlePosition) {
         switch position {
         case .left(let string):
@@ -80,19 +86,14 @@ public extension UIViewController {
         }
     }
 
-    /**
-     This method has the objective to set the rightBarButtonItems of navigationItem.
-
-        Example of usage:
-            let barItems: [UIBarButtonItem] = [
-                UIBarButtonItem(icon: .outlinedActionCalendar, action: nil, target: nil)
-            ]
-            viewController.configure(buttons: barItems)
-
-     - Parameters:
-        - buttons: Array of UIBarButtonItem.
-    */
-
+    /// Sets rightBarButtonItems for the navigation bar
+    ///
+    /// Example of usage:
+    ///
+    ///             let barItems: [UIBarButtonItem] = [UIBarButtonItem(icon: .outlinedActionCalendar, action: nil, target: nil)]
+    ///             viewController.configure(buttons: barItems)
+    ///
+    /// - Parameter buttons: an array of UIBarButtonItems
     func configure(buttons: [UIBarButtonItem]) {
         let itemButtons = setSpacingBetween(buttons: buttons)
         navigationItem.setRightBarButtonItems(itemButtons, animated: true)
