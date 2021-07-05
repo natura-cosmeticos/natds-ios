@@ -34,7 +34,6 @@
 		26740A4924B3A60C00419526 /* NatBadge+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26740A4824B3A60C00419526 /* NatBadge+Style.swift */; };
 		26740A4B24B3A62F00419526 /* NatBadge+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26740A4A24B3A62F00419526 /* NatBadge+Color.swift */; };
 		269C886224C23B0100A507BE /* UINavigationController+Configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269C886124C23B0100A507BE /* UINavigationController+Configure.swift */; };
-		269C886424C2456B00A507BE /* UINavigationController+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269C886324C2456B00A507BE /* UINavigationController+Style.swift */; };
 		269C886624C2480800A507BE /* UIViewController+Configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269C886524C2480800A507BE /* UIViewController+Configure.swift */; };
 		269C886824C2483600A507BE /* UIBarButtonItem+Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269C886724C2483600A507BE /* UIBarButtonItem+Icon.swift */; };
 		26BB817324B9191000617EFC /* NatBadge+Standard+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BB817224B9191000617EFC /* NatBadge+Standard+Spec.swift */; };
@@ -204,7 +203,7 @@
 		7D31C1102614BC1700EED32A /* NatRating+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D31C10F2614BC1700EED32A /* NatRating+Style.swift */; };
 		7D31C1152614C87F00EED32A /* NatRating+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D31C1142614C87F00EED32A /* NatRating+Size.swift */; };
 		7D31C11A2615162300EED32A /* NatRating+Alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D31C1192615162200EED32A /* NatRating+Alignment.swift */; };
-		7D394CD42674083700582030 /* AppBarTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D394CD32674083700582030 /* AppBarTop.swift */; };
+		7D394CD42674083700582030 /* AppBarColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D394CD32674083700582030 /* AppBarColor.swift */; };
 		7D3D59152593D1B600C9197B /* UIImageView+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3D59142593D1B500C9197B /* UIImageView+UIColor.swift */; };
 		7D43162225ED9477004AE34F /* TextField+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D43162125ED9477004AE34F /* TextField+Size.swift */; };
 		7D43162D25EE8944004AE34F /* TextField+FeedbackState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D43162C25EE8944004AE34F /* TextField+FeedbackState.swift */; };
@@ -446,7 +445,6 @@
 		26740A4A24B3A62F00419526 /* NatBadge+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatBadge+Color.swift"; sourceTree = "<group>"; };
 		268E9C6024C8746B006D6142 /* AppBar+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppBar+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		269C886124C23B0100A507BE /* UINavigationController+Configure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Configure.swift"; sourceTree = "<group>"; };
-		269C886324C2456B00A507BE /* UINavigationController+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Style.swift"; sourceTree = "<group>"; };
 		269C886524C2480800A507BE /* UIViewController+Configure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Configure.swift"; sourceTree = "<group>"; };
 		269C886724C2483600A507BE /* UIBarButtonItem+Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Icon.swift"; sourceTree = "<group>"; };
 		26BB817224B9191000617EFC /* NatBadge+Standard+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatBadge+Standard+Spec.swift"; sourceTree = "<group>"; };
@@ -619,7 +617,7 @@
 		7D31C10F2614BC1700EED32A /* NatRating+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatRating+Style.swift"; sourceTree = "<group>"; };
 		7D31C1142614C87F00EED32A /* NatRating+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatRating+Size.swift"; sourceTree = "<group>"; };
 		7D31C1192615162200EED32A /* NatRating+Alignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatRating+Alignment.swift"; sourceTree = "<group>"; };
-		7D394CD32674083700582030 /* AppBarTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBarTop.swift; sourceTree = "<group>"; };
+		7D394CD32674083700582030 /* AppBarColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBarColor.swift; sourceTree = "<group>"; };
 		7D3D59142593D1B500C9197B /* UIImageView+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+UIColor.swift"; sourceTree = "<group>"; };
 		7D43162125ED9477004AE34F /* TextField+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Size.swift"; sourceTree = "<group>"; };
 		7D43162C25EE8944004AE34F /* TextField+FeedbackState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+FeedbackState.swift"; sourceTree = "<group>"; };
@@ -881,8 +879,7 @@
 				269C886124C23B0100A507BE /* UINavigationController+Configure.swift */,
 				269C886724C2483600A507BE /* UIBarButtonItem+Icon.swift */,
 				269C886524C2480800A507BE /* UIViewController+Configure.swift */,
-				269C886324C2456B00A507BE /* UINavigationController+Style.swift */,
-				7D394CD32674083700582030 /* AppBarTop.swift */,
+				7D394CD32674083700582030 /* AppBarColor.swift */,
 			);
 			path = AppBar;
 			sourceTree = "<group>";
@@ -3320,7 +3317,6 @@
 				7D86C19A26654CF100FC4C53 /* NatLogo+Color.swift in Sources */,
 				A096BCFF55DBEF25B29C30C1537210D5 /* NavigationDrawerSubitemCell.swift in Sources */,
 				848831BE25018340004C3FA8 /* NatIconButton+Styles.swift in Sources */,
-				269C886424C2456B00A507BE /* UINavigationController+Style.swift in Sources */,
 				7D75A44125DB00230050ACA9 /* NatAvatar+Size.swift in Sources */,
 				9D4FF6FB92A6A5BD0AF263A69FF707E4 /* Pulsable.swift in Sources */,
 				80FE219D764217C0520E0C784F9C0C0B /* PulseLayer.swift in Sources */,
@@ -3343,7 +3339,7 @@
 				37953EE81D12EA2376E8C56E16BC4A29 /* UIColor+Hex.swift in Sources */,
 				56B51E3D524A0D2900D7DD3E6CC761E7 /* UIFont+Icon.swift in Sources */,
 				6C6CB092994DB60C83AC24F93B0F4E49 /* UITableView+Reusable.swift in Sources */,
-				7D394CD42674083700582030 /* AppBarTop.swift in Sources */,
+				7D394CD42674083700582030 /* AppBarColor.swift in Sources */,
 				269C886624C2480800A507BE /* UIViewController+Configure.swift in Sources */,
 				93B1D8CFBB1420174B310CC4906AA2EF /* UIView+Frame.swift in Sources */,
 				77C55B339CA403354D76ABF05E283D5A /* ValueTextHighlight.swift in Sources */,

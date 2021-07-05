@@ -19,19 +19,6 @@ import UIKit
 */
 
 public extension UINavigationController {
-    private func clearNavigationBarView() {
-        navigationBar.subviews.forEach { $0.removeFromSuperview() }
-    }
-    func configure(style: AppBarStyle) {
-        clearNavigationBarView()
-        if style == .base {
-
-        } else {
-            // adicionar a view do titulo e deixar os espacos pras actions (1 esquerda e 3 direita)
-            // permitir os botoes e tudo mais
-        }
-    }
-
     func configure(color: AppBarColor) {
         navigationBar.shadowImage = UIImage()
         navigationBar.barTintColor = color.backgroundColor

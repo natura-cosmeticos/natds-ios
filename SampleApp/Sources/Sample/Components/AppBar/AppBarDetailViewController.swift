@@ -3,11 +3,9 @@ import UIKit
 import NatDSIcons
 
 class AppBarDetailViewController: UITableViewController {
-    private var appBarStyle: UINavigationController.AppBarStyle
     private let sections: [AppBarSection] = AppBarSection.allCases
 
-    init(appBarStyle: UINavigationController.AppBarStyle) {
-        self.appBarStyle = appBarStyle
+    init() {
         super.init(style: .plain)
     }
 
@@ -18,12 +16,6 @@ class AppBarDetailViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-        navigationController?.configure(style: appBarStyle)
     }
 
     private func setupTableView() {
@@ -57,6 +49,7 @@ class AppBarDetailViewController: UITableViewController {
         return cell
     }
 
+    // swiftlint:disable:next cyclomatic_complexity
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = sections[indexPath.section].items[indexPath.row]
 
@@ -80,11 +73,11 @@ class AppBarDetailViewController: UITableViewController {
         case .threeActionsRight:
             let iconButton = NatIconButton(style: .standardDefault, size: .semi)
             iconButton.configure(icon: getIcon(.outlinedDefaultMockup))
-            let avatar = NatAvatar(size: .semi, type: .label)
-            avatar.configure(name: "Design System")
-            let button = NatButton(style: .contained)
-            button.configure(title: "Tap")
-            self.configure(actionRight: [iconButton, avatar, button])
+            let secondIconButton = NatIconButton(style: .standardDefault, size: .semi)
+            secondIconButton.configure(icon: getIcon(.outlinedDefaultMockup))
+            let thirdIconButton = NatIconButton(style: .standardDefault, size: .semi)
+            thirdIconButton.configure(icon: getIcon(.outlinedDefaultMockup))
+            self.configure(actionRight: [iconButton, secondIconButton, thirdIconButton])
         case .oneActionLeft:
             let iconButton = NatIconButton(style: .standardDefault, size: .semi)
             iconButton.configure(icon: getIcon(.outlinedDefaultMockup))
@@ -93,33 +86,7 @@ class AppBarDetailViewController: UITableViewController {
             self.configure(position: .center("Center"))
         case .positionLeft:
             self.configure(position: .left("Left"))
-        default:
-            return
         }
-
-//        switch item {
-//        case .textTitleStyle:
-//            configure(titleStyle: .logo)
-//        case .logoTitleStyle:
-//            configure(titleStyle: .title("New title"))
-//        case .noneBarItems:
-//            configure(buttons: [UIBarButtonItem]())
-//        case .twoBarItems:
-//            let calendarBarButtonItem = UIBarButtonItem(icon: getIcon(.outlinedActionCalendar),
-//                                                        action: #selector(calendarBarButtonItemHandler),
-//                                                        target: self)
-//
-//            let notificationBarButtonItem = UIBarButtonItem(icon: getIcon(.outlinedAlertNotification),
-//                                                         action: #selector(notificationBarButtonItemHandler),
-//                                                         target: self)
-//
-//            let badge = NatBadge(style: .standard, color: .alert)
-//            badge.configure(count: 9)
-//            notificationBarButtonItem.configure(badge: badge)
-//
-//            let barItems = [notificationBarButtonItem, calendarBarButtonItem]
-//            configure(buttons: barItems)
-//        }
     }
 
     @objc func calendarBarButtonItemHandler() {
