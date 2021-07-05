@@ -14,7 +14,7 @@
 */
 
 public extension UIViewController {
-    
+
     /// Sets the action right items for the navigation bar
     /// The items can be any of UIView, including other components from the Design System
     /// The max number of items that can be configured is 3.
@@ -29,7 +29,7 @@ public extension UIViewController {
             navigationItem.rightBarButtonItems = barButtonItems
         }
     }
-    
+
     /// Sets the action left item for the navigation bar
     /// If there's a 'back' action already in use, it overrides it
     /// The item can be any UIView, including other componentes from the Design System
@@ -39,7 +39,7 @@ public extension UIViewController {
         let barButtonItem = UIBarButtonItem(customView: item)
         navigationItem.leftBarButtonItem = barButtonItem
     }
-    
+
     /// Sets the position for the titleView in the navigation bar
     /// - Parameter position: an option from `TitlePosition` enum
     func configure(position: TitlePosition) {

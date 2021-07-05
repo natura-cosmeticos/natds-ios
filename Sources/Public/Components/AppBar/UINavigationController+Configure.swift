@@ -57,7 +57,7 @@ public extension UINavigationController {
             NSAttributedString.Key.foregroundColor: color.contentColor
         ]
     }
-    
+
     /// Sets an elevation for the navigation bar, which adds a slight shadow to it
     /// - Parameter elevation: a boolean to add or remove the attribute
     func configure(elevation: Bool) {
