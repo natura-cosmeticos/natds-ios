@@ -39,7 +39,9 @@ public extension UIViewController {
         let barButtonItem = UIBarButtonItem(customView: item)
         navigationItem.leftBarButtonItem = barButtonItem
     }
-
+    
+    /// Sets the content type for the navigation bar's center view
+    /// - Parameter item: an option from `AppBarContentType`, with a string value (for text) or an image (for media)
     func configure(appBarContentType item: AppBarContentType) {
         switch item {
         case .media(let image):
