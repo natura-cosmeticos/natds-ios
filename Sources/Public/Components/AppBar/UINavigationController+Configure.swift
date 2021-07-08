@@ -22,8 +22,8 @@
     - ✅ `Center` (default)
     - ❌ `Left`
  - Content type:
-    - ✅ `Text` (default)
-    - ❌ `Media`
+    - ✅ `Text`
+    - ✅ `Media`
     - ❌ `Search`
  - Content proeminent:
     - ✅ `False` (default)
@@ -49,19 +49,19 @@
 public extension UINavigationController {
     /// Sets the color for navigation bar and its subviews
     /// - Parameter color: an option from `AppBarColor` enum
-    func configure(color: AppBarColor) {
+    func configure(appBarColor: AppBarColor) {
         navigationBar.shadowImage = UIImage()
-        navigationBar.barTintColor = color.backgroundColor
-        navigationBar.tintColor = color.contentColor
+        navigationBar.barTintColor = appBarColor.backgroundColor
+        navigationBar.tintColor = appBarColor.contentColor
         navigationBar.titleTextAttributes = [
-            NSAttributedString.Key.foregroundColor: color.contentColor
+            NSAttributedString.Key.foregroundColor: appBarColor.contentColor
         ]
     }
 
     /// Sets an elevation for the navigation bar, which adds a slight shadow to it
     /// - Parameter elevation: a boolean to add or remove the attribute
-    func configure(elevation: Bool) {
-        if elevation {
+    func configure(appBarElevation: Bool) {
+        if appBarElevation {
             NatElevation.apply(on: navigationBar, elevation: .tiny)
         } else {
             NatElevation.apply(on: navigationBar, elevation: .none)

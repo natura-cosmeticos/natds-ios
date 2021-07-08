@@ -1,4 +1,4 @@
-/// AppBarColor represents the allowes color values for the AppBar Top component
+/// AppBarColor represents the allowed color values for the AppBar Top component
 /// The component is configured using UINavigationController and UIViewController extensions.
 public enum AppBarColor {
     case `default`

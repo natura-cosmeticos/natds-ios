@@ -20,7 +20,7 @@ public extension UIViewController {
     /// The max number of items that can be configured is 3.
     ///
     /// - Parameter items: an array of UIViews
-    func configure(actionRight items: [UIView]) {
+    func configure(appBarActionRight items: [UIView]) {
         var barButtonItems: [UIBarButtonItem] = []
         if items.count <= 3 {
             items.forEach { item in
@@ -35,25 +35,22 @@ public extension UIViewController {
     /// The item can be any UIView, including other componentes from the Design System
     ///
     /// - Parameter item: an UIView
-    func configure(actionLeft item: UIView) {
+    func configure(appBarActionLeft item: UIView) {
         let barButtonItem = UIBarButtonItem(customView: item)
         navigationItem.leftBarButtonItem = barButtonItem
     }
 
-    @available(*, deprecated, message: "TitleStyle is deprecated, check AppBar documentation")
-    func configure(titleStyle: TitleStyle) {
-        switch titleStyle {
-        case .title(let string):
-            navigationItem.titleView = nil
-            title = string
-        case .logo:
-            let logo = AssetsHelper.logo(from: getTokenFromTheme(\.assetBrandNeutralA))
-            let imageView = UIImageView(image: logo)
-
+    func configure(appBarContentType item: AppBarContentType) {
+        switch item {
+        case .media(let image):
+            let imageView = UIImageView(image: image)
             imageView.translatesAutoresizingMaskIntoConstraints = false
             imageView.widthAnchor.constraint(lessThanOrEqualToConstant: NatSizes.hugeX).isActive = true
             imageView.contentMode = .scaleAspectFit
             navigationItem.titleView = imageView
+        case .text(let string):
+            navigationItem.titleView = nil
+            title = string
         }
     }
 

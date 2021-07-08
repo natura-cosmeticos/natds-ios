@@ -12,7 +12,6 @@
 		06B6AF457FA3A8ADB837E7A2BBE53D91 /* NavigationDrawerItemCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB85B5288F76E27BCDF2A11BC05D3238 /* NavigationDrawerItemCellTests.swift */; };
 		0AF826DF57321D84C4B2EDDFAC49F377 /* AssetsHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DAA7E13F0D9435753C08228E164289 /* AssetsHelperTests.swift */; };
 		0C4CBA15016075A8E8A7CA6FC6054383 /* IllustrationIconsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D67F65D9E72160E498FBA256C62159F /* IllustrationIconsTests.swift */; };
-		0E4741DE24BE4C4100BB96FA /* UIViewController+TitleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4741DD24BE4C4100BB96FA /* UIViewController+TitleStyle.swift */; };
 		0E7C160524C5D3C3002FF46F /* UIViewController+Configure+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7C160424C5D3C3002FF46F /* UIViewController+Configure+Spec.swift */; };
 		0E7C160724C5D6DC002FF46F /* UIBarButtonItem+Icon+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7C160624C5D6DC002FF46F /* UIBarButtonItem+Icon+Spec.swift */; };
 		0E7C160924C5E614002FF46F /* IconViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7C160824C5E614002FF46F /* IconViewSpec.swift */; };
@@ -200,6 +199,7 @@
 		7D0537DB266AB2B80078AC98 /* Logo+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0537DA266AB2B80078AC98 /* Logo+Snapshot+Tests.swift */; };
 		7D17AB1B25E91C380070FD31 /* NatAvatar+Snapshots+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D17AB1A25E91C380070FD31 /* NatAvatar+Snapshots+Tests.swift */; };
 		7D19998925756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19998825756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift */; };
+		7D277B5026976900005075EF /* AppBarContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D277B4F26976900005075EF /* AppBarContentType.swift */; };
 		7D31C1102614BC1700EED32A /* NatRating+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D31C10F2614BC1700EED32A /* NatRating+Style.swift */; };
 		7D31C1152614C87F00EED32A /* NatRating+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D31C1142614C87F00EED32A /* NatRating+Size.swift */; };
 		7D31C11A2615162300EED32A /* NatRating+Alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D31C1192615162200EED32A /* NatRating+Alignment.swift */; };
@@ -423,7 +423,6 @@
 		0B29FF4C598F8297E81A6B6A82ACA4F9 /* IconView+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IconView+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		0D6236D4B7FFC5CF049C20642874B068 /* ButtonContainedStyle+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonContainedStyle+Spec.swift"; sourceTree = "<group>"; };
 		0D8BC0D102CE4444401C0469C861358A /* NatFonts+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatFonts+Spec.swift"; sourceTree = "<group>"; };
-		0E4741DD24BE4C4100BB96FA /* UIViewController+TitleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+TitleStyle.swift"; sourceTree = "<group>"; };
 		0E7C160424C5D3C3002FF46F /* UIViewController+Configure+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Configure+Spec.swift"; sourceTree = "<group>"; };
 		0E7C160624C5D6DC002FF46F /* UIBarButtonItem+Icon+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Icon+Spec.swift"; sourceTree = "<group>"; };
 		0E7C160824C5E614002FF46F /* IconViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconViewSpec.swift; sourceTree = "<group>"; };
@@ -614,6 +613,7 @@
 		7D0537DA266AB2B80078AC98 /* Logo+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Logo+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		7D17AB1A25E91C380070FD31 /* NatAvatar+Snapshots+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatAvatar+Snapshots+Tests.swift"; sourceTree = "<group>"; };
 		7D19998825756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatProgressIndicatorCircular+Size.swift"; sourceTree = "<group>"; };
+		7D277B4F26976900005075EF /* AppBarContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBarContentType.swift; sourceTree = "<group>"; };
 		7D31C10F2614BC1700EED32A /* NatRating+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatRating+Style.swift"; sourceTree = "<group>"; };
 		7D31C1142614C87F00EED32A /* NatRating+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatRating+Size.swift"; sourceTree = "<group>"; };
 		7D31C1192615162200EED32A /* NatRating+Alignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatRating+Alignment.swift"; sourceTree = "<group>"; };
@@ -875,11 +875,11 @@
 		0E3F578D24B8E9C8004B2F9E /* AppBar */ = {
 			isa = PBXGroup;
 			children = (
-				0E4741DD24BE4C4100BB96FA /* UIViewController+TitleStyle.swift */,
 				269C886124C23B0100A507BE /* UINavigationController+Configure.swift */,
 				269C886724C2483600A507BE /* UIBarButtonItem+Icon.swift */,
 				269C886524C2480800A507BE /* UIViewController+Configure.swift */,
 				7D394CD32674083700582030 /* AppBarColor.swift */,
+				7D277B4F26976900005075EF /* AppBarContentType.swift */,
 			);
 			path = AppBar;
 			sourceTree = "<group>";
@@ -3272,7 +3272,6 @@
 				F72BEF338B46182BC440C92CCF3D02B0 /* IconView.swift in Sources */,
 				847C829424E36AD1001CE116 /* TheBodyShopDarkTheme.swift in Sources */,
 				5737265E1EA6FD9BF1004F1CC1333F29 /* IllustrationIcons.swift in Sources */,
-				0E4741DE24BE4C4100BB96FA /* UIViewController+TitleStyle.swift in Sources */,
 				1908219397D007DC35BC0F99D5DEDE80 /* NSMutableAttributedString+Builder.swift in Sources */,
 				CF14752D6F385AD399A59F275DEB1ED7 /* NatBorderRadius.swift in Sources */,
 				F6B6FF5891E1F871748A9D598EA14AFE /* NatButton+EdgeInsets.swift in Sources */,
@@ -3311,6 +3310,7 @@
 				84F709FF1D1DFC32BA4E9CB1803A6E30 /* NavigationDrawer.swift in Sources */,
 				798CD2F02605151B00F49768 /* NatTag+Size.swift in Sources */,
 				79FC59C125D45DAE001CCB56 /* NatProgressIndicatorCircular+Constants.swift in Sources */,
+				7D277B5026976900005075EF /* AppBarContentType.swift in Sources */,
 				841FEABA24C5C1A100C50AFF /* NatLogoImages.swift in Sources */,
 				79FC59C925D45E7D001CCB56 /* NatProgressIndicatorCircular+Animation.swift in Sources */,
 				B16B10A0AA533EF36343B6B8A4AE4DA0 /* NavigationDrawerItemCell.swift in Sources */,

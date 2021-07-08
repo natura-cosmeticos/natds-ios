@@ -2,7 +2,7 @@ import NatDS
 import UIKit
 import NatDSIcons
 
-class AppBarDetailViewController: UITableViewController {
+class AppBarDetailViewController: UITableViewController, UITextFieldDelegate {
     private let sections: [AppBarSection] = AppBarSection.allCases
 
     init() {
@@ -55,21 +55,21 @@ class AppBarDetailViewController: UITableViewController {
 
         switch item {
         case .colorDefault:
-            self.navigationController?.configure(color: .default)
+            self.navigationController?.configure(appBarColor: .default)
         case .colorInverse:
-            self.navigationController?.configure(color: .inverse)
+            self.navigationController?.configure(appBarColor: .inverse)
         case .colorPrimary:
-            self.navigationController?.configure(color: .primary)
+            self.navigationController?.configure(appBarColor: .primary)
         case .colorNone:
-            self.navigationController?.configure(color: .none)
+            self.navigationController?.configure(appBarColor: .none)
         case .elevationTrue:
-            self.navigationController?.configure(elevation: true)
+            self.navigationController?.configure(appBarElevation: true)
         case .elevationFalse:
-            self.navigationController?.configure(elevation: false)
+            self.navigationController?.configure(appBarElevation: false)
         case.oneActionRight:
             let iconButton = NatIconButton(style: .standardDefault, size: .semi)
             iconButton.configure(icon: getIcon(.outlinedDefaultMockup))
-            self.configure(actionRight: [iconButton])
+            self.configure(appBarActionRight: [iconButton])
         case .threeActionsRight:
             let iconButton = NatIconButton(style: .standardDefault, size: .semi)
             iconButton.configure(icon: getIcon(.outlinedDefaultMockup))
@@ -77,11 +77,16 @@ class AppBarDetailViewController: UITableViewController {
             secondIconButton.configure(icon: getIcon(.outlinedDefaultMockup))
             let thirdIconButton = NatIconButton(style: .standardDefault, size: .semi)
             thirdIconButton.configure(icon: getIcon(.outlinedDefaultMockup))
-            self.configure(actionRight: [iconButton, secondIconButton, thirdIconButton])
+            self.configure(appBarActionRight: [iconButton, secondIconButton, thirdIconButton])
         case .oneActionLeft:
             let iconButton = NatIconButton(style: .standardDefault, size: .semi)
             iconButton.configure(icon: getIcon(.outlinedDefaultMockup))
-            self.configure(actionLeft: iconButton)
+            self.configure(appBarActionLeft: iconButton)
+        case .text:
+            self.configure(appBarContentType: .text("Text Content Type"))
+        case .media:
+            let image = NatLogoImages.horizontal
+            self.configure(appBarContentType: .media(image))
         }
     }
 
