@@ -131,14 +131,14 @@
     "item": "AppBarTop",
     "type": "component",
     "patterns": [
-      "configure(titleStyle",
-      "configure(buttons",
-      "configure(style",
-      "configure(color",
-      "configure(elevation",
-      "configure(actionRight",
-      "configure(actionLeft",
-      "configure(position"
+      "configure(buttons: [",
+      "configure(style: .default",
+      "configure(titleStyle .title(",
+      "configure(titleStyle .logo",
+      "configure(appBarColor",
+      "configure(appBarElevation",
+      "configure(appBarActionRight",
+      "configure(appBarActionLeft"
     ]
   },
   {
