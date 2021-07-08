@@ -14,10 +14,10 @@ final class UIViewControllerConfigureSpec: QuickSpec {
             sut = UIViewController()
         }
 
-        describe("#configure(titleStyle:)") {
-            context("when titleStyle is .title") {
+        describe("#configure(appBarContentType:)") {
+            context("when appBarContentType is .text") {
                 beforeEach {
-                    sut.configure(titleStyle: .title("Title"))
+                    sut.configure(appBarContentType: .text("Title"))
                 }
                 it("sets navigationItem title") {
                     expect(sut.title).to(equal("Title"))
@@ -27,9 +27,9 @@ final class UIViewControllerConfigureSpec: QuickSpec {
                 }
             }
 
-            context("when titleStyle is .image") {
+            context("when appBarContentType is .media") {
                 beforeEach {
-                    sut.configure(titleStyle: .logo)
+                    sut.configure(appBarContentType: .media(NatLogoImages.horizontal))
                 }
                 it("sets navigationItem titleView") {
                     expect(sut.navigationItem.titleView).toNot(beNil())
@@ -68,7 +68,7 @@ final class UIViewControllerConfigureSpec: QuickSpec {
                 actionInvocations = 0
                 let iconButton = NatIconButton(style: .standardDefault, size: .semi)
                 iconButton.configure { actionInvocations += 1 }
-                sut.configure(actionLeft: iconButton)
+                sut.configure(appBarActionLeft: iconButton)
                 iconButton.gestureRecognizers?.forEach { $0.sendGesturesEvents() }
             }
 
@@ -86,7 +86,7 @@ final class UIViewControllerConfigureSpec: QuickSpec {
                     actionInvocations = 0
                     let iconButton = NatIconButton(style: .standardDefault, size: .semi)
                     iconButton.configure { actionInvocations += 1 }
-                    sut.configure(actionRight: [iconButton])
+                    sut.configure(appBarActionRight: [iconButton])
                     iconButton.gestureRecognizers?.forEach { $0.sendGesturesEvents() }
                 }
 
@@ -105,7 +105,7 @@ final class UIViewControllerConfigureSpec: QuickSpec {
                     iconButton.gestureRecognizers?.forEach { $0.sendGesturesEvents() }
                     let nextIconButton = NatIconButton(style: .standardDefault, size: .semi)
                     nextIconButton.configure { actionInvocations += 1 }
-                    sut.configure(actionRight: [iconButton, nextIconButton])
+                    sut.configure(appBarActionRight: [iconButton, nextIconButton])
                     nextIconButton.gestureRecognizers?.forEach { $0.sendGesturesEvents() }
                 }
 

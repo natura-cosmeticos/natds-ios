@@ -15,58 +15,58 @@ class AppBarSnapshotTests: XCTestCase {
     }
 
     func test_appbar_color_primary_hasValidSnapshot() {
-        systemUnderTest.configure(color: .primary)
+        systemUnderTest.configure(appBarColor: .primary)
 
         assertSnapshot(matching: systemUnderTest, as: .image)
     }
 
     func test_appbar_color_default_hasValidSnapshot() {
-        systemUnderTest.configure(color: .default)
+        systemUnderTest.configure(appBarColor: .default)
 
         assertSnapshot(matching: systemUnderTest, as: .image)
     }
 
     func test_appbar_color_inverse_hasValidSnapshot() {
-        systemUnderTest.configure(color: .inverse)
+        systemUnderTest.configure(appBarColor: .inverse)
 
         assertSnapshot(matching: systemUnderTest, as: .image)
     }
 
     func test_appbar_color_none_hasValidSnapshot() {
-        systemUnderTest.configure(color: .none)
+        systemUnderTest.configure(appBarColor: .none)
 
         assertSnapshot(matching: systemUnderTest, as: .image)
     }
 
     func test_appbar_elevation_hasValidSnapshot() {
-        systemUnderTest.configure(color: .default)
-        systemUnderTest.configure(elevation: true)
+        systemUnderTest.configure(appBarColor: .default)
+        systemUnderTest.configure(appBarElevation: true)
 
         assertSnapshot(matching: systemUnderTest, as: .image)
     }
 
     func test_appbar_actionRight_hasValidSnapshot() {
-        systemUnderTest.configure(color: .default)
+        systemUnderTest.configure(appBarColor: .default)
         let iconButton = NatIconButton(style: .standardDefault, size: .semi)
-        systemUnderTest.visibleViewController?.configure(actionRight: [iconButton])
+        systemUnderTest.visibleViewController?.configure(appBarActionRight: [iconButton])
 
         assertSnapshot(matching: systemUnderTest, as: .image)
     }
 
     func test_appbar_actionRight_multiple_hasValidSnapshot() {
-        systemUnderTest.configure(color: .default)
+        systemUnderTest.configure(appBarColor: .default)
         let iconButton = NatIconButton(style: .standardDefault, size: .semi)
         let secondIconButton = NatIconButton(style: .standardDefault, size: .semi)
         let thirdIconButton = NatIconButton(style: .standardDefault, size: .semi)
-        systemUnderTest.visibleViewController?.configure(actionRight: [iconButton, secondIconButton, thirdIconButton])
+        systemUnderTest.visibleViewController?.configure(appBarActionRight: [iconButton, secondIconButton, thirdIconButton])
 
         assertSnapshot(matching: systemUnderTest, as: .image)
     }
 
     func test_appbar_actionLeft_hasValidSnapshot() {
-        systemUnderTest.configure(color: .default)
+        systemUnderTest.configure(appBarColor: .default)
         let iconButton = NatIconButton(style: .standardDefault, size: .semi)
-        systemUnderTest.visibleViewController?.configure(actionLeft: iconButton)
+        systemUnderTest.visibleViewController?.configure(appBarActionLeft: iconButton)
 
         assertSnapshot(matching: systemUnderTest, as: .image)
     }

@@ -17,7 +17,7 @@ final class UINavigationControllerConfigureSpec: QuickSpec {
 
         describe("configure(color:)") {
             beforeEach {
-                sut.configure(color: color)
+                sut.configure(appBarColor: color)
             }
             it("sets tintColor") {
                 expect(sut.navigationBar.tintColor).to(equal(color.contentColor))
@@ -38,7 +38,7 @@ final class UINavigationControllerConfigureSpec: QuickSpec {
         describe("configure(elevation:)") {
             context("when elevation is true") {
                 beforeEach {
-                    sut.configure(elevation: true)
+                    sut.configure(appBarElevation: true)
                 }
                 it("applies elevation") {
                     let attributes = NatElevation.ElevationAttributes.tiny
@@ -53,7 +53,7 @@ final class UINavigationControllerConfigureSpec: QuickSpec {
 
             context("when elevation is false") {
                 beforeEach {
-                    sut.configure(elevation: false)
+                    sut.configure(appBarElevation: false)
                 }
                 it("removes elevation") {
                     let attributes = NatElevation.ElevationAttributes.none
