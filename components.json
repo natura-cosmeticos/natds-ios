@@ -133,8 +133,8 @@
     "patterns": [
       "configure(buttons: [",
       "configure(style: .default",
-      "configure(titleStyle .title(",
-      "configure(titleStyle .logo",
+      "configure(titleStyle: .title(",
+      "configure(titleStyle: .logo",
       "configure(appBarColor",
       "configure(appBarElevation",
       "configure(appBarActionRight",
