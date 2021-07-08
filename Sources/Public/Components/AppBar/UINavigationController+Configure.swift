@@ -19,17 +19,17 @@
     - ✅ `True`
     - ✅ `False`
  - Content position:
-    - ✅ `Center`
-    - ✅ `Left`
+    - ✅ `Center` (default)
+    - ❌ `Left`
  - Content type:
-    - ✅ `Text` (default, not configurable)
+    - ✅ `Text` (default)
     - ❌ `Media`
     - ❌ `Search`
  - Content proeminent:
-    - ✅ `False` (default, not configurable)
+    - ✅ `False` (default)
     - ❌ `True`
  - Behavior:
-    - ✅ `Fixed` (default, not configurable)
+    - ✅ `Fixed` (default)
     - ❌ `Scroll`
  
  The navigation bar colors change accordint to the current brand configured and to the light/dark mode properties.
