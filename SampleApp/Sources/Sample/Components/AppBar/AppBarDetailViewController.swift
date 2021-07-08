@@ -82,10 +82,6 @@ class AppBarDetailViewController: UITableViewController {
             let iconButton = NatIconButton(style: .standardDefault, size: .semi)
             iconButton.configure(icon: getIcon(.outlinedDefaultMockup))
             self.configure(actionLeft: iconButton)
-        case .positionCenter:
-            self.configure(position: .center("Center"))
-        case .positionLeft:
-            self.configure(position: .left("Left"))
         }
     }
 

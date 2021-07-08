@@ -40,35 +40,6 @@ public extension UIViewController {
         navigationItem.leftBarButtonItem = barButtonItem
     }
 
-    /// Sets the position for the titleView in the navigation bar
-    /// - Parameter position: an option from `TitlePosition` enum
-    func configure(position: TitlePosition) {
-        switch position {
-        case .left(let string):
-            let titleLabel = UILabel()
-            titleLabel.text = string
-            titleLabel.textAlignment = .left
-            titleLabel.textColor = self.navigationController?.navigationBar.tintColor
-            titleLabel.translatesAutoresizingMaskIntoConstraints = false
-
-            navigationItem.titleView = titleLabel
-
-            guard let containerView = self.navigationItem.titleView?.superview else { return }
-            if let navigationBar = navigationController?.navigationBar {
-                NSLayoutConstraint.activate([
-                    titleLabel.leadingAnchor.constraint(equalTo: navigationBar.leadingAnchor,
-                                                        constant: NatSizes.semi),
-                    titleLabel.topAnchor.constraint(equalTo: containerView.topAnchor),
-                    titleLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
-                    titleLabel.widthAnchor.constraint(lessThanOrEqualToConstant: NatSizes.hugeX)
-                ])
-            }
-        case .center(let string):
-            navigationItem.titleView = nil
-            title = string
-        }
-    }
-
     @available(*, deprecated, message: "TitleStyle is deprecated, check AppBar documentation")
     func configure(titleStyle: TitleStyle) {
         switch titleStyle {
