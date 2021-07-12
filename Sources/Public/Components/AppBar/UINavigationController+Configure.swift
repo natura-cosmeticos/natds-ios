@@ -1,16 +1,44 @@
-import UIKit
-
 /**
-  This is an extension that modifies the navigationBar according to design system.
+ This is an extension that modifies the navigationBar according to the Design System.
+ It represents the component AppBar - Top.
+ 
+ - NOTE:
+ This component is available in the following variants:
+ - ✅ Standard
+ - ⚠️ Base
 
-  The navigationBar changes according with the current Brand configured in the Design system
-  and according with user properties of Light and Dark mode.
-
-    This component has 1 style:
-    - Default
-
-    Example of usage:
-        navigationController.configure(style: .default)
+ With the following attribute status:
+ - ✅ Action right
+ - ✅ Action left
+ - Color:
+    - ✅ `Default`
+    - ✅ `Primary`
+    - ✅ `None`
+    - ✅ `Inverse`
+ - Elevation:
+    - ✅ `True`
+    - ✅ `False`
+ - Content position:
+    - ✅ `Center` (default)
+    - ⚠️ `Left`
+ - Content type:
+    - ✅ `Text`
+    - ✅ `Media`
+    - ⚠️ `Search`
+ - Content proeminent:
+    - ✅ `False` (default)
+    - ⚠️ `True`
+ - Behavior:
+    - ✅ `Fixed` (default)
+    - ⚠️ `Scroll`
+ 
+ The navigation bar colors change accordint to the current brand configured and to the light/dark mode properties.
+ The component is available only with the variant `standard`.
+ 
+ Examples of usage:
+ 
+            navigationController.configure(color: .primary)
+            navigationController.configure(elevation: true)
 
  - Requires:
         It's necessary to configure the Design System with a theme or fatalError will be raised.
@@ -19,14 +47,24 @@ import UIKit
 */
 
 public extension UINavigationController {
-    func configure(style: Style) {
-        navigationBar.tintColor = style.titleColor
-        navigationBar.barTintColor = style.backgroundColor
-        NatElevation.apply(on: navigationBar, elevation: style.elevation)
+    /// Sets the color for navigation bar and its subviews
+    /// - Parameter color: an option from `AppBarColor` enum
+    func configure(appBarColor: AppBarColor) {
         navigationBar.shadowImage = UIImage()
-
+        navigationBar.barTintColor = appBarColor.backgroundColor
+        navigationBar.tintColor = appBarColor.contentColor
         navigationBar.titleTextAttributes = [
-            NSAttributedString.Key.foregroundColor: NatColors.highEmphasis
+            NSAttributedString.Key.foregroundColor: appBarColor.contentColor
         ]
+    }
+
+    /// Sets an elevation for the navigation bar, which adds a slight shadow to it
+    /// - Parameter elevation: a boolean to add or remove the attribute
+    func configure(appBarElevation: Bool) {
+        if appBarElevation {
+            NatElevation.apply(on: navigationBar, elevation: .tiny)
+        } else {
+            NatElevation.apply(on: navigationBar, elevation: .none)
+        }
     }
 }

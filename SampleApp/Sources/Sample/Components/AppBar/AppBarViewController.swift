@@ -4,9 +4,7 @@ import UIKit
 class AppBarViewController: UITableViewController, SampleItem {
     static var name: String = "App Bar"
 
-    private let dataSource: [(title: String, style: UINavigationController.Style)] = [
-        (title: "Default", style: .default)
-    ]
+    private let dataSource: [String] = ["Standard"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,15 +54,15 @@ class AppBarViewController: UITableViewController, SampleItem {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = dataSource[indexPath.row]
         let cell = tableView.dequeueReusableCell(for: indexPath, cellType: UITableViewCell.self)
-        cell.textLabel?.text = item.title
+        cell.textLabel?.text = item
         cell.selectionStyle = .none
         return cell
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = dataSource[indexPath.row]
-        let viewController = AppBarDetailViewController(appBarStyle: item.style)
-        viewController.title = item.title
+        let viewController = AppBarDetailViewController()
+        viewController.title = item
         self.navigationController?.pushViewController(viewController, animated: true)
     }
 }
