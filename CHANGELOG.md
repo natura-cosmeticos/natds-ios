@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.0.0](https://github.com/natura-cosmeticos/natds-ios/compare/5.3.0...6.0.0) (2021-07-12)
+
+
+### ⚠ BREAKING CHANGES
+
+* removes method configure(titleStyle:) for app bar, which was replaced with the method configure(appBarContentType:)
+* remove old App Bar Style configuration
+
+### Features
+
+* add appbar's color and elevation attributes to navigation bar ([200a8df](https://github.com/natura-cosmeticos/natds-ios/commit/200a8dfbd5181640ce61a7ec7c8cae480bb0c5aa))
+* add appbar's content type attribute ([c0fc93b](https://github.com/natura-cosmeticos/natds-ios/commit/c0fc93b074dfda257b211eb6855b98365637815a))
+* add left and right items for appbar + add center and left title for appbar ([9899ae9](https://github.com/natura-cosmeticos/natds-ios/commit/9899ae9644464bd195b5fbafb7f76b621d001b63))
+
 ## [5.3.0](https://github.com/natura-cosmeticos/natds-ios/compare/5.2.0...5.3.0) (2021-06-21)
 
 
