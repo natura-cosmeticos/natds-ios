@@ -5,7 +5,7 @@
  - NOTE:
  This component is available in the following variants:
  - ✅ Standard
- - ❌ Base
+ - ⚠️ Base
 
  With the following attribute status:
  - ✅ Action right
@@ -20,17 +20,17 @@
     - ✅ `False`
  - Content position:
     - ✅ `Center` (default)
-    - ❌ `Left`
+    - ⚠️ `Left`
  - Content type:
     - ✅ `Text`
     - ✅ `Media`
-    - ❌ `Search`
+    - ⚠️ `Search`
  - Content proeminent:
     - ✅ `False` (default)
-    - ❌ `True`
+    - ⚠️ `True`
  - Behavior:
     - ✅ `Fixed` (default)
-    - ❌ `Scroll`
+    - ⚠️ `Scroll`
  
  The navigation bar colors change accordint to the current brand configured and to the light/dark mode properties.
  The component is available only with the variant `standard`.
