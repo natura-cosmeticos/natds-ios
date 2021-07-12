@@ -17,7 +17,7 @@
       <div class="content-wrapper">
         <p>
           <a href="../index.html">NatDS  Docs</a>
-          <span class="no-mobile"> (33% documented)</span>
+          <span class="no-mobile"> (34% documented)</span>
         </p>
     
     
@@ -191,6 +191,129 @@
                                 <td>
                                   <div>
                                     <p>text always displayed above NatCounter</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS0A7CounterC8setCountyySiF"></a>
+                      <a name="//apple_ref/swift/Method/setCount(_:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A7CounterC8setCountyySiF">setCount(_:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Sets the value of NatCounter component</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setCount</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>value</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>value selected of NatCounter</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS0A7CounterC0C18ChangeValueHandlera"></a>
+                      <a name="//apple_ref/swift/Alias/CounterChangeValueHandler" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A7CounterC0C18ChangeValueHandlera">CounterChangeValueHandler</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">CounterChangeValueHandler</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS0A7CounterC9configure11changeValueyySic_tF"></a>
+                      <a name="//apple_ref/swift/Method/configure(changeValue:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A7CounterC9configure11changeValueyySic_tF">configure(changeValue:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Sets the handler to listening value changes</p>
+
+<p>Example of usage:</p>
+<pre class="highlight swift"><code><span class="n">counter</span><span class="o">.</span><span class="n">configure</span> <span class="p">{</span> <span class="n">newValue</span> <span class="k">in</span> <span class="p">}</span>
+</code></pre>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="nv">changeValue</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/NatCounter.html#/s:5NatDS0A7CounterC0C18ChangeValueHandlera">CounterChangeValueHandler</a></span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>changeValue</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>A closure to notify value changes</p>
                                   </div>
                                 </td>
                               </tr>
@@ -514,6 +637,9 @@
                   <a href="../Classes/NatDialogController.html#/s:5NatDS0A16DialogControllerC9ViewModelC">– ViewModel</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="../Classes/NatField.html">NatField</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Classes/NatIconButton.html">NatIconButton</a>
                 </li>
                 <li class="nav-group-task">
@@ -536,6 +662,18 @@
                 </li>
                 <li class="nav-group-task">
                   <a href="../Classes/NatListItemCell/FeedbackStyle.html">– FeedbackStyle</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NatLogo.html">NatLogo</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NatLogo/Color.html">– Color</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NatLogo/Model.html">– Model</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/NatLogo/Size.html">– Size</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Classes/NatProgressIndicatorCircular.html">NatProgressIndicatorCircular</a>
@@ -636,6 +774,12 @@
               <a href="../Enums.html">Enumerations</a>
               <ul class="nav-group-tasks">
                 <li class="nav-group-task">
+                  <a href="../Enums/AppBarColor.html">AppBarColor</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/AppBarContentType.html">AppBarContentType</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Enums/AvailableTheme.html">AvailableTheme</a>
                 </li>
                 <li class="nav-group-task">
@@ -671,9 +815,6 @@
                   <a href="../Extensions/UINavigationController.html">UINavigationController</a>
                 </li>
                 <li class="nav-group-task">
-                  <a href="../Extensions/UINavigationController/Style.html">– Style</a>
-                </li>
-                <li class="nav-group-task">
                   <a href="../Extensions/UITableView.html">UITableView</a>
                 </li>
                 <li class="nav-group-task">
@@ -681,9 +822,6 @@
                 </li>
                 <li class="nav-group-task">
                   <a href="../Extensions/UIViewController.html">UIViewController</a>
-                </li>
-                <li class="nav-group-task">
-                  <a href="../Extensions/UIViewController/TitleStyle.html">– TitleStyle</a>
                 </li>
               </ul>
             </li>
@@ -719,9 +857,6 @@
                 </li>
                 <li class="nav-group-task">
                   <a href="../Protocols/TabDelegate.html">TabDelegate</a>
-                </li>
-                <li class="nav-group-task">
-                  <a href="../Protocols/TextFieldDelegate.html">TextFieldDelegate</a>
                 </li>
               </ul>
             </li>
@@ -773,7 +908,7 @@
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2021-04-19)</p>
+          <p>&copy; 2021 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2021-07-12)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </div>
