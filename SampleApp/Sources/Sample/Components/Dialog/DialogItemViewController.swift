@@ -38,6 +38,15 @@ final class DialogItemViewController: UIViewController, SampleItem {
         return button
     }()
 
+    private let dialogWithDividerStandardButton: NatButton = {
+        let button = NatButton(style: .contained)
+        button.configure(title: "standard with divider")
+        button.addTarget(self, action: #selector(showDividerStandardDialog), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+
+        return button
+    }()
+
     private let dialogAlertButton: NatButton = {
         let button = NatButton(style: .contained)
         button.configure(title: "alert")
@@ -72,6 +81,23 @@ final class DialogItemViewController: UIViewController, SampleItem {
         let dialog = NatDialogController
             .standardStyleBuilder
             .configure(title: "Title")
+            .configure(body: "Some body text to make a snapshot text without think about the future.")
+            .configure(primaryButtonTitle: "Confirm button") {
+                self.navigationController?.presentedViewController?.dismiss(animated: true)
+            }
+            .configure(secondaryButtonTitle: "Close") {
+                self.navigationController?.presentedViewController?.dismiss(animated: true)
+            }
+            .build()
+
+        navigationController?.present(dialog, animated: true)
+    }
+
+    @objc func showDividerStandardDialog() {
+        let dialog = NatDialogController
+            .standardStyleBuilder
+            .configure(title: "Title")
+            .configure(divider: true)
             .configure(body: "Some body text to make a snapshot text without think about the future.")
             .configure(primaryButtonTitle: "Confirm button") {
                 self.navigationController?.presentedViewController?.dismiss(animated: true)
@@ -126,6 +152,7 @@ final class DialogItemViewController: UIViewController, SampleItem {
         containerView.addSubview(stackView)
 
         stackView.addArrangedSubview(dialogStandardButton)
+        stackView.addArrangedSubview(dialogWithDividerStandardButton)
         stackView.addArrangedSubview(dialogAlertButton)
         stackView.addArrangedSubview(dialogNotDismissableButton)
 

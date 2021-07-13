@@ -98,11 +98,12 @@ final class DialogFooterView: UIView {
     }
 
     private func addConstraints() {
+        let sideMargins = getTokenFromTheme(\.sizeSmall)
         NSLayoutConstraint.activate([
             stackView.topAnchor.constraint(equalTo: topAnchor),
-            stackView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -sideMargins),
             stackView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            stackView.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor)
+            stackView.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor, constant: sideMargins)
         ])
     }
 }
