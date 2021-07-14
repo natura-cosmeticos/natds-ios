@@ -1,7 +1,7 @@
 final class DialogBodyView: UIView {
 
     // MARK: - Private properties
-    
+
     private var body: String
     private var label: UILabel = UILabel()
     private var isFirstTimeInLayoutSubviews = true

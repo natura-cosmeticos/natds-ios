@@ -199,6 +199,7 @@
 		7D0537DB266AB2B80078AC98 /* Logo+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0537DA266AB2B80078AC98 /* Logo+Snapshot+Tests.swift */; };
 		7D17AB1B25E91C380070FD31 /* NatAvatar+Snapshots+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D17AB1A25E91C380070FD31 /* NatAvatar+Snapshots+Tests.swift */; };
 		7D19998925756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19998825756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift */; };
+		7D213B8A269F53D4005B15C3 /* NatDialogDividerConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D213B89269F53D4005B15C3 /* NatDialogDividerConfigurable.swift */; };
 		7D277B5026976900005075EF /* AppBarContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D277B4F26976900005075EF /* AppBarContentType.swift */; };
 		7D277B63269E2551005075EF /* DialogHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D277B62269E2551005075EF /* DialogHeaderView.swift */; };
 		7D277B68269E43A1005075EF /* DialogBodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D277B67269E43A1005075EF /* DialogBodyView.swift */; };
@@ -615,6 +616,7 @@
 		7D0537DA266AB2B80078AC98 /* Logo+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Logo+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		7D17AB1A25E91C380070FD31 /* NatAvatar+Snapshots+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatAvatar+Snapshots+Tests.swift"; sourceTree = "<group>"; };
 		7D19998825756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatProgressIndicatorCircular+Size.swift"; sourceTree = "<group>"; };
+		7D213B89269F53D4005B15C3 /* NatDialogDividerConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatDialogDividerConfigurable.swift; sourceTree = "<group>"; };
 		7D277B4F26976900005075EF /* AppBarContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBarContentType.swift; sourceTree = "<group>"; };
 		7D277B62269E2551005075EF /* DialogHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogHeaderView.swift; sourceTree = "<group>"; };
 		7D277B67269E43A1005075EF /* DialogBodyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogBodyView.swift; sourceTree = "<group>"; };
@@ -2280,6 +2282,7 @@
 				84BC901124AA17C0007DF09D /* NatDialogBodyConfigurable.swift */,
 				84BC901224AA17C0007DF09D /* NatDialogCustomBodyConfigurable.swift */,
 				84BC901B24AB7445007DF09D /* NatDialogDismissableConfigurable.swift */,
+				7D213B89269F53D4005B15C3 /* NatDialogDividerConfigurable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -3226,6 +3229,7 @@
 				8409854C24F030930095D6AD /* NotificationCenterObservable.swift in Sources */,
 				79FC594425BF58E4001CCB56 /* NatRadioButtonContainer.swift in Sources */,
 				BEDF93252593B5CE00F54C50 /* NatSelectionControl+Style.swift in Sources */,
+				7D213B8A269F53D4005B15C3 /* NatDialogDividerConfigurable.swift in Sources */,
 				26740A4B24B3A62F00419526 /* NatBadge+Color.swift in Sources */,
 				26BB817924B944D100617EFC /* Badgeable.swift in Sources */,
 				84EB6B7524EBFEC000C6A792 /* GetThemeValidated.swift in Sources */,
