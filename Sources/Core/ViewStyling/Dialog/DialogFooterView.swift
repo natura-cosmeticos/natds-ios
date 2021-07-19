@@ -3,6 +3,14 @@ private typealias ActionHandler = () -> Void
 final class DialogFooterView: UIView {
 
     // MARK: - Private properties
+    private let sideMargins = getTokenFromTheme(\.sizeSmall)
+
+    private let container: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+
+        return view
+    }()
 
     private let stackView: UIStackView = {
         let stackView = UIStackView()
@@ -89,20 +97,20 @@ final class DialogFooterView: UIView {
         )
 
         addSubview(stackView)
-
         addConstraints()
     }
 
     @objc private func adjustButtonsToFitScreen() {
-        stackView.axis = stackView.frame.width >= frame.width ? .vertical : .horizontal
+        let totalWidth = frame.width - (2 * sideMargins)
+        stackView.axis = stackView.frame.width >= totalWidth ? .vertical : .horizontal
     }
 
     private func addConstraints() {
         NSLayoutConstraint.activate([
             stackView.topAnchor.constraint(equalTo: topAnchor),
-            stackView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -sideMargins),
             stackView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            stackView.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor)
+            stackView.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor, constant: sideMargins)
         ])
     }
 }

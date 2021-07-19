@@ -67,7 +67,15 @@ public final class NatDialogController: UIViewController {
             stackView.addArrangedSubview(view)
         }
 
+        if let view = viewModel.topDividerView {
+            stackView.addArrangedSubview(view)
+        }
+
         if let view = viewModel.bodyView {
+            stackView.addArrangedSubview(view)
+        }
+
+        if let view = viewModel.bottomDividerView {
             stackView.addArrangedSubview(view)
         }
 
@@ -134,9 +142,9 @@ public final class NatDialogController: UIViewController {
             containerViewMinimumHeight,
 
             stackView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: sideMargins),
-            stackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -sideMargins),
+            stackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
             stackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -sideMargins),
-            stackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: sideMargins)
+            stackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor)
         ])
     }
 }

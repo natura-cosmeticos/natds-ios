@@ -27,6 +27,25 @@ enum DialogStyle {
         return label
     }
 
+    static func createDivider() -> Divider {
+        let divider = Divider()
+        divider.translatesAutoresizingMaskIntoConstraints = false
+        divider.configure(style: .fullBleed)
+        return divider
+    }
+
+    static func createHeaderView(title: String) -> DialogHeaderView {
+        let view = DialogHeaderView(title: title)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }
+
+    static func createBodyView(body: String) -> DialogBodyView {
+        let view = DialogBodyView(body: body)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }
+
     private static func createAttributedText(
         text: String,
         color: UIColor,
