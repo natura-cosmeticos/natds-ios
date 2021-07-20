@@ -37,11 +37,29 @@ final class DialogItemViewController: UIViewController, SampleItem {
 
         return button
     }()
-    
+
     private let dialogStandardLongTextButton: NatButton = {
         let button = NatButton(style: .contained)
-        button.configure(title: "standard with long buttons")
+        button.configure(title: "standard with long title button")
         button.addTarget(self, action: #selector(showStandardLongTextDialog), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+
+        return button
+    }()
+
+    private let dialogStandardBigViewButton: NatButton = {
+        let button = NatButton(style: .contained)
+        button.configure(title: "standard with max height")
+        button.addTarget(self, action: #selector(showStandardBigViewDialog), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+
+        return button
+    }()
+
+    private let dialogStandardCustomViewButton: NatButton = {
+        let button = NatButton(style: .contained)
+        button.configure(title: "standard with custom view")
+        button.addTarget(self, action: #selector(showStandardCustomViewDialog), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
 
         return button
@@ -106,8 +124,25 @@ final class DialogItemViewController: UIViewController, SampleItem {
         let dialog = NatDialogController
             .standardStyleBuilder
             .configure(title: "Title")
-            .configure(body: "Some body text to make a snapshot text without think about the future. A medium long text to check if it's really working etcetera etcetera.")
-            .configure(primaryButtonTitle: "Primary big big title") {
+            .configure(body: "Some body text to make a snapshot text without think about the future.")
+            .configure(primaryButtonTitle: "Button with long title") {
+                self.navigationController?.presentedViewController?.dismiss(animated: true)
+            }
+            .configure(secondaryButtonTitle: "Other button") {
+                self.navigationController?.presentedViewController?.dismiss(animated: true)
+            }
+            .build()
+
+        navigationController?.present(dialog, animated: true)
+    }
+
+    // swiftlint:disable line_length
+    @objc func showStandardBigViewDialog() {
+        let dialog = NatDialogController
+            .standardStyleBuilder
+            .configure(title: "Title")
+            .configure(body: "Some body text to make a snapshot text without think about the future. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ornare est mi. Ut porttitor nunc scelerisque, suscipit nisl non, cursus neque. Suspendisse ac mattis lorem. Nulla tincidunt eros sodales, auctor sem eu, condimentum magna. Cras facilisis posuere est a facilisis. Duis sit amet tincidunt massa. Vivamus malesuada lacus at mattis sagittis. Quisque fermentum augue non feugiat lobortis. Ut ac turpis at lorem mollis interdum vel vel eros. Maecenas tempus, magna eget placerat ultrices, lectus augue aliquet elit, ac euismod mauris dolor non augue. Phasellus id porttitor erat. Morbi a viverra nisi. Praesent id arcu lorem. Suspendisse sollicitudin sit amet elit sed sodales. Nunc ex elit, convallis non neque eget, egestas vestibulum nisi. Etiam fringilla nulla mi, in eleifend felis condimentum at. Integer suscipit sit amet ipsum eget euismod. Cras et diam dignissim, mollis nunc facilisis, malesuada felis.")
+            .configure(primaryButtonTitle: "Primary") {
                 self.navigationController?.presentedViewController?.dismiss(animated: true)
             }
             .configure(secondaryButtonTitle: "Secondary") {
@@ -118,6 +153,21 @@ final class DialogItemViewController: UIViewController, SampleItem {
         navigationController?.present(dialog, animated: true)
     }
 
+    @objc func showStandardCustomViewDialog() {
+        let dialog = NatDialogController
+            .standardStyleBuilder
+            .configure(title: "Title")
+            .configure(body: NatImage())
+            .configure(primaryButtonTitle: "Primary") {
+                self.navigationController?.presentedViewController?.dismiss(animated: true)
+            }
+            .configure(secondaryButtonTitle: "Secondary") {
+                self.navigationController?.presentedViewController?.dismiss(animated: true)
+            }
+            .build()
+
+        navigationController?.present(dialog, animated: true)
+    }
     @objc func showDividerStandardDialog() {
         let dialog = NatDialogController
             .standardStyleBuilder
@@ -153,7 +203,7 @@ final class DialogItemViewController: UIViewController, SampleItem {
     @objc func showNotDismissableDialog() {
         let dialog = NatDialogController
             .alertStyleBuilder
-            .configure(body: "Attention: Dismissable is Dialog property, that can be configured for all styles.")
+            .configure(body: "Tapping outside the Dialog does not dismiss it. Dismissable is a property for Dialog and can be configured for all styles.")
             .configure(isDismissable: false)
             .configure(primaryButtonTitle: "Confirm") {
                 self.navigationController?.presentedViewController?.dismiss(animated: true)
@@ -178,6 +228,8 @@ final class DialogItemViewController: UIViewController, SampleItem {
 
         stackView.addArrangedSubview(dialogStandardButton)
         stackView.addArrangedSubview(dialogStandardLongTextButton)
+        stackView.addArrangedSubview(dialogStandardBigViewButton)
+        stackView.addArrangedSubview(dialogStandardCustomViewButton)
         stackView.addArrangedSubview(dialogWithDividerStandardButton)
         stackView.addArrangedSubview(dialogAlertButton)
         stackView.addArrangedSubview(dialogNotDismissableButton)
