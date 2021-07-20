@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.1.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.0.1...6.1.0) (2021-07-20)
+
+
+### Features
+
+* add divider attribute to dialog component ([40ee8f5](https://github.com/natura-cosmeticos/natds-ios/commit/40ee8f58dfafbb3b6f0473da3913f2706a984d4d))
+
+
+### Bug Fixes
+
+* fix add divider for dialog function ([c224252](https://github.com/natura-cosmeticos/natds-ios/commit/c224252260c6d7dce69d5b31bfba0a771612d0c0))
+* fix dialog buttons orientation ([0f5d080](https://github.com/natura-cosmeticos/natds-ios/commit/0f5d080f0c91b2f0368c73c87db63a8977b13117))
+
 ### [6.0.1](https://github.com/natura-cosmeticos/natds-ios/compare/6.0.0...6.0.1) (2021-07-20)
 
 
