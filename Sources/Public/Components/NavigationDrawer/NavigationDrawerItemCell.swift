@@ -26,7 +26,9 @@ public class NavigationDrawerItemCell: UITableViewCell {
     public var tagText: String? {
         didSet {
             if let text = tagText {
+                tagView.setNeedsDisplay()
                 tagView.configure(text: text)
+                tagView.isHidden = false
             } else {
                 tagView.isHidden = true
             }
