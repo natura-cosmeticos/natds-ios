@@ -1,6 +1,17 @@
 import UIKit
 
 /**
+ - NOTE:
+ This component is available in the following variants:
+ - ✅ Standard
+ - ✅ Alert
+
+ With the following attributes:
+ - ✅ Divider
+ - ✅ Size/width
+ - ✅ Size/height
+ - ❌ Scroll
+ - ❌ Header's icon buttons
  
  NatDialogController is a class that represents a component from the design system.
  Its colors change according to the current brand theme.
