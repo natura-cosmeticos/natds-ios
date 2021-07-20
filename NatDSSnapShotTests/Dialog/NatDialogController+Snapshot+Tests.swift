@@ -78,6 +78,21 @@ final class NatDialogControllerSnapshotTests: XCTestCase {
         assertSnapshot(matching: superview, as: .image)
     }
 
+    func test_dialog_style_standard_with_divider_hasValidSnapshot() {
+        let systemUnderTest = NatDialogController
+            .standardStyleBuilder
+            .configure(title: "Title")
+            .configure(divider: true)
+            .configure(body: "Some body text to make a snapshot text without think about the future.")
+            .configure(primaryButtonTitle: "Primary", withAction: {})
+            .configure(secondaryButtonTitle: "Secondary", withAction: {})
+            .build()
+
+        superview.addSubview(systemUnderTest.view)
+
+        assertSnapshot(matching: superview, as: .image)
+    }
+
     func test_dialog_style_alert_hasValidSnapshot() {
         let systemUnderTest = NatDialogController
             .alertStyleBuilder

@@ -1,7 +1,9 @@
 extension NatDialogController {
     public class ViewModel {
-        var titleView: UIView?
+        var titleView: DialogHeaderView?
+        var topDividerView: UIView?
         var bodyView: UIView?
+        var bottomDividerView: UIView?
         var footerView: DialogFooterView?
         var isDismissable = true
     }

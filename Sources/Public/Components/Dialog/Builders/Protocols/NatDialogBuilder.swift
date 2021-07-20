@@ -4,6 +4,9 @@ public protocol NatDialogBuilder: class {
 }
 
 extension NatDialogBuilder {
+    /// The builder function to the Dialog component.
+    /// Should be used with other configurable builders to set the Dialog's properties.
+    /// - Returns: a Dialog
     public func build() -> NatDialogController {
         if  buttonsConfiguration.primary != nil {
             viewModel.footerView = .init()

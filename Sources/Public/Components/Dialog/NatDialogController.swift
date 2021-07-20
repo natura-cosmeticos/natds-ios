@@ -1,31 +1,41 @@
 import UIKit
 
 /**
+ - NOTE:
+ This component is available in the following variants:
+ - ✅ Standard
+ - ✅ Alert
 
-  NatDialogController is a class that represents a component from the design system.
-  The colors changes according with the current theme configured in the Design system.
+ With the following attributes:
+ - ✅ Divider
+ - ✅ Size/width
+ - ✅ Size/height
+ - ❌ Scroll
+ - ❌ Header's icon buttons
+ 
+ NatDialogController is a class that represents a component from the design system.
+ Its colors change according to the current brand theme.
+ 
+ To create and configure the dialog it's necessary to use Dialog Builders, which are available as class properties.
 
-    Available styles:
-    - Standard
-    - Alert
+ Available styles for the dialog:
+ - Standard
+ - Alert
 
-    To create and configure Dialogs it's necessary use Dialog Builders that builds are available as class
-    properties.
+ Configurable elements for the dialog:
+ - Title
+ - Body (Text or custom view)
+ - Primary button (must be configured before other buttons)
+ - Secondary button
+ - Divider
 
-    Available elements to configure:
-
-    - Title
-    - Body (Text or Custom view)
-    - Primary Button (must be configured before other buttons)
-    - Secondary Button (Optional)
-
-
-          Example of usage:
+Example of usage:
 
              let dialog = NatDialogController
              .standardStyleBuilder
              .configure(title: "Title")
              .configure(body: "Body")
+             .configure(divider: true)
              .configure(primaryTitle: "Title", primaryAction: { print("Some text") })
              .build()
 
@@ -67,7 +77,15 @@ public final class NatDialogController: UIViewController {
             stackView.addArrangedSubview(view)
         }
 
+        if let view = viewModel.topDividerView {
+            stackView.addArrangedSubview(view)
+        }
+
         if let view = viewModel.bodyView {
+            stackView.addArrangedSubview(view)
+        }
+
+        if let view = viewModel.bottomDividerView {
             stackView.addArrangedSubview(view)
         }
 
@@ -134,9 +152,9 @@ public final class NatDialogController: UIViewController {
             containerViewMinimumHeight,
 
             stackView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: sideMargins),
-            stackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -sideMargins),
+            stackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
             stackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -sideMargins),
-            stackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: sideMargins)
+            stackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor)
         ])
     }
 }
@@ -152,6 +170,7 @@ extension NatDialogController {
         - Body (Text or Custom view)
         - Primary Button (must be configured before other buttons)
         - Secondary Button (Optional)
+        - Divider
 
          Example of usage:
 

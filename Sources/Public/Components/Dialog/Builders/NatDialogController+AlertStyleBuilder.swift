@@ -21,7 +21,11 @@ extension NatDialogController {
         ) = (primary: nil, secondary: nil)
 
         // MARK: - Public methods
-
+        
+        /// Configures the primary button text and action for the Dialog
+        /// - Parameters:
+        ///   - title: a String to be displayed as the button title
+        ///   - action: the block of code to be executed when the button is tapped
         @discardableResult
         public func configure(primaryButtonTitle title: String, withAction action: @escaping () -> Void) -> Self {
             buttonsConfiguration.primary = .init(
@@ -32,7 +36,11 @@ extension NatDialogController {
 
             return self
         }
-
+        
+        /// Configures the secondary button text and action for the Dialog
+        /// - Parameters:
+        ///   - title: a String to be displayed as the button title
+        ///   - action: the block of code to be executed when the button is tapped
         @discardableResult
         public func configure(secondaryButtonTitle title: String, withAction action: @escaping () -> Void) -> Self {
             buttonsConfiguration.secondary = .init(
@@ -61,3 +69,7 @@ extension NatDialogController.AlertStyleBuilder: NatDialogBodyConfigurable {}
 // MARK: - NatDialogDismissableConfigurable
 
 extension NatDialogController.AlertStyleBuilder: NatDialogDismissableConfigurable {}
+
+// MARK: - NatDialogDividerConfigurable
+
+extension NatDialogController.AlertStyleBuilder: NatDialogDividerConfigurable {}
