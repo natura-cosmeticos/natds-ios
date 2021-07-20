@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.0.1](https://github.com/natura-cosmeticos/natds-ios/compare/6.0.0...6.0.1) (2021-07-20)
+
+
+### Bug Fixes
+
+* fix tag visibility for reused cells at navigation drawer ([a910b5b](https://github.com/natura-cosmeticos/natds-ios/commit/a910b5b50e857e036d7e49aae410f7a0883175e3))
+
 ## [6.0.0](https://github.com/natura-cosmeticos/natds-ios/compare/5.3.0...6.0.0) (2021-07-12)
 
 
