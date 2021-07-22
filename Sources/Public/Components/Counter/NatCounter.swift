@@ -37,6 +37,9 @@ import UIKit
 
 public final class NatCounter: UIView {
 
+    public typealias CounterChangeValueHandler = (Int) -> Void
+    private var counterChangeValueHandler: CounterChangeValueHandler?
+
     private var numCounter: Int = 0
     private var subtractDisabledSet: Bool = false
     private var addDisabledSet: Bool = false
@@ -57,6 +60,8 @@ public final class NatCounter: UIView {
 
     let numCounterLabelView: UIView = {
         let view = UIView()
+        view.addTopBorder(with: NatColors.highEmphasis, andWidth: 0.5)
+        view.addBottomBorder(with: NatColors.highEmphasis, andWidth: 0.5)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -110,12 +115,16 @@ public final class NatCounter: UIView {
 
         numCounterLabel.text = "\(numCounter)"
 
-        setupConstraints()
         setupButtons()
+        setupConstraints()
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    public override func layoutSubviews() {
+        super.layoutSubviews()
     }
 
     // MARK: - Public methods
@@ -125,7 +134,7 @@ public final class NatCounter: UIView {
     public func configure(label: String?) {
         self.label.text = label
     }
-    
+
     /// Sets the value of NatCounter component
     /// - Parameter value: value selected of NatCounter
     public func setCount(_ value: Int) {
@@ -133,10 +142,7 @@ public final class NatCounter: UIView {
         numCounterLabel.text = "\(numCounter)"
         checkLimit()
     }
- 
-    public typealias CounterChangeValueHandler = (Int) -> Void
-    private var counterChangeValueHandler: CounterChangeValueHandler?
-    
+
     /// Sets the handler to listening value changes
     /// - Parameter changeValue: A closure to notify value changes
     ///
@@ -203,38 +209,17 @@ public final class NatCounter: UIView {
     private func setupButtons() {
         let borderRadius = getTokenFromTheme(\.borderRadiusMedium)
 
-        switch size {
-        case .semi:
-            let sizeWidth = getTokenFromTheme(\.sizeSemi)
-            let sizeHeight = getTokenFromTheme(\.sizeSemiX)
+        subtractView.configure(height: size.buttonHeight, width: size.buttonWidth)
+        addView.configure(height: size.buttonHeight, width: size.buttonWidth)
 
-            subtractView.configure(height: sizeHeight, width: sizeWidth)
-            addView.configure(height: sizeHeight, width: sizeWidth)
-            subtractView.roundCorners(corners: [.topLeft, .bottomLeft],
-                                      radius: borderRadius,
-                                      sizeWidth: sizeWidth,
-                                      sizeHeight: sizeHeight)
-            addView.roundCorners(corners: [.topRight, .bottomRight],
-                                 radius: borderRadius,
-                                 sizeWidth: sizeWidth,
-                                 sizeHeight: sizeHeight)
-        case .medium:
-            let sizeWidth = getTokenFromTheme(\.sizeSemiX)
-            let sizeHeight = getTokenFromTheme(\.sizeMedium)
-
-            subtractView.configure(height: sizeHeight, width: sizeWidth)
-            addView.configure(height: sizeHeight, width: sizeWidth)
-
-            subtractView.roundCorners(corners: [.topLeft, .bottomLeft],
-                                      radius: borderRadius,
-                                      sizeWidth: sizeWidth,
-                                      sizeHeight: sizeHeight)
-
-            addView.roundCorners(corners: [.topRight, .bottomRight],
-                                 radius: borderRadius,
-                                 sizeWidth: sizeWidth,
-                                 sizeHeight: sizeHeight)
-        }
+        subtractView.roundCorners(corners: [.layerMinXMinYCorner, .layerMinXMaxYCorner],
+                                  radius: borderRadius,
+                                  sizeWidth: size.buttonWidth,
+                                  sizeHeight: size.buttonHeight)
+        addView.roundCorners(corners: [.layerMaxXMinYCorner, .layerMaxXMaxYCorner],
+                             radius: borderRadius,
+                             sizeWidth: size.buttonWidth,
+                             sizeHeight: size.buttonHeight)
 
         self.checkLimit()
 
@@ -254,7 +239,7 @@ public final class NatCounter: UIView {
     }
 
     private func checkLimit() {
-        if subtractDisabledSet == false {
+        if !subtractDisabledSet {
             if numCounter == 0 {
                 subtractView.currentState = .disabled
                 subtractView.iconLabel.textColor = getUIColorFromTokens(\.colorMediumEmphasis)
@@ -264,7 +249,7 @@ public final class NatCounter: UIView {
             }
         }
 
-        if addDisabledSet == false {
+        if !addDisabledSet {
             if numCounter == 99 {
                 addView.currentState = .disabled
                 addView.iconLabel.textColor = getUIColorFromTokens(\.colorMediumEmphasis)
@@ -302,15 +287,51 @@ public final class NatCounter: UIView {
 }
 
 extension UIView {
-    func roundCorners(corners: UIRectCorner,
+    func addTopBorder(with color: UIColor?, andWidth borderWidth: CGFloat) {
+        let border = UIView()
+        border.backgroundColor = color
+        border.autoresizingMask = [.flexibleWidth, .flexibleBottomMargin]
+        border.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: borderWidth)
+        addSubview(border)
+    }
+
+    func addBottomBorder(with color: UIColor?, andWidth borderWidth: CGFloat) {
+        let border = UIView()
+        border.backgroundColor = color
+        border.autoresizingMask = [.flexibleWidth, .flexibleTopMargin]
+        border.frame = CGRect(x: 0, y: frame.size.height - borderWidth, width: frame.size.width, height: borderWidth)
+        addSubview(border)
+    }
+
+    func roundCorners(corners: CACornerMask,
                       radius: CGFloat,
                       sizeWidth: CGFloat,
                       sizeHeight: CGFloat) {
-        let path = UIBezierPath(roundedRect: CGRect(origin: .zero, size: CGSize(width: sizeWidth, height: sizeHeight)),
-                                byRoundingCorners: corners,
-                                cornerRadii: CGSize(width: radius, height: radius))
-        let mask = CAShapeLayer()
-        mask.path = path.cgPath
-        layer.mask = mask
+        if #available(iOS 11, *) {
+            self.layer.cornerRadius = radius
+            self.layer.maskedCorners = corners
+        } else {
+            var cornerMask = UIRectCorner()
+            if corners.contains(.layerMinXMinYCorner) {
+                cornerMask.insert(.topLeft)
+            }
+            if corners.contains(.layerMaxXMinYCorner) {
+                cornerMask.insert(.topRight)
+            }
+            if corners.contains(.layerMinXMaxYCorner) {
+                cornerMask.insert(.bottomLeft)
+            }
+            if corners.contains(.layerMaxXMaxYCorner) {
+                cornerMask.insert(.bottomRight)
+            }
+            let path = UIBezierPath(roundedRect: CGRect(origin: .zero,
+                                                        size: CGSize(width: sizeWidth,
+                                                                     height: sizeHeight)),
+                                    byRoundingCorners: cornerMask,
+                                    cornerRadii: CGSize(width: radius, height: radius))
+            let mask = CAShapeLayer()
+            mask.path = path.cgPath
+            self.layer.mask = mask
+        }
     }
 }
