@@ -20,7 +20,7 @@ final class NatCounterSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.98))
     }
 
     func test_counter_medium_size_hasValidSnapshot() {
@@ -28,7 +28,7 @@ final class NatCounterSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.98))
     }
 
     func test_counter_with_label_hasValidSnapshot() {
@@ -37,7 +37,7 @@ final class NatCounterSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.98))
     }
 
     func test_counter_add_disabled_hasValidSnapshot() {
@@ -46,7 +46,7 @@ final class NatCounterSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.98))
     }
 
     func test_counter_subtract_disabled_hasValidSnapshot() {
@@ -55,7 +55,7 @@ final class NatCounterSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.98))
     }
 
     func test_counter_all_buttons_disabled_hasValidSnapshot() {
@@ -64,7 +64,7 @@ final class NatCounterSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.98))
     }
 
     private func addConstraints(_ systemUnderTest: UIView) {

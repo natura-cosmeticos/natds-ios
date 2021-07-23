@@ -1,18 +1,18 @@
 import UIKit
 
-final class NatCounterButton: UIView, Pulsable {
-    public enum State {
-        case enabled
-        case disabled
+internal final class NatCounterButton: UIView, Pulsable {
+
+    var action: (() -> Void)?
+    var isEnabled: Bool = true {
+        didSet {
+            self.updateColors()
+            self.setNeedsDisplay()
+        }
     }
 
-    private var action: (() -> Void)?
-    internal var currentState: State = .enabled
-
-    internal let iconLabel: UILabel = {
+    var iconLabel: UILabel = {
         let label = UILabel()
         label.font = NatFonts.font(ofSize: .button, withWeight: .medium)
-        label.textColor = getUIColorFromTokens(\.colorHighEmphasis)
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label
@@ -49,15 +49,13 @@ final class NatCounterButton: UIView, Pulsable {
         addGestureRecognizer(tapGesture)
     }
 
-    internal func configure(action: @escaping () -> Void) {
-        self.action = action
+    private func updateColors() {
+        self.iconLabel.textColor = isEnabled ?
+            getUIColorFromTokens(\.colorHighEmphasis) :
+            getUIColorFromTokens(\.colorMediumEmphasis)
     }
 
-    internal func configure(iconLabel: String?) {
-        self.iconLabel.text = iconLabel
-    }
-
-    internal func configure(height: CGFloat, width: CGFloat) {
+    func configure(height: CGFloat, width: CGFloat) {
         NSLayoutConstraint.activate([
             heightAnchor.constraint(equalToConstant: height),
             widthAnchor.constraint(equalToConstant: width)
@@ -65,21 +63,22 @@ final class NatCounterButton: UIView, Pulsable {
     }
 
     @objc func tapHandler(_ sender: UIGestureRecognizer) {
-        guard currentState == .enabled else { return }
-        action?()
+        if isEnabled {
+            action?()
+        }
     }
 
-    internal override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-        guard currentState == .enabled else { return }
+        if isEnabled {
+            let color = getUIColorFromTokens(\.colorHighEmphasis).withAlphaComponent(0.2)
 
-        let color = getUIColorFromTokens(\.colorHighEmphasis).withAlphaComponent(0.2)
-
-        addPulseLayerAnimated(
-            at: centerBounds,
-            in: layer,
-            withColor: color,
-            removeAfterAnimation: true
-        )
+            addPulseLayerAnimated(
+                at: centerBounds,
+                in: layer,
+                withColor: color,
+                removeAfterAnimation: true
+            )
+        }
     }
 }

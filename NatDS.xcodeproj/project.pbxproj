@@ -217,6 +217,7 @@
 		7D5F149A25A782AB007986EE /* IconsSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5F149925A782AB007986EE /* IconsSource.swift */; };
 		7D60A443260914DE00A23C1A /* NatIconButton+Backgrounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D60A442260914DE00A23C1A /* NatIconButton+Backgrounds.swift */; };
 		7D60A4A0260E208E00A23C1A /* NatListItem+Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D60A49F260E208E00A23C1A /* NatListItem+Feedback.swift */; };
+		7D704EDB26AB556100B64226 /* NatCounter+Size+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D704EDA26AB556100B64226 /* NatCounter+Size+Spec.swift */; };
 		7D75A43925DB00130050ACA9 /* NatAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D75A43825DB00130050ACA9 /* NatAvatar.swift */; };
 		7D75A44125DB00230050ACA9 /* NatAvatar+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D75A44025DB00230050ACA9 /* NatAvatar+Size.swift */; };
 		7D86C195266533F600FC4C53 /* NatLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86C194266533F600FC4C53 /* NatLogo.swift */; };
@@ -635,6 +636,7 @@
 		7D5F149925A782AB007986EE /* IconsSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsSource.swift; sourceTree = "<group>"; };
 		7D60A442260914DE00A23C1A /* NatIconButton+Backgrounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatIconButton+Backgrounds.swift"; sourceTree = "<group>"; };
 		7D60A49F260E208E00A23C1A /* NatListItem+Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatListItem+Feedback.swift"; sourceTree = "<group>"; };
+		7D704EDA26AB556100B64226 /* NatCounter+Size+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatCounter+Size+Spec.swift"; sourceTree = "<group>"; };
 		7D75A43825DB00130050ACA9 /* NatAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatAvatar.swift; sourceTree = "<group>"; };
 		7D75A44025DB00230050ACA9 /* NatAvatar+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatAvatar+Size.swift"; sourceTree = "<group>"; };
 		7D86C194266533F600FC4C53 /* NatLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatLogo.swift; sourceTree = "<group>"; };
@@ -1554,6 +1556,7 @@
 			isa = PBXGroup;
 			children = (
 				79EA0C56260E21E700742C0A /* NatCounter+Spec.swift */,
+				7D704EDA26AB556100B64226 /* NatCounter+Size+Spec.swift */,
 			);
 			path = Counter;
 			sourceTree = "<group>";
@@ -3134,6 +3137,7 @@
 				79FC59D425D57A3F001CCB56 /* ProgressIndicatorCircular+Size+Spec.swift in Sources */,
 				7DE2B10725FBD57300C5CBC0 /* NatListItem+Spec.swift in Sources */,
 				79E7FB3A2538CFA200A831BC /* NaturaLightTokens+Elevation+Spec.swift in Sources */,
+				7D704EDB26AB556100B64226 /* NatCounter+Size+Spec.swift in Sources */,
 				A0328AF2000431B6155A5A6CD94B1835 /* ReusableViewTests.swift in Sources */,
 				79E7FB492538D04300A831BC /* NaturaDarkTokens+Size+Spec.swift in Sources */,
 				84B9330E24ABC6D200B71BD4 /* NatDialogCustomBodyConfigurable+Spec.swift in Sources */,
