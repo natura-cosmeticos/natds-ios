@@ -1,8 +1,8 @@
 import UIKit
 
-final class NatCounterButton: UIView, Pulsable {
+internal final class NatCounterButton: UIView, Pulsable {
 
-    private var action: (() -> Void)?
+    var action: (() -> Void)?
     var isEnabled: Bool = true {
         didSet {
             self.updateColors()
@@ -10,7 +10,7 @@ final class NatCounterButton: UIView, Pulsable {
         }
     }
 
-    internal let iconLabel: UILabel = {
+    var iconLabel: UILabel = {
         let label = UILabel()
         label.font = NatFonts.font(ofSize: .button, withWeight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -55,15 +55,7 @@ final class NatCounterButton: UIView, Pulsable {
             getUIColorFromTokens(\.colorMediumEmphasis)
     }
 
-    internal func configure(action: @escaping () -> Void) {
-        self.action = action
-    }
-
-    internal func configure(iconLabel: String?) {
-        self.iconLabel.text = iconLabel
-    }
-
-    internal func configure(height: CGFloat, width: CGFloat) {
+    func configure(height: CGFloat, width: CGFloat) {
         NSLayoutConstraint.activate([
             heightAnchor.constraint(equalToConstant: height),
             widthAnchor.constraint(equalToConstant: width)
@@ -76,7 +68,7 @@ final class NatCounterButton: UIView, Pulsable {
         }
     }
 
-    internal override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         if isEnabled {
             let color = getUIColorFromTokens(\.colorHighEmphasis).withAlphaComponent(0.2)

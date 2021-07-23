@@ -98,7 +98,7 @@ public final class NatCounter: UIView {
 
     let subtractView: NatCounterButton = {
         let view = NatCounterButton()
-        view.configure(iconLabel: "-")
+        view.iconLabel.text = "-"
         view.translatesAutoresizingMaskIntoConstraints = false
 
         return view
@@ -106,13 +106,13 @@ public final class NatCounter: UIView {
 
     let addView: NatCounterButton = {
         let view = NatCounterButton()
-        view.configure(iconLabel: "+")
+        view.iconLabel.text = "+"
         view.translatesAutoresizingMaskIntoConstraints = false
 
         return view
     }()
 
-    internal var size: Size
+    private var size: Size
 
     // MARK: - Inits
 
@@ -214,11 +214,11 @@ public final class NatCounter: UIView {
                              sizeWidth: size.buttonWidth,
                              sizeHeight: size.buttonHeight)
 
-        subtractView.configure {
+        subtractView.action = {
             self.numCounter -= 1
         }
 
-        addView.configure {
+        addView.action = {
             self.numCounter += 1
         }
     }
