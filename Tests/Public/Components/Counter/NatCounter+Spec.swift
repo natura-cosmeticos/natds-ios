@@ -62,20 +62,20 @@ final class NatCounterSpec: QuickSpec {
                 it("when subtract button is disabled") {
                     let state = NatCounter.State.self
                     sut.configure(button: .subtract, state: .disabled)
-                    expect(sut.subtractView.currentState.hashValue).to(equal(state.disabled.hashValue))
+                    expect(sut.subtractView.isEnabled).to(beFalse())
                 }
 
                 it("when add button is disabled") {
                     let state = NatCounter.State.self
                     sut.configure(button: .add, state: .disabled)
-                    expect(sut.addView.currentState.hashValue).to(equal(state.disabled.hashValue))
+                    expect(sut.addView.isEnabled).to(beFalse())
                 }
 
                 it("when all buttons are disabled") {
                     let state = NatCounter.State.self
                     sut.configure(button: .all, state: .disabled)
-                    expect(sut.addView.currentState.hashValue).to(equal(state.disabled.hashValue))
-                    expect(sut.subtractView.currentState.hashValue).to(equal(state.disabled.hashValue))
+                    expect(sut.addView.isEnabled).to(beFalse())
+                    expect(sut.subtractView.isEnabled).to(beFalse())
                 }
             }
 
@@ -89,20 +89,20 @@ final class NatCounterSpec: QuickSpec {
                 it("when subtract button is enabled") {
                     let state = NatCounter.State.self
                     sut.configure(button: .subtract, state: .enabled)
-                    expect(sut.subtractView.currentState.hashValue).to(equal(state.enabled.hashValue))
+                    expect(sut.subtractView.isEnabled).to(beTrue())
                 }
 
                 it("when add button is enabled") {
                     let state = NatCounter.State.self
                     sut.configure(button: .add, state: .enabled)
-                    expect(sut.addView.currentState.hashValue).to(equal(state.enabled.hashValue))
+                    expect(sut.addView.isEnabled).to(beTrue())
                 }
 
                 it("when all buttons are enabled") {
                     let state = NatCounter.State.self
                     sut.configure(button: .all, state: .enabled)
-                    expect(sut.addView.currentState.hashValue).to(equal(state.enabled.hashValue))
-                    expect(sut.subtractView.currentState.hashValue).to(equal(state.enabled.hashValue))
+                    expect(sut.addView.isEnabled).to(beTrue())
+                    expect(sut.subtractView.isEnabled).to(beTrue())
                 }
             }
         }
