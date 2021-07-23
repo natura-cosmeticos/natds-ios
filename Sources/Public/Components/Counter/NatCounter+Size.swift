@@ -28,6 +28,10 @@ extension NatCounter.Size {
         }
     }
 
+    var borderRadius: CGFloat {
+        return getTokenFromTheme(\.borderRadiusMedium)
+    }
+
     var buttonWidth: CGFloat {
         switch self {
         case .semi:

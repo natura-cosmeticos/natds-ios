@@ -40,9 +40,19 @@ public final class NatCounter: UIView {
     public typealias CounterChangeValueHandler = (Int) -> Void
     private var counterChangeValueHandler: CounterChangeValueHandler?
 
-    private var numCounter: Int = 0
-    private var subtractDisabledSet: Bool = false
-    private var addDisabledSet: Bool = false
+    private var minCount: Int = 0
+    private var maxCount: Int = 99
+
+    private var numCounter: Int = 0 {
+        didSet {
+            numCounterLabel.text = "\(numCounter)"
+            counterChangeValueHandler?(numCounter)
+            checkLimit()
+        }
+    }
+
+    private var didSetSubtractDisabled: Bool = false
+    private var didSetAddDisabled: Bool = false
 
     let stackViewContainer: UIStackView = {
         let stackView = UIStackView()
@@ -60,9 +70,10 @@ public final class NatCounter: UIView {
 
     let numCounterLabelView: UIView = {
         let view = UIView()
-        view.addTopBorder(with: NatColors.highEmphasis, andWidth: 0.5)
-        view.addBottomBorder(with: NatColors.highEmphasis, andWidth: 0.5)
+        view.addBorder(with: NatColors.highEmphasis, andWidth: 0.5, atTop: true)
+        view.addBorder(with: NatColors.highEmphasis, andWidth: 0.5, atTop: false)
         view.translatesAutoresizingMaskIntoConstraints = false
+
         return view
     }()
 
@@ -88,8 +99,6 @@ public final class NatCounter: UIView {
     let subtractView: NatCounterButton = {
         let view = NatCounterButton()
         view.configure(iconLabel: "-")
-        view.layer.borderWidth = 0.5
-        view.layer.borderColor = NatColors.highEmphasis.cgColor
         view.translatesAutoresizingMaskIntoConstraints = false
 
         return view
@@ -98,8 +107,6 @@ public final class NatCounter: UIView {
     let addView: NatCounterButton = {
         let view = NatCounterButton()
         view.configure(iconLabel: "+")
-        view.layer.borderWidth = 0.5
-        view.layer.borderColor = NatColors.highEmphasis.cgColor
         view.translatesAutoresizingMaskIntoConstraints = false
 
         return view
@@ -113,18 +120,13 @@ public final class NatCounter: UIView {
         self.size = size
         super.init(frame: .zero)
 
-        numCounterLabel.text = "\(numCounter)"
-
+        setCount(minCount)
         setupButtons()
         setupConstraints()
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-
-    public override func layoutSubviews() {
-        super.layoutSubviews()
     }
 
     // MARK: - Public methods
@@ -139,8 +141,6 @@ public final class NatCounter: UIView {
     /// - Parameter value: value selected of NatCounter
     public func setCount(_ value: Int) {
         numCounter = value
-        numCounterLabel.text = "\(numCounter)"
-        checkLimit()
     }
 
     /// Sets the handler to listening value changes
@@ -165,36 +165,31 @@ public final class NatCounter: UIView {
     /// counter.configure(button: .all, state: .disabled)
     /// ```
     public func configure(button: CounterButtonType, state: State) {
-
         switch state {
         case .enabled:
             switch button {
             case .subtract:
-                subtractView.currentState = .enabled
+                subtractView.isEnabled = true
             case .add:
-                addView.currentState = .enabled
+                addView.isEnabled = true
             case .all:
-                subtractView.currentState = .enabled
-                addView.currentState = .enabled
+                subtractView.isEnabled = true
+                addView.isEnabled = true
             }
 
         case .disabled:
             switch button {
             case .subtract:
-                subtractView.currentState = .disabled
-                subtractView.iconLabel.textColor = getUIColorFromTokens(\.colorMediumEmphasis)
-                subtractDisabledSet = true
+                subtractView.isEnabled = false
+                didSetSubtractDisabled = true
             case .add:
-                addView.currentState = .disabled
-                addView.iconLabel.textColor = getUIColorFromTokens(\.colorMediumEmphasis)
-                addDisabledSet = true
+                addView.isEnabled = false
+                didSetAddDisabled = true
             case .all:
-                subtractView.currentState = .disabled
-                addView.currentState = .disabled
-                subtractView.iconLabel.textColor = getUIColorFromTokens(\.colorMediumEmphasis)
-                addView.iconLabel.textColor = getUIColorFromTokens(\.colorMediumEmphasis)
-                subtractDisabledSet = true
-                addDisabledSet = true
+                subtractView.isEnabled = false
+                addView.isEnabled = false
+                didSetAddDisabled = true
+                didSetSubtractDisabled = true
             }
         }
     }
@@ -207,56 +202,41 @@ public final class NatCounter: UIView {
     // MARK: - Private methods
 
     private func setupButtons() {
-        let borderRadius = getTokenFromTheme(\.borderRadiusMedium)
-
         subtractView.configure(height: size.buttonHeight, width: size.buttonWidth)
         addView.configure(height: size.buttonHeight, width: size.buttonWidth)
 
         subtractView.roundCorners(corners: [.layerMinXMinYCorner, .layerMinXMaxYCorner],
-                                  radius: borderRadius,
+                                  radius: size.borderRadius,
                                   sizeWidth: size.buttonWidth,
                                   sizeHeight: size.buttonHeight)
         addView.roundCorners(corners: [.layerMaxXMinYCorner, .layerMaxXMaxYCorner],
-                             radius: borderRadius,
+                             radius: size.borderRadius,
                              sizeWidth: size.buttonWidth,
                              sizeHeight: size.buttonHeight)
 
-        self.checkLimit()
-
         subtractView.configure {
             self.numCounter -= 1
-            self.numCounterLabel.text = "\(self.numCounter)"
-            self.checkLimit()
-            self.counterChangeValueHandler?(self.numCounter)
         }
 
         addView.configure {
             self.numCounter += 1
-            self.numCounterLabel.text = "\(self.numCounter)"
-            self.checkLimit()
-            self.counterChangeValueHandler?(self.numCounter)
         }
     }
 
     private func checkLimit() {
-        if !subtractDisabledSet {
-            if numCounter == 0 {
-                subtractView.currentState = .disabled
-                subtractView.iconLabel.textColor = getUIColorFromTokens(\.colorMediumEmphasis)
-            } else if numCounter > 0 {
-                subtractView.currentState = .enabled
-                subtractView.iconLabel.textColor = getUIColorFromTokens(\.colorHighEmphasis)
+        if !didSetSubtractDisabled {
+            if numCounter == minCount {
+                subtractView.isEnabled = false
+            } else if numCounter > minCount {
+                subtractView.isEnabled = true
             }
         }
 
-        if !addDisabledSet {
-            if numCounter == 99 {
-                addView.currentState = .disabled
-                addView.iconLabel.textColor = getUIColorFromTokens(\.colorMediumEmphasis)
-
-            } else if numCounter < 99 {
-                addView.currentState = .enabled
-                addView.iconLabel.textColor = getUIColorFromTokens(\.colorHighEmphasis)
+        if !didSetAddDisabled {
+            if numCounter == maxCount {
+                addView.isEnabled = false
+            } else if numCounter < maxCount {
+                addView.isEnabled = true
             }
         }
     }
@@ -286,20 +266,23 @@ public final class NatCounter: UIView {
     }
 }
 
-extension UIView {
-    func addTopBorder(with color: UIColor?, andWidth borderWidth: CGFloat) {
-        let border = UIView()
-        border.backgroundColor = color
-        border.autoresizingMask = [.flexibleWidth, .flexibleBottomMargin]
-        border.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: borderWidth)
-        addSubview(border)
-    }
+// MARK: - Extensions
 
-    func addBottomBorder(with color: UIColor?, andWidth borderWidth: CGFloat) {
+extension UIView {
+    func addBorder(with color: UIColor?, andWidth borderWidth: CGFloat, atTop: Bool) {
         let border = UIView()
         border.backgroundColor = color
-        border.autoresizingMask = [.flexibleWidth, .flexibleTopMargin]
-        border.frame = CGRect(x: 0, y: frame.size.height - borderWidth, width: frame.size.width, height: borderWidth)
+
+        if atTop {
+            border.autoresizingMask = [.flexibleWidth, .flexibleBottomMargin]
+            border.frame = CGRect(x: 0, y: 0,
+                                  width: frame.size.width, height: borderWidth)
+        } else {
+            border.autoresizingMask = [.flexibleWidth, .flexibleTopMargin]
+            border.frame = CGRect(x: 0, y: frame.size.height - borderWidth,
+                                  width: frame.size.width, height: borderWidth)
+        }
+
         addSubview(border)
     }
 
