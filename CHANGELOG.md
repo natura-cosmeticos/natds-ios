@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.1.1](https://github.com/natura-cosmeticos/natds-ios/compare/6.1.0...6.1.1) (2021-07-23)
+
+
+### Bug Fixes
+
+* update round corner function to fix bug at counter in iOS 11 ([dc3994d](https://github.com/natura-cosmeticos/natds-ios/commit/dc3994d0c20ca1521235c1d6e7cadb3df8e94dec))
+
 ## [6.1.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.0.1...6.1.0) (2021-07-20)
 
 
