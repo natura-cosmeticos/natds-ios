@@ -25,7 +25,7 @@ final class AvonLightComponentsLogoSpec: QuickSpec {
                     expect(systemUnderTest).to(equal("avon-a-custom"))
                 }
             }
-            
+
             describe("#neutralA") {
                 it("returns a expected path") {
                     let systemUnderTest = getTokenFromTheme(\.assetBrandNeutralA)
@@ -33,7 +33,7 @@ final class AvonLightComponentsLogoSpec: QuickSpec {
                     expect(systemUnderTest).to(equal("avon-a-official"))
                 }
             }
-            
+
             describe("#neutralB") {
                 it("returns a expected path") {
                     let systemUnderTest = getTokenFromTheme(\.assetBrandNeutralB)

@@ -19,7 +19,7 @@ final class NatRadioButtonControl: UIControl {
 
     override var isSelected: Bool {
         didSet {
-            self.setNeedsDisplay() 
+            self.setNeedsDisplay()
             super.isSelected = isSelected
             handler?(isSelected)
         }

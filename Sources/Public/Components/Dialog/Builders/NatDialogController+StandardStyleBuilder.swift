@@ -21,7 +21,7 @@ extension NatDialogController {
         ) = (nil, nil)
 
         // MARK: - Public methods
-        
+
         /// Configures the primary button text and action for the Dialog
         /// - Parameters:
         ///   - title: a String to be displayed as the button title

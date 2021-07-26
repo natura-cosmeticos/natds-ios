@@ -1756,6 +1756,17 @@
 			path = Rating;
 			sourceTree = "<group>";
 		};
+		7D968E1B26AF536000DE9A78 /* NatCheckbox */ = {
+			isa = PBXGroup;
+			children = (
+				79D4C8E825F2B5100027E74E /* NatCheckbox.swift */,
+				BEDF93362593D28400F54C50 /* NatCheckboxControl.swift */,
+				BE7C39B4259CC77200E82405 /* NatCheckboxControl+Style.swift */,
+				BEAFF23C259517DC00B9C9B5 /* NatCheckboxContainer.swift */,
+			);
+			path = NatCheckbox;
+			sourceTree = "<group>";
+		};
 		7D9838BB25F8F5CD00A99628 /* ListItem */ = {
 			isa = PBXGroup;
 			children = (
@@ -2571,25 +2582,14 @@
 		BEDF931B2593815900F54C50 /* SelectionControl */ = {
 			isa = PBXGroup;
 			children = (
-				BEDF93352593D27D00F54C50 /* Selectors */,
+				7D968E1626AF12E600DE9A78 /* NatSelectorProtocol.swift */,
 				BEDF931F2593B4FF00F54C50 /* NatSelectionControl.swift */,
 				BEDF93242593B5CE00F54C50 /* NatSelectionControl+Style.swift */,
 				BEDF93292593BE8000F54C50 /* NatSelectionControl+State.swift */,
-				7D968E1626AF12E600DE9A78 /* NatSelectorProtocol.swift */,
+				79FC593825BF56E0001CCB56 /* NatRadioButton */,
+				7D968E1B26AF536000DE9A78 /* NatCheckbox */,
 			);
 			path = SelectionControl;
-			sourceTree = "<group>";
-		};
-		BEDF93352593D27D00F54C50 /* Selectors */ = {
-			isa = PBXGroup;
-			children = (
-				79FC593825BF56E0001CCB56 /* NatRadioButton */,
-				79D4C8E825F2B5100027E74E /* NatCheckbox.swift */,
-				BEDF93362593D28400F54C50 /* NatCheckboxControl.swift */,
-				BE7C39B4259CC77200E82405 /* NatCheckboxControl+Style.swift */,
-				BEAFF23C259517DC00B9C9B5 /* NatCheckboxContainer.swift */,
-			);
-			path = Selectors;
 			sourceTree = "<group>";
 		};
 		BEE13D19F1A22BF171DC1BAC64B38FA7 /* Icons */ = {
