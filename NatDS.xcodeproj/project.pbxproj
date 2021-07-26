@@ -232,6 +232,7 @@
 		7D9038BD261B9402005A3D0A /* NatRating+Counter+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9038BC261B9402005A3D0A /* NatRating+Counter+Snapshot+Tests.swift */; };
 		7D9038C2261B951D005A3D0A /* NatRating+ReadOnly+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9038C1261B951D005A3D0A /* NatRating+ReadOnly+Snapshot+Tests.swift */; };
 		7D9038CA261B9F57005A3D0A /* NatRating+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9038C9261B9F57005A3D0A /* NatRating+State.swift */; };
+		7D968E1726AF12E600DE9A78 /* NatSelectorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D968E1626AF12E600DE9A78 /* NatSelectorProtocol.swift */; };
 		7D98388325F6450A00A99628 /* TextField+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D98388225F6450A00A99628 /* TextField+Spec.swift */; };
 		7D98388825F6A15400A99628 /* TextField+Sizes+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D98388725F6A15400A99628 /* TextField+Sizes+Spec.swift */; };
 		7D98388D25F6A26900A99628 /* TextField+InteractionStates+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D98388C25F6A26900A99628 /* TextField+InteractionStates+Spec.swift */; };
@@ -652,6 +653,7 @@
 		7D9038BC261B9402005A3D0A /* NatRating+Counter+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatRating+Counter+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		7D9038C1261B951D005A3D0A /* NatRating+ReadOnly+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatRating+ReadOnly+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		7D9038C9261B9F57005A3D0A /* NatRating+State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatRating+State.swift"; sourceTree = "<group>"; };
+		7D968E1626AF12E600DE9A78 /* NatSelectorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatSelectorProtocol.swift; sourceTree = "<group>"; };
 		7D98388225F6450A00A99628 /* TextField+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Spec.swift"; sourceTree = "<group>"; };
 		7D98388725F6A15400A99628 /* TextField+Sizes+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Sizes+Spec.swift"; sourceTree = "<group>"; };
 		7D98388C25F6A26900A99628 /* TextField+InteractionStates+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+InteractionStates+Spec.swift"; sourceTree = "<group>"; };
@@ -2573,6 +2575,7 @@
 				BEDF931F2593B4FF00F54C50 /* NatSelectionControl.swift */,
 				BEDF93242593B5CE00F54C50 /* NatSelectionControl+Style.swift */,
 				BEDF93292593BE8000F54C50 /* NatSelectionControl+State.swift */,
+				7D968E1626AF12E600DE9A78 /* NatSelectorProtocol.swift */,
 			);
 			path = SelectionControl;
 			sourceTree = "<group>";
@@ -3254,6 +3257,7 @@
 				000598F48ADE170D305737C11E3F2D99 /* ButtonTextStyle.swift in Sources */,
 				845D09952501193500B05760 /* NatIconButton+Sizes.swift in Sources */,
 				7D277B63269E2551005075EF /* DialogHeaderView.swift in Sources */,
+				7D968E1726AF12E600DE9A78 /* NatSelectorProtocol.swift in Sources */,
 				845AD7AA24E2CC82006CA226 /* AvonLightTheme.swift in Sources */,
 				40B14F67117654B7854317119E5B3509 /* ConfigurationStorage.swift in Sources */,
 				79FC593A25BF5894001CCB56 /* NatRadioButtonControl.swift in Sources */,

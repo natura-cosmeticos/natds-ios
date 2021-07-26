@@ -89,4 +89,8 @@ public final class NatRadioButton: UIView {
         radioButton.groupId = addToGroup.hashValue
         self.group = addToGroup
     }
+
+    public func configure(handler: SelectionHandler) {
+        radioButton.handler = handler
+    }
 }

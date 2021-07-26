@@ -23,6 +23,15 @@ import UIKit
 
 public class NatSelectionControl: UIView {
 
+    public var handler: SelectionHandler {
+        get {
+            selectorView.handler
+        }
+        set {
+            selectorView.handler = newValue
+        }
+    }
+
     /// Attribute that sets and checks if the component is selected.
     public var isSelected: Bool {
         get {

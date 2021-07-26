@@ -5,6 +5,7 @@ final class NatCheckboxControl: UIControl {
     var onTouchesBegan: ((Set<UITouch>) -> Void)?
     var onTouchesEnded: ((Set<UITouch>) -> Void)?
 
+    var handler: ((Bool) -> Void)?
     var isHapticFeedbackEnabled: Bool = false
     var isIndeterminate: Bool = false
     var labelComponent: String?
@@ -20,6 +21,7 @@ final class NatCheckboxControl: UIControl {
         didSet {
             self.setNeedsDisplay()
             super.isSelected = isSelected
+            handler?(isSelected)
         }
     }
 
