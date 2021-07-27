@@ -23,7 +23,7 @@ import UIKit
 
 public class NatSelectionControl: UIView {
 
-    public var handler: SelectionHandler {
+    public var handler: SelectionHandler? {
         get {
             selectorView.handler
         }

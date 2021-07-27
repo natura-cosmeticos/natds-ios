@@ -65,7 +65,7 @@ public final class NatCheckbox: UIView {
         checkbox.isIndeterminate = isIndeterminate
     }
 
-    public func configure(handler: SelectionHandler) {
-        checkbox.handler = handler
+    public func configure(selectionHandler: @escaping SelectionHandler) {
+        checkbox.handler = selectionHandler
     }
 }

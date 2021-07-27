@@ -5,7 +5,7 @@ final class NatRadioButtonControl: UIControl {
     var onTouchesBegan: ((Set<UITouch>) -> Void)?
     var onTouchesEnded: ((Set<UITouch>) -> Void)?
 
-    var handler: ((Bool) -> Void)?
+    var handler: SelectionHandler?
     var isHapticFeedbackEnabled: Bool = false
     var isIndeterminate: Bool = false
     var labelComponent: String?

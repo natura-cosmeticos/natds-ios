@@ -24,7 +24,7 @@ class NatRadioButtonContainer: UIControl, NatSelector {
         }
     }
 
-    var handler: SelectionHandler {
+    var handler: SelectionHandler? {
         get {
             radioButton.handler
         }

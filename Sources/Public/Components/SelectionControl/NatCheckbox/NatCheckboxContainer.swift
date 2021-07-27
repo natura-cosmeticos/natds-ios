@@ -22,7 +22,7 @@ class NatCheckboxContainer: UIControl, NatSelector {
         }
     }
 
-    var handler: SelectionHandler {
+    var handler: SelectionHandler? {
         get {
             checkbox.handler
         }

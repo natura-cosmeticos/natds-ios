@@ -90,7 +90,7 @@ public final class NatRadioButton: UIView {
         self.group = addToGroup
     }
 
-    public func configure(handler: SelectionHandler) {
-        radioButton.handler = handler
+    public func configure(selectionHandler: @escaping SelectionHandler) {
+        radioButton.handler = selectionHandler
     }
 }
