@@ -184,7 +184,7 @@ public final class NatRating: UIView {
     public func configure(state: State) {
         self.state = state
     }
-    
+
     /// Sets the handler to be executed when the value changes
     /// - Parameter valueHandler: A closure to notify value change
     ///
