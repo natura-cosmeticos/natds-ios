@@ -90,6 +90,13 @@ public final class NatRadioButton: UIView {
         self.group = addToGroup
     }
 
+    /// Sets the handler to be executed when `isSelected` value changes
+    ///
+    /// Example of usage:
+    /// ```
+    /// radioButton.configure { isSelected in }
+    /// ```
+    /// - Parameter selectionHandler: A closure to notify value change
     public func configure(selectionHandler: @escaping SelectionHandler) {
         radioButton.handler = selectionHandler
     }
