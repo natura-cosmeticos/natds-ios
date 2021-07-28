@@ -64,8 +64,10 @@
 
 public final class NatRating: UIView {
 
-    private var style: Style
+    public typealias RatingValueHandler = (Int) -> Void
+    private var ratingValueHandler: RatingValueHandler?
 
+    private var style: Style
     private var state: State = .enabled {
         didSet {
             updateStarViewsState()
@@ -75,15 +77,16 @@ public final class NatRating: UIView {
 
     private var size: Size
     private var alignment: Alignment
-    private var ratingValue: Int = 0 {
+    private var value: Int = 0 {
         didSet {
             updateStarViewsState()
+            ratingValueHandler?(value)
         }
     }
 
     private var starViewsArray: [IconView] = []
     private var touchedStar: IconView {
-        return starViewsArray[ratingValue-1]
+        return starViewsArray[value-1]
     }
 
     private var stackView: UIStackView = {
@@ -125,7 +128,13 @@ public final class NatRating: UIView {
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         if style == .input {
-            handleTouchAtLocation(withTouches: touches)
+            addPulseLayerAnimated(at: touchedStar.centerBounds,
+                                  in: touchedStar.layer,
+                                  withColor: getUIColorFromTokens(\.colorHighEmphasis)
+                                    .withAlphaComponent(getTokenFromTheme(\.opacityLow)),
+                                  removeAfterAnimation: true)
+
+            getValueFromTouchAtLocation(withTouches: touches)
         }
     }
 
@@ -135,20 +144,17 @@ public final class NatRating: UIView {
         }
     }
 
-    private func handleTouchAtLocation(withTouches touches: Set<UITouch>) {
+    private func getValueFromTouchAtLocation(withTouches touches: Set<UITouch>) {
         let touchLocation = touches.first
         let location = touchLocation?.location(in: stackView)
 
+        var value = 0
         starViewsArray.enumerated().forEach { (index, iconView) in
             if (location?.x)! > iconView.frame.origin.x {
-                ratingValue = index + 1
+                value = index + 1
             }
         }
-        addPulseLayerAnimated(at: touchedStar.centerBounds,
-                              in: touchedStar.layer,
-                              withColor: getUIColorFromTokens(\.colorHighEmphasis)
-                                .withAlphaComponent(getTokenFromTheme(\.opacityLow)),
-                              removeAfterAnimation: true)
+        self.value = value
     }
 
     // MARK: - Public methods
@@ -167,7 +173,7 @@ public final class NatRating: UIView {
     /// - Parameter rate: an Int with range from 0 to 5
     public func configure(rate: Int) {
         if style != .counter {
-            ratingValue = rate
+            value = rate
         }
     }
 
@@ -178,12 +184,23 @@ public final class NatRating: UIView {
     public func configure(state: State) {
         self.state = state
     }
+    
+    /// Sets the handler to be executed when the value changes
+    /// - Parameter valueHandler: A closure to notify value change
+    ///
+    /// Example of usage:
+    /// ```
+    /// rating.configure { newValue in }
+    /// ```
+    public func configure(valueHandler: @escaping RatingValueHandler) {
+        self.ratingValueHandler = valueHandler
+    }
 
     /// A function to get the input value from the used
     ///
     /// - Returns: an Int representing the selected value; range from 1 to 5
     public func getValue() -> Int {
-        return ratingValue
+        return value
     }
 
     // MARK: - Private methods
@@ -253,7 +270,7 @@ public final class NatRating: UIView {
 
     private func updateStarViewsState() {
         starViewsArray.enumerated().forEach { (index, iconView) in
-            if index < ratingValue {
+            if index < value {
                 iconView.defaultImageView.image = style.filledStarImage(for: state)
             } else {
                 iconView.defaultImageView.image = style.emptyStarImage
