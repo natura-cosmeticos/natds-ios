@@ -128,13 +128,13 @@ public final class NatRating: UIView {
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         if style == .input {
+            getValueFromTouchAtLocation(withTouches: touches)
+
             addPulseLayerAnimated(at: touchedStar.centerBounds,
                                   in: touchedStar.layer,
                                   withColor: getUIColorFromTokens(\.colorHighEmphasis)
                                     .withAlphaComponent(getTokenFromTheme(\.opacityLow)),
                                   removeAfterAnimation: true)
-
-            getValueFromTouchAtLocation(withTouches: touches)
         }
     }
 
