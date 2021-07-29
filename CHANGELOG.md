@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.2.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.1.1...6.2.0) (2021-07-29)
+
+
+### Features
+
+* add handler for rating input ([0d5eaf1](https://github.com/natura-cosmeticos/natds-ios/commit/0d5eaf11034e7e2b2505dedc75df05c54eed6ea1))
+
+
+### Bug Fixes
+
+* add handler for checkbox and radio button state change ([e628abf](https://github.com/natura-cosmeticos/natds-ios/commit/e628abf62703c11abf1fc8c0200f759594868aaf))
+* fix rating pulse animation when it receives touch ([6db86b8](https://github.com/natura-cosmeticos/natds-ios/commit/6db86b8ef28a972516433c645633f92a89778f60))
+
 ### [6.1.1](https://github.com/natura-cosmeticos/natds-ios/compare/6.1.0...6.1.1) (2021-07-23)
 
 
