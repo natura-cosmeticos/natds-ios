@@ -25,7 +25,7 @@ final class NaturaDarkComponentsLogoSpec: QuickSpec {
                     expect(systemUnderTest).to(equal("natura-b-custom"))
                 }
             }
-            
+
             describe("#neutralA") {
                 it("returns a expected path") {
                     let systemUnderTest = getTokenFromTheme(\.assetBrandNeutralA)
@@ -33,7 +33,7 @@ final class NaturaDarkComponentsLogoSpec: QuickSpec {
                     expect(systemUnderTest).to(equal("natura-a-official-dark"))
                 }
             }
-            
+
             describe("#neutralB") {
                 it("returns a expected path") {
                     let systemUnderTest = getTokenFromTheme(\.assetBrandNeutralB)

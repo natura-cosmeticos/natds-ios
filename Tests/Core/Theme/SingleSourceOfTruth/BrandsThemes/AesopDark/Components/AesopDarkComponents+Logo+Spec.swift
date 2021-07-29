@@ -25,7 +25,7 @@ final class AesopDarkComponentsLogoSpec: QuickSpec {
                     expect(systemUnderTest).to(equal("aesop-a-custom"))
                 }
             }
-            
+
             describe("#neutralA") {
                 it("returns a expected path") {
                     let systemUnderTest = getTokenFromTheme(\.assetBrandNeutralA)
@@ -33,7 +33,7 @@ final class AesopDarkComponentsLogoSpec: QuickSpec {
                     expect(systemUnderTest).to(equal("aesop-a-official-dark"))
                 }
             }
-            
+
             describe("#neutralB") {
                 it("returns a expected path") {
                     let systemUnderTest = getTokenFromTheme(\.assetBrandNeutralB)

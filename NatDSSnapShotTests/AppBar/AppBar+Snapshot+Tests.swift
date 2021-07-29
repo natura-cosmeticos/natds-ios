@@ -58,7 +58,9 @@ class AppBarSnapshotTests: XCTestCase {
         let iconButton = NatIconButton(style: .standardDefault, size: .semi)
         let secondIconButton = NatIconButton(style: .standardDefault, size: .semi)
         let thirdIconButton = NatIconButton(style: .standardDefault, size: .semi)
-        systemUnderTest.visibleViewController?.configure(appBarActionRight: [iconButton, secondIconButton, thirdIconButton])
+        systemUnderTest.visibleViewController?.configure(appBarActionRight: [iconButton,
+                                                                             secondIconButton,
+                                                                             thirdIconButton])
 
         assertSnapshot(matching: systemUnderTest, as: .image)
     }

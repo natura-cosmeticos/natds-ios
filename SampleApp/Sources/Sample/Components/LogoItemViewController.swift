@@ -18,7 +18,7 @@ final class LogoItemViewController: UIViewController, SampleItem {
 
         return view
     }()
-    
+
     private lazy var logoModelA = createLogo()
     private lazy var logoModelB = createLogo(model: .modelB)
     private lazy var logoPrimary = createLogo(color: .primary)

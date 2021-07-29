@@ -64,4 +64,15 @@ public final class NatCheckbox: UIView {
     public func configure(isIndeterminate: Bool) {
         checkbox.isIndeterminate = isIndeterminate
     }
+
+    /// Sets the handler to be executed when `isSelected` value changes
+    ///
+    /// Example of usage:
+    /// ```
+    /// checkbox.configure { isSelected in }
+    /// ```
+    /// - Parameter selectionHandler: A closure to notify value change
+    public func configure(selectionHandler: @escaping SelectionHandler) {
+        checkbox.handler = selectionHandler
+    }
 }

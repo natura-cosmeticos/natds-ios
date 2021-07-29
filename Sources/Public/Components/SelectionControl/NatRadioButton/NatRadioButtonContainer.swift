@@ -24,6 +24,15 @@ class NatRadioButtonContainer: UIControl, NatSelector {
         }
     }
 
+    var handler: SelectionHandler? {
+        get {
+            radioButton.handler
+        }
+        set {
+            radioButton.handler = newValue
+        }
+    }
+
     var isHapticFeedbackEnabled: Bool {
         get {
             radioButton.isHapticFeedbackEnabled
