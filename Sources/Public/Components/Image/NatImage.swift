@@ -5,19 +5,23 @@ public class NatImage: UIView {
     private var variant: ImageType = .standard
     private var fallbackImage: UIImage?
 
-    internal lazy var defaultImageView: UIImageView = {
-        let imageView = UIImageView()
-        let image = AssetsPath.iconOutlinedProductEmptyBackground.rawValue
-        imageView.image = image
-
-        return imageView
+    private lazy var imageView: UIImageView = {
+        let imgView = UIImageView()
+        imgView.translatesAutoresizingMaskIntoConstraints = false
+        return imgView
+    }()
+    
+    private lazy var overlay: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
     }()
 
     // MARK: - Inits
 
     public init() {
         super.init(frame: .zero)
-        addDefaultImage()
+        setup()
     }
 
     required init?(coder: NSCoder) {
@@ -50,13 +54,9 @@ public class NatImage: UIView {
     }
 
     public func configure(setOverlay: Bool) {
-        let overlay = UIView()
-        overlay.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(overlay)
-
         if setOverlay {
             overlay.layer.backgroundColor = NatColors
-                .onSurface
+                .highlight
                 .withAlphaComponent(getTokenFromTheme(\.opacityMedium))
                 .cgColor
             setFullConstraints(to: overlay)
@@ -66,23 +66,12 @@ public class NatImage: UIView {
     }
 
     public func configure(setImage: UIImage?) {
-        defaultImageView.removeFromSuperview()
-
-        let image = UIImageView()
-        image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = setImage ?? defaultImageView.image
-
-        addSubview(image)
-        sendSubviewToBack(image)
-
-        setFullConstraints(to: image)
+        imageView.image = setImage
     }
 
-    private func addDefaultImage() {
-        addSubview(defaultImageView)
-        defaultImageView.translatesAutoresizingMaskIntoConstraints = false
-
-        setFullConstraints(to: defaultImageView)
+    private func setup() {
+        addSubview(imageView)
+        setFullConstraints(to: imageView)
     }
 
     private func setFullConstraints(to object: AnyObject) {
