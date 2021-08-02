@@ -2,6 +2,8 @@ import UIKit
 
 public class NatImage: UIView {
 
+    private var variant: ImageType = .standard
+
     internal lazy var defaultImageView: UIImageView = {
         let imageView = UIImageView()
         let image = AssetsPath.iconOutlinedProductEmptyBackground.rawValue
@@ -20,6 +22,11 @@ public class NatImage: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    public func configure(variant: ImageType) {
+            self.variant = variant
+            self.configure(setOverlay: variant == .highlight)
+        }
 
     public func configure(setBorderRadius: Bool) {
         if setBorderRadius {
