@@ -69,6 +69,19 @@ public class NatImage: UIView {
         imageView.image = setImage
     }
 
+    public func configure(setImageFromURL: URL?) {
+        if let image = setImageFromURL {
+            do {
+                _ = try Data(contentsOf: image)
+                imageView.load(url: image)
+            } catch {
+                configure(setImage: fallbackImage)
+            }
+        } else {
+            configure(setImage: fallbackImage)
+        }
+    }
+
     private func setup() {
         addSubview(imageView)
         setFullConstraints(to: imageView)
