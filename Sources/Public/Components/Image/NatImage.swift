@@ -22,11 +22,17 @@ public class NatImage: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     public func configure(variant: ImageType) {
-            self.variant = variant
-            self.configure(setOverlay: variant == .highlight)
-        }
+        self.variant = variant
+        self.configure(setOverlay: variant == .highlight)
+    }
+
+    public func configureRadius(_ radius: ImageRadius = .none) {
+        layoutIfNeeded()
+        layer.cornerRadius = radius.value
+        clipsToBounds = true
+    }
 
     public func configure(setBorderRadius: Bool) {
         if setBorderRadius {
