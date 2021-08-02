@@ -3,6 +3,7 @@ import UIKit
 public class NatImage: UIView {
 
     private var variant: ImageType = .standard
+    private var fallbackImage: UIImage?
 
     internal lazy var defaultImageView: UIImageView = {
         let imageView = UIImageView()
@@ -32,6 +33,10 @@ public class NatImage: UIView {
         layoutIfNeeded()
         layer.cornerRadius = radius.value
         clipsToBounds = true
+    }
+
+    public func configure(fallback: UIImage?) {
+        self.fallbackImage = fallback
     }
 
     public func configure(setBorderRadius: Bool) {
