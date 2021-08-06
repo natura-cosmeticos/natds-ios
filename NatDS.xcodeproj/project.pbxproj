@@ -250,6 +250,8 @@
 		7DE2B11625FBFBAB00C5CBC0 /* NatListItemCell+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2B11525FBFBAB00C5CBC0 /* NatListItemCell+Snapshot+Tests.swift */; };
 		7DE2B12C26000BA600C5CBC0 /* UIImageView+Clickable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2B12B26000BA600C5CBC0 /* UIImageView+Clickable.swift */; };
 		7DE6156F26A6054F002621A5 /* NatDialogDividerConfigurable+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE6156E26A6054F002621A5 /* NatDialogDividerConfigurable+Spec.swift */; };
+		7DEE813826BDC17E00C594F1 /* NatImage+Radius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEE813726BDC17E00C594F1 /* NatImage+Radius.swift */; };
+		7DEE813D26BDC18700C594F1 /* NatImage+Fade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEE813C26BDC18700C594F1 /* NatImage+Fade.swift */; };
 		80FE219D764217C0520E0C784F9C0C0B /* PulseLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF8919785F0CA6D3AB0AD57F759ED73 /* PulseLayer.swift */; };
 		81AA5DF0A9D5F332072CA1EC9C5CF968 /* NatOpacities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E76AA6120032EE8B86EB90B51BFD8 /* NatOpacities.swift */; };
 		8401A9C024FED41E00B6E762 /* NatIconButton+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8401A9BF24FED41E00B6E762 /* NatIconButton+Snapshot+Tests.swift */; };
@@ -673,6 +675,8 @@
 		7DE2B11525FBFBAB00C5CBC0 /* NatListItemCell+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatListItemCell+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		7DE2B12B26000BA600C5CBC0 /* UIImageView+Clickable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Clickable.swift"; sourceTree = "<group>"; };
 		7DE6156E26A6054F002621A5 /* NatDialogDividerConfigurable+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogDividerConfigurable+Spec.swift"; sourceTree = "<group>"; };
+		7DEE813726BDC17E00C594F1 /* NatImage+Radius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatImage+Radius.swift"; sourceTree = "<group>"; };
+		7DEE813C26BDC18700C594F1 /* NatImage+Fade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatImage+Fade.swift"; sourceTree = "<group>"; };
 		7F9C4251076A01537D0A8CB995DF81EC /* NavigationDrawerSubitemCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerSubitemCellTests.swift; sourceTree = "<group>"; };
 		83C59F929E88764313134A046BA5C30F /* DesignSystem+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DesignSystem+Spec.swift"; sourceTree = "<group>"; };
 		8401A9BF24FED41E00B6E762 /* NatIconButton+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatIconButton+Snapshot+Tests.swift"; sourceTree = "<group>"; };
@@ -1633,6 +1637,8 @@
 			children = (
 				79FC59DC25DAB0BE001CCB56 /* NatImage.swift */,
 				7D495FA126B865EE00A33B64 /* NatImage+Type.swift */,
+				7DEE813726BDC17E00C594F1 /* NatImage+Radius.swift */,
+				7DEE813C26BDC18700C594F1 /* NatImage+Fade.swift */,
 				7D495FA626BAD93D00A33B64 /* NatGradientView.swift */,
 			);
 			path = Image;
@@ -3238,6 +3244,7 @@
 				84BC901624AA17C0007DF09D /* NatDialogCustomBodyConfigurable.swift in Sources */,
 				84BC901824AA17C0007DF09D /* NatDialogBuilder.swift in Sources */,
 				BEDF93202593B4FF00F54C50 /* NatSelectionControl.swift in Sources */,
+				7DEE813826BDC17E00C594F1 /* NatImage+Radius.swift in Sources */,
 				7DC81CB126121EAC006BE689 /* NatRating.swift in Sources */,
 				84BC901524AA17C0007DF09D /* NatDialogBodyConfigurable.swift in Sources */,
 				847C829024E36AA6001CE116 /* NaturaDarkTheme.swift in Sources */,
@@ -3267,6 +3274,7 @@
 				7D968E1726AF12E600DE9A78 /* NatSelectorProtocol.swift in Sources */,
 				845AD7AA24E2CC82006CA226 /* AvonLightTheme.swift in Sources */,
 				40B14F67117654B7854317119E5B3509 /* ConfigurationStorage.swift in Sources */,
+				7DEE813D26BDC18700C594F1 /* NatImage+Fade.swift in Sources */,
 				79FC593A25BF5894001CCB56 /* NatRadioButtonControl.swift in Sources */,
 				7D9838BD25F8F70300A99628 /* NatListItem.swift in Sources */,
 				84BC901C24AB7445007DF09D /* NatDialogDismissableConfigurable.swift in Sources */,

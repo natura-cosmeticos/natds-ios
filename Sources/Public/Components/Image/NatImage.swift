@@ -28,6 +28,8 @@ public class NatImage: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
+    // MARK: - Public methods
+
     public func configure(variant: ImageType) {
         self.variant = variant
         self.configure(setOverlay: variant == .highlight)
@@ -87,6 +89,8 @@ public class NatImage: UIView {
             configure(setImage: fallbackImage)
         }
     }
+
+    // MARK: - Private methods
 
     private func setup() {
         addSubview(imageView)
