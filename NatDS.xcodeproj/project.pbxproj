@@ -212,6 +212,7 @@
 		7D43162D25EE8944004AE34F /* TextField+FeedbackState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D43162C25EE8944004AE34F /* TextField+FeedbackState.swift */; };
 		7D43165925F2A16F004AE34F /* UIImageView+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D43165825F2A16F004AE34F /* UIImageView+URL.swift */; };
 		7D495FA226B865EE00A33B64 /* NatImage+Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D495FA126B865EE00A33B64 /* NatImage+Type.swift */; };
+		7D495FA726BAD93D00A33B64 /* NatGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D495FA626BAD93D00A33B64 /* NatGradientView.swift */; };
 		7D5120BA25E9914100557E21 /* NatAvatar+Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5120B925E9914100557E21 /* NatAvatar+Type.swift */; };
 		7D5120BF25E997CD00557E21 /* NatAvatar+Styles+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5120BE25E997CD00557E21 /* NatAvatar+Styles+Spec.swift */; };
 		7D5120D025ED7CE200557E21 /* TextField+InteractionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5120CF25ED7CE200557E21 /* TextField+InteractionState.swift */; };
@@ -633,6 +634,7 @@
 		7D43162C25EE8944004AE34F /* TextField+FeedbackState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+FeedbackState.swift"; sourceTree = "<group>"; };
 		7D43165825F2A16F004AE34F /* UIImageView+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+URL.swift"; sourceTree = "<group>"; };
 		7D495FA126B865EE00A33B64 /* NatImage+Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatImage+Type.swift"; sourceTree = "<group>"; };
+		7D495FA626BAD93D00A33B64 /* NatGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatGradientView.swift; sourceTree = "<group>"; };
 		7D5120B925E9914100557E21 /* NatAvatar+Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatAvatar+Type.swift"; sourceTree = "<group>"; };
 		7D5120BE25E997CD00557E21 /* NatAvatar+Styles+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatAvatar+Styles+Spec.swift"; sourceTree = "<group>"; };
 		7D5120CF25ED7CE200557E21 /* TextField+InteractionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+InteractionState.swift"; sourceTree = "<group>"; };
@@ -1631,6 +1633,7 @@
 			children = (
 				79FC59DC25DAB0BE001CCB56 /* NatImage.swift */,
 				7D495FA126B865EE00A33B64 /* NatImage+Type.swift */,
+				7D495FA626BAD93D00A33B64 /* NatGradientView.swift */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -3251,6 +3254,7 @@
 				84703F3924F6D9E400FE01CA /* GetComponentFromTheme.swift in Sources */,
 				7D31C1152614C87F00EED32A /* NatRating+Size.swift in Sources */,
 				98C6EB095DD059D51DD9883B943AF889 /* ButtonOutlineStyle.swift in Sources */,
+				7D495FA726BAD93D00A33B64 /* NatGradientView.swift in Sources */,
 				7D43162225ED9477004AE34F /* TextField+Size.swift in Sources */,
 				14016A20C7BF7046BAFCD2AE53673EB0 /* ButtonStyle.swift in Sources */,
 				84EB6B8524EEEA8E00C6A792 /* GetOrCreatedCachedColor.swift in Sources */,

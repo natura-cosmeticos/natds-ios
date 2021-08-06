@@ -28,7 +28,7 @@ extension NatImage {
         }
     }
 
-    public enum ImageFade {
+    public enum ImageFadeDirection {
         case left
         case top
         case right

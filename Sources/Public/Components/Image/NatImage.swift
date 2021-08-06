@@ -5,12 +5,12 @@ public class NatImage: UIView {
     private var variant: ImageType = .standard
     private var fallbackImage: UIImage?
 
-    private lazy var imageView: UIImageView = {
-        let imgView = UIImageView()
-        imgView.translatesAutoresizingMaskIntoConstraints = false
-        return imgView
+    private lazy var imageView: NatGradientImageView = {
+        let view = NatGradientImageView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
     }()
-    
+
     private lazy var overlay: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -37,6 +37,12 @@ public class NatImage: UIView {
         layoutIfNeeded()
         layer.cornerRadius = radius.value
         clipsToBounds = true
+    }
+
+    public func configureFade(_ fade: ImageFadeDirection = .bottom) {
+        layoutIfNeeded()
+        imageView.hasGradient = true
+        imageView.gradientDirection = fade
     }
 
     public func configure(fallback: UIImage?) {
