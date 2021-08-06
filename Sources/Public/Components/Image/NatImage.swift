@@ -67,8 +67,12 @@ public class NatImage: UIView {
                 .highlight
                 .withAlphaComponent(getTokenFromTheme(\.opacityMedium))
                 .cgColor
+            addSubview(overlay)
             setFullConstraints(to: overlay)
         } else {
+            if subviews.contains(overlay) {
+                overlay.removeFromSuperview()
+            }
             overlay.layer.backgroundColor = UIColor.clear.cgColor
         }
     }
