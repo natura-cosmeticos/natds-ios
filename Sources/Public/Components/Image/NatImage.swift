@@ -30,30 +30,45 @@ public class NatImage: UIView {
 
     // MARK: - Public methods
 
+    /// Sets the component with the chosen variant interface.
+    ///
+    /// - Parameter variant: an option from ImageType enum
     public func configure(variant: ImageType) {
         self.variant = variant
         self.configure(setOverlay: variant == .highlight)
     }
 
+    /// Sets the value for the border radius. The radius is equally applied in all corners.
+    /// If the chosen option is `circle`, the height of the view (a CGFloat) must be sent as a parameter.
+    /// Default option is `none`.
+    ///
+    /// - Parameter radius: an option from ImageRadius enum
     public func configureRadius(_ radius: ImageRadius = .none) {
         layoutIfNeeded()
         layer.cornerRadius = radius.value
         clipsToBounds = true
     }
 
+    /// Applies a fade overlay to the component and sets its direction.
+    /// Default option is `bottom`.
+    ///
+    /// - Parameter fade: an option from ImageFadeDirection enum
     public func configureFade(_ fade: ImageFadeDirection = .bottom) {
         layoutIfNeeded()
         imageView.hasGradient = true
         imageView.gradientDirection = fade
     }
 
+    /// Sets an image as a fallback, which will be displayed if the configuration with an URL fails.
+    ///
+    /// - Parameter fallback: an UIImage
     public func configure(fallback: UIImage?) {
         self.fallbackImage = fallback
     }
 
     public func configure(setBorderRadius: Bool) {
         if setBorderRadius {
-            self.layoutIfNeeded()
+            layoutIfNeeded()
             layer.cornerRadius = getTokenFromTheme(\.borderRadiusMedium)
             clipsToBounds = true
         } else {
@@ -77,10 +92,16 @@ public class NatImage: UIView {
         }
     }
 
+    /// Configures the component with an image.
+    ///
+    /// - Parameter setImage: an UIImage
     public func configure(setImage: UIImage?) {
         imageView.image = setImage
     }
 
+    /// Configures the component with an image from an URL.
+    ///
+    /// - Parameter setImageFromURL: an URL that loads an image
     public func configure(setImageFromURL: URL?) {
         if let image = setImageFromURL {
             do {
