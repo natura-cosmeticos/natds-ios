@@ -66,32 +66,6 @@ public class NatImage: UIView {
         self.fallbackImage = fallback
     }
 
-    public func configure(setBorderRadius: Bool) {
-        if setBorderRadius {
-            layoutIfNeeded()
-            layer.cornerRadius = getTokenFromTheme(\.borderRadiusMedium)
-            clipsToBounds = true
-        } else {
-            layer.cornerRadius = 0
-        }
-    }
-
-    public func configure(setOverlay: Bool) {
-        if setOverlay {
-            overlay.layer.backgroundColor = NatColors
-                .highlight
-                .withAlphaComponent(getTokenFromTheme(\.opacityMedium))
-                .cgColor
-            addSubview(overlay)
-            setFullConstraints(to: overlay)
-        } else {
-            if subviews.contains(overlay) {
-                overlay.removeFromSuperview()
-            }
-            overlay.layer.backgroundColor = UIColor.clear.cgColor
-        }
-    }
-
     /// Configures the component with an image.
     ///
     /// - Parameter setImage: an UIImage
@@ -129,5 +103,21 @@ public class NatImage: UIView {
             object.leadingAnchor.constraint(equalTo: leadingAnchor),
             object.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
+    }
+
+    private func configure(setOverlay: Bool) {
+        if setOverlay {
+            overlay.layer.backgroundColor = NatColors
+                .highlight
+                .withAlphaComponent(getTokenFromTheme(\.opacityMedium))
+                .cgColor
+            addSubview(overlay)
+            setFullConstraints(to: overlay)
+        } else {
+            if subviews.contains(overlay) {
+                overlay.removeFromSuperview()
+            }
+            overlay.layer.backgroundColor = UIColor.clear.cgColor
+        }
     }
 }
