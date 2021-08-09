@@ -2,10 +2,10 @@ import UIKit
 
 public class NatImage: UIView {
 
-    private var variant: ImageType = .standard
-    private var fallbackImage: UIImage?
+    private(set) var variant: ImageType = .standard
+    private(set) var fallbackImage: UIImage?
 
-    private lazy var imageView: NatGradientImageView = {
+    private(set) lazy var imageView: NatGradientImageView = {
         let view = NatGradientImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
