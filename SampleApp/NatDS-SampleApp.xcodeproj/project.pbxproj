@@ -39,6 +39,7 @@
 		7D75A45A25DB0BA50050ACA9 /* AvatarItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D75A45925DB0BA50050ACA9 /* AvatarItemViewController.swift */; };
 		7D75A46825DD60E30050ACA9 /* UIImage+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D75A46725DD60E30050ACA9 /* UIImage+UIColor.swift */; };
 		7D9838C825F9127400A99628 /* ListItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9838C725F9127400A99628 /* ListItemViewController.swift */; };
+		7D9ED9B226C1BA5A009CE085 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9ED9B126C1BA5A009CE085 /* ImageCell.swift */; };
 		7DC81CBC261227DA006BE689 /* RatingItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC81CBB261227DA006BE689 /* RatingItemViewController.swift */; };
 		8402F4E624F932E70018149C /* IconButtonItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402F4E524F932E70018149C /* IconButtonItemViewController.swift */; };
 		8409B9312507B9E2006ED4EA /* CustomSplashViewController+GradientBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409B9302507B9E2006ED4EA /* CustomSplashViewController+GradientBackgroundView.swift */; };
@@ -120,6 +121,7 @@
 		7D75A45925DB0BA50050ACA9 /* AvatarItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarItemViewController.swift; sourceTree = "<group>"; };
 		7D75A46725DD60E30050ACA9 /* UIImage+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIImage+UIColor.swift"; path = "../../../Sources/Core/Extensions/UIImage+UIColor.swift"; sourceTree = "<group>"; };
 		7D9838C725F9127400A99628 /* ListItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemViewController.swift; sourceTree = "<group>"; };
+		7D9ED9B126C1BA5A009CE085 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		7DC81CBB261227DA006BE689 /* RatingItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingItemViewController.swift; sourceTree = "<group>"; };
 		8402F4E524F932E70018149C /* IconButtonItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButtonItemViewController.swift; sourceTree = "<group>"; };
 		8409B9302507B9E2006ED4EA /* CustomSplashViewController+GradientBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomSplashViewController+GradientBackgroundView.swift"; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				79FC59E525DAB5A6001CCB56 /*  ImageViewController.swift */,
+				7D9ED9B126C1BA5A009CE085 /* ImageCell.swift */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -770,6 +773,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D9ED9B226C1BA5A009CE085 /* ImageCell.swift in Sources */,
 				BAD502BF80890F0D5ADA1B7671F5E4D1 /* AppSearchBarViewController.swift in Sources */,
 				FA821AD3D36171DBAF4790CAD9C46CC8 /* AppDelegate.swift in Sources */,
 				844A1E2624AE2BCE00E93AD9 /* ShortcutItemViewController.swift in Sources */,

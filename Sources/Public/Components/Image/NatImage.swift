@@ -73,6 +73,13 @@ public class NatImage: UIView {
         imageView.image = setImage
     }
 
+    /// Configures the content mode for the image.
+    ///
+    /// - Parameter contentMode: a contentMode option
+    public func configure(contentMode: UIImageView.ContentMode) {
+        imageView.contentMode = contentMode
+    }
+
     /// Configures the component with an image from an URL.
     ///
     /// - Parameter setImageFromURL: an URL that loads an image
