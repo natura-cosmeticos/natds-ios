@@ -51,12 +51,17 @@ public class NatImage: UIView {
 
     /// Applies a fade overlay to the component and sets its direction.
     /// Default option is `bottom`.
+    /// Option `none` is used to remove the fade overlay.
     ///
     /// - Parameter fade: an option from ImageFadeDirection enum
     public func configureFade(_ fade: ImageFadeDirection = .bottom) {
         layoutIfNeeded()
-        imageView.hasGradient = true
-        imageView.gradientDirection = fade
+        if fade == .none {
+            imageView.hasGradient = false
+        } else {
+            imageView.hasGradient = true
+            imageView.gradientDirection = fade
+        }
     }
 
     /// Sets an image as a fallback, which will be displayed if the configuration with an URL fails.

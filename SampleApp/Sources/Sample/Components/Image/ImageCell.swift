@@ -42,15 +42,17 @@ final class ImageCell: UITableViewCell {
 
     func configure(viewModel: ViewModel) {
         nameLabel.text = viewModel.description
-        
+
         natImageView.configure(variant: viewModel.variant)
         natImageView.configureRadius(viewModel.radius)
         natImageView.configure(setImage: UIImage(named: "ImageAreaPlaceholder"))
         natImageView.configure(contentMode: .scaleAspectFill)
         if let fade = viewModel.fade {
             natImageView.configureFade(fade)
+        } else {
+            natImageView.configureFade(.none)
         }
-        
+
         setNeedsDisplay()
     }
 

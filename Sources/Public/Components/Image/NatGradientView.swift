@@ -78,6 +78,8 @@ class NatGradientImageView: UIImageView {
         case .right:
             gradientLayer.startPoint = CGPoint(x: 1, y: 0.5)
             gradientLayer.endPoint = CGPoint(x: 0, y: 0.5)
+        case .none:
+            return
         }
     }
 

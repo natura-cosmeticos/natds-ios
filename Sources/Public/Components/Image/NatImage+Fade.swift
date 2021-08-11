@@ -6,5 +6,6 @@ extension NatImage {
         case top
         case right
         case bottom
+        case none
     }
 }
