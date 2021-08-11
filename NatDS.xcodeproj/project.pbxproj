@@ -241,6 +241,7 @@
 		7D98389225F6A69B00A99628 /* TextField+States+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D98389125F6A69B00A99628 /* TextField+States+Spec.swift */; };
 		7D98389725F6A6FA00A99628 /* TextField+Types+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D98389625F6A6FA00A99628 /* TextField+Types+Spec.swift */; };
 		7D9838BD25F8F70300A99628 /* NatListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9838BC25F8F70300A99628 /* NatListItem.swift */; };
+		7D9ED9B426C466A1009CE085 /* UIImage+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9ED9B326C466A1009CE085 /* UIImage+URL.swift */; };
 		7D9EEB8B25E6A3D300CEF6BC /* NatAvatar+Sizes+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9EEB8A25E6A3D300CEF6BC /* NatAvatar+Sizes+Spec.swift */; };
 		7DAF750925E4342E0094F865 /* NatAvatar+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAF750825E4342E0094F865 /* NatAvatar+Spec.swift */; };
 		7DAF750E25E5AF830094F865 /* String+Initials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAF750D25E5AF830094F865 /* String+Initials.swift */; };
@@ -666,6 +667,7 @@
 		7D98389125F6A69B00A99628 /* TextField+States+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+States+Spec.swift"; sourceTree = "<group>"; };
 		7D98389625F6A6FA00A99628 /* TextField+Types+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Types+Spec.swift"; sourceTree = "<group>"; };
 		7D9838BC25F8F70300A99628 /* NatListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatListItem.swift; sourceTree = "<group>"; };
+		7D9ED9B326C466A1009CE085 /* UIImage+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+URL.swift"; sourceTree = "<group>"; };
 		7D9EEB8A25E6A3D300CEF6BC /* NatAvatar+Sizes+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatAvatar+Sizes+Spec.swift"; sourceTree = "<group>"; };
 		7DAF750825E4342E0094F865 /* NatAvatar+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatAvatar+Spec.swift"; sourceTree = "<group>"; };
 		7DAF750D25E5AF830094F865 /* String+Initials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Initials.swift"; sourceTree = "<group>"; };
@@ -2631,6 +2633,7 @@
 				3E6444578A8B4B35C37D0B5FA4D8E0F6 /* UIColor+Hex.swift */,
 				8BA9C4721134BD5277D76AEDED7A01DB /* UIFont+Icon.swift */,
 				7D3D59142593D1B500C9197B /* UIImageView+UIColor.swift */,
+				7D9ED9B326C466A1009CE085 /* UIImage+URL.swift */,
 				7D43165825F2A16F004AE34F /* UIImageView+URL.swift */,
 				7DE2B12B26000BA600C5CBC0 /* UIImageView+Clickable.swift */,
 				7DAF750D25E5AF830094F865 /* String+Initials.swift */,
@@ -3269,6 +3272,7 @@
 				7D43162D25EE8944004AE34F /* TextField+FeedbackState.swift in Sources */,
 				845AD7A424E2C4DA006CA226 /* Theme.swift in Sources */,
 				000598F48ADE170D305737C11E3F2D99 /* ButtonTextStyle.swift in Sources */,
+				7D9ED9B426C466A1009CE085 /* UIImage+URL.swift in Sources */,
 				845D09952501193500B05760 /* NatIconButton+Sizes.swift in Sources */,
 				7D277B63269E2551005075EF /* DialogHeaderView.swift in Sources */,
 				7D968E1726AF12E600DE9A78 /* NatSelectorProtocol.swift in Sources */,

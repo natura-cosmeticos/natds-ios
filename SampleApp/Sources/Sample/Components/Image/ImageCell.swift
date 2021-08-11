@@ -10,6 +10,7 @@ final class ImageCell: UITableViewCell {
     private let nameLabel: UILabel = {
         let label = UILabel()
         label.font = NatFonts.font(ofSize: .body1, withWeight: .regular)
+        label.textColor = NatColors.onBackground
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -69,8 +70,8 @@ final class ImageCell: UITableViewCell {
             stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
             stackView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 8),
 
-            natImageView.heightAnchor.constraint(equalToConstant: 64),
-            natImageView.widthAnchor.constraint(equalToConstant: 64)
+            natImageView.heightAnchor.constraint(equalToConstant: 80),
+            natImageView.widthAnchor.constraint(equalToConstant: 80)
         ])
     }
 }

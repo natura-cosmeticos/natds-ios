@@ -9,7 +9,7 @@ class ImageViewController: UIViewController, SampleItem {
         ("Variant Highlight", .highlight, .none, nil),
         ("Radius None", .standard, .none, nil),
         ("Radius Medium", .standard, .medium, nil),
-        ("Radius Circle", .standard, .circle(imageHeight: 64), nil),
+        ("Radius Circle", .standard, .circle(imageHeight: 80), nil),
         ("Fade Top", .standard, .medium, .top),
         ("Fade Bottom", .standard, .medium, .bottom),
         ("Fade Left", .standard, .medium, .left),
@@ -20,7 +20,7 @@ class ImageViewController: UIViewController, SampleItem {
         let tableView = UITableView()
         tableView.register(ImageCell.self, forCellReuseIdentifier: ImageCell.reuseIdentifier)
         tableView.backgroundColor = NatColors.background
-        tableView.rowHeight = 80
+        tableView.rowHeight = 96
         tableView.allowsSelection = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.delegate = self

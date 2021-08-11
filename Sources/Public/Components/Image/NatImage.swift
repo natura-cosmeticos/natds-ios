@@ -106,6 +106,16 @@ public class NatImage: UIView {
         self.fallbackImage = fallback
     }
 
+    /// Sets an image as a fallback, which will be displayed if the configuration with an URL fails.
+    ///
+    /// - Parameter fallback: an URL that will return an image
+    public func configure(fallback: URL?) {
+        if let url = fallback {
+            let image = try? UIImage(withContentsOfUrl: url)
+            self.fallbackImage = image
+        }
+    }
+
     /// Configures the component with an image.
     ///
     /// - Parameter setImage: an UIImage
