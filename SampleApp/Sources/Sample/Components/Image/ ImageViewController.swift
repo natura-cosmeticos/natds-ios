@@ -31,6 +31,7 @@ class ImageViewController: UIViewController, SampleItem {
     override func viewDidLoad() {
         title = Self.name
         view.backgroundColor = NatColors.background
+
         setup()
     }
 
