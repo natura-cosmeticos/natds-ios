@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.2.1](https://github.com/natura-cosmeticos/natds-ios/compare/6.2.0...6.2.1) (2021-08-12)
+
+
+### Bug Fixes
+
+* remove lfs from repo and migrate files ([de10928](https://github.com/natura-cosmeticos/natds-ios/commit/de10928553cab55f8eb735c247a522f86154f531))
+* restore all files that were in git lfs ([9867f70](https://github.com/natura-cosmeticos/natds-ios/commit/9867f70a836ca275fefa2bc5c89ceafe9fd72a05))
+
 ## [6.2.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.1.1...6.2.0) (2021-07-29)
 
 
