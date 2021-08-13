@@ -1,4 +1,39 @@
-import UIKit
+/**
+ - NOTE:
+ This component is available in the following variants:
+ - ✅ Standard
+ - ✅ Highlight
+
+ With the following attribute status:
+ - Radius:
+    - ✅ `None`
+    - ✅ `Medium`
+    - ✅ `Circle`
+ - Fade:
+    - ✅ `Top`
+    - ✅ `Bottom`
+    - ✅ `Left`
+    - ✅ `Right`
+ - ✅ Fallback
+ 
+ NatImage is a class that represents the image component from the design system.
+
+ It can be configured with the variants:
+ - Standard (default)
+ - Highlight
+
+ Example of usage:
+
+            let image = NatImage()
+            image.configureFade(.top)
+            image.configure(setImage: YourUIImage())
+            image.configureRadius(.medium)
+
+ - Requires:
+ It's necessary to configure the Design System with a theme or fatalError will be raised.
+
+        DesignSystem().configure(with: AvailableTheme)
+ */
 
 public class NatImage: UIView {
 
