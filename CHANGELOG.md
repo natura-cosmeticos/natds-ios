@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.3.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.2.1...6.3.0) (2021-08-13)
+
+
+### Features
+
+* add new attributes for natimage ([3743167](https://github.com/natura-cosmeticos/natds-ios/commit/374316784c236500d571aec39201624835ea92c4))
+* update sample app with new natimage attributes ([5891e1c](https://github.com/natura-cosmeticos/natds-ios/commit/5891e1c02c77ed469ee26caebdd9b47b6b1d3b06))
+
 ### [6.2.1](https://github.com/natura-cosmeticos/natds-ios/compare/6.2.0...6.2.1) (2021-08-12)
 
 
