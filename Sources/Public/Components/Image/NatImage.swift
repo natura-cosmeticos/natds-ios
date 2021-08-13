@@ -43,7 +43,7 @@ public class NatImage: UIView {
     /// - Parameter variant: an option from ImageType enum
     public func configure(variant: ImageType) {
         self.variant = variant
-        self.configure(setOverlay: variant == .highlight)
+        self.setOverlay(variant == .highlight)
     }
 
     /// Sets the value for the border radius. The radius is equally applied in all corners.
@@ -137,19 +137,7 @@ public class NatImage: UIView {
 
     @available(*, deprecated, message: "Use configure(variant: .highlight) instead")
     public func configure(setOverlay: Bool) {
-        if setOverlay {
-            overlay.layer.backgroundColor = NatColors
-                .highlight
-                .withAlphaComponent(getTokenFromTheme(\.opacityMedium))
-                .cgColor
-            addSubview(overlay)
-            setFullConstraints(to: overlay)
-        } else {
-            if subviews.contains(overlay) {
-                overlay.removeFromSuperview()
-            }
-            overlay.layer.backgroundColor = UIColor.clear.cgColor
-        }
+        self.setOverlay(setOverlay)
     }
 
     // MARK: - Private methods
@@ -171,5 +159,21 @@ public class NatImage: UIView {
             object.leadingAnchor.constraint(equalTo: leadingAnchor),
             object.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
+    }
+
+    private func setOverlay(_ setOverlay: Bool) {
+        if setOverlay {
+            overlay.layer.backgroundColor = NatColors
+                .highlight
+                .withAlphaComponent(getTokenFromTheme(\.opacityMedium))
+                .cgColor
+            addSubview(overlay)
+            setFullConstraints(to: overlay)
+        } else {
+            if subviews.contains(overlay) {
+                overlay.removeFromSuperview()
+            }
+            overlay.layer.backgroundColor = UIColor.clear.cgColor
+        }
     }
 }
