@@ -34,7 +34,8 @@
 		79D4C8F525F69DB80027E74E /* RadioButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D4C8F425F69DB80027E74E /* RadioButtonViewController.swift */; };
 		79EA0C1E260A314500742C0A /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EA0C1D260A314500742C0A /* CounterViewController.swift */; };
 		79FC599025CAE5D0001CCB56 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC598F25CAE5D0001CCB56 /* CardViewController.swift */; };
-		79FC59E625DAB5A7001CCB56 /*  ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC59E525DAB5A6001CCB56 /*  ImageViewController.swift */; };
+		79FC59E625DAB5A7001CCB56 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC59E525DAB5A6001CCB56 /* ImageViewController.swift */; };
+		7D5349F726C6EBD800F88EA7 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5349F626C6EBD800F88EA7 /* ImageCell.swift */; };
 		7D60A49E260CF97400A23C1A /* SampleCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D60A49D260CF97400A23C1A /* SampleCustomCell.swift */; };
 		7D75A45A25DB0BA50050ACA9 /* AvatarItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D75A45925DB0BA50050ACA9 /* AvatarItemViewController.swift */; };
 		7D75A46825DD60E30050ACA9 /* UIImage+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D75A46725DD60E30050ACA9 /* UIImage+UIColor.swift */; };
@@ -115,7 +116,8 @@
 		79D4C8F425F69DB80027E74E /* RadioButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonViewController.swift; sourceTree = "<group>"; };
 		79EA0C1D260A314500742C0A /* CounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
 		79FC598F25CAE5D0001CCB56 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
-		79FC59E525DAB5A6001CCB56 /*  ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " ImageViewController.swift"; sourceTree = "<group>"; };
+		79FC59E525DAB5A6001CCB56 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		7D5349F626C6EBD800F88EA7 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		7D60A49D260CF97400A23C1A /* SampleCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCustomCell.swift; sourceTree = "<group>"; };
 		7D75A45925DB0BA50050ACA9 /* AvatarItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarItemViewController.swift; sourceTree = "<group>"; };
 		7D75A46725DD60E30050ACA9 /* UIImage+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIImage+UIColor.swift"; path = "../../../Sources/Core/Extensions/UIImage+UIColor.swift"; sourceTree = "<group>"; };
@@ -319,7 +321,8 @@
 		79FC59E425DAB592001CCB56 /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				79FC59E525DAB5A6001CCB56 /*  ImageViewController.swift */,
+				79FC59E525DAB5A6001CCB56 /* ImageViewController.swift */,
+				7D5349F626C6EBD800F88EA7 /* ImageCell.swift */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -770,6 +773,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D5349F726C6EBD800F88EA7 /* ImageCell.swift in Sources */,
 				BAD502BF80890F0D5ADA1B7671F5E4D1 /* AppSearchBarViewController.swift in Sources */,
 				FA821AD3D36171DBAF4790CAD9C46CC8 /* AppDelegate.swift in Sources */,
 				844A1E2624AE2BCE00E93AD9 /* ShortcutItemViewController.swift in Sources */,
@@ -824,7 +828,7 @@
 				BEDF93312593C65800F54C50 /* CheckboxViewController.swift in Sources */,
 				FD3C1A6EDAD5F31BC9E4984E981C28A8 /* TabItemViewController.swift in Sources */,
 				B5D960A174519D837D9855D4B0A6711B /* TextFieldItemViewController.swift in Sources */,
-				79FC59E625DAB5A7001CCB56 /*  ImageViewController.swift in Sources */,
+				79FC59E625DAB5A7001CCB56 /* ImageViewController.swift in Sources */,
 				7D75A45A25DB0BA50050ACA9 /* AvatarItemViewController.swift in Sources */,
 				D2874BA3C6A03754EC9895DC95D6DFE5 /* TypographyCell.swift in Sources */,
 				4FB74E3BCCB54EE2242A9A78778F6024 /* TypographyViewController.swift in Sources */,

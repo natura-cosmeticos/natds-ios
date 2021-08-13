@@ -5,73 +5,160 @@ import Nimble
 
 final class NatImageSpec: QuickSpec {
     override func spec() {
+
         var systemUnderTest: NatImage!
 
+        beforeEach {
+            ConfigurationStorage.shared.currentTheme = StubTheme()
+            systemUnderTest = NatImage()
+        }
+
         describe("#init") {
-            beforeEach {
-                ConfigurationStorage.shared.currentTheme = StubTheme()
+            it("starts with default `standard` variant") {
+                expect(systemUnderTest.variant).to(equal(NatImage.ImageType.standard))
+            }
+            it("doesn't have an image configured") {
+                expect(systemUnderTest.imageView.image).to(beNil())
+            }
+        }
 
-                systemUnderTest = NatImage()
+        describe("#configure(variant:)") {
+            context("variant standard") {
+                beforeEach {
+                    systemUnderTest.configure(variant: .standard)
+                }
+                it("is standard variant") {
+                    expect(systemUnderTest.variant).to(equal(NatImage.ImageType.standard))
+                }
+            }
+            context("variant highlight") {
+                beforeEach {
+                    systemUnderTest.configure(variant: .highlight)
+                }
+                it("is highlight variant") {
+                    expect(systemUnderTest.variant).to(equal(NatImage.ImageType.highlight))
+                }
+            }
+        }
+
+        describe("#configureRadius(_:)") {
+            context("default radius") {
+                beforeEach {
+                    systemUnderTest.configureRadius()
+                }
+                it("has radius none") {
+                    expect(systemUnderTest.layer.cornerRadius).to(equal(getTokenFromTheme(\.borderRadiusNone)))
+                }
+            }
+            context("none radius") {
+                beforeEach {
+                    systemUnderTest.configureRadius(.none)
+                }
+                it("has radius none") {
+                    expect(systemUnderTest.layer.cornerRadius).to(equal(getTokenFromTheme(\.borderRadiusNone)))
+                }
+            }
+            context("medium radius") {
+                beforeEach {
+                    systemUnderTest.configureRadius(.medium)
+                }
+                it("has radius medium") {
+                    expect(systemUnderTest.layer.cornerRadius).to(equal(NatBorderRadius.medium))
+                }
+            }
+            context("circle radius") {
+                beforeEach {
+                    systemUnderTest.configureRadius(.circle(imageHeight: 200))
+                }
+                it("has radius circle") {
+                    expect(systemUnderTest.layer.cornerRadius).to(equal(NatBorderRadius.circle(viewHeight: 200)))
+                }
             }
 
-            it("returns an expected borderRadius") {
-                systemUnderTest.configure(setBorderRadius: true)
-
-                expect(systemUnderTest.layer.cornerRadius).to(equal(getTokenFromTheme(\.borderRadiusMedium)))
+            describe("#configureFade(_:)") {
+                context("default fade") {
+                    beforeEach {
+                        systemUnderTest.configureFade()
+                    }
+                    it("has bottom fade") {
+                        expect(systemUnderTest.imageView.hasGradient).to(beTrue())
+                        expect(systemUnderTest.imageView.gradientDirection).to(equal(.bottom))
+                    }
+                }
+                context("bottom fade") {
+                    beforeEach {
+                        systemUnderTest.configureFade(.bottom)
+                    }
+                    it("has bottom fade") {
+                        expect(systemUnderTest.imageView.hasGradient).to(beTrue())
+                        expect(systemUnderTest.imageView.gradientDirection).to(equal(.bottom))
+                    }
+                }
+                context("top fade") {
+                    beforeEach {
+                        systemUnderTest.configureFade(.top)
+                    }
+                    it("has top fade") {
+                        expect(systemUnderTest.imageView.hasGradient).to(beTrue())
+                        expect(systemUnderTest.imageView.gradientDirection).to(equal(.top))
+                    }
+                }
+                context("left fade") {
+                    beforeEach {
+                        systemUnderTest.configureFade(.left)
+                    }
+                    it("has left fade") {
+                        expect(systemUnderTest.imageView.hasGradient).to(beTrue())
+                        expect(systemUnderTest.imageView.gradientDirection).to(equal(.left))
+                    }
+                }
+                context("right fade") {
+                    beforeEach {
+                        systemUnderTest.configureFade(.right)
+                    }
+                    it("has right fade") {
+                        expect(systemUnderTest.imageView.hasGradient).to(beTrue())
+                        expect(systemUnderTest.imageView.gradientDirection).to(equal(.right))
+                    }
+                }
             }
 
-            it("returns no borderRadius") {
-                systemUnderTest.configure(setBorderRadius: false)
-
-                expect(systemUnderTest.layer.cornerRadius).to(equal(0))
+            describe("#configureFallback(:)") {
+                beforeEach {
+                    systemUnderTest.configure(fallback: UIImage())
+                }
+                it("fallbackImage is not nil") {
+                    expect(systemUnderTest.fallbackImage).toNot(beNil())
+                }
             }
 
-            it("returns an expected overlay") {
-                systemUnderTest.configure(setOverlay: true)
-                let overlayLayer = systemUnderTest.subviews.last
-
-                expect(overlayLayer?.backgroundColor?.cgColor)
-                    .to(equal(NatColors
-                                .onSurface
-                                .withAlphaComponent(getTokenFromTheme(\.opacityMedium))
-                                .cgColor
-                                ))
+            describe("#configureImage(:)") {
+                context("with an UIImage") {
+                    beforeEach {
+                        systemUnderTest.configure(setImage: UIImage())
+                    }
+                    it("image is not nil") {
+                        expect(systemUnderTest.imageView.image).toNot(beNil())
+                    }
+                }
+                context("from an URL") {
+                    beforeEach {
+                        systemUnderTest.configure(setImageFromURL: URL(string: ""))
+                    }
+                    it("image is nil because the url is nil") {
+                        expect(systemUnderTest.imageView.image).to(beNil())
+                    }
+                }
+                context("from an URL with fallback") {
+                    beforeEach {
+                        systemUnderTest.configure(fallback: UIImage())
+                        systemUnderTest.configure(setImageFromURL: URL(string: ""))
+                    }
+                    it("image is not nil") {
+                        expect(systemUnderTest.imageView.image).toNot(beNil())
+                    }
+                }
             }
-
-            it("returns no overlay") {
-                systemUnderTest.configure(setOverlay: false)
-                let overlayLayer = systemUnderTest.subviews.last
-
-                expect(overlayLayer?.backgroundColor?.cgColor)
-                    .to(equal( UIColor.clear.cgColor))
-            }
-
-            it("returns defaultImage as default") {
-                let defaultImage = systemUnderTest.subviews.first
-
-                expect(defaultImage).to(equal(systemUnderTest.defaultImageView))
-            }
-
-            it("returns defaultImage as fallback") {
-                systemUnderTest.configure(setImage: UIImage(named: "wrongImage"))
-
-                let defaultImage = systemUnderTest.subviews
-                    .compactMap { $0 as? UIImageView }
-                    .first
-
-                expect(defaultImage?.image).to(equal(systemUnderTest.defaultImageView.image))
-            }
-
-            it("returns set image") {
-                systemUnderTest.configure(setImage: AssetsPath.iconOutlinedDefaultMockupBackground.rawValue)
-
-                let setImage = systemUnderTest.subviews
-                    .compactMap { $0 as? UIImageView }
-                    .first
-
-                expect(setImage?.image).to(equal(AssetsPath.iconOutlinedDefaultMockupBackground.rawValue))
-            }
-
         }
     }
 }
