@@ -46,16 +46,12 @@ public final class NatCounter: UIView {
     private var numCounter: Int = 0 {
         didSet {
             numCounterLabel.text = "\(numCounter)"
-            if shouldHandleValue {
-                counterChangeValueHandler?(numCounter)
-            }
             checkLimit()
         }
     }
 
     private var didSetSubtractDisabled: Bool = false
     private var didSetAddDisabled: Bool = false
-    private var shouldHandleValue: Bool = false
 
     let stackViewContainer: UIStackView = {
         let stackView = UIStackView()
@@ -143,9 +139,7 @@ public final class NatCounter: UIView {
     /// Sets the value of NatCounter component
     /// - Parameters:
     ///   - value: value for NatCounter
-    ///   - handleValue: a boolean to indicate if the value change should run the handler for value change (default is true)
-    public func setCount(_ value: Int, handleValue: Bool = true) {
-        shouldHandleValue = handleValue
+    public func setCount(_ value: Int) {
         numCounter = value
     }
 
@@ -221,11 +215,13 @@ public final class NatCounter: UIView {
                              sizeHeight: size.buttonHeight)
 
         subtractView.action = {
-            self.setCount(self.numCounter-1, handleValue: true)
+            self.numCounter -= 1
+            self.counterChangeValueHandler?(self.numCounter)
         }
 
         addView.action = {
-            self.setCount(self.numCounter+1, handleValue: true)
+            self.numCounter += 1
+            self.counterChangeValueHandler?(self.numCounter)
         }
     }
 
