@@ -137,8 +137,7 @@ public final class NatCounter: UIView {
     }
 
     /// Sets the value of NatCounter component
-    /// - Parameters:
-    ///   - value: value for NatCounter
+    /// - Parameter value: value for NatCounter
     public func setCount(_ value: Int) {
         numCounter = value
     }
