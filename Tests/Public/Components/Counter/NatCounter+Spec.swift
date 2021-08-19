@@ -7,14 +7,15 @@ final class NatCounterSpec: QuickSpec {
 
     override func spec() {
         var sut: NatCounter!
+        var actionInvocations = 0
 
         describe("#init()") {
             beforeEach {
                 ConfigurationStorage.shared.currentTheme = StubTheme()
+                sut = NatCounter()
             }
 
             it("counter starts at 0") {
-                sut = NatCounter()
                 expect(sut.numCounterLabel.text).to(equal("0"))
             }
         }
@@ -22,66 +23,144 @@ final class NatCounterSpec: QuickSpec {
         describe("#configure(label:)") {
             beforeEach {
                 ConfigurationStorage.shared.currentTheme = StubTheme()
-
                 sut = NatCounter()
             }
 
-            it("when it starts without text") {
+            it("starts without text") {
                 expect(sut.label.text).to(equal(""))
             }
 
-            it("when it starts with a text") {
-                sut.configure(label: "Design System")
-                expect(sut.label.text).to(equal("Design System"))
+            context("when a text is set") {
+                beforeEach {
+                    sut.configure(label: "Design System")
+                }
+
+                it("shows the text in the label") {
+                    expect(sut.label.text).to(equal("Design System"))
+                }
             }
         }
 
         describe("#configure(button: , state:) ") {
-            context(".disabled") {
-                beforeEach {
-                    ConfigurationStorage.shared.currentTheme = StubTheme()
+            beforeEach {
+                ConfigurationStorage.shared.currentTheme = StubTheme()
+                sut = NatCounter()
+            }
 
-                    sut = NatCounter()
+            context("when subtract button state is set to disabled") {
+                beforeEach {
+                    sut.configure(button: .subtract, state: .disabled)
                 }
 
-                it("when subtract button is disabled") {
-                    sut.configure(button: .subtract, state: .disabled)
+                it("is not enabled") {
                     expect(sut.subtractView.isEnabled).to(beFalse())
                 }
+            }
 
-                it("when add button is disabled") {
+            context("when add button state is set to disabled") {
+                beforeEach {
                     sut.configure(button: .add, state: .disabled)
-                    expect(sut.addView.isEnabled).to(beFalse())
                 }
 
-                it("when all buttons are disabled") {
+                it("is not enabled") {
+                    expect(sut.addView.isEnabled).to(beFalse())
+                }
+            }
+
+            context("when all buttons states are set to disabled") {
+                beforeEach {
                     sut.configure(button: .all, state: .disabled)
+                }
+
+                it("all buttons are not enabled") {
                     expect(sut.addView.isEnabled).to(beFalse())
                     expect(sut.subtractView.isEnabled).to(beFalse())
                 }
             }
 
-            context(".enabled") {
+            context("when subtract button state is set to enabled") {
                 beforeEach {
-                    ConfigurationStorage.shared.currentTheme = StubTheme()
-
-                    sut = NatCounter()
-                }
-
-                it("when subtract button is enabled") {
                     sut.configure(button: .subtract, state: .enabled)
-                    expect(sut.subtractView.isEnabled).to(beTrue())
                 }
 
-                it("when add button is enabled") {
+                it("is enabled") {
+                    expect(sut.subtractView.isEnabled).to(beTrue())
+                }
+            }
+
+            context("when add button state is set to enabled") {
+                beforeEach {
                     sut.configure(button: .add, state: .enabled)
-                    expect(sut.addView.isEnabled).to(beTrue())
                 }
 
-                it("when all buttons are enabled") {
+                it("is enabled") {
+                    expect(sut.addView.isEnabled).to(beTrue())
+                }
+            }
+
+            context("when all buttons states are set to enabled") {
+                beforeEach {
                     sut.configure(button: .all, state: .enabled)
+                }
+
+                it("all buttons are enabled") {
                     expect(sut.addView.isEnabled).to(beTrue())
                     expect(sut.subtractView.isEnabled).to(beTrue())
+                }
+            }
+        }
+
+        describe("#configure(changeValue:)") {
+            beforeEach {
+                ConfigurationStorage.shared.currentTheme = StubTheme()
+                sut = NatCounter()
+            }
+
+            context("when value is changed by adding") {
+                beforeEach {
+                    actionInvocations = 0
+                    sut.configure { _ in actionInvocations += 1 }
+                    sut.addView.gestureRecognizers?.forEach { $0.sendGesturesEvents() }
+                }
+
+                it("stores action and uses it in change value events") {
+                    expect(actionInvocations).toEventually(equal(1))
+                }
+            }
+
+            context("when value is changed by subtracting") {
+                beforeEach {
+                    actionInvocations = 0
+                    sut.configure { _ in actionInvocations += 1 }
+                    sut.setCount(1)
+                    sut.subtractView.gestureRecognizers?.forEach { $0.sendGesturesEvents() }
+                }
+
+                it("stores action and uses it in change value events") {
+                    expect(actionInvocations).toEventually(equal(1))
+                }
+            }
+        }
+
+        describe("#setCount:)") {
+            beforeEach {
+                ConfigurationStorage.shared.currentTheme = StubTheme()
+                sut = NatCounter()
+            }
+
+            context("when value is set for the component") {
+                beforeEach {
+                    sut.setCount(1)
+                    actionInvocations = 0
+                    sut.configure { _ in actionInvocations += 1 }
+                }
+
+                it("shows the set value") {
+                    expect(sut.numCounterLabel.text).to(equal("1"))
+                }
+
+                it("doesn't run the value change handler") {
+                    expect(actionInvocations).to(equal(0))
                 }
             }
         }
