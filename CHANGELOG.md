@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.3.1](https://github.com/natura-cosmeticos/natds-ios/compare/6.3.0...6.3.1) (2021-08-20)
+
+
+### Bug Fixes
+
+* fix counter to execute hanler only when value changes from user's input ([f48540d](https://github.com/natura-cosmeticos/natds-ios/commit/f48540d1de81adfc11c80c44d85c8c0e0bbbd527))
+* fixes bug on natcounter value handler ([b1aaaa7](https://github.com/natura-cosmeticos/natds-ios/commit/b1aaaa7ce318efff8c4a3b49701da338915fbc01))
+
 ## [6.3.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.2.1...6.3.0) (2021-08-13)
 
 
