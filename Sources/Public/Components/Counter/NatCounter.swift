@@ -46,7 +46,6 @@ public final class NatCounter: UIView {
     private var numCounter: Int = 0 {
         didSet {
             numCounterLabel.text = "\(numCounter)"
-            counterChangeValueHandler?(numCounter)
             checkLimit()
         }
     }
@@ -138,7 +137,7 @@ public final class NatCounter: UIView {
     }
 
     /// Sets the value of NatCounter component
-    /// - Parameter value: value selected of NatCounter
+    /// - Parameter value: value for NatCounter
     public func setCount(_ value: Int) {
         numCounter = value
     }
@@ -216,10 +215,12 @@ public final class NatCounter: UIView {
 
         subtractView.action = {
             self.numCounter -= 1
+            self.counterChangeValueHandler?(self.numCounter)
         }
 
         addView.action = {
             self.numCounter += 1
+            self.counterChangeValueHandler?(self.numCounter)
         }
     }
 
