@@ -16,7 +16,7 @@
       <div class="content-wrapper">
         <p>
           <a href="index.html">NatDS  Docs</a>
-          <span class="no-mobile"> (34% documented)</span>
+          <span class="no-mobile"> (37% documented)</span>
         </p>
     
     
@@ -52,6 +52,7 @@
 <li><strong>Swift 5</strong></li>
 <li>Supports iOS <strong>10</strong> to <strong>14</strong></li>
 <li>CocoaPods</li>
+<li>Swift Package Manager</li>
 <li>Fastlane</li>
 <li>Bitrise (CI)</li>
 <li><a href="https://git-lfs.github.com/">Git-LFS</a></li>
@@ -74,19 +75,28 @@
 <p>Then, run the following command:</p>
 <pre class="highlight shell"><code><span class="nv">$ </span>pod <span class="nb">install</span>
 </code></pre>
+<h3 id='swift-package-manager' class='heading'>Swift Package Manager</h3>
 
-<p>Before start using, it&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.</p>
+<p>To use NatDS in your project with Swift Package Manager, you need to add it from the Xcode menu. First, you should follow the path <code>File &gt; Swift Packages &gt; Add Package Dependency</code> and then, provide it the git url for this repository. Xcode will manage the imports.</p>
+<h2 id='how-to-configure' class='heading'>How to configure</h2>
+
+<p>Before using the components, it&rsquo;s necessary to configure the Design System providing it with a brand theme or <code>fatalError</code> will be raised.</p>
 <pre class="highlight swift"><code><span class="kt">DesignSystem</span><span class="p">()</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="kt">AvailableTheme</span><span class="p">)</span>
 </code></pre>
 <h2 id='icons' class='heading'>Icons</h2>
 
-<p>Since version <code>3.0.0</code> NatDS iOS has no longer NatDS Icons. To use NatDS Icons, you MUST add a new pod to your project. You must specify it in your <code>Podfile</code>:</p>
+<p>Since version <code>3.0.0</code> NatDS iOS no longer has the NatDS Icons. To use them, you MUST add a new pod to your project. You must specify it in your <code>Podfile</code>:</p>
 <pre class="highlight ruby"><code><span class="n">target</span> <span class="s1">'&lt;Your Target Name&gt;'</span> <span class="k">do</span>
     <span class="n">pod</span> <span class="s1">'NatDSIcons'</span>    
 <span class="k">end</span>
 </code></pre>
+<h3 id='natdsicons-versions' class='heading'>NatDSIcons versions</h3>
 
-<p><a href=how-to-use-icons.html target="_blank">Check the documentation on how to use icons.</a></p>
+<p>To check all available versions for NatDS Icons, you can check the <a href="https://github.com/natura-cosmeticos/natds-commons/blob/master/packages/natds-icons/CHANGELOG.md">changelog</a> at the commons repository, or run a pod command from your terminal:</p>
+<pre class="highlight shell"><code><span class="nv">$ </span>pod search NatDSIcons <span class="nt">--simple</span>
+</code></pre>
+
+<p>Don&rsquo;t forget to <a href=how-to-use-icons.html target="_blank">check the documentation on how to use icons.</a></p>
 <h2 id='getting-started' class='heading'>Getting started</h2>
 
 <p><a href=getting-started.html target="_blank">Check how to start using our lib.</a></p>
@@ -222,6 +232,15 @@
                 </li>
                 <li class="nav-group-task">
                   <a href="Classes/NatImage.html">NatImage</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatImage/ImageFadeDirection.html">– ImageFadeDirection</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatImage/ImageRadius.html">– ImageRadius</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatImage/ImageType.html">– ImageType</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="Classes/NatListItemCell.html">NatListItemCell</a>
@@ -410,6 +429,9 @@
                   <a href="Protocols/NatDialogDismissableConfigurable.html">NatDialogDismissableConfigurable</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="Protocols/NatDialogDividerConfigurable.html">NatDialogDividerConfigurable</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="Protocols/NatDialogTitleConfigurable.html">NatDialogTitleConfigurable</a>
                 </li>
                 <li class="nav-group-task">
@@ -465,6 +487,9 @@
               <a href="Typealiases.html">Type Aliases</a>
               <ul class="nav-group-tasks">
                 <li class="nav-group-task">
+                  <a href="Typealiases.html#/s:5NatDS16SelectionHandlera">SelectionHandler</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="Typealiases.html#/s:5NatDS13SimpleClosurea">SimpleClosure</a>
                 </li>
               </ul>
@@ -474,7 +499,7 @@
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2021-07-12)</p>
+          <p>&copy; 2021 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2021-08-23)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </div>
