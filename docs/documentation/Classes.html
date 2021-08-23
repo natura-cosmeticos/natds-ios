@@ -17,7 +17,7 @@
       <div class="content-wrapper">
         <p>
           <a href="index.html">NatDS  Docs</a>
-          <span class="no-mobile"> (34% documented)</span>
+          <span class="no-mobile"> (37% documented)</span>
         </p>
     
     
@@ -460,43 +460,63 @@ It&rsquo;s necessary to instantiate it and set its height and width constraints.
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>NatDialogController is a class that represents a component from the design system.
- The colors changes according with the current theme configured in the Design system.</p>
+                          <div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This component is available in the following variants:
 
-<p>Available styles:</p>
+</div><ul>
+<li>✅ Standard</li>
+<li>✅ Alert</li>
+</ul>
+
+<p>With the following attributes:</p>
+
+<ul>
+<li>✅ Divider</li>
+<li>✅ Size/width</li>
+<li>✅ Size/height</li>
+<li>❌ Scroll</li>
+<li>❌ Header&rsquo;s icon buttons</li>
+</ul>
+
+<p>NatDialogController is a class that represents a component from the design system.
+ Its colors change according to the current brand theme.</p>
+
+<p>To create and configure the dialog it&rsquo;s necessary to use Dialog Builders, which are available as class properties.</p>
+
+<p>Available styles for the dialog:</p>
 
 <ul>
 <li>Standard</li>
 <li>Alert</li>
 </ul>
 
-<p>To create and configure Dialogs it&rsquo;s necessary use Dialog Builders that builds are available as class
-   properties.</p>
-
-<p>Available elements to configure:</p>
+<p>Configurable elements for the dialog:</p>
 
 <ul>
 <li>Title</li>
-<li>Body (Text or Custom view)</li>
-<li>Primary Button (must be configured before other buttons)</li>
-<li><p>Secondary Button (Optional)</p>
-<pre class="highlight swift"><code> <span class="kt">Example</span> <span class="n">of</span> <span class="nv">usage</span><span class="p">:</span>
+<li>Body (Text or custom view)</li>
+<li>Primary button (must be configured before other buttons)</li>
+<li>Secondary button</li>
+<li>Divider</li>
+</ul>
 
-    <span class="k">let</span> <span class="nv">dialog</span> <span class="o">=</span> <span class="kt">NatDialogController</span>
-    <span class="o">.</span><span class="n">standardStyleBuilder</span>
-    <span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="s">"Title"</span><span class="p">)</span>
-    <span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">body</span><span class="p">:</span> <span class="s">"Body"</span><span class="p">)</span>
-    <span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">primaryTitle</span><span class="p">:</span> <span class="s">"Title"</span><span class="p">,</span> <span class="nv">primaryAction</span><span class="p">:</span> <span class="p">{</span> <span class="nf">print</span><span class="p">(</span><span class="s">"Some text"</span><span class="p">)</span> <span class="p">})</span>
-    <span class="o">.</span><span class="nf">build</span><span class="p">()</span>
+<p>Example of usage:</p>
+<pre class="highlight swift"><code>         <span class="k">let</span> <span class="nv">dialog</span> <span class="o">=</span> <span class="kt">NatDialogController</span>
+         <span class="o">.</span><span class="n">standardStyleBuilder</span>
+         <span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="s">"Title"</span><span class="p">)</span>
+         <span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">body</span><span class="p">:</span> <span class="s">"Body"</span><span class="p">)</span>
+         <span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">divider</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+         <span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">primaryTitle</span><span class="p">:</span> <span class="s">"Title"</span><span class="p">,</span> <span class="nv">primaryAction</span><span class="p">:</span> <span class="p">{</span> <span class="nf">print</span><span class="p">(</span><span class="s">"Some text"</span><span class="p">)</span> <span class="p">})</span>
+         <span class="o">.</span><span class="nf">build</span><span class="p">()</span>
 </code></pre>
 <div class="aside aside-requires">
     <p class="aside-title">Requires</p>
     <p>It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.</p>
+<pre class="highlight swift"><code>    <span class="kt">DesignSystem</span><span class="p">()</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="kt">AvailableTheme</span><span class="p">)</span>
+</code></pre>
 
-<p>DesignSystem().configure(with: AvailableTheme)</p>
-
-</div></li>
-</ul>
+</div>
 
                           <a href="Classes/NatDialogController.html" class="slightly-smaller">See more</a>
                         </div>
@@ -923,7 +943,58 @@ The button colors change according to the current theme configured.</p>
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Undocumented</p>
+                          <div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This component is available in the following variants:
+
+</div><ul>
+<li>✅ Standard</li>
+<li>✅ Highlight</li>
+</ul>
+
+<p>With the following attribute status:</p>
+
+<ul>
+<li>Radius:
+
+<ul>
+<li>✅ <code>None</code></li>
+<li>✅ <code>Medium</code></li>
+<li>✅ <code>Circle</code></li>
+</ul></li>
+<li>Fade:
+
+<ul>
+<li>✅ <code>Top</code></li>
+<li>✅ <code>Bottom</code></li>
+<li>✅ <code>Left</code></li>
+<li>✅ <code>Right</code></li>
+</ul></li>
+<li>✅ Fallback</li>
+</ul>
+
+<p>NatImage is a class that represents the image component from the design system.</p>
+
+<p>It can be configured with the variants:</p>
+
+<ul>
+<li>Standard (default)</li>
+<li>Highlight</li>
+</ul>
+
+<p>Example of usage:</p>
+<pre class="highlight swift"><code>       <span class="k">let</span> <span class="nv">image</span> <span class="o">=</span> <span class="kt">NatImage</span><span class="p">()</span>
+       <span class="n">image</span><span class="o">.</span><span class="nf">configureFade</span><span class="p">(</span><span class="o">.</span><span class="n">top</span><span class="p">)</span>
+       <span class="n">image</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">setImage</span><span class="p">:</span> <span class="kt">YourUIImage</span><span class="p">())</span>
+       <span class="n">image</span><span class="o">.</span><span class="nf">configureRadius</span><span class="p">(</span><span class="o">.</span><span class="n">medium</span><span class="p">)</span>
+</code></pre>
+<div class="aside aside-requires">
+    <p class="aside-title">Requires</p>
+    <p>It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.</p>
+
+<p>DesignSystem().configure(with: AvailableTheme)</p>
+
+</div>
 
                           <a href="Classes/NatImage.html" class="slightly-smaller">See more</a>
                         </div>
@@ -1386,57 +1457,6 @@ The aligment should be set at <code>init()</code>.</p>
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/c:@M@NatDS@objc(cs)NatSelectionControl"></a>
-                      <a name="//apple_ref/swift/Class/NatSelectionControl" class="dashAnchor"></a>
-                      <a class="token" href="#/c:@M@NatDS@objc(cs)NatSelectionControl">NatSelectionControl</a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          <p>NatSelectionControl is a class that represents Design System&rsquo;s selection control component.
-The component colors changes according to the current theme configured in the Design System.</p>
-
-<p>The component has 2 styles:</p>
-
-<ul>
-<li>checkbox</li>
-<li>radio</li>
-</ul>
-
-<p>Example of usage:</p>
-<pre class="highlight swift"><code>   <span class="kt">NatSelectionControl</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">radioButton</span><span class="p">)</span>
-</code></pre>
-
-<p>And it can be configured with a label:</p>
-<pre class="highlight swift"><code>   <span class="kt">NatSelectionControl</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">checkbox</span><span class="p">,</span> <span class="nv">text</span><span class="p">:</span> <span class="s">"The text for the label"</span><span class="p">)</span>
-</code></pre>
-<div class="aside aside-requires">
-    <p class="aside-title">Requires</p>
-    <p>It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.</p>
-
-<p>DesignSystem().configure(with: AvailableTheme)</p>
-
-</div>
-
-                          <a href="Classes/NatSelectionControl.html" class="slightly-smaller">See more</a>
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">NatSelectionControl</span> <span class="p">:</span> <span class="kt">UIView</span></code></pre>
-
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div>
-                      <code>
                       <a name="/c:@M@NatDS@objc(cs)NatCheckbox"></a>
                       <a name="//apple_ref/swift/Class/NatCheckbox" class="dashAnchor"></a>
                       <a class="token" href="#/c:@M@NatDS@objc(cs)NatCheckbox">NatCheckbox</a>
@@ -1512,6 +1532,57 @@ radioButton.configure(addToGroup: natRadioButtonGroup)</p>
                           <div class="language">
                             <p class="aside-title">Swift</p>
                             <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">NatRadioButton</span> <span class="p">:</span> <span class="kt">UIView</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@M@NatDS@objc(cs)NatSelectionControl"></a>
+                      <a name="//apple_ref/swift/Class/NatSelectionControl" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@NatDS@objc(cs)NatSelectionControl">NatSelectionControl</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>NatSelectionControl is a class that represents Design System&rsquo;s selection control component.
+The component colors changes according to the current theme configured in the Design System.</p>
+
+<p>The component has 2 styles:</p>
+
+<ul>
+<li>checkbox</li>
+<li>radio</li>
+</ul>
+
+<p>Example of usage:</p>
+<pre class="highlight swift"><code>   <span class="kt">NatSelectionControl</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">radioButton</span><span class="p">)</span>
+</code></pre>
+
+<p>And it can be configured with a label:</p>
+<pre class="highlight swift"><code>   <span class="kt">NatSelectionControl</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">checkbox</span><span class="p">,</span> <span class="nv">text</span><span class="p">:</span> <span class="s">"The text for the label"</span><span class="p">)</span>
+</code></pre>
+<div class="aside aside-requires">
+    <p class="aside-title">Requires</p>
+    <p>It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.</p>
+
+<p>DesignSystem().configure(with: AvailableTheme)</p>
+
+</div>
+
+                          <a href="Classes/NatSelectionControl.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">NatSelectionControl</span> <span class="p">:</span> <span class="kt">UIView</span></code></pre>
 
                           </div>
                         </div>
@@ -1951,6 +2022,15 @@ The tag colors change according to the current theme configured.</p>
                   <a href="Classes/NatImage.html">NatImage</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="Classes/NatImage/ImageFadeDirection.html">– ImageFadeDirection</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatImage/ImageRadius.html">– ImageRadius</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatImage/ImageType.html">– ImageType</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="Classes/NatListItemCell.html">NatListItemCell</a>
                 </li>
                 <li class="nav-group-task">
@@ -2137,6 +2217,9 @@ The tag colors change according to the current theme configured.</p>
                   <a href="Protocols/NatDialogDismissableConfigurable.html">NatDialogDismissableConfigurable</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="Protocols/NatDialogDividerConfigurable.html">NatDialogDividerConfigurable</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="Protocols/NatDialogTitleConfigurable.html">NatDialogTitleConfigurable</a>
                 </li>
                 <li class="nav-group-task">
@@ -2192,6 +2275,9 @@ The tag colors change according to the current theme configured.</p>
               <a href="Typealiases.html">Type Aliases</a>
               <ul class="nav-group-tasks">
                 <li class="nav-group-task">
+                  <a href="Typealiases.html#/s:5NatDS16SelectionHandlera">SelectionHandler</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="Typealiases.html#/s:5NatDS13SimpleClosurea">SimpleClosure</a>
                 </li>
               </ul>
@@ -2201,7 +2287,7 @@ The tag colors change according to the current theme configured.</p>
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2021-07-12)</p>
+          <p>&copy; 2021 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2021-08-23)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </div>
