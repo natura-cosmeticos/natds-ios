@@ -21,10 +21,10 @@
 @available(*, deprecated, message: "Use NatLogo component instead")
 public struct NatLogoImages {
     public static var horizontal: UIImage? {
-        AssetsHelper.logo(from: getTokenFromTheme(\.assetBrandNeutralA))
+        AssetsHelper.logo(from: getTokenFromTheme(\.assetBrandNeutralAFile))
     }
 
     public static var vertical: UIImage? {
-        AssetsHelper.logo(from: getTokenFromTheme(\.assetBrandNeutralB))
+        AssetsHelper.logo(from: getTokenFromTheme(\.assetBrandNeutralBFile))
     }
 }
