@@ -167,7 +167,7 @@ struct AesopDarkTokens: Tokens {
     let typographyFontFamilySecondary = "sans-serif"
     let typographyFontFamilyBranding = "Helvetica Now"
     let typographyFontFamilyCode = "SF Mono"
-    let typographyFontFamilyDisplay = "Zapf Humanist"
+    let typographyFontFamilyDisplay = "Zapf Humanist 601"
     let typographyFontFamilyHeadline = "Suisse"
     let typographyFontFamilyBody = "Suisse"
     let typographyFontFamilyFallback = "San Francisco"
