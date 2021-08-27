@@ -26,6 +26,26 @@ public struct NatFonts {
             weight: size.relatedTextStyle.weight
         )
     }
+
+    public static func customFont(ofSize fontSize: Size,
+                                  withStyle customFont: CustomFontStyle) -> UIFont {
+        AssetsHelper.loadCustomFont(customFont)
+
+        guard let font = UIFont(name: customFont.name, size: fontSize.relatedTextStyle.size) else {
+            return UIFont.systemFont(ofSize: fontSize.relatedTextStyle.size)
+        }
+        return font
+    }
+
+    public static func customFont(ofSize fontSize: CGFloat,
+                                  withStyle customFont: CustomFontStyle) -> UIFont {
+        AssetsHelper.loadCustomFont(customFont)
+
+        guard let font = UIFont(name: customFont.name, size: fontSize) else {
+            return UIFont.systemFont(ofSize: fontSize)
+        }
+        return font
+    }
 }
 
 // MARK: - Size

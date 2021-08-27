@@ -63,6 +63,21 @@ final class TypographyViewController: UIViewController, SampleItem {
     private func createCellsViewModels() -> [TypographyCell.ViewModel] {
         [
             .init(
+                sizeDescription: "display",
+                weightDescription: "custom",
+                font: NatFonts.customFont(ofSize: .heading2, withStyle: .display)
+            ),
+            .init(
+                sizeDescription: "headline",
+                weightDescription: "custom",
+                font: NatFonts.customFont(ofSize: .heading2, withStyle: .headline)
+            ),
+            .init(
+                sizeDescription: "body",
+                weightDescription: "custom",
+                font: NatFonts.customFont(ofSize: .heading2, withStyle: .body)
+            ),
+            .init(
                 sizeDescription: "heading1:",
                 weightDescription: "regular",
                 font: NatFonts.font(ofSize: .heading1, withWeight: .regular)

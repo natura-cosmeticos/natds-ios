@@ -76,7 +76,7 @@
 		6E6C6EC0105FF251940E4C011D611149 /* String+IconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD080B942BE2F7A41B1DEF15B19C34DB /* String+IconTests.swift */; };
 		6F66306180843E285A6B82D8788835D2 /* NatSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7FB96016F7D02CB5976F54C383CCD6 /* NatSizes.swift */; };
 		7392D4960D4A13B6ADF3AB7372B264F5 /* DesignSystem+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C59F929E88764313134A046BA5C30F /* DesignSystem+Spec.swift */; };
-		758EE01159A6E7AFC7217055678D4ED3 /* FontIconStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D221DC99290B86F7B59C72F4FA77BE4 /* FontIconStyle.swift */; };
+		758EE01159A6E7AFC7217055678D4ED3 /* IconFontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D221DC99290B86F7B59C72F4FA77BE4 /* IconFontStyle.swift */; };
 		77C55B339CA403354D76ABF05E283D5A /* ValueTextHighlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFBFE7E7E98BBE7DA3F6565371E522D /* ValueTextHighlight.swift */; };
 		790D3F862564181A007A9CA1 /* ProgressIndicatorCircular+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790D3F852564181A007A9CA1 /* ProgressIndicatorCircular+Spec.swift */; };
 		797E60DC25531625002A59E0 /* NatLogoImages+AvonDark+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797E60DB25531625002A59E0 /* NatLogoImages+AvonDark+Spec.swift */; };
@@ -200,6 +200,15 @@
 		7D17AB1B25E91C380070FD31 /* NatAvatar+Snapshots+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D17AB1A25E91C380070FD31 /* NatAvatar+Snapshots+Tests.swift */; };
 		7D19998925756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19998825756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift */; };
 		7D213B8A269F53D4005B15C3 /* NatDialogDividerConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D213B89269F53D4005B15C3 /* NatDialogDividerConfigurable.swift */; };
+		7D23B35126D7DE0300FB5DA9 /* HelveticaNowDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B34926D7DDFD00FB5DA9 /* HelveticaNowDisplay-Regular.ttf */; };
+		7D23B35226D7DE0300FB5DA9 /* WorkSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B34A26D7DDFE00FB5DA9 /* WorkSans-Regular.ttf */; };
+		7D23B35326D7DE0300FB5DA9 /* Recoleta-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B34B26D7DDFF00FB5DA9 /* Recoleta-Regular.ttf */; };
+		7D23B35426D7DE0300FB5DA9 /* SuisseIntl-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B34C26D7DE0000FB5DA9 /* SuisseIntl-Regular.ttf */; };
+		7D23B35526D7DE0300FB5DA9 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B34D26D7DE0100FB5DA9 /* Montserrat-Regular.ttf */; };
+		7D23B35626D7DE0300FB5DA9 /* DrukCy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B34E26D7DE0200FB5DA9 /* DrukCy-Bold.ttf */; };
+		7D23B35726D7DE0300FB5DA9 /* ZapfHumanist601BT-Roman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B34F26D7DE0200FB5DA9 /* ZapfHumanist601BT-Roman.ttf */; };
+		7D23B35826D7DE0300FB5DA9 /* HelveticaNowText-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B35026D7DE0300FB5DA9 /* HelveticaNowText-Regular.ttf */; };
+		7D23B35D26D97B0900FB5DA9 /* CustomFontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D23B35C26D97B0900FB5DA9 /* CustomFontStyle.swift */; };
 		7D277B5026976900005075EF /* AppBarContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D277B4F26976900005075EF /* AppBarContentType.swift */; };
 		7D277B63269E2551005075EF /* DialogHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D277B62269E2551005075EF /* DialogHeaderView.swift */; };
 		7D277B68269E43A1005075EF /* DialogBodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D277B67269E43A1005075EF /* DialogBodyView.swift */; };
@@ -467,7 +476,7 @@
 		26BFBADD251273BA006C22E2 /* NatTag+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatTag+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		2775F568C47ADB6D5DA7B7AFA4A41B4E /* NatElevation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatElevation.swift; sourceTree = "<group>"; };
 		2C157151985B2586A5377C35B4FC1F27 /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
-		2D221DC99290B86F7B59C72F4FA77BE4 /* FontIconStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontIconStyle.swift; sourceTree = "<group>"; };
+		2D221DC99290B86F7B59C72F4FA77BE4 /* IconFontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconFontStyle.swift; sourceTree = "<group>"; };
 		2D9C7ED46E33571D0B2A1E60936B8ACD /* Field+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Field+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		307E705878C6A3A88E39CDC82B799361 /* ViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStyle.swift; sourceTree = "<group>"; };
 		30E333A0723F6532721CE638F6819154 /* ButtonOutlineStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonOutlineStyle.swift; sourceTree = "<group>"; };
@@ -625,6 +634,15 @@
 		7D17AB1A25E91C380070FD31 /* NatAvatar+Snapshots+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatAvatar+Snapshots+Tests.swift"; sourceTree = "<group>"; };
 		7D19998825756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatProgressIndicatorCircular+Size.swift"; sourceTree = "<group>"; };
 		7D213B89269F53D4005B15C3 /* NatDialogDividerConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatDialogDividerConfigurable.swift; sourceTree = "<group>"; };
+		7D23B34926D7DDFD00FB5DA9 /* HelveticaNowDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNowDisplay-Regular.ttf"; sourceTree = "<group>"; };
+		7D23B34A26D7DDFE00FB5DA9 /* WorkSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Regular.ttf"; sourceTree = "<group>"; };
+		7D23B34B26D7DDFF00FB5DA9 /* Recoleta-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Recoleta-Regular.ttf"; sourceTree = "<group>"; };
+		7D23B34C26D7DE0000FB5DA9 /* SuisseIntl-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SuisseIntl-Regular.ttf"; sourceTree = "<group>"; };
+		7D23B34D26D7DE0100FB5DA9 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		7D23B34E26D7DE0200FB5DA9 /* DrukCy-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DrukCy-Bold.ttf"; sourceTree = "<group>"; };
+		7D23B34F26D7DE0200FB5DA9 /* ZapfHumanist601BT-Roman.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ZapfHumanist601BT-Roman.ttf"; sourceTree = "<group>"; };
+		7D23B35026D7DE0300FB5DA9 /* HelveticaNowText-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNowText-Regular.ttf"; sourceTree = "<group>"; };
+		7D23B35C26D97B0900FB5DA9 /* CustomFontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFontStyle.swift; sourceTree = "<group>"; };
 		7D277B4F26976900005075EF /* AppBarContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBarContentType.swift; sourceTree = "<group>"; };
 		7D277B62269E2551005075EF /* DialogHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogHeaderView.swift; sourceTree = "<group>"; };
 		7D277B67269E43A1005075EF /* DialogBodyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogBodyView.swift; sourceTree = "<group>"; };
@@ -1721,6 +1739,21 @@
 			path = Avatar;
 			sourceTree = "<group>";
 		};
+		7D23B34826D7DDD900FB5DA9 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7D23B34E26D7DE0200FB5DA9 /* DrukCy-Bold.ttf */,
+				7D23B34926D7DDFD00FB5DA9 /* HelveticaNowDisplay-Regular.ttf */,
+				7D23B35026D7DE0300FB5DA9 /* HelveticaNowText-Regular.ttf */,
+				7D23B34D26D7DE0100FB5DA9 /* Montserrat-Regular.ttf */,
+				7D23B34B26D7DDFF00FB5DA9 /* Recoleta-Regular.ttf */,
+				7D23B34C26D7DE0000FB5DA9 /* SuisseIntl-Regular.ttf */,
+				7D23B34A26D7DDFE00FB5DA9 /* WorkSans-Regular.ttf */,
+				7D23B34F26D7DE0200FB5DA9 /* ZapfHumanist601BT-Roman.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		7D5F149825A78220007986EE /* IconSource */ = {
 			isa = PBXGroup;
 			children = (
@@ -2618,8 +2651,9 @@
 		BFB6071E86F7F179141AA1490D7EE633 /* Style */ = {
 			isa = PBXGroup;
 			children = (
-				2D221DC99290B86F7B59C72F4FA77BE4 /* FontIconStyle.swift */,
 				93C1C3FD73F0E5F31735966CB48D7B16 /* FontStyle.swift */,
+				2D221DC99290B86F7B59C72F4FA77BE4 /* IconFontStyle.swift */,
+				7D23B35C26D97B0900FB5DA9 /* CustomFontStyle.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -2690,6 +2724,7 @@
 		DD20EF61A300C3292AE0EBCF255B5BD6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7D23B34826D7DDD900FB5DA9 /* Fonts */,
 				438A5C92460A2D83E14DF108D8CD8988 /* Images.xcassets */,
 			);
 			path = Resources;
@@ -2913,7 +2948,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D23B35726D7DE0300FB5DA9 /* ZapfHumanist601BT-Roman.ttf in Resources */,
+				7D23B35526D7DE0300FB5DA9 /* Montserrat-Regular.ttf in Resources */,
+				7D23B35426D7DE0300FB5DA9 /* SuisseIntl-Regular.ttf in Resources */,
+				7D23B35226D7DE0300FB5DA9 /* WorkSans-Regular.ttf in Resources */,
 				67BB06E023B48B85454BD2B38E60B156 /* Images.xcassets in Resources */,
+				7D23B35326D7DE0300FB5DA9 /* Recoleta-Regular.ttf in Resources */,
+				7D23B35826D7DE0300FB5DA9 /* HelveticaNowText-Regular.ttf in Resources */,
+				7D23B35126D7DE0300FB5DA9 /* HelveticaNowDisplay-Regular.ttf in Resources */,
+				7D23B35626D7DE0300FB5DA9 /* DrukCy-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3302,7 +3345,7 @@
 				84BC900824AA1678007DF09D /* NatDialogController+AlertStyleBuilder.swift in Sources */,
 				84BF066724B4A8DA00462AC5 /* ShortcutContainedStyle.swift in Sources */,
 				79FC598A25CAE199001CCB56 /* NatCard.swift in Sources */,
-				758EE01159A6E7AFC7217055678D4ED3 /* FontIconStyle.swift in Sources */,
+				758EE01159A6E7AFC7217055678D4ED3 /* IconFontStyle.swift in Sources */,
 				7DC81CB6261223CC006BE689 /* UIImage+UIColor.swift in Sources */,
 				269C886224C23B0100A507BE /* UINavigationController+Configure.swift in Sources */,
 				7D5349E826C6A33800F88EA7 /* NatImage+Fade.swift in Sources */,
@@ -3377,6 +3420,7 @@
 				5C0716F242EFC1AF6A61CBE257DA7CFE /* TextField.swift in Sources */,
 				79EA0C20260A85DE00742C0A /* NatCounterButton.swift in Sources */,
 				E07925C3535D79164EBC061C7D6A6CE4 /* TextFieldType.swift in Sources */,
+				7D23B35D26D97B0900FB5DA9 /* CustomFontStyle.swift in Sources */,
 				847C829224E36AB7001CE116 /* NaturaLightTheme.swift in Sources */,
 				84932F1324EAB9270052265F /* AvailableTheme.swift in Sources */,
 				518E40E608084AD36390CE8A38A1CB5A /* UICollectionView+Reusable.swift in Sources */,

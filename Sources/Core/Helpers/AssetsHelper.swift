@@ -16,6 +16,25 @@ class AssetsHelper {
         }
     }
 
+    static func loadCustomFont(_ font: CustomFontStyle) {
+        let fontNames = UIFont.fontNames(forFamilyName: font.familyName)
+        if !fontNames.contains(font.name) {
+            registerCustomFont(font.filename)
+        }
+    }
+
+    private static func registerCustomFont(_ name: String) {
+        var error: Unmanaged<CFError>?
+        let bundle = Bundle(for: self)
+
+        guard let pathForResource = bundle.url(forResource: name, withExtension: "ttf") else {
+            return
+        }
+        if !CTFontManagerRegisterFontsForURL(pathForResource as CFURL, CTFontManagerScope.process, &error) {
+            print(error as Any)
+        }
+    }
+
     private static func registerFont(_ name: String) {
         var error: Unmanaged<CFError>?
         guard let bundle = Bundle(identifier: IconsSource.natDS.identifier) else {
