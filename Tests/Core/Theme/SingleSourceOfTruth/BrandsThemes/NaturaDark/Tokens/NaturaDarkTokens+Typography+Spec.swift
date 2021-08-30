@@ -31,6 +31,30 @@ final class NaturaDarkTokensTypographySpec: QuickSpec {
                 }
         }
 
+        describe("#typographyFontFamilyDisplay") {
+            it("returns an expected value") {
+                expect(systemUnderTest.typographyFontFamilyDisplay).to(equal("Helvetica Now Display"))
+                }
+        }
+
+        describe("#typographyFontFamilyHeadline") {
+            it("returns an expected value") {
+                expect(systemUnderTest.typographyFontFamilyHeadline).to(equal("Helvetica Now Text"))
+                }
+        }
+
+        describe("#typographyFontFamilyBody") {
+            it("returns an expected value") {
+                expect(systemUnderTest.typographyFontFamilyBody).to(equal("Helvetica Now Text"))
+                }
+        }
+
+        describe("#typographyFontFamilyFallback") {
+            it("returns an expected value") {
+                expect(systemUnderTest.typographyFontFamilyFallback).to(equal("San Francisco"))
+                }
+        }
+
         describe("#typographyLineHeightReset") {
             it("returns an expected value") {
                 expect(systemUnderTest.typographyLineHeightReset).to(equal(1))

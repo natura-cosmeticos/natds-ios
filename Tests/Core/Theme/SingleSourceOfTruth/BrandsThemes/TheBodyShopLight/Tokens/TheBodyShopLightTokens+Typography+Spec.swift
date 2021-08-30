@@ -31,6 +31,30 @@ final class TheBodyShopLightTokensTypographySpec: QuickSpec {
                 }
         }
 
+        describe("#typographyFontFamilyDisplay") {
+            it("returns an expected value") {
+                expect(systemUnderTest.typographyFontFamilyDisplay).to(equal("Druk Bold"))
+                }
+        }
+
+        describe("#typographyFontFamilyHeadline") {
+            it("returns an expected value") {
+                expect(systemUnderTest.typographyFontFamilyHeadline).to(equal("Recoleta"))
+                }
+        }
+
+        describe("#typographyFontFamilyBody") {
+            it("returns an expected value") {
+                expect(systemUnderTest.typographyFontFamilyBody).to(equal("Work Sans"))
+                }
+        }
+
+        describe("#typographyFontFamilyFallback") {
+            it("returns an expected value") {
+                expect(systemUnderTest.typographyFontFamilyFallback).to(equal("San Francisco"))
+                }
+        }
+
         describe("#typographyLineHeightReset") {
             it("returns an expected value") {
                 expect(systemUnderTest.typographyLineHeightReset).to(equal(1))

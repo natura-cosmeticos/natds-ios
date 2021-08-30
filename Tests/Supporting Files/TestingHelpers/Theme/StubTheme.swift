@@ -6,10 +6,21 @@ struct StubTheme: Theme {
 }
 
 private struct StubTokens: Tokens {
-    let assetBrandNeutralA = "avon-a-official"
-    let assetBrandNeutralB = "avon-a-official"
-    let assetBrandCustomA = "avon-a-custom"
-    let assetBrandCustomB = "avon-a-custom"
+    let assetFontFileDisplay = "Montserrat-Regular"
+    let assetFontFileHeadline = "Montserrat-Regular"
+    let assetFontFileBody = "Montserrat-Regular"
+    let assetBrandNeutralAFile = "avon-a-official"
+    let assetBrandNeutralAWidth: CGFloat = 256
+    let assetBrandNeutralAHeight: CGFloat = 58
+    let assetBrandNeutralBFile = "avon-a-official"
+    let assetBrandNeutralBWidth: CGFloat = 256
+    let assetBrandNeutralBHeight: CGFloat = 58
+    let assetBrandCustomAFile = "avon-a-custom"
+    let assetBrandCustomAWidth: CGFloat = 256
+    let assetBrandCustomAHeight: CGFloat = 58
+    let assetBrandCustomBFile = "avon-a-custom"
+    let assetBrandCustomBWidth: CGFloat = 256
+    let assetBrandCustomBHeight: CGFloat = 58
     let borderRadiusNone: CGFloat = 0
     let borderRadiusSmall: CGFloat = 2
     let borderRadiusMedium: CGFloat = 4
@@ -139,6 +150,10 @@ private struct StubTokens: Tokens {
     let typographyFontFamilySecondary = "sans-serif"
     let typographyFontFamilyBranding = "Helvetica Now"
     let typographyFontFamilyCode = "SF Mono"
+    let typographyFontFamilyDisplay = "Montserrat"
+    let typographyFontFamilyHeadline = "Montserrat"
+    let typographyFontFamilyBody = "Montserrat"
+    let typographyFontFamilyFallback = "San Francisco"
     let typographyLineHeightReset: CGFloat = 1
     let typographyLineHeightSmall: CGFloat = 1.25
     let typographyLineHeightMedium: CGFloat = 1.5

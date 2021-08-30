@@ -31,6 +31,30 @@ final class AvonLightTokensTypographySpec: QuickSpec {
                 }
         }
 
+        describe("#typographyFontFamilyDisplay") {
+            it("returns an expected value") {
+                expect(systemUnderTest.typographyFontFamilyDisplay).to(equal("Montserrat"))
+                }
+        }
+
+        describe("#typographyFontFamilyHeadline") {
+            it("returns an expected value") {
+                expect(systemUnderTest.typographyFontFamilyHeadline).to(equal("Montserrat"))
+                }
+        }
+
+        describe("#typographyFontFamilyBody") {
+            it("returns an expected value") {
+                expect(systemUnderTest.typographyFontFamilyBody).to(equal("Montserrat"))
+                }
+        }
+
+        describe("#typographyFontFamilyFallback") {
+            it("returns an expected value") {
+                expect(systemUnderTest.typographyFontFamilyFallback).to(equal("San Francisco"))
+                }
+        }
+
         describe("#typographyLineHeightReset") {
             it("returns an expected value") {
                 expect(systemUnderTest.typographyLineHeightReset).to(equal(1))
