@@ -33,7 +33,7 @@ final class TheBodyShopDarkTokensTypographySpec: QuickSpec {
 
         describe("#typographyFontFamilyDisplay") {
             it("returns an expected value") {
-                expect(systemUnderTest.typographyFontFamilyDisplay).to(equal("Druk Bold"))
+                expect(systemUnderTest.typographyFontFamilyDisplay).to(equal("Druk Cy"))
                 }
         }
 
