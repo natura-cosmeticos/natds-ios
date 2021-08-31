@@ -167,7 +167,7 @@ struct TheBodyShopDarkTokens: Tokens {
     let typographyFontFamilySecondary = "sans-serif"
     let typographyFontFamilyBranding = "Helvetica Now"
     let typographyFontFamilyCode = "SF Mono"
-    let typographyFontFamilyDisplay = "Druk Bold"
+    let typographyFontFamilyDisplay = "Druk Cy"
     let typographyFontFamilyHeadline = "Recoleta"
     let typographyFontFamilyBody = "Work Sans"
     let typographyFontFamilyFallback = "San Francisco"
