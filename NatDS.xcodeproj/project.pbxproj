@@ -200,14 +200,14 @@
 		7D17AB1B25E91C380070FD31 /* NatAvatar+Snapshots+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D17AB1A25E91C380070FD31 /* NatAvatar+Snapshots+Tests.swift */; };
 		7D19998925756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19998825756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift */; };
 		7D213B8A269F53D4005B15C3 /* NatDialogDividerConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D213B89269F53D4005B15C3 /* NatDialogDividerConfigurable.swift */; };
-		7D23B35126D7DE0300FB5DA9 /* HelveticaNowDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B34926D7DDFD00FB5DA9 /* HelveticaNowDisplay-Regular.ttf */; };
-		7D23B35226D7DE0300FB5DA9 /* WorkSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B34A26D7DDFE00FB5DA9 /* WorkSans-Regular.ttf */; };
-		7D23B35326D7DE0300FB5DA9 /* Recoleta-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B34B26D7DDFF00FB5DA9 /* Recoleta-Regular.ttf */; };
-		7D23B35426D7DE0300FB5DA9 /* SuisseIntl-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B34C26D7DE0000FB5DA9 /* SuisseIntl-Regular.ttf */; };
-		7D23B35526D7DE0300FB5DA9 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B34D26D7DE0100FB5DA9 /* Montserrat-Regular.ttf */; };
-		7D23B35626D7DE0300FB5DA9 /* DrukCy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B34E26D7DE0200FB5DA9 /* DrukCy-Bold.ttf */; };
-		7D23B35726D7DE0300FB5DA9 /* ZapfHumanist601BT-Roman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B34F26D7DE0200FB5DA9 /* ZapfHumanist601BT-Roman.ttf */; };
-		7D23B35826D7DE0300FB5DA9 /* HelveticaNowText-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B35026D7DE0300FB5DA9 /* HelveticaNowText-Regular.ttf */; };
+		7D23B35126D7DE0300FB5DA9 /* HelveticaNowDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B34926D7DDFD00FB5DA9 /* HelveticaNowDisplay-Regular.ttf */; settings = {ASSET_TAGS = (natura, ); }; };
+		7D23B35226D7DE0300FB5DA9 /* WorkSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B34A26D7DDFE00FB5DA9 /* WorkSans-Regular.ttf */; settings = {ASSET_TAGS = (thebodyshop, ); }; };
+		7D23B35326D7DE0300FB5DA9 /* Recoleta-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B34B26D7DDFF00FB5DA9 /* Recoleta-Regular.ttf */; settings = {ASSET_TAGS = (thebodyshop, ); }; };
+		7D23B35426D7DE0300FB5DA9 /* SuisseIntl-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B34C26D7DE0000FB5DA9 /* SuisseIntl-Regular.ttf */; settings = {ASSET_TAGS = (aesop, ); }; };
+		7D23B35526D7DE0300FB5DA9 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B34D26D7DE0100FB5DA9 /* Montserrat-Regular.ttf */; settings = {ASSET_TAGS = (avon, ); }; };
+		7D23B35626D7DE0300FB5DA9 /* DrukCy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B34E26D7DE0200FB5DA9 /* DrukCy-Bold.ttf */; settings = {ASSET_TAGS = (thebodyshop, ); }; };
+		7D23B35726D7DE0300FB5DA9 /* ZapfHumanist601BT-Roman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B34F26D7DE0200FB5DA9 /* ZapfHumanist601BT-Roman.ttf */; settings = {ASSET_TAGS = (aesop, ); }; };
+		7D23B35826D7DE0300FB5DA9 /* HelveticaNowText-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B35026D7DE0300FB5DA9 /* HelveticaNowText-Regular.ttf */; settings = {ASSET_TAGS = (natura, ); }; };
 		7D23B35D26D97B0900FB5DA9 /* CustomFontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D23B35C26D97B0900FB5DA9 /* CustomFontStyle.swift */; };
 		7D277B5026976900005075EF /* AppBarContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D277B4F26976900005075EF /* AppBarContentType.swift */; };
 		7D277B63269E2551005075EF /* DialogHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D277B62269E2551005075EF /* DialogHeaderView.swift */; };
@@ -1742,14 +1742,10 @@
 		7D23B34826D7DDD900FB5DA9 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				7D23B34E26D7DE0200FB5DA9 /* DrukCy-Bold.ttf */,
-				7D23B34926D7DDFD00FB5DA9 /* HelveticaNowDisplay-Regular.ttf */,
-				7D23B35026D7DE0300FB5DA9 /* HelveticaNowText-Regular.ttf */,
-				7D23B34D26D7DE0100FB5DA9 /* Montserrat-Regular.ttf */,
-				7D23B34B26D7DDFF00FB5DA9 /* Recoleta-Regular.ttf */,
-				7D23B34C26D7DE0000FB5DA9 /* SuisseIntl-Regular.ttf */,
-				7D23B34A26D7DDFE00FB5DA9 /* WorkSans-Regular.ttf */,
-				7D23B34F26D7DE0200FB5DA9 /* ZapfHumanist601BT-Roman.ttf */,
+				7DFB000A26E170F800CB7465 /* Aesop */,
+				7DFB000B26E1711700CB7465 /* Avon */,
+				7DFB000D26E1713500CB7465 /* Natura */,
+				7DFB000C26E1712400CB7465 /* TheBodyShop */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -1859,6 +1855,42 @@
 				7DE2B11525FBFBAB00C5CBC0 /* NatListItemCell+Snapshot+Tests.swift */,
 			);
 			path = ListItem;
+			sourceTree = "<group>";
+		};
+		7DFB000A26E170F800CB7465 /* Aesop */ = {
+			isa = PBXGroup;
+			children = (
+				7D23B34C26D7DE0000FB5DA9 /* SuisseIntl-Regular.ttf */,
+				7D23B34F26D7DE0200FB5DA9 /* ZapfHumanist601BT-Roman.ttf */,
+			);
+			path = Aesop;
+			sourceTree = "<group>";
+		};
+		7DFB000B26E1711700CB7465 /* Avon */ = {
+			isa = PBXGroup;
+			children = (
+				7D23B34D26D7DE0100FB5DA9 /* Montserrat-Regular.ttf */,
+			);
+			path = Avon;
+			sourceTree = "<group>";
+		};
+		7DFB000C26E1712400CB7465 /* TheBodyShop */ = {
+			isa = PBXGroup;
+			children = (
+				7D23B34E26D7DE0200FB5DA9 /* DrukCy-Bold.ttf */,
+				7D23B34B26D7DDFF00FB5DA9 /* Recoleta-Regular.ttf */,
+				7D23B34A26D7DDFE00FB5DA9 /* WorkSans-Regular.ttf */,
+			);
+			path = TheBodyShop;
+			sourceTree = "<group>";
+		};
+		7DFB000D26E1713500CB7465 /* Natura */ = {
+			isa = PBXGroup;
+			children = (
+				7D23B34926D7DDFD00FB5DA9 /* HelveticaNowDisplay-Regular.ttf */,
+				7D23B35026D7DE0300FB5DA9 /* HelveticaNowText-Regular.ttf */,
+			);
+			path = Natura;
 			sourceTree = "<group>";
 		};
 		8401A9BE24FED3C900B6E762 /* IconButton */ = {
@@ -2906,6 +2938,12 @@
 		36C3D511769B0C048CF47BC3D975C8A0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					aesop,
+					avon,
+					natura,
+					thebodyshop,
+				);
 				LastSwiftUpdateCheck = 1160;
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = Natura;
