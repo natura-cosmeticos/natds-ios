@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.4.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.3.1...6.4.0) (2021-09-13)
+
+
+### Features
+
+* add low emphasis navigation items to sample app ([fcdb1e1](https://github.com/natura-cosmeticos/natds-ios/commit/fcdb1e1b3c7f5d83fc7b0782c2c939f959690e81))
+* add new lowemphasis state to navigation drawer ([e2a2816](https://github.com/natura-cosmeticos/natds-ios/commit/e2a28162406f8052ef0333d8406686c86ef036a8))
+
 ### [6.3.1](https://github.com/natura-cosmeticos/natds-ios/compare/6.3.0...6.3.1) (2021-08-20)
 
 
