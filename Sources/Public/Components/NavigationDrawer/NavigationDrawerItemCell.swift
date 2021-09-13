@@ -4,6 +4,7 @@ public class NavigationDrawerItemCell: UITableViewCell {
         case normal
         case disabled
         case selected
+        case lowEmphasis
     }
 
     public var state: State = .normal {
@@ -179,6 +180,7 @@ private extension NavigationDrawerItemCell {
         highlightSelectedView.isHidden = state != .selected
         highlightSelectedView.backgroundColor = hasSubItems ? NatColors.lowEmphasis : NatColors.secondary
 
-        contentView.alpha = state == .disabled ? 0.48 : 1.0
+        let shouldShowLowEmphasis = (state == .disabled) || (state == .lowEmphasis)
+        contentView.alpha = shouldShowLowEmphasis ? 0.48 : 1.0
     }
 }
