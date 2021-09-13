@@ -56,6 +56,9 @@ extension NavigationDrawerItemViewController: NavigationDrawerDelegate {
         if model.disabled {
             item.state = .disabled
         }
+        if model.lowEmphasis {
+            item.state = .lowEmphasis
+        }
     }
 
     func configureSubitem(_ subitem: NavigationDrawerSubitemCell, at index: NavigationDrawer.IndexMenu) {
@@ -67,6 +70,7 @@ extension NavigationDrawerItemViewController: NavigationDrawerDelegate {
     }
 }
 
+// swiftlint:disable function_body_length
 private extension NavigationDrawerItemViewController {
     struct ItemFactory {
         static func build() -> [Item] {
@@ -81,6 +85,7 @@ private extension NavigationDrawerItemViewController {
                      tagText: "New"),
                 Item(label: "Item with one subitem",
                      icon: NatDSIcons.getIcon(.outlinedActionNewrequest),
+                     lowEmphasis: true,
                      subitems: [
                         Subitem(label: "Subitem 2.1", disabled: false)
                 ]),
@@ -109,7 +114,18 @@ private extension NavigationDrawerItemViewController {
                         Subitem(label: "Subitem 6.1", disabled: true),
                         Subitem(label: "Subitem 6.3", disabled: false),
                         Subitem(label: "Subitem 6.4", disabled: false)
-                ])
+                ]),
+                Item(label: "Low emphasis item",
+                     icon: NatDSIcons.getIcon(.outlinedActionHelp),
+                     lowEmphasis: true),
+                Item(label: "Low emphasis item with tag",
+                     icon: NatDSIcons.getIcon(.outlinedActionLike),
+                     lowEmphasis: true,
+                     tagText: "New"),
+                Item(label: "Low emphasis item with subitem",
+                     icon: NatDSIcons.getIcon(.outlinedActionMic),
+                     lowEmphasis: true,
+                     subitems: [Subitem(label: "Subitem 9.1", disabled: false)])
             ]
 
             return items
@@ -120,13 +136,20 @@ private extension NavigationDrawerItemViewController {
         let label: String
         let icon: String?
         let disabled: Bool
+        let lowEmphasis: Bool
         let tagText: String?
         let subitems: [Subitem]
 
-        init(label: String, icon: String?, disabled: Bool = false, tagText: String? = nil, subitems: [Subitem] = []) {
+        init(label: String,
+             icon: String?,
+             disabled: Bool = false,
+             lowEmphasis: Bool = false,
+             tagText: String? = nil,
+             subitems: [Subitem] = []) {
             self.label = label
             self.icon = icon
             self.disabled = disabled
+            self.lowEmphasis = lowEmphasis
             self.tagText = tagText
             self.subitems = subitems
         }
