@@ -65,6 +65,19 @@ final class NavigationDrawerItemCellTests: XCTestCase {
         assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.99))
     }
 
+    func test_lowEmphasisStateWithoutSubItems_hasSelectedSnapshotWithoutArrow() {
+        systemUnderTest.state = .lowEmphasis
+
+        assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.99))
+    }
+
+    func test_lowEmphasisStateWithSubItems_hasSelectedSnapshotWithArrow() {
+        systemUnderTest.state = .lowEmphasis
+        systemUnderTest.hasSubItems = true
+
+        assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.99))
+    }
+
     func test_setIcon_hasSnapshotWithCustomIcon() {
         systemUnderTest.icon = nil
 
