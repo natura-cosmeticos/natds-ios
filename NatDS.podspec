@@ -14,13 +14,6 @@ Pod::Spec.new do |s|
 
   s.resources           = ['Sources/**/*.xcassets']
 
-  s.on_demand_resources = {
-    'aesop' => ['Sources/Resources/Fonts/Aesop/*.ttf'],
-    'avon' => ['Sources/Resources/Fonts/Avon/*.ttf'],
-    'natura' => ['Sources/Resources/Fonts/Natura/*.ttf'],
-    'thebodyshop' => ['Sources/Resources/Fonts/TheBodyShop/*.ttf']
-  }
-
   s.swift_version = '5.0' 
   s.platform      = :ios, '10.0'
 end

@@ -200,13 +200,13 @@
 		7D17AB1B25E91C380070FD31 /* NatAvatar+Snapshots+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D17AB1A25E91C380070FD31 /* NatAvatar+Snapshots+Tests.swift */; };
 		7D19998925756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19998825756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift */; };
 		7D213B8A269F53D4005B15C3 /* NatDialogDividerConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D213B89269F53D4005B15C3 /* NatDialogDividerConfigurable.swift */; };
-		7D23B35126D7DE0300FB5DA9 /* HelveticaNowDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B34926D7DDFD00FB5DA9 /* HelveticaNowDisplay-Regular.ttf */; settings = {ASSET_TAGS = (natura, ); }; };
+		7D23B35126D7DE0300FB5DA9 /* HelveticaNowDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B34926D7DDFD00FB5DA9 /* HelveticaNowDisplay-Regular.ttf */; };
 		7D23B35226D7DE0300FB5DA9 /* WorkSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B34A26D7DDFE00FB5DA9 /* WorkSans-Regular.ttf */; settings = {ASSET_TAGS = (thebodyshop, ); }; };
-		7D23B35326D7DE0300FB5DA9 /* Recoleta-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B34B26D7DDFF00FB5DA9 /* Recoleta-Regular.ttf */; settings = {ASSET_TAGS = (thebodyshop, ); }; };
-		7D23B35526D7DE0300FB5DA9 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B34D26D7DE0100FB5DA9 /* Montserrat-Regular.ttf */; settings = {ASSET_TAGS = (avon, ); }; };
-		7D23B35626D7DE0300FB5DA9 /* DrukCy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B34E26D7DE0200FB5DA9 /* DrukCy-Bold.ttf */; settings = {ASSET_TAGS = (thebodyshop, ); }; };
-		7D23B35726D7DE0300FB5DA9 /* ZapfHumanist601BT-Roman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B34F26D7DE0200FB5DA9 /* ZapfHumanist601BT-Roman.ttf */; settings = {ASSET_TAGS = (aesop, ); }; };
-		7D23B35826D7DE0300FB5DA9 /* HelveticaNowText-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B35026D7DE0300FB5DA9 /* HelveticaNowText-Regular.ttf */; settings = {ASSET_TAGS = (natura, ); }; };
+		7D23B35326D7DE0300FB5DA9 /* Recoleta-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B34B26D7DDFF00FB5DA9 /* Recoleta-Regular.ttf */; };
+		7D23B35526D7DE0300FB5DA9 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B34D26D7DE0100FB5DA9 /* Montserrat-Regular.ttf */; };
+		7D23B35626D7DE0300FB5DA9 /* DrukCy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B34E26D7DE0200FB5DA9 /* DrukCy-Bold.ttf */; };
+		7D23B35726D7DE0300FB5DA9 /* ZapfHumanist601BT-Roman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B34F26D7DE0200FB5DA9 /* ZapfHumanist601BT-Roman.ttf */; };
+		7D23B35826D7DE0300FB5DA9 /* HelveticaNowText-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B35026D7DE0300FB5DA9 /* HelveticaNowText-Regular.ttf */; };
 		7D23B35D26D97B0900FB5DA9 /* CustomFontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D23B35C26D97B0900FB5DA9 /* CustomFontStyle.swift */; };
 		7D277B5026976900005075EF /* AppBarContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D277B4F26976900005075EF /* AppBarContentType.swift */; };
 		7D277B63269E2551005075EF /* DialogHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D277B62269E2551005075EF /* DialogHeaderView.swift */; };
@@ -230,7 +230,7 @@
 		7D5F149A25A782AB007986EE /* IconsSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5F149925A782AB007986EE /* IconsSource.swift */; };
 		7D60A443260914DE00A23C1A /* NatIconButton+Backgrounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D60A442260914DE00A23C1A /* NatIconButton+Backgrounds.swift */; };
 		7D60A4A0260E208E00A23C1A /* NatListItem+Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D60A49F260E208E00A23C1A /* NatListItem+Feedback.swift */; };
-		7D6947D226E8FB89007D00A4 /* SuisseIntl-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D6947D126E8FB89007D00A4 /* SuisseIntl-Regular.ttf */; settings = {ASSET_TAGS = (aesop, ); }; };
+		7D6947D226E8FB89007D00A4 /* SuisseIntl-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D6947D126E8FB89007D00A4 /* SuisseIntl-Regular.ttf */; };
 		7D704EDB26AB556100B64226 /* NatCounter+Size+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D704EDA26AB556100B64226 /* NatCounter+Size+Spec.swift */; };
 		7D75A43925DB00130050ACA9 /* NatAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D75A43825DB00130050ACA9 /* NatAvatar.swift */; };
 		7D75A44125DB00230050ACA9 /* NatAvatar+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D75A44025DB00230050ACA9 /* NatAvatar+Size.swift */; };
