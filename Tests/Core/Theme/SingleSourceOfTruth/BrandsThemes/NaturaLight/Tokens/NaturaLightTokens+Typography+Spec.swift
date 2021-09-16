@@ -31,27 +31,33 @@ final class NaturaLightTokensTypographySpec: QuickSpec {
                 }
         }
 
-        describe("#typographyFontFamilyDisplay") {
+        describe("#typographyDisplayFontFamily") {
             it("returns an expected value") {
-                expect(systemUnderTest.typographyFontFamilyDisplay).to(equal("Helvetica Now Display"))
+                expect(systemUnderTest.typographyDisplayFontFamily).to(equal("Helvetica Now Display"))
                 }
         }
 
-        describe("#typographyFontFamilyHeadline") {
+        describe("#typographyHeadlineFontFamily") {
             it("returns an expected value") {
-                expect(systemUnderTest.typographyFontFamilyHeadline).to(equal("Helvetica Now Text"))
+                expect(systemUnderTest.typographyHeadlineFontFamily).to(equal("Helvetica Now Display"))
                 }
         }
 
-        describe("#typographyFontFamilyBody") {
+        describe("#typographyBodyRegularFontFamily") {
             it("returns an expected value") {
-                expect(systemUnderTest.typographyFontFamilyBody).to(equal("Helvetica Now Text"))
+                expect(systemUnderTest.typographyBodyRegularFontFamily).to(equal("Helvetica Now Display"))
                 }
         }
 
-        describe("#typographyFontFamilyFallback") {
+        describe("#typographyBodyBoldFontFamily") {
             it("returns an expected value") {
-                expect(systemUnderTest.typographyFontFamilyFallback).to(equal("San Francisco"))
+                expect(systemUnderTest.typographyBodyBoldFontFamily).to(equal("Helvetica Now Display"))
+                }
+        }
+
+        describe("#typographyFallbackFontFamily") {
+            it("returns an expected value") {
+                expect(systemUnderTest.typographyFallbackFontFamily).to(equal("San Francisco"))
                 }
         }
 

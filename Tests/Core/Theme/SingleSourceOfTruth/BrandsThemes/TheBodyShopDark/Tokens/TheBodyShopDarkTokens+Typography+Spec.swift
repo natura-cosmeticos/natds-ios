@@ -31,27 +31,33 @@ final class TheBodyShopDarkTokensTypographySpec: QuickSpec {
                 }
         }
 
-        describe("#typographyFontFamilyDisplay") {
+        describe("#typographyDisplayFontFamily") {
             it("returns an expected value") {
-                expect(systemUnderTest.typographyFontFamilyDisplay).to(equal("Druk Cy"))
+                expect(systemUnderTest.typographyDisplayFontFamily).to(equal("Druk Cy"))
                 }
         }
 
-        describe("#typographyFontFamilyHeadline") {
+        describe("#typographyHeadlineFontFamily") {
             it("returns an expected value") {
-                expect(systemUnderTest.typographyFontFamilyHeadline).to(equal("Recoleta"))
+                expect(systemUnderTest.typographyHeadlineFontFamily).to(equal("Recoleta"))
                 }
         }
 
-        describe("#typographyFontFamilyBody") {
+        describe("#typographyBodyRegularFontFamily") {
             it("returns an expected value") {
-                expect(systemUnderTest.typographyFontFamilyBody).to(equal("Work Sans"))
+                expect(systemUnderTest.typographyBodyRegularFontFamily).to(equal("Work Sans"))
                 }
         }
 
-        describe("#typographyFontFamilyFallback") {
+        describe("#typographyBodyBoldFontFamily") {
             it("returns an expected value") {
-                expect(systemUnderTest.typographyFontFamilyFallback).to(equal("San Francisco"))
+                expect(systemUnderTest.typographyBodyBoldFontFamily).to(equal("Work Sans"))
+                }
+        }
+
+        describe("#typographyFallbackFontFamily") {
+            it("returns an expected value") {
+                expect(systemUnderTest.typographyFallbackFontFamily).to(equal("San Francisco"))
                 }
         }
 

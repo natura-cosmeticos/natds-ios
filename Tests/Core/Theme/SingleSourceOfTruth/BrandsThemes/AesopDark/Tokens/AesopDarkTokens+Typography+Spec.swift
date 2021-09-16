@@ -31,27 +31,33 @@ final class AesopDarkTokensTypographySpec: QuickSpec {
                 }
         }
 
-        describe("#typographyFontFamilyDisplay") {
+        describe("#typographyDisplayFontFamily") {
             it("returns an expected value") {
-                expect(systemUnderTest.typographyFontFamilyDisplay).to(equal("Zapf Humanist 601"))
+                expect(systemUnderTest.typographyDisplayFontFamily).to(equal("Zapf Humanist 601"))
                 }
         }
 
-        describe("#typographyFontFamilyHeadline") {
+        describe("#typographyHeadlineFontFamily") {
             it("returns an expected value") {
-                expect(systemUnderTest.typographyFontFamilyHeadline).to(equal("Suisse"))
+                expect(systemUnderTest.typographyHeadlineFontFamily).to(equal("Suisse Int'l"))
                 }
         }
 
-        describe("#typographyFontFamilyBody") {
+        describe("#typographyBodyRegularFontFamily") {
             it("returns an expected value") {
-                expect(systemUnderTest.typographyFontFamilyBody).to(equal("Suisse"))
+                expect(systemUnderTest.typographyBodyRegularFontFamily).to(equal("Suisse Int'l"))
                 }
         }
 
-        describe("#typographyFontFamilyFallback") {
+        describe("#typographyBodyBoldFontFamily") {
             it("returns an expected value") {
-                expect(systemUnderTest.typographyFontFamilyFallback).to(equal("San Francisco"))
+                expect(systemUnderTest.typographyBodyBoldFontFamily).to(equal("Suisse Int'l"))
+                }
+        }
+
+        describe("#typographyFallbackFontFamily") {
+            it("returns an expected value") {
+                expect(systemUnderTest.typographyFallbackFontFamily).to(equal("San Francisco"))
                 }
         }
 

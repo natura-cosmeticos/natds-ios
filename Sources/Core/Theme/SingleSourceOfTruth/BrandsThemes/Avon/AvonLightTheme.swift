@@ -227,4 +227,3 @@ struct AvonLightComponents: Components {
     let overlineFontWeight: UIFont.Weight = .medium
     let overlineLetterSpacing: CGFloat = 0.8
 }
-
