@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.5.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.4.0...6.5.0) (2021-09-16)
+
+
+### Features
+
+* add brand custom font tokens ([5eb760b](https://github.com/natura-cosmeticos/natds-ios/commit/5eb760b2e056e578c46883e473aeecf86d9e2bed))
+* add custom font files ([9421d82](https://github.com/natura-cosmeticos/natds-ios/commit/9421d8264efbebc22b0eb82426010781bb72320c))
+* add on demand resources support for custom font files ([bf02e9d](https://github.com/natura-cosmeticos/natds-ios/commit/bf02e9d4e0bd59bcaf8e7c9db8a3ba767af2a62b))
+* load new custom fonts from NatFonts method ([3a874e6](https://github.com/natura-cosmeticos/natds-ios/commit/3a874e619a47e8e3f93dd0e1ce7955b48152b977))
+* update tokens and ttf files for custom fonts ([5ed9bd2](https://github.com/natura-cosmeticos/natds-ios/commit/5ed9bd20b3032666d5d04d11c8a1fb6b75306a6f))
+
+
+### Bug Fixes
+
+* fix aesop font family name to allow font rendering ([842f492](https://github.com/natura-cosmeticos/natds-ios/commit/842f492b83e23ed2ef0b83553ee54725aa0f00c6))
+* fix suisse font file for aesop custom font ([1cf5620](https://github.com/natura-cosmeticos/natds-ios/commit/1cf56204f5bf77980a84854c73ae995bb826c5a7))
+* fix tbs font family ([72e0667](https://github.com/natura-cosmeticos/natds-ios/commit/72e06674158d9519aec8b6bc0e7e44e10fa47628))
+
 ## [6.4.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.3.1...6.4.0) (2021-09-13)
 
 
