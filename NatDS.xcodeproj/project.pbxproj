@@ -76,7 +76,6 @@
 		6E6C6EC0105FF251940E4C011D611149 /* String+IconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD080B942BE2F7A41B1DEF15B19C34DB /* String+IconTests.swift */; };
 		6F66306180843E285A6B82D8788835D2 /* NatSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7FB96016F7D02CB5976F54C383CCD6 /* NatSizes.swift */; };
 		7392D4960D4A13B6ADF3AB7372B264F5 /* DesignSystem+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C59F929E88764313134A046BA5C30F /* DesignSystem+Spec.swift */; };
-		758EE01159A6E7AFC7217055678D4ED3 /* IconFontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D221DC99290B86F7B59C72F4FA77BE4 /* IconFontStyle.swift */; };
 		77C55B339CA403354D76ABF05E283D5A /* ValueTextHighlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFBFE7E7E98BBE7DA3F6565371E522D /* ValueTextHighlight.swift */; };
 		790D3F862564181A007A9CA1 /* ProgressIndicatorCircular+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790D3F852564181A007A9CA1 /* ProgressIndicatorCircular+Spec.swift */; };
 		797E60DC25531625002A59E0 /* NatLogoImages+AvonDark+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797E60DB25531625002A59E0 /* NatLogoImages+AvonDark+Spec.swift */; };
@@ -266,6 +265,7 @@
 		7DFC9EA326F38C0A00052C54 /* Recoleta-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DFC9EA226F38C0A00052C54 /* Recoleta-SemiBold.ttf */; };
 		7DFC9EA926F38C1600052C54 /* WorkSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DFC9EA726F38C1500052C54 /* WorkSans-Bold.ttf */; };
 		7DFC9EAA26F38C1600052C54 /* WorkSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DFC9EA826F38C1600052C54 /* WorkSans-Regular.ttf */; };
+		7DFC9EC626F3EC5200052C54 /* IconFontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFC9EC526F3EC5200052C54 /* IconFontStyle.swift */; };
 		80FE219D764217C0520E0C784F9C0C0B /* PulseLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF8919785F0CA6D3AB0AD57F759ED73 /* PulseLayer.swift */; };
 		81AA5DF0A9D5F332072CA1EC9C5CF968 /* NatOpacities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E76AA6120032EE8B86EB90B51BFD8 /* NatOpacities.swift */; };
 		8401A9C024FED41E00B6E762 /* NatIconButton+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8401A9BF24FED41E00B6E762 /* NatIconButton+Snapshot+Tests.swift */; };
@@ -480,7 +480,6 @@
 		26BFBADD251273BA006C22E2 /* NatTag+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatTag+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		2775F568C47ADB6D5DA7B7AFA4A41B4E /* NatElevation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatElevation.swift; sourceTree = "<group>"; };
 		2C157151985B2586A5377C35B4FC1F27 /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
-		2D221DC99290B86F7B59C72F4FA77BE4 /* IconFontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconFontStyle.swift; sourceTree = "<group>"; };
 		2D9C7ED46E33571D0B2A1E60936B8ACD /* Field+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Field+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		307E705878C6A3A88E39CDC82B799361 /* ViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStyle.swift; sourceTree = "<group>"; };
 		30E333A0723F6532721CE638F6819154 /* ButtonOutlineStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonOutlineStyle.swift; sourceTree = "<group>"; };
@@ -705,6 +704,7 @@
 		7DFC9EA226F38C0A00052C54 /* Recoleta-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Recoleta-SemiBold.ttf"; sourceTree = "<group>"; };
 		7DFC9EA726F38C1500052C54 /* WorkSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Bold.ttf"; sourceTree = "<group>"; };
 		7DFC9EA826F38C1600052C54 /* WorkSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Regular.ttf"; sourceTree = "<group>"; };
+		7DFC9EC526F3EC5200052C54 /* IconFontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconFontStyle.swift; sourceTree = "<group>"; };
 		7F9C4251076A01537D0A8CB995DF81EC /* NavigationDrawerSubitemCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerSubitemCellTests.swift; sourceTree = "<group>"; };
 		83C59F929E88764313134A046BA5C30F /* DesignSystem+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DesignSystem+Spec.swift"; sourceTree = "<group>"; };
 		8401A9BF24FED41E00B6E762 /* NatIconButton+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatIconButton+Snapshot+Tests.swift"; sourceTree = "<group>"; };
@@ -2696,8 +2696,8 @@
 			isa = PBXGroup;
 			children = (
 				93C1C3FD73F0E5F31735966CB48D7B16 /* FontStyle.swift */,
-				2D221DC99290B86F7B59C72F4FA77BE4 /* IconFontStyle.swift */,
 				7D23B35C26D97B0900FB5DA9 /* CustomFontStyle.swift */,
+				7DFC9EC526F3EC5200052C54 /* IconFontStyle.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -3399,7 +3399,6 @@
 				84BC900824AA1678007DF09D /* NatDialogController+AlertStyleBuilder.swift in Sources */,
 				84BF066724B4A8DA00462AC5 /* ShortcutContainedStyle.swift in Sources */,
 				79FC598A25CAE199001CCB56 /* NatCard.swift in Sources */,
-				758EE01159A6E7AFC7217055678D4ED3 /* IconFontStyle.swift in Sources */,
 				7DC81CB6261223CC006BE689 /* UIImage+UIColor.swift in Sources */,
 				269C886224C23B0100A507BE /* UINavigationController+Configure.swift in Sources */,
 				7D5349E826C6A33800F88EA7 /* NatImage+Fade.swift in Sources */,
@@ -3429,6 +3428,7 @@
 				26BFBAD725125246006C22E2 /* NatTag.swift in Sources */,
 				7D9038CA261B9F57005A3D0A /* NatRating+State.swift in Sources */,
 				69C11E581C612BD00EC0590B5FE51930 /* NatDialogController.swift in Sources */,
+				7DFC9EC626F3EC5200052C54 /* IconFontStyle.swift in Sources */,
 				7C00D9B09D306A421DBD99953C7BC9E4 /* NatElevation.swift in Sources */,
 				F7894B76EE9A0F4726C5DF88653A4816 /* NatFonts.swift in Sources */,
 				2600C22025129C880040C4C4 /* NatTag+Style.swift in Sources */,
