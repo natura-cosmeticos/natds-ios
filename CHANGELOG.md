@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.5.1](https://github.com/natura-cosmeticos/natds-ios/compare/6.5.0...6.5.1) (2021-09-16)
+
+
+### Bug Fixes
+
+* update FontStyle files to avoid conflict ([7e50192](https://github.com/natura-cosmeticos/natds-ios/commit/7e5019286337dfe299056291871bda4de766891d))
+
 ## [6.5.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.4.0...6.5.0) (2021-09-16)
 
 
