@@ -32,7 +32,7 @@ public struct NatFonts {
         AssetsHelper.loadFont(customFont, type: .custom)
 
         guard let font = UIFont(name: customFont.name, size: fontSize.relatedTextStyle.size) else {
-            return UIFont.systemFont(ofSize: fontSize.relatedTextStyle.size)
+            return UIFont.systemFont(ofSize: fontSize.relatedTextStyle.size, weight: customFont.weight)
         }
         return font
     }
@@ -42,7 +42,7 @@ public struct NatFonts {
         AssetsHelper.loadFont(customFont, type: .custom)
 
         guard let font = UIFont(name: customFont.name, size: fontSize) else {
-            return UIFont.systemFont(ofSize: fontSize)
+            return UIFont.systemFont(ofSize: fontSize, weight: customFont.weight)
         }
         return font
     }

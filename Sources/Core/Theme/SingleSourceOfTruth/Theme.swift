@@ -25,7 +25,8 @@ protocol Theme {
 protocol Tokens {
     var assetFontFileDisplay: String { get }
     var assetFontFileHeadline: String { get }
-    var assetFontFileBody: String { get }
+    var assetFontFileBodyRegular: String { get }
+    var assetFontFileBodyBold: String { get }
     var assetBrandNeutralAFile: String { get }
     var assetBrandNeutralAWidth: CGFloat { get }
     var assetBrandNeutralAHeight: CGFloat { get }
@@ -167,16 +168,22 @@ protocol Tokens {
     var typographyFontFamilySecondary: String { get }
     var typographyFontFamilyBranding: String { get }
     var typographyFontFamilyCode: String { get }
-    var typographyFontFamilyDisplay: String { get }
-    var typographyFontFamilyHeadline: String { get }
-    var typographyFontFamilyBody: String { get }
-    var typographyFontFamilyFallback: String { get }
     var typographyLineHeightReset: CGFloat { get }
     var typographyLineHeightSmall: CGFloat { get }
     var typographyLineHeightMedium: CGFloat { get }
     var typographyLineHeightLarge: CGFloat { get }
     var typographyFontWeightRegular: UIFont.Weight { get }
     var typographyFontWeightMedium: UIFont.Weight { get }
+    var typographyDisplayFontFamily: String { get }
+    var typographyDisplayFontWeight: UIFont.Weight { get }
+    var typographyHeadlineFontFamily: String { get }
+    var typographyHeadlineFontWeight: UIFont.Weight { get }
+    var typographyBodyRegularFontFamily: String { get }
+    var typographyBodyRegularFontWeight: UIFont.Weight { get }
+    var typographyBodyBoldFontFamily: String { get }
+    var typographyBodyBoldFontWeight: UIFont.Weight { get }
+    var typographyFallbackFontFamily: String { get }
+    var typographyFallbackFontWeight: UIFont.Weight { get }
 }
 
 protocol Components {

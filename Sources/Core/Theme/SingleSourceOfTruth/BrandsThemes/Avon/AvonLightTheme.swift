@@ -23,9 +23,10 @@ struct AvonLightTheme: Theme {
 }
 
 struct AvonLightTokens: Tokens {
-    let assetFontFileDisplay = "Montserrat-Regular"
-    let assetFontFileHeadline = "Montserrat-Regular"
-    let assetFontFileBody = "Montserrat-Regular"
+    let assetFontFileDisplay = "Montserrat-Bold"
+    let assetFontFileHeadline = "Montserrat-SemiBold"
+    let assetFontFileBodyRegular = "Montserrat-Regular"
+    let assetFontFileBodyBold = "Montserrat-Bold"
     let assetBrandNeutralAFile = "avon-a-official"
     let assetBrandNeutralAWidth: CGFloat = 256
     let assetBrandNeutralAHeight: CGFloat = 58
@@ -167,16 +168,22 @@ struct AvonLightTokens: Tokens {
     let typographyFontFamilySecondary = "sans-serif"
     let typographyFontFamilyBranding = "Helvetica Now"
     let typographyFontFamilyCode = "SF Mono"
-    let typographyFontFamilyDisplay = "Montserrat"
-    let typographyFontFamilyHeadline = "Montserrat"
-    let typographyFontFamilyBody = "Montserrat"
-    let typographyFontFamilyFallback = "San Francisco"
     let typographyLineHeightReset: CGFloat = 1
     let typographyLineHeightSmall: CGFloat = 1.25
     let typographyLineHeightMedium: CGFloat = 1.5
     let typographyLineHeightLarge: CGFloat = 2
     let typographyFontWeightRegular: UIFont.Weight = .regular
     let typographyFontWeightMedium: UIFont.Weight = .medium
+    let typographyDisplayFontFamily = "Montserrat"
+    let typographyDisplayFontWeight: UIFont.Weight = .bold
+    let typographyHeadlineFontFamily = "Montserrat"
+    let typographyHeadlineFontWeight: UIFont.Weight = .semibold
+    let typographyBodyRegularFontFamily = "Montserrat"
+    let typographyBodyRegularFontWeight: UIFont.Weight = .regular
+    let typographyBodyBoldFontFamily = "Montserrat"
+    let typographyBodyBoldFontWeight: UIFont.Weight = .bold
+    let typographyFallbackFontFamily = "San Francisco"
+    let typographyFallbackFontWeight: UIFont.Weight = .regular
 }
 struct AvonLightComponents: Components {
     let buttonDefaultFontSize: CGFloat = 14

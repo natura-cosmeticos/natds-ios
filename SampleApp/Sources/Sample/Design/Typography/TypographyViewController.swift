@@ -65,17 +65,22 @@ final class TypographyViewController: UIViewController, SampleItem {
             .init(
                 sizeDescription: "display",
                 weightDescription: "custom",
-                font: NatFonts.customFont(ofSize: .heading2, withStyle: .display)
+                font: NatFonts.customFont(ofSize: .heading1, withStyle: .display)
             ),
             .init(
                 sizeDescription: "headline",
                 weightDescription: "custom",
-                font: NatFonts.customFont(ofSize: .heading2, withStyle: .headline)
+                font: NatFonts.customFont(ofSize: .heading1, withStyle: .headline)
             ),
             .init(
-                sizeDescription: "body",
+                sizeDescription: "body regular",
                 weightDescription: "custom",
-                font: NatFonts.customFont(ofSize: .heading2, withStyle: .body)
+                font: NatFonts.customFont(ofSize: .heading1, withStyle: .bodyRegular)
+            ),
+            .init(
+                sizeDescription: "body bold",
+                weightDescription: "custom",
+                font: NatFonts.customFont(ofSize: .heading1, withStyle: .bodyBold)
             ),
             .init(
                 sizeDescription: "heading1:",

@@ -23,9 +23,10 @@ struct NaturaDarkTheme: Theme {
 }
 
 struct NaturaDarkTokens: Tokens {
-    let assetFontFileDisplay = "HelveticaNowDisplay-Regular"
-    let assetFontFileHeadline = "HelveticaNowText-Regular"
-    let assetFontFileBody = "HelveticaNowText-Regular"
+    let assetFontFileDisplay = "HelveticaNowDisplay-Bd"
+    let assetFontFileHeadline = "HelveticaNowDisplay-Md"
+    let assetFontFileBodyRegular = "HelveticaNowDisplay-Regular"
+    let assetFontFileBodyBold = "HelveticaNowDisplay-Bd"
     let assetBrandNeutralAFile = "natura-a-official-dark"
     let assetBrandNeutralAWidth: CGFloat = 256
     let assetBrandNeutralAHeight: CGFloat = 55
@@ -167,16 +168,22 @@ struct NaturaDarkTokens: Tokens {
     let typographyFontFamilySecondary = "sans-serif"
     let typographyFontFamilyBranding = "Helvetica Now"
     let typographyFontFamilyCode = "SF Mono"
-    let typographyFontFamilyDisplay = "Helvetica Now Display"
-    let typographyFontFamilyHeadline = "Helvetica Now Text"
-    let typographyFontFamilyBody = "Helvetica Now Text"
-    let typographyFontFamilyFallback = "San Francisco"
     let typographyLineHeightReset: CGFloat = 1
     let typographyLineHeightSmall: CGFloat = 1.25
     let typographyLineHeightMedium: CGFloat = 1.5
     let typographyLineHeightLarge: CGFloat = 2
     let typographyFontWeightRegular: UIFont.Weight = .regular
     let typographyFontWeightMedium: UIFont.Weight = .medium
+    let typographyDisplayFontFamily = "Helvetica Now Display"
+    let typographyDisplayFontWeight: UIFont.Weight = .bold
+    let typographyHeadlineFontFamily = "Helvetica Now Display"
+    let typographyHeadlineFontWeight: UIFont.Weight = .medium
+    let typographyBodyRegularFontFamily = "Helvetica Now Display"
+    let typographyBodyRegularFontWeight: UIFont.Weight = .regular
+    let typographyBodyBoldFontFamily = "Helvetica Now Display"
+    let typographyBodyBoldFontWeight: UIFont.Weight = .bold
+    let typographyFallbackFontFamily = "San Francisco"
+    let typographyFallbackFontWeight: UIFont.Weight = .regular
 }
 struct NaturaDarkComponents: Components {
     let buttonDefaultFontSize: CGFloat = 14

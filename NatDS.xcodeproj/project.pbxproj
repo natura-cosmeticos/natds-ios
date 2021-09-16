@@ -200,13 +200,7 @@
 		7D17AB1B25E91C380070FD31 /* NatAvatar+Snapshots+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D17AB1A25E91C380070FD31 /* NatAvatar+Snapshots+Tests.swift */; };
 		7D19998925756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19998825756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift */; };
 		7D213B8A269F53D4005B15C3 /* NatDialogDividerConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D213B89269F53D4005B15C3 /* NatDialogDividerConfigurable.swift */; };
-		7D23B35126D7DE0300FB5DA9 /* HelveticaNowDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B34926D7DDFD00FB5DA9 /* HelveticaNowDisplay-Regular.ttf */; };
-		7D23B35226D7DE0300FB5DA9 /* WorkSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B34A26D7DDFE00FB5DA9 /* WorkSans-Regular.ttf */; settings = {ASSET_TAGS = (thebodyshop, ); }; };
-		7D23B35326D7DE0300FB5DA9 /* Recoleta-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B34B26D7DDFF00FB5DA9 /* Recoleta-Regular.ttf */; };
-		7D23B35526D7DE0300FB5DA9 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B34D26D7DE0100FB5DA9 /* Montserrat-Regular.ttf */; };
-		7D23B35626D7DE0300FB5DA9 /* DrukCy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B34E26D7DE0200FB5DA9 /* DrukCy-Bold.ttf */; };
 		7D23B35726D7DE0300FB5DA9 /* ZapfHumanist601BT-Roman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B34F26D7DE0200FB5DA9 /* ZapfHumanist601BT-Roman.ttf */; };
-		7D23B35826D7DE0300FB5DA9 /* HelveticaNowText-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B35026D7DE0300FB5DA9 /* HelveticaNowText-Regular.ttf */; };
 		7D23B35D26D97B0900FB5DA9 /* CustomFontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D23B35C26D97B0900FB5DA9 /* CustomFontStyle.swift */; };
 		7D277B5026976900005075EF /* AppBarContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D277B4F26976900005075EF /* AppBarContentType.swift */; };
 		7D277B63269E2551005075EF /* DialogHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D277B62269E2551005075EF /* DialogHeaderView.swift */; };
@@ -262,6 +256,16 @@
 		7DE2B11625FBFBAB00C5CBC0 /* NatListItemCell+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2B11525FBFBAB00C5CBC0 /* NatListItemCell+Snapshot+Tests.swift */; };
 		7DE2B12C26000BA600C5CBC0 /* UIImageView+Clickable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2B12B26000BA600C5CBC0 /* UIImageView+Clickable.swift */; };
 		7DE6156F26A6054F002621A5 /* NatDialogDividerConfigurable+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE6156E26A6054F002621A5 /* NatDialogDividerConfigurable+Spec.swift */; };
+		7DFC9E8826F38BA500052C54 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DFC9E8526F38BA400052C54 /* Montserrat-Bold.ttf */; };
+		7DFC9E8926F38BA500052C54 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DFC9E8626F38BA500052C54 /* Montserrat-Regular.ttf */; };
+		7DFC9E8A26F38BA500052C54 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DFC9E8726F38BA500052C54 /* Montserrat-SemiBold.ttf */; };
+		7DFC9E9426F38BE500052C54 /* HelveticaNowDisplay-Bd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DFC9E9126F38BE300052C54 /* HelveticaNowDisplay-Bd.ttf */; };
+		7DFC9E9526F38BE500052C54 /* HelveticaNowDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DFC9E9226F38BE400052C54 /* HelveticaNowDisplay-Regular.ttf */; };
+		7DFC9E9626F38BE500052C54 /* HelveticaNowDisplay-Md.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DFC9E9326F38BE500052C54 /* HelveticaNowDisplay-Md.ttf */; };
+		7DFC9E9E26F38C0100052C54 /* DrukCy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DFC9E9D26F38C0100052C54 /* DrukCy-Bold.ttf */; };
+		7DFC9EA326F38C0A00052C54 /* Recoleta-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DFC9EA226F38C0A00052C54 /* Recoleta-SemiBold.ttf */; };
+		7DFC9EA926F38C1600052C54 /* WorkSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DFC9EA726F38C1500052C54 /* WorkSans-Bold.ttf */; };
+		7DFC9EAA26F38C1600052C54 /* WorkSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DFC9EA826F38C1600052C54 /* WorkSans-Regular.ttf */; };
 		80FE219D764217C0520E0C784F9C0C0B /* PulseLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF8919785F0CA6D3AB0AD57F759ED73 /* PulseLayer.swift */; };
 		81AA5DF0A9D5F332072CA1EC9C5CF968 /* NatOpacities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E76AA6120032EE8B86EB90B51BFD8 /* NatOpacities.swift */; };
 		8401A9C024FED41E00B6E762 /* NatIconButton+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8401A9BF24FED41E00B6E762 /* NatIconButton+Snapshot+Tests.swift */; };
@@ -634,13 +638,7 @@
 		7D17AB1A25E91C380070FD31 /* NatAvatar+Snapshots+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatAvatar+Snapshots+Tests.swift"; sourceTree = "<group>"; };
 		7D19998825756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatProgressIndicatorCircular+Size.swift"; sourceTree = "<group>"; };
 		7D213B89269F53D4005B15C3 /* NatDialogDividerConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatDialogDividerConfigurable.swift; sourceTree = "<group>"; };
-		7D23B34926D7DDFD00FB5DA9 /* HelveticaNowDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNowDisplay-Regular.ttf"; sourceTree = "<group>"; };
-		7D23B34A26D7DDFE00FB5DA9 /* WorkSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Regular.ttf"; sourceTree = "<group>"; };
-		7D23B34B26D7DDFF00FB5DA9 /* Recoleta-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Recoleta-Regular.ttf"; sourceTree = "<group>"; };
-		7D23B34D26D7DE0100FB5DA9 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
-		7D23B34E26D7DE0200FB5DA9 /* DrukCy-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DrukCy-Bold.ttf"; sourceTree = "<group>"; };
 		7D23B34F26D7DE0200FB5DA9 /* ZapfHumanist601BT-Roman.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ZapfHumanist601BT-Roman.ttf"; sourceTree = "<group>"; };
-		7D23B35026D7DE0300FB5DA9 /* HelveticaNowText-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNowText-Regular.ttf"; sourceTree = "<group>"; };
 		7D23B35C26D97B0900FB5DA9 /* CustomFontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFontStyle.swift; sourceTree = "<group>"; };
 		7D277B4F26976900005075EF /* AppBarContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBarContentType.swift; sourceTree = "<group>"; };
 		7D277B62269E2551005075EF /* DialogHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogHeaderView.swift; sourceTree = "<group>"; };
@@ -697,6 +695,16 @@
 		7DE2B11525FBFBAB00C5CBC0 /* NatListItemCell+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatListItemCell+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		7DE2B12B26000BA600C5CBC0 /* UIImageView+Clickable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Clickable.swift"; sourceTree = "<group>"; };
 		7DE6156E26A6054F002621A5 /* NatDialogDividerConfigurable+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogDividerConfigurable+Spec.swift"; sourceTree = "<group>"; };
+		7DFC9E8526F38BA400052C54 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		7DFC9E8626F38BA500052C54 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		7DFC9E8726F38BA500052C54 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		7DFC9E9126F38BE300052C54 /* HelveticaNowDisplay-Bd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNowDisplay-Bd.ttf"; sourceTree = "<group>"; };
+		7DFC9E9226F38BE400052C54 /* HelveticaNowDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNowDisplay-Regular.ttf"; sourceTree = "<group>"; };
+		7DFC9E9326F38BE500052C54 /* HelveticaNowDisplay-Md.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNowDisplay-Md.ttf"; sourceTree = "<group>"; };
+		7DFC9E9D26F38C0100052C54 /* DrukCy-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DrukCy-Bold.ttf"; sourceTree = "<group>"; };
+		7DFC9EA226F38C0A00052C54 /* Recoleta-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Recoleta-SemiBold.ttf"; sourceTree = "<group>"; };
+		7DFC9EA726F38C1500052C54 /* WorkSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Bold.ttf"; sourceTree = "<group>"; };
+		7DFC9EA826F38C1600052C54 /* WorkSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Regular.ttf"; sourceTree = "<group>"; };
 		7F9C4251076A01537D0A8CB995DF81EC /* NavigationDrawerSubitemCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerSubitemCellTests.swift; sourceTree = "<group>"; };
 		83C59F929E88764313134A046BA5C30F /* DesignSystem+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DesignSystem+Spec.swift"; sourceTree = "<group>"; };
 		8401A9BF24FED41E00B6E762 /* NatIconButton+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatIconButton+Snapshot+Tests.swift"; sourceTree = "<group>"; };
@@ -1869,7 +1877,9 @@
 		7DFB000B26E1711700CB7465 /* Avon */ = {
 			isa = PBXGroup;
 			children = (
-				7D23B34D26D7DE0100FB5DA9 /* Montserrat-Regular.ttf */,
+				7DFC9E8526F38BA400052C54 /* Montserrat-Bold.ttf */,
+				7DFC9E8626F38BA500052C54 /* Montserrat-Regular.ttf */,
+				7DFC9E8726F38BA500052C54 /* Montserrat-SemiBold.ttf */,
 			);
 			path = Avon;
 			sourceTree = "<group>";
@@ -1877,9 +1887,10 @@
 		7DFB000C26E1712400CB7465 /* TheBodyShop */ = {
 			isa = PBXGroup;
 			children = (
-				7D23B34E26D7DE0200FB5DA9 /* DrukCy-Bold.ttf */,
-				7D23B34B26D7DDFF00FB5DA9 /* Recoleta-Regular.ttf */,
-				7D23B34A26D7DDFE00FB5DA9 /* WorkSans-Regular.ttf */,
+				7DFC9EA726F38C1500052C54 /* WorkSans-Bold.ttf */,
+				7DFC9EA826F38C1600052C54 /* WorkSans-Regular.ttf */,
+				7DFC9E9D26F38C0100052C54 /* DrukCy-Bold.ttf */,
+				7DFC9EA226F38C0A00052C54 /* Recoleta-SemiBold.ttf */,
 			);
 			path = TheBodyShop;
 			sourceTree = "<group>";
@@ -1887,8 +1898,9 @@
 		7DFB000D26E1713500CB7465 /* Natura */ = {
 			isa = PBXGroup;
 			children = (
-				7D23B34926D7DDFD00FB5DA9 /* HelveticaNowDisplay-Regular.ttf */,
-				7D23B35026D7DE0300FB5DA9 /* HelveticaNowText-Regular.ttf */,
+				7DFC9E9126F38BE300052C54 /* HelveticaNowDisplay-Bd.ttf */,
+				7DFC9E9326F38BE500052C54 /* HelveticaNowDisplay-Md.ttf */,
+				7DFC9E9226F38BE400052C54 /* HelveticaNowDisplay-Regular.ttf */,
 			);
 			path = Natura;
 			sourceTree = "<group>";
@@ -2986,15 +2998,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DFC9EA326F38C0A00052C54 /* Recoleta-SemiBold.ttf in Resources */,
 				7D23B35726D7DE0300FB5DA9 /* ZapfHumanist601BT-Roman.ttf in Resources */,
-				7D23B35526D7DE0300FB5DA9 /* Montserrat-Regular.ttf in Resources */,
-				7D23B35226D7DE0300FB5DA9 /* WorkSans-Regular.ttf in Resources */,
 				67BB06E023B48B85454BD2B38E60B156 /* Images.xcassets in Resources */,
-				7D23B35326D7DE0300FB5DA9 /* Recoleta-Regular.ttf in Resources */,
-				7D23B35826D7DE0300FB5DA9 /* HelveticaNowText-Regular.ttf in Resources */,
+				7DFC9EAA26F38C1600052C54 /* WorkSans-Regular.ttf in Resources */,
+				7DFC9E9626F38BE500052C54 /* HelveticaNowDisplay-Md.ttf in Resources */,
+				7DFC9E8926F38BA500052C54 /* Montserrat-Regular.ttf in Resources */,
+				7DFC9E9426F38BE500052C54 /* HelveticaNowDisplay-Bd.ttf in Resources */,
+				7DFC9E8826F38BA500052C54 /* Montserrat-Bold.ttf in Resources */,
+				7DFC9E8A26F38BA500052C54 /* Montserrat-SemiBold.ttf in Resources */,
+				7DFC9E9E26F38C0100052C54 /* DrukCy-Bold.ttf in Resources */,
 				7D6947D226E8FB89007D00A4 /* SuisseIntl-Regular.ttf in Resources */,
-				7D23B35126D7DE0300FB5DA9 /* HelveticaNowDisplay-Regular.ttf in Resources */,
-				7D23B35626D7DE0300FB5DA9 /* DrukCy-Bold.ttf in Resources */,
+				7DFC9E9526F38BE500052C54 /* HelveticaNowDisplay-Regular.ttf in Resources */,
+				7DFC9EA926F38C1600052C54 /* WorkSans-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
