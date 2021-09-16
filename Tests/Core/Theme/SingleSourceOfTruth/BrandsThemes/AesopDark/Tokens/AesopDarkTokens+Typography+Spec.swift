@@ -31,6 +31,36 @@ final class AesopDarkTokensTypographySpec: QuickSpec {
                 }
         }
 
+        describe("#typographyDisplayFontFamily") {
+            it("returns an expected value") {
+                expect(systemUnderTest.typographyDisplayFontFamily).to(equal("Zapf Humanist 601"))
+                }
+        }
+
+        describe("#typographyHeadlineFontFamily") {
+            it("returns an expected value") {
+                expect(systemUnderTest.typographyHeadlineFontFamily).to(equal("Suisse Int'l"))
+                }
+        }
+
+        describe("#typographyBodyRegularFontFamily") {
+            it("returns an expected value") {
+                expect(systemUnderTest.typographyBodyRegularFontFamily).to(equal("Suisse Int'l"))
+                }
+        }
+
+        describe("#typographyBodyBoldFontFamily") {
+            it("returns an expected value") {
+                expect(systemUnderTest.typographyBodyBoldFontFamily).to(equal("Suisse Int'l"))
+                }
+        }
+
+        describe("#typographyFallbackFontFamily") {
+            it("returns an expected value") {
+                expect(systemUnderTest.typographyFallbackFontFamily).to(equal("San Francisco"))
+                }
+        }
+
         describe("#typographyLineHeightReset") {
             it("returns an expected value") {
                 expect(systemUnderTest.typographyLineHeightReset).to(equal(1))

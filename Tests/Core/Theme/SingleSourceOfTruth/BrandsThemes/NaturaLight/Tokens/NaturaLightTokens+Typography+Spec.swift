@@ -31,6 +31,36 @@ final class NaturaLightTokensTypographySpec: QuickSpec {
                 }
         }
 
+        describe("#typographyDisplayFontFamily") {
+            it("returns an expected value") {
+                expect(systemUnderTest.typographyDisplayFontFamily).to(equal("Helvetica Now Display"))
+                }
+        }
+
+        describe("#typographyHeadlineFontFamily") {
+            it("returns an expected value") {
+                expect(systemUnderTest.typographyHeadlineFontFamily).to(equal("Helvetica Now Display"))
+                }
+        }
+
+        describe("#typographyBodyRegularFontFamily") {
+            it("returns an expected value") {
+                expect(systemUnderTest.typographyBodyRegularFontFamily).to(equal("Helvetica Now Display"))
+                }
+        }
+
+        describe("#typographyBodyBoldFontFamily") {
+            it("returns an expected value") {
+                expect(systemUnderTest.typographyBodyBoldFontFamily).to(equal("Helvetica Now Display"))
+                }
+        }
+
+        describe("#typographyFallbackFontFamily") {
+            it("returns an expected value") {
+                expect(systemUnderTest.typographyFallbackFontFamily).to(equal("San Francisco"))
+                }
+        }
+
         describe("#typographyLineHeightReset") {
             it("returns an expected value") {
                 expect(systemUnderTest.typographyLineHeightReset).to(equal(1))

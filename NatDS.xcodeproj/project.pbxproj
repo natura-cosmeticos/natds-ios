@@ -76,7 +76,7 @@
 		6E6C6EC0105FF251940E4C011D611149 /* String+IconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD080B942BE2F7A41B1DEF15B19C34DB /* String+IconTests.swift */; };
 		6F66306180843E285A6B82D8788835D2 /* NatSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7FB96016F7D02CB5976F54C383CCD6 /* NatSizes.swift */; };
 		7392D4960D4A13B6ADF3AB7372B264F5 /* DesignSystem+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C59F929E88764313134A046BA5C30F /* DesignSystem+Spec.swift */; };
-		758EE01159A6E7AFC7217055678D4ED3 /* FontIconStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D221DC99290B86F7B59C72F4FA77BE4 /* FontIconStyle.swift */; };
+		758EE01159A6E7AFC7217055678D4ED3 /* IconFontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D221DC99290B86F7B59C72F4FA77BE4 /* IconFontStyle.swift */; };
 		77C55B339CA403354D76ABF05E283D5A /* ValueTextHighlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFBFE7E7E98BBE7DA3F6565371E522D /* ValueTextHighlight.swift */; };
 		790D3F862564181A007A9CA1 /* ProgressIndicatorCircular+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790D3F852564181A007A9CA1 /* ProgressIndicatorCircular+Spec.swift */; };
 		797E60DC25531625002A59E0 /* NatLogoImages+AvonDark+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797E60DB25531625002A59E0 /* NatLogoImages+AvonDark+Spec.swift */; };
@@ -200,6 +200,8 @@
 		7D17AB1B25E91C380070FD31 /* NatAvatar+Snapshots+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D17AB1A25E91C380070FD31 /* NatAvatar+Snapshots+Tests.swift */; };
 		7D19998925756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19998825756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift */; };
 		7D213B8A269F53D4005B15C3 /* NatDialogDividerConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D213B89269F53D4005B15C3 /* NatDialogDividerConfigurable.swift */; };
+		7D23B35726D7DE0300FB5DA9 /* ZapfHumanist601BT-Roman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D23B34F26D7DE0200FB5DA9 /* ZapfHumanist601BT-Roman.ttf */; };
+		7D23B35D26D97B0900FB5DA9 /* CustomFontStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D23B35C26D97B0900FB5DA9 /* CustomFontStyle.swift */; };
 		7D277B5026976900005075EF /* AppBarContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D277B4F26976900005075EF /* AppBarContentType.swift */; };
 		7D277B63269E2551005075EF /* DialogHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D277B62269E2551005075EF /* DialogHeaderView.swift */; };
 		7D277B68269E43A1005075EF /* DialogBodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D277B67269E43A1005075EF /* DialogBodyView.swift */; };
@@ -222,6 +224,7 @@
 		7D5F149A25A782AB007986EE /* IconsSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5F149925A782AB007986EE /* IconsSource.swift */; };
 		7D60A443260914DE00A23C1A /* NatIconButton+Backgrounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D60A442260914DE00A23C1A /* NatIconButton+Backgrounds.swift */; };
 		7D60A4A0260E208E00A23C1A /* NatListItem+Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D60A49F260E208E00A23C1A /* NatListItem+Feedback.swift */; };
+		7D6947D226E8FB89007D00A4 /* SuisseIntl-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D6947D126E8FB89007D00A4 /* SuisseIntl-Regular.ttf */; };
 		7D704EDB26AB556100B64226 /* NatCounter+Size+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D704EDA26AB556100B64226 /* NatCounter+Size+Spec.swift */; };
 		7D75A43925DB00130050ACA9 /* NatAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D75A43825DB00130050ACA9 /* NatAvatar.swift */; };
 		7D75A44125DB00230050ACA9 /* NatAvatar+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D75A44025DB00230050ACA9 /* NatAvatar+Size.swift */; };
@@ -253,6 +256,16 @@
 		7DE2B11625FBFBAB00C5CBC0 /* NatListItemCell+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2B11525FBFBAB00C5CBC0 /* NatListItemCell+Snapshot+Tests.swift */; };
 		7DE2B12C26000BA600C5CBC0 /* UIImageView+Clickable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2B12B26000BA600C5CBC0 /* UIImageView+Clickable.swift */; };
 		7DE6156F26A6054F002621A5 /* NatDialogDividerConfigurable+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE6156E26A6054F002621A5 /* NatDialogDividerConfigurable+Spec.swift */; };
+		7DFC9E8826F38BA500052C54 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DFC9E8526F38BA400052C54 /* Montserrat-Bold.ttf */; };
+		7DFC9E8926F38BA500052C54 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DFC9E8626F38BA500052C54 /* Montserrat-Regular.ttf */; };
+		7DFC9E8A26F38BA500052C54 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DFC9E8726F38BA500052C54 /* Montserrat-SemiBold.ttf */; };
+		7DFC9E9426F38BE500052C54 /* HelveticaNowDisplay-Bd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DFC9E9126F38BE300052C54 /* HelveticaNowDisplay-Bd.ttf */; };
+		7DFC9E9526F38BE500052C54 /* HelveticaNowDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DFC9E9226F38BE400052C54 /* HelveticaNowDisplay-Regular.ttf */; };
+		7DFC9E9626F38BE500052C54 /* HelveticaNowDisplay-Md.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DFC9E9326F38BE500052C54 /* HelveticaNowDisplay-Md.ttf */; };
+		7DFC9E9E26F38C0100052C54 /* DrukCy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DFC9E9D26F38C0100052C54 /* DrukCy-Bold.ttf */; };
+		7DFC9EA326F38C0A00052C54 /* Recoleta-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DFC9EA226F38C0A00052C54 /* Recoleta-SemiBold.ttf */; };
+		7DFC9EA926F38C1600052C54 /* WorkSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DFC9EA726F38C1500052C54 /* WorkSans-Bold.ttf */; };
+		7DFC9EAA26F38C1600052C54 /* WorkSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DFC9EA826F38C1600052C54 /* WorkSans-Regular.ttf */; };
 		80FE219D764217C0520E0C784F9C0C0B /* PulseLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF8919785F0CA6D3AB0AD57F759ED73 /* PulseLayer.swift */; };
 		81AA5DF0A9D5F332072CA1EC9C5CF968 /* NatOpacities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E76AA6120032EE8B86EB90B51BFD8 /* NatOpacities.swift */; };
 		8401A9C024FED41E00B6E762 /* NatIconButton+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8401A9BF24FED41E00B6E762 /* NatIconButton+Snapshot+Tests.swift */; };
@@ -467,7 +480,7 @@
 		26BFBADD251273BA006C22E2 /* NatTag+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatTag+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		2775F568C47ADB6D5DA7B7AFA4A41B4E /* NatElevation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatElevation.swift; sourceTree = "<group>"; };
 		2C157151985B2586A5377C35B4FC1F27 /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
-		2D221DC99290B86F7B59C72F4FA77BE4 /* FontIconStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontIconStyle.swift; sourceTree = "<group>"; };
+		2D221DC99290B86F7B59C72F4FA77BE4 /* IconFontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconFontStyle.swift; sourceTree = "<group>"; };
 		2D9C7ED46E33571D0B2A1E60936B8ACD /* Field+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Field+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		307E705878C6A3A88E39CDC82B799361 /* ViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStyle.swift; sourceTree = "<group>"; };
 		30E333A0723F6532721CE638F6819154 /* ButtonOutlineStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonOutlineStyle.swift; sourceTree = "<group>"; };
@@ -625,6 +638,8 @@
 		7D17AB1A25E91C380070FD31 /* NatAvatar+Snapshots+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatAvatar+Snapshots+Tests.swift"; sourceTree = "<group>"; };
 		7D19998825756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatProgressIndicatorCircular+Size.swift"; sourceTree = "<group>"; };
 		7D213B89269F53D4005B15C3 /* NatDialogDividerConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatDialogDividerConfigurable.swift; sourceTree = "<group>"; };
+		7D23B34F26D7DE0200FB5DA9 /* ZapfHumanist601BT-Roman.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ZapfHumanist601BT-Roman.ttf"; sourceTree = "<group>"; };
+		7D23B35C26D97B0900FB5DA9 /* CustomFontStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFontStyle.swift; sourceTree = "<group>"; };
 		7D277B4F26976900005075EF /* AppBarContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBarContentType.swift; sourceTree = "<group>"; };
 		7D277B62269E2551005075EF /* DialogHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogHeaderView.swift; sourceTree = "<group>"; };
 		7D277B67269E43A1005075EF /* DialogBodyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogBodyView.swift; sourceTree = "<group>"; };
@@ -647,6 +662,7 @@
 		7D5F149925A782AB007986EE /* IconsSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsSource.swift; sourceTree = "<group>"; };
 		7D60A442260914DE00A23C1A /* NatIconButton+Backgrounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatIconButton+Backgrounds.swift"; sourceTree = "<group>"; };
 		7D60A49F260E208E00A23C1A /* NatListItem+Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatListItem+Feedback.swift"; sourceTree = "<group>"; };
+		7D6947D126E8FB89007D00A4 /* SuisseIntl-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SuisseIntl-Regular.ttf"; sourceTree = "<group>"; };
 		7D704EDA26AB556100B64226 /* NatCounter+Size+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatCounter+Size+Spec.swift"; sourceTree = "<group>"; };
 		7D75A43825DB00130050ACA9 /* NatAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatAvatar.swift; sourceTree = "<group>"; };
 		7D75A44025DB00230050ACA9 /* NatAvatar+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatAvatar+Size.swift"; sourceTree = "<group>"; };
@@ -679,6 +695,16 @@
 		7DE2B11525FBFBAB00C5CBC0 /* NatListItemCell+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatListItemCell+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		7DE2B12B26000BA600C5CBC0 /* UIImageView+Clickable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Clickable.swift"; sourceTree = "<group>"; };
 		7DE6156E26A6054F002621A5 /* NatDialogDividerConfigurable+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogDividerConfigurable+Spec.swift"; sourceTree = "<group>"; };
+		7DFC9E8526F38BA400052C54 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		7DFC9E8626F38BA500052C54 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		7DFC9E8726F38BA500052C54 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		7DFC9E9126F38BE300052C54 /* HelveticaNowDisplay-Bd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNowDisplay-Bd.ttf"; sourceTree = "<group>"; };
+		7DFC9E9226F38BE400052C54 /* HelveticaNowDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNowDisplay-Regular.ttf"; sourceTree = "<group>"; };
+		7DFC9E9326F38BE500052C54 /* HelveticaNowDisplay-Md.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNowDisplay-Md.ttf"; sourceTree = "<group>"; };
+		7DFC9E9D26F38C0100052C54 /* DrukCy-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DrukCy-Bold.ttf"; sourceTree = "<group>"; };
+		7DFC9EA226F38C0A00052C54 /* Recoleta-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Recoleta-SemiBold.ttf"; sourceTree = "<group>"; };
+		7DFC9EA726F38C1500052C54 /* WorkSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Bold.ttf"; sourceTree = "<group>"; };
+		7DFC9EA826F38C1600052C54 /* WorkSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Regular.ttf"; sourceTree = "<group>"; };
 		7F9C4251076A01537D0A8CB995DF81EC /* NavigationDrawerSubitemCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerSubitemCellTests.swift; sourceTree = "<group>"; };
 		83C59F929E88764313134A046BA5C30F /* DesignSystem+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DesignSystem+Spec.swift"; sourceTree = "<group>"; };
 		8401A9BF24FED41E00B6E762 /* NatIconButton+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatIconButton+Snapshot+Tests.swift"; sourceTree = "<group>"; };
@@ -1721,6 +1747,17 @@
 			path = Avatar;
 			sourceTree = "<group>";
 		};
+		7D23B34826D7DDD900FB5DA9 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7DFB000A26E170F800CB7465 /* Aesop */,
+				7DFB000B26E1711700CB7465 /* Avon */,
+				7DFB000D26E1713500CB7465 /* Natura */,
+				7DFB000C26E1712400CB7465 /* TheBodyShop */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		7D5F149825A78220007986EE /* IconSource */ = {
 			isa = PBXGroup;
 			children = (
@@ -1826,6 +1863,46 @@
 				7DE2B11525FBFBAB00C5CBC0 /* NatListItemCell+Snapshot+Tests.swift */,
 			);
 			path = ListItem;
+			sourceTree = "<group>";
+		};
+		7DFB000A26E170F800CB7465 /* Aesop */ = {
+			isa = PBXGroup;
+			children = (
+				7D6947D126E8FB89007D00A4 /* SuisseIntl-Regular.ttf */,
+				7D23B34F26D7DE0200FB5DA9 /* ZapfHumanist601BT-Roman.ttf */,
+			);
+			path = Aesop;
+			sourceTree = "<group>";
+		};
+		7DFB000B26E1711700CB7465 /* Avon */ = {
+			isa = PBXGroup;
+			children = (
+				7DFC9E8526F38BA400052C54 /* Montserrat-Bold.ttf */,
+				7DFC9E8626F38BA500052C54 /* Montserrat-Regular.ttf */,
+				7DFC9E8726F38BA500052C54 /* Montserrat-SemiBold.ttf */,
+			);
+			path = Avon;
+			sourceTree = "<group>";
+		};
+		7DFB000C26E1712400CB7465 /* TheBodyShop */ = {
+			isa = PBXGroup;
+			children = (
+				7DFC9EA726F38C1500052C54 /* WorkSans-Bold.ttf */,
+				7DFC9EA826F38C1600052C54 /* WorkSans-Regular.ttf */,
+				7DFC9E9D26F38C0100052C54 /* DrukCy-Bold.ttf */,
+				7DFC9EA226F38C0A00052C54 /* Recoleta-SemiBold.ttf */,
+			);
+			path = TheBodyShop;
+			sourceTree = "<group>";
+		};
+		7DFB000D26E1713500CB7465 /* Natura */ = {
+			isa = PBXGroup;
+			children = (
+				7DFC9E9126F38BE300052C54 /* HelveticaNowDisplay-Bd.ttf */,
+				7DFC9E9326F38BE500052C54 /* HelveticaNowDisplay-Md.ttf */,
+				7DFC9E9226F38BE400052C54 /* HelveticaNowDisplay-Regular.ttf */,
+			);
+			path = Natura;
 			sourceTree = "<group>";
 		};
 		8401A9BE24FED3C900B6E762 /* IconButton */ = {
@@ -2618,8 +2695,9 @@
 		BFB6071E86F7F179141AA1490D7EE633 /* Style */ = {
 			isa = PBXGroup;
 			children = (
-				2D221DC99290B86F7B59C72F4FA77BE4 /* FontIconStyle.swift */,
 				93C1C3FD73F0E5F31735966CB48D7B16 /* FontStyle.swift */,
+				2D221DC99290B86F7B59C72F4FA77BE4 /* IconFontStyle.swift */,
+				7D23B35C26D97B0900FB5DA9 /* CustomFontStyle.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -2690,6 +2768,7 @@
 		DD20EF61A300C3292AE0EBCF255B5BD6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7D23B34826D7DDD900FB5DA9 /* Fonts */,
 				438A5C92460A2D83E14DF108D8CD8988 /* Images.xcassets */,
 			);
 			path = Resources;
@@ -2871,6 +2950,12 @@
 		36C3D511769B0C048CF47BC3D975C8A0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					aesop,
+					avon,
+					natura,
+					thebodyshop,
+				);
 				LastSwiftUpdateCheck = 1160;
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = Natura;
@@ -2913,7 +2998,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DFC9EA326F38C0A00052C54 /* Recoleta-SemiBold.ttf in Resources */,
+				7D23B35726D7DE0300FB5DA9 /* ZapfHumanist601BT-Roman.ttf in Resources */,
 				67BB06E023B48B85454BD2B38E60B156 /* Images.xcassets in Resources */,
+				7DFC9EAA26F38C1600052C54 /* WorkSans-Regular.ttf in Resources */,
+				7DFC9E9626F38BE500052C54 /* HelveticaNowDisplay-Md.ttf in Resources */,
+				7DFC9E8926F38BA500052C54 /* Montserrat-Regular.ttf in Resources */,
+				7DFC9E9426F38BE500052C54 /* HelveticaNowDisplay-Bd.ttf in Resources */,
+				7DFC9E8826F38BA500052C54 /* Montserrat-Bold.ttf in Resources */,
+				7DFC9E8A26F38BA500052C54 /* Montserrat-SemiBold.ttf in Resources */,
+				7DFC9E9E26F38C0100052C54 /* DrukCy-Bold.ttf in Resources */,
+				7D6947D226E8FB89007D00A4 /* SuisseIntl-Regular.ttf in Resources */,
+				7DFC9E9526F38BE500052C54 /* HelveticaNowDisplay-Regular.ttf in Resources */,
+				7DFC9EA926F38C1600052C54 /* WorkSans-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3302,7 +3399,7 @@
 				84BC900824AA1678007DF09D /* NatDialogController+AlertStyleBuilder.swift in Sources */,
 				84BF066724B4A8DA00462AC5 /* ShortcutContainedStyle.swift in Sources */,
 				79FC598A25CAE199001CCB56 /* NatCard.swift in Sources */,
-				758EE01159A6E7AFC7217055678D4ED3 /* FontIconStyle.swift in Sources */,
+				758EE01159A6E7AFC7217055678D4ED3 /* IconFontStyle.swift in Sources */,
 				7DC81CB6261223CC006BE689 /* UIImage+UIColor.swift in Sources */,
 				269C886224C23B0100A507BE /* UINavigationController+Configure.swift in Sources */,
 				7D5349E826C6A33800F88EA7 /* NatImage+Fade.swift in Sources */,
@@ -3377,6 +3474,7 @@
 				5C0716F242EFC1AF6A61CBE257DA7CFE /* TextField.swift in Sources */,
 				79EA0C20260A85DE00742C0A /* NatCounterButton.swift in Sources */,
 				E07925C3535D79164EBC061C7D6A6CE4 /* TextFieldType.swift in Sources */,
+				7D23B35D26D97B0900FB5DA9 /* CustomFontStyle.swift in Sources */,
 				847C829224E36AB7001CE116 /* NaturaLightTheme.swift in Sources */,
 				84932F1324EAB9270052265F /* AvailableTheme.swift in Sources */,
 				518E40E608084AD36390CE8A38A1CB5A /* UICollectionView+Reusable.swift in Sources */,

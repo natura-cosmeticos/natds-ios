@@ -13,15 +13,15 @@ extension NatLogo {
 
         var neutralImage: UIImage? {
             switch self {
-            case .modelA: return AssetsHelper.logo(from: getTokenFromTheme(\.assetBrandNeutralA))
-            case .modelB: return AssetsHelper.logo(from: getTokenFromTheme(\.assetBrandNeutralB))
+            case .modelA: return AssetsHelper.logo(from: getTokenFromTheme(\.assetBrandNeutralAFile))
+            case .modelB: return AssetsHelper.logo(from: getTokenFromTheme(\.assetBrandNeutralBFile))
             }
         }
 
         var customImage: UIImage? {
             switch self {
-            case .modelA: return AssetsHelper.logo(from: getTokenFromTheme(\.assetBrandCustomA))
-            case .modelB: return AssetsHelper.logo(from: getTokenFromTheme(\.assetBrandCustomB))
+            case .modelA: return AssetsHelper.logo(from: getTokenFromTheme(\.assetBrandCustomAFile))
+            case .modelB: return AssetsHelper.logo(from: getTokenFromTheme(\.assetBrandCustomBFile))
             }
         }
     }

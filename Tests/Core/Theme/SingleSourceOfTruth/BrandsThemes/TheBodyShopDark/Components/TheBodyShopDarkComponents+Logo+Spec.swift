@@ -12,7 +12,7 @@ final class TheBodyShopDarkComponentsLogoSpec: QuickSpec {
 
             describe("#customA") {
                 it("returns a expected path") {
-                    let systemUnderTest = getTokenFromTheme(\.assetBrandCustomA)
+                    let systemUnderTest = getTokenFromTheme(\.assetBrandCustomAFile)
 
                     expect(systemUnderTest).to(equal("thebodyshop-a-custom"))
                 }
@@ -20,7 +20,7 @@ final class TheBodyShopDarkComponentsLogoSpec: QuickSpec {
 
             describe("#customB") {
                 it("returns a expected path") {
-                    let systemUnderTest = getTokenFromTheme(\.assetBrandCustomB)
+                    let systemUnderTest = getTokenFromTheme(\.assetBrandCustomBFile)
 
                     expect(systemUnderTest).to(equal("thebodyshop-b-custom"))
                 }
@@ -28,7 +28,7 @@ final class TheBodyShopDarkComponentsLogoSpec: QuickSpec {
 
             describe("#neutralA") {
                 it("returns a expected path") {
-                    let systemUnderTest = getTokenFromTheme(\.assetBrandNeutralA)
+                    let systemUnderTest = getTokenFromTheme(\.assetBrandNeutralAFile)
 
                     expect(systemUnderTest).to(equal("thebodyshop-a-official-dark"))
                 }
@@ -36,7 +36,7 @@ final class TheBodyShopDarkComponentsLogoSpec: QuickSpec {
 
             describe("#neutralB") {
                 it("returns a expected path") {
-                    let systemUnderTest = getTokenFromTheme(\.assetBrandNeutralB)
+                    let systemUnderTest = getTokenFromTheme(\.assetBrandNeutralBFile)
 
                     expect(systemUnderTest).to(equal("thebodyshop-b-official-dark"))
                 }
