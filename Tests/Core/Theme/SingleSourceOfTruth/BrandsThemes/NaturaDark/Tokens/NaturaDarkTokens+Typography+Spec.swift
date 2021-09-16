@@ -61,7 +61,6 @@ final class NaturaDarkTokensTypographySpec: QuickSpec {
                 }
         }
 
-
         describe("#typographyLineHeightReset") {
             it("returns an expected value") {
                 expect(systemUnderTest.typographyLineHeightReset).to(equal(1))
