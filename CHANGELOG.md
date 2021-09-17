@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.5.2](https://github.com/natura-cosmeticos/natds-ios/compare/6.5.1...6.5.2) (2021-09-17)
+
+
+### Bug Fixes
+
+* update podspec to add font files as resources ([325f732](https://github.com/natura-cosmeticos/natds-ios/commit/325f73213ba5264e49b572b28049aafc1e9a6b12))
+
 ### [6.5.1](https://github.com/natura-cosmeticos/natds-ios/compare/6.5.0...6.5.1) (2021-09-16)
 
 
