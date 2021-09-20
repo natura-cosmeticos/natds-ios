@@ -187,10 +187,50 @@ protocol Tokens {
 }
 
 protocol Components {
-    var buttonDefaultFontSize: CGFloat { get }
-    var buttonDefaultFontWeight: UIFont.Weight { get }
-    var buttonDefaultLetterSpacing: CGFloat { get }
-    var buttonDefaultLineHeight: CGFloat { get }
+    var buttonLabelFontSize: CGFloat { get }
+    var buttonLabelLetterSpacing: CGFloat { get }
+    var buttonLabelLineHeight: CGFloat { get }
+    var buttonLabelPrimaryFontFamily: String { get }
+    var buttonLabelPrimaryFontWeight: UIFont.Weight { get }
+    var buttonLabelFallbackFontFamily: String { get }
+    var buttonLabelFallbackFontWeight: UIFont.Weight { get }
+    var buttonBorderRadius: CGFloat { get }
+    var buttonContainedColorEnableBackground: String { get }
+    var buttonContainedColorEnableBorder: String { get }
+    var buttonContainedColorEnableLabel: String { get }
+    var buttonContainedColorDisableBackground: String { get }
+    var buttonContainedColorDisableBorder: String { get }
+    var buttonContainedColorDisableLabel: String { get }
+    var buttonContainedColorHoverBackground: String { get }
+    var buttonContainedColorHoverBorder: String { get }
+    var buttonContainedColorHoverLabel: String { get }
+    var buttonContainedColorFocusBackground: String { get }
+    var buttonContainedColorFocusBorder: String { get }
+    var buttonContainedColorFocusLabel: String { get }
+    var buttonOutlinedColorEnableBackground: String { get }
+    var buttonOutlinedColorEnableBorder: String { get }
+    var buttonOutlinedColorEnableLabel: String { get }
+    var buttonOutlinedColorDisableBackground: String { get }
+    var buttonOutlinedColorDisableBorder: String { get }
+    var buttonOutlinedColorDisableLabel: String { get }
+    var buttonOutlinedColorHoverBackground: String { get }
+    var buttonOutlinedColorHoverBorder: String { get }
+    var buttonOutlinedColorHoverLabel: String { get }
+    var buttonOutlinedColorFocusBackground: String { get }
+    var buttonOutlinedColorFocusBorder: String { get }
+    var buttonOutlinedColorFocusLabel: String { get }
+    var buttonTextColorEnableBackground: String { get }
+    var buttonTextColorEnableBorder: String { get }
+    var buttonTextColorEnableLabel: String { get }
+    var buttonTextColorDisableBackground: String { get }
+    var buttonTextColorDisableBorder: String { get }
+    var buttonTextColorDisableLabel: String { get }
+    var buttonTextColorHoverBackground: String { get }
+    var buttonTextColorHoverBorder: String { get }
+    var buttonTextColorHoverLabel: String { get }
+    var buttonTextColorFocusBackground: String { get }
+    var buttonTextColorFocusBorder: String { get }
+    var buttonTextColorFocusLabel: String { get }
     var heading1FontSize: CGFloat { get }
     var heading1FontWeight: UIFont.Weight { get }
     var heading1LetterSpacing: CGFloat { get }

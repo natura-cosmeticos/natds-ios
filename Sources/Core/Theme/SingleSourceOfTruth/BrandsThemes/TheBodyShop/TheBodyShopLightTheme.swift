@@ -186,10 +186,51 @@ struct TheBodyShopLightTokens: Tokens {
     let typographyFallbackFontWeight: UIFont.Weight = .regular
 }
 struct TheBodyShopLightComponents: Components {
-    let buttonDefaultFontSize: CGFloat = 14
-    let buttonDefaultFontWeight: UIFont.Weight = .medium
-    let buttonDefaultLetterSpacing: CGFloat = 0.44
-    let buttonDefaultLineHeight: CGFloat = 1.5
+    let buttonLabelFontSize: CGFloat = 14
+    let buttonLabelLetterSpacing: CGFloat = 0.44
+    let buttonLabelLineHeight: CGFloat = 1.5
+    let buttonLabelPrimaryFontFamily = "San Francisco"
+    // TODO: confirmar se o weight é regular, pq antes era medium
+    let buttonLabelPrimaryFontWeight: UIFont.Weight = .regular
+    let buttonLabelFallbackFontFamily = "San Francisco"
+    let buttonLabelFallbackFontWeight: UIFont.Weight = .regular
+    let buttonBorderRadius: CGFloat = 4
+    let buttonContainedColorEnableBackground = "#004236"
+    let buttonContainedColorEnableBorder = "#FFFFFF00"
+    let buttonContainedColorEnableLabel = "#FFFFFF"
+    let buttonContainedColorDisableBackground = "#BBBBBB"
+    let buttonContainedColorDisableBorder = "#FFFFFF00"
+    let buttonContainedColorDisableLabel = "#333333"
+    let buttonContainedColorHoverBackground = "#001D10"
+    let buttonContainedColorHoverBorder = "#FFFFFF00"
+    let buttonContainedColorHoverLabel = "#FFFFFF"
+    let buttonContainedColorFocusBackground = "#041C18"
+    let buttonContainedColorFocusBorder = "#FFFFFF00"
+    let buttonContainedColorFocusLabel = "#FFFFFF"
+    let buttonOutlinedColorEnableBackground = "#FFFFFF00"
+    let buttonOutlinedColorEnableBorder = "#004236"
+    let buttonOutlinedColorEnableLabel = "#333333"
+    let buttonOutlinedColorDisableBackground = "#FFFFFF00"
+    let buttonOutlinedColorDisableBorder = "#BBBBBB"
+    let buttonOutlinedColorDisableLabel = "#777777"
+    let buttonOutlinedColorHoverBackground = "#f1f3f5"
+    let buttonOutlinedColorHoverBorder = "#004236"
+    let buttonOutlinedColorHoverLabel = "#333333"
+    let buttonOutlinedColorFocusBackground = "#e9ecef"
+    let buttonOutlinedColorFocusBorder = "#004236"
+    let buttonOutlinedColorFocusLabel = "#333333"
+    let buttonTextColorEnableBackground = "#FFFFFF00"
+    let buttonTextColorEnableBorder = "#FFFFFF00"
+    let buttonTextColorEnableLabel = "#333333"
+    let buttonTextColorDisableBackground = "#FFFFFF00"
+    let buttonTextColorDisableBorder = "#FFFFFF00"
+    let buttonTextColorDisableLabel = "#777777"
+    let buttonTextColorHoverBackground = "#f1f3f5"
+    let buttonTextColorHoverBorder = "#FFFFFF00"
+    let buttonTextColorHoverLabel = "#333333"
+    let buttonTextColorFocusBackground = "#e9ecef"
+    let buttonTextColorFocusBorder = "#FFFFFF00"
+    let buttonTextColorFocusLabel = "#333333"
     let heading1FontSize: CGFloat = 96
     let heading1FontWeight: UIFont.Weight = .regular
     let heading1LetterSpacing: CGFloat = 0
@@ -227,4 +268,3 @@ struct TheBodyShopLightComponents: Components {
     let overlineFontWeight: UIFont.Weight = .medium
     let overlineLetterSpacing: CGFloat = 0.8
 }
-

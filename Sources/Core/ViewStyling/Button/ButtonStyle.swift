@@ -1,6 +1,9 @@
 enum ButtonStyle {
     static func applyStyle(on button: UIButton) {
-        button.titleLabel?.font = NatFonts.font(ofSize: .button, withWeight: .medium)
+        let size = getComponentAttributeFromTheme(\.buttonLabelFontSize)
+        let weight = getComponentAttributeFromTheme(\.buttonLabelPrimaryFontWeight)
+        let family = getComponentAttributeFromTheme(\.buttonLabelPrimaryFontFamily)
+        button.titleLabel?.font = NatFonts.font(ofSize: size, withWeight: weight, withFamily: family)
         button.titleLabel?.lineBreakMode = .byTruncatingTail
 
         button.layer.cornerRadius = NatBorderRadius.medium
@@ -30,7 +33,7 @@ enum ButtonStyle {
         let attributedString = NSMutableAttributedString(string: text.uppercased())
         attributedString.apply(foregroundColor: color)
 
-        let value = getComponentAttributeFromTheme(\.buttonDefaultLetterSpacing)
+        let value = getComponentAttributeFromTheme(\.buttonLabelLetterSpacing)
         attributedString.apply(kernValue: value)
 
         return attributedString

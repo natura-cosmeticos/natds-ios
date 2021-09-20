@@ -132,11 +132,11 @@ final class TypographyViewController: UIViewController, SampleItem {
                 weightDescription: "regular",
                 font: NatFonts.font(ofSize: .body2, withWeight: .regular)
             ),
-            .init(
-                sizeDescription: "button:",
-                weightDescription: "medium",
-                font: NatFonts.font(ofSize: .button, withWeight: .medium)
-            ),
+//            .init(
+//                sizeDescription: "button:",
+//                weightDescription: "medium",
+//                font: NatFonts.font(ofSize: .button, withWeight: .medium)
+//            ),
             .init(
                 sizeDescription: "caption:",
                 weightDescription: "regular",

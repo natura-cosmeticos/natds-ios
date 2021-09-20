@@ -27,6 +27,26 @@ public struct NatFonts {
         )
     }
 
+    public static func font(ofSize size: CGFloat, withWeight weight: UIFont.Weight) -> UIFont {
+        .systemFont(ofSize: size, weight: weight)
+    }
+
+    public static func font(ofSize size: CGFloat) -> UIFont {
+        .systemFont(ofSize: size)
+    }
+
+    public static func font(ofSize size: CGFloat,
+                            withWeight weight: UIFont.Weight,
+                            withFamily family: String) -> UIFont {
+
+        for family in UIFont.familyNames.sorted() {
+            let names = UIFont.fontNames(forFamilyName: family)
+            print("Family: \(family) Font names: \(names)")
+        }
+
+        return .systemFont(ofSize: size, weight: weight)
+    }
+
     public static func customFont(ofSize fontSize: Size,
                                   withStyle customFont: CustomFontStyle) -> UIFont {
         AssetsHelper.loadFont(customFont, type: .custom)
@@ -62,7 +82,7 @@ extension NatFonts {
         case subtitle2
         case body1
         case body2
-        case button
+//        case button
         case caption
         case overline
 
@@ -80,7 +100,7 @@ extension NatFonts {
             case .subtitle2: textStyle = .subtitle2
             case .body1: textStyle = .body1
             case .body2: textStyle = .body2
-            case .button: textStyle = .button
+//            case .button: textStyle = .button
             case .caption: textStyle = .caption
             case .overline: textStyle = .overline
             }
