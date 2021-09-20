@@ -6,7 +6,7 @@ enum ButtonStyle {
         button.titleLabel?.font = NatFonts.font(ofSize: size, withWeight: weight, withFamily: family)
         button.titleLabel?.lineBreakMode = .byTruncatingTail
 
-        button.layer.cornerRadius = NatBorderRadius.medium
+        button.layer.cornerRadius = getComponentAttributeFromTheme(\.buttonBorderRadius)
 
         button.contentEdgeInsets = NatButton.EdgeInsets.medium
     }
