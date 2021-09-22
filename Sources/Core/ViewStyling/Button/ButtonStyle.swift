@@ -11,19 +11,15 @@ enum ButtonStyle {
         button.contentEdgeInsets = NatButton.EdgeInsets.medium
     }
 
-    static func applyStyleForTitle(
-        _ title: String,
-        colorForNormal: UIColor,
-        on button: UIButton) {
+    static func applyStyleForTitle(_ title: String,
+                                   colorForNormal: UIColor,
+                                   colorForDisabled: UIColor,
+                                   on button: UIButton) {
 
-        let titleForNormal = createTextForTitle(
-            text: title,
-            withColor: colorForNormal
-        )
-        let titleForDisabled = createTextForTitle(
-            text: title,
-            withColor: NatColors.onSurface.withAlphaComponent(getTokenFromTheme(\.opacityMediumHigh))
-        )
+        let titleForNormal = createTextForTitle(text: title,
+                                                withColor: colorForNormal)
+        let titleForDisabled = createTextForTitle(text: title,
+                                                  withColor: colorForDisabled)
 
         button.setAttributedTitle(titleForNormal, for: .normal)
         button.setAttributedTitle(titleForDisabled, for: .disabled)

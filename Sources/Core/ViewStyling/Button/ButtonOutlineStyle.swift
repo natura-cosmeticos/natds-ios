@@ -8,10 +8,11 @@ enum ButtonOutlinedStyle {
     static func applyStyleForStates(on button: UIButton) {
         switch button.state {
         case .normal:
-            button.layer.borderColor = NatColors.primary.cgColor
+            button.backgroundColor = getUIColorFromComponentAttributes(\.buttonOutlinedColorEnableBackground)
+            button.layer.borderColor = getUIColorFromComponentAttributes(\.buttonOutlinedColorEnableBorder).cgColor
         case .disabled:
-            button.layer.borderColor = NatColors.onSurface
-                .withAlphaComponent(NatOpacities.low).cgColor
+            button.backgroundColor = getUIColorFromComponentAttributes(\.buttonOutlinedColorDisableBackground)
+            button.layer.borderColor = getUIColorFromComponentAttributes(\.buttonOutlinedColorDisableBorder).cgColor
         default: break
         }
     }
@@ -19,8 +20,13 @@ enum ButtonOutlinedStyle {
     static func applyStyleForTitle(_ title: String, on button: UIButton) {
         ButtonStyle.applyStyleForTitle(
             title,
-            colorForNormal: NatColors.onSurface,
+            colorForNormal: getUIColorFromComponentAttributes(\.buttonOutlinedColorEnableLabel),
+            colorForDisabled: getUIColorFromComponentAttributes(\.buttonOutlinedColorDisableLabel),
             on: button
         )
+    }
+
+    static func focusColor() -> UIColor {
+        return getUIColorFromComponentAttributes(\.buttonOutlinedColorFocusBackground)
     }
 }
