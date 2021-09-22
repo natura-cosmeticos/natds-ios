@@ -186,6 +186,10 @@ struct AesopLightTokens: Tokens {
     let typographyFallbackFontWeight: UIFont.Weight = .regular
 }
 struct AesopLightComponents: Components {
+    let buttonDefaultFontSize: CGFloat = 14
+    let buttonDefaultFontWeight: UIFont.Weight = .medium
+    let buttonDefaultLetterSpacing: CGFloat = 0.44
+    let buttonDefaultLineHeight: CGFloat = 1.5
     let buttonLabelFontSize: CGFloat = 14
     let buttonLabelLetterSpacing: CGFloat = 0.44
     let buttonLabelLineHeight: CGFloat = 1.5

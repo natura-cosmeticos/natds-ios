@@ -38,12 +38,6 @@ public struct NatFonts {
     public static func font(ofSize size: CGFloat,
                             withWeight weight: UIFont.Weight,
                             withFamily family: String) -> UIFont {
-
-        for family in UIFont.familyNames.sorted() {
-            let names = UIFont.fontNames(forFamilyName: family)
-            print("Family: \(family) Font names: \(names)")
-        }
-
         return .systemFont(ofSize: size, weight: weight)
     }
 
@@ -82,7 +76,7 @@ extension NatFonts {
         case subtitle2
         case body1
         case body2
-//        case button
+        case button
         case caption
         case overline
 
@@ -100,7 +94,7 @@ extension NatFonts {
             case .subtitle2: textStyle = .subtitle2
             case .body1: textStyle = .body1
             case .body2: textStyle = .body2
-//            case .button: textStyle = .button
+            case .button: textStyle = .button
             case .caption: textStyle = .caption
             case .overline: textStyle = .overline
             }

@@ -67,11 +67,12 @@ extension NatFonts.TextStyle {
         letterSpacing: getComponentAttributeFromTheme(\.body2LetterSpacing)
     )
 
-//    static let button: NatFonts.TextStyle = .init(
-//        size: getComponentAttributeFromTheme(\.buttonDefaultFontSize),
-//        weight: getComponentAttributeFromTheme(\.buttonDefaultFontWeight),
-//        letterSpacing: getComponentAttributeFromTheme(\.buttonDefaultLetterSpacing)
-//    )
+    @available(*, deprecated, message: "This token is deprecated")
+    static let button: NatFonts.TextStyle = .init(
+        size: getComponentAttributeFromTheme(\.buttonDefaultFontSize),
+        weight: getComponentAttributeFromTheme(\.buttonDefaultFontWeight),
+        letterSpacing: getComponentAttributeFromTheme(\.buttonDefaultLetterSpacing)
+    )
 
     static let caption: NatFonts.TextStyle = .init(
         size: getComponentAttributeFromTheme(\.captionFontSize),

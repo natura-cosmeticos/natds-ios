@@ -187,6 +187,10 @@ protocol Tokens {
 }
 
 protocol Components {
+    var buttonDefaultFontSize: CGFloat { get }
+    var buttonDefaultFontWeight: UIFont.Weight { get }
+    var buttonDefaultLetterSpacing: CGFloat { get }
+    var buttonDefaultLineHeight: CGFloat { get }
     var buttonLabelFontSize: CGFloat { get }
     var buttonLabelLetterSpacing: CGFloat { get }
     var buttonLabelLineHeight: CGFloat { get }

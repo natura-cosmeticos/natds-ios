@@ -186,11 +186,14 @@ struct TheBodyShopLightTokens: Tokens {
     let typographyFallbackFontWeight: UIFont.Weight = .regular
 }
 struct TheBodyShopLightComponents: Components {
+    let buttonDefaultFontSize: CGFloat = 14
+    let buttonDefaultFontWeight: UIFont.Weight = .medium
+    let buttonDefaultLetterSpacing: CGFloat = 0.44
+    let buttonDefaultLineHeight: CGFloat = 1.5
     let buttonLabelFontSize: CGFloat = 14
     let buttonLabelLetterSpacing: CGFloat = 0.44
     let buttonLabelLineHeight: CGFloat = 1.5
     let buttonLabelPrimaryFontFamily = "San Francisco"
-    // TODO: confirmar se o weight é regular, pq antes era medium
     let buttonLabelPrimaryFontWeight: UIFont.Weight = .regular
     let buttonLabelFallbackFontFamily = "San Francisco"
     let buttonLabelFallbackFontWeight: UIFont.Weight = .regular
