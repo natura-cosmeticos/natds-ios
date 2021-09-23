@@ -194,9 +194,9 @@ struct AesopLightComponents: Components {
     let buttonLabelLetterSpacing: CGFloat = 0.44
     let buttonLabelLineHeight: CGFloat = 1.5
     let buttonLabelPrimaryFontFamily = "San Francisco"
-    let buttonLabelPrimaryFontWeight: UIFont.Weight = .regular
+    let buttonLabelPrimaryFontWeight: UIFont.Weight = .medium
     let buttonLabelFallbackFontFamily = "San Francisco"
-    let buttonLabelFallbackFontWeight: UIFont.Weight = .regular
+    let buttonLabelFallbackFontWeight: UIFont.Weight = .medium
     let buttonBorderRadius: CGFloat = 4
     let buttonContainedColorEnableBackground = "#262625"
     let buttonContainedColorEnableBorder = "#FFFFFF00"
@@ -271,4 +271,3 @@ struct AesopLightComponents: Components {
     let overlineFontWeight: UIFont.Weight = .medium
     let overlineLetterSpacing: CGFloat = 0.8
 }
-

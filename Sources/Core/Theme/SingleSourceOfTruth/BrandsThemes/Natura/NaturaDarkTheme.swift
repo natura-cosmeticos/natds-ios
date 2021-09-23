@@ -194,9 +194,9 @@ struct NaturaDarkComponents: Components {
     let buttonLabelLetterSpacing: CGFloat = 0.44
     let buttonLabelLineHeight: CGFloat = 1.5
     let buttonLabelPrimaryFontFamily = "San Francisco"
-    let buttonLabelPrimaryFontWeight: UIFont.Weight = .regular
+    let buttonLabelPrimaryFontWeight: UIFont.Weight = .medium
     let buttonLabelFallbackFontFamily = "San Francisco"
-    let buttonLabelFallbackFontWeight: UIFont.Weight = .regular
+    let buttonLabelFallbackFontWeight: UIFont.Weight = .medium
     let buttonBorderRadius: CGFloat = 4
     let buttonContainedColorEnableBackground = "#F4AB34"
     let buttonContainedColorEnableBorder = "#FFFFFF00"
