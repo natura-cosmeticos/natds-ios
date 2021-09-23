@@ -1,6 +1,7 @@
 enum ButtonTextStyle {
     static func applyStyle(on button: UIButton) {
         ButtonStyle.applyStyle(on: button)
+        applyStyleForStates(on: button)
     }
 
     static func applyStyleForStates(on button: UIButton) {

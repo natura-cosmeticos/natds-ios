@@ -20,9 +20,11 @@ final class ButtonStyleSpec: QuickSpec {
             }
 
             it("returns an expected font") {
-                let textStyle = NatFonts.TextStyle.button
-                expect(button.titleLabel?.font.pointSize).to(equal(textStyle.size))
-                expect(button.titleLabel?.font.getWeight()).to(equal(textStyle.weight))
+                let expectedSize = getComponentAttributeFromTheme(\.buttonLabelFontSize)
+                let expectedWeight = getComponentAttributeFromTheme(\.buttonLabelPrimaryFontWeight)
+
+                expect(button.titleLabel?.font.pointSize).to(equal(expectedSize))
+                expect(button.titleLabel?.font.getWeight()).to(equal(expectedWeight))
             }
 
             it("returns an expected backgroundColor") {
@@ -30,7 +32,8 @@ final class ButtonStyleSpec: QuickSpec {
             }
 
             it("returns an expected cornerRadius") {
-                let borderRadius = getTokenFromTheme(\.borderRadiusMedium)
+                let borderRadius = getComponentAttributeFromTheme(\.buttonBorderRadius)
+
                 expect(button.layer.cornerRadius).to(equal(borderRadius))
             }
 
@@ -58,12 +61,15 @@ final class ButtonStyleSpec: QuickSpec {
             var attributes: [NSAttributedString.Key: Any]!
 
             beforeEach {
-                systemUnderTest.applyStyleForTitle("StubTitle", colorForNormal: .red, on: button)
+                systemUnderTest.applyStyleForTitle("StubTitle",
+                                                   colorForNormal: .red,
+                                                   colorForDisabled: .gray,
+                                                   on: button)
             }
 
             context("when state is normal") {
                 beforeEach {
-                    systemUnderTest.applyStyleForTitle(title, colorForNormal: .red, on: button)
+                    systemUnderTest.applyStyleForTitle(title, colorForNormal: .red, colorForDisabled: .gray, on: button)
 
                     let attributedTitle = button.attributedTitle(for: .normal)
                     attributes = attributedTitle!.attributes(at: 0, effectiveRange: nil)
@@ -90,7 +96,7 @@ final class ButtonStyleSpec: QuickSpec {
 
             context("when state is disabled") {
                 beforeEach {
-                    systemUnderTest.applyStyleForTitle(title, colorForNormal: .red, on: button)
+                    systemUnderTest.applyStyleForTitle(title, colorForNormal: .red, colorForDisabled: .gray, on: button)
 
                     let attributedTitle = button.attributedTitle(for: .disabled)
                     attributes = attributedTitle!.attributes(at: 0, effectiveRange: nil)
@@ -110,10 +116,8 @@ final class ButtonStyleSpec: QuickSpec {
 
                 it("returns an expected foregroundColor") {
                     let foregroundColor = attributes[.foregroundColor] as? UIColor
-                    let expectedColor = getUIColorFromTokens(\.colorOnSurface)
-                        .withAlphaComponent(getTokenFromTheme(\.opacityMediumHigh))
 
-                    expect(foregroundColor).to(equal(expectedColor))
+                    expect(foregroundColor).to(equal(UIColor.gray))
                 }
             }
         }

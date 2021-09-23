@@ -39,4 +39,8 @@ extension UIColor {
         let alpha = CGFloat(a) / 255.0
         self.init(red: red, green: green, blue: blue, alpha: alpha)
     }
+
+    static func hexColorOrDefault(_ hex: String) -> UIColor {
+        return UIColor(hex: hex) ?? .black
+    }
 }
