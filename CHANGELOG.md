@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.6.1](https://github.com/natura-cosmeticos/natds-ios/compare/6.6.0...6.6.1) (2021-09-24)
+
+
+### Bug Fixes
+
+* update button typography token deprecation to fix cocoapods release ([e9c5b81](https://github.com/natura-cosmeticos/natds-ios/commit/e9c5b816349bb8f1f7caff7753bb9391569fecd0))
+
 ## [6.6.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.5.2...6.6.0) (2021-09-24)
 
 
