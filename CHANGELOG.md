@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.6.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.5.2...6.6.0) (2021-09-24)
+
+
+### Features
+
+* add button border radius from tokens ([9cd300b](https://github.com/natura-cosmeticos/natds-ios/commit/9cd300bd77a3c18a70af797abdc07482ff5015a2))
+* add color tokens for button ([b6b75ee](https://github.com/natura-cosmeticos/natds-ios/commit/b6b75ee60a7ac3ee9e4af7e6d2ed1caff859f9e0))
+* add method to get colors from attributes and refactor color to accept 8-digit hex ([6c6040d](https://github.com/natura-cosmeticos/natds-ios/commit/6c6040d2d70156caaf775a77b5f16022ce7c64b3))
+* add new button tokens ([52cf8ba](https://github.com/natura-cosmeticos/natds-ios/commit/52cf8baf30a66782bdcda401bc713c8bfcdc61d7))
+
+
+### Bug Fixes
+
+* fix button label weight to medium ([3b2b073](https://github.com/natura-cosmeticos/natds-ios/commit/3b2b0734ed2f2fd6a2a0ecfe0f5b48732292cb8d))
+* fix font getter for button for tokens with font family ([58bf5a2](https://github.com/natura-cosmeticos/natds-ios/commit/58bf5a2dc9d9fea7050c264543685cf9aab27412))
+* fix note doc for ux ([f580e8d](https://github.com/natura-cosmeticos/natds-ios/commit/f580e8dddedef921a60e4eacf1f4f45cc701108e))
+
 ### [6.5.2](https://github.com/natura-cosmeticos/natds-ios/compare/6.5.1...6.5.2) (2021-09-17)
 
 
