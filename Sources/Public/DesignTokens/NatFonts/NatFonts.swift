@@ -82,6 +82,7 @@ extension NatFonts {
         case subtitle2
         case body1
         case body2
+        @available(*, deprecated, message: "Button token is deprecated")
         case button
         case caption
         case overline
