@@ -2,10 +2,9 @@
 extension UIColor {
     convenience init?(hex: String) {
 
-        var hexString: String = hex.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-
+        var hexString: String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         if hexString.hasPrefix("#") {
-            hexString.removeFirst()
+            hexString.remove(at: hexString.startIndex)
         }
 
         if hexString.count == 3 {
