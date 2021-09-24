@@ -7,7 +7,7 @@
 
  With the following attribute status:
  - ✅ Disabled
- - ❌ Display
+ - ✅ Display (available in a different way)
  - Size:
     - ✅ `Semi` (small)
     - ✅ `SemiX` (medium)
