@@ -232,6 +232,7 @@
 		7D86C19F26654CFB00FC4C53 /* NatLogo+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86C19E26654CFB00FC4C53 /* NatLogo+Model.swift */; };
 		7D86C1A426654D0700FC4C53 /* NatLogo+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86C1A326654D0700FC4C53 /* NatLogo+Size.swift */; };
 		7D8F3E6A258A81C1003A7DEB /* ShortcutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8F3E69258A81C1003A7DEB /* ShortcutView.swift */; };
+		7D8FD15526FB742700B0912A /* GetUIColorFromComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8FD15426FB742700B0912A /* GetUIColorFromComponent.swift */; };
 		7D903892261B4ED6005A3D0A /* NatRating+Input+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D903891261B4ED6005A3D0A /* NatRating+Input+Spec.swift */; };
 		7D90389F261B62A5005A3D0A /* NatRating+ReadOnly+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D90389E261B62A5005A3D0A /* NatRating+ReadOnly+Spec.swift */; };
 		7D9038AF261B6707005A3D0A /* NatRating+Counter+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9038AE261B6707005A3D0A /* NatRating+Counter+Spec.swift */; };
@@ -671,6 +672,7 @@
 		7D86C1A326654D0700FC4C53 /* NatLogo+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatLogo+Size.swift"; sourceTree = "<group>"; };
 		7D8E6D9764598D210D58B32B2AEB0FE9 /* DesignSystemFatalError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemFatalError.swift; sourceTree = "<group>"; };
 		7D8F3E69258A81C1003A7DEB /* ShortcutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutView.swift; sourceTree = "<group>"; };
+		7D8FD15426FB742700B0912A /* GetUIColorFromComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUIColorFromComponent.swift; sourceTree = "<group>"; };
 		7D903891261B4ED6005A3D0A /* NatRating+Input+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatRating+Input+Spec.swift"; sourceTree = "<group>"; };
 		7D90389E261B62A5005A3D0A /* NatRating+ReadOnly+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatRating+ReadOnly+Spec.swift"; sourceTree = "<group>"; };
 		7D9038AE261B6707005A3D0A /* NatRating+Counter+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatRating+Counter+Spec.swift"; sourceTree = "<group>"; };
@@ -2856,6 +2858,7 @@
 				84EB6B6E24EB197000C6A792 /* GetTokensFromTheme.swift */,
 				84EB6B7424EBFEC000C6A792 /* GetThemeValidated.swift */,
 				84EB6B8224EEEA6200C6A792 /* GetUIColorFromTokens.swift */,
+				7D8FD15426FB742700B0912A /* GetUIColorFromComponent.swift */,
 				84EB6B8424EEEA8E00C6A792 /* GetOrCreatedCachedColor.swift */,
 			);
 			path = DomainFunctions;
@@ -3461,6 +3464,7 @@
 				9D4FF6FB92A6A5BD0AF263A69FF707E4 /* Pulsable.swift in Sources */,
 				80FE219D764217C0520E0C784F9C0C0B /* PulseLayer.swift in Sources */,
 				ECA4CB7769FB08CB62C5F8CD79EE6521 /* ReusableView.swift in Sources */,
+				7D8FD15526FB742700B0912A /* GetUIColorFromComponent.swift in Sources */,
 				7D31C1102614BC1700EED32A /* NatRating+Style.swift in Sources */,
 				84EB6B8324EEEA6200C6A792 /* GetUIColorFromTokens.swift in Sources */,
 				79EA0C962614B39A00742C0A /* NatBadge+Animation.swift in Sources */,

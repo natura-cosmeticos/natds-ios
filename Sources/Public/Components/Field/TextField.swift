@@ -202,7 +202,7 @@ public class TextField: UIView {
 
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = NatFonts.font(ofSize: .button, withWeight: .medium)
+        label.font = NatFonts.font(ofSize: 14, withWeight: .medium)
         label.numberOfLines = 2
         return label
     }()

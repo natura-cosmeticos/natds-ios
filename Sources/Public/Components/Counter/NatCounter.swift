@@ -87,7 +87,7 @@ public final class NatCounter: UIView {
 
     var label: UILabel = {
         let label = UILabel()
-        label.font = NatFonts.font(ofSize: .button, withWeight: .medium)
+        label.font = NatFonts.font(ofSize: 14, withWeight: .medium)
         label.textColor = getUIColorFromTokens(\.colorMediumEmphasis)
         label.text = ""
         label.translatesAutoresizingMaskIntoConstraints = false

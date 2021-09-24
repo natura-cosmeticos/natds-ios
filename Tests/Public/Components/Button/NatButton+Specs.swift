@@ -27,7 +27,8 @@ final class NatButtonSpec: QuickSpec {
             styleSpy = .init(
                 applyStyle: { _ in applyStyleInvocations += 1 },
                 changeState: { _ in changeStateInvocations += 1 },
-                applyTitle: { _, _ in applyTitleInvocations += 1 }
+                applyTitle: { _, _ in applyTitleInvocations += 1 },
+                focusColor: { return UIColor.gray }
             )
 
             systemUnderTest = .init(style: styleSpy, notificationCenter: notificationCenterSpy)
@@ -209,7 +210,8 @@ final class NatButtonSpec: QuickSpec {
                     styleSpy = .init(
                         applyStyle: { _ in applyStyleInvocations += 1 },
                         changeState: { _ in changeStateInvocations += 1 },
-                        applyTitle: { _, _ in applyTitleInvocations += 1 }
+                        applyTitle: { _, _ in applyTitleInvocations += 1 },
+                        focusColor: { return UIColor.gray }
                     )
                     systemUnderTest = .init(style: styleSpy)
 

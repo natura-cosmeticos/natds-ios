@@ -12,7 +12,7 @@ internal final class NatCounterButton: UIView, Pulsable {
 
     var iconLabel: UILabel = {
         let label = UILabel()
-        label.font = NatFonts.font(ofSize: .button, withWeight: .medium)
+        label.font = NatFonts.font(ofSize: 14, withWeight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label

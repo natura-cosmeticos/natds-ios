@@ -27,12 +27,32 @@ public struct NatFonts {
         )
     }
 
+    public static func font(ofSize size: CGFloat, withWeight weight: UIFont.Weight) -> UIFont {
+        .systemFont(ofSize: size, weight: weight)
+    }
+
+    public static func font(ofSize size: CGFloat) -> UIFont {
+        .systemFont(ofSize: size)
+    }
+
+    public static func font(ofSize size: CGFloat,
+                            withWeight weight: UIFont.Weight,
+                            withFamily family: String) -> UIFont {
+
+        guard let font = UIFont(name: family, size: size) else {
+            return UIFont.systemFont(ofSize: size,
+                                     weight: weight)
+        }
+        return font
+    }
+
     public static func customFont(ofSize fontSize: Size,
                                   withStyle customFont: CustomFontStyle) -> UIFont {
         AssetsHelper.loadFont(customFont, type: .custom)
 
         guard let font = UIFont(name: customFont.name, size: fontSize.relatedTextStyle.size) else {
-            return UIFont.systemFont(ofSize: fontSize.relatedTextStyle.size, weight: customFont.weight)
+            return UIFont.systemFont(ofSize: fontSize.relatedTextStyle.size,
+                                     weight: customFont.weight)
         }
         return font
     }

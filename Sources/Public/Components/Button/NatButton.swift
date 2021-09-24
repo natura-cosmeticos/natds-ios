@@ -1,5 +1,26 @@
-import UIKit
 /**
+ - NOTE:
+ This component is available in the following variants:
+ - ✅ Contained
+ - ✅ Outlined
+ - ✅ Text
+
+ With the following attribute status:
+ - ✅ Disabled
+ - ✅ Display (available in a different way)
+ - Size:
+    - ✅ `Semi` (small)
+    - ✅ `SemiX` (medium)
+    - ✅ `Medium` (large)
+ - Icon:
+    - ✅ `Left`
+    - ✅ `Right`
+ - Interaction state:
+    - ✅ `Enabled`
+    - ✅ `Focus`
+    - ✅ `Press `
+    - ❌ `Hover` (not applicable)
+
  NatButton is a class that represents  button  component from the design system.
  The button colors changes according with the current theme configured in the Design system.
  
@@ -123,7 +144,10 @@ public final class NatButton: UIButton, Pulsable {
 
         if let touch = touches.first {
             let point = touch.location(in: self)
-            addPulseLayerAnimated(at: point, in: layer, removeAfterAnimation: false)
+            addPulseLayerAnimated(at: point,
+                                  in: layer,
+                                  withColor: style.focusColor(),
+                                  removeAfterAnimation: false)
         }
     }
 

@@ -20,18 +20,22 @@ final class ButtonTextStyleSpec: QuickSpec {
             }
 
             it("returns an expected font") {
-                let textStyle = NatFonts.TextStyle.button
+                let expectedSize = getComponentAttributeFromTheme(\.buttonLabelFontSize)
+                let expectedWeight = getComponentAttributeFromTheme(\.buttonLabelPrimaryFontWeight)
 
-                expect(button.titleLabel?.font.pointSize).to(equal(textStyle.size))
-                expect(button.titleLabel?.font.getWeight()).to(equal(textStyle.weight))
+                expect(button.titleLabel?.font.pointSize).to(equal(expectedSize))
+                expect(button.titleLabel?.font.getWeight()).to(equal(expectedWeight))
             }
 
             it("returns an expected backgroundColor") {
-                expect(button.backgroundColor).to(beNil())
+                let expectedColor = getUIColorFromComponentAttributes(\.buttonTextColorEnableBackground)
+
+                expect(button.backgroundColor).to(equal(expectedColor))
             }
 
             it("returns an expected cornerRadius") {
-                let borderRadius = getTokenFromTheme(\.borderRadiusMedium)
+                let borderRadius = getComponentAttributeFromTheme(\.buttonBorderRadius)
+
                 expect(button.layer.cornerRadius).to(equal(borderRadius))
             }
 
@@ -40,7 +44,7 @@ final class ButtonTextStyleSpec: QuickSpec {
             }
 
             it("returns an expected borderColor") {
-                let expectedColor = UIButton().layer.borderColor
+                let expectedColor = getUIColorFromComponentAttributes(\.buttonTextColorEnableBorder).cgColor
 
                 expect(button.layer.borderColor).to(equal(expectedColor))
             }
@@ -83,9 +87,9 @@ final class ButtonTextStyleSpec: QuickSpec {
 
                 it("returns an expected foregroundColor") {
                     let foregroundColor = attributes[.foregroundColor] as? UIColor
+                    let expectedColor = getUIColorFromComponentAttributes(\.buttonTextColorEnableLabel)
 
-                    expect(foregroundColor).to(equal(getUIColorFromTokens(\.colorHighEmphasis)))
-                }
+                    expect(foregroundColor).to(equal(expectedColor))                }
             }
 
             context("when button is disabled") {
@@ -115,9 +119,9 @@ final class ButtonTextStyleSpec: QuickSpec {
 
                 it("returns an expected foregroundColor") {
                     let foregroundColor = attributes[.foregroundColor] as? UIColor
+                    let expectedColor = getUIColorFromComponentAttributes(\.buttonOutlinedColorDisableLabel)
 
-                    expect(foregroundColor)
-                        .to(equal(NatColors.onSurface.withAlphaComponent(getTokenFromTheme(\.opacityMediumHigh))))
+                    expect(foregroundColor).to(equal(expectedColor))
                 }
             }
         }

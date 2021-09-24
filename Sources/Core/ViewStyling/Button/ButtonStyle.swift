@@ -1,26 +1,25 @@
 enum ButtonStyle {
     static func applyStyle(on button: UIButton) {
-        button.titleLabel?.font = NatFonts.font(ofSize: .button, withWeight: .medium)
+        let size = getComponentAttributeFromTheme(\.buttonLabelFontSize)
+        let weight = getComponentAttributeFromTheme(\.buttonLabelPrimaryFontWeight)
+        let family = getComponentAttributeFromTheme(\.buttonLabelPrimaryFontFamily)
+        button.titleLabel?.font = NatFonts.font(ofSize: size, withWeight: weight, withFamily: family)
         button.titleLabel?.lineBreakMode = .byTruncatingTail
 
-        button.layer.cornerRadius = NatBorderRadius.medium
+        button.layer.cornerRadius = getComponentAttributeFromTheme(\.buttonBorderRadius)
 
         button.contentEdgeInsets = NatButton.EdgeInsets.medium
     }
 
-    static func applyStyleForTitle(
-        _ title: String,
-        colorForNormal: UIColor,
-        on button: UIButton) {
+    static func applyStyleForTitle(_ title: String,
+                                   colorForNormal: UIColor,
+                                   colorForDisabled: UIColor,
+                                   on button: UIButton) {
 
-        let titleForNormal = createTextForTitle(
-            text: title,
-            withColor: colorForNormal
-        )
-        let titleForDisabled = createTextForTitle(
-            text: title,
-            withColor: NatColors.onSurface.withAlphaComponent(getTokenFromTheme(\.opacityMediumHigh))
-        )
+        let titleForNormal = createTextForTitle(text: title,
+                                                withColor: colorForNormal)
+        let titleForDisabled = createTextForTitle(text: title,
+                                                  withColor: colorForDisabled)
 
         button.setAttributedTitle(titleForNormal, for: .normal)
         button.setAttributedTitle(titleForDisabled, for: .disabled)
@@ -30,7 +29,7 @@ enum ButtonStyle {
         let attributedString = NSMutableAttributedString(string: text.uppercased())
         attributedString.apply(foregroundColor: color)
 
-        let value = getComponentAttributeFromTheme(\.buttonDefaultLetterSpacing)
+        let value = getComponentAttributeFromTheme(\.buttonLabelLetterSpacing)
         attributedString.apply(kernValue: value)
 
         return attributedString
