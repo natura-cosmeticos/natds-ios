@@ -170,6 +170,25 @@ private struct StubTokens: Tokens {
 }
 
 private struct StubComponents: Components {
+    let badgeLabelFontSize: CGFloat = 12
+    let badgeLabelLetterSpacing: CGFloat = 0.16
+    let badgeLabelLineHeight: CGFloat = 1.5
+    let badgeLabelPrimaryFontFamily = "San Francisco"
+    let badgeLabelPrimaryFontWeight: UIFont.Weight = .regular
+    let badgeLabelFallbackFontFamily = "San Francisco"
+    let badgeLabelFallbackFontWeight: UIFont.Weight = .regular
+    let badgeStandardHeight: CGFloat = 16
+    let badgeStandardBorderRadius: CGFloat = 8
+    let badgeDotHeight: CGFloat = 8
+    let badgeDotBorderRadius: CGFloat = 4
+    let badgeColorPrimaryLabel = "#000000"
+    let badgeColorPrimaryBackground = "#F1F1F0"
+    let badgeColorSecondaryLabel = "#000000"
+    let badgeColorSecondaryBackground = "#DDCB91"
+    let badgeColorSuccessLabel = "#FFFFFF"
+    let badgeColorSuccessBackground = "#569A32"
+    let badgeColorAlertLabel = "#FFFFFF"
+    let badgeColorAlertBackground = "#E74627"
     let buttonDefaultFontSize: CGFloat = 14
     let buttonDefaultFontWeight: UIFont.Weight = .medium
     let buttonDefaultLetterSpacing: CGFloat = 0.44

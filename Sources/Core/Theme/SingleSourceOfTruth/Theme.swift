@@ -187,6 +187,25 @@ protocol Tokens {
 }
 
 protocol Components {
+    var badgeLabelFontSize: CGFloat { get }
+    var badgeLabelLetterSpacing: CGFloat { get }
+    var badgeLabelLineHeight: CGFloat { get }
+    var badgeLabelPrimaryFontFamily: String { get }
+    var badgeLabelPrimaryFontWeight: UIFont.Weight { get }
+    var badgeLabelFallbackFontFamily: String { get }
+    var badgeLabelFallbackFontWeight: UIFont.Weight { get }
+    var badgeStandardHeight: CGFloat { get }
+    var badgeStandardBorderRadius: CGFloat { get }
+    var badgeDotHeight: CGFloat { get }
+    var badgeDotBorderRadius: CGFloat { get }
+    var badgeColorPrimaryLabel: String { get }
+    var badgeColorPrimaryBackground: String { get }
+    var badgeColorSecondaryLabel: String { get }
+    var badgeColorSecondaryBackground: String { get }
+    var badgeColorSuccessLabel: String { get }
+    var badgeColorSuccessBackground: String { get }
+    var badgeColorAlertLabel: String { get }
+    var badgeColorAlertBackground: String { get }
     var buttonDefaultFontSize: CGFloat { get }
     var buttonDefaultFontWeight: UIFont.Weight { get }
     var buttonDefaultLetterSpacing: CGFloat { get }
