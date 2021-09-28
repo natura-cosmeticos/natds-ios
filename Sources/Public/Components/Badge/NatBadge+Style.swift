@@ -16,7 +16,7 @@ extension NatBadge {
         case standard
         case dot
         case pulse
-        
+
         var height: CGFloat {
             switch self {
             case .standard:

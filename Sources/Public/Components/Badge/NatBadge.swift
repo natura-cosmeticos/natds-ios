@@ -89,22 +89,24 @@ public final class NatBadge: UIView {
 
     private func addConstraintsFor(style: NatBadge.Style) {
         translatesAutoresizingMaskIntoConstraints = false
-        var constraints: [NSLayoutConstraint] = []
+
+        let heightConstraint = heightAnchor.constraint(equalToConstant: style.height)
+        let widthConstraint = widthAnchor.constraint(equalToConstant: style.height)
+        var constraints: [NSLayoutConstraint] = [heightConstraint, widthConstraint]
+
         if style == .standard {
             addSubview(label)
+            widthConstraint.priority = .defaultLow
             constraints = [
+                heightConstraint,
+                widthConstraint,
+                label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: style.borderRadius/2),
                 label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -style.borderRadius/2),
                 label.topAnchor.constraint(equalTo: topAnchor),
-                label.bottomAnchor.constraint(equalTo: bottomAnchor),
-                label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: style.borderRadius/2),
-                heightAnchor.constraint(equalToConstant: style.height)
-            ]
-        } else {
-            constraints = [
-                widthAnchor.constraint(equalToConstant: style.height),
-                heightAnchor.constraint(equalToConstant: style.height)
+                label.bottomAnchor.constraint(equalTo: bottomAnchor)
             ]
         }
+
         NSLayoutConstraint.activate(constraints)
     }
 
