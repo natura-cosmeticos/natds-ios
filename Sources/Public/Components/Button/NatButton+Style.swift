@@ -23,7 +23,6 @@ extension NatButton {
         let applyStyle: (NatButton) -> Void
         let changeState: ((NatButton) -> Void)?
         let applyTitle: (String, NatButton) -> Void
-        let focusColor: () -> UIColor
     }
 }
 
@@ -32,8 +31,7 @@ extension NatButton.Style {
         .init(
             applyStyle: ButtonContainedStyle.applyStyle,
             changeState: ButtonContainedStyle.applyStyleForStates,
-            applyTitle: ButtonContainedStyle.applyStyleForTitle,
-            focusColor: ButtonContainedStyle.focusColor
+            applyTitle: ButtonContainedStyle.applyStyleForTitle
         )
     }
 
@@ -41,8 +39,7 @@ extension NatButton.Style {
         .init(
             applyStyle: ButtonOutlinedStyle.applyStyle,
             changeState: ButtonOutlinedStyle.applyStyleForStates,
-            applyTitle: ButtonOutlinedStyle.applyStyleForTitle,
-            focusColor: ButtonOutlinedStyle.focusColor
+            applyTitle: ButtonOutlinedStyle.applyStyleForTitle
         )
     }
 
@@ -50,8 +47,7 @@ extension NatButton.Style {
         .init(
             applyStyle: ButtonTextStyle.applyStyle,
             changeState: nil,
-            applyTitle: ButtonTextStyle.applyStyleForTitle,
-            focusColor: ButtonTextStyle.focusColor
+            applyTitle: ButtonTextStyle.applyStyleForTitle
         )
     }
 }

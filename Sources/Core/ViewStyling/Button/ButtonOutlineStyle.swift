@@ -25,8 +25,4 @@ enum ButtonOutlinedStyle {
             on: button
         )
     }
-
-    static func focusColor() -> UIColor {
-        return getUIColorFromComponentAttributes(\.buttonOutlinedColorFocusBackground)
-    }
 }
