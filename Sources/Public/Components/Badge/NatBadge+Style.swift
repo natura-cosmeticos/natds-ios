@@ -16,5 +16,27 @@ extension NatBadge {
         case standard
         case dot
         case pulse
+        
+        var height: CGFloat {
+            switch self {
+            case .standard:
+                return getComponentAttributeFromTheme(\.badgeStandardHeight)
+            case .dot:
+                return getComponentAttributeFromTheme(\.badgeDotHeight)
+            case .pulse:
+                return getComponentAttributeFromTheme(\.badgeDotHeight)
+            }
+        }
+
+        var borderRadius: CGFloat {
+            switch self {
+            case .standard:
+                return getComponentAttributeFromTheme(\.badgeStandardBorderRadius)
+            case .dot:
+                return getComponentAttributeFromTheme(\.badgeDotBorderRadius)
+            case .pulse:
+                return getComponentAttributeFromTheme(\.badgeDotBorderRadius)
+            }
+        }
     }
 }

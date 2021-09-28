@@ -26,32 +26,32 @@ extension NatBadge.Color {
     var box: UIColor {
         switch self {
         case .alert:
-            return getUIColorFromTokens(\.colorAlert)
+            return getUIColorFromComponentAttributes(\.badgeColorAlertBackground)
 
         case .primary:
-            return getUIColorFromTokens(\.colorPrimary)
+            return getUIColorFromComponentAttributes(\.badgeColorPrimaryBackground)
 
         case .secondary:
-            return getUIColorFromTokens(\.colorSecondary)
+            return getUIColorFromComponentAttributes(\.badgeColorSecondaryBackground)
 
         case .success:
-            return getUIColorFromTokens(\.colorSuccess)
+            return getUIColorFromComponentAttributes(\.badgeColorSuccessBackground)
         }
     }
 
     var content: UIColor {
         switch self {
         case .alert:
-            return getUIColorFromTokens(\.colorOnAlert)
+            return getUIColorFromComponentAttributes(\.badgeColorAlertLabel)
 
         case .primary:
-            return getUIColorFromTokens(\.colorOnPrimary)
+            return getUIColorFromComponentAttributes(\.badgeColorPrimaryLabel)
 
         case .secondary:
-            return getUIColorFromTokens(\.colorOnSecondary)
+            return getUIColorFromComponentAttributes(\.badgeColorSecondaryLabel)
 
         case .success:
-            return getUIColorFromTokens(\.colorOnSuccess)
+            return getUIColorFromComponentAttributes(\.badgeColorSuccessLabel)
         }
     }
 }
