@@ -377,7 +377,10 @@ extension TextField {
                                                                             interactionState.placeholderTextColor])
 
         titleLabel.textColor = interactionState.titleTextColor
-        helperLabel.textColor = interactionState.helperLabelTextColor
+        if state == .none {
+            helperLabel.textColor = interactionState.helperLabelTextColor
+        }
+
         iconButtonGeneral.configure(iconColor: interactionState.iconColor)
 
         helperLabel.text = helper
