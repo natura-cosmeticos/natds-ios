@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.7.1](https://github.com/natura-cosmeticos/natds-ios/compare/6.7.0...6.7.1) (2021-09-29)
+
+
+### Bug Fixes
+
+* fix helper text color when textfield has a feedback state ([e4594e3](https://github.com/natura-cosmeticos/natds-ios/commit/e4594e38ff7dfbc026cfb95e28c7a5e10c87b424))
+* fix text field setter to match correct interaction state ([a1b633a](https://github.com/natura-cosmeticos/natds-ios/commit/a1b633ae22736f8e46cb4032064457518810240a))
+
 ## [6.7.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.6.1...6.7.0) (2021-09-29)
 
 
