@@ -146,7 +146,6 @@ public final class NatButton: UIButton, Pulsable {
             let point = touch.location(in: self)
             addPulseLayerAnimated(at: point,
                                   in: layer,
-                                  withColor: style.focusColor(),
                                   removeAfterAnimation: false)
         }
     }

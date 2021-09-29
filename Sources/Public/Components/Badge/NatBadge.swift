@@ -57,7 +57,9 @@ public final class NatBadge: UIView {
 
     private lazy var label: UILabel = {
         let label = UILabel()
-        label.font = NatFonts.font(ofSize: .caption, withWeight: .regular)
+        label.font = NatFonts.font(ofSize: getComponentAttributeFromTheme(\.badgeLabelFontSize),
+                                   withWeight: getComponentAttributeFromTheme(\.badgeLabelPrimaryFontWeight),
+                                   withFamily: getComponentAttributeFromTheme(\.badgeLabelPrimaryFontFamily))
         label.textColor = color.content
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -82,40 +84,28 @@ public final class NatBadge: UIView {
 
     private func setup() {
         backgroundColor = .clear
-        if case .standard = style {
+        addConstraintsFor(style: style)
+    }
+
+    private func addConstraintsFor(style: NatBadge.Style) {
+        translatesAutoresizingMaskIntoConstraints = false
+
+        let heightConstraint = heightAnchor.constraint(equalToConstant: style.height)
+        let widthConstraint = widthAnchor.constraint(equalToConstant: style.height)
+        var constraints: [NSLayoutConstraint] = [heightConstraint, widthConstraint]
+
+        if style == .standard {
             addSubview(label)
-            addLabelConstraints()
+            widthConstraint.priority = .defaultLow
+            constraints = [
+                heightConstraint,
+                widthConstraint,
+                label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: style.borderRadius/2),
+                label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -style.borderRadius/2),
+                label.topAnchor.constraint(equalTo: topAnchor),
+                label.bottomAnchor.constraint(equalTo: bottomAnchor)
+            ]
         }
-
-        if case .dot = style {
-            addDotConstraints()
-        }
-
-        if case .pulse = style {
-            addDotConstraints()
-        }
-    }
-
-    private func addLabelConstraints() {
-        translatesAutoresizingMaskIntoConstraints = false
-
-        let constraints = [
-            label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -4),
-            label.topAnchor.constraint(equalTo: topAnchor),
-            label.bottomAnchor.constraint(equalTo: bottomAnchor),
-            label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 4)
-        ]
-
-        NSLayoutConstraint.activate(constraints)
-    }
-
-    private func addDotConstraints() {
-        translatesAutoresizingMaskIntoConstraints = false
-
-        let constraints = [
-            self.widthAnchor.constraint(equalToConstant: 8),
-            self.heightAnchor.constraint(equalToConstant: 8)
-        ]
 
         NSLayoutConstraint.activate(constraints)
     }
@@ -125,26 +115,17 @@ public final class NatBadge: UIView {
     override public func draw(_ rect: CGRect) {
         let path: UIBezierPath?
 
-        switch style {
-        case .standard:
-            path = UIBezierPath(roundedRect: CGRect(origin: .zero, size: bounds.size),
-                                cornerRadius: NatBorderRadius.circle(viewHeight: bounds.size.height))
-            color.box.set()
-            path?.fill()
-
-        case .dot:
-            path = UIBezierPath(roundedRect: CGRect(origin: .zero, size: bounds.size),
-                                cornerRadius: NatBorderRadius.circle(viewHeight: bounds.size.height))
-            color.box.set()
-            path?.fill()
-
-        case .pulse:
-
+        if style == .pulse {
             drawPulse()
             scaleAnimation()
             opacityAnimation()
             centerCircleLayer.fillColor = color.box.cgColor
             backgroundCircleLayer.fillColor = color.box.withAlphaComponent(getTokenFromTheme(\.opacityMedium)).cgColor
+        } else {
+            path = UIBezierPath(roundedRect: CGRect(origin: .zero, size: bounds.size),
+                                cornerRadius: style.borderRadius)
+            color.box.set()
+            path?.fill()
         }
     }
 

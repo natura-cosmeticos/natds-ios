@@ -24,8 +24,4 @@ enum ButtonTextStyle {
             on: button
         )
     }
-
-    static func focusColor() -> UIColor {
-        return getUIColorFromComponentAttributes(\.buttonTextColorFocusBackground)
-    }
 }
