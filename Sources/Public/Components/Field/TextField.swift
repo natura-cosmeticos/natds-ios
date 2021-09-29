@@ -111,7 +111,9 @@ public class TextField: UIView {
         get { textField.text }
         set {
             textField.text = newValue
-            interactionState = text != nil ? .filled : .enabled
+            if interactionState == .enabled {
+                interactionState = text != nil ? .filled : .enabled
+            }
         }
     }
 
@@ -375,7 +377,10 @@ extension TextField {
                                                                             interactionState.placeholderTextColor])
 
         titleLabel.textColor = interactionState.titleTextColor
-        helperLabel.textColor = interactionState.helperLabelTextColor
+        if state == .none {
+            helperLabel.textColor = interactionState.helperLabelTextColor
+        }
+
         iconButtonGeneral.configure(iconColor: interactionState.iconColor)
 
         helperLabel.text = helper
