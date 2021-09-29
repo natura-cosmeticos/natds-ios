@@ -111,7 +111,9 @@ public class TextField: UIView {
         get { textField.text }
         set {
             textField.text = newValue
-            interactionState = text != nil ? .filled : .enabled
+            if interactionState == .enabled {
+                interactionState = text != nil ? .filled : .enabled
+            }
         }
     }
 
