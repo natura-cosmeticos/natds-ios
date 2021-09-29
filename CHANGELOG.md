@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.7.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.6.1...6.7.0) (2021-09-29)
+
+
+### Features
+
+* add badge component tokens ([f61837a](https://github.com/natura-cosmeticos/natds-ios/commit/f61837a900fbef8412b9bd6a9e5ac97d8bc83cec))
+* update badge code with attributes from new tokens ([a737951](https://github.com/natura-cosmeticos/natds-ios/commit/a73795174461070978377eed03161e8371025fd4))
+
+
+### Bug Fixes
+
+* fix button ripple color to default color ([6132806](https://github.com/natura-cosmeticos/natds-ios/commit/613280621fb97c9251fcec877b50de649b7b9960))
+* update badge constraints to match badge shape ([96531a3](https://github.com/natura-cosmeticos/natds-ios/commit/96531a3952473b7258a80c800a5b271130dff44d))
+
 ### [6.6.1](https://github.com/natura-cosmeticos/natds-ios/compare/6.6.0...6.6.1) (2021-09-24)
 
 
