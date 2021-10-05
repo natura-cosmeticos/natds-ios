@@ -46,6 +46,9 @@ pods_wipe: ## removes Pods folder, clean its cache and reinstall all Cocoapods d
 	rm -rf ~/Library/Caches/CocoaPods/*
 	$(FASTLANE) pods_install
 
+update_themes: ## update theme from commons
+	bash ./scripts/update_themes.sh
+
 create_docs: ## creates html docs
 	jazzy --theme=jony
 	bash ./scripts/update_docs.sh
