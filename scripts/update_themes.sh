@@ -15,7 +15,4 @@ tar -xzvf /tmp/natds/Themes.tar.gz -C /tmp/natds
 
 # copy themes folder from commons to project source files
 cp -r /tmp/natds/*/packages/natds-themes/build/ios/theme ./Sources/Core/Theme/SingleSourceOfTruth
-
-echo "---------------------------------------------------------------"
 echo "Themes copied to project source files"
-echo "---------------------------------------------------------------"

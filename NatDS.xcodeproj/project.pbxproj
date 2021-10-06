@@ -2043,16 +2043,6 @@
 			path = Shortcut;
 			sourceTree = "<group>";
 		};
-		845AD7A224E2C47B006CA226 /* SingleSourceOfTruth */ = {
-			isa = PBXGroup;
-			children = (
-				847C829724E562B4001CE116 /* DeprecatedWillBeRemoved */,
-				845AD7A324E2C4DA006CA226 /* Theme.swift */,
-				845AD7A524E2C8C5006CA226 /* BrandsThemes */,
-			);
-			path = SingleSourceOfTruth;
-			sourceTree = "<group>";
-		};
 		845AD7A524E2C8C5006CA226 /* BrandsThemes */ = {
 			isa = PBXGroup;
 			children = (
@@ -2168,14 +2158,6 @@
 				847C829524E36AE1001CE116 /* TheBodyShopLightTheme.swift */,
 			);
 			path = TheBodyShop;
-			sourceTree = "<group>";
-		};
-		847C829724E562B4001CE116 /* DeprecatedWillBeRemoved */ = {
-			isa = PBXGroup;
-			children = (
-				B795439BE58573E0D11DFD761D11CB3F /* Theme */,
-			);
-			path = DeprecatedWillBeRemoved;
 			sourceTree = "<group>";
 		};
 		847C829824E563E9001CE116 /* SingleSourceOfTruth */ = {
@@ -2452,7 +2434,8 @@
 		84EB6B7B24EC045400C6A792 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
-				845AD7A224E2C47B006CA226 /* SingleSourceOfTruth */,
+				845AD7A324E2C4DA006CA226 /* Theme.swift */,
+				845AD7A524E2C8C5006CA226 /* BrandsThemes */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -2506,14 +2489,6 @@
 				26BFBAD82512736F006C22E2 /* Tag */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		8D17D3D40C2AE04D8D49BFB4530D5BC9 /* DesignTokens */ = {
-			isa = PBXGroup;
-			children = (
-				64B35360D246BD94D64943CAB0591D20 /* Fonts */,
-			);
-			path = DesignTokens;
 			sourceTree = "<group>";
 		};
 		8F17D4DBF2804B57A4C0A71661E479AF /* Components */ = {
@@ -2616,6 +2591,7 @@
 		B054E7B09C6DBF531CFF71F300EEB33C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				64B35360D246BD94D64943CAB0591D20 /* Fonts */,
 				02B41F99CB8ACD14C09E1AA323E38C2D /* AssetsHelper.swift */,
 				79B6AC6B25AC8BF90027F7D6 /* AssetsPath.swift */,
 				6DA6561EEF13B1CE57B6CE00222286CB /* ReusableView.swift */,
@@ -2653,14 +2629,6 @@
 				79FC597225C3332C001CCB56 /* Divider+Style.swift */,
 			);
 			path = Divider;
-			sourceTree = "<group>";
-		};
-		B795439BE58573E0D11DFD761D11CB3F /* Theme */ = {
-			isa = PBXGroup;
-			children = (
-				8D17D3D40C2AE04D8D49BFB4530D5BC9 /* DesignTokens */,
-			);
-			path = Theme;
 			sourceTree = "<group>";
 		};
 		BE272C2F259B67C300060AF8 /* SelectionControl */ = {
