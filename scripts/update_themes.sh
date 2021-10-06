@@ -1,8 +1,5 @@
 #!/bin/zsh
 
-# TODO: receber path do projeto ios
-# TODO: deletar o arquivo de tmp (deleta sozinho depois de 3 dias)
-
 domain='https://github.com/natura-cosmeticos/natds-commons/archive/refs/tags/@naturacosmeticos/natds-themes@'
 extension='.tar.gz'
 
