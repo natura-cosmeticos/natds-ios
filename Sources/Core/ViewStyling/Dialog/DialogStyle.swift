@@ -2,10 +2,16 @@ enum DialogStyle {
     static func createLabelForTitle(title: String) -> UILabel {
         let label = UILabel()
         label.numberOfLines = 0
-        label.font = NatFonts.font(ofSize: .heading6, withWeight: .medium)
+
+        let fontSize = getComponentAttributeFromTheme(\.dialogTitleFontSize)
+        let fontWeight = getComponentAttributeFromTheme(\.dialogTitlePrimaryFontWeight)
+        let fontFamily = getComponentAttributeFromTheme(\.dialogTitlePrimaryFontFamily)
+        label.font = NatFonts.font(ofSize: fontSize,
+                                   withWeight: fontWeight,
+                                   withFamily: fontFamily)
 
         let color = getUIColorFromTokens(\.colorHighEmphasis)
-        let kern = getComponentAttributeFromTheme(\.heading6LetterSpacing)
+        let kern = getComponentAttributeFromTheme(\.dialogTitleLetterSpacing)
         label.attributedText = createAttributedText(text: title, color: color, kern: kern)
 
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -16,10 +22,16 @@ enum DialogStyle {
     static func createLabelForBody(body: String) -> UILabel {
         let label = UILabel()
         label.numberOfLines = 0
-        label.font = NatFonts.font(ofSize: .body1, withWeight: .regular)
+        let fontSize = getComponentAttributeFromTheme(\.dialogBodyFontSize)
+        let fontWeight = getComponentAttributeFromTheme(\.dialogBodyPrimaryFontWeight)
+        let fontFamily = getComponentAttributeFromTheme(\.dialogBodyPrimaryFontFamily)
+
+        label.font = NatFonts.font(ofSize: fontSize,
+                                   withWeight: fontWeight,
+                                   withFamily: fontFamily)
 
         let color = getUIColorFromTokens(\.colorHighEmphasis)
-        let kern = getComponentAttributeFromTheme(\.body1LetterSpacing)
+        let kern = getComponentAttributeFromTheme(\.dialogBodyLetterSpacing)
         label.attributedText = createAttributedText(text: body, color: color, kern: kern)
 
         label.translatesAutoresizingMaskIntoConstraints = false
