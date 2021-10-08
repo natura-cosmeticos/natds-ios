@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.8.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.7.1...6.8.0) (2021-10-08)
+
+
+### Features
+
+* add new dialog tokens to theme ([eaed725](https://github.com/natura-cosmeticos/natds-ios/commit/eaed72558246e2a5c381fbacc50e0b88f3460436))
+* update dialog title and body typography tokens ([5b6d6e1](https://github.com/natura-cosmeticos/natds-ios/commit/5b6d6e1a769b08da558adac7732a8a6e31410ad3))
+
 ### [6.7.1](https://github.com/natura-cosmeticos/natds-ios/compare/6.7.0...6.7.1) (2021-09-29)
 
 
