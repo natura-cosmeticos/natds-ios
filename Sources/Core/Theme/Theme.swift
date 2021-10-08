@@ -254,6 +254,20 @@ protocol Components {
     var buttonTextColorFocusBackground: String { get }
     var buttonTextColorFocusBorder: String { get }
     var buttonTextColorFocusLabel: String { get }
+    var dialogTitleFontSize: CGFloat { get }
+    var dialogTitleLetterSpacing: CGFloat { get }
+    var dialogTitleLineHeight: CGFloat { get }
+    var dialogTitlePrimaryFontFamily: String { get }
+    var dialogTitlePrimaryFontWeight: UIFont.Weight { get }
+    var dialogTitleFallbackFontFamily: String { get }
+    var dialogTitleFallbackFontWeight: UIFont.Weight { get }
+    var dialogBodyFontSize: CGFloat { get }
+    var dialogBodyLetterSpacing: CGFloat { get }
+    var dialogBodyLineHeight: CGFloat { get }
+    var dialogBodyPrimaryFontFamily: String { get }
+    var dialogBodyPrimaryFontWeight: UIFont.Weight { get }
+    var dialogBodyFallbackFontFamily: String { get }
+    var dialogBodyFallbackFontWeight: UIFont.Weight { get }
     var heading1FontSize: CGFloat { get }
     var heading1FontWeight: UIFont.Weight { get }
     var heading1LetterSpacing: CGFloat { get }
