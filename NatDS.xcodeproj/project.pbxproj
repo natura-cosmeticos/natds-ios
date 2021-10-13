@@ -255,6 +255,7 @@
 		7DE2B10725FBD57300C5CBC0 /* NatListItem+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2B10625FBD57300C5CBC0 /* NatListItem+Spec.swift */; };
 		7DE2B11625FBFBAB00C5CBC0 /* NatListItemCell+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2B11525FBFBAB00C5CBC0 /* NatListItemCell+Snapshot+Tests.swift */; };
 		7DE2B12C26000BA600C5CBC0 /* UIImageView+Clickable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2B12B26000BA600C5CBC0 /* UIImageView+Clickable.swift */; };
+		7DE323A427177A5D000D473E /* ExpansionPanel+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE323A327177A5D000D473E /* ExpansionPanel+Spec.swift */; };
 		7DE6156F26A6054F002621A5 /* NatDialogDividerConfigurable+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE6156E26A6054F002621A5 /* NatDialogDividerConfigurable+Spec.swift */; };
 		7DFC9E8826F38BA500052C54 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DFC9E8526F38BA400052C54 /* Montserrat-Bold.ttf */; };
 		7DFC9E8926F38BA500052C54 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DFC9E8626F38BA500052C54 /* Montserrat-Regular.ttf */; };
@@ -695,6 +696,7 @@
 		7DE2B10625FBD57300C5CBC0 /* NatListItem+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatListItem+Spec.swift"; sourceTree = "<group>"; };
 		7DE2B11525FBFBAB00C5CBC0 /* NatListItemCell+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatListItemCell+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		7DE2B12B26000BA600C5CBC0 /* UIImageView+Clickable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Clickable.swift"; sourceTree = "<group>"; };
+		7DE323A327177A5D000D473E /* ExpansionPanel+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExpansionPanel+Spec.swift"; sourceTree = "<group>"; };
 		7DE6156E26A6054F002621A5 /* NatDialogDividerConfigurable+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogDividerConfigurable+Spec.swift"; sourceTree = "<group>"; };
 		7DFC9E8526F38BA400052C54 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		7DFC9E8626F38BA500052C54 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
@@ -1198,6 +1200,7 @@
 			isa = PBXGroup;
 			children = (
 				F6F7B50CF41E6ECBFD7148828549ECBF /* ExpansionPanel+MarginTests.swift */,
+				7DE323A327177A5D000D473E /* ExpansionPanel+Spec.swift */,
 			);
 			path = ExpansionPanel;
 			sourceTree = "<group>";
@@ -3254,6 +3257,7 @@
 				8402DA76255310B2005295B5 /* NatLogoImages+AesopLight+Spec.swift in Sources */,
 				79E7FB8F2538E26400A831BC /* TheBodyShopDarkTokens+Color+Spec.swift in Sources */,
 				79E7FB992538EC7900A831BC /* TheBodyShopDarkTokens+Elevation+Spec.swift in Sources */,
+				7DE323A427177A5D000D473E /* ExpansionPanel+Spec.swift in Sources */,
 				797E60DC25531625002A59E0 /* NatLogoImages+AvonDark+Spec.swift in Sources */,
 				797E6100255317D4002A59E0 /* NatLogoImages+TheBodyShopDark+Spec.swift in Sources */,
 				79E7FA5E2537458D00A831BC /* AesopDarkTokens+Spacing+Spec.swift in Sources */,
