@@ -31,6 +31,18 @@ import UIKit
 */
 
 public class ExpansionPanel: UIView {
+    public enum ExpansionAction {
+        case open
+        case close
+        case all
+    }
+
+    public typealias Handler = () -> Void
+
+    private var expandHandler: Handler?
+    private var collapseHandler: Handler?
+    private var tapHandler: Handler?
+
     private lazy var subtitleLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
@@ -119,6 +131,17 @@ public class ExpansionPanel: UIView {
         self.detailView = detailView
     }
 
+    public func setHandlerForTap(withAction action: ExpansionAction, completionHandler: @escaping Handler) {
+        switch action {
+        case .open:
+            self.expandHandler = completionHandler
+        case .close:
+            self.collapseHandler = completionHandler
+        default:
+            self.tapHandler = completionHandler
+        }
+    }
+
     // MARK: - User interactions
 
     @objc private func didTapUpDownButton() {
@@ -150,7 +173,7 @@ public class ExpansionPanel: UIView {
     }
 
     private func toggle() {
-        isCollapsed ? expand() : collapse()
+        isCollapsed ? expand() : collapse()        
     }
 
     private func addTapToToggle() {
@@ -221,6 +244,7 @@ extension ExpansionPanel {
         animateIncreasingHeight(from: previousHeight)
         animateIncreasingDetailHeight()
         animateChangingColorToActive()
+        executeHandlerForExpand()
     }
 
     private func setBorderColorActive() {
@@ -238,6 +262,11 @@ extension ExpansionPanel {
         animateChangingBorderColor(from: inactiveBorderColor, to: activeBorderColor)
         setBorderColorActive()
     }
+
+    private func executeHandlerForExpand() {
+        expandHandler?()
+        tapHandler?()
+    }
 }
 
 // MARK: - Collapse
@@ -251,6 +280,7 @@ extension ExpansionPanel {
         rotateButtonDown()
         animateDecreasingHeight(from: previousHeight)
         animateChangingColorToInactive()
+        executeHandlerForCollapse()
     }
 
     private func setBorderColorInactive() {
@@ -268,6 +298,11 @@ extension ExpansionPanel {
     private func animateChangingColorToInactive() {
         animateChangingBorderColor(from: activeBorderColor, to: inactiveBorderColor)
         setBorderColorInactive()
+    }
+
+    private func executeHandlerForCollapse() {
+        collapseHandler?()
+        tapHandler?()
     }
 }
 
