@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.9.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.8.0...6.9.0) (2021-10-14)
+
+
+### Features
+
+* add handler for expansion panel's expands and collapses ([48edea9](https://github.com/natura-cosmeticos/natds-ios/commit/48edea9b542865f3893a60a8249c6596590e114d))
+
 ## [6.8.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.7.1...6.8.0) (2021-10-08)
 
 
