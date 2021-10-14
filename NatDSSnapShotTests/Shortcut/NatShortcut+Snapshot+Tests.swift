@@ -9,7 +9,7 @@ final class NatShortcutSnapshotTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        superview = UIView(frame: CGRect(x: 0, y: 0, width: 80, height: 80))
+        superview = UIView(frame: CGRect(x: 0, y: 0, width: 80, height: 100))
         superview.backgroundColor = .white
 
         ConfigurationStorage.shared.currentTheme = NaturaLightTheme()
