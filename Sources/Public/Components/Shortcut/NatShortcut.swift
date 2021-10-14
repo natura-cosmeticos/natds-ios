@@ -22,21 +22,36 @@ public final class NatShortcut: UIView {
 
     // MARK: - Private properties
 
-    private let shortcutView: ShortcutView = {
-        let view = ShortcutView(icon: nil)
+    private lazy var shortcutView: ShortcutView = {
+        let view = ShortcutView(icon: icon)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
 
-    private let label: UILabel = {
+    private lazy var label: UILabel = {
         let label = UILabel()
         label.font = NatFonts.font(ofSize: .caption, withWeight: .regular)
         label.textColor = getUIColorFromTokens(\.colorHighEmphasis)
         label.textAlignment = .center
+        label.lineBreakMode = .byWordWrapping
+        label.numberOfLines = 0
+        label.text = text
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label
     }()
+
+    private var icon: String? {
+        didSet {
+            shortcutView.configure(icon: icon)
+        }
+    }
+
+    private var text: String? {
+        didSet {
+            label.text = text
+        }
+    }
 
     private let style: Style
     private let notificationCenter: NotificationCenterObservable
@@ -45,11 +60,17 @@ public final class NatShortcut: UIView {
     // MARK: - Inits
 
     public convenience init(style: Style) {
-        self.init(style: style, notificationCenter: NotificationCenter.default)
+        self.init(style: style, text: nil, icon: nil, notificationCenter: NotificationCenter.default)
     }
 
-    init(style: Style, notificationCenter: NotificationCenterObservable) {
+    public convenience init(style: Style, text: String? = nil, icon: String? = nil) {
+        self.init(style: style, text: text, icon: icon, notificationCenter: NotificationCenter.default)
+    }
+
+    init(style: Style, text: String?, icon: String?, notificationCenter: NotificationCenterObservable) {
         self.style = style
+        self.text = text
+        self.icon = icon
         self.notificationCenter = notificationCenter
 
         super.init(frame: .zero)
@@ -93,27 +114,41 @@ public final class NatShortcut: UIView {
 
 extension NatShortcut {
     /// Sets an icon for the shortcut view
+    ///
     /// - Parameter icon: An icon from NatDSIcons.
     /// Example of usage:
     ///
     ///     shortcut.configure(icon: getIcon(icon: .outlinedAlertNotification))
     public func configure(icon: String?) {
-        shortcutView.configure(icon: icon)
+        self.icon = icon
     }
 
     /// Configures text for shortcut bottom label.
+    ///
     /// - Parameter text: A string with the text to display on the label.
     public func configure(text: String) {
-        label.text = text
+        self.text = text
     }
 
     /// Sets the functionality for the shortcut.
+    ///
     /// - Parameter action: A block of functionality to be executed when the shorcut is pressed
     public func configure(action: @escaping () -> Void) {
         self.action = action
     }
+    
+    /// Configures label text width and lines for long texts
+    ///
+    /// - Parameters:
+    ///   - numberOfLines: the number of lines to be displayed
+    ///   - lineBreakMode: the line break mode for long texts
+    public func configureText(numberOfLines: Int, lineBreakMode: NSLineBreakMode) {
+        label.lineBreakMode = lineBreakMode
+        label.numberOfLines = numberOfLines
+    }
 
     /// Configures a badge to the shortcut.
+    ///
     /// - Parameter badge: A badge from the design system.
     /// The badge must be created and configured before setting it to the shortcut.
     ///

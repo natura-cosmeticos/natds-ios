@@ -55,8 +55,7 @@ final class ShortcutItemViewController: UIViewController, SampleItem {
     private func createShortcuts(style: NatShortcut.Style, text: String,
                                  shouldShowBadge: Bool = false) -> [NatShortcut] {
         (0...3).map { value in
-            let shortcut = NatShortcut(style: style)
-            shortcut.configure(text: text)
+            let shortcut = NatShortcut(style: style, text: text)
 
             if shouldShowBadge {
                 let badgeValues = [1, 25, 99, 100]
