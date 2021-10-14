@@ -3,6 +3,8 @@ import NatDS
 class ExpansionPanelViewController: UIViewController, SampleItem {
 
     static var name: String = "Expansion Panel"
+    var tapsCounter: Int = 0
+    var expandCounter: Int = 0
 
     private lazy var panel: ExpansionPanel = {
         let expansionPanel = ExpansionPanel()
@@ -39,6 +41,14 @@ class ExpansionPanelViewController: UIViewController, SampleItem {
             panel.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -horizontalMargin)
         ])
         panel.setDetailView(detail)
+        panel.setHandlerForTap(withAction: .allActions) {
+            self.tapsCounter += 1
+            print("This component was tapped \(self.tapsCounter) times")
+        }
+        panel.setHandlerForTap(withAction: .expand) {
+            self.expandCounter += 1
+            print("This component was expanded \(self.expandCounter) times")
+        }
     }
 
 }

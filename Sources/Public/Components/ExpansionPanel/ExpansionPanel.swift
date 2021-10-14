@@ -1,28 +1,19 @@
 import UIKit
 
 /**
-  ExpansionPanel is a class that represents  a  view component that can be expanded and collapsed.
-  Also, it can show or hide a detail view
-  This is a component from the design system.
-  The panel expands and retracts as user touches the upDownButton,
-  and the border color changes according with the current theme configured in the Design system.
-
-    This panel has only 2 public methods to interact with:
-
-    With this, you can define a text for the subtitle
-
-        public func setSubtitle(_ subtitle: String)
-
-    With that one, you can add a detail view into the bottom content of the panel
-    This detail is going to be showed or hidden as the panel expands or collapses, respectively.
-
-        public func setDetailView(_ detailView: UIView?)
+  ExpansionPanel is a class that represents a view component that can be expanded and collapsed.
+  Also, it can show or hide a detail view with content.
+  The panel expands and retracts as user touches an up/down button, and the border color changes according to the chosen Design System theme.
 
     Example of usage:
 
         let expansionPanel = ExpansionPanel()
         expansionPanel.setSubtitle("My Subtitle")
         expansionPanel.setDetailView(myDetailView)
+        expansionPanel.setHandlerForTap(withAction: .expand) {
+            // your code
+        }
+}
 
  - Requires:
         It's necessary to configure the Design System with a theme or fatalError will be raised.
@@ -31,6 +22,20 @@ import UIKit
 */
 
 public class ExpansionPanel: UIView {
+
+    /// An enum that represents which actions performed by the component can receive a completion handler
+    public enum ExpansionAction {
+        case expand
+        case collapse
+        case allActions
+    }
+
+    public typealias ExpansionHandler = () -> Void
+
+    private var expandHandler: ExpansionHandler?
+    private var collapseHandler: ExpansionHandler?
+    private var tapHandler: ExpansionHandler?
+
     private lazy var subtitleLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
@@ -111,12 +116,35 @@ public class ExpansionPanel: UIView {
 
     // MARK: - Public methods
 
+    /// Defines a text for the subtitle (the main text in the component)
+    ///
+    /// - Parameter subtitle: a string for the subtitle
     public func setSubtitle(_ subtitle: String) {
         subtitleLabel.text = subtitle
     }
 
+    /// Adds a detail view into the bottom content of the panel
+    /// This detail view is going to be showed or hidden as the panel expands or collapses, respectively.
+    ///
+    /// - Parameter detailView: an UIView with your content
     public func setDetailView(_ detailView: UIView?) {
         self.detailView = detailView
+    }
+
+    /// Adds a completion handler to be executed when the component expands, collapses, or both
+    ///
+    /// - Parameters:
+    ///   - action: the action that will be the trigger to execute the completion handler.
+    ///   - completionHandler: the block of code to be run
+    public func setHandlerForTap(withAction action: ExpansionAction, completionHandler: @escaping ExpansionHandler) {
+        switch action {
+        case .expand:
+            self.expandHandler = completionHandler
+        case .collapse:
+            self.collapseHandler = completionHandler
+        default:
+            self.tapHandler = completionHandler
+        }
     }
 
     // MARK: - User interactions
@@ -221,6 +249,7 @@ extension ExpansionPanel {
         animateIncreasingHeight(from: previousHeight)
         animateIncreasingDetailHeight()
         animateChangingColorToActive()
+        executeHandlerForExpand()
     }
 
     private func setBorderColorActive() {
@@ -238,6 +267,11 @@ extension ExpansionPanel {
         animateChangingBorderColor(from: inactiveBorderColor, to: activeBorderColor)
         setBorderColorActive()
     }
+
+    private func executeHandlerForExpand() {
+        expandHandler?()
+        tapHandler?()
+    }
 }
 
 // MARK: - Collapse
@@ -251,6 +285,7 @@ extension ExpansionPanel {
         rotateButtonDown()
         animateDecreasingHeight(from: previousHeight)
         animateChangingColorToInactive()
+        executeHandlerForCollapse()
     }
 
     private func setBorderColorInactive() {
@@ -268,6 +303,11 @@ extension ExpansionPanel {
     private func animateChangingColorToInactive() {
         animateChangingBorderColor(from: activeBorderColor, to: inactiveBorderColor)
         setBorderColorInactive()
+    }
+
+    private func executeHandlerForCollapse() {
+        collapseHandler?()
+        tapHandler?()
     }
 }
 
