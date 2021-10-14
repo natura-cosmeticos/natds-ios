@@ -50,7 +50,7 @@ To use NatDS in your project with Swift Package Manager, you need to add it from
 Follow the path `File > Swift Packages > Add Package Dependency` and then provide it the git url for this repository: `https://github.com/natura-cosmeticos/natds-ios.git`. Xcode will manage the imports.
 
 ## How to configure
-The library provide the components according to the Design System brand themes, which must be chosen at your app's launch. All themes available are options from `AvailableTheme` enum.
+The library provide the components according to the Design System brand themes, which must be chosen before using the components (usually, at your app's launch). All themes available are options in the `AvailableTheme` enum.
 
 To choose a theme, configure the library with the following code:
 
@@ -63,7 +63,7 @@ DesignSystem().configure(with: AvailableTheme)
 ## How to add icons
 This library does not have the Design System icons. Since version `3.0.0`, they're stored in the separate icon library [NatDSIcons](https://cocoapods.org/pods/NatDSIcons), which can also be used with Cocoapods.
 
-To use the icons, specify their pod your `Podfile`:
+To use the icons, specify their pod in your `Podfile`:
 
 ```ruby
 target '<Your Target Name>' do
