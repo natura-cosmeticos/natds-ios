@@ -60,7 +60,7 @@ DesignSystem().configure(with: AvailableTheme)
 
 > Reminder: This step is mandatory. If the Design System is not configured with a brand theme, a `fatalError` will be raised. 
 
-## How to use icons
+## How to add icons
 This library does not have the Design System icons. Since version `3.0.0`, they're stored in the separate icon library [NatDSIcons](https://cocoapods.org/pods/NatDSIcons), which can also be used with Cocoapods.
 
 To use the icons, specify their pod your `Podfile`:
@@ -79,11 +79,10 @@ To check all available versions for NatDS Icons, you can check the [changelog](h
 pod search NatDSIcons --simple
 ```
 
-Don't forget to [check the documentation on how to use icons.](docs/How%20to%20use%20icons.md)
+[Check the documentation on how to use icons in your code.](docs/How%20to%20use%20icons.md)
 
-## Getting started
-[Check how to start using our lib.](docs/Getting%20started.md)
+## Themes, Components and Tokens
+[Check how to use the library.](docs/Getting%20started.md)
 
 ## How to contribute
-
-[Help us grow!](docs/How%20to%20contribute.md)
+[Check the contribution guidelines.](docs/How%20to%20contribute.md)

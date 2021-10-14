@@ -1,5 +1,5 @@
 # How to use Design System icons
-We use a proprietary icon library, so, through an organized system, categories and names, we provide access to the icons supported by Natura Design System.
+We use a proprietary icon library, which means that we provide access to the icons supported by Natura Design System through an organized system, categories and names.
 
 The icon library, which is available at [Natura Design System](https://ds.natura.design/28db352be/p/94367e-icon-library/b/6154b9) website, contains all the icons names and images. You can also check the icons by running the [Sample App](how%20to%20contribute.md) in a simulator.
 
@@ -18,7 +18,7 @@ And import NatDSIcons on the files that use icons:
 import NatDSIcons
 ```
 
-With NatDSIcons, all icon options from the library are listed as Icon type options. To use them, you must use the function `getIcon(_ icon: Icon) -> String`, sending the chosen icon as a parameter. 
+With NatDSIcons, all icon options from the library are listed as Icon type options. To use them, you must use the function `getIcon(_ icon: Icon) -> String`, sending the chosen icon name as a parameter. 
 
 ```swift
 let icon = getIcon(.outlinedActionCancel)
