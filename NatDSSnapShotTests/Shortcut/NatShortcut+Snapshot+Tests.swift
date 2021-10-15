@@ -26,6 +26,16 @@ final class NatShortcutSnapshotTests: XCTestCase {
 
     func test_shortcut_style_contained_primary_with_ellipsis_hasValidSnapshot() {
         let systemUnderTest = createSystemUnderTest(style: .containedPrimary, text: "Contained / Primary")
+        systemUnderTest.configureText(numberOfLines: 1, lineBreakMode: .byTruncatingTail)
+
+        superview.addSubview(systemUnderTest)
+        addConstraints(systemUnderTest)
+
+        assertSnapshot(matching: superview, as: .image(precision: 0.97))
+    }
+
+    func test_shortcut_style_contained_primary_with_lineBreak_hasValidSnapshot() {
+        let systemUnderTest = createSystemUnderTest(style: .containedPrimary, text: "Contained / Primary")
 
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
@@ -52,6 +62,16 @@ final class NatShortcutSnapshotTests: XCTestCase {
     }
 
     func test_shortcut_style_contained_default_with_ellipsis_hasValidSnapshot() {
+        let systemUnderTest = createSystemUnderTest(style: .containedDefault, text: "Contained / Default")
+        systemUnderTest.configureText(numberOfLines: 1, lineBreakMode: .byTruncatingTail)
+
+        superview.addSubview(systemUnderTest)
+        addConstraints(systemUnderTest)
+
+        assertSnapshot(matching: superview, as: .image(precision: 0.97))
+    }
+
+    func test_shortcut_style_contained_default_with_lineBreak_hasValidSnapshot() {
         let systemUnderTest = createSystemUnderTest(style: .containedDefault, text: "Contained / Default")
 
         superview.addSubview(systemUnderTest)
@@ -80,6 +100,16 @@ final class NatShortcutSnapshotTests: XCTestCase {
 
     func test_shortcut_style_outlined_primary_with_ellipsis_hasValidSnapshot() {
         let systemUnderTest = createSystemUnderTest(style: .outlinedPrimary, text: "Outlined / Primary")
+        systemUnderTest.configureText(numberOfLines: 1, lineBreakMode: .byTruncatingTail)
+
+        superview.addSubview(systemUnderTest)
+        addConstraints(systemUnderTest)
+
+        assertSnapshot(matching: superview, as: .image(precision: 0.97))
+    }
+
+    func test_shortcut_style_outlined_primary_with_lineBreak_hasValidSnapshot() {
+        let systemUnderTest = createSystemUnderTest(style: .outlinedPrimary, text: "Outlined / Primary")
 
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
@@ -106,6 +136,16 @@ final class NatShortcutSnapshotTests: XCTestCase {
     }
 
     func test_shortcut_style_outlined_default_with_ellipsis_hasValidSnapshot() {
+        let systemUnderTest = createSystemUnderTest(style: .containedDefault, text: "Outlined / Default")
+        systemUnderTest.configureText(numberOfLines: 1, lineBreakMode: .byTruncatingTail)
+
+        superview.addSubview(systemUnderTest)
+        addConstraints(systemUnderTest)
+
+        assertSnapshot(matching: superview, as: .image(precision: 0.97))
+    }
+
+    func test_shortcut_style_outlined_default_with_lineBreak_hasValidSnapshot() {
         let systemUnderTest = createSystemUnderTest(style: .containedDefault, text: "Outlined / Default")
 
         superview.addSubview(systemUnderTest)

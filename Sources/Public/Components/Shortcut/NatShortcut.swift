@@ -136,7 +136,7 @@ extension NatShortcut {
     public func configure(action: @escaping () -> Void) {
         self.action = action
     }
-    
+
     /// Configures label text width and lines for long texts
     ///
     /// - Parameters:
