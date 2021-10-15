@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.10.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.9.1...6.10.0) (2021-10-15)
+
+
+### Features
+
+* add method to configure shortcut label width ([14ce09d](https://github.com/natura-cosmeticos/natds-ios/commit/14ce09d9b4e8872491c02db0064c363f0dc20257))
+
 ### [6.9.1](https://github.com/natura-cosmeticos/natds-ios/compare/6.9.0...6.9.1) (2021-10-14)
 
 
