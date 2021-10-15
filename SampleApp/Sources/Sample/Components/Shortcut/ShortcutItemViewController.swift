@@ -37,32 +37,49 @@ final class ShortcutItemViewController: UIViewController, SampleItem {
         view.addSubview(containedPrimaryBadgeStackView)
         view.addSubview(outlinedPrimaryBadgeStackView)
 
-        let containedPrimary = createShortcuts(style: .containedPrimary, text: "Contained")
+        let containedPrimary = createShortcuts(style: .containedPrimary,
+                                               text: "Contained Primary",
+                                               shouldBreakLine: true)
         containedPrimary.forEach { containedPrimaryStackView.addArrangedSubview($0) }
 
-        let outlinedPrimary = createShortcuts(style: .outlinedPrimary, text: "Outlined")
+        let outlinedPrimary = createShortcuts(style: .outlinedPrimary,
+                                              text: "Outlined Primary",
+                                              shouldBreakLine: true)
         outlinedPrimary.forEach { outlinedPrimaryStackView.addArrangedSubview($0) }
 
-        let containedPrimaryBadge = createShortcuts(style: .containedPrimary, text: "Contained", shouldShowBadge: true)
-        containedPrimaryBadge.forEach { containedPrimaryBadgeStackView.addArrangedSubview($0) }
+        let containedDefaultBadge = createShortcuts(style: .containedDefault,
+                                                    text: "Contained Default",
+                                                    shouldShowBadge: true,
+                                                    shouldBreakLine: true)
+        containedDefaultBadge.forEach { containedPrimaryBadgeStackView.addArrangedSubview($0) }
 
-        let outlinedPrimaryBadge = createShortcuts(style: .outlinedPrimary, text: "Outlined", shouldShowBadge: true)
-        outlinedPrimaryBadge.forEach { outlinedPrimaryBadgeStackView.addArrangedSubview($0) }
+        let outlinedDefaultBadge = createShortcuts(style: .outlinedDefault,
+                                                   text: "Outlined Default",
+                                                   shouldShowBadge: true,
+                                                   shouldBreakLine: true)
+        outlinedDefaultBadge.forEach { outlinedPrimaryBadgeStackView.addArrangedSubview($0) }
 
         addConstraints()
     }
 
-    private func createShortcuts(style: NatShortcut.Style, text: String,
-                                 shouldShowBadge: Bool = false) -> [NatShortcut] {
+    private func createShortcuts(style: NatShortcut.Style,
+                                 text: String,
+                                 shouldShowBadge: Bool = false,
+                                 shouldBreakLine: Bool = false) -> [NatShortcut] {
         (0...3).map { value in
-            let shortcut = NatShortcut(style: style)
-            shortcut.configure(text: text)
+            let shortcut = NatShortcut(style: style, text: text)
 
             if shouldShowBadge {
                 let badgeValues = [1, 25, 99, 100]
                 let badge = NatBadge(style: .standard, color: .alert)
                 badge.configure(count: badgeValues[value])
                 shortcut.configure(badge: badge)
+            }
+
+            if shouldBreakLine {
+                shortcut.configureText(numberOfLines: 0, lineBreakMode: .byWordWrapping)
+            } else {
+                shortcut.configureText(numberOfLines: 1, lineBreakMode: .byTruncatingTail)
             }
 
             return shortcut
