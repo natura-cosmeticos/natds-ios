@@ -36,12 +36,12 @@ class ProgressIndicatorCircularSpec: QuickSpec {
 
             it("adds backgroundLayer") {
                 let color = UIColor(hex: getTokenFromTheme(\.colorSurface))?.cgColor
-                expect(systemUnderTest.circleLayer.fillColor).to(equal(color))
+                expect(systemUnderTest.backgroundLayer.fillColor).to(equal(color))
             }
 
             it("removes backgroundLayer") {
                 systemUnderTest.configure(useBackgroundLayer: false)
-                expect(systemUnderTest.circleLayer.fillColor).to(equal(UIColor.clear.cgColor))
+                expect(systemUnderTest.backgroundLayer.fillColor).to(equal(UIColor.clear.cgColor))
             }
         }
 

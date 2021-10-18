@@ -40,7 +40,7 @@ public class NatProgressIndicatorCircular: UIView {
     // MARK: - Private properties
 
     private var circleLineLayer = CAShapeLayer()
-    private var backgroundLayer = CAShapeLayer()
+    internal var backgroundLayer = CAShapeLayer()
     private var size: Size = .medium {
         didSet {
             self.setNeedsLayout()
