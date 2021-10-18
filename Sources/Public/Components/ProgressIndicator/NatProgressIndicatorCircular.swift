@@ -39,14 +39,19 @@ public class NatProgressIndicatorCircular: UIView {
 
     // MARK: - Private properties
 
-    private var semiCircleLayer = CAShapeLayer()
-    internal var circleLayer = CAShapeLayer()
+    private var circleLineLayer = CAShapeLayer()
+    private var backgroundLayer = CAShapeLayer()
+    private var size: Size = .medium {
+        didSet {
+            self.setNeedsLayout()
+        }
+    }
 
     // MARK: - Inits
 
-    public init() {
+    public init(size: NatProgressIndicatorCircular.Size = .medium) {
         super.init(frame: .zero)
-        clipsToBounds = true
+        self.size = size
     }
 
     required init?(coder: NSCoder) {
@@ -55,52 +60,75 @@ public class NatProgressIndicatorCircular: UIView {
 
     // MARK: - Public methods
 
-    public func configure(with action: Action, size: Size = .medium) {
+    public func configure(with action: Action, size: NatProgressIndicatorCircular.Size = .medium) {
+        self.size = size
+
         switch action {
         case .showAndStartAnimation:
-            addCircleAndSemiCircle(size: size.value)
             isHidden = false
+            startAnimating()
         case .hideAndStopAnimation:
             isHidden = true
-            semiCircleLayer.removeAllAnimations()
+            circleLineLayer.removeAllAnimations()
         }
     }
 
     public func configure(useBackgroundLayer: Bool) {
-        if useBackgroundLayer {
-            circleLayer.fillColor =  UIColor(hex: getTokenFromTheme(\.colorSurface))?.cgColor
-            clipsToBounds = true
-        } else {
-            circleLayer.fillColor =  UIColor.clear.cgColor
-        }
+        backgroundLayer.fillColor = useBackgroundLayer ?
+            getUIColorFromTokens(\.colorSurface).cgColor : UIColor.clear.cgColor
+    }
+
+    // MARK: - Overrides
+
+    override public func layoutSubviews() {
+        super.layoutSubviews()
+
+        setup()
+        startAnimating()
     }
 
     // MARK: - Private methods
 
-    private func createCirclePath(size: CGFloat) -> UIBezierPath {
-
-        let circlePath = UIBezierPath(
-            arcCenter: CGPoint(x: circleLayer.bounds.midX, y: circleLayer.bounds.midY),
-            radius: CGFloat(size/2),
-            startAngle: CGFloat(0),
-            endAngle: CGFloat(Double.pi * 2),
-            clockwise: true)
-
-        return circlePath
+    private func setup() {
+        clipsToBounds = true
+        setupBackground()
+        setupProgressIndicatorCircleLine()
     }
 
-    private func configureSemiCircle(semiCircleLayer: CAShapeLayer, size: CGFloat) {
-        semiCircleLayer.path = createCirclePath(size: size).cgPath
+    private func setupBackground() {
+        configureCircleBackground(circleLayer: backgroundLayer)
+        layer.addSublayer(backgroundLayer)
+    }
+
+    private func setupProgressIndicatorCircleLine() {
+        configureSemiCircle(semiCircleLayer: circleLineLayer)
+    }
+
+    private func startAnimating() {
+        circleLineLayer.add(rotationAnimation(), forKey: Constants.rotationAnimationKey)
+        circleLineLayer.add(springAnimation(), forKey: Constants.springAnimationKey)
+    }
+
+    // MARK: - Path configs
+
+    private func configureSemiCircle(semiCircleLayer: CAShapeLayer) {
+        semiCircleLayer.path = createCirclePath(size: size.value).cgPath
         semiCircleLayer.strokeColor = getUIColorFromTokens(\.colorPrimary).cgColor
         semiCircleLayer.fillColor = .none
         semiCircleLayer.lineWidth = getTokenFromTheme(\.sizeMicro)
-        semiCircleLayer.position = CGPoint(x: circleLayer.bounds.midX, y: circleLayer.bounds.midY)
+        semiCircleLayer.position = CGPoint(x: backgroundLayer.bounds.midX, y: backgroundLayer.bounds.midY)
+    }
+
+    private func configureCircleBackground(circleLayer: CAShapeLayer) {
+        circleLayer.path = createCircleBackground(size: size.value).cgPath
+        circleLayer.position = CGPoint(x: bounds.midX, y: bounds.midY)
+        circleLayer.addSublayer(circleLineLayer)
+        circleLayer.fillColor = UIColor.clear.cgColor
     }
 
     private func createCircleBackground(size: CGFloat) -> UIBezierPath {
-
         let circleBackground = UIBezierPath(
-            arcCenter: CGPoint(x: circleLayer.bounds.midX, y: circleLayer.bounds.midY),
+            arcCenter: CGPoint(x: backgroundLayer.bounds.midX, y: backgroundLayer.bounds.midY),
             radius: CGFloat(size/2 + getTokenFromTheme(\.sizeMicro)),
             startAngle: CGFloat(Double.pi),
             endAngle: CGFloat(Double.pi * 3),
@@ -109,18 +137,14 @@ public class NatProgressIndicatorCircular: UIView {
         return circleBackground
     }
 
-    private func configureCircleBackground(circleLayer: CAShapeLayer, size: CGFloat) {
-        circleLayer.path = createCircleBackground(size: size).cgPath
-        circleLayer.position = CGPoint(x: bounds.midX, y: bounds.midY)
+    private func createCirclePath(size: CGFloat) -> UIBezierPath {
+        let circlePath = UIBezierPath(
+            arcCenter: CGPoint(x: backgroundLayer.bounds.midX, y: backgroundLayer.bounds.midY),
+            radius: CGFloat(size/2),
+            startAngle: CGFloat(0),
+            endAngle: CGFloat(Double.pi * 2),
+            clockwise: true)
 
-        circleLayer.addSublayer(semiCircleLayer)
-    }
-
-    private func addCircleAndSemiCircle(size: CGFloat) {
-        configureSemiCircle(semiCircleLayer: semiCircleLayer, size: size)
-        semiCircleLayer.add(rotationAnimation(), forKey: Constants.rotationAnimationKey)
-        semiCircleLayer.add(springAnimation(), forKey: Constants.springAnimationKey)
-        configureCircleBackground(circleLayer: circleLayer, size: size)
-        layer.addSublayer(circleLayer)
+        return circlePath
     }
 }
