@@ -41,8 +41,16 @@ public class NatProgressIndicatorCircular: UIView {
 
     private var circleLineLayer = CAShapeLayer()
     internal var backgroundLayer = CAShapeLayer()
+
     private var size: Size = .medium {
         didSet {
+            self.setNeedsLayout()
+        }
+    }
+
+    private var backgroundLayerColor: UIColor = .clear {
+        didSet {
+            backgroundLayer.fillColor = backgroundLayerColor.cgColor
             self.setNeedsLayout()
         }
     }
@@ -74,8 +82,7 @@ public class NatProgressIndicatorCircular: UIView {
     }
 
     public func configure(useBackgroundLayer: Bool) {
-        backgroundLayer.fillColor = useBackgroundLayer ?
-            getUIColorFromTokens(\.colorSurface).cgColor : UIColor.clear.cgColor
+        backgroundLayerColor = useBackgroundLayer ? getUIColorFromTokens(\.colorSurface) : UIColor.clear
     }
 
     // MARK: - Overrides
@@ -123,7 +130,7 @@ public class NatProgressIndicatorCircular: UIView {
         circleLayer.path = createCircleBackground(size: size.value).cgPath
         circleLayer.position = CGPoint(x: bounds.midX, y: bounds.midY)
         circleLayer.addSublayer(circleLineLayer)
-        circleLayer.fillColor = UIColor.clear.cgColor
+        circleLayer.fillColor = backgroundLayerColor.cgColor
     }
 
     private func createCircleBackground(size: CGFloat) -> UIBezierPath {
