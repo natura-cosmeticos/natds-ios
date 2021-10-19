@@ -62,19 +62,19 @@ public class NatProgressIndicatorCircular: UIView {
     }
 
     // MARK: - Public methods
-    
+
     /// Starts the circle animation
     public func startAnimation() {
         isHidden = false
         startAnimating()
     }
-    
+
     /// Stops the circle animation and hides the progress indicator
     public func stopAnimation() {
         isHidden = true
         circleLineLayer.removeAllAnimations()
     }
-    
+
     /// Sets a background layer for the component
     /// - Parameter useBackgroundLayer: a boolean that indicates if the component should have a background layer
     public func configure(useBackgroundLayer: Bool) {
