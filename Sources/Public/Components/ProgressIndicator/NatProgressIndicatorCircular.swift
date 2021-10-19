@@ -1,37 +1,25 @@
-import UIKit
 /**
  NatProgressIndicatorCircular is a class that represents progress indicator circular component from the Design System.
  The component colors changes according to the current theme configured in the Design System.
-
- This component has 2 actions:
-    - showAndStartAnimation
-    - hideAndStopAnimation
-
- Example of usage:
- - progressIndicator.configure(state: .showAndStartAnimation)
- - hiddenProgressIndicator.configure(state: .hideAndStopAnimation)
-
- This progress indicator has a pre-defined radius value with NatSizes.Standard.
- The constraints for width and height should use the pre-defined size:
+ 
+ The size and background can be set at `init()`. The component is already animating when it appears on the screen.
+ 
+ The component has 2 actions:
+    - `startAnimation()`, which shows the animated progress indicator
+    - `stopAnimation()`, which hides the progress indicator
  
  Example of usage:
- - progressIndicator.heightAnchor.constraint(equalToConstant: NatProgressIndicatorCircular.Size.standard)
- - progressIndicator.widthAnchor.constraint(equalToConstant: NatProgressIndicatorCircular.Size.standard)
+            
+            let progressIndicator = NatProgressIndicator(size: .semi, backgroundLayer: true)
 
  - Requires:
  It's necessary to configure the Design System with a theme or fatalError will be raised.
  
- DesignSystem().configure(with: AvailableTheme)
+        DesignSystem().configure(with: AvailableTheme)
  */
 
 public class NatProgressIndicatorCircular: UIView {
-    /**
-     Action is a enum that represents actions for the NatProgressIndicatorCircular component.
 
-     These are all sizes allowed for a NatProgressIndicatorCircular:
-     - showAndStartAnimation
-     - hideAndStopAnimation
-     */
     public enum Action {
         case showAndStartAnimation
         case hideAndStopAnimation
@@ -74,17 +62,21 @@ public class NatProgressIndicatorCircular: UIView {
     }
 
     // MARK: - Public methods
-
-    public func stopAnimation() {
-        isHidden = true
-        circleLineLayer.removeAllAnimations()
-    }
-
+    
+    /// Starts the circle animation
     public func startAnimation() {
         isHidden = false
         startAnimating()
     }
-
+    
+    /// Stops the circle animation and hides the progress indicator
+    public func stopAnimation() {
+        isHidden = true
+        circleLineLayer.removeAllAnimations()
+    }
+    
+    /// Sets a background layer for the component
+    /// - Parameter useBackgroundLayer: a boolean that indicates if the component should have a background layer
     public func configure(useBackgroundLayer: Bool) {
         hasBackgroundLayer = useBackgroundLayer
     }
@@ -141,7 +133,7 @@ public class NatProgressIndicatorCircular: UIView {
         heightAnchor.constraint(equalToConstant: size.value + NatSizes.small).isActive = true
     }
 
-    // MARK: - Shape private config methods
+    // MARK: - Private shape configuration methods
 
     private func configureSemiCircle(semiCircleLayer: CAShapeLayer) {
         semiCircleLayer.path = createCirclePath(size: size.value).cgPath
