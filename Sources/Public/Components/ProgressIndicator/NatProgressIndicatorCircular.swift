@@ -118,6 +118,7 @@ public class NatProgressIndicatorCircular: UIView {
         clipsToBounds = true
         setupBackground()
         setupProgressIndicatorCircleLine()
+        setupConstraints()
     }
 
     private func setupBackground() {
@@ -132,6 +133,12 @@ public class NatProgressIndicatorCircular: UIView {
     private func startAnimating() {
         circleLineLayer.add(rotationAnimation(), forKey: Constants.rotationAnimationKey)
         circleLineLayer.add(springAnimation(), forKey: Constants.springAnimationKey)
+    }
+
+    private func setupConstraints() {
+        translatesAutoresizingMaskIntoConstraints = false
+        widthAnchor.constraint(equalToConstant: size.value + NatSizes.small).isActive = true
+        heightAnchor.constraint(equalToConstant: size.value + NatSizes.small).isActive = true
     }
 
     // MARK: - Shape private config methods
