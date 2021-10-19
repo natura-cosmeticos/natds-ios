@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.10.1](https://github.com/natura-cosmeticos/natds-ios/compare/6.10.0...6.10.1) (2021-10-19)
+
+
+### Bug Fixes
+
+* deprecate progress indicator config and adds simpler animations config methods ([87e5296](https://github.com/natura-cosmeticos/natds-ios/commit/87e52965f8fd527a7e69d423ef8b36a5e8ee3744))
+* fix bug at progress indicator subviews + refactor for comprehension improvement ([ed99b63](https://github.com/natura-cosmeticos/natds-ios/commit/ed99b636bc332694d4d7b6b6d12c09d3a2ee21b9))
+* fix progress indicator background color ([4a9f279](https://github.com/natura-cosmeticos/natds-ios/commit/4a9f27917f0963fe2b0da277487a67bd5516607d))
+* remove deprecated typography token from sample app ([4899a88](https://github.com/natura-cosmeticos/natds-ios/commit/4899a88aad0fc9585050d0bc6e0a5ee5285234c2))
+* update progress indicator constraints ([432e075](https://github.com/natura-cosmeticos/natds-ios/commit/432e075b2751c23b2a8a0e59bcca004ae85cda34))
+
 ## [6.10.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.9.1...6.10.0) (2021-10-15)
 
 
