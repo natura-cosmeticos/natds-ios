@@ -1,5 +1,4 @@
 extension NatProgressIndicatorCircular {
-
     internal enum Constants {
         static let rotationAnimationKey = "Animation.rotation.key"
         static let springAnimationKey = "Animation.spring.key"

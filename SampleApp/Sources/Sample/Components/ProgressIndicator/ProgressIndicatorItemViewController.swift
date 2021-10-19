@@ -3,23 +3,18 @@ import UIKit
 
 class ProgressIndicatorItemViewController: UIViewController, SampleItem {
     static var name = "Progress Indicator"
-    private let progressIndicator = NatProgressIndicatorCircular()
+    private let progressIndicator = NatProgressIndicatorCircular(size: .medium)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = Self.name
         view.backgroundColor = NatColors.background
         addProgressIndicator()
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        progressIndicator.configure(with: .showAndStartAnimation, size: .medium)
-        progressIndicator.configure(useBackgroundLayer: true)
+        setupProgressIndicator()
     }
 
     private func addProgressIndicator() {
         view.addSubview(progressIndicator)
-
         progressIndicator.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
@@ -28,6 +23,9 @@ class ProgressIndicatorItemViewController: UIViewController, SampleItem {
             progressIndicator.heightAnchor.constraint(equalToConstant: 100),
             progressIndicator.widthAnchor.constraint(equalToConstant: 100)
         ])
+    }
 
+    private func setupProgressIndicator() {
+        progressIndicator.configure(useBackgroundLayer: true)
     }
 }
