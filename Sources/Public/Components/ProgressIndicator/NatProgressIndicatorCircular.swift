@@ -48,6 +48,12 @@ public class NatProgressIndicatorCircular: UIView {
         }
     }
 
+    private var hasBackgroundLayer: Bool = false {
+        didSet {
+            backgroundLayerColor = hasBackgroundLayer ? getUIColorFromTokens(\.colorSurface) : UIColor.clear
+        }
+    }
+
     private var backgroundLayerColor: UIColor = .clear {
         didSet {
             backgroundLayer.fillColor = backgroundLayerColor.cgColor
@@ -57,9 +63,10 @@ public class NatProgressIndicatorCircular: UIView {
 
     // MARK: - Inits
 
-    public init(size: NatProgressIndicatorCircular.Size = .medium) {
+    public init(size: NatProgressIndicatorCircular.Size = .medium, backgroundLayer: Bool = false) {
         super.init(frame: .zero)
         self.size = size
+        self.hasBackgroundLayer = backgroundLayer
     }
 
     required init?(coder: NSCoder) {
@@ -68,6 +75,21 @@ public class NatProgressIndicatorCircular: UIView {
 
     // MARK: - Public methods
 
+    public func stopAnimation() {
+        isHidden = true
+        circleLineLayer.removeAllAnimations()
+    }
+
+    public func startAnimation() {
+        isHidden = false
+        startAnimating()
+    }
+
+    public func configure(useBackgroundLayer: Bool) {
+        hasBackgroundLayer = useBackgroundLayer
+    }
+
+    @available(*, deprecated, message: "Set the component size at init and use methods startAnimation() and stopAnimation()")
     public func configure(with action: Action, size: NatProgressIndicatorCircular.Size = .medium) {
         self.size = size
 
@@ -79,10 +101,6 @@ public class NatProgressIndicatorCircular: UIView {
             isHidden = true
             circleLineLayer.removeAllAnimations()
         }
-    }
-
-    public func configure(useBackgroundLayer: Bool) {
-        backgroundLayerColor = useBackgroundLayer ? getUIColorFromTokens(\.colorSurface) : UIColor.clear
     }
 
     // MARK: - Overrides
@@ -116,7 +134,7 @@ public class NatProgressIndicatorCircular: UIView {
         circleLineLayer.add(springAnimation(), forKey: Constants.springAnimationKey)
     }
 
-    // MARK: - Path configs
+    // MARK: - Shape private config methods
 
     private func configureSemiCircle(semiCircleLayer: CAShapeLayer) {
         semiCircleLayer.path = createCirclePath(size: size.value).cgPath
