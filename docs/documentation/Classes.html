@@ -285,7 +285,45 @@ It can be configured with colors <code>alert</code>, <code>primary</code>, <code
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>NatButton is a class that represents  button  component from the design system.
+                          <div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This component is available in the following variants:
+
+</div><ul>
+<li>✅ Contained</li>
+<li>✅ Outlined</li>
+<li>✅ Text</li>
+</ul>
+
+<p>With the following attribute status:</p>
+
+<ul>
+<li>✅ Disabled</li>
+<li>✅ Display (available in a different way)</li>
+<li>Size:
+
+<ul>
+<li>✅ <code>Semi</code> (small)</li>
+<li>✅ <code>SemiX</code> (medium)</li>
+<li>✅ <code>Medium</code> (large)</li>
+</ul></li>
+<li>Icon:
+
+<ul>
+<li>✅ <code>Left</code></li>
+<li>✅ <code>Right</code></li>
+</ul></li>
+<li>Interaction state:
+
+<ul>
+<li>✅ <code>Enabled</code></li>
+<li>✅ <code>Focus</code></li>
+<li>✅ <code>Press</code></li>
+<li>❌ <code>Hover</code> (not applicable)</li>
+</ul></li>
+</ul>
+
+<p>NatButton is a class that represents  button  component from the design system.
 The button colors changes according with the current theme configured in the Design system.</p>
 
 <p>This button has 3 styles:</p>
@@ -594,32 +632,24 @@ It&rsquo;s necessary to instantiate it and set its height and width constraints.
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>ExpansionPanel is a class that represents  a  view component that can be expanded and collapsed.
- Also, it can show or hide a detail view
- This is a component from the design system.
- The panel expands and retracts as user touches the upDownButton,
- and the border color changes according with the current theme configured in the Design system.</p>
+                          <p>ExpansionPanel is a class that represents a view component that can be expanded and collapsed.
+  Also, it can show or hide a detail view with content.
+  The panel expands and retracts as user touches an up/down button, and the border color changes according to the chosen Design System theme.</p>
+<pre class="highlight swift"><code><span class="kt">Example</span> <span class="n">of</span> <span class="nv">usage</span><span class="p">:</span>
 
-<p>This panel has only 2 public methods to interact with:</p>
-
-<p>With this, you can define a text for the subtitle</p>
-<pre class="highlight swift"><code>   <span class="kd">public</span> <span class="kd">func</span> <span class="nf">setSubtitle</span><span class="p">(</span><span class="n">_</span> <span class="nv">subtitle</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span>
+    <span class="k">let</span> <span class="nv">expansionPanel</span> <span class="o">=</span> <span class="kt">ExpansionPanel</span><span class="p">()</span>
+    <span class="n">expansionPanel</span><span class="o">.</span><span class="nf">setSubtitle</span><span class="p">(</span><span class="s">"My Subtitle"</span><span class="p">)</span>
+    <span class="n">expansionPanel</span><span class="o">.</span><span class="nf">setDetailView</span><span class="p">(</span><span class="n">myDetailView</span><span class="p">)</span>
+    <span class="n">expansionPanel</span><span class="o">.</span><span class="nf">setHandlerForTap</span><span class="p">(</span><span class="nv">withAction</span><span class="p">:</span> <span class="o">.</span><span class="n">expand</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// your code</span>
+    <span class="p">}</span>
 </code></pre>
 
-<p>With that one, you can add a detail view into the bottom content of the panel
-   This detail is going to be showed or hidden as the panel expands or collapses, respectively.</p>
-<pre class="highlight swift"><code>   <span class="kd">public</span> <span class="kd">func</span> <span class="nf">setDetailView</span><span class="p">(</span><span class="n">_</span> <span class="nv">detailView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">?)</span>
-</code></pre>
-
-<p>Example of usage:</p>
-<pre class="highlight swift"><code>   <span class="k">let</span> <span class="nv">expansionPanel</span> <span class="o">=</span> <span class="kt">ExpansionPanel</span><span class="p">()</span>
-   <span class="n">expansionPanel</span><span class="o">.</span><span class="nf">setSubtitle</span><span class="p">(</span><span class="s">"My Subtitle"</span><span class="p">)</span>
-   <span class="n">expansionPanel</span><span class="o">.</span><span class="nf">setDetailView</span><span class="p">(</span><span class="n">myDetailView</span><span class="p">)</span>
-</code></pre>
+<p>}</p>
 <div class="aside aside-requires">
     <p class="aside-title">Requires</p>
     <p>It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.</p>
-<pre class="highlight swift"><code>   <span class="kt">DesignSystem</span><span class="p">()</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="kt">AvailableTheme</span><span class="p">)</span>
+<pre class="highlight swift"><code>    <span class="kt">DesignSystem</span><span class="p">()</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="kt">AvailableTheme</span><span class="p">)</span>
 </code></pre>
 
 </div>
@@ -1294,35 +1324,25 @@ The default model is <code>A</code>; the default size is <code>veryHuge</code>; 
                           <p>NatProgressIndicatorCircular is a class that represents progress indicator circular component from the Design System.
 The component colors changes according to the current theme configured in the Design System.</p>
 
-<p>This component has 2 actions:</p>
+<p>The size and background can be set at <code>init()</code>. The component is already animating when it appears on the screen.</p>
+
+<p>The component has 2 actions:</p>
 
 <ul>
-<li>showAndStartAnimation</li>
-<li>hideAndStopAnimation</li>
+<li><code>startAnimation()</code>, which shows the animated progress indicator</li>
+<li><code>stopAnimation()</code>, which hides the progress indicator</li>
 </ul>
 
 <p>Example of usage:</p>
-
-<ul>
-<li>progressIndicator.configure(state: .showAndStartAnimation)</li>
-<li>hiddenProgressIndicator.configure(state: .hideAndStopAnimation)</li>
-</ul>
-
-<p>This progress indicator has a pre-defined radius value with NatSizes.Standard.
-The constraints for width and height should use the pre-defined size:</p>
-
-<p>Example of usage:</p>
-
-<ul>
-<li>progressIndicator.heightAnchor.constraint(equalToConstant: NatProgressIndicatorCircular.Size.standard)</li>
-<li><p>progressIndicator.widthAnchor.constraint(equalToConstant: NatProgressIndicatorCircular.Size.standard)</p></li>
-</ul><div class="aside aside-requires">
+<pre class="highlight swift"><code>       <span class="k">let</span> <span class="nv">progressIndicator</span> <span class="o">=</span> <span class="kt">NatProgressIndicator</span><span class="p">(</span><span class="nv">size</span><span class="p">:</span> <span class="o">.</span><span class="n">semi</span><span class="p">,</span> <span class="nv">backgroundLayer</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+</code></pre>
+<div class="aside aside-requires">
     <p class="aside-title">Requires</p>
     <p>It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.</p>
 
-</div>
-
 <p>DesignSystem().configure(with: AvailableTheme)</p>
+
+</div>
 
                           <a href="Classes/NatProgressIndicatorCircular.html" class="slightly-smaller">See more</a>
                         </div>
@@ -1929,6 +1949,9 @@ The tag colors change according to the current theme configured.</p>
                   <a href="Classes/ExpansionPanel.html">ExpansionPanel</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="Classes/ExpansionPanel/ExpansionAction.html">– ExpansionAction</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="Classes/ExpansionPanel/Margin.html">– Margin</a>
                 </li>
                 <li class="nav-group-task">
@@ -2156,6 +2179,9 @@ The tag colors change according to the current theme configured.</p>
                   <a href="Enums/AvailableTheme.html">AvailableTheme</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="Enums/CustomFontStyle.html">CustomFontStyle</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="Enums/NatBorderRadius.html">NatBorderRadius</a>
                 </li>
                 <li class="nav-group-task">
@@ -2287,7 +2313,7 @@ The tag colors change according to the current theme configured.</p>
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2021-08-23)</p>
+          <p>&copy; 2021 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2021-10-19)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </div>
