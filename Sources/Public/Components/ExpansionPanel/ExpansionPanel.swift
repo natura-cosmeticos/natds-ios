@@ -278,12 +278,10 @@ extension ExpansionPanel {
 
 extension ExpansionPanel {
     private func collapse() {
-        let previousHeight = frame.size.height
         collapseContentView()
         cleanContentView()
         layoutIfNeeded()
-        rotateButtonDown()
-        animateDecreasingHeight(from: previousHeight)
+        rotateButtonDown(animated: false)
         animateChangingColorToInactive()
         executeHandlerForCollapse()
     }
@@ -325,14 +323,19 @@ extension ExpansionPanel {
     private func animateIncreasingDetailHeight() {
         guard let detailView = detailView else { return }
         let newContentHeight = detailView.frame.height
-        detailView.height = newContentHeight / 2.0
+        increaseViewFromHalfHeight(detailView, with: newContentHeight)
         detailView.alpha = 0.0
-        let duration = animationDuration / 2.0
-        let delay = duration
-        viewAnimating.animate(withDuration: duration, delay: delay, options: .allowAnimatedContent) {
+        let halfAnimationDuration = animationDuration / 2.0
+        viewAnimating.animate(withDuration: halfAnimationDuration,
+                              delay: halfAnimationDuration,
+                              options: .allowAnimatedContent) {
             detailView.alpha = 1.0
             self.detailView?.height = newContentHeight
         }
+    }
+
+    private func increaseViewFromHalfHeight(_ view: UIView, with height: CGFloat) {
+        view.height = height / 2.0
     }
 
     private func rotateButtonUp() {
@@ -341,12 +344,16 @@ extension ExpansionPanel {
         }
     }
 
-    private func rotateButtonDown() {
-        viewAnimating.animate(withDuration: animationDuration, animations: {
-            self.upDownButton.transform = CGAffineTransform(rotationAngle: .pi * -2.0)
-        }, completion: { (_) in
+    private func rotateButtonDown(animated: Bool = true) {
+        if animated {
+            viewAnimating.animate(withDuration: animationDuration, animations: {
+                self.upDownButton.transform = CGAffineTransform(rotationAngle: .pi * -2.0)
+            }, completion: { (_) in
+                self.upDownButton.transform = CGAffineTransform.identity
+            })
+        } else {
             self.upDownButton.transform = CGAffineTransform.identity
-        })
+        }
     }
 
     private func animateDecreasingHeight(from previousHeight: CGFloat) {

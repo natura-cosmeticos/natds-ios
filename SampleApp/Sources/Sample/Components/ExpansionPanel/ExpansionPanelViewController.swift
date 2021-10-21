@@ -9,6 +9,14 @@ class ExpansionPanelViewController: UIViewController, SampleItem {
     private lazy var panel: ExpansionPanel = {
         let expansionPanel = ExpansionPanel()
         expansionPanel.setSubtitle("Subtitle")
+        expansionPanel.translatesAutoresizingMaskIntoConstraints = false
+        return expansionPanel
+    }()
+
+    private lazy var secondPanel: ExpansionPanel = {
+        let expansionPanel = ExpansionPanel()
+        expansionPanel.setSubtitle("Subtitle 2")
+        expansionPanel.translatesAutoresizingMaskIntoConstraints = false
         return expansionPanel
     }()
 
@@ -23,24 +31,38 @@ class ExpansionPanelViewController: UIViewController, SampleItem {
     }()
     // swiftlint:enable line_length
 
+    private lazy var secondeDetail: NatImage = {
+        let image = NatImage()
+        return image
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
+        setupLayout()
+        setupPanels()
     }
 
-    private func setup() {
+    private func setupLayout() {
         title = Self.name
         view.backgroundColor = NatColors.background
         view.addSubview(panel)
-        panel.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(secondPanel)
+
         let safeArea = view.safeAreaLayoutGuide
         let horizontalMargin = ExpansionPanel.Margin.horizontalMargin
         NSLayoutConstraint.activate([
             panel.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: NatSpacing.tiny),
             panel.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: horizontalMargin),
-            panel.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -horizontalMargin)
+            panel.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -horizontalMargin),
+            secondPanel.topAnchor.constraint(equalTo: panel.bottomAnchor, constant: NatSpacing.tiny),
+            secondPanel.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: horizontalMargin),
+            secondPanel.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -horizontalMargin)
         ])
+    }
+
+    private func setupPanels() {
         panel.setDetailView(detail)
+        secondPanel.setDetailView(secondeDetail)
         panel.setHandlerForTap(withAction: .allActions) {
             self.tapsCounter += 1
             print("This component was tapped \(self.tapsCounter) times")
@@ -50,5 +72,4 @@ class ExpansionPanelViewController: UIViewController, SampleItem {
             print("This component was expanded \(self.expandCounter) times")
         }
     }
-
 }
