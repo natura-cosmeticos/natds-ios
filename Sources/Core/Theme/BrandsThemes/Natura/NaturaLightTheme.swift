@@ -253,6 +253,13 @@ struct NaturaLightComponents: Components {
     let buttonTextColorFocusBackground = "#e9ecef"
     let buttonTextColorFocusBorder = "#FFFFFF00"
     let buttonTextColorFocusLabel = "#333333"
+    let checkboxLabelFontSize: CGFloat = 14
+    let checkboxLabelLetterSpacing: CGFloat = 0.16
+    let checkboxLabelLineHeight: CGFloat = 1.5
+    let checkboxLabelPrimaryFontFamily = "San Francisco"
+    let checkboxLabelPrimaryFontWeight: UIFont.Weight = .regular
+    let checkboxLabelFallbackFontFamily = "San Francisco"
+    let checkboxLabelFallbackFontWeight: UIFont.Weight = .regular
     let dialogTitleFontSize: CGFloat = 20
     let dialogTitleLetterSpacing: CGFloat = 0.12
     let dialogTitleLineHeight: CGFloat = 1.25

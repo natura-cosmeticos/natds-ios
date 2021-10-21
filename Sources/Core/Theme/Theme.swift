@@ -254,6 +254,13 @@ protocol Components {
     var buttonTextColorFocusBackground: String { get }
     var buttonTextColorFocusBorder: String { get }
     var buttonTextColorFocusLabel: String { get }
+    var checkboxLabelFontSize: CGFloat { get }
+    var checkboxLabelLetterSpacing: CGFloat { get }
+    var checkboxLabelLineHeight: CGFloat { get }
+    var checkboxLabelPrimaryFontFamily: String { get }
+    var checkboxLabelPrimaryFontWeight: UIFont.Weight { get }
+    var checkboxLabelFallbackFontFamily: String { get }
+    var checkboxLabelFallbackFontWeight: UIFont.Weight { get }
     var dialogTitleFontSize: CGFloat { get }
     var dialogTitleLetterSpacing: CGFloat { get }
     var dialogTitleLineHeight: CGFloat { get }
