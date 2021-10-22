@@ -47,38 +47,89 @@
 
                   </div>
                 </div>
-              <p>ExpansionPanel is a class that represents  a  view component that can be expanded and collapsed.
- Also, it can show or hide a detail view
- This is a component from the design system.
- The panel expands and retracts as user touches the upDownButton,
- and the border color changes according with the current theme configured in the Design system.</p>
+              <p>ExpansionPanel is a class that represents a view component that can be expanded and collapsed.
+  Also, it can show or hide a detail view with content.
+  The panel expands and retracts as user touches an up/down button, and the border color changes according to the chosen Design System theme.</p>
+<pre class="highlight swift"><code><span class="kt">Example</span> <span class="n">of</span> <span class="nv">usage</span><span class="p">:</span>
 
-<p>This panel has only 2 public methods to interact with:</p>
-
-<p>With this, you can define a text for the subtitle</p>
-<pre class="highlight swift"><code>   <span class="kd">public</span> <span class="kd">func</span> <span class="nf">setSubtitle</span><span class="p">(</span><span class="n">_</span> <span class="nv">subtitle</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span>
+    <span class="k">let</span> <span class="nv">expansionPanel</span> <span class="o">=</span> <span class="kt">ExpansionPanel</span><span class="p">()</span>
+    <span class="n">expansionPanel</span><span class="o">.</span><span class="nf">setSubtitle</span><span class="p">(</span><span class="s">"My Subtitle"</span><span class="p">)</span>
+    <span class="n">expansionPanel</span><span class="o">.</span><span class="nf">setDetailView</span><span class="p">(</span><span class="n">myDetailView</span><span class="p">)</span>
+    <span class="n">expansionPanel</span><span class="o">.</span><span class="nf">setHandlerForTap</span><span class="p">(</span><span class="nv">withAction</span><span class="p">:</span> <span class="o">.</span><span class="n">expand</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// your code</span>
+    <span class="p">}</span>
 </code></pre>
 
-<p>With that one, you can add a detail view into the bottom content of the panel
-   This detail is going to be showed or hidden as the panel expands or collapses, respectively.</p>
-<pre class="highlight swift"><code>   <span class="kd">public</span> <span class="kd">func</span> <span class="nf">setDetailView</span><span class="p">(</span><span class="n">_</span> <span class="nv">detailView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">?)</span>
-</code></pre>
-
-<p>Example of usage:</p>
-<pre class="highlight swift"><code>   <span class="k">let</span> <span class="nv">expansionPanel</span> <span class="o">=</span> <span class="kt">ExpansionPanel</span><span class="p">()</span>
-   <span class="n">expansionPanel</span><span class="o">.</span><span class="nf">setSubtitle</span><span class="p">(</span><span class="s">"My Subtitle"</span><span class="p">)</span>
-   <span class="n">expansionPanel</span><span class="o">.</span><span class="nf">setDetailView</span><span class="p">(</span><span class="n">myDetailView</span><span class="p">)</span>
-</code></pre>
+<p>}</p>
 <div class="aside aside-requires">
     <p class="aside-title">Requires</p>
     <p>It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.</p>
-<pre class="highlight swift"><code>   <span class="kt">DesignSystem</span><span class="p">()</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="kt">AvailableTheme</span><span class="p">)</span>
+<pre class="highlight swift"><code>    <span class="kt">DesignSystem</span><span class="p">()</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="kt">AvailableTheme</span><span class="p">)</span>
 </code></pre>
 
 </div>
 
             </section>
             <section class="section task-group-section">
+              <div class="task-group">
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS14ExpansionPanelC0C6ActionO"></a>
+                      <a name="//apple_ref/swift/Enum/ExpansionAction" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS14ExpansionPanelC0C6ActionO">ExpansionAction</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>An enum that represents which actions performed by the component can receive a completion handler</p>
+
+                          <a href="../Classes/ExpansionPanel/ExpansionAction.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ExpansionAction</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS14ExpansionPanelC0C7Handlera"></a>
+                      <a name="//apple_ref/swift/Alias/ExpansionHandler" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS14ExpansionPanelC0C7Handlera">ExpansionHandler</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">ExpansionHandler</span> <span class="o">=</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
               <div class="task-group">
                 <div class="task-name-container">
                   <a name="/Inits"></a>
@@ -143,7 +194,7 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Undocumented</p>
+                          <p>Defines a text for the subtitle (the main text in the component)</p>
 
                         </div>
                         <div class="declaration">
@@ -153,6 +204,25 @@
                             <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setSubtitle</span><span class="p">(</span><span class="n">_</span> <span class="nv">subtitle</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                           </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>subtitle</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>a string for the subtitle</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
                         </div>
                       </section>
                     </div>
@@ -170,7 +240,8 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Undocumented</p>
+                          <p>Adds a detail view into the bottom content of the panel
+This detail view is going to be showed or hidden as the panel expands or collapses, respectively.</p>
 
                         </div>
                         <div class="declaration">
@@ -180,6 +251,83 @@
                             <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setDetailView</span><span class="p">(</span><span class="n">_</span> <span class="nv">detailView</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">?)</span></code></pre>
 
                           </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>detailView</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>an UIView with your content</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS14ExpansionPanelC16setHandlerForTap10withAction010completionF0yAC0cJ0O_yyctF"></a>
+                      <a name="//apple_ref/swift/Method/setHandlerForTap(withAction:completionHandler:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS14ExpansionPanelC16setHandlerForTap10withAction010completionF0yAC0cJ0O_yyctF">setHandlerForTap(withAction:<wbr>completionHandler:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Adds a completion handler to be executed when the component expands, collapses, or both</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setHandlerForTap</span><span class="p">(</span><span class="n">withAction</span> <span class="nv">action</span><span class="p">:</span> <span class="kt"><a href="../Classes/ExpansionPanel/ExpansionAction.html">ExpansionAction</a></span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/ExpansionPanel.html#/s:5NatDS14ExpansionPanelC0C7Handlera">ExpansionHandler</a></span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>action</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>the action that will be the trigger to execute the completion handler.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>completionHandler</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>the block of code to be run</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
                         </div>
                       </section>
                     </div>
@@ -267,6 +415,9 @@
                 </li>
                 <li class="nav-group-task">
                   <a href="../Classes/ExpansionPanel.html">ExpansionPanel</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/ExpansionPanel/ExpansionAction.html">– ExpansionAction</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Classes/ExpansionPanel/Margin.html">– Margin</a>
@@ -496,6 +647,9 @@
                   <a href="../Enums/AvailableTheme.html">AvailableTheme</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="../Enums/CustomFontStyle.html">CustomFontStyle</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Enums/NatBorderRadius.html">NatBorderRadius</a>
                 </li>
                 <li class="nav-group-task">
@@ -627,7 +781,7 @@
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2021-08-23)</p>
+          <p>&copy; 2021 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2021-10-19)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </div>

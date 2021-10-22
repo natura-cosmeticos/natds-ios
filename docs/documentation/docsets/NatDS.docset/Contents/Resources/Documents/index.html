@@ -55,16 +55,19 @@
 <li>Swift Package Manager</li>
 <li>Fastlane</li>
 <li>Bitrise (CI)</li>
-<li><a href="https://git-lfs.github.com/">Git-LFS</a></li>
 <li>Swiftlint</li>
 <li><a href="https://github.com/realm/jazzy">Jazzy</a> for documentation</li>
 </ul>
 <h2 id='how-to-install' class='heading'>How to Install</h2>
 <h3 id='cocoapods' class='heading'>CocoaPods</h3>
 
-<p><a href="http://cocoapods.org">CocoaPods</a> is a dependency manager for Cocoa projects. You can install it with the following command:</p>
-<pre class="highlight shell"><code><span class="nv">$ </span>gem <span class="nb">install </span>cocoapods
+<p><a href="http://cocoapods.org">CocoaPods</a> is a dependency manager for Swift and Objective-C Cocoa projects. You can install it with the following command:</p>
+<pre class="highlight shell"><code>gem <span class="nb">install </span>cocoapods
 </code></pre>
+
+<blockquote>
+<p>You can also check Cocoapods&rsquo; <a href="https://guides.cocoapods.org/using/getting-started.html#installation">installation guide</a> for other options.</p>
+</blockquote>
 
 <p>To integrate NatDS into your Xcode project using CocoaPods, specify it in your <code>Podfile</code>:</p>
 <pre class="highlight ruby"><code><span class="n">target</span> <span class="s1">'&lt;Your Target Name&gt;'</span> <span class="k">do</span>
@@ -73,36 +76,49 @@
 </code></pre>
 
 <p>Then, run the following command:</p>
-<pre class="highlight shell"><code><span class="nv">$ </span>pod <span class="nb">install</span>
+<pre class="highlight shell"><code>pod <span class="nb">install</span>
 </code></pre>
 <h3 id='swift-package-manager' class='heading'>Swift Package Manager</h3>
 
-<p>To use NatDS in your project with Swift Package Manager, you need to add it from the Xcode menu. First, you should follow the path <code>File &gt; Swift Packages &gt; Add Package Dependency</code> and then, provide it the git url for this repository. Xcode will manage the imports.</p>
+<p>To use NatDS in your project with Swift Package Manager, you need to add it from the Xcode menu.
+Follow the path <code>File &gt; Swift Packages &gt; Add Package Dependency</code> and then provide it the git url for this repository: <code>https://github.com/natura-cosmeticos/natds-ios.git</code>. Xcode will manage the imports.</p>
 <h2 id='how-to-configure' class='heading'>How to configure</h2>
 
-<p>Before using the components, it&rsquo;s necessary to configure the Design System providing it with a brand theme or <code>fatalError</code> will be raised.</p>
+<p>The library provide the components according to the Design System brand themes, which must be chosen before using the components (usually, at your app&rsquo;s launch). All themes available are options in the <code><a href="Enums/AvailableTheme.html">AvailableTheme</a></code> enum.</p>
+
+<p>To choose a theme, configure the library with the following code:</p>
 <pre class="highlight swift"><code><span class="kt">DesignSystem</span><span class="p">()</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="kt">AvailableTheme</span><span class="p">)</span>
 </code></pre>
-<h2 id='icons' class='heading'>Icons</h2>
 
-<p>Since version <code>3.0.0</code> NatDS iOS no longer has the NatDS Icons. To use them, you MUST add a new pod to your project. You must specify it in your <code>Podfile</code>:</p>
+<blockquote>
+<p>Reminder: This step is mandatory. If the Design System is not configured with a brand theme, a <code>fatalError</code> will be raised. </p>
+</blockquote>
+<h2 id='how-to-add-icons' class='heading'>How to add icons</h2>
+
+<p>This library does not have the Design System icons. Since version <code>3.0.0</code>, they&rsquo;re stored in the separate icon library <a href="https://cocoapods.org/pods/NatDSIcons">NatDSIcons</a>, which can also be used with Cocoapods.</p>
+
+<p>To use the icons, specify their pod in your <code>Podfile</code>:</p>
 <pre class="highlight ruby"><code><span class="n">target</span> <span class="s1">'&lt;Your Target Name&gt;'</span> <span class="k">do</span>
     <span class="n">pod</span> <span class="s1">'NatDSIcons'</span>    
 <span class="k">end</span>
 </code></pre>
+
+<blockquote>
+<p>If you&rsquo;re using a NatDS version older than <code>3.0.0</code> there are available icons in the library. Nonetheless, some newer icons won&rsquo;t be available.</p>
 <h3 id='natdsicons-versions' class='heading'>NatDSIcons versions</h3>
 
-<p>To check all available versions for NatDS Icons, you can check the <a href="https://github.com/natura-cosmeticos/natds-commons/blob/master/packages/natds-icons/CHANGELOG.md">changelog</a> at the commons repository, or run a pod command from your terminal:</p>
-<pre class="highlight shell"><code><span class="nv">$ </span>pod search NatDSIcons <span class="nt">--simple</span>
+<p>To check all available versions for NatDS Icons, you can check the <a href="https://github.com/natura-cosmeticos/natds-commons/blob/master/packages/natds-icons/CHANGELOG.md">changelog</a>, or run a pod command from your terminal:</p>
+</blockquote>
+<pre class="highlight shell"><code>pod search NatDSIcons <span class="nt">--simple</span>
 </code></pre>
 
-<p>Don&rsquo;t forget to <a href="docs/How%20to%20use%20icons.md">check the documentation on how to use icons.</a></p>
-<h2 id='getting-started' class='heading'>Getting started</h2>
+<p><a href="docs/How%20to%20use%20icons.md">Check the documentation on how to use icons in your code.</a></p>
+<h2 id='themes-components-and-tokens' class='heading'>Themes, Components and Tokens</h2>
 
-<p><a href="docs/Getting%20started.md">Check how to start using our lib.</a></p>
+<p><a href="docs/Getting%20started.md">Check how to use the library.</a></p>
 <h2 id='how-to-contribute' class='heading'>How to contribute</h2>
 
-<p><a href="docs/How%20to%20contribute.md">Help us grow!</a></p>
+<p><a href="docs/How%20to%20contribute.md">Check the contribution guidelines.</a></p>
 
             </section>
           </section>
@@ -139,6 +155,9 @@
                 </li>
                 <li class="nav-group-task">
                   <a href="Classes/ExpansionPanel.html">ExpansionPanel</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/ExpansionPanel/ExpansionAction.html">– ExpansionAction</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="Classes/ExpansionPanel/Margin.html">– Margin</a>
@@ -368,6 +387,9 @@
                   <a href="Enums/AvailableTheme.html">AvailableTheme</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="Enums/CustomFontStyle.html">CustomFontStyle</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="Enums/NatBorderRadius.html">NatBorderRadius</a>
                 </li>
                 <li class="nav-group-task">
@@ -499,7 +521,7 @@
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2021-08-23)</p>
+          <p>&copy; 2021 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2021-10-19)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </div>
