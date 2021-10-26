@@ -84,9 +84,14 @@ public class ExpansionPanel: UIView {
 
     private var isExpanded: Bool { !isCollapsed }
     private var isCollapsed: Bool { upDownButton.transform == CGAffineTransform.identity }
-    private let activeBorderColor = NatColors.primary
-    private let inactiveBorderColor = UIColor.clear
     private let animationDuration = 0.5
+
+    private var activeBorderColor = NatColors.primary
+    private var inactiveBorderColor = UIColor.clear {
+        didSet {
+            layer.borderColor = inactiveBorderColor.cgColor
+        }
+    }
 
     // MARK: - Inits
 
@@ -119,8 +124,9 @@ public class ExpansionPanel: UIView {
     /// Defines a text for the subtitle (the main text in the component)
     ///
     /// - Parameter subtitle: a string for the subtitle
-    public func setSubtitle(_ subtitle: String) {
+    public func setSubtitle(_ subtitle: String, color: UIColor = NatColors.onSurface) {
         subtitleLabel.text = subtitle
+        subtitleLabel.textColor = color
     }
 
     /// Adds a detail view into the bottom content of the panel
@@ -145,6 +151,16 @@ public class ExpansionPanel: UIView {
         default:
             self.tapHandler = completionHandler
         }
+    }
+
+    /// Sets custom color for the component active and inactive borders
+    ///
+    /// - Parameters:
+    ///   - active: an UIColor
+    ///   - inactive: an UIColor
+    public func setColorForBorders(active: UIColor, inactive: UIColor) {
+        self.activeBorderColor = active
+        self.inactiveBorderColor = inactive
     }
 
     // MARK: - User interactions
