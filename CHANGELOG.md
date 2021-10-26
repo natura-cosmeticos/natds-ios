@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.11.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.10.1...6.11.0) (2021-10-26)
+
+
+### Features
+
+* add methods to set colors for expansion panel borders and title ([10cd224](https://github.com/natura-cosmeticos/natds-ios/commit/10cd224a76e9aeea23312d661695e4a324296eb4))
+
+
+### Bug Fixes
+
+* remove collapsing animation from expansion panel ([38df8b7](https://github.com/natura-cosmeticos/natds-ios/commit/38df8b751d9eda36b9bd47d7c16a8d12f2d40e24))
+
 ### [6.10.1](https://github.com/natura-cosmeticos/natds-ios/compare/6.10.0...6.10.1) (2021-10-19)
 
 
