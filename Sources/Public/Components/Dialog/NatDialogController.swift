@@ -95,6 +95,7 @@ public final class NatDialogController: UIViewController {
 
         if viewModel.isDismissable {
             let dismissTapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissDialog(_:)))
+            dismissTapGesture.cancelsTouchesInView = false
             view.addGestureRecognizer(dismissTapGesture)
         }
     }
