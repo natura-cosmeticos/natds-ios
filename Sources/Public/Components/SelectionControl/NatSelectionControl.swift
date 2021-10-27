@@ -104,8 +104,6 @@ public class NatSelectionControl: UIView {
 
     private lazy var label: UILabel = {
         let label = UILabel()
-        label.font = NatFonts.font(ofSize: .body2, withWeight: .regular)
-        label.textColor = getUIColorFromTokens(\.colorHighEmphasis)
         label.text = text
         label.numberOfLines = 0
         return label
@@ -148,6 +146,7 @@ public class NatSelectionControl: UIView {
 
         addSubview(label)
         addLabelConstraints()
+        setupLabel()
     }
 
     public override func layoutSubviews() {
@@ -175,5 +174,26 @@ public class NatSelectionControl: UIView {
     public func configure(text: String?) {
         label.text = text
         labelComponent = text
+    }
+
+    private func setupLabel() {
+        label.font = NatFonts.font(ofSize: style.fontSize,
+                                   withWeight: style.fontWeight,
+                                   withFamily: style.fontFamily)
+        label.textColor = getUIColorFromTokens(\.colorHighEmphasis)
+        if let text = text {
+            label.attributedText = createLabelWithAttributes(text)
+        }
+    }
+
+    private func createLabelWithAttributes(_ text: String) -> NSAttributedString {
+        let attributedString = NSMutableAttributedString(string: text)
+        attributedString.apply(kernValue: style.letterSpacing)
+
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = style.lineHeight
+        attributedString.apply(paragraphStyle: paragraphStyle)
+
+        return attributedString
     }
 }
