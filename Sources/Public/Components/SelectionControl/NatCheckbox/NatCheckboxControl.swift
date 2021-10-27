@@ -87,6 +87,14 @@ final class NatCheckboxControl: UIControl {
         onTouchesEnded?(touches)
     }
 
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesMoved(touches, with: event)
+    }
+
+    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesCancelled(touches, with: event)
+    }
+
     override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
 
         let relativeFrame = self.bounds
