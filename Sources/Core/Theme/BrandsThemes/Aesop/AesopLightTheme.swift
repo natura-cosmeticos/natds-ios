@@ -274,6 +274,13 @@ struct AesopLightComponents: Components {
     let dialogBodyPrimaryFontWeight: UIFont.Weight = .regular
     let dialogBodyFallbackFontFamily = "San Francisco"
     let dialogBodyFallbackFontWeight: UIFont.Weight = .regular
+    let radioButtonLabelFontSize: CGFloat = 14
+    let radioButtonLabelLetterSpacing: CGFloat = 0.16
+    let radioButtonLabelLineHeight: CGFloat = 1.5
+    let radioButtonLabelPrimaryFontFamily = "San Francisco"
+    let radioButtonLabelPrimaryFontWeight: UIFont.Weight = .regular
+    let radioButtonLabelFallbackFontFamily = "San Francisco"
+    let radioButtonLabelFallbackFontWeight: UIFont.Weight = .regular
     let heading1FontSize: CGFloat = 96
     let heading1FontWeight: UIFont.Weight = .regular
     let heading1LetterSpacing: CGFloat = 0
