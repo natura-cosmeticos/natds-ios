@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.12.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.11.0...6.12.0) (2021-10-28)
+
+
+### Features
+
+* update checkbox and radiobutton with typography attributes ([df9d2d3](https://github.com/natura-cosmeticos/natds-ios/commit/df9d2d320a460e25fcc1a5b5d0e7defdc2311215))
+
+
+### Bug Fixes
+
+* add methods to prevent touch bugs at checkbox and radiobutton ([f497578](https://github.com/natura-cosmeticos/natds-ios/commit/f497578edc2a5bdb5f7225861a569cf32dd98475))
+* prevent dialog from cancelling touches of subviews ([45af624](https://github.com/natura-cosmeticos/natds-ios/commit/45af62417b128e654bf572a5675f44bf97e1e64d))
+
 ## [6.11.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.10.1...6.11.0) (2021-10-26)
 
 
