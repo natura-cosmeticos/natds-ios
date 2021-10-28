@@ -253,6 +253,13 @@ struct NaturaDarkComponents: Components {
     let buttonTextColorFocusBackground = "#495057"
     let buttonTextColorFocusBorder = "#FFFFFF00"
     let buttonTextColorFocusLabel = "#FAFAFA"
+    let checkboxLabelFontSize: CGFloat = 14
+    let checkboxLabelLetterSpacing: CGFloat = 0.16
+    let checkboxLabelLineHeight: CGFloat = 1.5
+    let checkboxLabelPrimaryFontFamily = "San Francisco"
+    let checkboxLabelPrimaryFontWeight: UIFont.Weight = .regular
+    let checkboxLabelFallbackFontFamily = "San Francisco"
+    let checkboxLabelFallbackFontWeight: UIFont.Weight = .regular
     let dialogTitleFontSize: CGFloat = 20
     let dialogTitleLetterSpacing: CGFloat = 0.12
     let dialogTitleLineHeight: CGFloat = 1.25
@@ -267,6 +274,13 @@ struct NaturaDarkComponents: Components {
     let dialogBodyPrimaryFontWeight: UIFont.Weight = .regular
     let dialogBodyFallbackFontFamily = "San Francisco"
     let dialogBodyFallbackFontWeight: UIFont.Weight = .regular
+    let radioButtonLabelFontSize: CGFloat = 14
+    let radioButtonLabelLetterSpacing: CGFloat = 0.16
+    let radioButtonLabelLineHeight: CGFloat = 1.5
+    let radioButtonLabelPrimaryFontFamily = "San Francisco"
+    let radioButtonLabelPrimaryFontWeight: UIFont.Weight = .regular
+    let radioButtonLabelFallbackFontFamily = "San Francisco"
+    let radioButtonLabelFallbackFontWeight: UIFont.Weight = .regular
     let heading1FontSize: CGFloat = 96
     let heading1FontWeight: UIFont.Weight = .regular
     let heading1LetterSpacing: CGFloat = 0
