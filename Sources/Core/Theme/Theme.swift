@@ -282,6 +282,27 @@ protocol Components {
     var radioButtonLabelPrimaryFontWeight: UIFont.Weight { get }
     var radioButtonLabelFallbackFontFamily: String { get }
     var radioButtonLabelFallbackFontWeight: UIFont.Weight { get }
+    var textFieldLabelPrimaryFontFamily: String { get }
+    var textFieldLabelPrimaryFontWeight: UIFont.Weight { get }
+    var textFieldLabelFallbackFontFamily: String { get }
+    var textFieldLabelFallbackFontWeight: UIFont.Weight { get }
+    var textFieldLabelFontSize: CGFloat { get }
+    var textFieldLabelLetterSpacing: CGFloat { get }
+    var textFieldLabelLineHeight: CGFloat { get }
+    var textFieldContentPrimaryFontFamily: String { get }
+    var textFieldContentPrimaryFontWeight: UIFont.Weight { get }
+    var textFieldContentFallbackFontFamily: String { get }
+    var textFieldContentFallbackFontWeight: UIFont.Weight { get }
+    var textFieldContentFontSize: CGFloat { get }
+    var textFieldContentLetterSpacing: CGFloat { get }
+    var textFieldContentLineHeight: CGFloat { get }
+    var textFieldHelperTextPrimaryFontFamily: String { get }
+    var textFieldHelperTextPrimaryFontWeight: UIFont.Weight { get }
+    var textFieldHelperTextFallbackFontFamily: String { get }
+    var textFieldHelperTextFallbackFontWeight: UIFont.Weight { get }
+    var textFieldHelperTextFontSize: CGFloat { get }
+    var textFieldHelperTextLetterSpacing: CGFloat { get }
+    var textFieldHelperTextLineHeight: CGFloat { get }
     var heading1FontSize: CGFloat { get }
     var heading1FontWeight: UIFont.Weight { get }
     var heading1LetterSpacing: CGFloat { get }
