@@ -1,4 +1,4 @@
-    // swiftlint:disable line_length
+// swiftlint:disable line_length
 public final class NatField: UITextField {
 
     let contentFont: UIFont = NatFonts.font(ofSize: getComponentAttributeFromTheme(\.textFieldContentFontSize),
@@ -28,8 +28,9 @@ public final class NatField: UITextField {
     public override var text: String? {
         didSet {
             let attrText = NSMutableAttributedString(string: text ?? "")
-            attrText.apply(kernValue: contentLetterSpacing)
-            attrText.apply(paragraphStyle: contentParagraphStyle)
+            .apply(font: contentFont)
+            .apply(kernValue: contentLetterSpacing)
+            .apply(paragraphStyle: contentParagraphStyle)
 
             attributedText = attrText
         }
