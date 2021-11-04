@@ -103,7 +103,15 @@ public class TextField: UIView {
     /// A string with the text to be always displayed above textfield
     public var title: String? {
         get { titleLabel.text }
-        set { titleLabel.text = newValue }
+        set {
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.lineSpacing = getComponentAttributeFromTheme(\.textFieldLabelLineHeight)
+            let attributedString = NSMutableAttributedString(string: newValue ?? "")
+                .apply(kernValue: getComponentAttributeFromTheme(\.textFieldLabelLetterSpacing))
+                .apply(paragraphStyle: paragraphStyle)
+            attributedString.apply(paragraphStyle: paragraphStyle)
+            titleLabel.attributedText = attributedString
+        }
     }
 
     /// A string with the text inside the textField
@@ -126,7 +134,13 @@ public class TextField: UIView {
     /// A string with a helper text to be displayed below textField
     public var helper: String? {
         didSet {
-            helperLabel.text = helper
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.lineSpacing = getComponentAttributeFromTheme(\.textFieldHelperTextLineHeight)
+            let attributedString = NSMutableAttributedString(string: helper ?? "")
+                .apply(kernValue: getComponentAttributeFromTheme(\.textFieldHelperTextLetterSpacing))
+                .apply(paragraphStyle: paragraphStyle)
+            attributedString.apply(paragraphStyle: paragraphStyle)
+            helperLabel.attributedText = attributedString
         }
     }
 
@@ -204,7 +218,14 @@ public class TextField: UIView {
 
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = NatFonts.font(ofSize: 14, withWeight: .medium)
+
+        let fontSize = getComponentAttributeFromTheme(\.textFieldLabelFontSize)
+        let fontWeight = getComponentAttributeFromTheme(\.textFieldLabelPrimaryFontWeight)
+        let fontFamily = getComponentAttributeFromTheme(\.textFieldLabelPrimaryFontFamily)
+
+        label.font = NatFonts.font(ofSize: fontSize,
+                                   withWeight: fontWeight,
+                                   withFamily: fontFamily)
         label.numberOfLines = 2
         return label
     }()
@@ -227,7 +248,14 @@ public class TextField: UIView {
         let label = UILabel()
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
-        label.font = NatFonts.font(ofSize: .caption, withWeight: .regular)
+
+        let fontSize = getComponentAttributeFromTheme(\.textFieldHelperTextFontSize)
+        let fontWeight = getComponentAttributeFromTheme(\.textFieldHelperTextPrimaryFontWeight)
+        let fontFamily = getComponentAttributeFromTheme(\.textFieldHelperTextPrimaryFontFamily)
+
+        label.font = NatFonts.font(ofSize: fontSize,
+                                   withWeight: fontWeight,
+                                   withFamily: fontFamily)
         return label
     }()
 
