@@ -47,6 +47,7 @@ class ExpansionPanelViewController: UIViewController, SampleItem {
         view.backgroundColor = NatColors.background
         view.addSubview(panel)
         view.addSubview(secondPanel)
+        panel.translatesAutoresizingMaskIntoConstraints = false
 
         let safeArea = view.safeAreaLayoutGuide
         let horizontalMargin = ExpansionPanel.Margin.horizontalMargin
