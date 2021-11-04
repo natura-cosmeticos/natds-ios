@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.13.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.12.0...6.13.0) (2021-11-04)
+
+
+### Features
+
+* add typography tokens to textfield labels ([14c2c76](https://github.com/natura-cosmeticos/natds-ios/commit/14c2c76cd684c94a3f8917a05b0caf66878637a8))
+
+
+### Bug Fixes
+
+* add font to textfield's content text ([7b2cca7](https://github.com/natura-cosmeticos/natds-ios/commit/7b2cca7739e050f327767b7b88b9f5f58b1ac9f9))
+
 ## [6.12.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.11.0...6.12.0) (2021-10-28)
 
 
