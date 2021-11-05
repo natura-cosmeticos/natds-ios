@@ -50,7 +50,14 @@ public final class NatTag: UIView {
 
     internal lazy var label: UILabel = {
         let label = UILabel()
-        label.font = NatFonts.font(ofSize: .caption, withWeight: .regular)
+        let fontSize = getComponentAttributeFromTheme(\.tagLabelFontSize)
+        let fontWeight = getComponentAttributeFromTheme(\.tagLabelPrimaryFontWeight)
+        let fontFamily = getComponentAttributeFromTheme(\.tagLabelPrimaryFontFamily)
+
+        label.font = NatFonts.font(ofSize: fontSize,
+                                   withWeight: fontWeight,
+                                   withFamily: fontFamily)
+
         label.textAlignment = .center
         label.setContentCompressionResistancePriority(.defaultHigh + 1, for: .horizontal)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -136,7 +143,14 @@ public final class NatTag: UIView {
 
     /// Configures a text for the component's label. The tag adjusts its width to match the text length.
     public func configure(text: String) {
-        label.text = text
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = getComponentAttributeFromTheme(\.tagLabelLineHeight)
+        let attributedString = NSMutableAttributedString(string: text)
+            .apply(kernValue: getComponentAttributeFromTheme(\.tagLabelLetterSpacing))
+            .apply(paragraphStyle: paragraphStyle)
+        attributedString.apply(paragraphStyle: paragraphStyle)
+
+        label.attributedText = attributedString
         isHidden = text.isEmpty
     }
 

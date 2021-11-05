@@ -282,6 +282,13 @@ protocol Components {
     var radioButtonLabelPrimaryFontWeight: UIFont.Weight { get }
     var radioButtonLabelFallbackFontFamily: String { get }
     var radioButtonLabelFallbackFontWeight: UIFont.Weight { get }
+    var tagLabelFontSize: CGFloat { get }
+    var tagLabelLetterSpacing: CGFloat { get }
+    var tagLabelLineHeight: CGFloat { get }
+    var tagLabelPrimaryFontFamily: String { get }
+    var tagLabelPrimaryFontWeight: UIFont.Weight { get }
+    var tagLabelFallbackFontFamily: String { get }
+    var tagLabelFallbackFontWeight: UIFont.Weight { get }
     var textFieldLabelPrimaryFontFamily: String { get }
     var textFieldLabelPrimaryFontWeight: UIFont.Weight { get }
     var textFieldLabelFallbackFontFamily: String { get }
