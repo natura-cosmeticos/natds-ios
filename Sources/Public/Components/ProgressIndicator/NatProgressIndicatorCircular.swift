@@ -81,7 +81,7 @@ public class NatProgressIndicatorCircular: UIView {
         hasBackgroundLayer = useBackgroundLayer
     }
 
-    @available(*, deprecated, message: "Set the component size at init and use methods startAnimation() and stopAnimation()")
+    @available(*, deprecated, message: "Set the component size at init and use startAnimation() and stopAnimation()")
     public func configure(with action: Action, size: NatProgressIndicatorCircular.Size = .medium) {
         self.size = size
 
