@@ -251,6 +251,7 @@
 		7DAF750925E4342E0094F865 /* NatAvatar+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAF750825E4342E0094F865 /* NatAvatar+Spec.swift */; };
 		7DAF750E25E5AF830094F865 /* String+Initials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAF750D25E5AF830094F865 /* String+Initials.swift */; };
 		7DB17C0F2739979E00CCC734 /* AesopDarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB17C0E2739979E00CCC734 /* AesopDarkTheme.swift */; };
+		7DB17C332739B6E000CCC734 /* String+Attributed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB17C322739B6E000CCC734 /* String+Attributed.swift */; };
 		7DC81CB126121EAC006BE689 /* NatRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC81CB026121EAC006BE689 /* NatRating.swift */; };
 		7DC81CB6261223CC006BE689 /* UIImage+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC81CB5261223CC006BE689 /* UIImage+UIColor.swift */; };
 		7DE2B10725FBD57300C5CBC0 /* NatListItem+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE2B10625FBD57300C5CBC0 /* NatListItem+Spec.swift */; };
@@ -692,6 +693,7 @@
 		7DAF750825E4342E0094F865 /* NatAvatar+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatAvatar+Spec.swift"; sourceTree = "<group>"; };
 		7DAF750D25E5AF830094F865 /* String+Initials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Initials.swift"; sourceTree = "<group>"; };
 		7DB17C0E2739979E00CCC734 /* AesopDarkTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AesopDarkTheme.swift; sourceTree = "<group>"; };
+		7DB17C322739B6E000CCC734 /* String+Attributed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Attributed.swift"; sourceTree = "<group>"; };
 		7DC81CB026121EAC006BE689 /* NatRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatRating.swift; sourceTree = "<group>"; };
 		7DC81CB5261223CC006BE689 /* UIImage+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+UIColor.swift"; sourceTree = "<group>"; };
 		7DE2B10625FBD57300C5CBC0 /* NatListItem+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatListItem+Spec.swift"; sourceTree = "<group>"; };
@@ -2680,13 +2682,14 @@
 			children = (
 				845D099B250119CB00B05760 /* UIView */,
 				AC4E75499E95EC13EB47F2CD9CB26622 /* NSMutableAttributedString+Builder.swift */,
+				7DB17C322739B6E000CCC734 /* String+Attributed.swift */,
 				DD7122400C6AAB36772A6E365FBD263D /* String+Icon.swift */,
+				7DAF750D25E5AF830094F865 /* String+Initials.swift */,
 				3E6444578A8B4B35C37D0B5FA4D8E0F6 /* UIColor+Hex.swift */,
 				8BA9C4721134BD5277D76AEDED7A01DB /* UIFont+Icon.swift */,
 				7D3D59142593D1B500C9197B /* UIImageView+UIColor.swift */,
 				7D43165825F2A16F004AE34F /* UIImageView+URL.swift */,
 				7DE2B12B26000BA600C5CBC0 /* UIImageView+Clickable.swift */,
-				7DAF750D25E5AF830094F865 /* String+Initials.swift */,
 				7DC81CB5261223CC006BE689 /* UIImage+UIColor.swift */,
 				7D5349F126C6BBA600F88EA7 /* UIImage+URL.swift */,
 			);
@@ -3426,6 +3429,7 @@
 				84F709FF1D1DFC32BA4E9CB1803A6E30 /* NavigationDrawer.swift in Sources */,
 				798CD2F02605151B00F49768 /* NatTag+Size.swift in Sources */,
 				79FC59C125D45DAE001CCB56 /* NatProgressIndicatorCircular+Constants.swift in Sources */,
+				7DB17C332739B6E000CCC734 /* String+Attributed.swift in Sources */,
 				7D277B5026976900005075EF /* AppBarContentType.swift in Sources */,
 				841FEABA24C5C1A100C50AFF /* NatLogoImages.swift in Sources */,
 				79FC59C925D45E7D001CCB56 /* NatProgressIndicatorCircular+Animation.swift in Sources */,
