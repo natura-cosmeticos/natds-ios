@@ -281,6 +281,13 @@ struct NaturaDarkComponents: Components {
     let radioButtonLabelPrimaryFontWeight: UIFont.Weight = .regular
     let radioButtonLabelFallbackFontFamily = "San Francisco"
     let radioButtonLabelFallbackFontWeight: UIFont.Weight = .regular
+    let tagLabelFontSize: CGFloat = 12
+    let tagLabelLetterSpacing: CGFloat = 0.16
+    let tagLabelLineHeight: CGFloat = 1.25
+    let tagLabelPrimaryFontFamily = "San Francisco"
+    let tagLabelPrimaryFontWeight: UIFont.Weight = .regular
+    let tagLabelFallbackFontFamily = "San Francisco"
+    let tagLabelFallbackFontWeight: UIFont.Weight = .regular
     let textFieldLabelPrimaryFontFamily = "San Francisco"
     let textFieldLabelPrimaryFontWeight: UIFont.Weight = .medium
     let textFieldLabelFallbackFontFamily = "San Francisco"
