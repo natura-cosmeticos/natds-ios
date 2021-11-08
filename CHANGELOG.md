@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.14.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.13.0...6.14.0) (2021-11-08)
+
+
+### Features
+
+* upate tag typography tokens ([8aff0bb](https://github.com/natura-cosmeticos/natds-ios/commit/8aff0bb2763cca9e96f2fe96492ee0bc4862ab1b))
+
+
+### Bug Fixes
+
+* fix expansion panel subview ([dc074b7](https://github.com/natura-cosmeticos/natds-ios/commit/dc074b7033816900d25a678455c8f904b888ca6f))
+
 ## [6.13.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.12.0...6.13.0) (2021-11-04)
 
 
