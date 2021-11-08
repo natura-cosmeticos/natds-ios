@@ -151,6 +151,7 @@ public final class NatTag: UIView {
         attributedString.apply(paragraphStyle: paragraphStyle)
 
         label.attributedText = attributedString
+        label.textAlignment = .center
         isHidden = text.isEmpty
     }
 
