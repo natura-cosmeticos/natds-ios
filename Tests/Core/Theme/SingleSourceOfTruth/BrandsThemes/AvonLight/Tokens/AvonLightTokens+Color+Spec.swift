@@ -39,7 +39,7 @@ final class AvonLightTokensColorSpec: QuickSpec {
 
         describe("#colorOnPrimaryDark") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorOnPrimaryDark).to(equal("#000000"))
+                expect(systemUnderTest.colorOnPrimaryDark).to(equal("#FFFFFF"))
             }
         }
 

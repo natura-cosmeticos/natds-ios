@@ -174,22 +174,6 @@ final class NatFontsSpec: QuickSpec {
                     }
                 }
 
-                context("when size is button") {
-                    beforeEach {
-                        font = systemUnderTest.font(ofSize: .button, withWeight: .regular)
-                    }
-
-                    it("returns a expect value for size") {
-                        let expected = getComponentAttributeFromTheme(\.buttonDefaultFontSize)
-
-                        expect(font.pointSize).to(equal(expected))
-                    }
-
-                    it("returns a expect value for weight") {
-                        expect(font.getWeight()).to(equal(.regular))
-                    }
-                }
-
                 context("when size is caption") {
                     beforeEach {
                         font = systemUnderTest.font(ofSize: .caption, withWeight: .regular)
@@ -375,22 +359,6 @@ final class NatFontsSpec: QuickSpec {
 
                     it("returns a expect value for size") {
                         let expected = getComponentAttributeFromTheme(\.body2FontSize)
-
-                        expect(font.pointSize).to(equal(expected))
-                    }
-
-                    it("returns a expect value for weight") {
-                        expect(font.getWeight()).to(equal(.medium))
-                    }
-                }
-
-                context("when size is button") {
-                    beforeEach {
-                        font = systemUnderTest.font(ofSize: .button, withWeight: .medium)
-                    }
-
-                    it("returns a expect value for size") {
-                        let expected = getComponentAttributeFromTheme(\.buttonDefaultFontSize)
 
                         expect(font.pointSize).to(equal(expected))
                     }
