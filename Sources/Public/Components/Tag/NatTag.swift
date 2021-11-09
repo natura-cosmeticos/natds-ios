@@ -143,14 +143,9 @@ public final class NatTag: UIView {
 
     /// Configures a text for the component's label. The tag adjusts its width to match the text length.
     public func configure(text: String) {
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineSpacing = getComponentAttributeFromTheme(\.tagLabelLineHeight)
-        let attributedString = NSMutableAttributedString(string: text)
-            .apply(kernValue: getComponentAttributeFromTheme(\.tagLabelLetterSpacing))
-            .apply(paragraphStyle: paragraphStyle)
-        attributedString.apply(paragraphStyle: paragraphStyle)
-
-        label.attributedText = attributedString
+        // swiftlint:disable line_length
+        label.attributedText = text.attributedStringWith(lineHeight: getComponentAttributeFromTheme(\.tagLabelLineHeight),
+                                                         letterSpacing: getComponentAttributeFromTheme(\.tagLabelLetterSpacing))
         label.textAlignment = .center
         isHidden = text.isEmpty
     }

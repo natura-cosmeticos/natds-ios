@@ -45,7 +45,6 @@ public final class NatAvatar: UIView {
     internal let label: UILabel = {
         let label = UILabel()
         label.textColor = getUIColorFromTokens(\.colorOnPrimary)
-        label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -114,7 +113,10 @@ extension NatAvatar {
     /// If the name has more than 2 words, the initials will be the first letter from the first and last names
     public func configure(name: String) {
         type = .label
-        label.text = name.count <= 2 ? name : name.initials
+
+        let text = name.count <= 2 ? name : name.initials
+        label.attributedText = text.attributedStringWith(lineHeight: size.lineHeight, letterSpacing: size.letterSpacing)
+        label.textAlignment = .center
 
         imageView.isHidden = false
         label.isHidden = false

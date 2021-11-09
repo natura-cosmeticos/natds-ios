@@ -67,10 +67,12 @@ extension NatFonts.TextStyle {
         letterSpacing: getComponentAttributeFromTheme(\.body2LetterSpacing)
     )
 
+    // Hardcoded values because the token was deprecated.
+    // Later, the button typography should also be deprecated.
     static let button: NatFonts.TextStyle = .init(
-        size: getComponentAttributeFromTheme(\.buttonDefaultFontSize),
-        weight: getComponentAttributeFromTheme(\.buttonDefaultFontWeight),
-        letterSpacing: getComponentAttributeFromTheme(\.buttonDefaultLetterSpacing)
+        size: 14,
+        weight: UIFont.Weight.medium,
+        letterSpacing: 0.44
     )
 
     static let caption: NatFonts.TextStyle = .init(
