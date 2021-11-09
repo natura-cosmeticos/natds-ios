@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.15.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.14.1...6.15.0) (2021-11-09)
+
+
+### Features
+
+* update avatar typography, add string func to set lineHeight and letterSpacing ([a20f6a8](https://github.com/natura-cosmeticos/natds-ios/commit/a20f6a8f67142291aee9325eda049a18117448e1))
+* update themes version + add hardcode values for deprecated button typography ([c5434ef](https://github.com/natura-cosmeticos/natds-ios/commit/c5434ef69a58378ff643f949f1484306bdb28dad))
+
 ### [6.14.1](https://github.com/natura-cosmeticos/natds-ios/compare/6.14.0...6.14.1) (2021-11-08)
 
 
