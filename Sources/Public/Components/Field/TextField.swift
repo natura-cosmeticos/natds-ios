@@ -104,13 +104,8 @@ public class TextField: UIView {
     public var title: String? {
         get { titleLabel.text }
         set {
-            let paragraphStyle = NSMutableParagraphStyle()
-            paragraphStyle.lineSpacing = getComponentAttributeFromTheme(\.textFieldLabelLineHeight)
-            let attributedString = NSMutableAttributedString(string: newValue ?? "")
-                .apply(kernValue: getComponentAttributeFromTheme(\.textFieldLabelLetterSpacing))
-                .apply(paragraphStyle: paragraphStyle)
-            attributedString.apply(paragraphStyle: paragraphStyle)
-            titleLabel.attributedText = attributedString
+            titleLabel.attributedText = newValue?.attributedStringWith(lineHeight: getComponentAttributeFromTheme(\.textFieldLabelLineHeight),
+                                                                       letterSpacing: getComponentAttributeFromTheme(\.textFieldLabelLetterSpacing))
         }
     }
 
@@ -134,13 +129,8 @@ public class TextField: UIView {
     /// A string with a helper text to be displayed below textField
     public var helper: String? {
         didSet {
-            let paragraphStyle = NSMutableParagraphStyle()
-            paragraphStyle.lineSpacing = getComponentAttributeFromTheme(\.textFieldHelperTextLineHeight)
-            let attributedString = NSMutableAttributedString(string: helper ?? "")
-                .apply(kernValue: getComponentAttributeFromTheme(\.textFieldHelperTextLetterSpacing))
-                .apply(paragraphStyle: paragraphStyle)
-            attributedString.apply(paragraphStyle: paragraphStyle)
-            helperLabel.attributedText = attributedString
+            helperLabel.attributedText = helper?.attributedStringWith(lineHeight: getComponentAttributeFromTheme(\.textFieldHelperTextLineHeight),
+                                                                      letterSpacing: getComponentAttributeFromTheme(\.textFieldHelperTextLetterSpacing))
         }
     }
 
