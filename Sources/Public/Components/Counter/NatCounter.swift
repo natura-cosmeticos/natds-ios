@@ -45,7 +45,12 @@ public final class NatCounter: UIView {
 
     private var numCounter: Int = 0 {
         didSet {
-            numCounterLabel.text = "\(numCounter)"
+            let lineHeight = getComponentAttributeFromTheme(\.counterContentLineHeight)
+            let letterSpacing = getComponentAttributeFromTheme(\.counterContentLetterSpacing)
+
+            numCounterLabel.attributedText = "\(numCounter)".attributedStringWith(lineHeight: lineHeight,
+                                                                                  letterSpacing: letterSpacing)
+            numCounterLabel.textAlignment = .center
             checkLimit()
         }
     }
@@ -78,7 +83,9 @@ public final class NatCounter: UIView {
 
     let numCounterLabel: UILabel = {
         let label = UILabel()
-        label.font = NatFonts.font(ofSize: .body2, withWeight: .regular)
+        label.font = NatFonts.font(ofSize: getComponentAttributeFromTheme(\.counterContentFontSize),
+                                   withWeight: getComponentAttributeFromTheme(\.counterContentPrimaryFontWeight),
+                                   withFamily: getComponentAttributeFromTheme(\.counterContentPrimaryFontFamily))
         label.textColor = getUIColorFromTokens(\.colorHighEmphasis)
         label.translatesAutoresizingMaskIntoConstraints = false
 
@@ -87,7 +94,9 @@ public final class NatCounter: UIView {
 
     var label: UILabel = {
         let label = UILabel()
-        label.font = NatFonts.font(ofSize: 14, withWeight: .medium)
+        label.font = NatFonts.font(ofSize: getComponentAttributeFromTheme(\.counterLabelFontSize),
+                                   withWeight: getComponentAttributeFromTheme(\.counterLabelPrimaryFontWeight),
+                                   withFamily: getComponentAttributeFromTheme(\.counterLabelPrimaryFontFamily))
         label.textColor = getUIColorFromTokens(\.colorMediumEmphasis)
         label.text = ""
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -133,7 +142,10 @@ public final class NatCounter: UIView {
     /// Sets the label of NatCounter component
     /// - Parameter label: text always displayed above NatCounter
     public func configure(label: String?) {
-        self.label.text = label
+        let lineHeight = getComponentAttributeFromTheme(\.counterLabelLineHeight)
+        let letterSpacing = getComponentAttributeFromTheme(\.counterLabelLetterSpacing)
+        self.label.attributedText = label?.attributedStringWith(lineHeight: lineHeight,
+                                                                letterSpacing: letterSpacing)
     }
 
     /// Sets the value of NatCounter component
