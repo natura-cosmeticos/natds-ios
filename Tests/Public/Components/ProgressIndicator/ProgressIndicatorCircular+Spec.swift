@@ -6,11 +6,11 @@ import Nimble
 class ProgressIndicatorCircularSpec: QuickSpec {
     override func spec() {
         DesignSystem().configure(with: .avonLight)
-        let systemUnderTest = NatProgressIndicatorCircular()
+        var systemUnderTest = NatProgressIndicatorCircular()
 
         describe("#configure: action") {
             beforeEach {
-                systemUnderTest.configure(with: .showAndStartAnimation)
+                systemUnderTest.startAnimation()
             }
 
             it("adds progress indicator") {
@@ -20,7 +20,7 @@ class ProgressIndicatorCircularSpec: QuickSpec {
 
         describe("#configure: size") {
             beforeEach {
-                systemUnderTest.configure(with: .showAndStartAnimation, size: .large)
+                systemUnderTest = NatProgressIndicatorCircular(size: .large)
             }
 
             it("adds progress indicator") {
@@ -30,7 +30,6 @@ class ProgressIndicatorCircularSpec: QuickSpec {
 
         describe("#configure: backgroundLayer") {
             beforeEach {
-                systemUnderTest.configure(with: .showAndStartAnimation)
                 systemUnderTest.configure(useBackgroundLayer: true)
             }
 
@@ -47,7 +46,7 @@ class ProgressIndicatorCircularSpec: QuickSpec {
 
         describe("#isProgressHidden") {
             beforeEach {
-                systemUnderTest.configure(with: .hideAndStopAnimation)
+                systemUnderTest.stopAnimation()
             }
 
             it("removes progress indicator") {
