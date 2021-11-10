@@ -23,9 +23,6 @@ struct NaturaDarkTheme: Theme {
     let components: Components = NaturaDarkComponents()
 }
 
-// swiftlint:disable identifier_name
-// swiftlint:disable type_body_length
-// swiftlint:disable file_length
 struct NaturaDarkTokens: Tokens {
     let assetFontFileDisplay = "helvetica_now_display_bd"
     let assetFontFileHeadline = "helvetica_now_display_md"

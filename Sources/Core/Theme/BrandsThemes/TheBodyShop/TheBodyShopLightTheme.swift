@@ -23,9 +23,6 @@ struct TheBodyShopLightTheme: Theme {
     let components: Components = TheBodyShopLightComponents()
 }
 
-// swiftlint:disable identifier_name
-// swiftlint:disable type_body_length
-// swiftlint:disable file_length
 struct TheBodyShopLightTokens: Tokens {
     let assetFontFileDisplay = "druk_cy_bold"
     let assetFontFileHeadline = "recoleta_semi_bold"

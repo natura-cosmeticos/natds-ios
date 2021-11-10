@@ -1,5 +1,6 @@
 excluded:
   - Pods
+  - Sources/Core/Theme
 
 type_name:
     min_length: 2

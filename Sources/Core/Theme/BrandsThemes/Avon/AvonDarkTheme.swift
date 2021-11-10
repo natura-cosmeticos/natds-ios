@@ -23,9 +23,6 @@ struct AvonDarkTheme: Theme {
     let components: Components = AvonDarkComponents()
 }
 
-// swiftlint:disable identifier_name
-// swiftlint:disable type_body_length
-// swiftlint:disable file_length
 struct AvonDarkTokens: Tokens {
     let assetFontFileDisplay = "montserrat_bold"
     let assetFontFileHeadline = "montserrat_semi_bold"
