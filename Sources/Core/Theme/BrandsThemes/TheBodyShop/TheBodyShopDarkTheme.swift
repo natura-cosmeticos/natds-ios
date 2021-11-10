@@ -23,9 +23,6 @@ struct TheBodyShopDarkTheme: Theme {
     let components: Components = TheBodyShopDarkComponents()
 }
 
-// swiftlint:disable identifier_name
-// swiftlint:disable type_body_length
-// swiftlint:disable file_length
 struct TheBodyShopDarkTokens: Tokens {
     let assetFontFileDisplay = "druk_cy_bold"
     let assetFontFileHeadline = "recoleta_semi_bold"

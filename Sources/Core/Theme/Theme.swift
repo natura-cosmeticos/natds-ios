@@ -23,8 +23,6 @@ protocol Theme {
     var components: Components { get }
 }
 
-// swiftlint:disable identifier_name
-// swiftlint:disable file_length
 protocol Tokens {
     var assetFontFileDisplay: String { get }
     var assetFontFileHeadline: String { get }

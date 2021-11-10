@@ -23,9 +23,6 @@ struct AesopLightTheme: Theme {
     let components: Components = AesopLightComponents()
 }
 
-// swiftlint:disable identifier_name
-// swiftlint:disable type_body_length
-// swiftlint:disable file_length
 struct AesopLightTokens: Tokens {
     let assetFontFileDisplay = "zapf_humanist601bt_roman"
     let assetFontFileHeadline = "suisse_intl_regular"

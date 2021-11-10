@@ -53,4 +53,14 @@ final class NatTagSnapshotTests: XCTestCase {
 
         assertSnapshot(matching: sut, as: .image)
     }
+
+    func test_tag_fixed_width_hasValidSnapshot() {
+        let sut = NatTag(style: .defaultAlert)
+        sut.configure(text: "New")
+        sut.configure(color: .alert)
+        sut.translatesAutoresizingMaskIntoConstraints = false
+        sut.widthAnchor.constraint(equalToConstant: 100).isActive = true
+
+        assertSnapshot(matching: sut, as: .image)
+    }
 }

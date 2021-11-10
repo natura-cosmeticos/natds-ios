@@ -5,6 +5,8 @@ struct StubTheme: Theme {
     let components: Components = StubComponents()
 }
 
+// swiftlint:disable identifier_name
+// swiftlint:disable type_body_length
 private struct StubTokens: Tokens {
     let assetFontFileDisplay = "montserrat_bold"
     let assetFontFileHeadline = "montserrat_semi_bold"
