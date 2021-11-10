@@ -212,6 +212,7 @@
 		7D43162225ED9477004AE34F /* TextField+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D43162125ED9477004AE34F /* TextField+Size.swift */; };
 		7D43162D25EE8944004AE34F /* TextField+FeedbackState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D43162C25EE8944004AE34F /* TextField+FeedbackState.swift */; };
 		7D43165925F2A16F004AE34F /* UIImageView+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D43165825F2A16F004AE34F /* UIImageView+URL.swift */; };
+		7D456155273C167C0006B440 /* NatDialogCompletionHandlerConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D456154273C167C0006B440 /* NatDialogCompletionHandlerConfigurable.swift */; };
 		7D5120BA25E9914100557E21 /* NatAvatar+Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5120B925E9914100557E21 /* NatAvatar+Type.swift */; };
 		7D5120BF25E997CD00557E21 /* NatAvatar+Styles+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5120BE25E997CD00557E21 /* NatAvatar+Styles+Spec.swift */; };
 		7D5120D025ED7CE200557E21 /* TextField+InteractionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5120CF25ED7CE200557E21 /* TextField+InteractionState.swift */; };
@@ -653,6 +654,7 @@
 		7D43162125ED9477004AE34F /* TextField+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Size.swift"; sourceTree = "<group>"; };
 		7D43162C25EE8944004AE34F /* TextField+FeedbackState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+FeedbackState.swift"; sourceTree = "<group>"; };
 		7D43165825F2A16F004AE34F /* UIImageView+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+URL.swift"; sourceTree = "<group>"; };
+		7D456154273C167C0006B440 /* NatDialogCompletionHandlerConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatDialogCompletionHandlerConfigurable.swift; sourceTree = "<group>"; };
 		7D5120B925E9914100557E21 /* NatAvatar+Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatAvatar+Type.swift"; sourceTree = "<group>"; };
 		7D5120BE25E997CD00557E21 /* NatAvatar+Styles+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatAvatar+Styles+Spec.swift"; sourceTree = "<group>"; };
 		7D5120CF25ED7CE200557E21 /* TextField+InteractionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+InteractionState.swift"; sourceTree = "<group>"; };
@@ -2377,6 +2379,7 @@
 			isa = PBXGroup;
 			children = (
 				84BC901424AA17C0007DF09D /* NatDialogBuilder.swift */,
+				7D456154273C167C0006B440 /* NatDialogCompletionHandlerConfigurable.swift */,
 				84BC901324AA17C0007DF09D /* NatDialogTitleConfigurable.swift */,
 				84BC901124AA17C0007DF09D /* NatDialogBodyConfigurable.swift */,
 				84BC901224AA17C0007DF09D /* NatDialogCustomBodyConfigurable.swift */,
@@ -3454,6 +3457,7 @@
 				8409854724F02B230095D6AD /* Notification+Name+ThemeHasChanged.swift in Sources */,
 				5C0716F242EFC1AF6A61CBE257DA7CFE /* TextField.swift in Sources */,
 				79EA0C20260A85DE00742C0A /* NatCounterButton.swift in Sources */,
+				7D456155273C167C0006B440 /* NatDialogCompletionHandlerConfigurable.swift in Sources */,
 				E07925C3535D79164EBC061C7D6A6CE4 /* TextFieldType.swift in Sources */,
 				7D23B35D26D97B0900FB5DA9 /* CustomFontStyle.swift in Sources */,
 				847C829224E36AB7001CE116 /* NaturaLightTheme.swift in Sources */,
