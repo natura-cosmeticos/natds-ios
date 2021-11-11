@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.16.1](https://github.com/natura-cosmeticos/natds-ios/compare/6.16.0...6.16.1) (2021-11-11)
+
+
+### Bug Fixes
+
+* add a completion handler for dialog dismiss action ([d3af67a](https://github.com/natura-cosmeticos/natds-ios/commit/d3af67a707662dd03eae2d6720fcc7ff1fd0a950))
+
 ## [6.16.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.15.0...6.16.0) (2021-11-10)
 
 
