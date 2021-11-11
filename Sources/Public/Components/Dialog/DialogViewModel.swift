@@ -1,3 +1,5 @@
+public typealias ActionHandler = () -> Void
+
 extension NatDialogController {
     public class ViewModel {
         var titleView: DialogHeaderView?
@@ -6,5 +8,6 @@ extension NatDialogController {
         var bottomDividerView: UIView?
         var footerView: DialogFooterView?
         var isDismissable = true
+        var dismissCompletionHandler: ActionHandler?
     }
 }

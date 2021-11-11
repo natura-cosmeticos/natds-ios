@@ -73,3 +73,7 @@ extension NatDialogController.AlertStyleBuilder: NatDialogDismissableConfigurabl
 // MARK: - NatDialogDividerConfigurable
 
 extension NatDialogController.AlertStyleBuilder: NatDialogDividerConfigurable {}
+
+// MARK: - NatDialogCompletionHandlerConfigurable
+
+extension NatDialogController.AlertStyleBuilder: NatDialogCompletionHandlerConfigurable {}

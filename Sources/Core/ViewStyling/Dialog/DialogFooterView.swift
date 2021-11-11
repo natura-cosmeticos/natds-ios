@@ -1,5 +1,3 @@
-private typealias ActionHandler = () -> Void
-
 final class DialogFooterView: UIView {
 
     // MARK: - Private properties

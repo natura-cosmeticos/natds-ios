@@ -115,6 +115,9 @@ final class DialogItemViewController: UIViewController, SampleItem {
             .configure(secondaryButtonTitle: "Close") {
                 self.navigationController?.presentedViewController?.dismiss(animated: true)
             }
+            .configure(dismissActionHandler: {
+                print("Standard Dialog was dismissed")
+            })
             .build()
 
         navigationController?.present(dialog, animated: true)

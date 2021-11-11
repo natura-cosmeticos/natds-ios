@@ -49,6 +49,8 @@ public final class NatDialogController: UIViewController {
 
     // MARK: - Private properties
 
+    private var completionHandler: ActionHandler?
+
     private let containerView: UIView = {
         let view = UIView()
         ViewStyle.applyElevation(on: view, with: .huge)
@@ -98,6 +100,10 @@ public final class NatDialogController: UIViewController {
             dismissTapGesture.cancelsTouchesInView = false
             view.addGestureRecognizer(dismissTapGesture)
         }
+
+        if let handler = viewModel.dismissCompletionHandler {
+            completionHandler = handler
+        }
     }
 
     @available(*, unavailable)
@@ -114,6 +120,7 @@ public final class NatDialogController: UIViewController {
 
         if !containerView.frame.contains(tappedAtPoint) {
             dismiss(animated: true)
+            completionHandler?()
         }
     }
 
