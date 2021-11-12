@@ -179,20 +179,22 @@ extension NatButton {
     }
 
     private func setupConstraints(for iconView: IconView, at position: Position) {
-        guard
-            let title = titleLabel
-        else { return }
+        guard let title = titleLabel else { return }
 
         iconView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
 
         switch position {
         case .left:
-            iconView.trailingAnchor
-                .constraint(equalTo: title.leadingAnchor, constant: -NatSizes.micro).isActive = true
+            iconView.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor,
+                                              constant: NatSizes.micro).isActive = true
+            iconView.trailingAnchor.constraint(equalTo: title.leadingAnchor,
+                                               constant: -NatSizes.micro).isActive = true
 
         case .right:
-            iconView.leadingAnchor
-                .constraint(equalTo: title.trailingAnchor, constant: NatSizes.micro).isActive = true
+            iconView.leadingAnchor.constraint(equalTo: title.trailingAnchor,
+                                              constant: NatSizes.micro).isActive = true
+            iconView.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor,
+                                               constant: -NatSizes.micro).isActive = true
         }
     }
 
