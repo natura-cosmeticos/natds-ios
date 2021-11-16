@@ -36,19 +36,41 @@ final class NatButtonSnapshotTests: XCTestCase {
         assertSnapshot(matching: superview, as: .image(precision: 0.97))
         assertSnapshot(matching: systemUnderTest, as: .recursiveDescription)
     }
+
+    func test_icon_right_side_noWidthConstraint_hasValidSnapshot() {
+        let systemUnderTest = NatButton(style: .contained)
+        systemUnderTest.configure(title: "stub")
+        systemUnderTest.configure(icon: nil, position: .right)
+        superview.addSubview(systemUnderTest)
+        addConstraints(systemUnderTest, withWidth: false)
+
+        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: systemUnderTest, as: .recursiveDescription)
+    }
+
+    func test_icon_left_side_noWidthConstraint_hasValidSnapshot() {
+        let systemUnderTest = NatButton(style: .contained)
+        systemUnderTest.configure(title: "stub")
+        systemUnderTest.configure(icon: nil, position: .left)
+        superview.addSubview(systemUnderTest)
+        addConstraints(systemUnderTest, withWidth: false)
+
+        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: systemUnderTest, as: .recursiveDescription)
+    }
 }
 
 extension NatButtonSnapshotTests {
-    private func addConstraints(_ systemUnderTest: UIView) {
+    private func addConstraints(_ systemUnderTest: UIView, withWidth: Bool = true) {
         systemUnderTest.translatesAutoresizingMaskIntoConstraints = false
 
-        let constraints = [
+        var constraints = [
             systemUnderTest.centerXAnchor.constraint(equalTo: superview.centerXAnchor),
             systemUnderTest.centerYAnchor.constraint(equalTo: superview.centerYAnchor),
 
-            systemUnderTest.heightAnchor.constraint(equalToConstant: 40),
-            systemUnderTest.widthAnchor.constraint(equalToConstant: 80)
+            systemUnderTest.heightAnchor.constraint(equalToConstant: 40)
         ]
+        if withWidth { constraints.append(systemUnderTest.widthAnchor.constraint(equalToConstant: 80)) }
 
         NSLayoutConstraint.activate(constraints)
     }
