@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.16.2](https://github.com/natura-cosmeticos/natds-ios/compare/6.16.1...6.16.2) (2021-11-16)
+
+
+### Bug Fixes
+
+* fix button with icon and without width constraint ([d14dc89](https://github.com/natura-cosmeticos/natds-ios/commit/d14dc89d48deb861ce35bce91fa3bdde19a04e20))
+
 ### [6.16.1](https://github.com/natura-cosmeticos/natds-ios/compare/6.16.0...6.16.1) (2021-11-11)
 
 
