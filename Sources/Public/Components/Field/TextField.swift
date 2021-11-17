@@ -196,7 +196,7 @@ public class TextField: UIView {
     private(set) var interactionState: InteractionState = .enabled {
         didSet {
             handleInteractionState()
-            handleInteractionStateStyle()
+            handleFeedbackStyle()
         }
     }
 
