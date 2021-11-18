@@ -384,7 +384,7 @@ extension TextField {
     }
 
     private func handleInteractionAndFeedbackStyle() {
-        if state == .none || isEditing {
+        if state == .none {
             textField.borderWidth = interactionState.borderWidth
             textField.borderColor = interactionState.borderColor
             textField.textColor = interactionState.textColor
