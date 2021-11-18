@@ -59,11 +59,11 @@ public final class NatShortcut: UIView {
 
     // MARK: - Inits
 
-    public convenience init(style: Style) {
+    public convenience init(style: Style = .containedPrimary) {
         self.init(style: style, text: nil, icon: nil, notificationCenter: NotificationCenter.default)
     }
 
-    public convenience init(style: Style, text: String? = nil, icon: String? = nil) {
+    public convenience init(style: Style = .containedPrimary, text: String? = nil, icon: String? = nil) {
         self.init(style: style, text: text, icon: icon, notificationCenter: NotificationCenter.default)
     }
 
