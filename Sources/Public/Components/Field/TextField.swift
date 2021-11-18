@@ -196,13 +196,13 @@ public class TextField: UIView {
     private(set) var interactionState: InteractionState = .enabled {
         didSet {
             handleInteractionState()
-            handleInteractionStateStyle()
+            handleInteractionAndFeedbackStyle()
         }
     }
 
     private(set) var state: FeedbackState = .none {
         didSet {
-            handleFeedbackStyle()
+            handleInteractionAndFeedbackStyle()
         }
     }
 
@@ -313,8 +313,7 @@ extension TextField {
 
         handleRequired()
         handleInteractionState()
-        handleInteractionStateStyle()
-        handleFeedbackStyle()
+        handleInteractionAndFeedbackStyle()
         handleTextFieldType()
     }
 
@@ -384,45 +383,37 @@ extension TextField {
         iconButtonGeneral.isUserInteractionEnabled = self.interactionState.isUserInteractionEnabled
     }
 
-    private func handleInteractionStateStyle() {
-        textField.borderWidth = interactionState.borderWidth
-        textField.borderColor = interactionState.borderColor
-        textField.textColor = interactionState.textColor
-        textField.backgroundColor = interactionState.textFieldBackgroundColor
-        textField.tintColor = interactionState.textFieldTintColor
-        textField.attributedPlaceholder = NSAttributedString(string: placeholder ?? "",
-                                                             attributes: [NSAttributedString.Key.foregroundColor:
-                                                                            interactionState.placeholderTextColor])
+    private func handleInteractionAndFeedbackStyle() {
+        if state == .none || isEditing {
+            textField.borderWidth = interactionState.borderWidth
+            textField.borderColor = interactionState.borderColor
+            textField.textColor = interactionState.textColor
+            textField.backgroundColor = interactionState.textFieldBackgroundColor
+            textField.tintColor = interactionState.textFieldTintColor
+            textField.attributedPlaceholder = NSAttributedString(string: placeholder ?? "",
+                                                                 attributes: [NSAttributedString.Key.foregroundColor:
+                                                                                interactionState.placeholderTextColor])
 
-        titleLabel.textColor = interactionState.titleTextColor
-        if state == .none {
+            titleLabel.textColor = interactionState.titleTextColor
             helperLabel.textColor = interactionState.helperLabelTextColor
+            feedbackIconImageView.isHidden = true
+        } else {
+            textField.borderWidth = state.borderWidth
+            textField.borderColor = state.tintColor
+            textField.tintColor = state.tintColor
+            titleLabel.textColor = state.tintColor
+            helperLabel.textColor = state.tintColor
+            helperLabel.text = helper
+
+            stackView.spacing = getTokenFromTheme(\.sizeMicro)
+            feedbackIconImageView.image = state.helperIcon
+            feedbackIconImageView.contentMode = .scaleAspectFit
+            feedbackIconImageView.tintedColor = state.tintColor
+            feedbackIconImageView.isHidden = false
         }
 
         iconButtonGeneral.configure(iconColor: interactionState.iconColor)
-
         helperLabel.text = helper
-    }
-
-    private func handleFeedbackStyle() {
-        if state == .none {
-            handleInteractionStateStyle()
-            feedbackIconImageView.isHidden = true
-            return
-        }
-
-        textField.borderWidth = state.borderWidth
-        textField.borderColor = state.tintColor
-        textField.tintColor = state.tintColor
-        titleLabel.textColor = state.tintColor
-        helperLabel.textColor = state.tintColor
-        helperLabel.text = helper
-
-        stackView.spacing = getTokenFromTheme(\.sizeMicro)
-        feedbackIconImageView.image = state.helperIcon
-        feedbackIconImageView.contentMode = .scaleAspectFit
-        feedbackIconImageView.tintedColor = state.tintColor
-        feedbackIconImageView.isHidden = false
     }
 
     private func handleTextFieldType() {
