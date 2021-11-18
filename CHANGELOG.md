@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.16.4](https://github.com/natura-cosmeticos/natds-ios/compare/6.16.3...6.16.4) (2021-11-18)
+
+
+### Bug Fixes
+
+* fix editing textfield with feedback state ([bb31732](https://github.com/natura-cosmeticos/natds-ios/commit/bb3173250cdb4e3f00f24afd0da1dd8dc7338d08))
+
 ### [6.16.3](https://github.com/natura-cosmeticos/natds-ios/compare/6.16.2...6.16.3) (2021-11-18)
 
 
