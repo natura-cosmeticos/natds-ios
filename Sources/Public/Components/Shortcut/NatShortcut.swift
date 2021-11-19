@@ -30,7 +30,9 @@ public final class NatShortcut: UIView {
 
     private lazy var label: UILabel = {
         let label = UILabel()
-        label.font = NatFonts.font(ofSize: .caption, withWeight: .regular)
+        label.font = NatFonts.font(ofSize: getComponentAttributeFromTheme(\.shortcutLabelFontSize),
+                                   withWeight: getComponentAttributeFromTheme(\.shortcutLabelPrimaryFontWeight),
+                                   withFamily: getComponentAttributeFromTheme(\.shortcutLabelPrimaryFontFamily))
         label.textColor = getUIColorFromTokens(\.colorHighEmphasis)
         label.textAlignment = .center
         label.lineBreakMode = .byWordWrapping
@@ -49,7 +51,9 @@ public final class NatShortcut: UIView {
 
     private var text: String? {
         didSet {
-            label.text = text
+            // swiftlint:disable line_length
+            label.attributedText = text?.attributedStringWith(lineHeight: getComponentAttributeFromTheme(\.shortcutLabelLineHeight),
+                                                              letterSpacing: getComponentAttributeFromTheme(\.shortcutLabelLetterSpacing))
         }
     }
 
