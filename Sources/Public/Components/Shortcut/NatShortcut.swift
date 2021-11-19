@@ -30,7 +30,9 @@ public final class NatShortcut: UIView {
 
     private lazy var label: UILabel = {
         let label = UILabel()
-        label.font = NatFonts.font(ofSize: .caption, withWeight: .regular)
+        label.font = NatFonts.font(ofSize: getComponentAttributeFromTheme(\.shortcutLabelFontSize),
+                                   withWeight: getComponentAttributeFromTheme(\.shortcutLabelPrimaryFontWeight),
+                                   withFamily: getComponentAttributeFromTheme(\.shortcutLabelPrimaryFontFamily))
         label.textColor = getUIColorFromTokens(\.colorHighEmphasis)
         label.textAlignment = .center
         label.lineBreakMode = .byWordWrapping
@@ -49,7 +51,24 @@ public final class NatShortcut: UIView {
 
     private var text: String? {
         didSet {
-            label.text = text
+            // swiftlint:disable line_length
+            label.attributedText = text?.attributedStringWith(lineHeight: getComponentAttributeFromTheme(\.shortcutLabelLineHeight),
+                                                              letterSpacing: getComponentAttributeFromTheme(\.shortcutLabelLetterSpacing))
+            label.textAlignment = .center
+            label.lineBreakMode = lineBreakMode
+            label.numberOfLines = numberOfLines
+        }
+    }
+
+    private var lineBreakMode: NSLineBreakMode = .byTruncatingTail {
+        didSet {
+            label.lineBreakMode = lineBreakMode
+        }
+    }
+
+    private var numberOfLines: Int = 0 {
+        didSet {
+            label.numberOfLines = numberOfLines
         }
     }
 
@@ -59,11 +78,11 @@ public final class NatShortcut: UIView {
 
     // MARK: - Inits
 
-    public convenience init(style: Style) {
+    public convenience init(style: Style = .containedPrimary) {
         self.init(style: style, text: nil, icon: nil, notificationCenter: NotificationCenter.default)
     }
 
-    public convenience init(style: Style, text: String? = nil, icon: String? = nil) {
+    public convenience init(style: Style = .containedPrimary, text: String? = nil, icon: String? = nil) {
         self.init(style: style, text: text, icon: icon, notificationCenter: NotificationCenter.default)
     }
 
@@ -143,8 +162,8 @@ extension NatShortcut {
     ///   - numberOfLines: the number of lines to be displayed
     ///   - lineBreakMode: the line break mode for long texts
     public func configureText(numberOfLines: Int, lineBreakMode: NSLineBreakMode) {
-        label.lineBreakMode = lineBreakMode
-        label.numberOfLines = numberOfLines
+        self.lineBreakMode = lineBreakMode
+        self.numberOfLines = numberOfLines
     }
 
     /// Configures a badge to the shortcut.
