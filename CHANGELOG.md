@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.17.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.16.4...6.17.0) (2021-11-19)
+
+
+### Features
+
+* add typography tokens for shortcut ([4231918](https://github.com/natura-cosmeticos/natds-ios/commit/423191854f21c7fe14fb7e67fbbcf4a2a05930e1))
+
+
+### Bug Fixes
+
+* add contained primary as default style for shortcut ([7b175d1](https://github.com/natura-cosmeticos/natds-ios/commit/7b175d12189088e8d600f987dd54aa8c1114f642))
+
 ### [6.16.4](https://github.com/natura-cosmeticos/natds-ios/compare/6.16.3...6.16.4) (2021-11-18)
 
 
