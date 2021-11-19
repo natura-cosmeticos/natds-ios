@@ -54,6 +54,21 @@ public final class NatShortcut: UIView {
             // swiftlint:disable line_length
             label.attributedText = text?.attributedStringWith(lineHeight: getComponentAttributeFromTheme(\.shortcutLabelLineHeight),
                                                               letterSpacing: getComponentAttributeFromTheme(\.shortcutLabelLetterSpacing))
+            label.textAlignment = .center
+            label.lineBreakMode = lineBreakMode
+            label.numberOfLines = numberOfLines
+        }
+    }
+
+    private var lineBreakMode: NSLineBreakMode = .byTruncatingTail {
+        didSet {
+            label.lineBreakMode = lineBreakMode
+        }
+    }
+
+    private var numberOfLines: Int = 0 {
+        didSet {
+            label.numberOfLines = numberOfLines
         }
     }
 
@@ -147,8 +162,8 @@ extension NatShortcut {
     ///   - numberOfLines: the number of lines to be displayed
     ///   - lineBreakMode: the line break mode for long texts
     public func configureText(numberOfLines: Int, lineBreakMode: NSLineBreakMode) {
-        label.lineBreakMode = lineBreakMode
-        label.numberOfLines = numberOfLines
+        self.lineBreakMode = lineBreakMode
+        self.numberOfLines = numberOfLines
     }
 
     /// Configures a badge to the shortcut.
