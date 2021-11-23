@@ -1,5 +1,4 @@
-import UIKit
-
+// swiftlint:disable line_length
 /**
   ExpansionPanel is a class that represents a view component that can be expanded and collapsed.
   Also, it can show or hide a detail view with content.
@@ -20,6 +19,7 @@ import UIKit
 
             DesignSystem().configure(with: AvailableTheme)
 */
+// swiftlint:enable line_length
 
 public class ExpansionPanel: UIView {
 

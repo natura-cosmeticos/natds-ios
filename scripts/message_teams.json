@@ -1,0 +1,38 @@
+{
+    "@type": "MessageCard",
+    "@context": "http://schema.org/extensions",
+    "title": "🎉 New Design System version available!",
+    "text": " ",
+    "sections": [{
+        "activityTitle": "New released version of the library:",
+        "facts": [{
+            "name": "📲 Stack",
+            "value": "iOS"
+        }, {
+            "name": "🏷 Version",
+            "value": "VERSIONVALUE"
+        }]
+    }],
+    "potentialAction": [{
+        "@type": "OpenUri",
+        "name": "Check all NatDS versions",
+        "targets": [{
+            "os": "default",
+            "uri": "https://github.com/natura-cosmeticos/natds-ios/releases"
+        }]
+    }, {
+        "@type": "OpenUri",
+        "name": "Check NatDS iOS docs",
+        "targets": [{
+            "os": "default",
+            "uri": "https://natds-ios.natura.design/documentation/index.html"
+        }]
+    }, {
+        "@type": "OpenUri",
+        "name": "Check all DS info",
+        "targets": [{
+            "os": "default",
+            "uri": "https://ds.natura.design"
+        }]
+    } ]
+}

@@ -46,13 +46,6 @@ pods_wipe: ## removes Pods folder, clean its cache and reinstall all Cocoapods d
 	rm -rf ~/Library/Caches/CocoaPods/*
 	$(FASTLANE) pods_install
 
-update_themes: ## update theme from commons
-	bash ./scripts/update_themes.sh
-
-create_docs: ## creates html docs
-	jazzy --theme=jony
-	bash ./scripts/update_docs.sh
-
 install_certificates: ## fetch and install certificates for code signing
 	$(FASTLANE) fetch_certificates
 
@@ -73,6 +66,16 @@ update_patch: ## updates SampleApp and DS Lib versions with next Patch (Y.Y.X) n
 
 bump_version: ## releases new version of NatDS
 	bash ./scripts/bump_version.sh
+
+update_themes: ## update theme from commons
+	bash ./scripts/update_themes.sh
+
+create_docs: ## creates html docs
+	jazzy --theme=jony
+	bash ./scripts/update_docs.sh
+
+teams_release_notification: ## sends a notification on teams about a new available version
+	bash ./scripts/message_teams.sh
 
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
