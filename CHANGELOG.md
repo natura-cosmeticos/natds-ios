@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.18.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.17.0...6.18.0) (2021-11-29)
+
+
+### Features
+
+* deprecates value text highlight ([dc2bf80](https://github.com/natura-cosmeticos/natds-ios/commit/dc2bf800f8c0140ce007b389900dcf3c51dc405d))
+
 ## [6.17.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.16.4...6.17.0) (2021-11-19)
 
 
