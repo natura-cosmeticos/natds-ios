@@ -1,7 +1,12 @@
 import Foundation
 /**
- ValueTextHighlight is a class that represents a component from the design system.
+ - NOTE:
+ The component Value Text Highlight is deprecated since NatDS version `6.18.0`.
+ It won't be updated or receive maintenance.
  
+ ---
+ 
+ ValueTextHighlight is a class that represents a component from the design system.
  Example of usage:
  
         valueTextHighlight.valueDescription = "Amount value"
@@ -13,6 +18,9 @@ import Foundation
         DesignSystem().configure(with: AvailableTheme)
  */
 
+// swiftlint:disable line_length
+@available(*, deprecated, message: "This component is deprecated since version 6.18.0 and will no longer receive updates and fixes.")
+// swiftlint:enable line_length
 public class ValueTextHighlight: UIView {
 
     public var valueDescription: String? {
