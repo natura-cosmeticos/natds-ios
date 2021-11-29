@@ -19,7 +19,7 @@ import Foundation
  */
 
 // swiftlint:disable line_length
-@available(*, deprecated, message: "This component is deprecated since version 6.18.0 and will not receive new updates and maintenance.")
+@available(*, deprecated, message: "This component is deprecated since version 6.18.0 and will no longer receive updates and fixes.")
 // swiftlint:enable line_length
 public class ValueTextHighlight: UIView {
 
