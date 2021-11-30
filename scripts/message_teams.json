@@ -1,16 +1,19 @@
 {
     "@type": "MessageCard",
     "@context": "http://schema.org/extensions",
-    "title": "🎉 New Design System version available!",
+    "title": "🎉 iOS - New Design System version available!",
     "text": "CHANGELOGMESSAGE",
     "sections": [{
-        "activityTitle": "New released version of the library:",
+        "activityTitle": "Info:",
         "facts": [{
             "name": "📲 Stack",
             "value": "iOS"
         }, {
             "name": "🏷 Version",
             "value": "VERSIONVALUE"
+        }, {
+            "name": "🔗 Available at",
+            "value": "Cocoapods | Swift Package Manager"
         }],
         "markdown": true
     }],
