@@ -2,7 +2,7 @@
     "@type": "MessageCard",
     "@context": "http://schema.org/extensions",
     "title": "🎉 New Design System version available!",
-    "text": " ",
+    "text": " [6.17.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.16.4...6.17.0) (2021-11-19)n Featuresn* add typography tokens for shortcut ([4231918](https://github.com/natura-cosmeticos/natds-ios/commit/423191854f21c7fe14fb7e67fbbcf4a2a05930e1))n Bug Fixesn* add contained primary as default style for shortcut ([7b175d1](https://github.com/natura-cosmeticos/natds-ios/commit/7b175d12189088e8d600f987dd54aa8c1114f642))n",
     "sections": [{
         "activityTitle": "New released version of the library:",
         "facts": [{
@@ -10,8 +10,9 @@
             "value": "iOS"
         }, {
             "name": "🏷 Version",
-            "value": "VERSIONVALUE"
-        }]
+            "value": "6.17.0"
+        }],
+        "markdown": true
     }],
     "potentialAction": [{
         "@type": "OpenUri",
