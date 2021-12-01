@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.19.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.18.0...6.19.0) (2021-12-01)
+
+
+### Features
+
+* automate release notification at teams ([c2b4bdd](https://github.com/natura-cosmeticos/natds-ios/commit/c2b4bddf18279302b2c95e63695e4c11b1b721df))
+* update teams message script with correct markdown formatting ([71f90e2](https://github.com/natura-cosmeticos/natds-ios/commit/71f90e283f2eacf554dabb76faf0405944aeeb03))
+* update teams script to also get changelog messages ([dc112fb](https://github.com/natura-cosmeticos/natds-ios/commit/dc112fb9b0b1488f8e617bb553a4d8947a1f9944))
+
 ## [6.18.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.17.0...6.18.0) (2021-11-29)
 
 
