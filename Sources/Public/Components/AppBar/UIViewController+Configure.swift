@@ -56,6 +56,7 @@ public extension UIViewController {
         }
     }
 
+    // swiftlint:disable line_length
     /// Sets rightBarButtonItems for the navigation bar
     ///
     /// Example of usage:
@@ -68,6 +69,7 @@ public extension UIViewController {
         let itemButtons = setSpacingBetween(buttons: buttons)
         navigationItem.setRightBarButtonItems(itemButtons, animated: true)
     }
+    // swiftlint:enable line_length
 
     private func setSpacingBetween(buttons: [UIBarButtonItem]) -> [UIBarButtonItem] {
         var buttons = buttons
