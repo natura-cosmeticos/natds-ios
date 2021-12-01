@@ -35,9 +35,39 @@ extension NatRating {
         var font: UIFont {
             switch self {
             case .counter:
-                return NatFonts.font(ofSize: .body2)
+                let fontSize = getComponentAttributeFromTheme(\.ratingCounterLabelFontSize)
+                let fontWeight = getComponentAttributeFromTheme(\.ratingCounterLabelPrimaryFontWeight)
+                let fontFamily = getComponentAttributeFromTheme(\.ratingCounterLabelPrimaryFontFamily)
+                
+                return NatFonts.font(ofSize: fontSize,
+                                     withWeight: fontWeight,
+                                     withFamily: fontFamily)
             default:
-                return NatFonts.font(ofSize: .caption)
+                let fontSize = getComponentAttributeFromTheme(\.ratingInputLabelFontSize)
+                let fontWeight = getComponentAttributeFromTheme(\.ratingInputLabelPrimaryFontWeight)
+                let fontFamily = getComponentAttributeFromTheme(\.ratingInputLabelPrimaryFontFamily)
+                
+                return NatFonts.font(ofSize: fontSize,
+                                     withWeight: fontWeight,
+                                     withFamily: fontFamily)
+            }
+        }
+
+        var lineHeight: CGFloat {
+            switch self {
+            case .counter:
+                return getComponentAttributeFromTheme(\.ratingCounterLabelLineHeight)
+            default:
+                return getComponentAttributeFromTheme(\.ratingInputLabelLineHeight)
+            }
+        }
+
+        var letterSpacing: CGFloat {
+            switch self {
+            case .counter:
+                return getComponentAttributeFromTheme(\.ratingCounterLabelLetterSpacing)
+            default:
+                return getComponentAttributeFromTheme(\.ratingInputLabelLetterSpacing)
             }
         }
 
