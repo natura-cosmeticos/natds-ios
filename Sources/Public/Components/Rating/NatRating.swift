@@ -164,7 +164,8 @@ public final class NatRating: UIView {
     ///
     /// - Parameter text: a String with the text to be displayed
     public func configure(text: String) {
-        hintLabel.text = text
+        hintLabel.attributedText = text.attributedStringWith(lineHeight: style.lineHeight,
+                                                             letterSpacing: style.letterSpacing)
     }
 
     /// Sets the rate value to be shown as colored stars in the component.
