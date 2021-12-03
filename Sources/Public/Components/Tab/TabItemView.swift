@@ -19,14 +19,26 @@ class TabItemView: UIView {
 
     private(set) lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = NatFonts.font(ofSize: 14, withWeight: .medium)
+        let fontSize = getComponentAttributeFromTheme(\.tabLabelFontSize)
+        let fontWeight = getComponentAttributeFromTheme(\.tabLabelPrimaryFontWeight)
+        let fontFamily = getComponentAttributeFromTheme(\.tabLabelPrimaryFontFamily)
+
+        label.font = NatFonts.font(ofSize: fontSize,
+                             withWeight: fontWeight,
+                             withFamily: fontFamily)
         label.textAlignment = .center
         return label
     }()
 
     init(title: String) {
         super.init(frame: .zero)
-        titleLabel.text = title.uppercased()
+        let lineHeight = getComponentAttributeFromTheme(\.tabLabelLineHeight)
+        let letterSpacing = getComponentAttributeFromTheme(\.tabLabelLetterSpacing)
+        titleLabel.attributedText = title.uppercased()
+            .attributedStringWith(lineHeight: lineHeight,
+                                  letterSpacing: letterSpacing)
+        titleLabel.textAlignment = .center
+
         setup()
     }
 
