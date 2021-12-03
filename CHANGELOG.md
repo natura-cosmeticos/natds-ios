@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.21.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.20.0...6.21.0) (2021-12-03)
+
+
+### Features
+
+* add typography tokens to tab component to make it customisable by brand ([a7be8b7](https://github.com/natura-cosmeticos/natds-ios/commit/a7be8b7e5070fa0ac00ca304f4ec131e62256037))
+
 ## [6.20.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.19.0...6.20.0) (2021-12-02)
 
 
