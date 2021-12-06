@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.21.1](https://github.com/natura-cosmeticos/natds-ios/compare/6.21.0...6.21.1) (2021-12-06)
+
+
+### Bug Fixes
+
+* fix pod push to allow deprecation ([ca65377](https://github.com/natura-cosmeticos/natds-ios/commit/ca6537751d4c567df8f85978a67bb0c704ca6bd0))
+
 ## [6.21.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.20.0...6.21.0) (2021-12-03)
 
 
