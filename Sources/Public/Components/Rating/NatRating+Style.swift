@@ -38,7 +38,7 @@ extension NatRating {
                 let fontSize = getComponentAttributeFromTheme(\.ratingCounterLabelFontSize)
                 let fontWeight = getComponentAttributeFromTheme(\.ratingCounterLabelPrimaryFontWeight)
                 let fontFamily = getComponentAttributeFromTheme(\.ratingCounterLabelPrimaryFontFamily)
-                
+
                 return NatFonts.font(ofSize: fontSize,
                                      withWeight: fontWeight,
                                      withFamily: fontFamily)
@@ -46,7 +46,7 @@ extension NatRating {
                 let fontSize = getComponentAttributeFromTheme(\.ratingInputLabelFontSize)
                 let fontWeight = getComponentAttributeFromTheme(\.ratingInputLabelPrimaryFontWeight)
                 let fontFamily = getComponentAttributeFromTheme(\.ratingInputLabelPrimaryFontFamily)
-                
+
                 return NatFonts.font(ofSize: fontSize,
                                      withWeight: fontWeight,
                                      withFamily: fontFamily)

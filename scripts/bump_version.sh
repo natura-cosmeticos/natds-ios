@@ -17,7 +17,7 @@ then
     git add Tests/Supporting\ Files/Info.plist
     git commit -m "chore: updates version on Info.plist files"
     git push --follow-tags origin HEAD
-    VERSION_NUMBER=$VERSION pod trunk push NatDS.podspec
+    VERSION_NUMBER=$VERSION pod trunk push NatDS.podspec --allow-warnings
     make teams_release_notification
 else
     echo "No applicable changes since the previous tag, skipping..."
