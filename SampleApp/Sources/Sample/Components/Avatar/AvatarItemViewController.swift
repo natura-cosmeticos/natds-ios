@@ -99,6 +99,7 @@ class AvatarItemViewController: UIViewController, SampleItem {
                 constant: NatSpacing.standard
             ),
             standardStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            standardStackView.heightAnchor.constraint(equalToConstant: NatSizes.standard),
 
             // SEMI
             semiStackView.topAnchor.constraint(
@@ -107,6 +108,7 @@ class AvatarItemViewController: UIViewController, SampleItem {
             ),
             semiStackView.widthAnchor.constraint(equalTo: standardStackView.widthAnchor),
             semiStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            semiStackView.heightAnchor.constraint(equalToConstant: NatSizes.semi),
 
             // SEMIX
             semixStackView.topAnchor.constraint(
@@ -115,6 +117,7 @@ class AvatarItemViewController: UIViewController, SampleItem {
             ),
             semixStackView.widthAnchor.constraint(equalTo: semiStackView.widthAnchor),
             semixStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            semixStackView.heightAnchor.constraint(equalToConstant: NatSizes.semiX),
 
             // MEDIUM
             mediumStackView.topAnchor.constraint(
@@ -123,6 +126,7 @@ class AvatarItemViewController: UIViewController, SampleItem {
             ),
             mediumStackView.widthAnchor.constraint(equalTo: semixStackView.widthAnchor),
             mediumStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            mediumStackView.heightAnchor.constraint(equalToConstant: NatSizes.medium),
 
             // LARGEXXX
             largexxxStackView.topAnchor.constraint(
@@ -130,7 +134,8 @@ class AvatarItemViewController: UIViewController, SampleItem {
                 constant: NatSpacing.standard
             ),
             largexxxStackView.widthAnchor.constraint(equalTo: mediumStackView.widthAnchor),
-            largexxxStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            largexxxStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            largexxxStackView.heightAnchor.constraint(equalToConstant: NatSizes.largeXXX)
         ]
 
         NSLayoutConstraint.activate(constraints)

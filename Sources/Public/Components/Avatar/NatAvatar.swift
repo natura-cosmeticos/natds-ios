@@ -242,16 +242,14 @@ extension NatAvatar {
     }
 
     private func addConstraints() {
-        let circleSize = size.value
-
         let constraints = [
-            circleView.topAnchor.constraint(equalTo: topAnchor),
-            circleView.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor),
-            circleView.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor),
+            heightAnchor.constraint(equalToConstant: size.value),
+            widthAnchor.constraint(equalToConstant: size.value),
+
+            circleView.widthAnchor.constraint(equalToConstant: size.value),
+            circleView.heightAnchor.constraint(equalToConstant: size.value),
             circleView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            circleView.widthAnchor.constraint(equalToConstant: circleSize),
-            circleView.heightAnchor.constraint(equalToConstant: circleSize),
-            circleView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            circleView.centerYAnchor.constraint(equalTo: centerYAnchor),
 
             imageView.topAnchor.constraint(equalTo: circleView.topAnchor, constant: -2),
             imageView.bottomAnchor.constraint(equalTo: circleView.bottomAnchor, constant: 2),
