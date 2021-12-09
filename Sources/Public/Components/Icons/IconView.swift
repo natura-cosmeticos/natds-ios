@@ -79,6 +79,10 @@ public class IconView: UIView {
         defaultImageView.tintedColor = tintColor
     }
 
+    /// Updates the font size, which changes the size of the icon at the view.
+    /// The method receives an `UIFont` because it uses the font's pointSize
+    ///
+    /// - Parameter size: an font with the chosen size
     public func setFontSize(size: UIFont) {
         iconLabel.font = .iconFont(ofSize: size.pointSize)
     }
