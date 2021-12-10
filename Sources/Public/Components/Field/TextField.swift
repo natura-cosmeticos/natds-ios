@@ -343,6 +343,7 @@ extension TextField {
     }
 
     private func updateTextFieldHeightConstraint() {
+        textFieldHeightConstraint?.isActive = false
         textFieldHeightConstraint = textField.heightAnchor.constraint(equalToConstant: size.value)
         textFieldHeightConstraint?.isActive = true
     }

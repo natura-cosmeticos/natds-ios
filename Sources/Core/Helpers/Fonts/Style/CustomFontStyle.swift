@@ -1,3 +1,4 @@
+/// Enum that gets the attributes for each type of custom font and enables the use of customised typography by brand
 public enum CustomFontStyle: FontStyle {
     case display
     case headline

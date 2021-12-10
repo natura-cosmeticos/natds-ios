@@ -19,9 +19,7 @@ class ProgressIndicatorItemViewController: UIViewController, SampleItem {
 
         NSLayoutConstraint.activate([
             progressIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            progressIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            progressIndicator.heightAnchor.constraint(equalToConstant: 100),
-            progressIndicator.widthAnchor.constraint(equalToConstant: 100)
+            progressIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
     }
 
