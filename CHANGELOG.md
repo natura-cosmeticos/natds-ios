@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.21.2](https://github.com/natura-cosmeticos/natds-ios/compare/6.21.1...6.21.2) (2021-12-10)
+
+
+### Bug Fixes
+
+* fix avatar contraints ([a156c38](https://github.com/natura-cosmeticos/natds-ios/commit/a156c38cccc1deb2878c7e21916fdfe5f20e2518))
+* fix constraint conflict at textfield ([52d9edf](https://github.com/natura-cosmeticos/natds-ios/commit/52d9edfb5bdf460033be0e2650f220ddfd7bfaa3))
+
 ### [6.21.1](https://github.com/natura-cosmeticos/natds-ios/compare/6.21.0...6.21.1) (2021-12-06)
 
 
