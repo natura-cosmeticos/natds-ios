@@ -160,8 +160,8 @@ extension NatIconButton {
 
     /// Sets the functionality for the icon button. Example:
     ///
-    ///     iconButtonDefaultStyle.configure(delegate: self) { (self) in
-    ///         // your code
+    ///     yourIconButton.configure(delegate: self) { (self) in
+    ///         // your code for icon button's tap
     ///     }
     ///
     /// - Parameters:
