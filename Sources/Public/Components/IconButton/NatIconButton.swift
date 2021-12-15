@@ -114,7 +114,7 @@ public final class NatIconButton: UIView {
 
     @objc func tapHandler(_ sender: UIGestureRecognizer) {
         guard currentState == .enabled else { return }
-        action?()
+        self.action?()
         removePulseLayer(layer: layer)
     }
 
@@ -153,10 +153,26 @@ public final class NatIconButton: UIView {
 
 extension NatIconButton {
 
-    /// Sets the functionality for the icon button
-    /// - Parameter action: A block of functionality to be executed when the icon button is pressed
+    @available(*, deprecated, message: "Use configure(delegate:, action:) instead")
     public func configure(action: @escaping () -> Void) {
         self.action = action
+    }
+
+    /// Sets the functionality for the icon button. Example:
+    ///
+    ///     yourIconButton.configure(delegate: self) { (self) in
+    ///         // your code for icon button's tap
+    ///     }
+    ///
+    /// - Parameters:
+    ///   - delegate: the class that is the delegate for the action (usually, the class itself)
+    ///   - action: a block of code to be run when the icon button is pressed
+    public func configure<Object: AnyObject>(delegate: Object, action: @escaping (Object) -> Void) {
+        self.action = { [weak delegate] in
+            if let delegate = delegate {
+                action(delegate)
+            }
+        }
     }
 
     @available(*, deprecated, message: "Use configure(badge:) instead")
