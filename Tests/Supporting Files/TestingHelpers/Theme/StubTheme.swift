@@ -7,7 +7,7 @@ struct StubTheme: Theme {
 
 // swiftlint:disable identifier_name
 // swiftlint:disable type_body_length
-private struct StubTokens: Tokens {
+struct StubTokens: Tokens {
     let assetFontFileDisplay = "montserrat_bold"
     let assetFontFileHeadline = "montserrat_semi_bold"
     let assetFontFileBodyRegular = "montserrat_regular"
@@ -185,7 +185,7 @@ private struct StubTokens: Tokens {
     let typographyFallbackFontWeight: UIFont.Weight = .regular
 }
 
-private struct StubComponents: Components {
+struct StubComponents: Components {
     let alertTitleFontSize: CGFloat = 20
     let alertTitleLetterSpacing: CGFloat = 0.12
     let alertTitleLineHeight: CGFloat = 1.5
