@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.21.3](https://github.com/natura-cosmeticos/natds-ios/compare/6.21.2...6.21.3) (2021-12-15)
+
+
+### Bug Fixes
+
+* change icon button's action configuration to fix retain cycle ([b4c2f89](https://github.com/natura-cosmeticos/natds-ios/commit/b4c2f89b35002398d399468fcf54c95c819515ab))
+
 ### [6.21.2](https://github.com/natura-cosmeticos/natds-ios/compare/6.21.1...6.21.2) (2021-12-10)
 
 
