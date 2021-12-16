@@ -1,3 +1,4 @@
+/// A protocol to enable the configuration of a completion handler for the Dialog's dismiss action
 public protocol NatDialogCompletionHandlerConfigurable {}
 
 extension NatDialogCompletionHandlerConfigurable where Self: NatDialogBuilder {

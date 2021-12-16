@@ -1,3 +1,4 @@
+/// Alias for a closure that accepts no parameters and has no return value
 public typealias SimpleClosure = (() -> Void)
 private var tappableKey: UInt8 = 0
 private var actionKey: UInt8 = 1

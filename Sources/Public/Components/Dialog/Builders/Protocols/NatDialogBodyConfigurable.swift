@@ -1,3 +1,4 @@
+/// A protocol to enable the configuration of a text for the Dialog's body
 public protocol NatDialogBodyConfigurable {}
 
 extension NatDialogBodyConfigurable where Self: NatDialogBuilder {

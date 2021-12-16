@@ -1,3 +1,4 @@
+/// A protocol to enable the configuration of the `dismissable` property for the Dialog
 public protocol NatDialogDismissableConfigurable {}
 
 extension NatDialogDismissableConfigurable where Self: NatDialogBuilder {
