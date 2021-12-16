@@ -1,5 +1,6 @@
 /**
-  DesignSystem is a class entry point of configurations for this framework.
+ DesignSystem is a class entry point of configurations for this framework.
+ Usually, this configuration is in a global point after initialization, as in `AppDelegate`'s `didFinishLaunchingWithOptions` method.
 
     Example of usage:
 
@@ -9,8 +10,7 @@
             //or
             DesignSystem().configure(brand: .theBodyShopDark)
             //or
-            DesignSystem().configure(brand: .AesopDark)
-
+            DesignSystem().configure(brand: .aesopDark)
 
  - Note:
     Current Supported Brands:
@@ -19,7 +19,7 @@
         - Natura
         - The Body Shop
 
- - Requires:
+ - Note:
         It's necessary to configure the Design System with a theme or fatalError will be raised.
 
             DesignSystem().configure(with: AvailableTheme) 
@@ -33,7 +33,8 @@ public final class DesignSystem {
     private let notificationCenter: NotificationCenterPostable
 
     // MARK: - Public properties
-
+    
+    /// The theme that will be applied to your application
     public var currentTheme: AvailableTheme? {
         storage
             .currentTheme
@@ -52,7 +53,9 @@ public final class DesignSystem {
     }
 
     // MARK: - Public methods
-
+    
+    /// Method that configures the chosen theme to the Design System
+    /// - Parameter theme: an option from the available themes
     public func configure(with theme: AvailableTheme) {
         storage.currentTheme = theme.newInstance
         storage.cachedColors = [:]

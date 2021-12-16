@@ -1,3 +1,4 @@
+/// A protocol to enable the configuration of a custom view as the Dialog's body
 public protocol NatDialogCustomBodyConfigurable {}
 
 extension NatDialogCustomBodyConfigurable where Self: NatDialogBuilder {

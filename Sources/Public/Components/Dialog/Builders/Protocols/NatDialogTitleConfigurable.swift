@@ -1,3 +1,4 @@
+/// A protocol to enable the configuration of a title for the Dialog
 public protocol NatDialogTitleConfigurable {}
 
 extension NatDialogTitleConfigurable where Self: NatDialogBuilder {

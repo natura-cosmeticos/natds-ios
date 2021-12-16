@@ -1,3 +1,4 @@
+/// Alias for the callback of a selection method
 public typealias SelectionHandler = (Bool) -> Void
 
 protocol NatSelector: UIControl, Pulsable {
