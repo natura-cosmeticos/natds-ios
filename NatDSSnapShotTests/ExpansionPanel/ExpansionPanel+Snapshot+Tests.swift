@@ -32,11 +32,11 @@ class ExpansionPanelSnapshotTests: XCTestCase {
         systemUnderTest.translatesAutoresizingMaskIntoConstraints = false
         systemUnderTest.layoutIfNeeded()
 
-        assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.97))
+        assertSnapshot(matching: systemUnderTest, as: .image)
     }
 
     func test_initWithViewAnimating_hasValidSnapshot() {
-        assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.97))
+        assertSnapshot(matching: systemUnderTest, as: .image)
     }
 
     func test_defaultInit_withLongSubtitle_andLimitedSize_hasValidSnapshot() {
@@ -45,7 +45,7 @@ class ExpansionPanelSnapshotTests: XCTestCase {
         systemUnderTest.translatesAutoresizingMaskIntoConstraints = false
         let view = addsSutOnViewLimitedSize()
 
-        assertSnapshot(matching: view, as: .image(precision: 0.97))
+        assertSnapshot(matching: view, as: .image)
     }
 
     func test_initWithViewAnimating_withLongSubtitle_andLimitedSize_hasValidSnapshot() {
@@ -57,7 +57,7 @@ class ExpansionPanelSnapshotTests: XCTestCase {
         systemUnderTest.translatesAutoresizingMaskIntoConstraints = false
         let view = addsSutOnViewLimitedSize()
 
-        assertSnapshot(matching: view, as: .image(precision: 0.97))
+        assertSnapshot(matching: view, as: .image)
     }
 
     func test_tapButtonOnce_showsButtonPointingUp() {
@@ -65,7 +65,7 @@ class ExpansionPanelSnapshotTests: XCTestCase {
 
         tapButton()
 
-        assertSnapshot(matching: view, as: .image(precision: 0.97))
+        assertSnapshot(matching: view, as: .image)
     }
 
     func test_tapButtonTwice_showsButtonPointingDown() {
@@ -74,7 +74,7 @@ class ExpansionPanelSnapshotTests: XCTestCase {
         tapButton()
         tapButton()
 
-        assertSnapshot(matching: view, as: .image(precision: 0.97))
+        assertSnapshot(matching: view, as: .image)
     }
 
     func test_tapButtonThrice_showsButtonPointingUp() {
@@ -84,7 +84,7 @@ class ExpansionPanelSnapshotTests: XCTestCase {
         tapButton()
         tapButton()
 
-        assertSnapshot(matching: view, as: .image(precision: 0.97))
+        assertSnapshot(matching: view, as: .image)
     }
 
     func test_tapButtonOnce_withDetailView_showsButtonPointingUp_AndDetailView() {
@@ -93,7 +93,7 @@ class ExpansionPanelSnapshotTests: XCTestCase {
 
         tapButton()
 
-        assertSnapshot(matching: view, as: .image(precision: 0.97))
+        assertSnapshot(matching: view, as: .image)
     }
 
     func test_tapPanelOnce_withDetailView_showsButtonPointingUp_AndDetailView() {
@@ -102,7 +102,7 @@ class ExpansionPanelSnapshotTests: XCTestCase {
 
         tapPanel()
 
-        assertSnapshot(matching: view, as: .image(precision: 0.97))
+        assertSnapshot(matching: view, as: .image)
     }
 
     func test_setDetailView_whenPanelIsExpanded_showsButtonPointingUp_AndDetailView() {
@@ -112,7 +112,7 @@ class ExpansionPanelSnapshotTests: XCTestCase {
 
         systemUnderTest.setDetailView(otherDetailMock)
 
-        assertSnapshot(matching: view, as: .image(precision: 0.97))
+        assertSnapshot(matching: view, as: .image)
     }
 
     func test_tapPanelToCollapse_whenSetDetailView_AndPanelIsExpanded_showsButtonPointingDown() {
@@ -122,7 +122,7 @@ class ExpansionPanelSnapshotTests: XCTestCase {
 
         tapPanel()
 
-        assertSnapshot(matching: view, as: .image(precision: 0.97))
+        assertSnapshot(matching: view, as: .image)
     }
 
     func test_removeDetailView_AndPanelIsExpanded_showsButtonPointingDown() {
@@ -132,7 +132,7 @@ class ExpansionPanelSnapshotTests: XCTestCase {
 
         systemUnderTest.setDetailView(nil)
 
-        assertSnapshot(matching: view, as: .image(precision: 0.97))
+        assertSnapshot(matching: view, as: .image)
     }
 
     // MARK: Helper methods
