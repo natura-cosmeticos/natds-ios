@@ -47,11 +47,6 @@ public class ExpansionPanel: UIView {
 
         label.textColor = NatColors.onSurface
 
-        let fontSize = getComponentAttributeFromTheme(\.expansionPanelTitleFontSize)
-        let fontWeight = getComponentAttributeFromTheme(\.expansionPanelTitlePrimaryFontWeight)
-        let fontFamily = getComponentAttributeFromTheme(\.expansionPanelTitlePrimaryFontFamily)
-        label.font = NatFonts.font(ofSize: fontSize, withWeight: fontWeight, withFamily: fontFamily)
-
         return label
     }()
 
