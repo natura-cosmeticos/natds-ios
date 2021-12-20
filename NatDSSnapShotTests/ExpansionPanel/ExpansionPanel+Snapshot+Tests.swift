@@ -39,27 +39,6 @@ class ExpansionPanelSnapshotTests: XCTestCase {
         assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.97))
     }
 
-    func test_defaultInit_withLongSubtitle_hasValidSnapshot() {
-        systemUnderTest = ExpansionPanel()
-        systemUnderTest.setSubtitle(builder.longSubtitleMock)
-        systemUnderTest.translatesAutoresizingMaskIntoConstraints = false
-        systemUnderTest.layoutIfNeeded()
-
-        assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.97))
-    }
-
-    func test_initWithViewAnimating_withLongSubtitle_hasValidSnapshot() {
-        systemUnderTest = ExpansionPanel(
-            viewAnimating: builder.viewAnimatingMock,
-            notificationCenter: NotificationCenterSpy()
-        )
-        systemUnderTest.setSubtitle(builder.longSubtitleMock)
-        systemUnderTest.translatesAutoresizingMaskIntoConstraints = false
-        systemUnderTest.layoutIfNeeded()
-
-        assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.97))
-    }
-
     func test_defaultInit_withLongSubtitle_andLimitedSize_hasValidSnapshot() {
         systemUnderTest = ExpansionPanel()
         systemUnderTest.setSubtitle(builder.longSubtitleMock)
