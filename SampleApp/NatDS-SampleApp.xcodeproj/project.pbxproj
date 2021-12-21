@@ -37,6 +37,7 @@
 		79FC59E625DAB5A7001CCB56 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FC59E525DAB5A6001CCB56 /* ImageViewController.swift */; };
 		7D5349F726C6EBD800F88EA7 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5349F626C6EBD800F88EA7 /* ImageCell.swift */; };
 		7D60A49E260CF97400A23C1A /* SampleCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D60A49D260CF97400A23C1A /* SampleCustomCell.swift */; };
+		7D6A8FFF277264C2006CCD24 /* TestTypography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6A8FFE277264C2006CCD24 /* TestTypography.swift */; };
 		7D75A45A25DB0BA50050ACA9 /* AvatarItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D75A45925DB0BA50050ACA9 /* AvatarItemViewController.swift */; };
 		7D75A46825DD60E30050ACA9 /* UIImage+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D75A46725DD60E30050ACA9 /* UIImage+UIColor.swift */; };
 		7D9838C825F9127400A99628 /* ListItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9838C725F9127400A99628 /* ListItemViewController.swift */; };
@@ -119,6 +120,7 @@
 		79FC59E525DAB5A6001CCB56 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		7D5349F626C6EBD800F88EA7 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		7D60A49D260CF97400A23C1A /* SampleCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCustomCell.swift; sourceTree = "<group>"; };
+		7D6A8FFE277264C2006CCD24 /* TestTypography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTypography.swift; sourceTree = "<group>"; };
 		7D75A45925DB0BA50050ACA9 /* AvatarItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarItemViewController.swift; sourceTree = "<group>"; };
 		7D75A46725DD60E30050ACA9 /* UIImage+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIImage+UIColor.swift"; path = "../../../Sources/Core/Extensions/UIImage+UIColor.swift"; sourceTree = "<group>"; };
 		7D9838C725F9127400A99628 /* ListItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemViewController.swift; sourceTree = "<group>"; };
@@ -569,6 +571,7 @@
 			children = (
 				B7D68855C6F46E43FC45CF037561B02B /* Cells */,
 				FE39135EC83E5AE456AC7FBF5FE7F9CA /* TypographyViewController.swift */,
+				7D6A8FFE277264C2006CCD24 /* TestTypography.swift */,
 			);
 			path = Typography;
 			sourceTree = "<group>";
@@ -825,6 +828,7 @@
 				84E3B7C82502C88D0056FE57 /* CustomSplashViewController.swift in Sources */,
 				06E258AB651CE4F232CAAA3A2D94807C /* SpacingCell.swift in Sources */,
 				15CB9B603913EB682989F204523A1472 /* SpacingViewController.swift in Sources */,
+				7D6A8FFF277264C2006CCD24 /* TestTypography.swift in Sources */,
 				BEDF93312593C65800F54C50 /* CheckboxViewController.swift in Sources */,
 				FD3C1A6EDAD5F31BC9E4984E981C28A8 /* TabItemViewController.swift in Sources */,
 				B5D960A174519D837D9855D4B0A6711B /* TextFieldItemViewController.swift in Sources */,

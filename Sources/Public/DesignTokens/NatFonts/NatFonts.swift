@@ -13,6 +13,17 @@
 */
 
 public struct NatFonts {
+    // Returns a label for testing letter spacing tokens
+    public static func text(ofSize size: Size,
+                            customStyle: CustomFontStyle,
+                            text: String) -> UILabel {
+        let label = UILabel()
+        label.font = NatFonts.customFont(ofSize: size,
+                                         withStyle: customStyle)
+        label.attributedText = text.attributedStringWithLetterSpacing(size.relatedTextStyle.letterSpacing)
+        return label
+    }
+
     public static func font(ofSize size: Size, withWeight weight: Weight) -> UIFont {
         .systemFont(
             ofSize: size.relatedTextStyle.size,
