@@ -24,10 +24,10 @@ struct AvonLightTheme: Theme {
 }
 
 struct AvonLightTokens: Tokens {
-    let assetFontFileDisplay = "montserrat_bold"
-    let assetFontFileHeadline = "montserrat_semi_bold"
-    let assetFontFileBodyRegular = "montserrat_regular"
-    let assetFontFileBodyBold = "montserrat_bold"
+    let assetFontFileDisplay = "Montserrat-Bold"
+    let assetFontFileHeadline = "Montserrat-SemiBold"
+    let assetFontFileBodyRegular = "Montserrat-Regular"
+    let assetFontFileBodyBold = "Montserrat-Bold"
     let assetBrandNeutralAFile = "avon-a-official"
     let assetBrandNeutralAWidth: CGFloat = 256
     let assetBrandNeutralAHeight: CGFloat = 58

@@ -24,10 +24,10 @@ struct AesopDarkTheme: Theme {
 }
 
 struct AesopDarkTokens: Tokens {
-    let assetFontFileDisplay = "zapf_humanist601bt_roman"
-    let assetFontFileHeadline = "suisse_intl_regular"
-    let assetFontFileBodyRegular = "suisse_intl_regular"
-    let assetFontFileBodyBold = "suisse_intl_regular"
+    let assetFontFileDisplay = "ZapfHumanist601BT-Roman"
+    let assetFontFileHeadline = "SuisseIntl-Regular"
+    let assetFontFileBodyRegular = "SuisseIntl-Regular"
+    let assetFontFileBodyBold = "SuisseIntl-Regular"
     let assetBrandNeutralAFile = "aesop-a-official-dark"
     let assetBrandNeutralAWidth: CGFloat = 256
     let assetBrandNeutralAHeight: CGFloat = 82

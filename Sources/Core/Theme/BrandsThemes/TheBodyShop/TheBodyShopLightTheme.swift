@@ -24,10 +24,10 @@ struct TheBodyShopLightTheme: Theme {
 }
 
 struct TheBodyShopLightTokens: Tokens {
-    let assetFontFileDisplay = "druk_cy_bold"
-    let assetFontFileHeadline = "recoleta_semi_bold"
-    let assetFontFileBodyRegular = "work_sans_regular"
-    let assetFontFileBodyBold = "work_sans_bold"
+    let assetFontFileDisplay = "DrukCy-Bold"
+    let assetFontFileHeadline = "Recoleta-SemiBold"
+    let assetFontFileBodyRegular = "WorkSans-Regular"
+    let assetFontFileBodyBold = "WorkSans-Bold"
     let assetBrandNeutralAFile = "thebodyshop-a-official"
     let assetBrandNeutralAWidth: CGFloat = 256
     let assetBrandNeutralAHeight: CGFloat = 27

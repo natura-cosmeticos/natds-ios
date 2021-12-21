@@ -24,10 +24,10 @@ struct NaturaDarkTheme: Theme {
 }
 
 struct NaturaDarkTokens: Tokens {
-    let assetFontFileDisplay = "helvetica_now_display_bd"
-    let assetFontFileHeadline = "helvetica_now_display_md"
-    let assetFontFileBodyRegular = "helvetica_now_display_regular"
-    let assetFontFileBodyBold = "helvetica_now_display_bd"
+    let assetFontFileDisplay = "HelveticaNowDisplay-Bd"
+    let assetFontFileHeadline = "HelveticaNowDisplay-Md"
+    let assetFontFileBodyRegular = "HelveticaNowDisplay-Regular"
+    let assetFontFileBodyBold = "HelveticaNowDisplay-Bd"
     let assetBrandNeutralAFile = "natura-a-official-dark"
     let assetBrandNeutralAWidth: CGFloat = 256
     let assetBrandNeutralAHeight: CGFloat = 55
