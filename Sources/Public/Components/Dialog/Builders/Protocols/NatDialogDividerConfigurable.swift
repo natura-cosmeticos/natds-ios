@@ -1,3 +1,4 @@
+/// A protocol to enable the configuration of the `divider` property for the Dialog
 public protocol NatDialogDividerConfigurable {}
 
 extension NatDialogDividerConfigurable where Self: NatDialogBuilder {

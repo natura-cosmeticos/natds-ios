@@ -39,7 +39,12 @@ public class ExpansionPanel: UIView {
     private lazy var subtitleLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
-        label.font = NatFonts.font(ofSize: .subtitle1, withWeight: .medium)
+
+        let fontSize = getComponentAttributeFromTheme(\.expansionPanelTitleFontSize)
+        let fontWeight = getComponentAttributeFromTheme(\.expansionPanelTitlePrimaryFontWeight)
+        let fontFamily = getComponentAttributeFromTheme(\.expansionPanelTitlePrimaryFontFamily)
+        label.font = NatFonts.font(ofSize: fontSize, withWeight: fontWeight, withFamily: fontFamily)
+
         label.textColor = NatColors.onSurface
         return label
     }()
@@ -118,7 +123,10 @@ public class ExpansionPanel: UIView {
     ///
     /// - Parameter subtitle: a string for the subtitle
     public func setSubtitle(_ subtitle: String, color: UIColor = NatColors.onSurface) {
-        subtitleLabel.text = subtitle
+        let lineHeight = getComponentAttributeFromTheme(\.expansionPanelTitleLineHeight)
+        let letterSpacing = getComponentAttributeFromTheme(\.expansionPanelTitleLetterSpacing)
+        subtitleLabel.attributedText = subtitle.attributedStringWith(lineHeight: lineHeight,
+                                                                     letterSpacing: letterSpacing)
         subtitleLabel.textColor = color
     }
 
