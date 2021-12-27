@@ -34,6 +34,19 @@ public class NavigationDrawerItemCell: UITableViewCell {
         }
     }
 
+    public var rightIcon: String? = nil {
+        didSet {
+            rightIconView.isHidden = rightIcon == nil
+            rightIconView.iconText = rightIcon
+        }
+    }
+
+    public var titleIcon: String? = nil {
+        didSet {
+            titleIconView.iconText = titleIcon
+        }
+    }
+
     public var tagText: String? {
         didSet {
             if let text = tagText {
@@ -49,7 +62,6 @@ public class NavigationDrawerItemCell: UITableViewCell {
     var hasSubItems: Bool = false {
         didSet {
             updateState()
-            arrowView.isHidden = !hasSubItems
             labelToHighlightConstraint?.isActive = !hasSubItems
         }
     }
@@ -80,13 +92,9 @@ public class NavigationDrawerItemCell: UITableViewCell {
         return iconView
     }()
 
-    private lazy var arrowView: UIImageView = {
-        let iconView = UIImageView()
-        iconView.translatesAutoresizingMaskIntoConstraints = false
-        iconView.heightAnchor.constraint(equalToConstant: 12).isActive = true
-        iconView.widthAnchor.constraint(equalToConstant: 12).isActive = true
-        iconView.tintedColor = getUIColorFromTokens(\.colorHighEmphasis)
-
+    private lazy var rightIconView: IconView = {
+        let iconView = IconView()
+        iconView.tintColor = NatColors.highEmphasis
         return iconView
     }()
 
@@ -95,6 +103,19 @@ public class NavigationDrawerItemCell: UITableViewCell {
         tagView.configure(color: .alert)
 
         return tagView
+    }()
+
+    private lazy var badgeView: NatBadge = {
+        let badgeView = NatBadge(style: .dot, color: .primary)
+
+        return badgeView
+    }()
+
+    private lazy var titleIconView: IconView = {
+        let iconView = IconView()
+        iconView.setFontSize(size: getTokenFromTheme(\.sizeSmall))
+        iconView.tintColor = NatColors.highEmphasis
+        return iconView
     }()
 
     private var labelToHighlightConstraint: NSLayoutConstraint?
@@ -115,10 +136,39 @@ public class NavigationDrawerItemCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
+    public override func prepareForReuse() {
+        self.rightIcon = nil
+        self.title = nil
+    }
+}
+
+public extension NavigationDrawerItemCell {
+    func addDot() {
+        clearTitleViews()
+        self.badgeView = NatBadge(style: .dot, color: .primary)
+        addBadgeView()
+    }
+
+    func addPulse() {
+        clearTitleViews()
+        self.badgeView = NatBadge(style: .pulse, color: .primary)
+        addBadgeView()
+    }
+
+    func addBadge(text: String) {
+        clearTitleViews()
+        self.tagText = text
+        addTagView()
+    }
+
+    func addIconToTitle(_ icon: String?) {
+        clearTitleViews()
+        self.titleIcon = icon
+        addTitleIconView()
+    }
 }
 
 private extension NavigationDrawerItemCell {
-
     func setup() {
         selectionStyle = .none
         backgroundColor = .white
@@ -126,7 +176,13 @@ private extension NavigationDrawerItemCell {
         addIconView()
         addTitleLabel()
         addTagView()
-        addArrowImageView()
+        addRightIconView()
+    }
+
+    func clearTitleViews() {
+        if contentView.subviews.contains(tagView) { tagView.removeFromSuperview() }
+        if contentView.subviews.contains(badgeView) { badgeView.removeFromSuperview() }
+        if contentView.subviews.contains(titleIconView) { titleIconView.removeFromSuperview() }
     }
 
     func addHighlightSelectedView() {
@@ -168,31 +224,50 @@ private extension NavigationDrawerItemCell {
 
     func addTagView() {
         contentView.addSubview(tagView)
+        tagView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             tagView.centerYAnchor.constraint(equalTo: highlightSelectedView.centerYAnchor),
             tagView.leadingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: 8.0)
         ])
     }
 
-    func addArrowImageView() {
-        contentView.addSubview(arrowView)
-        arrowView.translatesAutoresizingMaskIntoConstraints = false
-        let constraint = arrowView.leadingAnchor.constraint(
-            greaterThanOrEqualTo: tagView.trailingAnchor,
-            constant: getTokenFromTheme(\.spacingTiny))
+    func addBadgeView() {
+        contentView.addSubview(badgeView)
+        badgeView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            arrowView.centerYAnchor.constraint(equalTo: highlightSelectedView.centerYAnchor),
-            arrowView.trailingAnchor.constraint(equalTo: highlightSelectedView.trailingAnchor, constant: -8.0),
-            arrowView.widthAnchor.constraint(equalToConstant: 24.0),
-            arrowView.heightAnchor.constraint(equalToConstant: 24.0),
-            constraint
+            badgeView.centerYAnchor.constraint(equalTo: highlightSelectedView.centerYAnchor),
+            badgeView.leadingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: 8.0)
         ])
     }
 
-    func updateState() {
-        arrowView.image = state == .selected ?
-            AssetsPath.iconOutlinedNavigationArrowTop.rawValue : AssetsPath.iconOutlinedNavigationArrowBottom.rawValue
+    func addTitleIconView() {
+        contentView.addSubview(titleIconView)
+        titleIconView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            titleIconView.centerYAnchor.constraint(equalTo: highlightSelectedView.centerYAnchor),
+            titleIconView.leadingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: 8.0),
+            titleIconView.heightAnchor.constraint(equalToConstant: getTokenFromTheme(\.sizeSmall)),
+            titleIconView.widthAnchor.constraint(equalToConstant: getTokenFromTheme(\.sizeSmall))
+        ])
+    }
 
+    func addRightIconView() {
+        contentView.addSubview(rightIconView)
+        rightIconView.translatesAutoresizingMaskIntoConstraints = false
+        let constraint = rightIconView.leadingAnchor.constraint(
+            greaterThanOrEqualTo: tagView.trailingAnchor,
+            constant: 24.0)
+        NSLayoutConstraint.activate([
+            rightIconView.centerYAnchor.constraint(equalTo: highlightSelectedView.centerYAnchor),
+            rightIconView.trailingAnchor.constraint(equalTo: highlightSelectedView.trailingAnchor, constant: -8.0),
+            rightIconView.widthAnchor.constraint(equalToConstant: 24.0),
+            rightIconView.heightAnchor.constraint(equalToConstant: 24.0),
+            constraint
+        ])
+        rightIconView.isHidden = true
+    }
+
+    func updateState() {
         highlightSelectedView.isHidden = state != .selected
         highlightSelectedView.backgroundColor = hasSubItems ? NatColors.lowEmphasis : NatColors.secondary
 

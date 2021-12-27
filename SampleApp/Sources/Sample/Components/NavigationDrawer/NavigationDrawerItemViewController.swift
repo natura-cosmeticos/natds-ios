@@ -52,6 +52,9 @@ extension NavigationDrawerItemViewController: NavigationDrawerDelegate {
         let model = items[index]
         item.title = model.label
         item.icon = model.icon
+        if model.subitems.count > 0 {
+            item.rightIcon = getIcon(.outlinedNavigationArrowbottom)
+        }
         item.tagText = model.tagText
         if model.disabled {
             item.state = .disabled
@@ -67,6 +70,7 @@ extension NavigationDrawerItemViewController: NavigationDrawerDelegate {
         if model.disabled {
             subitem.state = .disabled
         }
+        subitem.rightIcon = model.icon
     }
 }
 
@@ -87,7 +91,7 @@ private extension NavigationDrawerItemViewController {
                      icon: NatDSIcons.getIcon(.outlinedActionNewrequest),
                      lowEmphasis: true,
                      subitems: [
-                        Subitem(label: "Subitem 2.1", disabled: false)
+                        Subitem(label: "Subitem 2.1", disabled: false, icon: getIcon(.filledActionLove))
                 ]),
                 Item(label: "Item with very, very, very large title and tag",
                      icon: NatDSIcons.getIcon(.outlinedActionRequest),
@@ -158,5 +162,14 @@ private extension NavigationDrawerItemViewController {
     struct Subitem {
         let label: String
         let disabled: Bool
+        let icon: String?
+
+        init(label: String,
+             disabled: Bool,
+             icon: String? = nil) {
+            self.label = label
+            self.icon = icon
+            self.disabled = disabled
+        }
     }
 }

@@ -28,6 +28,23 @@ public class NavigationDrawerSubitemCell: UITableViewCell {
         }
     }
 
+    public var leftIcon: String? = nil {
+        didSet {
+            leftIconView.isHidden = leftIcon == nil
+            if leftIcon != nil {
+                leftIconView.iconText = leftIcon
+                updateTitleConstraints()
+            }
+        }
+    }
+
+    public var rightIcon: String? = nil {
+        didSet {
+            rightIconView.isHidden = rightIcon == nil
+            rightIconView.iconText = rightIcon
+        }
+    }
+
     private lazy var verticalLineView: UIView = {
         let view = UIView()
         view.backgroundColor = NatColors.highlight.withAlphaComponent(0.12)
@@ -55,6 +72,18 @@ public class NavigationDrawerSubitemCell: UITableViewCell {
         return label
     }()
 
+    private lazy var leftIconView: IconView = {
+        let iconView = IconView()
+        iconView.tintColor = NatColors.highEmphasis
+        return iconView
+    }()
+
+    private lazy var rightIconView: IconView = {
+        let iconView = IconView()
+        iconView.tintColor = NatColors.highEmphasis
+        return iconView
+    }()
+
     public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         defer { state = .normal }
@@ -66,6 +95,11 @@ public class NavigationDrawerSubitemCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
+    public override func prepareForReuse() {
+        self.rightIcon = nil
+        self.leftIcon = nil
+        self.title = nil
+    }
 }
 
 private extension NavigationDrawerSubitemCell {
@@ -76,6 +110,10 @@ private extension NavigationDrawerSubitemCell {
         addVerticalLineView()
         addHighlightSelectedView()
         addTitleLabel()
+        addLeftIconView()
+        addRightIconView()
+        rightIconView.isHidden = rightIcon == nil
+        leftIconView.isHidden = leftIcon == nil
     }
 
     func addVerticalLineView() {
@@ -111,4 +149,43 @@ private extension NavigationDrawerSubitemCell {
         ])
     }
 
+    func updateTitleConstraints() {
+        if subviews.contains(titleLabel) {
+            titleLabel.removeFromSuperview()
+        }
+        addSubview(titleLabel)
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            titleLabel.topAnchor.constraint(equalTo: highlightSelectedView.topAnchor, constant: 12.0),
+            titleLabel.bottomAnchor.constraint(equalTo: highlightSelectedView.bottomAnchor, constant: -12.0),
+            titleLabel.leadingAnchor.constraint(equalTo: highlightSelectedView.leadingAnchor, constant: 32.0),
+            titleLabel.trailingAnchor.constraint(equalTo: highlightSelectedView.trailingAnchor, constant: -8.0)
+        ])
+    }
+
+    func addLeftIconView() {
+        contentView.addSubview(leftIconView)
+        leftIconView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            leftIconView.centerYAnchor.constraint(equalTo: highlightSelectedView.centerYAnchor),
+            leftIconView.leadingAnchor.constraint(equalTo: verticalLineView.leadingAnchor, constant: 8.0),
+            leftIconView.widthAnchor.constraint(equalToConstant: 24.0),
+            leftIconView.heightAnchor.constraint(equalToConstant: 24.0)
+        ])
+    }
+
+    func addRightIconView() {
+        contentView.addSubview(rightIconView)
+        rightIconView.translatesAutoresizingMaskIntoConstraints = false
+        let constraint = rightIconView.leadingAnchor.constraint(
+            greaterThanOrEqualTo: titleLabel.trailingAnchor,
+            constant: 24.0)
+        NSLayoutConstraint.activate([
+            rightIconView.centerYAnchor.constraint(equalTo: highlightSelectedView.centerYAnchor),
+            rightIconView.trailingAnchor.constraint(equalTo: highlightSelectedView.trailingAnchor, constant: -8.0),
+            rightIconView.widthAnchor.constraint(equalToConstant: 24.0),
+            rightIconView.heightAnchor.constraint(equalToConstant: 24.0),
+            constraint
+        ])
+    }
 }
