@@ -188,5 +188,8 @@ extension NavigationDrawer: UITableViewDelegate {
         } else {
             delegate.didSelectItem(at: indexPath.section)
         }
+
+        let cell = tableView.cellForRow(at: indexPath) as? NavigationDrawerItemCell
+        cell?.addRippleAnimation()
     }
 }

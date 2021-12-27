@@ -33,7 +33,7 @@ public final class DesignSystem {
     private let notificationCenter: NotificationCenterPostable
 
     // MARK: - Public properties
-    
+
     /// The theme that will be applied to your application
     public var currentTheme: AvailableTheme? {
         storage
@@ -53,7 +53,7 @@ public final class DesignSystem {
     }
 
     // MARK: - Public methods
-    
+
     /// Method that configures the chosen theme to the Design System
     /// - Parameter theme: an option from the available themes
     public func configure(with theme: AvailableTheme) {

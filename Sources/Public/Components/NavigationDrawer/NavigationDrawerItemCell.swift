@@ -1,5 +1,5 @@
 @objcMembers
-public class NavigationDrawerItemCell: UITableViewCell {
+public class NavigationDrawerItemCell: UITableViewCell, Pulsable {
     public enum State: Int {
         case normal
         case disabled
@@ -44,6 +44,12 @@ public class NavigationDrawerItemCell: UITableViewCell {
     public var titleIcon: String? = nil {
         didSet {
             titleIconView.iconText = titleIcon
+        }
+    }
+
+    public var dropdown: Bool = false {
+        didSet {
+            updateDropdown()
         }
     }
 
@@ -98,6 +104,15 @@ public class NavigationDrawerItemCell: UITableViewCell {
         return iconView
     }()
 
+    private lazy var dropdownView: UIImageView = {
+        let view = UIImageView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.heightAnchor.constraint(equalToConstant: 12).isActive = true
+        view.widthAnchor.constraint(equalToConstant: 12).isActive = true
+        view.tintedColor = getUIColorFromTokens(\.colorHighEmphasis)
+        return view
+    }()
+
     private lazy var tagView: NatTag = {
         let tagView = NatTag(style: .defaultAlert)
         tagView.configure(color: .alert)
@@ -137,19 +152,23 @@ public class NavigationDrawerItemCell: UITableViewCell {
     }
 
     public override func prepareForReuse() {
-        self.rightIcon = nil
-        self.title = nil
+        rightIcon = nil
+        title = nil
+        state = .normal
+        hasSubItems = false
+        icon = nil
+        tagText = nil
     }
 }
 
 public extension NavigationDrawerItemCell {
-    func addDot() {
+    func addBadgeDot() {
         clearTitleViews()
         self.badgeView = NatBadge(style: .dot, color: .primary)
         addBadgeView()
     }
 
-    func addPulse() {
+    func addBadgePulse() {
         clearTitleViews()
         self.badgeView = NatBadge(style: .pulse, color: .primary)
         addBadgeView()
@@ -168,6 +187,15 @@ public extension NavigationDrawerItemCell {
     }
 }
 
+internal extension NavigationDrawerItemCell {
+    func addRippleAnimation() {
+        addPulseLayerAnimated(at: self.highlightSelectedView.center,
+                              in: self.highlightSelectedView.layer,
+                              withColor: NatColors.highlight.withAlphaComponent(getTokenFromTheme(\.opacityLow)),
+                              removeAfterAnimation: true)
+    }
+}
+
 private extension NavigationDrawerItemCell {
     func setup() {
         selectionStyle = .none
@@ -183,6 +211,24 @@ private extension NavigationDrawerItemCell {
         if contentView.subviews.contains(tagView) { tagView.removeFromSuperview() }
         if contentView.subviews.contains(badgeView) { badgeView.removeFromSuperview() }
         if contentView.subviews.contains(titleIconView) { titleIconView.removeFromSuperview() }
+    }
+
+    func updateDropdown() {
+        if dropdown {
+            contentView.addSubview(dropdownView)
+            let constraint = dropdownView.leadingAnchor.constraint(
+                greaterThanOrEqualTo: tagView.trailingAnchor,
+                constant: getTokenFromTheme(\.spacingTiny))
+            NSLayoutConstraint.activate([
+                dropdownView.centerYAnchor.constraint(equalTo: highlightSelectedView.centerYAnchor),
+                dropdownView.trailingAnchor.constraint(equalTo: highlightSelectedView.trailingAnchor, constant: -14.0),
+                dropdownView.widthAnchor.constraint(equalToConstant: 24.0),
+                dropdownView.heightAnchor.constraint(equalToConstant: 24.0),
+                constraint
+            ])
+        } else {
+            if contentView.subviews.contains(dropdownView) { dropdownView.removeFromSuperview() }
+        }
     }
 
     func addHighlightSelectedView() {
@@ -268,8 +314,13 @@ private extension NavigationDrawerItemCell {
     }
 
     func updateState() {
+        dropdownView.image = state == .selected ?
+                    AssetsPath.iconOutlinedNavigationArrowTop.rawValue :
+            AssetsPath.iconOutlinedNavigationArrowBottom.rawValue
+
         highlightSelectedView.isHidden = state != .selected
-        highlightSelectedView.backgroundColor = hasSubItems ? NatColors.lowEmphasis : NatColors.secondary
+        highlightSelectedView.backgroundColor = NatColors.primary
+        highlightSelectedView.alpha = getTokenFromTheme(\.opacityMediumLow)
 
         let shouldShowLowEmphasis = (state == .disabled) || (state == .lowEmphasis)
         contentView.alpha = shouldShowLowEmphasis ? 0.48 : 1.0
