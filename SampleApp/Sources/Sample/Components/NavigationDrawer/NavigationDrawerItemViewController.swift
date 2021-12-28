@@ -52,16 +52,16 @@ extension NavigationDrawerItemViewController: NavigationDrawerDelegate {
         let model = items[index]
         item.title = model.label
         item.icon = model.icon
-        if model.subitems.count > 0 {
-            item.rightIcon = getIcon(.outlinedNavigationArrowbottom)
-        }
         item.tagText = model.tagText
-        if model.disabled {
-            item.state = .disabled
-        }
-        if model.lowEmphasis {
-            item.state = .lowEmphasis
-        }
+        if model.disabled { item.state = .disabled }
+        if model.lowEmphasis { item.state = .lowEmphasis }
+        if model.rightActionIcon { item.actionRight = .icon(getIcon(.outlinedContentFlower)) }
+        if model.rightActionImage { item.actionRight = .image(UIImage(named: "ImageAreaPlaceholder")) }
+        if model.leftActionImage { item.actionLeft = .image(UIImage(named: "ImageAreaPlaceholder")) }
+        if model.titleRightActionPulse { item.actionTitleRight = .pulse }
+        if model.titleRightActionDot { item.actionTitleRight = .dot }
+        if model.titleRightActionIcon { item.actionTitleRight = .icon(getIcon(.filledActionAdd)) }
+        item.dropdown = model.dropdown
     }
 
     func configureSubitem(_ subitem: NavigationDrawerSubitemCell, at index: NavigationDrawer.IndexMenu) {
@@ -79,6 +79,24 @@ private extension NavigationDrawerItemViewController {
     struct ItemFactory {
         static func build() -> [Item] {
             let items: [Item] = [
+                Item(label: "Item with only title"),
+                Item(label: "Item with right icon",
+                     rightActionIcon: true),
+                Item(label: "Item with right image",
+                     rightActionImage: true),
+                Item(label: "Item with pulse",
+                     titleRightActionPulse: true),
+                Item(label: "Item with dot",
+                     titleRightActionDot: true),
+                Item(label: "Item with left image",
+                     leftActionImage: true),
+                Item(label: "Item with icon next to the title",
+                     titleRightActionIcon: true),
+                Item(label: "Item with subitems and no dropdown",
+                     subitems: [
+                        Subitem(label: "Subitem", disabled: false)
+                     ],
+                     dropdown: false),
                 Item(label: "Item with no subitems",
                      icon: NatDSIcons.getIcon(.outlinedFinanceShoppingcart)),
                 Item(label: "Item with tag",
@@ -143,19 +161,40 @@ private extension NavigationDrawerItemViewController {
         let lowEmphasis: Bool
         let tagText: String?
         let subitems: [Subitem]
+        let titleRightActionIcon: Bool
+        let titleRightActionDot: Bool
+        let titleRightActionPulse: Bool
+        let leftActionImage: Bool
+        let rightActionIcon: Bool
+        let rightActionImage: Bool
+        let dropdown: Bool
 
         init(label: String,
-             icon: String?,
+             icon: String? = nil,
              disabled: Bool = false,
              lowEmphasis: Bool = false,
              tagText: String? = nil,
-             subitems: [Subitem] = []) {
+             subitems: [Subitem] = [],
+             titleRightActionIcon: Bool = false,
+             titleRightActionDot: Bool = false,
+             titleRightActionPulse: Bool = false,
+             leftActionImage: Bool = false,
+             rightActionIcon: Bool = false,
+             rightActionImage: Bool = false,
+             dropdown: Bool = true) {
             self.label = label
             self.icon = icon
             self.disabled = disabled
             self.lowEmphasis = lowEmphasis
             self.tagText = tagText
             self.subitems = subitems
+            self.titleRightActionIcon = titleRightActionIcon
+            self.titleRightActionDot = titleRightActionDot
+            self.titleRightActionPulse = titleRightActionPulse
+            self.leftActionImage = leftActionImage
+            self.rightActionIcon = rightActionIcon
+            self.rightActionImage = rightActionImage
+            self.dropdown = dropdown
         }
     }
 

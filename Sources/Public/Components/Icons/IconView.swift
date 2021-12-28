@@ -68,6 +68,12 @@ public class IconView: UIView {
         iconLabel.font = .iconFont(ofSize: fontSize)
     }
 
+    public convenience init(_ icon: String? = nil) {
+        self.init()
+        defer { self.iconText = icon }
+        iconLabel.font = .iconFont()
+    }
+
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
