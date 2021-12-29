@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.23.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.22.0...6.23.0) (2021-12-29)
+
+
+### Features
+
+* add typography tokens to navigation drawer cells ([777a406](https://github.com/natura-cosmeticos/natds-ios/commit/777a406640b8585b7c3cca861e0b031dce5c957c))
+
 ## [6.22.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.21.3...6.22.0) (2021-12-21)
 
 
