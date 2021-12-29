@@ -15,7 +15,17 @@ public class NavigationDrawerSubitemCell: UITableViewCell {
 
     public var title: String? {
         get { return titleLabel.text }
-        set { titleLabel.text = newValue }
+        set {
+            let paragraph = NSMutableParagraphStyle()
+            paragraph.lineBreakMode = .byTruncatingTail
+
+            // swiftlint:disable line_length
+            titleLabel.attributedText = newValue?
+                .attributedStringWith(lineHeight: getComponentAttributeFromTheme(\.navigationDrawerSectionItemLineHeight),
+                                      letterSpacing: getComponentAttributeFromTheme(\.navigationDrawerSectionItemLetterSpacing),
+                                      paragraphStyle: paragraph)
+            // swiftlint:enable line_length
+        }
     }
 
     private lazy var verticalLineView: UIView = {
@@ -35,7 +45,13 @@ public class NavigationDrawerSubitemCell: UITableViewCell {
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = NatColors.highEmphasis
-        label.font = NatFonts.font(ofSize: .body2)
+        let fontSize = getComponentAttributeFromTheme(\.navigationDrawerSectionItemFontSize)
+        let fontWeight = getComponentAttributeFromTheme(\.navigationDrawerSectionItemPrimaryFontWeight)
+        let fontFamily = getComponentAttributeFromTheme(\.navigationDrawerSectionItemPrimaryFontFamily)
+
+        label.font = NatFonts.font(ofSize: fontSize,
+                             withWeight: fontWeight,
+                             withFamily: fontFamily)
         return label
     }()
 
