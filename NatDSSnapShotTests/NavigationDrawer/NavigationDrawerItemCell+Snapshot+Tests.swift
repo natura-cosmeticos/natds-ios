@@ -19,20 +19,20 @@ final class NavigationDrawerItemCellTests: XCTestCase {
     func test_largeText_textHasNoLineBreak() {
         systemUnderTest.title = "Menu Item lorem ipsum segum dolor et octum"
 
-        assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.99))
+        assertSnapshot(matching: systemUnderTest, as: .image)
     }
 
     func test_normalStateWithoutSubItems_hasNormalSnapshotWithoutArrow() {
         systemUnderTest.state = .normal
 
-        assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.99))
+        assertSnapshot(matching: systemUnderTest, as: .image)
     }
 
     func test_normalStateWithSubItems_hasNormalSnapshotWithArrow() {
         systemUnderTest.state = .normal
         systemUnderTest.hasSubItems = true
 
-        assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.99))
+        assertSnapshot(matching: systemUnderTest, as: .image)
     }
 
     func test_disabledStateWithoutSubItems_hasDisabledSnapshotWithoutArrow() {
@@ -40,7 +40,7 @@ final class NavigationDrawerItemCellTests: XCTestCase {
 
         systemUnderTest.state = .disabled
 
-        assertSnapshot(matching: containerView, as: .image(precision: 0.99))
+        assertSnapshot(matching: containerView, as: .image)
     }
 
     func test_disabledStateWithSubItems_hasDisabledSnapshotWithArrow() {
@@ -49,39 +49,39 @@ final class NavigationDrawerItemCellTests: XCTestCase {
         systemUnderTest.state = .disabled
         systemUnderTest.hasSubItems = true
 
-        assertSnapshot(matching: containerView, as: .image(precision: 0.99))
+        assertSnapshot(matching: containerView, as: .image)
     }
 
     func test_selectedStateWithoutSubItems_hasSelectedSnapshotWithoutArrow() {
         systemUnderTest.state = .selected
 
-        assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.99))
+        assertSnapshot(matching: systemUnderTest, as: .image)
     }
 
     func test_selectedStateWithSubItems_hasSelectedSnapshotWithArrow() {
         systemUnderTest.state = .selected
         systemUnderTest.hasSubItems = true
 
-        assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.99))
+        assertSnapshot(matching: systemUnderTest, as: .image)
     }
 
     func test_lowEmphasisStateWithoutSubItems_hasSelectedSnapshotWithoutArrow() {
         systemUnderTest.state = .lowEmphasis
 
-        assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.99))
+        assertSnapshot(matching: systemUnderTest, as: .image)
     }
 
     func test_lowEmphasisStateWithSubItems_hasSelectedSnapshotWithArrow() {
         systemUnderTest.state = .lowEmphasis
         systemUnderTest.hasSubItems = true
 
-        assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.99))
+        assertSnapshot(matching: systemUnderTest, as: .image)
     }
 
     func test_setIcon_hasSnapshotWithCustomIcon() {
         systemUnderTest.icon = nil
 
-        assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.99))
+        assertSnapshot(matching: systemUnderTest, as: .image)
     }
 
     func test_setTagText_hasSnapshotWithTag() {
@@ -94,7 +94,7 @@ final class NavigationDrawerItemCellTests: XCTestCase {
         systemUnderTest.title = "Menu Item lorem ipsum segum dolor et octum"
         systemUnderTest.tagText = "New"
 
-        assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.99))
+        assertSnapshot(matching: systemUnderTest, as: .image)
     }
 
     func test_setTagTextWithSubItems_hasSnapshotWithTag() {
@@ -109,7 +109,7 @@ final class NavigationDrawerItemCellTests: XCTestCase {
         systemUnderTest.tagText = "New"
         systemUnderTest.hasSubItems = true
 
-        assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.99))
+        assertSnapshot(matching: systemUnderTest, as: .image)
     }
 
     func test_setTagTextWithSubItems_hasSelectedSnapshotWithTag() {
