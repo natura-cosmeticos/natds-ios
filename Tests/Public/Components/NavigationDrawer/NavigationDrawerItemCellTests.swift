@@ -34,15 +34,22 @@ final class NavigationDrawerItemCellTests: XCTestCase {
     }
 
     func test_init_tagView_isHidden() {
-        let tagView = systemUnderTest.contentView.subviews[3]
-        XCTAssert(tagView is NatTag)
+        let tag = systemUnderTest.contentView.subviews
+            .compactMap { $0 as? NatTag }
+            .first
+        guard let tagView = try? XCTUnwrap(tag) else { return }
+
         XCTAssertEqual(tagView.isHidden, true)
     }
 
     func test_setTagText_showsTagView() throws {
         systemUnderTest.tagText = "Tag"
 
-        let tagView = try XCTUnwrap(systemUnderTest.contentView.subviews[3] as? NatTag)
+        let tag = systemUnderTest.contentView.subviews
+            .compactMap { $0 as? NatTag }
+            .first
+        guard let tagView = try? XCTUnwrap(tag) else { return }
+
         XCTAssertEqual(tagView.isHidden, false)
         let label = try XCTUnwrap(tagView.subviews.first as? UILabel)
         XCTAssertEqual(label.text, "Tag")
@@ -50,7 +57,12 @@ final class NavigationDrawerItemCellTests: XCTestCase {
 
     func test_setTagText_asNil_hidesTagView() {
         systemUnderTest.tagText = "Tag"
-        let tagView = systemUnderTest.contentView.subviews[3]
+
+        let tag = systemUnderTest.contentView.subviews
+            .compactMap { $0 as? NatTag }
+            .first
+        guard let tagView = try? XCTUnwrap(tag) else { return }
+
         XCTAssertEqual(tagView.isHidden, false)
 
         systemUnderTest.tagText = nil

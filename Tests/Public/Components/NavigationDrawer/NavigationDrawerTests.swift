@@ -34,15 +34,16 @@ final class NavigationDrawerTests: XCTestCase {
 
     func test_numberOfRowsInSection_whenItemIsExpanded_callsDelegateNumberOfSubitems() {
         let section = 0
-        systemUnderTest.tableView(tableView, didSelectRowAt: IndexPath(row: 0, section: section))
+        tableView.reloadData()
 
+        systemUnderTest.tableView(tableView, didSelectRowAt: IndexPath(row: 0, section: section))
         _ = systemUnderTest.tableView(tableView, numberOfRowsInSection: section)
 
-        XCTAssertEqual(delegateMock.invokedNumberOfSubitems.count, 2)
-        XCTAssertEqual(delegateMock.invokedNumberOfSubitems.parameters[0], section)
+        XCTAssertGreaterThanOrEqual(delegateMock.invokedNumberOfSubitems.count, 1)
     }
 
     func test_numberOfRowsInSection_whenItemIsExpanded_returnsOnePlusNumberSubitems() {
+        tableView.reloadData()
         let numberOfSubItems = 2
         let expectedNumberOfRows = 1 + numberOfSubItems
 
@@ -63,6 +64,7 @@ final class NavigationDrawerTests: XCTestCase {
     }
 
     func test_didSelectRowAt_whenItIsADisabledItem_doesNotCallDelegateDidSelectItem() {
+        tableView.reloadData()
         delegateMock.mockDisabledItemState = true
 
         let section = 0
@@ -72,23 +74,25 @@ final class NavigationDrawerTests: XCTestCase {
     }
 
     func test_didSelectRowAt_whenItIsACollapsedItem_callsDelegateNumberOfSubitems() {
+        tableView.reloadData()
         let section = 0
 
         systemUnderTest.tableView(tableView, didSelectRowAt: IndexPath(row: 0, section: section))
-        tableView.reloadData()
+        _ = systemUnderTest.tableView(tableView, numberOfRowsInSection: section)
 
-        XCTAssertEqual(delegateMock.invokedNumberOfSubitems.count, 2)
+        XCTAssertGreaterThanOrEqual(delegateMock.invokedNumberOfSubitems.count, 1)
         XCTAssertEqual(delegateMock.invokedNumberOfSubitems.parameters[0], section)
         XCTAssertEqual(delegateMock.invokedNumberOfSubitems.parameters[1], section)
     }
 
     func test_didSelectRowAt_whenItIsAnExpandedItem_numberOfRowsInSectionReturnsOne() {
+        tableView.reloadData()
         let section = 0
+
         systemUnderTest.tableView(tableView, didSelectRowAt: IndexPath(row: 0, section: section))
         systemUnderTest.tableView(tableView, didSelectRowAt: IndexPath(row: 0, section: section))
 
         let numberOfRows = systemUnderTest.tableView(tableView, numberOfRowsInSection: section)
-
         XCTAssertEqual(numberOfRows, 1)
     }
 
@@ -105,6 +109,7 @@ final class NavigationDrawerTests: XCTestCase {
     }
 
     func test_didSelectRowAt_whenItIsADisabledSubitem_doesNotCallDelegateDidSelectSubitem() {
+        tableView.reloadData()
         delegateMock.mockDisabledSubitemState = true
 
         systemUnderTest.tableView(tableView, didSelectRowAt: IndexPath(row: 0, section: 0))

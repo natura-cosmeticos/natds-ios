@@ -90,7 +90,11 @@ public class NavigationDrawerItemCell: UITableViewCell {
 
     public var icon: String? = nil {
         didSet {
-            self.actionLeft = .icon(icon)
+            if icon != nil {
+                self.actionLeft = .icon(icon)
+            } else {
+                self.actionLeft = .none
+            }
         }
     }
 
@@ -170,6 +174,8 @@ public class NavigationDrawerItemCell: UITableViewCell {
     }()
 
     private var labelToHighlightConstraint: NSLayoutConstraint?
+    private var titleToLeadingConstraint = NSLayoutConstraint()
+    private var titleToLeftViewConstraint = NSLayoutConstraint()
 
     public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -216,12 +222,13 @@ private extension NavigationDrawerItemCell {
         addTitleRightView()
     }
 
+    func updateLeftView(hidden: Bool) {
+        leftView.isHidden = hidden
+        titleToLeadingConstraint.isActive = hidden
+        titleToLeftViewConstraint.isActive = !hidden
+    }
+
     func updateAction(_ side: Side) {
-        if side == .left {
-            addLeftView()
-        } else {
-            addRightView()
-        }
         let sideAction = side == .left ? actionLeft : actionRight
         let sideView = side == .left ? leftView : rightView
         let iconColor = side == .left ?
@@ -230,11 +237,8 @@ private extension NavigationDrawerItemCell {
         switch sideAction {
         case .none:
             sideView.subviews.forEach { $0.removeFromSuperview() }
+            if sideView == leftView { updateLeftView(hidden: true) }
         case .icon(let newIcon):
-            // TODO:
-//            if newIcon == nil {
-//                sideView.removeFromSuperview()
-//            }
             sideView.subviews.forEach { $0.removeFromSuperview() }
             let view = IconView(newIcon)
             view.tintColor = iconColor
@@ -242,6 +246,7 @@ private extension NavigationDrawerItemCell {
             view.translatesAutoresizingMaskIntoConstraints = false
             view.centerXAnchor.constraint(equalTo: sideView.centerXAnchor).isActive = true
             view.centerYAnchor.constraint(equalTo: sideView.centerYAnchor).isActive = true
+            if sideView == leftView { updateLeftView(hidden: false) }
         case .imageUrl(let url):
             sideView.subviews.forEach { $0.removeFromSuperview() }
             let view = UIImageView()
@@ -253,6 +258,7 @@ private extension NavigationDrawerItemCell {
             view.topAnchor.constraint(equalTo: sideView.topAnchor).isActive = true
             view.bottomAnchor.constraint(equalTo: sideView.bottomAnchor).isActive = true
             view.load(url: url)
+            if sideView == leftView { updateLeftView(hidden: false) }
         case .image(let newImage):
             sideView.subviews.forEach { $0.removeFromSuperview() }
             let view = UIImageView()
@@ -264,6 +270,7 @@ private extension NavigationDrawerItemCell {
             view.topAnchor.constraint(equalTo: sideView.topAnchor).isActive = true
             view.bottomAnchor.constraint(equalTo: sideView.bottomAnchor).isActive = true
             view.image = newImage
+            if sideView == leftView { updateLeftView(hidden: false) }
         }
     }
 
@@ -292,6 +299,7 @@ private extension NavigationDrawerItemCell {
         case .badge(let newText):
             self.tagText = newText
         case .icon(let newIcon):
+            guard let newIcon = newIcon else { return }
             titleRightView.subviews.forEach { $0.removeFromSuperview() }
             let view = IconView(fontSize: 16, icon: newIcon)
             view.tintColor = getUIColorFromTokens(\.colorHighEmphasis)
@@ -330,13 +338,18 @@ private extension NavigationDrawerItemCell {
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         let constraint = titleLabel.trailingAnchor.constraint(lessThanOrEqualTo: highlightSelectedView.trailingAnchor,
                                                               constant: -8.0)
+        titleToLeftViewConstraint = titleLabel.leadingAnchor.constraint(equalTo: leftView.trailingAnchor,
+                                                                       constant: getTokenFromTheme(\.spacingSmall))
+        titleToLeadingConstraint = titleLabel.leadingAnchor.constraint(equalTo: highlightSelectedView.leadingAnchor,
+                                                                       constant: 8.0)
 
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: highlightSelectedView.topAnchor, constant: 12.0),
             titleLabel.bottomAnchor.constraint(equalTo: highlightSelectedView.bottomAnchor, constant: -12.0),
             titleLabel.leadingAnchor.constraint(equalTo: leftView.trailingAnchor,
                                                 constant: getTokenFromTheme(\.spacingSmall)),
-            constraint
+            constraint,
+            titleToLeadingConstraint
         ])
         labelToHighlightConstraint = constraint
     }

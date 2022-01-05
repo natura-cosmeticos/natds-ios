@@ -38,6 +38,7 @@ final class NavigationDrawerTests: XCTestCase {
     func test_cellForRowAt_whenItIsAnExpandedItem_hasValidSnapshot() {
         delegateMock.mockNumberOfItems = 10
         delegateMock.mockNumberOfSubitems = 2
+        tableView.reloadData()
         systemUnderTest.tableView(tableView, didSelectRowAt: IndexPath(row: 0, section: 0))
         systemUnderTest.tableView(tableView, didSelectRowAt: IndexPath(row: 0, section: 4))
 
