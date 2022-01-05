@@ -1,4 +1,5 @@
 // swiftlint:disable function_body_length
+// swiftlint:disable file_length
 @objcMembers
 public class NavigationDrawerItemCell: UITableViewCell {
     public enum State: Int {
@@ -39,6 +40,11 @@ public class NavigationDrawerItemCell: UITableViewCell {
         case left
     }
 
+    public enum NavigationItemType {
+        case title
+        case menuItem
+    }
+
     public enum NavigationAdd {
         case badge(_ text: String)
         case dot
@@ -68,6 +74,12 @@ public class NavigationDrawerItemCell: UITableViewCell {
         didSet {
             arrowView.isHidden = !hasSubItems || !dropdown
             labelToHighlightConstraint?.isActive = !hasSubItems || !dropdown
+        }
+    }
+
+    public var type: NavigationItemType = .menuItem {
+        didSet {
+            updateTitleLabelType(type)
         }
     }
 
@@ -181,6 +193,7 @@ public class NavigationDrawerItemCell: UITableViewCell {
         actionLeft = .none
         actionRight = .none
         actionTitleRight = .none
+        type = .menuItem
     }
 
     @available(*, unavailable)
@@ -290,6 +303,14 @@ private extension NavigationDrawerItemCell {
             view.trailingAnchor.constraint(equalTo: titleRightView.trailingAnchor).isActive = true
             view.topAnchor.constraint(equalTo: titleRightView.topAnchor).isActive = true
             view.bottomAnchor.constraint(equalTo: titleRightView.bottomAnchor).isActive = true
+        }
+    }
+
+    func updateTitleLabelType(_ type: NavigationItemType) {
+        if type == .menuItem {
+            titleLabel.font = NatFonts.font(ofSize: .body2)
+        } else {
+            titleLabel.font = NatFonts.font(ofSize: .subtitle1)
         }
     }
 

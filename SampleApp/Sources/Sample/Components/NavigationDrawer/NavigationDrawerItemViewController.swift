@@ -62,6 +62,7 @@ extension NavigationDrawerItemViewController: NavigationDrawerDelegate {
         if model.titleRightActionDot { item.actionTitleRight = .dot }
         if model.titleRightActionIcon { item.actionTitleRight = .icon(getIcon(.filledActionAdd)) }
         item.dropdown = model.dropdown
+        if model.typeTitle { item.type = .title }
     }
 
     func configureSubitem(_ subitem: NavigationDrawerSubitemCell, at index: NavigationDrawer.IndexMenu) {
@@ -79,7 +80,9 @@ private extension NavigationDrawerItemViewController {
     struct ItemFactory {
         static func build() -> [Item] {
             let items: [Item] = [
-                Item(label: "Item with only title"),
+                Item(label: "Item with type 'menu item'"),
+                Item(label: "Item with type 'title'",
+                     typeTitle: true),
                 Item(label: "Item with right icon",
                      rightActionIcon: true),
                 Item(label: "Item with right image",
@@ -168,6 +171,7 @@ private extension NavigationDrawerItemViewController {
         let rightActionIcon: Bool
         let rightActionImage: Bool
         let dropdown: Bool
+        let typeTitle: Bool
 
         init(label: String,
              icon: String? = nil,
@@ -181,7 +185,8 @@ private extension NavigationDrawerItemViewController {
              leftActionImage: Bool = false,
              rightActionIcon: Bool = false,
              rightActionImage: Bool = false,
-             dropdown: Bool = true) {
+             dropdown: Bool = true,
+             typeTitle: Bool = false) {
             self.label = label
             self.icon = icon
             self.disabled = disabled
@@ -195,6 +200,7 @@ private extension NavigationDrawerItemViewController {
             self.rightActionIcon = rightActionIcon
             self.rightActionImage = rightActionImage
             self.dropdown = dropdown
+            self.typeTitle = typeTitle
         }
     }
 
