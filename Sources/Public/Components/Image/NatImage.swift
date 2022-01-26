@@ -52,19 +52,11 @@ public class NatImage: UIView {
         return view
     }()
 
-    private lazy var defaultImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = AssetsPath.iconOutlinedProductEmptyBackground.rawValue
-        return imageView
-    }()
-
     // MARK: - Inits
 
     public init() {
         super.init(frame: .zero)
         setup()
-        addDefaultImage()
     }
 
     required init?(coder: NSCoder) {
@@ -107,14 +99,14 @@ public class NatImage: UIView {
         }
     }
 
-    /// Sets an image as a fallback, which will be displayed if the configuration with an URL fails.
+    /// Sets an image as a fallback, which will be displayed if the configuration with an URL or nil UIImage fails.
     ///
     /// - Parameter fallback: an UIImage
     public func configure(fallback: UIImage?) {
         self.fallbackImage = fallback
     }
 
-    /// Sets an image as a fallback, which will be displayed if the configuration with an URL fails.
+    /// Sets an image as a fallback, which will be displayed if the configuration with an URL or nil UIImage fails.
     ///
     /// - Parameter fallback: an URL that will return an image
     public func configure(fallback: URL?) {
@@ -129,10 +121,9 @@ public class NatImage: UIView {
     /// - Parameter setImage: an UIImage
     public func configure(setImage: UIImage?) {
         if let image = setImage {
-            defaultImageView.isHidden = true
             imageView.image = image
         } else {
-            defaultImageView.isHidden = false
+            imageView.image = fallbackImage
         }
     }
 
@@ -180,11 +171,6 @@ public class NatImage: UIView {
     private func setup() {
         addSubview(imageView)
         setFullConstraints(to: imageView)
-    }
-
-    private func addDefaultImage() {
-        addSubview(defaultImageView)
-        setFullConstraints(to: defaultImageView)
     }
 
     private func setFullConstraints(to object: AnyObject) {
