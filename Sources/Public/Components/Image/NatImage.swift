@@ -138,12 +138,16 @@ public class NatImage: UIView {
     ///
     /// - Parameter setImageFromURL: an URL that loads an image
     public func configure(setImageFromURL: URL?) {
-        if let image = setImageFromURL {
-            do {
-                _ = try Data(contentsOf: image)
-                imageView.load(url: image)
-            } catch {
-                configure(setImage: fallbackImage)
+
+        // loads fallback while loading from url
+        if imageView.image == nil {
+            configure(setImage: fallbackImage)
+        }
+
+        // loads from url if url exists, otherwise, loads fallback
+        if let imageURL = setImageFromURL {
+            DispatchQueue.main.async {
+                self.imageView.load(url: imageURL)
             }
         } else {
             configure(setImage: fallbackImage)
