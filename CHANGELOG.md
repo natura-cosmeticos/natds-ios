@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.23.1](https://github.com/natura-cosmeticos/natds-ios/compare/6.23.0...6.23.1) (2022-01-27)
+
+
+### Bug Fixes
+
+* fix image for async loading ([692a7d5](https://github.com/natura-cosmeticos/natds-ios/commit/692a7d5f028b6c8789b8fbe0f8927f4b0f346111))
+* remove default image from image component ([d0f1656](https://github.com/natura-cosmeticos/natds-ios/commit/d0f1656922de121d51703856220d362e25ae60f6))
+
 ## [6.23.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.22.0...6.23.0) (2021-12-29)
 
 
