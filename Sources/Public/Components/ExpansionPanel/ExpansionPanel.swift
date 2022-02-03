@@ -179,7 +179,7 @@ public class ExpansionPanel: UIView {
     private func setup() {
         backgroundColor = NatColors.surface
         NatElevation.apply(on: self, elevation: .micro)
-        layer.cornerRadius = NatBorderRadius.medium
+        layer.cornerRadius = getComponentAttributeFromTheme(\.expansionPanelBorderRadius)
         layer.borderWidth = 1
         layer.borderColor = inactiveBorderColor.cgColor
         addTapToToggle()
