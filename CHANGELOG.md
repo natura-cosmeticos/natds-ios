@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.26.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.25.0...6.26.0) (2022-02-03)
+
+
+### Features
+
+* update expansion panel border radius token ([5bc722a](https://github.com/natura-cosmeticos/natds-ios/commit/5bc722afc919ad19b4e6cec10d3abf06b881f6ba))
+
 ## [6.25.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.24.0...6.25.0) (2022-02-03)
 
 
