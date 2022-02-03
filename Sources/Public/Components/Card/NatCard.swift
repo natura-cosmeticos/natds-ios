@@ -42,9 +42,9 @@ public final class NatCard: UIView {
     /// - Parameter borderRadius: a bool that indicates if the card has rounded corners
     public func configure(borderRadius: Bool) {
         if borderRadius {
-            self.layer.cornerRadius = getTokenFromTheme(\.borderRadiusMedium)
+            self.layer.cornerRadius = getComponentAttributeFromTheme(\.cardBorderRadiusEnable)
         } else {
-            self.layer.cornerRadius = getTokenFromTheme(\.borderRadiusNone)
+            self.layer.cornerRadius = getComponentAttributeFromTheme(\.cardBorderRadiusDisable)
         }
     }
 }
