@@ -133,7 +133,7 @@ public final class NatDialogController: UIViewController {
         let opacity = getTokenFromTheme(\.opacityMediumHigh)
         view.backgroundColor = UIColor.black.withAlphaComponent(opacity)
 
-        containerView.layer.cornerRadius = getTokenFromTheme(\.borderRadiusMedium)
+        containerView.layer.cornerRadius = getComponentAttributeFromTheme(\.dialogBorderRadius)
         containerView.backgroundColor = getUIColorFromTokens(\.colorSurface)
 
         view.addSubview(containerView)
