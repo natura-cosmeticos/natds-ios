@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.25.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.24.0...6.25.0) (2022-02-03)
+
+
+### Features
+
+* update counter border radius ([a96d0d9](https://github.com/natura-cosmeticos/natds-ios/commit/a96d0d9f7810c8cb8381d1322e8b42cefd4f2945))
+* update dialog border radius token ([e9b07fa](https://github.com/natura-cosmeticos/natds-ios/commit/e9b07fa0a41fbe47f636ebf5f44e5ea432c1a553))
+
 ## [6.24.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.23.1...6.24.0) (2022-02-03)
 
 
