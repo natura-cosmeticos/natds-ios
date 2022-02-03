@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.24.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.23.1...6.24.0) (2022-02-03)
+
+
+### Features
+
+* update card border radius ([bdc851f](https://github.com/natura-cosmeticos/natds-ios/commit/bdc851f287c85c861ca4af6b1af123944eea7038))
+
 ### [6.23.1](https://github.com/natura-cosmeticos/natds-ios/compare/6.23.0...6.23.1) (2022-01-27)
 
 
