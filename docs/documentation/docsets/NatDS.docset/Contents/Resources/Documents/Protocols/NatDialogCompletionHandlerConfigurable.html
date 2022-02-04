@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>NatDialogBodyConfigurable Protocol Reference</title>
+    <title>NatDialogCompletionHandlerConfigurable Protocol Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -11,8 +11,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Protocol/NatDialogBodyConfigurable" class="dashAnchor"></a>
-    <a title="NatDialogBodyConfigurable Protocol Reference"></a>
+    <a name="//apple_ref/swift/Protocol/NatDialogCompletionHandlerConfigurable" class="dashAnchor"></a>
+    <a title="NatDialogCompletionHandlerConfigurable Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
         <p>
@@ -30,7 +30,7 @@
             <a href="../index.html">NatDS Reference</a>
             <img id="carat" src="../img/carat.png" />
           </span>
-          NatDialogBodyConfigurable Protocol Reference
+          NatDialogCompletionHandlerConfigurable Protocol Reference
         </p>
       </div>
     </div>
@@ -39,15 +39,15 @@
         <article class="main-content">
           <section>
             <section class="section">
-              <h1>NatDialogBodyConfigurable</h1>
+              <h1>NatDialogCompletionHandlerConfigurable</h1>
                 <div class="declaration">
                   <div class="language">
                     
-                    <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">NatDialogBodyConfigurable</span></code></pre>
+                    <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">NatDialogCompletionHandlerConfigurable</span></code></pre>
 
                   </div>
                 </div>
-              <p>A protocol to enable the configuration of a text for the Dialog&rsquo;s body</p>
+              <p>A protocol to enable the configuration of a completion handler for the Dialog&rsquo;s dismiss action</p>
 
             </section>
             <section class="section task-group-section">
@@ -65,9 +65,9 @@
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/s:5NatDS0A22DialogBodyConfigurablePA2A0aC7BuilderRzrlE9configure4bodyxSS_tF"></a>
-                      <a name="//apple_ref/swift/Method/configure(body:)" class="dashAnchor"></a>
-                      <a class="token" href="#/s:5NatDS0A22DialogBodyConfigurablePA2A0aC7BuilderRzrlE9configure4bodyxSS_tF">configure(body:<wbr>)</a>
+                      <a name="/s:5NatDS0A35DialogCompletionHandlerConfigurablePA2A0aC7BuilderRzrlE9configure013dismissActionE0xyycSg_tF"></a>
+                      <a name="//apple_ref/swift/Method/configure(dismissActionHandler:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A35DialogCompletionHandlerConfigurablePA2A0aC7BuilderRzrlE9configure013dismissActionE0xyycSg_tF">configure(dismissActionHandler:<wbr>)</a>
                       </code>
                         <span class="declaration-note">
                           Extension method
@@ -78,7 +78,7 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Sets the text for the Dialog body</p>
+                          <p>Sets a completion handler to the Dialog dismiss action</p>
 
                         </div>
                         <div class="declaration">
@@ -86,7 +86,7 @@
                           <div class="language">
                             <p class="aside-title">Swift</p>
                             <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="nv">body</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="nv">dismissActionHandler</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:5NatDS13ActionHandlera">ActionHandler</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                           </div>
                         </div>
@@ -97,12 +97,12 @@
                               <tr>
                                 <td>
                                   <code>
-                                  <em>body</em>
+                                  <em>divider</em>
                                   </code>
                                 </td>
                                 <td>
                                   <div>
-                                    <p>a String to be displayed as the Dialog body text</p>
+                                    <p>a block of code to be executed when the dialog is dismissed</p>
                                   </div>
                                 </td>
                               </tr>
