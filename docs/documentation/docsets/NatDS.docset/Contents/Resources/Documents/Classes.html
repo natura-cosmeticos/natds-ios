@@ -17,7 +17,7 @@
       <div class="content-wrapper">
         <p>
           <a href="index.html">NatDS  Docs</a>
-          <span class="no-mobile"> (37% documented)</span>
+          <span class="no-mobile"> (40% documented)</span>
         </p>
     
     
@@ -632,27 +632,7 @@ It&rsquo;s necessary to instantiate it and set its height and width constraints.
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>ExpansionPanel is a class that represents a view component that can be expanded and collapsed.
-  Also, it can show or hide a detail view with content.
-  The panel expands and retracts as user touches an up/down button, and the border color changes according to the chosen Design System theme.</p>
-<pre class="highlight swift"><code><span class="kt">Example</span> <span class="n">of</span> <span class="nv">usage</span><span class="p">:</span>
-
-    <span class="k">let</span> <span class="nv">expansionPanel</span> <span class="o">=</span> <span class="kt">ExpansionPanel</span><span class="p">()</span>
-    <span class="n">expansionPanel</span><span class="o">.</span><span class="nf">setSubtitle</span><span class="p">(</span><span class="s">"My Subtitle"</span><span class="p">)</span>
-    <span class="n">expansionPanel</span><span class="o">.</span><span class="nf">setDetailView</span><span class="p">(</span><span class="n">myDetailView</span><span class="p">)</span>
-    <span class="n">expansionPanel</span><span class="o">.</span><span class="nf">setHandlerForTap</span><span class="p">(</span><span class="nv">withAction</span><span class="p">:</span> <span class="o">.</span><span class="n">expand</span><span class="p">)</span> <span class="p">{</span>
-        <span class="c1">// your code</span>
-    <span class="p">}</span>
-</code></pre>
-
-<p>}</p>
-<div class="aside aside-requires">
-    <p class="aside-title">Requires</p>
-    <p>It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.</p>
-<pre class="highlight swift"><code>    <span class="kt">DesignSystem</span><span class="p">()</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="kt">AvailableTheme</span><span class="p">)</span>
-</code></pre>
-
-</div>
+                          <p>Undocumented</p>
 
                           <a href="Classes/ExpansionPanel.html" class="slightly-smaller">See more</a>
                         </div>
@@ -1827,19 +1807,7 @@ The tag colors change according to the current theme configured.</p>
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>ValueTextHighlight is a class that represents a component from the design system.</p>
-
-<p>Example of usage:</p>
-<pre class="highlight swift"><code>   <span class="n">valueTextHighlight</span><span class="o">.</span><span class="n">valueDescription</span> <span class="o">=</span> <span class="s">"Amount value"</span>
-   <span class="n">valueTextHighlight</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="s">"$40,00"</span>
-</code></pre>
-<div class="aside aside-requires">
-    <p class="aside-title">Requires</p>
-    <p>It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.</p>
-
-<p>DesignSystem().configure(with: AvailableTheme)</p>
-
-</div>
+                          <p>Undocumented</p>
 
                           <a href="Classes/ValueTextHighlight.html" class="slightly-smaller">See more</a>
                         </div>
@@ -1867,7 +1835,8 @@ The tag colors change according to the current theme configured.</p>
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>DesignSystem is a class entry point of configurations for this framework.</p>
+                          <p>DesignSystem is a class entry point of configurations for this framework.
+Usually, this configuration is in a global point after initialization, as in <code>AppDelegate</code>&lsquo;s <code>didFinishLaunchingWithOptions</code> method.</p>
 
 <p>Example of usage:</p>
 <pre class="highlight swift"><code>       <span class="kt">DesignSystem</span><span class="p">()</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">brand</span><span class="p">:</span> <span class="o">.</span><span class="n">avonLight</span><span class="p">)</span>
@@ -1876,7 +1845,7 @@ The tag colors change according to the current theme configured.</p>
        <span class="c1">//or</span>
        <span class="kt">DesignSystem</span><span class="p">()</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">brand</span><span class="p">:</span> <span class="o">.</span><span class="n">theBodyShopDark</span><span class="p">)</span>
        <span class="c1">//or</span>
-       <span class="kt">DesignSystem</span><span class="p">()</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">brand</span><span class="p">:</span> <span class="o">.</span><span class="kt">AesopDark</span><span class="p">)</span>
+       <span class="kt">DesignSystem</span><span class="p">()</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">brand</span><span class="p">:</span> <span class="o">.</span><span class="n">aesopDark</span><span class="p">)</span>
 </code></pre>
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
@@ -1889,8 +1858,8 @@ The tag colors change according to the current theme configured.</p>
 <li>The Body Shop</li>
 </ul>
 
-</div><div class="aside aside-requires">
-    <p class="aside-title">Requires</p>
+</div><div class="aside aside-note">
+    <p class="aside-title">Note</p>
     <p>It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.</p>
 <pre class="highlight swift"><code>   <span class="kt">DesignSystem</span><span class="p">()</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="kt">AvailableTheme</span><span class="p">)</span>
 </code></pre>
@@ -2237,6 +2206,9 @@ The tag colors change according to the current theme configured.</p>
                   <a href="Protocols/NatDialogBuilder.html">NatDialogBuilder</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="Protocols/NatDialogCompletionHandlerConfigurable.html">NatDialogCompletionHandlerConfigurable</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="Protocols/NatDialogCustomBodyConfigurable.html">NatDialogCustomBodyConfigurable</a>
                 </li>
                 <li class="nav-group-task">
@@ -2301,6 +2273,9 @@ The tag colors change according to the current theme configured.</p>
               <a href="Typealiases.html">Type Aliases</a>
               <ul class="nav-group-tasks">
                 <li class="nav-group-task">
+                  <a href="Typealiases.html#/s:5NatDS13ActionHandlera">ActionHandler</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="Typealiases.html#/s:5NatDS16SelectionHandlera">SelectionHandler</a>
                 </li>
                 <li class="nav-group-task">
@@ -2313,7 +2288,7 @@ The tag colors change according to the current theme configured.</p>
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2021-10-19)</p>
+          <p>&copy; 2022 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2022-02-04)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </div>
