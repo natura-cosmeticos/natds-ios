@@ -1,3 +1,4 @@
+/// A protocol for making views reusable within the project
 public protocol ReusableView: AnyObject {
     static var reuseIdentifier: String { get }
 }
