@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.28.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.27.0...6.28.0) (2022-02-07)
+
+
+### Features
+
+* add app bar top logo configuration at the sample app ([bf24553](https://github.com/natura-cosmeticos/natds-ios/commit/bf245536b87b2410f94fb55c9f005164a2807049))
+* add method to set logo at app bar top ([c151019](https://github.com/natura-cosmeticos/natds-ios/commit/c15101961eb7a6edb79a894eb57d4ebbf6505226))
+
 ## [6.27.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.26.0...6.27.0) (2022-02-07)
 
 
