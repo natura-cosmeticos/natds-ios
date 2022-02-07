@@ -85,11 +85,11 @@ class AppBarDetailViewController: UITableViewController, UITextFieldDelegate {
         case .text:
             self.configure(appBarContentType: .text("Text Content Type"))
         case .media:
-            let image = NatLogoImages.horizontal
+            let image = UIImage(named: "ImageAreaPlaceholder")
             self.configure(appBarContentType: .media(image))
         case .logo:
-            let myLogo = NatLogo(size: .largeXXX)
-            self.configure(appBarContentType: .logo(myLogo))
+            let newLogo = NatLogo(size: .largeXXX)
+            self.configure(appBarContentType: .logo(newLogo))
         }
     }
 
