@@ -239,6 +239,16 @@ final class NatIconButtonSnapshotTests: XCTestCase {
 
         assertSnapshot(matching: superview, as: .image(precision: 0.99))
     }
+
+    func test_standardStyle_changeStyleAfterInit_hasValidSnapshot() {
+        let systemUnderTest = NatIconButton(style: .standardLight)
+        superview.addSubview(systemUnderTest)
+        addConstraints(systemUnderTest)
+
+        systemUnderTest.configure(style: .standardDefault)
+
+        assertSnapshot(matching: superview, as: .image)
+    }
 }
 
 extension NatIconButtonSnapshotTests {

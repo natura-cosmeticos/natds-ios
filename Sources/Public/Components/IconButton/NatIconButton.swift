@@ -74,7 +74,7 @@ public final class NatIconButton: UIView {
 
     // MARK: - Private properties
 
-    private let style: Style
+    private var style: Style
     internal var backgroundStyle: Background = .inherit
     private let notificationCenter: NotificationCenterObservable
 
@@ -204,7 +204,6 @@ extension NatIconButton {
     /// - Parameter state: An option from State enum: enabled (default) or disabled
     public func configure(state: State) {
         currentState = state
-
         style.applyStyle(self)
     }
 
@@ -218,7 +217,13 @@ extension NatIconButton {
     /// - Parameter background: An option from Background enum: inherit (default), float or overlay
     public func configure(background: Background) {
         backgroundStyle = background
+        style.applyStyle(self)
+    }
 
+    /// Sets a style for the component, changing its color
+    /// - Parameter style: an option from `NatIconButton.Style`
+    public func configure(style: Style) {
+        self.style = style
         style.applyStyle(self)
     }
 }
