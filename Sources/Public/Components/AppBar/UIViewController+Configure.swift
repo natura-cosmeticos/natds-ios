@@ -41,7 +41,7 @@ public extension UIViewController {
     }
 
     /// Sets the content type for the navigation bar's center view
-    /// - Parameter item: an option from `AppBarContentType`, with a string value (for text) or an image (for media)
+    /// - Parameter item: an option from `AppBarContentType`, with a string value (for text), an image (for media) or a `NatLogo`
     func configure(appBarContentType item: AppBarContentType) {
         switch item {
         case .media(let image):
@@ -53,6 +53,11 @@ public extension UIViewController {
         case .text(let string):
             navigationItem.titleView = nil
             title = string
+        case .logo(let logo):
+            logo.translatesAutoresizingMaskIntoConstraints = false
+            logo.widthAnchor.constraint(lessThanOrEqualToConstant: NatSizes.hugeX).isActive = true
+            logo.contentMode = .scaleAspectFit
+            navigationItem.titleView = logo
         }
     }
 

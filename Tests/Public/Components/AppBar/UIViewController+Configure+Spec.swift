@@ -29,16 +29,29 @@ final class UIViewControllerConfigureSpec: QuickSpec {
 
             context("when appBarContentType is .media") {
                 beforeEach {
-                    sut.configure(appBarContentType: .media(NatLogoImages.horizontal))
+                    sut.configure(appBarContentType: .media(UIImage()))
+                }
+                it("sets navigationItem titleView") {
+                    expect(sut.navigationItem.titleView).toNot(beNil())
+                }
+                it("sets navigationItem titleView with image and its not nil") {
+                    let imageView = sut.navigationItem.titleView as? UIImageView
+
+                    expect(imageView?.image).toNot(beNil())
+                }
+            }
+
+            context("when appBarContentType is .logo") {
+                beforeEach {
+                    sut.configure(appBarContentType: .logo(NatLogo()))
                 }
                 it("sets navigationItem titleView") {
                     expect(sut.navigationItem.titleView).toNot(beNil())
                 }
                 it("sets navigationItem titleView with logo") {
-                    let logoImageView = sut.navigationItem.titleView as? UIImageView
-                    let logoImage = logoImageView?.image
+                    let logoImage = sut.navigationItem.titleView as? NatLogo
 
-                    expect(logoImage).to(equal(NatLogoImages.horizontal))
+                    expect(logoImage).to(beAKindOf(NatLogo.self))
                 }
             }
         }

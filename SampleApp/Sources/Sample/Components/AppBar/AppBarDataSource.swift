@@ -22,7 +22,7 @@ enum AppBarSection: CaseIterable {
         case .action:
             return [.oneActionRight, .threeActionsRight, .oneActionLeft]
         case .contentType:
-            return [.text, .media]
+            return [.text, .media, .logo]
         }
     }
 }
@@ -39,6 +39,7 @@ enum AppBarItem {
     case oneActionLeft
     case text
     case media
+    case logo
 
     var title: String {
         switch self {
@@ -53,6 +54,7 @@ enum AppBarItem {
         case .oneActionLeft: return "Action Left"
         case .text: return "Content type: Text"
         case .media: return "Content type: Media"
+        case .logo: return "Content type: Logo"
         }
     }
 }
