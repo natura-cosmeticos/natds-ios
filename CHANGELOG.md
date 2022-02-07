@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.27.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.26.0...6.27.0) (2022-02-07)
+
+
+### Features
+
+* add method to configure icon button color after its init ([c584fad](https://github.com/natura-cosmeticos/natds-ios/commit/c584fad58b44e80fe8e0bc51d21d7ca231e19091))
+
 ## [6.26.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.25.0...6.26.0) (2022-02-03)
 
 
