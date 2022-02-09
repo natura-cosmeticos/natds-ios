@@ -4,45 +4,12 @@ Are you feeling that you can help us with anything in the project? Just get clos
 
 ## Create a PR to contribute to the project
 
-We will review your PR checking some criteria and, if everything is fine, a new version for the library will be published with your contribution. Setup the project and start coding:
-
-## Project setup ##
-Follow the steps below before opening the project.
-
-  Installing dependencies:
-
-1. Install project dependencies:
-   ```
-   make setup
-   ```
-2. ## Natura employees only:
-   Note: before running this command, please contact System Team to request the required credentials
-
-   ```
-   make install_certificates
-   ```
-
-3. Done! Open project on Xcode using _.xcworkspace_
-
----
-
-## Sample App
-
-We have provided a sample project in the repository. To use it, download the repository, run `pod install` to download the required libraries and open `NatDS.xcworkspace`. You'll see two schemes: `NatDS` and `NatDS-SampleApp` - select `NatDS-SampleApp` and then build & run! Source files for this application are in the NatDS-SampleApp/Sources directory i the project navigator.
-
----
-
-## Dependencies
-
-- Xcode 12+
-- Homebrew
-- Ruby 2.6.5
-- Bundler
-- [Git-LFS](https://git-lfs.github.com/)
----
-
+We will review your PR checking some criteria and, if everything is fine, a new version for the library will be published with your contribution. Setup the project using [the steps in the setup guide](docs/Setup.md) and start coding.
 
 ## Contributing ##
+
+### Requirements
+If you created or updated a new component, don't forget to include examples of your features in the Sample App. New components and features must be documented and covered by unit and snapshot tests.
 
 ### Commits structure
 
