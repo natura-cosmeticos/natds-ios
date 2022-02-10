@@ -138,19 +138,19 @@ public class NavigationDrawerItemCell: UITableViewCell {
         return label
     }()
 
-    private lazy var leftView: UIView = {
+    internal lazy var leftView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
 
-    private lazy var rightView: UIView = {
+    internal lazy var rightView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
 
-    private lazy var titleRightView: UIView = {
+    internal lazy var titleRightView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view

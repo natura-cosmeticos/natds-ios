@@ -71,7 +71,6 @@ extension NavigationDrawerItemViewController: NavigationDrawerDelegate {
         if model.disabled {
             subitem.state = .disabled
         }
-        subitem.rightIcon = model.icon
     }
 }
 

@@ -222,6 +222,7 @@
 		7D5349ED26C6BA7200F88EA7 /* NatGradientImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5349EC26C6BA7200F88EA7 /* NatGradientImageView.swift */; };
 		7D5349F226C6BBA600F88EA7 /* UIImage+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5349F126C6BBA600F88EA7 /* UIImage+URL.swift */; };
 		7D5F149A25A782AB007986EE /* IconsSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5F149925A782AB007986EE /* IconsSource.swift */; };
+		7D6050D827B5631D007F474A /* IconMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6050D727B5631D007F474A /* IconMock.swift */; };
 		7D60A443260914DE00A23C1A /* NatIconButton+Backgrounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D60A442260914DE00A23C1A /* NatIconButton+Backgrounds.swift */; };
 		7D60A4A0260E208E00A23C1A /* NatListItem+Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D60A49F260E208E00A23C1A /* NatListItem+Feedback.swift */; };
 		7D6947D226E8FB89007D00A4 /* SuisseIntl-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D6947D126E8FB89007D00A4 /* SuisseIntl-Regular.ttf */; };
@@ -664,6 +665,7 @@
 		7D5349EC26C6BA7200F88EA7 /* NatGradientImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatGradientImageView.swift; sourceTree = "<group>"; };
 		7D5349F126C6BBA600F88EA7 /* UIImage+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+URL.swift"; sourceTree = "<group>"; };
 		7D5F149925A782AB007986EE /* IconsSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsSource.swift; sourceTree = "<group>"; };
+		7D6050D727B5631D007F474A /* IconMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconMock.swift; sourceTree = "<group>"; };
 		7D60A442260914DE00A23C1A /* NatIconButton+Backgrounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatIconButton+Backgrounds.swift"; sourceTree = "<group>"; };
 		7D60A49F260E208E00A23C1A /* NatListItem+Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatListItem+Feedback.swift"; sourceTree = "<group>"; };
 		7D6947D126E8FB89007D00A4 /* SuisseIntl-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SuisseIntl-Regular.ttf"; sourceTree = "<group>"; };
@@ -2626,6 +2628,7 @@
 				255B7772A418A4544E0B8F793BEB519D /* UIColor+AsHexString.swift */,
 				56F3D70C29CCB183081E1863D791C9D4 /* UIFont+GetWeight.swift */,
 				84A818BA24B77FA80007C7D5 /* UIGestureRecognizer+SendGesturesEvent.swift */,
+				7D6050D727B5631D007F474A /* IconMock.swift */,
 			);
 			path = TestingHelpers;
 			sourceTree = "<group>";
@@ -3126,6 +3129,7 @@
 				26BFBADB25127397006C22E2 /* NatTag+Spec.swift in Sources */,
 				79FC599E25CB21D5001CCB56 /* NatCard+Spec.swift in Sources */,
 				797E613825531CA7002A59E0 /* NaturaLightComponents+Logo+Spec.swift in Sources */,
+				7D6050D827B5631D007F474A /* IconMock.swift in Sources */,
 				BB3413734DCB562C834B90742EF06929 /* ButtonStyle+Spec.swift in Sources */,
 				7D98389225F6A69B00A99628 /* TextField+States+Spec.swift in Sources */,
 				797E6116255319D2002A59E0 /* AesopLightComponents+Logo+Spec.swift in Sources */,

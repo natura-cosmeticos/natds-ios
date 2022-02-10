@@ -134,18 +134,10 @@ final class NavigationDrawerItemCellTests: XCTestCase {
         assertSnapshot(matching: systemUnderTest, as: .image)
     }
 
-    func test_normalStateWithLeftIcon_hasNormalSnapshot() {
-        // TODO
-    }
-
     func test_normalStateWithLeftImage_hasNormalSnapshot() {
         systemUnderTest.actionLeft = .image(AssetsPath.iconOutlinedProductEmptyBackground.rawValue)
 
         assertSnapshot(matching: systemUnderTest, as: .image)
-    }
-
-    func test_normalStateWithRightIcon_hasNormalSnapshot() {
-        // TODO
     }
 
     func test_normalStateWithRightImage_hasNormalSnapshot() {
@@ -164,10 +156,6 @@ final class NavigationDrawerItemCellTests: XCTestCase {
         systemUnderTest.actionTitleRight = .dot
 
         assertSnapshot(matching: systemUnderTest, as: .image)
-    }
-
-    func test_setIconToTitle_hasValidSnapshot() {
-        // TODO
     }
 
     private func createContainerView(for view: UIView) -> UIView {
