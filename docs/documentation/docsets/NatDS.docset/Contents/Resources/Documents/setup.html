@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Getting started  Reference</title>
+    <title>Setup  Reference</title>
     <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="css/highlight.css" />
     <meta charset='utf-8'>
@@ -11,7 +11,7 @@
     
   </head>
   <body>
-    <a title="Getting started  Reference"></a>
+    <a title="Setup  Reference"></a>
     <header>
       <div class="content-wrapper">
         <p>
@@ -29,7 +29,7 @@
             <a href="index.html">NatDS Reference</a>
             <img id="carat" src="img/carat.png" />
           </span>
-          Getting started  Reference
+          Setup  Reference
         </p>
       </div>
     </div>
@@ -39,56 +39,42 @@
           <section>
             <section class="section">
               
-              <h1 id='getting-started-nat-design-system' class='heading'>Getting Started - Nat Design System</h1>
-<h2 id='themes' class='heading'>Themes</h2>
+              <h1 id='how-to-setup-the-project' class='heading'>How to setup the project</h1>
 
-<p>After following the steps to use NatDS with Cocoapods or Swift Package Manager in your project, it&#39;ss necessary to configure the Design System with a theme or <code>fatalError</code> will be raised.</p>
-<pre class="highlight swift"><code><span class="kt">DesignSystem</span><span class="p">()</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="kt">AvailableTheme</span><span class="p">)</span>
+<p>Follow the steps below before opening the project.</p>
+
+<p>Installing dependencies:</p>
+
+<ol>
+<li>Install project dependencies:
+<code>
+make setup
+</code></li>
+<li>## Natura employees only:
+Note: before running this command, please contact System Team to request the required credentials</li>
+</ol>
+<pre class="highlight plaintext"><code>   make install_certificates
 </code></pre>
 
-<p>Since every brand contained in the Design System has a different color palette and specific tokens, configuring the theme will define the base theme for the Design System usage and specify where the app should pull the token references from.</p>
+<ol>
+<li>Done! Open project on Xcode using <em>.xcworkspace</em></li>
+</ol>
 
-<blockquote>
-<p>It&rsquo;s recommended to set your chosen theme in the most generic layers of your app - in the <code>AppDelegate</code> file, for instance.</p>
-</blockquote>
-<h2 id='tokens' class='heading'>Tokens</h2>
+<hr>
+<h2 id='sample-app' class='heading'>Sample App</h2>
 
-<p>Design tokens are the most basic portion of our DS. They are all the basic attributes of design systems: colors, typography definitions, sizes, etc. Our library provide the following tokens:</p>
+<p>We have provided a sample project in the repository. To use it, download the repository, setup the project with the steps mentioned above and run <code>pod install</code> to download the required libraries. Then, open <code>NatDS.xcworkspace</code>. You&rsquo;ll see two schemes: <code>NatDS</code> and <code>NatDS-SampleApp</code> - select <code>NatDS-SampleApp</code>, build and run. Source files for this application are in the <code>NatDS-SampleApp/Sources</code> directory in the project navigator.</p>
+
+<hr>
+<h2 id='dependencies' class='heading'>Dependencies</h2>
 
 <ul>
-<li>Border radius​</li>
-<li>Color​</li>
-<li>Elevation​</li>
-<li>Fonts</li>
-<li><a href=how-to-use-icons.html target="_blank">Icons</a></li>
-<li>Opacity​</li>
-<li>Size​s</li>
-<li>Spacing​</li>
+<li>Xcode 12+</li>
+<li>Homebrew</li>
+<li>Ruby 2.6.5</li>
+<li>Bundler</li>
+<li><a href="https://git-lfs.github.com/">Git-LFS</a> for versions <code>6.2.0</code> and previous</li>
 </ul>
-
-<p>The components available in the library are built using this tokens, which makes them visually consistent. In addition, you can also use the theme tokens directly in your project to create local team components and UIs.</p>
-
-<p>Example:
-If you need to add text to a view that will be styled with the following attributes:</p>
-<pre class="highlight plaintext"><code>Font Family: Roboto, sans-serif
-Font Size: 96sp
-Letter Spacing: 0.015625
-Font weight: Regular
-Lineheight: Medium (1.5)
-</code></pre>
-
-<p>You can set these attributes manually in your code or .xib, but you can also use the <code>Heading 1</code> typography token, that has exactly these attributes:</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">myFont</span> <span class="o">=</span> <span class="kt">NatFonts</span><span class="o">.</span><span class="nf">font</span><span class="p">(</span><span class="nv">ofSize</span><span class="p">:</span> <span class="o">.</span><span class="n">heading1</span><span class="p">,</span> <span class="nv">withWeight</span><span class="p">:</span> <span class="o">.</span><span class="n">regular</span><span class="p">)</span>
-</code></pre>
-
-<p>Or if you need to build a view that has the brand primary color, you can use:</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">myColor</span> <span class="o">=</span> <span class="kt">NatColors</span><span class="o">.</span><span class="n">primary</span>
-</code></pre>
-<h2 id='components' class='heading'>Components</h2>
-
-<p>Components are a collection of interface elements used to create great and consistent user experiences. The currently available components are listed in our <a href="https://natds-ios.prd.naturacloud.com/documentation/index.html">documentation</a>, with instructions and usage examples. </p>
-
-<p>You can also download this repository and run the Sample App, which has code examples for all available components, or check the general <a href="https://natds.natura.design/docs">Natura Group Design System documentation</a>.</p>
 
             </section>
           </section>
