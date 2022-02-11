@@ -20,19 +20,6 @@ public class NavigationDrawerItemCell: UITableViewCell {
         case icon(_ icon: String?)
         case imageUrl(_ url: URL)
         case image(_ image: UIImage?)
-    public var title: String? {
-        get { return titleLabel.text }
-        set {
-            let paragraph = NSMutableParagraphStyle()
-            paragraph.lineBreakMode = .byTruncatingTail
-
-            // swiftlint:disable line_length
-            titleLabel.attributedText = newValue?
-                .attributedStringWith(lineHeight: getComponentAttributeFromTheme(\.navigationDrawerSectionItemLineHeight),
-                                      letterSpacing: getComponentAttributeFromTheme(\.navigationDrawerSectionItemLetterSpacing),
-                                      paragraphStyle: paragraph)
-            // swiftlint:enable line_length
-        }
     }
 
     enum Side {
@@ -85,7 +72,17 @@ public class NavigationDrawerItemCell: UITableViewCell {
 
     public var title: String? {
         get { return titleLabel.text }
-        set { titleLabel.text = newValue }
+        set {
+            let paragraph = NSMutableParagraphStyle()
+            paragraph.lineBreakMode = .byTruncatingTail
+
+            // swiftlint:disable line_length
+            titleLabel.attributedText = newValue?
+                .attributedStringWith(lineHeight: getComponentAttributeFromTheme(\.navigationDrawerSectionItemLineHeight),
+                                      letterSpacing: getComponentAttributeFromTheme(\.navigationDrawerSectionItemLetterSpacing),
+                                      paragraphStyle: paragraph)
+            // swiftlint:enable line_length
+        }
     }
 
     public var icon: String? = nil {
