@@ -1,3 +1,4 @@
+/// A protocol for allowing the addition of a badge in the top right corner
 public protocol Badgeable: UIView {}
 
 extension Badgeable {

@@ -15,10 +15,13 @@ Library with iOS components defined by [Natura Group Design System Team](https:/
 - CocoaPods
 - Swift Package Manager
 - Fastlane
-- Bitrise (CI)
+- Bitrise
 - Swiftlint
-- [Jazzy](https://github.com/realm/jazzy) for documentation
+- Jazzy
 
+NOTE: For versions `6.2.0` and previous, `Git-LFS` is also a dependency.
+
+---
 ## How to Install
 
 ### CocoaPods
@@ -49,6 +52,7 @@ pod install
 To use NatDS in your project with Swift Package Manager, you need to add it from the Xcode menu.
 Follow the path `File > Swift Packages > Add Package Dependency` and then provide it the git url for this repository: `https://github.com/natura-cosmeticos/natds-ios.git`. Xcode will manage the imports.
 
+---
 ## How to configure
 The library provide the components according to the Design System brand themes, which must be chosen before using the components (usually, at your app's launch). All themes available are options in the `AvailableTheme` enum.
 
@@ -60,8 +64,9 @@ DesignSystem().configure(with: AvailableTheme)
 
 > Reminder: This step is mandatory. If the Design System is not configured with a brand theme, a `fatalError` will be raised. 
 
+---
 ## How to add icons
-This library does not have the Design System icons. Since version `3.0.0`, they're stored in the separate icon library [NatDSIcons](https://cocoapods.org/pods/NatDSIcons), which can also be used with Cocoapods.
+This library does not have the Design System icons. Since version `3.0.0`, they're stored in the icon library [NatDSIcons](https://cocoapods.org/pods/NatDSIcons), which can also be used with Cocoapods.
 
 To use the icons, specify their pod in your `Podfile`:
 
@@ -81,8 +86,16 @@ pod search NatDSIcons --simple
 
 [Check the documentation on how to use icons in your code.](docs/How%20to%20use%20icons.md)
 
+---
+## Sample App
+The Sample App has visual and code implementation examples for the Design System's components and tokens. To run it, download this repository, install its dependencies following the project setup, then build and run.
+
+[Check how to use the Sample App.](docs/Setup.md)
+
+---
 ## Themes, Components and Tokens
 [Check how to use the library.](docs/Getting%20started.md)
 
+---
 ## How to contribute
 [Check the contribution guidelines.](docs/How%20to%20contribute.md)

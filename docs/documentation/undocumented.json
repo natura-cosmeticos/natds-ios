@@ -30,28 +30,14 @@
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Core/Helpers/ReusableView.swift",
-      "line": 1,
-      "symbol": "ReusableView",
-      "symbol_kind": "source.lang.swift.decl.protocol",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Core/Helpers/ReusableView.swift",
-      "line": 2,
+      "line": 3,
       "symbol": "ReusableView.reuseIdentifier",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Core/Helpers/ReusableView.swift",
-      "line": 5,
-      "symbol": "ReusableView",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Core/Helpers/ReusableView.swift",
-      "line": 6,
+      "line": 7,
       "symbol": "ReusableView.reuseIdentifier",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
@@ -151,6 +137,13 @@
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/AppBar/AppBarContentType.swift",
       "line": 5,
       "symbol": "AppBarContentType.media(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/AppBar/AppBarContentType.swift",
+      "line": 6,
+      "symbol": "AppBarContentType.logo(_:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
@@ -338,49 +331,35 @@
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/Badge/Protocol/Badgeable.swift",
-      "line": 1,
-      "symbol": "Badgeable",
-      "symbol_kind": "source.lang.swift.decl.protocol",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/Badge/Protocol/Badgeable.swift",
-      "line": 3,
-      "symbol": "Badgeable",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/Badge/Protocol/Badgeable.swift",
-      "line": 9,
+      "line": 10,
       "symbol": "Badgeable.configure(badgeStyle:withColor:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/Badge/Protocol/Badgeable.swift",
-      "line": 23,
+      "line": 24,
       "symbol": "Badgeable.setBadgeIsHidden(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/Badge/Protocol/Badgeable.swift",
-      "line": 27,
+      "line": 28,
       "symbol": "Badgeable.setBadge(count:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/Badge/Protocol/Badgeable.swift",
-      "line": 31,
+      "line": 32,
       "symbol": "Badgeable.removeBadge()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/Badge/Protocol/Badgeable.swift",
-      "line": 35,
+      "line": 36,
       "symbol": "Badgeable.configure(limit:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -607,13 +586,6 @@
       "line": 4,
       "symbol": "NatDialogBuilder.buttonsConfiguration",
       "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/Dialog/DialogButtonConfiguration.swift",
-      "line": 1,
-      "symbol": "DialogButtonConfiguration",
-      "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
@@ -1024,21 +996,14 @@
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/Icons/IllustrationIcons.swift",
-      "line": 1,
-      "symbol": "IllustrationIcons",
-      "symbol_kind": "source.lang.swift.decl.struct",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/Icons/IllustrationIcons.swift",
-      "line": 2,
+      "line": 3,
       "symbol": "IllustrationIcons.Lined",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/Icons/IllustrationIcons.swift",
-      "line": 3,
+      "line": 4,
       "symbol": "IllustrationIcons.Lined.sad",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
@@ -1353,98 +1318,49 @@
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawer.swift",
-      "line": 1,
-      "symbol": "NavigationDrawerDelegate",
-      "symbol_kind": "source.lang.swift.decl.protocol",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawer.swift",
-      "line": 2,
-      "symbol": "NavigationDrawerDelegate.numberOfItems()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawer.swift",
-      "line": 3,
-      "symbol": "NavigationDrawerDelegate.numberOfSubitems(in:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawer.swift",
-      "line": 4,
-      "symbol": "NavigationDrawerDelegate.didSelectItem(at:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawer.swift",
-      "line": 5,
-      "symbol": "NavigationDrawerDelegate.didSelectSubitem(at:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawer.swift",
-      "line": 6,
-      "symbol": "NavigationDrawerDelegate.configureItem(_:at:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawer.swift",
-      "line": 7,
-      "symbol": "NavigationDrawerDelegate.configureSubitem(_:at:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawer.swift",
-      "line": 43,
+      "line": 59,
       "symbol": "NavigationDrawer.delegate",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawer.swift",
-      "line": 49,
+      "line": 65,
       "symbol": "NavigationDrawer.init(tableView:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawer.swift",
-      "line": 60,
+      "line": 76,
       "symbol": "NavigationDrawer.reloadData()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawer.swift",
-      "line": 123,
+      "line": 139,
       "symbol": "NavigationDrawer.numberOfSections(in:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawer.swift",
-      "line": 127,
+      "line": 143,
       "symbol": "NavigationDrawer.tableView(_:numberOfRowsInSection:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawer.swift",
-      "line": 136,
+      "line": 152,
       "symbol": "NavigationDrawer.tableView(_:cellForRowAt:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawer.swift",
-      "line": 159,
+      "line": 175,
       "symbol": "NavigationDrawer.tableView(_:didSelectRowAt:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

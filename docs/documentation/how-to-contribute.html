@@ -16,7 +16,7 @@
       <div class="content-wrapper">
         <p>
           <a href="index.html">NatDS  Docs</a>
-          <span class="no-mobile"> (40% documented)</span>
+          <span class="no-mobile"> (42% documented)</span>
         </p>
     
     
@@ -41,50 +41,13 @@
               
               <h1 id='how-to-contribute' class='heading'>How to contribute</h1>
 
-<p>Are you feeling that you can help us with anything in the project? Just get closer!!</p>
-<h2 id='create-a-pr-to-contribute-to-the-project' class='heading'>Create a PR to contribute to the project</h2>
+<p>First of all, check the required dependencies, setup the project using <a href=setup.html target="_blank">the steps in the setup guide</a> and start coding. Use the commit structure and follow the criteria below before creating a PR. </p>
+<h2 id='requirements' class='heading'>Requirements</h2>
 
-<p>We will review your PR checking some criteria and, if everything is fine, a new version for the library will be published with your contribution. Setup the project and start coding:</p>
-<h2 id='project-setup' class='heading'>Project setup</h2>
+<p>If you created or updated a new component, don&rsquo;t forget to include examples of your features in the Sample App. New components and features must be documented and covered by unit and snapshot tests.</p>
+<h2 id='commits-structure' class='heading'>Commits structure</h2>
 
-<p>Follow the steps below before opening the project.</p>
-
-<p>Installing dependencies:</p>
-
-<ol>
-<li>Install project dependencies:
-<code>
-make setup
-</code></li>
-<li>## Natura employees only:
-Note: before running this command, please contact System Team to request the required credentials</li>
-</ol>
-<pre class="highlight plaintext"><code>   make install_certificates
-</code></pre>
-
-<ol>
-<li>Done! Open project on Xcode using <em>.xcworkspace</em></li>
-</ol>
-
-<hr>
-<h2 id='sample-app' class='heading'>Sample App</h2>
-
-<p>We have provided a sample project in the repository. To use it, download the repository, run <code>pod install</code> to download the required libraries and open <code>NatDS.xcworkspace</code>. You&rsquo;ll see two schemes: <code>NatDS</code> and <code>NatDS-SampleApp</code> - select <code>NatDS-SampleApp</code> and then build &amp; run! Source files for this application are in the NatDS-SampleApp/Sources directory i the project navigator.</p>
-
-<hr>
-<h2 id='dependencies' class='heading'>Dependencies</h2>
-
-<ul>
-<li>Xcode 12+</li>
-<li>Homebrew</li>
-<li>Ruby 2.6.5</li>
-<li>Bundler</li>
-</ul>
-<h2 id='a-href-https-git-lfs-github-com-git-lfs-a' class='heading'>- <a href="https://git-lfs.github.com/">Git-LFS</a></h2>
-<h2 id='contributing' class='heading'>Contributing</h2>
-<h3 id='commits-structure' class='heading'>Commits structure</h3>
-
-<p>After developing your contribution, we recommend the usage of <a href="https://www.conventionalcommits.org/en/v1.0.0/">Conversional Commits</a> to commit your work.</p>
+<p>After developing your contribution, we recommend the usage of <a href="https://www.conventionalcommits.org/en/v1.0.0/">Conventional Commits</a> to commit your work.</p>
 
 <p>The most common types the we use are:</p>
 
@@ -96,7 +59,9 @@ Note: before running this command, please contact System Team to request the req
 
 <p>There are many other types that you can use to tag your commits: <code>build:</code>, <code>chore:</code>, <code>ci:</code>, <code>docs:</code>, <code>style:</code>, <code>refactor:</code>, <code>perf:</code>; 
 <a href="https://www.conventionalcommits.org/en/v1.0.0/">here you can find more info about it</a>.</p>
-<h4 id='tool-to-help' class='heading'>Tool to help:</h4>
+
+<p>NOTE: The conventional commits structure is mandatory, as the new versions of the library are released using the commits as a source of information.</p>
+<h3 id='tool-to-help' class='heading'>Tool to help:</h3>
 
 <p>You can add an CLI to help you writing your commits. <a href="https://github.com/commitizen/cz-cli">Commitizen</a> is the tool we use :)</p>
 
@@ -114,9 +79,9 @@ git cz
 <p>After documenting your code, you&rsquo;ll also have to update the documentation files. To do that, run:</p>
 <pre class="highlight shell"><code>make create_docs
 </code></pre>
-<h3 id='review-criteria' class='heading'>Review criteria</h3>
+<h2 id='create-a-pr-to-contribute-to-the-project' class='heading'>Create a PR to contribute to the project</h2>
 
-<p>Fine, now you should be asking yourself which criteria will be checked before merging the PR. Here are some of them:</p>
+<p>We will review your PR checking some criteria:</p>
 
 <ul>
 <li>Your code is covered by tests</li>
@@ -129,8 +94,7 @@ git cz
 <li>Your code uses Design System design tokens</li>
 </ul>
 
-<p>Is there something that you think could be different in the lib and you want to let us know?
-Feel free to open an issue and explain your point. We&rsquo;ll be happy to get in touch! :)</p>
+<p>If there&rsquo;s something that we could improve in the library, feel free to open an issue and let us know. We&rsquo;ll be happy to get in touch! :)</p>
 
             </section>
           </section>
@@ -150,6 +114,9 @@ Feel free to open an issue and explain your point. We&rsquo;ll be happy to get i
                 </li>
                 <li class="nav-group-task">
                   <a href="how-to-use-icons.html">How to use icons</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="setup.html">Setup</a>
                 </li>
               </ul>
             </li>
@@ -539,7 +506,7 @@ Feel free to open an issue and explain your point. We&rsquo;ll be happy to get i
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2022-02-04)</p>
+          <p>&copy; 2022 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2022-02-10)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </div>

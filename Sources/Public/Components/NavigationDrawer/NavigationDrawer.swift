@@ -1,9 +1,25 @@
+/// A protocol with the delegate methods for navigation drawer configuration
 public protocol NavigationDrawerDelegate: AnyObject {
+    /// A method to return the number of itens in the Navigation Drawer
     func numberOfItems() -> Int
+    /// A method to return the number of subitens of an item in the Navigation Drawer
+    /// - Parameter item: the index of the item
     func numberOfSubitems(in item: Int) -> Int
+    /// The method that is called when the item is selected
+    /// - Parameter index: the index of the selected item
     func didSelectItem(at index: Int)
+    /// The method that is called when the subitem is selected
+    /// - Parameter index: the index of the subitem
     func didSelectSubitem(at index: NavigationDrawer.IndexMenu)
+    /// The method to configure an item at an index in the Navigation Drawer
+    /// - Parameters:
+    ///   - item: the customized `NavigationDrawerItemCell` for the index
+    ///   - index: the index of the item
     func configureItem(_ item: NavigationDrawerItemCell, at index: Int)
+    /// The method to configure a subitem at an index in the Navigation Drawer
+    /// - Parameters:
+    ///   - subitem: the customized `NavigationDrawerSubitemCell` for the index
+    ///   - index: the index of the subitem
     func configureSubitem(_ subitem: NavigationDrawerSubitemCell, at index: NavigationDrawer.IndexMenu)
 }
 
