@@ -4,7 +4,65 @@ import NatDSIcons
 class NavigationDrawerItemViewController: UIViewController, SampleItem {
     static var name = "Navigation Drawer"
 
-    private let navigationDrawer = NavigationDrawer()
+    private lazy var headerView: UIView = {
+        let header = UIView()
+        header.frame.size.height = 120
+        header.backgroundColor = NatColors.background
+
+        let avatar = NatAvatar(size: .medium, type: .label)
+        avatar.configure(name: "Design System")
+        header.addSubview(avatar)
+        avatar.translatesAutoresizingMaskIntoConstraints = false
+        avatar.leadingAnchor.constraint(equalTo: header.leadingAnchor,
+                                        constant: NatSpacing.small).isActive = true
+        avatar.topAnchor.constraint(equalTo: header.topAnchor,
+                                    constant: NatSpacing.small).isActive = true
+
+        let label = UILabel()
+        label.font = NatFonts.font(ofSize: .heading6, withWeight: .medium)
+        label.text = "Custom header"
+        header.addSubview(label)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.leadingAnchor.constraint(equalTo: header.leadingAnchor,
+                                        constant: NatSpacing.small).isActive = true
+        label.topAnchor.constraint(equalTo: avatar.bottomAnchor,
+                                    constant: NatSpacing.small).isActive = true
+
+        let divider = Divider()
+        header.addSubview(divider)
+        divider.translatesAutoresizingMaskIntoConstraints = false
+        divider.leadingAnchor.constraint(equalTo: header.leadingAnchor).isActive = true
+        divider.trailingAnchor.constraint(equalTo: header.trailingAnchor).isActive = true
+        divider.topAnchor.constraint(equalTo: label.bottomAnchor,
+                                     constant: NatSpacing.small).isActive = true
+
+        return header
+    }()
+
+    private lazy var footerView: UIView = {
+        let footer = UIView()
+        footer.frame.size.height = 100
+        footer.backgroundColor = NatColors.background
+
+        let logo = NatLogo(size: .large)
+        footer.addSubview(logo)
+        logo.translatesAutoresizingMaskIntoConstraints = false
+        logo.centerYAnchor.constraint(equalTo: footer.centerYAnchor,
+                                      constant: -NatSpacing.small).isActive = true
+        logo.centerXAnchor.constraint(equalTo: footer.centerXAnchor).isActive = true
+
+        let label = UILabel()
+        label.font = NatFonts.font(ofSize: .caption, withWeight: .regular)
+        label.text = "Custom footer"
+        footer.addSubview(label)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.centerXAnchor.constraint(equalTo: logo.centerXAnchor).isActive = true
+        label.bottomAnchor.constraint(equalTo: footer.bottomAnchor,
+                                    constant: -NatSpacing.small).isActive = true
+        return footer
+    }()
+
+    private var navigationDrawer = NavigationDrawer()
     private var items: [Item] = []
 
     override func viewDidLoad() {
@@ -15,6 +73,7 @@ class NavigationDrawerItemViewController: UIViewController, SampleItem {
     }
 
     private func setup() {
+        navigationDrawer = NavigationDrawer(headerView: headerView, footerView: footerView)
         addNavigationDrawer()
         navigationDrawer.delegate = self
     }
