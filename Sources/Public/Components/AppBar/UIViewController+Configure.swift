@@ -70,6 +70,7 @@ public extension UIViewController {
     ///             viewController.configure(buttons: barItems)
     ///
     /// - Parameter buttons: an array of UIBarButtonItems
+    @available(*, deprecated, message: "Use configure(appBarActionRight items:) instead")
     func configure(buttons: [UIBarButtonItem]) {
         let itemButtons = setSpacingBetween(buttons: buttons)
         navigationItem.setRightBarButtonItems(itemButtons, animated: true)
