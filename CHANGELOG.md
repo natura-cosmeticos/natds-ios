@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.28.1](https://github.com/natura-cosmeticos/natds-ios/compare/6.28.0...6.28.1) (2022-02-15)
+
+
+### Bug Fixes
+
+* deprecate old buttons config method at app bar top ([23eaa3e](https://github.com/natura-cosmeticos/natds-ios/commit/23eaa3ea970fe088e118484bc495314edf56f8bb))
+
 ## [6.28.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.27.0...6.28.0) (2022-02-07)
 
 
