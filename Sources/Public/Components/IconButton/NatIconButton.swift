@@ -123,7 +123,7 @@ public final class NatIconButton: UIView {
     public override func layoutSubviews() {
         super.layoutSubviews()
 
-        layer.cornerRadius = NatBorderRadius.circle(viewHeight: bounds.height)
+        layer.cornerRadius = self.size.borderRadius
     }
 
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
