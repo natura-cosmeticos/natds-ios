@@ -416,7 +416,7 @@ private extension NavigationDrawerItemCell {
             AssetsPath.iconOutlinedNavigationArrowTop.rawValue : AssetsPath.iconOutlinedNavigationArrowBottom.rawValue
 
         highlightSelectedView.isHidden = state != .selected
-        highlightSelectedView.backgroundColor = hasSubItems ? NatColors.lowEmphasis : NatColors.secondary
+        highlightSelectedView.backgroundColor = hasSubItems ? NatColors.lowEmphasis : NatColors.primary
 
         let shouldShowLowEmphasis = (state == .disabled) || (state == .lowEmphasis)
         contentView.alpha = shouldShowLowEmphasis ? 0.48 : 1.0

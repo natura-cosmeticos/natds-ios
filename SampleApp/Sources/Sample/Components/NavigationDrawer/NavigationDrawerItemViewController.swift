@@ -112,6 +112,7 @@ extension NavigationDrawerItemViewController: NavigationDrawerDelegate {
         item.title = model.label
         item.icon = model.icon
         item.tagText = model.tagText
+        if model.isSelected { item.state = .selected }
         if model.disabled { item.state = .disabled }
         if model.lowEmphasis { item.state = .lowEmphasis }
         if model.rightActionIcon { item.actionRight = .icon(getIcon(.outlinedContentFlower)) }
@@ -138,6 +139,7 @@ private extension NavigationDrawerItemViewController {
     struct ItemFactory {
         static func build() -> [Item] {
             let items: [Item] = [
+                Item(label: "Selected item", isSelected: true),
                 Item(label: "Item with type 'menu item'"),
                 Item(label: "Item with type 'title'",
                      typeTitle: true),
@@ -230,6 +232,7 @@ private extension NavigationDrawerItemViewController {
         let rightActionImage: Bool
         let dropdown: Bool
         let typeTitle: Bool
+        let isSelected: Bool
 
         init(label: String,
              icon: String? = nil,
@@ -244,7 +247,8 @@ private extension NavigationDrawerItemViewController {
              rightActionIcon: Bool = false,
              rightActionImage: Bool = false,
              dropdown: Bool = true,
-             typeTitle: Bool = false) {
+             typeTitle: Bool = false,
+             isSelected: Bool = false) {
             self.label = label
             self.icon = icon
             self.disabled = disabled
@@ -259,6 +263,7 @@ private extension NavigationDrawerItemViewController {
             self.rightActionImage = rightActionImage
             self.dropdown = dropdown
             self.typeTitle = typeTitle
+            self.isSelected = isSelected
         }
     }
 
