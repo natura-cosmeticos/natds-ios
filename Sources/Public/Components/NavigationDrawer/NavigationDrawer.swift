@@ -62,8 +62,13 @@ public class NavigationDrawer: UIView {
     private var isDisabledAtIndexPath = [IndexPath: Bool]()
     private var tableView: UITableView
 
-    public init(tableView: UITableView = UITableView()) {
+    private var headerView: UIView?
+    private var footerView: UIView?
+
+    public init(tableView: UITableView = UITableView(), headerView: UIView? = nil, footerView: UIView? = nil) {
         self.tableView = tableView
+        self.headerView = headerView
+        self.footerView = footerView
         super.init(frame: .zero)
         setup()
     }
@@ -85,6 +90,8 @@ public class NavigationDrawer: UIView {
         tableView.separatorStyle = .none
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.tableFooterView = footerView
+        tableView.tableHeaderView = headerView
 
         addTableView()
     }
@@ -188,5 +195,8 @@ extension NavigationDrawer: UITableViewDelegate {
         } else {
             delegate.didSelectItem(at: indexPath.section)
         }
+
+        let cell = tableView.cellForRow(at: indexPath) as? NavigationDrawerItemCell
+        cell?.addRippleAnimation()
     }
 }

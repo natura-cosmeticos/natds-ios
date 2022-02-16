@@ -4,7 +4,65 @@ import NatDSIcons
 class NavigationDrawerItemViewController: UIViewController, SampleItem {
     static var name = "Navigation Drawer"
 
-    private let navigationDrawer = NavigationDrawer()
+    private lazy var headerView: UIView = {
+        let header = UIView()
+        header.frame.size.height = 120
+        header.backgroundColor = NatColors.background
+
+        let avatar = NatAvatar(size: .medium, type: .label)
+        avatar.configure(name: "Design System")
+        header.addSubview(avatar)
+        avatar.translatesAutoresizingMaskIntoConstraints = false
+        avatar.leadingAnchor.constraint(equalTo: header.leadingAnchor,
+                                        constant: NatSpacing.small).isActive = true
+        avatar.topAnchor.constraint(equalTo: header.topAnchor,
+                                    constant: NatSpacing.small).isActive = true
+
+        let label = UILabel()
+        label.font = NatFonts.font(ofSize: .heading6, withWeight: .medium)
+        label.text = "Custom header"
+        header.addSubview(label)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.leadingAnchor.constraint(equalTo: header.leadingAnchor,
+                                        constant: NatSpacing.small).isActive = true
+        label.topAnchor.constraint(equalTo: avatar.bottomAnchor,
+                                    constant: NatSpacing.small).isActive = true
+
+        let divider = Divider()
+        header.addSubview(divider)
+        divider.translatesAutoresizingMaskIntoConstraints = false
+        divider.leadingAnchor.constraint(equalTo: header.leadingAnchor).isActive = true
+        divider.trailingAnchor.constraint(equalTo: header.trailingAnchor).isActive = true
+        divider.topAnchor.constraint(equalTo: label.bottomAnchor,
+                                     constant: NatSpacing.small).isActive = true
+
+        return header
+    }()
+
+    private lazy var footerView: UIView = {
+        let footer = UIView()
+        footer.frame.size.height = 100
+        footer.backgroundColor = NatColors.background
+
+        let logo = NatLogo(size: .large)
+        footer.addSubview(logo)
+        logo.translatesAutoresizingMaskIntoConstraints = false
+        logo.centerYAnchor.constraint(equalTo: footer.centerYAnchor,
+                                      constant: -NatSpacing.small).isActive = true
+        logo.centerXAnchor.constraint(equalTo: footer.centerXAnchor).isActive = true
+
+        let label = UILabel()
+        label.font = NatFonts.font(ofSize: .caption, withWeight: .regular)
+        label.text = "Custom footer"
+        footer.addSubview(label)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.centerXAnchor.constraint(equalTo: logo.centerXAnchor).isActive = true
+        label.bottomAnchor.constraint(equalTo: footer.bottomAnchor,
+                                    constant: -NatSpacing.small).isActive = true
+        return footer
+    }()
+
+    private var navigationDrawer = NavigationDrawer()
     private var items: [Item] = []
 
     override func viewDidLoad() {
@@ -15,6 +73,7 @@ class NavigationDrawerItemViewController: UIViewController, SampleItem {
     }
 
     private func setup() {
+        navigationDrawer = NavigationDrawer(headerView: headerView, footerView: footerView)
         addNavigationDrawer()
         navigationDrawer.delegate = self
     }
@@ -53,12 +112,16 @@ extension NavigationDrawerItemViewController: NavigationDrawerDelegate {
         item.title = model.label
         item.icon = model.icon
         item.tagText = model.tagText
-        if model.disabled {
-            item.state = .disabled
-        }
-        if model.lowEmphasis {
-            item.state = .lowEmphasis
-        }
+        if model.disabled { item.state = .disabled }
+        if model.lowEmphasis { item.state = .lowEmphasis }
+        if model.rightActionIcon { item.actionRight = .icon(getIcon(.outlinedContentFlower)) }
+        if model.rightActionImage { item.actionRight = .image(UIImage(named: "ImageAreaPlaceholder")) }
+        if model.leftActionImage { item.actionLeft = .image(UIImage(named: "ImageAreaPlaceholder")) }
+        if model.titleRightActionPulse { item.actionTitleRight = .pulse }
+        if model.titleRightActionDot { item.actionTitleRight = .dot }
+        if model.titleRightActionIcon { item.actionTitleRight = .icon(getIcon(.filledActionAdd)) }
+        item.dropdown = model.dropdown
+        if model.typeTitle { item.type = .title }
     }
 
     func configureSubitem(_ subitem: NavigationDrawerSubitemCell, at index: NavigationDrawer.IndexMenu) {
@@ -75,6 +138,26 @@ private extension NavigationDrawerItemViewController {
     struct ItemFactory {
         static func build() -> [Item] {
             let items: [Item] = [
+                Item(label: "Item with type 'menu item'"),
+                Item(label: "Item with type 'title'",
+                     typeTitle: true),
+                Item(label: "Item with right icon",
+                     rightActionIcon: true),
+                Item(label: "Item with right image",
+                     rightActionImage: true),
+                Item(label: "Item with pulse",
+                     titleRightActionPulse: true),
+                Item(label: "Item with dot",
+                     titleRightActionDot: true),
+                Item(label: "Item with left image",
+                     leftActionImage: true),
+                Item(label: "Item with icon next to the title",
+                     titleRightActionIcon: true),
+                Item(label: "Item with subitems and no dropdown",
+                     subitems: [
+                        Subitem(label: "Subitem", disabled: false)
+                     ],
+                     dropdown: false),
                 Item(label: "Item with no subitems",
                      icon: NatDSIcons.getIcon(.outlinedFinanceShoppingcart)),
                 Item(label: "Item with tag",
@@ -87,7 +170,7 @@ private extension NavigationDrawerItemViewController {
                      icon: NatDSIcons.getIcon(.outlinedActionNewrequest),
                      lowEmphasis: true,
                      subitems: [
-                        Subitem(label: "Subitem 2.1", disabled: false)
+                        Subitem(label: "Subitem 2.1", disabled: false, icon: getIcon(.filledActionLove))
                 ]),
                 Item(label: "Item with very, very, very large title and tag",
                      icon: NatDSIcons.getIcon(.outlinedActionRequest),
@@ -139,24 +222,57 @@ private extension NavigationDrawerItemViewController {
         let lowEmphasis: Bool
         let tagText: String?
         let subitems: [Subitem]
+        let titleRightActionIcon: Bool
+        let titleRightActionDot: Bool
+        let titleRightActionPulse: Bool
+        let leftActionImage: Bool
+        let rightActionIcon: Bool
+        let rightActionImage: Bool
+        let dropdown: Bool
+        let typeTitle: Bool
 
         init(label: String,
-             icon: String?,
+             icon: String? = nil,
              disabled: Bool = false,
              lowEmphasis: Bool = false,
              tagText: String? = nil,
-             subitems: [Subitem] = []) {
+             subitems: [Subitem] = [],
+             titleRightActionIcon: Bool = false,
+             titleRightActionDot: Bool = false,
+             titleRightActionPulse: Bool = false,
+             leftActionImage: Bool = false,
+             rightActionIcon: Bool = false,
+             rightActionImage: Bool = false,
+             dropdown: Bool = true,
+             typeTitle: Bool = false) {
             self.label = label
             self.icon = icon
             self.disabled = disabled
             self.lowEmphasis = lowEmphasis
             self.tagText = tagText
             self.subitems = subitems
+            self.titleRightActionIcon = titleRightActionIcon
+            self.titleRightActionDot = titleRightActionDot
+            self.titleRightActionPulse = titleRightActionPulse
+            self.leftActionImage = leftActionImage
+            self.rightActionIcon = rightActionIcon
+            self.rightActionImage = rightActionImage
+            self.dropdown = dropdown
+            self.typeTitle = typeTitle
         }
     }
 
     struct Subitem {
         let label: String
         let disabled: Bool
+        let icon: String?
+
+        init(label: String,
+             disabled: Bool,
+             icon: String? = nil) {
+            self.label = label
+            self.icon = icon
+            self.disabled = disabled
+        }
     }
 }

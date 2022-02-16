@@ -128,6 +128,36 @@ final class NavigationDrawerItemCellTests: XCTestCase {
         assertSnapshot(matching: systemUnderTest, as: .image)
     }
 
+    func test_normalStateWithTitle_hasNormalSnapshot() {
+        systemUnderTest.type = .title
+
+        assertSnapshot(matching: systemUnderTest, as: .image)
+    }
+
+    func test_normalStateWithLeftImage_hasNormalSnapshot() {
+        systemUnderTest.actionLeft = .image(AssetsPath.iconOutlinedProductEmptyBackground.rawValue)
+
+        assertSnapshot(matching: systemUnderTest, as: .image)
+    }
+
+    func test_normalStateWithRightImage_hasNormalSnapshot() {
+        systemUnderTest.actionRight = .image(AssetsPath.iconOutlinedProductEmptyBackground.rawValue)
+
+        assertSnapshot(matching: systemUnderTest, as: .image)
+    }
+
+    func test_setPulse_hasValidSnapshot() {
+        systemUnderTest.actionTitleRight = .pulse
+
+        assertSnapshot(matching: systemUnderTest, as: .image)
+    }
+
+    func test_setDot_hasValidSnapshot() {
+        systemUnderTest.actionTitleRight = .dot
+
+        assertSnapshot(matching: systemUnderTest, as: .image)
+    }
+
     private func createContainerView(for view: UIView) -> UIView {
         let containerView = UIView(frame: view.frame)
         containerView.addSubview(view)

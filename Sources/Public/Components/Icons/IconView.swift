@@ -68,6 +68,12 @@ public class IconView: UIView {
         iconLabel.font = .iconFont(ofSize: fontSize)
     }
 
+    public convenience init(_ icon: String? = nil) {
+        self.init()
+        defer { self.iconText = icon }
+        iconLabel.font = .iconFont()
+    }
+
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -85,6 +91,14 @@ public class IconView: UIView {
     /// - Parameter size: an font with the chosen size
     public func setFontSize(size: UIFont) {
         iconLabel.font = .iconFont(ofSize: size.pointSize)
+    }
+
+    /// Updates the font size, which changes the size of the icon at the view.
+    /// The method receives a CGFloat and uses it as the font's pointSize
+    ///
+    /// - Parameter size: a CGFloat that corresponds to the chosen size
+    public func setFontSize(size: CGFloat) {
+        iconLabel.font = .iconFont(ofSize: size)
     }
 
     private func setup() {
