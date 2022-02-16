@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.29.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.28.1...6.29.0) (2022-02-16)
+
+
+### Features
+
+* add action right attribute to navigation drawer ([7a4260c](https://github.com/natura-cosmeticos/natds-ios/commit/7a4260cd8ea6e5939c1e793f5a7c423f5246c1fe))
+* add header and footer to navigation drawer ([c80af48](https://github.com/natura-cosmeticos/natds-ios/commit/c80af48a79f2cfe03bf9b5d5189a2d14004277e8))
+* add icon and badge to title at navigation drawer ([920dd19](https://github.com/natura-cosmeticos/natds-ios/commit/920dd19c285a0cd339a4ed7b47d4d60fba87924e))
+* add ripple and selected states to navigation drawer ([4847916](https://github.com/natura-cosmeticos/natds-ios/commit/484791656f181bd1ebfab0136671bb60cbb0fe20))
+* add text type for menu item cells at navigation drawer ([baf3857](https://github.com/natura-cosmeticos/natds-ios/commit/baf385726ba5cb66cf2925da440241dda770d24e))
+
+
+### Bug Fixes
+
+* fix conflicting files ([14919dc](https://github.com/natura-cosmeticos/natds-ios/commit/14919dcbb88f1d6430af15497e4fcf15739ebb47))
+
 ### [6.28.1](https://github.com/natura-cosmeticos/natds-ios/compare/6.28.0...6.28.1) (2022-02-15)
 
 
