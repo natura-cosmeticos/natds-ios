@@ -29,5 +29,13 @@ extension NatIconButton {
             case .medium: return getTokenFromTheme(\.sizeSemiX)
             }
         }
+
+        var borderRadius: CGFloat {
+            switch self {
+            case .semi: return getComponentAttributeFromTheme(\.iconButtonSemiBorderRadius)
+            case .semiX: return getComponentAttributeFromTheme(\.iconButtonSemiXBorderRadius)
+            case .medium: return getComponentAttributeFromTheme(\.iconButtonMediumBorderRadius)
+            }
+        }
     }
 }
