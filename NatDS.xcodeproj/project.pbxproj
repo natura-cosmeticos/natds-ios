@@ -11,7 +11,6 @@
 		00677CE3627142815E32CE84F60D8910 /* UIFont+GetWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F3D70C29CCB183081E1863D791C9D4 /* UIFont+GetWeight.swift */; };
 		06B6AF457FA3A8ADB837E7A2BBE53D91 /* NavigationDrawerItemCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB85B5288F76E27BCDF2A11BC05D3238 /* NavigationDrawerItemCellTests.swift */; };
 		0AF826DF57321D84C4B2EDDFAC49F377 /* AssetsHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DAA7E13F0D9435753C08228E164289 /* AssetsHelperTests.swift */; };
-		0C4CBA15016075A8E8A7CA6FC6054383 /* IllustrationIconsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D67F65D9E72160E498FBA256C62159F /* IllustrationIconsTests.swift */; };
 		0E7C160524C5D3C3002FF46F /* UIViewController+Configure+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7C160424C5D3C3002FF46F /* UIViewController+Configure+Spec.swift */; };
 		0E7C160724C5D6DC002FF46F /* UIBarButtonItem+Icon+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7C160624C5D6DC002FF46F /* UIBarButtonItem+Icon+Spec.swift */; };
 		0E7C160924C5E614002FF46F /* IconViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7C160824C5E614002FF46F /* IconViewSpec.swift */; };
@@ -61,7 +60,6 @@
 		525A8C62B68D8C9B0AC882318792D04C /* Pulsable+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC00F737F0234FCBD14533100E96A39E /* Pulsable+Spec.swift */; };
 		55A2D6D6BAD3F2F0B352CA80FC656452 /* UICollectionView+ReusableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B6CEC817D03194414588BB22C1833A /* UICollectionView+ReusableTests.swift */; };
 		56B51E3D524A0D2900D7DD3E6CC761E7 /* UIFont+Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA9C4721134BD5277D76AEDED7A01DB /* UIFont+Icon.swift */; };
-		5737265E1EA6FD9BF1004F1CC1333F29 /* IllustrationIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4969844F4A007C92B7C67A4FA020C85 /* IllustrationIcons.swift */; };
 		5C0716F242EFC1AF6A61CBE257DA7CFE /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674EEA4A2112FC3EF3AE40AA3776A35A /* TextField.swift */; };
 		5C3B779F94FC59E1F2329996E3E55DF5 /* ElevationAttributes+Equitable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58907D6C652303C4D5FC5FFE6E8F721A /* ElevationAttributes+Equitable.swift */; };
 		5C5DF89CCAB72EC25E1A1BC43D450CB0 /* TabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99F543F7F6AC44B9A4E1341942EE0E0 /* TabTests.swift */; };
@@ -510,7 +508,6 @@
 		573BBF1E50E0B49397C339D19D5E0D0B /* ButtonStyle+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonStyle+Spec.swift"; sourceTree = "<group>"; };
 		58907D6C652303C4D5FC5FFE6E8F721A /* ElevationAttributes+Equitable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ElevationAttributes+Equitable.swift"; sourceTree = "<group>"; };
 		5AF8919785F0CA6D3AB0AD57F759ED73 /* PulseLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseLayer.swift; sourceTree = "<group>"; };
-		5D67F65D9E72160E498FBA256C62159F /* IllustrationIconsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllustrationIconsTests.swift; sourceTree = "<group>"; };
 		5F485CDE6E86A020B1549C882DC64B38 /* NatButton+Specs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+Specs.swift"; sourceTree = "<group>"; };
 		62CDD513F5E78AFAC3E17DD22AB3C6E1 /* FontIconStyleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontIconStyleTests.swift; sourceTree = "<group>"; };
 		674EEA4A2112FC3EF3AE40AA3776A35A /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
@@ -843,7 +840,6 @@
 		CF10A178B1E50604C97B543CD204939B /* NatButton+EdgeInsets+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+EdgeInsets+Spec.swift"; sourceTree = "<group>"; };
 		D1A1DDA4A78343DB58AF747FF9DC2B66 /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
 		D331FCE6B4B326453609B50D92482230 /* NatButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+Style.swift"; sourceTree = "<group>"; };
-		D4969844F4A007C92B7C67A4FA020C85 /* IllustrationIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllustrationIcons.swift; sourceTree = "<group>"; };
 		D521C44E858B4345479E0B193CE2BB9C /* TextFieldDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDelegateMock.swift; sourceTree = "<group>"; };
 		D557EC044D85EC418D42A00C93EEC23D /* NatDialogController+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogController+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		D7316FE65E814E2D5CA475475CD8D4EA /* ViewAnimatingWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewAnimatingWrapper.swift; sourceTree = "<group>"; };
@@ -2667,7 +2663,6 @@
 		BEE13D19F1A22BF171DC1BAC64B38FA7 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
-				5D67F65D9E72160E498FBA256C62159F /* IllustrationIconsTests.swift */,
 				0E7C160824C5E614002FF46F /* IconViewSpec.swift */,
 			);
 			path = Icons;
@@ -2848,7 +2843,6 @@
 			isa = PBXGroup;
 			children = (
 				D1A1DDA4A78343DB58AF747FF9DC2B66 /* IconView.swift */,
-				D4969844F4A007C92B7C67A4FA020C85 /* IllustrationIcons.swift */,
 				841FEAB924C5C1A100C50AFF /* NatLogoImages.swift */,
 			);
 			path = Icons;
@@ -3161,7 +3155,6 @@
 				79E7FA592537456500A831BC /* AesopLightTokens+Size+Spec.swift in Sources */,
 				79FC598125C845E4001CCB56 /* Divider+Styles+Spec.swift in Sources */,
 				797E612F25531C6B002A59E0 /* NaturaDarkComponents+Logo+Spec.swift in Sources */,
-				0C4CBA15016075A8E8A7CA6FC6054383 /* IllustrationIconsTests.swift in Sources */,
 				2D7E10D869A68FB9A120F4707A861DF8 /* NSMutableAttributedString+BuilderTests.swift in Sources */,
 				5E34A8BE616690B54E3DCDDF5395963E /* NatBorderRadius+Spec.swift in Sources */,
 				B7CCF87E56EA792B3471AD69AF68B23F /* NatButton+EdgeInsets+Spec.swift in Sources */,
@@ -3395,7 +3388,6 @@
 				7D86C19F26654CFB00FC4C53 /* NatLogo+Model.swift in Sources */,
 				F72BEF338B46182BC440C92CCF3D02B0 /* IconView.swift in Sources */,
 				847C829424E36AD1001CE116 /* TheBodyShopDarkTheme.swift in Sources */,
-				5737265E1EA6FD9BF1004F1CC1333F29 /* IllustrationIcons.swift in Sources */,
 				1908219397D007DC35BC0F99D5DEDE80 /* NSMutableAttributedString+Builder.swift in Sources */,
 				CF14752D6F385AD399A59F275DEB1ED7 /* NatBorderRadius.swift in Sources */,
 				F6B6FF5891E1F871748A9D598EA14AFE /* NatButton+EdgeInsets.swift in Sources */,
