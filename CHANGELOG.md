@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.30.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.29.1...6.30.0) (2022-02-17)
+
+
+### Features
+
+* update icon button border radius token ([1b6ad60](https://github.com/natura-cosmeticos/natds-ios/commit/1b6ad60c650d5734e6414623fd276415df910406))
+
+
+### Bug Fixes
+
+* fix selected state color for navigation drawer cell ([167d51a](https://github.com/natura-cosmeticos/natds-ios/commit/167d51a5da30d76dcbeac8e0300b96d23d40a95b))
+
 ### [6.29.1](https://github.com/natura-cosmeticos/natds-ios/compare/6.29.0...6.29.1) (2022-02-17)
 
 
