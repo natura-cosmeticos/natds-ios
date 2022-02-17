@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.29.1](https://github.com/natura-cosmeticos/natds-ios/compare/6.29.0...6.29.1) (2022-02-17)
+
+
+### Bug Fixes
+
+* remove unused illustration icon ([4d83b82](https://github.com/natura-cosmeticos/natds-ios/commit/4d83b82403fc17bba45870ddd22abecdd2ae0c4c))
+
 ## [6.29.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.28.1...6.29.0) (2022-02-16)
 
 
