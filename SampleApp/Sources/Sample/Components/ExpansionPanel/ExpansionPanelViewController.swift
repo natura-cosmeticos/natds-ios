@@ -1,6 +1,7 @@
 import NatDS
 
 class ExpansionPanelViewController: UIViewController, SampleItem {
+    var panelHeightConstraint: NSLayoutConstraint?
 
     static var name: String = "Expansion Panel"
     var tapsCounter: Int = 0
@@ -8,14 +9,21 @@ class ExpansionPanelViewController: UIViewController, SampleItem {
 
     private lazy var panel: ExpansionPanel = {
         let expansionPanel = ExpansionPanel()
-        expansionPanel.setSubtitle("Subtitle")
+        expansionPanel.setSubtitle("Panel with custom animation")
         expansionPanel.translatesAutoresizingMaskIntoConstraints = false
         return expansionPanel
     }()
 
     private lazy var secondPanel: ExpansionPanel = {
         let expansionPanel = ExpansionPanel()
-        expansionPanel.setSubtitle("Subtitle 2")
+        expansionPanel.setSubtitle("Panel with default animation")
+        expansionPanel.translatesAutoresizingMaskIntoConstraints = false
+        return expansionPanel
+    }()
+
+    private lazy var thirdPanel: ExpansionPanel = {
+        let expansionPanel = ExpansionPanel()
+        expansionPanel.setSubtitle("Panel with handler for taps")
         expansionPanel.translatesAutoresizingMaskIntoConstraints = false
         return expansionPanel
     }()
@@ -31,9 +39,19 @@ class ExpansionPanelViewController: UIViewController, SampleItem {
     }()
     // swiftlint:enable line_length
 
-    private lazy var secondeDetail: NatImage = {
-        let image = NatImage()
-        return image
+    private lazy var secondDetail: NatLogo = {
+        let logo = NatLogo()
+        logo.configure(model: .modelB)
+        return logo
+    }()
+
+    private lazy var thirdDetail: UILabel = {
+        let label = UILabel()
+        label.text = "Simple text inside the component."
+        label.numberOfLines = 0
+        label.textColor = NatColors.onSurface
+        label.font = NatFonts.font(ofSize: .body1, withWeight: .regular)
+        return label
     }()
 
     override func viewDidLoad() {
@@ -47,28 +65,53 @@ class ExpansionPanelViewController: UIViewController, SampleItem {
         view.backgroundColor = NatColors.background
         view.addSubview(panel)
         view.addSubview(secondPanel)
-        panel.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(thirdPanel)
+//        panel.translatesAutoresizingMaskIntoConstraints = false
 
         let safeArea = view.safeAreaLayoutGuide
         let horizontalMargin = ExpansionPanel.Margin.horizontalMargin
+        panelHeightConstraint = panel.heightAnchor.constraint(equalToConstant: 56)
+        panelHeightConstraint?.isActive = true
+
         NSLayoutConstraint.activate([
             panel.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: NatSpacing.tiny),
             panel.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: horizontalMargin),
             panel.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -horizontalMargin),
             secondPanel.topAnchor.constraint(equalTo: panel.bottomAnchor, constant: NatSpacing.tiny),
             secondPanel.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: horizontalMargin),
-            secondPanel.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -horizontalMargin)
+            secondPanel.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -horizontalMargin),
+            thirdPanel.topAnchor.constraint(equalTo: secondPanel.bottomAnchor, constant: NatSpacing.tiny),
+            thirdPanel.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: horizontalMargin),
+            thirdPanel.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -horizontalMargin)
         ])
     }
 
     private func setupPanels() {
+        // detail views
         panel.setDetailView(detail)
-        secondPanel.setDetailView(secondeDetail)
-        panel.setHandlerForTap(withAction: .allActions) {
+        secondPanel.setDetailView(secondDetail)
+        thirdPanel.setDetailView(thirdDetail)
+
+        // custom animations
+        panel.setCustomAnimationForExpand {
+            UIView.animate(withDuration: 1) {
+                self.panelHeightConstraint?.constant = 250
+                self.view.layoutIfNeeded()
+            }
+        }
+        panel.setCustomAnimationForCollapse {
+            UIView.animate(withDuration: 1) {
+                self.panelHeightConstraint?.constant = 56
+                self.view.layoutIfNeeded()
+            }
+        }
+
+        // handler for taps
+        thirdPanel.setHandlerForTap(withAction: .allActions) {
             self.tapsCounter += 1
             print("This component was tapped \(self.tapsCounter) times")
         }
-        panel.setHandlerForTap(withAction: .expand) {
+        thirdPanel.setHandlerForTap(withAction: .expand) {
             self.expandCounter += 1
             print("This component was expanded \(self.expandCounter) times")
         }

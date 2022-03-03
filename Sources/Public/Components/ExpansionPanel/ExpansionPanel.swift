@@ -36,6 +36,9 @@ public class ExpansionPanel: UIView {
     private var collapseHandler: ExpansionHandler?
     private var tapHandler: ExpansionHandler?
 
+    private var customExpandAnimation: ActionHandler?
+    private var customCollapseAnimation: ActionHandler?
+
     private lazy var subtitleLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
@@ -164,6 +167,14 @@ public class ExpansionPanel: UIView {
         self.inactiveBorderColor = inactive
     }
 
+    public func setCustomAnimationForExpand(animation: @escaping ActionHandler) {
+        self.customExpandAnimation = animation
+    }
+
+    public func setCustomAnimationForCollapse(animation: @escaping ActionHandler) {
+        self.customCollapseAnimation = animation
+    }
+
     // MARK: - User interactions
 
     @objc private func didTapUpDownButton() {
@@ -263,13 +274,17 @@ public class ExpansionPanel: UIView {
 // MARK: - Expand
 
 extension ExpansionPanel {
-    private func expand() {
+    public func expand() {
         addDetailView()
         let previousHeight = frame.size.height
         layoutIfNeeded()
         rotateButtonUp()
-        animateIncreasingHeight(from: previousHeight)
-        animateIncreasingDetailHeight()
+        if customExpandAnimation != nil {
+            customExpandAnimation?()
+        } else {
+            animateIncreasingHeight(from: previousHeight)
+            animateIncreasingDetailHeight()
+        }
         animateChangingColorToActive()
         executeHandlerForExpand()
     }
@@ -292,11 +307,17 @@ extension ExpansionPanel {
 // MARK: - Collapse
 
 extension ExpansionPanel {
-    private func collapse() {
+    public func collapse() {
+        let expandedHeight = frame.size.height
         removeDetailView()
         layoutIfNeeded()
         rotateButtonDown(animated: false)
         animateChangingColorToInactive()
+        if customCollapseAnimation != nil {
+            customCollapseAnimation?()
+        } else {
+            animateDecreasingHeight(from: expandedHeight)
+        }
         executeHandlerForCollapse()
     }
 
