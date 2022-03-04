@@ -37,23 +37,27 @@ final class ShortcutItemViewController: UIViewController, SampleItem {
         view.addSubview(containedPrimaryBadgeStackView)
         view.addSubview(outlinedPrimaryBadgeStackView)
 
-        let containedPrimary = createShortcuts(style: .containedPrimary,
+        let containedPrimary = createShortcuts(style: .contained,
+                                               color: .primary,
                                                text: "Contained Primary",
                                                shouldBreakLine: true)
         containedPrimary.forEach { containedPrimaryStackView.addArrangedSubview($0) }
 
-        let outlinedPrimary = createShortcuts(style: .outlinedPrimary,
+        let outlinedPrimary = createShortcuts(style: .outlined,
+                                              color: .primary,
                                               text: "Outlined Primary",
                                               shouldBreakLine: true)
         outlinedPrimary.forEach { outlinedPrimaryStackView.addArrangedSubview($0) }
 
-        let containedDefaultBadge = createShortcuts(style: .containedDefault,
+        let containedDefaultBadge = createShortcuts(style: .contained,
+                                                    color: .neutral,
                                                     text: "Contained Default",
                                                     shouldShowBadge: true,
                                                     shouldBreakLine: true)
         containedDefaultBadge.forEach { containedPrimaryBadgeStackView.addArrangedSubview($0) }
 
-        let outlinedDefaultBadge = createShortcuts(style: .outlinedDefault,
+        let outlinedDefaultBadge = createShortcuts(style: .outlined,
+                                                   color: .neutral,
                                                    text: "Outlined Default",
                                                    shouldShowBadge: true,
                                                    shouldBreakLine: true)
@@ -63,11 +67,12 @@ final class ShortcutItemViewController: UIViewController, SampleItem {
     }
 
     private func createShortcuts(style: NatShortcut.Style,
+                                 color: NatShortcut.Color,
                                  text: String,
                                  shouldShowBadge: Bool = false,
                                  shouldBreakLine: Bool = false) -> [NatShortcut] {
         (0...3).map { value in
-            let shortcut = NatShortcut(style: style, text: text)
+            let shortcut = NatShortcut(style: style, color: color, text: text)
 
             if shouldShowBadge {
                 let badgeValues = [1, 25, 99, 100]

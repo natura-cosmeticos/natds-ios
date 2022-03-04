@@ -20,6 +20,29 @@
 
 public final class NatShortcut: UIView {
 
+    public enum State {
+        case enabled
+        case disabled
+    }
+
+    public var style: Style {
+        didSet {
+            style.applyStyle(self)
+        }
+    }
+
+    public var color: Color {
+        didSet {
+            style.applyStyle(self)
+        }
+    }
+
+    public var state: State = .enabled {
+        didSet {
+            style.applyStyle(self)
+        }
+    }
+
     // MARK: - Private properties
 
     private lazy var shortcutView: ShortcutView = {
@@ -72,22 +95,22 @@ public final class NatShortcut: UIView {
         }
     }
 
-    private let style: Style
     private let notificationCenter: NotificationCenterObservable
     private var action: (() -> Void)?
 
     // MARK: - Inits
 
-    public convenience init(style: Style = .containedPrimary) {
-        self.init(style: style, text: nil, icon: nil, notificationCenter: NotificationCenter.default)
+    public convenience init(style: Style = .contained, color: Color = .primary) {
+        self.init(style: style, color: color, text: nil, icon: nil, notificationCenter: NotificationCenter.default)
     }
 
-    public convenience init(style: Style = .containedPrimary, text: String? = nil, icon: String? = nil) {
-        self.init(style: style, text: text, icon: icon, notificationCenter: NotificationCenter.default)
+    public convenience init(style: Style = .contained, color: Color = .primary, text: String? = nil, icon: String? = nil) {
+        self.init(style: style, color: color, text: text, icon: icon, notificationCenter: NotificationCenter.default)
     }
 
-    init(style: Style, text: String?, icon: String?, notificationCenter: NotificationCenterObservable) {
+    init(style: Style, color: Color, text: String?, icon: String?, notificationCenter: NotificationCenterObservable) {
         self.style = style
+        self.color = color
         self.text = text
         self.icon = icon
         self.notificationCenter = notificationCenter
@@ -114,13 +137,15 @@ public final class NatShortcut: UIView {
     @objc func tapHandler(_ sender: UITapGestureRecognizer) {
         action?()
 
-        addPulseLayerAnimated(at: shortcutView.centerBounds, in: shortcutView.layer, removeAfterAnimation: true)
+        addPulseLayerAnimated(at: shortcutView.centerBounds,
+                              in: shortcutView.layer, removeAfterAnimation: true)
     }
 
     @objc func longPressHandler(_ sender: UILongPressGestureRecognizer) {
         switch sender.state {
         case .began:
-            addPulseLayerAnimated(at: shortcutView.centerBounds, in: shortcutView.layer, removeAfterAnimation: true)
+            addPulseLayerAnimated(at: shortcutView.centerBounds,
+                                  in: shortcutView.layer, removeAfterAnimation: true)
         case .ended:
             removePulseLayer(layer: shortcutView.layer)
         default:
