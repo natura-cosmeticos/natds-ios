@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.31.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.30.0...6.31.0) (2022-03-07)
+
+
+### Features
+
+* adds custom animation configuration to expansion panel ([b9cfe25](https://github.com/natura-cosmeticos/natds-ios/commit/b9cfe258aac2eebd365c92ebf5ea7e3d46e2cde0))
+
 ## [6.30.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.29.1...6.30.0) (2022-02-17)
 
 
