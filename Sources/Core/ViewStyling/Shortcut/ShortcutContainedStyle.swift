@@ -1,14 +1,16 @@
 enum ShortcutContainedStyle {
     static func apply(on shortcut: NatShortcut) {
-        let circleColor = shortcut.state == .enabled ?
-            shortcut.color.enabledContainedBackgroundColor : shortcut.color.disabledContainedBackgroundColor
-        let iconColor = shortcut.state == .enabled ?
-            shortcut.color.enabledIconColor : shortcut.color.disabledIconColor
-
-        shortcut.configure(circleColor: circleColor)
-        shortcut.configure(iconColor: iconColor)
-
+        let backgroundColor = shortcut.color.containedBackgroundColor(state: shortcut.state)
+        let iconColor = shortcut.color.containedIconColor(state: shortcut.state)
+        let borderColor = shortcut.color.containedBorderColor(state: shortcut.state)
+        let labelColor = shortcut.color.containedLabelColor(state: shortcut.state)
         let elevation = NatElevation.ElevationAttributes.tiny
-        ViewStyle.applyElevation(on: shortcut, with: elevation)
+
+        shortcut.configure(circleColor: backgroundColor)
+        shortcut.configure(iconColor: iconColor)
+        shortcut.configure(labelColor: labelColor)
+        shortcut.configure(circleBorderWidth: 0)
+        shortcut.configure(circleBorderColor: borderColor.cgColor)
+        shortcut.configure(elevation: elevation)
     }
 }

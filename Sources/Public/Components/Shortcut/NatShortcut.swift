@@ -135,6 +135,8 @@ public final class NatShortcut: UIView {
     // MARK: - User interactions
 
     @objc func tapHandler(_ sender: UITapGestureRecognizer) {
+        guard self.state == .enabled else { return }
+
         action?()
 
         addPulseLayerAnimated(at: shortcutView.centerBounds,
@@ -142,6 +144,8 @@ public final class NatShortcut: UIView {
     }
 
     @objc func longPressHandler(_ sender: UILongPressGestureRecognizer) {
+        guard self.state == .enabled else { return }
+
         switch sender.state {
         case .began:
             addPulseLayerAnimated(at: shortcutView.centerBounds,
@@ -157,6 +161,12 @@ public final class NatShortcut: UIView {
 // MARK: - Public methods
 
 extension NatShortcut {
+
+    // TODO: documentar
+    public func configure(state: State) {
+        self.state = state
+    }
+
     /// Sets an icon for the shortcut view
     ///
     /// - Parameter icon: An icon from NatDSIcons.
@@ -230,6 +240,14 @@ extension NatShortcut {
 
     func configure(iconColor color: UIColor) {
         shortcutView.configure(iconColor: color)
+    }
+
+    func configure(labelColor color: UIColor) {
+        self.label.textColor = color
+    }
+
+    func configure(elevation: NatElevation.ElevationAttributes) {
+        ViewStyle.applyElevation(on: shortcutView, with: elevation)
     }
 }
 

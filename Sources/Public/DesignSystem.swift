@@ -1,3 +1,4 @@
+// swiftlint:disable line_length
 /**
  DesignSystem is a class entry point of configurations for this framework.
  Usually, this configuration is in a global point after initialization, as in `AppDelegate`'s `didFinishLaunchingWithOptions` method.
@@ -24,6 +25,7 @@
 
             DesignSystem().configure(with: AvailableTheme) 
 */
+// swiftlint:enable line_length
 
 public final class DesignSystem {
 

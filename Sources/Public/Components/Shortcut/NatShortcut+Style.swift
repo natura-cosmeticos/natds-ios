@@ -1,3 +1,4 @@
+// swiftlint:disable line_length
 extension NatShortcut {
     /**
      Style represents styles values for the NatShortcut component.
@@ -10,63 +11,87 @@ extension NatShortcut {
         case primary
         case neutral
 
-        var enabledContainedBackgroundColor: UIColor {
+        // MARK: Outlined attributes
+
+        func outlinedBackgroundColor(state: NatShortcut.State) -> UIColor {
             switch self {
             case .primary:
-                return getUIColorFromTokens(\.colorPrimary)
-            default:
-                return getUIColorFromTokens(\.colorSurface)
+                return state == .enabled ? getUIColorFromComponentAttributes(\.shortcutOutlinedColorEnablePrimaryBackground) :
+                    getUIColorFromComponentAttributes(\.shortcutOutlinedColorDisablePrimaryBackground)
+            case .neutral:
+                return state == .enabled ? getUIColorFromComponentAttributes(\.shortcutOutlinedColorEnableNeutralBackground) :
+                    getUIColorFromComponentAttributes(\.shortcutOutlinedColorDisableNeutralBackground)
             }
         }
 
-        var disabledContainedBackgroundColor: UIColor {
-            return getUIColorFromTokens(\.colorLowEmphasis)
-        }
-
-        var enabledOutlinedBackgroundColor: UIColor {
-            return UIColor.clear
-        }
-
-        var disabledOutlinedBackgroundColor: UIColor {
-            return getUIColorFromTokens(\.colorSurface)
-        }
-
-        var enabledOutlinedBorderColor: UIColor {
+        func outlinedBorderColor(state: NatShortcut.State) -> UIColor {
             switch self {
             case .primary:
-                return getUIColorFromTokens(\.colorPrimary)
-            default:
-                return getUIColorFromTokens(\.colorLowEmphasis)
+                return state == .enabled ? getUIColorFromComponentAttributes(\.shortcutOutlinedColorEnablePrimaryBorder) :
+                    getUIColorFromComponentAttributes(\.shortcutOutlinedColorDisablePrimaryBorder)
+            case .neutral:
+                return state == .enabled ? getUIColorFromComponentAttributes(\.shortcutOutlinedColorEnableNeutralBorder) :
+                    getUIColorFromComponentAttributes(\.shortcutOutlinedColorDisableNeutralBorder)
             }
         }
 
-        var disabledOutlinedBorderColor: UIColor {
-            return getUIColorFromTokens(\.colorLowEmphasis)
-        }
-
-        var enabledIconColor: UIColor {
-            return getUIColorFromTokens(\.colorHighEmphasis)
-        }
-
-        var disabledIconColor: UIColor {
+        func outlinedIconColor(state: NatShortcut.State) -> UIColor {
             switch self {
             case .primary:
-                return getUIColorFromTokens(\.colorMediumEmphasis)
-            default:
-                return getUIColorFromTokens(\.colorLowEmphasis)
+                return state == .enabled ? getUIColorFromTokens(\.colorHighEmphasis) : getUIColorFromTokens(\.colorMediumEmphasis)
+            case .neutral:
+                return state == .enabled ? getUIColorFromTokens(\.colorHighEmphasis) : getUIColorFromTokens(\.colorLowEmphasis)
             }
         }
 
-        var enabledLabelColor: UIColor {
-            return getUIColorFromTokens(\.colorHighEmphasis)
-        }
-
-        var disabledLabelColor: UIColor {
+        func outlinedLabelColor(state: NatShortcut.State) -> UIColor {
             switch self {
             case .primary:
-                return getUIColorFromTokens(\.colorMediumEmphasis)
-            default:
-                return getUIColorFromTokens(\.colorLowEmphasis)
+                return state == .enabled ? getUIColorFromComponentAttributes(\.shortcutOutlinedColorEnablePrimaryLabel) : getUIColorFromComponentAttributes(\.shortcutOutlinedColorDisablePrimaryLabel)
+            case .neutral:
+                return state == .enabled ? getUIColorFromComponentAttributes(\.shortcutOutlinedColorEnableNeutralLabel) : getUIColorFromComponentAttributes(\.shortcutOutlinedColorDisableNeutralLabel)
+            }
+        }
+
+        // MARK: Contained attributes
+
+        func containedBackgroundColor(state: NatShortcut.State) -> UIColor {
+            switch self {
+            case .primary:
+                return state == .enabled ? getUIColorFromComponentAttributes(\.shortcutContainedColorEnablePrimaryBackground) :
+                    getUIColorFromComponentAttributes(\.shortcutContainedColorDisablePrimaryBackground)
+            case .neutral:
+                return state == .enabled ? getUIColorFromComponentAttributes(\.shortcutContainedColorEnableNeutralBackground) :
+                    getUIColorFromComponentAttributes(\.shortcutContainedColorDisableNeutralBackground)
+            }
+        }
+
+        func containedBorderColor(state: NatShortcut.State) -> UIColor {
+            switch self {
+            case .primary:
+                return state == .enabled ? getUIColorFromComponentAttributes(\.shortcutContainedColorEnablePrimaryBorder) :
+                    getUIColorFromComponentAttributes(\.shortcutContainedColorDisablePrimaryBorder)
+            case .neutral:
+                return state == .enabled ? getUIColorFromComponentAttributes(\.shortcutContainedColorEnableNeutralBorder) :
+                    getUIColorFromComponentAttributes(\.shortcutContainedColorDisableNeutralBorder)
+            }
+        }
+
+        func containedIconColor(state: NatShortcut.State) -> UIColor {
+            switch self {
+            case .primary:
+                return state == .enabled ? getUIColorFromTokens(\.colorHighEmphasis) : getUIColorFromTokens(\.colorMediumEmphasis)
+            case .neutral:
+                return state == .enabled ? getUIColorFromTokens(\.colorHighEmphasis) : getUIColorFromTokens(\.colorLowEmphasis)
+            }
+        }
+
+        func containedLabelColor(state: NatShortcut.State) -> UIColor {
+            switch self {
+            case .primary:
+                return state == .enabled ? getUIColorFromComponentAttributes(\.shortcutContainedColorEnablePrimaryLabel) : getUIColorFromComponentAttributes(\.shortcutContainedColorDisablePrimaryLabel)
+            case .neutral:
+                return state == .enabled ? getUIColorFromComponentAttributes(\.shortcutContainedColorEnableNeutralLabel) : getUIColorFromComponentAttributes(\.shortcutContainedColorDisableNeutralLabel)
             }
         }
     }
@@ -82,7 +107,7 @@ extension NatShortcut.Style {
     }
 }
 
-//extension NatShortcut.Style {
+// extension NatShortcut.Style {
 //    @available(*, deprecated, message: "Use a combination of Color and Style")
 //    public static var containedPrimary: NatShortcut.Style {
 //        .init(
@@ -110,4 +135,4 @@ extension NatShortcut.Style {
 //            applyStyle: ShortcutOutlinedStyle.applyDefaultStyle
 //        )
 //    }
-//}
+// }
