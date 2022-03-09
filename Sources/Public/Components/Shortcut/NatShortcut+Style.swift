@@ -107,32 +107,27 @@ extension NatShortcut.Style {
     }
 }
 
-// extension NatShortcut.Style {
-//    @available(*, deprecated, message: "Use a combination of Color and Style")
-//    public static var containedPrimary: NatShortcut.Style {
-//        .init(
-//            applyStyle: ShortcutContainedStyle.applyPrimaryStyle
-//        )
-//    }
-//
-//    @available(*, deprecated, message: "Use a combination of Color and Style")
-//    public static var containedDefault: NatShortcut.Style {
-//        .init(
-//            applyStyle: ShortcutContainedStyle.applyDefaultStyle
-//        )
-//    }
-//
-//    @available(*, deprecated, message: "Use a combination of Color and Style")
-//    public static var outlinedPrimary: NatShortcut.Style {
-//        .init(
-//            applyStyle: ShortcutOutlinedStyle.applyPrimaryStyle
-//        )
-//    }
-//
-//    @available(*, deprecated, message: "Use a combination of Color and Style")
-//    public static var outlinedDefault: NatShortcut.Style {
-//        .init(
-//            applyStyle: ShortcutOutlinedStyle.applyDefaultStyle
-//        )
-//    }
-// }
+ extension NatShortcut.Style {
+    @available(*, deprecated, message: "Use contained style and primary color")
+    public static var containedPrimary: NatShortcut.Style {
+        .init(applyStyle: ShortcutContainedStyle.applyPrimaryStyle)
+    }
+
+    @available(*, deprecated, message: "Use contained style and neutral color")
+    public static var containedDefault: NatShortcut.Style {
+        .init(
+            applyStyle: ShortcutContainedStyle.applyDefaultStyle)
+    }
+
+    @available(*, deprecated, message: "Use outlined style and primary color")
+    public static var outlinedPrimary: NatShortcut.Style {
+        .init(
+            applyStyle: ShortcutOutlinedStyle.applyPrimaryStyle)
+    }
+
+    @available(*, deprecated, message: "Use outlined style and primary color")
+    public static var outlinedDefault: NatShortcut.Style {
+        .init(
+            applyStyle: ShortcutOutlinedStyle.applyDefaultStyle)
+    }
+ }
