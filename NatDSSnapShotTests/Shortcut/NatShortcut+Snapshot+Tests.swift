@@ -16,158 +16,202 @@ final class NatShortcutSnapshotTests: XCTestCase {
     }
 
     func test_shortcut_style_contained_primary_hasValidSnapshot() {
-        let systemUnderTest = createSystemUnderTest(style: .containedPrimary, text: "Contained")
+        let systemUnderTest = createSystemUnderTest(style: .contained, color: .primary, text: "Contained")
 
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image(precision: 0.97))
+        assertSnapshot(matching: superview, as: .image)
     }
 
     func test_shortcut_style_contained_primary_with_ellipsis_hasValidSnapshot() {
-        let systemUnderTest = createSystemUnderTest(style: .containedPrimary, text: "Contained / Primary")
+        let systemUnderTest = createSystemUnderTest(style: .contained, color: .primary, text: "Contained / Primary")
         systemUnderTest.configureText(numberOfLines: 1, lineBreakMode: .byTruncatingTail)
 
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image(precision: 0.97))
+        assertSnapshot(matching: superview, as: .image)
     }
 
     func test_shortcut_style_contained_primary_with_lineBreak_hasValidSnapshot() {
-        let systemUnderTest = createSystemUnderTest(style: .containedPrimary, text: "Contained / Primary")
+        let systemUnderTest = createSystemUnderTest(style: .contained, color: .primary, text: "Contained / Primary")
 
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image(precision: 0.97))
+        assertSnapshot(matching: superview, as: .image)
     }
 
     func test_shortcut_style_contained_primary_with_badge_hasValidSnapshot() {
-        let systemUnderTest = createSystemUnderTest(style: .containedPrimary, text: "Contained", badgeValue: 10)
+        let systemUnderTest = createSystemUnderTest(style: .contained, color: .primary,
+                                                    text: "Contained", badgeValue: 10)
 
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image(precision: 0.97))
+        assertSnapshot(matching: superview, as: .image)
     }
 
-    func test_shortcut_style_contained_default_hasValidSnapshot() {
-        let systemUnderTest = createSystemUnderTest(style: .containedDefault, text: "Contained")
+    func test_shortcut_style_contained_neutral_hasValidSnapshot() {
+        let systemUnderTest = createSystemUnderTest(style: .contained, color: .neutral, text: "Contained")
 
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image(precision: 0.97))
+        assertSnapshot(matching: superview, as: .image)
     }
 
-    func test_shortcut_style_contained_default_with_ellipsis_hasValidSnapshot() {
-        let systemUnderTest = createSystemUnderTest(style: .containedDefault, text: "Contained / Default")
+    func test_shortcut_style_contained_neutral_with_ellipsis_hasValidSnapshot() {
+        let systemUnderTest = createSystemUnderTest(style: .contained, color: .neutral, text: "Contained / Default")
         systemUnderTest.configureText(numberOfLines: 1, lineBreakMode: .byTruncatingTail)
 
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image(precision: 0.97))
+        assertSnapshot(matching: superview, as: .image)
     }
 
-    func test_shortcut_style_contained_default_with_lineBreak_hasValidSnapshot() {
-        let systemUnderTest = createSystemUnderTest(style: .containedDefault, text: "Contained / Default")
+    func test_shortcut_style_contained_neutral_with_lineBreak_hasValidSnapshot() {
+        let systemUnderTest = createSystemUnderTest(style: .contained, color: .neutral, text: "Contained / Default")
 
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image(precision: 0.97))
+        assertSnapshot(matching: superview, as: .image)
     }
 
-    func test_shortcut_style_contained_default_with_badge_hasValidSnapshot() {
-        let systemUnderTest = createSystemUnderTest(style: .containedDefault, text: "Contained", badgeValue: 10)
+    func test_shortcut_style_contained_neutral_with_badge_hasValidSnapshot() {
+        let systemUnderTest = createSystemUnderTest(style: .contained, color: .neutral,
+                                                    text: "Contained", badgeValue: 10)
 
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image(precision: 0.97))
+        assertSnapshot(matching: superview, as: .image)
+    }
+
+    func test_shortcut_style_contained_neutral_disabled_hasValidSnapshot() {
+        let systemUnderTest = createSystemUnderTest(style: .contained, color: .neutral, text: "Contained")
+        systemUnderTest.isEnabled = false
+
+        superview.addSubview(systemUnderTest)
+        addConstraints(systemUnderTest)
+
+        assertSnapshot(matching: superview, as: .image)
+    }
+
+    func test_shortcut_style_contained_primary_disabled_hasValidSnapshot() {
+        let systemUnderTest = createSystemUnderTest(style: .contained, color: .primary, text: "Contained")
+        systemUnderTest.isEnabled = false
+
+        superview.addSubview(systemUnderTest)
+        addConstraints(systemUnderTest)
+
+        assertSnapshot(matching: superview, as: .image)
     }
 
     func test_shortcut_style_outlined_primary_hasValidSnapshot() {
-        let systemUnderTest = createSystemUnderTest(style: .outlinedPrimary, text: "Outlined")
+        let systemUnderTest = createSystemUnderTest(style: .outlined, color: .primary, text: "Outlined")
 
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image(precision: 0.97))
+        assertSnapshot(matching: superview, as: .image)
     }
 
     func test_shortcut_style_outlined_primary_with_ellipsis_hasValidSnapshot() {
-        let systemUnderTest = createSystemUnderTest(style: .outlinedPrimary, text: "Outlined / Primary")
+        let systemUnderTest = createSystemUnderTest(style: .outlined, color: .primary, text: "Outlined / Primary")
         systemUnderTest.configureText(numberOfLines: 1, lineBreakMode: .byTruncatingTail)
 
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image(precision: 0.97))
+        assertSnapshot(matching: superview, as: .image)
     }
 
     func test_shortcut_style_outlined_primary_with_lineBreak_hasValidSnapshot() {
-        let systemUnderTest = createSystemUnderTest(style: .outlinedPrimary, text: "Outlined / Primary")
+        let systemUnderTest = createSystemUnderTest(style: .outlined, color: .primary, text: "Outlined / Primary")
 
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image(precision: 0.97))
+        assertSnapshot(matching: superview, as: .image)
     }
 
     func test_shortcut_style_outlined_primary_with_badge_hasValidSnapshot() {
-        let systemUnderTest = createSystemUnderTest(style: .outlinedPrimary, text: "Outlined", badgeValue: 10)
+        let systemUnderTest = createSystemUnderTest(style: .outlined, color: .primary, text: "Outlined", badgeValue: 10)
 
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image(precision: 0.97))
+        assertSnapshot(matching: superview, as: .image)
     }
 
-    func test_shortcut_style_outlined_default_hasValidSnapshot() {
-        let systemUnderTest = createSystemUnderTest(style: .containedDefault, text: "Outlined")
+    func test_shortcut_style_outlined_neutral_hasValidSnapshot() {
+        let systemUnderTest = createSystemUnderTest(style: .outlined, color: .neutral, text: "Outlined")
 
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image(precision: 0.97))
+        assertSnapshot(matching: superview, as: .image)
     }
 
-    func test_shortcut_style_outlined_default_with_ellipsis_hasValidSnapshot() {
-        let systemUnderTest = createSystemUnderTest(style: .containedDefault, text: "Outlined / Default")
+    func test_shortcut_style_outlined_neutral_with_ellipsis_hasValidSnapshot() {
+        let systemUnderTest = createSystemUnderTest(style: .outlined, color: .neutral, text: "Outlined / Default")
         systemUnderTest.configureText(numberOfLines: 1, lineBreakMode: .byTruncatingTail)
 
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image(precision: 0.97))
+        assertSnapshot(matching: superview, as: .image)
     }
 
-    func test_shortcut_style_outlined_default_with_lineBreak_hasValidSnapshot() {
-        let systemUnderTest = createSystemUnderTest(style: .containedDefault, text: "Outlined / Default")
+    func test_shortcut_style_outlined_neutral_with_lineBreak_hasValidSnapshot() {
+        let systemUnderTest = createSystemUnderTest(style: .outlined, color: .neutral, text: "Outlined / Default")
 
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image(precision: 0.97))
+        assertSnapshot(matching: superview, as: .image)
     }
 
-    func test_shortcut_style_outlined_default_with_badge_hasValidSnapshot() {
-        let systemUnderTest = createSystemUnderTest(style: .outlinedDefault, text: "Outlined", badgeValue: 10)
+    func test_shortcut_style_outlined_neutral_with_badge_hasValidSnapshot() {
+        let systemUnderTest = createSystemUnderTest(style: .outlined, color: .neutral, text: "Outlined", badgeValue: 10)
 
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image(precision: 0.97))
+        assertSnapshot(matching: superview, as: .image)
+    }
+
+    func test_shortcut_style_outlined_primary_disabled_hasValidSnapshot() {
+        let systemUnderTest = createSystemUnderTest(style: .outlined, color: .primary, text: "Contained")
+        systemUnderTest.isEnabled = false
+
+        superview.addSubview(systemUnderTest)
+        addConstraints(systemUnderTest)
+
+        assertSnapshot(matching: superview, as: .image)
+    }
+
+    func test_shortcut_style_outlined_neutral_disabled_hasValidSnapshot() {
+        let systemUnderTest = createSystemUnderTest(style: .outlined, color: .neutral, text: "Contained")
+        systemUnderTest.isEnabled = false
+
+        superview.addSubview(systemUnderTest)
+        addConstraints(systemUnderTest)
+
+        assertSnapshot(matching: superview, as: .image)
     }
 }
 
 extension NatShortcutSnapshotTests {
-    private func createSystemUnderTest(style: NatShortcut.Style, text: String, badgeValue: Int = 0) -> NatShortcut {
-        let systemUnderTest = NatShortcut(style: style)
-        systemUnderTest.configure(text: text)
+    private func createSystemUnderTest(style: NatShortcut.Style,
+                                       color: NatShortcut.Color,
+                                       text: String,
+                                       badgeValue: Int = 0) -> NatShortcut {
+        let systemUnderTest = NatShortcut(style: style, color: color, text: text)
         let badge = NatBadge(style: .standard, color: .alert)
         badge.configure(count: badgeValue)
         systemUnderTest.configure(badge: badge)
