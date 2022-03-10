@@ -5,10 +5,9 @@ final class ShortcutItemViewController: UIViewController, SampleItem {
 
     // MARK: - Private properties
 
-    private lazy var containedPrimaryStackView = createStackView()
-    private lazy var outlinedPrimaryStackView = createStackView()
-    private lazy var containedPrimaryBadgeStackView = createStackView()
-    private lazy var outlinedPrimaryBadgeStackView = createStackView()
+    private lazy var containedStackView = createStackView()
+    private lazy var outlinedStackView = createStackView()
+    private lazy var otherConfigStackView = createStackView()
 
     // MARK: - Life cycle
 
@@ -31,64 +30,56 @@ final class ShortcutItemViewController: UIViewController, SampleItem {
 
     private func setup() {
         view.backgroundColor = NatColors.background
-
-        view.addSubview(containedPrimaryStackView)
-        view.addSubview(outlinedPrimaryStackView)
-        view.addSubview(containedPrimaryBadgeStackView)
-        view.addSubview(outlinedPrimaryBadgeStackView)
-
-        let containedPrimary = createShortcuts(style: .contained,
-                                               color: .primary,
-                                               text: "Contained Primary",
-                                               shouldBreakLine: true)
-        containedPrimary.forEach { containedPrimaryStackView.addArrangedSubview($0) }
-
-        let outlinedPrimary = createShortcuts(style: .outlined,
-                                              color: .primary,
-                                              text: "Outlined Primary",
-                                              shouldBreakLine: true)
-        outlinedPrimary.forEach { outlinedPrimaryStackView.addArrangedSubview($0) }
-
-        let containedDefaultBadge = createShortcuts(style: .contained,
-                                                    color: .neutral,
-                                                    text: "Contained Default",
-                                                    shouldShowBadge: true,
-                                                    shouldBreakLine: true)
-        containedDefaultBadge.forEach { containedPrimaryBadgeStackView.addArrangedSubview($0) }
-
-        let outlinedDefaultBadge = createShortcuts(style: .outlined,
-                                                   color: .neutral,
-                                                   text: "Outlined Default",
-                                                   shouldShowBadge: true,
-                                                   shouldBreakLine: true)
-        outlinedDefaultBadge.forEach { outlinedPrimaryBadgeStackView.addArrangedSubview($0) }
-
+        setupShortcuts()
+        addStackViews()
         addConstraints()
     }
 
-    private func createShortcuts(style: NatShortcut.Style,
-                                 color: NatShortcut.Color,
-                                 text: String,
-                                 shouldShowBadge: Bool = false,
-                                 shouldBreakLine: Bool = false) -> [NatShortcut] {
-        (0...3).map { value in
-            let shortcut = NatShortcut(style: style, color: color, text: text)
+    private func setupShortcuts() {
+        // Contained
+        let containedPrimaryShortcut = NatShortcut(style: .contained, color: .primary, text: "Contained Primary")
+        let containedNeutralShortcut = NatShortcut(style: .contained, color: .neutral, text: "Contained Neutral")
+        let containedDisabledShortcut = NatShortcut(style: .contained, text: "Contained Disabled")
+        containedDisabledShortcut.configure(state: .disabled)
+        containedPrimaryShortcut.configureText(numberOfLines: 1, lineBreakMode: .byTruncatingTail)
+        containedNeutralShortcut.configureText(numberOfLines: 1, lineBreakMode: .byTruncatingTail)
+        containedDisabledShortcut.configureText(numberOfLines: 1, lineBreakMode: .byTruncatingTail)
 
-            if shouldShowBadge {
-                let badgeValues = [1, 25, 99, 100]
-                let badge = NatBadge(style: .standard, color: .alert)
-                badge.configure(count: badgeValues[value])
-                shortcut.configure(badge: badge)
-            }
+        // Outlined
+        let outlinedPrimaryShortcut = NatShortcut(style: .outlined, color: .primary, text: "Outlined Primary")
+        let outlinedNeutralShortcut = NatShortcut(style: .outlined, color: .neutral, text: "Outlined Neutral")
+        let outlinedDisabledShortcut = NatShortcut(style: .outlined, text: "Outlined Disabled")
+        outlinedDisabledShortcut.configure(state: .disabled)
 
-            if shouldBreakLine {
-                shortcut.configureText(numberOfLines: 0, lineBreakMode: .byWordWrapping)
-            } else {
-                shortcut.configureText(numberOfLines: 1, lineBreakMode: .byTruncatingTail)
-            }
+        // Other configurations
+        let containedBadgeShortcut = NatShortcut(style: .contained, color: .primary, text: "Notify with badge")
+        let longTextNoBreakLineShorcut = NatShortcut(style: .contained, color: .primary,
+                                                     text: "Long text with one line only")
+        let longTextBreakLineShortcut = NatShortcut(style: .contained, color: .primary,
+                                                    text: "Long text with custom break line")
+        longTextBreakLineShortcut.configureText(numberOfLines: 3, lineBreakMode: .byWordWrapping)
+        longTextNoBreakLineShorcut.configureText(numberOfLines: 1, lineBreakMode: .byTruncatingTail)
 
-            return shortcut
-        }
+        let badge = NatBadge(style: .standard, color: .alert)
+        badge.configure(count: 99)
+        containedBadgeShortcut.configure(badge: badge)
+
+        // Setup stack views
+        containedStackView.addArrangedSubview(containedPrimaryShortcut)
+        containedStackView.addArrangedSubview(containedNeutralShortcut)
+        containedStackView.addArrangedSubview(containedDisabledShortcut)
+        outlinedStackView.addArrangedSubview(outlinedPrimaryShortcut)
+        outlinedStackView.addArrangedSubview(outlinedNeutralShortcut)
+        outlinedStackView.addArrangedSubview(outlinedDisabledShortcut)
+        otherConfigStackView.addArrangedSubview(containedBadgeShortcut)
+        otherConfigStackView.addArrangedSubview(longTextNoBreakLineShorcut)
+        otherConfigStackView.addArrangedSubview(longTextBreakLineShortcut)
+    }
+
+    private func addStackViews() {
+        view.addSubview(containedStackView)
+        view.addSubview(outlinedStackView)
+        view.addSubview(otherConfigStackView)
     }
 
     private func createStackView() -> UIStackView {
@@ -104,40 +95,35 @@ final class ShortcutItemViewController: UIViewController, SampleItem {
     private func addConstraints() {
 
         let constraints = [
-            containedPrimaryStackView.topAnchor.constraint(
+            // Contained
+            containedStackView.topAnchor.constraint(
                 equalTo: view.safeAreaLayoutGuide.topAnchor,
                 constant: NatSpacing.small
             ),
-            containedPrimaryStackView.trailingAnchor.constraint(
+            containedStackView.trailingAnchor.constraint(
                 equalTo: view.safeAreaLayoutGuide.trailingAnchor,
                 constant: -NatSpacing.standard
             ),
-            containedPrimaryStackView.leadingAnchor.constraint(
+            containedStackView.leadingAnchor.constraint(
                 equalTo: view.safeAreaLayoutGuide.leadingAnchor,
                 constant: NatSpacing.standard
             ),
-            containedPrimaryStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            containedStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
 
-            outlinedPrimaryStackView.topAnchor.constraint(
-                equalTo: containedPrimaryStackView.bottomAnchor,
+            // Outlined primary
+            outlinedStackView.topAnchor.constraint(
+                equalTo: containedStackView.bottomAnchor,
                 constant: NatSpacing.small
             ),
-            outlinedPrimaryStackView.widthAnchor.constraint(equalTo: containedPrimaryStackView.widthAnchor),
-            outlinedPrimaryStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            outlinedStackView.widthAnchor.constraint(equalTo: containedStackView.widthAnchor),
+            outlinedStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
 
-            containedPrimaryBadgeStackView.topAnchor.constraint(
-                equalTo: outlinedPrimaryStackView.bottomAnchor,
+            otherConfigStackView.topAnchor.constraint(
+                equalTo: outlinedStackView.bottomAnchor,
                 constant: NatSpacing.small
             ),
-            containedPrimaryBadgeStackView.widthAnchor.constraint(equalTo: containedPrimaryStackView.widthAnchor),
-            containedPrimaryBadgeStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-
-            outlinedPrimaryBadgeStackView.topAnchor.constraint(
-                equalTo: containedPrimaryBadgeStackView.bottomAnchor,
-                constant: NatSpacing.small
-            ),
-            outlinedPrimaryBadgeStackView.widthAnchor.constraint(equalTo: containedPrimaryStackView.widthAnchor),
-            outlinedPrimaryBadgeStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            otherConfigStackView.widthAnchor.constraint(equalTo: containedStackView.widthAnchor),
+            otherConfigStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ]
 
         NSLayoutConstraint.activate(constraints)

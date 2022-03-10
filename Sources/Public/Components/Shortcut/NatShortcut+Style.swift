@@ -80,7 +80,7 @@ extension NatShortcut {
         func containedIconColor(state: NatShortcut.State) -> UIColor {
             switch self {
             case .primary:
-                return state == .enabled ? getUIColorFromTokens(\.colorHighEmphasis) : getUIColorFromTokens(\.colorMediumEmphasis)
+                return state == .enabled ? getUIColorFromTokens(\.colorOnPrimary) : getUIColorFromTokens(\.colorMediumEmphasis)
             case .neutral:
                 return state == .enabled ? getUIColorFromTokens(\.colorHighEmphasis) : getUIColorFromTokens(\.colorLowEmphasis)
             }
