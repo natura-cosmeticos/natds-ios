@@ -43,6 +43,12 @@ public final class NatShortcut: UIView {
         }
     }
 
+    public var isEnabled: Bool = true {
+        didSet {
+            self.state = isEnabled ? .enabled : .disabled
+        }
+    }
+
     // MARK: - Private properties
 
     private lazy var shortcutView: ShortcutView = {

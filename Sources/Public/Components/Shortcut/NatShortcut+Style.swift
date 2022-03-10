@@ -38,7 +38,7 @@ extension NatShortcut {
         func outlinedIconColor(state: NatShortcut.State) -> UIColor {
             switch self {
             case .primary:
-                return state == .enabled ? getUIColorFromTokens(\.colorHighEmphasis) : getUIColorFromTokens(\.colorMediumEmphasis)
+                return state == .enabled ? getUIColorFromTokens(\.colorHighEmphasis) : getUIColorFromTokens(\.colorLowEmphasis)
             case .neutral:
                 return state == .enabled ? getUIColorFromTokens(\.colorHighEmphasis) : getUIColorFromTokens(\.colorLowEmphasis)
             }
@@ -82,7 +82,7 @@ extension NatShortcut {
             case .primary:
                 return state == .enabled ? getUIColorFromTokens(\.colorOnPrimary) : getUIColorFromTokens(\.colorMediumEmphasis)
             case .neutral:
-                return state == .enabled ? getUIColorFromTokens(\.colorHighEmphasis) : getUIColorFromTokens(\.colorLowEmphasis)
+                return state == .enabled ? getUIColorFromTokens(\.colorHighEmphasis) : getUIColorFromTokens(\.colorMediumEmphasis)
             }
         }
 
