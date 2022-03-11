@@ -168,7 +168,6 @@ public final class NatShortcut: UIView {
 
 extension NatShortcut {
 
-    // TODO: documentar
     public func configure(state: State) {
         self.state = state
     }

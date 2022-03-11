@@ -23,7 +23,8 @@ final class NatShortSpec: QuickSpec {
             )
 
             notificationCenterSpy = .init()
-            systemUnderTest = .init(style: styleSpy, text: nil, icon: nil, notificationCenter: notificationCenterSpy)
+            systemUnderTest = .init(style: styleSpy, color: .primary, text: nil,
+                                    icon: nil, notificationCenter: notificationCenterSpy)
         }
 
         describe("#init") {
@@ -147,6 +148,20 @@ final class NatShortSpec: QuickSpec {
 
             it("stores action and uses it in tap events") {
                 expect(actionInvocations).toEventually(equal(1))
+            }
+        }
+
+        describe("#configure(state:)") {
+            var actionInvocations = 0
+
+            beforeEach {
+                systemUnderTest.configure(state: .disabled)
+                systemUnderTest.configure(action: { actionInvocations += 1 })
+                systemUnderTest.gestureRecognizers?.forEach { $0.sendGesturesEvents() }
+            }
+
+            it("does not perform action") {
+                expect(actionInvocations).to(equal(0))
             }
         }
 

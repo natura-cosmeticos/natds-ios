@@ -28,18 +28,24 @@ class ProgressIndicatorCircularSpec: QuickSpec {
             }
         }
 
-        describe("#configure: backgroundLayer") {
+        describe("#configure: backgroundLayer true") {
             beforeEach {
                 systemUnderTest.configure(useBackgroundLayer: true)
             }
 
             it("adds backgroundLayer") {
-                let color = UIColor(hex: getTokenFromTheme(\.colorSurface))?.cgColor
+                let color = getUIColorFromTokens(\.colorSurface).cgColor
+
                 expect(systemUnderTest.backgroundLayer.fillColor).to(equal(color))
+            }
+        }
+
+        describe("#configure: backgroundLayer false") {
+            beforeEach {
+                systemUnderTest.configure(useBackgroundLayer: false)
             }
 
             it("removes backgroundLayer") {
-                systemUnderTest.configure(useBackgroundLayer: false)
                 expect(systemUnderTest.backgroundLayer.fillColor).to(equal(UIColor.clear.cgColor))
             }
         }

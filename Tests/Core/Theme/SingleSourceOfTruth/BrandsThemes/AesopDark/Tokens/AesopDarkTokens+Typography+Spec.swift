@@ -51,7 +51,7 @@ final class AesopDarkTokensTypographySpec: QuickSpec {
 
         describe("#typographyBodyBoldFontFamily") {
             it("returns an expected value") {
-                expect(systemUnderTest.typographyBodyBoldFontFamily).to(equal("Suisse Int'l"))
+                expect(systemUnderTest.typographyBodyBoldFontFamily).to(equal("Suisse Int'l Medium"))
                 }
         }
 

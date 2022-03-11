@@ -3,6 +3,7 @@ import Nimble
 
 @testable import NatDS
 
+// swiftlint:disable line_length
 final class ShortcutContainedStyleSpec: QuickSpec {
     override func spec() {
         let systemUnderTest = ShortcutContainedStyle.self
@@ -17,19 +18,21 @@ final class ShortcutContainedStyleSpec: QuickSpec {
             shortcutView = shortcut.subviews.first
         }
 
-        describe("#applyPrimaryStyle") {
+        describe("#applyStyle: primary enabled") {
             beforeEach {
-                systemUnderTest.applyPrimaryStyle(on: shortcut)
+                shortcut.color = .primary
+                shortcut.isEnabled = true
+                systemUnderTest.apply(on: shortcut)
             }
 
-            it("sets an expected circle color") {
-                expect(shortcutView?.backgroundColor).to(equal(getUIColorFromTokens(\.colorPrimary)))
+            it("sets an expected background color") {
+                expect(shortcutView?.backgroundColor)
+                    .to(equal(getUIColorFromComponentAttributes(\.shortcutContainedColorEnablePrimaryBackground)))
             }
 
-            it("does not set circle border color") {
-                let expectedColor = UIView().layer.borderColor
-
-                expect(shortcutView?.layer.borderColor).to(equal(expectedColor))
+            it("sets an expected label color") {
+                expect(shortcutView?.backgroundColor)
+                    .to(equal(getUIColorFromComponentAttributes(\.shortcutContainedColorEnablePrimaryBackground)))
             }
 
             it("does not set circle border width") {
@@ -44,19 +47,48 @@ final class ShortcutContainedStyleSpec: QuickSpec {
             }
         }
 
-        describe("#applyDefaultStyle") {
+        describe("#applyStyle: primary disabled") {
             beforeEach {
-                systemUnderTest.applyDefaultStyle(on: shortcut)
+                shortcut.color = .primary
+                shortcut.isEnabled = false
+                systemUnderTest.apply(on: shortcut)
             }
 
-            it("sets an expected circle color") {
-                expect(shortcutView?.backgroundColor).to(equal(getUIColorFromTokens(\.colorSurface)))
+            it("sets an expected background color") {
+                expect(shortcutView?.backgroundColor).to(equal(getUIColorFromComponentAttributes(\.shortcutContainedColorDisablePrimaryBackground)))
             }
 
-            it("does not set circle border color") {
-                let expectedColor = UIView().layer.borderColor
+            it("sets an expected label color") {
+                expect(shortcutView?.backgroundColor).to(equal(getUIColorFromComponentAttributes(\.shortcutContainedColorDisablePrimaryBackground)))
+            }
 
-                expect(shortcutView?.layer.borderColor).to(equal(expectedColor))
+            it("does not set circle border width") {
+                expect(shortcutView?.layer.borderWidth).to(equal(0))
+            }
+
+            it("sets an expected icon color") {
+                let circleView = shortcutView?.subviews.first
+                let iconView = circleView?.subviews.first as? IconView
+
+                expect(iconView?.tintColor).to(equal(getUIColorFromTokens(\.colorMediumEmphasis)))
+            }
+        }
+
+        describe("#applyStyle: neutral enabled") {
+            beforeEach {
+                shortcut.color = .neutral
+                shortcut.isEnabled = true
+                systemUnderTest.apply(on: shortcut)
+            }
+
+            it("sets an expected background color") {
+                expect(shortcutView?.backgroundColor)
+                    .to(equal(getUIColorFromComponentAttributes(\.shortcutContainedColorEnableNeutralBackground)))
+            }
+
+            it("sets an expected label color") {
+                expect(shortcutView?.backgroundColor)
+                    .to(equal(getUIColorFromComponentAttributes(\.shortcutContainedColorEnableNeutralBackground)))
             }
 
             it("does not set circle border width") {
@@ -68,6 +100,35 @@ final class ShortcutContainedStyleSpec: QuickSpec {
                 let iconView = circleView?.subviews.first as? IconView
 
                 expect(iconView?.tintColor).to(equal(getUIColorFromTokens(\.colorHighEmphasis)))
+            }
+        }
+
+        describe("#applyStyle: neutral disabled") {
+            beforeEach {
+                shortcut.color = .neutral
+                shortcut.isEnabled = false
+                systemUnderTest.apply(on: shortcut)
+            }
+
+            it("sets an expected background color") {
+                expect(shortcutView?.backgroundColor)
+                    .to(equal(getUIColorFromComponentAttributes(\.shortcutContainedColorDisableNeutralBackground)))
+            }
+
+            it("sets an expected label color") {
+                expect(shortcutView?.backgroundColor)
+                    .to(equal(getUIColorFromComponentAttributes(\.shortcutContainedColorDisableNeutralBackground)))
+            }
+
+            it("does not set circle border width") {
+                expect(shortcutView?.layer.borderWidth).to(equal(0))
+            }
+
+            it("sets an expected icon color") {
+                let circleView = shortcutView?.subviews.first
+                let iconView = circleView?.subviews.first as? IconView
+
+                expect(iconView?.tintColor).to(equal(getUIColorFromTokens(\.colorMediumEmphasis)))
             }
         }
     }
