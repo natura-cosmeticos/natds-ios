@@ -1,12 +1,11 @@
 // swiftlint:disable line_length
 extension NatShortcut {
-    /**
-     Style represents styles values for the NatShortcut component.
-    */
+    /// `Style` applies the variant style for `shortcut`
     public struct Style {
         let applyStyle: (NatShortcut) -> Void
     }
 
+    /// `Color` represents the possible colors for `shortcut`
     public enum Color {
         case primary
         case neutral
@@ -98,10 +97,12 @@ extension NatShortcut {
 }
 
 extension NatShortcut.Style {
+    /// Represents a `shortcut` variant
     public static var contained: NatShortcut.Style {
         .init(applyStyle: ShortcutContainedStyle.apply)
     }
 
+    /// Represents a `shortcut` variant
     public static var outlined: NatShortcut.Style {
         .init(applyStyle: ShortcutOutlinedStyle.apply)
     }

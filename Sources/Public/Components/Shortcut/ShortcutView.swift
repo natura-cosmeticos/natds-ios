@@ -51,7 +51,9 @@ public class ShortcutView: UIView {
             circleView.heightAnchor.constraint(equalToConstant: circleSize),
 
             iconView.centerXAnchor.constraint(equalTo: circleView.centerXAnchor),
-            iconView.centerYAnchor.constraint(equalTo: circleView.centerYAnchor)
+            iconView.centerYAnchor.constraint(equalTo: circleView.centerYAnchor),
+            iconView.widthAnchor.constraint(equalToConstant: getTokenFromTheme(\.sizeSemi)),
+            iconView.heightAnchor.constraint(equalToConstant: getTokenFromTheme(\.sizeSemi))
         ]
 
         NSLayoutConstraint.activate(constraints)

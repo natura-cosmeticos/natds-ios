@@ -1,12 +1,36 @@
 /**
- NatShortcut is a class that represents a component from the design system.
- The shortcut colors change according to the current theme configured in the Design System.
+ - NOTE:
+ This component is available in the following variants:
+ - ✅ Contained (default)
+ - ✅ Outlined
+ 
+ With the following attribute status:
+ - ✅ Disabled
+ - ✅ Interaction State Pressed
+ - Color:
+    - ✅ `Primary` (default)
+    - ✅ `Neutral`
+ - Notify:
+    - ✅ `None` (default)
+    - ✅ `Standard`
+ - Interaction state:
+    - ✅ `Enabled`
+    - ✅ `Pressed `
 
- This component has 4 styles:
-    - Contained with Primary color
-    - Contained with Default color
-    - Outlined with Primary color
-    - Outlined with Default color
+ NatShortcut is a class that represents the component `shortcut` from the design system.
+ Its colors change according to the configured theme.
+
+ The component has the following variants:
+    - Contained (default)
+    - Outlined
+ 
+ And the colors:
+    - Primary (default)
+    - Neutral
+ 
+ And the states:
+    - Enabled
+    - Disabled
 
  Example of usage:
 
@@ -20,29 +44,34 @@
 
 public final class NatShortcut: UIView {
 
+    /// An enum that indicates possible states for the component `shortcut`
     public enum State {
         case enabled
         case disabled
     }
 
+    /// The variant for the component
     public var style: Style {
         didSet {
             style.applyStyle(self)
         }
     }
 
+    /// The color for the component
     public var color: Color {
         didSet {
             style.applyStyle(self)
         }
     }
 
+    /// The state of the component
     public var state: State = .enabled {
         didSet {
             style.applyStyle(self)
         }
     }
 
+    /// A boolean that indicates the state of the component
     public var isEnabled: Bool = true {
         didSet {
             self.state = isEnabled ? .enabled : .disabled
@@ -53,6 +82,12 @@ public final class NatShortcut: UIView {
 
     private lazy var shortcutView: ShortcutView = {
         let view = ShortcutView(icon: icon)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+
+    private lazy var helperView: HelperView = {
+        let view = HelperView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -168,13 +203,15 @@ public final class NatShortcut: UIView {
 
 extension NatShortcut {
 
+    /// Sets the state for the component
+    /// - Parameter state: a state option (enabled/disabled)
     public func configure(state: State) {
         self.state = state
     }
 
     /// Sets an icon for the shortcut view
     ///
-    /// - Parameter icon: An icon from NatDSIcons.
+    /// - Parameter icon: An icon from `NatDSIcons`
     /// Example of usage:
     ///
     ///     shortcut.configure(icon: getIcon(icon: .outlinedAlertNotification))
@@ -182,14 +219,14 @@ extension NatShortcut {
         self.icon = icon
     }
 
-    /// Configures text for shortcut bottom label.
+    /// Configures text for shortcut bottom label
     ///
-    /// - Parameter text: A string with the text to display on the label.
+    /// - Parameter text: A string with the text to display on the label
     public func configure(text: String) {
         self.text = text
     }
 
-    /// Sets the functionality for the shortcut.
+    /// Sets the functionality for the shortcut
     ///
     /// - Parameter action: A block of functionality to be executed when the shorcut is pressed
     public func configure(action: @escaping () -> Void) {
@@ -219,7 +256,7 @@ extension NatShortcut {
     /// shortcut.configure(badge: badge)
     /// ```
     public func configure(badge: NatBadge) {
-        badge.addToView(shortcutView)
+        badge.addToView(helperView)
     }
 
     @available(*, deprecated, message: "Use configure(badge:) instead")
@@ -262,6 +299,7 @@ extension NatShortcut {
     private func setup() {
         addSubview(shortcutView)
         addSubview(label)
+        helperView.addToView(self, constraintTo: shortcutView)
 
         addConstraints()
         addGestures()

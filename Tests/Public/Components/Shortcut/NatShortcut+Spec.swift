@@ -68,7 +68,9 @@ final class NatShortSpec: QuickSpec {
             }
 
             it("sets text to label") {
-                let label = systemUnderTest.subviews.last as? UILabel
+                let label = systemUnderTest.subviews
+                    .compactMap { $0 as? UILabel }
+                    .first
 
                 expect(label?.text).to(equal("stub text"))
             }
@@ -173,7 +175,11 @@ final class NatShortSpec: QuickSpec {
                 }
 
                 it("adds sublayer for badge") {
-                    expect(systemUnderTest.subviews.first?.layer.sublayers?.count).to(equal(2))
+                    let helperView = systemUnderTest.subviews
+                        .compactMap { $0 as? HelperView }
+                        .first
+
+                    expect(helperView?.subviews.count).to(equal(1))
                 }
             }
 
@@ -184,7 +190,10 @@ final class NatShortSpec: QuickSpec {
                 }
 
                 it("removes sublayer for badge if exists") {
-                    expect(systemUnderTest.subviews.first?.layer.sublayers?.count).to(equal(1))
+                    let helperView = systemUnderTest.subviews
+                        .compactMap { $0 as? HelperView }
+                        .first
+                    expect(helperView?.subviews.count).to(equal(0))
                 }
             }
 
@@ -196,7 +205,10 @@ final class NatShortSpec: QuickSpec {
                 }
 
                 it("removes sublayer for badge") {
-                    expect(systemUnderTest.subviews.first?.layer.sublayers?.count).to(equal(1))
+                    let helperView = systemUnderTest.subviews
+                        .compactMap { $0 as? HelperView }
+                        .first
+                    expect(helperView?.subviews.count).to(equal(0))
                 }
             }
         }

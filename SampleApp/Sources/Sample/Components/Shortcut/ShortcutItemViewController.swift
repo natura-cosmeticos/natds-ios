@@ -1,4 +1,5 @@
 import NatDS
+import NatDSIcons
 
 final class ShortcutItemViewController: UIViewController, SampleItem {
     static var name = "Shortcut"
@@ -37,26 +38,35 @@ final class ShortcutItemViewController: UIViewController, SampleItem {
 
     private func setupShortcuts() {
         // Contained
-        let containedPrimaryShortcut = NatShortcut(style: .contained, color: .primary, text: "Contained Primary")
-        let containedNeutralShortcut = NatShortcut(style: .contained, color: .neutral, text: "Contained Neutral")
-        let containedDisabledShortcut = NatShortcut(style: .contained, text: "Contained Disabled")
+        let containedPrimaryShortcut = NatShortcut(style: .contained, color: .primary,
+                                                   text: "Contained Primary", icon: getIcon(.filledActionAdd))
+        let containedNeutralShortcut = NatShortcut(style: .contained, color: .neutral,
+                                                   text: "Contained Neutral", icon: getIcon(.outlinedAlertCheck))
+        let containedDisabledShortcut = NatShortcut(style: .contained,
+                                                    text: "Contained Disabled", icon: getIcon(.filledMediaPause))
         containedDisabledShortcut.configure(state: .disabled)
         containedPrimaryShortcut.configureText(numberOfLines: 1, lineBreakMode: .byTruncatingTail)
         containedNeutralShortcut.configureText(numberOfLines: 1, lineBreakMode: .byTruncatingTail)
         containedDisabledShortcut.configureText(numberOfLines: 1, lineBreakMode: .byTruncatingTail)
 
         // Outlined
-        let outlinedPrimaryShortcut = NatShortcut(style: .outlined, color: .primary, text: "Outlined Primary")
-        let outlinedNeutralShortcut = NatShortcut(style: .outlined, color: .neutral, text: "Outlined Neutral")
-        let outlinedDisabledShortcut = NatShortcut(style: .outlined, text: "Outlined Disabled")
+        let outlinedPrimaryShortcut = NatShortcut(style: .outlined, color: .primary,
+                                                  text: "Outlined Primary", icon: getIcon(.outlinedAlertInfo))
+        let outlinedNeutralShortcut = NatShortcut(style: .outlined, color: .neutral,
+                                                  text: "Outlined Neutral", icon: getIcon(.filledPlaceTruck))
+        let outlinedDisabledShortcut = NatShortcut(style: .outlined,
+                                                   text: "Outlined Disabled", icon: getIcon(.outlinedPlaceRocket))
         outlinedDisabledShortcut.configure(state: .disabled)
 
         // Other configurations
-        let containedBadgeShortcut = NatShortcut(style: .contained, color: .primary, text: "Notify with badge")
+        let containedBadgeShortcut = NatShortcut(style: .outlined, color: .primary,
+                                                 text: "Notify with badge", icon: getIcon(.filledProductBrandsproduct))
         let longTextNoBreakLineShorcut = NatShortcut(style: .contained, color: .primary,
-                                                     text: "Long text with one line only")
+                                                     text: "Long text with one line only",
+                                                     icon: getIcon(.outlinedActionDownload))
         let longTextBreakLineShortcut = NatShortcut(style: .contained, color: .primary,
-                                                    text: "Long text with custom break line")
+                                                    text: "Long text with custom break line",
+                                                    icon: getIcon(.filledNavigationMenu))
         longTextBreakLineShortcut.configureText(numberOfLines: 3, lineBreakMode: .byWordWrapping)
         longTextNoBreakLineShorcut.configureText(numberOfLines: 1, lineBreakMode: .byTruncatingTail)
 

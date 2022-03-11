@@ -194,6 +194,7 @@
 		7CA6BAC353B73AF5D31F09CAF0268EE5 /* DesignSystemFatalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8E6D9764598D210D58B32B2AEB0FE9 /* DesignSystemFatalError.swift */; };
 		7D0537D2266979110078AC98 /* NatLogo+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0537D1266979110078AC98 /* NatLogo+Spec.swift */; };
 		7D0537DB266AB2B80078AC98 /* Logo+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0537DA266AB2B80078AC98 /* Logo+Snapshot+Tests.swift */; };
+		7D06729727DFABD800DFAC52 /* HelperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D06729627DFABD800DFAC52 /* HelperView.swift */; };
 		7D17AB1B25E91C380070FD31 /* NatAvatar+Snapshots+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D17AB1A25E91C380070FD31 /* NatAvatar+Snapshots+Tests.swift */; };
 		7D19998925756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D19998825756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift */; };
 		7D213B8A269F53D4005B15C3 /* NatDialogDividerConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D213B89269F53D4005B15C3 /* NatDialogDividerConfigurable.swift */; };
@@ -636,6 +637,7 @@
 		7CCF632B4501044E5062C574CCBBF74E /* NatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatButton.swift; sourceTree = "<group>"; };
 		7D0537D1266979110078AC98 /* NatLogo+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatLogo+Spec.swift"; sourceTree = "<group>"; };
 		7D0537DA266AB2B80078AC98 /* Logo+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Logo+Snapshot+Tests.swift"; sourceTree = "<group>"; };
+		7D06729627DFABD800DFAC52 /* HelperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperView.swift; sourceTree = "<group>"; };
 		7D17AB1A25E91C380070FD31 /* NatAvatar+Snapshots+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatAvatar+Snapshots+Tests.swift"; sourceTree = "<group>"; };
 		7D19998825756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatProgressIndicatorCircular+Size.swift"; sourceTree = "<group>"; };
 		7D213B89269F53D4005B15C3 /* NatDialogDividerConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatDialogDividerConfigurable.swift; sourceTree = "<group>"; };
@@ -2044,6 +2046,7 @@
 				844A1E2224AE117400E93AD9 /* NatShortcut.swift */,
 				84BF066124B4A62400462AC5 /* NatShortcut+Style.swift */,
 				7D8F3E69258A81C1003A7DEB /* ShortcutView.swift */,
+				7D06729627DFABD800DFAC52 /* HelperView.swift */,
 			);
 			path = Shortcut;
 			sourceTree = "<group>";
@@ -3369,6 +3372,7 @@
 				672E84F3438F653B2DF42C2018894304 /* ExpansionPanel+Margin.swift in Sources */,
 				3A65DE112EB34ED5B9F3F1DF7B8D3FBD /* ExpansionPanel.swift in Sources */,
 				7D5120BA25E9914100557E21 /* NatAvatar+Type.swift in Sources */,
+				7D06729727DFABD800DFAC52 /* HelperView.swift in Sources */,
 				79EA0CA8261B4A8800742C0A /* NatBadge+Limit.swift in Sources */,
 				79EA0C4B260CD9DB00742C0A /* NatCounter+State.swift in Sources */,
 				7D60A4A0260E208E00A23C1A /* NatListItem+Feedback.swift in Sources */,
