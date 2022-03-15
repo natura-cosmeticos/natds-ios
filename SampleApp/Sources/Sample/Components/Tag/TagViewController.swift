@@ -74,6 +74,15 @@ class TagViewController: UIViewController, SampleItem {
         return tag
     }()
 
+    private var tagDefaultCustom: NatTag = {
+        let tag = NatTag(style: .defaultAlert)
+        tag.configure(text: "Default Custom Color")
+        tag.configure(color: .custom(backgroundColor: UIColor.black, labelColor: UIColor.white))
+        tag.translatesAutoresizingMaskIntoConstraints = false
+
+        return tag
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -90,6 +99,7 @@ class TagViewController: UIViewController, SampleItem {
         stackView.addArrangedSubview(tagLeftAlert)
         stackView.addArrangedSubview(tagRightWarning)
         stackView.addArrangedSubview(tagRightLink)
+        stackView.addArrangedSubview(tagDefaultCustom)
 
         let constraints = [
             stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
