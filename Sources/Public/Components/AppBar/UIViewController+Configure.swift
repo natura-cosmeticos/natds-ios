@@ -41,7 +41,7 @@ public extension UIViewController {
     }
 
     /// Sets the content type for the navigation bar's center view
-    /// - Parameter item: an option from `AppBarContentType`, with a string value (for text), an image (for media) or a `NatLogo`
+    /// - Parameter item: an option from `AppBarContentType`, with a string value (text), image (media) or `NatLogo`
     func configure(appBarContentType item: AppBarContentType) {
         switch item {
         case .media(let image):

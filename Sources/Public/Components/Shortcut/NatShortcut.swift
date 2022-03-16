@@ -1,12 +1,36 @@
 /**
- NatShortcut is a class that represents a component from the design system.
- The shortcut colors change according to the current theme configured in the Design System.
+ - NOTE:
+ This component is available in the following variants:
+ - ✅ Contained (default)
+ - ✅ Outlined
+ 
+ With the following attribute status:
+ - ✅ Disabled
+ - ✅ Interaction State Pressed
+ - Color:
+    - ✅ `Primary` (default)
+    - ✅ `Neutral`
+ - Notify:
+    - ✅ `None` (default)
+    - ✅ `Standard`
+ - Interaction state:
+    - ✅ `Enabled`
+    - ✅ `Pressed `
 
- This component has 4 styles:
-    - Contained with Primary color
-    - Contained with Default color
-    - Outlined with Primary color
-    - Outlined with Default color
+ NatShortcut is a class that represents the component `shortcut` from the design system.
+ Its colors change according to the configured theme.
+
+ The component has the following variants:
+    - Contained (default)
+    - Outlined
+ 
+ And the colors:
+    - Primary (default)
+    - Neutral
+ 
+ And the states:
+    - Enabled
+    - Disabled
 
  Example of usage:
 
@@ -20,10 +44,50 @@
 
 public final class NatShortcut: UIView {
 
+    /// An enum that indicates possible states for the component `shortcut`
+    public enum State {
+        case enabled
+        case disabled
+    }
+
+    /// The variant for the component
+    public var style: Style {
+        didSet {
+            style.applyStyle(self)
+        }
+    }
+
+    /// The color for the component
+    public var color: Color {
+        didSet {
+            style.applyStyle(self)
+        }
+    }
+
+    /// The state of the component
+    public var state: State = .enabled {
+        didSet {
+            style.applyStyle(self)
+        }
+    }
+
+    /// A boolean that indicates the state of the component
+    public var isEnabled: Bool = true {
+        didSet {
+            self.state = isEnabled ? .enabled : .disabled
+        }
+    }
+
     // MARK: - Private properties
 
     private lazy var shortcutView: ShortcutView = {
         let view = ShortcutView(icon: icon)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+
+    private lazy var helperView: HelperView = {
+        let view = HelperView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -72,22 +136,22 @@ public final class NatShortcut: UIView {
         }
     }
 
-    private let style: Style
     private let notificationCenter: NotificationCenterObservable
     private var action: (() -> Void)?
 
     // MARK: - Inits
 
-    public convenience init(style: Style = .containedPrimary) {
-        self.init(style: style, text: nil, icon: nil, notificationCenter: NotificationCenter.default)
+    public convenience init(style: Style = .contained, color: Color = .primary) {
+        self.init(style: style, color: color, text: nil, icon: nil, notificationCenter: NotificationCenter.default)
     }
 
-    public convenience init(style: Style = .containedPrimary, text: String? = nil, icon: String? = nil) {
-        self.init(style: style, text: text, icon: icon, notificationCenter: NotificationCenter.default)
+    public convenience init(style: Style = .contained, color: Color = .primary, text: String? = nil, icon: String? = nil) {
+        self.init(style: style, color: color, text: text, icon: icon, notificationCenter: NotificationCenter.default)
     }
 
-    init(style: Style, text: String?, icon: String?, notificationCenter: NotificationCenterObservable) {
+    init(style: Style, color: Color, text: String?, icon: String?, notificationCenter: NotificationCenterObservable) {
         self.style = style
+        self.color = color
         self.text = text
         self.icon = icon
         self.notificationCenter = notificationCenter
@@ -112,15 +176,21 @@ public final class NatShortcut: UIView {
     // MARK: - User interactions
 
     @objc func tapHandler(_ sender: UITapGestureRecognizer) {
+        guard self.state == .enabled else { return }
+
         action?()
 
-        addPulseLayerAnimated(at: shortcutView.centerBounds, in: shortcutView.layer, removeAfterAnimation: true)
+        addPulseLayerAnimated(at: shortcutView.centerBounds,
+                              in: shortcutView.layer, removeAfterAnimation: true)
     }
 
     @objc func longPressHandler(_ sender: UILongPressGestureRecognizer) {
+        guard self.state == .enabled else { return }
+
         switch sender.state {
         case .began:
-            addPulseLayerAnimated(at: shortcutView.centerBounds, in: shortcutView.layer, removeAfterAnimation: true)
+            addPulseLayerAnimated(at: shortcutView.centerBounds,
+                                  in: shortcutView.layer, removeAfterAnimation: true)
         case .ended:
             removePulseLayer(layer: shortcutView.layer)
         default:
@@ -132,9 +202,16 @@ public final class NatShortcut: UIView {
 // MARK: - Public methods
 
 extension NatShortcut {
+
+    /// Sets the state for the component
+    /// - Parameter state: a state option (enabled/disabled)
+    public func configure(state: State) {
+        self.state = state
+    }
+
     /// Sets an icon for the shortcut view
     ///
-    /// - Parameter icon: An icon from NatDSIcons.
+    /// - Parameter icon: An icon from `NatDSIcons`
     /// Example of usage:
     ///
     ///     shortcut.configure(icon: getIcon(icon: .outlinedAlertNotification))
@@ -142,14 +219,14 @@ extension NatShortcut {
         self.icon = icon
     }
 
-    /// Configures text for shortcut bottom label.
+    /// Configures text for shortcut bottom label
     ///
-    /// - Parameter text: A string with the text to display on the label.
+    /// - Parameter text: A string with the text to display on the label
     public func configure(text: String) {
         self.text = text
     }
 
-    /// Sets the functionality for the shortcut.
+    /// Sets the functionality for the shortcut
     ///
     /// - Parameter action: A block of functionality to be executed when the shorcut is pressed
     public func configure(action: @escaping () -> Void) {
@@ -179,7 +256,7 @@ extension NatShortcut {
     /// shortcut.configure(badge: badge)
     /// ```
     public func configure(badge: NatBadge) {
-        badge.addToView(shortcutView)
+        badge.addToView(helperView)
     }
 
     @available(*, deprecated, message: "Use configure(badge:) instead")
@@ -206,6 +283,14 @@ extension NatShortcut {
     func configure(iconColor color: UIColor) {
         shortcutView.configure(iconColor: color)
     }
+
+    func configure(labelColor color: UIColor) {
+        self.label.textColor = color
+    }
+
+    func configure(elevation: NatElevation.ElevationAttributes) {
+        ViewStyle.applyElevation(on: shortcutView, with: elevation)
+    }
 }
 
 // MARK: - Private methods - UI
@@ -214,6 +299,7 @@ extension NatShortcut {
     private func setup() {
         addSubview(shortcutView)
         addSubview(label)
+        helperView.addToView(self, constraintTo: shortcutView)
 
         addConstraints()
         addGestures()

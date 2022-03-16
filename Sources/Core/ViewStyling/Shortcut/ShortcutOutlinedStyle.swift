@@ -1,17 +1,28 @@
 enum ShortcutOutlinedStyle {
+    static func apply(on shortcut: NatShortcut) {
+        apply(on: shortcut, color: shortcut.color)
+    }
+
+    static func apply(on shortcut: NatShortcut, color: NatShortcut.Color) {
+        let backgroundColor = color.outlinedBackgroundColor(state: shortcut.state)
+        let iconColor = color.outlinedIconColor(state: shortcut.state)
+        let borderColor = color.outlinedBorderColor(state: shortcut.state)
+        let labelColor = color.outlinedLabelColor(state: shortcut.state)
+        let elevation = NatElevation.ElevationAttributes.none
+
+        shortcut.configure(circleColor: backgroundColor)
+        shortcut.configure(iconColor: iconColor)
+        shortcut.configure(labelColor: labelColor)
+        shortcut.configure(circleBorderWidth: 1)
+        shortcut.configure(circleBorderColor: borderColor.cgColor)
+        shortcut.configure(elevation: elevation)
+    }
+
     static func applyPrimaryStyle(on shortcut: NatShortcut) {
-        applyStyle(on: shortcut, decorationColor: getUIColorFromTokens(\.colorPrimary))
+        apply(on: shortcut, color: .primary)
     }
 
     static func applyDefaultStyle(on shortcut: NatShortcut) {
-        applyStyle(on: shortcut, decorationColor: getUIColorFromTokens(\.colorHighEmphasis))
-    }
-
-    static private func applyStyle(on shortcut: NatShortcut, decorationColor: UIColor) {
-        shortcut.configure(circleColor: getUIColorFromTokens(\.colorSurface))
-        let opacity = getTokenFromTheme(\.opacityMediumLow)
-        shortcut.configure(circleBorderColor: decorationColor.withAlphaComponent(opacity).cgColor)
-        shortcut.configure(circleBorderWidth: 1)
-        shortcut.configure(iconColor: decorationColor)
+        apply(on: shortcut, color: .neutral)
     }
 }
