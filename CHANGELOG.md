@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.32.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.31.0...6.32.0) (2022-03-16)
+
+
+### Features
+
+* add disabled state and update shortcut attributes ([f4c441f](https://github.com/natura-cosmeticos/natds-ios/commit/f4c441f5d3f035d3102a84fa3ed2211a056e968f))
+* add isEnabled attribute to shortcut, fix shortcut icon color ([0ab9bef](https://github.com/natura-cosmeticos/natds-ios/commit/0ab9befb92ccf94dc99231774d3ea61df22b2011))
+* update shortcut state, style and colors ([76b1a08](https://github.com/natura-cosmeticos/natds-ios/commit/76b1a08898a62e8bc09b29c1ec7c5d5c85f349ef))
+* update shortcut styles and deprecate old styles ([5596af2](https://github.com/natura-cosmeticos/natds-ios/commit/5596af244728808f7d5d64acc263072de529976f))
+* update themes version ([4e9e4cd](https://github.com/natura-cosmeticos/natds-ios/commit/4e9e4cda8b55b94c40ba944593cb22e8d6f975a6))
+
+
+### Bug Fixes
+
+* fix icon color for contained shortcut ([33df49b](https://github.com/natura-cosmeticos/natds-ios/commit/33df49b8d5afa7186a336efc02d70782c1085f03))
+
 ## [6.31.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.30.0...6.31.0) (2022-03-07)
 
 
