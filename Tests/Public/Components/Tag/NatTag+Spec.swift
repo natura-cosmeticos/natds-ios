@@ -1,5 +1,6 @@
 import Quick
 import Nimble
+import NatDSIcons
 
 @testable import NatDS
 
@@ -119,6 +120,19 @@ final class NatTagSpec: QuickSpec {
             it("sets standard") {
                 let sizes = NatTag.Size.self
                 expect(sizes.standard.value).to(equal(getTokenFromTheme(\.sizeStandard)))
+            }
+        }
+
+        describe("#configure icon") {
+            beforeEach {
+                sut = .init(style: styleSpy,
+                            icon: getIcon(.outlinedDefaultMockup),
+                            text: "New")
+            }
+
+            it("sets icon") {
+                expect(sut.icon).to(equal(getIcon(.outlinedDefaultMockup)))
+                expect(sut.iconView.isHidden).to(beFalse())
             }
         }
     }
