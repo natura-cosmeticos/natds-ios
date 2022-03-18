@@ -70,37 +70,43 @@ final class NatTagSpec: QuickSpec {
             it("sets primary") {
                 sut.configure(color: .primary)
                 expect(sut.color.tag).to(equal(getUIColorFromTokens(\.colorPrimary)))
-                expect(sut.label.tintColor).to(equal(getUIColorFromTokens(\.colorOnPrimary)))
+                expect(sut.color.label).to(equal(getUIColorFromTokens(\.colorOnPrimary)))
             }
 
             it("sets secondary") {
                 sut.configure(color: .secondary)
                 expect(sut.color.tag).to(equal(getUIColorFromTokens(\.colorSecondary)))
-                expect(sut.label.textColor).to(equal(getUIColorFromTokens(\.colorOnSecondary)))
+                expect(sut.color.label).to(equal(getUIColorFromTokens(\.colorOnSecondary)))
             }
 
             it("sets success") {
                 sut.configure(color: .success)
                 expect(sut.color.tag).to(equal(getUIColorFromTokens(\.colorSuccess)))
-                expect(sut.label.textColor).to(equal(getUIColorFromTokens(\.colorOnSuccess)))
+                expect(sut.color.label).to(equal(getUIColorFromTokens(\.colorOnSuccess)))
             }
 
             it("sets alert") {
                 sut.configure(color: .alert)
                 expect(sut.color.tag).to(equal(getUIColorFromTokens(\.colorAlert)))
-                expect(sut.label.textColor).to(equal(getUIColorFromTokens(\.colorOnAlert)))
+                expect(sut.color.label).to(equal(getUIColorFromTokens(\.colorOnAlert)))
             }
 
             it("sets warning") {
                 sut.configure(color: .warning)
                 expect(sut.color.tag).to(equal(getUIColorFromTokens(\.colorWarning)))
-                expect(sut.label.textColor).to(equal(getUIColorFromTokens(\.colorOnWarning)))
+                expect(sut.color.label).to(equal(getUIColorFromTokens(\.colorOnWarning)))
             }
 
             it("sets link") {
                 sut.configure(color: .link)
                 expect(sut.color.tag).to(equal(getUIColorFromTokens(\.colorLink)))
-                expect(sut.label.textColor).to(equal(getUIColorFromTokens(\.colorOnLink)))
+                expect(sut.color.label).to(equal(getUIColorFromTokens(\.colorOnLink)))
+            }
+
+            it("sets custom") {
+                sut.configure(color: .custom(backgroundColor: .black, labelColor: .white))
+                expect(sut.color.tag).to(equal(.black))
+                expect(sut.color.label).to(equal(.white))
             }
         }
 
