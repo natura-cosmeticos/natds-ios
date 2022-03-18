@@ -1,3 +1,4 @@
+// swiftlint:disable line_length
 extension String {
     func attributedStringWith(lineHeight: CGFloat,
                               letterSpacing: CGFloat,

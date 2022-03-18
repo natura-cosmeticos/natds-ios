@@ -1,5 +1,6 @@
 import UIKit
 import NatDS
+import NatDSIcons
 
 class TagViewController: UIViewController, SampleItem {
     static var name: String = "Tag"
@@ -7,7 +8,7 @@ class TagViewController: UIViewController, SampleItem {
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.spacing = NatSpacing.xLarge
+        stackView.spacing = NatSpacing.semi
         stackView.distribution = .fillProportionally
         stackView.alignment = .center
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -75,9 +76,18 @@ class TagViewController: UIViewController, SampleItem {
     }()
 
     private var tagDefaultCustom: NatTag = {
-        let tag = NatTag(style: .defaultAlert)
-        tag.configure(text: "Default Custom Color")
-        tag.configure(color: .custom(backgroundColor: UIColor.black, labelColor: UIColor.white))
+        let color: NatTag.Color = .custom(backgroundColor: UIColor.black, labelColor: UIColor.white)
+        let tag = NatTag(style: .defaultAlert, color: color, size: .small, icon: getIcon(.outlinedDefaultMockup))
+        tag.configure(text: "Custom color and icon Small")
+        tag.translatesAutoresizingMaskIntoConstraints = false
+
+        return tag
+    }()
+
+    private var tagDefaultStandardCustom: NatTag = {
+        let color: NatTag.Color = .custom(backgroundColor: NatColors.mediumEmphasis, labelColor: UIColor.white)
+        let tag = NatTag(style: .defaultAlert, color: color, size: .standard, icon: getIcon(.outlinedDefaultMockup))
+        tag.configure(text: "Custom color and icon Standard")
         tag.translatesAutoresizingMaskIntoConstraints = false
 
         return tag
@@ -100,6 +110,7 @@ class TagViewController: UIViewController, SampleItem {
         stackView.addArrangedSubview(tagRightWarning)
         stackView.addArrangedSubview(tagRightLink)
         stackView.addArrangedSubview(tagDefaultCustom)
+        stackView.addArrangedSubview(tagDefaultStandardCustom)
 
         let constraints = [
             stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
