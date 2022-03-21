@@ -1,3 +1,4 @@
+// swiftlint:disable file_length
 // swiftlint:disable line_length
 /**
   ExpansionPanel is a class that represents a view component that can be expanded and collapsed.

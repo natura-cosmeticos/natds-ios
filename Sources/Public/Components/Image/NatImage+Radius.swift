@@ -8,8 +8,8 @@ extension NatImage {
 
         var value: CGFloat {
             switch self {
-            case .none: return getTokenFromTheme(\.borderRadiusNone)
-            case .medium: return getTokenFromTheme(\.borderRadiusMedium)
+            case .none: return getComponentAttributeFromTheme(\.imageBorderRadiusNone)
+            case .medium: return getComponentAttributeFromTheme(\.imageBorderRadiusMedium)
             case .circle(let height): return NatBorderRadius.circle(viewHeight: height)
             }
         }
