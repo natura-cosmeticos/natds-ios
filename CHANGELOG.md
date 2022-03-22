@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.34.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.33.0...6.34.0) (2022-03-22)
+
+
+### Features
+
+* udpdate image border radius to make it customisable ([bfc6ed5](https://github.com/natura-cosmeticos/natds-ios/commit/bfc6ed5b8eec23725a7f1be7147d8b10400f934a))
+* update themes version ([f1991a1](https://github.com/natura-cosmeticos/natds-ios/commit/f1991a17fe232d21c843714bdab973bc9d13d195))
+
 ## [6.33.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.32.0...6.33.0) (2022-03-22)
 
 
