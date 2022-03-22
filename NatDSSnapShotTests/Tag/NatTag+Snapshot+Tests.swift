@@ -1,5 +1,6 @@
 import XCTest
 import SnapshotTesting
+import NatDSIcons
 
 @testable import NatDS
 
@@ -55,11 +56,21 @@ final class NatTagSnapshotTests: XCTestCase {
     }
 
     func test_tag_fixed_width_hasValidSnapshot() {
-        let sut = NatTag(style: .defaultAlert)
-        sut.configure(text: "New")
-        sut.configure(color: .alert)
+        let sut = NatTag(style: .defaultAlert, color: .alert, text: "New")
         sut.translatesAutoresizingMaskIntoConstraints = false
         sut.widthAnchor.constraint(equalToConstant: 100).isActive = true
+
+        assertSnapshot(matching: sut, as: .image)
+    }
+
+    func test_tag_small_withIcon_hasValidSnapshot() {
+        let sut = NatTag(style: .defaultAlert, color: .alert, icon: getIcon(.outlinedDefaultMockup), text: "New")
+
+        assertSnapshot(matching: sut, as: .image)
+    }
+
+    func test_tag_standard_withIcon_hasValidSnapshot() {
+        let sut = NatTag(style: .defaultAlert, color: .alert, size: .standard, icon: getIcon(.outlinedDefaultMockup), text: "New")
 
         assertSnapshot(matching: sut, as: .image)
     }

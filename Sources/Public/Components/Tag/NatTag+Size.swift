@@ -20,5 +20,15 @@ extension NatTag {
                 return getTokenFromTheme(\.sizeStandard)
             }
         }
+
+        var iconSize: CGFloat {
+            let iconPadding: CGFloat = 3
+            switch self {
+            case .small:
+                return getTokenFromTheme(\.sizeSmall) - iconPadding
+            case .standard:
+                return getTokenFromTheme(\.sizeStandard) - iconPadding
+            }
+        }
     }
 }

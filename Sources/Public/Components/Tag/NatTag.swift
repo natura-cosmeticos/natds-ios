@@ -48,7 +48,14 @@ public final class NatTag: UIView {
 
     // MARK: - Private properties
 
-    internal lazy var label: UILabel = {
+    public lazy var iconView: IconView = {
+        let iconView = IconView()
+        iconView.translatesAutoresizingMaskIntoConstraints = false
+        return iconView
+
+    }()
+
+    public lazy var label: UILabel = {
         let label = UILabel()
         let fontSize = getComponentAttributeFromTheme(\.tagLabelFontSize)
         let fontWeight = getComponentAttributeFromTheme(\.tagLabelPrimaryFontWeight)
@@ -64,14 +71,41 @@ public final class NatTag: UIView {
         return label
     }()
 
-    private let style: Style
+    private var style: Style
+    public var color: Color {
+        didSet {
+            style.applyStyle(self)
+        }
+    }
+    private var size: Size
+    public var icon: String? {
+        didSet {
+            updateIcon()
+        }
+    }
+
+    public var text: String? {
+        didSet {
+            updateText()
+        }
+    }
+
     private var drawPath: DrawPath?
-    internal var tagColor: Color = .primary
+    private var heightConstraint: NSLayoutConstraint?
 
     // MARK: - Inits
 
-    public init(style: Style) {
+    public init(style: Style = .defaultAlert,
+                color: Color = .primary,
+                size: Size = .small,
+                icon: String? = nil,
+                text: String? = nil) {
         self.style = style
+        self.color = color
+        self.size = size
+        self.icon = icon
+        self.text = text
+
         super.init(frame: .zero)
         self.contentScaleFactor = UIScreen.main.scale
 
@@ -88,21 +122,44 @@ public final class NatTag: UIView {
 
     private func setup() {
         backgroundColor = .clear
+        if icon != nil {
+            addSubview(iconView)
+        }
         addSubview(label)
         addConstraints()
-        isHidden = true
+        updateText()
+        updateIcon()
     }
 
     private func addConstraints() {
         translatesAutoresizingMaskIntoConstraints = false
 
-        let constraints = [
-            label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -getTokenFromTheme(\.sizeTiny)),
-            label.topAnchor.constraint(equalTo: topAnchor, constant: getTokenFromTheme(\.sizeNone)),
-            label.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -getTokenFromTheme(\.sizeNone)),
-            label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: getTokenFromTheme(\.sizeTiny))
-        ]
+        var constraints: [NSLayoutConstraint] = []
 
+        if icon != nil {
+            constraints = [
+                iconView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: getTokenFromTheme(\.spacingTiny)),
+                iconView.heightAnchor.constraint(equalToConstant: size.value),
+                iconView.widthAnchor.constraint(equalToConstant: size.value),
+                iconView.centerYAnchor.constraint(equalTo: centerYAnchor),
+                label.leadingAnchor.constraint(equalTo: iconView.trailingAnchor,
+                                               constant: getTokenFromTheme(\.spacingMicro)),
+                label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -getTokenFromTheme(\.spacingTiny)),
+                label.centerYAnchor.constraint(equalTo: centerYAnchor)
+            ]
+        } else {
+            constraints = [
+                label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -getTokenFromTheme(\.sizeTiny)),
+                label.topAnchor.constraint(equalTo: topAnchor, constant: getTokenFromTheme(\.sizeNone)),
+                label.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -getTokenFromTheme(\.sizeNone)),
+                label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: getTokenFromTheme(\.sizeTiny))
+            ]
+        }
+
+        heightConstraint = heightAnchor.constraint(equalToConstant: size.value)
+        if let heightConstraint = heightConstraint {
+            constraints.append(heightConstraint)
+        }
         NSLayoutConstraint.activate(constraints)
     }
 
@@ -126,13 +183,32 @@ public final class NatTag: UIView {
                                                         height: NatBorderRadius.circle(viewHeight: size.height)))
             }
 
-            self.tagColor.tag.set()
+            self.color.tag.set()
             path.fill()
         }
     }
 
+    func updateText() {
+        // swiftlint:disable line_length
+        guard let text = text else { return }
+        label.attributedText = text.attributedStringWith(lineHeight: getComponentAttributeFromTheme(\.tagLabelLineHeight),
+                                                         letterSpacing: getComponentAttributeFromTheme(\.tagLabelLetterSpacing))
+        label.textAlignment = .center
+        isHidden = text.isEmpty
+        // swiftlint:enable line_length
+    }
+
+    func updateIcon() {
+        iconView.iconText = icon
+        iconView.setFontSize(size: size.iconSize)
+    }
+
     func configure(textColor color: UIColor) {
         label.textColor = color
+    }
+
+    func configure(iconColor color: UIColor) {
+        iconView.tintColor = color
     }
 
     // MARK: - Public methods
@@ -142,22 +218,22 @@ public final class NatTag: UIView {
     }
 
     /// Configures a text for the component's label. The tag adjusts its width to match the text length.
-    public func configure(text: String) {
-        // swiftlint:disable line_length
-        label.attributedText = text.attributedStringWith(lineHeight: getComponentAttributeFromTheme(\.tagLabelLineHeight),
-                                                         letterSpacing: getComponentAttributeFromTheme(\.tagLabelLetterSpacing))
-        label.textAlignment = .center
-        isHidden = text.isEmpty
+    public func configure(text: String?) {
+        self.text = text
     }
 
     /// Configures a size to the component, which changes the tag's height and padding.
-    public func configure(size: Size = .small) {
-        heightAnchor.constraint(equalToConstant: size.value).isActive = true
+    public func configure(size: Size) {
+        heightConstraint?.constant = size.value
+        setNeedsDisplay()
     }
 
     /// Configures a color for the component's background.
-    public func configure(color: Color = .primary) {
-        tagColor = color
-        configure(textColor: color.label)
+    public func configure(color: Color) {
+        self.color = color
+    }
+
+    public func configure(icon: String?) {
+        iconView.iconText = icon
     }
 }

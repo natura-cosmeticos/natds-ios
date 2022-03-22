@@ -12,13 +12,14 @@ extension NatTag {
      - link
      */
 
-    public enum Color: CaseIterable {
+    public enum Color {
         case primary
         case secondary
         case success
         case alert
         case warning
         case link
+        case custom(backgroundColor: UIColor, labelColor: UIColor)
 
         var tag: UIColor {
             switch self {
@@ -34,6 +35,8 @@ extension NatTag {
                 return getUIColorFromTokens(\.colorWarning)
             case .link:
                 return getUIColorFromTokens(\.colorLink)
+            case .custom(let backgroundCustomColor, _):
+                return backgroundCustomColor
             }
         }
 
@@ -51,6 +54,8 @@ extension NatTag {
                 return getUIColorFromTokens(\.colorOnWarning)
             case .link:
                 return getUIColorFromTokens(\.colorOnLink)
+            case .custom(_, let labelCustomColor):
+                return labelCustomColor
             }
         }
     }

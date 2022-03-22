@@ -59,4 +59,12 @@ final class NatTagColorSnapshotTests: XCTestCase {
 
         assertSnapshot(matching: sut, as: .image)
     }
+
+    func test_tag_color_custom_hasValidSnapshot() {
+        let sut = NatTag(style: .defaultAlert)
+        sut.configure(text: "New")
+        sut.configure(color: .custom(backgroundColor: .black, labelColor: .white))
+
+        assertSnapshot(matching: sut, as: .image)
+    }
 }
