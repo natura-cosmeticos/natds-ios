@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.33.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.32.0...6.33.0) (2022-03-22)
+
+
+### Features
+
+* add custom color configuration to tag component ([763b72a](https://github.com/natura-cosmeticos/natds-ios/commit/763b72a813ea6be7832eff5819902612d1c69b5a))
+* add icon to tag ([c111835](https://github.com/natura-cosmeticos/natds-ios/commit/c1118359236f277fdbab59bbb9c708b529f4bada))
+
 ## [6.32.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.31.0...6.32.0) (2022-03-16)
 
 
