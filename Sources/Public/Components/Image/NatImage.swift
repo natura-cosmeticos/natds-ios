@@ -161,7 +161,7 @@ public class NatImage: UIView {
             layer.cornerRadius = getTokenFromTheme(\.borderRadiusMedium)
             clipsToBounds = true
         } else {
-            layer.cornerRadius = 0
+            layer.cornerRadius = getTokenFromTheme(\.borderRadiusNone)
         }
     }
 

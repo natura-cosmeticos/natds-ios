@@ -64,6 +64,8 @@ public class ValueTextHighlight: UIView {
         return label
     }()
 
+    // MARK: - Init
+
     public override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -74,9 +76,7 @@ public class ValueTextHighlight: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-}
-
-extension ValueTextHighlight {
+    // MARK: - Private methods
 
     private func setup() {
         self.backgroundColor = .clear
@@ -139,4 +139,5 @@ extension ValueTextHighlight {
 
         NSLayoutConstraint.activate(constraints)
     }
+
 }
