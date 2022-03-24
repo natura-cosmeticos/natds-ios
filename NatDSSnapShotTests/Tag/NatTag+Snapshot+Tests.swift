@@ -70,7 +70,11 @@ final class NatTagSnapshotTests: XCTestCase {
     }
 
     func test_tag_standard_withIcon_hasValidSnapshot() {
-        let sut = NatTag(style: .defaultAlert, color: .alert, size: .standard, icon: getIcon(.outlinedDefaultMockup), text: "New")
+        let sut = NatTag(style: .defaultAlert,
+                         color: .alert,
+                         size: .standard,
+                         icon: getIcon(.outlinedDefaultMockup),
+                         text: "New")
 
         assertSnapshot(matching: sut, as: .image)
     }

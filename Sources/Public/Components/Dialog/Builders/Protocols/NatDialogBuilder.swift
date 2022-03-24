@@ -1,5 +1,5 @@
 /// A protocol to build the Dialog component
-public protocol NatDialogBuilder: class {
+public protocol NatDialogBuilder: AnyObject {
     var viewModel: NatDialogController.ViewModel { get }
     var buttonsConfiguration: (primary: DialogButtonConfiguration?, secondary: DialogButtonConfiguration?) { get }
 }

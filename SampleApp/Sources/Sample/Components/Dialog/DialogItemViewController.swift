@@ -32,7 +32,7 @@ final class DialogItemViewController: UIViewController, SampleItem {
     private let dialogStandardButton: NatButton = {
         let button = NatButton(style: .contained)
         button.configure(title: "standard")
-        button.addTarget(self, action: #selector(showStandardDialog), for: .touchUpInside)
+        button.addTarget(DialogItemViewController.self, action: #selector(showStandardDialog), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
 
         return button
@@ -41,7 +41,7 @@ final class DialogItemViewController: UIViewController, SampleItem {
     private let dialogStandardLongTextButton: NatButton = {
         let button = NatButton(style: .contained)
         button.configure(title: "standard with long title button")
-        button.addTarget(self, action: #selector(showStandardLongTextDialog), for: .touchUpInside)
+        button.addTarget(DialogItemViewController.self, action: #selector(showStandardLongTextDialog), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
 
         return button
@@ -50,7 +50,7 @@ final class DialogItemViewController: UIViewController, SampleItem {
     private let dialogStandardBigViewButton: NatButton = {
         let button = NatButton(style: .contained)
         button.configure(title: "standard with max height")
-        button.addTarget(self, action: #selector(showStandardBigViewDialog), for: .touchUpInside)
+        button.addTarget(DialogItemViewController.self, action: #selector(showStandardBigViewDialog), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
 
         return button
@@ -59,7 +59,7 @@ final class DialogItemViewController: UIViewController, SampleItem {
     private let dialogStandardCustomViewButton: NatButton = {
         let button = NatButton(style: .contained)
         button.configure(title: "standard with custom view")
-        button.addTarget(self, action: #selector(showStandardCustomViewDialog), for: .touchUpInside)
+        button.addTarget(DialogItemViewController.self, action: #selector(showStandardCustomViewDialog), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
 
         return button
@@ -68,7 +68,7 @@ final class DialogItemViewController: UIViewController, SampleItem {
     private let dialogWithDividerStandardButton: NatButton = {
         let button = NatButton(style: .contained)
         button.configure(title: "standard with divider")
-        button.addTarget(self, action: #selector(showDividerStandardDialog), for: .touchUpInside)
+        button.addTarget(DialogItemViewController.self, action: #selector(showDividerStandardDialog), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
 
         return button
@@ -77,7 +77,7 @@ final class DialogItemViewController: UIViewController, SampleItem {
     private let dialogAlertButton: NatButton = {
         let button = NatButton(style: .contained)
         button.configure(title: "alert")
-        button.addTarget(self, action: #selector(showAlertDialog), for: .touchUpInside)
+        button.addTarget(DialogItemViewController.self, action: #selector(showAlertDialog), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
 
         return button
@@ -86,7 +86,7 @@ final class DialogItemViewController: UIViewController, SampleItem {
     private let dialogNotDismissableButton: NatButton = {
         let button = NatButton(style: .contained)
         button.configure(title: "not dismissable dialog")
-        button.addTarget(self, action: #selector(showNotDismissableDialog), for: .touchUpInside)
+        button.addTarget(DialogItemViewController.self, action: #selector(showNotDismissableDialog), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
 
         return button
