@@ -116,10 +116,9 @@ extension ChooseBrandViewController: UITableViewDelegate {
             navigationBarAppearance.titleTextAttributes = [
                 NSAttributedString.Key.foregroundColor: NatColors.onPrimary
             ]
-            let appearance = UINavigationBar.appearance()
-            appearance.tintColor = NatColors.onPrimary
-            appearance.standardAppearance = navigationBarAppearance
-            appearance.scrollEdgeAppearance = navigationBarAppearance
+            navigationController?.navigationBar.tintColor = NatColors.onPrimary
+            navigationController?.navigationBar.standardAppearance = navigationBarAppearance
+            navigationController?.navigationBar.scrollEdgeAppearance = navigationBarAppearance
         } else {
             navigationController?.navigationBar.barTintColor = NatColors.primary
             navigationController?.navigationBar.tintColor = NatColors.onPrimary
