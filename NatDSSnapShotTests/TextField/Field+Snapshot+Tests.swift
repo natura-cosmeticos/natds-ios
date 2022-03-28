@@ -17,18 +17,18 @@ final class FieldSnapshotTests: XCTestCase {
     }
 
     func test_init_hasNormalSnapshot() {
-        assertSnapshot(matching: systemUnderTest, as: .image)
+        assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.99))
     }
 
     func test_boderWidth_whenSetBorderWidth_hasSnapshotWithBorderWidthGreater() {
         systemUnderTest.borderWidth = 4
 
-        assertSnapshot(matching: systemUnderTest, as: .image)
+        assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.99))
     }
 
     func test_borderColors_whenSetABorder_hasSnapshotWithCustomValue() {
         systemUnderTest.borderColor = .red
 
-        assertSnapshot(matching: systemUnderTest, as: .image)
+        assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.99))
     }
 }

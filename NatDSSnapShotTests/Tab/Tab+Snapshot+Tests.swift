@@ -31,7 +31,7 @@ final class TabSnapshotTests: XCTestCase {
         systemUnderTest.insertTab(title: "Tab 2")
         systemUnderTest.insertTab(title: "Tab 3")
 
-        assertSnapshot(matching: superView, as: .image)
+        assertSnapshot(matching: superView, as: .image(precision: 0.99))
     }
 
     func test_whenHas2TabsAndSelectedTabIs2_returnsTabWith2SelectedValidSnapshot() {
@@ -40,7 +40,7 @@ final class TabSnapshotTests: XCTestCase {
 
         systemUnderTest.selectedSegmentedIndex = 1
 
-        assertSnapshot(matching: superView, as: .image)
+        assertSnapshot(matching: superView, as: .image(precision: 0.99))
     }
 
     func test_whenHas3TabsAndSelectedTabIs2_returnsTabWith2SelectedValidSnapshot() {
@@ -50,6 +50,6 @@ final class TabSnapshotTests: XCTestCase {
 
         systemUnderTest.selectedSegmentedIndex = 1
 
-        assertSnapshot(matching: superView, as: .image)
+        assertSnapshot(matching: superView, as: .image(precision: 0.99))
     }
 }

@@ -34,7 +34,7 @@ final class NatDialogControllerSnapshotTests: XCTestCase {
 
         superview.addSubview(systemUnderTest.view)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.99))
     }
 
     func test_dialog_style_standard_without_title_hasValidSnapshot() {
@@ -47,7 +47,7 @@ final class NatDialogControllerSnapshotTests: XCTestCase {
 
         superview.addSubview(systemUnderTest.view)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.99))
     }
 
     func test_dialog_style_standard_with_vertical_buttons_hasValidSnapshot() {
@@ -61,7 +61,7 @@ final class NatDialogControllerSnapshotTests: XCTestCase {
 
         superview.addSubview(systemUnderTest.view)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.99))
     }
 
     func test_dialog_style_standard_with_title_hasValidSnapshot() {
@@ -75,7 +75,7 @@ final class NatDialogControllerSnapshotTests: XCTestCase {
 
         superview.addSubview(systemUnderTest.view)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.99))
     }
 
     func test_dialog_style_standard_with_divider_hasValidSnapshot() {
@@ -90,7 +90,7 @@ final class NatDialogControllerSnapshotTests: XCTestCase {
 
         superview.addSubview(systemUnderTest.view)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.99))
     }
 
     func test_dialog_style_alert_hasValidSnapshot() {
@@ -103,7 +103,7 @@ final class NatDialogControllerSnapshotTests: XCTestCase {
 
         superview.addSubview(systemUnderTest.view)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.99))
     }
 
     func test_dialog_style_alert_with_vertical_buttons_hasValidSnapshot() {
@@ -116,6 +116,6 @@ final class NatDialogControllerSnapshotTests: XCTestCase {
 
         superview.addSubview(systemUnderTest.view)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.99))
     }
 }
