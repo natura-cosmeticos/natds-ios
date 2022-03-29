@@ -17,32 +17,32 @@ class AppBarSnapshotTests: XCTestCase {
     func test_appbar_color_primary_hasValidSnapshot() {
         systemUnderTest.configure(appBarColor: .primary)
 
-        assertSnapshot(matching: systemUnderTest, as: .image)
+        assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.93))
     }
 
     func test_appbar_color_default_hasValidSnapshot() {
         systemUnderTest.configure(appBarColor: .default)
 
-        assertSnapshot(matching: systemUnderTest, as: .image)
+        assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.93))
     }
 
     func test_appbar_color_inverse_hasValidSnapshot() {
         systemUnderTest.configure(appBarColor: .inverse)
 
-        assertSnapshot(matching: systemUnderTest, as: .image)
+        assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.93))
     }
 
     func test_appbar_color_none_hasValidSnapshot() {
         systemUnderTest.configure(appBarColor: .none)
 
-        assertSnapshot(matching: systemUnderTest, as: .image)
+        assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.93))
     }
 
     func test_appbar_elevation_hasValidSnapshot() {
         systemUnderTest.configure(appBarColor: .default)
         systemUnderTest.configure(appBarElevation: true)
 
-        assertSnapshot(matching: systemUnderTest, as: .image)
+        assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.93))
     }
 
     func test_appbar_actionRight_hasValidSnapshot() {
@@ -50,7 +50,7 @@ class AppBarSnapshotTests: XCTestCase {
         let iconButton = NatIconButton(style: .standardDefault, size: .semi)
         systemUnderTest.visibleViewController?.configure(appBarActionRight: [iconButton])
 
-        assertSnapshot(matching: systemUnderTest, as: .image)
+        assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.93))
     }
 
     func test_appbar_actionRight_multiple_hasValidSnapshot() {
@@ -62,7 +62,7 @@ class AppBarSnapshotTests: XCTestCase {
                                                                              secondIconButton,
                                                                              thirdIconButton])
 
-        assertSnapshot(matching: systemUnderTest, as: .image)
+        assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.93))
     }
 
     func test_appbar_actionLeft_hasValidSnapshot() {
@@ -70,6 +70,6 @@ class AppBarSnapshotTests: XCTestCase {
         let iconButton = NatIconButton(style: .standardDefault, size: .semi)
         systemUnderTest.visibleViewController?.configure(appBarActionLeft: iconButton)
 
-        assertSnapshot(matching: systemUnderTest, as: .image)
+        assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.93))
     }
 }

@@ -44,7 +44,7 @@ final class NatButtonSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest, withWidth: false)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.99))
         assertSnapshot(matching: systemUnderTest, as: .recursiveDescription)
     }
 
@@ -55,7 +55,7 @@ final class NatButtonSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest, withWidth: false)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.99))
         assertSnapshot(matching: systemUnderTest, as: .recursiveDescription)
     }
 }
