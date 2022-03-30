@@ -49,7 +49,7 @@ platform :ios do
     scan(
       workspace: workspace_path,
       scheme: scheme_snapshot,
-      destination: "platform=iOS Simulator,name=iPhone SE (2nd generation)",
+      destination: "platform=iOS Simulator,name=iPhone SE (3rd generation)",
       skip_detect_devices: true
     )
   end
@@ -58,13 +58,6 @@ platform :ios do
   lane :fetch_certificates do
     match(app_identifier: app_identifier, readonly: true, type: "development")
     match(app_identifier: app_identifier, readonly: true, type: "appstore")
-  end
-
-  desc "Fetch the Development, AdHoc and Distribution Certificates"
-  lane :renew_certificates do
-    app_store_authentication()
-    match(app_identifier: app_identifier, readonly: false, type: "development")
-    match(app_identifier: app_identifier, readonly: false, type: "appstore")
   end
 
   desc "Install cocoapods dependencies"
@@ -110,7 +103,11 @@ platform :ios do
       )
     end
 
-    app_store_authentication()
+    app_store_connect_api_key(
+      key_id: ENV["APP_STORE_CONNECT_KEY_ID"], 
+      issuer_id: ENV["APP_STORE_CONNECT_ISSUER_ID"],
+      key_filepath: ENV["APP_STORE_CONNECT_API_KEY_FILE_PATH"],
+      in_house: false)
 
     build_ipa(
       scheme: options[:scheme],
@@ -192,13 +189,6 @@ platform :ios do
 
     add_git_tag(tag: "#{updated_version_number}")
     push_to_git_remote(local_branch: git_branch)
-  end
-
-  def app_store_authentication
-    app_store_connect_api_key(
-      key_id: ENV["APP_STORE_CONNECT_KEY_ID"], 
-      issuer_id: ENV["APP_STORE_CONNECT_ISSUER_ID"],
-      key_filepath: ENV["APP_STORE_CONNECT_API_KEY_FILE_PATH"])
   end
 
   def next_major_version
