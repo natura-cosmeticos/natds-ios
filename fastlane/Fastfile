@@ -60,6 +60,13 @@ platform :ios do
     match(app_identifier: app_identifier, readonly: true, type: "appstore")
   end
 
+  desc "Fetch the Development, AdHoc and Distribution Certificates"
+  lane :renew_certificates do
+    app_store_authentication()
+    match(app_identifier: app_identifier, readonly: false, type: "development")
+    match(app_identifier: app_identifier, readonly: false, type: "appstore")
+  end
+
   desc "Install cocoapods dependencies"
   lane :pods_install do
     cocoapods(repo_update:true, clean_install: false, use_bundle_exec:true)
@@ -103,10 +110,7 @@ platform :ios do
       )
     end
 
-    app_store_connect_api_key(
-      key_id: ENV["APP_STORE_CONNECT_KEY_ID"], 
-      issuer_id: ENV["APP_STORE_CONNECT_ISSUER_ID"],
-      key_filepath: ENV["APP_STORE_CONNECT_API_KEY_FILE_PATH"])
+    app_store_authentication()
 
     build_ipa(
       scheme: options[:scheme],
@@ -188,6 +192,13 @@ platform :ios do
 
     add_git_tag(tag: "#{updated_version_number}")
     push_to_git_remote(local_branch: git_branch)
+  end
+
+  def app_store_authentication
+    app_store_connect_api_key(
+      key_id: ENV["APP_STORE_CONNECT_KEY_ID"], 
+      issuer_id: ENV["APP_STORE_CONNECT_ISSUER_ID"],
+      key_filepath: ENV["APP_STORE_CONNECT_API_KEY_FILE_PATH"])
   end
 
   def next_major_version
