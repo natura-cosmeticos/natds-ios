@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.34.1](https://github.com/natura-cosmeticos/natds-ios/compare/6.34.0...6.34.1) (2022-04-06)
+
+
+### Bug Fixes
+
+* update app bar color configuration to match ios 15 appearance ([ea8721d](https://github.com/natura-cosmeticos/natds-ios/commit/ea8721d1a0cf1a720e29cf00e31324458071646d))
+* update color config at samples app's nav bar ([1693e16](https://github.com/natura-cosmeticos/natds-ios/commit/1693e16a660249c81afb633acd8e804da0907a2c))
+
 ## [6.34.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.33.0...6.34.0) (2022-03-22)
 
 
