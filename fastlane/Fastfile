@@ -60,6 +60,17 @@ platform :ios do
     match(app_identifier: app_identifier, readonly: true, type: "appstore")
   end
 
+  desc "Renew the Development, AdHoc and Distribution Certificates"
+  lane :renew_certificates do
+    app_store_connect_api_key(
+      key_id: ENV["APP_STORE_CONNECT_KEY_ID"], 
+      issuer_id: ENV["APP_STORE_CONNECT_ISSUER_ID"],
+      key_filepath: ENV["APP_STORE_CONNECT_API_KEY_FILE_PATH"],
+      in_house: false)
+    match(app_identifier: app_identifier, readonly: false, type: "development")
+    match(app_identifier: app_identifier, readonly: false, type: "appstore")
+  end
+
   desc "Install cocoapods dependencies"
   lane :pods_install do
     cocoapods(repo_update:true, clean_install: false, use_bundle_exec:true)
@@ -106,7 +117,8 @@ platform :ios do
     app_store_connect_api_key(
       key_id: ENV["APP_STORE_CONNECT_KEY_ID"], 
       issuer_id: ENV["APP_STORE_CONNECT_ISSUER_ID"],
-      key_filepath: ENV["APP_STORE_CONNECT_API_KEY_FILE_PATH"])
+      key_filepath: ENV["APP_STORE_CONNECT_API_KEY_FILE_PATH"],
+      in_house: false)
 
     build_ipa(
       scheme: options[:scheme],

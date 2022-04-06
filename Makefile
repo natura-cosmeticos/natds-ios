@@ -29,6 +29,7 @@ setup: ## intalls project dependencies
 
 install_bundle: ## install gems
 	$(BUNDLE) install
+	$(BUNDLE) update --all
 
 xcode_wipe: ## delete all xcode cached outputs, kill and reset all simulators
 	-rm -rf ~/Library/Developer/Xcode/{DerivedData,Archives,Products}
@@ -76,6 +77,9 @@ create_docs: ## creates html docs
 
 teams_release_notification: ## sends a notification on teams about a new available version
 	bash ./scripts/message_teams.sh
+
+update_profiles:
+	$(FASTLANE) renew_certificates
 
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
