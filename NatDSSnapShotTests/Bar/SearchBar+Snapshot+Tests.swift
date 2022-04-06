@@ -40,7 +40,7 @@ final class SearchBarSnapshotTests: XCTestCase {
         systemUnderTest.setFocusTextField()
         systemUnderTest.text = "NAT NATURA"
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.98))
     }
 }
 

@@ -32,7 +32,7 @@ final class NavigationDrawerTests: XCTestCase {
         delegateMock.mockNumberOfItems = 10
         delegateMock.mockNumberOfSubitems = 2
 
-        assertSnapshot(matching: systemUnderTest, as: .image)
+        assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.99))
     }
 
     func test_cellForRowAt_whenItIsAnExpandedItem_hasValidSnapshot() {
@@ -42,7 +42,7 @@ final class NavigationDrawerTests: XCTestCase {
         systemUnderTest.tableView(tableView, didSelectRowAt: IndexPath(row: 0, section: 0))
         systemUnderTest.tableView(tableView, didSelectRowAt: IndexPath(row: 0, section: 4))
 
-        assertSnapshot(matching: systemUnderTest, as: .image)
+        assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.99))
     }
 
     func test_componentWithHeaderView_hasValidSnapshot() {
@@ -52,7 +52,7 @@ final class NavigationDrawerTests: XCTestCase {
         systemUnderTest.delegate = delegateMock
         systemUnderTest.frame = CGRect(x: 0, y: 0, width: 320, height: 568)
 
-        assertSnapshot(matching: systemUnderTest, as: .image)
+        assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.99))
     }
 
     func test_componentWithFooterView_hasValidSnapshot() {
@@ -63,7 +63,7 @@ final class NavigationDrawerTests: XCTestCase {
         delegateMock.mockNumberOfItems = 10
         systemUnderTest.frame = CGRect(x: 0, y: 0, width: 320, height: 568)
 
-        assertSnapshot(matching: systemUnderTest, as: .image)
+        assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.99))
     }
 
     func genericViewWithLogo() -> UIView {

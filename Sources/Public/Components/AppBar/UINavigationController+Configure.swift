@@ -50,12 +50,26 @@ public extension UINavigationController {
     /// Sets the color for navigation bar and its subviews
     /// - Parameter color: an option from `AppBarColor` enum
     func configure(appBarColor: AppBarColor) {
-        navigationBar.shadowImage = UIImage()
         navigationBar.barTintColor = appBarColor.backgroundColor
         navigationBar.tintColor = appBarColor.contentColor
-        navigationBar.titleTextAttributes = [
-            NSAttributedString.Key.foregroundColor: appBarColor.contentColor
-        ]
+
+        if #available(iOS 15.0, *) {
+            let navBarAppearance = UINavigationBarAppearance()
+            navBarAppearance.configureWithOpaqueBackground()
+            navBarAppearance.backgroundColor = appBarColor.backgroundColor
+            navBarAppearance.titleTextAttributes = [
+                NSAttributedString.Key.foregroundColor: appBarColor.contentColor
+            ]
+            navBarAppearance.shadowColor = .clear
+            navBarAppearance.shadowImage = UIImage()
+            navigationBar.standardAppearance = navBarAppearance
+            navigationBar.scrollEdgeAppearance = navBarAppearance
+        } else {
+            navigationBar.titleTextAttributes = [
+                NSAttributedString.Key.foregroundColor: appBarColor.contentColor
+            ]
+            navigationBar.shadowImage = UIImage()
+        }
     }
 
     /// Sets an elevation for the navigation bar, which adds a slight shadow to it

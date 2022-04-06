@@ -10,7 +10,8 @@ final class UIViewCenterBoundsSpecs: QuickSpec {
         describe("#centerBounds") {
             context("without a superview") {
                 it("returns an expected value") {
-                    expect(systemUnderTest.centerBounds).to(equal(.init(x: 100, y: 100)))
+                    let point = CGPoint(x: 100, y: 100)
+                    expect(systemUnderTest.centerBounds).to(equal(point))
                 }
             }
 
@@ -21,7 +22,8 @@ final class UIViewCenterBoundsSpecs: QuickSpec {
                 }
 
                 it("returns an expected value") {
-                    expect(systemUnderTest.centerBounds).to(equal(.init(x: 100, y: 100)))
+                    let point = CGPoint(x: 100, y: 100)
+                    expect(systemUnderTest.centerBounds).to(equal(point))
                 }
             }
         }

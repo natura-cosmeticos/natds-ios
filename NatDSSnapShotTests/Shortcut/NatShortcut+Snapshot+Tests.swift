@@ -40,7 +40,7 @@ final class NatShortcutSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.98))
     }
 
     func test_shortcut_style_contained_primary_with_badge_hasValidSnapshot() {
@@ -136,7 +136,7 @@ final class NatShortcutSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.98))
     }
 
     func test_shortcut_style_outlined_primary_with_badge_hasValidSnapshot() {

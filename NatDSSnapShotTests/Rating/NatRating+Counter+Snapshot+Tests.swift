@@ -37,7 +37,7 @@ final class NatRatingCounterSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.99))
     }
 
     func test_rating_counter_sizeStandard_hasValidSnapshot() {

@@ -72,7 +72,7 @@ final class NatLogoSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.99))
     }
 
     func test_sizeMediumX_hasValidSnapshot() {
@@ -80,7 +80,7 @@ final class NatLogoSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.99))
     }
 
     func test_sizeLarge_hasValidSnapshot() {
@@ -88,7 +88,7 @@ final class NatLogoSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.99))
     }
 
     func test_sizeLargeX_hasValidSnapshot() {
@@ -96,7 +96,7 @@ final class NatLogoSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.99))
     }
 
     func test_sizeLargeXX_hasValidSnapshot() {
@@ -104,7 +104,7 @@ final class NatLogoSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.99))
     }
 
     func test_sizeLargeXXX_hasValidSnapshot() {
@@ -112,7 +112,7 @@ final class NatLogoSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.99))
     }
 
     func test_sizeHuge_hasValidSnapshot() {
@@ -120,7 +120,7 @@ final class NatLogoSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.99))
     }
 
     func test_sizeHugeX_hasValidSnapshot() {
@@ -128,7 +128,7 @@ final class NatLogoSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.99))
     }
 
     func test_sizeHugeXX_hasValidSnapshot() {
@@ -136,7 +136,7 @@ final class NatLogoSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.99))
     }
 
     func test_sizeHugeXXX_hasValidSnapshot() {
@@ -144,7 +144,7 @@ final class NatLogoSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.99))
     }
 }
 

@@ -107,11 +107,25 @@ extension ChooseBrandViewController: UITableViewDelegate {
         ThemeManager.shared.setLight()
 
         let viewController = MainViewController()
-        navigationController?.navigationBar.barTintColor = NatColors.primary
-        navigationController?.navigationBar.tintColor = NatColors.onPrimary
-        navigationController?.navigationBar.titleTextAttributes = [
-            NSAttributedString.Key.foregroundColor: NatColors.onPrimary
-        ]
+
+        if #available(iOS 15.0, *) {
+            let navigationBarAppearance = UINavigationBarAppearance()
+            navigationBarAppearance.configureWithDefaultBackground()
+            navigationBarAppearance.configureWithOpaqueBackground()
+            navigationBarAppearance.backgroundColor = NatColors.primary
+            navigationBarAppearance.titleTextAttributes = [
+                NSAttributedString.Key.foregroundColor: NatColors.onPrimary
+            ]
+            navigationController?.navigationBar.tintColor = NatColors.onPrimary
+            navigationController?.navigationBar.standardAppearance = navigationBarAppearance
+            navigationController?.navigationBar.scrollEdgeAppearance = navigationBarAppearance
+        } else {
+            navigationController?.navigationBar.barTintColor = NatColors.primary
+            navigationController?.navigationBar.tintColor = NatColors.onPrimary
+            navigationController?.navigationBar.titleTextAttributes = [
+                NSAttributedString.Key.foregroundColor: NatColors.onPrimary
+            ]
+        }
         navigationController?.pushViewController(viewController, animated: true)
     }
 }

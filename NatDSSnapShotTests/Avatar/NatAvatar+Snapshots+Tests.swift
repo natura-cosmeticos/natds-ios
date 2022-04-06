@@ -22,7 +22,7 @@ final class NatAvatarSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
 
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.99))
         assertSnapshot(matching: systemUnderTest, as: .recursiveDescription)
     }
 
