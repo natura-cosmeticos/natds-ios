@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.34.3](https://github.com/natura-cosmeticos/natds-ios/compare/6.34.2...6.34.3) (2022-04-08)
+
+
+### Bug Fixes
+
+* Gemfile & Gemfile.lock to reduce vulnerabilities ([0d2a5a1](https://github.com/natura-cosmeticos/natds-ios/commit/0d2a5a1eab073b52efe03193851fa4ec7ea8178f))
+
 ### [6.34.2](https://github.com/natura-cosmeticos/natds-ios/compare/6.34.1...6.34.2) (2022-04-07)
 
 
