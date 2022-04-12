@@ -27,15 +27,15 @@ final class PulsableSpec: QuickSpec {
             }
 
             it("inserts PulseContainerLayer as sublayer") {
-                expect(pulseContainerLayer).toNot(beNil())
+                expect(pulseContainerLayer).toEventuallyNot(beNil())
             }
 
             it("sets the same cornerRadius to pulseContainerLayer") {
-                expect(pulseContainerLayer?.cornerRadius).to(equal(pulsableButtonStub.layer.cornerRadius))
+                expect(pulseContainerLayer?.cornerRadius).toEventually(equal(pulsableButtonStub.layer.cornerRadius))
             }
 
             it("sets bounds to pulseContainerLayer.frame") {
-                expect(pulseContainerLayer?.frame).to(equal(pulsableButtonStub.layer.bounds))
+                expect(pulseContainerLayer?.frame).toEventually(equal(pulsableButtonStub.layer.bounds))
             }
         }
 
