@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.34.4](https://github.com/natura-cosmeticos/natds-ios/compare/6.34.3...6.34.4) (2022-04-12)
+
 ### [6.34.3](https://github.com/natura-cosmeticos/natds-ios/compare/6.34.2...6.34.3) (2022-04-08)
 
 
