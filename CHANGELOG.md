@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [7.0.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.34.5...7.0.0) (2022-04-13)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove IllustrationIcon component
+
+* remove illustration sad/lined image ([089756e](https://github.com/natura-cosmeticos/natds-ios/commit/089756ea5ed2b2709ef20defae207ef960095dbc))
+
 ### [6.34.5](https://github.com/natura-cosmeticos/natds-ios/compare/6.34.4...6.34.5) (2022-04-13)
 
 
