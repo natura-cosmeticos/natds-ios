@@ -203,8 +203,6 @@
 		7D277B5026976900005075EF /* AppBarContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D277B4F26976900005075EF /* AppBarContentType.swift */; };
 		7D277B63269E2551005075EF /* DialogHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D277B62269E2551005075EF /* DialogHeaderView.swift */; };
 		7D277B68269E43A1005075EF /* DialogBodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D277B67269E43A1005075EF /* DialogBodyView.swift */; };
-		7D2DD86E2806195200E71505 /* IllustrationIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2DD86D2806195200E71505 /* IllustrationIcons.swift */; };
-		7D2DD87128061C7D00E71505 /* IllustrationIconsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2DD86F28061A5F00E71505 /* IllustrationIconsTests.swift */; };
 		7D31C1102614BC1700EED32A /* NatRating+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D31C10F2614BC1700EED32A /* NatRating+Style.swift */; };
 		7D31C1152614C87F00EED32A /* NatRating+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D31C1142614C87F00EED32A /* NatRating+Size.swift */; };
 		7D31C11A2615162300EED32A /* NatRating+Alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D31C1192615162200EED32A /* NatRating+Alignment.swift */; };
@@ -648,8 +646,6 @@
 		7D277B4F26976900005075EF /* AppBarContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBarContentType.swift; sourceTree = "<group>"; };
 		7D277B62269E2551005075EF /* DialogHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogHeaderView.swift; sourceTree = "<group>"; };
 		7D277B67269E43A1005075EF /* DialogBodyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogBodyView.swift; sourceTree = "<group>"; };
-		7D2DD86D2806195200E71505 /* IllustrationIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllustrationIcons.swift; sourceTree = "<group>"; };
-		7D2DD86F28061A5F00E71505 /* IllustrationIconsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllustrationIconsTests.swift; sourceTree = "<group>"; };
 		7D31C10F2614BC1700EED32A /* NatRating+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatRating+Style.swift"; sourceTree = "<group>"; };
 		7D31C1142614C87F00EED32A /* NatRating+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatRating+Size.swift"; sourceTree = "<group>"; };
 		7D31C1192615162200EED32A /* NatRating+Alignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatRating+Alignment.swift"; sourceTree = "<group>"; };
@@ -2671,7 +2667,6 @@
 			isa = PBXGroup;
 			children = (
 				0E7C160824C5E614002FF46F /* IconViewSpec.swift */,
-				7D2DD86F28061A5F00E71505 /* IllustrationIconsTests.swift */,
 			);
 			path = Icons;
 			sourceTree = "<group>";
@@ -2852,7 +2847,6 @@
 			children = (
 				D1A1DDA4A78343DB58AF747FF9DC2B66 /* IconView.swift */,
 				841FEAB924C5C1A100C50AFF /* NatLogoImages.swift */,
-				7D2DD86D2806195200E71505 /* IllustrationIcons.swift */,
 			);
 			path = Icons;
 			sourceTree = "<group>";
@@ -3224,7 +3218,6 @@
 				C24255D434C838206493D9A89581F7C1 /* PulseLayer+Spec.swift in Sources */,
 				845D09A22501248500B05760 /* IconButtonStandardStyle+Spec.swift in Sources */,
 				79E7FA702537470600A831BC /* AesopLightTokens+Typography+Spec.swift in Sources */,
-				7D2DD87128061C7D00E71505 /* IllustrationIconsTests.swift in Sources */,
 				79E7FAC825388BEF00A831BC /* AvonLightTokens+BorderRadius+Spec.swift in Sources */,
 				847C82A824E57946001CE116 /* TheBodyShopLightTheme+Spec.swift in Sources */,
 				79E7FBA82538ED0500A831BC /* TheBodyShopLightTokens+Opacity+Spec.swift in Sources */,
@@ -3380,7 +3373,6 @@
 				3A65DE112EB34ED5B9F3F1DF7B8D3FBD /* ExpansionPanel.swift in Sources */,
 				7D5120BA25E9914100557E21 /* NatAvatar+Type.swift in Sources */,
 				7D06729727DFABD800DFAC52 /* HelperView.swift in Sources */,
-				7D2DD86E2806195200E71505 /* IllustrationIcons.swift in Sources */,
 				79EA0CA8261B4A8800742C0A /* NatBadge+Limit.swift in Sources */,
 				79EA0C4B260CD9DB00742C0A /* NatCounter+State.swift in Sources */,
 				7D60A4A0260E208E00A23C1A /* NatListItem+Feedback.swift in Sources */,
