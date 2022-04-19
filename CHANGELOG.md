@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [7.1.0](https://github.com/natura-cosmeticos/natds-ios/compare/7.0.0...7.1.0) (2022-04-19)
+
+
+### Features
+
+* add method to configure shortcut action with delegate ([7f99ee2](https://github.com/natura-cosmeticos/natds-ios/commit/7f99ee2892aae93c4fffa4570a1bbb8cd8bd9e38))
+
 ## [7.0.0](https://github.com/natura-cosmeticos/natds-ios/compare/6.34.5...7.0.0) (2022-04-13)
 
 
