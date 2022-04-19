@@ -61,6 +61,7 @@ class CounterViewController: UIViewController, SampleItem {
         title = Self.name
         view.backgroundColor = NatColors.background
         setup()
+        setupHandlers()
     }
 
     private func setup() {
@@ -76,5 +77,17 @@ class CounterViewController: UIViewController, SampleItem {
             stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
+    }
+
+    private func setupHandlers() {
+        enableMediumCounter.configure { value in
+            let alert = UIAlertController(title: "Taps",
+                                          message: "You've selected number \(value)",
+                                          preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok",
+                                          style: .default,
+                                          handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 }

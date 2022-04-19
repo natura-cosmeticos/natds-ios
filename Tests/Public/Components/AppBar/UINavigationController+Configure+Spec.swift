@@ -15,6 +15,7 @@ final class UINavigationControllerConfigureSpec: QuickSpec {
             color = .default
         }
 
+        // swiftlint:disable line_length
         describe("configure(color:)") {
             beforeEach {
                 sut.configure(appBarColor: color)
@@ -26,14 +27,22 @@ final class UINavigationControllerConfigureSpec: QuickSpec {
                 expect(sut.navigationBar.barTintColor).to(equal(color.backgroundColor))
             }
             it("sets titleTextAttributes") {
-                let foregroundAttribute = sut.navigationBar.titleTextAttributes?[NSAttributedString.Key.foregroundColor]
-                if let foregroundColor = foregroundAttribute as? UIColor {
-                    expect(foregroundColor).to(equal(color.contentColor))
+                if #available(iOS 15.0, *) {
+                    if let foregroundColor = sut.navigationBar.standardAppearance.titleTextAttributes[NSAttributedString.Key.foregroundColor] as? UIColor {
+                        expect(foregroundColor).to(equal(color.contentColor))
+                    } else {
+                        fail()
+                    }
                 } else {
-                    fail()
+                    if let foregroundColor = sut.navigationBar.titleTextAttributes?[NSAttributedString.Key.foregroundColor] as? UIColor {
+                        expect(foregroundColor).to(equal(color.contentColor))
+                    } else {
+                        fail()
+                    }
                 }
             }
         }
+        // swiftlint:enable line_length
 
         describe("configure(elevation:)") {
             context("when elevation is true") {

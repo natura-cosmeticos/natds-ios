@@ -141,6 +141,7 @@ final class IconButtonItemViewController: UIViewController, SampleItem {
         super.viewDidLoad()
 
         setup()
+        setupAction()
     }
 
     // MARK: - Private methods
@@ -183,6 +184,12 @@ final class IconButtonItemViewController: UIViewController, SampleItem {
                                                           text: "Size semiX"))
         stackView.addArrangedSubview(createIconButtonView(iconButtonSizeMedium,
                                                           text: "Size medium"))
+    }
+
+    private func setupAction() {
+        iconButtonDefaultStyle.configure(delegate: self) { _ in
+            print("Tap event")
+        }
     }
 
     private func addConstraints() {

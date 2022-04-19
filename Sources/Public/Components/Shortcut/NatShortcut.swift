@@ -141,15 +141,23 @@ public final class NatShortcut: UIView {
 
     // MARK: - Inits
 
-    public convenience init(style: Style = .contained, color: Color = .primary) {
+    public convenience init(style: Style = .contained,
+                            color: Color = .primary) {
         self.init(style: style, color: color, text: nil, icon: nil, notificationCenter: NotificationCenter.default)
     }
 
-    public convenience init(style: Style = .contained, color: Color = .primary, text: String? = nil, icon: String? = nil) {
+    public convenience init(style: Style = .contained,
+                            color: Color = .primary,
+                            text: String? = nil,
+                            icon: String? = nil) {
         self.init(style: style, color: color, text: text, icon: icon, notificationCenter: NotificationCenter.default)
     }
 
-    init(style: Style, color: Color, text: String?, icon: String?, notificationCenter: NotificationCenterObservable) {
+    init(style: Style,
+         color: Color,
+         text: String?,
+         icon: String?,
+         notificationCenter: NotificationCenterObservable) {
         self.style = style
         self.color = color
         self.text = text
@@ -231,6 +239,25 @@ extension NatShortcut {
     /// - Parameter action: A block of functionality to be executed when the shorcut is pressed
     public func configure(action: @escaping () -> Void) {
         self.action = action
+    }
+
+    /// Sets the functionality for the shortcut.
+    /// Example:
+    ///
+    ///     yourShortcut.configure(delegate: self) { (self) in
+    ///         // your code for shortcut's action
+    ///     }
+    ///
+    /// - Parameters:
+    ///   - delegate: the class that is the delegate for the action (usually, the class itself)
+    ///   - action: a block of code to be run when the shortcut is pressed
+    public func configure<Object: AnyObject>(delegate: Object,
+                                             action: @escaping (Object) -> Void) {
+        self.action = { [weak delegate] in
+            if let delegate = delegate {
+                action(delegate)
+            }
+        }
     }
 
     /// Configures label text width and lines for long texts

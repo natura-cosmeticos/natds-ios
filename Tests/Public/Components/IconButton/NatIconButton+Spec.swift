@@ -70,7 +70,9 @@ final class NatIconButtonSpec: QuickSpec {
             context("when is enabled") {
                 beforeEach {
                     actionInvocations = 0
-                    systemUnderTest.configure(action: { actionInvocations += 1 })
+                    systemUnderTest.configure(delegate: self) { _ in
+                        actionInvocations += 1
+                    }
                     systemUnderTest.gestureRecognizers?.forEach { $0.sendGesturesEvents() }
                 }
 

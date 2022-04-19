@@ -66,7 +66,6 @@ class ExpansionPanelViewController: UIViewController, SampleItem {
         view.addSubview(panel)
         view.addSubview(secondPanel)
         view.addSubview(thirdPanel)
-//        panel.translatesAutoresizingMaskIntoConstraints = false
 
         let safeArea = view.safeAreaLayoutGuide
         let horizontalMargin = ExpansionPanel.Margin.horizontalMargin
