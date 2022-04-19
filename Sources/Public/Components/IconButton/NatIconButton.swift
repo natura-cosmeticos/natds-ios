@@ -167,7 +167,8 @@ extension NatIconButton {
     /// - Parameters:
     ///   - delegate: the class that is the delegate for the action (usually, the class itself)
     ///   - action: a block of code to be run when the icon button is pressed
-    public func configure<Object: AnyObject>(delegate: Object, action: @escaping (Object) -> Void) {
+    public func configure<Object: AnyObject>(delegate: Object,
+                                             action: @escaping (Object) -> Void) {
         self.action = { [weak delegate] in
             if let delegate = delegate {
                 action(delegate)

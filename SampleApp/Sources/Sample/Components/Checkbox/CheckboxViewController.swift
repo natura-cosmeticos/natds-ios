@@ -148,6 +148,7 @@ final class CheckboxViewController: UIViewController, SampleItem {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        setupHandlers()
     }
 
     // MARK: - Private methods
@@ -207,5 +208,17 @@ extension CheckboxViewController {
         ]
 
         NSLayoutConstraint.activate(constraints)
+    }
+
+    private func setupHandlers() {
+        enabledUnselectedCheckbox.configure { isChecked in
+            let alert = UIAlertController(title: "Taps",
+                                          message: "It's marked as \(isChecked)",
+                                          preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok",
+                                          style: .default,
+                                          handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 }
