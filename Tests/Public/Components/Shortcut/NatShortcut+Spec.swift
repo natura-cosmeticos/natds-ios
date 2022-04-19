@@ -153,6 +153,21 @@ final class NatShortSpec: QuickSpec {
             }
         }
 
+        describe("#configure(delegate:action:)") {
+            var actionInvocations = 0
+
+            beforeEach {
+                systemUnderTest.configure(delegate: self) { _ in
+                    actionInvocations += 1
+                }
+                systemUnderTest.gestureRecognizers?.forEach { $0.sendGesturesEvents() }
+            }
+
+            it("stores action and uses it in tap events") {
+                expect(actionInvocations).toEventually(equal(1))
+            }
+        }
+
         describe("#configure(state:)") {
             var actionInvocations = 0
 
