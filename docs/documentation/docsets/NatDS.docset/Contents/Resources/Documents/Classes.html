@@ -17,7 +17,7 @@
       <div class="content-wrapper">
         <p>
           <a href="index.html">NatDS  Docs</a>
-          <span class="no-mobile"> (42% documented)</span>
+          <span class="no-mobile"> (40% documented)</span>
         </p>
     
     
@@ -28,7 +28,7 @@
         <p id="breadcrumbs">
           <span class="no-mobile">
             <a href="index.html">NatDS Reference</a>
-            <img id="carat" src="img/carat.png" />
+            <img id="carat" src="img/carat.png" alt=""/>
           </span>
           Classes  Reference
         </p>
@@ -1135,10 +1135,11 @@ It inherits from UITableViewCell, being used inside UITableViews.</p>
 <p>NatLogo represents Design System&rsquo;s <code>logo</code> component.
 The logo image changes according to the configured theme and it has different model, color and size options.
 The default model is <code>A</code>; the default size is <code>veryHuge</code>; and the default color is <code>neutral</code>.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>the size can only be changed at <code>init()</code></p>
 
-<blockquote>
-<p>Note: the size can only be changed at <code>init()</code></p>
-</blockquote>
+</div>
 
 <p>Example of usage:</p>
 <pre class="highlight swift"><code>   <span class="k">let</span> <span class="nv">logo</span> <span class="o">=</span> <span class="kt">NatLogo</span><span class="p">(</span><span class="nv">size</span><span class="p">:</span> <span class="o">.</span><span class="n">medium</span><span class="p">)</span>
@@ -1254,6 +1255,7 @@ The default model is <code>A</code>; the default size is <code>veryHuge</code>; 
                             <p class="aside-title">Swift</p>
                             <pre class="highlight swift"><code><span class="kd">@objcMembers</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="kt">NavigationDrawerItemCell</span> <span class="p">:</span> <span class="kt">UITableViewCell</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">NavigationDrawerItemCell</span><span class="p">:</span> <span class="kt"><a href="Protocols/Pulsable.html">Pulsable</a></span></code></pre>
 
                           </div>
                         </div>
@@ -1399,10 +1401,11 @@ The colors are default and doesn&rsquo;t change according to the current theme c
 <li>Counter</li>
 <li>Read-only</li>
 </ul>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>the style should be set at <code>init()</code>.</p>
 
-<blockquote>
-<p>Note: the style should be set at <code>init()</code>.</p>
-</blockquote>
+</div>
 
 <p>There are five different sizes for the rating stars:</p>
 
@@ -1413,14 +1416,15 @@ The colors are default and doesn&rsquo;t change according to the current theme c
 <li>SemiX (default)</li>
 <li>Medium</li>
 </ul>
-
-<blockquote>
-<p>Note: the size can only be changed at <code>init()</code>.
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>the size can only be changed at <code>init()</code>.
 The sizes <code>small</code> and <code>standard</code> should only be used with <code>counter</code> and <code>readOnly</code> variants.</p>
 
 <p>Note: For the variant <code>Counter</code>, the alignment can be <code>right</code> or <code>left</code> (default).
 The aligment should be set at <code>init()</code>.</p>
-</blockquote>
+
+</div>
 
 <p>Example of usage:</p>
 <pre class="highlight swift"><code>   <span class="k">let</span> <span class="nv">rating</span> <span class="o">=</span> <span class="kt">NatRating</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="n">input</span><span class="p">,</span> <span class="nv">size</span><span class="p">:</span> <span class="o">.</span><span class="n">medium</span><span class="p">)</span>
@@ -1602,16 +1606,62 @@ The component colors changes according to the current theme configured in the De
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>NatShortcut is a class that represents a component from the design system.
-The shortcut colors change according to the current theme configured in the Design System.</p>
+                          <div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This component is available in the following variants:
 
-<p>This component has 4 styles:</p>
+</div><ul>
+<li>✅ Contained (default)</li>
+<li>✅ Outlined</li>
+</ul>
+
+<p>With the following attribute status:</p>
 
 <ul>
-<li>Contained with Primary color</li>
-<li>Contained with Default color</li>
-<li>Outlined with Primary color</li>
-<li>Outlined with Default color</li>
+<li>✅ Disabled</li>
+<li>✅ Interaction State Pressed</li>
+<li>Color:
+
+<ul>
+<li>✅ <code>Primary</code> (default)</li>
+<li>✅ <code>Neutral</code></li>
+</ul></li>
+<li>Notify:
+
+<ul>
+<li>✅ <code>None</code> (default)</li>
+<li>✅ <code>Standard</code></li>
+</ul></li>
+<li>Interaction state:
+
+<ul>
+<li>✅ <code>Enabled</code></li>
+<li>✅ <code>Pressed</code></li>
+</ul></li>
+</ul>
+
+<p>NatShortcut is a class that represents the component <code>shortcut</code> from the design system.
+Its colors change according to the configured theme.</p>
+
+<p>The component has the following variants:</p>
+
+<ul>
+<li>Contained (default)</li>
+<li>Outlined</li>
+</ul>
+
+<p>And the colors:</p>
+
+<ul>
+<li>Primary (default)</li>
+<li>Neutral</li>
+</ul>
+
+<p>And the states:</p>
+
+<ul>
+<li>Enabled</li>
+<li>Disabled</li>
 </ul>
 
 <p>Example of usage:</p>
@@ -1835,36 +1885,7 @@ The tag colors change according to the current theme configured.</p>
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>DesignSystem is a class entry point of configurations for this framework.
-Usually, this configuration is in a global point after initialization, as in <code>AppDelegate</code>&lsquo;s <code>didFinishLaunchingWithOptions</code> method.</p>
-
-<p>Example of usage:</p>
-<pre class="highlight swift"><code>       <span class="kt">DesignSystem</span><span class="p">()</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">brand</span><span class="p">:</span> <span class="o">.</span><span class="n">avonLight</span><span class="p">)</span>
-       <span class="c1">//or</span>
-       <span class="kt">DesignSystem</span><span class="p">()</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">brand</span><span class="p">:</span> <span class="o">.</span><span class="n">theBodyShopLight</span><span class="p">)</span>
-       <span class="c1">//or</span>
-       <span class="kt">DesignSystem</span><span class="p">()</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">brand</span><span class="p">:</span> <span class="o">.</span><span class="n">theBodyShopDark</span><span class="p">)</span>
-       <span class="c1">//or</span>
-       <span class="kt">DesignSystem</span><span class="p">()</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">brand</span><span class="p">:</span> <span class="o">.</span><span class="n">aesopDark</span><span class="p">)</span>
-</code></pre>
-<div class="aside aside-note">
-    <p class="aside-title">Note</p>
-    <p>Current Supported Brands:</p>
-
-<ul>
-<li>Aesop</li>
-<li>Avon</li>
-<li>Natura</li>
-<li>The Body Shop</li>
-</ul>
-
-</div><div class="aside aside-note">
-    <p class="aside-title">Note</p>
-    <p>It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.</p>
-<pre class="highlight swift"><code>   <span class="kt">DesignSystem</span><span class="p">()</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="kt">AvailableTheme</span><span class="p">)</span>
-</code></pre>
-
-</div>
+                          <p>Undocumented</p>
 
                           <a href="Classes/DesignSystem.html" class="slightly-smaller">See more</a>
                         </div>
@@ -2080,7 +2101,13 @@ Usually, this configuration is in a global point after initialization, as in <co
                   <a href="Classes/NatShortcut.html">NatShortcut</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="Classes/NatShortcut/State.html">– State</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="Classes/NatShortcut/Style.html">– Style</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatShortcut/Color.html">– Color</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="Classes/NatTag.html">NatTag</a>
@@ -2105,6 +2132,15 @@ Usually, this configuration is in a global point after initialization, as in <co
                 </li>
                 <li class="nav-group-task">
                   <a href="Classes/NavigationDrawerItemCell/State.html">– State</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NavigationDrawerItemCell/NavigationAction.html">– NavigationAction</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NavigationDrawerItemCell/NavigationItemType.html">– NavigationItemType</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NavigationDrawerItemCell/NavigationAdd.html">– NavigationAdd</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="Classes/NavigationDrawerSubitemCell.html">NavigationDrawerSubitemCell</a>
@@ -2244,12 +2280,6 @@ Usually, this configuration is in a global point after initialization, as in <co
                   <a href="Structs.html#/s:5NatDS25DialogButtonConfigurationV">DialogButtonConfiguration</a>
                 </li>
                 <li class="nav-group-task">
-                  <a href="Structs/IllustrationIcons.html">IllustrationIcons</a>
-                </li>
-                <li class="nav-group-task">
-                  <a href="Structs/IllustrationIcons/Lined.html">– Lined</a>
-                </li>
-                <li class="nav-group-task">
                   <a href="Structs/NatColors.html">NatColors</a>
                 </li>
                 <li class="nav-group-task">
@@ -2291,11 +2321,10 @@ Usually, this configuration is in a global point after initialization, as in <co
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2022-02-10)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2022 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external noopener">System Team - Natura SA</a>. All rights reserved. (Last updated: 2022-04-20)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </div>
     </div>
   </body>
-</div>
 </html>

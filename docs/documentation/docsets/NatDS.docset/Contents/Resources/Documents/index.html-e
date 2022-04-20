@@ -120,7 +120,7 @@ Follow the path <code>File &gt; Swift Packages &gt; Add Package Dependency</code
 <pre class="highlight shell"><code>pod search NatDSIcons <span class="nt">--simple</span>
 </code></pre>
 
-<p><a href="docs/How%20to%20use%20icons.md">Check the documentation on how to use icons in your code.</a></p>
+<p><a href=how-to-use-icons.html target="_blank">Check the documentation on how to use icons in your code.</a></p>
 
 <hr>
 <h2 id='sample-app' class='heading'>Sample App</h2>
