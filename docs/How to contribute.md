@@ -8,8 +8,13 @@ The code is the folder `Sources > Public > Components`. If you're creating a new
 ## Code
 If you created or updated a new component, include or update examples of your features in the Sample App: create a new View Controller in the target target `NatDS-Sample App` and folder `Sources > Sample > Components`. You should also include your new ViewController in the file `ComponentsSection`.
 
-Your code should be covered by unit and snapshot tests. We use the libraries `Quick`, `Nimble` and `SnapshotTesting` to test the code.
+## Tests
+Your code should be covered by unit and snapshot tests.
+- Unit tests are located in the folder `Tests` and developed with the libraries `Quick` and `Nimble`.
+- Snapshot tests are located in the folder `NatDSSnapshotTests` and developed with the library `SnapshotTesting`.
+> Note: To run snapshot tests, select `iPhone SE (3rd generation)` as the target simulator.
 
+## Documentation
 Don't forget to document your new classes and methods. Use the shortcut `option + command + /` to open the documentation fields in Xcode.
 ## Commit structure
 We use semantic commits in the project - you can follow the types and descriptions of [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/). 
@@ -23,7 +28,7 @@ The most common types the we use are:
 
 There are other types that you can use to tag your commits: `build:`, `chore:`, `ci:`, `docs:`, `style:`, `refactor:`, `perf:`. [Check the description of each type of message](https://www.conventionalcommits.org/en/v1.0.0/).
 
-### Tool to help:
+### Tool:
 We use the tool [Commitizen](https://github.com/commitizen/cz-cli) to help us use semantic commits.
 
 To install Commitizen, run:
