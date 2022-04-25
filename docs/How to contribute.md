@@ -1,58 +1,43 @@
 # How to contribute
 
-First of all, check the required dependencies, setup the project using [the steps in the setup guide](docs/Setup.md) and start coding. Use the commit structure and follow the criteria below before creating a PR. 
+## Setup
+Check the required dependencies and setup the project using the [setup guide](docs/Setup.md). Create a new branch from `master` and code your solution.
 
-## Requirements
-If you created or updated a new component, don't forget to include examples of your features in the Sample App. New components and features must be documented and covered by unit and snapshot tests.
+The code is the folder `Sources > Public > Components`. If you're creating a new component, use the naming convention with a prefix. (Example: NatButton). You can use whatever structure you want to write your code, since it respects SOLID principles and keeps the component as flexible as possible.
 
-## Commits structure
+## Code
+If you created or updated a new component, include or update examples of your features in the Sample App: create a new View Controller in the target target `NatDS-Sample App` and folder `Sources > Sample > Components`. You should also include your new ViewController in the file `ComponentsSection`.
 
-After developing your contribution, we recommend the usage of [Conventional Commits] (https://www.conventionalcommits.org/en/v1.0.0/) to commit your work.
+Your code should be covered by unit and snapshot tests. We use the libraries `Quick`, `Nimble` and `SnapshotTesting` to test the code.
+
+Don't forget to document your new classes and methods. Use the shortcut `option + command + /` to open the documentation fields in Xcode.
+## Commit structure
+We use semantic commits in the project - you can follow the types and descriptions of [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/). 
+
+> NOTE: The use of these commit messages is *MANDATORY*, as the new versions of the library are released using the commits as a source of information.
 
 The most common types the we use are:
-- If you're adding a new feature, your commit should look like: `feat: [Short Description] [long description if you need]`
-- If you're fixing a bug, your commit should look like: `bug: [Short Description] [long description if you need]`
-- If you're adding tests, your commit should look like: `test: [Short Description] [long description if you need]`
+- `feat: [Short Description] [long description if you need]` (when adding a new feature)
+- `bug: [Short Description] [long description if you need]` (when fixing a bug)
+- `test: [Short Description] [long description if you need]` (when adding/updating tests)
 
-There are many other types that you can use to tag your commits: `build:`, `chore:`, `ci:`, `docs:`, `style:`, `refactor:`, `perf:`; 
-[here you can find more info about it](https://www.conventionalcommits.org/en/v1.0.0/).
-
-NOTE: The conventional commits structure is mandatory, as the new versions of the library are released using the commits as a source of information.
+There are other types that you can use to tag your commits: `build:`, `chore:`, `ci:`, `docs:`, `style:`, `refactor:`, `perf:`. [Check the description of each type of message](https://www.conventionalcommits.org/en/v1.0.0/).
 
 ### Tool to help:
-You can add an CLI to help you writing your commits. [Commitizen](https://github.com/commitizen/cz-cli) is the tool we use :)
+We use the tool [Commitizen](https://github.com/commitizen/cz-cli) to help us use semantic commits.
 
-To install the CLI, run:
+To install Commitizen, run:
 
 ```bash
 npm install -g commitizen
 ```
 
-To commit your work with Commitizen, run:
+To commit your work, run:
 
 ```bash
 git add .
 git cz
 ```
 
-Commitizen will guide you about how to structure you commit.
-
-After documenting your code, you'll also have to update the documentation files. To do that, run:
-```bash
-make create_docs
-```
-
-## Create a PR to contribute to the project
-
-We will review your PR checking some criteria:
-
-- Your code is covered by tests
-- Your code is well structured, respecting SOLID principles
-- Your code passed our automatic verifications (you can check the pipeline flow link in your PR)
-- You've added a sample of the increment to the Sample App (remember to update the tests related to it)
-- You have made the corresponding changes to the documentation
-- Your changes don't generate new warnings
-- The component works fine with dark mode enabled
-- Your code uses Design System design tokens
-
-If there's something that we could improve in the library, feel free to open an issue and let us know. We'll be happy to get in touch! :)
+## Create a PR
+When opening a Pull Request with your changes, add a description of the changes and follow the checklist. Then, request a code review.
