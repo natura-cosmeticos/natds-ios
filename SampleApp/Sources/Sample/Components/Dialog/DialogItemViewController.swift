@@ -29,70 +29,70 @@ final class DialogItemViewController: UIViewController, SampleItem {
         return stackView
     }()
 
-    private let dialogStandardButton: NatButton = {
+    private lazy var dialogStandardButton: NatButton = {
         let button = NatButton(style: .contained)
         button.configure(title: "standard")
-        button.addTarget(DialogItemViewController.self,
+        button.addTarget(self,
                          action: #selector(showStandardDialog), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
 
         return button
     }()
 
-    private let dialogStandardLongTextButton: NatButton = {
+    private lazy var dialogStandardLongTextButton: NatButton = {
         let button = NatButton(style: .contained)
         button.configure(title: "standard with long title button")
-        button.addTarget(DialogItemViewController.self,
+        button.addTarget(self,
                          action: #selector(showStandardLongTextDialog), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
 
         return button
     }()
 
-    private let dialogStandardBigViewButton: NatButton = {
+    private lazy var dialogStandardBigViewButton: NatButton = {
         let button = NatButton(style: .contained)
         button.configure(title: "standard with max height")
-        button.addTarget(DialogItemViewController.self,
+        button.addTarget(self,
                          action: #selector(showStandardBigViewDialog), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
 
         return button
     }()
 
-    private let dialogStandardCustomViewButton: NatButton = {
+    private lazy var dialogStandardCustomViewButton: NatButton = {
         let button = NatButton(style: .contained)
         button.configure(title: "standard with custom view")
-        button.addTarget(DialogItemViewController.self,
+        button.addTarget(self,
                          action: #selector(showStandardCustomViewDialog), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
 
         return button
     }()
 
-    private let dialogWithDividerStandardButton: NatButton = {
+    private lazy var dialogWithDividerStandardButton: NatButton = {
         let button = NatButton(style: .contained)
         button.configure(title: "standard with divider")
-        button.addTarget(DialogItemViewController.self,
+        button.addTarget(self,
                          action: #selector(showDividerStandardDialog), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
 
         return button
     }()
 
-    private let dialogAlertButton: NatButton = {
+    private lazy var dialogAlertButton: NatButton = {
         let button = NatButton(style: .contained)
         button.configure(title: "alert")
-        button.addTarget(DialogItemViewController.self,
+        button.addTarget(self,
                          action: #selector(showAlertDialog), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
 
         return button
     }()
 
-    private let dialogNotDismissableButton: NatButton = {
+    private lazy var dialogNotDismissableButton: NatButton = {
         let button = NatButton(style: .contained)
         button.configure(title: "not dismissable dialog")
-        button.addTarget(DialogItemViewController.self,
+        button.addTarget(self,
                          action: #selector(showNotDismissableDialog), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
 
