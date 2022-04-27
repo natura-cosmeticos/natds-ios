@@ -11,3 +11,7 @@ sed -i'' -e "s|<a href=\"How%20to%20use%20icons.md\">|<a href="how-to-use-icons.
 sed -i'' -e "s|<a href=\"docs/Setup.md\">|<a href="setup.html" target=\"_blank\">|g" ./docs/documentation/how-to-contribute.html
 
 sed -i'' -e "s|<a href=\"docs/Setup.md\">|<a href="setup.html" target=\"_blank\">|g" ./docs/documentation/index.html
+
+git add ./docs
+git commit -m "update documentation"
+git push origin HEAD
