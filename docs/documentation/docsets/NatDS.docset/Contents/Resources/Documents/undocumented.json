@@ -632,43 +632,85 @@
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
-      "line": 24,
+      "line": 25,
       "symbol": "ExpansionPanel",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
-      "line": 28,
+      "line": 29,
       "symbol": "ExpansionPanel.ExpansionAction.expand",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
-      "line": 29,
+      "line": 30,
       "symbol": "ExpansionPanel.ExpansionAction.collapse",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
-      "line": 30,
+      "line": 31,
       "symbol": "ExpansionPanel.ExpansionAction.allActions",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
-      "line": 33,
+      "line": 34,
       "symbol": "ExpansionPanel.ExpansionHandler",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
-      "line": 96,
+      "line": 100,
       "symbol": "ExpansionPanel.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
+      "line": 171,
+      "symbol": "ExpansionPanel.setCustomAnimationForExpand(animation:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
+      "line": 175,
+      "symbol": "ExpansionPanel.setCustomAnimationForCollapse(animation:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
+      "line": 277,
+      "symbol": "ExpansionPanel",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
+      "line": 278,
+      "symbol": "ExpansionPanel.expand()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
+      "line": 310,
+      "symbol": "ExpansionPanel",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
+      "line": 311,
+      "symbol": "ExpansionPanel.collapse()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -968,7 +1010,7 @@
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/IconButton/NatIconButton.swift",
-      "line": 179,
+      "line": 180,
       "symbol": "NatIconButton.configure(badgeValue:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -989,23 +1031,16 @@
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/Icons/IconView.swift",
-      "line": 76,
-      "symbol": "IconView.tintColorDidChange()",
+      "line": 71,
+      "symbol": "IconView.init(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/Icons/IllustrationIcons.swift",
-      "line": 3,
-      "symbol": "IllustrationIcons.Lined",
-      "symbol_kind": "source.lang.swift.decl.struct",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/Icons/IllustrationIcons.swift",
-      "line": 4,
-      "symbol": "IllustrationIcons.Lined.sad",
-      "symbol_kind": "source.lang.swift.decl.var.static",
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/Icons/IconView.swift",
+      "line": 82,
+      "symbol": "IconView.tintColorDidChange()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
@@ -1325,121 +1360,268 @@
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawer.swift",
-      "line": 65,
-      "symbol": "NavigationDrawer.init(tableView:)",
+      "line": 68,
+      "symbol": "NavigationDrawer.init(tableView:headerView:footerView:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawer.swift",
-      "line": 76,
+      "line": 81,
       "symbol": "NavigationDrawer.reloadData()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawer.swift",
-      "line": 139,
+      "line": 146,
       "symbol": "NavigationDrawer.numberOfSections(in:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawer.swift",
-      "line": 143,
+      "line": 150,
       "symbol": "NavigationDrawer.tableView(_:numberOfRowsInSection:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawer.swift",
-      "line": 152,
+      "line": 159,
       "symbol": "NavigationDrawer.tableView(_:cellForRowAt:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawer.swift",
-      "line": 175,
+      "line": 182,
       "symbol": "NavigationDrawer.tableView(_:didSelectRowAt:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
-      "line": 2,
+      "line": 4,
       "symbol": "NavigationDrawerItemCell",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
-      "line": 3,
+      "line": 5,
       "symbol": "NavigationDrawerItemCell.State",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
-      "line": 4,
+      "line": 6,
       "symbol": "NavigationDrawerItemCell.State.normal",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
-      "line": 5,
+      "line": 7,
       "symbol": "NavigationDrawerItemCell.State.disabled",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
-      "line": 6,
+      "line": 8,
       "symbol": "NavigationDrawerItemCell.State.selected",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
-      "line": 7,
+      "line": 9,
       "symbol": "NavigationDrawerItemCell.State.lowEmphasis",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
-      "line": 10,
+      "line": 12,
       "symbol": "NavigationDrawerItemCell.state",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
-      "line": 16,
+      "line": 18,
+      "symbol": "NavigationDrawerItemCell.NavigationAction",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "line": 19,
+      "symbol": "NavigationDrawerItemCell.NavigationAction.none",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "line": 20,
+      "symbol": "NavigationDrawerItemCell.NavigationAction.icon(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "line": 21,
+      "symbol": "NavigationDrawerItemCell.NavigationAction.imageUrl(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "line": 22,
+      "symbol": "NavigationDrawerItemCell.NavigationAction.image(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "line": 30,
+      "symbol": "NavigationDrawerItemCell.NavigationItemType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "line": 31,
+      "symbol": "NavigationDrawerItemCell.NavigationItemType.title",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "line": 32,
+      "symbol": "NavigationDrawerItemCell.NavigationItemType.menuItem",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "line": 35,
+      "symbol": "NavigationDrawerItemCell.NavigationAdd",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "line": 36,
+      "symbol": "NavigationDrawerItemCell.NavigationAdd.badge(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "line": 37,
+      "symbol": "NavigationDrawerItemCell.NavigationAdd.dot",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "line": 38,
+      "symbol": "NavigationDrawerItemCell.NavigationAdd.pulse",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "line": 39,
+      "symbol": "NavigationDrawerItemCell.NavigationAdd.icon(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "line": 40,
+      "symbol": "NavigationDrawerItemCell.NavigationAdd.none",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "line": 43,
+      "symbol": "NavigationDrawerItemCell.actionRight",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "line": 48,
+      "symbol": "NavigationDrawerItemCell.actionLeft",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "line": 54,
+      "symbol": "NavigationDrawerItemCell.actionTitleRight",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "line": 60,
+      "symbol": "NavigationDrawerItemCell.dropdown",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "line": 67,
+      "symbol": "NavigationDrawerItemCell.type",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "line": 73,
       "symbol": "NavigationDrawerItemCell.title",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
-      "line": 31,
+      "line": 88,
       "symbol": "NavigationDrawerItemCell.icon",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
-      "line": 37,
+      "line": 98,
       "symbol": "NavigationDrawerItemCell.tagText",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
-      "line": 102,
+      "line": 177,
       "symbol": "NavigationDrawerItemCell.init(style:reuseIdentifier:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "line": 191,
+      "symbol": "NavigationDrawerItemCell.prepareForReuse()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "line": 426,
+      "symbol": "NavigationDrawerItemCell",
+      "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
@@ -1493,8 +1675,29 @@
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerSubitemCell.swift",
-      "line": 58,
+      "line": 31,
+      "symbol": "NavigationDrawerSubitemCell.leftIcon",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerSubitemCell.swift",
+      "line": 41,
+      "symbol": "NavigationDrawerSubitemCell.rightIcon",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerSubitemCell.swift",
+      "line": 87,
       "symbol": "NavigationDrawerSubitemCell.init(style:reuseIdentifier:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerSubitemCell.swift",
+      "line": 98,
+      "symbol": "NavigationDrawerSubitemCell.prepareForReuse()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -1563,14 +1766,14 @@
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/ProgressIndicator/NatProgressIndicatorCircular.swift",
-      "line": 85,
+      "line": 87,
       "symbol": "NatProgressIndicatorCircular.configure(with:size:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/ProgressIndicator/NatProgressIndicatorCircular.swift",
-      "line": 100,
+      "line": 102,
       "symbol": "NatProgressIndicatorCircular.layoutSubviews()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -1766,49 +1969,77 @@
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/Shortcut/NatShortcut+Style.swift",
-      "line": 17,
+      "line": 10,
+      "symbol": "NatShortcut.Color.primary",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/Shortcut/NatShortcut+Style.swift",
+      "line": 11,
+      "symbol": "NatShortcut.Color.neutral",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/Shortcut/NatShortcut+Style.swift",
+      "line": 113,
       "symbol": "NatShortcut.Style.containedPrimary",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/Shortcut/NatShortcut+Style.swift",
-      "line": 23,
+      "line": 118,
       "symbol": "NatShortcut.Style.containedDefault",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/Shortcut/NatShortcut+Style.swift",
-      "line": 29,
+      "line": 124,
       "symbol": "NatShortcut.Style.outlinedPrimary",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/Shortcut/NatShortcut+Style.swift",
-      "line": 35,
+      "line": 130,
       "symbol": "NatShortcut.Style.outlinedDefault",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/Shortcut/NatShortcut.swift",
-      "line": 81,
-      "symbol": "NatShortcut.init(style:)",
+      "line": 49,
+      "symbol": "NatShortcut.State.enabled",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/Shortcut/NatShortcut.swift",
+      "line": 50,
+      "symbol": "NatShortcut.State.disabled",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/Shortcut/NatShortcut.swift",
+      "line": 144,
+      "symbol": "NatShortcut.init(style:color:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/Shortcut/NatShortcut.swift",
-      "line": 85,
-      "symbol": "NatShortcut.init(style:text:icon:)",
+      "line": 149,
+      "symbol": "NatShortcut.init(style:color:text:icon:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/Shortcut/NatShortcut.swift",
-      "line": 186,
+      "line": 290,
       "symbol": "NatShortcut.configure(badgeValue:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -1843,7 +2074,7 @@
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/Shortcut/ShortcutView.swift",
-      "line": 78,
+      "line": 80,
       "symbol": "ShortcutView",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
@@ -1933,6 +2164,13 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/Tag/NatTag+Color.swift",
+      "line": 22,
+      "symbol": "NatTag.Color.custom(backgroundColor:labelColor:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/Tag/NatTag+Size.swift",
       "line": 12,
       "symbol": "NatTag.Size.small",
@@ -1969,15 +2207,57 @@
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/Tag/NatTag.swift",
-      "line": 73,
-      "symbol": "NatTag.init(style:)",
+      "line": 51,
+      "symbol": "NatTag.iconView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/Tag/NatTag.swift",
+      "line": 58,
+      "symbol": "NatTag.label",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/Tag/NatTag.swift",
+      "line": 75,
+      "symbol": "NatTag.color",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/Tag/NatTag.swift",
+      "line": 81,
+      "symbol": "NatTag.icon",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/Tag/NatTag.swift",
+      "line": 87,
+      "symbol": "NatTag.text",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/Tag/NatTag.swift",
+      "line": 98,
+      "symbol": "NatTag.init(style:color:size:icon:text:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/Tag/NatTag.swift",
-      "line": 140,
+      "line": 216,
       "symbol": "NatTag.draw(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/Tag/NatTag.swift",
+      "line": 236,
+      "symbol": "NatTag.configure(icon:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -2004,14 +2284,21 @@
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/Components/ValueText/ValueTextHighlight.swift",
-      "line": 67,
+      "line": 69,
       "symbol": "ValueTextHighlight.init(frame:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/DesignSystem.swift",
-      "line": 46,
+      "line": 30,
+      "symbol": "DesignSystem",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/penelope.araujo/Desktop/design-system/natds-ios/Sources/Public/DesignSystem.swift",
+      "line": 48,
       "symbol": "DesignSystem.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
