@@ -19,6 +19,7 @@ then
     git push --follow-tags origin HEAD
     VERSION_NUMBER=$VERSION pod trunk push NatDS.podspec --allow-warnings
     make teams_release_notification
+    make create_docs
 else
     echo "No applicable changes since the previous tag, skipping..."
 fi
