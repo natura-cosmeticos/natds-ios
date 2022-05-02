@@ -76,7 +76,7 @@ final class NatRadioButtonControl: UIControl {
 
         if self.isGrouped {
             let groupId: [String: Int] = ["id": self.groupId]
-            NotificationCenter.default.post(name: .stateHasChanged, object: nil, userInfo: groupId)
+            NotificationCenter.default.post(name: .stateWillChange, object: nil, userInfo: groupId)
         }
     }
 
@@ -90,6 +90,11 @@ final class NatRadioButtonControl: UIControl {
         }
 
         onTouchesEnded?(touches)
+
+        if self.isGrouped {
+            let groupId: [String: Int] = ["id": self.groupId]
+            NotificationCenter.default.post(name: .stateHasChanged, object: nil, userInfo: groupId)
+        }
     }
 
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {

@@ -46,7 +46,7 @@ final class RadioButtonViewController: UIViewController, SampleItem {
     private let groupFirstRadioButton: NatRadioButton = {
         let radioButton = NatRadioButton()
         radioButton.configure(isSelected: true)
-        radioButton.configure(text: "Group")
+        radioButton.configure(text: "Button 1")
         radioButton.translatesAutoresizingMaskIntoConstraints = false
 
         return radioButton
@@ -54,7 +54,7 @@ final class RadioButtonViewController: UIViewController, SampleItem {
 
     private let groupSecondRadioButton: NatRadioButton = {
         let radioButton = NatRadioButton()
-        radioButton.configure(text: "Group")
+        radioButton.configure(text: "Button 2")
         radioButton.translatesAutoresizingMaskIntoConstraints = false
 
         return radioButton
@@ -62,7 +62,7 @@ final class RadioButtonViewController: UIViewController, SampleItem {
 
     private let groupThirdRadioButton: NatRadioButton = {
         let radioButton = NatRadioButton()
-        radioButton.configure(text: "Group")
+        radioButton.configure(text: "Button 3")
         radioButton.translatesAutoresizingMaskIntoConstraints = false
 
         return radioButton
@@ -139,6 +139,12 @@ final class RadioButtonViewController: UIViewController, SampleItem {
         return radioButton
     }()
 
+    private lazy var radioButtonGroup: NatRadioButtonGroup = {
+        let group = NatRadioButtonGroup()
+        group.configure(radioButtons: [groupFirstRadioButton, groupSecondRadioButton, groupThirdRadioButton])
+        return group
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -148,12 +154,6 @@ final class RadioButtonViewController: UIViewController, SampleItem {
     // MARK: - Private methods
 
     private func setup() {
-
-        let group = [groupFirstRadioButton, groupSecondRadioButton, groupThirdRadioButton]
-        groupFirstRadioButton.configure(addToGroup: group)
-        groupSecondRadioButton.configure(addToGroup: group)
-        groupThirdRadioButton.configure(addToGroup: group)
-
         title = Self.name
         view.backgroundColor = NatColors.background
         view.addSubview(scrollView)
@@ -220,5 +220,29 @@ extension RadioButtonViewController {
                                           handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
+
+        radioButtonGroup.configure(selectionHandler: { [weak self] selectedRadioButton in
+            let selectedGroupButtonName = self?.getSelectedGroupButtonName(selectedButton: selectedRadioButton) ?? ""
+
+            let alert = UIAlertController(title: "Taps",
+                                          message: "Selected \(selectedGroupButtonName)",
+                                          preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok",
+                                          style: .default,
+                                          handler: nil))
+            self?.present(alert, animated: true, completion: nil)
+        })
     }
-}
+
+    private func getSelectedGroupButtonName(selectedButton: NatRadioButton?) -> String? {
+        if selectedButton == groupFirstRadioButton {
+            return "Group button 1"
+        } else if selectedButton == groupSecondRadioButton {
+            return "Group button 2"
+        } else if selectedButton == groupThirdRadioButton {
+            return "Group button 3"
+        } else {
+            return nil
+        }
+    }
+ }

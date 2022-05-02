@@ -20,6 +20,7 @@ public final class NatRadioButton: UIView {
 
     public var radioButton = NatSelectionControl(style: .radioButton)
     private var group: [NatRadioButton] = []
+    private var radioButtonGroup: NatRadioButtonGroup?
 
     // MARK: - Inits
 
@@ -49,12 +50,12 @@ public final class NatRadioButton: UIView {
 
     private func configureAddObserver() {
         NotificationCenter.default.addObserver(self,
-                                               selector: #selector(stateHasChanged(_:)),
-                                               name: .stateHasChanged,
+                                               selector: #selector(stateWillChange(_:)),
+                                               name: .stateWillChange,
                                                object: nil)
     }
 
-    @objc internal func stateHasChanged(_ notification: Notification) {
+    @objc internal func stateWillChange(_ notification: Notification) {
         if let id = notification.userInfo?["id"] as? Int {
             if radioButton.groupId == id {
                 let selectedButton = group.filter { $0.radioButton.isSelected }.first
@@ -63,6 +64,12 @@ public final class NatRadioButton: UIView {
                 }
             }
         }
+    }
+
+    internal func configure(radioButtonGroup: NatRadioButtonGroup) {
+        self.radioButtonGroup = radioButtonGroup
+        radioButton.isGrouped = true
+        radioButton.groupId = radioButtonGroup.groupID
     }
 
     // MARK: - Public Methods

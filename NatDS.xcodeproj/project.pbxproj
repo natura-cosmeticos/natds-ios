@@ -410,6 +410,7 @@
 		D2063015F26B7E8B3A27602A3B907BCE /* NavigationDrawerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E816229C707C64C390D3320DFA6B5D99 /* NavigationDrawerTests.swift */; };
 		D23F82EE5C3333FD06E87016848DCD37 /* TabItemViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AA33B684C0A723F3E2F341D0A10EEC /* TabItemViewTests.swift */; };
 		D36E7374F76C10792F8292DCD99800D5 /* NavigationDrawerDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92BFB29E97D8520D6B67E8883AB9A08 /* NavigationDrawerDelegateMock.swift */; };
+		DCDEE935281C6B53005B7747 /* NatRadioButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDEE934281C6B53005B7747 /* NatRadioButtonGroup.swift */; };
 		DF58B3DD08824CC1C80C886321CEA0F4 /* NatElevations+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A9D6B3184A3081BD0CDE0B1A351C8F /* NatElevations+Spec.swift */; };
 		E07925C3535D79164EBC061C7D6A6CE4 /* TextFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437B78D88ACFB47EEADED96CDC94C7C5 /* TextFieldType.swift */; };
 		E4B171E23C40B91B211DB2F64357778D /* ViewStyle+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAE325876E14C91105C5CF9D2E7F1EF /* ViewStyle+Spec.swift */; };
@@ -848,6 +849,7 @@
 		D7C267848A6D4A2289C862E53EA54F84 /* ElevationAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevationAttributes.swift; sourceTree = "<group>"; };
 		D9B397DFEC0D8F0FBBDE7AE09BA83B2D /* NatButton+EdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+EdgeInsets.swift"; sourceTree = "<group>"; };
 		DA25909FD964254E6B99AD359EFD8A5C /* UIColor+HexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HexTests.swift"; sourceTree = "<group>"; };
+		DCDEE934281C6B53005B7747 /* NatRadioButtonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatRadioButtonGroup.swift; sourceTree = "<group>"; };
 		DD7122400C6AAB36772A6E365FBD263D /* String+Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Icon.swift"; sourceTree = "<group>"; };
 		E2274F3C7AE245CDA327DD2C /* Pods-NatDSSnapShotTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatDSSnapShotTests.debug.xcconfig"; path = "Target Support Files/Pods-NatDSSnapShotTests/Pods-NatDSSnapShotTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E46448E79883A4EB8A9416823A01531F /* NatOpacities+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatOpacities+Spec.swift"; sourceTree = "<group>"; };
@@ -2657,6 +2659,7 @@
 				BEDF931F2593B4FF00F54C50 /* NatSelectionControl.swift */,
 				BEDF93242593B5CE00F54C50 /* NatSelectionControl+Style.swift */,
 				BEDF93292593BE8000F54C50 /* NatSelectionControl+State.swift */,
+				DCDEE933281C66D6005B7747 /* NatRadioButtonGroup */,
 				79FC593825BF56E0001CCB56 /* NatRadioButton */,
 				7D968E1B26AF536000DE9A78 /* NatCheckbox */,
 			);
@@ -2743,6 +2746,14 @@
 				9EAE325876E14C91105C5CF9D2E7F1EF /* ViewStyle+Spec.swift */,
 			);
 			path = ViewStyle;
+			sourceTree = "<group>";
+		};
+		DCDEE933281C66D6005B7747 /* NatRadioButtonGroup */ = {
+			isa = PBXGroup;
+			children = (
+				DCDEE934281C6B53005B7747 /* NatRadioButtonGroup.swift */,
+			);
+			path = NatRadioButtonGroup;
 			sourceTree = "<group>";
 		};
 		DD20EF61A300C3292AE0EBCF255B5BD6 /* Resources */ = {
@@ -3385,6 +3396,7 @@
 				7DC81CB6261223CC006BE689 /* UIImage+UIColor.swift in Sources */,
 				269C886224C23B0100A507BE /* UINavigationController+Configure.swift in Sources */,
 				7D5349E826C6A33800F88EA7 /* NatImage+Fade.swift in Sources */,
+				DCDEE935281C6B53005B7747 /* NatRadioButtonGroup.swift in Sources */,
 				F01F3CA72313B3C97F42498878234A82 /* FontStyle.swift in Sources */,
 				84EB6B6F24EB197000C6A792 /* GetTokensFromTheme.swift in Sources */,
 				845D09982501196D00B05760 /* IconButtonStandardStyle.swift in Sources */,
