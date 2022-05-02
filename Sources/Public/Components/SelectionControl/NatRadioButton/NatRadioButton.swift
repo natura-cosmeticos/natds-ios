@@ -90,6 +90,7 @@ public final class NatRadioButton: UIView {
     }
 
     /// Attribute that adds the radioButton is a group.
+    @available(*, deprecated, message: "Use NatRadioButtonGroup class to manage radio buttons group instead this method")
     public func configure(addToGroup: [NatRadioButton]) {
         self.configureAddObserver()
         radioButton.isGrouped = true
