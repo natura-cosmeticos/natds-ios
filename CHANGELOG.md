@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [7.2.0](https://github.com/natura-cosmeticos/natds-ios/compare/7.1.2...7.2.0) (2022-05-03)
+
+
+### Features
+
+* add NatRadioButtonGroup class to manage radio buttons group behavior ([84d6197](https://github.com/natura-cosmeticos/natds-ios/commit/84d6197097bb1030da9c27a2328965962d124e9b))
+
 ### [7.1.2](https://github.com/natura-cosmeticos/natds-ios/compare/7.1.1...7.1.2) (2022-04-29)
 
 
