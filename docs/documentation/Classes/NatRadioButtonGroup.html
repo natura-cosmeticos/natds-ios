@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>AppBarColor Enumeration Reference</title>
+    <title>NatRadioButtonGroup Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -11,8 +11,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Enum/AppBarColor" class="dashAnchor"></a>
-    <a title="AppBarColor Enumeration Reference"></a>
+    <a name="//apple_ref/swift/Class/NatRadioButtonGroup" class="dashAnchor"></a>
+    <a title="NatRadioButtonGroup Class Reference"></a>
     <header>
       <div class="content-wrapper">
         <p>
@@ -30,7 +30,7 @@
             <a href="../index.html">NatDS Reference</a>
             <img id="carat" src="../img/carat.png" alt=""/>
           </span>
-          AppBarColor Enumeration Reference
+          NatRadioButtonGroup Class Reference
         </p>
       </div>
     </div>
@@ -39,16 +39,23 @@
         <article class="main-content">
           <section>
             <section class="section">
-              <h1>AppBarColor</h1>
+              <h1>NatRadioButtonGroup</h1>
                 <div class="declaration">
                   <div class="language">
                     
-                    <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">AppBarColor</span></code></pre>
+                    <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">NatRadioButtonGroup</span></code></pre>
 
                   </div>
                 </div>
-              <p>AppBarColor represents the allowed color values for the AppBar Top component
-The component is configured using UINavigationController and UIViewController extensions.</p>
+              <p>NatRadioButtonGroup is a class to manage a group of RadioButton components from the design system.</p>
+
+<p>Example of usage:</p>
+
+<p>radioButtonGroup.configure(radioButtons: [radioButton1, radioButton2, &hellip;])</p>
+
+<p>radioButtonGroup.configure(selectionHandler:  { selectedRadioButton in
+   // Code
+})</p>
 
             </section>
             <section class="section task-group-section">
@@ -57,9 +64,9 @@ The component is configured using UINavigationController and UIViewController ex
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/s:5NatDS11AppBarColorO7defaultyA2CmF"></a>
-                      <a name="//apple_ref/swift/Element/default" class="dashAnchor"></a>
-                      <a class="token" href="#/s:5NatDS11AppBarColorO7defaultyA2CmF">default</a>
+                      <a name="/s:5NatDS0A16RadioButtonGroupCACycfc"></a>
+                      <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A16RadioButtonGroupCACycfc">init()</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -74,7 +81,47 @@ The component is configured using UINavigationController and UIViewController ex
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">case</span> <span class="err">`</span><span class="k">default</span><span class="err">`</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">()</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="task-group">
+                <div class="task-name-container">
+                  <a name="/Public%20Methods"></a>
+                  <a name="//apple_ref/swift/Section/Public Methods" class="dashAnchor"></a>
+                  <div class="section-name-container">
+                    <a class="section-name-link" href="#/Public%20Methods"></a>
+                    <h3 class="section-name"><span>Public Methods</span>
+</h3>
+                  </div>
+                </div>
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS0A16RadioButtonGroupC9configure12radioButtonsySayAA0acD0CG_tF"></a>
+                      <a name="//apple_ref/swift/Method/configure(radioButtons:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A16RadioButtonGroupC9configure12radioButtonsySayAA0acD0CG_tF">configure(radioButtons:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Attribute that sets the radioButtons group</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="nv">radioButtons</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/NatRadioButton.html">NatRadioButton</a></span><span class="p">])</span></code></pre>
 
                           </div>
                         </div>
@@ -84,9 +131,9 @@ The component is configured using UINavigationController and UIViewController ex
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/s:5NatDS11AppBarColorO7primaryyA2CmF"></a>
-                      <a name="//apple_ref/swift/Element/primary" class="dashAnchor"></a>
-                      <a class="token" href="#/s:5NatDS11AppBarColorO7primaryyA2CmF">primary</a>
+                      <a name="/s:5NatDS0A16RadioButtonGroupC9configure16selectionHandleryyAA0acD0CSgc_tF"></a>
+                      <a name="//apple_ref/swift/Method/configure(selectionHandler:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A16RadioButtonGroupC9configure16selectionHandleryyAA0acD0CSgc_tF">configure(selectionHandler:<wbr>)</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -94,70 +141,35 @@ The component is configured using UINavigationController and UIViewController ex
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Undocumented</p>
+                          <p>Sets the handler to be executed when <code>selectedRadioButton</code> value changes</p>
 
                         </div>
                         <div class="declaration">
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">primary</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="nv">selectionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/NatRadioButton.html">NatRadioButton</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                           </div>
                         </div>
-                      </section>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div>
-                      <code>
-                      <a name="/s:5NatDS11AppBarColorO4noneyA2CmF"></a>
-                      <a name="//apple_ref/swift/Element/none" class="dashAnchor"></a>
-                      <a class="token" href="#/s:5NatDS11AppBarColorO4noneyA2CmF">none</a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          <p>Undocumented</p>
-
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">case</span> <span class="k">none</span></code></pre>
-
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div>
-                      <code>
-                      <a name="/s:5NatDS11AppBarColorO7inverseyA2CmF"></a>
-                      <a name="//apple_ref/swift/Element/inverse" class="dashAnchor"></a>
-                      <a class="token" href="#/s:5NatDS11AppBarColorO7inverseyA2CmF">inverse</a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          <p>Undocumented</p>
-
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">inverse</span></code></pre>
-
-                          </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>selectionHandler</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>A closure to notify value change</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
                         </div>
                       </section>
                     </div>
