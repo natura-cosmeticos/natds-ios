@@ -72,6 +72,7 @@ update_themes: ## update theme from commons
 	bash ./scripts/update_themes.sh
 
 create_docs: ## creates html docs
+	gem install jazzy
 	jazzy --theme=jony
 	bash ./scripts/update_docs.sh
 

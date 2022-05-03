@@ -16,7 +16,7 @@
       <div class="content-wrapper">
         <p>
           <a href="index.html">NatDS  Docs</a>
-          <span class="no-mobile"> (42% documented)</span>
+          <span class="no-mobile"> (40% documented)</span>
         </p>
     
     
@@ -27,7 +27,7 @@
         <p id="breadcrumbs">
           <span class="no-mobile">
             <a href="index.html">NatDS Reference</a>
-            <img id="carat" src="img/carat.png" />
+            <img id="carat" src="img/carat.png" alt=""/>
           </span>
           How to contribute  Reference
         </p>
@@ -40,61 +40,59 @@
             <section class="section">
               
               <h1 id='how-to-contribute' class='heading'>How to contribute</h1>
+<h2 id='setup' class='heading'>Setup</h2>
 
-<p>First of all, check the required dependencies, setup the project using <a href="docs/Setup.md">the steps in the setup guide</a> and start coding. Use the commit structure and follow the criteria below before creating a PR. </p>
-<h2 id='requirements' class='heading'>Requirements</h2>
+<p>Check the required dependencies and setup the project using the <a href="docs/Setup.md">setup guide</a>. Create a new branch from <code>master</code> and code your solution.</p>
 
-<p>If you created or updated a new component, don&rsquo;t forget to include examples of your features in the Sample App. New components and features must be documented and covered by unit and snapshot tests.</p>
-<h2 id='commits-structure' class='heading'>Commits structure</h2>
+<p>The code is the folder <code>Sources &gt; Public &gt; Components</code>. If you&rsquo;re creating a new component, use the naming convention with a prefix. (Example: NatButton). You can use whatever structure you want to write your code, since it respects SOLID principles and keeps the component as flexible as possible.</p>
+<h2 id='code' class='heading'>Code</h2>
 
-<p>After developing your contribution, we recommend the usage of <a href="https://www.conventionalcommits.org/en/v1.0.0/">Conventional Commits</a> to commit your work.</p>
+<p>If you created or updated a new component, include or update examples of your features in the Sample App: create a new View Controller in the target target <code>NatDS-Sample App</code> and folder <code>Sources &gt; Sample &gt; Components</code>. You should also include your new ViewController in the file <code>ComponentsSection</code>.</p>
+<h2 id='tests' class='heading'>Tests</h2>
+
+<p>Your code should be covered by unit and snapshot tests.</p>
+
+<ul>
+<li>Unit tests are located in the folder <code>Tests</code> and developed with the libraries <code>Quick</code> and <code>Nimble</code>.</li>
+<li>Snapshot tests are located in the folder <code>NatDSSnapshotTests</code> and developed with the library <code>SnapshotTesting</code>.
+&gt; Note: To run snapshot tests, select <code>iPhone SE (3rd generation)</code> as the target simulator.</li>
+</ul>
+<h2 id='documentation' class='heading'>Documentation</h2>
+
+<p>Don&rsquo;t forget to document your new classes and methods. Use the shortcut <code>option + command + /</code> to open the documentation fields in Xcode.</p>
+<h2 id='commit-structure' class='heading'>Commit structure</h2>
+
+<p>We use semantic commits in the project - you can follow the types and descriptions of <a href="https://www.conventionalcommits.org/en/v1.0.0/">Conventional Commits</a>. </p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>The use of these commit messages is <em>MANDATORY</em>, as the new versions of the library are released using the commits as a source of information.</p>
+
+</div>
 
 <p>The most common types the we use are:</p>
 
 <ul>
-<li>If you&rsquo;re adding a new feature, your commit should look like: <code>feat: [Short Description] [long description if you need]</code></li>
-<li>If you&rsquo;re fixing a bug, your commit should look like: <code>bug: [Short Description] [long description if you need]</code></li>
-<li>If you&rsquo;re adding tests, your commit should look like: <code>test: [Short Description] [long description if you need]</code></li>
+<li><code>feat: [Short Description] [long description if you need]</code> (when adding a new feature)</li>
+<li><code>bug: [Short Description] [long description if you need]</code> (when fixing a bug)</li>
+<li><code>test: [Short Description] [long description if you need]</code> (when adding/updating tests)</li>
 </ul>
 
-<p>There are many other types that you can use to tag your commits: <code>build:</code>, <code>chore:</code>, <code>ci:</code>, <code>docs:</code>, <code>style:</code>, <code>refactor:</code>, <code>perf:</code>; 
-<a href="https://www.conventionalcommits.org/en/v1.0.0/">here you can find more info about it</a>.</p>
+<p>There are other types that you can use to tag your commits: <code>build:</code>, <code>chore:</code>, <code>ci:</code>, <code>docs:</code>, <code>style:</code>, <code>refactor:</code>, <code>perf:</code>. <a href="https://www.conventionalcommits.org/en/v1.0.0/">Check the description of each type of message</a>.</p>
+<h3 id='tool' class='heading'>Tool:</h3>
 
-<p>NOTE: The conventional commits structure is mandatory, as the new versions of the library are released using the commits as a source of information.</p>
-<h3 id='tool-to-help' class='heading'>Tool to help:</h3>
+<p>We use the tool <a href="https://github.com/commitizen/cz-cli">Commitizen</a> to help us use semantic commits.</p>
 
-<p>You can add an CLI to help you writing your commits. <a href="https://github.com/commitizen/cz-cli">Commitizen</a> is the tool we use :)</p>
-
-<p>To install the CLI, run:</p>
-<pre class="highlight shell"><code>npm <span class="nb">install</span> <span class="nt">-g</span> commitizen
+<p>To install Commitizen, run:</p>
+<pre class="highlight shell"><code>npm install -g commitizen
 </code></pre>
 
-<p>To commit your work with Commitizen, run:</p>
-<pre class="highlight shell"><code>git add <span class="nb">.</span>
+<p>To commit your work, run:</p>
+<pre class="highlight shell"><code>git add .
 git cz
 </code></pre>
+<h2 id='create-a-pr' class='heading'>Create a PR</h2>
 
-<p>Commitizen will guide you about how to structure you commit.</p>
-
-<p>After documenting your code, you&rsquo;ll also have to update the documentation files. To do that, run:</p>
-<pre class="highlight shell"><code>make create_docs
-</code></pre>
-<h2 id='create-a-pr-to-contribute-to-the-project' class='heading'>Create a PR to contribute to the project</h2>
-
-<p>We will review your PR checking some criteria:</p>
-
-<ul>
-<li>Your code is covered by tests</li>
-<li>Your code is well structured, respecting SOLID principles</li>
-<li>Your code passed our automatic verifications (you can check the pipeline flow link in your PR)</li>
-<li>You&rsquo;ve added a sample of the increment to the Sample App (remember to update the tests related to it)</li>
-<li>You have made the corresponding changes to the documentation</li>
-<li>Your changes don&rsquo;t generate new warnings</li>
-<li>The component works fine with dark mode enabled</li>
-<li>Your code uses Design System design tokens</li>
-</ul>
-
-<p>If there&rsquo;s something that we could improve in the library, feel free to open an issue and let us know. We&rsquo;ll be happy to get in touch! :)</p>
+<p>When opening a Pull Request with your changes, add a description of the changes and follow the checklist. Then, request a code review.</p>
 
             </section>
           </section>
@@ -295,7 +293,13 @@ git cz
                   <a href="Classes/NatShortcut.html">NatShortcut</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="Classes/NatShortcut/State.html">– State</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="Classes/NatShortcut/Style.html">– Style</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatShortcut/Color.html">– Color</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="Classes/NatTag.html">NatTag</a>
@@ -320,6 +324,15 @@ git cz
                 </li>
                 <li class="nav-group-task">
                   <a href="Classes/NavigationDrawerItemCell/State.html">– State</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NavigationDrawerItemCell/NavigationAction.html">– NavigationAction</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NavigationDrawerItemCell/NavigationItemType.html">– NavigationItemType</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NavigationDrawerItemCell/NavigationAdd.html">– NavigationAdd</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="Classes/NavigationDrawerSubitemCell.html">NavigationDrawerSubitemCell</a>
@@ -459,12 +472,6 @@ git cz
                   <a href="Structs.html#/s:5NatDS25DialogButtonConfigurationV">DialogButtonConfiguration</a>
                 </li>
                 <li class="nav-group-task">
-                  <a href="Structs/IllustrationIcons.html">IllustrationIcons</a>
-                </li>
-                <li class="nav-group-task">
-                  <a href="Structs/IllustrationIcons/Lined.html">– Lined</a>
-                </li>
-                <li class="nav-group-task">
                   <a href="Structs/NatColors.html">NatColors</a>
                 </li>
                 <li class="nav-group-task">
@@ -506,11 +513,10 @@ git cz
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external">System Team - Natura SA</a>. All rights reserved. (Last updated: 2022-02-10)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2022 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external noopener">System Team - Natura SA</a>. All rights reserved. (Last updated: 2022-04-28)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </div>
     </div>
   </body>
-</div>
 </html>
