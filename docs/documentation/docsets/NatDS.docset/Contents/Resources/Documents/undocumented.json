@@ -1913,8 +1913,15 @@
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/SelectionControl/NatRadioButton/NatRadioButton.swift",
-      "line": 26,
+      "line": 27,
       "symbol": "NatRadioButton.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/SelectionControl/NatRadioButtonGroup/NatRadioButtonGroup.swift",
+      "line": 25,
+      "symbol": "NatRadioButtonGroup.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },

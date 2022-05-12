@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>AvailableTheme Enumeration Reference</title>
+    <title>NatSwitch Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -11,8 +11,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Enum/AvailableTheme" class="dashAnchor"></a>
-    <a title="AvailableTheme Enumeration Reference"></a>
+    <a name="//apple_ref/swift/Class/NatSwitch" class="dashAnchor"></a>
+    <a title="NatSwitch Class Reference"></a>
     <header>
       <div class="content-wrapper">
         <p>
@@ -30,7 +30,7 @@
             <a href="../index.html">NatDS Reference</a>
             <img id="carat" src="../img/carat.png" alt=""/>
           </span>
-          AvailableTheme Enumeration Reference
+          NatSwitch Class Reference
         </p>
       </div>
     </div>
@@ -39,31 +39,36 @@
         <article class="main-content">
           <section>
             <section class="section">
-              <h1>AvailableTheme</h1>
+              <h1>NatSwitch</h1>
                 <div class="declaration">
                   <div class="language">
                     
-                    <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">AvailableTheme</span></code></pre>
+                    <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">NatSwitch</span> <span class="p">:</span> <span class="kt">UIView</span></code></pre>
 
                   </div>
                 </div>
-              <p>Representation of available themes in Design System.</p>
-<div class="aside aside-note">
-    <p class="aside-title">Note</p>
-    Supported Themes:
+              <p>NatSwitch is a class that represents the switch component from the design system.
+The switch colors changes according with the current theme configured in the Design System.</p>
 
-<ul>
-<li>AesopDark</li>
-<li>AesopLight</li>
-<li>AvonDark</li>
-<li>AvonLight</li>
-<li>NaturaDark</li>
-<li>NaturaLight</li>
-<li>TheBodyShopDark</li>
-<li>TheBodyShopLight</li>
-</ul>
+<p>Example of usage:</p>
+
+<p>natSwitch.configure(state: .normal)
+natSwitch.configure(state: .focused)
+natSwitch.configure(state: .disabled)</p>
+
+<p>natSwitch.configure(isOn: true)
+natSwitch.configure(isOn: false)</p>
+
+<p>natSwitch.configure(isOnHandler:  { isOn in
+   // Code
+})</p>
+<div class="aside aside-requires">
+    <p class="aside-title">Requires</p>
+    It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.
 
 </div>
+
+<p>DesignSystem().configure(with: AvailableTheme)</p>
 
             </section>
             <section class="section task-group-section">
@@ -72,9 +77,9 @@
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/s:5NatDS14AvailableThemeO9aesopDarkyA2CmF"></a>
-                      <a name="//apple_ref/swift/Element/aesopDark" class="dashAnchor"></a>
-                      <a class="token" href="#/s:5NatDS14AvailableThemeO9aesopDarkyA2CmF">aesopDark</a>
+                      <a name="/s:5NatDS0A6SwitchC4isOnSbvp"></a>
+                      <a name="//apple_ref/swift/Property/isOn" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A6SwitchC4isOnSbvp">isOn</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -89,7 +94,7 @@
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">aesopDark</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">isOn</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                           </div>
                         </div>
@@ -99,9 +104,9 @@
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/s:5NatDS14AvailableThemeO10aesopLightyA2CmF"></a>
-                      <a name="//apple_ref/swift/Element/aesopLight" class="dashAnchor"></a>
-                      <a class="token" href="#/s:5NatDS14AvailableThemeO10aesopLightyA2CmF">aesopLight</a>
+                      <a name="/s:5NatDS0A6SwitchC5stateSo14UIControlStateVvp"></a>
+                      <a name="//apple_ref/swift/Property/state" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A6SwitchC5stateSo14UIControlStateVvp">state</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -116,7 +121,7 @@
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">aesopLight</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">state</span><span class="p">:</span> <span class="kt">UIControl</span><span class="o">.</span><span class="kt">State</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                           </div>
                         </div>
@@ -126,9 +131,9 @@
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/s:5NatDS14AvailableThemeO8avonDarkyA2CmF"></a>
-                      <a name="//apple_ref/swift/Element/avonDark" class="dashAnchor"></a>
-                      <a class="token" href="#/s:5NatDS14AvailableThemeO8avonDarkyA2CmF">avonDark</a>
+                      <a name="/c:@M@NatDS@objc(cs)NatSwitch(im)init"></a>
+                      <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@NatDS@objc(cs)NatSwitch(im)init">init()</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -143,9 +148,72 @@
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">avonDark</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">()</span></code></pre>
 
                           </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="task-group">
+                <div class="task-name-container">
+                  <a name="/Public%20Methods"></a>
+                  <a name="//apple_ref/swift/Section/Public Methods" class="dashAnchor"></a>
+                  <div class="section-name-container">
+                    <a class="section-name-link" href="#/Public%20Methods"></a>
+                    <h3 class="section-name"><span>Public Methods</span>
+</h3>
+                  </div>
+                </div>
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS0A6SwitchC9configure5stateySo14UIControlStateV_tF"></a>
+                      <a name="//apple_ref/swift/Method/configure(state:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A6SwitchC9configure5stateySo14UIControlStateV_tF">configure(state:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Sets the state of the component.</p>
+
+<p>Example of usage:</p>
+<pre class="highlight swift"><code><span class="n">natSwitch</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">state</span><span class="p">:</span> <span class="o">.</span><span class="n">normal</span><span class="p">)</span>
+</code></pre>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="nv">state</span><span class="p">:</span> <span class="kt">UIControl</span><span class="o">.</span><span class="kt">State</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>state</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>An <code>UIControl.State</code> that changes the state of the component</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
                         </div>
                       </section>
                     </div>
@@ -153,9 +221,9 @@
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/s:5NatDS14AvailableThemeO9avonLightyA2CmF"></a>
-                      <a name="//apple_ref/swift/Element/avonLight" class="dashAnchor"></a>
-                      <a class="token" href="#/s:5NatDS14AvailableThemeO9avonLightyA2CmF">avonLight</a>
+                      <a name="/s:5NatDS0A6SwitchC9configure4isOnySb_tF"></a>
+                      <a name="//apple_ref/swift/Method/configure(isOn:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A6SwitchC9configure4isOnySb_tF">configure(isOn:<wbr>)</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -163,16 +231,39 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Undocumented</p>
+                          <p>Turns the component on/off.</p>
+
+<p>Example of usage:</p>
+<pre class="highlight swift"><code><span class="n">natSwitch</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">isOn</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+</code></pre>
 
                         </div>
                         <div class="declaration">
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">avonLight</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="nv">isOn</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
 
                           </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>isOn</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>A <code>Bool</code> that turns the component on/off</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
                         </div>
                       </section>
                     </div>
@@ -180,9 +271,9 @@
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/s:5NatDS14AvailableThemeO10naturaDarkyA2CmF"></a>
-                      <a name="//apple_ref/swift/Element/naturaDark" class="dashAnchor"></a>
-                      <a class="token" href="#/s:5NatDS14AvailableThemeO10naturaDarkyA2CmF">naturaDark</a>
+                      <a name="/s:5NatDS0A6SwitchC9configure11isOnHandleryySbc_tF"></a>
+                      <a name="//apple_ref/swift/Method/configure(isOnHandler:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A6SwitchC9configure11isOnHandleryySbc_tF">configure(isOnHandler:<wbr>)</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -190,97 +281,39 @@
                       <section class="section">
                         <div class="pointer"></div>
                         <div class="abstract">
-                          <p>Undocumented</p>
+                          <p>Sets the handler to be executed when <code><a href="../Classes/NatSwitch.html#/s:5NatDS0A6SwitchC4isOnSbvp">isOn</a></code> value changes</p>
+
+<p>Example of usage:</p>
+<pre class="highlight swift"><code><span class="n">natSwitch</span><span class="o">.</span><span class="n">configure</span> <span class="p">{</span> <span class="n">isOn</span> <span class="k">in</span> <span class="p">}</span>
+</code></pre>
 
                         </div>
                         <div class="declaration">
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">naturaDark</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="nv">isOnHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                           </div>
                         </div>
-                      </section>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div>
-                      <code>
-                      <a name="/s:5NatDS14AvailableThemeO11naturaLightyA2CmF"></a>
-                      <a name="//apple_ref/swift/Element/naturaLight" class="dashAnchor"></a>
-                      <a class="token" href="#/s:5NatDS14AvailableThemeO11naturaLightyA2CmF">naturaLight</a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          <p>Undocumented</p>
-
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">naturaLight</span></code></pre>
-
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div>
-                      <code>
-                      <a name="/s:5NatDS14AvailableThemeO15theBodyShopDarkyA2CmF"></a>
-                      <a name="//apple_ref/swift/Element/theBodyShopDark" class="dashAnchor"></a>
-                      <a class="token" href="#/s:5NatDS14AvailableThemeO15theBodyShopDarkyA2CmF">theBodyShopDark</a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          <p>Undocumented</p>
-
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">theBodyShopDark</span></code></pre>
-
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div>
-                      <code>
-                      <a name="/s:5NatDS14AvailableThemeO16theBodyShopLightyA2CmF"></a>
-                      <a name="//apple_ref/swift/Element/theBodyShopLight" class="dashAnchor"></a>
-                      <a class="token" href="#/s:5NatDS14AvailableThemeO16theBodyShopLightyA2CmF">theBodyShopLight</a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          <p>Undocumented</p>
-
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">theBodyShopLight</span></code></pre>
-
-                          </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>isOnHandler</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>A closure to notify value change</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
                         </div>
                       </section>
                     </div>
