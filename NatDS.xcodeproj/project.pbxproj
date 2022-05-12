@@ -410,7 +410,10 @@
 		D2063015F26B7E8B3A27602A3B907BCE /* NavigationDrawerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E816229C707C64C390D3320DFA6B5D99 /* NavigationDrawerTests.swift */; };
 		D23F82EE5C3333FD06E87016848DCD37 /* TabItemViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AA33B684C0A723F3E2F341D0A10EEC /* TabItemViewTests.swift */; };
 		D36E7374F76C10792F8292DCD99800D5 /* NavigationDrawerDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92BFB29E97D8520D6B67E8883AB9A08 /* NavigationDrawerDelegateMock.swift */; };
+		DC724B7D282CA4D500C8F090 /* Switch+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC724B7C282CA4D500C8F090 /* Switch+Spec.swift */; };
+		DC724B80282CA9A700C8F090 /* NatSwitch+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC724B7F282CA9A700C8F090 /* NatSwitch+Snapshot+Tests.swift */; };
 		DCDEE935281C6B53005B7747 /* NatRadioButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDEE934281C6B53005B7747 /* NatRadioButtonGroup.swift */; };
+		DCDEE93828258840005B7747 /* NatSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDEE93728258840005B7747 /* NatSwitch.swift */; };
 		DF58B3DD08824CC1C80C886321CEA0F4 /* NatElevations+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A9D6B3184A3081BD0CDE0B1A351C8F /* NatElevations+Spec.swift */; };
 		E07925C3535D79164EBC061C7D6A6CE4 /* TextFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437B78D88ACFB47EEADED96CDC94C7C5 /* TextFieldType.swift */; };
 		E4B171E23C40B91B211DB2F64357778D /* ViewStyle+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAE325876E14C91105C5CF9D2E7F1EF /* ViewStyle+Spec.swift */; };
@@ -849,7 +852,10 @@
 		D7C267848A6D4A2289C862E53EA54F84 /* ElevationAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevationAttributes.swift; sourceTree = "<group>"; };
 		D9B397DFEC0D8F0FBBDE7AE09BA83B2D /* NatButton+EdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+EdgeInsets.swift"; sourceTree = "<group>"; };
 		DA25909FD964254E6B99AD359EFD8A5C /* UIColor+HexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HexTests.swift"; sourceTree = "<group>"; };
+		DC724B7C282CA4D500C8F090 /* Switch+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Switch+Spec.swift"; sourceTree = "<group>"; };
+		DC724B7F282CA9A700C8F090 /* NatSwitch+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatSwitch+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		DCDEE934281C6B53005B7747 /* NatRadioButtonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatRadioButtonGroup.swift; sourceTree = "<group>"; };
+		DCDEE93728258840005B7747 /* NatSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatSwitch.swift; sourceTree = "<group>"; };
 		DD7122400C6AAB36772A6E365FBD263D /* String+Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Icon.swift"; sourceTree = "<group>"; };
 		E2274F3C7AE245CDA327DD2C /* Pods-NatDSSnapShotTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatDSSnapShotTests.debug.xcconfig"; path = "Target Support Files/Pods-NatDSSnapShotTests/Pods-NatDSSnapShotTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E46448E79883A4EB8A9416823A01531F /* NatOpacities+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatOpacities+Spec.swift"; sourceTree = "<group>"; };
@@ -2009,6 +2015,7 @@
 				7D9038B3261B8000005A3D0A /* Rating */,
 				79FC596125C1AAAA001CCB56 /* SelectionControl */,
 				84391DEB24DB4784009D0BE8 /* Shortcut */,
+				DC724B7E282CA98500C8F090 /* Switch */,
 				84BB928924DC734800A9BCC8 /* Tab */,
 				26BFBADC251273AB006C22E2 /* Tag */,
 				84BB929B24DC975E00A9BCC8 /* TextField */,
@@ -2496,6 +2503,7 @@
 				7D903890261B4EB6005A3D0A /* Rating */,
 				BE272C2F259B67C300060AF8 /* SelectionControl */,
 				84BF066F24B511F600462AC5 /* Shortcut */,
+				DC724B7B282CA4A000C8F090 /* Switch */,
 				28B8CBEE15559C8DBD459A3FC53141DB /* Tab */,
 				26BFBAD82512736F006C22E2 /* Tag */,
 			);
@@ -2526,6 +2534,7 @@
 				7DC81CAF26121E9B006BE689 /* Rating */,
 				BEDF931B2593815900F54C50 /* SelectionControl */,
 				844A1E2124AE111D00E93AD9 /* Shortcut */,
+				DCDEE9362825880D005B7747 /* Switch */,
 				1C64E7FC7AE243CD11623B12CB2E59B4 /* Tab */,
 				26BFBAD525125195006C22E2 /* Tag */,
 				857FA81A9331D03B846B818F61F9D19A /* ValueText */,
@@ -2736,6 +2745,22 @@
 			path = Dialog;
 			sourceTree = "<group>";
 		};
+		DC724B7B282CA4A000C8F090 /* Switch */ = {
+			isa = PBXGroup;
+			children = (
+				DC724B7C282CA4D500C8F090 /* Switch+Spec.swift */,
+			);
+			path = Switch;
+			sourceTree = "<group>";
+		};
+		DC724B7E282CA98500C8F090 /* Switch */ = {
+			isa = PBXGroup;
+			children = (
+				DC724B7F282CA9A700C8F090 /* NatSwitch+Snapshot+Tests.swift */,
+			);
+			path = Switch;
+			sourceTree = "<group>";
+		};
 		DCA8206FBF7A0CC92AB1B5DA7728EFB0 /* ViewStyle */ = {
 			isa = PBXGroup;
 			children = (
@@ -2754,6 +2779,14 @@
 				DCDEE934281C6B53005B7747 /* NatRadioButtonGroup.swift */,
 			);
 			path = NatRadioButtonGroup;
+			sourceTree = "<group>";
+		};
+		DCDEE9362825880D005B7747 /* Switch */ = {
+			isa = PBXGroup;
+			children = (
+				DCDEE93728258840005B7747 /* NatSwitch.swift */,
+			);
+			path = Switch;
 			sourceTree = "<group>";
 		};
 		DD20EF61A300C3292AE0EBCF255B5BD6 /* Resources */ = {
@@ -3237,6 +3270,7 @@
 				79FC595D25C1A854001CCB56 /* SelectionControl+RadioButton+Spec.swift in Sources */,
 				79FC597925C83E17001CCB56 /* Divider+Spec.swift in Sources */,
 				79E7FABA25388B7200A831BC /* AvonDarkTokens+BorderRadius+Spec.swift in Sources */,
+				DC724B7D282CA4D500C8F090 /* Switch+Spec.swift in Sources */,
 				0E7C160B24C61E45002FF46F /* UINavigationController+Configure+Spec.swift in Sources */,
 				79B6AC7D25AE1BDC0027F7D6 /* NatBadge+Dot+Spec.swift in Sources */,
 				79E7FA45253741AD00A831BC /* AesopLightTokens+Elevation+Spec.swift in Sources */,
@@ -3418,6 +3452,7 @@
 				BEAFF23D259517DC00B9C9B5 /* NatCheckboxContainer.swift in Sources */,
 				845AD7A824E2C8E6006CA226 /* AvonDarkTheme.swift in Sources */,
 				0FB003017C3A179872BC65E6E321FD13 /* NatDialogController+StandardStyleBuilder.swift in Sources */,
+				DCDEE93828258840005B7747 /* NatSwitch.swift in Sources */,
 				84BC900B24AA169B007DF09D /* DialogViewModel.swift in Sources */,
 				26BFBAD725125246006C22E2 /* NatTag.swift in Sources */,
 				7D9038CA261B9F57005A3D0A /* NatRating+State.swift in Sources */,
@@ -3496,6 +3531,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC724B80282CA9A700C8F090 /* NatSwitch+Snapshot+Tests.swift in Sources */,
 				79FC596325C1AAD5001CCB56 /* SelectionControl+Checkbox+Snapshot+Tests.swift in Sources */,
 				84391DEA24DB477F009D0BE8 /* NatShortcut+Snapshot+Tests.swift in Sources */,
 				79FC596B25C1AE5D001CCB56 /* SelectionControl+RadioButton+Snapshot+Tests.swift in Sources */,
