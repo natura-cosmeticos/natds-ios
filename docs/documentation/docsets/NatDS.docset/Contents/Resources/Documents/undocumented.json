@@ -2087,6 +2087,27 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Switch/NatSwitch.swift",
+      "line": 75,
+      "symbol": "NatSwitch.isOn",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Switch/NatSwitch.swift",
+      "line": 82,
+      "symbol": "NatSwitch.state",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Switch/NatSwitch.swift",
+      "line": 90,
+      "symbol": "NatSwitch.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/vagrant/git/Sources/Public/Components/Tab/Tab.swift",
       "line": 3,
       "symbol": "TabDelegate",
