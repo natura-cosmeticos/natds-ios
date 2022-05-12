@@ -13,7 +13,7 @@ import UIKit
  natSwitch.configure(isOn: true)
  natSwitch.configure(isOn: false)
  
- natSwitchconfigure(isOnHandler:  { isOn in
+ natSwitch.configure(isOnHandler:  { isOn in
     // Code
  })
 
@@ -169,12 +169,24 @@ public class NatSwitch: UIView {
 
     // MARK: - Public Methods
 
-    /// Attribute that sets the state of the component.
+    /// Sets the state of the component.
+    ///
+    /// Example of usage:
+    /// ```
+    /// natSwitch.configure(state: .normal)
+    /// ```
+    /// - Parameter state: An `UIControl.State` that changes the state of the component
     public func configure(state: UIControl.State) {
         self.state = state
     }
 
-    /// Attribute that sets and checks if the component is on.
+    /// Turns the component on/off.
+    ///
+    /// Example of usage:
+    /// ```
+    /// natSwitch.configure(isOn: true)
+    /// ```
+    /// - Parameter isOn: A `Bool` that turns the component on/off
     public func configure(isOn: Bool) {
         self.isOn = isOn
     }
