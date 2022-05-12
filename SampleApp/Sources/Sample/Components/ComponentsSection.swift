@@ -24,6 +24,7 @@ class ComponentsSection: SampleSection {
         RadioButtonViewController.self,
         RatingItemViewController.self,
         ShortcutItemViewController.self,
+        SwitchViewController.self,
         TabItemViewController.self,
         TagViewController.self,
         TextFieldItemViewController.self,

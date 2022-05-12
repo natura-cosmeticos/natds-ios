@@ -66,6 +66,7 @@
 		D3219E81DF4D5C6AC40F7F7677D8A7E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F3D5DE37D2013D4BADC0F54FAEDE3F6 /* Assets.xcassets */; };
 		D8E43C13D4DE5237EBF1AAA69FCF03EF /* BorderRadiusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ECCCD44B56293C5FBF0660526ABA56 /* BorderRadiusViewController.swift */; };
 		DC40596AEA7EE184F0A1BCD2F3BFF7FC /* DesignSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729810E32083E04163C749DCF3552FA6 /* DesignSection.swift */; };
+		DC724B7A282C87DA00C8F090 /* SwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC724B79282C87DA00C8F090 /* SwitchViewController.swift */; };
 		DF627B5ABA0E7336C4F3554132159A83 /* ComponentsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B703332C6994E56C229AEDFFD1B5EB /* ComponentsSection.swift */; };
 		E061B6B85CEFBAE9AE8A8079DEF9E0A4 /* SampleSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F8B4392DE4673E30A21B2F6E484CDB /* SampleSection.swift */; };
 		E85844B6881ACA2A4AD480885DC8B068 /* OpacityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E864ED7BB360AA6C6091D7E1053A5ED /* OpacityViewController.swift */; };
@@ -152,6 +153,7 @@
 		CDEFD4EFD9613149DFEC9007479CFBA8 /* SampleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleItem.swift; sourceTree = "<group>"; };
 		D6931A5C475B8907A39E71B99395C70C /* SizeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeCell.swift; sourceTree = "<group>"; };
 		D79F005407CCF54F38930570D9BE50EA /* OpacityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpacityCell.swift; sourceTree = "<group>"; };
+		DC724B79282C87DA00C8F090 /* SwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchViewController.swift; sourceTree = "<group>"; };
 		EB193A88212A44D97B2A08002B40993F /* ButtonsItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsItemViewController.swift; sourceTree = "<group>"; };
 		EEBC24456A172162B3538C51FBFE2BA6 /* NatDS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NatDS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F481A68E21070452D7ABE08B85865E10 /* SpacingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacingViewController.swift; sourceTree = "<group>"; };
@@ -436,6 +438,7 @@
 				7DC81CBA261227CA006BE689 /* Rating */,
 				79D4C8F325F68DD50027E74E /* RadioButton */,
 				844A1E2424AE2B7600E93AD9 /* Shortcut */,
+				DC724B78282C87BF00C8F090 /* Switch */,
 				C420063DEF581D12DAA6D31645B6B382 /* Tab */,
 				2600C21C25127D500040C4C4 /* Tag */,
 				C1D1F3FC973CC3D14F86C680F200601D /* ValueText */,
@@ -587,6 +590,14 @@
 				F65EAA4E8148EBDC96E68E9E054CED31 /* AppSearchBarViewController.swift */,
 			);
 			path = Bar;
+			sourceTree = "<group>";
+		};
+		DC724B78282C87BF00C8F090 /* Switch */ = {
+			isa = PBXGroup;
+			children = (
+				DC724B79282C87DA00C8F090 /* SwitchViewController.swift */,
+			);
+			path = Switch;
 			sourceTree = "<group>";
 		};
 		DEA60779BDC024D9AD1244CD29A20E30 /* Spacing */ = {
@@ -801,6 +812,7 @@
 				D10339C459C644B3172B6106B51A961C /* ElevationCell.swift in Sources */,
 				04AA815DDD6F9388F3A1010428342BBB /* ElevationViewController.swift in Sources */,
 				7DC81CBC261227DA006BE689 /* RatingItemViewController.swift in Sources */,
+				DC724B7A282C87DA00C8F090 /* SwitchViewController.swift in Sources */,
 				C3FB6A19DFD7AF84B435860A0C7F355D /* ExpansionPanelViewController.swift in Sources */,
 				9B13D285941681F8967FCC54F3945D5F /* IconCollectionViewCell.swift in Sources */,
 				84A9E9A9250F9CC8006B8A52 /* ThemeManager.swift in Sources */,
