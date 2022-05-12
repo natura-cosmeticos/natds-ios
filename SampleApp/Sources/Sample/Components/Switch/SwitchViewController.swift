@@ -9,6 +9,7 @@ class SwitchViewController: UIViewController, SampleItem {
     private let standardLabel: UILabel = {
         let label = UILabel()
         label.font = NatFonts.font(ofSize: .body1)
+        label.textColor = .black
         label.text = "Standard"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -31,6 +32,7 @@ class SwitchViewController: UIViewController, SampleItem {
     private let focusedLabel: UILabel = {
         let label = UILabel()
         label.font = NatFonts.font(ofSize: .body1)
+        label.textColor = .black
         label.text = "Focused"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -54,6 +56,7 @@ class SwitchViewController: UIViewController, SampleItem {
     private let disabledOnLabel: UILabel = {
         let label = UILabel()
         label.font = NatFonts.font(ofSize: .body1)
+        label.textColor = .black
         label.text = "Disabled on"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -78,6 +81,7 @@ class SwitchViewController: UIViewController, SampleItem {
     private let disabledOffLabel: UILabel = {
         let label = UILabel()
         label.font = NatFonts.font(ofSize: .body1)
+        label.textColor = .black
         label.text = "Disabled off"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
