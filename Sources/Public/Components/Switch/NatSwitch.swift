@@ -6,21 +6,21 @@ import UIKit
  
  Example of usage:
 
- natSwitch.configure(state: .normal)
- natSwitch.configure(state: .focused)
- natSwitch.configure(state: .disabled)
+        natSwitch.configure(state: .normal)
+        natSwitch.configure(state: .focused)
+        natSwitch.configure(state: .disabled)
  
- natSwitch.configure(isOn: true)
- natSwitch.configure(isOn: false)
+        natSwitch.configure(isOn: true)
+        natSwitch.configure(isOn: false)
  
- natSwitch.configure(isOnHandler:  { isOn in
-    // Code
- })
+        natSwitch.configure(isOnHandler:  { isOn in
+            // Code
+        })
 
  - Requires:
  It's necessary to configure the Design System with a theme or fatalError will be raised.
 
- DesignSystem().configure(with: AvailableTheme)
+        DesignSystem().configure(with: AvailableTheme)
  */
 
 public class NatSwitch: UIView {
