@@ -6,7 +6,7 @@ extension Notification.Name {
     static var stateWillChange: Notification.Name {
         return .init(rawValue: "StateWillChange")
     }
-    
+
     static var stateHasChanged: Notification.Name {
         return .init(rawValue: "StateHasChanged")
     }
