@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [7.3.0](https://github.com/natura-cosmeticos/natds-ios/compare/7.2.0...7.3.0) (2022-05-12)
+
+
+### Features
+
+* add NatSwitch component ([c403190](https://github.com/natura-cosmeticos/natds-ios/commit/c4031906fa7f2239705ec1fe26f1f1a6cc609792))
+
 ## [7.2.0](https://github.com/natura-cosmeticos/natds-ios/compare/7.1.2...7.2.0) (2022-05-03)
 
 
