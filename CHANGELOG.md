@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [7.3.1](https://github.com/natura-cosmeticos/natds-ios/compare/7.3.0...7.3.1) (2022-05-18)
+
+
+### Bug Fixes
+
+* remove buggy collapse animation ([61e7108](https://github.com/natura-cosmeticos/natds-ios/commit/61e7108b84c3e51921cf58ca7c8d560632208e33))
+
 ## [7.3.0](https://github.com/natura-cosmeticos/natds-ios/compare/7.2.0...7.3.0) (2022-05-12)
 
 
