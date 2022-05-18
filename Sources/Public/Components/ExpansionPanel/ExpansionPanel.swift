@@ -309,15 +309,12 @@ extension ExpansionPanel {
 
 extension ExpansionPanel {
     public func collapse() {
-        let expandedHeight = frame.size.height
         removeDetailView()
         layoutIfNeeded()
         rotateButtonDown(animated: false)
         animateChangingColorToInactive()
         if customCollapseAnimation != nil {
             customCollapseAnimation?()
-        } else {
-            animateDecreasingHeight(from: expandedHeight)
         }
         executeHandlerForCollapse()
     }
