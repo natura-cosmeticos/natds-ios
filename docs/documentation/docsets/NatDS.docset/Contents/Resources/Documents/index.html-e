@@ -66,7 +66,7 @@
 <h3 id='cocoapods' class='heading'>CocoaPods</h3>
 
 <p><a href="http://cocoapods.org">CocoaPods</a> is a dependency manager for Swift and Objective-C Cocoa projects. You can install it with the following command:</p>
-<pre class="highlight shell"><code>gem install cocoapods
+<pre class="highlight shell"><code>gem <span class="nb">install </span>cocoapods
 </code></pre>
 
 <blockquote>
@@ -80,7 +80,7 @@
 </code></pre>
 
 <p>Then, run the following command:</p>
-<pre class="highlight shell"><code>pod install
+<pre class="highlight shell"><code>pod <span class="nb">install</span>
 </code></pre>
 <h3 id='swift-package-manager' class='heading'>Swift Package Manager</h3>
 
@@ -117,7 +117,7 @@ Follow the path <code>File &gt; Swift Packages &gt; Add Package Dependency</code
 
 <p>To check all available versions for NatDS Icons, you can check the <a href="https://github.com/natura-cosmeticos/natds-commons/blob/master/packages/natds-icons/CHANGELOG.md">changelog</a>, or run a pod command from your terminal:</p>
 </blockquote>
-<pre class="highlight shell"><code>pod search NatDSIcons --simple
+<pre class="highlight shell"><code>pod search NatDSIcons <span class="nt">--simple</span>
 </code></pre>
 
 <p><a href=how-to-use-icons.html target="_blank">Check the documentation on how to use icons in your code.</a></p>

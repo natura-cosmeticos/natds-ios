@@ -1,3260 +1,3260 @@
 {
   "warnings": [
     {
-      "file": "/Users/vagrant/git/Sources/Core/Helpers/Fonts/Style/CustomFontStyle.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Core/Helpers/Fonts/Style/CustomFontStyle.swift",
       "line": 3,
       "symbol": "CustomFontStyle.display",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Core/Helpers/Fonts/Style/CustomFontStyle.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Core/Helpers/Fonts/Style/CustomFontStyle.swift",
       "line": 4,
       "symbol": "CustomFontStyle.headline",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Core/Helpers/Fonts/Style/CustomFontStyle.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Core/Helpers/Fonts/Style/CustomFontStyle.swift",
       "line": 5,
       "symbol": "CustomFontStyle.bodyRegular",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Core/Helpers/Fonts/Style/CustomFontStyle.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Core/Helpers/Fonts/Style/CustomFontStyle.swift",
       "line": 6,
       "symbol": "CustomFontStyle.bodyBold",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Core/Helpers/ReusableView.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Core/Helpers/ReusableView.swift",
       "line": 3,
       "symbol": "ReusableView.reuseIdentifier",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Core/Helpers/ReusableView.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Core/Helpers/ReusableView.swift",
       "line": 7,
       "symbol": "ReusableView.reuseIdentifier",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/AvailableTheme.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/AvailableTheme.swift",
       "line": 17,
       "symbol": "AvailableTheme.aesopDark",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/AvailableTheme.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/AvailableTheme.swift",
       "line": 18,
       "symbol": "AvailableTheme.aesopLight",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/AvailableTheme.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/AvailableTheme.swift",
       "line": 19,
       "symbol": "AvailableTheme.avonDark",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/AvailableTheme.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/AvailableTheme.swift",
       "line": 20,
       "symbol": "AvailableTheme.avonLight",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/AvailableTheme.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/AvailableTheme.swift",
       "line": 21,
       "symbol": "AvailableTheme.naturaDark",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/AvailableTheme.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/AvailableTheme.swift",
       "line": 22,
       "symbol": "AvailableTheme.naturaLight",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/AvailableTheme.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/AvailableTheme.swift",
       "line": 23,
       "symbol": "AvailableTheme.theBodyShopDark",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/AvailableTheme.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/AvailableTheme.swift",
       "line": 24,
       "symbol": "AvailableTheme.theBodyShopLight",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/AppBar/AppBarColor.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/AppBar/AppBarColor.swift",
       "line": 4,
       "symbol": "AppBarColor.default",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/AppBar/AppBarColor.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/AppBar/AppBarColor.swift",
       "line": 5,
       "symbol": "AppBarColor.primary",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/AppBar/AppBarColor.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/AppBar/AppBarColor.swift",
       "line": 6,
       "symbol": "AppBarColor.none",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/AppBar/AppBarColor.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/AppBar/AppBarColor.swift",
       "line": 7,
       "symbol": "AppBarColor.inverse",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/AppBar/AppBarContentType.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/AppBar/AppBarContentType.swift",
       "line": 4,
       "symbol": "AppBarContentType.text(_:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/AppBar/AppBarContentType.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/AppBar/AppBarContentType.swift",
       "line": 5,
       "symbol": "AppBarContentType.media(_:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/AppBar/AppBarContentType.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/AppBar/AppBarContentType.swift",
       "line": 6,
       "symbol": "AppBarContentType.logo(_:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/AppBar/UIBarButtonItem+Icon.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/AppBar/UIBarButtonItem+Icon.swift",
       "line": 4,
       "symbol": "UIBarButtonItem.init(icon:action:target:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/AppBar/UIBarButtonItem+Icon.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/AppBar/UIBarButtonItem+Icon.swift",
       "line": 12,
       "symbol": "UIBarButtonItem.setBadgeValue(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Avatar/NatAvatar+Size.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Avatar/NatAvatar+Size.swift",
       "line": 19,
       "symbol": "NatAvatar.Size.standard",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Avatar/NatAvatar+Size.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Avatar/NatAvatar+Size.swift",
       "line": 20,
       "symbol": "NatAvatar.Size.semi",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Avatar/NatAvatar+Size.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Avatar/NatAvatar+Size.swift",
       "line": 21,
       "symbol": "NatAvatar.Size.semiX",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Avatar/NatAvatar+Size.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Avatar/NatAvatar+Size.swift",
       "line": 22,
       "symbol": "NatAvatar.Size.medium",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Avatar/NatAvatar+Size.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Avatar/NatAvatar+Size.swift",
       "line": 23,
       "symbol": "NatAvatar.Size.largeXXX",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Avatar/NatAvatar+Type.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Avatar/NatAvatar+Type.swift",
       "line": 16,
       "symbol": "NatAvatar.Types.icon",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Avatar/NatAvatar+Type.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Avatar/NatAvatar+Type.swift",
       "line": 17,
       "symbol": "NatAvatar.Types.label",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Avatar/NatAvatar+Type.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Avatar/NatAvatar+Type.swift",
       "line": 18,
       "symbol": "NatAvatar.Types.image",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Avatar/NatAvatar.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Avatar/NatAvatar.swift",
       "line": 84,
       "symbol": "NatAvatar.init(size:type:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Avatar/NatAvatar.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Avatar/NatAvatar.swift",
       "line": 99,
       "symbol": "NatAvatar.layoutSubviews()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Badge/NatBadge+Color.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Badge/NatBadge+Color.swift",
       "line": 18,
       "symbol": "NatBadge.Color.alert",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Badge/NatBadge+Color.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Badge/NatBadge+Color.swift",
       "line": 19,
       "symbol": "NatBadge.Color.primary",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Badge/NatBadge+Color.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Badge/NatBadge+Color.swift",
       "line": 20,
       "symbol": "NatBadge.Color.secondary",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Badge/NatBadge+Color.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Badge/NatBadge+Color.swift",
       "line": 21,
       "symbol": "NatBadge.Color.success",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Badge/NatBadge+Limit.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Badge/NatBadge+Limit.swift",
       "line": 17,
       "symbol": "NatBadge.Limit.max9",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Badge/NatBadge+Limit.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Badge/NatBadge+Limit.swift",
       "line": 18,
       "symbol": "NatBadge.Limit.max99",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Badge/NatBadge+Limit.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Badge/NatBadge+Limit.swift",
       "line": 19,
       "symbol": "NatBadge.Limit.unlimited",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Badge/NatBadge+Style.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Badge/NatBadge+Style.swift",
       "line": 16,
       "symbol": "NatBadge.Style.standard",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Badge/NatBadge+Style.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Badge/NatBadge+Style.swift",
       "line": 17,
       "symbol": "NatBadge.Style.dot",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Badge/NatBadge+Style.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Badge/NatBadge+Style.swift",
       "line": 18,
       "symbol": "NatBadge.Style.pulse",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Badge/NatBadge.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Badge/NatBadge.swift",
       "line": 71,
       "symbol": "NatBadge.init(style:color:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Badge/NatBadge.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Badge/NatBadge.swift",
       "line": 115,
       "symbol": "NatBadge.draw(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Badge/NatBadge.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Badge/NatBadge.swift",
       "line": 150,
       "symbol": "NatBadge.configure(count:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Badge/NatBadge.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Badge/NatBadge.swift",
       "line": 171,
       "symbol": "NatBadge.configure(limit:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Badge/Protocol/Badgeable.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Badge/Protocol/Badgeable.swift",
       "line": 10,
       "symbol": "Badgeable.configure(badgeStyle:withColor:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Badge/Protocol/Badgeable.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Badge/Protocol/Badgeable.swift",
       "line": 24,
       "symbol": "Badgeable.setBadgeIsHidden(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Badge/Protocol/Badgeable.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Badge/Protocol/Badgeable.swift",
       "line": 28,
       "symbol": "Badgeable.setBadge(count:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Badge/Protocol/Badgeable.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Badge/Protocol/Badgeable.swift",
       "line": 32,
       "symbol": "Badgeable.removeBadge()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Badge/Protocol/Badgeable.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Badge/Protocol/Badgeable.swift",
       "line": 36,
       "symbol": "Badgeable.configure(limit:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Bar/SearchBar.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Bar/SearchBar.swift",
       "line": 23,
       "symbol": "SearchBar.init(frame:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Button/NatButton+EdgeInsets.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Button/NatButton+EdgeInsets.swift",
       "line": 22,
       "symbol": "NatButton.EdgeInsets.small",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Button/NatButton+EdgeInsets.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Button/NatButton+EdgeInsets.swift",
       "line": 23,
       "symbol": "NatButton.EdgeInsets.medium",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Button/NatButton+EdgeInsets.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Button/NatButton+EdgeInsets.swift",
       "line": 24,
       "symbol": "NatButton.EdgeInsets.large",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Button/NatButton+Height.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Button/NatButton+Height.swift",
       "line": 21,
       "symbol": "NatButton.Height.small",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Button/NatButton+Height.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Button/NatButton+Height.swift",
       "line": 22,
       "symbol": "NatButton.Height.medium",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Button/NatButton+Height.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Button/NatButton+Height.swift",
       "line": 23,
       "symbol": "NatButton.Height.large",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Button/NatButton+Icon.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Button/NatButton+Icon.swift",
       "line": 10,
       "symbol": "NatButton.Position.left",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Button/NatButton+Icon.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Button/NatButton+Icon.swift",
       "line": 11,
       "symbol": "NatButton.Position.right",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Button/NatButton+Style.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Button/NatButton+Style.swift",
       "line": 30,
       "symbol": "NatButton.Style.contained",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Button/NatButton+Style.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Button/NatButton+Style.swift",
       "line": 38,
       "symbol": "NatButton.Style.outlined",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Button/NatButton+Style.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Button/NatButton+Style.swift",
       "line": 46,
       "symbol": "NatButton.Style.text",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Button/NatButton.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Button/NatButton.swift",
       "line": 58,
       "symbol": "NatButton.isEnabled",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Button/NatButton.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Button/NatButton.swift",
       "line": 67,
       "symbol": "NatButton.init(style:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Button/NatButton.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Button/NatButton.swift",
       "line": 142,
       "symbol": "NatButton.touchesBegan(_:with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Button/NatButton.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Button/NatButton.swift",
       "line": 153,
       "symbol": "NatButton.touchesEnded(_:with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Card/NatCard.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Card/NatCard.swift",
       "line": 19,
       "symbol": "NatCard.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Counter/NatCounter+CounterButtonType.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Counter/NatCounter+CounterButtonType.swift",
       "line": 13,
       "symbol": "NatCounter.CounterButtonType.add",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Counter/NatCounter+CounterButtonType.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Counter/NatCounter+CounterButtonType.swift",
       "line": 14,
       "symbol": "NatCounter.CounterButtonType.subtract",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Counter/NatCounter+CounterButtonType.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Counter/NatCounter+CounterButtonType.swift",
       "line": 15,
       "symbol": "NatCounter.CounterButtonType.all",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Counter/NatCounter+Size.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Counter/NatCounter+Size.swift",
       "line": 16,
       "symbol": "NatCounter.Size.semi",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Counter/NatCounter+Size.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Counter/NatCounter+Size.swift",
       "line": 17,
       "symbol": "NatCounter.Size.medium",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Counter/NatCounter+State.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Counter/NatCounter+State.swift",
       "line": 12,
       "symbol": "NatCounter.State.enabled",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Counter/NatCounter+State.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Counter/NatCounter+State.swift",
       "line": 13,
       "symbol": "NatCounter.State.disabled",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Counter/NatCounter.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Counter/NatCounter.swift",
       "line": 40,
       "symbol": "NatCounter.CounterChangeValueHandler",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Counter/NatCounter.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Counter/NatCounter.swift",
       "line": 127,
       "symbol": "NatCounter.init(size:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Dialog/Builders/NatDialogController+AlertStyleBuilder.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Dialog/Builders/NatDialogController+AlertStyleBuilder.swift",
       "line": 16,
       "symbol": "NatDialogController.AlertStyleBuilder.viewModel",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Dialog/Builders/NatDialogController+AlertStyleBuilder.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Dialog/Builders/NatDialogController+AlertStyleBuilder.swift",
       "line": 18,
       "symbol": "NatDialogController.AlertStyleBuilder.buttonsConfiguration",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Dialog/Builders/NatDialogController+StandardStyleBuilder.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Dialog/Builders/NatDialogController+StandardStyleBuilder.swift",
       "line": 16,
       "symbol": "NatDialogController.StandardStyleBuilder.viewModel",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Dialog/Builders/NatDialogController+StandardStyleBuilder.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Dialog/Builders/NatDialogController+StandardStyleBuilder.swift",
       "line": 18,
       "symbol": "NatDialogController.StandardStyleBuilder.buttonsConfiguration",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Dialog/Builders/Protocols/NatDialogBuilder.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Dialog/Builders/Protocols/NatDialogBuilder.swift",
       "line": 3,
       "symbol": "NatDialogBuilder.viewModel",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Dialog/Builders/Protocols/NatDialogBuilder.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Dialog/Builders/Protocols/NatDialogBuilder.swift",
       "line": 4,
       "symbol": "NatDialogBuilder.buttonsConfiguration",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Divider/Divider+Style.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Divider/Divider+Style.swift",
       "line": 12,
       "symbol": "Divider.Styles.fullBleed",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Divider/Divider+Style.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Divider/Divider+Style.swift",
       "line": 13,
       "symbol": "Divider.Styles.inset",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Divider/Divider+Style.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Divider/Divider+Style.swift",
       "line": 14,
       "symbol": "Divider.Styles.middle",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Divider/Divider.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Divider/Divider.swift",
       "line": 26,
       "symbol": "Divider.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/ExpansionPanel/ExpansionPanel+Margin.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/ExpansionPanel/ExpansionPanel+Margin.swift",
       "line": 20,
       "symbol": "ExpansionPanel.Margin.horizontalMargin",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
       "line": 1,
       "symbol": "ExpansionPanel",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
       "line": 25,
       "symbol": "ExpansionPanel",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
       "line": 29,
       "symbol": "ExpansionPanel.ExpansionAction.expand",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
       "line": 30,
       "symbol": "ExpansionPanel.ExpansionAction.collapse",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
       "line": 31,
       "symbol": "ExpansionPanel.ExpansionAction.allActions",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
       "line": 34,
       "symbol": "ExpansionPanel.ExpansionHandler",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
       "line": 100,
       "symbol": "ExpansionPanel.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
       "line": 171,
       "symbol": "ExpansionPanel.setCustomAnimationForExpand(animation:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
       "line": 175,
       "symbol": "ExpansionPanel.setCustomAnimationForCollapse(animation:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
       "line": 277,
       "symbol": "ExpansionPanel",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
       "line": 278,
       "symbol": "ExpansionPanel.expand()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
       "line": 310,
       "symbol": "ExpansionPanel",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
       "line": 311,
       "symbol": "ExpansionPanel.collapse()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Field/NatField.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Field/NatField.swift",
       "line": 2,
       "symbol": "NatField",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Field/NatField.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Field/NatField.swift",
       "line": 16,
       "symbol": "NatField.placeholder",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Field/NatField.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Field/NatField.swift",
       "line": 28,
       "symbol": "NatField.text",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Field/NatField.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Field/NatField.swift",
       "line": 71,
       "symbol": "NatField.textRect(forBounds:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Field/NatField.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Field/NatField.swift",
       "line": 75,
       "symbol": "NatField.placeholderRect(forBounds:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Field/NatField.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Field/NatField.swift",
       "line": 79,
       "symbol": "NatField.editingRect(forBounds:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextField+FeedbackState.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Field/TextField+FeedbackState.swift",
       "line": 14,
       "symbol": "TextField.FeedbackState.error",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextField+FeedbackState.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Field/TextField+FeedbackState.swift",
       "line": 15,
       "symbol": "TextField.FeedbackState.success",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextField+FeedbackState.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Field/TextField+FeedbackState.swift",
       "line": 16,
       "symbol": "TextField.FeedbackState.none",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextField+InteractionState.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Field/TextField+InteractionState.swift",
       "line": 2,
       "symbol": "TextField.InteractionState",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextField+InteractionState.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Field/TextField+InteractionState.swift",
       "line": 3,
       "symbol": "TextField.InteractionState.enabled",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextField+InteractionState.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Field/TextField+InteractionState.swift",
       "line": 4,
       "symbol": "TextField.InteractionState.disabled",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextField+InteractionState.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Field/TextField+InteractionState.swift",
       "line": 5,
       "symbol": "TextField.InteractionState.readOnly",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextField+InteractionState.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Field/TextField+InteractionState.swift",
       "line": 6,
       "symbol": "TextField.InteractionState.active",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextField+InteractionState.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Field/TextField+InteractionState.swift",
       "line": 7,
       "symbol": "TextField.InteractionState.filled",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextField+Size.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Field/TextField+Size.swift",
       "line": 11,
       "symbol": "TextField.Size.medium",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextField+Size.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Field/TextField+Size.swift",
       "line": 12,
       "symbol": "TextField.Size.mediumX",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextField.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Field/TextField.swift",
       "line": 180,
       "symbol": "TextField.delegate",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextField.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Field/TextField.swift",
       "line": 223,
       "symbol": "TextField.textField",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextField.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Field/TextField.swift",
       "line": 275,
       "symbol": "TextField.init(frame:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextField.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Field/TextField.swift",
       "line": 289,
       "symbol": "TextField.becomeFirstResponder()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextField.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Field/TextField.swift",
       "line": 294,
       "symbol": "TextField.resignFirstResponder()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextFieldType.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Field/TextFieldType.swift",
       "line": 13,
       "symbol": "TextFieldType.text",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextFieldType.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Field/TextFieldType.swift",
       "line": 14,
       "symbol": "TextFieldType.name",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextFieldType.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Field/TextFieldType.swift",
       "line": 15,
       "symbol": "TextFieldType.number",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextFieldType.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Field/TextFieldType.swift",
       "line": 16,
       "symbol": "TextFieldType.password(keyboardType:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/IconButton/NatIconButton+Backgrounds.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/IconButton/NatIconButton+Backgrounds.swift",
       "line": 13,
       "symbol": "NatIconButton.Background.float",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/IconButton/NatIconButton+Backgrounds.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/IconButton/NatIconButton+Backgrounds.swift",
       "line": 14,
       "symbol": "NatIconButton.Background.inherit",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/IconButton/NatIconButton+Backgrounds.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/IconButton/NatIconButton+Backgrounds.swift",
       "line": 15,
       "symbol": "NatIconButton.Background.overlay",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/IconButton/NatIconButton+Sizes.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/IconButton/NatIconButton+Sizes.swift",
       "line": 13,
       "symbol": "NatIconButton.Sizes.semi",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/IconButton/NatIconButton+Sizes.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/IconButton/NatIconButton+Sizes.swift",
       "line": 14,
       "symbol": "NatIconButton.Sizes.semiX",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/IconButton/NatIconButton+Sizes.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/IconButton/NatIconButton+Sizes.swift",
       "line": 15,
       "symbol": "NatIconButton.Sizes.medium",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/IconButton/NatIconButton+Styles.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/IconButton/NatIconButton+Styles.swift",
       "line": 15,
       "symbol": "NatIconButton.Style.standardDefault",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/IconButton/NatIconButton+Styles.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/IconButton/NatIconButton+Styles.swift",
       "line": 21,
       "symbol": "NatIconButton.Style.standardPrimary",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/IconButton/NatIconButton+Styles.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/IconButton/NatIconButton+Styles.swift",
       "line": 27,
       "symbol": "NatIconButton.Style.standardLight",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/IconButton/NatIconButton.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/IconButton/NatIconButton.swift",
       "line": 65,
       "symbol": "NatIconButton.State.enabled",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/IconButton/NatIconButton.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/IconButton/NatIconButton.swift",
       "line": 66,
       "symbol": "NatIconButton.State.disabled",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/IconButton/NatIconButton.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/IconButton/NatIconButton.swift",
       "line": 87,
       "symbol": "NatIconButton.init(style:size:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/IconButton/NatIconButton.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/IconButton/NatIconButton.swift",
       "line": 123,
       "symbol": "NatIconButton.layoutSubviews()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/IconButton/NatIconButton.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/IconButton/NatIconButton.swift",
       "line": 129,
       "symbol": "NatIconButton.touchesBegan(_:with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/IconButton/NatIconButton.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/IconButton/NatIconButton.swift",
       "line": 145,
       "symbol": "NatIconButton.touchesEnded(_:with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/IconButton/NatIconButton.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/IconButton/NatIconButton.swift",
       "line": 157,
       "symbol": "NatIconButton.configure(action:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/IconButton/NatIconButton.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/IconButton/NatIconButton.swift",
       "line": 180,
       "symbol": "NatIconButton.configure(badgeValue:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Icons/IconView.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Icons/IconView.swift",
       "line": 60,
       "symbol": "IconView.init(frame:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Icons/IconView.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Icons/IconView.swift",
       "line": 65,
       "symbol": "IconView.init(fontSize:icon:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Icons/IconView.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Icons/IconView.swift",
       "line": 71,
       "symbol": "IconView.init(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Icons/IconView.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Icons/IconView.swift",
       "line": 82,
       "symbol": "IconView.tintColorDidChange()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Icons/NatLogoImages.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Icons/NatLogoImages.swift",
       "line": 23,
       "symbol": "NatLogoImages.horizontal",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Icons/NatLogoImages.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Icons/NatLogoImages.swift",
       "line": 27,
       "symbol": "NatLogoImages.vertical",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Image/NatImage+Fade.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Image/NatImage+Fade.swift",
       "line": 5,
       "symbol": "NatImage.ImageFadeDirection.left",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Image/NatImage+Fade.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Image/NatImage+Fade.swift",
       "line": 6,
       "symbol": "NatImage.ImageFadeDirection.top",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Image/NatImage+Fade.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Image/NatImage+Fade.swift",
       "line": 7,
       "symbol": "NatImage.ImageFadeDirection.right",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Image/NatImage+Fade.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Image/NatImage+Fade.swift",
       "line": 8,
       "symbol": "NatImage.ImageFadeDirection.bottom",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Image/NatImage+Fade.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Image/NatImage+Fade.swift",
       "line": 9,
       "symbol": "NatImage.ImageFadeDirection.none",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Image/NatImage+Radius.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Image/NatImage+Radius.swift",
       "line": 5,
       "symbol": "NatImage.ImageRadius.none",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Image/NatImage+Radius.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Image/NatImage+Radius.swift",
       "line": 6,
       "symbol": "NatImage.ImageRadius.medium",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Image/NatImage+Radius.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Image/NatImage+Radius.swift",
       "line": 7,
       "symbol": "NatImage.ImageRadius.circle(imageHeight:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Image/NatImage+Type.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Image/NatImage+Type.swift",
       "line": 5,
       "symbol": "NatImage.ImageType.standard",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Image/NatImage+Type.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Image/NatImage+Type.swift",
       "line": 6,
       "symbol": "NatImage.ImageType.highlight",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Image/NatImage.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Image/NatImage.swift",
       "line": 57,
       "symbol": "NatImage.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Image/NatImage.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Image/NatImage.swift",
       "line": 158,
       "symbol": "NatImage.configure(setBorderRadius:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Image/NatImage.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Image/NatImage.swift",
       "line": 169,
       "symbol": "NatImage.configure(setOverlay:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/ListItem/NatListItem+Feedback.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/ListItem/NatListItem+Feedback.swift",
       "line": 10,
       "symbol": "NatListItemCell.FeedbackStyle.ripple",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/ListItem/NatListItem+Feedback.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/ListItem/NatListItem+Feedback.swift",
       "line": 11,
       "symbol": "NatListItemCell.FeedbackStyle.selection",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/ListItem/NatListItem.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/ListItem/NatListItem.swift",
       "line": 65,
       "symbol": "NatListItemCell.awakeFromNib()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/ListItem/NatListItem.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/ListItem/NatListItem.swift",
       "line": 72,
       "symbol": "NatListItemCell.setSelected(_:animated:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/ListItem/NatListItem.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/ListItem/NatListItem.swift",
       "line": 82,
       "symbol": "NatListItemCell.touchesBegan(_:with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/ListItem/NatListItem.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/ListItem/NatListItem.swift",
       "line": 93,
       "symbol": "NatListItemCell.touchesEnded(_:with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Logo/NatLogo+Color.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Logo/NatLogo+Color.swift",
       "line": 14,
       "symbol": "NatLogo.Color.neutral",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Logo/NatLogo+Color.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Logo/NatLogo+Color.swift",
       "line": 15,
       "symbol": "NatLogo.Color.primary",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Logo/NatLogo+Color.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Logo/NatLogo+Color.swift",
       "line": 16,
       "symbol": "NatLogo.Color.secondary",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Logo/NatLogo+Color.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Logo/NatLogo+Color.swift",
       "line": 17,
       "symbol": "NatLogo.Color.highlight",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Logo/NatLogo+Color.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Logo/NatLogo+Color.swift",
       "line": 18,
       "symbol": "NatLogo.Color.surface",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Logo/NatLogo+Model.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Logo/NatLogo+Model.swift",
       "line": 11,
       "symbol": "NatLogo.Model.modelA",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Logo/NatLogo+Model.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Logo/NatLogo+Model.swift",
       "line": 12,
       "symbol": "NatLogo.Model.modelB",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Logo/NatLogo+Size.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Logo/NatLogo+Size.swift",
       "line": 20,
       "symbol": "NatLogo.Size.medium",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Logo/NatLogo+Size.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Logo/NatLogo+Size.swift",
       "line": 21,
       "symbol": "NatLogo.Size.mediumX",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Logo/NatLogo+Size.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Logo/NatLogo+Size.swift",
       "line": 22,
       "symbol": "NatLogo.Size.large",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Logo/NatLogo+Size.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Logo/NatLogo+Size.swift",
       "line": 23,
       "symbol": "NatLogo.Size.largeX",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Logo/NatLogo+Size.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Logo/NatLogo+Size.swift",
       "line": 24,
       "symbol": "NatLogo.Size.largeXX",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Logo/NatLogo+Size.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Logo/NatLogo+Size.swift",
       "line": 25,
       "symbol": "NatLogo.Size.largeXXX",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Logo/NatLogo+Size.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Logo/NatLogo+Size.swift",
       "line": 26,
       "symbol": "NatLogo.Size.huge",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Logo/NatLogo+Size.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Logo/NatLogo+Size.swift",
       "line": 27,
       "symbol": "NatLogo.Size.hugeX",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Logo/NatLogo+Size.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Logo/NatLogo+Size.swift",
       "line": 28,
       "symbol": "NatLogo.Size.hugeXX",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Logo/NatLogo+Size.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Logo/NatLogo+Size.swift",
       "line": 29,
       "symbol": "NatLogo.Size.hugeXXX",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Logo/NatLogo+Size.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Logo/NatLogo+Size.swift",
       "line": 30,
       "symbol": "NatLogo.Size.veryHuge",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Logo/NatLogo.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Logo/NatLogo.swift",
       "line": 64,
       "symbol": "NatLogo.init(size:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawer+IndexMenu.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawer+IndexMenu.swift",
       "line": 2,
       "symbol": "NavigationDrawer.IndexMenu",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawer+IndexMenu.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawer+IndexMenu.swift",
       "line": 3,
       "symbol": "NavigationDrawer.IndexMenu.item",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawer+IndexMenu.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawer+IndexMenu.swift",
       "line": 4,
       "symbol": "NavigationDrawer.IndexMenu.subitem",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawer+IndexMenu.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawer+IndexMenu.swift",
       "line": 6,
       "symbol": "NavigationDrawer.IndexMenu.init(item:subitem:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawer.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawer.swift",
       "line": 59,
       "symbol": "NavigationDrawer.delegate",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawer.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawer.swift",
       "line": 68,
       "symbol": "NavigationDrawer.init(tableView:headerView:footerView:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawer.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawer.swift",
       "line": 81,
       "symbol": "NavigationDrawer.reloadData()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawer.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawer.swift",
       "line": 146,
       "symbol": "NavigationDrawer.numberOfSections(in:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawer.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawer.swift",
       "line": 150,
       "symbol": "NavigationDrawer.tableView(_:numberOfRowsInSection:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawer.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawer.swift",
       "line": 159,
       "symbol": "NavigationDrawer.tableView(_:cellForRowAt:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawer.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawer.swift",
       "line": 182,
       "symbol": "NavigationDrawer.tableView(_:didSelectRowAt:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
       "line": 4,
       "symbol": "NavigationDrawerItemCell",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
       "line": 5,
       "symbol": "NavigationDrawerItemCell.State",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
       "line": 6,
       "symbol": "NavigationDrawerItemCell.State.normal",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
       "line": 7,
       "symbol": "NavigationDrawerItemCell.State.disabled",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
       "line": 8,
       "symbol": "NavigationDrawerItemCell.State.selected",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
       "line": 9,
       "symbol": "NavigationDrawerItemCell.State.lowEmphasis",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
       "line": 12,
       "symbol": "NavigationDrawerItemCell.state",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
       "line": 18,
       "symbol": "NavigationDrawerItemCell.NavigationAction",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
       "line": 19,
       "symbol": "NavigationDrawerItemCell.NavigationAction.none",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
       "line": 20,
       "symbol": "NavigationDrawerItemCell.NavigationAction.icon(_:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
       "line": 21,
       "symbol": "NavigationDrawerItemCell.NavigationAction.imageUrl(_:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
       "line": 22,
       "symbol": "NavigationDrawerItemCell.NavigationAction.image(_:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
       "line": 30,
       "symbol": "NavigationDrawerItemCell.NavigationItemType",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
       "line": 31,
       "symbol": "NavigationDrawerItemCell.NavigationItemType.title",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
       "line": 32,
       "symbol": "NavigationDrawerItemCell.NavigationItemType.menuItem",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
       "line": 35,
       "symbol": "NavigationDrawerItemCell.NavigationAdd",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
       "line": 36,
       "symbol": "NavigationDrawerItemCell.NavigationAdd.badge(_:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
       "line": 37,
       "symbol": "NavigationDrawerItemCell.NavigationAdd.dot",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
       "line": 38,
       "symbol": "NavigationDrawerItemCell.NavigationAdd.pulse",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
       "line": 39,
       "symbol": "NavigationDrawerItemCell.NavigationAdd.icon(_:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
       "line": 40,
       "symbol": "NavigationDrawerItemCell.NavigationAdd.none",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
       "line": 43,
       "symbol": "NavigationDrawerItemCell.actionRight",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
       "line": 48,
       "symbol": "NavigationDrawerItemCell.actionLeft",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
       "line": 54,
       "symbol": "NavigationDrawerItemCell.actionTitleRight",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
       "line": 60,
       "symbol": "NavigationDrawerItemCell.dropdown",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
       "line": 67,
       "symbol": "NavigationDrawerItemCell.type",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
       "line": 73,
       "symbol": "NavigationDrawerItemCell.title",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
       "line": 88,
       "symbol": "NavigationDrawerItemCell.icon",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
       "line": 98,
       "symbol": "NavigationDrawerItemCell.tagText",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
       "line": 177,
       "symbol": "NavigationDrawerItemCell.init(style:reuseIdentifier:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
       "line": 191,
       "symbol": "NavigationDrawerItemCell.prepareForReuse()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerItemCell.swift",
       "line": 426,
       "symbol": "NavigationDrawerItemCell",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerSubitemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerSubitemCell.swift",
       "line": 1,
       "symbol": "NavigationDrawerSubitemCell",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerSubitemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerSubitemCell.swift",
       "line": 3,
       "symbol": "NavigationDrawerSubitemCell.State",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerSubitemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerSubitemCell.swift",
       "line": 4,
       "symbol": "NavigationDrawerSubitemCell.State.normal",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerSubitemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerSubitemCell.swift",
       "line": 5,
       "symbol": "NavigationDrawerSubitemCell.State.disabled",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerSubitemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerSubitemCell.swift",
       "line": 6,
       "symbol": "NavigationDrawerSubitemCell.State.selected",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerSubitemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerSubitemCell.swift",
       "line": 9,
       "symbol": "NavigationDrawerSubitemCell.state",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerSubitemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerSubitemCell.swift",
       "line": 16,
       "symbol": "NavigationDrawerSubitemCell.title",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerSubitemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerSubitemCell.swift",
       "line": 31,
       "symbol": "NavigationDrawerSubitemCell.leftIcon",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerSubitemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerSubitemCell.swift",
       "line": 41,
       "symbol": "NavigationDrawerSubitemCell.rightIcon",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerSubitemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerSubitemCell.swift",
       "line": 87,
       "symbol": "NavigationDrawerSubitemCell.init(style:reuseIdentifier:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/NavigationDrawer/NavigationDrawerSubitemCell.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/NavigationDrawer/NavigationDrawerSubitemCell.swift",
       "line": 98,
       "symbol": "NavigationDrawerSubitemCell.prepareForReuse()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/ProgressIndicator/NatProgressIndicatorCircular+Size.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/ProgressIndicator/NatProgressIndicatorCircular+Size.swift",
       "line": 2,
       "symbol": "NatProgressIndicatorCircular.Size",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/ProgressIndicator/NatProgressIndicatorCircular+Size.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/ProgressIndicator/NatProgressIndicatorCircular+Size.swift",
       "line": 3,
       "symbol": "NatProgressIndicatorCircular.Size.standard",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/ProgressIndicator/NatProgressIndicatorCircular+Size.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/ProgressIndicator/NatProgressIndicatorCircular+Size.swift",
       "line": 4,
       "symbol": "NatProgressIndicatorCircular.Size.semi",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/ProgressIndicator/NatProgressIndicatorCircular+Size.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/ProgressIndicator/NatProgressIndicatorCircular+Size.swift",
       "line": 5,
       "symbol": "NatProgressIndicatorCircular.Size.medium",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/ProgressIndicator/NatProgressIndicatorCircular+Size.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/ProgressIndicator/NatProgressIndicatorCircular+Size.swift",
       "line": 6,
       "symbol": "NatProgressIndicatorCircular.Size.large",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/ProgressIndicator/NatProgressIndicatorCircular.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/ProgressIndicator/NatProgressIndicatorCircular.swift",
       "line": 23,
       "symbol": "NatProgressIndicatorCircular.Action",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/ProgressIndicator/NatProgressIndicatorCircular.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/ProgressIndicator/NatProgressIndicatorCircular.swift",
       "line": 24,
       "symbol": "NatProgressIndicatorCircular.Action.showAndStartAnimation",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/ProgressIndicator/NatProgressIndicatorCircular.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/ProgressIndicator/NatProgressIndicatorCircular.swift",
       "line": 25,
       "symbol": "NatProgressIndicatorCircular.Action.hideAndStopAnimation",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/ProgressIndicator/NatProgressIndicatorCircular.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/ProgressIndicator/NatProgressIndicatorCircular.swift",
       "line": 54,
       "symbol": "NatProgressIndicatorCircular.init(size:backgroundLayer:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/ProgressIndicator/NatProgressIndicatorCircular.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/ProgressIndicator/NatProgressIndicatorCircular.swift",
       "line": 87,
       "symbol": "NatProgressIndicatorCircular.configure(with:size:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/ProgressIndicator/NatProgressIndicatorCircular.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/ProgressIndicator/NatProgressIndicatorCircular.swift",
       "line": 102,
       "symbol": "NatProgressIndicatorCircular.layoutSubviews()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Rating/NatRating+Alignment.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Rating/NatRating+Alignment.swift",
       "line": 14,
       "symbol": "NatRating.Alignment.left",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Rating/NatRating+Alignment.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Rating/NatRating+Alignment.swift",
       "line": 15,
       "symbol": "NatRating.Alignment.right",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Rating/NatRating+Size.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Rating/NatRating+Size.swift",
       "line": 16,
       "symbol": "NatRating.Size.small",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Rating/NatRating+Size.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Rating/NatRating+Size.swift",
       "line": 17,
       "symbol": "NatRating.Size.standard",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Rating/NatRating+Size.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Rating/NatRating+Size.swift",
       "line": 18,
       "symbol": "NatRating.Size.semi",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Rating/NatRating+Size.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Rating/NatRating+Size.swift",
       "line": 19,
       "symbol": "NatRating.Size.semiX",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Rating/NatRating+Size.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Rating/NatRating+Size.swift",
       "line": 20,
       "symbol": "NatRating.Size.medium",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Rating/NatRating+State.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Rating/NatRating+State.swift",
       "line": 14,
       "symbol": "NatRating.State.enabled",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Rating/NatRating+State.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Rating/NatRating+State.swift",
       "line": 15,
       "symbol": "NatRating.State.disabled",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Rating/NatRating+Style.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Rating/NatRating+Style.swift",
       "line": 12,
       "symbol": "NatRating.Style.input",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Rating/NatRating+Style.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Rating/NatRating+Style.swift",
       "line": 13,
       "symbol": "NatRating.Style.counter",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Rating/NatRating+Style.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Rating/NatRating+Style.swift",
       "line": 14,
       "symbol": "NatRating.Style.readOnly",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Rating/NatRating.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Rating/NatRating.swift",
       "line": 67,
       "symbol": "NatRating.RatingValueHandler",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Rating/NatRating.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Rating/NatRating.swift",
       "line": 112,
       "symbol": "NatRating.init(style:size:alignment:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Rating/NatRating.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Rating/NatRating.swift",
       "line": 128,
       "symbol": "NatRating.touchesBegan(_:with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Rating/NatRating.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Rating/NatRating.swift",
       "line": 141,
       "symbol": "NatRating.touchesEnded(_:with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/SelectionControl/NatCheckbox/NatCheckbox.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/SelectionControl/NatCheckbox/NatCheckbox.swift",
       "line": 21,
       "symbol": "NatCheckbox.checkbox",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/SelectionControl/NatCheckbox/NatCheckbox.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/SelectionControl/NatCheckbox/NatCheckbox.swift",
       "line": 24,
       "symbol": "NatCheckbox.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/SelectionControl/NatRadioButton/NatRadioButton.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/SelectionControl/NatRadioButton/NatRadioButton.swift",
       "line": 21,
       "symbol": "NatRadioButton.radioButton",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/SelectionControl/NatRadioButton/NatRadioButton.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/SelectionControl/NatRadioButton/NatRadioButton.swift",
       "line": 27,
       "symbol": "NatRadioButton.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/SelectionControl/NatRadioButtonGroup/NatRadioButtonGroup.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/SelectionControl/NatRadioButtonGroup/NatRadioButtonGroup.swift",
       "line": 25,
       "symbol": "NatRadioButtonGroup.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/SelectionControl/NatSelectionControl+Style.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/SelectionControl/NatSelectionControl+Style.swift",
       "line": 12,
       "symbol": "NatSelectionControl.Style.checkbox",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/SelectionControl/NatSelectionControl+Style.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/SelectionControl/NatSelectionControl+Style.swift",
       "line": 13,
       "symbol": "NatSelectionControl.Style.radioButton",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/SelectionControl/NatSelectionControl.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/SelectionControl/NatSelectionControl.swift",
       "line": 26,
       "symbol": "NatSelectionControl.handler",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/SelectionControl/NatSelectionControl.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/SelectionControl/NatSelectionControl.swift",
       "line": 75,
       "symbol": "NatSelectionControl.labelComponent",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/SelectionControl/NatSelectionControl.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/SelectionControl/NatSelectionControl.swift",
       "line": 112,
       "symbol": "NatSelectionControl.init(style:text:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/SelectionControl/NatSelectionControl.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/SelectionControl/NatSelectionControl.swift",
       "line": 152,
       "symbol": "NatSelectionControl.layoutSubviews()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/SelectionControl/NatSelectionControl.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/SelectionControl/NatSelectionControl.swift",
       "line": 174,
       "symbol": "NatSelectionControl.configure(text:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Shortcut/NatShortcut+Style.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Shortcut/NatShortcut+Style.swift",
       "line": 10,
       "symbol": "NatShortcut.Color.primary",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Shortcut/NatShortcut+Style.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Shortcut/NatShortcut+Style.swift",
       "line": 11,
       "symbol": "NatShortcut.Color.neutral",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Shortcut/NatShortcut+Style.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Shortcut/NatShortcut+Style.swift",
       "line": 113,
       "symbol": "NatShortcut.Style.containedPrimary",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Shortcut/NatShortcut+Style.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Shortcut/NatShortcut+Style.swift",
       "line": 118,
       "symbol": "NatShortcut.Style.containedDefault",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Shortcut/NatShortcut+Style.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Shortcut/NatShortcut+Style.swift",
       "line": 124,
       "symbol": "NatShortcut.Style.outlinedPrimary",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Shortcut/NatShortcut+Style.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Shortcut/NatShortcut+Style.swift",
       "line": 130,
       "symbol": "NatShortcut.Style.outlinedDefault",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Shortcut/NatShortcut.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Shortcut/NatShortcut.swift",
       "line": 49,
       "symbol": "NatShortcut.State.enabled",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Shortcut/NatShortcut.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Shortcut/NatShortcut.swift",
       "line": 50,
       "symbol": "NatShortcut.State.disabled",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Shortcut/NatShortcut.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Shortcut/NatShortcut.swift",
       "line": 144,
       "symbol": "NatShortcut.init(style:color:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Shortcut/NatShortcut.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Shortcut/NatShortcut.swift",
       "line": 149,
       "symbol": "NatShortcut.init(style:color:text:icon:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Shortcut/NatShortcut.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Shortcut/NatShortcut.swift",
       "line": 290,
       "symbol": "NatShortcut.configure(badgeValue:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Shortcut/ShortcutView.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Shortcut/ShortcutView.swift",
       "line": 1,
       "symbol": "ShortcutView",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Shortcut/ShortcutView.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Shortcut/ShortcutView.swift",
       "line": 18,
       "symbol": "ShortcutView.init(frame:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Shortcut/ShortcutView.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Shortcut/ShortcutView.swift",
       "line": 23,
       "symbol": "ShortcutView.init(icon:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Shortcut/ShortcutView.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Shortcut/ShortcutView.swift",
       "line": 33,
       "symbol": "ShortcutView.layoutSubviews()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Shortcut/ShortcutView.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Shortcut/ShortcutView.swift",
       "line": 80,
       "symbol": "ShortcutView",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Switch/NatSwitch.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Switch/NatSwitch.swift",
       "line": 75,
       "symbol": "NatSwitch.isOn",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Switch/NatSwitch.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Switch/NatSwitch.swift",
       "line": 82,
       "symbol": "NatSwitch.state",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Switch/NatSwitch.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Switch/NatSwitch.swift",
       "line": 90,
       "symbol": "NatSwitch.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Tab/Tab.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Tab/Tab.swift",
       "line": 3,
       "symbol": "TabDelegate",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Tab/Tab.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Tab/Tab.swift",
       "line": 4,
       "symbol": "TabDelegate.didChangeSelectedSegmented(index:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Tab/Tab.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Tab/Tab.swift",
       "line": 25,
       "symbol": "Tab.delegate",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Tab/Tab.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Tab/Tab.swift",
       "line": 27,
       "symbol": "Tab.selectedSegmentedIndex",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Tab/Tab.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Tab/Tab.swift",
       "line": 60,
       "symbol": "Tab.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Tab/Tab.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Tab/Tab.swift",
       "line": 73,
       "symbol": "Tab.insertTab(title:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Tag/NatTag+Color.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Tag/NatTag+Color.swift",
       "line": 16,
       "symbol": "NatTag.Color.primary",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Tag/NatTag+Color.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Tag/NatTag+Color.swift",
       "line": 17,
       "symbol": "NatTag.Color.secondary",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Tag/NatTag+Color.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Tag/NatTag+Color.swift",
       "line": 18,
       "symbol": "NatTag.Color.success",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Tag/NatTag+Color.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Tag/NatTag+Color.swift",
       "line": 19,
       "symbol": "NatTag.Color.alert",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Tag/NatTag+Color.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Tag/NatTag+Color.swift",
       "line": 20,
       "symbol": "NatTag.Color.warning",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Tag/NatTag+Color.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Tag/NatTag+Color.swift",
       "line": 21,
       "symbol": "NatTag.Color.link",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Tag/NatTag+Color.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Tag/NatTag+Color.swift",
       "line": 22,
       "symbol": "NatTag.Color.custom(backgroundColor:labelColor:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Tag/NatTag+Size.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Tag/NatTag+Size.swift",
       "line": 12,
       "symbol": "NatTag.Size.small",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Tag/NatTag+Size.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Tag/NatTag+Size.swift",
       "line": 13,
       "symbol": "NatTag.Size.standard",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Tag/NatTag+Style.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Tag/NatTag+Style.swift",
       "line": 14,
       "symbol": "NatTag.Style.defaultAlert",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Tag/NatTag+Style.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Tag/NatTag+Style.swift",
       "line": 20,
       "symbol": "NatTag.Style.leftAlert",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Tag/NatTag+Style.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Tag/NatTag+Style.swift",
       "line": 26,
       "symbol": "NatTag.Style.rightAlert",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Tag/NatTag.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Tag/NatTag.swift",
       "line": 51,
       "symbol": "NatTag.iconView",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Tag/NatTag.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Tag/NatTag.swift",
       "line": 58,
       "symbol": "NatTag.label",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Tag/NatTag.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Tag/NatTag.swift",
       "line": 75,
       "symbol": "NatTag.color",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Tag/NatTag.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Tag/NatTag.swift",
       "line": 81,
       "symbol": "NatTag.icon",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Tag/NatTag.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Tag/NatTag.swift",
       "line": 87,
       "symbol": "NatTag.text",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Tag/NatTag.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Tag/NatTag.swift",
       "line": 98,
       "symbol": "NatTag.init(style:color:size:icon:text:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Tag/NatTag.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Tag/NatTag.swift",
       "line": 216,
       "symbol": "NatTag.draw(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Tag/NatTag.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/Tag/NatTag.swift",
       "line": 236,
       "symbol": "NatTag.configure(icon:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/ValueText/ValueTextHighlight.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/ValueText/ValueTextHighlight.swift",
       "line": 24,
       "symbol": "ValueTextHighlight",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/ValueText/ValueTextHighlight.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/ValueText/ValueTextHighlight.swift",
       "line": 26,
       "symbol": "ValueTextHighlight.valueDescription",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/ValueText/ValueTextHighlight.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/ValueText/ValueTextHighlight.swift",
       "line": 31,
       "symbol": "ValueTextHighlight.value",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Components/ValueText/ValueTextHighlight.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Components/ValueText/ValueTextHighlight.swift",
       "line": 69,
       "symbol": "ValueTextHighlight.init(frame:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignSystem.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignSystem.swift",
       "line": 30,
       "symbol": "DesignSystem",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignSystem.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignSystem.swift",
       "line": 48,
       "symbol": "DesignSystem.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatBorderRadius.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatBorderRadius.swift",
       "line": 20,
       "symbol": "NatBorderRadius.small",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatBorderRadius.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatBorderRadius.swift",
       "line": 21,
       "symbol": "NatBorderRadius.medium",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatBorderRadius.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatBorderRadius.swift",
       "line": 22,
       "symbol": "NatBorderRadius.large",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatBorderRadius.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatBorderRadius.swift",
       "line": 23,
       "symbol": "NatBorderRadius.circle(viewHeight:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatColors.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatColors.swift",
       "line": 41,
       "symbol": "NatColors.primary",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatColors.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatColors.swift",
       "line": 42,
       "symbol": "NatColors.onPrimary",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatColors.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatColors.swift",
       "line": 43,
       "symbol": "NatColors.primaryDark",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatColors.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatColors.swift",
       "line": 44,
       "symbol": "NatColors.onPrimaryDark",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatColors.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatColors.swift",
       "line": 45,
       "symbol": "NatColors.primaryLight",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatColors.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatColors.swift",
       "line": 46,
       "symbol": "NatColors.onPrimaryLight",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatColors.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatColors.swift",
       "line": 50,
       "symbol": "NatColors.secondary",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatColors.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatColors.swift",
       "line": 51,
       "symbol": "NatColors.onSecondary",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatColors.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatColors.swift",
       "line": 52,
       "symbol": "NatColors.secondaryDark",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatColors.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatColors.swift",
       "line": 53,
       "symbol": "NatColors.onSecondaryDark",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatColors.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatColors.swift",
       "line": 54,
       "symbol": "NatColors.secondaryLight",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatColors.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatColors.swift",
       "line": 55,
       "symbol": "NatColors.onSecondaryLight",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatColors.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatColors.swift",
       "line": 59,
       "symbol": "NatColors.background",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatColors.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatColors.swift",
       "line": 60,
       "symbol": "NatColors.onBackground",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatColors.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatColors.swift",
       "line": 61,
       "symbol": "NatColors.surface",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatColors.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatColors.swift",
       "line": 62,
       "symbol": "NatColors.onSurface",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatColors.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatColors.swift",
       "line": 66,
       "symbol": "NatColors.highlight",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatColors.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatColors.swift",
       "line": 67,
       "symbol": "NatColors.highEmphasis",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatColors.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatColors.swift",
       "line": 68,
       "symbol": "NatColors.mediumEmphasis",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatColors.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatColors.swift",
       "line": 69,
       "symbol": "NatColors.lowEmphasis",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatColors.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatColors.swift",
       "line": 73,
       "symbol": "NatColors.success",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatColors.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatColors.swift",
       "line": 74,
       "symbol": "NatColors.onSuccess",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatColors.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatColors.swift",
       "line": 75,
       "symbol": "NatColors.warning",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatColors.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatColors.swift",
       "line": 76,
       "symbol": "NatColors.onWarning",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatColors.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatColors.swift",
       "line": 77,
       "symbol": "NatColors.alert",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatColors.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatColors.swift",
       "line": 78,
       "symbol": "NatColors.onAlert",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatColors.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatColors.swift",
       "line": 79,
       "symbol": "NatColors.link",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatColors.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatColors.swift",
       "line": 80,
       "symbol": "NatColors.onLink",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
       "line": 17,
       "symbol": "NatElevation.apply(on:elevation:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
       "line": 25,
       "symbol": "NatElevation.Elevation",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
       "line": 26,
       "symbol": "NatElevation.Elevation.none",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
       "line": 27,
       "symbol": "NatElevation.Elevation.micro",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
       "line": 28,
       "symbol": "NatElevation.Elevation.tiny",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
       "line": 29,
       "symbol": "NatElevation.Elevation.small",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
       "line": 30,
       "symbol": "NatElevation.Elevation.medium",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
       "line": 31,
       "symbol": "NatElevation.Elevation.large",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
       "line": 32,
       "symbol": "NatElevation.Elevation.largeX",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
       "line": 33,
       "symbol": "NatElevation.Elevation.largeXX",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
       "line": 34,
       "symbol": "NatElevation.Elevation.huge",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
       "line": 35,
       "symbol": "NatElevation.Elevation.hugeX",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
       "line": 36,
       "symbol": "NatElevation.Elevation.hugeXX",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
       "line": 39,
       "symbol": "NatElevation.Elevation.elevation01",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
       "line": 41,
       "symbol": "NatElevation.Elevation.elevation02",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
       "line": 43,
       "symbol": "NatElevation.Elevation.elevation03",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
       "line": 45,
       "symbol": "NatElevation.Elevation.elevation04",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
       "line": 47,
       "symbol": "NatElevation.Elevation.elevation05",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
       "line": 49,
       "symbol": "NatElevation.Elevation.elevation06",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
       "line": 51,
       "symbol": "NatElevation.Elevation.elevation07",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
       "line": 53,
       "symbol": "NatElevation.Elevation.elevation08",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
       "line": 55,
       "symbol": "NatElevation.Elevation.elevation09",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatElevation/NatElevation.swift",
       "line": 57,
       "symbol": "NatElevation.Elevation.elevation10",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
       "line": 16,
       "symbol": "NatFonts.font(ofSize:withWeight:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
       "line": 23,
       "symbol": "NatFonts.font(ofSize:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
       "line": 30,
       "symbol": "NatFonts.font(ofSize:withWeight:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
       "line": 34,
       "symbol": "NatFonts.font(ofSize:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
       "line": 38,
       "symbol": "NatFonts.font(ofSize:withWeight:withFamily:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
       "line": 49,
       "symbol": "NatFonts.customFont(ofSize:withStyle:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
       "line": 60,
       "symbol": "NatFonts.customFont(ofSize:withStyle:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
       "line": 74,
       "symbol": "NatFonts.Size",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
       "line": 75,
       "symbol": "NatFonts.Size.heading1",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
       "line": 76,
       "symbol": "NatFonts.Size.heading2",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
       "line": 77,
       "symbol": "NatFonts.Size.heading3",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
       "line": 78,
       "symbol": "NatFonts.Size.heading4",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
       "line": 79,
       "symbol": "NatFonts.Size.heading5",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
       "line": 80,
       "symbol": "NatFonts.Size.heading6",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
       "line": 81,
       "symbol": "NatFonts.Size.subtitle1",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
       "line": 82,
       "symbol": "NatFonts.Size.subtitle2",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
       "line": 83,
       "symbol": "NatFonts.Size.body1",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
       "line": 84,
       "symbol": "NatFonts.Size.body2",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
       "line": 86,
       "symbol": "NatFonts.Size.button",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
       "line": 87,
       "symbol": "NatFonts.Size.caption",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
       "line": 88,
       "symbol": "NatFonts.Size.overline",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
       "line": 117,
       "symbol": "NatFonts.Weight",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
       "line": 118,
       "symbol": "NatFonts.Weight.regular",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
       "line": 119,
       "symbol": "NatFonts.Weight.medium",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatFonts/NatFonts.swift",
       "line": 120,
       "symbol": "NatFonts.Weight.bold",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatOpacities.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatOpacities.swift",
       "line": 20,
       "symbol": "NatOpacities.transparent",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatOpacities.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatOpacities.swift",
       "line": 21,
       "symbol": "NatOpacities.lower",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatOpacities.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatOpacities.swift",
       "line": 22,
       "symbol": "NatOpacities.veryLow",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatOpacities.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatOpacities.swift",
       "line": 23,
       "symbol": "NatOpacities.low",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatOpacities.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatOpacities.swift",
       "line": 24,
       "symbol": "NatOpacities.mediumLow",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatOpacities.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatOpacities.swift",
       "line": 25,
       "symbol": "NatOpacities.disabledLow",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatOpacities.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatOpacities.swift",
       "line": 26,
       "symbol": "NatOpacities.disabled",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatOpacities.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatOpacities.swift",
       "line": 27,
       "symbol": "NatOpacities.medium",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatOpacities.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatOpacities.swift",
       "line": 28,
       "symbol": "NatOpacities.mediumHigh",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatOpacities.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatOpacities.swift",
       "line": 29,
       "symbol": "NatOpacities.high",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatOpacities.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatOpacities.swift",
       "line": 30,
       "symbol": "NatOpacities.veryHigh",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatOpacities.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatOpacities.swift",
       "line": 31,
       "symbol": "NatOpacities.opaque",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatOpacities.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatOpacities.swift",
       "line": 34,
       "symbol": "NatOpacities.opacity01",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatOpacities.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatOpacities.swift",
       "line": 36,
       "symbol": "NatOpacities.opacity02",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatOpacities.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatOpacities.swift",
       "line": 38,
       "symbol": "NatOpacities.opacity03",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatOpacities.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatOpacities.swift",
       "line": 40,
       "symbol": "NatOpacities.opacity04",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatOpacities.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatOpacities.swift",
       "line": 42,
       "symbol": "NatOpacities.opacity05",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatOpacities.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatOpacities.swift",
       "line": 44,
       "symbol": "NatOpacities.opacity06",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatOpacities.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatOpacities.swift",
       "line": 46,
       "symbol": "NatOpacities.opacity07",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatOpacities.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatOpacities.swift",
       "line": 48,
       "symbol": "NatOpacities.opacity08",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatOpacities.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatOpacities.swift",
       "line": 50,
       "symbol": "NatOpacities.opacity09",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatOpacities.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatOpacities.swift",
       "line": 52,
       "symbol": "NatOpacities.opacity10",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatOpacities.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatOpacities.swift",
       "line": 54,
       "symbol": "NatOpacities.full",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatSizes.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatSizes.swift",
       "line": 20,
       "symbol": "NatSizes.micro",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatSizes.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatSizes.swift",
       "line": 21,
       "symbol": "NatSizes.tiny",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatSizes.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatSizes.swift",
       "line": 22,
       "symbol": "NatSizes.small",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatSizes.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatSizes.swift",
       "line": 23,
       "symbol": "NatSizes.standard",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatSizes.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatSizes.swift",
       "line": 24,
       "symbol": "NatSizes.semi",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatSizes.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatSizes.swift",
       "line": 25,
       "symbol": "NatSizes.semiX",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatSizes.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatSizes.swift",
       "line": 26,
       "symbol": "NatSizes.medium",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatSizes.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatSizes.swift",
       "line": 27,
       "symbol": "NatSizes.mediumX",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatSizes.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatSizes.swift",
       "line": 28,
       "symbol": "NatSizes.large",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatSizes.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatSizes.swift",
       "line": 29,
       "symbol": "NatSizes.largeX",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatSizes.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatSizes.swift",
       "line": 30,
       "symbol": "NatSizes.largeXX",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatSizes.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatSizes.swift",
       "line": 31,
       "symbol": "NatSizes.largeXXX",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatSizes.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatSizes.swift",
       "line": 32,
       "symbol": "NatSizes.huge",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatSizes.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatSizes.swift",
       "line": 33,
       "symbol": "NatSizes.hugeX",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatSizes.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatSizes.swift",
       "line": 34,
       "symbol": "NatSizes.hugeXX",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatSizes.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatSizes.swift",
       "line": 35,
       "symbol": "NatSizes.hugeXXX",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatSizes.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatSizes.swift",
       "line": 36,
       "symbol": "NatSizes.veryHuge",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatSpacing.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatSpacing.swift",
       "line": 21,
       "symbol": "NatSpacing.none",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatSpacing.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatSpacing.swift",
       "line": 22,
       "symbol": "NatSpacing.micro",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatSpacing.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatSpacing.swift",
       "line": 23,
       "symbol": "NatSpacing.tiny",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatSpacing.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatSpacing.swift",
       "line": 24,
       "symbol": "NatSpacing.small",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatSpacing.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatSpacing.swift",
       "line": 25,
       "symbol": "NatSpacing.standard",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatSpacing.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatSpacing.swift",
       "line": 26,
       "symbol": "NatSpacing.semi",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatSpacing.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatSpacing.swift",
       "line": 27,
       "symbol": "NatSpacing.large",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/DesignTokens/NatSpacing.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/DesignTokens/NatSpacing.swift",
       "line": 28,
       "symbol": "NatSpacing.xLarge",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Extensions/UICollectionView+Reusable.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Extensions/UICollectionView+Reusable.swift",
       "line": 3,
       "symbol": "UICollectionView.register(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Extensions/UICollectionView+Reusable.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Extensions/UICollectionView+Reusable.swift",
       "line": 7,
       "symbol": "UICollectionView.dequeueReusableCell(for:cellType:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Extensions/UITableView+Reusable.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Extensions/UITableView+Reusable.swift",
       "line": 3,
       "symbol": "UITableView.register(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/vagrant/git/Sources/Public/Extensions/UITableView+Reusable.swift",
+      "file": "/Users/pedrosobrosa/Documents/natds-ios/Sources/Public/Extensions/UITableView+Reusable.swift",
       "line": 7,
       "symbol": "UITableView.dequeueReusableCell(for:cellType:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     }
   ],
-  "source_directory": "/Users/vagrant/git"
+  "source_directory": "/Users/pedrosobrosa/Documents/natds-ios"
 }
