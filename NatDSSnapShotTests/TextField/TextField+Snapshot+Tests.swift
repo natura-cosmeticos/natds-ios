@@ -113,12 +113,12 @@ final class TextFieldSnapshotTests: XCTestCase {
     }
 
     func test_actionIcon_whenHasActionIcon_showsExpectedIconButtonSnapshot() {
-        systemUnderTest.configure(icon: nil) {}
+        systemUnderTest.configure(iconButton: NatIconButton(style: .standardDefault))
         assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.99))
     }
 
     func test_actionIcon_whenRemovesActionIcon_hidesExpectedIconButtonSnapshot() {
-        systemUnderTest.configure(icon: nil) {}
+        systemUnderTest.configure(iconButton: NatIconButton(style: .standardDefault))
         systemUnderTest.configureRemoveAction()
         assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.99))
     }
