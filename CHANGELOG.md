@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [7.4.0](https://github.com/natura-cosmeticos/natds-ios/compare/7.3.1...7.4.0) (2022-05-20)
+
+
+### Features
+
+* add method to configure text field icon button ([c81154d](https://github.com/natura-cosmeticos/natds-ios/commit/c81154d495a06e48d7e72286dc1605e4897a6a14))
+
 ### [7.3.1](https://github.com/natura-cosmeticos/natds-ios/compare/7.3.0...7.3.1) (2022-05-18)
 
 
