@@ -181,11 +181,18 @@ class TextFieldItemViewController: UIViewController, SampleItem {
         field.title = "Action with icon"
         field.type = .text
         field.placeholder = "Icon has action on touch"
-        field.configure(icon: getIcon(.outlinedDefaultMockup)) {
-            print("That's the icon action")
-        }
+        field.configure(iconButton: iconButton)
         field.delegate = self
         return field
+    }()
+
+    private lazy var iconButton: NatIconButton = {
+        let iconButton = NatIconButton(style: .standardDefault)
+        iconButton.configure(icon: getIcon(.outlinedDefaultMockup))
+        iconButton.translatesAutoresizingMaskIntoConstraints = false
+        iconButton.heightAnchor.constraint(equalToConstant: NatSpacing.semi).isActive = true
+        iconButton.widthAnchor.constraint(equalToConstant: NatSpacing.semi).isActive = true
+        return iconButton
     }()
 
     private lazy var actionImageTextField: TextField = {
@@ -203,6 +210,7 @@ class TextFieldItemViewController: UIViewController, SampleItem {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        setupAction()
 
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapView))
         view.addGestureRecognizer(tapGesture)
@@ -256,6 +264,18 @@ class TextFieldItemViewController: UIViewController, SampleItem {
         ]
 
         NSLayoutConstraint.activate(constraints)
+    }
+
+    private func setupAction() {
+        iconButton.configure(delegate: self) { _ in
+            let alert = UIAlertController(title: "Taps",
+                                          message: "Icon button tapped",
+                                          preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok",
+                                          style: .default,
+                                          handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 
     @objc func didTapView() {

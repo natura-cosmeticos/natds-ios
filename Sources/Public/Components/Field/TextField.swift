@@ -509,10 +509,7 @@ extension TextField {
         self.helper = helperText
     }
 
-    /// Sets an icon to be displayed inside the textField box, aligned with it's right side, and the action to be executed when the icon is tapped.
-    /// - Parameters:
-    ///   - icon: An icon from NatDSIcons, which is sent as a string. Example: `getIcon(.outlinedDefaultMockup)`
-    ///   - action: A block of code to be executed when the icon receives a tap.
+    @available(*, deprecated, message: "Use configure(iconButton:) instead")
     public func configure(icon: String?, with action: @escaping () -> Void) {
         configureRemoveAction()
         textField.fitPaddingToIconButton()
@@ -524,6 +521,16 @@ extension TextField {
         } else {
             iconButtonGeneral.configure(icon: icon)
         }
+    }
+
+    /// Sets an icon button to be displayed inside the textField box, aligned with it's right side.
+    /// - Parameter iconButton: An `NatIconButton` to be displayed in the textField right edge
+    public func configure(iconButton: NatIconButton) {
+        configureRemoveAction()
+        iconButtonGeneral = iconButton
+        iconButton.translatesAutoresizingMaskIntoConstraints = false
+        textField.fitPaddingToIconButton()
+        addIconButtonGeneral()
     }
 
     /// Sets a local image to be displayed inside the textField box, aligned with the right side, and the action to be executed when it is tapped.
