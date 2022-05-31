@@ -23,6 +23,7 @@ class ComponentsSection: SampleSection {
         ProgressIndicatorItemViewController.self,
         RadioButtonViewController.self,
         RatingItemViewController.self,
+        NatSelectItemViewController.self,
         ShortcutItemViewController.self,
         SwitchViewController.self,
         TabItemViewController.self,
