@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [7.5.0](https://github.com/natura-cosmeticos/natds-ios/compare/7.4.0...7.5.0) (2022-06-01)
+
+
+### Features
+
+* add NatSelect component ([becdce4](https://github.com/natura-cosmeticos/natds-ios/commit/becdce4c300dba048f6d23e238fe73724d03aab8))
+
+
+### Bug Fixes
+
+* disable text edit on the NatSelect component ([ed0d25e](https://github.com/natura-cosmeticos/natds-ios/commit/ed0d25e81d918bb6169acf34faa18854b14f8589))
+
 ## [7.4.0](https://github.com/natura-cosmeticos/natds-ios/compare/7.3.1...7.4.0) (2022-05-20)
 
 
