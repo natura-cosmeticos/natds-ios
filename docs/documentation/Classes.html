@@ -1461,6 +1461,51 @@ The aligment should be set at <code>init()</code>.</p>
                   <li class="item">
                     <div>
                       <code>
+                      <a name="/c:@M@NatDS@objc(cs)NatSelect"></a>
+                      <a name="//apple_ref/swift/Class/NatSelect" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@NatDS@objc(cs)NatSelect">NatSelect</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>NatSelect is a class that represents the select component from the design system.</p>
+
+<p>Example of usage:</p>
+<pre class="highlight swift"><code>   <span class="k">let</span> <span class="nv">select</span> <span class="o">=</span> <span class="kt">NatSelect</span><span class="p">(</span><span class="nv">textField</span><span class="p">:</span> <span class="n">textField</span><span class="p">)</span>
+   <span class="n">select</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="p">[</span><span class="s">"Item 1"</span><span class="p">,</span> <span class="s">"Item 2"</span><span class="p">])</span>
+   <span class="n">select</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">:</span> <span class="p">[</span><span class="s">"Item 1"</span><span class="p">,</span> <span class="s">"Item 2"</span><span class="p">],</span> <span class="mi">1</span><span class="p">:</span> <span class="p">[</span><span class="s">"Item 3"</span><span class="p">,</span> <span class="s">"Item 4"</span><span class="p">]])</span>
+
+   <span class="n">select</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">format</span><span class="p">:</span> <span class="s">"First: %@, Second: %@"</span><span class="p">)</span>
+</code></pre>
+<div class="aside aside-requires">
+    <p class="aside-title">Requires</p>
+    <p>It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.</p>
+
+<p>DesignSystem().configure(with: AvailableTheme)</p>
+
+</div>
+
+                          <a href="Classes/NatSelect.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">NatSelect</span> <span class="p">:</span> <span class="kt">UIView</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">NatSelect</span><span class="p">:</span> <span class="kt">UIPickerViewDelegate</span><span class="p">,</span> <span class="kt">UIPickerViewDataSource</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">NatSelect</span><span class="p">:</span> <span class="kt">UITextFieldDelegate</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
                       <a name="/c:@M@NatDS@objc(cs)NatCheckbox"></a>
                       <a name="//apple_ref/swift/Class/NatCheckbox" class="dashAnchor"></a>
                       <a class="token" href="#/c:@M@NatDS@objc(cs)NatCheckbox">NatCheckbox</a>
@@ -2180,6 +2225,9 @@ The tag colors change according to the current theme configured.</p>
                   <a href="Classes/NatRating/Style.html">– Style</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="Classes/NatSelect.html">NatSelect</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="Classes/NatSelectionControl.html">NatSelectionControl</a>
                 </li>
                 <li class="nav-group-task">
@@ -2412,7 +2460,7 @@ The tag colors change according to the current theme configured.</p>
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external noopener">System Team - Natura SA</a>. All rights reserved. (Last updated: 2022-05-20)</p>
+          <p>&copy; 2022 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external noopener">System Team - Natura SA</a>. All rights reserved. (Last updated: 2022-06-01)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </div>

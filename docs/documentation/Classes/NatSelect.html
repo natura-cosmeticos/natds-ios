@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>CustomFontStyle Enumeration Reference</title>
+    <title>NatSelect Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -11,8 +11,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Enum/CustomFontStyle" class="dashAnchor"></a>
-    <a title="CustomFontStyle Enumeration Reference"></a>
+    <a name="//apple_ref/swift/Class/NatSelect" class="dashAnchor"></a>
+    <a title="NatSelect Class Reference"></a>
     <header>
       <div class="content-wrapper">
         <p>
@@ -30,7 +30,7 @@
             <a href="../index.html">NatDS Reference</a>
             <img id="carat" src="../img/carat.png" alt=""/>
           </span>
-          CustomFontStyle Enumeration Reference
+          NatSelect Class Reference
         </p>
       </div>
     </div>
@@ -39,15 +39,32 @@
         <article class="main-content">
           <section>
             <section class="section">
-              <h1>CustomFontStyle</h1>
+              <h1>NatSelect</h1>
                 <div class="declaration">
                   <div class="language">
                     
-                    <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">CustomFontStyle</span> <span class="p">:</span> <span class="kt">FontStyle</span></code></pre>
+                    <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">NatSelect</span> <span class="p">:</span> <span class="kt">UIView</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">NatSelect</span><span class="p">:</span> <span class="kt">UIPickerViewDelegate</span><span class="p">,</span> <span class="kt">UIPickerViewDataSource</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">NatSelect</span><span class="p">:</span> <span class="kt">UITextFieldDelegate</span></code></pre>
 
                   </div>
                 </div>
-              <p>Enum that gets the attributes for each type of custom font and enables the use of customised typography by brand</p>
+              <p>NatSelect is a class that represents the select component from the design system.</p>
+
+<p>Example of usage:</p>
+<pre class="highlight swift"><code>   <span class="k">let</span> <span class="nv">select</span> <span class="o">=</span> <span class="kt">NatSelect</span><span class="p">(</span><span class="nv">textField</span><span class="p">:</span> <span class="n">textField</span><span class="p">)</span>
+   <span class="n">select</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="p">[</span><span class="s">"Item 1"</span><span class="p">,</span> <span class="s">"Item 2"</span><span class="p">])</span>
+   <span class="n">select</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">:</span> <span class="p">[</span><span class="s">"Item 1"</span><span class="p">,</span> <span class="s">"Item 2"</span><span class="p">],</span> <span class="mi">1</span><span class="p">:</span> <span class="p">[</span><span class="s">"Item 3"</span><span class="p">,</span> <span class="s">"Item 4"</span><span class="p">]])</span>
+
+   <span class="n">select</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">format</span><span class="p">:</span> <span class="s">"First: %@, Second: %@"</span><span class="p">)</span>
+</code></pre>
+<div class="aside aside-requires">
+    <p class="aside-title">Requires</p>
+    <p>It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.</p>
+
+<p>DesignSystem().configure(with: AvailableTheme)</p>
+
+</div>
 
             </section>
             <section class="section task-group-section">
@@ -56,9 +73,9 @@
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/s:5NatDS15CustomFontStyleO7displayyA2CmF"></a>
-                      <a name="//apple_ref/swift/Element/display" class="dashAnchor"></a>
-                      <a class="token" href="#/s:5NatDS15CustomFontStyleO7displayyA2CmF">display</a>
+                      <a name="/s:5NatDS0A6SelectC9textFieldAcA04TextE0C_tcfc"></a>
+                      <a name="//apple_ref/swift/Method/init(textField:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A6SelectC9textFieldAcA04TextE0C_tcfc">init(textField:<wbr>)</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -73,7 +90,197 @@
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">display</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">textField</span><span class="p">:</span> <span class="kt"><a href="../Classes/TextField.html">TextField</a></span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="task-group">
+                <div class="task-name-container">
+                  <a name="/Public%20Methods"></a>
+                  <a name="//apple_ref/swift/Section/Public Methods" class="dashAnchor"></a>
+                  <div class="section-name-container">
+                    <a class="section-name-link" href="#/Public%20Methods"></a>
+                    <h3 class="section-name"><span>Public Methods</span>
+</h3>
+                  </div>
+                </div>
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS0A6SelectC9configure4dataySDySiSaySSGG_tF"></a>
+                      <a name="//apple_ref/swift/Method/configure(data:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A6SelectC9configure4dataySDySiSaySSGG_tF">configure(data:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Sets a dictionary to feed the component</p>
+
+<p>Example of usage:</p>
+<pre class="highlight swift"><code><span class="n">natSelect</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">:</span> <span class="p">[</span><span class="s">"Item 1"</span><span class="p">,</span> <span class="s">"Item 2"</span><span class="p">],</span> <span class="mi">1</span><span class="p">:</span> <span class="p">[</span><span class="s">"Item 3"</span><span class="p">,</span> <span class="s">"Item 4"</span><span class="p">]])</span>
+</code></pre>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span> <span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]])</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>data</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>A <code>Dictionary</code> that feed the component</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS0A6SelectC9configure4dataySaySSG_tF"></a>
+                      <a name="//apple_ref/swift/Method/configure(data:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A6SelectC9configure4dataySaySSG_tF">configure(data:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Sets a array of string to feed the component</p>
+
+<p>Example of usage:</p>
+<pre class="highlight swift"><code><span class="n">natSelect</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="p">[</span><span class="s">"Item 1"</span><span class="p">,</span> <span class="s">"Item 2"</span><span class="p">])</span>
+</code></pre>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">])</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>data</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>A <code>Array of Strings</code> that feed the component</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS0A6SelectC9configure6formatySS_tF"></a>
+                      <a name="//apple_ref/swift/Method/configure(format:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A6SelectC9configure6formatySS_tF">configure(format:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Sets format to format the text inside of the text field</p>
+
+<p>Example of usage:</p>
+<pre class="highlight swift"><code><span class="n">natSelect</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">format</span><span class="p">:</span> <span class="s">"Selected: %@"</span><span class="p">)</span>
+</code></pre>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="nv">format</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>format</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>A <code>String</code> that format the text inside of the text field</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@CM@NatDS@objc(cs)NatSelect(im)numberOfComponentsInPickerView:"></a>
+                      <a name="//apple_ref/swift/Method/numberOfComponents(in:)" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@CM@NatDS@objc(cs)NatSelect(im)numberOfComponentsInPickerView:">numberOfComponents(in:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">numberOfComponents</span><span class="p">(</span><span class="k">in</span> <span class="nv">pickerView</span><span class="p">:</span> <span class="kt">UIPickerView</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
 
                           </div>
                         </div>
@@ -83,9 +290,9 @@
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/s:5NatDS15CustomFontStyleO8headlineyA2CmF"></a>
-                      <a name="//apple_ref/swift/Element/headline" class="dashAnchor"></a>
-                      <a class="token" href="#/s:5NatDS15CustomFontStyleO8headlineyA2CmF">headline</a>
+                      <a name="/c:@CM@NatDS@objc(cs)NatSelect(im)pickerView:numberOfRowsInComponent:"></a>
+                      <a name="//apple_ref/swift/Method/pickerView(_:numberOfRowsInComponent:)" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@CM@NatDS@objc(cs)NatSelect(im)pickerView:numberOfRowsInComponent:">pickerView(_:<wbr>numberOfRowsInComponent:<wbr>)</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -100,7 +307,7 @@
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">headline</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">pickerView</span><span class="p">(</span><span class="n">_</span> <span class="nv">pickerView</span><span class="p">:</span> <span class="kt">UIPickerView</span><span class="p">,</span> <span class="n">numberOfRowsInComponent</span> <span class="nv">component</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
 
                           </div>
                         </div>
@@ -110,9 +317,9 @@
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/s:5NatDS15CustomFontStyleO11bodyRegularyA2CmF"></a>
-                      <a name="//apple_ref/swift/Element/bodyRegular" class="dashAnchor"></a>
-                      <a class="token" href="#/s:5NatDS15CustomFontStyleO11bodyRegularyA2CmF">bodyRegular</a>
+                      <a name="/c:@CM@NatDS@objc(cs)NatSelect(im)pickerView:titleForRow:forComponent:"></a>
+                      <a name="//apple_ref/swift/Method/pickerView(_:titleForRow:forComponent:)" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@CM@NatDS@objc(cs)NatSelect(im)pickerView:titleForRow:forComponent:">pickerView(_:<wbr>titleForRow:<wbr>forComponent:<wbr>)</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -127,7 +334,7 @@
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">bodyRegular</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">pickerView</span><span class="p">(</span><span class="n">_</span> <span class="nv">pickerView</span><span class="p">:</span> <span class="kt">UIPickerView</span><span class="p">,</span> <span class="n">titleForRow</span> <span class="nv">row</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">forComponent</span> <span class="nv">component</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                           </div>
                         </div>
@@ -137,9 +344,9 @@
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/s:5NatDS15CustomFontStyleO8bodyBoldyA2CmF"></a>
-                      <a name="//apple_ref/swift/Element/bodyBold" class="dashAnchor"></a>
-                      <a class="token" href="#/s:5NatDS15CustomFontStyleO8bodyBoldyA2CmF">bodyBold</a>
+                      <a name="/c:@CM@NatDS@objc(cs)NatSelect(im)pickerView:didSelectRow:inComponent:"></a>
+                      <a name="//apple_ref/swift/Method/pickerView(_:didSelectRow:inComponent:)" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@CM@NatDS@objc(cs)NatSelect(im)pickerView:didSelectRow:inComponent:">pickerView(_:<wbr>didSelectRow:<wbr>inComponent:<wbr>)</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -154,7 +361,36 @@
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">bodyBold</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">pickerView</span><span class="p">(</span><span class="n">_</span> <span class="nv">pickerView</span><span class="p">:</span> <span class="kt">UIPickerView</span><span class="p">,</span> <span class="n">didSelectRow</span> <span class="nv">row</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">inComponent</span> <span class="nv">component</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@CM@NatDS@objc(cs)NatSelect(im)textField:shouldChangeCharactersInRange:replacementString:"></a>
+                      <a name="//apple_ref/swift/Method/textField(_:shouldChangeCharactersIn:replacementString:)" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@CM@NatDS@objc(cs)NatSelect(im)textField:shouldChangeCharactersInRange:replacementString:">textField(_:<wbr>shouldChangeCharactersIn:<wbr>replacementString:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">textField</span><span class="p">(</span><span class="n">_</span> <span class="nv">textField</span><span class="p">:</span> <span class="kt">UITextField</span><span class="p">,</span>
+                      <span class="n">shouldChangeCharactersIn</span> <span class="nv">range</span><span class="p">:</span> <span class="kt">NSRange</span><span class="p">,</span>
+                      <span class="n">replacementString</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                           </div>
                         </div>

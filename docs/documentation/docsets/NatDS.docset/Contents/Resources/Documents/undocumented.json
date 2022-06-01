@@ -869,6 +869,13 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextField.swift",
+      "line": 513,
+      "symbol": "TextField.configure(icon:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextFieldType.swift",
       "line": 13,
       "symbol": "TextFieldType.text",
