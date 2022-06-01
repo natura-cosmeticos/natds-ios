@@ -65,6 +65,7 @@
 		D30EE21E999567FD384CCE8B5D90FAC2 /* SizeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6931A5C475B8907A39E71B99395C70C /* SizeCell.swift */; };
 		D3219E81DF4D5C6AC40F7F7677D8A7E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F3D5DE37D2013D4BADC0F54FAEDE3F6 /* Assets.xcassets */; };
 		D8E43C13D4DE5237EBF1AAA69FCF03EF /* BorderRadiusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ECCCD44B56293C5FBF0660526ABA56 /* BorderRadiusViewController.swift */; };
+		DC309FC62844C511008F7146 /* NatSelectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC309FC52844C511008F7146 /* NatSelectController.swift */; };
 		DC40596AEA7EE184F0A1BCD2F3BFF7FC /* DesignSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729810E32083E04163C749DCF3552FA6 /* DesignSection.swift */; };
 		DC724B7A282C87DA00C8F090 /* SwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC724B79282C87DA00C8F090 /* SwitchViewController.swift */; };
 		DF627B5ABA0E7336C4F3554132159A83 /* ComponentsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B703332C6994E56C229AEDFFD1B5EB /* ComponentsSection.swift */; };
@@ -153,6 +154,7 @@
 		CDEFD4EFD9613149DFEC9007479CFBA8 /* SampleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleItem.swift; sourceTree = "<group>"; };
 		D6931A5C475B8907A39E71B99395C70C /* SizeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeCell.swift; sourceTree = "<group>"; };
 		D79F005407CCF54F38930570D9BE50EA /* OpacityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpacityCell.swift; sourceTree = "<group>"; };
+		DC309FC52844C511008F7146 /* NatSelectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatSelectController.swift; sourceTree = "<group>"; };
 		DC724B79282C87DA00C8F090 /* SwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchViewController.swift; sourceTree = "<group>"; };
 		EB193A88212A44D97B2A08002B40993F /* ButtonsItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsItemViewController.swift; sourceTree = "<group>"; };
 		EEBC24456A172162B3538C51FBFE2BA6 /* NatDS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NatDS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -437,6 +439,7 @@
 				79ACDAE3255C33F700660E68 /* ProgressIndicator */,
 				7DC81CBA261227CA006BE689 /* Rating */,
 				79D4C8F325F68DD50027E74E /* RadioButton */,
+				DC309FC42844C4F2008F7146 /* Select */,
 				844A1E2424AE2B7600E93AD9 /* Shortcut */,
 				DC724B78282C87BF00C8F090 /* Switch */,
 				C420063DEF581D12DAA6D31645B6B382 /* Tab */,
@@ -590,6 +593,14 @@
 				F65EAA4E8148EBDC96E68E9E054CED31 /* AppSearchBarViewController.swift */,
 			);
 			path = Bar;
+			sourceTree = "<group>";
+		};
+		DC309FC42844C4F2008F7146 /* Select */ = {
+			isa = PBXGroup;
+			children = (
+				DC309FC52844C511008F7146 /* NatSelectController.swift */,
+			);
+			path = Select;
 			sourceTree = "<group>";
 		};
 		DC724B78282C87BF00C8F090 /* Switch */ = {
@@ -827,6 +838,7 @@
 				7D75A46825DD60E30050ACA9 /* UIImage+UIColor.swift in Sources */,
 				E061B6B85CEFBAE9AE8A8079DEF9E0A4 /* SampleSection.swift in Sources */,
 				79FC599025CAE5D0001CCB56 /* CardViewController.swift in Sources */,
+				DC309FC62844C511008F7146 /* NatSelectController.swift in Sources */,
 				842EA8AB25082B60009AE473 /* ChooseBrandHeader.swift in Sources */,
 				79D4C8F525F69DB80027E74E /* RadioButtonViewController.swift in Sources */,
 				D30EE21E999567FD384CCE8B5D90FAC2 /* SizeCell.swift in Sources */,

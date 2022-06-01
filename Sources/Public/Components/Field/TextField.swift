@@ -206,6 +206,13 @@ public class TextField: UIView {
         }
     }
 
+    private lazy var arrowView: UIImageView = {
+        let arrowView = UIImageView()
+        arrowView.image = AssetsPath.iconOutlinedNavigationArrowBottomTemplate.rawValue
+        arrowView.translatesAutoresizingMaskIntoConstraints = false
+        return arrowView
+    }()
+
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
 
@@ -340,6 +347,18 @@ extension TextField {
         ]
         NSLayoutConstraint.activate(constraints)
         updateTextFieldHeightConstraint()
+    }
+
+    private func addArrowView() {
+        iconButtonGeneral.removeFromSuperview()
+        arrowView.tintColor = isEnabled ? NatColors.highEmphasis : NatColors.lowEmphasis
+        insertSubview(arrowView, aboveSubview: textField)
+
+        let constraints = [
+            arrowView.centerYAnchor.constraint(equalTo: textField.centerYAnchor),
+            arrowView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -NatSpacing.tiny)
+        ]
+        NSLayoutConstraint.activate(constraints)
     }
 
     private func updateTextFieldHeightConstraint() {
@@ -581,5 +600,10 @@ extension TextField {
     /// Internal method as a helper to run snapshot tests.
     internal func setIsEditing(_ isEditing: Bool) {
         self.isEditing = isEditing
+    }
+
+    internal func setPickerView(pickerView: UIPickerView) {
+        textField.inputView = pickerView
+        addArrowView()
     }
 }

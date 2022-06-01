@@ -80,6 +80,14 @@ public final class NatField: UITextField {
         return bounds.inset(by: padding)
     }
 
+    public override func caretRect(for position: UITextPosition) -> CGRect {
+        if inputView != nil {
+            return .zero
+        }
+
+        return super.caretRect(for: position)
+    }
+
     func fitPaddingToIconButton() {
         padding = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 40)
     }

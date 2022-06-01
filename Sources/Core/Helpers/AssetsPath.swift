@@ -12,6 +12,7 @@ enum AssetsPath {
     case iconOutlinedDefaultMockup
     case iconOutlinedDefaultMockupBackground
     case iconOutlinedNavigationArrowBottom
+    case iconOutlinedNavigationArrowBottomTemplate
     case iconOutlinedNavigationArrowTop
     case iconOutlinedProductEmptyBackground
     case iconOutlinedSocialPerson
@@ -45,6 +46,8 @@ extension AssetsPath: RawRepresentable {
             self = .iconOutlinedDefaultMockupBackground
         case AssetsHelper.image(from: "Icons/IconOutlinedNavigationArrowBottom"):
             self = .iconOutlinedNavigationArrowBottom
+        case AssetsHelper.image(from: "Icons/IconOutlinedNavigationArrowBottomTemplate"):
+            self = .iconOutlinedNavigationArrowBottomTemplate
         case AssetsHelper.image(from: "Icons/IconOutlinedNavigationArrowTop"):
             self = .iconOutlinedNavigationArrowTop
         case AssetsHelper.image(from: "Icons/IconOutlinedProductEmptyBackground"):
@@ -79,6 +82,8 @@ extension AssetsPath: RawRepresentable {
             return AssetsHelper.image(from: "Icons/IconOutlinedDefaultMockupBackground")
         case .iconOutlinedNavigationArrowBottom:
             return AssetsHelper.image(from: "Icons/IconOutlinedNavigationArrowBottom")
+        case .iconOutlinedNavigationArrowBottomTemplate:
+            return AssetsHelper.image(from: "Icons/IconOutlinedNavigationArrowBottomTemplate")
         case .iconOutlinedNavigationArrowTop:
             return AssetsHelper.image(from: "Icons/IconOutlinedNavigationArrowTop")
         case .iconOutlinedProductEmptyBackground:
