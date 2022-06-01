@@ -33,10 +33,11 @@ public class NatSelect: UIView {
         self.textField = textField
         super.init(frame: .zero)
 
+        textField.delegate = self
         textField.setPickerView(pickerView: pickerView)
         setup()
     }
-    
+
     // MARK: - Public Methods
 
     /// Sets a dictionary to feed the component
@@ -118,5 +119,13 @@ extension NatSelect: UIPickerViewDelegate, UIPickerViewDataSource {
         } else {
             textField.text = data[component]?[row]
         }
+    }
+}
+
+extension NatSelect: UITextFieldDelegate {
+    public func textField(_ textField: UITextField,
+                          shouldChangeCharactersIn range: NSRange,
+                          replacementString string: String) -> Bool {
+        return false
     }
 }
