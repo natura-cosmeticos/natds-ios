@@ -1,10 +1,15 @@
 import NatDS
 import UIKit
 
+enum BarType: String, CaseIterable {
+    case standard = "Standard"
+    case search = "Search"
+}
+
 class AppBarViewController: UITableViewController, SampleItem {
     static var name: String = "App Bar"
 
-    private let dataSource: [String] = ["Standard"]
+    private let dataSource: [BarType] = BarType.allCases
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,15 +59,23 @@ class AppBarViewController: UITableViewController, SampleItem {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = dataSource[indexPath.row]
         let cell = tableView.dequeueReusableCell(for: indexPath, cellType: UITableViewCell.self)
-        cell.textLabel?.text = item
+        cell.textLabel?.text = item.rawValue
         cell.selectionStyle = .none
         return cell
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = dataSource[indexPath.row]
-        let viewController = AppBarDetailViewController()
-        viewController.title = item
-        self.navigationController?.pushViewController(viewController, animated: true)
+        var viewController: UIViewController?
+        switch item {
+        case .standard:
+            viewController = AppBarDetailViewController()
+        case .search:
+            viewController = AppSearchBarViewController()
+        }
+        viewController?.title = item.rawValue
+        if let viewController = viewController {
+            navigationController?.pushViewController(viewController, animated: true)
+        }
     }
 }
