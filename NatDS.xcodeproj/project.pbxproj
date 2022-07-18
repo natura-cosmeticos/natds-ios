@@ -410,9 +410,13 @@
 		D2063015F26B7E8B3A27602A3B907BCE /* NavigationDrawerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E816229C707C64C390D3320DFA6B5D99 /* NavigationDrawerTests.swift */; };
 		D23F82EE5C3333FD06E87016848DCD37 /* TabItemViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AA33B684C0A723F3E2F341D0A10EEC /* TabItemViewTests.swift */; };
 		D36E7374F76C10792F8292DCD99800D5 /* NavigationDrawerDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92BFB29E97D8520D6B67E8883AB9A08 /* NavigationDrawerDelegateMock.swift */; };
+		DC1FF6E32885F54200AC659C /* NatChip+Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1FF6E22885F54200AC659C /* NatChip+Position.swift */; };
+		DC1FF6E52885F57500AC659C /* NatChip+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1FF6E42885F57500AC659C /* NatChip+Color.swift */; };
 		DC2A136C2844B29A00485682 /* NatSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2A136B2844B29A00485682 /* NatSelect.swift */; };
 		DC724B7D282CA4D500C8F090 /* Switch+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC724B7C282CA4D500C8F090 /* Switch+Spec.swift */; };
 		DC724B80282CA9A700C8F090 /* NatSwitch+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC724B7F282CA9A700C8F090 /* NatSwitch+Snapshot+Tests.swift */; };
+		DCBF1B43287F2E480024041E /* NatChip.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBF1B42287F2E480024041E /* NatChip.swift */; };
+		DCBF1B45287F360B0024041E /* NatChip+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBF1B44287F360B0024041E /* NatChip+Size.swift */; };
 		DCDEE935281C6B53005B7747 /* NatRadioButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDEE934281C6B53005B7747 /* NatRadioButtonGroup.swift */; };
 		DCDEE93828258840005B7747 /* NatSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDEE93728258840005B7747 /* NatSwitch.swift */; };
 		DF58B3DD08824CC1C80C886321CEA0F4 /* NatElevations+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A9D6B3184A3081BD0CDE0B1A351C8F /* NatElevations+Spec.swift */; };
@@ -853,9 +857,13 @@
 		D7C267848A6D4A2289C862E53EA54F84 /* ElevationAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevationAttributes.swift; sourceTree = "<group>"; };
 		D9B397DFEC0D8F0FBBDE7AE09BA83B2D /* NatButton+EdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+EdgeInsets.swift"; sourceTree = "<group>"; };
 		DA25909FD964254E6B99AD359EFD8A5C /* UIColor+HexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HexTests.swift"; sourceTree = "<group>"; };
+		DC1FF6E22885F54200AC659C /* NatChip+Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatChip+Position.swift"; sourceTree = "<group>"; };
+		DC1FF6E42885F57500AC659C /* NatChip+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatChip+Color.swift"; sourceTree = "<group>"; };
 		DC2A136B2844B29A00485682 /* NatSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatSelect.swift; sourceTree = "<group>"; };
 		DC724B7C282CA4D500C8F090 /* Switch+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Switch+Spec.swift"; sourceTree = "<group>"; };
 		DC724B7F282CA9A700C8F090 /* NatSwitch+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatSwitch+Snapshot+Tests.swift"; sourceTree = "<group>"; };
+		DCBF1B42287F2E480024041E /* NatChip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatChip.swift; sourceTree = "<group>"; };
+		DCBF1B44287F360B0024041E /* NatChip+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatChip+Size.swift"; sourceTree = "<group>"; };
 		DCDEE934281C6B53005B7747 /* NatRadioButtonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatRadioButtonGroup.swift; sourceTree = "<group>"; };
 		DCDEE93728258840005B7747 /* NatSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatSwitch.swift; sourceTree = "<group>"; };
 		DD7122400C6AAB36772A6E365FBD263D /* String+Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Icon.swift"; sourceTree = "<group>"; };
@@ -2521,6 +2529,7 @@
 				AAA7C27FE8E04EF2103505C58C128D34 /* Bar */,
 				F39AE9E5CB68E8C7A269525355E8E4D3 /* Button */,
 				79FC598825CAE181001CCB56 /* Card */,
+				DCBF1B41287F2E2E0024041E /* Chip */,
 				79EA0C16260A30B000742C0A /* Counter */,
 				78FE21C8815B7AED38811BF6BEB37BF0 /* Dialog */,
 				B765E7CB5E163C38B6106556601A6CCA /* Divider */,
@@ -2782,6 +2791,17 @@
 				9EAE325876E14C91105C5CF9D2E7F1EF /* ViewStyle+Spec.swift */,
 			);
 			path = ViewStyle;
+			sourceTree = "<group>";
+		};
+		DCBF1B41287F2E2E0024041E /* Chip */ = {
+			isa = PBXGroup;
+			children = (
+				DCBF1B42287F2E480024041E /* NatChip.swift */,
+				DC1FF6E42885F57500AC659C /* NatChip+Color.swift */,
+				DC1FF6E22885F54200AC659C /* NatChip+Position.swift */,
+				DCBF1B44287F360B0024041E /* NatChip+Size.swift */,
+			);
+			path = Chip;
 			sourceTree = "<group>";
 		};
 		DCDEE933281C66D6005B7747 /* NatRadioButtonGroup */ = {
@@ -3395,6 +3415,7 @@
 				26BB817924B944D100617EFC /* Badgeable.swift in Sources */,
 				84EB6B7524EBFEC000C6A792 /* GetThemeValidated.swift in Sources */,
 				1F40DBA4B8A3C9B0558AD83B5B2884D6 /* ButtonContainedStyle.swift in Sources */,
+				DC1FF6E52885F57500AC659C /* NatChip+Color.swift in Sources */,
 				84703F3924F6D9E400FE01CA /* GetComponentFromTheme.swift in Sources */,
 				7D31C1152614C87F00EED32A /* NatRating+Size.swift in Sources */,
 				98C6EB095DD059D51DD9883B943AF889 /* ButtonOutlineStyle.swift in Sources */,
@@ -3435,6 +3456,7 @@
 				84BF066524B4A8BD00462AC5 /* ShortcutOutlinedStyle.swift in Sources */,
 				4612CED8B9691035EFA62E01E2B30FD6 /* NatField.swift in Sources */,
 				84BC900824AA1678007DF09D /* NatDialogController+AlertStyleBuilder.swift in Sources */,
+				DCBF1B43287F2E480024041E /* NatChip.swift in Sources */,
 				7DB17C0F2739979E00CCC734 /* AesopDarkTheme.swift in Sources */,
 				84BF066724B4A8DA00462AC5 /* ShortcutContainedStyle.swift in Sources */,
 				79FC598A25CAE199001CCB56 /* NatCard.swift in Sources */,
@@ -3459,6 +3481,7 @@
 				4838BBC57B1464D82D59DE861726268A /* NatColors.swift in Sources */,
 				84BC900224AA15C3007DF09D /* NotificationCenterPostable.swift in Sources */,
 				797E615E255464D1002A59E0 /* NatButton+Icon.swift in Sources */,
+				DCBF1B45287F360B0024041E /* NatChip+Size.swift in Sources */,
 				BEDF932A2593BE8000F54C50 /* NatSelectionControl+State.swift in Sources */,
 				BEAFF23D259517DC00B9C9B5 /* NatCheckboxContainer.swift in Sources */,
 				845AD7A824E2C8E6006CA226 /* AvonDarkTheme.swift in Sources */,
@@ -3507,6 +3530,7 @@
 				7D31C1102614BC1700EED32A /* NatRating+Style.swift in Sources */,
 				84EB6B8324EEEA6200C6A792 /* GetUIColorFromTokens.swift in Sources */,
 				79EA0C962614B39A00742C0A /* NatBadge+Animation.swift in Sources */,
+				DC1FF6E32885F54200AC659C /* NatChip+Position.swift in Sources */,
 				7D5349ED26C6BA7200F88EA7 /* NatGradientImageView.swift in Sources */,
 				509D46F287D25DAEB7A71BF2665EF894 /* SearchBar.swift in Sources */,
 				10953079D3A781AA63E2E03A93F222C4 /* String+Icon.swift in Sources */,
