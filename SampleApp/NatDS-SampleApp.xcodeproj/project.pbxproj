@@ -65,6 +65,7 @@
 		D30EE21E999567FD384CCE8B5D90FAC2 /* SizeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6931A5C475B8907A39E71B99395C70C /* SizeCell.swift */; };
 		D3219E81DF4D5C6AC40F7F7677D8A7E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F3D5DE37D2013D4BADC0F54FAEDE3F6 /* Assets.xcassets */; };
 		D8E43C13D4DE5237EBF1AAA69FCF03EF /* BorderRadiusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ECCCD44B56293C5FBF0660526ABA56 /* BorderRadiusViewController.swift */; };
+		DC1FF6E82885F5F700AC659C /* ChipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1FF6E72885F5F700AC659C /* ChipViewController.swift */; };
 		DC309FC62844C511008F7146 /* NatSelectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC309FC52844C511008F7146 /* NatSelectController.swift */; };
 		DC40596AEA7EE184F0A1BCD2F3BFF7FC /* DesignSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729810E32083E04163C749DCF3552FA6 /* DesignSection.swift */; };
 		DC724B7A282C87DA00C8F090 /* SwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC724B79282C87DA00C8F090 /* SwitchViewController.swift */; };
@@ -154,6 +155,7 @@
 		CDEFD4EFD9613149DFEC9007479CFBA8 /* SampleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleItem.swift; sourceTree = "<group>"; };
 		D6931A5C475B8907A39E71B99395C70C /* SizeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeCell.swift; sourceTree = "<group>"; };
 		D79F005407CCF54F38930570D9BE50EA /* OpacityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpacityCell.swift; sourceTree = "<group>"; };
+		DC1FF6E72885F5F700AC659C /* ChipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipViewController.swift; sourceTree = "<group>"; };
 		DC309FC52844C511008F7146 /* NatSelectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatSelectController.swift; sourceTree = "<group>"; };
 		DC724B79282C87DA00C8F090 /* SwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchViewController.swift; sourceTree = "<group>"; };
 		EB193A88212A44D97B2A08002B40993F /* ButtonsItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsItemViewController.swift; sourceTree = "<group>"; };
@@ -426,6 +428,7 @@
 				BD3CB0F80322B0EA8970D31ABDFB1318 /* Button */,
 				79FC598E25CAE538001CCB56 /* Card */,
 				BEDF932F2593C63700F54C50 /* Checkbox */,
+				DC1FF6E62885F5E300AC659C /* Chip */,
 				79EA0C1C260A312800742C0A /* Counter */,
 				00BA79FB1659D007DB8720B65080C439 /* Dialog */,
 				D2D202BFFC95DC39B94A26A5FB172483 /* Divider */,
@@ -593,6 +596,14 @@
 				F65EAA4E8148EBDC96E68E9E054CED31 /* AppSearchBarViewController.swift */,
 			);
 			path = Bar;
+			sourceTree = "<group>";
+		};
+		DC1FF6E62885F5E300AC659C /* Chip */ = {
+			isa = PBXGroup;
+			children = (
+				DC1FF6E72885F5F700AC659C /* ChipViewController.swift */,
+			);
+			path = Chip;
 			sourceTree = "<group>";
 		};
 		DC309FC42844C4F2008F7146 /* Select */ = {
@@ -849,6 +860,7 @@
 				84E3B7C82502C88D0056FE57 /* CustomSplashViewController.swift in Sources */,
 				06E258AB651CE4F232CAAA3A2D94807C /* SpacingCell.swift in Sources */,
 				15CB9B603913EB682989F204523A1472 /* SpacingViewController.swift in Sources */,
+				DC1FF6E82885F5F700AC659C /* ChipViewController.swift in Sources */,
 				BEDF93312593C65800F54C50 /* CheckboxViewController.swift in Sources */,
 				FD3C1A6EDAD5F31BC9E4984E981C28A8 /* TabItemViewController.swift in Sources */,
 				B5D960A174519D837D9855D4B0A6711B /* TextFieldItemViewController.swift in Sources */,
