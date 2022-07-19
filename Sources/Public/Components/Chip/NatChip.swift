@@ -214,7 +214,7 @@ public final class NatChip: UIView {
     /// natChip.configure(avatar: natAvatar, position: .left)
     /// ```
     /// - Parameters:
-    ///   - Avatr:  A `NatAvatar` that set an avatar to the component
+    ///   - avatar:  A `NatAvatar` that set an avatar to the component
     ///   - position: A `NatChip.Position` that indicates the position of the avatar
     public func configure(avatar: NatAvatar, position: NatChip.Position) {
         addToStack(view: avatar, on: position)
