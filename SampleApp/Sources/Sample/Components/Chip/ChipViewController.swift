@@ -26,29 +26,126 @@ class ChipViewController: UIViewController, SampleItem {
         return stack
     }()
 
-    private func createChip(size: NatChip.Size = .semi,
-                            color: NatChip.Color = .neutral,
-                            text: String,
-                            state: UIControl.State = .normal,
-                            icon: String? = nil,
-                            avatar: NatAvatar? = nil,
-                            position: NatChip.Position? = nil) -> NatChip {
-
-        let chip = NatChip(size: size, color: color)
-        chip.configure(text: text)
-        chip.configure(state: state)
-        if let position = position {
-            if let icon = icon {
-                chip.configure(icon: icon, position: position)
-            }
-            if let avatar = avatar {
-                chip.configure(avatar: avatar, position: position)
-            }
-        }
-
-        chip.translatesAutoresizingMaskIntoConstraints = false
+    private let neutralColorChip: NatChip = {
+        let chip = NatChip()
+        chip.configure(text: "Neutral color")
         return chip
-    }
+    }()
+
+    private let primaryColorChip: NatChip = {
+        let chip = NatChip(color: .primary)
+        chip.configure(text: "Primary color")
+        return chip
+    }()
+
+    private let secondaryColorChip: NatChip = {
+        let chip = NatChip(color: .secondary)
+        chip.configure(text: "Secondary color")
+        return chip
+    }()
+
+    private let customColorChip: NatChip = {
+        let chip = NatChip(color: .custom(NatColors.link))
+        chip.configure(text: "Custom color")
+        return chip
+    }()
+
+    private let semiSizeChip: NatChip = {
+        let chip = NatChip(size: .semi)
+        chip.configure(text: "Semi size")
+        return chip
+    }()
+
+    private let semiXSizeChip: NatChip = {
+        let chip = NatChip(size: .semiX)
+        chip.configure(text: "SemiX size")
+        return chip
+    }()
+
+    private let mediumSizeChip: NatChip = {
+        let chip = NatChip(size: .medium)
+        chip.configure(text: "Medium size")
+        return chip
+    }()
+
+    private let leftIconChip: NatChip = {
+        let icon = getIcon(.outlinedDefaultMockup)
+        let chip = NatChip()
+        chip.configure(text: "Left icon")
+        chip.configure(icon: icon, position: .left)
+        return chip
+    }()
+
+    private let rightIconChip: NatChip = {
+        let icon = getIcon(.outlinedDefaultMockup)
+        let chip = NatChip()
+        chip.configure(text: "Right icon")
+        chip.configure(icon: icon, position: .right)
+        return chip
+    }()
+
+    private let bothSidesIconChip: NatChip = {
+        let icon = getIcon(.outlinedDefaultMockup)
+        let chip = NatChip()
+        chip.configure(text: "Both sides icon")
+        chip.configure(icon: icon, position: .left)
+        chip.configure(icon: icon, position: .right)
+        return chip
+    }()
+
+    private let leftAvatarChip: NatChip = {
+        let avatar = NatAvatar(size: .standard, type: .label)
+        avatar.configure(name: "Design System")
+        let chip = NatChip()
+        chip.configure(text: "Left avatar")
+        chip.configure(avatar: avatar, position: .left)
+        return chip
+    }()
+
+    private let rightAvatarChip: NatChip = {
+        let avatar = NatAvatar(size: .standard, type: .label)
+        avatar.configure(name: "Design System")
+        let chip = NatChip()
+        chip.configure(text: "Right avatar")
+        chip.configure(avatar: avatar, position: .right)
+        return chip
+    }()
+
+    private let iconAndAvatarChip: NatChip = {
+        let icon = getIcon(.outlinedDefaultMockup)
+        let avatar = NatAvatar(size: .standard, type: .label)
+        avatar.configure(name: "Design System")
+        let chip = NatChip()
+        chip.configure(text: "Icon and Avatar")
+        chip.configure(icon: icon, position: .left)
+        chip.configure(avatar: avatar, position: .right)
+        return chip
+    }()
+
+    private let avatarAndIconChip: NatChip = {
+        let icon = getIcon(.outlinedDefaultMockup)
+        let avatar = NatAvatar(size: .standard, type: .label)
+        avatar.configure(name: "Design System")
+        let chip = NatChip()
+        chip.configure(text: "Avatar and icon")
+        chip.configure(avatar: avatar, position: .left)
+        chip.configure(icon: icon, position: .right)
+        return chip
+    }()
+
+    private let focusedChip: NatChip = {
+        let chip = NatChip()
+        chip.configure(text: "Focused")
+        chip.configure(state: .focused)
+        return chip
+    }()
+
+    private let disabledChip: NatChip = {
+        let chip = NatChip()
+        chip.configure(text: "Disabled")
+        chip.configure(state: .disabled)
+        return chip
+    }()
 
     // MARK: - Life cycle
 
@@ -62,69 +159,25 @@ class ChipViewController: UIViewController, SampleItem {
     private func setup() {
         title = Self.name
         view.backgroundColor = NatColors.background
-        let icon = getIcon(.outlinedDefaultMockup)
-        let avatar = NatAvatar(size: .standard, type: .label)
-        avatar.configure(name: "Design System")
-
         view.addSubview(scrollView)
         scrollView.addSubview(stackView)
-        addConstraints()
-
-        stackView.addArrangedSubview(createChip(text: "Neutral color"))
-        stackView.addArrangedSubview(createChip(color: .primary, text: "Primary color"))
-        stackView.addArrangedSubview(createChip(color: .secondary, text: "Secondary color"))
-        stackView.addArrangedSubview(createChip(color: .custom(NatColors.link), text: "Custom color"))
-
-        stackView.addArrangedSubview(createChip(size: .semi, text: "Semi size"))
-        stackView.addArrangedSubview(createChip(size: .semiX, text: "SemiX size"))
-        stackView.addArrangedSubview(createChip(size: .medium, text: "Medium size"))
-
-        stackView.addArrangedSubview(createChip(text: "Left icon",
-                                                icon: icon,
-                                                position: .left))
-        stackView.addArrangedSubview(createChip(text: "Right icon",
-                                                icon: icon,
-                                                position: .right))
-        let bothSidesIconChip = createChip(text: "Both sides icon",
-                                           icon: icon,
-                                           position: .left)
-        bothSidesIconChip.configure(icon: icon,
-                                    position: .right)
+        stackView.addArrangedSubview(neutralColorChip)
+        stackView.addArrangedSubview(primaryColorChip)
+        stackView.addArrangedSubview(secondaryColorChip)
+        stackView.addArrangedSubview(customColorChip)
+        stackView.addArrangedSubview(semiSizeChip)
+        stackView.addArrangedSubview(semiXSizeChip)
+        stackView.addArrangedSubview(mediumSizeChip)
+        stackView.addArrangedSubview(leftIconChip)
+        stackView.addArrangedSubview(rightIconChip)
         stackView.addArrangedSubview(bothSidesIconChip)
-
-        stackView.addArrangedSubview(createChip(text: "Left avatar",
-                                                avatar: avatar,
-                                                position: .left))
-        stackView.addArrangedSubview(createChip(text: "Right avatar",
-                                                avatar: avatar,
-                                                position: .right))
-        let bothSidesAvatarChip = createChip(text: "Both sides avatar",
-                                             avatar: avatar,
-                                             position: .left)
-        bothSidesAvatarChip.configure(avatar: avatar,
-                                      position: .right)
-        stackView.addArrangedSubview(bothSidesAvatarChip)
-
-        let avatarAndIconChip = createChip(text: "Avatar and icon",
-                                           avatar: avatar,
-                                           position: .left)
-        avatarAndIconChip.configure(icon: icon,
-                                    position: .right)
-        stackView.addArrangedSubview(avatarAndIconChip)
-
-        let iconAndAvatarChip = createChip(text: "Icon and avatar",
-                                           icon: icon,
-                                           position: .left)
-        iconAndAvatarChip.configure(avatar: avatar,
-                                    position: .right)
-
+        stackView.addArrangedSubview(leftAvatarChip)
+        stackView.addArrangedSubview(rightAvatarChip)
         stackView.addArrangedSubview(iconAndAvatarChip)
-
-        stackView.addArrangedSubview(createChip(text: "Focused chip",
-                                                state: .focused))
-        stackView.addArrangedSubview(createChip(text: "Disbled chip",
-                                                state: .disabled))
-
+        stackView.addArrangedSubview(avatarAndIconChip)
+        stackView.addArrangedSubview(focusedChip)
+        stackView.addArrangedSubview(disabledChip)
+        addConstraints()
     }
 
     private func addConstraints() {
