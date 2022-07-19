@@ -412,6 +412,8 @@
 		D36E7374F76C10792F8292DCD99800D5 /* NavigationDrawerDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92BFB29E97D8520D6B67E8883AB9A08 /* NavigationDrawerDelegateMock.swift */; };
 		DC1FF6E32885F54200AC659C /* NatChip+Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1FF6E22885F54200AC659C /* NatChip+Position.swift */; };
 		DC1FF6E52885F57500AC659C /* NatChip+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1FF6E42885F57500AC659C /* NatChip+Color.swift */; };
+		DC1FF6EE2887334200AC659C /* Chip+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1FF6ED2887334200AC659C /* Chip+Snapshot+Tests.swift */; };
+		DC1FF6EF2887344300AC659C /* Chip+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1FF6EA288728B800AC659C /* Chip+Spec.swift */; };
 		DC2A136C2844B29A00485682 /* NatSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2A136B2844B29A00485682 /* NatSelect.swift */; };
 		DC724B7D282CA4D500C8F090 /* Switch+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC724B7C282CA4D500C8F090 /* Switch+Spec.swift */; };
 		DC724B80282CA9A700C8F090 /* NatSwitch+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC724B7F282CA9A700C8F090 /* NatSwitch+Snapshot+Tests.swift */; };
@@ -859,6 +861,8 @@
 		DA25909FD964254E6B99AD359EFD8A5C /* UIColor+HexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HexTests.swift"; sourceTree = "<group>"; };
 		DC1FF6E22885F54200AC659C /* NatChip+Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatChip+Position.swift"; sourceTree = "<group>"; };
 		DC1FF6E42885F57500AC659C /* NatChip+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatChip+Color.swift"; sourceTree = "<group>"; };
+		DC1FF6EA288728B800AC659C /* Chip+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chip+Spec.swift"; sourceTree = "<group>"; };
+		DC1FF6ED2887334200AC659C /* Chip+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chip+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		DC2A136B2844B29A00485682 /* NatSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatSelect.swift; sourceTree = "<group>"; };
 		DC724B7C282CA4D500C8F090 /* Switch+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Switch+Spec.swift"; sourceTree = "<group>"; };
 		DC724B7F282CA9A700C8F090 /* NatSwitch+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatSwitch+Snapshot+Tests.swift"; sourceTree = "<group>"; };
@@ -2011,6 +2015,7 @@
 				79ACDAB42555D99300660E68 /* Button */,
 				79FC59A525CB2B1A001CCB56 /* Card */,
 				79D4C90425F6C7C60027E74E /* Checkbox */,
+				DC1FF6EC2887331000AC659C /* Chip */,
 				79EA0C64260E6EFD00742C0A /* Counter */,
 				84391DE924DB275E009D0BE8 /* Dialog */,
 				84BB929424DC821800A9BCC8 /* Divider */,
@@ -2498,6 +2503,7 @@
 				79FC599C25CB21AC001CCB56 /* Card */,
 				79EA0C55260E219B00742C0A /* Counter */,
 				79D4C8F625F6B1B00027E74E /* Checkbox */,
+				DC1FF6E9288728A200AC659C /* Chip */,
 				67643298FB5CC3CCB193DC69AF79EC67 /* Dialog */,
 				79FC597725C83DF4001CCB56 /* Divider */,
 				6759B588024397D1AC93C8D123122D59 /* ExpansionPanel */,
@@ -2755,6 +2761,22 @@
 				84BC8FFB24AA14C0007DF09D /* DialogStyle+Spec.swift */,
 			);
 			path = Dialog;
+			sourceTree = "<group>";
+		};
+		DC1FF6E9288728A200AC659C /* Chip */ = {
+			isa = PBXGroup;
+			children = (
+				DC1FF6EA288728B800AC659C /* Chip+Spec.swift */,
+			);
+			path = Chip;
+			sourceTree = "<group>";
+		};
+		DC1FF6EC2887331000AC659C /* Chip */ = {
+			isa = PBXGroup;
+			children = (
+				DC1FF6ED2887334200AC659C /* Chip+Snapshot+Tests.swift */,
+			);
+			path = Chip;
 			sourceTree = "<group>";
 		};
 		DC2A136A2844B27300485682 /* Select */ = {
@@ -3249,6 +3271,7 @@
 				7D9EEB8B25E6A3D300CEF6BC /* NatAvatar+Sizes+Spec.swift in Sources */,
 				790D3F862564181A007A9CA1 /* ProgressIndicatorCircular+Spec.swift in Sources */,
 				797E60F225531742002A59E0 /* NatLogoImages+NaturaDark+Spec.swift in Sources */,
+				DC1FF6EF2887344300AC659C /* Chip+Spec.swift in Sources */,
 				E891D4E704EDCC6EA9CD3EE125A5D292 /* NatDialogController+StandardStyleBuilder+Spec.swift in Sources */,
 				79E7FAE625388FAA00A831BC /* AvonLightTokens+Opacity+Spec.swift in Sources */,
 				DF58B3DD08824CC1C80C886321CEA0F4 /* NatElevations+Spec.swift in Sources */,
@@ -3612,6 +3635,7 @@
 				84BB928B24DC743300A9BCC8 /* TabItem+Snapshot+Tests.swift in Sources */,
 				84BB929824DC8FA600A9BCC8 /* ExpansionPanel+Snapshot+Tests.swift in Sources */,
 				84391DE824DB1C67009D0BE8 /* NatDialogController+Snapshot+Tests.swift in Sources */,
+				DC1FF6EE2887334200AC659C /* Chip+Snapshot+Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
