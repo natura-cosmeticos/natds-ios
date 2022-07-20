@@ -119,8 +119,9 @@ public final class NatChip: UIView {
     private func setupUI() {
         switch state {
         case .normal:
-            backgroundView.layer.borderColor = color.uiColor.cgColor
+            backgroundView.layer.borderColor = color.borderColor.cgColor
             backgroundView.backgroundColor = .clear
+            label.textColor = NatColors.highEmphasis
         case .disabled:
             backgroundView.layer.borderColor = NatColors.lowEmphasis.cgColor
             backgroundView.backgroundColor = .clear
@@ -133,8 +134,14 @@ public final class NatChip: UIView {
         case .focused:
             backgroundView.backgroundColor = backgroundView.backgroundColor?.withAlphaComponent(NatOpacities.low)
         case .selected:
-            backgroundView.layer.borderColor = color.uiColor.cgColor
-            backgroundView.backgroundColor = color.uiColor
+            backgroundView.layer.borderColor = color.selectedColor.cgColor
+            backgroundView.backgroundColor = color.selectedColor
+            label.textColor = color.labelColor
+            stackView.arrangedSubviews.forEach {
+                if $0 != label {
+                    $0.tintColor = color.labelColor
+                }
+            }
         default:
             state = .normal
         }
