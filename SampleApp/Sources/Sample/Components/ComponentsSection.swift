@@ -10,6 +10,7 @@ class ComponentsSection: SampleSection {
         CardViewController.self,
         CounterViewController.self,
         CheckboxViewController.self,
+        ChipViewController.self,
         DialogItemViewController.self,
         DividerViewController.self,
         ExpansionPanelViewController.self,
