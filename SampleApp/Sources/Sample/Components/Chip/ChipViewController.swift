@@ -45,8 +45,16 @@ class ChipViewController: UIViewController, SampleItem {
     }()
 
     private let customColorChip: NatChip = {
-        let chip = NatChip(color: .custom(NatColors.link))
+        let chip = NatChip(color: .custom(selectedColor: NatColors.link,
+                                          labelColor: NatColors.lowEmphasis,
+                                          borderColor: NatColors.alert))
         chip.configure(text: "Custom color")
+        return chip
+    }()
+
+    private let chipWithAction: NatChip = {
+        let chip = NatChip()
+        chip.configure(text: "Chip with action")
         return chip
     }()
 
@@ -152,6 +160,7 @@ class ChipViewController: UIViewController, SampleItem {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        setupHandlers()
     }
 
     // MARK: - Private methods
@@ -165,6 +174,7 @@ class ChipViewController: UIViewController, SampleItem {
         stackView.addArrangedSubview(primaryColorChip)
         stackView.addArrangedSubview(secondaryColorChip)
         stackView.addArrangedSubview(customColorChip)
+        stackView.addArrangedSubview(chipWithAction)
         stackView.addArrangedSubview(semiSizeChip)
         stackView.addArrangedSubview(semiXSizeChip)
         stackView.addArrangedSubview(mediumSizeChip)
@@ -178,6 +188,18 @@ class ChipViewController: UIViewController, SampleItem {
         stackView.addArrangedSubview(focusedChip)
         stackView.addArrangedSubview(disabledChip)
         addConstraints()
+    }
+
+    private func setupHandlers() {
+        chipWithAction.configure { isSelected in
+            let alert = UIAlertController(title: "Taps",
+                                          message: "selected: \(isSelected)",
+                                          preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok",
+                                          style: .default,
+                                          handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 
     private func addConstraints() {
