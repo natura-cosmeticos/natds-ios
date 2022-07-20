@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [7.6.0](https://github.com/natura-cosmeticos/natds-ios/compare/7.5.0...7.6.0) (2022-07-20)
+
+
+### Features
+
+* add function to configure a closure to handle when isSelected changes it values on NatChip ([07b8b75](https://github.com/natura-cosmeticos/natds-ios/commit/07b8b75358f787e48905a8d17d7ec06a819645c9))
+* add NatChip component ([f5c75c0](https://github.com/natura-cosmeticos/natds-ios/commit/f5c75c0509549a36e6532b64c3dccd15857bc54a))
+
+
+### Bug Fixes
+
+* change colors to fix constrast ([36b7f85](https://github.com/natura-cosmeticos/natds-ios/commit/36b7f85fcad45f1af4ca1a9c2b3209a35370c1ce))
+
 ## [7.5.0](https://github.com/natura-cosmeticos/natds-ios/compare/7.4.0...7.5.0) (2022-06-01)
 
 
