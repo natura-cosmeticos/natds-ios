@@ -757,6 +757,13 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Field/NatField.swift",
+      "line": 83,
+      "symbol": "NatField.caretRect(for:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextField+FeedbackState.swift",
       "line": 14,
       "symbol": "TextField.FeedbackState.error",
@@ -842,35 +849,35 @@
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextField.swift",
-      "line": 223,
+      "line": 230,
       "symbol": "TextField.textField",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextField.swift",
-      "line": 275,
+      "line": 282,
       "symbol": "TextField.init(frame:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextField.swift",
-      "line": 289,
+      "line": 296,
       "symbol": "TextField.becomeFirstResponder()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextField.swift",
-      "line": 294,
+      "line": 301,
       "symbol": "TextField.resignFirstResponder()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextField.swift",
-      "line": 513,
+      "line": 532,
       "symbol": "TextField.configure(icon:with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -1894,6 +1901,48 @@
       "file": "/Users/vagrant/git/Sources/Public/Components/Rating/NatRating.swift",
       "line": 141,
       "symbol": "NatRating.touchesEnded(_:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Select/NatSelect.swift",
+      "line": 32,
+      "symbol": "NatSelect.init(textField:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Select/NatSelect.swift",
+      "line": 97,
+      "symbol": "NatSelect.numberOfComponents(in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Select/NatSelect.swift",
+      "line": 101,
+      "symbol": "NatSelect.pickerView(_:numberOfRowsInComponent:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Select/NatSelect.swift",
+      "line": 105,
+      "symbol": "NatSelect.pickerView(_:titleForRow:forComponent:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Select/NatSelect.swift",
+      "line": 109,
+      "symbol": "NatSelect.pickerView(_:didSelectRow:inComponent:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Select/NatSelect.swift",
+      "line": 126,
+      "symbol": "NatSelect.textField(_:shouldChangeCharactersIn:replacementString:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
