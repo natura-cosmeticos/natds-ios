@@ -47,7 +47,9 @@ final class NatChipSnapshotTests: XCTestCase {
     }
 
     func test_Nat_Chip_custom_color() {
-        let systemUnderTest = NatChip(color: .custom(NatColors.link))
+        let systemUnderTest = NatChip(color: .custom(selectedColor: NatColors.alert,
+                                                     labelColor: NatColors.lowEmphasis,
+                                                     borderColor: NatColors.link))
 
         systemUnderTest.configure(text: "Custom color")
         superview.addSubview(systemUnderTest)
