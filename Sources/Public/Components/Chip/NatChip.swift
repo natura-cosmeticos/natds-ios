@@ -9,6 +9,9 @@ import UIKit
      chip.configure(icon: getIcon(.outlinedDefaultMockup), position: .left)
      chip.configure(avatar: natAvatar, position: .right)
      chip.configure(state: .normal)
+     chip.configure(actionHandler: { isSelect in
+        //do something
+     })
 
  - Requires:
  It's necessary to configure the Design System with a theme or fatalError will be raised.
@@ -62,6 +65,8 @@ public final class NatChip: UIView {
         return view
     }()
 
+    private var actionHandler: ((Bool) -> Void)?
+
     // MARK: - Public properties
 
     public private(set) var state: UIControl.State = .normal {
@@ -71,7 +76,11 @@ public final class NatChip: UIView {
         }
     }
 
-    public private(set) var isSelected = false
+    public private(set) var isSelected = false {
+        didSet {
+            actionHandler?(isSelected)
+        }
+    }
 
     // MARK: - Init
 
@@ -236,5 +245,16 @@ public final class NatChip: UIView {
     /// - Parameter state: An `UIControl.State` that changes the state of the component
     public func configure(state: UIControl.State) {
         self.state = state
+    }
+
+    /// Sets the handler to be executed when `isSelected` value changes
+    ///
+    /// Example of usage:
+    /// ```
+    /// natChip.configure { isSelected in }
+    /// ```
+    /// - Parameter actionHandler: A closure to notify value change
+    public func configure(actionHandler: @escaping (Bool) -> Void) {
+        self.actionHandler = actionHandler
     }
 }
