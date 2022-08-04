@@ -1,36 +1,170 @@
-//
-//  NatAlert+Snapshot+Tests.swift
-//  NatDSSnapShotTests
-//
-//  Created by Gustavo Colaco Dalbuquerque Cavalcanti on 04/08/22.
-//  Copyright © 2022 Natura. All rights reserved.
-//
-
 import XCTest
+import SnapshotTesting
+
+@testable import NatDS
+
 
 class NatAlert_Snapshot_Tests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    var superview: UIView!
+    
+    override func setUp() {
+        super.setUp()
+        
+        superview = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 330))
+        superview.backgroundColor = .white
+        
+        ConfigurationStorage.shared.currentTheme = NaturaLightTheme()
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func test_Nat_Alert_default_style() {
+        let systemUnderTest = NatAlert()
+        
+        systemUnderTest.configure(titleText: "This is a title")
+        systemUnderTest.configure(descriptionText: "This is a description")
+        superview.addSubview(systemUnderTest)
+        addConstraints(systemUnderTest)
+        
+        assertSnapshot(matching: superview, as: .image)
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    
+    func test_Nat_Alert_warning_style() {
+        let systemUnderTest = NatAlert(style: .warning)
+        
+        systemUnderTest.configure(titleText: "This is a title")
+        systemUnderTest.configure(descriptionText: "This is a description")
+        superview.addSubview(systemUnderTest)
+        addConstraints(systemUnderTest)
+        
+        assertSnapshot(matching: superview, as: .image)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func test_Nat_Alert_warning_with_primary_button() {
+        let systemUnderTest = NatAlert(style: .warning)
+        
+        systemUnderTest.configure(titleText: "This is a title")
+        systemUnderTest.configure(descriptionText: "This is a description")
+        systemUnderTest.configure(primaryButtonTitle: "button 1")
+        superview.addSubview(systemUnderTest)
+        addConstraints(systemUnderTest)
+        
+        assertSnapshot(matching: superview, as: .image)
     }
+    
+    func test_Nat_Alert_warning_with_primary_and_secondary_button() {
+        let systemUnderTest = NatAlert(style: .warning)
+        
+        systemUnderTest.configure(titleText: "This is a title")
+        systemUnderTest.configure(descriptionText: "This is a description")
+        systemUnderTest.configure(primaryButtonTitle: "button 1")
+        systemUnderTest.configure(secondaryButtonTitle: "button 2")
+        superview.addSubview(systemUnderTest)
+        addConstraints(systemUnderTest)
+        
+        assertSnapshot(matching: superview, as: .image)
+    }
+    
+    func test_Nat_Alert_warning_with_no_icon() {
+        let systemUnderTest = NatAlert(style: .warning)
+        
+        systemUnderTest.configure(titleText: "This is a title")
+        systemUnderTest.configure(descriptionText: "This is a description")
+        systemUnderTest.configure(showIcon: false)
+        superview.addSubview(systemUnderTest)
+        addConstraints(systemUnderTest)
+        
+        assertSnapshot(matching: superview, as: .image)
+    }
+    
+    func test_Nat_Alert_warning_with_no_title() {
+        let systemUnderTest = NatAlert(style: .warning)
+        
+        systemUnderTest.configure(titleText: "This is a title")
+        systemUnderTest.configure(descriptionText: "This is a description")
+        systemUnderTest.showTitle = false
+        superview.addSubview(systemUnderTest)
+        addConstraints(systemUnderTest)
+        
+        assertSnapshot(matching: superview, as: .image)
+    }
+    
+    func test_Nat_Alert_warning_with_no_icon_and_no_title() {
+        let systemUnderTest = NatAlert(style: .warning)
+        
+        systemUnderTest.configure(titleText: "This is a title")
+        systemUnderTest.configure(descriptionText: "This is a description")
+        systemUnderTest.showTitle = false
+        systemUnderTest.configure(showIcon: false)
+        superview.addSubview(systemUnderTest)
+        addConstraints(systemUnderTest)
+        
+        assertSnapshot(matching: superview, as: .image)
+    }
+    
+    func test_Nat_Alert_warning_outlined() {
+        let systemUnderTest = NatAlert(style: .warning, type: .outlined)
+        
+        systemUnderTest.configure(titleText: "This is a title")
+        systemUnderTest.configure(descriptionText: "This is a description")
+        superview.addSubview(systemUnderTest)
+        addConstraints(systemUnderTest)
+        
+        assertSnapshot(matching: superview, as: .image)
+    }
+    
+    func test_Nat_Alert_success_outlined() {
+        let systemUnderTest = NatAlert(style: .success, type: .outlined)
+        
+        systemUnderTest.configure(titleText: "This is a title")
+        systemUnderTest.configure(descriptionText: "This is a description")
+        superview.addSubview(systemUnderTest)
+        addConstraints(systemUnderTest)
+        
+        assertSnapshot(matching: superview, as: .image)
+    }
+    
+    func test_Nat_Alert_error_outlined() {
+        let systemUnderTest = NatAlert(style: .error, type: .outlined)
+        
+        systemUnderTest.configure(titleText: "This is a title")
+        systemUnderTest.configure(descriptionText: "This is a description")
+        superview.addSubview(systemUnderTest)
+        addConstraints(systemUnderTest)
+        
+        assertSnapshot(matching: superview, as: .image)
+    }
+    
+    func test_Nat_Alert_success_default() {
+        let systemUnderTest = NatAlert(style: .success)
+        
+        systemUnderTest.configure(titleText: "This is a title")
+        systemUnderTest.configure(descriptionText: "This is a description")
+        superview.addSubview(systemUnderTest)
+        addConstraints(systemUnderTest)
+        
+        assertSnapshot(matching: superview, as: .image)
+    }
+    
+    func test_Nat_Alert_error_default() {
+        let systemUnderTest = NatAlert(style: .error)
+        
+        systemUnderTest.configure(titleText: "This is a title")
+        systemUnderTest.configure(descriptionText: "This is a description")
+        superview.addSubview(systemUnderTest)
+        addConstraints(systemUnderTest)
+        
+        assertSnapshot(matching: superview, as: .image)
+    }
+    
+    private func addConstraints(_ systemUnderTest: UIView) {
+        
+        systemUnderTest.translatesAutoresizingMaskIntoConstraints = false
+        
+        let constraints = [
+            systemUnderTest.centerXAnchor.constraint(equalTo: superview.centerXAnchor),
+            systemUnderTest.centerYAnchor.constraint(equalTo: superview.centerYAnchor)
+        ]
+        NSLayoutConstraint.activate(constraints)
+    }
+    
 
 }
