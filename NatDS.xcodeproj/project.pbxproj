@@ -374,6 +374,10 @@
 		84EB6B8324EEEA6200C6A792 /* GetUIColorFromTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB6B8224EEEA6200C6A792 /* GetUIColorFromTokens.swift */; };
 		84EB6B8524EEEA8E00C6A792 /* GetOrCreatedCachedColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB6B8424EEEA8E00C6A792 /* GetOrCreatedCachedColor.swift */; };
 		84F709FF1D1DFC32BA4E9CB1803A6E30 /* NavigationDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31247B21FE6C5054DC6E3BD9BE4A5E35 /* NavigationDrawer.swift */; };
+		8C6A076928998C250090EA38 /* NatAlert+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6A076828998C250090EA38 /* NatAlert+Spec.swift */; };
+		8C6A0773289BE35D0090EA38 /* NatAlert+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6A0772289BE35D0090EA38 /* NatAlert+Snapshot+Tests.swift */; };
+		8CF727B9288EE66000C5906E /* NatAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF727B8288EE66000C5906E /* NatAlert.swift */; };
+		8CF727BE288F1F5C00C5906E /* NatAlert+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF727BD288F1F5C00C5906E /* NatAlert+Style.swift */; };
 		8D1EAB3D076206BCF28328D0054701CA /* NatDS.h in Headers */ = {isa = PBXBuildFile; fileRef = EFD589860DA945AE5563620B305091ED /* NatDS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8E7FE7AAE264D40AF9BFF5CE6E5C7AD0 /* UIView+FrameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF60BC58D83695B3AC61ABB7BBE49B9C /* UIView+FrameTests.swift */; };
 		8F808FFBB4549BC4F3895B8CBB23ADB3 /* Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D996E4B957C51847075E986215675B /* Divider.swift */; };
@@ -812,6 +816,10 @@
 		8951046F74282531403D6D25AE4E299E /* ButtonOutlinedStyle+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonOutlinedStyle+Spec.swift"; sourceTree = "<group>"; };
 		8BA9C4721134BD5277D76AEDED7A01DB /* UIFont+Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Icon.swift"; sourceTree = "<group>"; };
 		8BEE0086E453EC48CFDC60DBA3C5C989 /* NatField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatField.swift; sourceTree = "<group>"; };
+		8C6A076828998C250090EA38 /* NatAlert+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatAlert+Spec.swift"; sourceTree = "<group>"; };
+		8C6A0772289BE35D0090EA38 /* NatAlert+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatAlert+Snapshot+Tests.swift"; sourceTree = "<group>"; };
+		8CF727B8288EE66000C5906E /* NatAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatAlert.swift; sourceTree = "<group>"; };
+		8CF727BD288F1F5C00C5906E /* NatAlert+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatAlert+Style.swift"; sourceTree = "<group>"; };
 		8D7EAA7BDB4A7A15736AF73EF6EBCD74 /* NatDialogController+StandardStyleBuilder+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatDialogController+StandardStyleBuilder+Spec.swift"; sourceTree = "<group>"; };
 		8F52062B7DB3FCB23FA74EEE5EA52FDF /* NatDialogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatDialogController.swift; sourceTree = "<group>"; };
 		90FE1ED739157F95D9EBBE9BD71B94E0 /* NavigationDrawer+IndexMenuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationDrawer+IndexMenuTests.swift"; sourceTree = "<group>"; };
@@ -2010,6 +2018,7 @@
 			children = (
 				84391DEC24DB5AE6009D0BE8 /* AppBar */,
 				7D17AB1925E91C070070FD31 /* Avatar */,
+				8C6A0771289BE3040090EA38 /* Alert */,
 				84BB928324DC680A00A9BCC8 /* Badge */,
 				84BB929224DC7B0800A9BCC8 /* Bar */,
 				79ACDAB42555D99300660E68 /* Button */,
@@ -2498,6 +2507,7 @@
 			children = (
 				7DAF74FF25E433690094F865 /* Avatar */,
 				0E7C160024C5D214002FF46F /* AppBar */,
+				8C6A076728998B950090EA38 /* Alert */,
 				26BB817124B918FB00617EFC /* Badge */,
 				37C041B132E91C20059E887D83DD7E4E /* Button */,
 				79FC599C25CB21AC001CCB56 /* Card */,
@@ -2526,11 +2536,37 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		8C6A076728998B950090EA38 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				8C6A076828998C250090EA38 /* NatAlert+Spec.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		8C6A0771289BE3040090EA38 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				8C6A0772289BE35D0090EA38 /* NatAlert+Snapshot+Tests.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		8CF727B7288EE63200C5906E /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				8CF727B8288EE66000C5906E /* NatAlert.swift */,
+				8CF727BD288F1F5C00C5906E /* NatAlert+Style.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 		8F17D4DBF2804B57A4C0A71661E479AF /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				0E3F578D24B8E9C8004B2F9E /* AppBar */,
 				7D75A43725DAFF3F0050ACA9 /* Avatar */,
+				8CF727B7288EE63200C5906E /* Alert */,
 				265B17E924AFA0DA00FD0407 /* Badge */,
 				AAA7C27FE8E04EF2103505C58C128D34 /* Bar */,
 				F39AE9E5CB68E8C7A269525355E8E4D3 /* Button */,
@@ -3342,6 +3378,7 @@
 				84B9330C24ABC5FD00B71BD4 /* NatDialogBodyConfigurable+Spec.swift in Sources */,
 				7D90389F261B62A5005A3D0A /* NatRating+ReadOnly+Spec.swift in Sources */,
 				79E7FA1525373ADE00A831BC /* AesopDarkTokens+BorderRadius+Spec.swift in Sources */,
+				8C6A076928998C250090EA38 /* NatAlert+Spec.swift in Sources */,
 				79E7FB442538D01100A831BC /* NaturaLightTokens+Opacity+Spec.swift in Sources */,
 				ECF18B7FA2F5A22C0F919BBBE58FF611 /* TabDelegateMock.swift in Sources */,
 				79E7FA3325373ED200A831BC /* AesopDarkTokens+Color+Spec.swift in Sources */,
@@ -3533,6 +3570,7 @@
 				13070104FE3F89CB14F76D621EF9A7F1 /* NavigationDrawer+IndexMenu.swift in Sources */,
 				7D75A43925DB00130050ACA9 /* NatAvatar.swift in Sources */,
 				79EA0C18260A30DA00742C0A /* NatCounter.swift in Sources */,
+				8CF727BE288F1F5C00C5906E /* NatAlert+Style.swift in Sources */,
 				84F709FF1D1DFC32BA4E9CB1803A6E30 /* NavigationDrawer.swift in Sources */,
 				798CD2F02605151B00F49768 /* NatTag+Size.swift in Sources */,
 				79FC59C125D45DAE001CCB56 /* NatProgressIndicatorCircular+Constants.swift in Sources */,
@@ -3564,6 +3602,7 @@
 				5C0716F242EFC1AF6A61CBE257DA7CFE /* TextField.swift in Sources */,
 				79EA0C20260A85DE00742C0A /* NatCounterButton.swift in Sources */,
 				7D456155273C167C0006B440 /* NatDialogCompletionHandlerConfigurable.swift in Sources */,
+				8CF727B9288EE66000C5906E /* NatAlert.swift in Sources */,
 				E07925C3535D79164EBC061C7D6A6CE4 /* TextFieldType.swift in Sources */,
 				7D23B35D26D97B0900FB5DA9 /* CustomFontStyle.swift in Sources */,
 				847C829224E36AB7001CE116 /* NaturaLightTheme.swift in Sources */,
@@ -3619,6 +3658,7 @@
 				84A16F0324DDBF6C00E80DA0 /* NavigationDrawer+Snapshot+Tests.swift in Sources */,
 				84A16F0624DDC61000E80DA0 /* ValueTextHighlight+Snapshot+Tests.swift in Sources */,
 				7DE2B11625FBFBAB00C5CBC0 /* NatListItemCell+Snapshot+Tests.swift in Sources */,
+				8C6A0773289BE35D0090EA38 /* NatAlert+Snapshot+Tests.swift in Sources */,
 				84BB929A24DC935700A9BCC8 /* ViewAnimatingMock.swift in Sources */,
 				84BB92A024DCA7E300A9BCC8 /* TextFieldDelegateMock.swift in Sources */,
 				7D0537DB266AB2B80078AC98 /* Logo+Snapshot+Tests.swift in Sources */,
