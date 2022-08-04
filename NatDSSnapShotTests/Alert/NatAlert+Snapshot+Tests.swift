@@ -133,6 +133,18 @@ class NatAlert_Snapshot_Tests: XCTestCase {
         assertSnapshot(matching: superview, as: .image)
     }
     
+    func test_Nat_Alert_default_outlined() {
+        let systemUnderTest = NatAlert(type: .outlined)
+        
+        systemUnderTest.configure(titleText: "This is a title")
+        systemUnderTest.configure(descriptionText: "This is a description")
+        superview.addSubview(systemUnderTest)
+        addConstraints(systemUnderTest)
+        
+        assertSnapshot(matching: superview, as: .image)
+    }
+ 
+    
     func test_Nat_Alert_success_default() {
         let systemUnderTest = NatAlert(style: .success)
         
