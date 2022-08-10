@@ -167,6 +167,17 @@ class NatAlertSnapshotTests: XCTestCase {
         assertSnapshot(matching: superview, as: .image(precision: 0.97))
     }
     
+    func test_Nat_Alert_info_default() {
+        let systemUnderTest = NatAlert(style: .info)
+        
+        systemUnderTest.configure(titleText: "This is a title")
+        systemUnderTest.configure(descriptionText: "This is a description")
+        superview.addSubview(systemUnderTest)
+        addConstraints(systemUnderTest)
+        
+        assertSnapshot(matching: superview, as: .image)
+    }
+    
     private func addConstraints(_ systemUnderTest: UIView) {
         
         systemUnderTest.translatesAutoresizingMaskIntoConstraints = false
