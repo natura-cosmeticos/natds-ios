@@ -4,7 +4,7 @@ import SnapshotTesting
 @testable import NatDS
 
 
-class NatAlert_Snapshot_Tests: XCTestCase {
+class NatAlertSnapshotTests: XCTestCase {
     var superview: UIView!
     
     override func setUp() {
