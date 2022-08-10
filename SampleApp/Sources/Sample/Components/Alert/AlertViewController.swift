@@ -31,14 +31,14 @@ class AlertViewController: UIViewController, SampleItem {
     private let alert: NatAlert = {
         let alert = NatAlert(style: .warning)
         alert.configure(titleText: "Title example")
-        alert.configure(descriptionText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id lectus ut nulla rutrum molestie eget ut quam. Maecenas non tellus cursus, rutrum tellus at, faucibus mauris.")
+        alert.configure(descriptionText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id lectus ut nulla rutrum molestie eget ut quam.")
         return alert
     }()
     
     private let alertWithCustomIcon: NatAlert = {
         let alert = NatAlert(style: .warning)
         alert.configure(titleText: "Alert with custom Icon")
-        alert.configure(descriptionText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id lectus ut nulla rutrum molestie eget ut quam. Maecenas non tellus cursus, rutrum tellus at, faucibus mauris.")
+        alert.configure(descriptionText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id lectus ut nulla rutrum molestie eget ut quam.")
         alert.configure(icon: getIcon(.outlinedAlertWarning))
         return alert
     }()
@@ -46,7 +46,7 @@ class AlertViewController: UIViewController, SampleItem {
     private let alertWithPrimaryButton: NatAlert = {
         let alert = NatAlert(style: .warning)
         alert.configure(titleText: "Alert with primary button")
-        alert.configure(descriptionText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id lectus ut nulla rutrum molestie eget ut quam. Maecenas non tellus cursus, rutrum tellus at, faucibus mauris.")
+        alert.configure(descriptionText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id lectus ut nulla rutrum molestie eget ut quam.")
         alert.configure(primaryButtonTitle: "Button 1")
         alert.configure(icon: getIcon(.outlinedAlertWarning))
         return alert
@@ -55,7 +55,7 @@ class AlertViewController: UIViewController, SampleItem {
     private let alertWithSecondaryButton: NatAlert = {
         let alert = NatAlert(style: .warning)
         alert.configure(titleText: "Alert with two buttons")
-        alert.configure(descriptionText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id lectus ut nulla rutrum molestie eget ut quam. Maecenas non tellus cursus, rutrum tellus at, faucibus mauris.")
+        alert.configure(descriptionText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id lectus ut nulla rutrum molestie eget ut quam.")
         alert.configure(primaryButtonTitle: "Button 1")
         alert.configure(secondaryButtonTitle: "Button 2")
         alert.configure(icon: getIcon(.outlinedAlertWarning))
@@ -65,7 +65,7 @@ class AlertViewController: UIViewController, SampleItem {
     private let alertWithNoIcon: NatAlert = {
         let alert = NatAlert(style: .warning)
         alert.configure(titleText: "Alert without icon")
-        alert.configure(descriptionText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id lectus ut nulla rutrum molestie eget ut quam. Maecenas non tellus cursus, rutrum tellus at, faucibus mauris.")
+        alert.configure(descriptionText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id lectus ut nulla rutrum molestie eget ut quam.")
         alert.configure(showIcon: false)
         return alert
     }()
@@ -88,63 +88,63 @@ class AlertViewController: UIViewController, SampleItem {
     private let alertOutlined: NatAlert = {
         let alert = NatAlert(style: .warning, type: .outlined)
         alert.configure(titleText: "Alert Warning outlined")
-        alert.configure(descriptionText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id lectus ut nulla rutrum molestie eget ut quam. Maecenas non tellus cursus, rutrum tellus at, faucibus mauris.")
+        alert.configure(descriptionText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id lectus ut nulla rutrum molestie eget ut quam.")
         return alert
     }()
     
     private let alertSuccess: NatAlert = {
         let alert = NatAlert(style: .success)
         alert.configure(titleText: "Alert Success")
-        alert.configure(descriptionText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id lectus ut nulla rutrum molestie eget ut quam. Maecenas non tellus cursus, rutrum tellus at, faucibus mauris.")
+        alert.configure(descriptionText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id lectus ut nulla rutrum molestie eget ut quam.")
         return alert
     }()
     
     private let alertSuccessOutlined: NatAlert = {
         let alert = NatAlert(style: .success, type: .outlined)
         alert.configure(titleText: "Alert Success outlined")
-        alert.configure(descriptionText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id lectus ut nulla rutrum molestie eget ut quam. Maecenas non tellus cursus, rutrum tellus at, faucibus mauris.")
+        alert.configure(descriptionText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id lectus ut nulla rutrum molestie eget ut quam.")
         return alert
     }()
     
     private let alertInfo: NatAlert = {
         let alert = NatAlert(style: .info)
         alert.configure(titleText: "Alert Info")
-        alert.configure(descriptionText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id lectus ut nulla rutrum molestie eget ut quam. Maecenas non tellus cursus, rutrum tellus at, faucibus mauris.")
+        alert.configure(descriptionText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id lectus ut nulla rutrum molestie eget ut quam.")
         return alert
     }()
     
     private let alertInfoOutlined: NatAlert = {
         let alert = NatAlert(style: .info, type: .outlined)
         alert.configure(titleText: "Alert Info outlined")
-        alert.configure(descriptionText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id lectus ut nulla rutrum molestie eget ut quam. Maecenas non tellus cursus, rutrum tellus at, faucibus mauris.")
+        alert.configure(descriptionText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id lectus ut nulla rutrum molestie eget ut quam.")
         return alert
     }()
     
     private let alertError: NatAlert = {
         let alert = NatAlert(style: .error)
         alert.configure(titleText: "Alert Error")
-        alert.configure(descriptionText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id lectus ut nulla rutrum molestie eget ut quam. Maecenas non tellus cursus, rutrum tellus at, faucibus mauris.")
+        alert.configure(descriptionText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id lectus ut nulla rutrum molestie eget ut quam.")
         return alert
     }()
     
     private let alertErrorOutlined: NatAlert = {
         let alert = NatAlert(style: .error, type: .outlined)
         alert.configure(titleText: "Alert Error outlined")
-        alert.configure(descriptionText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id lectus ut nulla rutrum molestie eget ut quam. Maecenas non tellus cursus, rutrum tellus at, faucibus mauris.")
+        alert.configure(descriptionText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id lectus ut nulla rutrum molestie eget ut quam.")
         return alert
     }()
     
     private let alertCustom: NatAlert = {
         let alert = NatAlert(style: .custom(backgroundColor: .cyan, borderColor: .blue, labelsColor: .red))
         alert.configure(titleText: "Alert Custom")
-        alert.configure(descriptionText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id lectus ut nulla rutrum molestie eget ut quam. Maecenas non tellus cursus, rutrum tellus at, faucibus mauris.")
+        alert.configure(descriptionText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id lectus ut nulla rutrum molestie eget ut quam.")
         return alert
     }()
     
     private let alertCustomOutlined: NatAlert = {
         let alert = NatAlert(style: .custom(backgroundColor: .cyan, borderColor: .blue, labelsColor: .red), type: .outlined)
         alert.configure(titleText: "Alert Custom outlined")
-        alert.configure(descriptionText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id lectus ut nulla rutrum molestie eget ut quam. Maecenas non tellus cursus, rutrum tellus at, faucibus mauris.")
+        alert.configure(descriptionText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id lectus ut nulla rutrum molestie eget ut quam.")
         return alert
     }()
 
