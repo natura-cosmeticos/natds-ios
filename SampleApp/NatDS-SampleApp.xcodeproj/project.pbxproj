@@ -51,6 +51,7 @@
 		84E3B7C82502C88D0056FE57 /* CustomSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E3B7C72502C88D0056FE57 /* CustomSplashViewController.swift */; };
 		84F60D152509402300498C8A /* ChooseBrandCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F60D142509402300498C8A /* ChooseBrandCell.swift */; };
 		877F22F92578C46BFE34404C /* Pods_NatDS_SampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28DD6817F24C672DD593A2C6 /* Pods_NatDS_SampleApp.framework */; };
+		8C1AE06328A684E7000F9D88 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1AE06228A684E7000F9D88 /* AlertViewController.swift */; };
 		9B13D285941681F8967FCC54F3945D5F /* IconCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FBDBE3AD8777A865F1B1E40859758D /* IconCollectionViewCell.swift */; };
 		B0824E26ADCA40FFA158AA0A35155D71 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFC72AFBBBAAEBA2097DA669BB3792F /* MainViewController.swift */; };
 		B14E0B8A51D237CFBA1AD574ED6EC10C /* DividerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F657058E049073E0255E8EE6ED2580B /* DividerViewController.swift */; };
@@ -138,6 +139,7 @@
 		84F60D142509402300498C8A /* ChooseBrandCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseBrandCell.swift; sourceTree = "<group>"; };
 		88DF0FA08B4E2EB33C77654A3EC4E83E /* ChooseBrandViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseBrandViewController.swift; sourceTree = "<group>"; };
 		8AD6BDA39D2DFA18294278D33A054F9B /* TabItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemViewController.swift; sourceTree = "<group>"; };
+		8C1AE06228A684E7000F9D88 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		96E03E96B39ADDD9B77FC7C702E3029F /* MainDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDataSource.swift; sourceTree = "<group>"; };
 		9A952C68A59714AAC3B9888C2904F969 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9AFC72AFBBBAAEBA2097DA669BB3792F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -421,6 +423,7 @@
 		86D88A8EB08915984C5FB6D277F7A6FA /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				8C1AE06128A684D0000F9D88 /* Alert */,
 				7D75A45825DB0B940050ACA9 /* Avatar */,
 				265B17EC24AFBE2A00FD0407 /* Badge */,
 				0E3F579024B90E79004B2F9E /* AppBar */,
@@ -467,6 +470,14 @@
 				729810E32083E04163C749DCF3552FA6 /* DesignSection.swift */,
 			);
 			path = Design;
+			sourceTree = "<group>";
+		};
+		8C1AE06128A684D0000F9D88 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				8C1AE06228A684E7000F9D88 /* AlertViewController.swift */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 		9DE43D2630BC7A2BC76DE6043192AFF4 /* Sample */ = {
@@ -869,6 +880,7 @@
 				D2874BA3C6A03754EC9895DC95D6DFE5 /* TypographyCell.swift in Sources */,
 				4FB74E3BCCB54EE2242A9A78778F6024 /* TypographyViewController.swift in Sources */,
 				5A95C641E43BCD63CA21359C8EAFBA25 /* ValueTextHighlightItemViewController.swift in Sources */,
+				8C1AE06328A684E7000F9D88 /* AlertViewController.swift in Sources */,
 				84A9E9AC250F9D18006B8A52 /* BrandThemes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
