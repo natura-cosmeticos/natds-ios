@@ -24,7 +24,7 @@ class NatAlertSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
         
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.97))
     }
     
     func test_Nat_Alert_warning_style() {
@@ -35,7 +35,7 @@ class NatAlertSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
         
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.97))
     }
     
     func test_Nat_Alert_warning_with_primary_button() {
@@ -47,7 +47,7 @@ class NatAlertSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
         
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.97))
     }
     
     func test_Nat_Alert_warning_with_primary_and_secondary_button() {
@@ -60,7 +60,7 @@ class NatAlertSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
         
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.97))
     }
     
     func test_Nat_Alert_warning_with_no_icon() {
@@ -72,7 +72,7 @@ class NatAlertSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
         
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.97))
     }
     
     func test_Nat_Alert_warning_with_no_title() {
@@ -84,7 +84,7 @@ class NatAlertSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
         
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.97))
     }
     
     func test_Nat_Alert_warning_with_no_icon_and_no_title() {
@@ -97,7 +97,7 @@ class NatAlertSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
         
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.97))
     }
     
     func test_Nat_Alert_warning_outlined() {
@@ -108,7 +108,7 @@ class NatAlertSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
         
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.97))
     }
     
     func test_Nat_Alert_success_outlined() {
@@ -119,7 +119,7 @@ class NatAlertSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
         
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.97))
     }
     
     func test_Nat_Alert_error_outlined() {
@@ -130,7 +130,7 @@ class NatAlertSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
         
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.97))
     }
     
     func test_Nat_Alert_default_outlined() {
@@ -141,7 +141,7 @@ class NatAlertSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
         
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.97))
     }
  
     
@@ -153,7 +153,7 @@ class NatAlertSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
         
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.97))
     }
     
     func test_Nat_Alert_error_default() {
@@ -164,7 +164,7 @@ class NatAlertSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
         
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.97))
     }
     
     func test_Nat_Alert_info_default() {
@@ -175,7 +175,7 @@ class NatAlertSnapshotTests: XCTestCase {
         superview.addSubview(systemUnderTest)
         addConstraints(systemUnderTest)
         
-        assertSnapshot(matching: superview, as: .image)
+        assertSnapshot(matching: superview, as: .image(precision: 0.97))
     }
     
     private func addConstraints(_ systemUnderTest: UIView) {

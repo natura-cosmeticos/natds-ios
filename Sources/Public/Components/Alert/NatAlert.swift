@@ -152,8 +152,7 @@ public final class NatAlert: UIView {
             textStackView.topAnchor.constraint(equalTo: iconView.topAnchor),
             textStackView.leadingAnchor.constraint(equalTo: iconView.trailingAnchor, constant: 8),
             textStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-            textStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16)
-
+            textStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),
         ])
     }
     
