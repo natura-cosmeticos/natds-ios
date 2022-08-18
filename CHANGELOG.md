@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [7.7.0](https://github.com/natura-cosmeticos/natds-ios/compare/7.6.0...7.7.0) (2022-08-18)
+
+
+### Features
+
+* Add NatAlert Component ([a68fb96](https://github.com/natura-cosmeticos/natds-ios/commit/a68fb96fcd069aef8ce4eac706c72365b516a301))
+
+
+### Bug Fixes
+
+* bottom spacing and snapshot precision ([df97afb](https://github.com/natura-cosmeticos/natds-ios/commit/df97afb4899b59025b4b3a24b873a5efdba6e2b2))
+
 ## [7.6.0](https://github.com/natura-cosmeticos/natds-ios/compare/7.5.0...7.6.0) (2022-07-20)
 
 
