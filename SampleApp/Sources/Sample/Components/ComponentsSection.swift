@@ -3,6 +3,7 @@ import UIKit
 class ComponentsSection: SampleSection {
     var name = "Components"
     var items: [SampleItem.Type] = [
+        AlertViewController.self,
         AppBarViewController.self,
         AvatarItemViewController.self,
         BadgeViewController.self,
