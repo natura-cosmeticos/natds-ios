@@ -99,6 +99,125 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Alert/NatAlert+Style.swift",
+      "line": 2,
+      "symbol": "NatAlert.AlertStyle",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Alert/NatAlert+Style.swift",
+      "line": 3,
+      "symbol": "NatAlert.AlertStyle.error",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Alert/NatAlert+Style.swift",
+      "line": 3,
+      "symbol": "NatAlert.AlertStyle.info",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Alert/NatAlert+Style.swift",
+      "line": 3,
+      "symbol": "NatAlert.AlertStyle.success",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Alert/NatAlert+Style.swift",
+      "line": 3,
+      "symbol": "NatAlert.AlertStyle.warning",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Alert/NatAlert+Style.swift",
+      "line": 4,
+      "symbol": "NatAlert.AlertStyle.custom(backgroundColor:borderColor:labelsColor:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Alert/NatAlert+Style.swift",
+      "line": 47,
+      "symbol": "NatAlert.AlertType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Alert/NatAlert+Style.swift",
+      "line": 48,
+      "symbol": "NatAlert.AlertType.contained",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Alert/NatAlert+Style.swift",
+      "line": 48,
+      "symbol": "NatAlert.AlertType.outlined",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Alert/NatAlert.swift",
+      "line": 25,
+      "symbol": "NatAlert.primaryButtonTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Alert/NatAlert.swift",
+      "line": 30,
+      "symbol": "NatAlert.secondaryButtonTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Alert/NatAlert.swift",
+      "line": 36,
+      "symbol": "NatAlert.showTitle",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Alert/NatAlert.swift",
+      "line": 42,
+      "symbol": "NatAlert.titleText",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Alert/NatAlert.swift",
+      "line": 48,
+      "symbol": "NatAlert.descriptionText",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Alert/NatAlert.swift",
+      "line": 77,
+      "symbol": "NatAlert.primaryButton",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Alert/NatAlert.swift",
+      "line": 83,
+      "symbol": "NatAlert.secondaryButton",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Alert/NatAlert.swift",
+      "line": 107,
+      "symbol": "NatAlert.init(style:type:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/vagrant/git/Sources/Public/Components/AppBar/AppBarColor.swift",
       "line": 4,
       "symbol": "AppBarColor.default",
