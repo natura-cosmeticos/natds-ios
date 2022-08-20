@@ -77,4 +77,30 @@ final class TabTests: XCTestCase {
 
         XCTAssertEqual(systemUnderTest.selectedSegmentedIndex, expectIndex)
     }
+
+    func test_defaultPositionWithouUseConfigureFunction() {
+        let expectedStatus = true
+
+        systemUnderTest.insertTab(title: "Tab 1")
+        systemUnderTest.insertTab(title: "Tab 2")
+        XCTAssertEqual(systemUnderTest.stackWidthConstraint?.isActive, expectedStatus)
+    }
+
+    func test_useConfigureFunctionToSetFixedPosittion() {
+        let expectedStatus = true
+
+        systemUnderTest.insertTab(title: "Tab 1")
+        systemUnderTest.insertTab(title: "Tab 2")
+        systemUnderTest.configure(position: .fixed)
+        XCTAssertEqual(systemUnderTest.stackWidthConstraint?.isActive, expectedStatus)
+    }
+
+    func test_useConfigureFunctionToSetScrollablePosittion() {
+        let expectedStatus = false
+
+        systemUnderTest.insertTab(title: "Tab 1")
+        systemUnderTest.insertTab(title: "Tab 2")
+        systemUnderTest.configure(position: .scrollable)
+        XCTAssertEqual(systemUnderTest.stackWidthConstraint?.isActive, expectedStatus)
+    }
 }
