@@ -23,12 +23,12 @@ final class TabItemSnapshotTests: XCTestCase {
     func test_state_whenIsSelected_returnsSelectedSnapshot() {
         systemUnderTest.state = .selected
 
-        assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.99))
+        assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.95))
     }
 
     func test_state_whenIsNormal_returnsNormalSnapshot() {
         systemUnderTest.state = .normal
 
-        assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.99))
+        assertSnapshot(matching: systemUnderTest, as: .image(precision: 0.95))
     }
 }
