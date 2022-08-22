@@ -47,26 +47,40 @@
 
                   </div>
                 </div>
-              <p>Tab is a class that represents a  component from the design system.
-A new tab is inserted using insertTab(title: String) method.</p>
-<pre class="highlight swift"><code><span class="kt">Example</span> <span class="n">of</span> <span class="nv">usage</span><span class="p">:</span>
-<span class="o">-</span> <span class="n">tab</span><span class="o">.</span><span class="nf">insertTab</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="s">"Tab One"</span><span class="p">)</span>
-
-<span class="kt">It</span><span class="err">'</span><span class="n">s</span> <span class="n">possible</span> <span class="n">to</span> <span class="n">select</span> <span class="n">a</span> <span class="n">tab</span> <span class="n">using</span> <span class="n">the</span> <span class="n">selectedSegmentedIndex</span> <span class="nv">property</span><span class="p">:</span>
-<span class="o">-</span> <span class="n">tab</span><span class="o">.</span><span class="n">selectedSegmentedIndex</span> <span class="o">=</span> <span class="mi">1</span>
-</code></pre>
-<div class="aside aside-requires">
-    <p class="aside-title">Requires</p>
-    It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.
-
-</div>
-
-<p>DesignSystem().configure(with: AvailableTheme)</p>
+              <p>Undocumented</p>
 
             </section>
             <section class="section task-group-section">
               <div class="task-group">
                 <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS3TabC8PositionO"></a>
+                      <a name="//apple_ref/swift/Enum/Position" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS3TabC8PositionO">Position</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Position is an enum that represents if the tabBar is fixed or scrollable</p>
+
+                          <a href="../Classes/Tab/Position.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Position</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
                   <li class="item">
                     <div>
                       <code>
@@ -169,6 +183,51 @@ A new tab is inserted using insertTab(title: String) method.</p>
                           <div class="language">
                             <p class="aside-title">Swift</p>
                             <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">insertTab</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="task-group">
+                <div class="task-name-container">
+                  <a name="/Public%20Methods"></a>
+                  <a name="//apple_ref/swift/Section/Public Methods" class="dashAnchor"></a>
+                  <div class="section-name-container">
+                    <a class="section-name-link" href="#/Public%20Methods"></a>
+                    <h3 class="section-name"><span>Public Methods</span>
+</h3>
+                  </div>
+                </div>
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS3TabC9configure8positionyAC8PositionO_tF"></a>
+                      <a name="//apple_ref/swift/Method/configure(position:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS3TabC9configure8positionyAC8PositionO_tF">configure(position:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Sets the position comportament of the component.</p>
+
+<p>Example of usage:</p>
+<pre class="highlight swift"><code><span class="kt">Tab</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">position</span><span class="p">:</span> <span class="o">.</span><span class="n">fixed</span><span class="p">)</span>
+<span class="kt">Tab</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">position</span><span class="p">:</span> <span class="o">.</span><span class="n">scrollable</span><span class="p">)</span>
+</code></pre>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="nv">position</span><span class="p">:</span> <span class="kt"><a href="../Classes/Tab/Position.html">Position</a></span><span class="p">)</span></code></pre>
 
                           </div>
                         </div>
@@ -463,6 +522,9 @@ A new tab is inserted using insertTab(title: String) method.</p>
                   <a href="../Classes/Tab.html">Tab</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="../Classes/Tab/Position.html">– Position</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Classes/TextField.html">TextField</a>
                 </li>
                 <li class="nav-group-task">
@@ -626,7 +688,7 @@ A new tab is inserted using insertTab(title: String) method.</p>
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external noopener">System Team - Natura SA</a>. All rights reserved. (Last updated: 2022-08-18)</p>
+          <p>&copy; 2022 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external noopener">System Team - Natura SA</a>. All rights reserved. (Last updated: 2022-08-22)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </div>
