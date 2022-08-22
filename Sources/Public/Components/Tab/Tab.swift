@@ -1,29 +1,47 @@
+/**
+ - NOTE:
+ This component is available in the following positions:
+ - ✅ Fixed
+ - ✅ Scrollable
+ 
+ Tab is a class that represents a  component from the design system.
+ A new tab is inserted using insertTab(title: String) method.
+ 
+ It can be configured with the variants:
+ - Fixed (default)
+ - Scrollable
+ 
+ Example of usage:
+ - tab.insertTab(title: "Tab One")
+ - tab.configure(position: .scrollable)
+ 
+ It's possible to select a tab using the selectedSegmentedIndex property after insert all tabs:
+ - tab.selectedSegmentedIndex = 1
+ 
+ - Requires:
+ It's necessary to configure the Design System with a theme or fatalError will be raised.
+ 
+ DesignSystem().configure(with: AvailableTheme)
+ */
+
 import Foundation
 
 public protocol TabDelegate: AnyObject {
     func didChangeSelectedSegmented(index: Int)
 }
 
-/**
- Tab is a class that represents a  component from the design system.
- A new tab is inserted using insertTab(title: String) method.
-
-     Example of usage:
-     - tab.insertTab(title: "Tab One")
-
-     It's possible to select a tab using the selectedSegmentedIndex property:
-     - tab.selectedSegmentedIndex = 1
-
- - Requires:
- It's necessary to configure the Design System with a theme or fatalError will be raised.
-
- DesignSystem().configure(with: AvailableTheme)
- */
-
 public class Tab: UIView {
+    /// Position is an enum that represents if the tabBar is fixed or scrollable
+    public enum Position {
+        case fixed
+        case scrollable
+    }
 
+    private var defaultIndex: Int?
+    private(set) var stackWidthConstraint: NSLayoutConstraint?
     public weak var delegate: TabDelegate?
-
+    private var indicatorViewWidthConstraint: NSLayoutConstraint?
+    private var indicatorViewLeadingConstraint: NSLayoutConstraint?
     public var selectedSegmentedIndex: Int {
         get { selectedIndex }
         set {
@@ -38,24 +56,31 @@ public class Tab: UIView {
     private var selectedIndex: Int = 0 {
         didSet {
             handleIndexChange()
+            updateScrollPosition()
         }
     }
+
+    private lazy var scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.alwaysBounceHorizontal = true
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        return scrollView
+    }()
 
     private lazy var indicatorView: UIView = {
         let view = UIView()
         view.backgroundColor = NatColors.secondary
+        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
 
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView()
-        stackView.distribution = .fillEqually
+        stackView.distribution = .fillProportionally
         stackView.axis = .horizontal
+        stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
-
-    private var indicatorViewWidthConstraint: NSLayoutConstraint?
-    private var indicatorViewLeadingConstraint: NSLayoutConstraint?
 
     public init() {
         super.init(frame: .zero)
@@ -73,12 +98,14 @@ public extension Tab {
     func insertTab(title: String) {
         let tabView = TabItemView(title: title)
         tabView.delegate = self
-
         tabs.append(tabView)
         stackView.addArrangedSubview(tabView)
-
         updateTabsState()
-        addIndicatorWidthIfNeeded()
+        if defaultIndex == nil && tabs.count > 0 {
+            updateTabsState()
+            updateIndicatorX()
+            defaultIndex = 0
+        }
     }
 }
 
@@ -86,62 +113,53 @@ extension Tab {
 
     private func setup() {
         backgroundColor = .white
+        addScrollView()
         addStackView()
         addIndicatorView()
         setShadow()
     }
 
+    private func addScrollView() {
+        addSubview(scrollView)
+
+        NSLayoutConstraint.activate([
+            scrollView.topAnchor.constraint(equalTo: topAnchor),
+            scrollView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            scrollView.heightAnchor.constraint(equalToConstant: NatSizes.medium),
+            self.heightAnchor.constraint(greaterThanOrEqualToConstant: NatSizes.medium)
+        ])
+        scrollView.showsHorizontalScrollIndicator = false
+    }
+
     private func addStackView() {
-        addSubview(stackView)
-        stackView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.addSubview(stackView)
 
-        let constraints = [
-            stackView.topAnchor.constraint(equalTo: topAnchor),
-            stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            stackView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            stackView.trailingAnchor.constraint(equalTo: trailingAnchor)
-        ]
-
-        NSLayoutConstraint.activate(constraints)
+        NSLayoutConstraint.activate([
+            stackView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            stackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+            stackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+            stackView.heightAnchor.constraint(equalToConstant: NatSizes.medium)
+        ])
+        stackWidthConstraint = stackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor)
+        stackWidthConstraint?.isActive = true
     }
 
     private func addIndicatorView() {
         addSubview(indicatorView)
-        indicatorView.translatesAutoresizingMaskIntoConstraints = false
-
-        let constraints = [
+        NSLayoutConstraint.activate([
             indicatorView.heightAnchor.constraint(equalToConstant: 2),
-            indicatorView.bottomAnchor.constraint(equalTo: bottomAnchor)
-        ]
-
-        NSLayoutConstraint.activate(constraints)
-        addIndicatorLeadingConstraint(leadingAnchor: leadingAnchor)
-    }
-
-    private func addIndicatorWidthIfNeeded() {
-        guard indicatorViewWidthConstraint == nil, let selectedTab = tabs.first else { return }
-
-        indicatorViewWidthConstraint = indicatorView.widthAnchor.constraint(equalTo: selectedTab.widthAnchor)
-        indicatorViewWidthConstraint?.isActive = true
-    }
-
-    private func addIndicatorLeadingConstraint(leadingAnchor: NSLayoutXAxisAnchor) {
-        if let constraint = indicatorViewLeadingConstraint {
-            constraint.isActive = false
-        }
-
-        let leadingConstraint = indicatorView.leadingAnchor.constraint(equalTo: leadingAnchor)
-        leadingConstraint.isActive = true
-
-        indicatorViewLeadingConstraint = leadingConstraint
+            indicatorView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor)
+        ])
     }
 
     private func setShadow() {
-        layer.shadowRadius = 2.0
-        layer.shadowOpacity = 0.14
-        layer.masksToBounds = false
-        layer.shadowColor = NatColors.highlight.cgColor
-        layer.shadowOffset = CGSize(width: 0, height: 3)
+        scrollView.backgroundColor = .white
+        scrollView.layer.shadowRadius = 2.0
+        scrollView.layer.shadowOpacity = 0.14
+        scrollView.layer.masksToBounds = false
+        scrollView.layer.shadowColor = NatColors.highlight.cgColor
+        scrollView.layer.shadowOffset = CGSize(width: 0, height: 3)
     }
 }
 
@@ -159,12 +177,61 @@ extension Tab {
         }
     }
 
+    private func updateScrollPosition() {
+        var offset: CGPoint = CGPoint(x: 0, y: 0)
+        struct Limit {
+            var min: CGFloat
+            var max: CGFloat
+        }
+        var visibleArea = Limit(min: 0, max: 0)
+        let tabArea = Limit(min: tabs[selectedIndex].frame.minX, max: tabs[selectedIndex].frame.maxX)
+        visibleArea.min = scrollView.contentOffset.x
+        visibleArea.max = visibleArea.min + scrollView.frame.maxX
+        let maxScroll: Limit = Limit(min: 0, max: tabs[tabs.count-1].frame.maxX - scrollView.frame.maxX)
+        if  tabArea.max + 30 > visibleArea.max {
+            offset.x = tabArea.max - visibleArea.max + 45 + visibleArea.min
+            if offset.x > maxScroll.max {
+                offset.x = maxScroll.max
+            }
+            scrollView.setContentOffset(offset, animated: true)
+        } else {
+            if tabArea.min - 30  < visibleArea.min {
+                offset.x = tabArea.min - 45
+                if offset.x < maxScroll.min {
+                    offset.x = maxScroll.min
+                }
+                scrollView.setContentOffset(offset, animated: true)
+            }
+        }
+    }
     private func updateIndicatorX() {
         let selectedTab = tabs[selectedIndex]
-        addIndicatorLeadingConstraint(leadingAnchor: selectedTab.leadingAnchor)
-
+        indicatorViewLeadingConstraint?.isActive = false
+        indicatorViewWidthConstraint?.isActive = false
+        indicatorViewLeadingConstraint = indicatorView.leadingAnchor.constraint(equalTo: selectedTab.leadingAnchor)
+        indicatorViewWidthConstraint = indicatorView.trailingAnchor.constraint(equalTo: selectedTab.trailingAnchor)
+        indicatorViewLeadingConstraint?.isActive = true
+        indicatorViewWidthConstraint?.isActive = true
+        updateScrollPosition()
         UIView.animate(withDuration: 0.1) { [unowned self] in
             self.layoutIfNeeded()
+        }
+    }
+    // MARK: - Public Methods
+
+    /// Sets the position comportament of the component.
+    ///
+    /// Example of usage:
+    /// ```
+    /// Tab.configure(position: .fixed)
+    /// Tab.configure(position: .scrollable)
+    /// ```
+    public func configure(position: Position) {
+        switch position {
+        case .fixed:
+            stackWidthConstraint?.isActive = true
+        case .scrollable:
+            stackWidthConstraint?.isActive = false
         }
     }
 }

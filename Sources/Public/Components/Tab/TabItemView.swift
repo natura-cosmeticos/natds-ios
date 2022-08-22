@@ -65,14 +65,13 @@ extension TabItemView {
 
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
 
-        let constraints = [
+        NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 0),
-            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
+            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: NatSpacing.tiny),
             titleLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0),
-            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0)
-        ]
-
-        NSLayoutConstraint.activate(constraints)
+            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -NatSpacing.tiny),
+            self.widthAnchor.constraint(greaterThanOrEqualToConstant: NatSizes.largeX)
+        ])
     }
 }
 
