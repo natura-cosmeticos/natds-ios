@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [7.7.2](https://github.com/natura-cosmeticos/natds-ios/compare/7.7.1...7.7.2) (2022-09-20)
+
+
+### Bug Fixes
+
+* removing hidden folder that might be breaking the versioning for cocoapods ([e464175](https://github.com/natura-cosmeticos/natds-ios/commit/e464175852be71b0b0ecb06ea558aae41ec7852a))
+
 ### [7.7.1](https://github.com/natura-cosmeticos/natds-ios/compare/7.7.0...7.7.1) (2022-08-22)
 
 ## [7.7.0](https://github.com/natura-cosmeticos/natds-ios/compare/7.6.0...7.7.0) (2022-08-18)
