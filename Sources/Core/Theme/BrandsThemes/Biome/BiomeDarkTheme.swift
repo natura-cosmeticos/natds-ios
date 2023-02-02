@@ -18,26 +18,26 @@
  *                                                              
  */
 
-struct AesopDarkTheme: Theme {
-  let tokens: Tokens = AesopDarkTokens()
-  let components: Components = AesopDarkComponents()
+struct BiomeDarkTheme: Theme {
+  let tokens: Tokens = BiomeDarkTokens()
+  let components: Components = BiomeDarkComponents()
 }
 
-struct AesopDarkTokens: Tokens {
-  let assetFontFileDisplay = "zapf_humanist601bt_roman"
-  let assetFontFileHeadline = "suisse_intl_regular"
-  let assetFontFileBodyRegular = "suisse_intl_regular"
-  let assetFontFileBodyBold = "suisse_intl_medium"
-  let assetBrandNeutralAFile = "aesop-a-official-dark"
+struct BiomeDarkTokens: Tokens {
+  let assetFontFileDisplay = "roboto_regular"
+  let assetFontFileHeadline = "roboto_regular"
+  let assetFontFileBodyRegular = "roboto_regular"
+  let assetFontFileBodyBold = "roboto_medium"
+  let assetBrandNeutralAFile = "biome-a-official-dark"
   let assetBrandNeutralAWidth: CGFloat = 256
   let assetBrandNeutralAHeight: CGFloat = 82
-  let assetBrandNeutralBFile = "aesop-a-official-dark"
+  let assetBrandNeutralBFile = "natura-a-official-dark"
   let assetBrandNeutralBWidth: CGFloat = 256
   let assetBrandNeutralBHeight: CGFloat = 82
-  let assetBrandCustomAFile = "aesop-a-custom"
+  let assetBrandCustomAFile = "biome-a-custom"
   let assetBrandCustomAWidth: CGFloat = 256
   let assetBrandCustomAHeight: CGFloat = 82
-  let assetBrandCustomBFile = "aesop-a-custom"
+  let assetBrandCustomBFile = "natura-a-custom"
   let assetBrandCustomBWidth: CGFloat = 256
   let assetBrandCustomBHeight: CGFloat = 82
   let borderRadiusNone: CGFloat = 0
@@ -54,21 +54,21 @@ struct AesopDarkTokens: Tokens {
   let colorNeutral700 = "#E3E3E3"
   let colorNeutral800 = "#EEEEEE"
   let colorNeutral900 = "#F7F7F7"
-  let colorPrimary = "#F1F1F0"
-  let colorOnPrimary = "#000000"
+  let colorPrimary = "#F3EADE"
+  let colorOnPrimary = "#333333"
   let colorPrimaryLight = "#FFFFFF"
-  let colorOnPrimaryLight = "#000000"
-  let colorPrimaryLightest = "#232323"
+  let colorOnPrimaryLight = "#333333"
+  let colorPrimaryLightest = "#FFFFFF"
   let colorOnPrimaryLightest = "#000000"
-  let colorPrimaryDark = "#BEBEBE"
-  let colorOnPrimaryDark = "#000000"
-  let colorPrimaryDarkest = "#747474"
+  let colorPrimaryDark = "#C0B8AC"
+  let colorOnPrimaryDark = "#333333"
+  let colorPrimaryDarkest = "#C0B8AC"
   let colorOnPrimaryDarkest = "#000000"
-  let colorSecondary = "#DDCB91"
+  let colorSecondary = "#CBFFD2"
   let colorOnSecondary = "#000000"
-  let colorSecondaryLight = "#FFFEC2"
+  let colorSecondaryLight = "#CBFFD2"
   let colorOnSecondaryLight = "#000000"
-  let colorSecondaryDark = "#AA9A63"
+  let colorSecondaryDark = "#69A172"
   let colorOnSecondaryDark = "#000000"
   let colorBackground = "#121212"
   let colorOnBackground = "#FFFFFF"
@@ -207,18 +207,18 @@ struct AesopDarkTokens: Tokens {
   let typographyFontFamilyCode = "SF Mono"
   let typographyFontWeightRegular: UIFont.Weight = .regular
   let typographyFontWeightMedium: UIFont.Weight = .medium
-  let typographyDisplayFontFamily = "Zapf Humanist 601"
+  let typographyDisplayFontFamily = "Roboto"
   let typographyDisplayFontWeight: UIFont.Weight = .regular
-  let typographyHeadlineFontFamily = "Suisse Int'l"
+  let typographyHeadlineFontFamily = "Roboto"
   let typographyHeadlineFontWeight: UIFont.Weight = .regular
-  let typographyBodyRegularFontFamily = "Suisse Int'l"
+  let typographyBodyRegularFontFamily = "Roboto"
   let typographyBodyRegularFontWeight: UIFont.Weight = .regular
-  let typographyBodyBoldFontFamily = "Suisse Int'l Medium"
+  let typographyBodyBoldFontFamily = "Roboto"
   let typographyBodyBoldFontWeight: UIFont.Weight = .medium
   let typographyFallbackFontFamily = "San Francisco"
   let typographyFallbackFontWeight: UIFont.Weight = .regular
 }
-struct AesopDarkComponents: Components {
+struct BiomeDarkComponents: Components {
   let alertTitleFontSize: CGFloat = 20
   let alertTitleLetterSpacing: CGFloat = 0.12
   let alertTitleLineHeight: CGFloat = 1.5
@@ -265,8 +265,8 @@ struct AesopDarkComponents: Components {
   let avatarPrimaryFontWeight: UIFont.Weight = .regular
   let avatarFallbackFontFamily = "San Francisco"
   let avatarFallbackFontWeight: UIFont.Weight = .regular
-  let avatarColorBackground = "#F1F1F0"
-  let avatarColorLabel = "#000000"
+  let avatarColorBackground = "#F3EADE"
+  let avatarColorLabel = "#333333"
   let badgeLabelFontSize: CGFloat = 12
   let badgeLabelLetterSpacing: CGFloat = 0.16
   let badgeLabelLineHeight: CGFloat = 1.5
@@ -278,10 +278,10 @@ struct AesopDarkComponents: Components {
   let badgeStandardBorderRadius: CGFloat = 8
   let badgeDotHeight: CGFloat = 8
   let badgeDotBorderRadius: CGFloat = 4
-  let badgeColorPrimaryLabel = "#000000"
-  let badgeColorPrimaryBackground = "#F1F1F0"
+  let badgeColorPrimaryLabel = "#333333"
+  let badgeColorPrimaryBackground = "#F3EADE"
   let badgeColorSecondaryLabel = "#000000"
-  let badgeColorSecondaryBackground = "#DDCB91"
+  let badgeColorSecondaryBackground = "#CBFFD2"
   let badgeColorSuccessLabel = "#FFFFFF"
   let badgeColorSuccessBackground = "#569A32"
   let badgeColorAlertLabel = "#FFFFFF"
@@ -294,29 +294,29 @@ struct AesopDarkComponents: Components {
   let buttonLabelFallbackFontFamily = "San Francisco"
   let buttonLabelFallbackFontWeight: UIFont.Weight = .medium
   let buttonBorderRadius: CGFloat = 4
-  let buttonContainedColorEnableBackground = "#F1F1F0"
+  let buttonContainedColorEnableBackground = "#F3EADE"
   let buttonContainedColorEnableBorder = "#FFFFFF00"
-  let buttonContainedColorEnableLabel = "#000000"
+  let buttonContainedColorEnableLabel = "#333333"
   let buttonContainedColorDisableBackground = "#777777"
   let buttonContainedColorDisableBorder = "#FFFFFF00"
   let buttonContainedColorDisableLabel = "#FAFAFA"
-  let buttonContainedColorHoverBackground = "#BEBEBE"
+  let buttonContainedColorHoverBackground = "#C0B8AC"
   let buttonContainedColorHoverBorder = "#FFFFFF00"
-  let buttonContainedColorHoverLabel = "#000000"
-  let buttonContainedColorFocusBackground = "#747474"
+  let buttonContainedColorHoverLabel = "#333333"
+  let buttonContainedColorFocusBackground = "#C0B8AC"
   let buttonContainedColorFocusBorder = "#FFFFFF00"
   let buttonContainedColorFocusLabel = "#000000"
   let buttonOutlinedColorEnableBackground = "#FFFFFF00"
-  let buttonOutlinedColorEnableBorder = "#F1F1F0"
+  let buttonOutlinedColorEnableBorder = "#F3EADE"
   let buttonOutlinedColorEnableLabel = "#FAFAFA"
   let buttonOutlinedColorDisableBackground = "#FFFFFF00"
   let buttonOutlinedColorDisableBorder = "#777777"
   let buttonOutlinedColorDisableLabel = "#BBBBBB"
   let buttonOutlinedColorHoverBackground = "#333333"
-  let buttonOutlinedColorHoverBorder = "#F1F1F0"
+  let buttonOutlinedColorHoverBorder = "#F3EADE"
   let buttonOutlinedColorHoverLabel = "#FAFAFA"
   let buttonOutlinedColorFocusBackground = "#515151"
-  let buttonOutlinedColorFocusBorder = "#F1F1F0"
+  let buttonOutlinedColorFocusBorder = "#F3EADE"
   let buttonOutlinedColorFocusLabel = "#FAFAFA"
   let buttonTextColorEnableBackground = "#FFFFFF00"
   let buttonTextColorEnableBorder = "#FFFFFF00"
@@ -440,7 +440,7 @@ struct AesopDarkComponents: Components {
   let progressIndicatorSemiBorderRadius: CGFloat = 16
   let progressIndicatorMediumBorderRadius: CGFloat = 24
   let progressIndicatorLargeBorderRadius: CGFloat = 32
-  let progressIndicatorColorStroke = "#F1F1F0"
+  let progressIndicatorColorStroke = "#F3EADE"
   let progressIndicatorColorLayer = "#333333"
   let radioButtonLabelFontSize: CGFloat = 14
   let radioButtonLabelLetterSpacing: CGFloat = 0.16
@@ -450,8 +450,8 @@ struct AesopDarkComponents: Components {
   let radioButtonLabelFallbackFontFamily = "San Francisco"
   let radioButtonLabelFallbackFontWeight: UIFont.Weight = .regular
   let radioButtonBorderRadius: CGFloat = 12
-  let radioButtonColorSelectBorder = "#F1F1F0"
-  let radioButtonColorSelectContent = "#F1F1F0"
+  let radioButtonColorSelectBorder = "#F3EADE"
+  let radioButtonColorSelectContent = "#F3EADE"
   let radioButtonColorUnselectBorder = "#FFFFFF"
   let radioButtonColorUnselectContent = "#FFFFFF"
   let radioButtonColorDisableBorder = "#777777"
@@ -477,7 +477,7 @@ struct AesopDarkComponents: Components {
   let shortcutLabelPrimaryFontWeight: UIFont.Weight = .regular
   let shortcutLabelFallbackFontFamily = "San Francisco"
   let shortcutLabelFallbackFontWeight: UIFont.Weight = .regular
-  let shortcutContainedColorEnablePrimaryBackground = "#F1F1F0"
+  let shortcutContainedColorEnablePrimaryBackground = "#F3EADE"
   let shortcutContainedColorEnablePrimaryBorder = "#FFFFFF00"
   let shortcutContainedColorEnablePrimaryLabel = "#FAFAFA"
   let shortcutContainedColorEnableNeutralBackground = "#333333"
@@ -489,20 +489,20 @@ struct AesopDarkComponents: Components {
   let shortcutContainedColorDisableNeutralBackground = "#777777"
   let shortcutContainedColorDisableNeutralBorder = "#FFFFFF00"
   let shortcutContainedColorDisableNeutralLabel = "#BBBBBB"
-  let shortcutContainedColorHoverPrimaryBackground = "#BEBEBE"
+  let shortcutContainedColorHoverPrimaryBackground = "#C0B8AC"
   let shortcutContainedColorHoverPrimaryBorder = "#FFFFFF00"
   let shortcutContainedColorHoverPrimaryLabel = "#FAFAFA"
   let shortcutContainedColorHoverNeutralBackground = "#333333"
   let shortcutContainedColorHoverNeutralBorder = "#FFFFFF00"
   let shortcutContainedColorHoverNeutralLabel = "#FAFAFA"
-  let shortcutContainedColorFocusPrimaryBackground = "#747474"
+  let shortcutContainedColorFocusPrimaryBackground = "#C0B8AC"
   let shortcutContainedColorFocusPrimaryBorder = "#FFFFFF00"
   let shortcutContainedColorFocusPrimaryLabel = "#FAFAFA"
   let shortcutContainedColorFocusNeutralBackground = "#515151"
   let shortcutContainedColorFocusNeutralBorder = "#FFFFFF00"
   let shortcutContainedColorFocusNeutralLabel = "#FAFAFA"
   let shortcutOutlinedColorEnablePrimaryBackground = "#FFFFFF00"
-  let shortcutOutlinedColorEnablePrimaryBorder = "#F1F1F0"
+  let shortcutOutlinedColorEnablePrimaryBorder = "#F3EADE"
   let shortcutOutlinedColorEnablePrimaryLabel = "#FAFAFA"
   let shortcutOutlinedColorEnableNeutralBackground = "#FFFFFF00"
   let shortcutOutlinedColorEnableNeutralBorder = "#777777"
@@ -514,13 +514,13 @@ struct AesopDarkComponents: Components {
   let shortcutOutlinedColorDisableNeutralBorder = "#777777"
   let shortcutOutlinedColorDisableNeutralLabel = "#777777"
   let shortcutOutlinedColorHoverPrimaryBackground = "#333333"
-  let shortcutOutlinedColorHoverPrimaryBorder = "#BEBEBE"
+  let shortcutOutlinedColorHoverPrimaryBorder = "#C0B8AC"
   let shortcutOutlinedColorHoverPrimaryLabel = "#FAFAFA"
   let shortcutOutlinedColorHoverNeutralBackground = "#333333"
   let shortcutOutlinedColorHoverNeutralBorder = "#BBBBBB"
   let shortcutOutlinedColorHoverNeutralLabel = "#FAFAFA"
   let shortcutOutlinedColorFocusPrimaryBackground = "#515151"
-  let shortcutOutlinedColorFocusPrimaryBorder = "#BEBEBE"
+  let shortcutOutlinedColorFocusPrimaryBorder = "#C0B8AC"
   let shortcutOutlinedColorFocusPrimaryLabel = "#FAFAFA"
   let shortcutOutlinedColorFocusNeutralBackground = "#515151"
   let shortcutOutlinedColorFocusNeutralBorder = "#BBBBBB"
@@ -552,13 +552,13 @@ struct AesopDarkComponents: Components {
   let tagSmallBorderRadiusDisable: CGFloat = 0
   let tagStandardBorderRadiusEnable: CGFloat = 12
   let tagStandardBorderRadiusDisable: CGFloat = 0
-  let tagColorBackgroundPrimary = "#F1F1F0"
-  let tagColorBackgroundSecondary = "#DDCB91"
+  let tagColorBackgroundPrimary = "#F3EADE"
+  let tagColorBackgroundSecondary = "#CBFFD2"
   let tagColorBackgroundSuccess = "#569A32"
   let tagColorBackgroundAlert = "#E74627"
   let tagColorBackgroundWarning = "#FCC433"
   let tagColorBackgroundLink = "#227BBD"
-  let tagColorLabelPrimary = "#000000"
+  let tagColorLabelPrimary = "#333333"
   let tagColorLabelSecondary = "#000000"
   let tagColorLabelSuccess = "#FFFFFF"
   let tagColorLabelAlert = "#FFFFFF"

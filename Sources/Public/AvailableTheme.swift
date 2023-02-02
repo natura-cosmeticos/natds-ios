@@ -11,6 +11,8 @@
       - NaturaLight
       - TheBodyShopDark
       - TheBodyShopLight
+      - ConsultoriaDeBelezaLight
+      - ConsultoriaDeBelezaDark
 */
 
 public enum AvailableTheme {
@@ -22,6 +24,8 @@ public enum AvailableTheme {
     case naturaLight
     case theBodyShopDark
     case theBodyShopLight
+    case consultoriaDeBelezaDark
+    case consultoriaDeBelezaLight
 
     init?(theme: Theme) {
         switch theme {
@@ -33,13 +37,14 @@ public enum AvailableTheme {
         case is NaturaLightTheme: self = .naturaLight
         case is TheBodyShopDarkTheme: self = .theBodyShopDark
         case is TheBodyShopLightTheme: self = .theBodyShopLight
+        case is ConsultoriaDeBelezaDarkTheme: self = .consultoriaDeBelezaDark
+        case is ConsultoriaDeBelezaLightTheme: self = .consultoriaDeBelezaLight
         default: return nil
         }
     }
 
     var newInstance: Theme {
         let instance: Theme
-
         switch self {
         case .aesopDark: instance = AesopDarkTheme()
         case .aesopLight: instance = AesopLightTheme()
@@ -49,8 +54,9 @@ public enum AvailableTheme {
         case .naturaLight: instance = NaturaLightTheme()
         case .theBodyShopDark: instance = TheBodyShopDarkTheme()
         case .theBodyShopLight: instance = TheBodyShopLightTheme()
+        case .consultoriaDeBelezaDark: instance = ConsultoriaDeBelezaDarkTheme()
+        case .consultoriaDeBelezaLight: instance = ConsultoriaDeBelezaLightTheme()
         }
-
         return instance
     }
 }

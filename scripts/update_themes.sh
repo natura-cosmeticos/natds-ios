@@ -14,5 +14,5 @@ curl $domain$version$extension -J -L -o /tmp/natds/Themes.tar.gz
 tar -xzvf /tmp/natds/Themes.tar.gz -C /tmp/natds
 
 # copy themes folder from commons to project source files
-cp -r /tmp/natds/*/packages/natds-themes/build/ios/theme ./Sources/Core/Theme
+cp -r /tmp/natds/*/packages/natds-themes/build/ios/theme/. ./Sources/Core/Theme/BrandsThemes
 echo "Themes copied to project source files"
