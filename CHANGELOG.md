@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [7.7.3](https://github.com/natura-cosmeticos/natds-ios/compare/7.7.2...7.7.3) (2023-02-02)
+
+
+### Bug Fixes
+
+* add tema consultoria de beleza ([187f5f3](https://github.com/natura-cosmeticos/natds-ios/commit/187f5f3e9e29182f12606fea770469dd382ef992))
+* especify iOS version for snapshotTest ([4915db1](https://github.com/natura-cosmeticos/natds-ios/commit/4915db1eecfab0009902447132cce16b6dab15d2))
+* generate snapshot on intel arch ([5360265](https://github.com/natura-cosmeticos/natds-ios/commit/5360265f736d28997b8a824e5df3525af21ee48c))
+* remove lint tuple errors ([7a4e2ce](https://github.com/natura-cosmeticos/natds-ios/commit/7a4e2cea332b2746c1af8d91e3d07e2dbc4f3dda))
+* update snapshot test with new tokens ([df1ffc3](https://github.com/natura-cosmeticos/natds-ios/commit/df1ffc3109bfc858cb0f19b058c58be15f3e00ec))
+
 ### [7.7.2](https://github.com/natura-cosmeticos/natds-ios/compare/7.7.1...7.7.2) (2022-09-20)
 
 
