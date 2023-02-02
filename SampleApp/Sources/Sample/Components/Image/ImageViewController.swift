@@ -5,15 +5,15 @@ class ImageViewController: UIViewController, SampleItem {
     static var name = "Image"
 
     private let cellsViewModel: [ImageCell.ViewModel] = [
-        ("Variant Standard", .standard, .none, nil),
-        ("Variant Highlight", .highlight, .none, nil),
-        ("Radius None", .standard, .none, nil),
-        ("Radius Medium", .standard, .medium, nil),
-        ("Radius Circle", .standard, .circle(imageHeight: 80), nil),
-        ("Fade Top", .standard, .medium, .top),
-        ("Fade Bottom", .standard, .medium, .bottom),
-        ("Fade Left", .standard, .medium, .left),
-        ("Fade Right", .standard, .medium, .right)
+        ImageCell.ViewModel(description: "Variant Standard", variant: .standard, radius: .none, fade: nil),
+        ImageCell.ViewModel(description: "Variant Highlight", variant: .highlight, radius: .none, fade: nil),
+        ImageCell.ViewModel(description: "Radius None", variant: .standard, radius: .none, fade: nil),
+        ImageCell.ViewModel(description: "Radius Medium", variant: .standard, radius: .medium, fade: nil),
+        ImageCell.ViewModel(description: "Radius Circle", variant: .standard, radius: .circle(imageHeight: 80), fade: nil),
+        ImageCell.ViewModel(description: "Fade Top", variant: .standard, radius: .medium, fade: .top),
+        ImageCell.ViewModel(description: "Fade Bottom", variant: .standard, radius: .medium, fade: .bottom),
+        ImageCell.ViewModel(description: "Fade Left", variant: .standard, radius: .medium, fade: .left),
+        ImageCell.ViewModel(description: "Fade Right", variant: .standard, radius: .medium, fade: .right)
     ]
 
     private lazy var tableView: UITableView = {

@@ -13,30 +13,30 @@ final class ColorsViewController: UIViewController, SampleItem {
 
     private let cellsViewModel: [String: [ColorsCell.ViewModel]] = [
         "Primary": [
-            ("primary", NatColors.primary, NatColors.onPrimary, false),
-            ("primaryLight", NatColors.primaryLight, NatColors.onPrimaryLight, false),
-            ("primaryDark", NatColors.primaryDark, NatColors.onPrimaryDark, false)
+            ColorsCell.ViewModel(colorName: "primary", color: NatColors.primary, onColor: NatColors.onPrimary, isTextOnHidden: false),
+            ColorsCell.ViewModel(colorName: "primaryLight", color: NatColors.primaryLight, onColor: NatColors.onPrimaryLight, isTextOnHidden: false),
+            ColorsCell.ViewModel(colorName: "primaryDark", color: NatColors.primaryDark, onColor: NatColors.onPrimaryDark, isTextOnHidden: false)
         ],
         "Secondary": [
-            ("secondary", NatColors.secondary, NatColors.onSecondary, false),
-            ("secondaryLight", NatColors.secondaryLight, NatColors.onSecondaryLight, false),
-            ("secondaryDark", NatColors.secondaryDark, NatColors.onSecondaryDark, false)
+            ColorsCell.ViewModel(colorName: "secondary", color: NatColors.secondary, onColor: NatColors.onSecondary, isTextOnHidden: false),
+            ColorsCell.ViewModel(colorName: "secondaryLight", color: NatColors.secondaryLight, onColor: NatColors.onSecondaryLight, isTextOnHidden: false),
+            ColorsCell.ViewModel(colorName: "secondaryDark", color: NatColors.secondaryDark, onColor: NatColors.onSecondaryDark, isTextOnHidden: false)
         ],
         "Surface": [
-            ("background", NatColors.background, NatColors.onBackground, false),
-            ("surface", NatColors.surface, NatColors.onSurface, false)
+            ColorsCell.ViewModel(colorName: "background", color: NatColors.background, onColor: NatColors.onBackground, isTextOnHidden: false),
+            ColorsCell.ViewModel(colorName: "surface", color: NatColors.surface, onColor: NatColors.onSurface, isTextOnHidden: false)
         ],
         "Content": [
-            ("highlight", NatColors.highlight, NatColors.surface, true),
-            ("highEmphasis", NatColors.highEmphasis, NatColors.surface, true),
-            ("mediumEmphasis", NatColors.mediumEmphasis, NatColors.surface, true),
-            ("lowEmphasis", NatColors.lowEmphasis, NatColors.surface, true)
+            ColorsCell.ViewModel(colorName: "highlight", color: NatColors.highlight, onColor: NatColors.surface, isTextOnHidden: true),
+            ColorsCell.ViewModel(colorName: "highEmphasis", color: NatColors.highEmphasis, onColor: NatColors.surface, isTextOnHidden: true),
+            ColorsCell.ViewModel(colorName: "mediumEmphasis", color: NatColors.mediumEmphasis, onColor: NatColors.surface, isTextOnHidden: true),
+            ColorsCell.ViewModel(colorName: "lowEmphasis", color: NatColors.lowEmphasis, onColor: NatColors.surface, isTextOnHidden: true)
         ],
         "Feedback": [
-            ("success", NatColors.success, NatColors.onSuccess, false),
-            ("warning", NatColors.warning, NatColors.onWarning, false),
-            ("alert", NatColors.alert, NatColors.onAlert, false),
-            ("link", NatColors.link, NatColors.onLink, false)
+            ColorsCell.ViewModel(colorName: "success", color: NatColors.success, onColor: NatColors.onSuccess, isTextOnHidden: false),
+            ColorsCell.ViewModel(colorName: "warning", color: NatColors.warning, onColor: NatColors.onWarning, isTextOnHidden: false),
+            ColorsCell.ViewModel(colorName: "alert", color: NatColors.alert, onColor: NatColors.onAlert, isTextOnHidden: false),
+            ColorsCell.ViewModel(colorName: "link", color: NatColors.link, onColor: NatColors.onLink, isTextOnHidden: false)
         ]
     ]
 
