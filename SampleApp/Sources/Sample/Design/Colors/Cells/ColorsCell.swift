@@ -2,7 +2,12 @@ import UIKit
 import NatDS
 
 final class ColorsCell: UITableViewCell {
-    typealias ViewModel = (colorName: String, color: UIColor, onColor: UIColor, isTextOnHidden: Bool)
+    struct ViewModel {
+        var colorName: String
+        var color: UIColor
+        var onColor: UIColor
+        var isTextOnHidden: Bool
+    }
 
     private let nameLabel: UILabel = {
         let label = UILabel()

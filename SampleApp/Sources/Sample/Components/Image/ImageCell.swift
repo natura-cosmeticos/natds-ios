@@ -2,11 +2,12 @@ import UIKit
 import NatDS
 
 final class ImageCell: UITableViewCell {
-    typealias ViewModel = (description: String,
-                           variant: NatImage.ImageType,
-                           radius: NatImage.ImageRadius,
-                           fade: NatImage.ImageFadeDirection?)
-
+    struct ViewModel {
+        var description: String
+        var variant: NatImage.ImageType
+        var radius: NatImage.ImageRadius
+        var fade: NatImage.ImageFadeDirection?
+    }
     private let nameLabel: UILabel = {
         let label = UILabel()
         label.font = NatFonts.font(ofSize: .body1, withWeight: .regular)

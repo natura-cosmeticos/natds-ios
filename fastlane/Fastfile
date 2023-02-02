@@ -49,7 +49,7 @@ platform :ios do
     scan(
       workspace: workspace_path,
       scheme: scheme_snapshot,
-      destination: "platform=iOS Simulator,name=iPhone SE (3rd generation)",
+      destination: "platform=iOS Simulator,name=iPhone SE (3rd generation),OS=15.5",
       skip_detect_devices: true
     )
   end
