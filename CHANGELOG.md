@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [7.8.1](https://github.com/natura-cosmeticos/natds-ios/compare/7.8.0...7.8.1) (2023-02-03)
+
+
+### Bug Fixes
+
+* remove duplicated files ([c1b36e5](https://github.com/natura-cosmeticos/natds-ios/commit/c1b36e56573a8ab53e2c2e976f4c183b788f43d8))
+
 ## [7.8.0](https://github.com/natura-cosmeticos/natds-ios/compare/7.7.3...7.8.0) (2023-02-03)
 
 
