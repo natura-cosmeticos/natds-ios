@@ -10,13 +10,13 @@ final class ChooseBrandCell: UITableViewCell {
         view.backgroundColor = .white
         view.layer.cornerRadius = NatBorderRadius.medium
         view.translatesAutoresizingMaskIntoConstraints = false
-
         return view
     }()
 
     private let brandImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFit
 
         return imageView
     }()
@@ -64,7 +64,12 @@ extension ChooseBrandCell {
             cardView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: NatSpacing.small),
 
             brandImageView.centerXAnchor.constraint(equalTo: cardView.centerXAnchor),
-            brandImageView.centerYAnchor.constraint(equalTo: cardView.centerYAnchor)
+            brandImageView.centerYAnchor.constraint(equalTo: cardView.centerYAnchor),
+            brandImageView.topAnchor.constraint(equalTo: cardView.topAnchor, constant: NatSpacing.tiny),
+            brandImageView.leadingAnchor.constraint(equalTo: cardView.leadingAnchor),
+            brandImageView.trailingAnchor.constraint(equalTo: cardView.trailingAnchor),
+            brandImageView.bottomAnchor.constraint(equalTo: cardView.bottomAnchor, constant: -NatSpacing.tiny)
+
         ])
     }
 }
