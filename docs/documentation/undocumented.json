@@ -44,57 +44,71 @@
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/AvailableTheme.swift",
-      "line": 17,
+      "line": 19,
       "symbol": "AvailableTheme.aesopDark",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/AvailableTheme.swift",
-      "line": 18,
+      "line": 20,
       "symbol": "AvailableTheme.aesopLight",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/AvailableTheme.swift",
-      "line": 19,
+      "line": 21,
       "symbol": "AvailableTheme.avonDark",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/AvailableTheme.swift",
-      "line": 20,
+      "line": 22,
       "symbol": "AvailableTheme.avonLight",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/AvailableTheme.swift",
-      "line": 21,
+      "line": 23,
       "symbol": "AvailableTheme.naturaDark",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/AvailableTheme.swift",
-      "line": 22,
+      "line": 24,
       "symbol": "AvailableTheme.naturaLight",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/AvailableTheme.swift",
-      "line": 23,
+      "line": 25,
       "symbol": "AvailableTheme.theBodyShopDark",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/AvailableTheme.swift",
-      "line": 24,
+      "line": 26,
       "symbol": "AvailableTheme.theBodyShopLight",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/AvailableTheme.swift",
+      "line": 27,
+      "symbol": "AvailableTheme.consultoriaDeBelezaDark",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/AvailableTheme.swift",
+      "line": 28,
+      "symbol": "AvailableTheme.consultoriaDeBelezaLight",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
