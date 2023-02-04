@@ -12,6 +12,7 @@ class IconographyItemViewController: UIViewController, SampleItem {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.collectionViewLayout = layout
         collectionView.dataSource = self
+        collectionView.delegate = self
         collectionView.register(IconCollectionViewCell.self)
         collectionView.backgroundColor = .clear
 
@@ -43,7 +44,7 @@ class IconographyItemViewController: UIViewController, SampleItem {
     }
 }
 
-extension IconographyItemViewController: UICollectionViewDataSource {
+extension IconographyItemViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         getAllIcons().count
     }
@@ -54,5 +55,15 @@ extension IconographyItemViewController: UICollectionViewDataSource {
 
         view.icon = getAllIcons()[indexPath.row]
         return view
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let icon = NatDSIcons.Icon.allCases[indexPath.row]
+
+        let snackbar = NatSnackbar()
+        snackbar.configure(body: icon.rawValue)
+        snackbar.configure(icon: getIcon(icon))
+
+        snackbar.present(from: self)
     }
 }
