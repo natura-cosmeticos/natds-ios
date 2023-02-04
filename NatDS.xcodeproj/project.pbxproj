@@ -122,6 +122,8 @@
 		79B3CDA9298EA78700A02122 /* NatSnackbar+Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3CDA8298EA78700A02122 /* NatSnackbar+Position.swift */; };
 		79B3CDAB298EA7AE00A02122 /* NatSnackbar+Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3CDAA298EA7AE00A02122 /* NatSnackbar+Timer.swift */; };
 		79B3CDAD298EA7B700A02122 /* NatSnackbar+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3CDAC298EA7B700A02122 /* NatSnackbar+Animation.swift */; };
+		79B3CDB0298EDC5500A02122 /* NatSnackbar+PublicMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3CDAF298EDC5500A02122 /* NatSnackbar+PublicMethods.swift */; };
+		79B3CDB2298EDC6500A02122 /* NatSnackbar+PrivateMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3CDB1298EDC6500A02122 /* NatSnackbar+PrivateMethods.swift */; };
 		79B6AC6C25AC8BF90027F7D6 /* AssetsPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B6AC6B25AC8BF90027F7D6 /* AssetsPath.swift */; };
 		79B6AC7D25AE1BDC0027F7D6 /* NatBadge+Dot+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B6AC7C25AE1BDC0027F7D6 /* NatBadge+Dot+Spec.swift */; };
 		79B6AC8525AE1E520027F7D6 /* NatBadge+Dot+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B6AC8425AE1E520027F7D6 /* NatBadge+Dot+Snapshot+Tests.swift */; };
@@ -595,6 +597,8 @@
 		79B3CDA8298EA78700A02122 /* NatSnackbar+Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NatSnackbar+Position.swift"; sourceTree = "<group>"; };
 		79B3CDAA298EA7AE00A02122 /* NatSnackbar+Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NatSnackbar+Timer.swift"; sourceTree = "<group>"; };
 		79B3CDAC298EA7B700A02122 /* NatSnackbar+Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NatSnackbar+Animation.swift"; sourceTree = "<group>"; };
+		79B3CDAF298EDC5500A02122 /* NatSnackbar+PublicMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatSnackbar+PublicMethods.swift"; sourceTree = "<group>"; };
+		79B3CDB1298EDC6500A02122 /* NatSnackbar+PrivateMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NatSnackbar+PrivateMethods.swift"; sourceTree = "<group>"; };
 		79B6AC6B25AC8BF90027F7D6 /* AssetsPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsPath.swift; sourceTree = "<group>"; };
 		79B6AC7C25AE1BDC0027F7D6 /* NatBadge+Dot+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatBadge+Dot+Spec.swift"; sourceTree = "<group>"; };
 		79B6AC8425AE1E520027F7D6 /* NatBadge+Dot+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatBadge+Dot+Snapshot+Tests.swift"; sourceTree = "<group>"; };
@@ -1542,6 +1546,7 @@
 		79B3CD9E298E94C500A02122 /* Snackbar */ = {
 			isa = PBXGroup;
 			children = (
+				79B3CDAE298EDC3800A02122 /* Methods */,
 				79B3CD9F298E975800A02122 /* NatSnackbar.swift */,
 				79B3CDA4298EA2C700A02122 /* NatSnackbar+ActionButton.swift */,
 				79B3CDA6298EA60700A02122 /* NatSnackbar+Feedback.swift */,
@@ -1550,6 +1555,15 @@
 				79B3CDAC298EA7B700A02122 /* NatSnackbar+Animation.swift */,
 			);
 			path = Snackbar;
+			sourceTree = "<group>";
+		};
+		79B3CDAE298EDC3800A02122 /* Methods */ = {
+			isa = PBXGroup;
+			children = (
+				79B3CDAF298EDC5500A02122 /* NatSnackbar+PublicMethods.swift */,
+				79B3CDB1298EDC6500A02122 /* NatSnackbar+PrivateMethods.swift */,
+			);
+			path = Methods;
 			sourceTree = "<group>";
 		};
 		79D4C8F625F6B1B00027E74E /* Checkbox */ = {
@@ -3580,6 +3594,7 @@
 				7D968E1726AF12E600DE9A78 /* NatSelectorProtocol.swift in Sources */,
 				40B14F67117654B7854317119E5B3509 /* ConfigurationStorage.swift in Sources */,
 				79FC593A25BF5894001CCB56 /* NatRadioButtonControl.swift in Sources */,
+				79B3CDB0298EDC5500A02122 /* NatSnackbar+PublicMethods.swift in Sources */,
 				7D9838BD25F8F70300A99628 /* NatListItem.swift in Sources */,
 				84BC901C24AB7445007DF09D /* NatDialogDismissableConfigurable.swift in Sources */,
 				AB9CCFDF8B930FD49AFAEAE1BB5CA718 /* DesignSystem.swift in Sources */,
@@ -3691,6 +3706,7 @@
 				604835F2975D92A9D2EF46132C17C0A5 /* Tab.swift in Sources */,
 				AAA3820978AE27C3A6ED940916227C9D /* TabItemView.swift in Sources */,
 				0839F976298C794B00FDCC91 /* ConsultoriaDeBelezaLightTheme.swift in Sources */,
+				79B3CDB2298EDC6500A02122 /* NatSnackbar+PrivateMethods.swift in Sources */,
 				79FC59DD25DAB0BE001CCB56 /* NatImage.swift in Sources */,
 				79B3CDAB298EA7AE00A02122 /* NatSnackbar+Timer.swift in Sources */,
 				8409854724F02B230095D6AD /* Notification+Name+ThemeHasChanged.swift in Sources */,

@@ -18,6 +18,19 @@ extension NatSnackbar {
         case minimum
         case intermediary
         case indeterminate
-        case custom(Int)
+        case custom(TimeInterval)
+        
+        var interval: TimeInterval? {
+            switch self {
+            case .minimum:
+                return 5
+            case .intermediary:
+                return 10
+            case .indeterminate:
+                return nil
+            case .custom(let interval):
+                return interval
+            }
+        }
     }
 }
