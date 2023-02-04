@@ -26,6 +26,7 @@ class ComponentsSection: SampleSection {
         RatingItemViewController.self,
         NatSelectItemViewController.self,
         ShortcutItemViewController.self,
+        SnackbarItemViewController.self,
         SwitchViewController.self,
         TabItemViewController.self,
         TagViewController.self,

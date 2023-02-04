@@ -116,6 +116,12 @@
 		799B683C256720890055B96D /* ProgressIndicatorCircular+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799B683B256720890055B96D /* ProgressIndicatorCircular+Snapshot+Tests.swift */; };
 		79ACDAB62555D9B500660E68 /* NatButton+SnapShot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ACDAB52555D9B500660E68 /* NatButton+SnapShot+Tests.swift */; };
 		79ACDADF255C336E00660E68 /* NatProgressIndicatorCircular.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ACDADE255C336E00660E68 /* NatProgressIndicatorCircular.swift */; };
+		79B3CDA0298E975800A02122 /* NatSnackbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3CD9F298E975800A02122 /* NatSnackbar.swift */; };
+		79B3CDA5298EA2C700A02122 /* NatSnackbar+ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3CDA4298EA2C700A02122 /* NatSnackbar+ActionButton.swift */; };
+		79B3CDA7298EA60700A02122 /* NatSnackbar+Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3CDA6298EA60700A02122 /* NatSnackbar+Feedback.swift */; };
+		79B3CDA9298EA78700A02122 /* NatSnackbar+Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3CDA8298EA78700A02122 /* NatSnackbar+Position.swift */; };
+		79B3CDAB298EA7AE00A02122 /* NatSnackbar+Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3CDAA298EA7AE00A02122 /* NatSnackbar+Timer.swift */; };
+		79B3CDAD298EA7B700A02122 /* NatSnackbar+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3CDAC298EA7B700A02122 /* NatSnackbar+Animation.swift */; };
 		79B6AC6C25AC8BF90027F7D6 /* AssetsPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B6AC6B25AC8BF90027F7D6 /* AssetsPath.swift */; };
 		79B6AC7D25AE1BDC0027F7D6 /* NatBadge+Dot+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B6AC7C25AE1BDC0027F7D6 /* NatBadge+Dot+Spec.swift */; };
 		79B6AC8525AE1E520027F7D6 /* NatBadge+Dot+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B6AC8425AE1E520027F7D6 /* NatBadge+Dot+Snapshot+Tests.swift */; };
@@ -583,6 +589,12 @@
 		799B683B256720890055B96D /* ProgressIndicatorCircular+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProgressIndicatorCircular+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		79ACDAB52555D9B500660E68 /* NatButton+SnapShot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+SnapShot+Tests.swift"; sourceTree = "<group>"; };
 		79ACDADE255C336E00660E68 /* NatProgressIndicatorCircular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatProgressIndicatorCircular.swift; sourceTree = "<group>"; };
+		79B3CD9F298E975800A02122 /* NatSnackbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatSnackbar.swift; sourceTree = "<group>"; };
+		79B3CDA4298EA2C700A02122 /* NatSnackbar+ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatSnackbar+ActionButton.swift"; sourceTree = "<group>"; };
+		79B3CDA6298EA60700A02122 /* NatSnackbar+Feedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NatSnackbar+Feedback.swift"; sourceTree = "<group>"; };
+		79B3CDA8298EA78700A02122 /* NatSnackbar+Position.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NatSnackbar+Position.swift"; sourceTree = "<group>"; };
+		79B3CDAA298EA7AE00A02122 /* NatSnackbar+Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NatSnackbar+Timer.swift"; sourceTree = "<group>"; };
+		79B3CDAC298EA7B700A02122 /* NatSnackbar+Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NatSnackbar+Animation.swift"; sourceTree = "<group>"; };
 		79B6AC6B25AC8BF90027F7D6 /* AssetsPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsPath.swift; sourceTree = "<group>"; };
 		79B6AC7C25AE1BDC0027F7D6 /* NatBadge+Dot+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatBadge+Dot+Spec.swift"; sourceTree = "<group>"; };
 		79B6AC8425AE1E520027F7D6 /* NatBadge+Dot+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatBadge+Dot+Snapshot+Tests.swift"; sourceTree = "<group>"; };
@@ -1525,6 +1537,19 @@
 				42FC9280C40680336260347DADB5C0F3 /* Pulsable.swift */,
 			);
 			path = Animations;
+			sourceTree = "<group>";
+		};
+		79B3CD9E298E94C500A02122 /* Snackbar */ = {
+			isa = PBXGroup;
+			children = (
+				79B3CD9F298E975800A02122 /* NatSnackbar.swift */,
+				79B3CDA4298EA2C700A02122 /* NatSnackbar+ActionButton.swift */,
+				79B3CDA6298EA60700A02122 /* NatSnackbar+Feedback.swift */,
+				79B3CDA8298EA78700A02122 /* NatSnackbar+Position.swift */,
+				79B3CDAA298EA7AE00A02122 /* NatSnackbar+Timer.swift */,
+				79B3CDAC298EA7B700A02122 /* NatSnackbar+Animation.swift */,
+			);
+			path = Snackbar;
 			sourceTree = "<group>";
 		};
 		79D4C8F625F6B1B00027E74E /* Checkbox */ = {
@@ -2644,6 +2669,7 @@
 				DC2A136A2844B27300485682 /* Select */,
 				BEDF931B2593815900F54C50 /* SelectionControl */,
 				844A1E2124AE111D00E93AD9 /* Shortcut */,
+				79B3CD9E298E94C500A02122 /* Snackbar */,
 				DCDEE9362825880D005B7747 /* Switch */,
 				1C64E7FC7AE243CD11623B12CB2E59B4 /* Tab */,
 				26BFBAD525125195006C22E2 /* Tag */,
@@ -3509,6 +3535,7 @@
 				BEDF93372593D28400F54C50 /* NatCheckboxControl.swift in Sources */,
 				0839F98E298C8B6200FDCC91 /* AvonDarkTheme.swift in Sources */,
 				7D31C11A2615162300EED32A /* NatRating+Alignment.swift in Sources */,
+				79B3CDAD298EA7B700A02122 /* NatSnackbar+Animation.swift in Sources */,
 				7D277B68269E43A1005075EF /* DialogBodyView.swift in Sources */,
 				845D099A250119AF00B05760 /* UIView+CenterBounds.swift in Sources */,
 				7DE2B12C26000BA600C5CBC0 /* UIImageView+Clickable.swift in Sources */,
@@ -3521,6 +3548,7 @@
 				7DC81CB126121EAC006BE689 /* NatRating.swift in Sources */,
 				84BC901524AA17C0007DF09D /* NatDialogBodyConfigurable.swift in Sources */,
 				7D5F149A25A782AB007986EE /* IconsSource.swift in Sources */,
+				79B3CDA9298EA78700A02122 /* NatSnackbar+Position.swift in Sources */,
 				7D8F3E6A258A81C1003A7DEB /* ShortcutView.swift in Sources */,
 				8409854C24F030930095D6AD /* NotificationCenterObservable.swift in Sources */,
 				79FC594425BF58E4001CCB56 /* NatRadioButtonContainer.swift in Sources */,
@@ -3546,6 +3574,7 @@
 				000598F48ADE170D305737C11E3F2D99 /* ButtonTextStyle.swift in Sources */,
 				845D09952501193500B05760 /* NatIconButton+Sizes.swift in Sources */,
 				0839F992298C8B6200FDCC91 /* TheBodyShopDarkTheme.swift in Sources */,
+				79B3CDA5298EA2C700A02122 /* NatSnackbar+ActionButton.swift in Sources */,
 				7D5349F226C6BBA600F88EA7 /* UIImage+URL.swift in Sources */,
 				7D277B63269E2551005075EF /* DialogHeaderView.swift in Sources */,
 				7D968E1726AF12E600DE9A78 /* NatSelectorProtocol.swift in Sources */,
@@ -3613,6 +3642,7 @@
 				7DFC9EC626F3EC5200052C54 /* IconFontStyle.swift in Sources */,
 				0839F98F298C8B6200FDCC91 /* AvonLightTheme.swift in Sources */,
 				7C00D9B09D306A421DBD99953C7BC9E4 /* NatElevation.swift in Sources */,
+				79B3CDA7298EA60700A02122 /* NatSnackbar+Feedback.swift in Sources */,
 				F7894B76EE9A0F4726C5DF88653A4816 /* NatFonts.swift in Sources */,
 				2600C22025129C880040C4C4 /* NatTag+Style.swift in Sources */,
 				81AA5DF0A9D5F332072CA1EC9C5CF968 /* NatOpacities.swift in Sources */,
@@ -3662,6 +3692,7 @@
 				AAA3820978AE27C3A6ED940916227C9D /* TabItemView.swift in Sources */,
 				0839F976298C794B00FDCC91 /* ConsultoriaDeBelezaLightTheme.swift in Sources */,
 				79FC59DD25DAB0BE001CCB56 /* NatImage.swift in Sources */,
+				79B3CDAB298EA7AE00A02122 /* NatSnackbar+Timer.swift in Sources */,
 				8409854724F02B230095D6AD /* Notification+Name+ThemeHasChanged.swift in Sources */,
 				5C0716F242EFC1AF6A61CBE257DA7CFE /* TextField.swift in Sources */,
 				79EA0C20260A85DE00742C0A /* NatCounterButton.swift in Sources */,
@@ -3678,6 +3709,7 @@
 				7D394CD42674083700582030 /* AppBarColor.swift in Sources */,
 				269C886624C2480800A507BE /* UIViewController+Configure.swift in Sources */,
 				93B1D8CFBB1420174B310CC4906AA2EF /* UIView+Frame.swift in Sources */,
+				79B3CDA0298E975800A02122 /* NatSnackbar.swift in Sources */,
 				77C55B339CA403354D76ABF05E283D5A /* ValueTextHighlight.swift in Sources */,
 				7DAF750E25E5AF830094F865 /* String+Initials.swift in Sources */,
 				840B6A754236624B9738CBC3D5CFE895 /* ViewAnimatingWrapper.swift in Sources */,
