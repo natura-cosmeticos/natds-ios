@@ -124,6 +124,7 @@
 		79B3CDAD298EA7B700A02122 /* NatSnackbar+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3CDAC298EA7B700A02122 /* NatSnackbar+Animation.swift */; };
 		79B3CDB0298EDC5500A02122 /* NatSnackbar+PublicMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3CDAF298EDC5500A02122 /* NatSnackbar+PublicMethods.swift */; };
 		79B3CDB2298EDC6500A02122 /* NatSnackbar+PrivateMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3CDB1298EDC6500A02122 /* NatSnackbar+PrivateMethods.swift */; };
+		79B3CDB8298F203700A02122 /* NatSnackbar+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B3CDB6298F201E00A02122 /* NatSnackbar+Spec.swift */; };
 		79B6AC6C25AC8BF90027F7D6 /* AssetsPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B6AC6B25AC8BF90027F7D6 /* AssetsPath.swift */; };
 		79B6AC7D25AE1BDC0027F7D6 /* NatBadge+Dot+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B6AC7C25AE1BDC0027F7D6 /* NatBadge+Dot+Spec.swift */; };
 		79B6AC8525AE1E520027F7D6 /* NatBadge+Dot+Snapshot+Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B6AC8425AE1E520027F7D6 /* NatBadge+Dot+Snapshot+Tests.swift */; };
@@ -599,6 +600,7 @@
 		79B3CDAC298EA7B700A02122 /* NatSnackbar+Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NatSnackbar+Animation.swift"; sourceTree = "<group>"; };
 		79B3CDAF298EDC5500A02122 /* NatSnackbar+PublicMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatSnackbar+PublicMethods.swift"; sourceTree = "<group>"; };
 		79B3CDB1298EDC6500A02122 /* NatSnackbar+PrivateMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NatSnackbar+PrivateMethods.swift"; sourceTree = "<group>"; };
+		79B3CDB6298F201E00A02122 /* NatSnackbar+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatSnackbar+Spec.swift"; sourceTree = "<group>"; };
 		79B6AC6B25AC8BF90027F7D6 /* AssetsPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsPath.swift; sourceTree = "<group>"; };
 		79B6AC7C25AE1BDC0027F7D6 /* NatBadge+Dot+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatBadge+Dot+Spec.swift"; sourceTree = "<group>"; };
 		79B6AC8425AE1E520027F7D6 /* NatBadge+Dot+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatBadge+Dot+Snapshot+Tests.swift"; sourceTree = "<group>"; };
@@ -1564,6 +1566,14 @@
 				79B3CDB1298EDC6500A02122 /* NatSnackbar+PrivateMethods.swift */,
 			);
 			path = Methods;
+			sourceTree = "<group>";
+		};
+		79B3CDB5298F1FFD00A02122 /* Snackbar */ = {
+			isa = PBXGroup;
+			children = (
+				79B3CDB6298F201E00A02122 /* NatSnackbar+Spec.swift */,
+			);
+			path = Snackbar;
 			sourceTree = "<group>";
 		};
 		79D4C8F625F6B1B00027E74E /* Checkbox */ = {
@@ -2624,6 +2634,7 @@
 				7D903890261B4EB6005A3D0A /* Rating */,
 				BE272C2F259B67C300060AF8 /* SelectionControl */,
 				84BF066F24B511F600462AC5 /* Shortcut */,
+				79B3CDB5298F1FFD00A02122 /* Snackbar */,
 				DC724B7B282CA4A000C8F090 /* Switch */,
 				28B8CBEE15559C8DBD459A3FC53141DB /* Tab */,
 				26BFBAD82512736F006C22E2 /* Tag */,
@@ -3417,6 +3428,7 @@
 				79E7FB942538EB8000A831BC /* TheBodyShopLightTokens+Color+Spec.swift in Sources */,
 				79E7FAF52538935B00A831BC /* AvonDarkTokens+Spacing+Spec.swift in Sources */,
 				60B6A40046E3479DEC3808473AF0D08B /* NatSizes+Spec.swift in Sources */,
+				79B3CDB8298F203700A02122 /* NatSnackbar+Spec.swift in Sources */,
 				84932F1624EABB190052265F /* AvailableTheme+Spec.swift in Sources */,
 				165E49381ECDC5C699C3496C7C3EA66A /* NatSpacing+Spec.swift in Sources */,
 				79E7FB4E2538D06C00A831BC /* NaturaLightTokens+Size+Spec.swift in Sources */,
