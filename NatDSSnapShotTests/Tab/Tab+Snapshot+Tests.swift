@@ -30,6 +30,7 @@ final class TabSnapshotTests: XCTestCase {
         systemUnderTest.insertTab(title: "AVON")
         systemUnderTest.insertTab(title: "THE BODY SHOP")
         systemUnderTest.insertTab(title: "AĒSOP")
+        systemUnderTest.configure(elevation: true)
 
         assertSnapshot(matching: superView, as: .image(precision: 0.95))
     }
@@ -38,6 +39,7 @@ final class TabSnapshotTests: XCTestCase {
         systemUnderTest.insertTab(title: "AVON")
         systemUnderTest.insertTab(title: "THE BODY SHOP")
         systemUnderTest.selectedSegmentedIndex = 1
+        systemUnderTest.configure(elevation: true)
 
         assertSnapshot(matching: superView, as: .image(precision: 0.95))
     }
@@ -47,6 +49,7 @@ final class TabSnapshotTests: XCTestCase {
         systemUnderTest.insertTab(title: "THE BODY SHOP")
         systemUnderTest.insertTab(title: "AĒSOP")
         systemUnderTest.selectedSegmentedIndex = 1
+        systemUnderTest.configure(elevation: true)
 
         assertSnapshot(matching: superView, as: .image(precision: 0.95))
     }
@@ -59,6 +62,7 @@ final class TabSnapshotTests: XCTestCase {
         systemUnderTest.insertTab(title: "NATURA&CO")
         systemUnderTest.configure(position: .scrollable)
         systemUnderTest.selectedSegmentedIndex = 0
+        systemUnderTest.configure(elevation: true)
 
         assertSnapshot(matching: superView, as: .image(precision: 0.95))
     }
@@ -71,6 +75,8 @@ final class TabSnapshotTests: XCTestCase {
         systemUnderTest.insertTab(title: "NATURA&CO")
         systemUnderTest.configure(position: .scrollable)
         systemUnderTest.selectedSegmentedIndex = 3
+        systemUnderTest.configure(elevation: true)
+        
         assertSnapshot(matching: superView, as: .image(precision: 0.95))
     }
 
@@ -79,6 +85,7 @@ final class TabSnapshotTests: XCTestCase {
         systemUnderTest.insertTab(title: "THE BODY SHOP")
         systemUnderTest.insertTab(title: "AĒSOP")
         systemUnderTest.configure(position: .fixed)
+        systemUnderTest.configure(elevation: true)
 
         assertSnapshot(matching: superView, as: .image(precision: 0.95))
     }
@@ -90,7 +97,19 @@ final class TabSnapshotTests: XCTestCase {
         systemUnderTest.insertTab(title: "NATURA")
         systemUnderTest.insertTab(title: "NATURA&CO")
         systemUnderTest.configure(position: .scrollable)
+        systemUnderTest.configure(elevation: true)
 
+        assertSnapshot(matching: superView, as: .image(precision: 0.95))
+    }
+    
+    func test_WhenPositionIsScrollableAndNoSetElevation() {
+        systemUnderTest.insertTab(title: "AVON")
+        systemUnderTest.insertTab(title: "THE BODY SHOP")
+        systemUnderTest.insertTab(title: "AĒSOP")
+        systemUnderTest.insertTab(title: "NATURA")
+        systemUnderTest.insertTab(title: "NATURA&CO")
+        systemUnderTest.configure(position: .scrollable)
+        
         assertSnapshot(matching: superView, as: .image(precision: 0.95))
     }
 }
