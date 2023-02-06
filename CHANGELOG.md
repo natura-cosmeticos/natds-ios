@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [7.9.0](https://github.com/natura-cosmeticos/natds-ios/compare/7.8.1...7.9.0) (2023-02-06)
+
+
+### Features
+
+* add method to configure tab elevation ([1166552](https://github.com/natura-cosmeticos/natds-ios/commit/1166552e4c2f67231c5f651775d03f3647489705))
+
 ### [7.8.1](https://github.com/natura-cosmeticos/natds-ios/compare/7.8.0...7.8.1) (2023-02-03)
 
 
