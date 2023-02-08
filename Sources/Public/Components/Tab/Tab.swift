@@ -64,6 +64,7 @@ public class Tab: UIView {
         let scrollView = UIScrollView()
         scrollView.alwaysBounceHorizontal = true
         scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.backgroundColor = NatColors.surface
         return scrollView
     }()
 
@@ -116,7 +117,8 @@ extension Tab {
         addScrollView()
         addStackView()
         addIndicatorView()
-        setShadow()
+        configure(elevation: false)
+        setupUI()
     }
 
     private func addScrollView() {
@@ -139,7 +141,7 @@ extension Tab {
             stackView.topAnchor.constraint(equalTo: scrollView.topAnchor),
             stackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
             stackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
-            stackView.heightAnchor.constraint(equalToConstant: NatSizes.medium)
+            stackView.heightAnchor.constraint(equalTo: scrollView.heightAnchor)
         ])
         stackWidthConstraint = stackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor)
         stackWidthConstraint?.isActive = true
@@ -153,13 +155,8 @@ extension Tab {
         ])
     }
 
-    private func setShadow() {
-        scrollView.backgroundColor = .white
-        scrollView.layer.shadowRadius = 2.0
-        scrollView.layer.shadowOpacity = 0.14
-        scrollView.layer.masksToBounds = false
-        scrollView.layer.shadowColor = NatColors.highlight.cgColor
-        scrollView.layer.shadowOffset = CGSize(width: 0, height: 3)
+    private func setupUI() {
+        self.backgroundColor = NatColors.surface
     }
 }
 
@@ -234,8 +231,22 @@ extension Tab {
             stackWidthConstraint?.isActive = false
         }
     }
+    
+    /// Sets if the tab has elevation
+    /// - Parameter elevation: a bool that indicates if the tab has elevation
+    ///
+    /// Example of usage:
+    /// ```
+    /// Tab.configure(elevation: true)
+    /// ```
+    public func configure(elevation: Bool) {
+        if elevation {
+            NatElevation.apply(on: self, elevation: .micro)
+        } else {
+            NatElevation.apply(on: self, elevation: .none)
+        }
+    }
 }
-
 extension Tab: TabItemViewDelegate {
 
     func didTapTabItem(_ tabItemView: TabItemView) {

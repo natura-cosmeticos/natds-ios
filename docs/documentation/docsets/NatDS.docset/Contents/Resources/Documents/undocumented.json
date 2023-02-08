@@ -2445,28 +2445,28 @@
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Tab/Tab.swift",
-      "line": 85,
+      "line": 86,
       "symbol": "Tab.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Tab/Tab.swift",
-      "line": 96,
+      "line": 97,
       "symbol": "Tab",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Tab/Tab.swift",
-      "line": 98,
+      "line": 99,
       "symbol": "Tab.insertTab(title:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Tab/Tab.swift",
-      "line": 166,
+      "line": 163,
       "symbol": "Tab",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"

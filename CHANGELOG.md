@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [7.10.0](https://github.com/natura-cosmeticos/natds-ios/compare/7.9.0...7.10.0) (2023-02-06)
+
+
+### Features
+
+* add consultoria de beleza resources ([d9290c0](https://github.com/natura-cosmeticos/natds-ios/commit/d9290c01377bc78b9db397b2cf20817606f1c8c1))
+* update consultoria de beleza tokens ([434d8f0](https://github.com/natura-cosmeticos/natds-ios/commit/434d8f0d35a480f77fb0b025a1684e6910dfac36))
+
+## [7.9.0](https://github.com/natura-cosmeticos/natds-ios/compare/7.8.1...7.9.0) (2023-02-06)
+
+
+### Features
+
+* add method to configure tab elevation ([1166552](https://github.com/natura-cosmeticos/natds-ios/commit/1166552e4c2f67231c5f651775d03f3647489705))
+
 ### [7.8.1](https://github.com/natura-cosmeticos/natds-ios/compare/7.8.0...7.8.1) (2023-02-03)
 
 

@@ -13,6 +13,7 @@ class TabItemViewController: UIViewController, SampleItem {
     }()
     private let scrollableTab = Tab()
     private let fixedTab = Tab()
+    private let scrollableTabWithoutElevation = Tab()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,7 @@ class TabItemViewController: UIViewController, SampleItem {
         fixedTab.insertTab(title: "THE BODY SHOP")
         fixedTab.insertTab(title: "AĒSOP")
         fixedTab.configure(position: .fixed)
+        fixedTab.configure(elevation: true)
         // fixedTab.selectedSegmentedIndex = 1
 
         // Scrollable
@@ -42,7 +44,19 @@ class TabItemViewController: UIViewController, SampleItem {
         scrollableTab.insertTab(title: "NATURA")
         scrollableTab.insertTab(title: "NATURA&CO")
         scrollableTab.configure(position: .scrollable)
+        scrollableTab.configure(elevation: true)
         //scrollableTab.selectedSegmentedIndex = 1
+        
+        // ScrollableWithoutElevation
+        addTab(tab: scrollableTabWithoutElevation)
+        scrollableTabWithoutElevation.delegate = self
+        scrollableTabWithoutElevation.insertTab(title: "NATURA&CO")
+        scrollableTabWithoutElevation.insertTab(title: "NATURA")
+        scrollableTabWithoutElevation.insertTab(title: "AVON")
+        scrollableTabWithoutElevation.insertTab(title: "AĒSOP")
+        scrollableTabWithoutElevation.insertTab(title: "THE BODY SHOP")
+        scrollableTabWithoutElevation.configure(position: .scrollable)
+        //scrollableTabWithoutElevation.selectedSegmentedIndex = 1
     }
     private func addStackView() {
         view.addSubview(stackView)
