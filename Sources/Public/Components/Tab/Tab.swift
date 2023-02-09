@@ -70,7 +70,7 @@ public class Tab: UIView {
 
     private lazy var indicatorView: UIView = {
         let view = UIView()
-        view.backgroundColor = NatColors.secondary
+        view.backgroundColor = NatColors.primary
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
