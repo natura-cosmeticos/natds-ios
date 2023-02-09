@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [7.10.1](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.0...7.10.1) (2023-02-09)
+
+
+### Bug Fixes
+
+* change color token ([612a009](https://github.com/natura-cosmeticos/natds-ios/commit/612a0097a83676b8df099b165243f12dc1c2e6a6))
+
 ## [7.10.0](https://github.com/natura-cosmeticos/natds-ios/compare/7.9.0...7.10.0) (2023-02-06)
 
 
