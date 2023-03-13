@@ -21,7 +21,7 @@ final class TheBodyShopLightTokensColorSpec: QuickSpec {
 
         describe("#colorPrimaryLight") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorPrimaryLight).to(equal("#356D60"))
+                expect(systemUnderTest.colorPrimaryLight).to(equal("#2B6258"))
             }
         }
 
@@ -33,7 +33,7 @@ final class TheBodyShopLightTokensColorSpec: QuickSpec {
 
         describe("#colorPrimaryDark") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorPrimaryDark).to(equal("#001D10"))
+                expect(systemUnderTest.colorPrimaryDark).to(equal("#00372D"))
             }
         }
 
@@ -45,7 +45,7 @@ final class TheBodyShopLightTokensColorSpec: QuickSpec {
 
         describe("#colorSecondary") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorSecondary).to(equal("#D6CE4B"))
+                expect(systemUnderTest.colorSecondary).to(equal("#D5CD61"))
             }
         }
 
@@ -57,7 +57,7 @@ final class TheBodyShopLightTokensColorSpec: QuickSpec {
 
         describe("#colorSecondaryLight") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorSecondaryLight).to(equal("#FFFF7C"))
+                expect(systemUnderTest.colorSecondaryLight).to(equal("#DCD57A"))
             }
         }
 
@@ -69,7 +69,7 @@ final class TheBodyShopLightTokensColorSpec: QuickSpec {
 
         describe("#colorSecondaryDark") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorSecondaryDark).to(equal("#A29D12"))
+                expect(systemUnderTest.colorSecondaryDark).to(equal("#B3AC51"))
             }
         }
 

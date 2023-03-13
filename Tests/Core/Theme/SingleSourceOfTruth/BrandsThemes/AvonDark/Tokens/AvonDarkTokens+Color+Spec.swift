@@ -9,73 +9,73 @@ final class AvonDarkTokensColorSpec: QuickSpec {
 
         describe("#colorPrimary") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorPrimary).to(equal("#BE9AE2"))
+                expect(systemUnderTest.colorPrimary).to(equal("#6221BD"))
             }
         }
 
         describe("#colorOnPrimary") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorOnPrimary).to(equal("#000000"))
+                expect(systemUnderTest.colorOnPrimary).to(equal("#FFFFFF"))
             }
         }
 
         describe("#colorPrimaryLight") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorPrimaryLight).to(equal("#F1CBFF"))
+                expect(systemUnderTest.colorPrimaryLight).to(equal("#7D51CC"))
             }
         }
 
         describe("#colorOnPrimaryLight") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorOnPrimaryLight).to(equal("#000000"))
+                expect(systemUnderTest.colorOnPrimaryLight).to(equal("#FFFFFF"))
             }
         }
 
         describe("#colorPrimaryDark") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorPrimaryDark).to(equal("#8D6BB0"))
+                expect(systemUnderTest.colorPrimaryDark).to(equal("#5428A3"))
             }
         }
 
         describe("#colorOnPrimaryDark") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorOnPrimaryDark).to(equal("#000000"))
+                expect(systemUnderTest.colorOnPrimaryDark).to(equal("#FFFFFF"))
             }
         }
 
         describe("#colorSecondary") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorSecondary).to(equal("#F593C4"))
+                expect(systemUnderTest.colorSecondary).to(equal("#C2488E"))
             }
         }
 
         describe("#colorOnSecondary") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorOnSecondary).to(equal("#000000"))
+                expect(systemUnderTest.colorOnSecondary).to(equal("#FFFFFF"))
             }
         }
 
         describe("#colorSecondaryLight") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorSecondaryLight).to(equal("#FFC5F7"))
+                expect(systemUnderTest.colorSecondaryLight).to(equal("#CC65A0"))
             }
         }
 
         describe("#colorOnSecondaryLight") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorOnSecondaryLight).to(equal("#000000"))
+                expect(systemUnderTest.colorOnSecondaryLight).to(equal("#FFFFFF"))
             }
         }
 
         describe("#colorSecondaryDark") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorSecondaryDark).to(equal("#C16394"))
+                expect(systemUnderTest.colorSecondaryDark).to(equal("#A33C77"))
             }
         }
 
         describe("#colorOnSecondaryDark") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorOnSecondaryDark).to(equal("#000000"))
+                expect(systemUnderTest.colorOnSecondaryDark).to(equal("#FFFFFF"))
             }
         }
 
@@ -129,49 +129,49 @@ final class AvonDarkTokensColorSpec: QuickSpec {
 
         describe("#colorLink") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorLink).to(equal("#227BBD"))
+                expect(systemUnderTest.colorLink).to(equal("#86D6FB"))
             }
         }
 
         describe("#colorOnLink") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorOnLink).to(equal("#FFFFFF"))
+                expect(systemUnderTest.colorOnLink).to(equal("#000000"))
             }
         }
 
         describe("#colorSuccess") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorSuccess).to(equal("#569A32"))
+                expect(systemUnderTest.colorSuccess).to(equal("#BCDEA2"))
             }
         }
 
         describe("#colorOnSuccess") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorOnSuccess).to(equal("#FFFFFF"))
+                expect(systemUnderTest.colorOnSuccess).to(equal("#000000"))
             }
         }
 
         describe("#colorWarning") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorWarning).to(equal("#FCC433"))
+                expect(systemUnderTest.colorWarning).to(equal("#FEF59E"))
             }
         }
 
         describe("#colorOnWarning") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorOnWarning).to(equal("#333333"))
+                expect(systemUnderTest.colorOnWarning).to(equal("#000000"))
             }
         }
 
         describe("#colorAlert") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorAlert).to(equal("#E74627"))
+                expect(systemUnderTest.colorAlert).to(equal("#FFAA96"))
             }
         }
 
         describe("#colorOnAlert") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorOnAlert).to(equal("#FFFFFF"))
+                expect(systemUnderTest.colorOnAlert).to(equal("#000000"))
             }
         }
     }

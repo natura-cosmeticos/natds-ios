@@ -9,7 +9,7 @@ final class AvonLightTokensColorSpec: QuickSpec {
 
         describe("#colorPrimary") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorPrimary).to(equal("#7F28C4"))
+                expect(systemUnderTest.colorPrimary).to(equal("#6221BD"))
             }
         }
 
@@ -21,19 +21,19 @@ final class AvonLightTokensColorSpec: QuickSpec {
 
         describe("#colorPrimaryLight") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorPrimaryLight).to(equal("#B35BF8"))
+                expect(systemUnderTest.colorPrimaryLight).to(equal("#7D51CC"))
             }
         }
 
         describe("#colorOnPrimaryLight") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorOnPrimaryLight).to(equal("#000000"))
+                expect(systemUnderTest.colorOnPrimaryLight).to(equal("#FFFFFF"))
             }
         }
 
         describe("#colorPrimaryDark") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorPrimaryDark).to(equal("#4B0092"))
+                expect(systemUnderTest.colorPrimaryDark).to(equal("#5428A3"))
             }
         }
 
@@ -45,7 +45,7 @@ final class AvonLightTokensColorSpec: QuickSpec {
 
         describe("#colorSecondary") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorSecondary).to(equal("#E2197C"))
+                expect(systemUnderTest.colorSecondary).to(equal("#C2488E"))
             }
         }
 
@@ -57,19 +57,19 @@ final class AvonLightTokensColorSpec: QuickSpec {
 
         describe("#colorSecondaryLight") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorSecondaryLight).to(equal("#FF5EAB"))
+                expect(systemUnderTest.colorSecondaryLight).to(equal("#CC65A0"))
             }
         }
 
         describe("#colorOnSecondaryLight") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorOnSecondaryLight).to(equal("#000000"))
+                expect(systemUnderTest.colorOnSecondaryLight).to(equal("#FFFFFF"))
             }
         }
 
         describe("#colorSecondaryDark") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorSecondaryDark).to(equal("#AA0050"))
+                expect(systemUnderTest.colorSecondaryDark).to(equal("#A33C77"))
             }
         }
 

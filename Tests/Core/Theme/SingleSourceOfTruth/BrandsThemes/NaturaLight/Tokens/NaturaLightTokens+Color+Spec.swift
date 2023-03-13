@@ -21,7 +21,7 @@ final class NaturaLightTokensColorSpec: QuickSpec {
 
         describe("#colorPrimaryLight") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorPrimaryLight).to(equal("#FEFDE8"))
+                expect(systemUnderTest.colorPrimaryLight).to(equal("#F6B854"))
             }
         }
 
@@ -33,13 +33,13 @@ final class NaturaLightTokensColorSpec: QuickSpec {
 
         describe("#colorPrimaryDark") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorPrimaryDark).to(equal("#EF8426"))
+                expect(systemUnderTest.colorPrimaryDark).to(equal("#CD902C"))
             }
         }
 
         describe("#colorOnPrimaryDark") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorOnPrimaryDark).to(equal("#333333"))
+                expect(systemUnderTest.colorOnPrimaryDark).to(equal("#FFFFFF"))
             }
         }
 
@@ -57,7 +57,7 @@ final class NaturaLightTokensColorSpec: QuickSpec {
 
         describe("#colorSecondaryLight") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorSecondaryLight).to(equal("#FFF8E1"))
+                expect(systemUnderTest.colorSecondaryLight).to(equal("#FF8332"))
             }
         }
 
@@ -69,13 +69,13 @@ final class NaturaLightTokensColorSpec: QuickSpec {
 
         describe("#colorSecondaryDark") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorSecondaryDark).to(equal("#FF5808"))
+                expect(systemUnderTest.colorSecondaryDark).to(equal("#D65A09"))
             }
         }
 
         describe("#colorOnSecondaryDark") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorOnSecondaryDark).to(equal("#000000"))
+                expect(systemUnderTest.colorOnSecondaryDark).to(equal("#FFFFFF"))
             }
         }
 
