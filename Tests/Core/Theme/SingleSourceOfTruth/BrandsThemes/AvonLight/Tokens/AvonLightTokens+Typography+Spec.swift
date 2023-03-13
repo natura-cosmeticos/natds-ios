@@ -21,7 +21,7 @@ final class AvonLightTokensTypographySpec: QuickSpec {
 
         describe("#typographyFontFamilyBranding") {
             it("returns an expected value") {
-                expect(systemUnderTest.typographyFontFamilyBranding).to(equal("Helvetica Now"))
+                expect(systemUnderTest.typographyFontFamilyBranding).to(equal("Roboto"))
             }
         }
 

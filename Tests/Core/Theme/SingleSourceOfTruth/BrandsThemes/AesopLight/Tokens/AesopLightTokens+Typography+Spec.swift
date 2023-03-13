@@ -21,7 +21,7 @@ final class AesopLightTokensTypographySpec: QuickSpec {
 
         describe("#typographyFontFamilyBranding") {
             it("returns an expected value") {
-                expect(systemUnderTest.typographyFontFamilyBranding).to(equal("Helvetica Now"))
+                expect(systemUnderTest.typographyFontFamilyBranding).to(equal("Roboto"))
             }
         }
 
@@ -33,7 +33,7 @@ final class AesopLightTokensTypographySpec: QuickSpec {
 
         describe("#typographyDisplayFontFamily") {
             it("returns an expected value") {
-                expect(systemUnderTest.typographyDisplayFontFamily).to(equal("Zapf Humanist 601"))
+                expect(systemUnderTest.typographyDisplayFontFamily).to(equal("ZapfHumnst BT"))
                 }
         }
 

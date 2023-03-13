@@ -9,7 +9,7 @@ final class AesopLightTokensColorSpec: QuickSpec {
 
         describe("#colorPrimary") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorPrimary).to(equal("#262625"))
+                expect(systemUnderTest.colorPrimary).to(equal("#333333"))
             }
         }
 
@@ -21,7 +21,7 @@ final class AesopLightTokensColorSpec: QuickSpec {
 
         describe("#colorPrimaryLight") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorPrimaryLight).to(equal("#4E4E4D"))
+                expect(systemUnderTest.colorPrimaryLight).to(equal("#545454"))
             }
         }
 
@@ -33,7 +33,7 @@ final class AesopLightTokensColorSpec: QuickSpec {
 
         describe("#colorPrimaryDark") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorPrimaryDark).to(equal("#000000"))
+                expect(systemUnderTest.colorPrimaryDark).to(equal("#2B2B2B"))
             }
         }
 
@@ -45,7 +45,7 @@ final class AesopLightTokensColorSpec: QuickSpec {
 
         describe("#colorSecondary") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorSecondary).to(equal("#A6662B"))
+                expect(systemUnderTest.colorSecondary).to(equal("#A6672B"))
             }
         }
 
@@ -57,19 +57,19 @@ final class AesopLightTokensColorSpec: QuickSpec {
 
         describe("#colorSecondaryLight") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorSecondaryLight).to(equal("#DB9457"))
+                expect(systemUnderTest.colorSecondaryLight).to(equal("#B47F4D"))
             }
         }
 
         describe("#colorOnSecondaryLight") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorOnSecondaryLight).to(equal("#000000"))
+                expect(systemUnderTest.colorOnSecondaryLight).to(equal("#FFFFFF"))
             }
         }
 
         describe("#colorSecondaryDark") {
             it("returns an expected value") {
-                expect(systemUnderTest.colorSecondaryDark).to(equal("#733B00"))
+                expect(systemUnderTest.colorSecondaryDark).to(equal("#8B5724"))
             }
         }
 
