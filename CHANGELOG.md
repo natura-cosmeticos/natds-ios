@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [7.10.2](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.1...7.10.2) (2023-03-13)
+
+
+### Bug Fixes
+
+* logo consultoria de beleza updated ([780c3cc](https://github.com/natura-cosmeticos/natds-ios/commit/780c3cc4159ec15c0aa85c1e7247532d8893ff10))
+* themes values ([c933b08](https://github.com/natura-cosmeticos/natds-ios/commit/c933b089971aa23700e57b5545beb02f4af46839))
+
 ### [7.10.1](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.0...7.10.1) (2023-02-09)
 
 
