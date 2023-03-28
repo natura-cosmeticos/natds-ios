@@ -18,26 +18,26 @@
  *                                                              
  */
 
-struct AvonLightTheme: Theme {
-  let tokens: Tokens = AvonLightTokens()
-  let components: Components = AvonLightComponents()
+struct CasaEestiloLightTheme: Theme {
+  let tokens: Tokens = CasaEestiloLightTokens()
+  let components: Components = CasaEestiloLightComponents()
 }
 
-struct AvonLightTokens: Tokens {
+struct CasaEestiloLightTokens: Tokens {
   let assetFontFileDisplay = "montserrat_bold"
   let assetFontFileHeadline = "montserrat_semi_bold"
   let assetFontFileBodyRegular = "montserrat_regular"
   let assetFontFileBodyBold = "montserrat_bold"
-  let assetBrandNeutralAFile = "avon-a-official"
+  let assetBrandNeutralAFile = "casaeestilo-a-official"
   let assetBrandNeutralAWidth: CGFloat = 256
   let assetBrandNeutralAHeight: CGFloat = 58
-  let assetBrandNeutralBFile = "avon-a-official"
+  let assetBrandNeutralBFile = "casaeestilo-a-official"
   let assetBrandNeutralBWidth: CGFloat = 256
   let assetBrandNeutralBHeight: CGFloat = 58
-  let assetBrandCustomAFile = "avon-a-custom"
+  let assetBrandCustomAFile = "casaeestilo-a-custom"
   let assetBrandCustomAWidth: CGFloat = 256
   let assetBrandCustomAHeight: CGFloat = 58
-  let assetBrandCustomBFile = "avon-a-custom"
+  let assetBrandCustomBFile = "casaeestilo-a-custom"
   let assetBrandCustomBWidth: CGFloat = 256
   let assetBrandCustomBHeight: CGFloat = 58
   let borderRadiusNone: CGFloat = 0
@@ -54,25 +54,25 @@ struct AvonLightTokens: Tokens {
   let colorNeutral700 = "#495057"
   let colorNeutral800 = "#343a40"
   let colorNeutral900 = "#212529"
-  let colorPrimary = "#6221BD"
+  let colorPrimary = "#C2488E"
   let colorOnPrimary = "#FFFFFF"
-  let colorPrimaryLight = "#7D51CC"
+  let colorPrimaryLight = "#CC65A0"
   let colorOnPrimaryLight = "#FFFFFF"
-  let colorPrimaryLightest = "#9672D6"
+  let colorPrimaryLightest = "#D683B2"
   let colorOnPrimaryLightest = "#FFFFFF"
-  let colorPrimaryDark = "#5428A3"
+  let colorPrimaryDark = "#A33C77"
   let colorOnPrimaryDark = "#FFFFFF"
-  let colorPrimaryDarkest = "#442184"
+  let colorPrimaryDarkest = "#843161"
   let colorOnPrimaryDarkest = "#FFFFFF"
-  let colorSecondary = "#C2488E"
+  let colorSecondary = "#6221BD"
   let colorOnSecondary = "#FFFFFF"
-  let colorSecondaryLight = "#CC65A0"
+  let colorSecondaryLight = "#7D51CC"
   let colorOnSecondaryLight = "#FFFFFF"
-  let colorSecondaryLightest = "#D683B2"
+  let colorSecondaryLightest = "#9672D6"
   let colorOnSecondaryLightest = "#FFFFFF"
-  let colorSecondaryDark = "#A33C77"
+  let colorSecondaryDark = "#5428A3"
   let colorOnSecondaryDark = "#FFFFFF"
-  let colorSecondaryDarkest = "#843161"
+  let colorSecondaryDarkest = "#442184"
   let colorOnSecondaryDarkest = "#FFFFFF"
   let colorBackground = "#FAFAFA"
   let colorOnBackground = "#333333"
@@ -222,7 +222,7 @@ struct AvonLightTokens: Tokens {
   let typographyFallbackFontFamily = "San Francisco"
   let typographyFallbackFontWeight: UIFont.Weight = .regular
 }
-struct AvonLightComponents: Components {
+struct CasaEestiloLightComponents: Components {
   let alertTitleFontSize: CGFloat = 20
   let alertTitleLetterSpacing: CGFloat = 0.12
   let alertTitleLineHeight: CGFloat = 1.5
@@ -269,7 +269,7 @@ struct AvonLightComponents: Components {
   let avatarPrimaryFontWeight: UIFont.Weight = .regular
   let avatarFallbackFontFamily = "San Francisco"
   let avatarFallbackFontWeight: UIFont.Weight = .regular
-  let avatarColorBackground = "#6221BD"
+  let avatarColorBackground = "#C2488E"
   let avatarColorLabel = "#FFFFFF"
   let badgeLabelFontSize: CGFloat = 12
   let badgeLabelLetterSpacing: CGFloat = 0.16
@@ -283,9 +283,9 @@ struct AvonLightComponents: Components {
   let badgeDotHeight: CGFloat = 8
   let badgeDotBorderRadius: CGFloat = 4
   let badgeColorPrimaryLabel = "#FFFFFF"
-  let badgeColorPrimaryBackground = "#6221BD"
+  let badgeColorPrimaryBackground = "#C2488E"
   let badgeColorSecondaryLabel = "#FFFFFF"
-  let badgeColorSecondaryBackground = "#C2488E"
+  let badgeColorSecondaryBackground = "#6221BD"
   let badgeColorSuccessLabel = "#FFFFFF"
   let badgeColorSuccessBackground = "#569A32"
   let badgeColorAlertLabel = "#FFFFFF"
@@ -298,29 +298,29 @@ struct AvonLightComponents: Components {
   let buttonLabelFallbackFontFamily = "San Francisco"
   let buttonLabelFallbackFontWeight: UIFont.Weight = .medium
   let buttonBorderRadius: CGFloat = 4
-  let buttonContainedColorEnableBackground = "#6221BD"
+  let buttonContainedColorEnableBackground = "#C2488E"
   let buttonContainedColorEnableBorder = "#FFFFFF00"
   let buttonContainedColorEnableLabel = "#FFFFFF"
   let buttonContainedColorDisableBackground = "#BBBBBB"
   let buttonContainedColorDisableBorder = "#FFFFFF00"
   let buttonContainedColorDisableLabel = "#333333"
-  let buttonContainedColorHoverBackground = "#5428A3"
+  let buttonContainedColorHoverBackground = "#A33C77"
   let buttonContainedColorHoverBorder = "#FFFFFF00"
   let buttonContainedColorHoverLabel = "#FFFFFF"
-  let buttonContainedColorFocusBackground = "#442184"
+  let buttonContainedColorFocusBackground = "#843161"
   let buttonContainedColorFocusBorder = "#FFFFFF00"
   let buttonContainedColorFocusLabel = "#FFFFFF"
   let buttonOutlinedColorEnableBackground = "#FFFFFF00"
-  let buttonOutlinedColorEnableBorder = "#6221BD"
+  let buttonOutlinedColorEnableBorder = "#C2488E"
   let buttonOutlinedColorEnableLabel = "#333333"
   let buttonOutlinedColorDisableBackground = "#FFFFFF00"
   let buttonOutlinedColorDisableBorder = "#BBBBBB"
   let buttonOutlinedColorDisableLabel = "#777777"
   let buttonOutlinedColorHoverBackground = "#f1f3f5"
-  let buttonOutlinedColorHoverBorder = "#6221BD"
+  let buttonOutlinedColorHoverBorder = "#C2488E"
   let buttonOutlinedColorHoverLabel = "#333333"
   let buttonOutlinedColorFocusBackground = "#e9ecef"
-  let buttonOutlinedColorFocusBorder = "#6221BD"
+  let buttonOutlinedColorFocusBorder = "#C2488E"
   let buttonOutlinedColorFocusLabel = "#333333"
   let buttonTextColorEnableBackground = "#FFFFFF00"
   let buttonTextColorEnableBorder = "#FFFFFF00"
@@ -444,7 +444,7 @@ struct AvonLightComponents: Components {
   let progressIndicatorSemiBorderRadius: CGFloat = 16
   let progressIndicatorMediumBorderRadius: CGFloat = 24
   let progressIndicatorLargeBorderRadius: CGFloat = 32
-  let progressIndicatorColorStroke = "#6221BD"
+  let progressIndicatorColorStroke = "#C2488E"
   let progressIndicatorColorLayer = "#FFFFFF"
   let radioButtonLabelFontSize: CGFloat = 14
   let radioButtonLabelLetterSpacing: CGFloat = 0.16
@@ -454,8 +454,8 @@ struct AvonLightComponents: Components {
   let radioButtonLabelFallbackFontFamily = "San Francisco"
   let radioButtonLabelFallbackFontWeight: UIFont.Weight = .regular
   let radioButtonBorderRadius: CGFloat = 12
-  let radioButtonColorSelectBorder = "#6221BD"
-  let radioButtonColorSelectContent = "#6221BD"
+  let radioButtonColorSelectBorder = "#C2488E"
+  let radioButtonColorSelectContent = "#C2488E"
   let radioButtonColorUnselectBorder = "#000000"
   let radioButtonColorUnselectContent = "#000000"
   let radioButtonColorDisableBorder = "#BBBBBB"
@@ -481,7 +481,7 @@ struct AvonLightComponents: Components {
   let shortcutLabelPrimaryFontWeight: UIFont.Weight = .regular
   let shortcutLabelFallbackFontFamily = "San Francisco"
   let shortcutLabelFallbackFontWeight: UIFont.Weight = .regular
-  let shortcutContainedColorEnablePrimaryBackground = "#6221BD"
+  let shortcutContainedColorEnablePrimaryBackground = "#C2488E"
   let shortcutContainedColorEnablePrimaryBorder = "#FFFFFF00"
   let shortcutContainedColorEnablePrimaryLabel = "#333333"
   let shortcutContainedColorEnableNeutralBackground = "#FFFFFF"
@@ -493,20 +493,20 @@ struct AvonLightComponents: Components {
   let shortcutContainedColorDisableNeutralBackground = "#BBBBBB"
   let shortcutContainedColorDisableNeutralBorder = "#FFFFFF00"
   let shortcutContainedColorDisableNeutralLabel = "#777777"
-  let shortcutContainedColorHoverPrimaryBackground = "#5428A3"
+  let shortcutContainedColorHoverPrimaryBackground = "#A33C77"
   let shortcutContainedColorHoverPrimaryBorder = "#FFFFFF00"
   let shortcutContainedColorHoverPrimaryLabel = "#333333"
   let shortcutContainedColorHoverNeutralBackground = "#f1f3f5"
   let shortcutContainedColorHoverNeutralBorder = "#FFFFFF00"
   let shortcutContainedColorHoverNeutralLabel = "#333333"
-  let shortcutContainedColorFocusPrimaryBackground = "#442184"
+  let shortcutContainedColorFocusPrimaryBackground = "#843161"
   let shortcutContainedColorFocusPrimaryBorder = "#FFFFFF00"
   let shortcutContainedColorFocusPrimaryLabel = "#333333"
   let shortcutContainedColorFocusNeutralBackground = "#e9ecef"
   let shortcutContainedColorFocusNeutralBorder = "#FFFFFF00"
   let shortcutContainedColorFocusNeutralLabel = "#333333"
   let shortcutOutlinedColorEnablePrimaryBackground = "#FFFFFF00"
-  let shortcutOutlinedColorEnablePrimaryBorder = "#6221BD"
+  let shortcutOutlinedColorEnablePrimaryBorder = "#C2488E"
   let shortcutOutlinedColorEnablePrimaryLabel = "#333333"
   let shortcutOutlinedColorEnableNeutralBackground = "#FFFFFF00"
   let shortcutOutlinedColorEnableNeutralBorder = "#BBBBBB"
@@ -518,13 +518,13 @@ struct AvonLightComponents: Components {
   let shortcutOutlinedColorDisableNeutralBorder = "#BBBBBB"
   let shortcutOutlinedColorDisableNeutralLabel = "#BBBBBB"
   let shortcutOutlinedColorHoverPrimaryBackground = "#f1f3f5"
-  let shortcutOutlinedColorHoverPrimaryBorder = "#5428A3"
+  let shortcutOutlinedColorHoverPrimaryBorder = "#A33C77"
   let shortcutOutlinedColorHoverPrimaryLabel = "#333333"
   let shortcutOutlinedColorHoverNeutralBackground = "#f1f3f5"
   let shortcutOutlinedColorHoverNeutralBorder = "#777777"
   let shortcutOutlinedColorHoverNeutralLabel = "#333333"
   let shortcutOutlinedColorFocusPrimaryBackground = "#e9ecef"
-  let shortcutOutlinedColorFocusPrimaryBorder = "#5428A3"
+  let shortcutOutlinedColorFocusPrimaryBorder = "#A33C77"
   let shortcutOutlinedColorFocusPrimaryLabel = "#333333"
   let shortcutOutlinedColorFocusNeutralBackground = "#e9ecef"
   let shortcutOutlinedColorFocusNeutralBorder = "#777777"
@@ -556,8 +556,8 @@ struct AvonLightComponents: Components {
   let tagSmallBorderRadiusDisable: CGFloat = 0
   let tagStandardBorderRadiusEnable: CGFloat = 12
   let tagStandardBorderRadiusDisable: CGFloat = 0
-  let tagColorBackgroundPrimary = "#6221BD"
-  let tagColorBackgroundSecondary = "#C2488E"
+  let tagColorBackgroundPrimary = "#C2488E"
+  let tagColorBackgroundSecondary = "#6221BD"
   let tagColorBackgroundSuccess = "#569A32"
   let tagColorBackgroundAlert = "#E74627"
   let tagColorBackgroundWarning = "#FCC433"
