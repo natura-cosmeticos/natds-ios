@@ -8,7 +8,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [7.10.3](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.2...7.10.3) (2023-03-13)
 
-
 ### Bug Fixes
 
 * logo update ([2fcc6a4](https://github.com/natura-cosmeticos/natds-ios/commit/2fcc6a4c4b05f0971cf6a6139735a41e2a0a3af3))
