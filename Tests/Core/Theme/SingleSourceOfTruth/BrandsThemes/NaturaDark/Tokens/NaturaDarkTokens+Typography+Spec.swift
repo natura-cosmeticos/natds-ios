@@ -2,7 +2,6 @@ import Quick
 import Nimble
 
 @testable import NatDS
-
 final class NaturaDarkTokensTypographySpec: QuickSpec {
     override func spec() {
         let systemUnderTest = NaturaDarkTheme().tokens
@@ -19,7 +18,7 @@ final class NaturaDarkTokensTypographySpec: QuickSpec {
             }
         }
 
-        describe("#typographyFontFamilyBranding") {
+        describe("#typographyFontFamilyBrandingg") {
             it("returns an expected value") {
                 expect(systemUnderTest.typographyFontFamilyBranding).to(equal("Roboto"))
             }
