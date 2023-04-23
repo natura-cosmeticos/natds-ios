@@ -43,18 +43,6 @@ final class NaturaDarkTokensTypographySpec: QuickSpec {
                 }
         }
 
-        describe("#typographyBodyRegularFontFamily") {
-            it("returns an expected value") {
-                expect(systemUnderTest.typographyBodyRegularFontFamily).to(equal("Helvetica Now Display"))
-                }
-        }
-
-        describe("#typographyBodyBoldFontFamily") {
-            it("returns an expected value") {
-                expect(systemUnderTest.typographyBodyBoldFontFamily).to(equal("Helvetica Now Display"))
-                }
-        }
-
         describe("#typographyFallbackFontFamily") {
             it("returns an expected value") {
                 expect(systemUnderTest.typographyFallbackFontFamily).to(equal("San Francisco"))
