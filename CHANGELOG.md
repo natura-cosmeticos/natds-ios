@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [7.10.15](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.14...7.10.15) (2023-04-24)
+
+
+### Bug Fixes
+
+* duplicated theme and missing tokens ([5f7eb0c](https://github.com/natura-cosmeticos/natds-ios/commit/5f7eb0c65c558a13234dd787e0906c07487911c4))
+* stubTokens missing string ([7d9df8f](https://github.com/natura-cosmeticos/natds-ios/commit/7d9df8f4a5975098603bc86b03f061257e1bd20c))
+
 ### [7.10.14](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.13...7.10.14) (2023-04-24)
 
 ### [7.10.13](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.12...7.10.13) (2023-04-24)
