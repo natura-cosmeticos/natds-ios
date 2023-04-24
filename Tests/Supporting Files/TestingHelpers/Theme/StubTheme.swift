@@ -8,6 +8,10 @@ struct StubTheme: Theme {
 // swiftlint:disable identifier_name
 // swiftlint:disable type_body_length
 private struct StubTokens: Tokens {
+    let colorSecondaryLightest = ""
+    let colorOnSecondaryLightest = ""
+    let colorSecondaryDarkest = ""
+    let colorOnSecondaryDarkest = ""
     let assetFontFileDisplay = "montserrat_bold"
     let assetFontFileHeadline = "montserrat_semi_bold"
     let assetFontFileBodyRegular = "montserrat_regular"
