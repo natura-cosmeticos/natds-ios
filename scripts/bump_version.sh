@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # checks commit history at PR
-if \
-    { git log "$( git describe --tags --abbrev=0 )..HEAD" --format='%s' | cut -d: -f1 | sort -u | sed -e 's/([^)]*)//' | grep -q -i -E '^feat|fix|perf|refactor|revert$' ; } || \
-    { git log "$( git describe --tags --abbrev=0 )..HEAD" --format='%s' | cut -d: -f1 | sort -u | sed -e 's/([^)]*)//' | grep -q -E '\!$' ; } || \
-    { git log "$( git describe --tags --abbrev=0 )..HEAD" --format='%b' | grep -q -E '^BREAKING CHANGE:' ; }
-then
+# if \
+#     { git log "$( git describe --tags --abbrev=0 )..HEAD" --format='%s' | cut -d: -f1 | sort -u | sed -e 's/([^)]*)//' | grep -q -i -E '^feat|fix|perf|refactor|revert$' ; } || \
+#     { git log "$( git describe --tags --abbrev=0 )..HEAD" --format='%s' | cut -d: -f1 | sort -u | sed -e 's/([^)]*)//' | grep -q -E '\!$' ; } || \
+#     { git log "$( git describe --tags --abbrev=0 )..HEAD" --format='%b' | grep -q -E '^BREAKING CHANGE:' ; }
+# then
     # creates new lib version and updates version at version file and project targets
     npx standard-version
     VERSION=$(cat ./version.txt)
@@ -25,6 +25,6 @@ then
     make teams_release_notification
     # updates remote docs page
     make create_docs
-else
-    echo "No applicable changes since the previous tag, skipping..."
-fi
+# else
+#     echo "No applicable changes since the previous tag, skipping..."
+# fi
