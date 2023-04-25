@@ -2,10 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [7.10.16](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.15...7.10.16) (2023-04-25)
+### [7.10.16](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.14...7.10.16) (2023-04-25)
+
+### Bug Fixes
+
+* downgrade iOS version from 11 to 10
 
 ### [7.10.15](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.14...7.10.15) (2023-04-24)
-
 
 ### Bug Fixes
 
