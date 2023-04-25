@@ -15,5 +15,5 @@ Pod::Spec.new do |s|
   s.resources     = ['Sources/**/*.xcassets', 'Sources/**/*.ttf']
 
   s.swift_version = '5.0' 
-  s.platform      = :ios, '11.0'
+  s.platform      = :ios, '10.0'
 end
