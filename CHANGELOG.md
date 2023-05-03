@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [7.10.17](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.16...7.10.17) (2023-05-03)
+
+### Bug Fixes
+
+* fix NatChip component scroll issue ([8334348](https://github.com/natura-cosmeticos/natds-ios/commit/8334348e7ae25038e6747990bec5d9afb7e80ab3))
+
+
 ### [7.10.16](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.14...7.10.16) (2023-04-25)
 
 ### Bug Fixes
