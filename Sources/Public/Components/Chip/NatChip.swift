@@ -33,7 +33,6 @@ public final class NatChip: UIView {
         view.layer.borderWidth = 1
         let tapGesture = UILongPressGestureRecognizer(target: self, action: #selector(tapHandler(gesture:)))
         tapGesture.minimumPressDuration = .zero
-        view.addGestureRecognizer(tapGesture)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
