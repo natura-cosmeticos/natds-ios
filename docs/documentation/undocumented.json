@@ -695,21 +695,21 @@
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Chip/NatChip.swift",
-      "line": 72,
+      "line": 71,
       "symbol": "NatChip.state",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Chip/NatChip.swift",
-      "line": 79,
+      "line": 78,
       "symbol": "NatChip.isSelected",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Chip/NatChip.swift",
-      "line": 87,
+      "line": 86,
       "symbol": "NatChip.init(size:color:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
