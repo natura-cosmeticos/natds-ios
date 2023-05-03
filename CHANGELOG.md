@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [7.10.17](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.16...7.10.17) (2023-05-03)
 
+### [7.10.17](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.16...7.10.17) (2023-05-03)
+
 ### Bug Fixes
 
 * fix NatChip component scroll issue ([8334348](https://github.com/natura-cosmeticos/natds-ios/commit/8334348e7ae25038e6747990bec5d9afb7e80ab3))
