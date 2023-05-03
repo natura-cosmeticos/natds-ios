@@ -22,22 +22,6 @@ All notable changes to this project will be documented in this file. See [standa
 * duplicated theme and missing tokens ([5f7eb0c](https://github.com/natura-cosmeticos/natds-ios/commit/5f7eb0c65c558a13234dd787e0906c07487911c4))
 * stubTokens missing string ([7d9df8f](https://github.com/natura-cosmeticos/natds-ios/commit/7d9df8f4a5975098603bc86b03f061257e1bd20c))
 
-### [7.10.14](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.13...7.10.14) (2023-04-24)
-
-### [7.10.13](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.12...7.10.13) (2023-04-24)
-
-### [7.10.12](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.11...7.10.12) (2023-04-24)
-
-### [7.10.11](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.10...7.10.11) (2023-04-24)
-
-### [7.10.7](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.6...7.10.7) (2023-04-24)
-
-### [7.10.6](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.5...7.10.6) (2023-04-23)
-
-### [7.10.5](https://github.com/natura-cosmeticos/natds-ios/compare/7.1.3...7.10.5) (2023-04-23)
-
-### [7.10.4](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.3...7.10.4) (2023-04-23)
-
 ### [7.10.3](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.2...7.10.3) (2023-03-13)
 
 ### Bug Fixes
