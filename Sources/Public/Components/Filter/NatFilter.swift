@@ -1,15 +1,22 @@
-import UIKit
+//
+//  NatFilter.swift
+//  NatDS
+//
+//  Created by Hayna.Cardoso on 04/05/23.
+//  Copyright © 2023 Natura. All rights reserved.
+//
+
 /**
- NatChip is a class that represents the Chip component from the design system.
+ NatFilter is a class that represents the Filter component from the design system.
 
  Example of usage:
 
-     let chip = NatChip(size: .semi, color: .neutral)
-     chip.configure(text: "NatChip example text")
-     chip.configure(icon: getIcon(.outlinedDefaultMockup), position: .left)
-     chip.configure(avatar: natAvatar, position: .right)
-     chip.configure(state: .normal)
-     chip.configure(actionHandler: { isSelect in
+     let filter = NatFilter(size: .semi, color: .neutral)
+     filter.configure(text: "NatFilter example text")
+     filter.configure(icon: getIcon(.outlinedDefaultMockup), position: .left)
+     filter.configure(avatar: natAvatar, position: .right)
+     filter.configure(state: .normal)
+     filter.configure(actionHandler: { isSelect in
         //do something
      })
 
@@ -19,21 +26,18 @@ import UIKit
         DesignSystem().configure(with: AvailableTheme)
  */
 
-public final class NatChip: UIView {
+public final class NatFilter: UIView {
 
     // MARK: - Private properties
 
-    private let size: NatChip.Size
-    private let color: NatChip.Color
+    private let size: NatFilter.Size
+    private let color: NatFilter.Color
     private var nextState: UIControl.State = .normal
 
     private lazy var backgroundView: UIView = {
         let view = UIView()
         view.layer.cornerRadius = size.value/2
         view.layer.borderWidth = 1
-        let tapGesture = UILongPressGestureRecognizer(target: self, action: #selector(tapHandler(gesture:)))
-        tapGesture.minimumPressDuration = .zero
-        view.addGestureRecognizer(tapGesture)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -84,8 +88,8 @@ public final class NatChip: UIView {
 
     // MARK: - Init
 
-    public init(size: NatChip.Size = .semi,
-                color: NatChip.Color = .neutral) {
+    public init(size: NatFilter.Size = .semi,
+                color: NatFilter.Color = .neutral) {
         self.size = size
         self.color = color
         super.init(frame: .zero)
@@ -123,6 +127,17 @@ public final class NatChip: UIView {
 
         circleView.centerYAnchor.constraint(equalTo: backgroundView.centerYAnchor).isActive = true
         circleView.centerXAnchor.constraint(equalTo: backgroundView.centerXAnchor).isActive = true
+    }
+    
+    public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+    }
+    
+    public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
+        if state != .disabled {
+                state = state != .selected ? .selected : .normal
+        }
     }
 
     private func setupUI() {
@@ -167,7 +182,7 @@ public final class NatChip: UIView {
         return iconView
     }
 
-    private func removeFromStack(on position: NatChip.Position) {
+    private func removeFromStack(on position: NatFilter.Position) {
         let indexToRemove = position == .left ? 0 : 2
         let subviews = stackView.arrangedSubviews
         if indexToRemove < subviews.count, subviews[indexToRemove] != label {
@@ -175,7 +190,7 @@ public final class NatChip: UIView {
         }
     }
 
-    private func addToStack(view: UIView, on position: NatChip.Position) {
+    private func addToStack(view: UIView, on position: NatFilter.Position) {
         removeFromStack(on: position)
         if position == .left {
             stackView.insertArrangedSubview(view, at: .zero)
@@ -202,7 +217,7 @@ public final class NatChip: UIView {
     ///
     /// Example of usage:
     /// ```
-    /// natChip.configure(text: "NatChip example text")
+    /// natFilter.configure(text: "NatFilter example text")
     /// ```
     /// - Parameter text: A `String` that set the text of the component
     public func configure(text: String) {
@@ -213,12 +228,12 @@ public final class NatChip: UIView {
     ///
     /// Example of usage:
     /// ```
-    /// natChip.configure(icon: getIcon(.outlinedDefaultMockup), position: .left)
+    /// natFilter.configure(icon: getIcon(.outlinedDefaultMockup), position: .left)
     /// ```
     /// - Parameters:
     ///   - icon:  A `String` that set an icon to the component
-    ///   - position: A `NatChip.Position` that indicates the position of the icon
-    public func configure(icon: String?, position: NatChip.Position) {
+    ///   - position: A `NatFilter.Position` that indicates the position of the icon
+    public func configure(icon: String?, position: NatFilter.Position) {
         let view = createIconView(icon: icon)
         addToStack(view: view, on: position)
     }
@@ -227,12 +242,12 @@ public final class NatChip: UIView {
     ///
     /// Example of usage:
     /// ```
-    /// natChip.configure(avatar: natAvatar, position: .left)
+    /// natFilter.configure(avatar: natAvatar, position: .left)
     /// ```
     /// - Parameters:
     ///   - avatar:  A `NatAvatar` that set an avatar to the component
-    ///   - position: A `NatChip.Position` that indicates the position of the avatar
-    public func configure(avatar: NatAvatar, position: NatChip.Position) {
+    ///   - position: A `NatFilter.Position` that indicates the position of the avatar
+    public func configure(avatar: NatAvatar, position: NatFilter.Position) {
         addToStack(view: avatar, on: position)
     }
 
@@ -240,7 +255,7 @@ public final class NatChip: UIView {
     ///
     /// Example of usage:
     /// ```
-    /// natChip.configure(state: .normal)
+    /// natFilter.configure(state: .normal)
     /// ```
     /// - Parameter state: An `UIControl.State` that changes the state of the component
     public func configure(state: UIControl.State) {
@@ -251,10 +266,11 @@ public final class NatChip: UIView {
     ///
     /// Example of usage:
     /// ```
-    /// natChip.configure { isSelected in }
+    /// natFilter.configure { isSelected in }
     /// ```
     /// - Parameter actionHandler: A closure to notify value change
     public func configure(actionHandler: @escaping (Bool) -> Void) {
         self.actionHandler = actionHandler
     }
 }
+

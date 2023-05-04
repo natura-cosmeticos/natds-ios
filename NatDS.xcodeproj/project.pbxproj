@@ -450,6 +450,10 @@
 		F7894B76EE9A0F4726C5DF88653A4816 /* NatFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C1EA361FCA3C4EFEC4858AA4E04143 /* NatFonts.swift */; };
 		FAD0A71F10707995BE66A299D98CC33B /* NatOpacities+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46448E79883A4EB8A9416823A01531F /* NatOpacities+Spec.swift */; };
 		FF4C87EAD7ADB8D9EF8F897BA229A3A7 /* NatFonts+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8BC0D102CE4444401C0469C861358A /* NatFonts+Spec.swift */; };
+		FF50B6422A040D3600FA824A /* NatFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF50B6412A040D3600FA824A /* NatFilter.swift */; };
+		FF50B6442A040D5600FA824A /* NatFilter+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF50B6432A040D5600FA824A /* NatFilter+Color.swift */; };
+		FF50B6462A040D6B00FA824A /* NatFilter+Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF50B6452A040D6B00FA824A /* NatFilter+Position.swift */; };
+		FF50B6482A040D9700FA824A /* NatFilter+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF50B6472A040D9700FA824A /* NatFilter+Size.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -914,6 +918,10 @@
 		FADDEC4E472D2A193BED0EBF058A67E8 /* ViewAnimatingMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewAnimatingMock.swift; sourceTree = "<group>"; };
 		FB7FB96016F7D02CB5976F54C383CCD6 /* NatSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatSizes.swift; sourceTree = "<group>"; };
 		FD3CA47F5B151245708F86A82388401D /* Divider+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Divider+Snapshot+Tests.swift"; sourceTree = "<group>"; };
+		FF50B6412A040D3600FA824A /* NatFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatFilter.swift; sourceTree = "<group>"; };
+		FF50B6432A040D5600FA824A /* NatFilter+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatFilter+Color.swift"; sourceTree = "<group>"; };
+		FF50B6452A040D6B00FA824A /* NatFilter+Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatFilter+Position.swift"; sourceTree = "<group>"; };
+		FF50B6472A040D9700FA824A /* NatFilter+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatFilter+Size.swift"; sourceTree = "<group>"; };
 		FF60BC58D83695B3AC61ABB7BBE49B9C /* UIView+FrameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+FrameTests.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -2549,8 +2557,9 @@
 				B765E7CB5E163C38B6106556601A6CCA /* Divider */,
 				9A95973E20D8800C2A72454FF93AEC3F /* ExpansionPanel */,
 				EA99DA7A49950566847F2CD983BBD1EA /* Field */,
-				FBCFD36466E6B86E32075C92503882F7 /* Icons */,
+				FF50B6402A040CF600FA824A /* Filter */,
 				84703F3D24F83AB900FE01CA /* IconButton */,
+				FBCFD36466E6B86E32075C92503882F7 /* Icons */,
 				79FC59DB25DAB0A6001CCB56 /* Image */,
 				7D9838BB25F8F5CD00A99628 /* ListItem */,
 				7D86C193266533E700FC4C53 /* Logo */,
@@ -3052,6 +3061,17 @@
 				841FEAB924C5C1A100C50AFF /* NatLogoImages.swift */,
 			);
 			path = Icons;
+			sourceTree = "<group>";
+		};
+		FF50B6402A040CF600FA824A /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				FF50B6412A040D3600FA824A /* NatFilter.swift */,
+				FF50B6432A040D5600FA824A /* NatFilter+Color.swift */,
+				FF50B6452A040D6B00FA824A /* NatFilter+Position.swift */,
+				FF50B6472A040D9700FA824A /* NatFilter+Size.swift */,
+			);
+			path = Filter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -3567,6 +3587,7 @@
 				79FC593A25BF5894001CCB56 /* NatRadioButtonControl.swift in Sources */,
 				7D9838BD25F8F70300A99628 /* NatListItem.swift in Sources */,
 				84BC901C24AB7445007DF09D /* NatDialogDismissableConfigurable.swift in Sources */,
+				FF50B6422A040D3600FA824A /* NatFilter.swift in Sources */,
 				AB9CCFDF8B930FD49AFAEAE1BB5CA718 /* DesignSystem.swift in Sources */,
 				E67E4E4729F714CB00FF7515 /* NatdsTestDarkTheme.swift in Sources */,
 				E67E4E5629F714CB00FF7515 /* AesopLightTheme.swift in Sources */,
@@ -3676,7 +3697,9 @@
 				604835F2975D92A9D2EF46132C17C0A5 /* Tab.swift in Sources */,
 				AAA3820978AE27C3A6ED940916227C9D /* TabItemView.swift in Sources */,
 				79FC59DD25DAB0BE001CCB56 /* NatImage.swift in Sources */,
+				FF50B6442A040D5600FA824A /* NatFilter+Color.swift in Sources */,
 				8409854724F02B230095D6AD /* Notification+Name+ThemeHasChanged.swift in Sources */,
+				FF50B6462A040D6B00FA824A /* NatFilter+Position.swift in Sources */,
 				5C0716F242EFC1AF6A61CBE257DA7CFE /* TextField.swift in Sources */,
 				E67E4E4C29F714CB00FF7515 /* ConsultoriaDeBelezaLightTheme.swift in Sources */,
 				E67E4E4829F714CB00FF7515 /* NatdsTestLightTheme.swift in Sources */,
@@ -3701,6 +3724,7 @@
 				EE1E7A9F49A18BCD194E0C03FB2F0074 /* ViewStyle.swift in Sources */,
 				79EA0C3E260B861400742C0A /* NatCounter+Size.swift in Sources */,
 				79FC593F25BF58C7001CCB56 /* NatRadioButtonControl+Style.swift in Sources */,
+				FF50B6482A040D9700FA824A /* NatFilter+Size.swift in Sources */,
 				7D5120D025ED7CE200557E21 /* TextField+InteractionState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
