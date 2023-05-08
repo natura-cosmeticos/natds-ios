@@ -199,7 +199,7 @@ class ChipFilterViewController: UIViewController, SampleItem {
     }
 
     private func setupHandlers() {
-        filterWithAction.configure { isSelected in
+        chipFilterWithAction.configure { isSelected in
             let alert = UIAlertController(title: "Taps",
                                           message: "selected: \(isSelected)",
                                           preferredStyle: .alert)
