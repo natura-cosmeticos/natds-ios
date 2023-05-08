@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### Features
+
+* Adding new component: NatChipFilter ([fb9a356](https://github.com/natura-cosmeticos/natds-ios/commit/f6c6432a6602ced9f3ddd54fb81383afb672d9c0))
+
 ### [7.10.17](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.16...7.10.17) (2023-05-03)
 
 ### Bug Fixes
