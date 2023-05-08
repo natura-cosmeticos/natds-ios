@@ -1,5 +1,5 @@
 //
-//  NatFilter+Size.swift
+//  NatChipFilter+Size.swift
 //  NatDS
 //
 //  Created by Hayna.Cardoso on 04/05/23.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension NatFilter {
+extension NatChipFilter {
     /**
      Size is an enum that represents the possible sizes for the NatChip size.
      The default size is `semi`.

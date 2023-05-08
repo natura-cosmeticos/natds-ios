@@ -1,5 +1,5 @@
 //
-//  FilterViewController.swift
+//  ChipFilterViewController.swift
 //  NatDS-SampleApp
 //
 //  Created by Hayna.Cardoso on 04/05/23.
@@ -10,8 +10,8 @@ import NatDS
 import UIKit
 import NatDSIcons
 
-class FilterViewController: UIViewController, SampleItem {
-    static var name = "Filter"
+class ChipFilterViewController: UIViewController, SampleItem {
+    static var name = "ChipFilter"
 
     // MARK: - Private properties
 
@@ -34,133 +34,133 @@ class FilterViewController: UIViewController, SampleItem {
         return stack
     }()
 
-    private let neutralColorFilter: NatFilter = {
-        let filter = NatFilter()
+    private let neutralColorChipFilter: NatChipFilter = {
+        let filter = NatChipFilter()
         filter.configure(text: "Neutral color")
         return filter
     }()
 
-    private let primaryColorFilter: NatFilter = {
-        let filter = NatFilter(color: .primary)
+    private let primaryColorChipFilter: NatChipFilter = {
+        let filter = NatChipFilter(color: .primary)
         filter.configure(text: "Primary color")
         return filter
     }()
 
-    private let secondaryColorFilter: NatFilter = {
-        let filter = NatFilter(color: .secondary)
+    private let secondaryColorChipFilter: NatChipFilter = {
+        let filter = NatChipFilter(color: .secondary)
         filter.configure(text: "Secondary color")
         return filter
     }()
 
-    private let customColorFilter: NatFilter = {
-        let filter = NatFilter(color: .custom(selectedColor: NatColors.link,
+    private let customColorChipFilter: NatChipFilter = {
+        let filter = NatChipFilter(color: .custom(selectedColor: NatColors.link,
                                           labelColor: NatColors.lowEmphasis,
                                           borderColor: NatColors.alert))
         filter.configure(text: "Custom color")
         return filter
     }()
 
-    private let filterWithAction: NatFilter = {
-        let filter = NatFilter()
+    private let chipFilterWithAction: NatChipFilter = {
+        let filter = NatChipFilter()
         filter.configure(text: "Filter with action")
         return filter
     }()
 
-    private let semiSizeFilter: NatFilter = {
-        let filter = NatFilter(size: .semi)
+    private let semiSizeChipFilter: NatChipFilter = {
+        let filter = NatChipFilter(size: .semi)
         filter.configure(text: "Semi filter")
         return filter
     }()
 
-    private let semiXSizeFilter: NatFilter = {
-        let filter = NatFilter(size: .semiX)
+    private let semiXSizeChipFilter: NatChipFilter = {
+        let filter = NatChipFilter(size: .semiX)
         filter.configure(text: "SemiX size")
         return filter
     }()
 
-    private let mediumSizeFilter: NatFilter = {
-        let filter = NatFilter(size: .medium)
+    private let mediumSizeChipFilter: NatChipFilter = {
+        let filter = NatChipFilter(size: .medium)
         filter.configure(text: "Medium size")
         return filter
     }()
 
-    private let leftIconFilter: NatFilter = {
+    private let leftIconChipFilter: NatChipFilter = {
         let icon = getIcon(.outlinedDefaultMockup)
-        let filter = NatFilter()
+        let filter = NatChipFilter()
         filter.configure(text: "Left icon")
         filter.configure(icon: icon, position: .left)
         return filter
     }()
 
-    private let rightIconFilter: NatFilter = {
+    private let rightIconChipFilter: NatChipFilter = {
         let icon = getIcon(.outlinedDefaultMockup)
-        let filter = NatFilter()
+        let filter = NatChipFilter()
         filter.configure(text: "Right icon")
         filter.configure(icon: icon, position: .right)
         return filter
     }()
 
-    private let bothSidesIconFilter: NatFilter = {
+    private let bothSidesIconChipFilter: NatChipFilter = {
         let icon = getIcon(.outlinedDefaultMockup)
-        let filter = NatFilter()
+        let filter = NatChipFilter()
         filter.configure(text: "Both sides icon")
         filter.configure(icon: icon, position: .left)
         filter.configure(icon: icon, position: .right)
         return filter
     }()
 
-    private let leftAvatarFilter: NatFilter = {
+    private let leftAvatarChipFilter: NatChipFilter = {
         let avatar = NatAvatar(size: .standard, type: .label)
         avatar.configure(name: "Design System")
-        let filter = NatFilter()
+        let filter = NatChipFilter()
         filter.configure(text: "Left avatar")
         filter.configure(avatar: avatar, position: .left)
         return filter
     }()
 
-    private let rightAvatarFilter: NatFilter = {
+    private let rightAvatarChipFilter: NatChipFilter = {
         let avatar = NatAvatar(size: .standard, type: .label)
         avatar.configure(name: "Design System")
-        let filter = NatFilter()
+        let filter = NatChipFilter()
         filter.configure(text: "Right avatar")
         filter.configure(avatar: avatar, position: .right)
         return filter
     }()
 
-    private let iconAndAvatarFilter: NatFilter = {
+    private let iconAndAvatarChipFilter: NatChipFilter = {
         let icon = getIcon(.outlinedDefaultMockup)
         let avatar = NatAvatar(size: .standard, type: .label)
         avatar.configure(name: "Design System")
-        let filter = NatFilter()
+        let filter = NatChipFilter()
         filter.configure(text: "Icon and Avatar")
         filter.configure(icon: icon, position: .left)
         filter.configure(avatar: avatar, position: .right)
         return filter
     }()
 
-    private let avatarAndIconFilter: NatFilter = {
+    private let avatarAndIconChipFilter: NatChipFilter = {
         let icon = getIcon(.outlinedDefaultMockup)
         let avatar = NatAvatar(size: .standard, type: .label)
         avatar.configure(name: "Design System")
-        let filter = NatFilter()
+        let filter = NatChipFilter()
         filter.configure(text: "Avatar and icon")
         filter.configure(avatar: avatar, position: .left)
         filter.configure(icon: icon, position: .right)
         return filter
     }()
 
-    private let focusedFilter: NatFilter = {
-        let filter = NatFilter()
-        filter.configure(text: "Focused")
-        filter.configure(state: .focused)
-        return filter
+    private let focusedChipFilter: NatChipFilter = {
+        let chipFilter = NatChipFilter()
+        chipFilter.configure(text: "Focused")
+        chipFilter.configure(state: .focused)
+        return chipFilter
     }()
 
-    private let disabledFilter: NatFilter = {
-        let filter = NatFilter()
-        filter.configure(text: "Disabled")
-        filter.configure(state: .disabled)
-        return filter
+    private let disabledChipFilter: NatChipFilter = {
+        let chipFilter = NatChipFilter()
+        chipFilter.configure(text: "Disabled")
+        chipFilter.configure(state: .disabled)
+        return chipFilter
     }()
 
     // MARK: - Life cycle
@@ -178,23 +178,23 @@ class FilterViewController: UIViewController, SampleItem {
         view.backgroundColor = NatColors.background
         view.addSubview(scrollView)
         scrollView.addSubview(stackView)
-        stackView.addArrangedSubview(neutralColorFilter)
-        stackView.addArrangedSubview(primaryColorFilter)
-        stackView.addArrangedSubview(secondaryColorFilter)
-        stackView.addArrangedSubview(customColorFilter)
-        stackView.addArrangedSubview(filterWithAction)
-        stackView.addArrangedSubview(semiSizeFilter)
-        stackView.addArrangedSubview(semiXSizeFilter)
-        stackView.addArrangedSubview(mediumSizeFilter)
-        stackView.addArrangedSubview(leftIconFilter)
-        stackView.addArrangedSubview(rightIconFilter)
-        stackView.addArrangedSubview(bothSidesIconFilter)
-        stackView.addArrangedSubview(leftAvatarFilter)
-        stackView.addArrangedSubview(rightAvatarFilter)
-        stackView.addArrangedSubview(iconAndAvatarFilter)
-        stackView.addArrangedSubview(avatarAndIconFilter)
-        stackView.addArrangedSubview(focusedFilter)
-        stackView.addArrangedSubview(disabledFilter)
+        stackView.addArrangedSubview(neutralColorChipFilter)
+        stackView.addArrangedSubview(primaryColorChipFilter)
+        stackView.addArrangedSubview(secondaryColorChipFilter)
+        stackView.addArrangedSubview(customColorChipFilter)
+        stackView.addArrangedSubview(chipFilterWithAction)
+        stackView.addArrangedSubview(semiSizeChipFilter)
+        stackView.addArrangedSubview(semiXSizeChipFilter)
+        stackView.addArrangedSubview(mediumSizeChipFilter)
+        stackView.addArrangedSubview(leftIconChipFilter)
+        stackView.addArrangedSubview(rightIconChipFilter)
+        stackView.addArrangedSubview(bothSidesIconChipFilter)
+        stackView.addArrangedSubview(leftAvatarChipFilter)
+        stackView.addArrangedSubview(rightAvatarChipFilter)
+        stackView.addArrangedSubview(iconAndAvatarChipFilter)
+        stackView.addArrangedSubview(avatarAndIconChipFilter)
+        stackView.addArrangedSubview(focusedChipFilter)
+        stackView.addArrangedSubview(disabledChipFilter)
         addConstraints()
     }
 

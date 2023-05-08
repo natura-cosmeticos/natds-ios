@@ -1,5 +1,5 @@
 //
-//  NatFilter+Color.swift
+//  NatChipFilter+Color.swift
 //  NatDS
 //
 //  Created by Hayna.Cardoso on 04/05/23.
@@ -15,7 +15,7 @@
  - secondary
  - custom
  */
-extension NatFilter {
+extension NatChipFilter {
     public enum Color {
         case neutral
         case primary

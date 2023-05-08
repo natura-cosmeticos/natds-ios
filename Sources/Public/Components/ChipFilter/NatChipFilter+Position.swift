@@ -1,5 +1,5 @@
 //
-//  NatFilter+Position.swift
+//  NatChipFilter+Position.swift
 //  NatDS
 //
 //  Created by Hayna.Cardoso on 04/05/23.
@@ -13,7 +13,7 @@
  - right
  - left
  */
-extension NatFilter {
+extension NatChipFilter {
     public enum Position {
         case left
         case right
