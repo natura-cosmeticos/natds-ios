@@ -77,6 +77,7 @@
 		F73DA218B08455F09195D7D6F4990961 /* SizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCE6B3ED45C1E81094E9B4DDAB9D1EC /* SizeViewController.swift */; };
 		FA821AD3D36171DBAF4790CAD9C46CC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EB78FC7F0EEE4914F65F61B2E74031 /* AppDelegate.swift */; };
 		FD3C1A6EDAD5F31BC9E4984E981C28A8 /* TabItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD6BDA39D2DFA18294278D33A054F9B /* TabItemViewController.swift */; };
+		FF50B64B2A040FCC00FA824A /* ChipFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF50B64A2A040FCC00FA824A /* ChipFilterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -167,6 +168,7 @@
 		F9F8B4392DE4673E30A21B2F6E484CDB /* SampleSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleSection.swift; sourceTree = "<group>"; };
 		FD277263F8F3EE00B21A0DE2E9849D97 /* ColorsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsCell.swift; sourceTree = "<group>"; };
 		FE39135EC83E5AE456AC7FBF5FE7F9CA /* TypographyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypographyViewController.swift; sourceTree = "<group>"; };
+		FF50B64A2A040FCC00FA824A /* ChipFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipFilterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -423,6 +425,7 @@
 		86D88A8EB08915984C5FB6D277F7A6FA /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				FF50B6492A040F1A00FA824A /* ChipFilter */,
 				8C1AE06128A684D0000F9D88 /* Alert */,
 				7D75A45825DB0B940050ACA9 /* Avatar */,
 				265B17EC24AFBE2A00FD0407 /* Badge */,
@@ -702,6 +705,14 @@
 			path = Field;
 			sourceTree = "<group>";
 		};
+		FF50B6492A040F1A00FA824A /* ChipFilter */ = {
+			isa = PBXGroup;
+			children = (
+				FF50B64A2A040FCC00FA824A /* ChipFilterViewController.swift */,
+			);
+			path = ChipFilter;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -877,6 +888,7 @@
 				B5D960A174519D837D9855D4B0A6711B /* TextFieldItemViewController.swift in Sources */,
 				79FC59E625DAB5A7001CCB56 /* ImageViewController.swift in Sources */,
 				7D75A45A25DB0BA50050ACA9 /* AvatarItemViewController.swift in Sources */,
+				FF50B64B2A040FCC00FA824A /* ChipFilterViewController.swift in Sources */,
 				D2874BA3C6A03754EC9895DC95D6DFE5 /* TypographyCell.swift in Sources */,
 				4FB74E3BCCB54EE2242A9A78778F6024 /* TypographyViewController.swift in Sources */,
 				5A95C641E43BCD63CA21359C8EAFBA25 /* ValueTextHighlightItemViewController.swift in Sources */,

@@ -12,6 +12,7 @@ class ComponentsSection: SampleSection {
         CounterViewController.self,
         CheckboxViewController.self,
         ChipViewController.self,
+        ChipFilterViewController.self,
         DialogItemViewController.self,
         DividerViewController.self,
         ExpansionPanelViewController.self,
