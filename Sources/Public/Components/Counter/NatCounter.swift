@@ -35,7 +35,7 @@ import UIKit
         DesignSystem().configure(with: AvailableTheme)
  */
 
-public final class NatCounter: UIView {
+public final class NatCounter: UIView, UITextFieldDelegate {
 
     public typealias CounterChangeValueHandler = (Int) -> Void
     private var counterChangeValueHandler: CounterChangeValueHandler?
@@ -48,9 +48,9 @@ public final class NatCounter: UIView {
             let lineHeight = getComponentAttributeFromTheme(\.counterContentLineHeight)
             let letterSpacing = getComponentAttributeFromTheme(\.counterContentLetterSpacing)
 
-            numCounterLabel.attributedText = "\(numCounter)".attributedStringWith(lineHeight: lineHeight,
+            numCounterTextField.attributedText = "\(numCounter)".attributedStringWith(lineHeight: lineHeight,
                                                                                   letterSpacing: letterSpacing)
-            numCounterLabel.textAlignment = .center
+            numCounterTextField.textAlignment = .center
             checkLimit()
         }
     }
@@ -80,17 +80,48 @@ public final class NatCounter: UIView {
 
         return view
     }()
+    
+    let numCounterTextField: UITextField = {
+        let textField = UITextField()
+        
+        textField.font = NatFonts.font(ofSize: getComponentAttributeFromTheme(\.counterContentFontSize),
+                                       withWeight: getComponentAttributeFromTheme(\.counterContentPrimaryFontWeight),
+                                       withFamily: getComponentAttributeFromTheme(\.counterContentPrimaryFontFamily))
+        textField.textColor = getUIColorFromTokens(\.colorHighEmphasis)
+        textField.textAlignment = .center
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.keyboardType = .numberPad
 
-    let numCounterLabel: UILabel = {
-        let label = UILabel()
-        label.font = NatFonts.font(ofSize: getComponentAttributeFromTheme(\.counterContentFontSize),
-                                   withWeight: getComponentAttributeFromTheme(\.counterContentPrimaryFontWeight),
-                                   withFamily: getComponentAttributeFromTheme(\.counterContentPrimaryFontFamily))
-        label.textColor = getUIColorFromTokens(\.colorHighEmphasis)
-        label.translatesAutoresizingMaskIntoConstraints = false
-
-        return label
+        return textField
     }()
+    
+    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let currentText = textField.text ?? ""
+        guard let stringRange = Range(range, in: currentText) else { return false }
+
+        let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
+
+        if let number = Int(updatedText) {
+            return number >= minCount && number <= maxCount
+        } else if updatedText.isEmpty {
+            return true
+        }
+
+        return false
+    }
+    
+    public func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField.text?.isEmpty ?? false {
+            textField.text = "0"
+            numCounter = minCount
+        }
+    }
+
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        if let text = textField.text, let number = Int(text) {
+            numCounter = number
+        }
+    }
 
     var label: UILabel = {
         let label = UILabel()
@@ -127,6 +158,9 @@ public final class NatCounter: UIView {
     public init(size: Size = .semi) {
         self.size = size
         super.init(frame: .zero)
+        
+        numCounterTextField.delegate = self
+        numCounterTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
 
         setCount(minCount)
         setupButtons()
@@ -258,7 +292,7 @@ public final class NatCounter: UIView {
         addSubview(label)
         addSubview(stackViewContainer)
 
-        numCounterLabelView.addSubview(numCounterLabel)
+        numCounterLabelView.addSubview(numCounterTextField)
         stackViewContainer.addArrangedSubview(subtractView)
         stackViewContainer.addArrangedSubview(numCounterLabelView)
         stackViewContainer.addArrangedSubview(addView)
@@ -269,8 +303,8 @@ public final class NatCounter: UIView {
             stackViewContainer.trailingAnchor.constraint(equalTo: trailingAnchor),
             stackViewContainer.bottomAnchor.constraint(equalTo: bottomAnchor),
 
-            numCounterLabel.centerYAnchor.constraint(equalTo: numCounterLabelView.centerYAnchor),
-            numCounterLabel.centerXAnchor.constraint(equalTo: numCounterLabelView.centerXAnchor),
+            numCounterTextField.centerYAnchor.constraint(equalTo: numCounterLabelView.centerYAnchor),
+            numCounterTextField.centerXAnchor.constraint(equalTo: numCounterLabelView.centerXAnchor),
 
             label.leadingAnchor.constraint(equalTo: leadingAnchor),
             label.topAnchor.constraint(equalTo: topAnchor),
