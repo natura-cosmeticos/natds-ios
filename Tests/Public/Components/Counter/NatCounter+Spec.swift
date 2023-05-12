@@ -16,7 +16,7 @@ final class NatCounterSpec: QuickSpec {
             }
 
             it("counter starts at 0") {
-                expect(sut.numCounterLabel.text).to(equal("0"))
+                expect(sut.numCounterTextField.text).to(equal("0"))
             }
         }
 
@@ -156,7 +156,7 @@ final class NatCounterSpec: QuickSpec {
                 }
 
                 it("shows the set value") {
-                    expect(sut.numCounterLabel.text).to(equal("1"))
+                    expect(sut.numCounterTextField.text).to(equal("1"))
                 }
 
                 it("doesn't run the value change handler") {
