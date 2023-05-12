@@ -500,6 +500,52 @@ It&rsquo;s necessary to instantiate it and set its height and width constraints.
                   <li class="item">
                     <div>
                       <code>
+                      <a name="/c:@M@NatDS@objc(cs)NatChipFilter"></a>
+                      <a name="//apple_ref/swift/Class/NatChipFilter" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@M@NatDS@objc(cs)NatChipFilter">NatChipFilter</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>NatChipFilter is a class that represents the ChipFilter component from the design system.</p>
+
+<p>Example of usage:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">chipFilter</span> <span class="o">=</span> <span class="kt">NatChipFilter</span><span class="p">(</span><span class="nv">size</span><span class="p">:</span> <span class="o">.</span><span class="n">semi</span><span class="p">,</span> <span class="nv">color</span><span class="p">:</span> <span class="o">.</span><span class="n">neutral</span><span class="p">)</span>
+<span class="n">chipFilter</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">text</span><span class="p">:</span> <span class="s">"NatChipFilter example text"</span><span class="p">)</span>
+<span class="n">chipFilter</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">icon</span><span class="p">:</span> <span class="nf">getIcon</span><span class="p">(</span><span class="o">.</span><span class="n">outlinedDefaultMockup</span><span class="p">),</span> <span class="nv">position</span><span class="p">:</span> <span class="o">.</span><span class="n">left</span><span class="p">)</span>
+<span class="n">chipFilter</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">avatar</span><span class="p">:</span> <span class="n">natAvatar</span><span class="p">,</span> <span class="nv">position</span><span class="p">:</span> <span class="o">.</span><span class="n">right</span><span class="p">)</span>
+<span class="n">chipFilter</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">state</span><span class="p">:</span> <span class="o">.</span><span class="n">normal</span><span class="p">)</span>
+<span class="n">chipFilter</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">actionHandler</span><span class="p">:</span> <span class="p">{</span> <span class="n">isSelect</span> <span class="k">in</span>
+   <span class="c1">//do something</span>
+<span class="p">})</span>
+</code></pre>
+<div class="aside aside-requires">
+    <p class="aside-title">Requires</p>
+    <p>It&rsquo;s necessary to configure the Design System with a theme or fatalError will be raised.</p>
+
+<p>DesignSystem().configure(with: AvailableTheme)</p>
+
+</div>
+
+                          <a href="Classes/NatChipFilter.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">NatChipFilter</span> <span class="p">:</span> <span class="kt">UIView</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
                       <a name="/c:@M@NatDS@objc(cs)NatCounter"></a>
                       <a name="//apple_ref/swift/Class/NatCounter" class="dashAnchor"></a>
                       <a class="token" href="#/c:@M@NatDS@objc(cs)NatCounter">NatCounter</a>
@@ -570,7 +616,7 @@ It&rsquo;s necessary to instantiate it and set its height and width constraints.
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">NatCounter</span> <span class="p">:</span> <span class="kt">UIView</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">NatCounter</span> <span class="p">:</span> <span class="kt">UIView</span><span class="p">,</span> <span class="kt">UITextFieldDelegate</span></code></pre>
 
                           </div>
                         </div>
@@ -2222,6 +2268,18 @@ The tag colors change according to the current theme configured.</p>
                   <a href="Classes/NatChip/Size.html">– Size</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="Classes/NatChipFilter.html">NatChipFilter</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatChipFilter/Color.html">– Color</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatChipFilter/Position.html">– Position</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/NatChipFilter/Size.html">– Size</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="Classes/NatCounter.html">NatCounter</a>
                 </li>
                 <li class="nav-group-task">
@@ -2562,7 +2620,7 @@ The tag colors change according to the current theme configured.</p>
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2023 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external noopener">System Team - Natura SA</a>. All rights reserved. (Last updated: 2023-05-03)</p>
+          <p>&copy; 2023 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external noopener">System Team - Natura SA</a>. All rights reserved. (Last updated: 2023-05-12)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </div>
