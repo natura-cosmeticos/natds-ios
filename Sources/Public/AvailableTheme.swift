@@ -13,6 +13,8 @@
       - TheBodyShopLight
       - ConsultoriaDeBelezaLight
       - ConsultoriaDeBelezaDark
+      - CasaEestiloDark
+      - CasaEestiloLight
 */
 
 public enum AvailableTheme {
@@ -26,6 +28,8 @@ public enum AvailableTheme {
     case theBodyShopLight
     case consultoriaDeBelezaDark
     case consultoriaDeBelezaLight
+    case casaeestiloDark
+    case casaeestiloLight
 
     init?(theme: Theme) {
         switch theme {
@@ -39,6 +43,8 @@ public enum AvailableTheme {
         case is TheBodyShopLightTheme: self = .theBodyShopLight
         case is ConsultoriaDeBelezaDarkTheme: self = .consultoriaDeBelezaDark
         case is ConsultoriaDeBelezaLightTheme: self = .consultoriaDeBelezaLight
+        case is CasaEestiloDarkTheme: self = .casaeestiloDark
+        case is CasaEestiloLightTheme: self = .casaeestiloLight
         default: return nil
         }
     }
@@ -56,6 +62,8 @@ public enum AvailableTheme {
         case .theBodyShopLight: instance = TheBodyShopLightTheme()
         case .consultoriaDeBelezaDark: instance = ConsultoriaDeBelezaDarkTheme()
         case .consultoriaDeBelezaLight: instance = ConsultoriaDeBelezaLightTheme()
+        case .casaeestiloDark: instance = CasaEestiloDarkTheme()
+        case .casaeestiloLight: instance = CasaEestiloLightTheme()
         }
         return instance
     }
