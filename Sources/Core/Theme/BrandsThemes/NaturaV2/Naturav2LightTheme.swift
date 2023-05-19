@@ -18,12 +18,12 @@
  *                                                              
  */
 
-struct Natura_v2LightTheme: Theme {
-  let tokens: Tokens = Natura_v2LightTokens()
-  let components: Components = Natura_v2LightComponents()
+struct Naturav2LightTheme: Theme {
+  let tokens: Tokens = Naturav2LightTokens()
+  let components: Components = Naturav2LightComponents()
 }
 
-struct Natura_v2LightTokens: Tokens {
+struct Naturav2LightTokens: Tokens {
   let assetFontFileDisplay = "roboto_regular"
   let assetFontFileHeadline = "roboto_regular"
   let assetFontFileBodyRegular = "roboto_regular"
@@ -222,7 +222,7 @@ struct Natura_v2LightTokens: Tokens {
   let typographyFallbackFontFamily = "San Francisco"
   let typographyFallbackFontWeight: UIFont.Weight = .regular
 }
-struct Natura_v2LightComponents: Components {
+struct Naturav2LightComponents: Components {
   let alertTitleFontSize: CGFloat = 20
   let alertTitleLetterSpacing: CGFloat = 0.12
   let alertTitleLineHeight: CGFloat = 1.5

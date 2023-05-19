@@ -18,12 +18,12 @@
  *                                                              
  */
 
-struct Avon_v2DarkTheme: Theme {
-  let tokens: Tokens = Avon_v2DarkTokens()
-  let components: Components = Avon_v2DarkComponents()
+struct Avonv2DarkTheme: Theme {
+  let tokens: Tokens = Avonv2DarkTokens()
+  let components: Components = Avonv2DarkComponents()
 }
 
-struct Avon_v2DarkTokens: Tokens {
+struct Avonv2DarkTokens: Tokens {
   let assetFontFileDisplay = "montserrat_bold"
   let assetFontFileHeadline = "montserrat_semi_bold"
   let assetFontFileBodyRegular = "montserrat_regular"
@@ -222,7 +222,7 @@ struct Avon_v2DarkTokens: Tokens {
   let typographyFallbackFontFamily = "San Francisco"
   let typographyFallbackFontWeight: UIFont.Weight = .regular
 }
-struct Avon_v2DarkComponents: Components {
+struct Avonv2DarkComponents: Components {
   let alertTitleFontSize: CGFloat = 20
   let alertTitleLetterSpacing: CGFloat = 0.12
   let alertTitleLineHeight: CGFloat = 1.5
