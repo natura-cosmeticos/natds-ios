@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [7.10.22](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.21...7.10.22) (2023-05-19)
 
+### [7.10.22](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.21...7.10.22) (2023-05-19)
+
 * removing Helvetica font family
 * add AvonV2 theme
 * add NaturaV2 theme
