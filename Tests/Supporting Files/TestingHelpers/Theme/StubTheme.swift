@@ -191,7 +191,7 @@ private struct StubTokens: Tokens {
     let typographyLineHeightLarge: CGFloat = 2
     let typographyFontFamilyPrimary = "San Francisco"
     let typographyFontFamilySecondary = "sans-serif"
-    let typographyFontFamilyBranding = "Helvetica Now"
+    let typographyFontFamilyBranding = "Roboto"
     let typographyFontFamilyCode = "SF Mono"
     let typographyFontWeightRegular: UIFont.Weight = .regular
     let typographyFontWeightMedium: UIFont.Weight = .medium
