@@ -2,9 +2,7 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### Features
-
-* add consultoria de beleza resources ([2f8efe3](https://github.com/natura-cosmeticos/natds-ios/commit/2f8efe30cf5c1e3f0e6781677bd97ab488ada3ee))
+### [7.10.19](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.18...7.10.19) (2023-05-19)
 
 ### [7.10.18](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.17...7.10.18) (2023-05-12)
 
