@@ -2,7 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [7.10.21](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.20...7.10.21) (2023-05-19)
+### [7.10.22](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.21...7.10.22) (2023-05-19)
+
+* removing Helvetica font family
+* add AvonV2 theme
+* add NaturaV2 theme
 
 ### [7.10.18](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.17...7.10.18) (2023-05-12)
 
