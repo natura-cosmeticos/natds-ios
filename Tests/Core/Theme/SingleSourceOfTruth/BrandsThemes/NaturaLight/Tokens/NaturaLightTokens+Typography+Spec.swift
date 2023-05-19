@@ -32,13 +32,13 @@ final class NaturaLightTokensTypographySpec: QuickSpec {
 
         describe("#typographyDisplayFontFamily") {
             it("returns an expected value") {
-                expect(systemUnderTest.typographyDisplayFontFamily).to(equal("Helvetica Now Display"))
+                expect(systemUnderTest.typographyDisplayFontFamily).to(equal("Roboto"))
                 }
         }
 
         describe("#typographyHeadlineFontFamily") {
             it("returns an expected value") {
-                expect(systemUnderTest.typographyHeadlineFontFamily).to(equal("Helvetica Now Display"))
+                expect(systemUnderTest.typographyHeadlineFontFamily).to(equal("Roboto"))
                 }
         }
 

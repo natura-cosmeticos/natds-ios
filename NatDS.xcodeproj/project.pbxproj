@@ -262,9 +262,6 @@
 		7DFC9E8826F38BA500052C54 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DFC9E8526F38BA400052C54 /* Montserrat-Bold.ttf */; };
 		7DFC9E8926F38BA500052C54 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DFC9E8626F38BA500052C54 /* Montserrat-Regular.ttf */; };
 		7DFC9E8A26F38BA500052C54 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DFC9E8726F38BA500052C54 /* Montserrat-SemiBold.ttf */; };
-		7DFC9E9426F38BE500052C54 /* HelveticaNowDisplay-Bd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DFC9E9126F38BE300052C54 /* HelveticaNowDisplay-Bd.ttf */; };
-		7DFC9E9526F38BE500052C54 /* HelveticaNowDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DFC9E9226F38BE400052C54 /* HelveticaNowDisplay-Regular.ttf */; };
-		7DFC9E9626F38BE500052C54 /* HelveticaNowDisplay-Md.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DFC9E9326F38BE500052C54 /* HelveticaNowDisplay-Md.ttf */; };
 		7DFC9E9E26F38C0100052C54 /* DrukCy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DFC9E9D26F38C0100052C54 /* DrukCy-Bold.ttf */; };
 		7DFC9EA326F38C0A00052C54 /* Recoleta-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DFC9EA226F38C0A00052C54 /* Recoleta-SemiBold.ttf */; };
 		7DFC9EA926F38C1600052C54 /* WorkSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DFC9EA726F38C1500052C54 /* WorkSans-Bold.ttf */; };
@@ -449,6 +446,8 @@
 		F72BEF338B46182BC440C92CCF3D02B0 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A1DDA4A78343DB58AF747FF9DC2B66 /* IconView.swift */; };
 		F7894B76EE9A0F4726C5DF88653A4816 /* NatFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C1EA361FCA3C4EFEC4858AA4E04143 /* NatFonts.swift */; };
 		FAD0A71F10707995BE66A299D98CC33B /* NatOpacities+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46448E79883A4EB8A9416823A01531F /* NatOpacities+Spec.swift */; };
+		FF4BFAAC2A17080200D7E28F /* Avon_v2DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4BFAAA2A17080200D7E28F /* Avon_v2DarkTheme.swift */; };
+		FF4BFAAD2A17080200D7E28F /* Avon_v2LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4BFAAB2A17080200D7E28F /* Avon_v2LightTheme.swift */; };
 		FF4C87EAD7ADB8D9EF8F897BA229A3A7 /* NatFonts+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8BC0D102CE4444401C0469C861358A /* NatFonts+Spec.swift */; };
 		FF50B6422A040D3600FA824A /* NatChipFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF50B6412A040D3600FA824A /* NatChipFilter.swift */; };
 		FF50B6442A040D5600FA824A /* NatChipFilter+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF50B6432A040D5600FA824A /* NatChipFilter+Color.swift */; };
@@ -735,9 +734,6 @@
 		7DFC9E8526F38BA400052C54 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		7DFC9E8626F38BA500052C54 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		7DFC9E8726F38BA500052C54 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
-		7DFC9E9126F38BE300052C54 /* HelveticaNowDisplay-Bd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNowDisplay-Bd.ttf"; sourceTree = "<group>"; };
-		7DFC9E9226F38BE400052C54 /* HelveticaNowDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNowDisplay-Regular.ttf"; sourceTree = "<group>"; };
-		7DFC9E9326F38BE500052C54 /* HelveticaNowDisplay-Md.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaNowDisplay-Md.ttf"; sourceTree = "<group>"; };
 		7DFC9E9D26F38C0100052C54 /* DrukCy-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DrukCy-Bold.ttf"; sourceTree = "<group>"; };
 		7DFC9EA226F38C0A00052C54 /* Recoleta-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Recoleta-SemiBold.ttf"; sourceTree = "<group>"; };
 		7DFC9EA726F38C1500052C54 /* WorkSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Bold.ttf"; sourceTree = "<group>"; };
@@ -918,6 +914,8 @@
 		FADDEC4E472D2A193BED0EBF058A67E8 /* ViewAnimatingMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewAnimatingMock.swift; sourceTree = "<group>"; };
 		FB7FB96016F7D02CB5976F54C383CCD6 /* NatSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatSizes.swift; sourceTree = "<group>"; };
 		FD3CA47F5B151245708F86A82388401D /* Divider+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Divider+Snapshot+Tests.swift"; sourceTree = "<group>"; };
+		FF4BFAAA2A17080200D7E28F /* Avon_v2DarkTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Avon_v2DarkTheme.swift; sourceTree = "<group>"; };
+		FF4BFAAB2A17080200D7E28F /* Avon_v2LightTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Avon_v2LightTheme.swift; sourceTree = "<group>"; };
 		FF50B6412A040D3600FA824A /* NatChipFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatChipFilter.swift; sourceTree = "<group>"; };
 		FF50B6432A040D5600FA824A /* NatChipFilter+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatChipFilter+Color.swift"; sourceTree = "<group>"; };
 		FF50B6452A040D6B00FA824A /* NatChipFilter+Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatChipFilter+Position.swift"; sourceTree = "<group>"; };
@@ -1965,9 +1963,6 @@
 		7DFB000D26E1713500CB7465 /* Natura */ = {
 			isa = PBXGroup;
 			children = (
-				7DFC9E9126F38BE300052C54 /* HelveticaNowDisplay-Bd.ttf */,
-				7DFC9E9326F38BE500052C54 /* HelveticaNowDisplay-Md.ttf */,
-				7DFC9E9226F38BE400052C54 /* HelveticaNowDisplay-Regular.ttf */,
 			);
 			path = Natura;
 			sourceTree = "<group>";
@@ -2903,6 +2898,7 @@
 		E67E4E2A29F714CB00FF7515 /* BrandsThemes */ = {
 			isa = PBXGroup;
 			children = (
+				FF4BFAA92A17065700D7E28F /* Avon_v2 */,
 				E67E4E2B29F714CB00FF7515 /* NatdsTest */,
 				E67E4E2E29F714CB00FF7515 /* Avon */,
 				E67E4E3129F714CB00FF7515 /* ConsultoriaDeBeleza */,
@@ -3063,6 +3059,15 @@
 			path = Icons;
 			sourceTree = "<group>";
 		};
+		FF4BFAA92A17065700D7E28F /* Avon_v2 */ = {
+			isa = PBXGroup;
+			children = (
+				FF4BFAAA2A17080200D7E28F /* Avon_v2DarkTheme.swift */,
+				FF4BFAAB2A17080200D7E28F /* Avon_v2LightTheme.swift */,
+			);
+			path = Avon_v2;
+			sourceTree = "<group>";
+		};
 		FF50B6402A040CF600FA824A /* ChipFilter */ = {
 			isa = PBXGroup;
 			children = (
@@ -3205,14 +3210,11 @@
 				7D23B35726D7DE0300FB5DA9 /* ZapfHumanist601BT-Roman.ttf in Resources */,
 				67BB06E023B48B85454BD2B38E60B156 /* Images.xcassets in Resources */,
 				7DFC9EAA26F38C1600052C54 /* WorkSans-Regular.ttf in Resources */,
-				7DFC9E9626F38BE500052C54 /* HelveticaNowDisplay-Md.ttf in Resources */,
 				7DFC9E8926F38BA500052C54 /* Montserrat-Regular.ttf in Resources */,
-				7DFC9E9426F38BE500052C54 /* HelveticaNowDisplay-Bd.ttf in Resources */,
 				7DFC9E8826F38BA500052C54 /* Montserrat-Bold.ttf in Resources */,
 				7DFC9E8A26F38BA500052C54 /* Montserrat-SemiBold.ttf in Resources */,
 				7DFC9E9E26F38C0100052C54 /* DrukCy-Bold.ttf in Resources */,
 				7D6947D226E8FB89007D00A4 /* SuisseIntl-Regular.ttf in Resources */,
-				7DFC9E9526F38BE500052C54 /* HelveticaNowDisplay-Regular.ttf in Resources */,
 				7DFC9EA926F38C1600052C54 /* WorkSans-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3634,6 +3636,7 @@
 				E70EF1AC4BB7A93A80A500786C1A6497 /* NatButton.swift in Sources */,
 				798CD29C25FFCC4A00F49768 /* NatRadioButton.swift in Sources */,
 				4838BBC57B1464D82D59DE861726268A /* NatColors.swift in Sources */,
+				FF4BFAAD2A17080200D7E28F /* Avon_v2LightTheme.swift in Sources */,
 				E67E4E5129F714CB00FF7515 /* ThemeProtocol.swift in Sources */,
 				84BC900224AA15C3007DF09D /* NotificationCenterPostable.swift in Sources */,
 				797E615E255464D1002A59E0 /* NatButton+Icon.swift in Sources */,
@@ -3721,6 +3724,7 @@
 				7DAF750E25E5AF830094F865 /* String+Initials.swift in Sources */,
 				840B6A754236624B9738CBC3D5CFE895 /* ViewAnimatingWrapper.swift in Sources */,
 				7D86C1A426654D0700FC4C53 /* NatLogo+Size.swift in Sources */,
+				FF4BFAAC2A17080200D7E28F /* Avon_v2DarkTheme.swift in Sources */,
 				EE1E7A9F49A18BCD194E0C03FB2F0074 /* ViewStyle.swift in Sources */,
 				79EA0C3E260B861400742C0A /* NatCounter+Size.swift in Sources */,
 				79FC593F25BF58C7001CCB56 /* NatRadioButtonControl+Style.swift in Sources */,
