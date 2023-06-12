@@ -19,6 +19,7 @@ import UIKit
 public class NatSelect: UIView {
 
     private var textField: TextField
+    private var theme: AvailableTheme
     private var data: [Int: [String]] = [:]
     private var format: String?
 
@@ -29,10 +30,10 @@ public class NatSelect: UIView {
         return pickerView
     }()
 
-    public init(textField: TextField) {
+    public init(textField: TextField, theme:AvailableTheme = .none) {
         self.textField = textField
+        self.theme = textField.theme
         super.init(frame: .zero)
-
         textField.delegate = self
         textField.setPickerView(pickerView: pickerView)
         setup()

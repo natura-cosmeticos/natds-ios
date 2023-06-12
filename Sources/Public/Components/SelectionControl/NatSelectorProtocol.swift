@@ -8,4 +8,5 @@ protocol NatSelector: UIControl, Pulsable {
     var isGrouped: Bool { get set }
     var groupId: Int { get set }
     var handler: SelectionHandler? { get set }
+    var theme:AvailableTheme { get set }
 }

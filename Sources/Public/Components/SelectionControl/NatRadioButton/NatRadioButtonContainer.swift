@@ -1,10 +1,7 @@
 import UIKit
 
 class NatRadioButtonContainer: UIControl, NatSelector {
-
-    let radioButton = NatRadioButtonControl()
-    let selectedPulsableColor: UIColor = getUIColorFromTokens(\.colorPrimary).withAlphaComponent(0.2)
-    let unselectedPulsableColor: UIColor = getUIColorFromTokens(\.colorMediumEmphasis).withAlphaComponent(0.2)
+    var radioButton = NatRadioButtonControl()
 
     override var isSelected: Bool {
         get {
@@ -77,6 +74,15 @@ class NatRadioButtonContainer: UIControl, NatSelector {
             radioButton.groupId = newValue
         }
     }
+    
+    var theme: AvailableTheme {
+        get {
+            radioButton.theme
+        }
+        set {
+            radioButton.theme = newValue
+        }
+    }
 
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
@@ -95,10 +101,39 @@ class NatRadioButtonContainer: UIControl, NatSelector {
 
     // swiftlint:disable line_length
     private func setup() {
+        
+        radioButton = NatRadioButtonControl(theme: self.theme)
+        
         addSubview(radioButton)
-        radioButton.onTouchesBegan = { [unowned self] _ in
+        
+        var selectedPulsableColor: UIColor = .white
+        var unselectedPulsableColor: UIColor = .white
+        
+        if (self.theme == .none) {
+             selectedPulsableColor = getUIColorFromTokens(\.colorPrimary).withAlphaComponent(0.2)
+             unselectedPulsableColor = getUIColorFromTokens(\.colorMediumEmphasis).withAlphaComponent(0.2)
+        }
+        else
+        {
+            selectedPulsableColor = hexStringToUIColor(hex: self.theme.newInstance.tokens.colorPrimary).withAlphaComponent(0.2)
+            unselectedPulsableColor = getUIColorFromTokens(\.colorMediumEmphasis).withAlphaComponent(0.2)
+        }
+        
+        radioButton.onTouchesBegan = {
+            [unowned self] _ in
+            
+            if (self.theme == .none) {
+                 selectedPulsableColor = getUIColorFromTokens(\.colorPrimary).withAlphaComponent(0.2)
+                 unselectedPulsableColor = getUIColorFromTokens(\.colorMediumEmphasis).withAlphaComponent(0.2)
+            }
+            else
+            {
+                selectedPulsableColor = hexStringToUIColor(hex: self.theme.newInstance.tokens.colorPrimary).withAlphaComponent(0.2)
+                unselectedPulsableColor = getUIColorFromTokens(\.colorMediumEmphasis).withAlphaComponent(0.2)
+            }
+            
             self.addPulseLayerAnimated(at: self.radioButton.center, in: self.layer,
-                                       withColor: self.isSelected ? self.unselectedPulsableColor : self.selectedPulsableColor,
+                                       withColor: self.isSelected ? unselectedPulsableColor : selectedPulsableColor,
                                        removeAfterAnimation: false)
         }
         // swiftlint:enable line_length

@@ -80,6 +80,15 @@ public class NatSelectionControl: UIView {
             selectorView.labelComponent = newValue ?? ""
         }
     }
+    
+    public var theme: AvailableTheme {
+        get {
+            selectorView.theme
+        }
+        set {
+            selectorView.theme = newValue
+        }
+    }
 
     internal var isGrouped: Bool = false {
         didSet {
@@ -94,11 +103,13 @@ public class NatSelectionControl: UIView {
     }
 
     private let style: Style
+    private var customTheme: AvailableTheme = .none
     private(set) var text: String?
     private var notificationCenter: NotificationCenterObservable
 
     private lazy var selectorView: NatSelector = {
         let view = style.getSelector()
+        view.theme = customTheme
         return view
     }()
 
@@ -109,9 +120,10 @@ public class NatSelectionControl: UIView {
         return label
     }()
 
-    public init(style: Style, text: String? = nil) {
+    public init(style: Style, text: String? = nil, theme:AvailableTheme = .none) {
         self.style = style
         self.text = text
+        self.customTheme = theme
         self.notificationCenter = NotificationCenter.default
         super.init(frame: .zero)
         setup()
@@ -119,12 +131,15 @@ public class NatSelectionControl: UIView {
 
     init(style: Style,
          text: String? = nil,
-         notificationCenter: NotificationCenterObservable = NotificationCenter.default) {
+         notificationCenter: NotificationCenterObservable = NotificationCenter.default, theme: AvailableTheme = .none) {
 
         self.notificationCenter = notificationCenter
         self.style = style
         self.text = text
+        self.customTheme = theme
+        
         super.init(frame: .zero)
+        self.theme = theme
 
         setup()
     }

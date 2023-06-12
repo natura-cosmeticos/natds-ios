@@ -1,4 +1,5 @@
 extension TextField {
+    
     public enum InteractionState: CaseIterable {
         case enabled
         case disabled
@@ -22,19 +23,6 @@ extension TextField {
                 return 2
             default:
                 return 1
-            }
-        }
-
-        var borderColor: UIColor {
-            switch self {
-            case .enabled,
-                 .readOnly,
-                 .disabled:
-                return getUIColorFromTokens(\.colorLowEmphasis)
-            case .active:
-                return getUIColorFromTokens(\.colorPrimary)
-            case .filled:
-                return getUIColorFromTokens(\.colorHighEmphasis)
             }
         }
 
@@ -107,10 +95,6 @@ extension TextField {
             }
         }
 
-        var textFieldTintColor: UIColor {
-            return getUIColorFromTokens(\.colorPrimary)
-        }
-
         var placeholderTextColor: UIColor {
             switch self {
             case .enabled,
@@ -119,6 +103,45 @@ extension TextField {
                 return getUIColorFromTokens(\.colorMediumEmphasis)
             default:
                 return getUIColorFromTokens(\.colorLowEmphasis)
+            }
+        }
+    }
+    
+    public struct ThemeColor {
+        private let theme: AvailableTheme
+        private let state: InteractionState
+
+
+        public init(theme: AvailableTheme, state: InteractionState) {
+            self.theme = theme
+            self.state = state
+        }
+
+        public var borderColor: UIColor
+        {
+            switch state {
+            case .enabled,
+                 .readOnly,
+                 .disabled:
+                return getUIColorFromTokens(\.colorLowEmphasis)
+            case .active:
+                if (theme == .none){
+                    return getUIColorFromTokens(\.colorPrimary)
+                }
+                else {
+                    return hexStringToUIColor(hex: theme.newInstance.tokens.colorPrimary)
+                }
+            case .filled:
+                return getUIColorFromTokens(\.colorHighEmphasis)
+            }
+        }
+        
+        public var textFieldTintColor: UIColor {
+            if (theme == .none){
+                return getUIColorFromTokens(\.colorPrimary)
+            }
+            else {
+                return hexStringToUIColor(hex: theme.newInstance.tokens.colorPrimary)
             }
         }
     }

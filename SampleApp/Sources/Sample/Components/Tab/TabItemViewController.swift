@@ -13,7 +13,7 @@ class TabItemViewController: UIViewController, SampleItem {
     }()
     private let scrollableTab = Tab()
     private let fixedTab = Tab()
-    private let scrollableTabWithoutElevation = Tab()
+    private let scrollableTabWithoutElevation = Tab(theme: .avonLight)
 
     override func viewDidLoad() {
         super.viewDidLoad()

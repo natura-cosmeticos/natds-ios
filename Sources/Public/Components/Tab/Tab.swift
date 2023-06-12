@@ -82,9 +82,21 @@ public class Tab: UIView {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
+    
+    var theme:AvailableTheme = .none
+    var primaryColor: UIColor = .white
 
-    public init() {
+    public init(theme:AvailableTheme = .none) {
         super.init(frame: .zero)
+        
+        self.theme = theme
+        if (self.theme == .none) {
+            primaryColor = NatColors.primary
+        }
+        else {
+            primaryColor = hexStringToUIColor(hex: self.theme.newInstance.tokens.colorPrimary)
+        }
+        
         setup()
     }
 
@@ -148,6 +160,9 @@ extension Tab {
     }
 
     private func addIndicatorView() {
+        
+        indicatorView.backgroundColor = self.primaryColor
+        
         addSubview(indicatorView)
         NSLayoutConstraint.activate([
             indicatorView.heightAnchor.constraint(equalToConstant: 2),

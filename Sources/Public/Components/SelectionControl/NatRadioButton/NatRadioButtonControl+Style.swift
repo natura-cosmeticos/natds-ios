@@ -3,13 +3,6 @@ extension NatRadioButtonControl {
 
         // MARK: Static Properties
 
-        static var `default`: Style {
-            Style(uncheckedBorderColor: getUIColorFromTokens(\.colorMediumEmphasis),
-                  uncheckedBackgroundColor: .clear,
-                  checkedBorderColor: getUIColorFromTokens(\.colorPrimary),
-                  checkedBackgroundColor: getUIColorFromTokens(\.colorPrimary),
-                  checkmarkColor: .white)
-        }
 
         // MARK: Properties
 

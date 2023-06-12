@@ -10,6 +10,8 @@ class AvatarItemViewController: UIViewController, SampleItem {
     private lazy var semixStackView = createStackView()
     private lazy var mediumStackView = createStackView()
     private lazy var largexxxStackView = createStackView()
+    
+    private lazy var standardThemeStackView = createStackView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +27,8 @@ class AvatarItemViewController: UIViewController, SampleItem {
         view.addSubview(semixStackView)
         view.addSubview(mediumStackView)
         view.addSubview(largexxxStackView)
+        
+        view.addSubview(standardThemeStackView)
 
         let standardAvatars = createAvatars(size: .standard,
                                             image: UIImage(),
@@ -50,6 +54,13 @@ class AvatarItemViewController: UIViewController, SampleItem {
                                             image: UIImage(),
                                             name: "Natura Design System")
         largexxxAvatars.forEach { largexxxStackView.addArrangedSubview($0) }
+        
+        
+        let standardThemeAvatars = createThemeAvatars(size: .standard,
+                                            image: UIImage(),
+                                            name: "Natura Design System")
+        standardThemeAvatars.forEach { standardThemeStackView.addArrangedSubview($0) }
+       
 
         addConstraints()
     }
@@ -57,6 +68,25 @@ class AvatarItemViewController: UIViewController, SampleItem {
     private func createAvatars(size: NatAvatar.Size, image: UIImage, name: String) -> [NatAvatar] {
         (0...2).map { value in
             let avatar = NatAvatar(size: size)
+
+            if value == 0 {
+                avatar.configure(icon: getIcon(.outlinedDefaultMockup))
+            }
+
+            if value == 1 {
+                avatar.configure(name: name)
+            }
+
+            if value == 2 {
+                avatar.configure(image: UIImage(named: "ImageAreaPlaceholder"))
+            }
+            return avatar
+        }
+    }
+    
+    private func createThemeAvatars(size: NatAvatar.Size, image: UIImage, name: String) -> [NatAvatar] {
+        (0...2).map { value in
+            let avatar = NatAvatar(size: size, theme: .avonLight)
 
             if value == 0 {
                 avatar.configure(icon: getIcon(.outlinedDefaultMockup))
@@ -135,7 +165,16 @@ class AvatarItemViewController: UIViewController, SampleItem {
             ),
             largexxxStackView.widthAnchor.constraint(equalTo: mediumStackView.widthAnchor),
             largexxxStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            largexxxStackView.heightAnchor.constraint(equalToConstant: NatSizes.largeXXX)
+            largexxxStackView.heightAnchor.constraint(equalToConstant: NatSizes.largeXXX),
+            
+            // AVON THEME
+            standardThemeStackView.topAnchor.constraint(
+                equalTo: largexxxStackView.bottomAnchor,
+                constant: NatSpacing.standard
+            ),
+            standardThemeStackView.widthAnchor.constraint(equalTo: largexxxStackView.widthAnchor),
+            standardThemeStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            standardThemeStackView.heightAnchor.constraint(equalToConstant: NatSizes.standard)
         ]
 
         NSLayoutConstraint.activate(constraints)

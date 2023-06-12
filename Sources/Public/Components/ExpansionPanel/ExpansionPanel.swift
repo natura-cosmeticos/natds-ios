@@ -32,6 +32,8 @@ public class ExpansionPanel: UIView {
     }
 
     public typealias ExpansionHandler = () -> Void
+    
+    private var theme: AvailableTheme
 
     private var expandHandler: ExpansionHandler?
     private var collapseHandler: ExpansionHandler?
@@ -88,7 +90,14 @@ public class ExpansionPanel: UIView {
     private var isCollapsed: Bool { upDownButton.transform == CGAffineTransform.identity }
     private let animationDuration = 0.5
 
-    private var activeBorderColor = NatColors.primary
+    private var activeBorderColor: UIColor { if self.theme == .none {
+        return NatColors.primary
+    }
+        else {
+            return hexStringToUIColor(hex: self.theme.newInstance.tokens.colorPrimary)
+        }
+    }
+    
     private var inactiveBorderColor = UIColor.clear {
         didSet {
             layer.borderColor = inactiveBorderColor.cgColor
@@ -97,13 +106,14 @@ public class ExpansionPanel: UIView {
 
     // MARK: - Inits
 
-    public convenience init() {
-        self.init(viewAnimating: ViewAnimatingWrapper(), notificationCenter: NotificationCenter.default)
+    public convenience init(theme: AvailableTheme = .none) {
+        self.init(viewAnimating: ViewAnimatingWrapper(), notificationCenter: NotificationCenter.default, theme: theme)
     }
 
-    init(viewAnimating: ViewAnimating, notificationCenter: NotificationCenterObservable) {
+    init(viewAnimating: ViewAnimating, notificationCenter: NotificationCenterObservable, theme:AvailableTheme = .none) {
         self.viewAnimating = viewAnimating
         self.notificationCenter = notificationCenter
+        self.theme = theme
 
         super.init(frame: .zero)
 
@@ -164,7 +174,7 @@ public class ExpansionPanel: UIView {
     ///   - active: an UIColor
     ///   - inactive: an UIColor
     public func setColorForBorders(active: UIColor, inactive: UIColor) {
-        self.activeBorderColor = active
+        
         self.inactiveBorderColor = inactive
     }
 

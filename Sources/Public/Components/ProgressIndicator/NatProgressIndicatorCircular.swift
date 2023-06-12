@@ -48,12 +48,15 @@ public class NatProgressIndicatorCircular: UIView {
             self.setNeedsLayout()
         }
     }
+    
+    private var theme: AvailableTheme = .none
 
     // MARK: - Inits
 
-    public init(size: NatProgressIndicatorCircular.Size = .medium, backgroundLayer: Bool = false) {
+    public init(size: NatProgressIndicatorCircular.Size = .medium, backgroundLayer: Bool = false, theme:AvailableTheme = .none) {
         super.init(frame: .zero)
         self.size = size
+        self.theme = theme
         self.hasBackgroundLayer = backgroundLayer
 
         setupConstraints()
@@ -138,7 +141,14 @@ public class NatProgressIndicatorCircular: UIView {
 
     private func configureSemiCircle(semiCircleLayer: CAShapeLayer) {
         semiCircleLayer.path = createCirclePath(size: size.value).cgPath
-        semiCircleLayer.strokeColor = getUIColorFromTokens(\.colorPrimary).cgColor
+        
+        if (self.theme == .none) {
+            semiCircleLayer.strokeColor = getUIColorFromTokens(\.colorPrimary).cgColor
+        }
+        else {
+            semiCircleLayer.strokeColor = hexStringToUIColor(hex: self.theme.newInstance.tokens.colorPrimary).cgColor
+        }
+
         semiCircleLayer.fillColor = .none
         semiCircleLayer.lineWidth = getTokenFromTheme(\.sizeMicro)
         semiCircleLayer.position = CGPoint(x: backgroundLayer.bounds.midX, y: backgroundLayer.bounds.midY)

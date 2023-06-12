@@ -102,7 +102,7 @@ final class RadioButtonViewController: UIViewController, SampleItem {
     }()
 
     private let enabledUnselectedLabelRadioButton: NatRadioButton = {
-        let radioButton = NatRadioButton()
+        let radioButton = NatRadioButton(theme: .avonLight)
         radioButton.configure(text: "Enabled unselected with label")
         radioButton.translatesAutoresizingMaskIntoConstraints = false
 
@@ -111,7 +111,7 @@ final class RadioButtonViewController: UIViewController, SampleItem {
 
     private let enabledSelectedLabelRadioButton: NatRadioButton = {
 
-        let radioButton = NatRadioButton()
+        let radioButton = NatRadioButton(theme: .avonLight)
         radioButton.configure(text: "Enabled selected with label")
         radioButton.configure(isSelected: true)
         radioButton.translatesAutoresizingMaskIntoConstraints = false

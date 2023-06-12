@@ -85,7 +85,7 @@ final class CheckboxViewController: UIViewController, SampleItem {
     }()
 
     private let enabledUnselectedLabelCheckbox: NatCheckbox = {
-        let checkbox = NatCheckbox()
+        let checkbox = NatCheckbox(theme: .avonLight)
         checkbox.configure(text: "Enabled unselected with label")
         checkbox.translatesAutoresizingMaskIntoConstraints = false
 
@@ -93,7 +93,7 @@ final class CheckboxViewController: UIViewController, SampleItem {
     }()
 
     private let enabledSelectedLabelCheckbox: NatCheckbox = {
-        let checkbox = NatCheckbox()
+        let checkbox = NatCheckbox(theme: .avonLight)
         checkbox.configure(isSelected: true)
         checkbox.configure(text: "Enabled selected with label")
         checkbox.translatesAutoresizingMaskIntoConstraints = false

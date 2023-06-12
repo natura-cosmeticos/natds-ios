@@ -21,8 +21,9 @@ public final class NatCheckbox: UIView {
     public var checkbox = NatSelectionControl(style: .checkbox)
 
     // MARK: - Inits
-    public init() {
+    public init(theme: AvailableTheme = .none) {
         super.init(frame: .zero)
+        self.checkbox = NatSelectionControl(style: .checkbox, theme: theme)
         setup()
     }
 

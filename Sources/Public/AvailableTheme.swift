@@ -3,6 +3,7 @@
 
  - Note:
     Supported Themes:
+      - None
       - AesopDark
       - AesopLight
       - AvonDark
@@ -36,6 +37,7 @@ public enum AvailableTheme {
     case avonv2Light
     case naturav2Dark
     case naturav2Light
+    case none
 
     init?(theme: Theme) {
         switch theme {
@@ -55,6 +57,7 @@ public enum AvailableTheme {
         case is Avonv2LightTheme: self = .avonv2Light
         case is Naturav2DarkTheme: self = .naturav2Dark
         case is Naturav2LightTheme: self = .naturav2Light
+        case is BiomeLightTheme: self = .none
         default: return nil
         }
     }
@@ -78,6 +81,7 @@ public enum AvailableTheme {
         case .avonv2Light: instance = Avonv2LightTheme()
         case .naturav2Dark: instance = Naturav2DarkTheme()
         case .naturav2Light: instance = Naturav2LightTheme()
+        case .none: instance = BiomeLightTheme()
         }
         return instance
     }

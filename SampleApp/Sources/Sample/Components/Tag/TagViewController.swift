@@ -24,6 +24,16 @@ class TagViewController: UIViewController, SampleItem {
 
         return tag
     }()
+    
+    private var tagCustomDefaultPrimary: NatTag = {
+        let tag = NatTag(style: .defaultAlert, theme: .avonLight)
+        tag.configure(text: "Default Primary Avon")
+        tag.configure(color: .primary)
+        tag.configure(size: .small)
+        tag.translatesAutoresizingMaskIntoConstraints = false
+
+        return tag
+    }()
 
     private var tagDefaultSecondary: NatTag = {
         let tag = NatTag(style: .defaultAlert)
@@ -104,6 +114,7 @@ class TagViewController: UIViewController, SampleItem {
 
         view.addSubview(stackView)
         stackView.addArrangedSubview(tagDefaultPrimary)
+        stackView.addArrangedSubview(tagCustomDefaultPrimary)
         stackView.addArrangedSubview(tagDefaultSecondary)
         stackView.addArrangedSubview(tagLeftSuccess)
         stackView.addArrangedSubview(tagLeftAlert)

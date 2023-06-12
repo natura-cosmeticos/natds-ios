@@ -6,19 +6,19 @@ class BadgeViewController: UIViewController, SampleItem {
 
     private lazy var badgeableViewDot: BadgeableView = {
         let view = BadgeableView(frame: .init(x: 0, y: 0, width: 24, height: 24))
-        view.configure(badgeStyle: .dot, withColor: .alert)
+        view.configure(badgeStyle: .dot, withColor: .primary)
         return view
     }()
 
     private lazy var badgeableViewPulse: BadgeableView = {
         let view = BadgeableView(frame: .init(x: 0, y: 0, width: 24, height: 24))
-        view.configure(badgeStyle: .pulse, withColor: .success)
+        view.configure(badgeStyle: .pulse, withColor: .primary)
         return view
     }()
 
     private lazy var badgeableViewOneChartStandard: BadgeableView = {
         let view = BadgeableView(frame: .init(x: 0, y: 0, width: 24, height: 24))
-        view.configure(badgeStyle: .standard, withColor: .primary)
+        view.configure(badgeStyle: .standard, withColor: .primary, theme: .avonLight)
         view.setBadge(count: 100)
         view.configure(limit: .max9)
         return view
@@ -49,6 +49,7 @@ class BadgeViewController: UIViewController, SampleItem {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

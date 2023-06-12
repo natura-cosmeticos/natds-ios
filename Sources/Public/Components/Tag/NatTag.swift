@@ -72,11 +72,7 @@ public final class NatTag: UIView {
     }()
 
     private var style: Style
-    public var color: Color {
-        didSet {
-            style.applyStyle(self)
-        }
-    }
+
     private var size: Size
     public var icon: String? {
         didSet {
@@ -89,9 +85,17 @@ public final class NatTag: UIView {
             updateText()
         }
     }
+    
+    public var color: ThemeColor {
+        didSet {
+            style.applyStyle(self)
+        }
+    }
 
     private var drawPath: DrawPath?
     private var heightConstraint: NSLayoutConstraint?
+
+    public static var currentTheme: AvailableTheme = .none
 
     // MARK: - Inits
 
@@ -99,17 +103,20 @@ public final class NatTag: UIView {
                 color: Color = .primary,
                 size: Size = .small,
                 icon: String? = nil,
-                text: String? = nil) {
+                text: String? = nil,
+                theme:AvailableTheme = .none) {
         self.style = style
-        self.color = color
+        self.color = ThemeColor(theme: theme, colorType: color)
         self.size = size
         self.icon = icon
         self.text = text
+        NatTag.currentTheme = theme 
 
         super.init(frame: .zero)
         self.contentScaleFactor = UIScreen.main.scale
-
+        
         style.applyStyle(self)
+
         setup()
     }
 
@@ -230,8 +237,15 @@ public final class NatTag: UIView {
 
     /// Configures a color for the component's background.
     public func configure(color: Color) {
-        self.color = color
-    }
+            switch color {
+            case .primary:
+                self.color = ThemeColor(theme: NatTag.currentTheme, colorType: .primary)
+            case .secondary:
+                self.color = ThemeColor(theme: NatTag.currentTheme, colorType: .secondary)
+            default:
+                self.color = ThemeColor(theme: .none, colorType: color)
+            }
+        }
 
     public func configure(icon: String?) {
         iconView.iconText = icon

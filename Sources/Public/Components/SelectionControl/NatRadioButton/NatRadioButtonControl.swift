@@ -11,8 +11,8 @@ final class NatRadioButtonControl: UIControl {
     var labelComponent: String?
     var isGrouped: Bool = false
     var groupId: Int = 0
+    var theme: AvailableTheme = .none
 
-    private var style = Style.default
     private let increasedTouchRadius: CGFloat = 5
     private let notificationCenter: NotificationCenterObservable
     private var feedbackGenerator: UIImpactFeedbackGenerator?
@@ -25,9 +25,10 @@ final class NatRadioButtonControl: UIControl {
         }
     }
 
-    init(style: Style, notificationCenter: NotificationCenterObservable = NotificationCenter.default) {
-        self.style = style
+    init(notificationCenter: NotificationCenterObservable = NotificationCenter.default, theme:AvailableTheme = .none) {
+        
         self.notificationCenter = notificationCenter
+        self.theme = theme
 
         super.init(frame: .zero)
 
@@ -35,7 +36,6 @@ final class NatRadioButtonControl: UIControl {
     }
 
     override init(frame: CGRect = .zero) {
-        self.style = Style.default
         self.notificationCenter = NotificationCenter.default
         super.init(frame: frame)
 
@@ -121,7 +121,31 @@ final class NatRadioButtonControl: UIControl {
         let borderWidth: CGFloat = 2
 
         let context = UIGraphicsGetCurrentContext()
-        context?.setStrokeColor(style.borderColor(isSelected, isEnabled: isEnabled).cgColor)
+        
+        var defaultTheme: Style {
+            Style(uncheckedBorderColor: getUIColorFromTokens(\.colorMediumEmphasis),
+                  uncheckedBackgroundColor: .clear,
+                  checkedBorderColor: getUIColorFromTokens(\.colorPrimary),
+                  checkedBackgroundColor: getUIColorFromTokens(\.colorPrimary),
+                  checkmarkColor: .white)
+        }
+        
+        var customTheme: Style {
+            Style(uncheckedBorderColor: getUIColorFromTokens(\.colorMediumEmphasis),
+                  uncheckedBackgroundColor: .clear,
+                  checkedBorderColor: hexStringToUIColor(hex: theme.newInstance.tokens.colorPrimary),
+                  checkedBackgroundColor: hexStringToUIColor(hex: theme.newInstance.tokens.colorPrimary),
+                  checkmarkColor: .white)
+        }
+        
+        if (self.theme == .none) {
+            context?.setStrokeColor(defaultTheme.borderColor(isSelected, isEnabled: isEnabled).cgColor)
+        }
+        else
+        {
+            context?.setStrokeColor(customTheme.borderColor(isSelected, isEnabled: isEnabled).cgColor)
+        }
+        
         context?.setLineWidth(borderWidth)
 
         let halfSize: CGFloat = min(bounds.size.width/2, bounds.size.height/2)
@@ -132,8 +156,14 @@ final class NatRadioButtonControl: UIControl {
             startAngle: CGFloat(0),
             endAngle: CGFloat(Double.pi * 2),
             clockwise: true)
-
-        style.backgroundColor(isSelected, isEnabled: isEnabled).setFill()
+        
+        if (self.theme == .none) {
+            defaultTheme.backgroundColor(isSelected, isEnabled: isEnabled).setFill()
+        }
+        else
+        {
+            customTheme.backgroundColor(isSelected, isEnabled: isEnabled).setFill()
+        }
 
         context?.addPath(circlePath.cgPath)
         context?.strokePath()
@@ -160,6 +190,6 @@ final class NatRadioButtonControl: UIControl {
 
 extension NatRadioButtonControl {
     @objc internal func themeHasChanged() {
-        style = Style.default
+        //style = Style.default
     }
 }

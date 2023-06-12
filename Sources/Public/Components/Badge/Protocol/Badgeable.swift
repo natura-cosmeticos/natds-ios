@@ -7,10 +7,10 @@ extension Badgeable {
         return subviews.compactMap { $0 as? NatBadge }.first
     }
 
-    public func configure(badgeStyle style: NatBadge.Style, withColor color: NatBadge.Color) {
+    public func configure(badgeStyle style: NatBadge.Style, withColor color: NatBadge.Color, theme: AvailableTheme = .none) {
         guard badge == nil else { return }
 
-        let badge = NatBadge(style: style, color: color)
+        let badge = NatBadge(style: style, color: color, theme: theme)
         addSubview(badge)
 
         let constraints = [

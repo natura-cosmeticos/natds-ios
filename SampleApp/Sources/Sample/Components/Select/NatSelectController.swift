@@ -22,7 +22,7 @@ class NatSelectItemViewController: UIViewController, SampleItem {
     }()
 
     private lazy var standardSelect: NatSelect = {
-        let field = TextField()
+        let field = TextField(theme: .avonLight)
         field.title = "Standard select"
         field.type = .text
         field.placeholder = "Select an item"

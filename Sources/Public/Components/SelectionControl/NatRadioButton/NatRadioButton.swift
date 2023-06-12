@@ -18,14 +18,15 @@ import UIKit
 
 public final class NatRadioButton: UIView {
 
-    public var radioButton = NatSelectionControl(style: .radioButton)
+    public var radioButton:NatSelectionControl = NatSelectionControl(style: .radioButton)
     private var group: [NatRadioButton] = []
     private var radioButtonGroup: NatRadioButtonGroup?
 
     // MARK: - Inits
 
-    public init() {
+    public init(theme: AvailableTheme = .none) {
         super.init(frame: .zero)
+        self.radioButton = NatSelectionControl(style: .radioButton, theme: theme)
         setup()
     }
 
