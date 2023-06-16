@@ -17,7 +17,7 @@
       <div class="content-wrapper">
         <p>
           <a href="../index.html">NatDS  Docs</a>
-          <span class="no-mobile"> (40% documented)</span>
+          <span class="no-mobile"> (39% documented)</span>
         </p>
     
     
@@ -134,6 +134,33 @@
                       </section>
                     </div>
                   </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS0A10ChipFilterC5themeAA14AvailableThemeOvp"></a>
+                      <a name="//apple_ref/swift/Property/theme" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A10ChipFilterC5themeAA14AvailableThemeOvp">theme</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">theme</span><span class="p">:</span> <span class="kt"><a href="../Enums/AvailableTheme.html">AvailableTheme</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
                 </ul>
               </div>
               <div class="task-group">
@@ -150,9 +177,9 @@
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/s:5NatDS0A10ChipFilterC4size5colorA2C4SizeO_AC5ColorOtcfc"></a>
-                      <a name="//apple_ref/swift/Method/init(size:color:)" class="dashAnchor"></a>
-                      <a class="token" href="#/s:5NatDS0A10ChipFilterC4size5colorA2C4SizeO_AC5ColorOtcfc">init(size:<wbr>color:<wbr>)</a>
+                      <a name="/s:5NatDS0A10ChipFilterC4size5color5themeA2C4SizeO_AC5ColorOAA14AvailableThemeOtcfc"></a>
+                      <a name="//apple_ref/swift/Method/init(size:color:theme:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A10ChipFilterC4size5color5themeA2C4SizeO_AC5ColorOAA14AvailableThemeOtcfc">init(size:<wbr>color:<wbr>theme:<wbr>)</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -168,7 +195,8 @@
                           <div class="language">
                             <p class="aside-title">Swift</p>
                             <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">size</span><span class="p">:</span> <span class="kt">NatChipFilter</span><span class="o">.</span><span class="kt"><a href="../Classes/NatChipFilter/Size.html">Size</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">semi</span><span class="p">,</span>
-            <span class="nv">color</span><span class="p">:</span> <span class="kt">NatChipFilter</span><span class="o">.</span><span class="kt"><a href="../Classes/NatChipFilter/Color.html">Color</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">neutral</span><span class="p">)</span></code></pre>
+            <span class="nv">color</span><span class="p">:</span> <span class="kt">NatChipFilter</span><span class="o">.</span><span class="kt"><a href="../Classes/NatChipFilter/Color.html">Color</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">neutral</span><span class="p">,</span>
+            <span class="nv">theme</span><span class="p">:</span> <span class="kt"><a href="../Enums/AvailableTheme.html">AvailableTheme</a></span> <span class="o">=</span> <span class="o">.</span><span class="k">none</span><span class="p">)</span></code></pre>
 
                           </div>
                         </div>
@@ -507,6 +535,56 @@
                                 <td>
                                   <div>
                                     <p>A closure to notify value change</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:5NatDS0A10ChipFilterC9configure5themeyAA14AvailableThemeO_tF"></a>
+                      <a name="//apple_ref/swift/Method/configure(theme:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A10ChipFilterC9configure5themeyAA14AvailableThemeO_tF">configure(theme:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Sets the state of the component.</p>
+
+<p>Example of usage:</p>
+<pre class="highlight swift"><code><span class="n">natChip</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="nv">state</span><span class="p">:</span> <span class="o">.</span><span class="n">normal</span><span class="p">)</span>
+</code></pre>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="nv">theme</span><span class="p">:</span> <span class="kt"><a href="../Enums/AvailableTheme.html">AvailableTheme</a></span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>state</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>An <code>UIControl.State</code> that changes the state of the component</p>
                                   </div>
                                 </td>
                               </tr>
@@ -867,6 +945,9 @@ The default size is <code>semi</code>.</p>
                   <a href="../Classes/NatTag/Color.html">– Color</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="../Classes/NatTag/ThemeColor.html">– ThemeColor</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Classes/NatTag/Size.html">– Size</a>
                 </li>
                 <li class="nav-group-task">
@@ -919,6 +1000,9 @@ The default size is <code>semi</code>.</p>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Classes/TextField/InteractionState.html">– InteractionState</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/TextField/ThemeColor.html">– ThemeColor</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Classes/TextField/Size.html">– Size</a>
@@ -1075,7 +1159,7 @@ The default size is <code>semi</code>.</p>
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2023 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external noopener">System Team - Natura SA</a>. All rights reserved. (Last updated: 2023-05-12)</p>
+          <p>&copy; 2023 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external noopener">System Team - Natura SA</a>. All rights reserved. (Last updated: 2023-06-16)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </div>

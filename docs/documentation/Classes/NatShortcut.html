@@ -17,7 +17,7 @@
       <div class="content-wrapper">
         <p>
           <a href="../index.html">NatDS  Docs</a>
-          <span class="no-mobile"> (40% documented)</span>
+          <span class="no-mobile"> (39% documented)</span>
         </p>
     
     
@@ -273,9 +273,9 @@ Its colors change according to the configured theme.</p>
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/s:5NatDS0A8ShortcutC5style5colorA2C5StyleV_AC5ColorOtcfc"></a>
-                      <a name="//apple_ref/swift/Method/init(style:color:)" class="dashAnchor"></a>
-                      <a class="token" href="#/s:5NatDS0A8ShortcutC5style5colorA2C5StyleV_AC5ColorOtcfc">init(style:<wbr>color:<wbr>)</a>
+                      <a name="/s:5NatDS0A8ShortcutC5style5color5themeA2C5StyleV_AC5ColorOAA14AvailableThemeOtcfc"></a>
+                      <a name="//apple_ref/swift/Method/init(style:color:theme:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A8ShortcutC5style5color5themeA2C5StyleV_AC5ColorOAA14AvailableThemeOtcfc">init(style:<wbr>color:<wbr>theme:<wbr>)</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -291,7 +291,8 @@ Its colors change according to the configured theme.</p>
                           <div class="language">
                             <p class="aside-title">Swift</p>
                             <pre class="highlight swift"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="kt"><a href="../Classes/NatShortcut/Style.html">Style</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">contained</span><span class="p">,</span>
-                        <span class="nv">color</span><span class="p">:</span> <span class="kt"><a href="../Classes/NatShortcut/Color.html">Color</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">primary</span><span class="p">)</span></code></pre>
+                        <span class="nv">color</span><span class="p">:</span> <span class="kt"><a href="../Classes/NatShortcut/Color.html">Color</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">primary</span><span class="p">,</span>
+                        <span class="nv">theme</span><span class="p">:</span><span class="kt"><a href="../Enums/AvailableTheme.html">AvailableTheme</a></span> <span class="o">=</span> <span class="o">.</span><span class="k">none</span><span class="p">)</span></code></pre>
 
                           </div>
                         </div>
@@ -301,9 +302,9 @@ Its colors change according to the configured theme.</p>
                   <li class="item">
                     <div>
                       <code>
-                      <a name="/s:5NatDS0A8ShortcutC5style5color4text4iconA2C5StyleV_AC5ColorOSSSgALtcfc"></a>
-                      <a name="//apple_ref/swift/Method/init(style:color:text:icon:)" class="dashAnchor"></a>
-                      <a class="token" href="#/s:5NatDS0A8ShortcutC5style5color4text4iconA2C5StyleV_AC5ColorOSSSgALtcfc">init(style:<wbr>color:<wbr>text:<wbr>icon:<wbr>)</a>
+                      <a name="/s:5NatDS0A8ShortcutC5style5color4text4icon5themeA2C5StyleV_AC5ColorOSSSgAmA14AvailableThemeOtcfc"></a>
+                      <a name="//apple_ref/swift/Method/init(style:color:text:icon:theme:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:5NatDS0A8ShortcutC5style5color4text4icon5themeA2C5StyleV_AC5ColorOSSSgAmA14AvailableThemeOtcfc">init(style:<wbr>color:<wbr>text:<wbr>icon:<wbr>theme:<wbr>)</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -321,7 +322,8 @@ Its colors change according to the configured theme.</p>
                             <pre class="highlight swift"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">style</span><span class="p">:</span> <span class="kt"><a href="../Classes/NatShortcut/Style.html">Style</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">contained</span><span class="p">,</span>
                         <span class="nv">color</span><span class="p">:</span> <span class="kt"><a href="../Classes/NatShortcut/Color.html">Color</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">primary</span><span class="p">,</span>
                         <span class="nv">text</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-                        <span class="nv">icon</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                        <span class="nv">icon</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                        <span class="nv">theme</span><span class="p">:</span><span class="kt"><a href="../Enums/AvailableTheme.html">AvailableTheme</a></span> <span class="o">=</span> <span class="o">.</span><span class="k">none</span><span class="p">)</span></code></pre>
 
                           </div>
                         </div>
@@ -1045,6 +1047,9 @@ The badge must be created and configured before setting it to the shortcut.</p>
                   <a href="../Classes/NatTag/Color.html">– Color</a>
                 </li>
                 <li class="nav-group-task">
+                  <a href="../Classes/NatTag/ThemeColor.html">– ThemeColor</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="../Classes/NatTag/Size.html">– Size</a>
                 </li>
                 <li class="nav-group-task">
@@ -1097,6 +1102,9 @@ The badge must be created and configured before setting it to the shortcut.</p>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Classes/TextField/InteractionState.html">– InteractionState</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/TextField/ThemeColor.html">– ThemeColor</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="../Classes/TextField/Size.html">– Size</a>
@@ -1253,7 +1261,7 @@ The badge must be created and configured before setting it to the shortcut.</p>
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2023 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external noopener">System Team - Natura SA</a>. All rights reserved. (Last updated: 2023-05-12)</p>
+          <p>&copy; 2023 <a class="link" href="https://www.natura.com.br/" target="_blank" rel="external noopener">System Team - Natura SA</a>. All rights reserved. (Last updated: 2023-06-16)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </div>
