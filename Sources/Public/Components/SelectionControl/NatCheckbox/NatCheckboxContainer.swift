@@ -1,8 +1,6 @@
 class NatCheckboxContainer: UIControl, NatSelector {
 
-    let checkbox = NatCheckboxControl()
-    let selectedPulsableColor: UIColor = getUIColorFromTokens(\.colorPrimary).withAlphaComponent(0.2)
-    let unselectedPulsableColor: UIColor = getUIColorFromTokens(\.colorMediumEmphasis).withAlphaComponent(0.2)
+    var checkbox = NatCheckboxControl()
 
     override var isSelected: Bool {
         get {
@@ -75,6 +73,15 @@ class NatCheckboxContainer: UIControl, NatSelector {
             checkbox.groupId = newValue
         }
     }
+    
+    var theme: AvailableTheme {
+        get {
+            checkbox.theme
+        }
+        set {
+            checkbox.theme = newValue
+        }
+    }
 
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
@@ -93,11 +100,27 @@ class NatCheckboxContainer: UIControl, NatSelector {
 
     // swiftlint:disable line_length
     private func setup() {
+        
+        checkbox = NatCheckboxControl(theme: self.theme)
         addSubview(checkbox)
+        
+        var selectedPulsableColor: UIColor = .white
+        var unselectedPulsableColor: UIColor = .white
 
         checkbox.onTouchesBegan = { [unowned self] _ in
+            
+            if (self.theme == .none) {
+                 selectedPulsableColor = getUIColorFromTokens(\.colorPrimary).withAlphaComponent(0.2)
+                 unselectedPulsableColor = getUIColorFromTokens(\.colorMediumEmphasis).withAlphaComponent(0.2)
+            }
+            else
+            {
+                selectedPulsableColor = hexStringToUIColor(hex: self.theme.newInstance.tokens.colorPrimary).withAlphaComponent(0.2)
+                unselectedPulsableColor = getUIColorFromTokens(\.colorMediumEmphasis).withAlphaComponent(0.2)
+            }
+            
             self.addPulseLayerAnimated(at: self.checkbox.center, in: self.layer,
-                                       withColor: self.isSelected ? self.unselectedPulsableColor : self.selectedPulsableColor,
+                                       withColor: self.isSelected ? unselectedPulsableColor : selectedPulsableColor,
                                        removeAfterAnimation: false)
         }
         // swiftlint:enable line_length

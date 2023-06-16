@@ -53,21 +53,21 @@ public final class NatShortcut: UIView {
     /// The variant for the component
     public var style: Style {
         didSet {
-            style.applyStyle(self)
+            style.applyStyle(self.theme, self)
         }
     }
 
     /// The color for the component
     public var color: Color {
         didSet {
-            style.applyStyle(self)
+            style.applyStyle(self.theme, self)
         }
     }
 
     /// The state of the component
     public var state: State = .enabled {
         didSet {
-            style.applyStyle(self)
+            style.applyStyle(self.theme, self)
         }
     }
 
@@ -138,35 +138,40 @@ public final class NatShortcut: UIView {
 
     private let notificationCenter: NotificationCenterObservable
     private var action: (() -> Void)?
+    private var theme: AvailableTheme = .none
 
     // MARK: - Inits
 
     public convenience init(style: Style = .contained,
-                            color: Color = .primary) {
-        self.init(style: style, color: color, text: nil, icon: nil, notificationCenter: NotificationCenter.default)
+                            color: Color = .primary,
+                            theme:AvailableTheme = .none) {
+        self.init(style: style, color: color, text: nil, icon: nil, notificationCenter: NotificationCenter.default, theme: theme)
     }
 
     public convenience init(style: Style = .contained,
                             color: Color = .primary,
                             text: String? = nil,
-                            icon: String? = nil) {
-        self.init(style: style, color: color, text: text, icon: icon, notificationCenter: NotificationCenter.default)
+                            icon: String? = nil,
+                            theme:AvailableTheme = .none) {
+        self.init(style: style, color: color, text: text, icon: icon, notificationCenter: NotificationCenter.default, theme: theme)
     }
 
     init(style: Style,
          color: Color,
          text: String?,
          icon: String?,
-         notificationCenter: NotificationCenterObservable) {
+         notificationCenter: NotificationCenterObservable,
+         theme:AvailableTheme = .none) {
         self.style = style
         self.color = color
         self.text = text
         self.icon = icon
         self.notificationCenter = notificationCenter
+        self.theme = theme
 
         super.init(frame: .zero)
 
-        style.applyStyle(self)
+        style.applyStyle(self.theme, self)
         setup()
     }
 
@@ -382,7 +387,7 @@ extension NatShortcut {
 
 extension NatShortcut {
     @objc private func themeHasChanged() {
-        style.applyStyle(self)
+        style.applyStyle(self.theme, self)
     }
 }
 

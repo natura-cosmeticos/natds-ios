@@ -2,7 +2,7 @@
 extension NatShortcut {
     /// `Style` applies the variant style for `shortcut`
     public struct Style {
-        let applyStyle: (NatShortcut) -> Void
+        let applyStyle: (AvailableTheme, NatShortcut) -> Void
     }
 
     /// `Color` represents the possible colors for `shortcut`
@@ -12,85 +12,171 @@ extension NatShortcut {
 
         // MARK: Outlined attributes
 
-        func outlinedBackgroundColor(state: NatShortcut.State) -> UIColor {
-            switch self {
-            case .primary:
-                return state == .enabled ? getUIColorFromComponentAttributes(\.shortcutOutlinedColorEnablePrimaryBackground) :
-                    getUIColorFromComponentAttributes(\.shortcutOutlinedColorDisablePrimaryBackground)
-            case .neutral:
-                return state == .enabled ? getUIColorFromComponentAttributes(\.shortcutOutlinedColorEnableNeutralBackground) :
-                    getUIColorFromComponentAttributes(\.shortcutOutlinedColorDisableNeutralBackground)
+        func outlinedBackgroundColor(theme: AvailableTheme = .none, state: NatShortcut.State) -> UIColor {
+            
+            
+                switch self {
+                case .primary:
+                    return state == .enabled ? getUIColorFromComponentAttributes(\.shortcutOutlinedColorEnablePrimaryBackground) :
+                        getUIColorFromComponentAttributes(\.shortcutOutlinedColorDisablePrimaryBackground)
+                case .neutral:
+                    return state == .enabled ? getUIColorFromComponentAttributes(\.shortcutOutlinedColorEnableNeutralBackground) :
+                        getUIColorFromComponentAttributes(\.shortcutOutlinedColorDisableNeutralBackground)
+                }
+            
+        }
+
+        func outlinedBorderColor(theme: AvailableTheme = .none, state: NatShortcut.State) -> UIColor {
+            
+            if theme == .none {
+                switch self {
+                case .primary:
+                    return state == .enabled ? getUIColorFromComponentAttributes(\.shortcutOutlinedColorEnablePrimaryBorder) :
+                        getUIColorFromComponentAttributes(\.shortcutOutlinedColorDisablePrimaryBorder)
+                case .neutral:
+                    return state == .enabled ? getUIColorFromComponentAttributes(\.shortcutOutlinedColorEnableNeutralBorder) :
+                        getUIColorFromComponentAttributes(\.shortcutOutlinedColorDisableNeutralBorder)
+                }
+            }
+            else {
+                switch self {
+                case .primary:
+                    return state == .enabled ? hexStringToUIColor(hex: theme.newInstance.components.shortcutOutlinedColorEnablePrimaryBorder) :
+                    hexStringToUIColor(hex: theme.newInstance.components.shortcutOutlinedColorDisablePrimaryBorder)
+                case .neutral:
+                    return state == .enabled ? hexStringToUIColor(hex: theme.newInstance.components.shortcutOutlinedColorEnableNeutralBorder) :
+                    hexStringToUIColor(hex: theme.newInstance.components.shortcutOutlinedColorDisableNeutralBorder)
+                }
             }
         }
 
-        func outlinedBorderColor(state: NatShortcut.State) -> UIColor {
-            switch self {
-            case .primary:
-                return state == .enabled ? getUIColorFromComponentAttributes(\.shortcutOutlinedColorEnablePrimaryBorder) :
-                    getUIColorFromComponentAttributes(\.shortcutOutlinedColorDisablePrimaryBorder)
-            case .neutral:
-                return state == .enabled ? getUIColorFromComponentAttributes(\.shortcutOutlinedColorEnableNeutralBorder) :
-                    getUIColorFromComponentAttributes(\.shortcutOutlinedColorDisableNeutralBorder)
+        func outlinedIconColor(theme: AvailableTheme = .none, state: NatShortcut.State) -> UIColor {
+            
+            if theme == .none {
+                switch self {
+                case .primary:
+                    return state == .enabled ? getUIColorFromTokens(\.colorHighEmphasis) : getUIColorFromTokens(\.colorLowEmphasis)
+                case .neutral:
+                    return state == .enabled ? getUIColorFromTokens(\.colorHighEmphasis) : getUIColorFromTokens(\.colorLowEmphasis)
+                }
+            }
+            else {
+                switch self {
+                case .primary:
+                    return state == .enabled ? hexStringToUIColor(hex: theme.newInstance.tokens.colorHighEmphasis) : hexStringToUIColor(hex: theme.newInstance.tokens.colorLowEmphasis)
+                case .neutral:
+                    return state == .enabled ? hexStringToUIColor(hex: theme.newInstance.tokens.colorHighEmphasis) : hexStringToUIColor(hex: theme.newInstance.tokens.colorLowEmphasis)
+                }
             }
         }
 
-        func outlinedIconColor(state: NatShortcut.State) -> UIColor {
-            switch self {
-            case .primary:
-                return state == .enabled ? getUIColorFromTokens(\.colorHighEmphasis) : getUIColorFromTokens(\.colorLowEmphasis)
-            case .neutral:
-                return state == .enabled ? getUIColorFromTokens(\.colorHighEmphasis) : getUIColorFromTokens(\.colorLowEmphasis)
+        func outlinedLabelColor(theme: AvailableTheme = .none, state: NatShortcut.State) -> UIColor {
+            
+            if theme == .none {
+                switch self {
+                case .primary:
+                    return state == .enabled ? getUIColorFromComponentAttributes(\.shortcutOutlinedColorEnablePrimaryLabel) : getUIColorFromComponentAttributes(\.shortcutOutlinedColorDisablePrimaryLabel)
+                case .neutral:
+                    return state == .enabled ? getUIColorFromComponentAttributes(\.shortcutOutlinedColorEnableNeutralLabel) : getUIColorFromComponentAttributes(\.shortcutOutlinedColorDisableNeutralLabel)
+                }
             }
-        }
-
-        func outlinedLabelColor(state: NatShortcut.State) -> UIColor {
-            switch self {
-            case .primary:
-                return state == .enabled ? getUIColorFromComponentAttributes(\.shortcutOutlinedColorEnablePrimaryLabel) : getUIColorFromComponentAttributes(\.shortcutOutlinedColorDisablePrimaryLabel)
-            case .neutral:
-                return state == .enabled ? getUIColorFromComponentAttributes(\.shortcutOutlinedColorEnableNeutralLabel) : getUIColorFromComponentAttributes(\.shortcutOutlinedColorDisableNeutralLabel)
+            else {
+                switch self {
+                case .primary:
+                    return state == .enabled ? hexStringToUIColor(hex: theme.newInstance.components.shortcutOutlinedColorEnablePrimaryLabel) : hexStringToUIColor(hex: theme.newInstance.components.shortcutOutlinedColorDisablePrimaryLabel)
+                case .neutral:
+                    return state == .enabled ? hexStringToUIColor(hex: theme.newInstance.components.shortcutOutlinedColorEnableNeutralLabel) : hexStringToUIColor(hex: theme.newInstance.components.shortcutOutlinedColorDisableNeutralLabel)
+                }
             }
         }
 
         // MARK: Contained attributes
 
-        func containedBackgroundColor(state: NatShortcut.State) -> UIColor {
-            switch self {
-            case .primary:
-                return state == .enabled ? getUIColorFromComponentAttributes(\.shortcutContainedColorEnablePrimaryBackground) :
-                    getUIColorFromComponentAttributes(\.shortcutContainedColorDisablePrimaryBackground)
-            case .neutral:
-                return state == .enabled ? getUIColorFromComponentAttributes(\.shortcutContainedColorEnableNeutralBackground) :
-                    getUIColorFromComponentAttributes(\.shortcutContainedColorDisableNeutralBackground)
+        func containedBackgroundColor(theme: AvailableTheme = .none, state: NatShortcut.State) -> UIColor {
+            
+            if theme == .none {
+                switch self {
+                case .primary:
+                    return state == .enabled ? getUIColorFromComponentAttributes(\.shortcutContainedColorEnablePrimaryBackground) :
+                        getUIColorFromComponentAttributes(\.shortcutContainedColorDisablePrimaryBackground)
+                case .neutral:
+                    return state == .enabled ? getUIColorFromComponentAttributes(\.shortcutContainedColorEnableNeutralBackground) :
+                        getUIColorFromComponentAttributes(\.shortcutContainedColorDisableNeutralBackground)
+                }
+            }
+            else {
+                switch self {
+                case .primary:
+                    return state == .enabled ? hexStringToUIColor(hex: theme.newInstance.components.shortcutContainedColorEnablePrimaryBackground) :
+                    hexStringToUIColor(hex: theme.newInstance.components.shortcutContainedColorDisablePrimaryBackground)
+                case .neutral:
+                    return state == .enabled ? hexStringToUIColor(hex: theme.newInstance.components.shortcutContainedColorEnableNeutralBackground) :
+                    hexStringToUIColor(hex: theme.newInstance.components.shortcutContainedColorDisableNeutralBackground)
+                }
             }
         }
 
-        func containedBorderColor(state: NatShortcut.State) -> UIColor {
-            switch self {
-            case .primary:
-                return state == .enabled ? getUIColorFromComponentAttributes(\.shortcutContainedColorEnablePrimaryBorder) :
-                    getUIColorFromComponentAttributes(\.shortcutContainedColorDisablePrimaryBorder)
-            case .neutral:
-                return state == .enabled ? getUIColorFromComponentAttributes(\.shortcutContainedColorEnableNeutralBorder) :
-                    getUIColorFromComponentAttributes(\.shortcutContainedColorDisableNeutralBorder)
+        func containedBorderColor(theme: AvailableTheme = .none, state: NatShortcut.State) -> UIColor {
+            
+            if theme == .none {
+                switch self {
+                case .primary:
+                    return state == .enabled ? getUIColorFromComponentAttributes(\.shortcutContainedColorEnablePrimaryBorder) :
+                        getUIColorFromComponentAttributes(\.shortcutContainedColorDisablePrimaryBorder)
+                case .neutral:
+                    return state == .enabled ? getUIColorFromComponentAttributes(\.shortcutContainedColorEnableNeutralBorder) :
+                        getUIColorFromComponentAttributes(\.shortcutContainedColorDisableNeutralBorder)
+                }
+            }
+            else {
+                switch self {
+                case .primary:
+                    return state == .enabled ? hexStringToUIColor(hex: theme.newInstance.components.shortcutContainedColorEnablePrimaryBorder) :
+                    hexStringToUIColor(hex: theme.newInstance.components.shortcutContainedColorDisablePrimaryBorder)
+                case .neutral:
+                    return state == .enabled ? hexStringToUIColor(hex: theme.newInstance.components.shortcutContainedColorEnableNeutralBorder) :
+                    hexStringToUIColor(hex: theme.newInstance.components.shortcutContainedColorDisableNeutralBorder)
+                }
             }
         }
 
-        func containedIconColor(state: NatShortcut.State) -> UIColor {
-            switch self {
-            case .primary:
-                return state == .enabled ? getUIColorFromTokens(\.colorOnPrimary) : getUIColorFromTokens(\.colorMediumEmphasis)
-            case .neutral:
-                return state == .enabled ? getUIColorFromTokens(\.colorHighEmphasis) : getUIColorFromTokens(\.colorMediumEmphasis)
+        func containedIconColor(theme: AvailableTheme = .none, state: NatShortcut.State) -> UIColor {
+            
+            if theme == .none {
+                switch self {
+                case .primary:
+                    return state == .enabled ? getUIColorFromTokens(\.colorOnPrimary) : getUIColorFromTokens(\.colorMediumEmphasis)
+                case .neutral:
+                    return state == .enabled ? getUIColorFromTokens(\.colorHighEmphasis) : getUIColorFromTokens(\.colorMediumEmphasis)
+                }
+            }
+            else {
+                switch self {
+                case .primary:
+                    return state == .enabled ? hexStringToUIColor(hex: theme.newInstance.tokens.colorOnPrimary) : hexStringToUIColor(hex: theme.newInstance.tokens.colorMediumEmphasis)
+                case .neutral:
+                    return state == .enabled ? hexStringToUIColor(hex: theme.newInstance.tokens.colorHighEmphasis) : hexStringToUIColor(hex: theme.newInstance.tokens.colorMediumEmphasis)
+                }
             }
         }
 
-        func containedLabelColor(state: NatShortcut.State) -> UIColor {
-            switch self {
-            case .primary:
-                return state == .enabled ? getUIColorFromComponentAttributes(\.shortcutContainedColorEnablePrimaryLabel) : getUIColorFromComponentAttributes(\.shortcutContainedColorDisablePrimaryLabel)
-            case .neutral:
-                return state == .enabled ? getUIColorFromComponentAttributes(\.shortcutContainedColorEnableNeutralLabel) : getUIColorFromComponentAttributes(\.shortcutContainedColorDisableNeutralLabel)
+        func containedLabelColor(theme: AvailableTheme = .none, state: NatShortcut.State) -> UIColor {
+            
+            if theme == .none {
+                switch self {
+                case .primary:
+                    return state == .enabled ? getUIColorFromComponentAttributes(\.shortcutContainedColorEnablePrimaryLabel) : getUIColorFromComponentAttributes(\.shortcutContainedColorDisablePrimaryLabel)
+                case .neutral:
+                    return state == .enabled ? getUIColorFromComponentAttributes(\.shortcutContainedColorEnableNeutralLabel) : getUIColorFromComponentAttributes(\.shortcutContainedColorDisableNeutralLabel)
+                }
+            }
+            else {
+                switch self {
+                case .primary:
+                    return state == .enabled ? hexStringToUIColor(hex: theme.newInstance.components.shortcutContainedColorEnablePrimaryLabel) : hexStringToUIColor(hex: theme.newInstance.components.shortcutContainedColorDisablePrimaryLabel)
+                case .neutral:
+                    return state == .enabled ? hexStringToUIColor(hex: theme.newInstance.components.shortcutContainedColorEnableNeutralLabel) : hexStringToUIColor(hex: theme.newInstance.components.shortcutContainedColorDisableNeutralLabel)
+                }
             }
         }
     }

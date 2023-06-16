@@ -52,29 +52,31 @@ public final class NatButton: UIButton, Pulsable {
     private let style: Style
     private let notificationCenter: NotificationCenterObservable
     private var iconView: IconView?
+    private var theme: AvailableTheme
 
     // MARK: - Public properties
 
     public override var isEnabled: Bool {
         didSet {
-            style.changeState?(self)
+            style.changeState(self.theme, self)
             iconView?.tintColor = titleLabel?.textColor
         }
     }
 
     // MARK: - Inits
 
-    public convenience init(style: Style) {
-        self.init(style: style, notificationCenter: NotificationCenter.default)
+    public convenience init(style: Style, theme: AvailableTheme = .none) {
+        self.init(style: style, notificationCenter: NotificationCenter.default, theme: theme)
     }
 
-    init(style: Style, notificationCenter: NotificationCenterObservable) {
+    init(style: Style, notificationCenter: NotificationCenterObservable, theme: AvailableTheme = .none) {
         self.style = style
         self.notificationCenter = notificationCenter
+        self.theme = theme
 
         super.init(frame: .zero)
 
-        style.applyStyle(self)
+        style.applyStyle(self.theme, self)
 
         notificationCenter.addObserver(
             self,
@@ -111,7 +113,7 @@ public final class NatButton: UIButton, Pulsable {
      - title: This String will be used to configure Normal & Disabled states.
      */
     public func configure(title: String) {
-        style.applyTitle(title, self)
+        style.applyTitle(title, self.theme, self)
     }
 
     /**
@@ -161,7 +163,7 @@ public final class NatButton: UIButton, Pulsable {
 
 extension NatButton {
     @objc private func themeHasChanged() {
-        style.changeState?(self)
+        style.changeState(self.theme, self)
         iconView?.tintColor = titleLabel?.textColor
     }
 }

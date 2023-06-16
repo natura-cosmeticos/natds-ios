@@ -1,27 +1,52 @@
 enum ButtonTextStyle {
-    static func applyStyle(on button: UIButton) {
+    static func applyStyle(_ theme:AvailableTheme, on button: UIButton) {
         ButtonStyle.applyStyle(on: button)
-        applyStyleForStates(on: button)
+        applyStyleForStates(theme: theme, on: button)
     }
 
-    static func applyStyleForStates(on button: UIButton) {
-        switch button.state {
-        case .normal:
-            button.backgroundColor = getUIColorFromComponentAttributes(\.buttonTextColorEnableBackground)
-            button.layer.borderColor = getUIColorFromComponentAttributes(\.buttonTextColorEnableBorder).cgColor
-        case .disabled:
-            button.backgroundColor = getUIColorFromComponentAttributes(\.buttonTextColorDisableBackground)
-            button.layer.borderColor = getUIColorFromComponentAttributes(\.buttonTextColorDisableBorder).cgColor
-        default: break
+    static func applyStyleForStates(theme:AvailableTheme, on button: UIButton) {
+        
+        if theme == .none {
+            switch button.state {
+            case .normal:
+                button.backgroundColor = getUIColorFromComponentAttributes(\.buttonTextColorEnableBackground)
+                button.layer.borderColor = getUIColorFromComponentAttributes(\.buttonTextColorEnableBorder).cgColor
+            case .disabled:
+                button.backgroundColor = getUIColorFromComponentAttributes(\.buttonTextColorDisableBackground)
+                button.layer.borderColor = getUIColorFromComponentAttributes(\.buttonTextColorDisableBorder).cgColor
+            default: break
+            }
+        }
+        else {
+            switch button.state {
+            case .normal:
+                button.backgroundColor = getUIColorFromComponentAttributes(\.buttonTextColorEnableBackground)
+                button.layer.borderColor = getUIColorFromComponentAttributes(\.buttonTextColorEnableBorder).cgColor
+            case .disabled:
+                button.backgroundColor = getUIColorFromComponentAttributes(\.buttonTextColorDisableBackground)
+                button.layer.borderColor = getUIColorFromComponentAttributes(\.buttonTextColorDisableBorder).cgColor
+            default: break
+            }
         }
     }
 
-    static func applyStyleForTitle(_ title: String, on button: UIButton) {
-        ButtonStyle.applyStyleForTitle(
-            title,
-            colorForNormal: getUIColorFromComponentAttributes(\.buttonTextColorEnableLabel),
-            colorForDisabled: getUIColorFromComponentAttributes(\.buttonTextColorDisableLabel),
-            on: button
-        )
+    static func applyStyleForTitle(_ title: String, theme:AvailableTheme, on button: UIButton) {
+        
+        if theme == .none {
+            ButtonStyle.applyStyleForTitle(
+                title,
+                colorForNormal: getUIColorFromComponentAttributes(\.buttonTextColorEnableLabel),
+                colorForDisabled: getUIColorFromComponentAttributes(\.buttonTextColorDisableLabel),
+                on: button
+            )
+        }
+        else {
+            ButtonStyle.applyStyleForTitle(
+                title,
+                colorForNormal: hexStringToUIColor(hex: theme.newInstance.components.buttonTextColorEnableLabel),
+                colorForDisabled: hexStringToUIColor(hex: theme.newInstance.components.buttonTextColorDisableLabel),
+                on: button
+            )
+        }
     }
 }

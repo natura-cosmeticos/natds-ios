@@ -108,6 +108,10 @@ public class TextField: UIView {
                                                                        letterSpacing: getComponentAttributeFromTheme(\.textFieldLabelLetterSpacing))
         }
     }
+    
+    public var theme:AvailableTheme = .none
+    
+    public static var currentTheme: AvailableTheme = .none
 
     /// A string with the text inside the textField
     public var text: String? {
@@ -228,7 +232,7 @@ public class TextField: UIView {
     }()
 
     public private(set) lazy var textField: NatField = {
-        let field = NatField()
+        let field = NatField(theme: self.theme)
         field.delegate = self.delegate
         return field
     }()
@@ -279,8 +283,10 @@ public class TextField: UIView {
         return imageView
     }()
 
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
+    public init(theme:AvailableTheme = .none) {
+        self.theme = theme
+        TextField.currentTheme = self.theme
+        super.init(frame: .zero)
         setup()
     }
 
@@ -406,10 +412,16 @@ extension TextField {
     private func handleInteractionAndFeedbackStyle() {
         if state == .none {
             textField.borderWidth = interactionState.borderWidth
-            textField.borderColor = interactionState.borderColor
+            
+            let getThemeColor = ThemeColor(theme: self.theme, state: interactionState)
+            
+            textField.borderColor =  getThemeColor.borderColor
+            
             textField.textColor = interactionState.textColor
             textField.backgroundColor = interactionState.textFieldBackgroundColor
-            textField.tintColor = interactionState.textFieldTintColor
+            
+            textField.tintColor = getThemeColor.textFieldTintColor
+            
             textField.attributedPlaceholder = NSAttributedString(string: placeholder ?? "",
                                                                  attributes: [NSAttributedString.Key.foregroundColor:
                                                                                 interactionState.placeholderTextColor])

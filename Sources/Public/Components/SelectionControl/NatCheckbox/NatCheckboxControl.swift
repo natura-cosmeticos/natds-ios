@@ -9,6 +9,8 @@ final class NatCheckboxControl: UIControl {
     var isHapticFeedbackEnabled: Bool = false
     var isIndeterminate: Bool = false
     var labelComponent: String?
+    var theme: AvailableTheme = .none
+    
     internal var isGrouped: Bool = false
     internal var groupId: Int = 0
 
@@ -25,9 +27,10 @@ final class NatCheckboxControl: UIControl {
         }
     }
 
-    init(style: Style, notificationCenter: NotificationCenterObservable = NotificationCenter.default) {
-        self.style = style
+    init(notificationCenter: NotificationCenterObservable = NotificationCenter.default, theme:AvailableTheme = .none) {
+        
         self.notificationCenter = notificationCenter
+        self.theme = theme
 
         super.init(frame: .zero)
 
@@ -35,7 +38,6 @@ final class NatCheckboxControl: UIControl {
     }
 
     override init(frame: CGRect = .zero) {
-        self.style = Style.default
         self.notificationCenter = NotificationCenter.default
         super.init(frame: frame)
 
@@ -112,12 +114,43 @@ final class NatCheckboxControl: UIControl {
         let newRect = rect.insetBy(dx: dxy, dy: dxy)
 
         let context = UIGraphicsGetCurrentContext()
-        context?.setStrokeColor(style.borderColor(isSelected, isEnabled: isEnabled).cgColor)
+        
+        var defaultTheme: Style {
+            Style(uncheckedBorderColor: getUIColorFromTokens(\.colorMediumEmphasis),
+                  uncheckedBackgroundColor: .clear,
+                  checkedBorderColor: getUIColorFromTokens(\.colorPrimary),
+                  checkedBackgroundColor: getUIColorFromTokens(\.colorPrimary),
+                  checkmarkColor: .white)
+        }
+        
+        var customTheme: Style {
+            Style(uncheckedBorderColor: getUIColorFromTokens(\.colorMediumEmphasis),
+                  uncheckedBackgroundColor: .clear,
+                  checkedBorderColor: hexStringToUIColor(hex: theme.newInstance.tokens.colorPrimary),
+                  checkedBackgroundColor: hexStringToUIColor(hex: theme.newInstance.tokens.colorPrimary),
+                  checkmarkColor: .white)
+        }
+        
+        if (self.theme == .none) {
+            context?.setStrokeColor(defaultTheme.borderColor(isSelected, isEnabled: isEnabled).cgColor)
+        }
+        else
+        {
+            context?.setStrokeColor(customTheme.borderColor(isSelected, isEnabled: isEnabled).cgColor)
+        }
+        
+        
         context?.setLineWidth(borderWidth)
 
         let roundedSquare = UIBezierPath(roundedRect: newRect, cornerRadius: 2)
-
-        style.backgroundColor(isSelected, isEnabled: isEnabled).setFill()
+        
+        if (self.theme == .none) {
+            defaultTheme.backgroundColor(isSelected, isEnabled: isEnabled).setFill()
+        }
+        else
+        {
+            customTheme.backgroundColor(isSelected, isEnabled: isEnabled).setFill()
+        }
 
         roundedSquare.fill()
 

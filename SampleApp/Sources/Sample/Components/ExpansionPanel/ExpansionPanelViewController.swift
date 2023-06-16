@@ -15,7 +15,7 @@ class ExpansionPanelViewController: UIViewController, SampleItem {
     }()
 
     private lazy var secondPanel: ExpansionPanel = {
-        let expansionPanel = ExpansionPanel()
+        let expansionPanel = ExpansionPanel(theme: .avonLight)
         expansionPanel.setSubtitle("Panel with default animation")
         expansionPanel.translatesAutoresizingMaskIntoConstraints = false
         return expansionPanel

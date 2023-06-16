@@ -40,18 +40,25 @@ final class ShortcutItemViewController: UIViewController, SampleItem {
         // Contained
         let containedPrimaryShortcut = NatShortcut(style: .contained, color: .primary,
                                                    text: "Contained Primary", icon: getIcon(.filledActionAdd))
+        let containedThemePrimaryShortcut = NatShortcut(style: .contained, color: .primary,
+                                                   text: "Contained Avon", icon: getIcon(.filledActionAdd), theme: .avonLight)
         let containedNeutralShortcut = NatShortcut(style: .contained, color: .neutral,
                                                    text: "Contained Neutral", icon: getIcon(.outlinedAlertCheck))
         let containedDisabledShortcut = NatShortcut(style: .contained,
                                                     text: "Contained Disabled", icon: getIcon(.filledMediaPause))
         containedDisabledShortcut.configure(state: .disabled)
         containedPrimaryShortcut.configureText(numberOfLines: 1, lineBreakMode: .byTruncatingTail)
+        containedThemePrimaryShortcut.configureText(numberOfLines: 1, lineBreakMode: .byTruncatingTail)
         containedNeutralShortcut.configureText(numberOfLines: 1, lineBreakMode: .byTruncatingTail)
         containedDisabledShortcut.configureText(numberOfLines: 1, lineBreakMode: .byTruncatingTail)
 
         // Outlined
         let outlinedPrimaryShortcut = NatShortcut(style: .outlined, color: .primary,
                                                   text: "Outlined Primary", icon: getIcon(.outlinedAlertInfo))
+        
+        let outlinedThemePrimaryShortcut = NatShortcut(style: .outlined, color: .primary,
+                                                       text: "Outlined Avon", icon: getIcon(.outlinedAlertInfo), theme: .avonLight)
+        
         let outlinedNeutralShortcut = NatShortcut(style: .outlined, color: .neutral,
                                                   text: "Outlined Neutral", icon: getIcon(.filledPlaceTruck))
         let outlinedDisabledShortcut = NatShortcut(style: .outlined,
@@ -61,6 +68,8 @@ final class ShortcutItemViewController: UIViewController, SampleItem {
         // Other configurations
         let containedBadgeShortcut = NatShortcut(style: .outlined, color: .primary,
                                                  text: "Notify with badge", icon: getIcon(.filledProductBrandsproduct))
+        let containedThemeBadgeShortcut = NatShortcut(style: .outlined, color: .primary,
+                                                      text: "Avon with badge", icon: getIcon(.filledProductBrandsproduct), theme: .avonLight)
         let longTextNoBreakLineShorcut = NatShortcut(style: .contained, color: .primary,
                                                      text: "Long text with one line only",
                                                      icon: getIcon(.outlinedActionDownload))
@@ -73,15 +82,22 @@ final class ShortcutItemViewController: UIViewController, SampleItem {
         let badge = NatBadge(style: .standard, color: .alert)
         badge.configure(count: 99)
         containedBadgeShortcut.configure(badge: badge)
+        
+        let badgeAvon = NatBadge(style: .standard, color: .alert, theme: .avonLight)
+        badgeAvon.configure(count: 99)
+        containedThemeBadgeShortcut.configure(badge: badgeAvon)
 
         // Setup stack views
         containedStackView.addArrangedSubview(containedPrimaryShortcut)
+        containedStackView.addArrangedSubview(containedThemePrimaryShortcut)
         containedStackView.addArrangedSubview(containedNeutralShortcut)
         containedStackView.addArrangedSubview(containedDisabledShortcut)
         outlinedStackView.addArrangedSubview(outlinedPrimaryShortcut)
+        outlinedStackView.addArrangedSubview(outlinedThemePrimaryShortcut)
         outlinedStackView.addArrangedSubview(outlinedNeutralShortcut)
         outlinedStackView.addArrangedSubview(outlinedDisabledShortcut)
         otherConfigStackView.addArrangedSubview(containedBadgeShortcut)
+        otherConfigStackView.addArrangedSubview(containedThemeBadgeShortcut)
         otherConfigStackView.addArrangedSubview(longTextNoBreakLineShorcut)
         otherConfigStackView.addArrangedSubview(longTextBreakLineShortcut)
     }

@@ -1,13 +1,13 @@
 enum ShortcutOutlinedStyle {
-    static func apply(on shortcut: NatShortcut) {
-        apply(on: shortcut, color: shortcut.color)
+    static func apply(_ theme:AvailableTheme, on shortcut: NatShortcut) {
+        apply(theme, on: shortcut, color: shortcut.color)
     }
 
-    static func apply(on shortcut: NatShortcut, color: NatShortcut.Color) {
-        let backgroundColor = color.outlinedBackgroundColor(state: shortcut.state)
-        let iconColor = color.outlinedIconColor(state: shortcut.state)
-        let borderColor = color.outlinedBorderColor(state: shortcut.state)
-        let labelColor = color.outlinedLabelColor(state: shortcut.state)
+    static func apply(_ theme:AvailableTheme, on shortcut: NatShortcut, color: NatShortcut.Color) {
+        let backgroundColor = color.outlinedBackgroundColor(theme: theme, state: shortcut.state)
+        let iconColor = color.outlinedIconColor(theme: theme, state: shortcut.state)
+        let borderColor = color.outlinedBorderColor(theme: theme, state: shortcut.state)
+        let labelColor = color.outlinedLabelColor(theme: theme, state: shortcut.state)
         let elevation = NatElevation.ElevationAttributes.none
 
         shortcut.configure(circleColor: backgroundColor)
@@ -18,11 +18,11 @@ enum ShortcutOutlinedStyle {
         shortcut.configure(elevation: elevation)
     }
 
-    static func applyPrimaryStyle(on shortcut: NatShortcut) {
-        apply(on: shortcut, color: .primary)
+    static func applyPrimaryStyle(_ theme:AvailableTheme, on shortcut: NatShortcut) {
+        apply(theme, on: shortcut, color: .primary)
     }
 
-    static func applyDefaultStyle(on shortcut: NatShortcut) {
-        apply(on: shortcut, color: .neutral)
+    static func applyDefaultStyle(_ theme:AvailableTheme, on shortcut: NatShortcut) {
+        apply(theme, on: shortcut, color: .neutral)
     }
 }

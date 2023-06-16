@@ -30,7 +30,7 @@ final class ButtonsItemViewController: UIViewController, SampleItem {
     }()
 
     private let containedButton: NatButton = {
-        let button = NatButton(style: .contained)
+        let button = NatButton(style: .contained, theme: .avonLight)
         button.configure(title: "Contained")
         button.translatesAutoresizingMaskIntoConstraints = false
 
@@ -38,7 +38,7 @@ final class ButtonsItemViewController: UIViewController, SampleItem {
     }()
 
     private let outlinedButton: NatButton = {
-        let button = NatButton(style: .outlined)
+        let button = NatButton(style: .outlined, theme: .avonLight)
         button.configure(title: "Outlined")
         button.translatesAutoresizingMaskIntoConstraints = false
 
@@ -46,7 +46,7 @@ final class ButtonsItemViewController: UIViewController, SampleItem {
     }()
 
     private let textButton: NatButton = {
-        let button = NatButton(style: .text)
+        let button = NatButton(style: .text, theme: .avonLight)
         button.configure(title: "Text")
         button.translatesAutoresizingMaskIntoConstraints = false
 

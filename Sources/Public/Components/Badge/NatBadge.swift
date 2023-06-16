@@ -44,6 +44,7 @@ public final class NatBadge: UIView {
 
     private let style: Style
     private let color: Color
+    private var theme: AvailableTheme
     private var value = 0
     private var limit: Limit = .unlimited {
         didSet {
@@ -60,7 +61,21 @@ public final class NatBadge: UIView {
         label.font = NatFonts.font(ofSize: getComponentAttributeFromTheme(\.badgeLabelFontSize),
                                    withWeight: getComponentAttributeFromTheme(\.badgeLabelPrimaryFontWeight),
                                    withFamily: getComponentAttributeFromTheme(\.badgeLabelPrimaryFontFamily))
-        label.textColor = color.content
+        label.textColor = {
+        if self.theme == .none {
+            return color.content
+        } else {
+            if (self.color == .primary) {
+                return hexStringToUIColor(hex: self.theme.newInstance.components.badgeColorPrimaryLabel)
+            }
+            else if (self.color == .secondary) {
+                return hexStringToUIColor(hex: self.theme.newInstance.components.badgeColorSecondaryLabel)
+            }
+            else {
+                return color.content
+            }
+        }
+    }()
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -68,9 +83,10 @@ public final class NatBadge: UIView {
 
     // MARK: - Inits
 
-    public init(style: Style, color: Color) {
+    public init(style: Style, color: Color, theme: AvailableTheme = .none) {
         self.style = style
         self.color = color
+        self.theme = theme
         super.init(frame: .zero)
         setup()
     }
@@ -119,12 +135,54 @@ public final class NatBadge: UIView {
             drawPulse()
             scaleAnimation()
             opacityAnimation()
-            centerCircleLayer.fillColor = color.box.cgColor
-            backgroundCircleLayer.fillColor = color.box.withAlphaComponent(getTokenFromTheme(\.opacityMedium)).cgColor
+            centerCircleLayer.fillColor =  {
+                if self.theme == .none {
+                    return color.box.cgColor
+                } else {
+                    if (self.color == .primary) {
+                        return hexStringToUIColor(hex: self.theme.newInstance.tokens.colorPrimary).cgColor
+                    }
+                    else if (self.color == .secondary) {
+                        return hexStringToUIColor(hex: self.theme.newInstance.tokens.colorSecondary).cgColor
+                    }
+                    else {
+                        return color.box.cgColor
+                    }
+                }
+            }()
+            
+            backgroundCircleLayer.fillColor = {
+                if self.theme == .none {
+                    return color.box.withAlphaComponent(getTokenFromTheme(\.opacityMedium)).cgColor
+                } else {
+                    if (self.color == .primary) {
+                        return hexStringToUIColor(hex: self.theme.newInstance.tokens.colorPrimary).withAlphaComponent(getTokenFromTheme(\.opacityMedium)).cgColor
+                    }
+                    else if (self.color == .secondary) {
+                        return hexStringToUIColor(hex: self.theme.newInstance.tokens.colorSecondary).withAlphaComponent(getTokenFromTheme(\.opacityMedium)).cgColor
+                    }
+                    else {
+                        return color.box.withAlphaComponent(getTokenFromTheme(\.opacityMedium)).cgColor
+                    }
+                }
+            }()
         } else {
             path = UIBezierPath(roundedRect: CGRect(origin: .zero, size: bounds.size),
                                 cornerRadius: style.borderRadius)
-            color.box.set()
+            
+            if self.theme == .none {
+                color.box.set()
+            } else {
+                if (self.color == .primary) {
+                    hexStringToUIColor(hex: self.theme.newInstance.tokens.colorPrimary).set()
+                }
+                else if (self.color == .secondary) {
+                    hexStringToUIColor(hex: self.theme.newInstance.tokens.colorSecondary).set()
+                }
+                else {
+                    color.box.set()
+                }
+            }
             path?.fill()
         }
     }

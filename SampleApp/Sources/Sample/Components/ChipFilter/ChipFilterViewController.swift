@@ -59,6 +59,12 @@ class ChipFilterViewController: UIViewController, SampleItem {
         filter.configure(text: "Custom color")
         return filter
     }()
+    
+    private let customThemeChip: NatChipFilter = {
+        let chip = NatChipFilter(theme: .avonLight)
+        chip.configure(text: "ChipFilter with Avon theme")
+        return chip
+    }()
 
     private let chipFilterWithAction: NatChipFilter = {
         let filter = NatChipFilter()
@@ -182,6 +188,7 @@ class ChipFilterViewController: UIViewController, SampleItem {
         stackView.addArrangedSubview(primaryColorChipFilter)
         stackView.addArrangedSubview(secondaryColorChipFilter)
         stackView.addArrangedSubview(customColorChipFilter)
+        stackView.addArrangedSubview(customThemeChip)
         stackView.addArrangedSubview(chipFilterWithAction)
         stackView.addArrangedSubview(semiSizeChipFilter)
         stackView.addArrangedSubview(semiXSizeChipFilter)

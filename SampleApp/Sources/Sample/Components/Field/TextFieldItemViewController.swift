@@ -22,7 +22,7 @@ class TextFieldItemViewController: UIViewController, SampleItem {
     }()
 
     private lazy var textField: TextField = {
-        let field = TextField()
+        let field = TextField(theme: .avonLight)
         field.title = "Text"
         field.type = .text
         field.placeholder = "Type some text"

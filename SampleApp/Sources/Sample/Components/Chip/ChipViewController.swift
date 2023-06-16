@@ -51,6 +51,12 @@ class ChipViewController: UIViewController, SampleItem {
         chip.configure(text: "Custom color")
         return chip
     }()
+    
+    private let customThemeChip: NatChip = {
+        let chip = NatChip(theme: .avonLight)
+        chip.configure(text: "Chip with Avon theme")
+        return chip
+    }()
 
     private let chipWithAction: NatChip = {
         let chip = NatChip()
@@ -174,6 +180,7 @@ class ChipViewController: UIViewController, SampleItem {
         stackView.addArrangedSubview(primaryColorChip)
         stackView.addArrangedSubview(secondaryColorChip)
         stackView.addArrangedSubview(customColorChip)
+        stackView.addArrangedSubview(customThemeChip)
         stackView.addArrangedSubview(chipWithAction)
         stackView.addArrangedSubview(semiSizeChip)
         stackView.addArrangedSubview(semiXSizeChip)

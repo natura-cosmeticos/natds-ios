@@ -20,9 +20,9 @@ extension NatButton {
      */
 
     public struct Style {
-        let applyStyle: (NatButton) -> Void
-        let changeState: ((NatButton) -> Void)?
-        let applyTitle: (String, NatButton) -> Void
+        let applyStyle: (AvailableTheme, NatButton) -> Void
+        let changeState: (AvailableTheme, NatButton) -> Void?
+        let applyTitle: (String, AvailableTheme, NatButton) -> Void
     }
 }
 
@@ -46,7 +46,7 @@ extension NatButton.Style {
     public static var text: NatButton.Style {
         .init(
             applyStyle: ButtonTextStyle.applyStyle,
-            changeState: nil,
+            changeState: ButtonTextStyle.applyStyleForStates,
             applyTitle: ButtonTextStyle.applyStyleForTitle
         )
     }

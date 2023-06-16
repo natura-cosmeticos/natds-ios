@@ -39,7 +39,7 @@ class SwitchViewController: UIViewController, SampleItem {
     }()
 
     private let focusedSwitch: NatSwitch = {
-        let natSwitch = NatSwitch()
+        let natSwitch = NatSwitch(theme: .avonLight)
         natSwitch.configure(state: .focused)
         natSwitch.translatesAutoresizingMaskIntoConstraints = false
         return natSwitch

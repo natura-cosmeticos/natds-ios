@@ -35,19 +35,9 @@ public final class NatAvatar: UIView {
 
     // MARK: - Private properties
 
-    internal let circleView: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = getUIColorFromTokens(\.colorPrimary)
-        return view
-    }()
+    var circleView = UIView()
 
-    internal let label: UILabel = {
-        let label = UILabel()
-        label.textColor = getUIColorFromTokens(\.colorOnPrimary)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
+    var label = UILabel()
 
     internal let imageView: UIImageView = {
         let imageView = UIImageView()
@@ -59,31 +49,21 @@ public final class NatAvatar: UIView {
         return imageView
     }()
 
-    internal var defaultIconView: UIImageView = {
-        let iconView = UIImageView()
-        iconView.image = AssetsPath.iconOutlinedDefaultMockup.rawValue
-        iconView.tintedColor = getUIColorFromTokens(\.colorOnPrimary)
-        iconView.translatesAutoresizingMaskIntoConstraints = false
-        return iconView
-    }()
+    var defaultIconView = UIImageView()
 
-    internal let iconView: IconView = {
-        let iconView = IconView(fontSize: NatSizes.standard)
-        iconView.tintColor = getUIColorFromTokens(\.colorOnPrimary)
-        iconView.translatesAutoresizingMaskIntoConstraints = false
-
-        return iconView
-    }()
+    var iconView = IconView()
 
     internal let size: Size
     internal var type: Types
+    internal var theme: AvailableTheme
     internal var fallBackIcon: String?
 
     // MARK: - Inits
 
-    public init(size: Size = .medium, type: Types = .icon) {
+    public init(size: Size = .medium, type: Types = .icon, theme:AvailableTheme = .none) {
         self.size = size
         self.type = type
+        self.theme = theme
 
         super.init(frame: .zero)
         setup()
@@ -232,6 +212,63 @@ extension NatAvatar {
     }
 
     private func setup() {
+        
+        circleView = {
+            let view = UIView()
+            view.translatesAutoresizingMaskIntoConstraints = false
+            if (self.theme == .none) {
+                view.backgroundColor = getUIColorFromTokens(\.colorPrimary)
+            }
+            else {
+                view.backgroundColor = hexStringToUIColor(hex: self.theme.newInstance.tokens.colorPrimary)
+            }
+            return view
+        }()
+        
+        label = {
+           let label = UILabel()
+            
+            if (self.theme == .none) {
+                label.textColor = getUIColorFromTokens(\.colorOnPrimary)
+            }
+            else {
+                label.textColor = hexStringToUIColor(hex: self.theme.newInstance.tokens.colorOnPrimary)
+            }
+            
+           label.translatesAutoresizingMaskIntoConstraints = false
+           return label
+       }()
+
+        defaultIconView = {
+           let iconView = UIImageView()
+           iconView.image = AssetsPath.iconOutlinedDefaultMockup.rawValue
+            
+            if (self.theme == .none) {
+                iconView.tintedColor = getUIColorFromTokens(\.colorOnPrimary)
+            }
+            else {
+                iconView.tintedColor = hexStringToUIColor(hex: self.theme.newInstance.tokens.colorOnPrimary)
+            }
+            
+           iconView.translatesAutoresizingMaskIntoConstraints = false
+           return iconView
+       }()
+
+        iconView = {
+           let iconView = IconView(fontSize: NatSizes.standard)
+            
+            if (self.theme == .none) {
+                iconView.tintColor = getUIColorFromTokens(\.colorOnPrimary)
+            }
+            else {
+                iconView.tintColor = hexStringToUIColor(hex: self.theme.newInstance.tokens.colorOnPrimary)
+            }
+            
+           iconView.translatesAutoresizingMaskIntoConstraints = false
+
+           return iconView
+       }()
+
         addSubview(circleView)
         addSubview(label)
         addSubview(iconView)

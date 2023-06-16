@@ -6,6 +6,8 @@ public final class NatField: UITextField {
                                             withFamily: getComponentAttributeFromTheme(\.textFieldContentPrimaryFontFamily))
     let contentLetterSpacing = getComponentAttributeFromTheme(\.textFieldContentLetterSpacing)
     let contentLineHeight = getComponentAttributeFromTheme(\.textFieldContentLineHeight)
+    
+    var theme:AvailableTheme = .none
 
     lazy var contentParagraphStyle: NSMutableParagraphStyle = {
         let paragraphStyle = NSMutableParagraphStyle()
@@ -47,20 +49,25 @@ public final class NatField: UITextField {
             layer.borderColor = borderColor.cgColor
         }
     }
+    
+    
 
     private var padding = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
 
-    convenience init() {
+    convenience init(theme:AvailableTheme = .none) {
         self.init(frame: .zero)
+        
+        self.theme = theme
+        
     }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+
         font = contentFont
         textColor = getUIColorFromTokens(\.colorHighEmphasis)
         layer.cornerRadius = 4
         layer.borderWidth = borderWidth
-        layer.borderColor = borderColor.cgColor
     }
 
     @available(*, unavailable)

@@ -85,13 +85,22 @@ public final class NatChipFilter: UIView {
             actionHandler?(isSelected)
         }
     }
+    
+    public private(set) var theme: AvailableTheme = .none {
+        didSet {
+            setupUI()
+            isSelected = state == .selected
+        }
+    }
 
     // MARK: - Init
 
     public init(size: NatChipFilter.Size = .semi,
-                color: NatChipFilter.Color = .neutral) {
+                color: NatChipFilter.Color = .neutral,
+                theme: AvailableTheme = .none) {
         self.size = size
         self.color = color
+        self.theme = theme
         super.init(frame: .zero)
         setup()
     }
@@ -140,37 +149,72 @@ public final class NatChipFilter: UIView {
         }
     }
 
-    private func setupUI() {
-        switch state {
-        case .normal:
-            backgroundView.layer.borderColor = color.borderColor.cgColor
-            backgroundView.backgroundColor = .clear
-            label.textColor = NatColors.highEmphasis
-        case .disabled:
-            backgroundView.layer.borderColor = NatColors.lowEmphasis.cgColor
-            backgroundView.backgroundColor = .clear
-            label.textColor = NatColors.lowEmphasis
-            stackView.arrangedSubviews.forEach {
-                if $0 != label {
-                    $0.tintColor = NatColors.lowEmphasis
+    private func setupUI(theme: AvailableTheme = .none) {
+        
+        if (self.theme == .none) {
+            switch state {
+            case .normal:
+                backgroundView.layer.borderColor = color.borderColor.cgColor
+                backgroundView.backgroundColor = .clear
+                label.textColor = NatColors.highEmphasis
+            case .disabled:
+                backgroundView.layer.borderColor = NatColors.lowEmphasis.cgColor
+                backgroundView.backgroundColor = .clear
+                label.textColor = NatColors.lowEmphasis
+                stackView.arrangedSubviews.forEach {
+                    if $0 != label {
+                        $0.tintColor = NatColors.lowEmphasis
+                    }
                 }
-            }
-        case .focused:
-            backgroundView.backgroundColor = backgroundView.backgroundColor?.withAlphaComponent(NatOpacities.low)
-        case .selected:
-            backgroundView.layer.borderColor = color.selectedColor.cgColor
-            backgroundView.backgroundColor = color.selectedColor
-            label.textColor = color.labelColor
-            stackView.arrangedSubviews.forEach {
-                if $0 != label {
-                    $0.tintColor = color.labelColor
+            case .focused:
+                backgroundView.backgroundColor = backgroundView.backgroundColor?.withAlphaComponent(NatOpacities.low)
+            case .selected:
+                backgroundView.layer.borderColor = color.selectedColor.cgColor
+                backgroundView.backgroundColor = color.selectedColor
+                label.textColor = color.labelColor
+                stackView.arrangedSubviews.forEach {
+                    if $0 != label {
+                        $0.tintColor = color.labelColor
+                    }
                 }
+            default:
+                state = .normal
             }
-        default:
-            state = .normal
-        }
 
-        backgroundColor = .clear
+            backgroundColor = .clear
+        }
+        else {
+            switch state {
+            case .normal:
+                backgroundView.layer.borderColor = hexStringToUIColor(hex: self.theme.newInstance.tokens.colorPrimary).cgColor
+                backgroundView.backgroundColor = .clear
+                label.textColor = hexStringToUIColor(hex: self.theme.newInstance.tokens.colorHighEmphasis)
+            case .disabled:
+                backgroundView.layer.borderColor = NatColors.lowEmphasis.cgColor
+                backgroundView.backgroundColor = .clear
+                label.textColor = NatColors.lowEmphasis
+                stackView.arrangedSubviews.forEach {
+                    if $0 != label {
+                        $0.tintColor = NatColors.lowEmphasis
+                    }
+                }
+            case .focused:
+                backgroundView.backgroundColor = backgroundView.backgroundColor?.withAlphaComponent(NatOpacities.low)
+            case .selected:
+                backgroundView.layer.borderColor = hexStringToUIColor(hex: self.theme.newInstance.tokens.colorPrimary).cgColor
+                backgroundView.backgroundColor = hexStringToUIColor(hex: self.theme.newInstance.tokens.colorPrimary)
+                label.textColor = hexStringToUIColor(hex: self.theme.newInstance.tokens.colorOnPrimary)
+                stackView.arrangedSubviews.forEach {
+                    if $0 != label {
+                        $0.tintColor = hexStringToUIColor(hex: self.theme.newInstance.tokens.colorOnPrimary)
+                    }
+                }
+            default:
+                state = .normal
+            }
+
+            backgroundColor = .clear
+        }
     }
 
     private func createIconView(icon: String?) -> IconView {
@@ -271,6 +315,17 @@ public final class NatChipFilter: UIView {
     /// - Parameter actionHandler: A closure to notify value change
     public func configure(actionHandler: @escaping (Bool) -> Void) {
         self.actionHandler = actionHandler
+    }
+
+    /// Sets the state of the component.
+    ///
+    /// Example of usage:
+    /// ```
+    /// natChip.configure(state: .normal)
+    /// ```
+    /// - Parameter state: An `UIControl.State` that changes the state of the component
+    public func configure(theme: AvailableTheme) {
+        setupUI(theme: theme)
     }
 }
 

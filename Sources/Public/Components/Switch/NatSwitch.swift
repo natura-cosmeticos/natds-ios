@@ -84,11 +84,24 @@ public class NatSwitch: UIView {
             setupUI()
         }
     }
+    
+    var theme:AvailableTheme = .none
+    var primaryColor: UIColor = .white
 
     private var isOnHandler: ((Bool) -> Void)?
 
-    public init() {
+    public init(theme:AvailableTheme = .none) {
         super.init(frame: .zero)
+        
+        self.theme = theme
+        if (self.theme == .none) {
+            primaryColor = NatColors.primary
+        }
+        else
+        {
+            primaryColor = hexStringToUIColor(hex: self.theme.newInstance.tokens.colorPrimary)
+        }
+        
         setup()
     }
 
@@ -119,9 +132,9 @@ public class NatSwitch: UIView {
     private func setupUI() {
         switch state {
         case .normal:
-            thumbView.backgroundColor = isOn ? NatColors.primary : NatColors.mediumEmphasis
+            thumbView.backgroundColor = isOn ? self.primaryColor : NatColors.mediumEmphasis
             thumbView.alpha = isOn ? NatOpacities.medium : NatOpacities.opaque
-            circleView.backgroundColor = isOn ? NatColors.primary : NatColors.surface
+            circleView.backgroundColor = isOn ? self.primaryColor : NatColors.surface
             highlightCircleView.isHidden = true
         case .disabled:
             thumbView.backgroundColor = NatColors.lowEmphasis
@@ -129,10 +142,10 @@ public class NatSwitch: UIView {
             circleView.backgroundColor = NatColors.surface
             highlightCircleView.isHidden = true
         case .focused:
-            thumbView.backgroundColor = isOn ? NatColors.primary : NatColors.mediumEmphasis
+            thumbView.backgroundColor = isOn ? self.primaryColor : NatColors.mediumEmphasis
             thumbView.alpha = isOn ? NatOpacities.medium : NatOpacities.opaque
-            circleView.backgroundColor = isOn ? NatColors.primary : NatColors.surface
-            highlightCircleView.backgroundColor = isOn ? NatColors.primary : NatColors.highlight
+            circleView.backgroundColor = isOn ? self.primaryColor : NatColors.surface
+            highlightCircleView.backgroundColor = isOn ? self.primaryColor : NatColors.highlight
             highlightCircleView.alpha = NatOpacities.low
             highlightCircleView.isHidden = false
         default:
@@ -158,7 +171,7 @@ public class NatSwitch: UIView {
     @objc private func tapHandler(gesture: UITapGestureRecognizer) {
         if state != .disabled {
             if gesture.state == .began {
-                highlightCircleView.backgroundColor = isOn ? NatColors.primary : NatColors.highlight
+                highlightCircleView.backgroundColor = isOn ? self.primaryColor : NatColors.highlight
                 highlightCircleView.alpha = NatOpacities.mediumLow
                 highlightCircleView.isHidden = false
             } else if gesture.state == .ended {
