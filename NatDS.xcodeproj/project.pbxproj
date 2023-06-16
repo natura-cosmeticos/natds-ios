@@ -427,8 +427,8 @@
 		E67E4E4F29F714CB00FF7515 /* BiomeLightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67E4E3829F714CB00FF7515 /* BiomeLightTheme.swift */; };
 		E67E4E5029F714CB00FF7515 /* BiomeDarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67E4E3929F714CB00FF7515 /* BiomeDarkTheme.swift */; };
 		E67E4E5129F714CB00FF7515 /* ThemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67E4E3A29F714CB00FF7515 /* ThemeProtocol.swift */; };
-		E67E4E5229F714CB00FF7515 /* Natura_v2DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67E4E3C29F714CB00FF7515 /* Natura_v2DarkTheme.swift */; };
-		E67E4E5329F714CB00FF7515 /* Natura_v2LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67E4E3D29F714CB00FF7515 /* Natura_v2LightTheme.swift */; };
+		E67E4E5229F714CB00FF7515 /* Naturav2DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67E4E3C29F714CB00FF7515 /* Naturav2DarkTheme.swift */; };
+		E67E4E5329F714CB00FF7515 /* Naturav2LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67E4E3D29F714CB00FF7515 /* Naturav2LightTheme.swift */; };
 		E67E4E5429F714CB00FF7515 /* CasaEestiloDarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67E4E3F29F714CB00FF7515 /* CasaEestiloDarkTheme.swift */; };
 		E67E4E5529F714CB00FF7515 /* CasaEestiloLightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67E4E4029F714CB00FF7515 /* CasaEestiloLightTheme.swift */; };
 		E67E4E5629F714CB00FF7515 /* AesopLightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67E4E4229F714CB00FF7515 /* AesopLightTheme.swift */; };
@@ -446,8 +446,8 @@
 		F72BEF338B46182BC440C92CCF3D02B0 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A1DDA4A78343DB58AF747FF9DC2B66 /* IconView.swift */; };
 		F7894B76EE9A0F4726C5DF88653A4816 /* NatFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C1EA361FCA3C4EFEC4858AA4E04143 /* NatFonts.swift */; };
 		FAD0A71F10707995BE66A299D98CC33B /* NatOpacities+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46448E79883A4EB8A9416823A01531F /* NatOpacities+Spec.swift */; };
-		FF4BFAAC2A17080200D7E28F /* Avon_v2DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4BFAAA2A17080200D7E28F /* Avon_v2DarkTheme.swift */; };
-		FF4BFAAD2A17080200D7E28F /* Avon_v2LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4BFAAB2A17080200D7E28F /* Avon_v2LightTheme.swift */; };
+		FF4BFAAC2A17080200D7E28F /* Avonv2DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4BFAAA2A17080200D7E28F /* Avonv2DarkTheme.swift */; };
+		FF4BFAAD2A17080200D7E28F /* Avonv2LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4BFAAB2A17080200D7E28F /* Avonv2LightTheme.swift */; };
 		FF4C87EAD7ADB8D9EF8F897BA229A3A7 /* NatFonts+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8BC0D102CE4444401C0469C861358A /* NatFonts+Spec.swift */; };
 		FF50B6422A040D3600FA824A /* NatChipFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF50B6412A040D3600FA824A /* NatChipFilter.swift */; };
 		FF50B6442A040D5600FA824A /* NatChipFilter+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF50B6432A040D5600FA824A /* NatChipFilter+Color.swift */; };
@@ -893,8 +893,8 @@
 		E67E4E3829F714CB00FF7515 /* BiomeLightTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiomeLightTheme.swift; sourceTree = "<group>"; };
 		E67E4E3929F714CB00FF7515 /* BiomeDarkTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiomeDarkTheme.swift; sourceTree = "<group>"; };
 		E67E4E3A29F714CB00FF7515 /* ThemeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeProtocol.swift; sourceTree = "<group>"; };
-		E67E4E3C29F714CB00FF7515 /* Natura_v2DarkTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Natura_v2DarkTheme.swift; sourceTree = "<group>"; };
-		E67E4E3D29F714CB00FF7515 /* Natura_v2LightTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Natura_v2LightTheme.swift; sourceTree = "<group>"; };
+		E67E4E3C29F714CB00FF7515 /* Naturav2DarkTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Naturav2DarkTheme.swift; sourceTree = "<group>"; };
+		E67E4E3D29F714CB00FF7515 /* Naturav2LightTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Naturav2LightTheme.swift; sourceTree = "<group>"; };
 		E67E4E3F29F714CB00FF7515 /* CasaEestiloDarkTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CasaEestiloDarkTheme.swift; sourceTree = "<group>"; };
 		E67E4E4029F714CB00FF7515 /* CasaEestiloLightTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CasaEestiloLightTheme.swift; sourceTree = "<group>"; };
 		E67E4E4229F714CB00FF7515 /* AesopLightTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AesopLightTheme.swift; sourceTree = "<group>"; };
@@ -914,8 +914,8 @@
 		FADDEC4E472D2A193BED0EBF058A67E8 /* ViewAnimatingMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewAnimatingMock.swift; sourceTree = "<group>"; };
 		FB7FB96016F7D02CB5976F54C383CCD6 /* NatSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatSizes.swift; sourceTree = "<group>"; };
 		FD3CA47F5B151245708F86A82388401D /* Divider+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Divider+Snapshot+Tests.swift"; sourceTree = "<group>"; };
-		FF4BFAAA2A17080200D7E28F /* Avon_v2DarkTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Avon_v2DarkTheme.swift; sourceTree = "<group>"; };
-		FF4BFAAB2A17080200D7E28F /* Avon_v2LightTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Avon_v2LightTheme.swift; sourceTree = "<group>"; };
+		FF4BFAAA2A17080200D7E28F /* Avonv2DarkTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Avonv2DarkTheme.swift; sourceTree = "<group>"; };
+		FF4BFAAB2A17080200D7E28F /* Avonv2LightTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Avonv2LightTheme.swift; sourceTree = "<group>"; };
 		FF50B6412A040D3600FA824A /* NatChipFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatChipFilter.swift; sourceTree = "<group>"; };
 		FF50B6432A040D5600FA824A /* NatChipFilter+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatChipFilter+Color.swift"; sourceTree = "<group>"; };
 		FF50B6452A040D6B00FA824A /* NatChipFilter+Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatChipFilter+Position.swift"; sourceTree = "<group>"; };
@@ -2898,14 +2898,14 @@
 		E67E4E2A29F714CB00FF7515 /* BrandsThemes */ = {
 			isa = PBXGroup;
 			children = (
-				FF4BFAA92A17065700D7E28F /* Avon_v2 */,
+				FF4BFAA92A17065700D7E28F /* AvonV2 */,
 				E67E4E2B29F714CB00FF7515 /* NatdsTest */,
 				E67E4E2E29F714CB00FF7515 /* Avon */,
 				E67E4E3129F714CB00FF7515 /* ConsultoriaDeBeleza */,
 				E67E4E3429F714CB00FF7515 /* TheBodyShop */,
 				E67E4E3729F714CB00FF7515 /* Biome */,
 				E67E4E3A29F714CB00FF7515 /* ThemeProtocol.swift */,
-				E67E4E3B29F714CB00FF7515 /* Natura_v2 */,
+				E67E4E3B29F714CB00FF7515 /* NaturaV2 */,
 				E67E4E3E29F714CB00FF7515 /* CasaEestilo */,
 				E67E4E4129F714CB00FF7515 /* Aesop */,
 				E67E4E4429F714CB00FF7515 /* Natura */,
@@ -2958,13 +2958,13 @@
 			path = Biome;
 			sourceTree = "<group>";
 		};
-		E67E4E3B29F714CB00FF7515 /* Natura_v2 */ = {
+		E67E4E3B29F714CB00FF7515 /* NaturaV2 */ = {
 			isa = PBXGroup;
 			children = (
-				E67E4E3C29F714CB00FF7515 /* Natura_v2DarkTheme.swift */,
-				E67E4E3D29F714CB00FF7515 /* Natura_v2LightTheme.swift */,
+				E67E4E3C29F714CB00FF7515 /* Naturav2DarkTheme.swift */,
+				E67E4E3D29F714CB00FF7515 /* Naturav2LightTheme.swift */,
 			);
-			path = Natura_v2;
+			path = NaturaV2;
 			sourceTree = "<group>";
 		};
 		E67E4E3E29F714CB00FF7515 /* CasaEestilo */ = {
@@ -3059,13 +3059,13 @@
 			path = Icons;
 			sourceTree = "<group>";
 		};
-		FF4BFAA92A17065700D7E28F /* Avon_v2 */ = {
+		FF4BFAA92A17065700D7E28F /* AvonV2 */ = {
 			isa = PBXGroup;
 			children = (
-				FF4BFAAA2A17080200D7E28F /* Avon_v2DarkTheme.swift */,
-				FF4BFAAB2A17080200D7E28F /* Avon_v2LightTheme.swift */,
+				FF4BFAAA2A17080200D7E28F /* Avonv2DarkTheme.swift */,
+				FF4BFAAB2A17080200D7E28F /* Avonv2LightTheme.swift */,
 			);
-			path = Avon_v2;
+			path = AvonV2;
 			sourceTree = "<group>";
 		};
 		FF50B6402A040CF600FA824A /* ChipFilter */ = {
@@ -3636,7 +3636,7 @@
 				E70EF1AC4BB7A93A80A500786C1A6497 /* NatButton.swift in Sources */,
 				798CD29C25FFCC4A00F49768 /* NatRadioButton.swift in Sources */,
 				4838BBC57B1464D82D59DE861726268A /* NatColors.swift in Sources */,
-				FF4BFAAD2A17080200D7E28F /* Avon_v2LightTheme.swift in Sources */,
+				FF4BFAAD2A17080200D7E28F /* Avonv2LightTheme.swift in Sources */,
 				E67E4E5129F714CB00FF7515 /* ThemeProtocol.swift in Sources */,
 				84BC900224AA15C3007DF09D /* NotificationCenterPostable.swift in Sources */,
 				797E615E255464D1002A59E0 /* NatButton+Icon.swift in Sources */,
@@ -3667,8 +3667,8 @@
 				BE7C39B5259CC77200E82405 /* NatCheckboxControl+Style.swift in Sources */,
 				84BC900C24AA169B007DF09D /* DialogButtonConfiguration.swift in Sources */,
 				7D3D59152593D1B600C9197B /* UIImageView+UIColor.swift in Sources */,
-				E67E4E5229F714CB00FF7515 /* Natura_v2DarkTheme.swift in Sources */,
-				E67E4E5329F714CB00FF7515 /* Natura_v2LightTheme.swift in Sources */,
+				E67E4E5229F714CB00FF7515 /* Naturav2DarkTheme.swift in Sources */,
+				E67E4E5329F714CB00FF7515 /* Naturav2LightTheme.swift in Sources */,
 				13070104FE3F89CB14F76D621EF9A7F1 /* NavigationDrawer+IndexMenu.swift in Sources */,
 				7D75A43925DB00130050ACA9 /* NatAvatar.swift in Sources */,
 				79EA0C18260A30DA00742C0A /* NatCounter.swift in Sources */,
@@ -3724,7 +3724,7 @@
 				7DAF750E25E5AF830094F865 /* String+Initials.swift in Sources */,
 				840B6A754236624B9738CBC3D5CFE895 /* ViewAnimatingWrapper.swift in Sources */,
 				7D86C1A426654D0700FC4C53 /* NatLogo+Size.swift in Sources */,
-				FF4BFAAC2A17080200D7E28F /* Avon_v2DarkTheme.swift in Sources */,
+				FF4BFAAC2A17080200D7E28F /* Avonv2DarkTheme.swift in Sources */,
 				EE1E7A9F49A18BCD194E0C03FB2F0074 /* ViewStyle.swift in Sources */,
 				79EA0C3E260B861400742C0A /* NatCounter+Size.swift in Sources */,
 				79FC593F25BF58C7001CCB56 /* NatRadioButtonControl+Style.swift in Sources */,
