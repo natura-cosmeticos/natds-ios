@@ -91,9 +91,22 @@ public final class NatCounter: UIView, UITextFieldDelegate {
         textField.textAlignment = .center
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.keyboardType = .numberPad
+                
+        let toolbar = UIToolbar()
+                toolbar.sizeToFit()
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(title: "OK", style: .done, target: self, action: #selector(doneButtonAction))
+        toolbar.items = [flexibleSpace, doneButton]
+        
+        textField.inputAccessoryView = toolbar
+        textField.resignFirstResponder()
 
         return textField
     }()
+    
+    @objc func doneButtonAction() {
+        numCounterTextField.resignFirstResponder()
+    }
     
     public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let currentText = textField.text ?? ""
