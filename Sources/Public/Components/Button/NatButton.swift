@@ -53,6 +53,7 @@ public final class NatButton: UIButton, Pulsable {
     private let notificationCenter: NotificationCenterObservable
     private var iconView: IconView?
     private var theme: AvailableTheme
+    private var size: ButtonHeight
 
     // MARK: - Public properties
 
@@ -65,19 +66,35 @@ public final class NatButton: UIButton, Pulsable {
 
     // MARK: - Inits
 
-    public convenience init(style: Style, theme: AvailableTheme = .none) {
-        self.init(style: style, notificationCenter: NotificationCenter.default, theme: theme)
+    public convenience init(style: Style, size: ButtonHeight = .semix, theme: AvailableTheme = .none) {
+        self.init(style: style, notificationCenter: NotificationCenter.default, size: size, theme: theme)
     }
 
-    init(style: Style, notificationCenter: NotificationCenterObservable, theme: AvailableTheme = .none) {
+    init(style: Style, notificationCenter: NotificationCenterObservable, size: ButtonHeight = .semix, theme: AvailableTheme = .none) {
         self.style = style
         self.notificationCenter = notificationCenter
         self.theme = theme
+        self.size = size
 
         super.init(frame: .zero)
 
         style.applyStyle(self.theme, self)
-
+        
+        translatesAutoresizingMaskIntoConstraints = false
+        
+        let heightConstraint: NSLayoutConstraint
+            
+        switch size {
+            case .medium:
+                heightConstraint = heightAnchor.constraint(equalToConstant: getTokenFromTheme(\.sizeMedium))
+            case .semix:
+                heightConstraint = heightAnchor.constraint(equalToConstant: getTokenFromTheme(\.sizeSemiX))
+            case .semi:
+                heightConstraint = heightAnchor.constraint(equalToConstant: getTokenFromTheme(\.sizeSemi))
+        }
+            
+        heightConstraint.isActive = true
+        
         notificationCenter.addObserver(
             self,
             selector: #selector(themeHasChanged),
