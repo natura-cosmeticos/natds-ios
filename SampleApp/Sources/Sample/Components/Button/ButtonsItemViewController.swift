@@ -94,17 +94,37 @@ final class ButtonsItemViewController: UIViewController, SampleItem {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.spacing = NatSpacing.tiny
-        stackView.distribution = .fillEqually
         stackView.translatesAutoresizingMaskIntoConstraints = false
 
         return stackView
+    }()
+    
+    private let containedFullMediumButton: NatButton = {
+        let button = NatButton(style: .contained, size: .medium)
+        button.configure(title: "Contained - Medium")
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    private let disableContainedFullSemixButton: NatButton = {
+        let button = NatButton(style: .contained, size: .semix)
+        button.configure(title: "Disabled Contained - Semix")
+        button.isEnabled = false
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    private let outlinedFullSemiButton: NatButton = {
+        let button = NatButton(style: .outlined, size: .semi)
+        button.configure(title: "Outlined - Semi")
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
     }()
 
     private let containedFullButton: NatButton = {
         let button = NatButton(style: .contained)
         button.configure(title: "Contained")
         button.translatesAutoresizingMaskIntoConstraints = false
-
         return button
     }()
 
@@ -113,7 +133,6 @@ final class ButtonsItemViewController: UIViewController, SampleItem {
         button.configure(title: "Disabled Contained")
         button.isEnabled = false
         button.translatesAutoresizingMaskIntoConstraints = false
-
         return button
     }()
 
@@ -121,7 +140,6 @@ final class ButtonsItemViewController: UIViewController, SampleItem {
         let button = NatButton(style: .outlined)
         button.configure(title: "Outlined")
         button.translatesAutoresizingMaskIntoConstraints = false
-
         return button
     }()
 
@@ -231,6 +249,9 @@ final class ButtonsItemViewController: UIViewController, SampleItem {
         containerView.addSubview(fullStackView)
         containerView.addSubview(containedIconStackView)
         containerView.addSubview(outlinedIconStackView)
+        containerView.addSubview(containedFullMediumButton)
+        containerView.addSubview(outlinedFullSemiButton)
+        containerView.addSubview(disableContainedFullSemixButton)
 
         enabledStackView.addArrangedSubview(containedButton)
         enabledStackView.addArrangedSubview(outlinedButton)
@@ -264,6 +285,9 @@ final class ButtonsItemViewController: UIViewController, SampleItem {
         addConstraintsFullStackView()
         addConstraintsContainedIconStackView()
         addConstraintsOutlinedIconStackView()
+        addConstraintsMediumButton()
+        addConstraintsSemixButton()
+        addConstraintsSemiButton()
 
         containedFullButton.heightAnchor.constraint(equalToConstant: NatButton.Height.medium).isActive = true
     }
@@ -352,4 +376,42 @@ extension ButtonsItemViewController {
         ]
         NSLayoutConstraint.activate(constraints)
     }
+    
+    private func addConstraintsMediumButton() {
+        let constraints = [
+            containedFullMediumButton.topAnchor.constraint(
+                equalTo: outlinedIconStackView.bottomAnchor,
+                constant: NatSpacing.small
+            ),
+            containedFullMediumButton.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+            containedFullMediumButton.leadingAnchor.constraint(equalTo: containerView.leadingAnchor)
+        ]
+        NSLayoutConstraint.activate(constraints)
+    }
+    
+    private func addConstraintsSemixButton() {
+        let constraints = [
+            disableContainedFullSemixButton.topAnchor.constraint(
+                equalTo: containedFullMediumButton.bottomAnchor,
+                constant: NatSpacing.small
+            ),
+            disableContainedFullSemixButton.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+            disableContainedFullSemixButton.leadingAnchor.constraint(equalTo: containerView.leadingAnchor)
+        ]
+        NSLayoutConstraint.activate(constraints)
+    }
+    
+    private func addConstraintsSemiButton() {
+        let constraints = [
+            outlinedFullSemiButton.topAnchor.constraint(
+                equalTo: disableContainedFullSemixButton.bottomAnchor,
+                constant: NatSpacing.small
+            ),
+            outlinedFullSemiButton.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+            outlinedFullSemiButton.leadingAnchor.constraint(equalTo: containerView.leadingAnchor)
+        ]
+        NSLayoutConstraint.activate(constraints)
+    }
+    
+    
 }
