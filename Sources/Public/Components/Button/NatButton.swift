@@ -59,6 +59,7 @@ public final class NatButton: UIButton, Pulsable {
 
     public override var isEnabled: Bool {
         didSet {
+            self.isHighlighted = false
             style.changeState(self.theme, self)
             iconView?.tintColor = titleLabel?.textColor
         }
