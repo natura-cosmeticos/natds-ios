@@ -27,8 +27,8 @@ enum ButtonContainedStyle {
                 
                 NatElevation.apply(on: button, elevation: .tiny)
             case .disabled:
-                button.backgroundColor = getUIColorFromComponentAttributes(\.buttonContainedColorDisableBackground)
-                button.layer.borderColor = getUIColorFromComponentAttributes(\.buttonContainedColorDisableBorder).cgColor
+                button.backgroundColor = hexStringToUIColor(hex: theme.newInstance.components.buttonContainedColorDisableBackground)
+                button.layer.borderColor = hexStringToUIColor(hex: theme.newInstance.components.buttonContainedColorDisableBorder).cgColor
                 NatElevation.apply(on: button, elevation: .none)
             default: break
             }
