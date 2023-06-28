@@ -44,85 +44,120 @@
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/AvailableTheme.swift",
-      "line": 21,
+      "line": 24,
       "symbol": "AvailableTheme.aesopDark",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/AvailableTheme.swift",
-      "line": 22,
+      "line": 25,
       "symbol": "AvailableTheme.aesopLight",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/AvailableTheme.swift",
-      "line": 23,
+      "line": 26,
       "symbol": "AvailableTheme.avonDark",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/AvailableTheme.swift",
-      "line": 24,
+      "line": 27,
       "symbol": "AvailableTheme.avonLight",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/AvailableTheme.swift",
-      "line": 25,
+      "line": 28,
       "symbol": "AvailableTheme.naturaDark",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/AvailableTheme.swift",
-      "line": 26,
+      "line": 29,
       "symbol": "AvailableTheme.naturaLight",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/AvailableTheme.swift",
-      "line": 27,
+      "line": 30,
       "symbol": "AvailableTheme.theBodyShopDark",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/AvailableTheme.swift",
-      "line": 28,
+      "line": 31,
       "symbol": "AvailableTheme.theBodyShopLight",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/AvailableTheme.swift",
-      "line": 29,
+      "line": 32,
       "symbol": "AvailableTheme.consultoriaDeBelezaDark",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/AvailableTheme.swift",
-      "line": 30,
+      "line": 33,
       "symbol": "AvailableTheme.consultoriaDeBelezaLight",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/AvailableTheme.swift",
-      "line": 31,
+      "line": 34,
       "symbol": "AvailableTheme.casaeestiloDark",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/AvailableTheme.swift",
-      "line": 32,
+      "line": 35,
       "symbol": "AvailableTheme.casaeestiloLight",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/AvailableTheme.swift",
+      "line": 36,
+      "symbol": "AvailableTheme.avonv2Dark",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/AvailableTheme.swift",
+      "line": 37,
+      "symbol": "AvailableTheme.avonv2Light",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/AvailableTheme.swift",
+      "line": 38,
+      "symbol": "AvailableTheme.naturav2Dark",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/AvailableTheme.swift",
+      "line": 39,
+      "symbol": "AvailableTheme.naturav2Light",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/AvailableTheme.swift",
+      "line": 40,
+      "symbol": "AvailableTheme.none",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
@@ -366,14 +401,14 @@
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Avatar/NatAvatar.swift",
-      "line": 84,
-      "symbol": "NatAvatar.init(size:type:)",
+      "line": 63,
+      "symbol": "NatAvatar.init(size:type:theme:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Avatar/NatAvatar.swift",
-      "line": 99,
+      "line": 79,
       "symbol": "NatAvatar.layoutSubviews()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -450,28 +485,28 @@
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Badge/NatBadge.swift",
-      "line": 71,
-      "symbol": "NatBadge.init(style:color:)",
+      "line": 86,
+      "symbol": "NatBadge.init(style:color:theme:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Badge/NatBadge.swift",
-      "line": 115,
+      "line": 131,
       "symbol": "NatBadge.draw(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Badge/NatBadge.swift",
-      "line": 150,
+      "line": 208,
       "symbol": "NatBadge.configure(count:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Badge/NatBadge.swift",
-      "line": 171,
+      "line": 229,
       "symbol": "NatBadge.configure(limit:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -479,7 +514,7 @@
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Badge/Protocol/Badgeable.swift",
       "line": 10,
-      "symbol": "Badgeable.configure(badgeStyle:withColor:)",
+      "symbol": "Badgeable.configure(badgeStyle:withColor:theme:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -597,28 +632,28 @@
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Button/NatButton.swift",
-      "line": 58,
+      "line": 59,
       "symbol": "NatButton.isEnabled",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Button/NatButton.swift",
-      "line": 67,
-      "symbol": "NatButton.init(style:)",
+      "line": 68,
+      "symbol": "NatButton.init(style:theme:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Button/NatButton.swift",
-      "line": 142,
+      "line": 144,
       "symbol": "NatButton.touchesBegan(_:with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Button/NatButton.swift",
-      "line": 153,
+      "line": 155,
       "symbol": "NatButton.touchesEnded(_:with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -723,8 +758,15 @@
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Chip/NatChip.swift",
-      "line": 87,
-      "symbol": "NatChip.init(size:color:)",
+      "line": 85,
+      "symbol": "NatChip.theme",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Chip/NatChip.swift",
+      "line": 94,
+      "symbol": "NatChip.init(size:color:theme:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -821,21 +863,28 @@
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/ChipFilter/NatChipFilter.swift",
-      "line": 91,
-      "symbol": "NatChipFilter.init(size:color:)",
+      "line": 89,
+      "symbol": "NatChipFilter.theme",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/ChipFilter/NatChipFilter.swift",
+      "line": 98,
+      "symbol": "NatChipFilter.init(size:color:theme:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/ChipFilter/NatChipFilter.swift",
-      "line": 132,
+      "line": 141,
       "symbol": "NatChipFilter.touchesBegan(_:with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/ChipFilter/NatChipFilter.swift",
-      "line": 136,
+      "line": 145,
       "symbol": "NatChipFilter.touchesEnded(_:with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -1038,49 +1087,49 @@
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
-      "line": 100,
-      "symbol": "ExpansionPanel.init()",
+      "line": 109,
+      "symbol": "ExpansionPanel.init(theme:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
-      "line": 171,
+      "line": 181,
       "symbol": "ExpansionPanel.setCustomAnimationForExpand(animation:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
-      "line": 175,
+      "line": 185,
       "symbol": "ExpansionPanel.setCustomAnimationForCollapse(animation:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
-      "line": 277,
+      "line": 287,
       "symbol": "ExpansionPanel",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
-      "line": 278,
+      "line": 288,
       "symbol": "ExpansionPanel.expand()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
-      "line": 310,
+      "line": 320,
       "symbol": "ExpansionPanel",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/ExpansionPanel/ExpansionPanel.swift",
-      "line": 311,
+      "line": 321,
       "symbol": "ExpansionPanel.collapse()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -1094,42 +1143,42 @@
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Field/NatField.swift",
-      "line": 16,
+      "line": 18,
       "symbol": "NatField.placeholder",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Field/NatField.swift",
-      "line": 28,
+      "line": 30,
       "symbol": "NatField.text",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Field/NatField.swift",
-      "line": 71,
+      "line": 78,
       "symbol": "NatField.textRect(forBounds:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Field/NatField.swift",
-      "line": 75,
+      "line": 82,
       "symbol": "NatField.placeholderRect(forBounds:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Field/NatField.swift",
-      "line": 79,
+      "line": 86,
       "symbol": "NatField.editingRect(forBounds:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Field/NatField.swift",
-      "line": 83,
+      "line": 90,
       "symbol": "NatField.caretRect(for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -1157,44 +1206,72 @@
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextField+InteractionState.swift",
-      "line": 2,
+      "line": 3,
       "symbol": "TextField.InteractionState",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextField+InteractionState.swift",
-      "line": 3,
+      "line": 4,
       "symbol": "TextField.InteractionState.enabled",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextField+InteractionState.swift",
-      "line": 4,
+      "line": 5,
       "symbol": "TextField.InteractionState.disabled",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextField+InteractionState.swift",
-      "line": 5,
+      "line": 6,
       "symbol": "TextField.InteractionState.readOnly",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextField+InteractionState.swift",
-      "line": 6,
+      "line": 7,
       "symbol": "TextField.InteractionState.active",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextField+InteractionState.swift",
-      "line": 7,
+      "line": 8,
       "symbol": "TextField.InteractionState.filled",
       "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextField+InteractionState.swift",
+      "line": 110,
+      "symbol": "TextField.ThemeColor",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextField+InteractionState.swift",
+      "line": 115,
+      "symbol": "TextField.ThemeColor.init(theme:state:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextField+InteractionState.swift",
+      "line": 120,
+      "symbol": "TextField.ThemeColor.borderColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextField+InteractionState.swift",
+      "line": 139,
+      "symbol": "TextField.ThemeColor.textFieldTintColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
@@ -1213,42 +1290,56 @@
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextField.swift",
-      "line": 180,
+      "line": 112,
+      "symbol": "TextField.theme",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextField.swift",
+      "line": 114,
+      "symbol": "TextField.currentTheme",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextField.swift",
+      "line": 184,
       "symbol": "TextField.delegate",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextField.swift",
-      "line": 230,
+      "line": 234,
       "symbol": "TextField.textField",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextField.swift",
-      "line": 282,
-      "symbol": "TextField.init(frame:)",
+      "line": 286,
+      "symbol": "TextField.init(theme:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextField.swift",
-      "line": 296,
+      "line": 302,
       "symbol": "TextField.becomeFirstResponder()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextField.swift",
-      "line": 301,
+      "line": 307,
       "symbol": "TextField.resignFirstResponder()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Field/TextField.swift",
-      "line": 532,
+      "line": 544,
       "symbol": "TextField.configure(icon:with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -2144,21 +2235,21 @@
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/ProgressIndicator/NatProgressIndicatorCircular.swift",
-      "line": 54,
-      "symbol": "NatProgressIndicatorCircular.init(size:backgroundLayer:)",
+      "line": 56,
+      "symbol": "NatProgressIndicatorCircular.init(size:backgroundLayer:theme:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/ProgressIndicator/NatProgressIndicatorCircular.swift",
-      "line": 87,
+      "line": 90,
       "symbol": "NatProgressIndicatorCircular.configure(with:size:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/ProgressIndicator/NatProgressIndicatorCircular.swift",
-      "line": 102,
+      "line": 105,
       "symbol": "NatProgressIndicatorCircular.layoutSubviews()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -2277,42 +2368,42 @@
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Select/NatSelect.swift",
-      "line": 32,
-      "symbol": "NatSelect.init(textField:)",
+      "line": 33,
+      "symbol": "NatSelect.init(textField:theme:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Select/NatSelect.swift",
-      "line": 97,
+      "line": 98,
       "symbol": "NatSelect.numberOfComponents(in:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Select/NatSelect.swift",
-      "line": 101,
+      "line": 102,
       "symbol": "NatSelect.pickerView(_:numberOfRowsInComponent:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Select/NatSelect.swift",
-      "line": 105,
+      "line": 106,
       "symbol": "NatSelect.pickerView(_:titleForRow:forComponent:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Select/NatSelect.swift",
-      "line": 109,
+      "line": 110,
       "symbol": "NatSelect.pickerView(_:didSelectRow:inComponent:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Select/NatSelect.swift",
-      "line": 126,
+      "line": 127,
       "symbol": "NatSelect.textField(_:shouldChangeCharactersIn:replacementString:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -2327,7 +2418,7 @@
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/SelectionControl/NatCheckbox/NatCheckbox.swift",
       "line": 24,
-      "symbol": "NatCheckbox.init()",
+      "symbol": "NatCheckbox.init(theme:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -2341,7 +2432,7 @@
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/SelectionControl/NatRadioButton/NatRadioButton.swift",
       "line": 27,
-      "symbol": "NatRadioButton.init()",
+      "symbol": "NatRadioButton.init(theme:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -2382,21 +2473,28 @@
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/SelectionControl/NatSelectionControl.swift",
-      "line": 112,
-      "symbol": "NatSelectionControl.init(style:text:)",
+      "line": 84,
+      "symbol": "NatSelectionControl.theme",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/SelectionControl/NatSelectionControl.swift",
+      "line": 123,
+      "symbol": "NatSelectionControl.init(style:text:theme:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/SelectionControl/NatSelectionControl.swift",
-      "line": 152,
+      "line": 167,
       "symbol": "NatSelectionControl.layoutSubviews()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/SelectionControl/NatSelectionControl.swift",
-      "line": 174,
+      "line": 189,
       "symbol": "NatSelectionControl.configure(text:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -2417,28 +2515,28 @@
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Shortcut/NatShortcut+Style.swift",
-      "line": 113,
+      "line": 199,
       "symbol": "NatShortcut.Style.containedPrimary",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Shortcut/NatShortcut+Style.swift",
-      "line": 118,
+      "line": 204,
       "symbol": "NatShortcut.Style.containedDefault",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Shortcut/NatShortcut+Style.swift",
-      "line": 124,
+      "line": 210,
       "symbol": "NatShortcut.Style.outlinedPrimary",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Shortcut/NatShortcut+Style.swift",
-      "line": 130,
+      "line": 216,
       "symbol": "NatShortcut.Style.outlinedDefault",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
@@ -2459,21 +2557,21 @@
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Shortcut/NatShortcut.swift",
-      "line": 144,
-      "symbol": "NatShortcut.init(style:color:)",
+      "line": 145,
+      "symbol": "NatShortcut.init(style:color:theme:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Shortcut/NatShortcut.swift",
-      "line": 149,
-      "symbol": "NatShortcut.init(style:color:text:icon:)",
+      "line": 151,
+      "symbol": "NatShortcut.init(style:color:text:icon:theme:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Shortcut/NatShortcut.swift",
-      "line": 290,
+      "line": 295,
       "symbol": "NatShortcut.configure(badgeValue:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -2529,8 +2627,8 @@
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Switch/NatSwitch.swift",
-      "line": 90,
-      "symbol": "NatSwitch.init()",
+      "line": 93,
+      "symbol": "NatSwitch.init(theme:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -2585,28 +2683,28 @@
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Tab/Tab.swift",
-      "line": 86,
-      "symbol": "Tab.init()",
+      "line": 89,
+      "symbol": "Tab.init(theme:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Tab/Tab.swift",
-      "line": 97,
+      "line": 109,
       "symbol": "Tab",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Tab/Tab.swift",
-      "line": 99,
+      "line": 111,
       "symbol": "Tab.insertTab(title:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Tab/Tab.swift",
-      "line": 163,
+      "line": 178,
       "symbol": "Tab",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
@@ -2661,6 +2759,34 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Tag/NatTag+Color.swift",
+      "line": 64,
+      "symbol": "NatTag.ThemeColor",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Tag/NatTag+Color.swift",
+      "line": 69,
+      "symbol": "NatTag.ThemeColor.init(theme:colorType:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Tag/NatTag+Color.swift",
+      "line": 74,
+      "symbol": "NatTag.ThemeColor.tag",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Tag/NatTag+Color.swift",
+      "line": 101,
+      "symbol": "NatTag.ThemeColor.label",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/vagrant/git/Sources/Public/Components/Tag/NatTag+Size.swift",
       "line": 12,
       "symbol": "NatTag.Size.small",
@@ -2711,42 +2837,49 @@
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Tag/NatTag.swift",
-      "line": 75,
-      "symbol": "NatTag.color",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/vagrant/git/Sources/Public/Components/Tag/NatTag.swift",
-      "line": 81,
+      "line": 77,
       "symbol": "NatTag.icon",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Tag/NatTag.swift",
-      "line": 87,
+      "line": 83,
       "symbol": "NatTag.text",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Tag/NatTag.swift",
+      "line": 89,
+      "symbol": "NatTag.color",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Tag/NatTag.swift",
       "line": 98,
-      "symbol": "NatTag.init(style:color:size:icon:text:)",
+      "symbol": "NatTag.currentTheme",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Tag/NatTag.swift",
+      "line": 102,
+      "symbol": "NatTag.init(style:color:size:icon:text:theme:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Tag/NatTag.swift",
-      "line": 216,
+      "line": 223,
       "symbol": "NatTag.draw(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Tag/NatTag.swift",
-      "line": 236,
+      "line": 250,
       "symbol": "NatTag.configure(icon:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
