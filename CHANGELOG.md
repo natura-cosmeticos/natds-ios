@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [7.10.24](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.23...7.10.24) (2023-06-28)
 
+* Fix button custom theme color for click disable
+
 ### [7.10.23](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.22...7.10.23) (2023-06-16)
 
 * Feature/switch theme
