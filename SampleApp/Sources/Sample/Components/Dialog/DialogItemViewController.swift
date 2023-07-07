@@ -116,7 +116,7 @@ final class DialogItemViewController: UIViewController, SampleItem {
             .standardStyleBuilder
             .configure(title: "Title")
             .configure(body: "Some body text to make a snapshot text without think about the future.")
-            .configure(primaryButtonTitle: "Confirm button") {
+            .configure(primaryButtonTitle: "Confirm button", theme: .avonLight) {
                 self.navigationController?.presentedViewController?.dismiss(animated: true)
             }
             .configure(secondaryButtonTitle: "Close") {

@@ -27,10 +27,11 @@ extension NatDialogController {
         ///   - title: a String to be displayed as the button title
         ///   - action: the block of code to be executed when the button is tapped
         @discardableResult
-        public func configure(primaryButtonTitle title: String, withAction action: @escaping () -> Void) -> Self {
+        public func configure(primaryButtonTitle title: String, theme newTheme:AvailableTheme = .none, withAction action: @escaping () -> Void) -> Self {
             buttonsConfiguration.primary = .init(
                 title: title,
                 style: .contained,
+                theme: newTheme,
                 action: action
             )
 
@@ -42,10 +43,11 @@ extension NatDialogController {
         ///   - title: a String to be displayed as the button title
         ///   - action: the block of code to be executed when the button is tapped
         @discardableResult
-        public func configure(secondaryButtonTitle title: String, withAction action: @escaping () -> Void) -> Self {
+        public func configure(secondaryButtonTitle title: String, theme newTheme:AvailableTheme = .none, withAction action: @escaping () -> Void) -> Self {
             buttonsConfiguration.secondary = .init(
                 title: title,
                 style: .text,
+                theme: newTheme,
                 action: action
             )
 

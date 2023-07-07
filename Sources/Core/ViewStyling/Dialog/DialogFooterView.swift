@@ -66,7 +66,7 @@ final class DialogFooterView: UIView {
     // MARK: - Public methods
 
     func configure(newButton configuration: DialogButtonConfiguration) {
-        let button = NatButton(style: configuration.style)
+        let button = NatButton(style: configuration.style, theme: configuration.theme)
         button.configure(title: configuration.title)
         button.addTarget(self, action: #selector(buttonTapHandler), for: .touchUpInside)
         addConstraintAndSuperView(button: button)
