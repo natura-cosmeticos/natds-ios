@@ -576,23 +576,51 @@
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Button/NatButton+Height.swift",
-      "line": 21,
+      "line": 22,
       "symbol": "NatButton.Height.small",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Button/NatButton+Height.swift",
-      "line": 22,
+      "line": 23,
       "symbol": "NatButton.Height.medium",
       "symbol_kind": "source.lang.swift.decl.var.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Button/NatButton+Height.swift",
-      "line": 23,
+      "line": 24,
       "symbol": "NatButton.Height.large",
       "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Button/NatButton+Height.swift",
+      "line": 28,
+      "symbol": "NatButton.ButtonHeight",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Button/NatButton+Height.swift",
+      "line": 29,
+      "symbol": "NatButton.ButtonHeight.medium",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Button/NatButton+Height.swift",
+      "line": 30,
+      "symbol": "NatButton.ButtonHeight.semix",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Button/NatButton+Height.swift",
+      "line": 31,
+      "symbol": "NatButton.ButtonHeight.semi",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
@@ -632,28 +660,28 @@
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Button/NatButton.swift",
-      "line": 59,
+      "line": 60,
       "symbol": "NatButton.isEnabled",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Button/NatButton.swift",
-      "line": 68,
-      "symbol": "NatButton.init(style:theme:)",
+      "line": 70,
+      "symbol": "NatButton.init(style:size:theme:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Button/NatButton.swift",
-      "line": 144,
+      "line": 162,
       "symbol": "NatButton.touchesBegan(_:with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Button/NatButton.swift",
-      "line": 155,
+      "line": 173,
       "symbol": "NatButton.touchesEnded(_:with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -947,21 +975,21 @@
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Counter/NatCounter.swift",
-      "line": 98,
+      "line": 111,
       "symbol": "NatCounter.textField(_:shouldChangeCharactersIn:replacementString:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Counter/NatCounter.swift",
-      "line": 113,
+      "line": 126,
       "symbol": "NatCounter.textFieldDidEndEditing(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Counter/NatCounter.swift",
-      "line": 158,
+      "line": 171,
       "symbol": "NatCounter.init(size:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
