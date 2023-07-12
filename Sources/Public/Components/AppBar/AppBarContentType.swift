@@ -4,4 +4,5 @@ public enum AppBarContentType {
     case text(String)
     case media(UIImage?)
     case logo(NatLogo)
+    case colorLogo
 }

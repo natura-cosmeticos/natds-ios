@@ -3,6 +3,7 @@
 public enum AppBarColor {
     case `default`
     case primary
+    case secondary
     case none
     case inverse
 
@@ -10,6 +11,7 @@ public enum AppBarColor {
         switch self {
         case .default: return getUIColorFromTokens(\.colorSurface)
         case .primary: return getUIColorFromTokens(\.colorPrimary)
+        case .secondary: return getUIColorFromTokens(\.colorSecondary)
         case .none: return .clear
         case .inverse: return getUIColorFromTokens(\.colorHighEmphasis)
         }
@@ -19,6 +21,7 @@ public enum AppBarColor {
         switch self {
         case .default: return getUIColorFromTokens(\.colorOnSurface)
         case .primary: return getUIColorFromTokens(\.colorOnPrimary)
+        case .secondary: return getUIColorFromTokens(\.colorOnSecondary)
         case .none: return getUIColorFromTokens(\.colorHighlight)
         case .inverse: return getUIColorFromTokens(\.colorSurface)
         }
