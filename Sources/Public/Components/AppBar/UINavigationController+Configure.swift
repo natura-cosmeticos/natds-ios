@@ -49,7 +49,7 @@
 public extension UINavigationController {
     /// Sets the color for navigation bar and its subviews
     /// - Parameter color: an option from `AppBarColor` enum
-    func configure(appBarColor: AppBarColor) {
+    func configure(appBarColor: AppBarColor, appBarContentType: AppBarContentType = .text("")) {
         navigationBar.barTintColor = appBarColor.backgroundColor
         navigationBar.tintColor = appBarColor.contentColor
 
@@ -70,6 +70,38 @@ public extension UINavigationController {
             ]
             navigationBar.shadowImage = UIImage()
         }
+        
+        var newLogo = UIImage()
+        
+        switch appBarContentType {
+            case .colorLogo:
+                switch appBarColor {
+                    case .default:
+                    newLogo = AssetsHelper.logo(from: getTokenFromTheme(\.assetBrandNeutralAFile))!
+                    case.inverse:
+                    newLogo = AssetsHelper.logo(from: getTokenFromTheme(\.assetBrandCustomAFile))!.tintedWithColor(getUIColorFromTokens(\.colorSurface))
+                    case.none:
+                    newLogo = AssetsHelper.logo(from: getTokenFromTheme(\.assetBrandNeutralAFile))!
+                    case .primary:
+                    newLogo = AssetsHelper.logo(from: getTokenFromTheme(\.assetBrandCustomAFile))!.tintedWithColor(getUIColorFromTokens(\.colorOnPrimary))
+                    case .secondary:
+                    newLogo = AssetsHelper.logo(from: getTokenFromTheme(\.assetBrandCustomAFile))!.tintedWithColor(getUIColorFromTokens(\.colorOnSecondary))
+                }
+            
+            guard let topViewController = topViewController else { return }
+            
+            let imageView = UIImageView(image: newLogo)
+            imageView.translatesAutoresizingMaskIntoConstraints = false
+            imageView.widthAnchor.constraint(lessThanOrEqualToConstant: NatSizes.largeXXX).isActive = true
+            imageView.contentMode = .scaleAspectFit
+            
+            topViewController.navigationItem.titleView = imageView
+                        
+            case .text(_): break
+            case .media(_): break
+            case .logo(_): break
+        }
+        
     }
 
     /// Sets an elevation for the navigation bar, which adds a slight shadow to it

@@ -55,13 +55,15 @@ class AppBarDetailViewController: UITableViewController, UITextFieldDelegate {
 
         switch item {
         case .colorDefault:
-            self.navigationController?.configure(appBarColor: .default)
+            self.navigationController?.configure(appBarColor: .default, appBarContentType: .colorLogo)
         case .colorInverse:
-            self.navigationController?.configure(appBarColor: .inverse)
+            self.navigationController?.configure(appBarColor: .inverse, appBarContentType: .colorLogo)
         case .colorPrimary:
-            self.navigationController?.configure(appBarColor: .primary)
+            self.navigationController?.configure(appBarColor: .primary, appBarContentType: .colorLogo)
+        case .colorSecondary:
+            self.navigationController?.configure(appBarColor: .secondary, appBarContentType: .colorLogo)
         case .colorNone:
-            self.navigationController?.configure(appBarColor: .none)
+            self.navigationController?.configure(appBarColor: .none, appBarContentType: .colorLogo)
         case .elevationTrue:
             self.navigationController?.configure(appBarElevation: true)
         case .elevationFalse:

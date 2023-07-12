@@ -16,7 +16,7 @@ enum AppBarSection: CaseIterable {
     var items: [AppBarItem] {
         switch self {
         case .color:
-            return [.colorDefault, .colorPrimary, .colorNone, .colorInverse]
+            return [.colorDefault, .colorPrimary, .colorSecondary, .colorNone, .colorInverse]
         case .elevation:
             return [.elevationTrue, .elevationFalse]
         case .action:
@@ -30,6 +30,7 @@ enum AppBarSection: CaseIterable {
 enum AppBarItem {
     case colorDefault
     case colorPrimary
+    case colorSecondary
     case colorNone
     case colorInverse
     case elevationTrue
@@ -45,6 +46,7 @@ enum AppBarItem {
         switch self {
         case .colorDefault: return "Color default"
         case .colorPrimary: return "Color primary"
+        case .colorSecondary: return "Color secondary"
         case .colorNone: return "Color none"
         case .colorInverse: return "Color inverse"
         case .elevationTrue: return "Elevation: true"

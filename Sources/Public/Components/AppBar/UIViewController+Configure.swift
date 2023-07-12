@@ -58,6 +58,7 @@ public extension UIViewController {
             logo.widthAnchor.constraint(lessThanOrEqualToConstant: NatSizes.hugeX).isActive = true
             logo.contentMode = .scaleAspectFit
             navigationItem.titleView = logo
+        case .colorLogo: break
         }
     }
 
