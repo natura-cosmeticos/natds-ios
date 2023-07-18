@@ -24,6 +24,10 @@ struct NatdsTestLightTheme: Theme {
 }
 
 struct NatdsTestLightTokens: Tokens {
+  let colorSecondaryLightest = "#BBBBBB"
+  let colorOnSecondaryLightest = "#000000"
+  let colorSecondaryDarkest = "#000000"
+  let colorOnSecondaryDarkest = "#FFFFFF"
   let assetFontFileDisplay = "montserrat_bold"
   let assetFontFileHeadline = "montserrat_semi_bold"
   let assetFontFileBodyRegular = "montserrat_regular"
