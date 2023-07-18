@@ -24,6 +24,10 @@ struct BiomeLightTheme: Theme {
 }
 
 struct BiomeLightTokens: Tokens {
+  let colorSecondaryLightest = "#BBBBBB"
+  let colorOnSecondaryLightest = "#000000"
+  let colorSecondaryDarkest = "#000000"
+  let colorOnSecondaryDarkest = "#FFFFFF"
   let assetFontFileDisplay = "roboto_regular"
   let assetFontFileHeadline = "roboto_regular"
   let assetFontFileBodyRegular = "roboto_regular"
