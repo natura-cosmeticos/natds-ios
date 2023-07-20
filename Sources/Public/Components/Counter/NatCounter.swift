@@ -106,6 +106,12 @@ public final class NatCounter: UIView, UITextFieldDelegate {
     
     @objc func doneButtonAction() {
         numCounterTextField.resignFirstResponder()
+        if let text = numCounterTextField.text, let number = Int(text) {
+            numCounter = number
+        } else {
+            numCounter = minCount
+        }
+        counterChangeValueHandler?(numCounter)
     }
     
     public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
