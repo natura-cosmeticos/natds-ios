@@ -31,13 +31,13 @@ struct Avonv2DarkTokens: Tokens {
   let assetBrandNeutralAFile = "avonv2-a-official-dark"
   let assetBrandNeutralAWidth: CGFloat = 256
   let assetBrandNeutralAHeight: CGFloat = 58
-  let assetBrandNeutralBFile = "avonv2-a-official-dark"
+  let assetBrandNeutralBFile = "avonv2-b-official-dark"
   let assetBrandNeutralBWidth: CGFloat = 256
   let assetBrandNeutralBHeight: CGFloat = 58
   let assetBrandCustomAFile = "avonv2-a-custom"
   let assetBrandCustomAWidth: CGFloat = 256
   let assetBrandCustomAHeight: CGFloat = 58
-  let assetBrandCustomBFile = "avonv2-a-custom"
+  let assetBrandCustomBFile = "avonv2-b-custom"
   let assetBrandCustomBWidth: CGFloat = 256
   let assetBrandCustomBHeight: CGFloat = 58
   let borderRadiusNone: CGFloat = 0
