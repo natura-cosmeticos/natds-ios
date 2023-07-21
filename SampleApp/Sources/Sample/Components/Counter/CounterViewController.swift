@@ -26,7 +26,7 @@ class CounterViewController: UIViewController, SampleItem {
         let counter = NatCounter(size: .medium)
         counter.configure(label: "All Enabled Medium")
         counter.translatesAutoresizingMaskIntoConstraints = false
-
+        
         return counter
     }()
 
