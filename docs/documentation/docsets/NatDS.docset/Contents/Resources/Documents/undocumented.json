@@ -297,13 +297,20 @@
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/AppBar/AppBarColor.swift",
       "line": 6,
-      "symbol": "AppBarColor.none",
+      "symbol": "AppBarColor.secondary",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/AppBar/AppBarColor.swift",
       "line": 7,
+      "symbol": "AppBarColor.none",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/AppBar/AppBarColor.swift",
+      "line": 8,
       "symbol": "AppBarColor.inverse",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
@@ -326,6 +333,13 @@
       "file": "/Users/vagrant/git/Sources/Public/Components/AppBar/AppBarContentType.swift",
       "line": 6,
       "symbol": "AppBarContentType.logo(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/AppBar/AppBarContentType.swift",
+      "line": 7,
+      "symbol": "AppBarContentType.colorLogo",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
@@ -975,21 +989,21 @@
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Counter/NatCounter.swift",
-      "line": 111,
+      "line": 117,
       "symbol": "NatCounter.textField(_:shouldChangeCharactersIn:replacementString:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Counter/NatCounter.swift",
-      "line": 126,
+      "line": 132,
       "symbol": "NatCounter.textFieldDidEndEditing(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Counter/NatCounter.swift",
-      "line": 171,
+      "line": 177,
       "symbol": "NatCounter.init(size:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
