@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "avon-b-official-dark.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
