@@ -257,6 +257,22 @@ public final class NatCounter: UIView, UITextFieldDelegate {
             }
         }
     }
+    
+    private var isKeyboardEnabled: Bool = true {
+        didSet {
+            numCounterTextField.isUserInteractionEnabled = isKeyboardEnabled
+        }
+    }
+
+    // Adicione esse método para habilitar ou desabilitar o teclado
+    public func configureKeyboard(state: State) {
+        switch state {
+        case .enabled:
+            isKeyboardEnabled = true
+        case .disabled:
+            isKeyboardEnabled = false
+        }
+    }
 
     /// Returns the value of counter
     public func getValue() -> Int {
