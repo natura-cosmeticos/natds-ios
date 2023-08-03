@@ -8,6 +8,7 @@
  - custom
  */
 extension NatChip {
+
     public enum Color {
         case neutral
         case primary
@@ -52,6 +53,91 @@ extension NatChip {
                 return NatColors.secondary
             case .custom(_, _, let color):
                 return color
+            }
+        }
+    }
+    
+    public struct ThemeColor {
+        private let theme: AvailableTheme
+        private let colorType: Color
+
+
+        public init(theme: AvailableTheme, colorType: Color) {
+            self.theme = theme
+            self.colorType = colorType
+        }
+
+        public var selectedColor: UIColor {
+            switch colorType {
+            case .primary:
+                if theme == .none {
+                    return getUIColorFromTokens(\.colorPrimary)
+                } else {
+                    return hexStringToUIColor(hex: theme.newInstance.tokens.colorPrimary)
+                }
+            case .secondary:
+                if theme == .none {
+                    return getUIColorFromTokens(\.colorSecondary)
+                } else {
+                    return hexStringToUIColor(hex: theme.newInstance.tokens.colorSecondary)
+                }
+            
+            case .neutral:
+                if theme == .none {
+                    return getUIColorFromTokens(\.colorPrimary)
+                } else {
+                    return hexStringToUIColor(hex: theme.newInstance.tokens.colorPrimary)
+                }
+            
+            case .custom(selectedColor: let selectedColor, labelColor: _, borderColor: _):
+                return selectedColor
+            }
+        }
+        
+        public var labelColor: UIColor {
+            switch colorType {
+            case .primary:
+                if theme == .none {
+                    return getUIColorFromTokens(\.colorOnPrimary)
+                } else {
+                    return hexStringToUIColor(hex: theme.newInstance.tokens.colorOnPrimary)
+                }
+            case .secondary:
+                if theme == .none {
+                    return getUIColorFromTokens(\.colorOnSecondary)
+                } else {
+                    return hexStringToUIColor(hex: theme.newInstance.tokens.colorOnSecondary)
+                }
+            case .neutral:
+                if theme == .none {
+                    return getUIColorFromTokens(\.colorOnPrimary)
+                } else {
+                    return hexStringToUIColor(hex: theme.newInstance.tokens.colorOnPrimary)
+                }
+                
+            case .custom(selectedColor: _, labelColor: let labelColor, borderColor: _):
+                return labelColor
+            }
+        }
+        
+        public var borderColor: UIColor {
+            switch colorType {
+            case .primary:
+                if theme == .none {
+                    return getUIColorFromTokens(\.colorPrimary)
+                } else {
+                    return hexStringToUIColor(hex: theme.newInstance.tokens.colorPrimary)
+                }
+            case .secondary:
+                if theme == .none {
+                    return getUIColorFromTokens(\.colorSecondary)
+                } else {
+                    return hexStringToUIColor(hex: theme.newInstance.tokens.colorSecondary)
+                }
+            case .neutral:
+                    return NatColors.lowEmphasis
+            case .custom(selectedColor: _, labelColor: _, borderColor: let borderColor):
+                return borderColor
             }
         }
     }

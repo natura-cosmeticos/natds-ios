@@ -8,7 +8,7 @@ extension NatShortcut {
     /// `Color` represents the possible colors for `shortcut`
     public enum Color {
         case primary
-        case neutral
+        case neutral 
 
         // MARK: Outlined attributes
 
