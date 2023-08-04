@@ -4,12 +4,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [7.10.27](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.26...7.10.27) (2023-07-21)
 
-### [7.10.26](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.25...7.10.26) (2023-07-21)
-
-### [7.10.25](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.24...7.10.25) (2023-07-10)
-
-### [7.10.25](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.24...7.10.25) (2023-07-10)
-
 * Dialog with switch themes 
 
 ### [7.10.24](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.23...7.10.24) (2023-06-28)
