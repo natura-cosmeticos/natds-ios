@@ -709,37 +709,72 @@
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Chip/NatChip+Color.swift",
-      "line": 11,
+      "line": 12,
       "symbol": "NatChip.Color",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Chip/NatChip+Color.swift",
-      "line": 12,
+      "line": 13,
       "symbol": "NatChip.Color.neutral",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Chip/NatChip+Color.swift",
-      "line": 13,
+      "line": 14,
       "symbol": "NatChip.Color.primary",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Chip/NatChip+Color.swift",
-      "line": 14,
+      "line": 15,
       "symbol": "NatChip.Color.secondary",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Chip/NatChip+Color.swift",
-      "line": 15,
+      "line": 16,
       "symbol": "NatChip.Color.custom(selectedColor:labelColor:borderColor:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Chip/NatChip+Color.swift",
+      "line": 60,
+      "symbol": "NatChip.ThemeColor",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Chip/NatChip+Color.swift",
+      "line": 65,
+      "symbol": "NatChip.ThemeColor.init(theme:colorType:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Chip/NatChip+Color.swift",
+      "line": 70,
+      "symbol": "NatChip.ThemeColor.selectedColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Chip/NatChip+Color.swift",
+      "line": 97,
+      "symbol": "NatChip.ThemeColor.labelColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Chip/NatChip+Color.swift",
+      "line": 123,
+      "symbol": "NatChip.ThemeColor.borderColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
@@ -786,6 +821,13 @@
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Chip/NatChip.swift",
+      "line": 28,
+      "symbol": "NatChip.currentTheme",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Chip/NatChip.swift",
       "line": 72,
       "symbol": "NatChip.state",
       "symbol_kind": "source.lang.swift.decl.var.instance",
@@ -807,8 +849,22 @@
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Chip/NatChip.swift",
-      "line": 94,
+      "line": 92,
+      "symbol": "NatChip.color",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Chip/NatChip.swift",
+      "line": 100,
       "symbol": "NatChip.init(size:color:theme:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Chip/NatChip.swift",
+      "line": 276,
+      "symbol": "NatChip.configure(color:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -845,6 +901,41 @@
       "line": 23,
       "symbol": "NatChipFilter.Color.custom(selectedColor:labelColor:borderColor:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/ChipFilter/NatChipFilter+Color.swift",
+      "line": 67,
+      "symbol": "NatChipFilter.ThemeColor",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/ChipFilter/NatChipFilter+Color.swift",
+      "line": 72,
+      "symbol": "NatChipFilter.ThemeColor.init(theme:colorType:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/ChipFilter/NatChipFilter+Color.swift",
+      "line": 77,
+      "symbol": "NatChipFilter.ThemeColor.selectedColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/ChipFilter/NatChipFilter+Color.swift",
+      "line": 104,
+      "symbol": "NatChipFilter.ThemeColor.labelColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/ChipFilter/NatChipFilter+Color.swift",
+      "line": 130,
+      "symbol": "NatChipFilter.ThemeColor.borderColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
@@ -891,6 +982,13 @@
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/ChipFilter/NatChipFilter.swift",
+      "line": 35,
+      "symbol": "NatChipFilter.currentTheme",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/ChipFilter/NatChipFilter.swift",
       "line": 76,
       "symbol": "NatChipFilter.state",
       "symbol_kind": "source.lang.swift.decl.var.instance",
@@ -912,22 +1010,36 @@
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/ChipFilter/NatChipFilter.swift",
-      "line": 98,
+      "line": 96,
+      "symbol": "NatChipFilter.color",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/ChipFilter/NatChipFilter.swift",
+      "line": 104,
       "symbol": "NatChipFilter.init(size:color:theme:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/ChipFilter/NatChipFilter.swift",
-      "line": 141,
+      "line": 147,
       "symbol": "NatChipFilter.touchesBegan(_:with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/ChipFilter/NatChipFilter.swift",
-      "line": 145,
+      "line": 151,
       "symbol": "NatChipFilter.touchesEnded(_:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/ChipFilter/NatChipFilter.swift",
+      "line": 290,
+      "symbol": "NatChipFilter.configure(color:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
