@@ -53,7 +53,7 @@ class ChipViewController: UIViewController, SampleItem {
     }()
     
     private let customThemeChip: NatChip = {
-        let chip = NatChip(theme: .avonLight)
+        let chip = NatChip(color: .primary, theme: .avonLight)
         chip.configure(text: "Chip with Avon theme")
         return chip
     }()
