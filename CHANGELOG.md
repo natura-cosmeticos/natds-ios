@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [7.10.28](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.27...7.10.28) (2023-08-09)
+
+* Add switch themes suport on NatChip and NatChipFilter 
+
 ### [7.10.27](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.26...7.10.27) (2023-07-21)
 
 * Dialog with switch themes 
