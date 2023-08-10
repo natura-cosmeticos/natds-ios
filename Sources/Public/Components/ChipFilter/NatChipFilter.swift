@@ -27,13 +27,13 @@
  */
 
 public final class NatChipFilter: UIView {
-
+    
     // MARK: - Private properties
-
+    
     private let size: NatChipFilter.Size
-    private let color: NatChipFilter.Color
     private var nextState: UIControl.State = .normal
-
+    public static var currentTheme: AvailableTheme = .none
+    
     private lazy var backgroundView: UIView = {
         let view = UIView()
         view.layer.cornerRadius = size.value/2
@@ -41,7 +41,7 @@ public final class NatChipFilter: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-
+    
     private let stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
@@ -49,7 +49,7 @@ public final class NatChipFilter: UIView {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
-
+    
     private let label: UILabel = {
         let label = UILabel()
         label.font = NatFonts.font(ofSize: .body2)
@@ -57,7 +57,7 @@ public final class NatChipFilter: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-
+    
     private let circleView: UIView = {
         let view = UIView()
         view.heightAnchor.constraint(equalToConstant: NatSizes.standard).isActive = true
@@ -68,18 +68,18 @@ public final class NatChipFilter: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-
+    
     private var actionHandler: ((Bool) -> Void)?
-
+    
     // MARK: - Public properties
-
+    
     public private(set) var state: UIControl.State = .normal {
         didSet {
             setupUI()
             isSelected = state == .selected
         }
     }
-
+    
     public private(set) var isSelected = false {
         didSet {
             actionHandler?(isSelected)
@@ -92,24 +92,30 @@ public final class NatChipFilter: UIView {
             isSelected = state == .selected
         }
     }
-
+    
+    public var color: ThemeColor {
+        didSet {
+            setupUI()
+        }
+    }
+    
     // MARK: - Init
-
+    
     public init(size: NatChipFilter.Size = .semi,
                 color: NatChipFilter.Color = .neutral,
                 theme: AvailableTheme = .none) {
         self.size = size
-        self.color = color
+        self.color = ThemeColor(theme: theme, colorType: color)
         self.theme = theme
         super.init(frame: .zero)
         setup()
     }
-
+    
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     private func setup() {
         addSubview(backgroundView)
         stackView.addArrangedSubview(label)
@@ -118,14 +124,14 @@ public final class NatChipFilter: UIView {
         addConstraints()
         setupUI()
     }
-
+    
     private func addConstraints() {
         backgroundView.heightAnchor.constraint(equalToConstant: size.value).isActive = true
         backgroundView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         backgroundView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         backgroundView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         backgroundView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-
+        
         stackView.leadingAnchor.constraint(equalTo: backgroundView.leadingAnchor,
                                            constant: size == .medium ? NatSpacing.small :
                                             NatSpacing.tiny).isActive = true
@@ -133,7 +139,7 @@ public final class NatChipFilter: UIView {
                                             constant: size == .medium ? -NatSpacing.small :
                                                 -NatSpacing.tiny).isActive = true
         stackView.centerYAnchor.constraint(equalTo: backgroundView.centerYAnchor).isActive = true
-
+        
         circleView.centerYAnchor.constraint(equalTo: backgroundView.centerYAnchor).isActive = true
         circleView.centerXAnchor.constraint(equalTo: backgroundView.centerXAnchor).isActive = true
     }
@@ -145,78 +151,42 @@ public final class NatChipFilter: UIView {
     public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
         if state != .disabled {
-                state = state != .selected ? .selected : .normal
+            state = state != .selected ? .selected : .normal
         }
     }
-
-    private func setupUI(theme: AvailableTheme = .none) {
-        
-        if (self.theme == .none) {
-            switch state {
-            case .normal:
-                backgroundView.layer.borderColor = color.borderColor.cgColor
-                backgroundView.backgroundColor = .clear
-                label.textColor = NatColors.highEmphasis
-            case .disabled:
-                backgroundView.layer.borderColor = NatColors.lowEmphasis.cgColor
-                backgroundView.backgroundColor = .clear
-                label.textColor = NatColors.lowEmphasis
-                stackView.arrangedSubviews.forEach {
-                    if $0 != label {
-                        $0.tintColor = NatColors.lowEmphasis
-                    }
+    
+    private func setupUI() {
+        switch state {
+        case .normal:
+            backgroundView.layer.borderColor = color.borderColor.cgColor
+            backgroundView.backgroundColor = .clear
+            label.textColor = NatColors.highEmphasis
+        case .disabled:
+            backgroundView.layer.borderColor = NatColors.lowEmphasis.cgColor
+            backgroundView.backgroundColor = .clear
+            label.textColor = NatColors.lowEmphasis
+            stackView.arrangedSubviews.forEach {
+                if $0 != label {
+                    $0.tintColor = NatColors.lowEmphasis
                 }
-            case .focused:
-                backgroundView.backgroundColor = backgroundView.backgroundColor?.withAlphaComponent(NatOpacities.low)
-            case .selected:
-                backgroundView.layer.borderColor = color.selectedColor.cgColor
-                backgroundView.backgroundColor = color.selectedColor
-                label.textColor = color.labelColor
-                stackView.arrangedSubviews.forEach {
-                    if $0 != label {
-                        $0.tintColor = color.labelColor
-                    }
-                }
-            default:
-                state = .normal
             }
-
-            backgroundColor = .clear
-        }
-        else {
-            switch state {
-            case .normal:
-                backgroundView.layer.borderColor = hexStringToUIColor(hex: self.theme.newInstance.tokens.colorPrimary).cgColor
-                backgroundView.backgroundColor = .clear
-                label.textColor = hexStringToUIColor(hex: self.theme.newInstance.tokens.colorHighEmphasis)
-            case .disabled:
-                backgroundView.layer.borderColor = NatColors.lowEmphasis.cgColor
-                backgroundView.backgroundColor = .clear
-                label.textColor = NatColors.lowEmphasis
-                stackView.arrangedSubviews.forEach {
-                    if $0 != label {
-                        $0.tintColor = NatColors.lowEmphasis
-                    }
+        case .focused:
+            backgroundView.backgroundColor = backgroundView.backgroundColor?.withAlphaComponent(NatOpacities.low)
+        case .selected:
+            backgroundView.layer.borderColor = color.selectedColor.cgColor
+            backgroundView.backgroundColor = color.selectedColor
+            label.textColor = color.labelColor
+            stackView.arrangedSubviews.forEach {
+                if $0 != label {
+                    $0.tintColor = color.labelColor
                 }
-            case .focused:
-                backgroundView.backgroundColor = backgroundView.backgroundColor?.withAlphaComponent(NatOpacities.low)
-            case .selected:
-                backgroundView.layer.borderColor = hexStringToUIColor(hex: self.theme.newInstance.tokens.colorPrimary).cgColor
-                backgroundView.backgroundColor = hexStringToUIColor(hex: self.theme.newInstance.tokens.colorPrimary)
-                label.textColor = hexStringToUIColor(hex: self.theme.newInstance.tokens.colorOnPrimary)
-                stackView.arrangedSubviews.forEach {
-                    if $0 != label {
-                        $0.tintColor = hexStringToUIColor(hex: self.theme.newInstance.tokens.colorOnPrimary)
-                    }
-                }
-            default:
-                state = .normal
             }
-
-            backgroundColor = .clear
+        default:
+            state = .normal
         }
+        backgroundColor = .clear
     }
-
+    
     private func createIconView(icon: String?) -> IconView {
         let iconView = IconView(fontSize: NatSizes.standard)
         iconView.translatesAutoresizingMaskIntoConstraints = false
@@ -225,7 +195,7 @@ public final class NatChipFilter: UIView {
         iconView.translatesAutoresizingMaskIntoConstraints = false
         return iconView
     }
-
+    
     private func removeFromStack(on position: NatChipFilter.Position) {
         let indexToRemove = position == .left ? 0 : 2
         let subviews = stackView.arrangedSubviews
@@ -233,7 +203,7 @@ public final class NatChipFilter: UIView {
             subviews[indexToRemove].removeFromSuperview()
         }
     }
-
+    
     private func addToStack(view: UIView, on position: NatChipFilter.Position) {
         removeFromStack(on: position)
         if position == .left {
@@ -243,7 +213,7 @@ public final class NatChipFilter: UIView {
         }
         setupUI()
     }
-
+    
     @objc private func tapHandler(gesture: UITapGestureRecognizer) {
         if state != .disabled {
             if gesture.state == .began {
@@ -254,9 +224,9 @@ public final class NatChipFilter: UIView {
             }
         }
     }
-
+    
     // MARK: - Public Methods
-
+    
     /// Sets the text of the component.
     ///
     /// Example of usage:
@@ -267,7 +237,7 @@ public final class NatChipFilter: UIView {
     public func configure(text: String) {
         self.label.text = text
     }
-
+    
     /// Sets an icon to the component.
     ///
     /// Example of usage:
@@ -281,7 +251,7 @@ public final class NatChipFilter: UIView {
         let view = createIconView(icon: icon)
         addToStack(view: view, on: position)
     }
-
+    
     /// Sets an avatar to the component.
     ///
     /// Example of usage:
@@ -294,7 +264,7 @@ public final class NatChipFilter: UIView {
     public func configure(avatar: NatAvatar, position: NatChipFilter.Position) {
         addToStack(view: avatar, on: position)
     }
-
+    
     /// Sets the state of the component.
     ///
     /// Example of usage:
@@ -305,7 +275,7 @@ public final class NatChipFilter: UIView {
     public func configure(state: UIControl.State) {
         self.state = state
     }
-
+    
     /// Sets the handler to be executed when `isSelected` value changes
     ///
     /// Example of usage:
@@ -316,16 +286,17 @@ public final class NatChipFilter: UIView {
     public func configure(actionHandler: @escaping (Bool) -> Void) {
         self.actionHandler = actionHandler
     }
-
-    /// Sets the state of the component.
-    ///
-    /// Example of usage:
-    /// ```
-    /// natChip.configure(state: .normal)
-    /// ```
-    /// - Parameter state: An `UIControl.State` that changes the state of the component
-    public func configure(theme: AvailableTheme) {
-        setupUI(theme: theme)
+    
+    public func configure(color: Color) {
+        switch color {
+        case .primary:
+            self.color = ThemeColor(theme: NatChipFilter.currentTheme, colorType: .primary)
+        case .secondary:
+            self.color = ThemeColor(theme: NatChipFilter.currentTheme, colorType: .secondary)
+        case .neutral:
+            self.color = ThemeColor(theme: NatChipFilter.currentTheme, colorType: .secondary)
+        case .custom(selectedColor: let selectedColor, labelColor: let labelColor, borderColor: let borderColor):
+            self.color = ThemeColor(theme: .none, colorType: .custom(selectedColor: selectedColor, labelColor: labelColor, borderColor: borderColor))
+        }
     }
 }
-

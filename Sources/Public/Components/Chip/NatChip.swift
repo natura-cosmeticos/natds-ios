@@ -24,8 +24,8 @@ public final class NatChip: UIView {
     // MARK: - Private properties
 
     private let size: NatChip.Size
-    private let color: NatChip.Color
     private var nextState: UIControl.State = .normal
+    public static var currentTheme: AvailableTheme = .none
 
     private lazy var backgroundView: UIView = {
         let view = UIView()
@@ -88,6 +88,12 @@ public final class NatChip: UIView {
             isSelected = state == .selected
         }
     }
+    
+    public var color: ThemeColor {
+        didSet {
+            setupUI()
+        }
+    }
 
     // MARK: - Init
 
@@ -95,7 +101,7 @@ public final class NatChip: UIView {
                 color: NatChip.Color = .neutral,
                 theme: AvailableTheme = .none) {
         self.size = size
-        self.color = color
+        self.color = ThemeColor(theme: theme, colorType: color)
         self.theme = theme
         super.init(frame: .zero)
         setup()
@@ -133,10 +139,8 @@ public final class NatChip: UIView {
         circleView.centerYAnchor.constraint(equalTo: backgroundView.centerYAnchor).isActive = true
         circleView.centerXAnchor.constraint(equalTo: backgroundView.centerXAnchor).isActive = true
     }
-
-    private func setupUI(theme: AvailableTheme = .none) {
-        
-        if (self.theme == .none) {
+  
+    private func setupUI() {
             switch state {
             case .normal:
                 backgroundView.layer.borderColor = color.borderColor.cgColor
@@ -167,39 +171,6 @@ public final class NatChip: UIView {
             }
 
             backgroundColor = .clear
-        }
-        else {
-            switch state {
-            case .normal:
-                backgroundView.layer.borderColor = hexStringToUIColor(hex: self.theme.newInstance.tokens.colorPrimary).cgColor
-                backgroundView.backgroundColor = .clear
-                label.textColor = hexStringToUIColor(hex: self.theme.newInstance.tokens.colorHighEmphasis)
-            case .disabled:
-                backgroundView.layer.borderColor = NatColors.lowEmphasis.cgColor
-                backgroundView.backgroundColor = .clear
-                label.textColor = NatColors.lowEmphasis
-                stackView.arrangedSubviews.forEach {
-                    if $0 != label {
-                        $0.tintColor = NatColors.lowEmphasis
-                    }
-                }
-            case .focused:
-                backgroundView.backgroundColor = backgroundView.backgroundColor?.withAlphaComponent(NatOpacities.low)
-            case .selected:
-                backgroundView.layer.borderColor = hexStringToUIColor(hex: self.theme.newInstance.tokens.colorPrimary).cgColor
-                backgroundView.backgroundColor = hexStringToUIColor(hex: self.theme.newInstance.tokens.colorPrimary)
-                label.textColor = hexStringToUIColor(hex: self.theme.newInstance.tokens.colorOnPrimary)
-                stackView.arrangedSubviews.forEach {
-                    if $0 != label {
-                        $0.tintColor = hexStringToUIColor(hex: self.theme.newInstance.tokens.colorOnPrimary)
-                    }
-                }
-            default:
-                state = .normal
-            }
-
-            backgroundColor = .clear
-        }
     }
 
     private func createIconView(icon: String?) -> IconView {
@@ -302,15 +273,16 @@ public final class NatChip: UIView {
         self.actionHandler = actionHandler
     }
     
-    
-    /// Sets the state of the component.
-    ///
-    /// Example of usage:
-    /// ```
-    /// natChip.configure(state: .normal)
-    /// ```
-    /// - Parameter state: An `UIControl.State` that changes the state of the component
-    public func configure(theme: AvailableTheme) {
-        setupUI(theme: theme)
+    public func configure(color: Color) {
+        switch color {
+        case .primary:
+            self.color = ThemeColor(theme: NatChip.currentTheme, colorType: .primary)
+        case .secondary:
+            self.color = ThemeColor(theme: NatChip.currentTheme, colorType: .secondary)
+        case .neutral:
+            self.color = ThemeColor(theme: NatChip.currentTheme, colorType: .secondary)
+        case .custom(selectedColor: let selectedColor, labelColor: let labelColor, borderColor: let borderColor):
+            self.color = ThemeColor(theme: .none, colorType: .custom(selectedColor: selectedColor, labelColor: labelColor, borderColor: borderColor))
+        }
     }
 }

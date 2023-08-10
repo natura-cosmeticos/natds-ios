@@ -61,7 +61,7 @@ class ChipFilterViewController: UIViewController, SampleItem {
     }()
     
     private let customThemeChip: NatChipFilter = {
-        let chip = NatChipFilter(theme: .avonLight)
+        let chip = NatChipFilter(color: .secondary, theme: .avonLight)
         chip.configure(text: "ChipFilter with Avon theme")
         return chip
     }()
