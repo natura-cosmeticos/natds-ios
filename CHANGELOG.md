@@ -4,8 +4,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [7.10.29](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.28...7.10.29) (2023-08-10)
 
-### [7.10.29](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.28...7.10.29) (2023-08-10)
-
 * Fix NatCounter: disabling keyboard
 
 ### [7.10.28](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.27...7.10.28) (2023-08-09)
