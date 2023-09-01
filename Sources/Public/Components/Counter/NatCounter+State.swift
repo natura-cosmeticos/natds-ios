@@ -12,4 +12,9 @@ extension NatCounter {
         case enabled
         case disabled
     }
+    
+    public enum MinValue {
+        case value0
+        case value1
+    }
 }
