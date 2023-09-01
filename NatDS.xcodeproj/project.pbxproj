@@ -2539,6 +2539,7 @@
 		8F17D4DBF2804B57A4C0A71661E479AF /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				FF49B7242AA19B2D001478A5 /* Snackbar */,
 				8C1AE05628A682CC000F9D88 /* Alert */,
 				0E3F578D24B8E9C8004B2F9E /* AppBar */,
 				7D75A43725DAFF3F0050ACA9 /* Avatar */,
@@ -3057,6 +3058,13 @@
 				841FEAB924C5C1A100C50AFF /* NatLogoImages.swift */,
 			);
 			path = Icons;
+			sourceTree = "<group>";
+		};
+		FF49B7242AA19B2D001478A5 /* Snackbar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Snackbar;
 			sourceTree = "<group>";
 		};
 		FF4BFAA92A17065700D7E28F /* AvonV2 */ = {
