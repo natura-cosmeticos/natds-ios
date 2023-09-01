@@ -131,7 +131,7 @@ public final class NatCounter: UIView, UITextFieldDelegate {
     
     public func textFieldDidEndEditing(_ textField: UITextField) {
         if textField.text?.isEmpty ?? false {
-            textField.text = "0"
+            textField.text = String(minCount)
             numCounter = minCount
         }
     }
@@ -171,12 +171,18 @@ public final class NatCounter: UIView, UITextFieldDelegate {
     }()
 
     private var size: Size
+    private var minValue: MinValue
 
     // MARK: - Inits
 
-    public init(size: Size = .semi) {
+    public init(size: Size = .semi, minimumValue:MinValue = .value0) {
         self.size = size
+        self.minValue = minimumValue
         super.init(frame: .zero)
+        
+        if (self.minValue == .value1) {
+            minCount = 1
+        }
         
         numCounterTextField.delegate = self
         numCounterTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
