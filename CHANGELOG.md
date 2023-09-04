@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [7.10.30](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.29...7.10.30) (2023-09-04)
+
+* Add Snackbar component v1
+* Add the possibility to change minimum value NatCounter to 1
+
 ### [7.10.29](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.28...7.10.29) (2023-08-10)
 
 * Fix NatCounter: disabling keyboard

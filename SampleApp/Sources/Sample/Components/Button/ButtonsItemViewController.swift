@@ -1,4 +1,5 @@
 import NatDS
+import NatDSIcons
 
 final class ButtonsItemViewController: UIViewController, SampleItem {
     static var name = "Button"
@@ -39,7 +40,12 @@ final class ButtonsItemViewController: UIViewController, SampleItem {
     }()
     
     @objc func buttonClicked() {
-        containedButton.isEnabled = false
+        let snackbar = NatSnackbar(color: .inverse)
+        snackbar.configure(duration: .long)
+        snackbar.configure(position: .bottom)
+        snackbar.configure(icon: getIcon(.outlinedAlertCheck))
+        snackbar.configure(title: "This is my title")
+        snackbar.show()
     }
 
     private let outlinedButton: NatButton = {

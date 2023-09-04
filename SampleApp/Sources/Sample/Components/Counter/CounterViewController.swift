@@ -23,7 +23,7 @@ class CounterViewController: UIViewController, SampleItem {
     }()
 
     let enableMediumCounterWithLabel: NatCounter = {
-        let counter = NatCounter(size: .medium)
+        let counter = NatCounter(size: .medium, minimumValue: .value1)
         counter.configure(label: "All Enabled Medium")
         counter.configureKeyboard(state: .disabled)
         counter.translatesAutoresizingMaskIntoConstraints = false

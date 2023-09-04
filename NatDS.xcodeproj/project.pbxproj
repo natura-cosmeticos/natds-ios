@@ -446,6 +446,7 @@
 		F72BEF338B46182BC440C92CCF3D02B0 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A1DDA4A78343DB58AF747FF9DC2B66 /* IconView.swift */; };
 		F7894B76EE9A0F4726C5DF88653A4816 /* NatFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C1EA361FCA3C4EFEC4858AA4E04143 /* NatFonts.swift */; };
 		FAD0A71F10707995BE66A299D98CC33B /* NatOpacities+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46448E79883A4EB8A9416823A01531F /* NatOpacities+Spec.swift */; };
+		FF49B7262AA1A00C001478A5 /* NatSnackbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF49B7252AA1A00C001478A5 /* NatSnackbar.swift */; };
 		FF4BFAAC2A17080200D7E28F /* Avonv2DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4BFAAA2A17080200D7E28F /* Avonv2DarkTheme.swift */; };
 		FF4BFAAD2A17080200D7E28F /* Avonv2LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4BFAAB2A17080200D7E28F /* Avonv2LightTheme.swift */; };
 		FF4C87EAD7ADB8D9EF8F897BA229A3A7 /* NatFonts+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8BC0D102CE4444401C0469C861358A /* NatFonts+Spec.swift */; };
@@ -914,6 +915,7 @@
 		FADDEC4E472D2A193BED0EBF058A67E8 /* ViewAnimatingMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewAnimatingMock.swift; sourceTree = "<group>"; };
 		FB7FB96016F7D02CB5976F54C383CCD6 /* NatSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatSizes.swift; sourceTree = "<group>"; };
 		FD3CA47F5B151245708F86A82388401D /* Divider+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Divider+Snapshot+Tests.swift"; sourceTree = "<group>"; };
+		FF49B7252AA1A00C001478A5 /* NatSnackbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatSnackbar.swift; sourceTree = "<group>"; };
 		FF4BFAAA2A17080200D7E28F /* Avonv2DarkTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Avonv2DarkTheme.swift; sourceTree = "<group>"; };
 		FF4BFAAB2A17080200D7E28F /* Avonv2LightTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Avonv2LightTheme.swift; sourceTree = "<group>"; };
 		FF50B6412A040D3600FA824A /* NatChipFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatChipFilter.swift; sourceTree = "<group>"; };
@@ -2539,6 +2541,7 @@
 		8F17D4DBF2804B57A4C0A71661E479AF /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				FF49B7242AA19B2D001478A5 /* Snackbar */,
 				8C1AE05628A682CC000F9D88 /* Alert */,
 				0E3F578D24B8E9C8004B2F9E /* AppBar */,
 				7D75A43725DAFF3F0050ACA9 /* Avatar */,
@@ -3059,6 +3062,14 @@
 			path = Icons;
 			sourceTree = "<group>";
 		};
+		FF49B7242AA19B2D001478A5 /* Snackbar */ = {
+			isa = PBXGroup;
+			children = (
+				FF49B7252AA1A00C001478A5 /* NatSnackbar.swift */,
+			);
+			path = Snackbar;
+			sourceTree = "<group>";
+		};
 		FF4BFAA92A17065700D7E28F /* AvonV2 */ = {
 			isa = PBXGroup;
 			children = (
@@ -3575,6 +3586,7 @@
 				E67E4E4A29F714CB00FF7515 /* AvonLightTheme.swift in Sources */,
 				14016A20C7BF7046BAFCD2AE53673EB0 /* ButtonStyle.swift in Sources */,
 				E67E4E4929F714CB00FF7515 /* AvonDarkTheme.swift in Sources */,
+				FF49B7262AA1A00C001478A5 /* NatSnackbar.swift in Sources */,
 				84EB6B8524EEEA8E00C6A792 /* GetOrCreatedCachedColor.swift in Sources */,
 				E67E4E4F29F714CB00FF7515 /* BiomeLightTheme.swift in Sources */,
 				798CD2F5260519C000F49768 /* NatTag+Color.swift in Sources */,
