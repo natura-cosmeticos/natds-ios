@@ -24,7 +24,8 @@ lane :install do
     UI.user_error!("This can only be executed on CI.")
   end
 
-  sh("npm install npm@18.17.0 -g")
+  sh("npm uninstall -g npm")
+  sh("npm i -g npm@next")
   pods_install
 end
 
