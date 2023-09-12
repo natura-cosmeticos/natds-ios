@@ -1121,6 +1121,13 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Counter/NatCounter.swift",
+      "line": 268,
+      "symbol": "NatCounter.configureKeyboard(state:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/vagrant/git/Sources/Public/Components/Dialog/Builders/NatDialogController+AlertStyleBuilder.swift",
       "line": 16,
       "symbol": "NatDialogController.AlertStyleBuilder.viewModel",
