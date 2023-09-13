@@ -40,6 +40,14 @@ struct TheBodyShopLightTokens: Tokens {
   let assetBrandCustomBFile = "thebodyshop-b-custom"
   let assetBrandCustomBWidth: CGFloat = 256
   let assetBrandCustomBHeight: CGFloat = 109
+  let assetBrandNeutralAPtFile = "thebodyshop-b-custom"
+  let assetBrandNeutralBPtFile = "thebodyshop-b-custom"
+  let assetBrandCustomAPtFile = "thebodyshop-b-custom"
+  let assetBrandCustomBPtFile = "thebodyshop-b-custom"
+  let assetBrandNeutralAEsFile = "thebodyshop-b-custom"
+  let assetBrandNeutralBEsFile = "thebodyshop-b-custom"
+  let assetBrandCustomAEsFile = "thebodyshop-b-custom"
+  let assetBrandCustomBEsFile = "thebodyshop-b-custom"
   let borderRadiusNone: CGFloat = 0
   let borderRadiusSmall: CGFloat = 2
   let borderRadiusMedium: CGFloat = 4

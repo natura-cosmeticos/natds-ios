@@ -40,6 +40,14 @@ struct Naturav2LightTokens: Tokens {
   let assetBrandCustomBFile = "natura-b-custom"
   let assetBrandCustomBWidth: CGFloat = 256
   let assetBrandCustomBHeight: CGFloat = 192
+  let assetBrandNeutralAPtFile = "natura-b-custom"
+  let assetBrandNeutralBPtFile = "natura-b-custom"
+  let assetBrandCustomAPtFile = "natura-b-custom"
+  let assetBrandCustomBPtFile = "natura-b-custom"
+  let assetBrandNeutralAEsFile = "natura-b-custom"
+  let assetBrandNeutralBEsFile = "natura-b-custom"
+  let assetBrandCustomAEsFile = "natura-b-custom"
+  let assetBrandCustomBEsFile = "natura-b-custom"
   let borderRadiusNone: CGFloat = 0
   let borderRadiusSmall: CGFloat = 2
   let borderRadiusMedium: CGFloat = 4

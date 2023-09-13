@@ -46,6 +46,14 @@ struct ConsultoriaDeBelezaLightTokens: Tokens {
   let assetBrandCustomBFile = "consultoriadebeleza-b-custom"
   let assetBrandCustomBEs = "consultoriadebeleza-a-custom"
   let assetBrandCustomBPt = "consultoriadebeleza-b-custom"
+  let assetBrandNeutralAPtFile = "consultoriadebeleza-b-custom"
+  let assetBrandNeutralBPtFile = "consultoriadebeleza-b-custom"
+  let assetBrandCustomAPtFile = "consultoriadebeleza-b-custom"
+  let assetBrandCustomBPtFile = "consultoriadebeleza-b-custom"
+  let assetBrandNeutralAEsFile = "consultoriadebeleza-b-custom"
+  let assetBrandNeutralBEsFile = "consultoriadebeleza-b-custom"
+  let assetBrandCustomAEsFile = "consultoriadebeleza-b-custom"
+  let assetBrandCustomBEsFile = "consultoriadebeleza-b-custom"
   let assetBrandCustomBWidth: CGFloat = 256
   let assetBrandCustomBHeight: CGFloat = 55
   let borderRadiusNone: CGFloat = 0

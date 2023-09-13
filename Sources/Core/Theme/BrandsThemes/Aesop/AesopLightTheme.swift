@@ -40,6 +40,14 @@ struct AesopLightTokens: Tokens {
   let assetBrandCustomBFile = "aesop-a-custom"
   let assetBrandCustomBWidth: CGFloat = 256
   let assetBrandCustomBHeight: CGFloat = 82
+  let assetBrandNeutralAPtFile = "aesop-b-custom"
+  let assetBrandNeutralBPtFile = "aesop-b-custom"
+  let assetBrandCustomAPtFile = "aesop-b-custom"
+  let assetBrandCustomBPtFile = "aesop-b-custom"
+  let assetBrandNeutralAEsFile = "aesop-b-custom"
+  let assetBrandNeutralBEsFile = "aesop-b-custom"
+  let assetBrandCustomAEsFile = "aesop-b-custom"
+  let assetBrandCustomBEsFile = "aesop-b-custom"
   let borderRadiusNone: CGFloat = 0
   let borderRadiusSmall: CGFloat = 2
   let borderRadiusMedium: CGFloat = 4

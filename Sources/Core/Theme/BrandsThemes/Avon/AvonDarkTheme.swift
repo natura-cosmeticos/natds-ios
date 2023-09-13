@@ -40,6 +40,14 @@ struct AvonDarkTokens: Tokens {
   let assetBrandCustomBFile = "avon-a-custom"
   let assetBrandCustomBWidth: CGFloat = 256
   let assetBrandCustomBHeight: CGFloat = 58
+  let assetBrandNeutralAPtFile = "avon-b-custom"
+  let assetBrandNeutralBPtFile = "avon-b-custom"
+  let assetBrandCustomAPtFile = "avon-b-custom"
+  let assetBrandCustomBPtFile = "avon-b-custom"
+  let assetBrandNeutralAEsFile = "avon-b-custom"
+  let assetBrandNeutralBEsFile = "avon-b-custom"
+  let assetBrandCustomAEsFile = "avon-b-custom"
+  let assetBrandCustomBEsFile = "avon-b-custom"
   let borderRadiusNone: CGFloat = 0
   let borderRadiusSmall: CGFloat = 2
   let borderRadiusMedium: CGFloat = 4

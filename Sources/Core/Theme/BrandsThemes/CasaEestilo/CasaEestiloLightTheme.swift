@@ -40,6 +40,14 @@ struct CasaEestiloLightTokens: Tokens {
   let assetBrandCustomBFile = "casaeestilo-a-custom"
   let assetBrandCustomBWidth: CGFloat = 256
   let assetBrandCustomBHeight: CGFloat = 58
+  let assetBrandNeutralAPtFile = "casaeestilo-b-custom"
+  let assetBrandNeutralBPtFile = "casaeestilo-b-custom"
+  let assetBrandCustomAPtFile = "casaeestilo-b-custom"
+  let assetBrandCustomBPtFile = "casaeestilo-b-custom"
+  let assetBrandNeutralAEsFile = "casaeestilo-b-custom"
+  let assetBrandNeutralBEsFile = "casaeestilo-b-custom"
+  let assetBrandCustomAEsFile = "casaeestilo-b-custom"
+  let assetBrandCustomBEsFile = "casaeestilo-b-custom"
   let borderRadiusNone: CGFloat = 0
   let borderRadiusSmall: CGFloat = 2
   let borderRadiusMedium: CGFloat = 4

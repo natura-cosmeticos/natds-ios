@@ -40,6 +40,14 @@ struct Avonv2LightTokens: Tokens {
   let assetBrandCustomBFile = "avonv2-b-custom"
   let assetBrandCustomBWidth: CGFloat = 256
   let assetBrandCustomBHeight: CGFloat = 58
+  let assetBrandNeutralAPtFile = "avonv2-b-custom"
+  let assetBrandNeutralBPtFile = "avonv2-b-custom"
+  let assetBrandCustomAPtFile = "avonv2-b-custom"
+  let assetBrandCustomBPtFile = "avonv2-b-custom"
+  let assetBrandNeutralAEsFile = "avonv2-b-custom"
+  let assetBrandNeutralBEsFile = "avonv2-b-custom"
+  let assetBrandCustomAEsFile = "avonv2-b-custom"
+  let assetBrandCustomBEsFile = "avonv2-b-custom"
   let borderRadiusNone: CGFloat = 0
   let borderRadiusSmall: CGFloat = 2
   let borderRadiusMedium: CGFloat = 4
