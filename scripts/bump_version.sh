@@ -21,8 +21,6 @@
     git push --follow-tags origin HEAD
     # uploads new version to cocoapods
     VERSION_NUMBER=$VERSION pod trunk push NatDS.podspec --allow-warnings
-    # sends release message at teams
-    make teams_release_notification
     # updates remote docs page
     make create_docs
 # else
