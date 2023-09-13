@@ -34,14 +34,14 @@ protocol Tokens {
   var assetBrandNeutralBFile: String { get }
   var assetBrandNeutralBWidth: CGFloat { get }
   var assetBrandNeutralBHeight: CGFloat { get }
-  var assetBrandNeutralAPtFile: CGFloat { get }
-  var assetBrandNeutralBPtFile: CGFloat { get }
-  var assetBrandCustomAPtFile: CGFloat { get }
-  var assetBrandCustomBPtFile: CGFloat { get }
-  var assetBrandNeutralAEsFile: CGFloat { get }
-  var assetBrandNeutralBEsFile: CGFloat { get }
-  var assetBrandCustomAEsFile: CGFloat { get }
-  var assetBrandCustomBEsFile: CGFloat { get }
+  var assetBrandNeutralAPtFile: String { get }
+  var assetBrandNeutralBPtFile: String { get }
+  var assetBrandCustomAPtFile: String { get }
+  var assetBrandCustomBPtFile: String { get }
+  var assetBrandNeutralAEsFile: String { get }
+  var assetBrandNeutralBEsFile: String { get }
+  var assetBrandCustomAEsFile: String { get }
+  var assetBrandCustomBEsFile: String { get }
   var assetBrandCustomAFile: String { get }
   var assetBrandCustomAWidth: CGFloat { get }
   var assetBrandCustomAHeight: CGFloat { get }
