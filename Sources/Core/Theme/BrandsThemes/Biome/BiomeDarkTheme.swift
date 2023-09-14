@@ -24,6 +24,12 @@ struct BiomeDarkTheme: Theme {
 }
 
 struct BiomeDarkTokens: Tokens {
+  let colorSecondaryDarkest = "#000000"
+  let colorOnSecondaryDarkest = "#FFFFFF"
+  let colorSecondaryLightest = "#BBBBBB"
+  let colorOnSecondaryLightest = "#000000"
+  let colorSecondaryDark = "#69A172"
+  let colorOnSecondaryDark = "#000000"
   let assetFontFileDisplay = "roboto_regular"
   let assetFontFileHeadline = "roboto_regular"
   let assetFontFileBodyRegular = "roboto_regular"
@@ -76,8 +82,6 @@ struct BiomeDarkTokens: Tokens {
   let colorOnSecondary = "#000000"
   let colorSecondaryLight = "#CBFFD2"
   let colorOnSecondaryLight = "#000000"
-  let colorSecondaryDark = "#69A172"
-  let colorOnSecondaryDark = "#000000"
   let colorBackground = "#121212"
   let colorOnBackground = "#FFFFFF"
   let colorSurface = "#333333"

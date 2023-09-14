@@ -20,7 +20,9 @@ final class LogoItemViewController: UIViewController, SampleItem {
     }()
 
     private lazy var logoModelA = createLogo()
+    private lazy var logoModelAEs = createLogo(model: .modelA, lang: .es)
     private lazy var logoModelB = createLogo(model: .modelB)
+    private lazy var logoModelBEs = createLogo(model: .modelB, lang: .es)
     private lazy var logoPrimary = createLogo(color: .primary)
     private lazy var logoSecondary = createLogo(color: .secondary)
     private lazy var logoHighlight = createLogo(color: .highlight)
@@ -38,7 +40,9 @@ final class LogoItemViewController: UIViewController, SampleItem {
     private lazy var logoVeryHuge = createLogo(size: .veryHuge)
 
     private lazy var labelLogoModelA = createLabel(text: "Model A")
+    private lazy var labelLogoModelAEs = createLabel(text: "Model A - Lang: es")
     private lazy var labelLogoModelB = createLabel(text: "Model B")
+    private lazy var labelLogoModelBEs = createLabel(text: "Model B - Lang: es")
     private lazy var labelLogoPrimary = createLabel(text: "Primary")
     private lazy var labelLogoSecondary = createLabel(text: "Secondary")
     private lazy var labelLogoHighlight = createLabel(text: "Highlight")
@@ -75,8 +79,12 @@ final class LogoItemViewController: UIViewController, SampleItem {
 
         containerView.addSubview(logoModelA)
         containerView.addSubview(labelLogoModelA)
+        containerView.addSubview(logoModelAEs)
+        containerView.addSubview(labelLogoModelAEs)
         containerView.addSubview(logoModelB)
         containerView.addSubview(labelLogoModelB)
+        containerView.addSubview(logoModelBEs)
+        containerView.addSubview(labelLogoModelBEs)
         containerView.addSubview(logoPrimary)
         containerView.addSubview(labelLogoPrimary)
         containerView.addSubview(logoSecondary)
@@ -135,14 +143,26 @@ final class LogoItemViewController: UIViewController, SampleItem {
 
             labelLogoModelA.topAnchor.constraint(equalTo: logoModelA.bottomAnchor, constant: NatSpacing.micro),
             labelLogoModelA.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: NatSpacing.small),
+            
+            logoModelAEs.topAnchor.constraint(equalTo: labelLogoModelA.bottomAnchor, constant: NatSpacing.small),
+            logoModelAEs.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: NatSpacing.small),
 
-            logoModelB.topAnchor.constraint(equalTo: labelLogoModelA.bottomAnchor, constant: NatSpacing.small),
+            labelLogoModelAEs.topAnchor.constraint(equalTo: logoModelAEs.bottomAnchor, constant: NatSpacing.micro),
+            labelLogoModelAEs.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: NatSpacing.small),
+
+            logoModelB.topAnchor.constraint(equalTo: labelLogoModelAEs.bottomAnchor, constant: NatSpacing.small),
             logoModelB.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: NatSpacing.small),
 
             labelLogoModelB.topAnchor.constraint(equalTo: logoModelB.bottomAnchor, constant: NatSpacing.micro),
             labelLogoModelB.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: NatSpacing.small),
+            
+            logoModelBEs.topAnchor.constraint(equalTo: labelLogoModelB.bottomAnchor, constant: NatSpacing.small),
+            logoModelBEs.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: NatSpacing.small),
 
-            logoPrimary.topAnchor.constraint(equalTo: labelLogoModelB.bottomAnchor, constant: NatSpacing.small),
+            labelLogoModelBEs.topAnchor.constraint(equalTo: logoModelBEs.bottomAnchor, constant: NatSpacing.micro),
+            labelLogoModelBEs.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: NatSpacing.small),
+
+            logoPrimary.topAnchor.constraint(equalTo: labelLogoModelBEs.bottomAnchor, constant: NatSpacing.small),
             logoPrimary.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: NatSpacing.small),
 
             labelLogoPrimary.topAnchor.constraint(equalTo: logoPrimary.bottomAnchor, constant: NatSpacing.micro),
@@ -251,9 +271,10 @@ final class LogoItemViewController: UIViewController, SampleItem {
 
     private func createLogo(size: NatLogo.Size = .veryHuge,
                             color: NatLogo.Color = .neutral,
-                            model: NatLogo.Model = .modelA) -> NatLogo {
+                            model: NatLogo.Model = .modelA,
+                            lang: NatLogo.Language = .none) -> NatLogo {
         let logo = NatLogo(size: size)
-        logo.configure(model: model)
+        logo.configure(model: model, lang: lang)
         logo.configure(color: color)
         logo.translatesAutoresizingMaskIntoConstraints = false
         return logo

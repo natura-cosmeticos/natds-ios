@@ -24,6 +24,10 @@ struct NaturaDarkTheme: Theme {
 }
 
 struct NaturaDarkTokens: Tokens {
+  let colorSecondaryLightest = "#BBBBBB"
+  let colorOnSecondaryLightest = "#BBBBBB"
+  let colorSecondaryDarkest = "#BBBBBB"
+  let colorOnSecondaryDarkest = "#BBBBBB"
   let assetFontFileDisplay = "roboto_regular"
   let assetFontFileHeadline = "roboto_regular"
   let assetFontFileBodyRegular = "roboto_regular"
