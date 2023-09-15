@@ -1093,6 +1093,27 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Counter/NatCounter+State.swift",
+      "line": 16,
+      "symbol": "NatCounter.MinValue",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Counter/NatCounter+State.swift",
+      "line": 17,
+      "symbol": "NatCounter.MinValue.value0",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Counter/NatCounter+State.swift",
+      "line": 18,
+      "symbol": "NatCounter.MinValue.value1",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/vagrant/git/Sources/Public/Components/Counter/NatCounter.swift",
       "line": 40,
       "symbol": "NatCounter.CounterChangeValueHandler",
@@ -1115,14 +1136,14 @@
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Counter/NatCounter.swift",
-      "line": 177,
-      "symbol": "NatCounter.init(size:)",
+      "line": 178,
+      "symbol": "NatCounter.init(size:minimumValue:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Counter/NatCounter.swift",
-      "line": 268,
+      "line": 274,
       "symbol": "NatCounter.configureKeyboard(state:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -2770,6 +2791,160 @@
       "line": 80,
       "symbol": "ShortcutView",
       "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Snackbar/NatSnackbar.swift",
+      "line": 11,
+      "symbol": "NatSnackbar",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Snackbar/NatSnackbar.swift",
+      "line": 13,
+      "symbol": "NatSnackbar.SnackbarPosition",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Snackbar/NatSnackbar.swift",
+      "line": 14,
+      "symbol": "NatSnackbar.SnackbarPosition.bottom",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Snackbar/NatSnackbar.swift",
+      "line": 14,
+      "symbol": "NatSnackbar.SnackbarPosition.top",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Snackbar/NatSnackbar.swift",
+      "line": 17,
+      "symbol": "NatSnackbar.SnackbarDuration",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Snackbar/NatSnackbar.swift",
+      "line": 18,
+      "symbol": "NatSnackbar.SnackbarDuration.custom(seconds:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Snackbar/NatSnackbar.swift",
+      "line": 18,
+      "symbol": "NatSnackbar.SnackbarDuration.long",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Snackbar/NatSnackbar.swift",
+      "line": 18,
+      "symbol": "NatSnackbar.SnackbarDuration.short",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Snackbar/NatSnackbar.swift",
+      "line": 32,
+      "symbol": "NatSnackbar.SnackbarColor",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Snackbar/NatSnackbar.swift",
+      "line": 33,
+      "symbol": "NatSnackbar.SnackbarColor.error",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Snackbar/NatSnackbar.swift",
+      "line": 33,
+      "symbol": "NatSnackbar.SnackbarColor.info",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Snackbar/NatSnackbar.swift",
+      "line": 33,
+      "symbol": "NatSnackbar.SnackbarColor.inverse",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Snackbar/NatSnackbar.swift",
+      "line": 33,
+      "symbol": "NatSnackbar.SnackbarColor.success",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Snackbar/NatSnackbar.swift",
+      "line": 33,
+      "symbol": "NatSnackbar.SnackbarColor.warning",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Snackbar/NatSnackbar.swift",
+      "line": 34,
+      "symbol": "NatSnackbar.SnackbarColor.custom(backgroundColor:labelsColor:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Snackbar/NatSnackbar.swift",
+      "line": 90,
+      "symbol": "NatSnackbar.configure(icon:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Snackbar/NatSnackbar.swift",
+      "line": 108,
+      "symbol": "NatSnackbar.configure(message:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Snackbar/NatSnackbar.swift",
+      "line": 113,
+      "symbol": "NatSnackbar.init(color:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Snackbar/NatSnackbar.swift",
+      "line": 216,
+      "symbol": "NatSnackbar.configure(title:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Snackbar/NatSnackbar.swift",
+      "line": 220,
+      "symbol": "NatSnackbar.configure(duration:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Snackbar/NatSnackbar.swift",
+      "line": 224,
+      "symbol": "NatSnackbar.configure(position:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Snackbar/NatSnackbar.swift",
+      "line": 228,
+      "symbol": "NatSnackbar.show()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
