@@ -11,18 +11,39 @@ extension NatLogo {
         case modelA
         case modelB
 
-        var neutralImage: UIImage? {
+        func neutralImage(with languageSuffix: String) -> UIImage? {
+            let tokenName: String
             switch self {
-            case .modelA: return AssetsHelper.logo(from: getTokenFromTheme(\.assetBrandNeutralAFile))
-            case .modelB: return AssetsHelper.logo(from: getTokenFromTheme(\.assetBrandNeutralBFile))
+            case .modelA:
+                tokenName = "assetBrandNeutralA\(languageSuffix)File"
+            case .modelB:
+                tokenName = "assetBrandNeutralB\(languageSuffix)File"
             }
+            guard let imageName = getTokenFromTheme(tokenName) as? String else {
+                return nil
+            }
+            return AssetsHelper.logo(from: imageName)
         }
 
-        var customImage: UIImage? {
-            switch self {
-            case .modelA: return AssetsHelper.logo(from: getTokenFromTheme(\.assetBrandCustomAFile))
-            case .modelB: return AssetsHelper.logo(from: getTokenFromTheme(\.assetBrandCustomBFile))
-            }
+        func customImage(with languageSuffix: String) -> UIImage? {
+            let tokenName: String
+                switch self {
+                case .modelA:
+                    tokenName = "assetBrandCustomA\(languageSuffix)File"
+                case .modelB:
+                    tokenName = "assetBrandCustomB\(languageSuffix)File"
+                }
+                guard let imageName = getTokenFromTheme(tokenName) as? String else {
+                    return nil
+                }
+                return AssetsHelper.logo(from: imageName)
         }
     }
+    
+    public enum Language: String {
+        case none = ""
+        case es = "Es"
+        case pt = "Pt"
+    }
+
 }

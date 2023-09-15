@@ -49,6 +49,8 @@ public final class NatLogo: UIView {
             updateImage()
         }
     }
+    
+    var language: Language = .none
 
     private var logoImage: UIImage?
 
@@ -92,10 +94,21 @@ public final class NatLogo: UIView {
     }
 
     private func updateImage() {
+        let langSuffix = languageSuffix(for: language)
+            
         if color == .neutral {
-            logoImageView.image = model.neutralImage
+            logoImageView.image = model.neutralImage(with: langSuffix)
         } else {
-            logoImageView.image = model.customImage?.tintedWithColor(color.value)
+            logoImageView.image = model.customImage(with: langSuffix)?.tintedWithColor(color.value)
+        }
+    }
+    
+    private func languageSuffix(for language: Language) -> String {
+        switch language {
+        case .none:
+            return ""
+        default:
+            return language.rawValue
         }
     }
 
@@ -103,7 +116,8 @@ public final class NatLogo: UIView {
 
     /// Configures a model for the logo
     /// - Parameter model: an option from `Model` enum
-    public func configure(model: Model) {
+    public func configure(model: Model, lang: Language = .none) {
+        self.language = lang
         self.model = model
     }
 
