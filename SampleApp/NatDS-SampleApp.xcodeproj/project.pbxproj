@@ -83,6 +83,7 @@
 		FFCA19A22ABAD56100F03EAA /* button_size.png in Resources */ = {isa = PBXBuildFile; fileRef = FFCA199D2ABAD56000F03EAA /* button_size.png */; };
 		FFCA19A32ABAD56100F03EAA /* button_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FFCA199E2ABAD56000F03EAA /* button_icon.png */; };
 		FFCA19A42ABAD56100F03EAA /* button_inline.png in Resources */ = {isa = PBXBuildFile; fileRef = FFCA199F2ABAD56000F03EAA /* button_inline.png */; };
+		FFCA19A82ABAF86500F03EAA /* button_variants.png in Resources */ = {isa = PBXBuildFile; fileRef = FFCA19A72ABAF86500F03EAA /* button_variants.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -180,6 +181,7 @@
 		FFCA199E2ABAD56000F03EAA /* button_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_icon.png; sourceTree = "<group>"; };
 		FFCA199F2ABAD56000F03EAA /* button_inline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_inline.png; sourceTree = "<group>"; };
 		FFCA19A62ABAD6EC00F03EAA /* Button.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Button.md; sourceTree = "<group>"; };
+		FFCA19A72ABAF86500F03EAA /* button_variants.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_variants.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -737,6 +739,7 @@
 		FFCA19A52ABAD6AB00F03EAA /* images */ = {
 			isa = PBXGroup;
 			children = (
+				FFCA19A72ABAF86500F03EAA /* button_variants.png */,
 				FFCA199E2ABAD56000F03EAA /* button_icon.png */,
 				FFCA199F2ABAD56000F03EAA /* button_inline.png */,
 				FFCA199D2ABAD56000F03EAA /* button_size.png */,
@@ -808,6 +811,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3219E81DF4D5C6AC40F7F7677D8A7E7 /* Assets.xcassets in Resources */,
+				FFCA19A82ABAF86500F03EAA /* button_variants.png in Resources */,
 				FFCA19A12ABAD56100F03EAA /* button_theme.png in Resources */,
 				FFCA19A22ABAD56100F03EAA /* button_size.png in Resources */,
 				FFCA19A42ABAD56100F03EAA /* button_inline.png in Resources */,
