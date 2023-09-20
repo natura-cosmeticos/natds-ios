@@ -4,7 +4,7 @@
 
 
 
-### Propertys
+## Propertys
 
 | Property       | Values                    | Status            |
 | -------------- | ------------------------- | ----------------- |
@@ -18,13 +18,13 @@
 
 
 
-### Technical Usages Examples
+## Technical Usages Examples
 
 > All codes are available for Swift.
 
 
 
-##### STYLE - Contained, Outlined, Text
+#### STYLE - Contained, Outlined, Text
 
 ![](./images/button_variants.png)
 
@@ -58,7 +58,7 @@ private let textButton: NatButton = {
 
 
 
-##### ICON - None, Right, Left
+#### ICON - None, Right, Left
 
 ![](./images/button_icon.png)
 
@@ -84,7 +84,7 @@ private let containedIconLeftButton: NatButton = {
 
 
 
-##### SIZE - Small, Medium, Large
+#### SIZE - Small, Medium, Large
 
 ![](./images/button_size.png)
 
@@ -116,7 +116,7 @@ private let outlinedFullSemiButton: NatButton = {
 
 
 
-##### ISENABLED - True, False
+#### ISENABLED - True, False
 
 ![](./images/button_status.png)
 
@@ -135,7 +135,7 @@ button.isEnabled = false
 
 
 
-##### DISPLAY - True, False
+#### DISPLAY - True, False
 
 > This property is not from NatButton but is a property related to contained layout. 
 
@@ -145,7 +145,7 @@ button.isEnabled = false
 
 
 
-##### TEXT-TRANSFORM - Uppercase, Capitalize
+#### TEXT-TRANSFORM - Uppercase, Capitalize
 
 🛠️ Not Available 
 
@@ -153,7 +153,7 @@ button.isEnabled = false
 
 
 
-##### THEME - All DS Themes
+#### THEME - All DS Themes
 
 > Exemple is used in Natura but theme is for Avon.
 
@@ -172,5 +172,6 @@ let button = NatButton(style: .text, theme: .avonLight)
 button.configure(title: "Text")
 ```
 
-### More code
+
+## More code
 You can check out more examples from SampleApp by clicking [here](https://github.com/natura-cosmeticos/natds-ios/blob/master/SampleApp/Sources/Sample/Components/Button/ButtonsItemViewController.swift).
