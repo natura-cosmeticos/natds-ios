@@ -179,6 +179,7 @@
 		FFCA199D2ABAD56000F03EAA /* button_size.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_size.png; sourceTree = "<group>"; };
 		FFCA199E2ABAD56000F03EAA /* button_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_icon.png; sourceTree = "<group>"; };
 		FFCA199F2ABAD56000F03EAA /* button_inline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_inline.png; sourceTree = "<group>"; };
+		FFCA19A62ABAD6EC00F03EAA /* Button.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Button.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -727,13 +728,22 @@
 		FFCA199A2ABAD52000F03EAA /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
+				FFCA19A52ABAD6AB00F03EAA /* images */,
+				FFCA19A62ABAD6EC00F03EAA /* Button.md */,
+			);
+			path = Documentation;
+			sourceTree = "<group>";
+		};
+		FFCA19A52ABAD6AB00F03EAA /* images */ = {
+			isa = PBXGroup;
+			children = (
 				FFCA199E2ABAD56000F03EAA /* button_icon.png */,
 				FFCA199F2ABAD56000F03EAA /* button_inline.png */,
 				FFCA199D2ABAD56000F03EAA /* button_size.png */,
 				FFCA199B2ABAD56000F03EAA /* button_status.png */,
 				FFCA199C2ABAD56000F03EAA /* button_theme.png */,
 			);
-			path = Documentation;
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
