@@ -78,6 +78,11 @@
 		FA821AD3D36171DBAF4790CAD9C46CC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EB78FC7F0EEE4914F65F61B2E74031 /* AppDelegate.swift */; };
 		FD3C1A6EDAD5F31BC9E4984E981C28A8 /* TabItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD6BDA39D2DFA18294278D33A054F9B /* TabItemViewController.swift */; };
 		FF50B64B2A040FCC00FA824A /* ChipFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF50B64A2A040FCC00FA824A /* ChipFilterViewController.swift */; };
+		FFCA19A02ABAD56100F03EAA /* button_status.png in Resources */ = {isa = PBXBuildFile; fileRef = FFCA199B2ABAD56000F03EAA /* button_status.png */; };
+		FFCA19A12ABAD56100F03EAA /* button_theme.png in Resources */ = {isa = PBXBuildFile; fileRef = FFCA199C2ABAD56000F03EAA /* button_theme.png */; };
+		FFCA19A22ABAD56100F03EAA /* button_size.png in Resources */ = {isa = PBXBuildFile; fileRef = FFCA199D2ABAD56000F03EAA /* button_size.png */; };
+		FFCA19A32ABAD56100F03EAA /* button_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FFCA199E2ABAD56000F03EAA /* button_icon.png */; };
+		FFCA19A42ABAD56100F03EAA /* button_inline.png in Resources */ = {isa = PBXBuildFile; fileRef = FFCA199F2ABAD56000F03EAA /* button_inline.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -169,6 +174,11 @@
 		FD277263F8F3EE00B21A0DE2E9849D97 /* ColorsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsCell.swift; sourceTree = "<group>"; };
 		FE39135EC83E5AE456AC7FBF5FE7F9CA /* TypographyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypographyViewController.swift; sourceTree = "<group>"; };
 		FF50B64A2A040FCC00FA824A /* ChipFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipFilterViewController.swift; sourceTree = "<group>"; };
+		FFCA199B2ABAD56000F03EAA /* button_status.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_status.png; sourceTree = "<group>"; };
+		FFCA199C2ABAD56000F03EAA /* button_theme.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_theme.png; sourceTree = "<group>"; };
+		FFCA199D2ABAD56000F03EAA /* button_size.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_size.png; sourceTree = "<group>"; };
+		FFCA199E2ABAD56000F03EAA /* button_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_icon.png; sourceTree = "<group>"; };
+		FFCA199F2ABAD56000F03EAA /* button_inline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_inline.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,14 +284,15 @@
 		42CA660B6D99BC41804F8F3DFFF846E2 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				FFCA199A2ABAD52000F03EAA /* Documentation */,
+				A9EB78FC7F0EEE4914F65F61B2E74031 /* AppDelegate.swift */,
+				96E03E96B39ADDD9B77FC7C702E3029F /* MainDataSource.swift */,
+				9AFC72AFBBBAAEBA2097DA669BB3792F /* MainViewController.swift */,
+				842EA8A92508278E009AE473 /* ChooseBrand */,
+				8409B92F2507B9A9006ED4EA /* CustomSplash */,
 				7D75A46625DD60D50050ACA9 /* Extensions */,
 				9DE43D2630BC7A2BC76DE6043192AFF4 /* Sample */,
 				BBBD9AE748A7F062C343564EE84A8A71 /* Supporting Files */,
-				A9EB78FC7F0EEE4914F65F61B2E74031 /* AppDelegate.swift */,
-				8409B92F2507B9A9006ED4EA /* CustomSplash */,
-				842EA8A92508278E009AE473 /* ChooseBrand */,
-				96E03E96B39ADDD9B77FC7C702E3029F /* MainDataSource.swift */,
-				9AFC72AFBBBAAEBA2097DA669BB3792F /* MainViewController.swift */,
 				84A9E9AA250F9D09006B8A52 /* ThemeManager */,
 			);
 			path = Sources;
@@ -713,6 +724,18 @@
 			path = ChipFilter;
 			sourceTree = "<group>";
 		};
+		FFCA199A2ABAD52000F03EAA /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				FFCA199E2ABAD56000F03EAA /* button_icon.png */,
+				FFCA199F2ABAD56000F03EAA /* button_inline.png */,
+				FFCA199D2ABAD56000F03EAA /* button_size.png */,
+				FFCA199B2ABAD56000F03EAA /* button_status.png */,
+				FFCA199C2ABAD56000F03EAA /* button_theme.png */,
+			);
+			path = Documentation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -775,6 +798,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3219E81DF4D5C6AC40F7F7677D8A7E7 /* Assets.xcassets in Resources */,
+				FFCA19A12ABAD56100F03EAA /* button_theme.png in Resources */,
+				FFCA19A22ABAD56100F03EAA /* button_size.png in Resources */,
+				FFCA19A42ABAD56100F03EAA /* button_inline.png in Resources */,
+				FFCA19A02ABAD56100F03EAA /* button_status.png in Resources */,
+				FFCA19A32ABAD56100F03EAA /* button_icon.png in Resources */,
 				237BDC613256825FFF9C564C51CEBED6 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -31,7 +31,7 @@ final class ButtonsItemViewController: UIViewController, SampleItem {
     }()
 
     private let containedButton: NatButton = {
-        let button = NatButton(style: .contained, theme: .avonLight)
+        let button = NatButton(style: .contained)
         button.configure(title: "Contained")
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
@@ -49,7 +49,7 @@ final class ButtonsItemViewController: UIViewController, SampleItem {
     }
 
     private let outlinedButton: NatButton = {
-        let button = NatButton(style: .outlined, theme: .avonLight)
+        let button = NatButton(style: .outlined)
         button.configure(title: "Outlined")
         button.translatesAutoresizingMaskIntoConstraints = false
 
