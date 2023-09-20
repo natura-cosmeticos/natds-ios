@@ -8,7 +8,6 @@
 
 | Variant       | Property       | Values                    | Status            |
 | -------------- | -------------- | ------------------------- | ----------------- |
-| Contained      | Style          | Contained, Outlined, Text | ✅  Available      |
 | Contained      | Icon           | None, Right, Left         | ✅  Available      |
 | Contained      | Size           | Small, Medium, Large      | ✅  Available      |
 | Contained      | IsEnabled      | True, False               | ✅  Available      |
@@ -16,6 +15,23 @@
 | Contained      | Text-Transform | Uppercase, Capitalize     | 🛠️  Not Available  |
 | Contained      | Theme          | All Themes Available      | ✅  Available      |
 
+| Variant       | Property       | Values                    | Status            |
+| -------------- | -------------- | ------------------------- | ----------------- |
+| Outlined      | Icon           | None, Right, Left         | ✅  Available      |
+| Outlined      | Size           | Small, Medium, Large      | ✅  Available      |
+| Outlined      | IsEnabled      | True, False               | ✅  Available      |
+| Outlined      | Display        | True, False               | ❌  Not Applicable |
+| Outlined      | Text-Transform | Uppercase, Capitalize     | 🛠️  Not Available  |
+| Outlined      | Theme          | All Themes Available      | ✅  Available      |
+
+| Variant   | Property       | Values                    | Status            |
+| --------- | -------------- | ------------------------- | ----------------- |
+| Text      | Icon           | None, Right, Left         | ✅  Available      |
+| Text      | Size           | Small, Medium, Large      | ✅  Available      |
+| Text      | IsEnabled      | True, False               | ✅  Available      |
+| Text      | Display        | True, False               | ❌  Not Applicable |
+| Text      | Text-Transform | Uppercase, Capitalize     | 🛠️  Not Available  |
+| Text      | Theme          | All Themes Available      | ✅  Available      |
 
 
 ## Technical Usages Examples
