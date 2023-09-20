@@ -6,15 +6,15 @@
 
 ## Propertys
 
-| Property       | Values                    | Status            |
-| -------------- | ------------------------- | ----------------- |
-| Style          | Contained, Outlined, Text | ✅  Available      |
-| Icon           | None, Right, Left         | ✅  Available      |
-| Size           | Small, Medium, Large      | ✅  Available      |
-| IsEnabled      | True, False               | ✅  Available      |
-| Display        | True, False               | ❌  Not Applicable |
-| Text-Transform | Uppercase, Capitalize     | 🛠️  Not Available  |
-| Theme          | All Themes Available      | ✅  Available      |
+| Property       | Property       | Values                    | Status            |
+| -------------- | -------------- | ------------------------- | ----------------- |
+| Contained      | Style          | Contained, Outlined, Text | ✅  Available      |
+| Contained      | Icon           | None, Right, Left         | ✅  Available      |
+| Contained      | Size           | Small, Medium, Large      | ✅  Available      |
+| Contained      | IsEnabled      | True, False               | ✅  Available      |
+| Contained      | Display        | True, False               | ❌  Not Applicable |
+| Contained      | Text-Transform | Uppercase, Capitalize     | 🛠️  Not Available  |
+| Contained      | Theme          | All Themes Available      | ✅  Available      |
 
 
 
