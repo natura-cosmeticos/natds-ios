@@ -6,7 +6,7 @@
 
 ## Propertys
 
-| Property       | Property       | Values                    | Status            |
+| Variant       | Property       | Values                    | Status            |
 | -------------- | -------------- | ------------------------- | ----------------- |
 | Contained      | Style          | Contained, Outlined, Text | ✅  Available      |
 | Contained      | Icon           | None, Right, Left         | ✅  Available      |
