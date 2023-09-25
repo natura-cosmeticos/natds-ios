@@ -13,7 +13,7 @@
 | Size           | Small, Medium, Large      | ✅  Available      |
 | IsEnabled      | True, False               | ✅  Available      |
 | Display        | True, False               | ❌  Not Applicable |
-| Text-Transform | Uppercase, Capitalize     | 🛠️  Backlog        |
+| Text-Transform | Uppercase, Capitalize     | 🗂️  Backlog        |
 | Theme          | All Themes Available      | ✅  Available      |
 
 
