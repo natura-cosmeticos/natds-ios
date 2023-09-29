@@ -13,7 +13,7 @@
 | OnClick             | -                          | ✅  Available     |
 | Style          | standardDefault, standardPrimary, standardLight   | ✅  Available     |
 | Background         | Inherit, Float, Overlay        | ✅  Available     |
-| State          | Enabled, Disabled, Press                    | ✅  Available     |
+| State          | Enabled, Disabled                    | ✅  Available     |
 | Size               | Semi, Semix, Medium            | ✅  Available     |
 
 
