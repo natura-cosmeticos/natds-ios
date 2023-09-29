@@ -11,7 +11,7 @@
 | Property           | Values                         | Status            |
 | --------------     | -------------------------      | ----------------- |
 | OnClick             | -                          | ✅  Available     |
-| IconColor          | standardDefault, standardPrimary, standardLight   | ✅  Available     |
+| Style          | standardDefault, standardPrimary, standardLight   | ✅  Available     |
 | Background         | Inherit, Float, Overlay        | ✅  Available     |
 | State          | Enabled, Disabled, Press                    | ✅  Available     |
 | Size               | Semi, Semix, Medium            | ✅  Available     |
@@ -41,7 +41,7 @@
 
 
 
-#### ICON COLOR - standardDefault, standardPrimary, standardLight
+#### STYLE - standardDefault, standardPrimary, standardLight
 
 ![](./images/iconbutton_color.png)
 
@@ -79,6 +79,7 @@
 
 #### STATE - Enabled, Disabled
 
+
 ![](./images/iconbutton.png)
 
 ```swift
@@ -90,7 +91,7 @@
 ```
 
 
-
+>
 
 
 #### SIZE - Semi, Semix, Medium
