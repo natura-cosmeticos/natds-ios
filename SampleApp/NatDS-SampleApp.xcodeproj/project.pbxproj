@@ -84,7 +84,6 @@
 		FFCA19A32ABAD56100F03EAA /* button_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FFCA199E2ABAD56000F03EAA /* button_icon.png */; };
 		FFCA19A42ABAD56100F03EAA /* button_inline.png in Resources */ = {isa = PBXBuildFile; fileRef = FFCA199F2ABAD56000F03EAA /* button_inline.png */; };
 		FFCA19A82ABAF86500F03EAA /* button_variants.png in Resources */ = {isa = PBXBuildFile; fileRef = FFCA19A72ABAF86500F03EAA /* button_variants.png */; };
-		FFCA19AA2ABB1C3300F03EAA /* Button.html in Resources */ = {isa = PBXBuildFile; fileRef = FFCA19A92ABB1C3300F03EAA /* Button.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -183,7 +182,6 @@
 		FFCA199F2ABAD56000F03EAA /* button_inline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_inline.png; sourceTree = "<group>"; };
 		FFCA19A62ABAD6EC00F03EAA /* Button.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Button.md; sourceTree = "<group>"; };
 		FFCA19A72ABAF86500F03EAA /* button_variants.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_variants.png; sourceTree = "<group>"; };
-		FFCA19A92ABB1C3300F03EAA /* Button.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html.documentation; path = Button.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -732,7 +730,6 @@
 		FFCA199A2ABAD52000F03EAA /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
-				FFCA19A92ABB1C3300F03EAA /* Button.html */,
 				FFCA19A52ABAD6AB00F03EAA /* images */,
 				FFCA19A62ABAD6EC00F03EAA /* Button.md */,
 			);
@@ -820,7 +817,6 @@
 				FFCA19A42ABAD56100F03EAA /* button_inline.png in Resources */,
 				FFCA19A02ABAD56100F03EAA /* button_status.png in Resources */,
 				FFCA19A32ABAD56100F03EAA /* button_icon.png in Resources */,
-				FFCA19AA2ABB1C3300F03EAA /* Button.html in Resources */,
 				237BDC613256825FFF9C564C51CEBED6 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
