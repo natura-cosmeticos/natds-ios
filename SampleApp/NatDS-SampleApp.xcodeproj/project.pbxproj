@@ -84,6 +84,11 @@
 		FFCA19A32ABAD56100F03EAA /* button_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FFCA199E2ABAD56000F03EAA /* button_icon.png */; };
 		FFCA19A42ABAD56100F03EAA /* button_inline.png in Resources */ = {isa = PBXBuildFile; fileRef = FFCA199F2ABAD56000F03EAA /* button_inline.png */; };
 		FFCA19A82ABAF86500F03EAA /* button_variants.png in Resources */ = {isa = PBXBuildFile; fileRef = FFCA19A72ABAF86500F03EAA /* button_variants.png */; };
+		FFCA19B22AC6A9F700F03EAA /* iconbuton_backgroundstyle.png in Resources */ = {isa = PBXBuildFile; fileRef = FFCA19AD2AC6A9F700F03EAA /* iconbuton_backgroundstyle.png */; };
+		FFCA19B32AC6A9F700F03EAA /* iconbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = FFCA19AE2AC6A9F700F03EAA /* iconbutton.png */; };
+		FFCA19B42AC6A9F700F03EAA /* iconbutton_press.png in Resources */ = {isa = PBXBuildFile; fileRef = FFCA19AF2AC6A9F700F03EAA /* iconbutton_press.png */; };
+		FFCA19B52AC6A9F700F03EAA /* iconbutton_color.png in Resources */ = {isa = PBXBuildFile; fileRef = FFCA19B02AC6A9F700F03EAA /* iconbutton_color.png */; };
+		FFCA19B62AC6A9F700F03EAA /* iconbutton_size.png in Resources */ = {isa = PBXBuildFile; fileRef = FFCA19B12AC6A9F700F03EAA /* iconbutton_size.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -182,6 +187,12 @@
 		FFCA199F2ABAD56000F03EAA /* button_inline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_inline.png; sourceTree = "<group>"; };
 		FFCA19A62ABAD6EC00F03EAA /* Button.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Button.md; sourceTree = "<group>"; };
 		FFCA19A72ABAF86500F03EAA /* button_variants.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_variants.png; sourceTree = "<group>"; };
+		FFCA19AC2AC6A39500F03EAA /* IconButton.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = IconButton.md; sourceTree = "<group>"; };
+		FFCA19AD2AC6A9F700F03EAA /* iconbuton_backgroundstyle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconbuton_backgroundstyle.png; sourceTree = "<group>"; };
+		FFCA19AE2AC6A9F700F03EAA /* iconbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconbutton.png; sourceTree = "<group>"; };
+		FFCA19AF2AC6A9F700F03EAA /* iconbutton_press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconbutton_press.png; sourceTree = "<group>"; };
+		FFCA19B02AC6A9F700F03EAA /* iconbutton_color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconbutton_color.png; sourceTree = "<group>"; };
+		FFCA19B12AC6A9F700F03EAA /* iconbutton_size.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconbutton_size.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -732,6 +743,7 @@
 			children = (
 				FFCA19A52ABAD6AB00F03EAA /* images */,
 				FFCA19A62ABAD6EC00F03EAA /* Button.md */,
+				FFCA19AC2AC6A39500F03EAA /* IconButton.md */,
 			);
 			path = Documentation;
 			sourceTree = "<group>";
@@ -739,6 +751,11 @@
 		FFCA19A52ABAD6AB00F03EAA /* images */ = {
 			isa = PBXGroup;
 			children = (
+				FFCA19AD2AC6A9F700F03EAA /* iconbuton_backgroundstyle.png */,
+				FFCA19B02AC6A9F700F03EAA /* iconbutton_color.png */,
+				FFCA19AF2AC6A9F700F03EAA /* iconbutton_press.png */,
+				FFCA19B12AC6A9F700F03EAA /* iconbutton_size.png */,
+				FFCA19AE2AC6A9F700F03EAA /* iconbutton.png */,
 				FFCA19A72ABAF86500F03EAA /* button_variants.png */,
 				FFCA199E2ABAD56000F03EAA /* button_icon.png */,
 				FFCA199F2ABAD56000F03EAA /* button_inline.png */,
@@ -810,6 +827,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFCA19B22AC6A9F700F03EAA /* iconbuton_backgroundstyle.png in Resources */,
+				FFCA19B62AC6A9F700F03EAA /* iconbutton_size.png in Resources */,
+				FFCA19B42AC6A9F700F03EAA /* iconbutton_press.png in Resources */,
 				D3219E81DF4D5C6AC40F7F7677D8A7E7 /* Assets.xcassets in Resources */,
 				FFCA19A82ABAF86500F03EAA /* button_variants.png in Resources */,
 				FFCA19A12ABAD56100F03EAA /* button_theme.png in Resources */,
@@ -817,6 +837,8 @@
 				FFCA19A42ABAD56100F03EAA /* button_inline.png in Resources */,
 				FFCA19A02ABAD56100F03EAA /* button_status.png in Resources */,
 				FFCA19A32ABAD56100F03EAA /* button_icon.png in Resources */,
+				FFCA19B32AC6A9F700F03EAA /* iconbutton.png in Resources */,
+				FFCA19B52AC6A9F700F03EAA /* iconbutton_color.png in Resources */,
 				237BDC613256825FFF9C564C51CEBED6 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
