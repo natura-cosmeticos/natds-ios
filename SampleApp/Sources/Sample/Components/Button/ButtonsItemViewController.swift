@@ -34,8 +34,7 @@ final class ButtonsItemViewController: UIViewController, SampleItem {
         let button = NatButton(style: .contained, theme: .avonLight)
         button.configure(title: "Contained")
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
-            
+        
         return button
     }()
     
