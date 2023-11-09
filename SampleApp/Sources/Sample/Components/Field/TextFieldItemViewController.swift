@@ -29,6 +29,66 @@ class TextFieldItemViewController: UIViewController, SampleItem {
         field.delegate = self
         return field
     }()
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        print("Iniciou a edição!")
+    }
+
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        print("Iniciou a edição 2!")
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        print("Iniciou a edição 3!")
+            
+            // Removendo caracteres não numéricos
+            let allowedCharacters = CharacterSet.decimalDigits
+            let characterSet = CharacterSet(charactersIn: string)
+            if !allowedCharacters.isSuperset(of: characterSet) {
+                return false
+            }
+            
+            let currentText = textField.text ?? ""
+            let prospectiveText = (currentText as NSString).replacingCharacters(in: range, with: string)
+            
+            // Limita o comprimento da entrada para 19 (incluindo pontos)
+            if prospectiveText.count > 19 {
+                return false
+            }
+            
+            // Aplicando a máscara
+            if string.count > 0 {
+                // Adicionando caracteres
+                if (prospectiveText.count == 4) || (prospectiveText.count == 9) || (prospectiveText.count == 14) {
+                    textField.text = currentText + string + "."
+                    return false
+                }
+            } else {
+                // Removendo caracteres
+                if (currentText.count == 5) || (currentText.count == 10) || (currentText.count == 15) {
+                    let index = currentText.index(before: currentText.endIndex)
+                    textField.text = String(currentText[..<index])
+                    return false
+                }
+            }
+            
+            return true
+        }
+
+
+    private lazy var textFieldTest: TextField = {
+        let field = TextField()
+        field.title = "Text"
+        field.type = .text
+        field.placeholder = "Type some text"
+        field.delegate = self
+        field.configure(delegate: self)
+        return field
+    }()
 
     private lazy var nameField: TextField = {
         let field = TextField()

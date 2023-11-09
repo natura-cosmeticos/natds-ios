@@ -10,12 +10,9 @@ internal final class NatCounterButton: UIView, Pulsable {
         }
     }
 
-    var iconLabel: UILabel = {
-        let label = UILabel()
-        label.font = NatFonts.font(ofSize: 14, withWeight: .medium)
-        label.translatesAutoresizingMaskIntoConstraints = false
-
-        return label
+    var iconButton: UIImageView = {
+        let image = UIImageView()
+        return image
     }()
 
     init() {
@@ -31,12 +28,12 @@ internal final class NatCounterButton: UIView, Pulsable {
     private func setupConstraints() {
         translatesAutoresizingMaskIntoConstraints = false
 
-        addSubview(iconLabel)
+        addSubview(iconButton)
 
         NSLayoutConstraint.activate([
-            iconLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
-            iconLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            iconLabel.heightAnchor.constraint(equalToConstant: 20)
+            iconButton.centerYAnchor.constraint(equalTo: centerYAnchor),
+            iconButton.centerXAnchor.constraint(equalTo: centerXAnchor),
+            iconButton.heightAnchor.constraint(equalToConstant: 20)
         ])
     }
 
@@ -48,9 +45,11 @@ internal final class NatCounterButton: UIView, Pulsable {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapHandler))
         addGestureRecognizer(tapGesture)
     }
+    
+    
 
     private func updateColors() {
-        self.iconLabel.textColor = isEnabled ?
+        self.iconButton.tintedColor = isEnabled ?
             getUIColorFromTokens(\.colorHighEmphasis) :
             getUIColorFromTokens(\.colorMediumEmphasis)
     }

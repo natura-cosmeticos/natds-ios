@@ -41,7 +41,7 @@ public final class NatCounter: UIView, UITextFieldDelegate {
     private var counterChangeValueHandler: CounterChangeValueHandler?
 
     private var minCount: Int = 0
-    private var maxCount: Int = 99
+    private var maxCount: Int = 999
 
     private var numCounter: Int = 0 {
         didSet {
@@ -49,7 +49,7 @@ public final class NatCounter: UIView, UITextFieldDelegate {
             let letterSpacing = getComponentAttributeFromTheme(\.counterContentLetterSpacing)
 
             numCounterTextField.attributedText = "\(numCounter)".attributedStringWith(lineHeight: lineHeight,
-                                                                                  letterSpacing: letterSpacing)
+                                                                                      letterSpacing: 0.48)
             numCounterTextField.textAlignment = .center
             checkLimit()
         }
@@ -156,7 +156,14 @@ public final class NatCounter: UIView, UITextFieldDelegate {
 
     let subtractView: NatCounterButton = {
         let view = NatCounterButton()
-        view.iconLabel.text = "-"
+        
+   
+            let arrowView = UIImageView()
+            arrowView.image = AssetsPath.iconOutlinedNavigationArrowBottomTemplate.rawValue
+            arrowView.translatesAutoresizingMaskIntoConstraints = false
+           
+        
+        view.iconButton.image = arrowView.image
         view.translatesAutoresizingMaskIntoConstraints = false
 
         return view
@@ -164,7 +171,7 @@ public final class NatCounter: UIView, UITextFieldDelegate {
 
     let addView: NatCounterButton = {
         let view = NatCounterButton()
-        view.iconLabel.text = "+"
+        view.iconButton.image = AssetsPath.iconOutlinedActionAdd.rawValue
         view.translatesAutoresizingMaskIntoConstraints = false
 
         return view
