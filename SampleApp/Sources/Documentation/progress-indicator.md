@@ -14,7 +14,9 @@
 
 ## Technical Usages Examples
 
-![](./images/progressindicator.png)
+<p align="center">
+  <img alt="1" src="./images/progressindicator.png" width="40%"> 
+</p>
 
 ```swift
 let progressIndicator = NatProgressIndicatorCircular(size: .medium)

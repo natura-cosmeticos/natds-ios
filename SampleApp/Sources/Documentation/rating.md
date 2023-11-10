@@ -17,7 +17,9 @@
 
 ## Technical Usages Examples
 
-![](./images/rating.png)
+<p align="center">
+  <img alt="1" src="./images/rating.png" width="40%"> 
+</p>
 
 
 ```swift

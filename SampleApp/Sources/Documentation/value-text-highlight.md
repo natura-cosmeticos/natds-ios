@@ -12,7 +12,9 @@
 
 ## Technical Usages Examples
 
-![](./images/valuetexthighlight.png)
+<p align="center">
+  <img alt="1" src="./images/valuetexthighlight.png" width="40%"> 
+</p>
 
 <br>
 

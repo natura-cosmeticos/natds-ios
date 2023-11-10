@@ -11,7 +11,9 @@
 
 ## Technical Usages Examples
 
-![](./images/divider.png)
+<p align="center">
+  <img alt="1" src="./images/divider.png" width="40%"> 
+</p>
 
 <br>
 

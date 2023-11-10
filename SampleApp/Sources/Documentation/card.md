@@ -14,7 +14,9 @@
 ## Technical Usages Examples
 
 
-![Card](./images/card.png)
+<p align="center">
+  <img alt="1" src="./images/card.png" width="40%"> 
+</p>
 
 ```swift
     var card = NatCard()

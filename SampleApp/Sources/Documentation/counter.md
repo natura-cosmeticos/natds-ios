@@ -15,7 +15,9 @@
 
 ## Technical Usages Examples
 
-![Counter](./images/counter.png)
+<p align="center">
+  <img alt="1" src="./images/counter.png" width="40%"> 
+</p>
 
 
 

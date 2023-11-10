@@ -14,7 +14,9 @@
 
 ## Technical Usages Examples
 
-![Checkbox](./images/checkbox.png)
+<p align="center">
+  <img alt="1" src="./images/checkbox.png" width="40%"> 
+</p>
 
 <br>
 

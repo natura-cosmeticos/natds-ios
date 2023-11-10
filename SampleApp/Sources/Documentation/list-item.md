@@ -12,7 +12,9 @@
 
 ## Technical Usages Examples
 
-![Listitem](./images/listitem.png)
+<p align="center">
+  <img alt="1" src="./images/listitem.png" width="40%"> 
+</p>
 
 
 ```swift

@@ -17,7 +17,9 @@
       
 ## Technical Usages Examples
 
-![Badge](./images/badge.png)
+<p align="center">
+  <img alt="1" src="./images/badge.png" width="40%"> 
+</p>
 
 
 ```swift

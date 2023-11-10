@@ -16,7 +16,9 @@
       
 ## Technical Usages Examples
 
-![Avatar](./images/avatar.png)
+<p align="center">
+  <img alt="1" src="./images/avatar.png" width="40%"> 
+</p>
 
 
 

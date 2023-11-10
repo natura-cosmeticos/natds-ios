@@ -12,7 +12,9 @@
 
 ## Technical Usages Examples
 
-![](./images/switch.png)
+<p align="center">
+  <img alt="1" src="./images/switch.png" width="40%"> 
+</p>
 
 <br>
 

@@ -15,7 +15,9 @@
 
 ## Technical Usages Examples
 
-![](./images/shortcut.png)
+<p align="center">
+  <img alt="1" src="./images/shortcut.png" width="40%"> 
+</p>
 
 ```swift
         // Contained

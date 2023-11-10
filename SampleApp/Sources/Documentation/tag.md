@@ -13,7 +13,9 @@
 
 ## Technical Usages Examples
 
-![](./images/tag.png)
+<p align="center">
+  <img alt="1" src="./images/tag.png" width="40%"> 
+</p>
 
 <br>
 

@@ -4,7 +4,9 @@
 
 ## Technical Usages Examples
 
-[![Collapsed](./images/expansionpanel.png)]
+<p align="center">
+  <img alt="1" src="./images/expansionpanel.png" width="40%"> 
+</p>
 
 ```swift
     private lazy var panel: ExpansionPanel = {

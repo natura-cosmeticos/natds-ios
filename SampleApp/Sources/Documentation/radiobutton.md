@@ -13,7 +13,9 @@
 ## Technical Usages Examples
 
 
-![](./images/radiobutton.png)
+<p align="center">
+  <img alt="1" src="./images/radiobutton.png" width="40%"> 
+</p>
 
 ```swift
     private let groupFirstRadioButton: NatRadioButton = {
