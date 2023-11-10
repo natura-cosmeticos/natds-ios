@@ -4,9 +4,8 @@
 
 ## Properties
 
-| Property           | Values                         | Status            |
-| --------------     | -------------------------      | ----------------- |
-| 🚨 Deprecated             | 🚨 Deprecated                         | 🚨 Deprecated    |
+
+> 🚨 Deprecated
 
 
 

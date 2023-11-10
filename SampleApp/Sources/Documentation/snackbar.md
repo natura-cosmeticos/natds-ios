@@ -22,7 +22,7 @@
 ## Technical Usages Examples
 
 
-p align="center">
+<p align="center">
   <img alt="Snackbar 1" src="./images/snackbar1.png" width="20%"> 
 &nbsp; &nbsp; &nbsp; 
   <img alt="Snackbar 2" src="./images/snackbar2.png" width="20%">
