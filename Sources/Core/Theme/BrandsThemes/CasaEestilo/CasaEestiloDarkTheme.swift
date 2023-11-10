@@ -24,6 +24,7 @@ struct CasaEestiloDarkTheme: Theme {
 }
 
 struct CasaEestiloDarkTokens: Tokens {
+  let colorNeutralLightest = "#CC65A0"
   let colorNeutralLight = "#CC65A0"
   let colorNeutralDark = "#843161"
   let colorNeutralDarkest = "#843161"

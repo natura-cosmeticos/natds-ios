@@ -24,6 +24,7 @@ struct AvonDarkTheme: Theme {
 }
 
 struct AvonDarkTokens: Tokens {
+  let colorNeutralLightest = "#FFFFFF"
   let colorNeutralLight = "#FAFAFA"
   let colorNeutralDark = "#777777"
   let colorNeutralDarkest = "#333333"

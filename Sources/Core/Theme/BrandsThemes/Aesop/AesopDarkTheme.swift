@@ -24,6 +24,7 @@ struct AesopDarkTheme: Theme {
 }
 
 struct AesopDarkTokens: Tokens {
+  let colorSecondaryLightest = "#E2DD94"
   let colorOnSecondaryLightest = "#000000"
   let colorSecondaryDarkest = "#918B42"
   let colorOnSecondaryDarkest = "#FFFFFF"

@@ -86,6 +86,7 @@ struct AvonLightTokens: Tokens {
   let colorOnBackground = "#333333"
   let colorSurface = "#FFFFFF"
   let colorOnSurface = "#333333"
+  let colorSurfaceInverse = "#333333"
   let colorOnSurfaceInverse = "#FFFFFF"
   let colorHighlight = "#000000"
   let colorHighEmphasis = "#333333"
