@@ -15,79 +15,56 @@
 
 ## Technical Usages Examples
 
-![](./images/shortcut_lightMode.png)
+![](./images/shortcut.png)
 
-##### Shortcut with mockup icon, type contained and notify
+```swift
+        // Contained
+        let containedPrimaryShortcut = NatShortcut(style: .contained, color: .primary,
+                                                   text: "Contained Primary", icon: getIcon(.filledActionAdd))
+        let containedThemePrimaryShortcut = NatShortcut(style: .contained, color: .primary,
+                                                   text: "Contained Avon", icon: getIcon(.filledActionAdd), theme: .avonLight)
+        let containedNeutralShortcut = NatShortcut(style: .contained, color: .neutral,
+                                                   text: "Contained Neutral", icon: getIcon(.outlinedAlertCheck))
+        let containedDisabledShortcut = NatShortcut(style: .contained,
+                                                    text: "Contained Disabled", icon: getIcon(.filledMediaPause))
+        containedDisabledShortcut.configure(state: .disabled)
+        containedPrimaryShortcut.configureText(numberOfLines: 1, lineBreakMode: .byTruncatingTail)
+        containedThemePrimaryShortcut.configureText(numberOfLines: 1, lineBreakMode: .byTruncatingTail)
+        containedNeutralShortcut.configureText(numberOfLines: 1, lineBreakMode: .byTruncatingTail)
+        containedDisabledShortcut.configureText(numberOfLines: 1, lineBreakMode: .byTruncatingTail)
 
-![Shortcut](./images/shortcut_contained.png)
+        // Outlined
+        let outlinedPrimaryShortcut = NatShortcut(style: .outlined, color: .primary,
+                                                  text: "Outlined Primary", icon: getIcon(.outlinedAlertInfo))
+        
+        let outlinedThemePrimaryShortcut = NatShortcut(style: .outlined, color: .primary,
+                                                       text: "Outlined Avon", icon: getIcon(.outlinedAlertInfo), theme: .avonLight)
+        
+        let outlinedNeutralShortcut = NatShortcut(style: .outlined, color: .neutral,
+                                                  text: "Outlined Neutral", icon: getIcon(.filledPlaceTruck))
+        let outlinedDisabledShortcut = NatShortcut(style: .outlined,
+                                                   text: "Outlined Disabled", icon: getIcon(.outlinedPlaceRocket))
+        outlinedDisabledShortcut.configure(state: .disabled)
 
-```android
-    <com.natura.android.shortcut.Shortcut
-        android:id="@+id/shortcut"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:shct_icon_name="outlined-default-mockup"
-        app:shct_notify="1000"
-        app:shct_text_label="Contained/Primary"
-        app:shct_type="contained" />
+        // Other configurations
+        let containedBadgeShortcut = NatShortcut(style: .outlined, color: .primary,
+                                                 text: "Notify with badge", icon: getIcon(.filledProductBrandsproduct))
+        let containedThemeBadgeShortcut = NatShortcut(style: .outlined, color: .primary,
+                                                      text: "Avon with badge", icon: getIcon(.filledProductBrandsproduct), theme: .avonLight)
+        let longTextNoBreakLineShorcut = NatShortcut(style: .contained, color: .primary,
+                                                     text: "Long text with one line only",
+                                                     icon: getIcon(.outlinedActionDownload))
+        let longTextBreakLineShortcut = NatShortcut(style: .contained, color: .primary,
+                                                    text: "Long text with custom break line",
+                                                    icon: getIcon(.filledNavigationMenu))
+        longTextBreakLineShortcut.configureText(numberOfLines: 3, lineBreakMode: .byWordWrapping)
+        longTextNoBreakLineShorcut.configureText(numberOfLines: 1, lineBreakMode: .byTruncatingTail)
+
+        let badge = NatBadge(style: .standard, color: .alert)
+        badge.configure(count: 99)
+        containedBadgeShortcut.configure(badge: badge)
+        
+        let badgeAvon = NatBadge(style: .standard, color: .alert, theme: .avonLight)
+        badgeAvon.configure(count: 99)
+        containedThemeBadgeShortcut.configure(badge: badgeAvon)
 ```
-
-<br>
-
-em Kotlin
-
-<br>
-
-```kotlin
-    val shortcut = findViewById<Shortcut>(R.id.shortcut)
-    shortcut.notify = 1000
-    shortcut.setLabel("Contained/Primary")
-    shortcut.setIcon("outlined-default-mockup")
-```
-<br><br>
-
-##### Shortcut with mockup icon, type outlined and action
-
-![Shortcut](./images/shortcut_outlined.png)
-
-```android
-    <com.natura.android.shortcut.Shortcut
-        android:id="@+id/shortcut"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:shct_icon_name="outlined-default-mockup"
-        app:shct_text_label="Outlined/Primary"
-        app:shct_type="outlined" />
-```
-<br>
-
-em Kotlin
-
-<br>
-
-```kotlin
-    val shortcut = findViewById<Shortcut>(R.id.shortcut)
-    shortcut.setLabel("Outlined/Primary")
-    shortcut.setIcon("outlined-default-mockup")
-
-    shortcut.setOnClickListener {
-        Toast.makeText(this, "Testing shortcut", Toast.LENGTH_SHORT).show()
-    }
-```
-
-<br>
-
-
-
-## More code
-You can check out more examples from SampleApp by clicking [here](https://github.com/natura-cosmeticos/natds-android/tree/master/sample/src/main/res/layout/activity_shortcut.xml).
-
-## Attention points
-
-1. Before the **3.0.0** version, the parameter to set the shortcut icon is different <br>
-    - Attribute name: icon  
-    - Parameter type: drawable
-
-    Ex: `app:icon="@drawable/outlined_default_mockup"`
-
-<br>

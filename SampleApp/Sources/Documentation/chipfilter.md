@@ -1,6 +1,7 @@
-# Chip
+# ChipFilter
 
 > Chips are compact elements that represent an input, attribute, or action.
+> ChipFilter is an evolution of the Chip component to comply with the use of scrollview and not affect other users who use Chip today
 
 <br>
 
@@ -24,83 +25,145 @@
 <br>
 
 <p align="center">
-  <img alt="Card 1" src="./images/chip_1.png" width="40%"> 
-&nbsp;
-  <img alt="Card 2" src="./images/chip_2.png" width="40%">
+  <img alt="Card 1" src="./images/chipfilter.png" width="40%"> 
 </p>
 
 <br>
 
-#### Chip selected with primary color
-
-![Chip](./images/chip_primarySelected.png)
 
 
-```android
-    <com.natura.android.chip.Chip
-            android:id="@+id/chip_color_primary_selected"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:chp_color="primary"
-            app:chp_label="Color Primary Selected"
-            app:chp_selected="true"/>
+```swift
+    private let neutralColorChipFilter: NatChipFilter = {
+        let filter = NatChipFilter()
+        filter.configure(text: "Neutral color")
+        return filter
+    }()
+
+    private let primaryColorChipFilter: NatChipFilter = {
+        let filter = NatChipFilter(color: .primary)
+        filter.configure(text: "Primary color")
+        return filter
+    }()
+
+    private let secondaryColorChipFilter: NatChipFilter = {
+        let filter = NatChipFilter(color: .secondary)
+        filter.configure(text: "Secondary color")
+        return filter
+    }()
+
+    private let customColorChipFilter: NatChipFilter = {
+        let filter = NatChipFilter(color: .custom(selectedColor: NatColors.link,
+                                          labelColor: NatColors.lowEmphasis,
+                                          borderColor: NatColors.alert))
+        filter.configure(text: "Custom color")
+        return filter
+    }()
+    
+    private let customThemeChip: NatChipFilter = {
+        let chip = NatChipFilter(color: .secondary, theme: .avonLight)
+        chip.configure(text: "ChipFilter with Avon theme")
+        return chip
+    }()
+
+    private let chipFilterWithAction: NatChipFilter = {
+        let filter = NatChipFilter()
+        filter.configure(text: "Filter with action")
+        return filter
+    }()
+
+    private let semiSizeChipFilter: NatChipFilter = {
+        let filter = NatChipFilter(size: .semi)
+        filter.configure(text: "Semi filter")
+        return filter
+    }()
+
+    private let semiXSizeChipFilter: NatChipFilter = {
+        let filter = NatChipFilter(size: .semiX)
+        filter.configure(text: "SemiX size")
+        return filter
+    }()
+
+    private let mediumSizeChipFilter: NatChipFilter = {
+        let filter = NatChipFilter(size: .medium)
+        filter.configure(text: "Medium size")
+        return filter
+    }()
+
+    private let leftIconChipFilter: NatChipFilter = {
+        let icon = getIcon(.outlinedDefaultMockup)
+        let filter = NatChipFilter()
+        filter.configure(text: "Left icon")
+        filter.configure(icon: icon, position: .left)
+        return filter
+    }()
+
+    private let rightIconChipFilter: NatChipFilter = {
+        let icon = getIcon(.outlinedDefaultMockup)
+        let filter = NatChipFilter()
+        filter.configure(text: "Right icon")
+        filter.configure(icon: icon, position: .right)
+        return filter
+    }()
+
+    private let bothSidesIconChipFilter: NatChipFilter = {
+        let icon = getIcon(.outlinedDefaultMockup)
+        let filter = NatChipFilter()
+        filter.configure(text: "Both sides icon")
+        filter.configure(icon: icon, position: .left)
+        filter.configure(icon: icon, position: .right)
+        return filter
+    }()
+
+    private let leftAvatarChipFilter: NatChipFilter = {
+        let avatar = NatAvatar(size: .standard, type: .label)
+        avatar.configure(name: "Design System")
+        let filter = NatChipFilter()
+        filter.configure(text: "Left avatar")
+        filter.configure(avatar: avatar, position: .left)
+        return filter
+    }()
+
+    private let rightAvatarChipFilter: NatChipFilter = {
+        let avatar = NatAvatar(size: .standard, type: .label)
+        avatar.configure(name: "Design System")
+        let filter = NatChipFilter()
+        filter.configure(text: "Right avatar")
+        filter.configure(avatar: avatar, position: .right)
+        return filter
+    }()
+
+    private let iconAndAvatarChipFilter: NatChipFilter = {
+        let icon = getIcon(.outlinedDefaultMockup)
+        let avatar = NatAvatar(size: .standard, type: .label)
+        avatar.configure(name: "Design System")
+        let filter = NatChipFilter()
+        filter.configure(text: "Icon and Avatar")
+        filter.configure(icon: icon, position: .left)
+        filter.configure(avatar: avatar, position: .right)
+        return filter
+    }()
+
+    private let avatarAndIconChipFilter: NatChipFilter = {
+        let icon = getIcon(.outlinedDefaultMockup)
+        let avatar = NatAvatar(size: .standard, type: .label)
+        avatar.configure(name: "Design System")
+        let filter = NatChipFilter()
+        filter.configure(text: "Avatar and icon")
+        filter.configure(avatar: avatar, position: .left)
+        filter.configure(icon: icon, position: .right)
+        return filter
+    }()
+
+    private let focusedChipFilter: NatChipFilter = {
+        let chipFilter = NatChipFilter()
+        chipFilter.configure(text: "Focused")
+        chipFilter.configure(state: .focused)
+        return chipFilter
+    }()
+
+    private let disabledChipFilter: NatChipFilter = {
+        let chipFilter = NatChipFilter()
+        chipFilter.configure(text: "Disabled")
+        chipFilter.configure(state: .disabled)
+        return chipFilter
 ```
-
-<br><br>
-
-#### Chip not select with secondary color
-
-![Chip](./images/chip_secondaryNotSelected.png)
-
-```android
-   <com.natura.android.chip.Chip
-            android:id="@+id/chip_color_secondary_notselected"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:chp_color="secondary"
-            app:chp_label="Color Secondary Not Selected"
-            app:chp_selected="false"/>
-```
-
-<br><br>
-
-#### Chip with Size Medium
-
-![Chip](./images/chip_sizeMedium.png)
-
-```android
-   <com.natura.android.chip.Chip
-            android:id="@+id/chip_size_medium"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:chp_color="neutral"
-            app:chp_label="Size Medium"
-            app:chp_selected="false"
-            app:chp_size="medium"/>
-```
-
-<br><br>
-
-#### Chip with helper right
-
-![Chip](./images/chip_helperRightAvatar.png)
-
-```android
-   <com.natura.android.chip.Chip
-            android:id="@+id/chip_helper_right_avatar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:chp_color="neutral"
-            app:chp_helper_right="@mipmap/nat_avatar"
-            app:chp_helper_right_type="avatar"
-            app:chp_label="Helper Right Avatar"
-            app:chp_selected="true"
-            app:chp_size="semi"/>
-```
-
-<br>
-
-## More code
-
-You can check out more examples from SampleApp by
-clicking [here](https://github.com/natura-cosmeticos/natds-android/tree/master/sample/src/main/res/layout/activity_chip.xml)

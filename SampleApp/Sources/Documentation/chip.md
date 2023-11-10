@@ -24,83 +24,146 @@
 <br>
 
 <p align="center">
-  <img alt="Card 1" src="./images/chip_1.png" width="40%"> 
-&nbsp;
-  <img alt="Card 2" src="./images/chip_2.png" width="40%">
+  <img alt="Card 1" src="./images/chip.png" width="40%"> 
 </p>
 
 <br>
 
-#### Chip selected with primary color
-
-![Chip](./images/chip_primarySelected.png)
 
 
-```android
-    <com.natura.android.chip.Chip
-            android:id="@+id/chip_color_primary_selected"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:chp_color="primary"
-            app:chp_label="Color Primary Selected"
-            app:chp_selected="true"/>
+```swift
+    private let neutralColorChip: NatChip = {
+        let chip = NatChip()
+        chip.configure(text: "Neutral color")
+        return chip
+    }()
+
+    private let primaryColorChip: NatChip = {
+        let chip = NatChip(color: .primary)
+        chip.configure(text: "Primary color")
+        return chip
+    }()
+
+    private let secondaryColorChip: NatChip = {
+        let chip = NatChip(color: .secondary)
+        chip.configure(text: "Secondary color")
+        return chip
+    }()
+
+    private let customColorChip: NatChip = {
+        let chip = NatChip(color: .custom(selectedColor: NatColors.link,
+                                          labelColor: NatColors.lowEmphasis,
+                                          borderColor: NatColors.alert))
+        chip.configure(text: "Custom color")
+        return chip
+    }()
+    
+    private let customThemeChip: NatChip = {
+        let chip = NatChip(color: .primary, theme: .avonLight)
+        chip.configure(text: "Chip with Avon theme")
+        return chip
+    }()
+
+    private let chipWithAction: NatChip = {
+        let chip = NatChip()
+        chip.configure(text: "Chip with action")
+        return chip
+    }()
+
+    private let semiSizeChip: NatChip = {
+        let chip = NatChip(size: .semi)
+        chip.configure(text: "Semi size")
+        return chip
+    }()
+
+    private let semiXSizeChip: NatChip = {
+        let chip = NatChip(size: .semiX)
+        chip.configure(text: "SemiX size")
+        return chip
+    }()
+
+    private let mediumSizeChip: NatChip = {
+        let chip = NatChip(size: .medium)
+        chip.configure(text: "Medium size")
+        return chip
+    }()
+
+    private let leftIconChip: NatChip = {
+        let icon = getIcon(.outlinedDefaultMockup)
+        let chip = NatChip()
+        chip.configure(text: "Left icon")
+        chip.configure(icon: icon, position: .left)
+        return chip
+    }()
+
+    private let rightIconChip: NatChip = {
+        let icon = getIcon(.outlinedDefaultMockup)
+        let chip = NatChip()
+        chip.configure(text: "Right icon")
+        chip.configure(icon: icon, position: .right)
+        return chip
+    }()
+
+    private let bothSidesIconChip: NatChip = {
+        let icon = getIcon(.outlinedDefaultMockup)
+        let chip = NatChip()
+        chip.configure(text: "Both sides icon")
+        chip.configure(icon: icon, position: .left)
+        chip.configure(icon: icon, position: .right)
+        return chip
+    }()
+
+    private let leftAvatarChip: NatChip = {
+        let avatar = NatAvatar(size: .standard, type: .label)
+        avatar.configure(name: "Design System")
+        let chip = NatChip()
+        chip.configure(text: "Left avatar")
+        chip.configure(avatar: avatar, position: .left)
+        return chip
+    }()
+
+    private let rightAvatarChip: NatChip = {
+        let avatar = NatAvatar(size: .standard, type: .label)
+        avatar.configure(name: "Design System")
+        let chip = NatChip()
+        chip.configure(text: "Right avatar")
+        chip.configure(avatar: avatar, position: .right)
+        return chip
+    }()
+
+    private let iconAndAvatarChip: NatChip = {
+        let icon = getIcon(.outlinedDefaultMockup)
+        let avatar = NatAvatar(size: .standard, type: .label)
+        avatar.configure(name: "Design System")
+        let chip = NatChip()
+        chip.configure(text: "Icon and Avatar")
+        chip.configure(icon: icon, position: .left)
+        chip.configure(avatar: avatar, position: .right)
+        return chip
+    }()
+
+    private let avatarAndIconChip: NatChip = {
+        let icon = getIcon(.outlinedDefaultMockup)
+        let avatar = NatAvatar(size: .standard, type: .label)
+        avatar.configure(name: "Design System")
+        let chip = NatChip()
+        chip.configure(text: "Avatar and icon")
+        chip.configure(avatar: avatar, position: .left)
+        chip.configure(icon: icon, position: .right)
+        return chip
+    }()
+
+    private let focusedChip: NatChip = {
+        let chip = NatChip()
+        chip.configure(text: "Focused")
+        chip.configure(state: .focused)
+        return chip
+    }()
+
+    private let disabledChip: NatChip = {
+        let chip = NatChip()
+        chip.configure(text: "Disabled")
+        chip.configure(state: .disabled)
+        return chip
+    }()
 ```
-
-<br><br>
-
-#### Chip not select with secondary color
-
-![Chip](./images/chip_secondaryNotSelected.png)
-
-```android
-   <com.natura.android.chip.Chip
-            android:id="@+id/chip_color_secondary_notselected"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:chp_color="secondary"
-            app:chp_label="Color Secondary Not Selected"
-            app:chp_selected="false"/>
-```
-
-<br><br>
-
-#### Chip with Size Medium
-
-![Chip](./images/chip_sizeMedium.png)
-
-```android
-   <com.natura.android.chip.Chip
-            android:id="@+id/chip_size_medium"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:chp_color="neutral"
-            app:chp_label="Size Medium"
-            app:chp_selected="false"
-            app:chp_size="medium"/>
-```
-
-<br><br>
-
-#### Chip with helper right
-
-![Chip](./images/chip_helperRightAvatar.png)
-
-```android
-   <com.natura.android.chip.Chip
-            android:id="@+id/chip_helper_right_avatar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:chp_color="neutral"
-            app:chp_helper_right="@mipmap/nat_avatar"
-            app:chp_helper_right_type="avatar"
-            app:chp_label="Helper Right Avatar"
-            app:chp_selected="true"
-            app:chp_size="semi"/>
-```
-
-<br>
-
-## More code
-
-You can check out more examples from SampleApp by
-clicking [here](https://github.com/natura-cosmeticos/natds-android/tree/master/sample/src/main/res/layout/activity_chip.xml)

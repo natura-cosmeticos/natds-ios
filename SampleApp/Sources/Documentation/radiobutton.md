@@ -12,114 +12,109 @@
 
 ## Technical Usages Examples
 
-> All codes are available for Android with XML Layout.
 
-![](./images/radiobutton_lightMode.png)
+![](./images/radiobutton.png)
 
+```swift
+    private let groupFirstRadioButton: NatRadioButton = {
+        let radioButton = NatRadioButton()
+        radioButton.configure(isSelected: true)
+        radioButton.configure(text: "Button 1")
+        radioButton.translatesAutoresizingMaskIntoConstraints = false
 
-##### RadioButton enabled unchecked
+        return radioButton
+    }()
 
-![RadioButton](./images/radiobutton_enabledUnchecked.png)
+    private let groupSecondRadioButton: NatRadioButton = {
+        let radioButton = NatRadioButton()
+        radioButton.configure(text: "Button 2")
+        radioButton.translatesAutoresizingMaskIntoConstraints = false
 
-```android
-    <com.natura.android.radiobutton.RadioButton
-        android:id="@+id/radioButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Radio Button" />
+        return radioButton
+    }()
+
+    private let groupThirdRadioButton: NatRadioButton = {
+        let radioButton = NatRadioButton()
+        radioButton.configure(text: "Button 3")
+        radioButton.translatesAutoresizingMaskIntoConstraints = false
+
+        return radioButton
+    }()
+
+    private let enabledUnselectedRadioButton: NatRadioButton = {
+        let radioButton = NatRadioButton()
+        radioButton.translatesAutoresizingMaskIntoConstraints = false
+
+        return radioButton
+    }()
+
+    private let enabledSelectedRadioButton: NatRadioButton = {
+        let radioButton = NatRadioButton()
+        radioButton.configure(isSelected: true)
+        radioButton.translatesAutoresizingMaskIntoConstraints = false
+
+        return radioButton
+    }()
+
+    private let disabledUnselectedRadioButton: NatRadioButton = {
+        let radioButton = NatRadioButton()
+        radioButton.configure(isSelected: false)
+        radioButton.configure(isEnabled: false)
+        radioButton.translatesAutoresizingMaskIntoConstraints = false
+
+        return radioButton
+    }()
+
+    private let disabledSelectedRadioButton: NatRadioButton = {
+        let radioButton = NatRadioButton()
+        radioButton.configure(isSelected: true)
+        radioButton.configure(isEnabled: false)
+        radioButton.translatesAutoresizingMaskIntoConstraints = false
+
+        return radioButton
+    }()
+
+    private let enabledUnselectedLabelRadioButton: NatRadioButton = {
+        let radioButton = NatRadioButton(theme: .avonLight)
+        radioButton.configure(text: "Enabled unselected with label")
+        radioButton.translatesAutoresizingMaskIntoConstraints = false
+
+        return radioButton
+    }()
+
+    private let enabledSelectedLabelRadioButton: NatRadioButton = {
+
+        let radioButton = NatRadioButton(theme: .avonLight)
+        radioButton.configure(text: "Enabled selected with label")
+        radioButton.configure(isSelected: true)
+        radioButton.translatesAutoresizingMaskIntoConstraints = false
+
+        return radioButton
+    }()
+
+    private let disabledUnselectedLabelRadioButton: NatRadioButton = {
+        let radioButton = NatRadioButton()
+        radioButton.configure(text: "Disabled unselected with label")
+        radioButton.configure(isSelected: false)
+        radioButton.configure(isEnabled: false)
+        radioButton.translatesAutoresizingMaskIntoConstraints = false
+
+        return radioButton
+    }()
+
+    private let disabledSelectedLabelRadioButton: NatRadioButton = {
+        let radioButton = NatRadioButton()
+        radioButton.configure(text: "Disabled selected with label")
+        radioButton.configure(isSelected: true)
+        radioButton.configure(isEnabled: false)
+        radioButton.translatesAutoresizingMaskIntoConstraints = false
+
+        return radioButton
+    }()
+
+    private lazy var radioButtonGroup: NatRadioButtonGroup = {
+        let group = NatRadioButtonGroup()
+        group.configure(radioButtons: [groupFirstRadioButton, groupSecondRadioButton, groupThirdRadioButton])
+        return group
+    }()
 ```
-<br>
-em Kotlin
-<br>
-
-```kotlin
-    val radioButton = findViewById<RadioButton>(R.id.radioButton)
-    radioButton.text = "Radio Button"
-    radioButton.isEnabled = true
-    radioButton.isChecked = false
-```
-<br><br>
-
-##### RadioButton enabled checked
-
-<br>       
-
-![RadioButton](./images/radiobutton_enabledChecked.png)
-
-```android
-    <com.natura.android.radiobutton.RadioButton
-        android:id="@+id/radioButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:checked="true"
-        android:text="Radio Button" />
-```
-
-<br>
-em Kotlin
-<br>
-
-```kotlin
-    val radioButton = findViewById<RadioButton>(R.id.radioButton)
-    radioButton.text = "Radio Button"
-    radioButton.isEnabled = true
-    radioButton.isChecked = true
-```    
-<br><br>
-
-##### RadioButton disabled unchecked
-
-![RadioButton](./images/radiobutton_disabledUnchecked.png)
-
-
-```android
-    <com.natura.android.radiobutton.RadioButton
-        android:id="@+id/radioButton"
-        android:enabled="false"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Radio Button" />
-```
-
-<br>
-em Kotlin
-<br>
-
-```kotlin
-    val radioButton = findViewById<RadioButton>(R.id.radioButton)
-    radioButton.text = "Radio Button"
-    radioButton.isEnabled = false
-    radioButton.isChecked = false
-```
-
-<br><br>
-
-##### RadioButton disabled checked
-
-![RadioButton](./images/radiobutton_disabledChecked.png)
-
-```android
-    <com.natura.android.radiobutton.RadioButton
-        android:id="@+id/radioButton"
-        android:enabled="false"
-        android:checked="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Radio Button" />
-```
-
-<br>
-em Kotlin
-<br>
-
-```kotlin
-    val radioButton = findViewById<RadioButton>(R.id.radioButton)
-    radioButton.text = "Radio Button"
-    radioButton.isEnabled = false
-    radioButton.isChecked = true
-```
-
-<br>
-
-## More code
-You can check out more examples from SampleApp by clicking [here](https://github.com/natura-cosmeticos/natds-android/tree/master/sample/src/main/res/layout/activity_radiobutton.xml).

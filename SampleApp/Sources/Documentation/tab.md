@@ -1,121 +1,68 @@
-# Tag
-> Tags are used to label, categorize, or organize items using keywords that describe them.  
+# Tab
+> Tabs organize content across different screens, data sets, and other interactions 
 
 ## Properties
 
 | Property           | Values                         | Status            |
 | --------------     | -------------------------      | ----------------- |
-| Size             | Standard, Small                          | ✅  Available     |
-| Color          | Primary, Secondary, Alert, Success, Link, Warning, Custom   | ✅  Available     |
-| Position         | Center, Left, Right       | ✅  Available     |
-| Icon          | True, False                    | ✅  Available     |
+| Position             | Fixed, Scrollable                         | ✅  Available     |
+| Icon          | Leading Icon, Top Icon, Icon   | ✅  Available     |
+| Interaction State         | Enabled, Press       | ✅  Available     |
+| Disabled          | True, False                    | ✅  Available     |
+| Elevation          | True, False                    | ✅  Available     |
+| Color          | True, False                    | ✅  Available     |
 
 
 ## Technical Usages Examples
 
-![](./images/tag_lightMode.png)
+![](./images/tab.png)
 
 <br>
 
-##### Tag with position center, primary type and small size
+```swift
+    private let scrollableTab = Tab()
+    private let fixedTab = Tab()
+    private let scrollableTabWithoutElevation = Tab(theme: .avonLight)
+    
+        // Fixed
+        addTab(tab: fixedTab)
+        fixedTab.delegate = self
+        fixedTab.insertTab(title: "AVON")
+        fixedTab.insertTab(title: "THE BODY SHOP")
+        fixedTab.insertTab(title: "AĒSOP")
+        fixedTab.configure(position: .fixed)
+        fixedTab.configure(elevation: true)
+        // fixedTab.selectedSegmentedIndex = 1
 
-![Tag Center Primary](./images/tag_centersmall.png)
+        // Scrollable
+        addTab(tab: scrollableTab)
+        scrollableTab.delegate = self
+        scrollableTab.insertTab(title: "AVON")
+        scrollableTab.insertTab(title: "THE BODY SHOP")
+        scrollableTab.insertTab(title: "AĒSOP")
+        scrollableTab.insertTab(title: "NATURA")
+        scrollableTab.insertTab(title: "NATURA&CO")
+        scrollableTab.configure(position: .scrollable)
+        scrollableTab.configure(elevation: true)
+        //scrollableTab.selectedSegmentedIndex = 1
+        
+        // ScrollableWithoutElevation
+        addTab(tab: scrollableTabWithoutElevation)
+        scrollableTabWithoutElevation.delegate = self
+        scrollableTabWithoutElevation.insertTab(title: "NATURA&CO")
+        scrollableTabWithoutElevation.insertTab(title: "NATURA")
+        scrollableTabWithoutElevation.insertTab(title: "AVON")
+        scrollableTabWithoutElevation.insertTab(title: "AĒSOP")
+        scrollableTabWithoutElevation.insertTab(title: "THE BODY SHOP")
+        scrollableTabWithoutElevation.configure(position: .scrollable)
+        
+        private func addTab(tab: Tab) {
+        stackView.addArrangedSubview(tab)
+        tab.translatesAutoresizingMaskIntoConstraints = false
 
-```android
-    <com.natura.android.tag.Tag
-        android:id="@+id/tagPrimary"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:tag_type="primary"
-        app:textLabel="Center Primary Small" />
+        NSLayoutConstraint.activate([
+            tab.leadingAnchor.constraint(equalTo: stackView.leadingAnchor),
+            tab.trailingAnchor.constraint(equalTo: stackView.trailingAnchor)
+        ])
+        }
 ```
-<br> 
-
-em Kotlin
-
-<br>
-
-```kotlin
-    val tag = findViewById<Tag>(R.id.tagPrimary)
-    tag.setLabel("Center Primary Small")
-```
-<br><br>
-
-##### Tag with position left, alert type and standard size
-
-![Tag Center Primary](./images/tag_leftstandard.png)
-
-```android
-     <com.natura.android.tag.Tag
-        android:id="@+id/tagAlert"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:tag_size="standard"
-        app:tag_type="alert"
-        app:tag_position="left"
-        app:textLabel="Left Alert Standard" />
-
-```
-<br> 
-
-em Kotlin
-
-<br>
-
-```kotlin
-    val tag = findViewById<Tag>(R.id.tagAlert)
-    tag.setLabel("Left Alert Standard")
-```
-<br><br>
-
-##### Tag with position right, warning type and small size
-
-![Tag Center Primary](./images/tag_rightsmall.png)
-
-```android
-    <com.natura.android.tag.Tag
-        android:id="@+id/tagWarning"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:tag_size="small"
-        app:tag_type="warning"
-        app:tag_position="right"
-        app:textLabel="Right Warning Small" />
-```
-
-<br><br>
-
-##### Tag with icon and custom color
-
-![Tag With Icon](./images/tag_withIcon.png)
-
-```android
-    <com.natura.android.tag.Tag
-        android:id="@+id/tagWithIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:tag_icon="@drawable/outlined_action_mic"
-        app:tag_position="center"
-        app:tag_size="standard"
-        app:tag_type="custom"
-        app:tag_background_color="?colorNeutral300"
-        app:tag_label_color="?colorOnPrimary"
-        app:textLabel="Tag" />
-```
-
-<br> 
-
-em Kotlin
-
-<br>
-
-```kotlin
-    val tag = findViewById<Tag>(R.id.tagWarning)
-    tag.setLabel("Right Warning Small")
-```
-
-<br>
-
-
-## More code
-You can check out more examples from SampleApp by clicking [here](https://github.com/natura-cosmeticos/natds-android/tree/master/sample/src/main/res/layout/activity_tag.xml).

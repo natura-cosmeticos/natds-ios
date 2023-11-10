@@ -1,7 +1,6 @@
 # Dialog
 
 > Dialogs inform users about a task and can contain critical information, require decisions, or involve multiple tasks.
-> Built based on [AlertDialog](https://developer.android.com/reference/android/app/AlertDialog).
 
 <br>
 
@@ -17,199 +16,148 @@
 
 <br>
 
-## Attributes
-
-<br>
-
-| Attrs | Description | Type | Options |
-| - | --- | -------------| :------: |
-| Context | Android Context | Context | - 
-| Dialog Title | String that will be show as a dialog title | string | text
-| Dialog Main Button Title (Optional) | String with main button's label, this button will be show as a *contained* button | string | text
-| Dialog Main Action (Optional) | DialogInterface.OnClickListener that will be call when user perform a click at main button | Listener | Listener
-| Dialog Secondary Button Title (Optional) | String with secondary button's label, this button will be show as a *text* button | string | text
-| Dialog Secondary Action (Optional) | DialogInterface.OnClickListener that will be call when user perform a click at secondary button|  Listener | Listener
-| Content View, Content Layout or Text Message | Content that will be show inside dialog. You can provide an View, a Layout reference to fill it, or simply insert the main text of your dialog. | XML, View or string | - 
-| Cancelable | Flag that set if dialog can be closed by clicking out of it or not. You can omite this parameter and it will be assumed as true | boolean | true or false
-| Dialog Theme (Optional) | If the view where dialog is in has not a DS theme applyed, you can pass the DS theme reference at the constructor. The theme will be used only inside the dialog. <p>⚠️ **If you omit this, the parent theme will be used to set the dialog. If the parent theme is not an Nat DS Theme, the dialog will not be set as expected**</P> | Android theme | - 
-| Divider (Optional)  | Flag that defines whether two division lines will separate the content (top and bottom) | boolean | true or false
-| StyleButtons (Optional)  | Constant that indicates whether the buttons will have default style (Main and Secondary), Contained, Text or Outlined. | integer | - 
-| firstHeaderIconButton (Optional)  | String used to define the icon of the first iconbutton of the dialog header | string | Icon name
-| firstHeaderIconButtonAction (Optional)  | View.OnClickListener that will be call when user perform a click at first iconbutton in header | Listener | Listener
-| secondHeaderIconButton (Optional)  | String used to define the icon of the second iconbutton of the dialog header | string | icon name
-| secondHeaderIconButtonAction (Optional)  | View.OnClickListener that will be call when user perform a click at second iconbutton in header | Listener | Listener
-| thirdHeaderIconButton (Optional)  | String used to define the icon of the third iconbutton of the dialog header | string | icon name
-| thirdHeaderIconButtonAction (Optional)  | View.OnClickListener that will be call when user perform a click at third iconbutton in header | Listener | Listener
-
-<br>
 
 ## Technical Usages Examples
 
-### Dialog with icon, dividers, icon buttons and text
 
-![Dialog](./images/dialog_withIcons.png)
 
+<p align="center">
+  <img alt="dialog 1" src="./images/dialog_1.png" width="20%"> 
+&nbsp; &nbsp; &nbsp; 
+  <img alt="dialog2" src="./images/dialog_2.png" width="20%">
+&nbsp; &nbsp; &nbsp; 
+  <img alt="dialog 3" src="./images/dialog_3.png" width="20%">
+ &nbsp; &nbsp;&nbsp; 
+ <img alt="dialog 1" src="./images/dialog_4.png" width="20%"> 
+</p>
 <br>
 
-em Kotlin
-
+<p align="center">
+  
+  <img alt="dialog 2" src="./images/dialog_5.png" width="20%">
+&nbsp; &nbsp; &nbsp; 
+  <img alt="dialog 3" src="./images/dialog_6.png" width="20%">
+ &nbsp; &nbsp;&nbsp; 
+ <img alt="dialog 1" src="./images/dialog_7.png" width="20%"> 
+&nbsp; &nbsp; &nbsp; 
+  <img alt="dialog 2" src="./images/dialog_8.png" width="20%">
+</p>
 <br>
 
-```android
-private fun createStandardDialogWithHeaderIconButtons() {
-        val mainClickListener = DialogInterface.OnClickListener { _, _ ->
-            Toast.makeText(
-                this,
-                "Dialog Main Action",
-                Toast.LENGTH_LONG
-            ).show()
-        }
-        val secondaryClickListener = DialogInterface.OnClickListener { _, _ ->
-            Toast.makeText(
-                this,
-                "Dialog Secondary Action",
-                Toast.LENGTH_LONG
-            ).show()
-        }
 
-        val firstHeaderAction = View.OnClickListener {
-            Toast.makeText(this, "Dialog Header Icon Action", Toast.LENGTH_LONG).show()
-        }
-        val secondHeaderAction = View.OnClickListener {
-            Toast.makeText(this, "Dialog Header Icon Action", Toast.LENGTH_LONG).show()
-        }
-        val thirdHeaderAction = View.OnClickListener {
-            Toast.makeText(this, "Dialog Header Icon Action", Toast.LENGTH_LONG).show()
-        }
+```swift
+    @objc func showStandardDialog() {
+        let dialog = NatDialogController
+            .standardStyleBuilder
+            .configure(title: "Title")
+            .configure(body: "Some body text to make a snapshot text without think about the future.")
+            .configure(primaryButtonTitle: "Confirm button", theme: .avonLight) {
+                self.navigationController?.presentedViewController?.dismiss(animated: true)
+            }
+            .configure(secondaryButtonTitle: "Close") {
+                self.navigationController?.presentedViewController?.dismiss(animated: true)
+            }
+            .configure(dismissActionHandler: {
+                print("Standard Dialog was dismissed")
+            })
+            .build()
 
-        standardDialogHeaderIconButtons = DialogStandard(
-            this,
-            "Title",
-            "Confirm Button",
-            mainClickListener,
-            "Close",
-            secondaryClickListener,
-            "Long text that should be substitied for some dialog text. This might actually take two lines or more",
-            true,
-            null,
-            false,
-            0,
-            "outlined-action-mic",
-            firstHeaderAction,
-            "outlined-action-add",
-            secondHeaderAction,
-            "outlined-action-cancel",
-            thirdHeaderAction
-        ).create()
-    }
-```
-
-### Dialog with title, text and two buttons only
-
-![Dialog](./images/dialog_standard.png)
-
-<br>
-
-em Kotlin
-
-<br>
-
-```android
-private fun createDialog() {
-    val mainClickListener = DialogInterface.OnClickListener { _, _ -> Toast.makeText(this, "Dialog Main Action", Toast.LENGTH_LONG).show() }
-    val secondaryClickListener = DialogInterface.OnClickListener { _, _ -> Toast.makeText(this, "Dialog Secondary Action", Toast.LENGTH_LONG).show() }
-
-    dialogStandard = DialogStandard(
-        this,
-        "Title",
-        "Confirm Button",
-        mainClickListener,
-        "Close",
-        secondaryClickListener,
-        "Long text that should be substitied for some alert text. This might actually take two lines or more").create()
-}
-```
-
-### Dialog with title, text, dividers and outlined buttons
-
-![Dialog](./images/dialog_outlinedButtons.png)
-
-<br>
-
-em Kotlin
-
-<br>
-
-```android
-private fun createDialog() {
-        val mainClickListener = DialogInterface.OnClickListener { _, _ ->
-            Toast.makeText(
-                this,
-                "Dialog Main Action",
-                Toast.LENGTH_LONG
-            ).show()
-        }
-        dialogStandard = DialogStandard(
-            this,
-            "Title",
-            "Confirm Button",
-            mainClickListener,
-            "Close",
-            null,
-            "Long text that should be substitied for some dialog text. This might actually take two lines or more",
-            true,
-            null,
-            true,
-            DialogStandard.OUTLINED
-        ).create()
-    }
-```
-
-Showing the dialog
-
-With the dialog created, you can show it whenever you want, calling *show()* method :)
-
-```android
-button.setOnClickListener {
-    dialogStandard.show()
-}
-```
-
-### Dialog Standard from Dialog Fragment
-
-We also allow the use of DialogStandard extending from DialogFragment, in order to aggregate the life cycle of a fragment to some development need.
-
-Instead of sending callbacks as a parameter, the class that will use the DialogStandardFragment will
-need to implement the DialogStandardFragmentCallback interface, where the button click methods are.
-Below is an example of how to use it:
-
-```android
-val fragmentManager: FragmentManager = supportFragmentManager
-val alertDialog: DialogStandardFragment = DialogStandardFragment.newInstance("Some title", "Some text", "OK", "Cancel")
-alertDialog.show(fragmentManager, "DialogFragment")
-```
-
-```android
-class DialogActivity : AppCompatActivity(), DialogStandardFragmentCallback {
-    .
-    .
-    .
-    .
-    
-    override fun onMainButtonClick() {
-        Toast.makeText(
-            this,
-            "Dialog Main Action",
-            Toast.LENGTH_LONG
-        ).show()
+        navigationController?.present(dialog, animated: true)
     }
 
-    override fun onSecondaryButtonClick() {
-        Toast.makeText(
-            this,
-            "Dialog Secondary Action",
-            Toast.LENGTH_LONG
-        ).show()
+    @objc func showStandardLongTextDialog() {
+        let dialog = NatDialogController
+            .standardStyleBuilder
+            .configure(title: "Title")
+            .configure(body: "Some body text to make a snapshot text without think about the future.")
+            .configure(primaryButtonTitle: "Button with long title") {
+                self.navigationController?.presentedViewController?.dismiss(animated: true)
+            }
+            .configure(secondaryButtonTitle: "Other button") {
+                self.navigationController?.presentedViewController?.dismiss(animated: true)
+            }
+            .build()
+
+        navigationController?.present(dialog, animated: true)
     }
-}
+
+    // swiftlint:disable line_length
+    @objc func showStandardBigViewDialog() {
+        let dialog = NatDialogController
+            .standardStyleBuilder
+            .configure(title: "Title")
+            .configure(body: "Some body text to make a snapshot text without think about the future. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ornare est mi. Ut porttitor nunc scelerisque, suscipit nisl non, cursus neque. Suspendisse ac mattis lorem. Nulla tincidunt eros sodales, auctor sem eu, condimentum magna. Cras facilisis posuere est a facilisis. Duis sit amet tincidunt massa. Vivamus malesuada lacus at mattis sagittis. Quisque fermentum augue non feugiat lobortis. Ut ac turpis at lorem mollis interdum vel vel eros. Maecenas tempus, magna eget placerat ultrices, lectus augue aliquet elit, ac euismod mauris dolor non augue. Phasellus id porttitor erat. Morbi a viverra nisi. Praesent id arcu lorem. Suspendisse sollicitudin sit amet elit sed sodales. Nunc ex elit, convallis non neque eget, egestas vestibulum nisi. Etiam fringilla nulla mi, in eleifend felis condimentum at. Integer suscipit sit amet ipsum eget euismod. Cras et diam dignissim, mollis nunc facilisis, malesuada felis.")
+            .configure(primaryButtonTitle: "Primary") {
+                self.navigationController?.presentedViewController?.dismiss(animated: true)
+            }
+            .configure(secondaryButtonTitle: "Secondary") {
+                self.navigationController?.presentedViewController?.dismiss(animated: true)
+            }
+            .build()
+
+        navigationController?.present(dialog, animated: true)
+    }
+
+    @objc func showStandardCustomViewDialog() {
+        let dialog = NatDialogController
+            .standardStyleBuilder
+            .configure(title: "Title")
+            .configure(body: NatImage())
+            .configure(primaryButtonTitle: "Primary") {
+                self.navigationController?.presentedViewController?.dismiss(animated: true)
+            }
+            .configure(secondaryButtonTitle: "Secondary") {
+                self.navigationController?.presentedViewController?.dismiss(animated: true)
+            }
+            .build()
+
+        navigationController?.present(dialog, animated: true)
+    }
+    @objc func showDividerStandardDialog() {
+        let dialog = NatDialogController
+            .standardStyleBuilder
+            .configure(title: "Title")
+            .configure(divider: true)
+            .configure(body: "Some body text to make a snapshot text without think about the future.")
+            .configure(primaryButtonTitle: "Confirm button") {
+                self.navigationController?.presentedViewController?.dismiss(animated: true)
+            }
+            .configure(secondaryButtonTitle: "Close") {
+                self.navigationController?.presentedViewController?.dismiss(animated: true)
+            }
+            .build()
+
+        navigationController?.present(dialog, animated: true)
+    }
+
+    @objc func showAlertDialog() {
+        let dialog = NatDialogController
+            .alertStyleBuilder
+            .configure(body: "Some body text to make a snapshot text without think about the future.")
+            .configure(primaryButtonTitle: "Confirm") {
+                self.navigationController?.presentedViewController?.dismiss(animated: true)
+            }
+            .configure(secondaryButtonTitle: "Close") {
+                self.navigationController?.presentedViewController?.dismiss(animated: true)
+            }
+            .build()
+
+        navigationController?.present(dialog, animated: true)
+    }
+
+    @objc func showNotDismissableDialog() {
+        let dialog = NatDialogController
+            .alertStyleBuilder
+            .configure(body: "Tapping outside the Dialog does not dismiss it. Dismissable is a property for Dialog and can be configured for all styles.")
+            .configure(isDismissable: false)
+            .configure(primaryButtonTitle: "Confirm") {
+                self.navigationController?.presentedViewController?.dismiss(animated: true)
+            }
+            .configure(secondaryButtonTitle: "Close") {
+                self.navigationController?.presentedViewController?.dismiss(animated: true)
+            }
+            .build()
+
+        navigationController?.present(dialog, animated: true)
+    }
 ```

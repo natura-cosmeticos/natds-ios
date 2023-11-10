@@ -12,7 +12,7 @@
 | Color          | Primary, Secondary, Default, Inverse   | ✅  Available     |
 | Action Right         | -        | ✅  Available     |
 | Action Left         | -        | ✅  Available     |
-| Content Position         | Left, Center        | ✅  Available     |
+| Content Position         | Left, Center        | ❌  Not applicable     |
 | Content Type         | Text, Media, Search        | ✅  Available     |
 | Content Proeminent         | True, False        | 🗂️  Backlog     |
  
@@ -24,83 +24,52 @@
 <br><br>
 
 <p align="center">
-  <img alt="App Bar 1" src="./images/appbar_1.png" width="30%"> 
+  <img alt="App Bar 1" src="./images/appbar_1.png" width="20%"> 
 &nbsp; &nbsp; &nbsp; 
-  <img alt="App Bar 2" src="./images/appbar_2.png" width="30%">
+  <img alt="App Bar 2" src="./images/appbar_2.png" width="20%">
 &nbsp; &nbsp; &nbsp; 
-  <img alt="App Bar 3" src="./images/appbar_3.png" width="30%">
- &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+  <img alt="App Bar 3" src="./images/appbar_3.png" width="20%">
+ &nbsp; &nbsp;&nbsp; 
+ <img alt="App Bar 1" src="./images/appbar_4.png" width="20%"> 
 </p>
 <br>
 
 <p align="center">
-  <img alt="App Bar 1" src="./images/appbar_4.png" width="30%"> 
+  
+  <img alt="App Bar 2" src="./images/appbar_5.png" width="20%">
 &nbsp; &nbsp; &nbsp; 
-  <img alt="App Bar 2" src="./images/appbar_5.png" width="30%">
+  <img alt="App Bar 3" src="./images/appbar_6.png" width="20%">
+ &nbsp; &nbsp;&nbsp; 
+ <img alt="App Bar 1" src="./images/appbar_7.png" width="20%"> 
 &nbsp; &nbsp; &nbsp; 
-  <img alt="App Bar 3" src="./images/appbar_6.png" width="30%">
- &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+  <img alt="App Bar 2" src="./images/appbar_8.png" width="20%">
 </p>
 <br>
 <p align="center">
-  <img alt="App Bar 1" src="./images/appbar_7.png" width="30%"> 
+  
+  <img alt="App Bar 3" src="./images/appbar_9.png" width="20%">
+  &nbsp; &nbsp;&nbsp; 
+  <img alt="App Bar 1" src="./images/appbar_10.png" width="20%"> 
 &nbsp; &nbsp; &nbsp; 
-  <img alt="App Bar 2" src="./images/appbar_8.png" width="30%">
-&nbsp; &nbsp;&nbsp; 
-  <img alt="App Bar 3" src="./images/appbar_9.png" width="30%">
-  &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+  <img alt="App Bar 3" src="./images/appbar_11.png" width="20%">
+  &nbsp; &nbsp;&nbsp; 
+ <img alt="App Bar 1" src="./images/appbar_12.png" width="20%"> 
 </p>
 <br>
 <p align="center">
-  <img alt="App Bar 1" src="./images/appbar_10.png" width="30%"> 
-&nbsp; &nbsp; &nbsp; 
-  <img alt="App Bar 3" src="./images/appbar_11.png" width="30%">
-  &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+  <img alt="App Bar 3" src="./images/appbar_13.png" width="20%">
+  &nbsp; &nbsp;&nbsp; 
+  <img alt="App Bar 1" src="./images/appbar_14.png" width="20%"> 
 </p>
 
 <br>
 
 ### How to use it?
-Add the app bar component in your xml layout file
-Important! Do not use the default theme, use the NoActionBar variant. You can check more info [Getting Started guide](../README.md).
-```android
-        <com.natura.android.appbartop.StandardAppBarTop
-                   android:id="@+id/appBar"
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:theme="?toolbarDefaultTheme"
-                   app:actionLeft="true"
-                   app:actionRight="true"
-                   app:appBarColor="colorDefault"
-                   app:contentPosition="center"
-                   app:contentText="Title Page Center"
-                   app:contentType="text"
-                   app:enabledElevation="true"
-                   app:proeminentContent="false"
-                   app:scrollable="true">
-       
-                   <com.natura.android.iconButton.IconButton
-                       android:id="@+id/buttonActionViewIconButtonActionRight"
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:layout_gravity="center_vertical"
-                       app:buttonColor="defaultColor"
-                       app:iconName="outlined_default_mockup"
-                       app:sizeButton="semi"
-                       app:styleButton="inherit" />
-       
-                   <Button
-                       android:id="@+id/buttonActionViewOutlinedButtonActionRight"
-                       style="?textButton"
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:minWidth="?sizeHuge"
-                       android:text="DEFAULT" />
-               </com.natura.android.appbartop.StandardAppBarTop>
+
+```swift
+self.navigationController?.configure(appBarColor: .default, appBarContentType: .colorLogo)
+self.navigationController?.configure(color: .primary)
+self.navigationController?.configure(elevation: true)
+self.configure(actionRight: [iconButton, customView])
+self.configure(actionLeft: iconButton)
 ```
-
-<br>
-
-## More code
-You can check out more examples from SampleApp by clicking [AppBar Top Example](https://github.com/natura-cosmeticos/natds-android/tree/master/sample/src/main/res/layout/appbartop_button_action.xml).
-

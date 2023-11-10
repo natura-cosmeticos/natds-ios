@@ -15,41 +15,51 @@
 
 ## Technical Usages Examples
 
-![Counter](./images/counter_lightMode.png)
+![Counter](./images/counter.png)
 
 
-##### Counter with semix size
 
-![Counter](./images/counter_semix.png)
+```swift
+    let enableMediumCounter: NatCounter = {
+        let counter = NatCounter(size: .medium)
+        counter.translatesAutoresizingMaskIntoConstraints = false
 
-```android
-   <com.natura.android.counter.Counter
-        android:id="@+id/counterSemix"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:ctr_disabled="none"
-        app:ctr_label="Label"
-        app:ctr_size="semix"/>
+        return counter
+    }()
+
+    let enableMediumCounterWithLabel: NatCounter = {
+        let counter = NatCounter(size: .medium, minimumValue: .value1)
+        counter.configure(label: "All Enabled Medium")
+        counter.configureKeyboard(state: .disabled)
+        counter.translatesAutoresizingMaskIntoConstraints = false
+        
+        return counter
+    }()
+
+    let subtractDisabledMediumCounter: NatCounter = {
+        let counter = NatCounter(size: .medium)
+        counter.configure(label: "Subtract Disabled Medium")
+        counter.configure(button: .subtract, state: .disabled)
+        counter.translatesAutoresizingMaskIntoConstraints = false
+
+        return counter
+    }()
+
+    let addDisabledSemiCounter: NatCounter = {
+        let counter = NatCounter(size: .semi)
+        counter.configure(label: "Add Disabled Semi")
+        counter.configure(button: .add, state: .disabled)
+        counter.translatesAutoresizingMaskIntoConstraints = false
+
+        return counter
+    }()
+
+    let allDisabledSemiCounter: NatCounter = {
+        let counter = NatCounter(size: .semi)
+        counter.configure(label: "All Disabled Semi")
+        counter.configure(button: .all, state: .disabled)
+        counter.translatesAutoresizingMaskIntoConstraints = false
+
+        return counter
+    }()
 ```
-
-<br><br>
-
-##### Counter with medium size and no label
-
-![Counter](./images/counter_nolabel.png)
-
-```android
-   <com.natura.android.counter.Counter
-        android:id="@+id/counterSemix"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:ctr_disabled="none"
-        app:ctr_size="medium"/>
-```
-
-<br><br>
-
-## More code
-
-You can check out more examples from SampleApp by
-clicking [here](https://github.com/natura-cosmeticos/natds-android/tree/master/sample/src/main/res/layout/activity_counter.xml)

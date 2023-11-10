@@ -19,102 +19,197 @@
 ## Technical Usages Examples
 
 <p align="center">
-  <img alt="Textfield Light" src="./images/textfield_1.png" width="20%"> 
+  <img alt="Textfield Light" src="./images/textfield1.png" width="30%"> 
 &nbsp;
-  <img alt="Textfield Dark" src="./images/textfield_2.png" width="20%">
+  <img alt="Textfield Dark" src="./images/textfield2.png" width="30%">
   &nbsp;
-  <img alt="Textfield Dark" src="./images/textfield_3.png" width="20%">
-  &nbsp;
-  <img alt="Textfield Dark" src="./images/textfield_4.png" width="20%">
+  <img alt="Textfield Dark" src="./images/textfield3.png" width="30%">
 </p>
 
 <br>
 
-##### Textfield with text type   
+```swift
+    private lazy var textField: TextField = {
+        let field = TextField(theme: .avonLight)
+        field.title = "Text"
+        field.type = .text
+        field.placeholder = "Type some text"
+        field.delegate = self
+        return field
+    }()
 
-![TextField with text](./images/textfield_default.png)
+    private lazy var nameField: TextField = {
+        let field = TextField()
+        field.title = "Name"
+        field.type = .name
+        field.placeholder = "Type your name"
+        field.delegate = self
+        return field
+    }()
 
-```android
-    <com.natura.android.textfield.TextField
-        android:id="@+id/text_item"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Type some text"
-        app:text_field_label="Label" />
+    private lazy var numberTextField: TextField = {
+        let field = TextField()
+        field.title = "Number"
+        field.type = .number
+        field.placeholder = "Type numbers"
+        field.delegate = self
+        return field
+    }()
+
+    private lazy var passwordTextField: TextField = {
+        let field = TextField()
+        field.title = "Password"
+        field.type = .password(keyboardType: .default)
+        field.placeholder = "Type your password"
+        field.delegate = self
+        return field
+    }()
+
+    private lazy var numberPasswordTextField: TextField = {
+        let field = TextField()
+        field.title = "Password - Only numbers"
+        field.type = .password(keyboardType: .numberPad)
+        field.placeholder = "Type your password (only numbers)"
+        field.delegate = self
+        return field
+    }()
+
+    private lazy var errorTextField: TextField = {
+        let field = TextField()
+        field.title = "Error"
+        field.placeholder = "Input with error"
+        field.configure(state: .error, with: "Opss... this input has an error!")
+        field.delegate = self
+        return field
+    }()
+
+    private lazy var errorTextFieldMultpleLines: TextField = {
+        let field = TextField()
+        field.title = "Error"
+        field.placeholder = "Input with error"
+        field.configure(state: .error,
+                        with: "Opss... this input has an error - Neque porro quisquam est qui dolorem ipsum quia dolor sit amet.")
+        field.delegate = self
+        return field
+    }()
+
+    private lazy var helperTextField: TextField = {
+        let field = TextField()
+        field.title = "Helper"
+        field.placeholder = "Input with helper"
+        field.helper = "This input has a helper text"
+        field.delegate = self
+        return field
+    }()
+
+    private lazy var mediumTextField: TextField = {
+        let field = TextField()
+        field.configure(size: .medium)
+        field.title = "Medium Size"
+        field.type = .text
+        field.placeholder = "A text field with height size medium"
+        field.delegate = self
+        return field
+    }()
+
+    private lazy var mediumXTextField: TextField = {
+        let field = TextField()
+        field.configure(size: .mediumX)
+        field.title = "MediumX Size (Default)"
+        field.type = .text
+        field.placeholder = "A text field with height size mediumX"
+        field.delegate = self
+        return field
+    }()
+
+    private lazy var successTextField: TextField = {
+        let field = TextField()
+        field.title = "Success"
+        field.type = .text
+        field.placeholder = "Input with success"
+        field.configure(state: .success, with: "Success message validating what's typed.")
+        field.delegate = self
+        return field
+    }()
+
+    private lazy var longSuccessTextField: TextField = {
+        let field = TextField()
+        field.title = "Success"
+        field.type = .text
+        field.placeholder = "Input with success"
+        field.configure(state: .success,
+                        with: "A very, very long success message validating what's typed and giving more info.")
+        field.delegate = self
+        return field
+    }()
+
+    private lazy var requiredTextField: TextField = {
+        let field = TextField()
+        field.title = "Required"
+        field.type = .text
+        field.placeholder = "This text field is required"
+        field.configure(required: true)
+        field.delegate = self
+        return field
+    }()
+
+    private lazy var disabledTextField: TextField = {
+        let field = TextField()
+        field.title = "Disabled"
+        field.type = .text
+        field.placeholder = "Disabled input"
+        field.delegate = self
+        field.configure(isEnabled: false)
+        return field
+    }()
+
+    private lazy var readOnlyTextField: TextField = {
+        let field = TextField()
+        field.title = "Read only"
+        field.type = .text
+        field.text = "Input is read-only"
+        field.delegate = self
+        field.configure(readOnly: true)
+        return field
+    }()
+
+    private lazy var filledTextField: TextField = {
+        let field = TextField()
+        field.title = "Filled"
+        field.type = .text
+        field.text = "Filled text field"
+        field.delegate = self
+        return field
+    }()
+
+    private lazy var actionIconTextField: TextField = {
+        let field = TextField()
+        field.title = "Action with icon"
+        field.type = .text
+        field.placeholder = "Icon has action on touch"
+        field.configure(iconButton: iconButton)
+        field.delegate = self
+        return field
+    }()
+
+    private lazy var iconButton: NatIconButton = {
+        let iconButton = NatIconButton(style: .standardDefault)
+        iconButton.configure(icon: getIcon(.outlinedDefaultMockup))
+        iconButton.translatesAutoresizingMaskIntoConstraints = false
+        iconButton.heightAnchor.constraint(equalToConstant: NatSpacing.semi).isActive = true
+        iconButton.widthAnchor.constraint(equalToConstant: NatSpacing.semi).isActive = true
+        return iconButton
+    }()
+
+    private lazy var actionImageTextField: TextField = {
+        let field = TextField()
+        field.title = "Action with image"
+        field.type = .text
+        field.placeholder = "Image has action on touch"
+        field.configure(image: UIImage(named: "ImageAreaLimit")) {
+            print("That's the image action")
+        }
+        field.delegate = self
+        return field
+    }()
 ```
-<br>
-
-Kotlin
-
-<br>
-
-```kotlin
-    val textField = findViewById<TextField>(R.id.myTextField)
-    textField.hint = "Type some text"
-    textField.label = "Text"
-```
-
-<br><br>
-
-##### Textfield with error
-
-![TextField with error](./images/textfield_withError.png)
-
-```android
-    <com.natura.android.textfield.TextField
-        android:id="@+id/error_long_footer_item"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Input with error"
-        app:text_field_footer="Opss...This input has an error - Neque porro quisquam est qui dolorem ipsum quia dolor sit amet."
-        app:text_field_label="Error"
-        app:text_field_state="error" />
-```
-
-<br>
-
-Kotlin
-
-<br>
-
-```kotlin
-    val textField = findViewById<TextField>(R.id.myTextField)
-    textField.hint = "Input with error"
-    textField.state = TextField.State.ERROR
-    textField.label = "Error"
-    textField.footer = "Opss...This input has an error - Neque porro quisquam est qui dolorem ipsum quia dolor sit amet."
-```
-
-<br><br>
-
-##### Textfield with image
-
-![TextField with image](./images/textfield_withImage.png)
-
-```android
-     <com.natura.android.textfield.TextField
-        android:id="@+id/action_image_item"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Icon has action on touch"
-        app:text_field_image="@drawable/textfield_image_arealimit"
-        app:text_field_label="Action with image" />
-```
-
-<br>
-
-Kotlin
-
-<br>
-
-```kotlin
-    val textField = findViewById<TextField>(R.id.myTextField)
-    textField.hint = "Icon has action on touch"
-    textField.label = "Action with image"
-    textField.image = R.drawable.myImage
-```
-<br>
-
-
-## More code
-You can check out more examples from SampleApp by clicking [here](https://github.com/natura-cosmeticos/natds-android/tree/master/sample/src/main/res/layout/activity_textfield.xml).

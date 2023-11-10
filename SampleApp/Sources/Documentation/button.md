@@ -170,7 +170,3 @@ button.configure(title: "Outlined")
 let button = NatButton(style: .text, theme: .avonLight)
 button.configure(title: "Text")
 ```
-
-
-## More code
-You can check out more examples from SampleApp by clicking [here](https://github.com/natura-cosmeticos/natds-ios/blob/master/SampleApp/Sources/Sample/Components/Button/ButtonsItemViewController.swift).

@@ -11,128 +11,45 @@
 | Variant             | Standard                          | ✅  Available     |
 | Title             | True, False                           | ✅  Available     |
 | Icon             | True, False                           | ✅  Available     |
-| Action Button        | None, Inline, Block, Icon Button           | ✅  Available     |
+| Action Button        | None, Inline, Block, Icon Button           | 🗂️ Backlog     |
 | Feedback (color)      | Default, Success, Error, Warning, Info            | ✅  Available     |
-| Timer     | Minimum, Intermediary, Indeterminated, Custom             | ✅  Available     |
+| Timer     | Minimum, Intermediary, *Indeterminated, Custom             | 🛠️ In improvement     |
 | Position     | Top center, Bottom center             | ✅  Available     |
-| Animation     | False, Right, Left, Center Bottom, Center Top        | ✅  Available     |
+| Animation     | False, Right, Left, Center Bottom, Center Top        | 🗂️ Backlog     |
 
 <br>
 
 ## Technical Usages Examples
 
-> This component has no xml attributes, only available in view code with Kotlin
 
-<br><br>
+p align="center">
+  <img alt="Snackbar 1" src="./images/snackbar1.png" width="20%"> 
+&nbsp; &nbsp; &nbsp; 
+  <img alt="Snackbar 2" src="./images/snackbar2.png" width="20%">
+&nbsp; &nbsp; &nbsp; 
+  <img alt="Snackbar 3" src="./images/snackbar3.png" width="20%">
+ &nbsp; &nbsp;&nbsp; 
+ <img alt="Snackbar 4" src="./images/snackbar4.png" width="20%"> 
+</p>
+<br>
 
 <p align="center">
-  <img alt="Card 1" src="./images/snackbar_1.png" width="40%"> 
-&nbsp;
-  <img alt="Card 2" src="./images/snackbar_2.png" width="40%">
+  <img alt="Snackbar 5" src="./images/snackbar5.png" width="20%">
+&nbsp; &nbsp; &nbsp; 
+  <img alt="Snackbar 6" src="./images/snackbar6.png" width="20%">
+ &nbsp; &nbsp;&nbsp; 
+ <img alt="Snackbar 7" src="./images/snackbar7.png" width="20%"> 
+&nbsp; &nbsp; &nbsp; 
+  <img alt="Snackbar 8" src="./images/snackbar8.png" width="20%">
 </p>
 
 <br>
 
-```android
-   SnackBar(
-      mainView = binding.root,
-      message = "This message is showing according with default test",
-      mainButtonTitle = "Button",
-      mainButtonAction = {
-        Toast.makeText(this,"SnackBar main button clicked",Toast.LENGTH_SHORT).show()
-      },
-      mainButtonType = SnackbarActionButtonType.INLINE_BOTTON,
-    )
+```swift
+    let snackbar = NatSnackbar(color: .inverse)
+    snackbar.configure(duration: .long)
+    snackbar.configure(position: .bottom)
+    snackbar.configure(icon: getIcon(.outlinedAlertCheck))
+    snackbar.configure(title: "This is my title")
+    snackbar.show()
 ```
-
-<br><br>
-
-##### Title
-
-<p align="center">
-  <img alt="Card 1" src="./images/snackbar_2_.png" width="30%"> 
-</p>
-
-```android
-   title = "Title",
-   showTitle = true,
-```
-
-<br>
-
-##### Icon
-
-<p align="center">
-  <img alt="Card 1" src="./images/snackbar_2_.png" width="30%"> 
-</p>
-
-```android
-   showIcon = true,
-   iconName = iconNameProp
-```
-
-<br>
-
-##### Button
-
-<p align="center">
-  <img alt="Card 1" src="./images/snackbar_1_.png" width="30%"> 
-</p>
-
-```android
-   mainButtonTitle = "Button",
-   mainButtonAction = {
-     Toast.makeText(this,"SnackBar main button clicked",Toast.LENGTH_SHORT).show()
-   },
-   mainButtonType = SnackbarActionButtonType.INLINE_BOTTON
-```
-
-<br>
-
-##### Color
-
-<p align="center">
-  <img alt="Card 1" src="./images/snackbar_4.png" width="30%"> 
-</p>
-
-```android
-   color = SnackbarColorType.SUCCESS
-```
-
-<br>
-
-##### Position
-
-<p align="center">
-  <img alt="Card 1" src="./images/snackbar_5.png" width="30%"> 
-</p>
-
-```android
-   animation = true,
-   positionType = SnackbarPositionType.TOP_CENTER,
-   animationType = SnackbarAnimationtype.NONE
-```
-
-<br>
-
-##### Animation
-
-```android
-   animationType = SnackbarAnimationtype.CENTER
-```
-
-<br>
-
-##### Timer
-
-```android
-   timerType = SnackbarTimerType.MINIMUM
-```
-
-
-<br>
-
-## More code
-
-You can check out more examples from SampleApp by
-clicking [here](https://github.com/natura-cosmeticos/natds-android/tree/master/sample/src/main/res/layout/activity_select.xml)

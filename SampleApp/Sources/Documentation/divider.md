@@ -11,55 +11,36 @@
 
 ## Technical Usages Examples
 
-![](./images/divider_lightMode.png)
+![](./images/divider.png)
 
 <br>
 
-##### Divider with fullBleed type
 
-![Divider](./images/divider_fullBleed.png)
+```swift
+    private let dividerFullBleed: Divider = {
+        let divider = Divider()
+        divider.configure(style: .fullBleed)
+        divider.translatesAutoresizingMaskIntoConstraints = false
 
-```android
-    <com.natura.android.divider.Divider
-       android:id="@+id/divider"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       app:dividerType="fullBleed" />
+        return divider
+    }()
+
+    private let dividerMiddle: Divider = {
+        let divider = Divider()
+        divider.configure(style: .middle)
+        divider.translatesAutoresizingMaskIntoConstraints = false
+
+        return divider
+    }()
+
+    private let dividerInset: Divider = {
+        let divider = Divider()
+        divider.configure(style: .inset)
+        divider.translatesAutoresizingMaskIntoConstraints = false
+
+        return divider
+    }()
 ```
-
-<br><br>
-
-##### Divider with inset type
-
-![Divider](./images/divider_inset.png)
-
-```android
-    <com.natura.android.divider.Divider
-       android:id="@+id/divider"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       app:dividerType="inset" />
-```
-
-<br><br>
-
-##### Divider with middle type
-
-![Divider](./images/divider_middle.png)
-
-```android
-    <com.natura.android.divider.Divider
-       android:id="@+id/divider"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       app:dividerType="middle" />
-```
-
-<br><br>
-
-## More code
-You can check out more examples from SampleApp by clicking [here](https://github.com/natura-cosmeticos/natds-android/tree/master/sample/src/main/res/layout/activity_divider.xml).
-
 
 ## Attention points
    

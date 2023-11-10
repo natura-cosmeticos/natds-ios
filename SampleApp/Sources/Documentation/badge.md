@@ -17,77 +17,43 @@
       
 ## Technical Usages Examples
 
-![Badge](./images/badgeScreen.png)
+![Badge](./images/badge.png)
 
-#### Badge Drawable
 
-We use BadgeDrawable class to draw this component on screen. 
-For that to happen, it is necessary to instantiate the BadgeDrawable class, passing three parameters: 
+```swift
+    private lazy var badgeableViewDot: BadgeableView = {
+        let view = BadgeableView(frame: .init(x: 0, y: 0, width: 24, height: 24))
+        view.configure(badgeStyle: .dot, withColor: .primary)
+        return view
+    }()
 
-1. context application
-2. number that will be drawn, when the variant is standard
-3. the drawable that will receive the badge
-4. background color 
-3. numerical limit, when the variant is standard
-        
-#### Examples
+    private lazy var badgeableViewPulse: BadgeableView = {
+        let view = BadgeableView(frame: .init(x: 0, y: 0, width: 24, height: 24))
+        view.configure(badgeStyle: .pulse, withColor: .primary)
+        return view
+    }()
 
-##### If you want to display an icon with a Badge with number
+    private lazy var badgeableViewOneChartStandard: BadgeableView = {
+        let view = BadgeableView(frame: .init(x: 0, y: 0, width: 24, height: 24))
+        view.configure(badgeStyle: .standard, withColor: .primary, theme: .avonLight)
+        view.setBadge(count: 100)
+        view.configure(limit: .max9)
+        return view
+    }()
 
-* Create a drawable layer-list with two items inside. The first item should be your base icon and the second should be the placeholder for your badge.
+    private lazy var badgeableViewTwoCharStandard: BadgeableView = {
+        let view = BadgeableView(frame: .init(x: 0, y: 0, width: 24, height: 24))
+        view.configure(badgeStyle: .standard, withColor: .secondary)
+        view.setBadge(count: 100)
+        view.configure(limit: .max99)
+        return view
+    }()
 
-```android
- icon_base_badge.xml
- 
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:drawable="@drawable/outlined_default_mockup"
-        android:gravity="center" />
-
-    <item
-        android:id="@+id/ic_badge_placeholder"
-        android:drawable="@android:color/transparent" />
-</layer-list>
-
+    private lazy var badgeableViewThreeCharStandard: BadgeableView = {
+        let view = BadgeableView(frame: .init(x: 0, y: 0, width: 24, height: 24))
+        view.configure(badgeStyle: .standard, withColor: .success)
+        view.setBadge(count: 1000)
+        view.configure(limit: .unlimited)
+        return view
+    }()
    ```
-
-* Use icon_base_badge.xml as your ImageView source.
-
-* Create a new instance of BadgeDrawable passing the context, the number that you want to be displayed and the image will be inflated with Badge.
-
-```kotlin
-    val badgeDrawable: BadgeDrawable
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_badge)
-        badgeDrawable = BadgeDrawable(this, number, imageViewBadged.drawable)
-    }
-   ```
-
-* If you need to update the number inside a Badge, call the method 'updateNotificationBadge'
-```android
-   badgeDrawable.updateBadgeDrawable(number)
-   ```
-
-#### Badge
-
-We use Badge class to draw this component on screen, as a pre-defined visual component, ready to be inserted into a layout. 
-For that to happen, it is necessary add the Badge component in your xml layout file. It has some parameters: 
-
- 1. badgeColor
- 2. badgeLimitNumber
- 3. badgeNumber
- 4. badgeVariant
-        
-#### Example
-
-```android
-<com.natura.android.badge.Badge
-        android:id="@+id/badgeDotColorPrimary"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:badgeColor="colorPrimary"
-        app:badgeVariant="dot" />
-</com.natura.android.card.Card>
-```
