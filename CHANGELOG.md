@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [7.11.0](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.32...7.11.0) (2023-11-13)
+
+- Adding new tokens and change other existing tokens
+
 ### [7.10.32](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.31...7.10.32) (2023-09-15)
 
 - Adding prop language to Logo component
