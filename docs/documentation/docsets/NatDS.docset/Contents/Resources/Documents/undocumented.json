@@ -1898,6 +1898,34 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Logo/NatLogo+Model.swift",
+      "line": 43,
+      "symbol": "NatLogo.Language",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Logo/NatLogo+Model.swift",
+      "line": 44,
+      "symbol": "NatLogo.Language.none",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Logo/NatLogo+Model.swift",
+      "line": 45,
+      "symbol": "NatLogo.Language.es",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/vagrant/git/Sources/Public/Components/Logo/NatLogo+Model.swift",
+      "line": 46,
+      "symbol": "NatLogo.Language.pt",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/vagrant/git/Sources/Public/Components/Logo/NatLogo+Size.swift",
       "line": 20,
       "symbol": "NatLogo.Size.medium",
@@ -1976,7 +2004,7 @@
     },
     {
       "file": "/Users/vagrant/git/Sources/Public/Components/Logo/NatLogo.swift",
-      "line": 64,
+      "line": 66,
       "symbol": "NatLogo.init(size:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
