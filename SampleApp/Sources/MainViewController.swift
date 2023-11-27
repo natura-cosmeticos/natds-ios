@@ -33,13 +33,12 @@ final class MainViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = dataSource.sections[indexPath.section].items[indexPath.row]
+        
         let cell = tableView.dequeueReusableCell(for: indexPath, cellType: UITableViewCell.self)
-
         cell.textLabel?.text = item.name
         cell.textLabel?.textColor = NatColors.onBackground
         cell.selectionStyle = .none
         cell.backgroundColor = NatColors.background
-
         return cell
     }
 
