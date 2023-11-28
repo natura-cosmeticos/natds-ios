@@ -12,6 +12,8 @@ internal final class NatCounterButton: UIView, Pulsable {
 
     var iconButton: UIImageView = {
         let image = UIImageView()
+        image.image = AssetsPath.iconOutlinedActionAdd.rawValue
+        image.translatesAutoresizingMaskIntoConstraints = false
         return image
     }()
 
@@ -33,7 +35,8 @@ internal final class NatCounterButton: UIView, Pulsable {
         NSLayoutConstraint.activate([
             iconButton.centerYAnchor.constraint(equalTo: centerYAnchor),
             iconButton.centerXAnchor.constraint(equalTo: centerXAnchor),
-            iconButton.heightAnchor.constraint(equalToConstant: 20)
+            iconButton.heightAnchor.constraint(equalToConstant: 20),
+            iconButton.widthAnchor.constraint(equalToConstant: 20)
         ])
     }
 

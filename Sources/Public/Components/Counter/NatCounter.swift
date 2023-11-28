@@ -62,7 +62,7 @@ public final class NatCounter: UIView, UITextFieldDelegate {
         let stackView = UIStackView()
         stackView.axis = .horizontal
         stackView.spacing = 0
-        stackView.distribution = .fillEqually
+        stackView.distribution = .fill
         stackView.alignment = .fill
         stackView.layer.borderColor = NatColors.highEmphasis.cgColor
         stackView.layer.borderWidth = 0.5
@@ -157,13 +157,11 @@ public final class NatCounter: UIView, UITextFieldDelegate {
     let subtractView: NatCounterButton = {
         let view = NatCounterButton()
         
-   
-            let arrowView = UIImageView()
-            arrowView.image = AssetsPath.iconOutlinedNavigationArrowBottomTemplate.rawValue
-            arrowView.translatesAutoresizingMaskIntoConstraints = false
-           
+        let minusView = UIImageView()
+        minusView.image = AssetsPath.iconOutlinedActionSubtract.rawValue
+        minusView.translatesAutoresizingMaskIntoConstraints = false
         
-        view.iconButton.image = arrowView.image
+        view.iconButton.image = minusView.image
         view.translatesAutoresizingMaskIntoConstraints = false
 
         return view
@@ -171,7 +169,12 @@ public final class NatCounter: UIView, UITextFieldDelegate {
 
     let addView: NatCounterButton = {
         let view = NatCounterButton()
-        view.iconButton.image = AssetsPath.iconOutlinedActionAdd.rawValue
+        
+        let plusView = UIImageView()
+        plusView.image = AssetsPath.iconOutlinedActionAdd.rawValue
+        plusView.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.iconButton.image = plusView.image
         view.translatesAutoresizingMaskIntoConstraints = false
 
         return view
@@ -344,6 +347,10 @@ public final class NatCounter: UIView, UITextFieldDelegate {
         stackViewContainer.addArrangedSubview(subtractView)
         stackViewContainer.addArrangedSubview(numCounterLabelView)
         stackViewContainer.addArrangedSubview(addView)
+        
+        stackViewContainer.distribution = .fill
+        let middleViewWidth = numCounterLabelView.widthAnchor.constraint(equalTo: subtractView.widthAnchor, multiplier: 1.2)
+        middleViewWidth.isActive = true
 
         NSLayoutConstraint.activate([
             stackViewContainer.topAnchor.constraint(equalTo: topAnchor, constant: 24),
