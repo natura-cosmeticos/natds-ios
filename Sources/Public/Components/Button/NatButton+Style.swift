@@ -20,9 +20,9 @@ extension NatButton {
      */
 
     public struct Style {
-        let applyStyle: (AvailableTheme, NatButton) -> Void
-        let changeState: (AvailableTheme, NatButton) -> Void?
-        let applyTitle: (String, AvailableTheme, NatButton) -> Void
+        let applyStyle: (AvailableTheme, Color, NatButton) -> Void
+        let changeState: (AvailableTheme, Color, NatButton) -> Void?
+        let applyTitle: (String, AvailableTheme, Color, NatButton) -> Void
     }
 }
 

@@ -1,10 +1,10 @@
 enum ButtonTextStyle {
-    static func applyStyle(_ theme:AvailableTheme, on button: UIButton) {
+    static func applyStyle(_ theme:AvailableTheme, _ color:Color, on button: UIButton) {
         ButtonStyle.applyStyle(on: button)
-        applyStyleForStates(theme: theme, on: button)
+        applyStyleForStates(theme: theme, color: color, on: button)
     }
 
-    static func applyStyleForStates(theme:AvailableTheme, on button: UIButton) {
+    static func applyStyleForStates(theme:AvailableTheme, color:Color, on button: UIButton) {
         
         if theme == .none {
             switch button.state {
@@ -30,23 +30,99 @@ enum ButtonTextStyle {
         }
     }
 
-    static func applyStyleForTitle(_ title: String, theme:AvailableTheme, on button: UIButton) {
+    static func applyStyleForTitle(_ title: String, theme:AvailableTheme, color:Color, on button: UIButton) {
         
         if theme == .none {
-            ButtonStyle.applyStyleForTitle(
-                title,
-                colorForNormal: getUIColorFromComponentAttributes(\.buttonTextColorEnableLabel),
-                colorForDisabled: getUIColorFromComponentAttributes(\.buttonTextColorDisableLabel),
-                on: button
-            )
+            switch color {
+            case .primary:
+                ButtonStyle.applyStyleForTitle(
+                    title,
+                    colorForNormal: getUIColorFromTokens(\.colorPrimary),
+                    colorForDisabled: getUIColorFromComponentAttributes(\.buttonTextColorDisableLabel),
+                    on: button
+                )
+            case .onPrimary:
+                ButtonStyle.applyStyleForTitle(
+                    title,
+                    colorForNormal: getUIColorFromTokens(\.colorOnPrimary),
+                    colorForDisabled: getUIColorFromComponentAttributes(\.buttonTextColorDisableLabel),
+                    on: button
+                )
+            case .secondary:
+                ButtonStyle.applyStyleForTitle(
+                    title,
+                    colorForNormal: getUIColorFromTokens(\.colorSecondary),
+                    colorForDisabled: getUIColorFromComponentAttributes(\.buttonTextColorDisableLabel),
+                    on: button
+                )
+            case .onSecondary:
+                ButtonStyle.applyStyleForTitle(
+                    title,
+                    colorForNormal: getUIColorFromTokens(\.colorOnSecondary),
+                    colorForDisabled: getUIColorFromComponentAttributes(\.buttonTextColorDisableLabel),
+                    on: button
+                )
+            case .inverse:
+                ButtonStyle.applyStyleForTitle(
+                    title,
+                    colorForNormal: getUIColorFromTokens(\.colorSurfaceInverse),
+                    colorForDisabled: getUIColorFromComponentAttributes(\.buttonTextColorDisableLabel),
+                    on: button
+                )
+            case .onInverse:
+                ButtonStyle.applyStyleForTitle(
+                    title,
+                    colorForNormal: getUIColorFromTokens(\.colorOnSurfaceInverse),
+                    colorForDisabled: getUIColorFromComponentAttributes(\.buttonTextColorDisableLabel),
+                    on: button
+                )
+            }
         }
         else {
-            ButtonStyle.applyStyleForTitle(
-                title,
-                colorForNormal: hexStringToUIColor(hex: theme.newInstance.components.buttonTextColorEnableLabel),
-                colorForDisabled: hexStringToUIColor(hex: theme.newInstance.components.buttonTextColorDisableLabel),
-                on: button
-            )
+            switch color {
+            case .primary:
+                ButtonStyle.applyStyleForTitle(
+                    title,
+                    colorForNormal: hexStringToUIColor(hex: theme.newInstance.tokens.colorPrimary),
+                    colorForDisabled: hexStringToUIColor(hex: theme.newInstance.components.buttonTextColorDisableLabel),
+                    on: button
+                )
+            case .onPrimary:
+                ButtonStyle.applyStyleForTitle(
+                    title,
+                    colorForNormal: hexStringToUIColor(hex: theme.newInstance.tokens.colorOnPrimary),
+                    colorForDisabled: hexStringToUIColor(hex: theme.newInstance.components.buttonTextColorDisableLabel),
+                    on: button
+                )
+            case .secondary:
+                ButtonStyle.applyStyleForTitle(
+                    title,
+                    colorForNormal: hexStringToUIColor(hex: theme.newInstance.tokens.colorSecondary),
+                    colorForDisabled: hexStringToUIColor(hex: theme.newInstance.components.buttonTextColorDisableLabel),
+                    on: button
+                )
+            case .onSecondary:
+                ButtonStyle.applyStyleForTitle(
+                    title,
+                    colorForNormal: hexStringToUIColor(hex: theme.newInstance.tokens.colorOnSecondary),
+                    colorForDisabled: hexStringToUIColor(hex: theme.newInstance.components.buttonTextColorDisableLabel),
+                    on: button
+                )
+            case .inverse:
+                ButtonStyle.applyStyleForTitle(
+                    title,
+                    colorForNormal: hexStringToUIColor(hex: theme.newInstance.tokens.colorSurfaceInverse),
+                    colorForDisabled: hexStringToUIColor(hex: theme.newInstance.components.buttonTextColorDisableLabel),
+                    on: button
+                )
+            case .onInverse:
+                ButtonStyle.applyStyleForTitle(
+                    title,
+                    colorForNormal: hexStringToUIColor(hex: theme.newInstance.tokens.colorOnSurfaceInverse),
+                    colorForDisabled: hexStringToUIColor(hex: theme.newInstance.components.buttonTextColorDisableLabel),
+                    on: button
+                )
+            }
         }
     }
 }

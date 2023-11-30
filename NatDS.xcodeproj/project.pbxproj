@@ -454,6 +454,7 @@
 		FF50B6442A040D5600FA824A /* NatChipFilter+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF50B6432A040D5600FA824A /* NatChipFilter+Color.swift */; };
 		FF50B6462A040D6B00FA824A /* NatChipFilter+Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF50B6452A040D6B00FA824A /* NatChipFilter+Position.swift */; };
 		FF50B6482A040D9700FA824A /* NatChipFilter+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF50B6472A040D9700FA824A /* NatChipFilter+Size.swift */; };
+		FFD9EB3B2B185D7000EBE815 /* NatButton+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9EB3A2B185D7000EBE815 /* NatButton+Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -923,6 +924,7 @@
 		FF50B6452A040D6B00FA824A /* NatChipFilter+Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatChipFilter+Position.swift"; sourceTree = "<group>"; };
 		FF50B6472A040D9700FA824A /* NatChipFilter+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatChipFilter+Size.swift"; sourceTree = "<group>"; };
 		FF60BC58D83695B3AC61ABB7BBE49B9C /* UIView+FrameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+FrameTests.swift"; sourceTree = "<group>"; };
+		FFD9EB3A2B185D7000EBE815 /* NatButton+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+Color.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -3036,6 +3038,7 @@
 				D331FCE6B4B326453609B50D92482230 /* NatButton+Style.swift */,
 				7CCF632B4501044E5062C574CCBBF74E /* NatButton.swift */,
 				797E615D255464D1002A59E0 /* NatButton+Icon.swift */,
+				FFD9EB3A2B185D7000EBE815 /* NatButton+Color.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -3576,6 +3579,7 @@
 				26740A4B24B3A62F00419526 /* NatBadge+Color.swift in Sources */,
 				7D5349E326C6A32E00F88EA7 /* NatImage+Radius.swift in Sources */,
 				26BB817924B944D100617EFC /* Badgeable.swift in Sources */,
+				FFD9EB3B2B185D7000EBE815 /* NatButton+Color.swift in Sources */,
 				84EB6B7524EBFEC000C6A792 /* GetThemeValidated.swift in Sources */,
 				1F40DBA4B8A3C9B0558AD83B5B2884D6 /* ButtonContainedStyle.swift in Sources */,
 				DC1FF6E52885F57500AC659C /* NatChip+Color.swift in Sources */,

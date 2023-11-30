@@ -54,32 +54,34 @@ public final class NatButton: UIButton, Pulsable {
     private var iconView: IconView?
     private var theme: AvailableTheme
     private var size: ButtonHeight
+    private var color: Color
 
     // MARK: - Public properties
 
     public override var isEnabled: Bool {
         didSet {
             self.isHighlighted = false
-            style.changeState(self.theme, self)
+            style.changeState(self.theme, self.color, self)
             iconView?.tintColor = titleLabel?.textColor
         }
     }
 
     // MARK: - Inits
 
-    public convenience init(style: Style, size: ButtonHeight = .semix, theme: AvailableTheme = .none) {
-        self.init(style: style, notificationCenter: NotificationCenter.default, size: size, theme: theme)
+    public convenience init(style: Style, size: ButtonHeight = .semix, theme: AvailableTheme = .none, color: Color = .primary) {
+        self.init(style: style, notificationCenter: NotificationCenter.default, size: size, theme: theme, color: color)
     }
 
-    init(style: Style, notificationCenter: NotificationCenterObservable, size: ButtonHeight = .semix, theme: AvailableTheme = .none) {
+    init(style: Style, notificationCenter: NotificationCenterObservable, size: ButtonHeight = .semix, theme: AvailableTheme = .none, color: Color = .primary) {
         self.style = style
         self.notificationCenter = notificationCenter
         self.theme = theme
         self.size = size
+        self.color = color
 
         super.init(frame: .zero)
 
-        style.applyStyle(self.theme, self)
+        style.applyStyle(self.theme, self.color, self)
         
         translatesAutoresizingMaskIntoConstraints = false
         
@@ -131,7 +133,7 @@ public final class NatButton: UIButton, Pulsable {
      - title: This String will be used to configure Normal & Disabled states.
      */
     public func configure(title: String) {
-        style.applyTitle(title, self.theme, self)
+        style.applyTitle(title, self.theme, self.color, self)
     }
 
     /**
@@ -181,7 +183,7 @@ public final class NatButton: UIButton, Pulsable {
 
 extension NatButton {
     @objc private func themeHasChanged() {
-        style.changeState(self.theme, self)
+        style.changeState(self.theme, self.color, self)
         iconView?.tintColor = titleLabel?.textColor
     }
 }
