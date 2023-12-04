@@ -10,6 +10,18 @@ enum ButtonOutlinedStyle {
         if theme == .none {
             
             switch color {
+                
+            case .colorDefault:
+                switch button.state {
+                case .normal:
+                    button.backgroundColor = getUIColorFromComponentAttributes(\.buttonOutlinedColorEnableBackground)
+                    button.layer.borderColor = getUIColorFromTokens(\.colorPrimary).cgColor
+                case .disabled:
+                    button.backgroundColor = getUIColorFromComponentAttributes(\.buttonOutlinedColorDisableBackground)
+                    button.layer.borderColor = getUIColorFromComponentAttributes(\.buttonOutlinedColorDisableBorder).cgColor
+                default: break
+                }
+                
             case .primary:
                 switch button.state {
                 case .normal:
@@ -80,6 +92,18 @@ enum ButtonOutlinedStyle {
         else {
           
             switch color {
+                
+            case .colorDefault:
+                switch button.state {
+                case .normal:
+                    button.backgroundColor = getUIColorFromComponentAttributes(\.buttonOutlinedColorEnableBackground)
+                    button.layer.borderColor = hexStringToUIColor(hex: theme.newInstance.tokens.colorPrimary).cgColor
+                case .disabled:
+                    button.backgroundColor = getUIColorFromComponentAttributes(\.buttonOutlinedColorDisableBackground)
+                    button.layer.borderColor = getUIColorFromComponentAttributes(\.buttonOutlinedColorDisableBorder).cgColor
+                default: break
+                }
+                
             case .primary:
                 switch button.state {
                 case .normal:
@@ -155,6 +179,14 @@ enum ButtonOutlinedStyle {
         if theme == .none {
             
             switch color {
+                
+            case .colorDefault:
+                ButtonStyle.applyStyleForTitle(
+                    title,
+                    colorForNormal: getUIColorFromTokens(\.colorHighEmphasis),
+                    colorForDisabled: getUIColorFromComponentAttributes(\.buttonOutlinedColorDisableLabel),
+                    on: button)
+                
             case .primary:
                 ButtonStyle.applyStyleForTitle(
                     title,
@@ -201,6 +233,14 @@ enum ButtonOutlinedStyle {
         else {
             
             switch color {
+                
+            case .colorDefault:
+                ButtonStyle.applyStyleForTitle(
+                    title,
+                    colorForNormal: hexStringToUIColor(hex: theme.newInstance.tokens.colorHighEmphasis),
+                    colorForDisabled: hexStringToUIColor(hex: theme.newInstance.components.buttonOutlinedColorDisableLabel),
+                    on: button)
+                
             case .primary:
                 ButtonStyle.applyStyleForTitle(
                     title,

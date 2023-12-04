@@ -9,6 +9,7 @@
 import Foundation
 
 public enum Color {
+    case colorDefault
     case primary
     case onPrimary
     case secondary

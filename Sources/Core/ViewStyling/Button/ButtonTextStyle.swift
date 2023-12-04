@@ -34,6 +34,13 @@ enum ButtonTextStyle {
         
         if theme == .none {
             switch color {
+            case .colorDefault:
+                ButtonStyle.applyStyleForTitle(
+                    title,
+                    colorForNormal: getUIColorFromTokens(\.colorHighEmphasis),
+                    colorForDisabled: getUIColorFromComponentAttributes(\.buttonTextColorDisableLabel),
+                    on: button
+                )
             case .primary:
                 ButtonStyle.applyStyleForTitle(
                     title,
@@ -80,6 +87,13 @@ enum ButtonTextStyle {
         }
         else {
             switch color {
+            case .colorDefault:
+                ButtonStyle.applyStyleForTitle(
+                    title,
+                    colorForNormal: hexStringToUIColor(hex: theme.newInstance.tokens.colorHighEmphasis),
+                    colorForDisabled: hexStringToUIColor(hex: theme.newInstance.components.buttonTextColorDisableLabel),
+                    on: button
+                )
             case .primary:
                 ButtonStyle.applyStyleForTitle(
                     title,

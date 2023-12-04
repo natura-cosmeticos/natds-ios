@@ -12,6 +12,8 @@ enum ButtonContainedStyle {
             case .normal:
                 
                 switch color {
+                case .colorDefault:
+                    button.backgroundColor = getUIColorFromTokens(\.colorPrimary)
                 case .primary:
                     button.backgroundColor = getUIColorFromTokens(\.colorPrimary)
                 case .onPrimary:
@@ -38,6 +40,19 @@ enum ButtonContainedStyle {
         else {
             
             switch color {
+            case .colorDefault:
+                switch button.state {
+                case .normal:
+                    button.backgroundColor = hexStringToUIColor(hex: theme.newInstance.tokens.colorPrimary)
+                    button.layer.borderColor = hexStringToUIColor(hex: theme.newInstance.components.buttonContainedColorEnableBorder).cgColor
+                    
+                    NatElevation.apply(on: button, elevation: .tiny)
+                case .disabled:
+                    button.backgroundColor = hexStringToUIColor(hex: theme.newInstance.components.buttonContainedColorDisableBackground)
+                    button.layer.borderColor = hexStringToUIColor(hex: theme.newInstance.components.buttonContainedColorDisableBorder).cgColor
+                    NatElevation.apply(on: button, elevation: .none)
+                default: break
+                }
             case .primary:
                 switch button.state {
                 case .normal:
@@ -125,6 +140,14 @@ enum ButtonContainedStyle {
         if theme == .none {
             
             switch color {
+            case .colorDefault:
+                ButtonStyle.applyStyleForTitle(
+                    title,
+                    colorForNormal:
+                        getUIColorFromTokens(\.colorOnPrimary),
+                    colorForDisabled: getUIColorFromComponentAttributes(\.buttonContainedColorDisableLabel),
+                    on: button
+                )
             case .primary:
                 ButtonStyle.applyStyleForTitle(
                     title,
@@ -178,6 +201,15 @@ enum ButtonContainedStyle {
         else {
             
             switch color {
+            case .colorDefault:
+                ButtonStyle.applyStyleForTitle(
+                    title,
+                    colorForNormal:
+                        hexStringToUIColor(hex: theme.newInstance.tokens.colorOnPrimary),
+                    colorForDisabled:
+                        hexStringToUIColor(hex: theme.newInstance.components.buttonContainedColorDisableLabel),
+                    on: button
+                )
             case .primary:
                 ButtonStyle.applyStyleForTitle(
                     title,
