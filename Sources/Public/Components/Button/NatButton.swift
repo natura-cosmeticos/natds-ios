@@ -68,11 +68,11 @@ public final class NatButton: UIButton, Pulsable {
 
     // MARK: - Inits
 
-    public convenience init(style: Style, size: ButtonHeight = .semix, theme: AvailableTheme = .none, color: Color = .primary) {
+    public convenience init(style: Style, size: ButtonHeight = .semix, theme: AvailableTheme = .none, color: Color = .colorDefault) {
         self.init(style: style, notificationCenter: NotificationCenter.default, size: size, theme: theme, color: color)
     }
 
-    init(style: Style, notificationCenter: NotificationCenterObservable, size: ButtonHeight = .semix, theme: AvailableTheme = .none, color: Color = .primary) {
+    init(style: Style, notificationCenter: NotificationCenterObservable, size: ButtonHeight = .semix, theme: AvailableTheme = .none, color: Color = .colorDefault) {
         self.style = style
         self.notificationCenter = notificationCenter
         self.theme = theme
