@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [7.11.5](https://github.com/natura-cosmeticos/natds-ios/compare/7.11.4...7.11.5) (2023-12-04)
 
+- Change color default for button
+
 ### [7.11.4](https://github.com/natura-cosmeticos/natds-ios/compare/7.11.3...7.11.4) (2023-12-04)
 
 - Add new colors for Button component
