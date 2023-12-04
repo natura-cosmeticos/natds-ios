@@ -4,13 +4,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [7.11.3](https://github.com/natura-cosmeticos/natds-ios/compare/7.11.2...7.11.3) (2023-11-28)
 
-### [7.11.2](https://github.com/natura-cosmeticos/natds-ios/compare/7.11.1...7.11.2) (2023-11-28)
-
-### [7.11.1](https://github.com/natura-cosmeticos/natds-ios/compare/7.11.0...7.11.1) (2023-11-27)
-
-## [7.11.0](https://github.com/natura-cosmeticos/natds-ios/compare/7.10.34...7.11.0) (2023-11-24)
-
-
 ### Features
 
 * improve minor version and add new tokens ([db77aa3](https://github.com/natura-cosmeticos/natds-ios/commit/db77aa31a48c1d436732dc22a90742cab8660ca4))
