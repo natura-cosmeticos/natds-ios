@@ -51,26 +51,51 @@ class RatingItemViewController: UIViewController, SampleItem {
 
     let inputRatingDisabled: NatRating = {
         let rating = NatRating(style: .input)
-        rating.configure(rate: 3)
+        rating.configure(rate: 2)
+        rating.configure(state: .disabled)
+        return rating
+    }()
+
+    let inputSemiRatingDisabled: NatRating = {
+        let rating = NatRating(style: .input)
+        rating.configure(rate: 3.8)
         rating.configure(state: .disabled)
         return rating
     }()
 
     let readOnlyRating: NatRating = {
         let rating = NatRating(style: .readOnly)
-        rating.configure(rate: 2)
+        rating.configure(rate: 4)
+        return rating
+    }()
+
+    let readOnlySemiRating: NatRating = {
+        let rating = NatRating(style: .readOnly)
+        rating.configure(rate: 1.9)
         return rating
     }()
 
     let counterRating: NatRating = {
         let rating = NatRating(style: .counter)
-        rating.configure(text: "Hint placeholder")
+        rating.configure(text: "3,8")
+        return rating
+    }()
+
+    let counterQuantityRating: NatRating = {
+        let rating = NatRating(style: .counter, showQuantity: true)
+        rating.configure(text: "3,8", quantityText: "(288)")
         return rating
     }()
 
     let counterRatingRight: NatRating = {
         let rating = NatRating(style: .counter, alignment: .right)
-        rating.configure(text: "Hint placeholder")
+        rating.configure(text: "3.0")
+        return rating
+    }()
+    
+    let counterQuantityRatingRight: NatRating = {
+        let rating = NatRating(style: .counter, alignment: .right, showQuantity: true)
+        rating.configure(text: "4.7", quantityText: "(5)")
         return rating
     }()
 
@@ -127,12 +152,20 @@ class RatingItemViewController: UIViewController, SampleItem {
                                                                rating: inputRatingWithHintMedium))
         stackView.addArrangedSubview(createViewWithDescription("Input disabled",
                                                                rating: inputRatingDisabled))
+        stackView.addArrangedSubview(createViewWithDescription("Input half disabled",
+                                                               rating: inputSemiRatingDisabled))
         stackView.addArrangedSubview(createViewWithDescription("Read only default",
                                                                rating: readOnlyRating))
+        stackView.addArrangedSubview(createViewWithDescription("Read only half default",
+                                                               rating: readOnlySemiRating))
         stackView.addArrangedSubview(createViewWithDescription("Counter left (default)",
                                                                rating: counterRating))
+        stackView.addArrangedSubview(createViewWithDescription("Counter with quantit left (default)",
+                                                               rating: counterQuantityRating))
         stackView.addArrangedSubview(createViewWithDescription("Counter right",
                                                                rating: counterRatingRight))
+        stackView.addArrangedSubview(createViewWithDescription("Counter with quantity right",
+                                                               rating: counterQuantityRatingRight))
     }
 
     private func createViewWithDescription(_ text: String, rating: NatRating) -> UIView {

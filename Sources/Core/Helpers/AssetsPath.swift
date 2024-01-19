@@ -3,6 +3,7 @@ import UIKit
 enum AssetsPath {
     case iconOutlinedActionAdd
     case iconFilledActionRating
+    case iconSemiFilledActionRating
     case iconOutlinedActionCancel
     case iconOutlinedActionCheck
     case iconOutlinedActionSubtract
@@ -28,6 +29,8 @@ extension AssetsPath: RawRepresentable {
             self = .iconOutlinedActionAdd
         case AssetsHelper.image(from: "Icons/IconFilledActionRating"):
             self = .iconFilledActionRating
+        case AssetsHelper.image(from: "Icons/IconSemiFilledActionRating"):
+            self = .iconSemiFilledActionRating
         case AssetsHelper.image(from: "Icons/IconOutlinedActionCancel"):
             self = .iconOutlinedActionCancel
         case AssetsHelper.image(from: "Icons/IconOutlinedActionCheck"):
@@ -64,6 +67,8 @@ extension AssetsPath: RawRepresentable {
             return AssetsHelper.image(from: "Icons/IconOutlinedActionAdd")
         case .iconFilledActionRating:
             return AssetsHelper.image(from: "Icons/IconFilledActionRating")
+        case .iconSemiFilledActionRating:
+            return AssetsHelper.image(from: "Icons/IconSemiFilledActionRating")
         case .iconOutlinedActionCancel:
             return AssetsHelper.image(from: "Icons/IconOutlinedActionCancel")
         case .iconOutlinedActionCheck:

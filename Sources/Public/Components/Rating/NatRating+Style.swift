@@ -14,18 +14,20 @@ extension NatRating {
         case readOnly
 
         var emptyStarImage: UIImage? {
-            switch self {
-            case .readOnly:
-                let image = AssetsPath.iconFilledActionRating.rawValue
-                return image?.tintedWithColor(getUIColorFromTokens(\.colorMediumEmphasis))
-            default:
-                let image = AssetsPath.iconOutlinedActionRating.rawValue
-                return image?.tintedWithColor(getUIColorFromTokens(\.colorMediumEmphasis))
-            }
+            let image = AssetsPath.iconOutlinedActionRating.rawValue
+            return image?.tintedWithColor(getUIColorFromTokens(\.colorMediumEmphasis))
         }
 
         func filledStarImage(for state: State) -> UIImage? {
             let image = AssetsPath.iconFilledActionRating.rawValue
+            if self == .input, state == .disabled {
+                return image?.tintedWithColor(getUIColorFromTokens(\.colorMediumEmphasis))
+            }
+            return image?.tintedWithColor(UIColor(red: 0.97, green: 0.71, blue: 0.27, alpha: 1.00))
+        }
+        
+        func semiFilledStarImage(for state: State) -> UIImage? {
+            let image = AssetsPath.iconSemiFilledActionRating.rawValue
             if self == .input, state == .disabled {
                 return image?.tintedWithColor(getUIColorFromTokens(\.colorMediumEmphasis))
             }
@@ -72,12 +74,29 @@ extension NatRating {
         }
 
         var fontColor: UIColor {
+            switch self {
+            case .counter:
+                return getUIColorFromTokens(\.colorHighEmphasis)
+            default:
+                return getUIColorFromTokens(\.colorMediumEmphasis)
+            }
+        }
+        
+        var fontColorQuantity: UIColor {
             return getUIColorFromTokens(\.colorMediumEmphasis)
         }
 
         var canShowHint: Bool {
             switch self {
             case .input:
+                return true
+            default:
+                return false
+            }
+        }
+        var canShowQuantity: Bool {
+            switch self {
+            case .counter:
                 return true
             default:
                 return false

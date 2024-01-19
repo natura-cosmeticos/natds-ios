@@ -64,7 +64,7 @@
 
 public final class NatRating: UIView {
 
-    public typealias RatingValueHandler = (Int) -> Void
+    public typealias RatingValueHandler = (Double) -> Void
     private var ratingValueHandler: RatingValueHandler?
 
     private var style: Style
@@ -77,16 +77,19 @@ public final class NatRating: UIView {
 
     private var size: Size
     private var alignment: Alignment
-    private var value: Int = 0 {
+    private var value: Double = 0.0 {
         didSet {
             updateStarViewsState()
             ratingValueHandler?(value)
         }
     }
+    
+    private var showQuantity: Bool = true
 
     private var starViewsArray: [IconView] = []
     private var touchedStar: IconView {
-        return starViewsArray[value-1]
+        let index = Int(floor(value)) - 1
+        return starViewsArray[max(0, index)]
     }
 
     private var stackView: UIStackView = {
@@ -106,13 +109,22 @@ public final class NatRating: UIView {
         label.textColor = style.fontColor
         return label
     }()
+    
+    private lazy var quantityLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = style.font
+        label.textColor = style.fontColorQuantity
+        return label
+    }()
 
     // MARK: - Inits
 
-    public init(style: Style, size: Size = .semi, alignment: Alignment = .left) {
+    public init(style: Style, size: Size = .semi, alignment: Alignment = .left, showQuantity:Bool = true) {
         self.style = style
         self.size = size
         self.alignment = alignment
+        self.showQuantity = showQuantity
         super.init(frame: .zero)
 
         setup()
@@ -145,17 +157,21 @@ public final class NatRating: UIView {
     }
 
     private func getValueFromTouchAtLocation(withTouches touches: Set<UITouch>) {
-        let touchLocation = touches.first
-        let location = touchLocation?.location(in: stackView)
+        guard let touchLocation = touches.first?.location(in: stackView) else { return }
 
-        var value = 0
-        starViewsArray.enumerated().forEach { (index, iconView) in
-            if (location?.x)! > iconView.frame.origin.x {
-                value = index + 1
+        var newValue: Double = 0
+        for (index, iconView) in starViewsArray.enumerated() {
+            let iconFrame = iconView.frame
+            if touchLocation.x > iconFrame.minX {
+                newValue = Double(index) + 1
+                if style != .input && touchLocation.x < iconFrame.midX {
+                    newValue = Double(index) + 0.5
+                }
             }
         }
-        self.value = value
+        self.value = newValue
     }
+
 
     // MARK: - Public methods
 
@@ -163,18 +179,24 @@ public final class NatRating: UIView {
     /// Note: for counter ratings, if the text isn't set, the component will only display a single colored star.
     ///
     /// - Parameter text: a String with the text to be displayed
-    public func configure(text: String) {
+    public func configure(text: String, quantityText:String = "") {
         hintLabel.attributedText = text.attributedStringWith(lineHeight: style.lineHeight,
-                                                             letterSpacing: style.letterSpacing)
+            letterSpacing: style.letterSpacing)
+        quantityLabel.attributedText = quantityText.attributedStringWith(lineHeight: style.lineHeight, letterSpacing: style.letterSpacing)
     }
 
     /// Sets the rate value to be shown as colored stars in the component.
     /// Useful for disabled inputs and readOnly variants.
     ///
     /// - Parameter rate: an Int with range from 0 to 5
-    public func configure(rate: Int) {
+    public func configure(rate: Double) {
         if style != .counter {
-            value = rate
+            if (style == .input) {
+                value = Double(Int(floor(rate)))
+            }
+            else {
+                value = rate
+            }
         }
     }
 
@@ -200,7 +222,7 @@ public final class NatRating: UIView {
     /// A function to get the input value from the used
     ///
     /// - Returns: an Int representing the selected value; range from 1 to 5
-    public func getValue() -> Int {
+    public func getValue() -> Double {
         return value
     }
 
@@ -214,7 +236,13 @@ public final class NatRating: UIView {
         addSubview(stackView)
 
         createStarViews()
-        addConstraints()
+        if (style.canShowQuantity) {
+            addConstraintsCounter()
+        }
+        else {
+            addConstraints()
+        }
+        
         handleInteractionState()
     }
 
@@ -235,11 +263,18 @@ public final class NatRating: UIView {
         if style == .counter {
             let iconView = createStarIconView(with: style.filledStarImage(for: state))
             stackView.spacing = getTokenFromTheme(\.spacingMicro)
+
             if alignment == .left {
                 stackView.addArrangedSubview(iconView)
                 stackView.addArrangedSubview(hintLabel)
+                if showQuantity {
+                    stackView.addArrangedSubview(quantityLabel)
+                }
             } else {
                 stackView.addArrangedSubview(hintLabel)
+                if showQuantity {
+                    stackView.addArrangedSubview(quantityLabel)
+                }
                 stackView.addArrangedSubview(iconView)
             }
         } else {
@@ -252,6 +287,19 @@ public final class NatRating: UIView {
         }
     }
 
+    private func addConstraintsCounter() {
+        // Restrições para o stackView
+        stackView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        stackView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        stackView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        
+        let stackViewBottomConstraint = stackView.bottomAnchor.constraint(equalTo: bottomAnchor)
+
+       // Ativa a restrição de fundo do stackView
+        stackViewBottomConstraint.isActive = true
+    }
+
+    
     private func addConstraints() {
         stackView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         stackView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
@@ -263,21 +311,25 @@ public final class NatRating: UIView {
             hintLabel.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
             hintLabel.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
             hintLabel.topAnchor.constraint(equalTo: stackView.bottomAnchor,
-                                           constant: getTokenFromTheme(\.spacingMicro)).isActive = true
+                constant: getTokenFromTheme(\.spacingMicro)).isActive = true
         } else {
             stackView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         }
     }
 
+
     private func updateStarViewsState() {
-        starViewsArray.enumerated().forEach { (index, iconView) in
-            if index < value {
+        for (index, iconView) in starViewsArray.enumerated() {
+            if Double(index) + 0.5 == value {
+                iconView.defaultImageView.image = style.semiFilledStarImage(for: state)
+            } else if Double(index) < value {
                 iconView.defaultImageView.image = style.filledStarImage(for: state)
             } else {
                 iconView.defaultImageView.image = style.emptyStarImage
             }
         }
     }
+
 
     private func handleInteractionState() {
         if style == .input {
