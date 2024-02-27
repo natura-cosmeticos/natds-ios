@@ -1,6 +1,5 @@
 import UIKit
 import NatDS
-import NatDSIcons
 
 class TagViewController: UIViewController, SampleItem {
     static var name: String = "Tag"

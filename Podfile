@@ -15,18 +15,15 @@ target 'NatDSTests' do
 project 'NatDS.xcodeproj'
   use_frameworks!
   test_pod
-  pod 'NatDSIcons'
 end
 
 target 'NatDSSnapShotTests' do
 project 'NatDS.xcodeproj'
   use_frameworks!
   pod 'SnapshotTesting'
-  pod 'NatDSIcons'
 end
 
 target 'NatDS-SampleApp' do
 project 'SampleApp/NatDS-SampleApp.xcodeproj'
   use_frameworks!
-  pod 'NatDSIcons'
 end

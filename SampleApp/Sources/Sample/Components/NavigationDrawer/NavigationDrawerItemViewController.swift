@@ -1,5 +1,4 @@
 import NatDS
-import NatDSIcons
 
 class NavigationDrawerItemViewController: UIViewController, SampleItem {
     static var name = "Navigation Drawer"
@@ -161,21 +160,21 @@ private extension NavigationDrawerItemViewController {
                      ],
                      dropdown: false),
                 Item(label: "Item with no subitems",
-                     icon: NatDSIcons.getIcon(.outlinedFinanceShoppingcart)),
+                     icon: getIcon(.outlinedFinanceShoppingcart)),
                 Item(label: "Item with tag",
-                     icon: NatDSIcons.getIcon(.outlinedAlertInfo),
+                     icon: getIcon(.outlinedAlertInfo),
                      tagText: "New"),
                 Item(label: "Item with very, very, very large title and tag",
-                     icon: NatDSIcons.getIcon(.outlinedFinanceCards),
+                     icon: getIcon(.outlinedFinanceCards),
                      tagText: "New"),
                 Item(label: "Item with one subitem",
-                     icon: NatDSIcons.getIcon(.outlinedActionNewrequest),
+                     icon: getIcon(.outlinedActionNewrequest),
                      lowEmphasis: true,
                      subitems: [
                         Subitem(label: "Subitem 2.1", disabled: false, icon: getIcon(.filledActionLove))
                 ]),
                 Item(label: "Item with very, very, very large title and tag",
-                     icon: NatDSIcons.getIcon(.outlinedActionRequest),
+                     icon: getIcon(.outlinedActionRequest),
                      tagText: "New",
                      subitems: [
                         Subitem(label: "Subitem 3.1", disabled: false),
@@ -183,10 +182,10 @@ private extension NavigationDrawerItemViewController {
                         Subitem(label: "Subitem 3.3", disabled: false)
                 ]),
                 Item(label: "Disabled item with no subitem",
-                     icon: NatDSIcons.getIcon(.outlinedSocialGroupofpeople),
+                     icon: getIcon(.outlinedSocialGroupofpeople),
                      disabled: true),
                 Item(label: "Disabled item with subitems",
-                     icon: NatDSIcons.getIcon(.filledBrandNaturarosacea),
+                     icon: getIcon(.filledBrandNaturarosacea),
                      disabled: true,
                      tagText: "New",
                      subitems: [
@@ -194,21 +193,21 @@ private extension NavigationDrawerItemViewController {
                         Subitem(label: "Subitem 5.2", disabled: false)
                 ]),
                 Item(label: "Item with disabled subitem",
-                     icon: NatDSIcons.getIcon(.outlinedPlaceBus),
+                     icon: getIcon(.outlinedPlaceBus),
                      subitems: [
                         Subitem(label: "Subitem 6.1", disabled: true),
                         Subitem(label: "Subitem 6.3", disabled: false),
                         Subitem(label: "Subitem 6.4", disabled: false)
                 ]),
                 Item(label: "Low emphasis item",
-                     icon: NatDSIcons.getIcon(.outlinedActionHelp),
+                     icon: getIcon(.outlinedActionHelp),
                      lowEmphasis: true),
                 Item(label: "Low emphasis item with tag",
-                     icon: NatDSIcons.getIcon(.outlinedActionLike),
+                     icon: getIcon(.outlinedActionLike),
                      lowEmphasis: true,
                      tagText: "New"),
                 Item(label: "Low emphasis item with subitem",
-                     icon: NatDSIcons.getIcon(.outlinedActionMic),
+                     icon: getIcon(.outlinedActionMic),
                      lowEmphasis: true,
                      subitems: [Subitem(label: "Subitem 9.1", disabled: false)])
             ]

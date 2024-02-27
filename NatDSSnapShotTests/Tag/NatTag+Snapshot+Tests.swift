@@ -1,6 +1,5 @@
 import XCTest
 import SnapshotTesting
-import NatDSIcons
 
 @testable import NatDS
 

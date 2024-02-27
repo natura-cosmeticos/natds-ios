@@ -1,6 +1,5 @@
 import UIKit
 import NatDS
-import NatDSIcons
 
 class RatingItemViewController: UIViewController, SampleItem {
 

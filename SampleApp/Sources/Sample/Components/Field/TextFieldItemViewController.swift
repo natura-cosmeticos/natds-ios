@@ -1,6 +1,5 @@
 import UIKit
 import NatDS
-import NatDSIcons
 
 class TextFieldItemViewController: UIViewController, SampleItem {
     static var name: String = "Text Field"

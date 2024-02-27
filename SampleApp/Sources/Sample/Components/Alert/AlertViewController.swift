@@ -1,6 +1,5 @@
 import UIKit
 import NatDS
-import NatDSIcons
 
 class AlertViewController: UIViewController, SampleItem {
     static var name: String = "Alert"

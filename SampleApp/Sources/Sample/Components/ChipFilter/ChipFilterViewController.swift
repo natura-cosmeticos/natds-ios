@@ -8,7 +8,6 @@
 
 import NatDS
 import UIKit
-import NatDSIcons
 
 class ChipFilterViewController: UIViewController, SampleItem {
     static var name = "ChipFilter"

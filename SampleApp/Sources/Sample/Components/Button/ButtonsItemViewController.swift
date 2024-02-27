@@ -1,5 +1,4 @@
 import NatDS
-import NatDSIcons
 
 final class ButtonsItemViewController: UIViewController, SampleItem {
     static var name = "Button"

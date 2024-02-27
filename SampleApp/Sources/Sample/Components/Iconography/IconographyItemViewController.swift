@@ -1,5 +1,4 @@
 import NatDS
-import NatDSIcons
 
 class IconographyItemViewController: UIViewController, SampleItem {
     static var name = "Iconography"
@@ -26,7 +25,7 @@ class IconographyItemViewController: UIViewController, SampleItem {
 
     private func getAllIcons() -> [String] {
         var icons: [String] = []
-        NatDSIcons.Icon.allCases.forEach { icons.append(getIcon($0)) }
+        Icon.allCases.forEach { icons.append(getIcon($0)) }
         return icons
     }
 

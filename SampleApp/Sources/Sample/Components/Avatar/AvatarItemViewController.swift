@@ -1,6 +1,5 @@
 import UIKit
 import NatDS
-import NatDSIcons
 
 class AvatarItemViewController: UIViewController, SampleItem {
     static var name = "Avatar"
@@ -70,7 +69,7 @@ class AvatarItemViewController: UIViewController, SampleItem {
             let avatar = NatAvatar(size: size)
 
             if value == 0 {
-                avatar.configure(icon: getIcon(.outlinedDefaultMockup))
+                avatar.configure(icon: getIcon(.outlinedFinanceBank))
             }
 
             if value == 1 {

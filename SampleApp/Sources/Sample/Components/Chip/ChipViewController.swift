@@ -1,6 +1,5 @@
 import NatDS
 import UIKit
-import NatDSIcons
 
 class ChipViewController: UIViewController, SampleItem {
     static var name = "Chip"

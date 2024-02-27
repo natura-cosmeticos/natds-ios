@@ -1,5 +1,4 @@
 import NatDS
-import NatDSIcons
 
 final class ShortcutItemViewController: UIViewController, SampleItem {
     static var name = "Shortcut"

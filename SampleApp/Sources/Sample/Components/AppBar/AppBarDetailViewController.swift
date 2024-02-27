@@ -1,6 +1,5 @@
 import NatDS
 import UIKit
-import NatDSIcons
 
 class AppBarDetailViewController: UITableViewController, UITextFieldDelegate {
     private let sections: [AppBarSection] = AppBarSection.allCases

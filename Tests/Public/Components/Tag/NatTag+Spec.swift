@@ -1,6 +1,5 @@
 import Quick
 import Nimble
-import NatDSIcons
 
 @testable import NatDS
 
