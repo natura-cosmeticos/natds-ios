@@ -7,19 +7,34 @@ class IconCollectionViewCell: UICollectionViewCell {
         }
     }
 
+    var iconName: String? {
+        didSet {
+            nameLabel.text = iconName
+        }
+    }
+
     private let iconView: IconView = {
         let iconView = IconView()
         iconView.tintColor = NatColors.highEmphasis
+        iconView.setFontSize(size: 34)
         return iconView
+    }()
+
+    private let nameLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 10)
+        label.textColor = .black
+        label.numberOfLines = 2
+        return label
     }()
 
     private let stackView: UIStackView = {
         let stackView = UIStackView()
-        stackView.distribution = .fill
+        stackView.distribution = .fillEqually
         stackView.axis = .vertical
         stackView.spacing = NatSpacing.tiny
         stackView.translatesAutoresizingMaskIntoConstraints = false
-
         return stackView
     }()
 
@@ -28,13 +43,13 @@ class IconCollectionViewCell: UICollectionViewCell {
         setup()
     }
 
-    @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func setup() {
+    private func setup() {
         stackView.addArrangedSubview(iconView)
+        stackView.addArrangedSubview(nameLabel)
 
         addSubview(stackView)
 

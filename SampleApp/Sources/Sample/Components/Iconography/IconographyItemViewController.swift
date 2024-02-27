@@ -22,11 +22,9 @@ class IconographyItemViewController: UIViewController, SampleItem {
         title = Self.name
         setup()
     }
-
+    
     private func getAllIcons() -> [String] {
-        var icons: [String] = []
-        Icon.allCases.forEach { icons.append(getIcon($0)) }
-        return icons
+        return Icon.allCases.map { $0.rawValue }.sorted()
     }
 
     private func setup() {
@@ -47,11 +45,14 @@ extension IconographyItemViewController: UICollectionViewDataSource {
         getAllIcons().count
     }
 
-    func collectionView(_ collectionView: UICollectionView,
-                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let view = collectionView.dequeueReusableCell(for: indexPath, cellType: IconCollectionViewCell.self)
-
-        view.icon = getAllIcons()[indexPath.row]
-        return view
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "IconCollectionViewCell", for: indexPath) as! IconCollectionViewCell
+        let iconName = getAllIcons()[indexPath.row]
+        if let iconEnum = Icon(rawValue: iconName) {
+            cell.icon = getIcon(iconEnum) // Configura o ícone a ser exibido pela célula
+            cell.iconName = iconName // Agora usa a propriedade pública para configurar o nome do ícone
+        }
+        return cell
     }
+
 }
