@@ -49,8 +49,8 @@ extension IconographyItemViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "IconCollectionViewCell", for: indexPath) as! IconCollectionViewCell
         let iconName = getAllIcons()[indexPath.row]
         if let iconEnum = Icon(rawValue: iconName) {
-            cell.icon = getIcon(iconEnum) // Configura o ícone a ser exibido pela célula
-            cell.iconName = iconName // Agora usa a propriedade pública para configurar o nome do ícone
+            cell.icon = getIcon(iconEnum)
+            cell.iconName = iconName
         }
         return cell
     }
