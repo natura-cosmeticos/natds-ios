@@ -448,7 +448,7 @@
 		FAD0A71F10707995BE66A299D98CC33B /* NatOpacities+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46448E79883A4EB8A9416823A01531F /* NatOpacities+Spec.swift */; };
 		FF38AE932B6B5E3100F0F10B /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38AE912B6B5E3100F0F10B /* Icon.swift */; };
 		FF38AE962B6B5FF000F0F10B /* NatDSIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38AE952B6B5FF000F0F10B /* NatDSIcons.swift */; };
-		FF38AE9A2B84253300F0F10B /* natds-icons-ios.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF38AE922B6B5E3100F0F10B /* natds-icons-ios.ttf */; };
+		FF38AE9E2B90472500F0F10B /* natds-icons-ios.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF38AE9D2B90472500F0F10B /* natds-icons-ios.ttf */; };
 		FF49B7262AA1A00C001478A5 /* NatSnackbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF49B7252AA1A00C001478A5 /* NatSnackbar.swift */; };
 		FF4BFAAC2A17080200D7E28F /* Avonv2DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4BFAAA2A17080200D7E28F /* Avonv2DarkTheme.swift */; };
 		FF4BFAAD2A17080200D7E28F /* Avonv2LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4BFAAB2A17080200D7E28F /* Avonv2LightTheme.swift */; };
@@ -920,8 +920,8 @@
 		FB7FB96016F7D02CB5976F54C383CCD6 /* NatSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatSizes.swift; sourceTree = "<group>"; };
 		FD3CA47F5B151245708F86A82388401D /* Divider+Snapshot+Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Divider+Snapshot+Tests.swift"; sourceTree = "<group>"; };
 		FF38AE912B6B5E3100F0F10B /* Icon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
-		FF38AE922B6B5E3100F0F10B /* natds-icons-ios.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "natds-icons-ios.ttf"; sourceTree = "<group>"; };
 		FF38AE952B6B5FF000F0F10B /* NatDSIcons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NatDSIcons.swift; sourceTree = "<group>"; };
+		FF38AE9D2B90472500F0F10B /* natds-icons-ios.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "natds-icons-ios.ttf"; sourceTree = "<group>"; };
 		FF49B7252AA1A00C001478A5 /* NatSnackbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatSnackbar.swift; sourceTree = "<group>"; };
 		FF4BFAAA2A17080200D7E28F /* Avonv2DarkTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Avonv2DarkTheme.swift; sourceTree = "<group>"; };
 		FF4BFAAB2A17080200D7E28F /* Avonv2LightTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Avonv2LightTheme.swift; sourceTree = "<group>"; };
@@ -1825,7 +1825,7 @@
 		7D23B34826D7DDD900FB5DA9 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				FF38AE922B6B5E3100F0F10B /* natds-icons-ios.ttf */,
+				FF38AE9D2B90472500F0F10B /* natds-icons-ios.ttf */,
 				7DFB000A26E170F800CB7465 /* Aesop */,
 				7DFB000B26E1711700CB7465 /* Avon */,
 				7DFB000D26E1713500CB7465 /* Natura */,
@@ -3234,7 +3234,7 @@
 				67BB06E023B48B85454BD2B38E60B156 /* Images.xcassets in Resources */,
 				7DFC9EAA26F38C1600052C54 /* WorkSans-Regular.ttf in Resources */,
 				7DFC9E8926F38BA500052C54 /* Montserrat-Regular.ttf in Resources */,
-				FF38AE9A2B84253300F0F10B /* natds-icons-ios.ttf in Resources */,
+				FF38AE9E2B90472500F0F10B /* natds-icons-ios.ttf in Resources */,
 				7DFC9E8826F38BA500052C54 /* Montserrat-Bold.ttf in Resources */,
 				7DFC9E8A26F38BA500052C54 /* Montserrat-SemiBold.ttf in Resources */,
 				7DFC9E9E26F38C0100052C54 /* DrukCy-Bold.ttf in Resources */,
