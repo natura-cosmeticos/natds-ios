@@ -71,6 +71,9 @@ bump_version: ## releases new version of NatDS
 update_themes: ## update theme from commons
 	bash ./scripts/update_themes.sh
 
+update_icons: ## update icons in ios
+	bash ./scripts/update_icons.sh
+
 create_docs: ## creates html docs
 	gem install jazzy
 	jazzy --theme=jony
