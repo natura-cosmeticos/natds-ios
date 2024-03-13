@@ -24,7 +24,7 @@ final class ChooseBrandHeader: UITableViewHeaderFooterView {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = NatFonts.font(ofSize: .heading6)
-        label.text = "NATDS - iOS"
+        label.text = "GaYa - iOS"
         label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
 
@@ -46,7 +46,7 @@ final class ChooseBrandHeader: UITableViewHeaderFooterView {
     private let subTitleLabel: UILabel = {
         let label = UILabel()
         label.font = NatFonts.font(ofSize: .subtitle1)
-        label.text = "Select a brand:"
+        label.text = "Selecione uma marca:"
         label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
 

@@ -98,6 +98,12 @@ public final class NatButton: UIButton, Pulsable {
             
         heightConstraint.isActive = true
         
+        if getComponentAttributeFromTheme(\.isButtonRounded) {
+            self.layer.cornerRadius = heightConstraint.constant / 2
+        } else {
+            self.layer.cornerRadius = getComponentAttributeFromTheme(\.buttonBorderRadius)
+        }
+        
         notificationCenter.addObserver(
             self,
             selector: #selector(themeHasChanged),

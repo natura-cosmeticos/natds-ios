@@ -8,16 +8,21 @@
       - AesopLight
       - AvonDark
       - AvonLight
+      - Avonv2Dark
+      - Avonv2Light
       - NaturaDark
       - NaturaLight
+      - Naturav2Dark
+      - Naturav2Light
+      - Naturav3Dark
+      - Naturav3Light
       - TheBodyShopDark
       - TheBodyShopLight
       - ConsultoriaDeBelezaLight
       - ConsultoriaDeBelezaDark
       - CasaEestiloDark
       - CasaEestiloLight
-      - AvonV2Dark
-      - AvonV2Light
+      
 */
 
 public enum AvailableTheme {
@@ -37,6 +42,8 @@ public enum AvailableTheme {
     case avonv2Light
     case naturav2Dark
     case naturav2Light
+    case naturav3Dark
+    case naturav3Light
     case none
 
     init?(theme: Theme) {
@@ -57,6 +64,8 @@ public enum AvailableTheme {
         case is Avonv2LightTheme: self = .avonv2Light
         case is Naturav2DarkTheme: self = .naturav2Dark
         case is Naturav2LightTheme: self = .naturav2Light
+        case is Naturav3DarkTheme: self = .naturav3Dark
+        case is Naturav3LightTheme: self = .naturav3Light
         case is BiomeLightTheme: self = .none
         default: return nil
         }
@@ -81,6 +90,8 @@ public enum AvailableTheme {
         case .avonv2Light: instance = Avonv2LightTheme()
         case .naturav2Dark: instance = Naturav2DarkTheme()
         case .naturav2Light: instance = Naturav2LightTheme()
+        case .naturav3Dark: instance = Naturav3DarkTheme()
+        case .naturav3Light: instance = Naturav3LightTheme()
         case .none: instance = BiomeLightTheme()
         }
         return instance

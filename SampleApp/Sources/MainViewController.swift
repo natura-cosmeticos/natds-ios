@@ -7,7 +7,7 @@ final class MainViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "NATDS"
+        title = "GaYa"
 
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
