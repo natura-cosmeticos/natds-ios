@@ -142,8 +142,8 @@ private extension NavigationDrawerSubitemCell {
         addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: highlightSelectedView.topAnchor, constant: 12.0),
-            titleLabel.bottomAnchor.constraint(equalTo: highlightSelectedView.bottomAnchor, constant: -12.0),
+            titleLabel.topAnchor.constraint(equalTo: highlightSelectedView.topAnchor, constant: 8.0),
+            titleLabel.bottomAnchor.constraint(equalTo: highlightSelectedView.bottomAnchor, constant: -8.0),
             titleLabel.leadingAnchor.constraint(equalTo: highlightSelectedView.leadingAnchor, constant: 8.0),
             titleLabel.trailingAnchor.constraint(equalTo: highlightSelectedView.trailingAnchor, constant: -8.0)
         ])
