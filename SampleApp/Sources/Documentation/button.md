@@ -8,13 +8,13 @@
 
 | Property       | Values                    | Status            |
 | -------------- | ------------------------- | ----------------- |
-| Style          | Contained, Outlined, Text | ✅  Available      |
-| Icon           | None, Right, Left         | ✅  Available      |
-| Size           | Small, Medium, Large      | ✅  Available      |
-| IsEnabled      | True, False               | ✅  Available      |
-| Display        | True, False               | ❌  Not Applicable |
-| Text-Transform | Uppercase, Capitalize     | 🗂️  Backlog        |
-| Theme          | All Themes Available      | ✅  Available      |
+| Style          | Contained, Outlined, Text | ✅  Available       |
+| Icon           | None, Right, Left         | ✅  Available       |
+| Size           | Small, Medium, Large      | ✅  Available       |
+| IsEnabled      | True, False               | ✅  Available       |
+| Display        | True, False               | ❌  Not Applicable  |
+| Text-Transform | Uppercase, Capitalize     | ❌  Not Applicable  |
+| Theme          | All Themes Available      | ✅  Available       |
 
 
 ## Technical Usages Examples
