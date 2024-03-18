@@ -4,7 +4,13 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [8.0.0](https://github.com/natura-cosmeticos/natds-ios/compare/7.11.6...8.0.0) (2024-03-13)
 
+- Embedded NATDSIcons in NATDS project
+- Add NaturaV3 theme
+- New button style to NaturaV3 theme
+
 ### [7.11.6](https://github.com/natura-cosmeticos/natds-ios/compare/7.11.5...7.11.6) (2024-02-29)
+
+- Adding Rating component
 
 ### [7.11.5](https://github.com/natura-cosmeticos/natds-ios/compare/7.11.4...7.11.5) (2023-12-04)
 
