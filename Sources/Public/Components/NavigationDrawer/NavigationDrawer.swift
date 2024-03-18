@@ -186,6 +186,14 @@ extension NavigationDrawer: UITableViewDelegate {
             delegate.didSelectSubitem(at: indexMenu)
             return
         }
+        
+        if !expandedItems.isEmpty {
+            guard let expandedItem = expandedItems.first else { return }
+            if expandedItem != indexPath.section {
+                toggleExpandedItem(expandedItem)
+                tableView.reloadSections(IndexSet(integer: expandedItem), with: .none)
+            }
+        }
 
         if hasSubitems(in: indexPath.section) {
             toggleExpandedItem(indexPath.section)
