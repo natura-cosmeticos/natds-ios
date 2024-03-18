@@ -2,11 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## [8.0.0](https://github.com/natura-cosmeticos/natds-ios/compare/7.11.6...8.0.0) (2024-03-13)
+## [8.0.0](https://github.com/natura-cosmeticos/natds-ios/compare/7.11.7...8.0.0) (2024-03-13)
 
 - Embedded NATDSIcons in NATDS project
 - Add NaturaV3 theme
 - New button style to NaturaV3 theme
+
+
+### [7.11.7](https://github.com/natura-cosmeticos/natds-ios/compare/7.11.6...7.11.7) (2024-03-18)
+
+- Removing embedding NATDSIcons
 
 ### [7.11.6](https://github.com/natura-cosmeticos/natds-ios/compare/7.11.5...7.11.6) (2024-02-29)
 
