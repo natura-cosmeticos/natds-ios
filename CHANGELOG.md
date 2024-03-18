@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [8.0.1](https://github.com/natura-cosmeticos/natds-ios/compare/8.0.0...8.0.1) (2024-03-18)
+
 ## [8.0.0](https://github.com/natura-cosmeticos/natds-ios/compare/7.11.7...8.0.0) (2024-03-13)
 
 - Embedded NATDSIcons in NATDS project
