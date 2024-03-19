@@ -3,16 +3,18 @@
 # Pega a última tag
 LAST_TAG=$(git describe --tags --abbrev=0)
 
-# Verifica se existe algum commit com 'major:' desde a última tag
-if git log "${LAST_TAG}..HEAD" --format='%s' | grep -q -E 'major:'; then
-    # Se "major:" for encontrado, aumenta a versão major
+# Verifica se existe algum commit com 'major:' no início desde a última tag
+if git log "${LAST_TAG}..HEAD" --format='%s' | grep -q -E '^major:'; then
+    # Se "major:" for encontrado no início, aumenta a versão major
     npx standard-version --release-as major
-# Verifica se existe algum commit com 'breaking:' desde a última tag
-elif git log "${LAST_TAG}..HEAD" --format='%b' | grep -q -E 'breaking:'; then
-    # Se "breaking:" for encontrado, aumenta a versão major
-    npx standard-version --release-as major
+
+# Verifica se existe algum commit com 'breaking:' no início desde a última tag
+elif git log "${LAST_TAG}..HEAD" --format='%s' | grep -q -E '^breaking:'; then
+    # Se "breaking:" for encontrado no início, aumenta a versão minor
+    npx standard-version --release-as minor
+
 else
-    # Se nenhum dos anteriores for encontrado, segue o procedimento padrão para determinar o tipo de release
+    # Para todos os outros casos, segue o procedimento padrão que normalmente aumenta o patch
     npx standard-version
 fi
 
@@ -39,6 +41,3 @@ git push --follow-tags origin HEAD
 
 # Faz o upload da nova versão para o Cocoapods
 VERSION_NUMBER=$VERSION pod trunk push NatDS.podspec --allow-warnings
-
-# Faz a notificação da nova versão e atualiza a documentação
-make create_docs
