@@ -451,6 +451,7 @@
 		FF38AE9E2B90472500F0F10B /* natds-icons-ios.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF38AE9D2B90472500F0F10B /* natds-icons-ios.ttf */; };
 		FF38AEA32BA0935400F0F10B /* Naturav3LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38AEA12BA0935400F0F10B /* Naturav3LightTheme.swift */; };
 		FF38AEA42BA0935400F0F10B /* Naturav3DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38AEA22BA0935400F0F10B /* Naturav3DarkTheme.swift */; };
+		FF38AEA72BB2E78000F0F10B /* ContainerBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38AEA62BB2E78000F0F10B /* ContainerBar.swift */; };
 		FF49B7262AA1A00C001478A5 /* NatSnackbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF49B7252AA1A00C001478A5 /* NatSnackbar.swift */; };
 		FF4BFAAC2A17080200D7E28F /* Avonv2DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4BFAAA2A17080200D7E28F /* Avonv2DarkTheme.swift */; };
 		FF4BFAAD2A17080200D7E28F /* Avonv2LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4BFAAB2A17080200D7E28F /* Avonv2LightTheme.swift */; };
@@ -926,6 +927,7 @@
 		FF38AE9D2B90472500F0F10B /* natds-icons-ios.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "natds-icons-ios.ttf"; sourceTree = "<group>"; };
 		FF38AEA12BA0935400F0F10B /* Naturav3LightTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Naturav3LightTheme.swift; sourceTree = "<group>"; };
 		FF38AEA22BA0935400F0F10B /* Naturav3DarkTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Naturav3DarkTheme.swift; sourceTree = "<group>"; };
+		FF38AEA62BB2E78000F0F10B /* ContainerBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerBar.swift; sourceTree = "<group>"; };
 		FF49B7252AA1A00C001478A5 /* NatSnackbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatSnackbar.swift; sourceTree = "<group>"; };
 		FF4BFAAA2A17080200D7E28F /* Avonv2DarkTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Avonv2DarkTheme.swift; sourceTree = "<group>"; };
 		FF4BFAAB2A17080200D7E28F /* Avonv2LightTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Avonv2LightTheme.swift; sourceTree = "<group>"; };
@@ -2642,6 +2644,7 @@
 			isa = PBXGroup;
 			children = (
 				3D17E5874C6FD18F726E3F2F41FA5A91 /* SearchBar.swift */,
+				FF38AEA62BB2E78000F0F10B /* ContainerBar.swift */,
 			);
 			path = Bar;
 			sourceTree = "<group>";
@@ -3604,6 +3607,7 @@
 				7D5349E326C6A32E00F88EA7 /* NatImage+Radius.swift in Sources */,
 				26BB817924B944D100617EFC /* Badgeable.swift in Sources */,
 				FFD9EB3B2B185D7000EBE815 /* NatButton+Color.swift in Sources */,
+				FF38AEA72BB2E78000F0F10B /* ContainerBar.swift in Sources */,
 				84EB6B7524EBFEC000C6A792 /* GetThemeValidated.swift in Sources */,
 				1F40DBA4B8A3C9B0558AD83B5B2884D6 /* ButtonContainedStyle.swift in Sources */,
 				DC1FF6E52885F57500AC659C /* NatChip+Color.swift in Sources */,

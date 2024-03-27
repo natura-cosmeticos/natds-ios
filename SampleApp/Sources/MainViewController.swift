@@ -17,6 +17,15 @@ final class MainViewController: UITableViewController {
         tableView.backgroundColor = NatColors.background
 
         view.backgroundColor = NatColors.background
+      
+      self.navigationController?.configureAppBar(color: .primary, contentType: .colorLogo, hasTransparency: true, scrollView: tableView)
+    }
+  
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if isMovingFromParent {
+            self.navigationController?.stopObservingScrollView(scrollView: tableView)
+        }
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {

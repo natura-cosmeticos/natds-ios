@@ -114,3 +114,93 @@ public extension UINavigationController {
         }
     }
 }
+
+public extension UINavigationController {
+
+    func configureAppBar(color: AppBarColor, contentType: AppBarContentType = .text(""), hasTransparency: Bool = false, scrollView: UIScrollView? = nil) {
+
+        NatElevation.apply(on: navigationBar, elevation: .none)
+        navigationBar.barTintColor = color.backgroundColor
+        navigationBar.tintColor = color.contentColor
+        navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: color.contentColor]
+
+        if hasTransparency {
+            navigationBar.setBackgroundImage(UIImage(), for: .default)
+            navigationBar.shadowImage = UIImage()
+            navigationBar.isTranslucent = true
+            navigationBar.backgroundColor = UIColor.clear
+            removeBottomLine()
+        } else {
+            navigationBar.isTranslucent = false
+            navigationBar.backgroundColor = color.backgroundColor
+        }
+
+        if hasTransparency, let scrollView = scrollView {
+            removeBottomLine()
+            scrollView.addObserver(self, forKeyPath: "contentOffset", options: [.new], context: nil)
+        }
+    }
+  
+    func removeBottomLine() {
+      navigationBar.shadowImage = nil
+      navigationBar.layer.shadowColor = nil
+      navigationBar.layer.shadowOpacity = 0.0
+      
+      if #available(iOS 13.0, *) {
+        let appearance = navigationBar.standardAppearance.copy()
+        appearance.shadowColor = nil // Remove a linha de sombra no iOS 13.0+
+        navigationBar.standardAppearance = appearance
+        navigationBar.scrollEdgeAppearance = appearance
+      }
+    }
+
+    override open func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "contentOffset", let scrollView = object as? UIScrollView {
+            adjustNavigationBarTransparency(for: scrollView, threshold: 100) // Ajuste o threshold conforme necessário
+        }
+    }
+
+    private func adjustNavigationBarTransparency(for scrollView: UIScrollView, threshold: CGFloat) {
+        let offset = scrollView.contentOffset.y
+        let alpha = min(1, max(0, offset / threshold))
+        
+        if #available(iOS 13.0, *) {
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = navigationBar.barTintColor?.withAlphaComponent(alpha)
+            navigationBar.standardAppearance = appearance
+            navigationBar.scrollEdgeAppearance = navigationBar.standardAppearance
+        }
+    }
+    
+    func stopObservingScrollView(scrollView: UIScrollView) {
+        scrollView.removeObserver(self, forKeyPath: "contentOffset")
+    }
+}
+
+//public extension UINavigationController {
+//
+//    private struct TransparencyHandler {
+//        static var handler: ((UIScrollView) -> Void)?
+//    }
+//
+//    func setTransparencyHandler(handler: ((UIScrollView) -> Void)?) {
+//        TransparencyHandler.handler = handler
+//    }
+//
+//    func enableNavigationBarTransparency(for scrollView: UIScrollView, threshold: CGFloat = 100.0) {
+//        scrollView.delegate = self // Atenção aqui, isso pode substituir um delegate existente.
+//
+//        setTransparencyHandler { scrollView in
+//            let offsetY = scrollView.contentOffset.y
+//            let alpha = min(max(offsetY / threshold, 0), 1)
+//            self.navigationBar.alpha = alpha
+//        }
+//    }
+//}
+//
+//extension UINavigationController: UIScrollViewDelegate {
+//    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        TransparencyHandler.handler?(scrollView)
+//    }
+//}
