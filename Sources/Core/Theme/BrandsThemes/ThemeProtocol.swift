@@ -427,6 +427,9 @@ protocol Components {
   var checkboxLabelFallbackFontFamily: String { get }
   var checkboxLabelFallbackFontWeight: UIFont.Weight { get }
   var checkboxBorderRadius: CGFloat { get }
+  var checkboxColorSelected: String { get }
+  var switchColorSelected: String { get }
+  var fieldColorSelected: String { get }
   var counterLabelPrimaryFontFamily: String { get }
   var counterLabelPrimaryFontWeight: UIFont.Weight { get }
   var counterLabelFallbackFontFamily: String { get }

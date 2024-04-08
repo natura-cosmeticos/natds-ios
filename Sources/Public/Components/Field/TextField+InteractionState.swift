@@ -126,10 +126,10 @@ extension TextField {
                 return getUIColorFromTokens(\.colorLowEmphasis)
             case .active:
                 if (theme == .none){
-                    return getUIColorFromTokens(\.colorPrimary)
+                    return getUIColorFromComponentAttributes(\.fieldColorSelected)
                 }
                 else {
-                    return hexStringToUIColor(hex: theme.newInstance.tokens.colorPrimary)
+                    return hexStringToUIColor(hex: theme.newInstance.components.fieldColorSelected)
                 }
             case .filled:
                 return getUIColorFromTokens(\.colorHighEmphasis)
@@ -138,10 +138,10 @@ extension TextField {
         
         public var textFieldTintColor: UIColor {
             if (theme == .none){
-                return getUIColorFromTokens(\.colorPrimary)
+                return getUIColorFromComponentAttributes(\.fieldColorSelected)
             }
             else {
-                return hexStringToUIColor(hex: theme.newInstance.tokens.colorPrimary)
+                return hexStringToUIColor(hex: theme.newInstance.components.fieldColorSelected)
             }
         }
     }

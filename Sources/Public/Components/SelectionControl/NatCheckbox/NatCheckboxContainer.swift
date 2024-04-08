@@ -110,12 +110,12 @@ class NatCheckboxContainer: UIControl, NatSelector {
         checkbox.onTouchesBegan = { [unowned self] _ in
             
             if (self.theme == .none) {
-                 selectedPulsableColor = getUIColorFromTokens(\.colorPrimary).withAlphaComponent(0.2)
+                 selectedPulsableColor = getUIColorFromComponentAttributes(\.checkboxColorSelected).withAlphaComponent(0.2)
                  unselectedPulsableColor = getUIColorFromTokens(\.colorMediumEmphasis).withAlphaComponent(0.2)
             }
             else
             {
-                selectedPulsableColor = hexStringToUIColor(hex: self.theme.newInstance.tokens.colorPrimary).withAlphaComponent(0.2)
+                selectedPulsableColor = hexStringToUIColor(hex: self.theme.newInstance.components.checkboxColorSelected).withAlphaComponent(0.2)
                 unselectedPulsableColor = getUIColorFromTokens(\.colorMediumEmphasis).withAlphaComponent(0.2)
             }
             

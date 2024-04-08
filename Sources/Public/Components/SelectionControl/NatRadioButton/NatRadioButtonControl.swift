@@ -125,16 +125,16 @@ final class NatRadioButtonControl: UIControl {
         var defaultTheme: Style {
             Style(uncheckedBorderColor: getUIColorFromTokens(\.colorMediumEmphasis),
                   uncheckedBackgroundColor: .clear,
-                  checkedBorderColor: getUIColorFromTokens(\.colorPrimary),
-                  checkedBackgroundColor: getUIColorFromTokens(\.colorPrimary),
+                  checkedBorderColor: getUIColorFromComponentAttributes(\.radioButtonColorSelectBorder),
+                  checkedBackgroundColor: getUIColorFromComponentAttributes(\.radioButtonColorSelectContent),
                   checkmarkColor: .white)
         }
         
         var customTheme: Style {
             Style(uncheckedBorderColor: getUIColorFromTokens(\.colorMediumEmphasis),
                   uncheckedBackgroundColor: .clear,
-                  checkedBorderColor: hexStringToUIColor(hex: theme.newInstance.tokens.colorPrimary),
-                  checkedBackgroundColor: hexStringToUIColor(hex: theme.newInstance.tokens.colorPrimary),
+                  checkedBorderColor: hexStringToUIColor(hex: theme.newInstance.components.radioButtonColorSelectBorder),
+                  checkedBackgroundColor: hexStringToUIColor(hex: theme.newInstance.components.radioButtonColorSelectContent),
                   checkmarkColor: .white)
         }
         

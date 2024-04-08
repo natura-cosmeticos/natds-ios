@@ -423,6 +423,9 @@ struct Naturav3LightComponents: Components {
   let checkboxLabelFallbackFontFamily = "San Francisco"
   let checkboxLabelFallbackFontWeight: UIFont.Weight = .regular
   let checkboxBorderRadius: CGFloat = 2
+  let checkboxColorSelected = "#F6BE00"
+  let switchColorSelected = "#F6BE00"
+  let fieldColorSelected = "#F6BE00"
   let counterLabelPrimaryFontFamily = "San Francisco"
   let counterLabelPrimaryFontWeight: UIFont.Weight = .medium
   let counterLabelFallbackFontFamily = "San Francisco"
@@ -532,8 +535,8 @@ struct Naturav3LightComponents: Components {
   let radioButtonLabelFallbackFontFamily = "San Francisco"
   let radioButtonLabelFallbackFontWeight: UIFont.Weight = .regular
   let radioButtonBorderRadius: CGFloat = 12
-  let radioButtonColorSelectBorder = "#F48646"
-  let radioButtonColorSelectContent = "#F48646"
+  let radioButtonColorSelectBorder = "#F6BE00"
+  let radioButtonColorSelectContent = "#F6BE00"
   let radioButtonColorUnselectBorder = "#111111"
   let radioButtonColorUnselectContent = "#111111"
   let radioButtonColorDisableBorder = "#8C8C8C"
