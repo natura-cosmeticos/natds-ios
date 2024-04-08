@@ -95,11 +95,11 @@ public class NatSwitch: UIView {
         
         self.theme = theme
         if (self.theme == .none) {
-            primaryColor = NatColors.primary
+          primaryColor = hexStringToUIColor(hex:getComponentAttributeFromTheme(\.switchColorSelected))
         }
         else
         {
-            primaryColor = hexStringToUIColor(hex: self.theme.newInstance.tokens.colorPrimary)
+            primaryColor = hexStringToUIColor(hex: self.theme.newInstance.components.switchColorSelected)
         }
         
         setup()

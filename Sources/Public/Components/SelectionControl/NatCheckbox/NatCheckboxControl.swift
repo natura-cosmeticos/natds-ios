@@ -118,16 +118,16 @@ final class NatCheckboxControl: UIControl {
         var defaultTheme: Style {
             Style(uncheckedBorderColor: getUIColorFromTokens(\.colorMediumEmphasis),
                   uncheckedBackgroundColor: .clear,
-                  checkedBorderColor: getUIColorFromTokens(\.colorPrimary),
-                  checkedBackgroundColor: getUIColorFromTokens(\.colorPrimary),
+                  checkedBorderColor: getUIColorFromComponentAttributes(\.checkboxColorSelected),
+                  checkedBackgroundColor: getUIColorFromComponentAttributes(\.checkboxColorSelected),
                   checkmarkColor: .white)
         }
         
         var customTheme: Style {
             Style(uncheckedBorderColor: getUIColorFromTokens(\.colorMediumEmphasis),
                   uncheckedBackgroundColor: .clear,
-                  checkedBorderColor: hexStringToUIColor(hex: theme.newInstance.tokens.colorPrimary),
-                  checkedBackgroundColor: hexStringToUIColor(hex: theme.newInstance.tokens.colorPrimary),
+                  checkedBorderColor: hexStringToUIColor(hex: theme.newInstance.components.checkboxColorSelected),
+                  checkedBackgroundColor: hexStringToUIColor(hex: theme.newInstance.components.checkboxColorSelected),
                   checkmarkColor: .white)
         }
         

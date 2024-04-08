@@ -423,6 +423,9 @@ struct BiomeDarkComponents: Components {
   let checkboxLabelFallbackFontFamily = "San Francisco"
   let checkboxLabelFallbackFontWeight: UIFont.Weight = .regular
   let checkboxBorderRadius: CGFloat = 2
+  let checkboxColorSelected = "#F3EADE"
+  let switchColorSelected = "#F3EADE"
+  let fieldColorSelected = "#F3EADE"
   let counterLabelPrimaryFontFamily = "San Francisco"
   let counterLabelPrimaryFontWeight: UIFont.Weight = .medium
   let counterLabelFallbackFontFamily = "San Francisco"

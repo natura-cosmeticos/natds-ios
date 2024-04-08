@@ -424,6 +424,9 @@ struct Avonv2LightComponents: Components {
   let checkboxLabelFallbackFontFamily = "San Francisco"
   let checkboxLabelFallbackFontWeight: UIFont.Weight = .regular
   let checkboxBorderRadius: CGFloat = 2
+  let checkboxColorSelected = "#E5004B"
+  let switchColorSelected = "#E5004B"
+  let fieldColorSelected = "#E5004B"
   let counterLabelPrimaryFontFamily = "San Francisco"
   let counterLabelPrimaryFontWeight: UIFont.Weight = .medium
   let counterLabelFallbackFontFamily = "San Francisco"
