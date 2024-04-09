@@ -43,3 +43,4 @@ Podfile.lock
 
 ### Snapshot FailureDiffs ###
 Tests/FailureDiffs
+NatDS.xcodeproj/project.pbxproj
