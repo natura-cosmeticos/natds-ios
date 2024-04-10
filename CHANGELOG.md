@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [8.0.4](https://github.com/natura-cosmeticos/natds-ios/compare/8.0.3...8.0.4) (2024-04-10)
+
 ### [8.0.3](https://github.com/natura-cosmeticos/natds-ios/compare/8.0.2...8.0.3) (2024-03-20)
 
 - Pipeline errors fixing
