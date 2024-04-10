@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [8.0.4](https://github.com/natura-cosmeticos/natds-ios/compare/8.0.3...8.0.4) (2024-04-10)
 
+- Adding secondary color to input components in natura v3
+- New Icons
+
 ### [8.0.3](https://github.com/natura-cosmeticos/natds-ios/compare/8.0.2...8.0.3) (2024-03-20)
 
 - Pipeline errors fixing
