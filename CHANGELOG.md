@@ -5,7 +5,36 @@ All notable changes to this project will be documented in this file. See [standa
 ### [8.0.4](https://github.com/natura-cosmeticos/natds-ios/compare/8.0.3...8.0.4) (2024-04-10)
 
 - Adding secondary color to input components in natura v3
-- New Icons
+##### New Icons
+  - filled-action-half-rating
+  - filled-brand-tiktok
+  - filled-content-handsoap
+  - filled-content-handwater
+  - filled-content-oilunavailable
+  - filled-content-sensitive
+  - filled-finance-shieldplus
+  - filled-media-volumeoff
+  - filled-media-volumeon
+  - filled-navigation-maximize
+  - filled-navigation-minimize
+  - filled-place-target
+  - filled-product-cube
+  - outlined-action-half-rating
+  - outlined-action-zoomin
+  - outlined-action-zoomout
+  - outlined-brand-tiktok
+  - outlined-content-handsoap
+  - outlined-content-handwater
+  - outlined-content-oilunavailable
+  - outlined-content-sensitive
+  - outlined-finance-shieldplus
+  - outlined-makeup-age
+  - outlined-makeup-mixedskin
+  - outlined-makeup-typeacneic
+  - outlined-media-volumeoff
+  - outlined-media-volumeon
+  - outlined-navigation-maximize
+  - outlined-navigation-minimize
 
 ### [8.0.3](https://github.com/natura-cosmeticos/natds-ios/compare/8.0.2...8.0.3) (2024-03-20)
 
