@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "filled-content-gauge.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

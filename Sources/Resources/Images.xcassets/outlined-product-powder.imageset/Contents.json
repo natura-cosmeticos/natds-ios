@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "outlined-product-powder.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

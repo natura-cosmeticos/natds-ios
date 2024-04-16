@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "filled-alert-cancel.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

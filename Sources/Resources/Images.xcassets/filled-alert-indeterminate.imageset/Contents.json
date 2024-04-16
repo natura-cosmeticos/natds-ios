@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "filled-alert-indeterminate.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

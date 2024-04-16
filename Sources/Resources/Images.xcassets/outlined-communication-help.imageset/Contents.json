@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "outlined-communication-help.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

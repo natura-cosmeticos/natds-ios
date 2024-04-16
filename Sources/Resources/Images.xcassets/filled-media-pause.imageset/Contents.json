@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "filled-media-pause.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
