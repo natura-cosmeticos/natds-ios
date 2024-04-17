@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [8.0.5](https://github.com/natura-cosmeticos/natds-ios/compare/8.0.4...8.0.5) (2024-04-17)
+
 ### [8.0.4](https://github.com/natura-cosmeticos/natds-ios/compare/8.0.3...8.0.4) (2024-04-10)
 
 - Adding secondary color to input components in natura v3
