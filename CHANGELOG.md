@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [8.0.5](https://github.com/natura-cosmeticos/natds-ios/compare/8.0.4...8.0.5) (2024-04-17)
 
+- Adding lowercased prop for buttons in natura v3
+##### New Icons
+- filled-action-halfrating
+- filled-alert-notificationunavailable
+- filled-content-oil
+- filled-finance-shield
+- filled-finance-shieldcheck
+- outlined-action-halfrating
+- outlined-alert-notificationunavailable
+- outlined-finance-shield
+- outlined-finance-shieldcheck
+
 ### [8.0.4](https://github.com/natura-cosmeticos/natds-ios/compare/8.0.3...8.0.4) (2024-04-10)
 
 - Adding secondary color to input components in natura v3
