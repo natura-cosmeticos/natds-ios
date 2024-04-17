@@ -13,6 +13,11 @@
  */
 
 public class IconView: UIView {
+    
+    private var iconSize: CGSize = CGSize(width: 24, height: 24)
+    
+    private var widthConstraint: NSLayoutConstraint?
+    private var heightConstraint: NSLayoutConstraint?
 
     /// The alignment of the icon inside the view
     public var aligment: NSTextAlignment = .center {
@@ -24,11 +29,22 @@ public class IconView: UIView {
     /// The string that comes from `NatDSIcons` and it's translated as an icon
     public var iconText: String? {
         didSet {
-            iconLabel.text = iconText
-            if iconText != nil {
-                shouldShowDefaultIcon = false
-            }
+            updateIconDisplay()
         }
+    }
+
+    private func updateIconDisplay() {
+        let iconName = iconText?.isEmpty == false ? iconText : "outlined-default-mockup"
+        if let image = AssetsHelper.image(from: iconName!)?.withRenderingMode(.alwaysTemplate) {
+            defaultImageView.image = image
+            defaultImageView.tintedColor = tintColor
+            defaultImageView.isHidden = false
+        } else {
+            defaultImageView.image = AssetsHelper.image(from: "outlined-default-mockup")?.withRenderingMode(.alwaysTemplate)
+            defaultImageView.tintedColor = tintColor
+            defaultImageView.isHidden = false
+        }
+        iconLabel.isHidden = true
     }
 
     /// Sets if should show a default icon or a customized icon
@@ -46,14 +62,15 @@ public class IconView: UIView {
     internal lazy var iconLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = aligment
-        label.font = .iconFont()
+        label.isHidden = true
         return label
     }()
 
     internal lazy var defaultImageView: UIImageView = {
         let imageView = UIImageView()
-        let image = AssetsPath.iconOutlinedDefaultMockup.rawValue
-        imageView.image = image
+        imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.image = AssetsHelper.image(from: "outlined-default-mockup")
         return imageView
     }()
 
@@ -82,28 +99,18 @@ public class IconView: UIView {
     public override func tintColorDidChange() {
         super.tintColorDidChange()
         iconLabel.textColor = tintColor
-        defaultImageView.tintedColor = tintColor
-    }
-
-    /// Updates the font size, which changes the size of the icon at the view.
-    /// The method receives an `UIFont` because it uses the font's pointSize
-    ///
-    /// - Parameter size: an font with the chosen size
-    public func setFontSize(size: UIFont) {
-        iconLabel.font = .iconFont(ofSize: size.pointSize)
-    }
-
-    /// Updates the font size, which changes the size of the icon at the view.
-    /// The method receives a CGFloat and uses it as the font's pointSize
-    ///
-    /// - Parameter size: a CGFloat that corresponds to the chosen size
-    public func setFontSize(size: CGFloat) {
-        iconLabel.font = .iconFont(ofSize: size)
+        defaultImageView.tintColor = tintColor
     }
 
     private func setup() {
-        addSubview(iconLabel)
         addSubview(defaultImageView)
+        addSubview(iconLabel)
+        
+        widthConstraint = defaultImageView.widthAnchor.constraint(equalToConstant: iconSize.width)
+        heightConstraint = defaultImageView.heightAnchor.constraint(equalToConstant: iconSize.height)
+
+        NSLayoutConstraint.activate([widthConstraint!, heightConstraint!])
+
         iconLabel.translatesAutoresizingMaskIntoConstraints = false
         defaultImageView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -116,5 +123,28 @@ public class IconView: UIView {
             defaultImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
             defaultImageView.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
+        defaultImageView.isHidden = false
+        iconLabel.isHidden = true
+    }
+    
+    private func updateImageViewSizeConstraints() {
+            NSLayoutConstraint.activate([
+                defaultImageView.widthAnchor.constraint(equalToConstant: iconSize.width),
+                defaultImageView.heightAnchor.constraint(equalToConstant: iconSize.height)
+            ])
+        }
+
+    /// Atualiza o tamanho do ícone.
+    public func setFontSize(size: CGFloat) {
+        updateImageViewSizeConstraints()
+    }
+    
+    func updateIconSize(to newSize: CGSize) {
+        widthConstraint?.constant = newSize.width
+        heightConstraint?.constant = newSize.height
+        
+        NSLayoutConstraint.activate([widthConstraint!, heightConstraint!])
+
+        layoutIfNeeded()
     }
 }

@@ -81,7 +81,7 @@ public final class NatAvatar: UIView {
         circleView.layer.cornerRadius = size.value / 2
         imageView.layer.cornerRadius = size.value / 2
         label.font = size.font
-        iconView.setFontSize(size: size.font)
+        iconView.updateIconSize(to: CGSize(width: size.value - 8, height: size.value - 8))
     }
 }
 

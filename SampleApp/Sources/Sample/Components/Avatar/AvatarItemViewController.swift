@@ -69,7 +69,7 @@ class AvatarItemViewController: UIViewController, SampleItem {
             let avatar = NatAvatar(size: size)
 
             if value == 0 {
-                avatar.configure(icon: getIcon(.outlinedFinanceBank))
+                avatar.configure(icon: getIcon(.outlinedContentHandsoap))
             }
 
             if value == 1 {
