@@ -376,6 +376,7 @@ struct TheBodyShopLightComponents: Components {
   let buttonLabelFallbackFontWeight: UIFont.Weight = .medium
   let buttonBorderRadius: CGFloat = 4
   let isButtonRounded: Bool = false
+  let isButtonUppercased: Bool = true
   let buttonContainedColorEnableBackground = "#004236"
   let buttonContainedColorEnableBorder = "#FFFFFF00"
   let buttonContainedColorEnableLabel = "#FFFFFF"

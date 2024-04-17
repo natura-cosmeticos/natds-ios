@@ -217,6 +217,7 @@ private struct StubTokens: Tokens {
 
 private struct StubComponents: Components {
     let isButtonRounded:Bool = false
+    let isButtonUppercased: Bool = true
     let alertTitleFontSize: CGFloat = 20
     let alertTitleLetterSpacing: CGFloat = 0.12
     let alertTitleLineHeight: CGFloat = 1.5

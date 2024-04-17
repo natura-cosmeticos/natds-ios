@@ -376,6 +376,7 @@ struct Naturav3DarkComponents: Components {
   let buttonLabelFallbackFontWeight: UIFont.Weight = .medium
   let buttonBorderRadius: CGFloat = 999
   let isButtonRounded: Bool = true
+  let isButtonUppercased: Bool = false
   let buttonContainedColorEnableBackground = "#FFC9AB"
   let buttonContainedColorEnableBorder = "#FFFFFF00"
   let buttonContainedColorEnableLabel = "#111111"

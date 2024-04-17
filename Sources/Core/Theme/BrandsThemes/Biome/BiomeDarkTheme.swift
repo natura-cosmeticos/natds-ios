@@ -376,6 +376,7 @@ struct BiomeDarkComponents: Components {
   let buttonLabelFallbackFontWeight: UIFont.Weight = .medium
   let buttonBorderRadius: CGFloat = 4
   let isButtonRounded: Bool = false
+  let isButtonUppercased: Bool = true
   let buttonContainedColorEnableBackground = "#F3EADE"
   let buttonContainedColorEnableBorder = "#FFFFFF00"
   let buttonContainedColorEnableLabel = "#333333"

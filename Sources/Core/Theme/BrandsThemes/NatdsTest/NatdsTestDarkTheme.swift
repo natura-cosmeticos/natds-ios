@@ -376,6 +376,7 @@ struct NatdsTestDarkComponents: Components {
   let buttonLabelFallbackFontWeight: UIFont.Weight = .medium
   let buttonBorderRadius: CGFloat = 0
   let isButtonRounded: Bool = false
+  let isButtonUppercased: Bool = true
   let buttonContainedColorEnableBackground = "#BE9AE2"
   let buttonContainedColorEnableBorder = "#FFFFFF00"
   let buttonContainedColorEnableLabel = "#000000"

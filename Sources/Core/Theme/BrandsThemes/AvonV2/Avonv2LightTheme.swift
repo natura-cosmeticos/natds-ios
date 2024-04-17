@@ -377,6 +377,7 @@ struct Avonv2LightComponents: Components {
   let buttonLabelFallbackFontWeight: UIFont.Weight = .medium
   let buttonBorderRadius: CGFloat = 4
   let isButtonRounded: Bool = false
+  let isButtonUppercased: Bool = true
   let buttonContainedColorEnableBackground = "#E5004B"
   let buttonContainedColorEnableBorder = "#FFFFFF00"
   let buttonContainedColorEnableLabel = "#FFFFFF"

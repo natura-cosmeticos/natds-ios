@@ -23,7 +23,13 @@ enum ButtonStyle {
     }
 
     static private func createTextForTitle(text: String, withColor color: UIColor) -> NSAttributedString {
-        let attributedString = NSMutableAttributedString(string: text.uppercased())
+        var attributedString = NSMutableAttributedString(string: text.uppercased())
+        
+        var isUppercased = getComponentAttributeFromTheme(\.isButtonUppercased)
+        if (!isUppercased) {
+            attributedString = NSMutableAttributedString(string: text.lowercased())
+        }
+        
         attributedString.apply(foregroundColor: color)
 
         let value = getComponentAttributeFromTheme(\.buttonLabelLetterSpacing)
