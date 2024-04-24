@@ -17,7 +17,8 @@ let package = Package(
             path: "Sources",
             resources: [
                 .process("Resources/Images.xcassets"),
-                .process("Resources/Fonts")
-            ])
+                .copy("Resources/Fonts")
+            ]
+        )
     ]
 )
