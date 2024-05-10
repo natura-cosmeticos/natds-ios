@@ -1,69 +1,71 @@
-%PDF-1.4
-%µÌÆ˚
-4 0 obj
-<< /Length 5 0 R
-   /Filter /FlateDecode
->>
+%PDF-1.7
+
+1 0 obj
+  << >>
+endobj
+
+2 0 obj
+  << /Length 3 0 R >>
 stream
-xúMN[
-¬@¸ﬂSÃì4€lé·§`˝Èázp∑R*!Û √ÖÙπhmX∂Ú*B√±Ô◊ª`˝î∆¨12åm»ã—™CÖﬁ:—&8=KÁ–ÏΩ›Œ–â÷W†3#Œ®´*õ˘h∫ÎI©˘§Ï-©;zéÛ˘“ÇÁˇèr+_›-)Î
+/DeviceRGB CS
+/DeviceRGB cs
+q
+1.000000 0.000000 -0.000000 1.000000 2.492859 0.916748 cm
+0.211765 0.211765 0.211765 scn
+9.514140 1.583258 m
+2.201140 1.583258 -2.369860 9.500257 1.287140 15.833258 c
+4.943140 22.166258 14.085140 22.166258 17.741140 15.833258 c
+18.575140 14.389257 19.014141 12.751258 19.014141 11.083258 c
+19.008141 5.839258 14.758141 1.589258 9.514140 1.583258 c
+h
+f
+n
+Q
+
 endstream
 endobj
-5 0 obj
-   133
-endobj
+
 3 0 obj
-<<
-   /ExtGState <<
-      /a0 << /CA 1 /ca 1 >>
-   >>
->>
+  386
 endobj
-2 0 obj
-<< /Type /Page % 1
-   /Parent 1 0 R
-   /MediaBox [ 0 0 18 18 ]
-   /Contents 4 0 R
-   /Group <<
-      /Type /Group
-      /S /Transparency
-      /I true
-      /CS /DeviceRGB
-   >>
-   /Resources 3 0 R
->>
+
+4 0 obj
+  << /Annots []
+     /Type /Page
+     /MediaBox [ 0.000000 0.000000 24.000000 24.000000 ]
+     /Resources 1 0 R
+     /Contents 2 0 R
+     /Parent 5 0 R
+  >>
 endobj
-1 0 obj
-<< /Type /Pages
-   /Kids [ 2 0 R ]
-   /Count 1
->>
+
+5 0 obj
+  << /Kids [ 4 0 R ]
+     /Count 1
+     /Type /Pages
+  >>
 endobj
+
 6 0 obj
-<< /Producer (cairo 1.15.12 (http://cairographics.org))
-   /CreationDate (D:20240412201504Z)
->>
+  << /Pages 5 0 R
+     /Type /Catalog
+  >>
 endobj
-7 0 obj
-<< /Type /Catalog
-   /Pages 1 0 R
->>
-endobj
+
 xref
-0 8
-0000000000 65535 f 
-0000000535 00000 n 
-0000000319 00000 n 
-0000000247 00000 n 
-0000000015 00000 n 
-0000000225 00000 n 
-0000000600 00000 n 
-0000000711 00000 n 
+0 7
+0000000000 65535 f
+0000000010 00000 n
+0000000034 00000 n
+0000000476 00000 n
+0000000498 00000 n
+0000000671 00000 n
+0000000745 00000 n
 trailer
-<< /Size 8
-   /Root 7 0 R
-   /Info 6 0 R
+<< /ID [ (some) (id) ]
+   /Root 6 0 R
+   /Size 7
 >>
 startxref
-763
+804
 %%EOF

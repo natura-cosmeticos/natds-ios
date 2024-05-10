@@ -384,7 +384,7 @@ struct ConsultoriaDeBelezaDarkComponents: Components {
   let buttonLabelFallbackFontWeight: UIFont.Weight = .medium
   let buttonBorderRadius: CGFloat = 4
   let isButtonRounded: Bool = false
-  let isButtonUppercased: Bool = true
+  let buttonTextTransform: String = "capitalized"
   let buttonContainedColorEnableBackground = "#FFFB85"
   let buttonContainedColorEnableBorder = "#FFFFFF00"
   let buttonContainedColorEnableLabel = "#000000"

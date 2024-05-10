@@ -376,7 +376,7 @@ struct Naturav2LightComponents: Components {
   let buttonLabelFallbackFontWeight: UIFont.Weight = .medium
   let buttonBorderRadius: CGFloat = 4
   let isButtonRounded: Bool = false
-  let isButtonUppercased: Bool = true
+  let buttonTextTransform: String = "uppercased"
   let buttonContainedColorEnableBackground = "#EB6619"
   let buttonContainedColorEnableBorder = "#FFFFFF00"
   let buttonContainedColorEnableLabel = "#111111"

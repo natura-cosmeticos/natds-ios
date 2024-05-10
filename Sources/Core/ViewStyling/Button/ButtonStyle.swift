@@ -5,7 +5,7 @@ enum ButtonStyle {
         let family = getComponentAttributeFromTheme(\.buttonLabelPrimaryFontFamily)
         button.titleLabel?.font = NatFonts.font(ofSize: size, withWeight: weight, withFamily: family)
         button.titleLabel?.lineBreakMode = .byTruncatingTail
-        button.contentEdgeInsets = NatButton.EdgeInsets.medium
+        button.contentEdgeInsets = GaYaButton.EdgeInsets.medium
     }
 
     static func applyStyleForTitle(_ title: String,
@@ -25,8 +25,8 @@ enum ButtonStyle {
     static private func createTextForTitle(text: String, withColor color: UIColor) -> NSAttributedString {
         var attributedString = NSMutableAttributedString(string: text.uppercased())
         
-        var isUppercased = getComponentAttributeFromTheme(\.isButtonUppercased)
-        if (!isUppercased) {
+        var buttonTextStyle = getComponentAttributeFromTheme(\.buttonTextTransform)
+        if (buttonTextStyle == "lowercased") {
             attributedString = NSMutableAttributedString(string: text.lowercased())
         }
         

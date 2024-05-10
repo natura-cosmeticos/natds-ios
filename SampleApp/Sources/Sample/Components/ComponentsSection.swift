@@ -8,6 +8,7 @@ class ComponentsSection: SampleSection {
         AvatarItemViewController.self,
         BadgeViewController.self,
         ButtonsItemViewController.self,
+        GaYaButtonViewController.self,
         CardViewController.self,
         CounterViewController.self,
         CheckboxViewController.self,

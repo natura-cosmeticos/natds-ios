@@ -376,7 +376,7 @@ struct AesopDarkComponents: Components {
   let buttonLabelFallbackFontWeight: UIFont.Weight = .medium
   let buttonBorderRadius: CGFloat = 4
   let isButtonRounded: Bool = false
-  let isButtonUppercased: Bool = true
+  let buttonTextTransform: String = "uppercased"
   let buttonContainedColorEnableBackground = "#333333"
   let buttonContainedColorEnableBorder = "#FFFFFF00"
   let buttonContainedColorEnableLabel = "#FFFFFF"

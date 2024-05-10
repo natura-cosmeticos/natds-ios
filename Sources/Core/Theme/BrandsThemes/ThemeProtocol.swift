@@ -380,7 +380,7 @@ protocol Components {
   var buttonLabelFallbackFontWeight: UIFont.Weight { get }
   var buttonBorderRadius: CGFloat { get }
   var isButtonRounded: Bool { get }
-  var isButtonUppercased: Bool { get }
+  var buttonTextTransform: String { get }
   var buttonContainedColorEnableBackground: String { get }
   var buttonContainedColorEnableBorder: String { get }
   var buttonContainedColorEnableLabel: String { get }

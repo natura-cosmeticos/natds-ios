@@ -376,7 +376,7 @@ struct CasaEestiloLightComponents: Components {
   let buttonLabelFallbackFontWeight: UIFont.Weight = .medium
   let buttonBorderRadius: CGFloat = 4
   let isButtonRounded: Bool = false
-  let isButtonUppercased: Bool = true
+  let buttonTextTransform: String = "uppercased"
   let buttonContainedColorEnableBackground = "#C2488E"
   let buttonContainedColorEnableBorder = "#FFFFFF00"
   let buttonContainedColorEnableLabel = "#FFFFFF"
