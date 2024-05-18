@@ -4,6 +4,41 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [8.1.0](https://github.com/natura-cosmeticos/natds-ios/compare/8.0.6...8.1.0) (2024-05-10)
 
+- GaYaButton
+##### New Icons
+- filled-navigation-arrowctrregularleft
+- filled-navigation-arrowctrregularright
+- filled-navigation-arrowctrlcompactbottom
+- filled-navigation-arrowctrlcompactleft
+- filled-navigation-arrowctrlcompactright
+- filled-navigation-arrowctrlcompacttop
+- filled-navigation-arrowctrlregularbottom
+- filled-navigation-arrowctrlregulartop
+- filled-navigation-arrowrunbottom
+- filled-navigation-arrowrunleft
+- filled-navigation-arrowrunright
+- filled-navigation-arrowruntop
+- filled-navigation-arrowtrianglebottom
+- filled-navigation-arrowtriangleleft
+- filled-navigation-arrowtriangleright
+- filled-navigation-arrowtriangletop
+- outlined-content-oil
+- outlined-navigation-arrowctrlcompactbottom
+- outlined-navigation-arrowctrlcompactleft
+- outlined-navigation-arrowctrlcompactright
+- outlined-navigation-arrowctrlcompacttop
+- outlined-navigation-arrowctrlregularbottom
+- outlined-navigation-arrowctrlregularleft
+- outlined-navigation-arrowctrlregularright
+- outlined-navigation-arrowctrlregulartop
+- outlined-navigation-arrowrunbottom
+- outlined-navigation-arrowrunleft
+- outlined-navigation-arrowrunright
+- outlined-navigation-arrowruntop
+- outlined-place-target
+- outlined-product-cube
+- outlined-product-nailpolish
+
 ### [8.0.6](https://github.com/natura-cosmeticos/natds-ios/compare/8.0.5...8.0.6) (2024-04-24)
 
 ### [8.0.5](https://github.com/natura-cosmeticos/natds-ios/compare/8.0.4...8.0.5) (2024-04-17)
