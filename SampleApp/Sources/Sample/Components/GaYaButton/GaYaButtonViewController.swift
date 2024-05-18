@@ -527,7 +527,7 @@ final class GaYaButtonViewController: UIViewController, SampleItem {
     private let containedIconRightButton: GaYaButton = {
         let button = GaYaButton(style: .filled)
         button.configure(title: "filled")
-        button.configure(icon: nil, position: .right)
+        button.configure(icon: getIcon(.outlinedAlertNotification), position: .right)
         button.translatesAutoresizingMaskIntoConstraints = false
 
         return button
