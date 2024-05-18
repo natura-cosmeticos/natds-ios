@@ -6,13 +6,13 @@ O componente `GaYaButton` é essencial para interações no aplicativo, permitin
 
 | Prop Figma       | Prop Swift       | Valores                    | Status            |
 | -------------- | -------------- | ------------------------- | ----------------- |
-| Theme          | Style          | Filled, Outlined, Ghost, Tonal | ✅  Disponível       |
-| Theme          | Color          | Primary, OnPrimary, Secondary, OnSecondary, Inverse, Neutral | ✅  Disponível       |
-| Theme          | Icon           | Right, Left         | ✅  Disponível       |
-| Theme          | Size           | Small, Medium, Large      | ✅  Disponível       |
-| Theme          | IsEnabled      | True, False               | ✅  Disponível       |
+| Variants          | Style          | Filled, Outlined, Ghost, Tonal | ✅  Disponível       |
+| Colors          | Color          | Primary, OnPrimary, Secondary, OnSecondary, Inverse, Neutral | ✅  Disponível       |
+| Icon          | Icon + Position           | Right, Left         | ✅  Disponível       |
+| Sizes          | Size           | Small, Medium, Large      | ✅  Disponível       |
+| Disabled          | IsEnabled      | True, False               | ✅  Disponível       |
 | Display          | -        | -               | ❌  Não aplicável  |
-| Text-Transform          | - | Uppercase, Lowercase, Capitalize     | ✅  Disponível no tema  |
+| Text-Transform          | - | Uppercase, Lowercase, Capitalize     | ✅  Aplicável pelo tema  |
 | -          | Theme          | Todos os temas disponíveis      | ✅  Disponível       |
 
 ### Como Usar
