@@ -4,6 +4,17 @@
 
 O componente `GaYaButton` é essencial para interações no aplicativo, permitindo que os usuários façam escolhas e executem ações com um simples toque. Este guia detalha as configurações disponíveis para personalizar o botão de acordo com as necessidades do seu design de interface.
 
+| Prop Figma       | Prop Swift       | Valores                    | Status            |
+| -------------- | -------------- | ------------------------- | ----------------- |
+| Theme          | Style          | Filled, Outlined, Ghost, Tonal | ✅  Disponível       |
+| Theme          | Color          | Primary, OnPrimary, Secondary, OnSecondary, Inverse, Neutral | ✅  Disponível       |
+| Theme          | Icon           | Right, Left         | ✅  Disponível       |
+| Theme          | Size           | Small, Medium, Large      | ✅  Disponível       |
+| Theme          | IsEnabled      | True, False               | ✅  Disponível       |
+| Display          | -        | -               | ❌  Não aplicável  |
+| Text-Transform          | - | Uppercase, Lowercase, Capitalize     | ✅  Disponível no tema  |
+| -          | Theme          | Todos os temas disponíveis      | ✅  Disponível       |
+
 ### Como Usar
 
 Para começar a usar o `GaYaButton`, siga as instruções abaixo para configurar os diferentes estilos e funcionalidades.
@@ -11,6 +22,11 @@ Para começar a usar o `GaYaButton`, siga as instruções abaixo para configurar
 ## Estilos de Botão
 
 **1. Filled**
+
+<p align="center">
+  <img alt="1" src="./images/gayabutton_filled.png" width="40%"> 
+</p>
+
    - **Descrição**: Botão com fundo colorido.
    - **Código**:
      ```swift
@@ -19,6 +35,11 @@ Para começar a usar o `GaYaButton`, siga as instruções abaixo para configurar
      ```
 
 **2. Outlined**
+
+<p align="center">
+  <img alt="1" src="./images/gayabutton_outlined.png" width="40%"> 
+</p>
+
    - **Descrição**: Botão com borda e fundo transparente.
    - **Código**:
      ```swift
@@ -27,6 +48,11 @@ Para começar a usar o `GaYaButton`, siga as instruções abaixo para configurar
      ```
 
 **3. Ghost**
+
+<p align="center">
+  <img alt="1" src="./images/gayabutton_ghost.png" width="40%"> 
+</p>
+
    - **Descrição**: Botão sem borda ou fundo, apenas texto.
    - **Código**:
      ```swift
@@ -35,6 +61,11 @@ Para começar a usar o `GaYaButton`, siga as instruções abaixo para configurar
      ```
      
 **4. Tonal**
+
+<p align="center">
+  <img alt="1" src="./images/gayabutton_tonal.png" width="40%"> 
+</p>
+
    - **Descrição**: Botão com fundo colorido, cores mais claras.
    - **Código**:
      ```swift
@@ -42,52 +73,92 @@ Para começar a usar o `GaYaButton`, siga as instruções abaixo para configurar
      tonalButton.configure(title: "Tonal")
      ```
 
+## Cores
+
+**1. Primary**
+   - **Código**:
+     ```swift
+     button.configure(color: .primary)
+     ```
+
+**2. OnPrimary**
+   - **Código**:
+     ```swift
+     button.configure(color: .onPrimary)
+     ```
+
+**3. Secondary**
+   - **Código**:
+     ```swift
+     button.configure(color: .secondary)
+     ```
+     
+**4. OnSecondary**
+   - **Código**:
+     ```swift
+     button.configure(color: .onSecondary)
+     ```
+
+**4. Inverse**
+   - **Código**:
+     ```swift
+     button.configure(color: .inverse)
+     ```
+
+**4. Neutral**
+   - **Código**:
+     ```swift
+     button.configure(color: .neutral)
+     ```
+
 ## Ícones
 
 **Posicionamento de Ícones**
+
+<p align="center">
+  <img alt="1" src="./images/gayabutton_icons.png" width="40%"> 
+</p>
+
    - **Descrição**: Adicione ícones ao botão para melhorar a identificação visual.
    - **À Direita**:
      ```swift
-     let rightIconButton = GaYaButton(style: .contained)
-     rightIconButton.configure(title: "Com Ícone", icon: UIImage(named: "rightIcon"), position: .right)
+     let button = GaYaButton(style: .filled)
+     button.configure(icon: getIcon(.outlinedAlertNotification), position: .right)
      ```
    - **À Esquerda**:
      ```swift
-     let leftIconButton = GaYaButton(style: .contained)
-     leftIconButton.configure(title: "Com Ícone", icon: UIImage(named: "leftIcon"), position: .left)
+     let button = GaYaButton(style: .filled)
+     button.configure(icon: getIcon(.outlinedAlertNotification), position: .left)
      ```
 
-## Tamanho e Ativação
+## Tamanho, Ativação, Posicionamento e Text-transform
 
 **Tamanhos Disponíveis**
+
+<p align="center">
+  <img alt="1" src="./images/gayabutton_sizes.png" width="40%"> 
+</p>
+
    - **Semi, Semix e Medium**
      - Ajuste o tamanho para adequar-se ao contexto de uso.
      
      ```swift
-        private let containedFullMediumButton: GaYaButton = {
-            let button = GaYaButton(style: .filled, size: .medium)
-            button.configure(title: "Filled - Medium")
-            button.translatesAutoresizingMaskIntoConstraints = false
-            return button
-        }()
+     let button = GaYaButton(style: .filled, size: .medium)
+     button.configure(title: "Filled - Medium")
 
-        private let disableContainedFullSemixButton: GaYaButton = {
-            let button = GaYaButton(style: .filled, size: .semix)
-            button.configure(title: "Disabled Filled - Semix")
-            button.isEnabled = false
-            button.translatesAutoresizingMaskIntoConstraints = false
-            return button
-        }()
+     let button = GaYaButton(style: .filled, size: .semix)
+     button.configure(title: "Filled - Semix")
 
-        private let outlinedFullSemiButton: GaYaButton = {
-            let button = GaYaButton(style: .outlined, size: .semi)
-            button.configure(title: "Outlined - Semi")
-            button.translatesAutoresizingMaskIntoConstraints = false
-            return button
-        }()
-    ```
+     let button = GaYaButton(style: .outlined, size: .semi)
+     button.configure(title: "Outlined - Semi")
+     
 
 **Ativação**
+
+<p align="center">
+  <img alt="1" src="./images/gayabutton_disabled.png" width="40%"> 
+</p>
+
    - **Habilitar/Desabilitar Botão**
      - Gerencie se o botão pode ser interagido pelo usuário.
      
@@ -97,13 +168,22 @@ Para começar a usar o `GaYaButton`, siga as instruções abaixo para configurar
      disabledButton.configure(title: "Desabilitado")
      ```
 
+**Posicionamento (não aplicável)**
+   - **Display**
+     - O posicionamento obedece a arquitetura da tela utilizada e hierarquia dos componentes existentes.
+    
+**Text-transform (não aplicável)**
+   - **Uppercase, Lowercase, Capitalize**
+     - Gerenciado pelo tema, a propriedade está sendo modificada diretamente pelo tema utilizado
+     
+
 ## Temas
 
 **Aplicando Temas**
    - **Descrição**: Customize o tema do botão para corresponder ao flavor visual do seu app.
    - **Exemplo**:
      ```swift
-     let themeButton = GaYaButton(style: .contained, theme: .avonLight)
+     let themeButton = GaYaButton(style: .filled, theme: .avonLight)
      themeButton.configure(title: "Tema Avon")
      ```
 
