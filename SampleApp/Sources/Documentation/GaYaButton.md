@@ -12,7 +12,7 @@ O componente `GaYaButton` é essencial para interações no aplicativo, permitin
 | Sizes          | Size           | Small, Medium, Large      | ✅  Disponível       |
 | Disabled          | IsEnabled      | True, False               | ✅  Disponível       |
 | Display          | -        | -               | ❌  Não aplicável  |
-| Text-Transform          | - | Uppercase, Lowercase, Capitalize     | ✅  Aplicável pelo tema  |
+| Text-Transform          | - | Definido pelo tema     | ✅  Disponível  |
 | -          | Theme          | Todos os temas disponíveis      | ✅  Disponível       |
 
 ### Como Usar
@@ -173,8 +173,8 @@ Para começar a usar o `GaYaButton`, siga as instruções abaixo para configurar
      - O posicionamento obedece a arquitetura da tela utilizada e hierarquia dos componentes existentes.
     
 **Text-transform (não aplicável)**
-   - **Uppercase, Lowercase, Capitalize**
-     - Gerenciado pelo tema, a propriedade está sendo modificada diretamente pelo tema utilizado
+   - **Definido pelo tema**
+     - Gerenciado pelo tema, podem ser Uppercase, Lowercase, Capitalize mas será modificada diretamente pelo tema utilizado
      
 
 ## Temas
