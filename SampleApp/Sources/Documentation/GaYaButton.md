@@ -1,5 +1,8 @@
 # Guia de Uso - GaYaButton
 
+> 📢 O GaYaButton faz parte da evolução contínua de componentes do GaYa Design System. Ele foi lançado como um novo componente mas o antigo NatButton permanecerá disponível para uso mas não receberá mais atualizações ou suporte ativo. Encorajamos a migração para o GaYaButton o quanto antes para aproveitar as melhorias e garantir compatibilidade futura.
+
+
 ## Visão Geral
 
 O componente `GaYaButton` é essencial para interações no aplicativo, permitindo que os usuários façam escolhas e executem ações com um simples toque. Este guia detalha as configurações disponíveis para personalizar o botão de acordo com as necessidades do seu design de interface.
@@ -14,6 +17,10 @@ O componente `GaYaButton` é essencial para interações no aplicativo, permitin
 | Display          | -        | -               | ❌  Não aplicável  |
 | Text-Transform          | - | Definido pelo tema     | ✅  Disponível  |
 | -          | Theme          | Todos os temas disponíveis      | ✅  Disponível       |
+
+### Changelog
+
+Para acompanhar a evolução deste e de outros componentes acesse: https://github.com/natura-cosmeticos/natds-ios/blob/master/CHANGELOG.md
 
 ### Como Usar
 
