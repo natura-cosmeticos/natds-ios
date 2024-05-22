@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [8.1.1](https://github.com/natura-cosmeticos/natds-ios/compare/8.1.0...8.1.1) (2024-05-22)
+
 ## [8.1.0](https://github.com/natura-cosmeticos/natds-ios/compare/8.0.6...8.1.0) (2024-05-10)
 
 - GaYaButton
