@@ -595,7 +595,7 @@ final class GaYaButtonViewController: UIViewController, SampleItem {
     private func setup() {
         title = Self.name
 
-        //view.backgroundColor = hexStringToUIColor(hex: "#f4f4f4")
+        view.backgroundColor = hexStringToUIColor(hex: "#f4f4f4")
         view.addSubview(scrollView)
 
         scrollView.addSubview(containerView)

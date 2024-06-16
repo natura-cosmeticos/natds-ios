@@ -174,6 +174,9 @@
 		FFD9EB352AFD8DE900EBE815 /* radiobutton.md in Resources */ = {isa = PBXBuildFile; fileRef = FFD9EB192AFD8DE900EBE815 /* radiobutton.md */; };
 		FFD9EB362AFD8DE900EBE815 /* checkbox.md in Resources */ = {isa = PBXBuildFile; fileRef = FFD9EB1A2AFD8DE900EBE815 /* checkbox.md */; };
 		FFD9EB372AFD8DE900EBE815 /* switch.md in Resources */ = {isa = PBXBuildFile; fileRef = FFD9EB1B2AFD8DE900EBE815 /* switch.md */; };
+		FFE7974D2C1D924B00D241BF /* GaYaAvatarItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE7974C2C1D924B00D241BF /* GaYaAvatarItemViewController.swift */; };
+		FFE7974F2C1D926A00D241BF /* GaYaChipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE7974E2C1D926A00D241BF /* GaYaChipViewController.swift */; };
+		FFE797512C1D928500D241BF /* GaYaChipFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE797502C1D928500D241BF /* GaYaChipFilterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -362,6 +365,9 @@
 		FFD9EB192AFD8DE900EBE815 /* radiobutton.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = radiobutton.md; sourceTree = "<group>"; };
 		FFD9EB1A2AFD8DE900EBE815 /* checkbox.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = checkbox.md; sourceTree = "<group>"; };
 		FFD9EB1B2AFD8DE900EBE815 /* switch.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = switch.md; sourceTree = "<group>"; };
+		FFE7974C2C1D924B00D241BF /* GaYaAvatarItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaAvatarItemViewController.swift; sourceTree = "<group>"; };
+		FFE7974E2C1D926A00D241BF /* GaYaChipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaChipViewController.swift; sourceTree = "<group>"; };
+		FFE797502C1D928500D241BF /* GaYaChipFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaChipFilterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -619,6 +625,9 @@
 		86D88A8EB08915984C5FB6D277F7A6FA /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				FFE7974B2C1D922300D241BF /* GaYaChipFilter */,
+				FFE7974A2C1D921700D241BF /* GaYaChip */,
+				FFE797492C1D920B00D241BF /* GaYaAvatar */,
 				8C1AE06128A684D0000F9D88 /* Alert */,
 				0E3F579024B90E79004B2F9E /* AppBar */,
 				7D75A45825DB0B940050ACA9 /* Avatar */,
@@ -1027,6 +1036,30 @@
 			path = images;
 			sourceTree = "<group>";
 		};
+		FFE797492C1D920B00D241BF /* GaYaAvatar */ = {
+			isa = PBXGroup;
+			children = (
+				FFE7974C2C1D924B00D241BF /* GaYaAvatarItemViewController.swift */,
+			);
+			path = GaYaAvatar;
+			sourceTree = "<group>";
+		};
+		FFE7974A2C1D921700D241BF /* GaYaChip */ = {
+			isa = PBXGroup;
+			children = (
+				FFE7974E2C1D926A00D241BF /* GaYaChipViewController.swift */,
+			);
+			path = GaYaChip;
+			sourceTree = "<group>";
+		};
+		FFE7974B2C1D922300D241BF /* GaYaChipFilter */ = {
+			isa = PBXGroup;
+			children = (
+				FFE797502C1D928500D241BF /* GaYaChipFilterViewController.swift */,
+			);
+			path = GaYaChipFilter;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1255,6 +1288,7 @@
 				F1BDDD1A6BB7FF95ED9BF0D4FF3083A8 /* IconographyItemViewController.swift in Sources */,
 				BD695AAB8C1745298D8F405635E322A7 /* MainDataSource.swift in Sources */,
 				B0824E26ADCA40FFA158AA0A35155D71 /* MainViewController.swift in Sources */,
+				FFE7974D2C1D924B00D241BF /* GaYaAvatarItemViewController.swift in Sources */,
 				6566B8AD366FC73D95DA1F35979D488C /* NavigationDrawerItemViewController.swift in Sources */,
 				18A184686209DD677293C0286EEB0C60 /* OpacityCell.swift in Sources */,
 				8402F4E624F932E70018149C /* IconButtonItemViewController.swift in Sources */,
@@ -1276,6 +1310,7 @@
 				15CB9B603913EB682989F204523A1472 /* SpacingViewController.swift in Sources */,
 				DC1FF6E82885F5F700AC659C /* ChipViewController.swift in Sources */,
 				BEDF93312593C65800F54C50 /* CheckboxViewController.swift in Sources */,
+				FFE797512C1D928500D241BF /* GaYaChipFilterViewController.swift in Sources */,
 				FD3C1A6EDAD5F31BC9E4984E981C28A8 /* TabItemViewController.swift in Sources */,
 				B5D960A174519D837D9855D4B0A6711B /* TextFieldItemViewController.swift in Sources */,
 				79FC59E625DAB5A7001CCB56 /* ImageViewController.swift in Sources */,
@@ -1284,6 +1319,7 @@
 				D2874BA3C6A03754EC9895DC95D6DFE5 /* TypographyCell.swift in Sources */,
 				4FB74E3BCCB54EE2242A9A78778F6024 /* TypographyViewController.swift in Sources */,
 				5A95C641E43BCD63CA21359C8EAFBA25 /* ValueTextHighlightItemViewController.swift in Sources */,
+				FFE7974F2C1D926A00D241BF /* GaYaChipViewController.swift in Sources */,
 				8C1AE06328A684E7000F9D88 /* AlertViewController.swift in Sources */,
 				84A9E9AC250F9D18006B8A52 /* BrandThemes.swift in Sources */,
 			);

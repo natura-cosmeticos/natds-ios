@@ -471,6 +471,17 @@
 		FF5439E52BD6A5BA00FAE2C4 /* GaYaButtonFilledStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5439E12BD6A5B900FAE2C4 /* GaYaButtonFilledStyle.swift */; };
 		FF5439E62BD6A5BA00FAE2C4 /* GaYaButtonOutlineStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5439E22BD6A5BA00FAE2C4 /* GaYaButtonOutlineStyle.swift */; };
 		FFD9EB3B2B185D7000EBE815 /* NatButton+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9EB3A2B185D7000EBE815 /* NatButton+Color.swift */; };
+		FFE797342C1D86D400D241BF /* GaYaChip.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE797332C1D86D400D241BF /* GaYaChip.swift */; };
+		FFE797362C1D86E800D241BF /* GaYaChip+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE797352C1D86E800D241BF /* GaYaChip+Color.swift */; };
+		FFE797382C1D870000D241BF /* GaYaChip+Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE797372C1D870000D241BF /* GaYaChip+Position.swift */; };
+		FFE7973A2C1D870F00D241BF /* GaYaChip+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE797392C1D870F00D241BF /* GaYaChip+Size.swift */; };
+		FFE7973C2C1D872C00D241BF /* GaYaChipFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE7973B2C1D872C00D241BF /* GaYaChipFilter.swift */; };
+		FFE7973E2C1D873D00D241BF /* GaYaChipFilter+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE7973D2C1D873D00D241BF /* GaYaChipFilter+Color.swift */; };
+		FFE797402C1D874C00D241BF /* GaYaChipFilter+Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE7973F2C1D874C00D241BF /* GaYaChipFilter+Position.swift */; };
+		FFE797422C1D875800D241BF /* GaYaChipFilter+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE797412C1D875800D241BF /* GaYaChipFilter+Size.swift */; };
+		FFE797442C1D89B400D241BF /* GaYaAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE797432C1D89B400D241BF /* GaYaAvatar.swift */; };
+		FFE797462C1D89CA00D241BF /* GaYaAvatar+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE797452C1D89CA00D241BF /* GaYaAvatar+Size.swift */; };
+		FFE797482C1D89D800D241BF /* GaYaAvatar+Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE797472C1D89D800D241BF /* GaYaAvatar+Type.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -957,6 +968,17 @@
 		FF5439E22BD6A5BA00FAE2C4 /* GaYaButtonOutlineStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaYaButtonOutlineStyle.swift; sourceTree = "<group>"; };
 		FF60BC58D83695B3AC61ABB7BBE49B9C /* UIView+FrameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+FrameTests.swift"; sourceTree = "<group>"; };
 		FFD9EB3A2B185D7000EBE815 /* NatButton+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+Color.swift"; sourceTree = "<group>"; };
+		FFE797332C1D86D400D241BF /* GaYaChip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaChip.swift; sourceTree = "<group>"; };
+		FFE797352C1D86E800D241BF /* GaYaChip+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GaYaChip+Color.swift"; sourceTree = "<group>"; };
+		FFE797372C1D870000D241BF /* GaYaChip+Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GaYaChip+Position.swift"; sourceTree = "<group>"; };
+		FFE797392C1D870F00D241BF /* GaYaChip+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GaYaChip+Size.swift"; sourceTree = "<group>"; };
+		FFE7973B2C1D872C00D241BF /* GaYaChipFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaChipFilter.swift; sourceTree = "<group>"; };
+		FFE7973D2C1D873D00D241BF /* GaYaChipFilter+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GaYaChipFilter+Color.swift"; sourceTree = "<group>"; };
+		FFE7973F2C1D874C00D241BF /* GaYaChipFilter+Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GaYaChipFilter+Position.swift"; sourceTree = "<group>"; };
+		FFE797412C1D875800D241BF /* GaYaChipFilter+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GaYaChipFilter+Size.swift"; sourceTree = "<group>"; };
+		FFE797432C1D89B400D241BF /* GaYaAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaAvatar.swift; sourceTree = "<group>"; };
+		FFE797452C1D89CA00D241BF /* GaYaAvatar+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GaYaAvatar+Size.swift"; sourceTree = "<group>"; };
+		FFE797472C1D89D800D241BF /* GaYaAvatar+Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GaYaAvatar+Type.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1879,6 +1901,9 @@
 				7D75A43825DB00130050ACA9 /* NatAvatar.swift */,
 				7D75A44025DB00230050ACA9 /* NatAvatar+Size.swift */,
 				7D5120B925E9914100557E21 /* NatAvatar+Type.swift */,
+				FFE797432C1D89B400D241BF /* GaYaAvatar.swift */,
+				FFE797452C1D89CA00D241BF /* GaYaAvatar+Size.swift */,
+				FFE797472C1D89D800D241BF /* GaYaAvatar+Type.swift */,
 			);
 			path = Avatar;
 			sourceTree = "<group>";
@@ -2878,6 +2903,10 @@
 				DC1FF6E42885F57500AC659C /* NatChip+Color.swift */,
 				DC1FF6E22885F54200AC659C /* NatChip+Position.swift */,
 				DCBF1B44287F360B0024041E /* NatChip+Size.swift */,
+				FFE797332C1D86D400D241BF /* GaYaChip.swift */,
+				FFE797352C1D86E800D241BF /* GaYaChip+Color.swift */,
+				FFE797372C1D870000D241BF /* GaYaChip+Position.swift */,
+				FFE797392C1D870F00D241BF /* GaYaChip+Size.swift */,
 			);
 			path = Chip;
 			sourceTree = "<group>";
@@ -3145,6 +3174,10 @@
 				FF50B6432A040D5600FA824A /* NatChipFilter+Color.swift */,
 				FF50B6452A040D6B00FA824A /* NatChipFilter+Position.swift */,
 				FF50B6472A040D9700FA824A /* NatChipFilter+Size.swift */,
+				FFE7973B2C1D872C00D241BF /* GaYaChipFilter.swift */,
+				FFE7973D2C1D873D00D241BF /* GaYaChipFilter+Color.swift */,
+				FFE7973F2C1D874C00D241BF /* GaYaChipFilter+Position.swift */,
+				FFE797412C1D875800D241BF /* GaYaChipFilter+Size.swift */,
 			);
 			path = ChipFilter;
 			sourceTree = "<group>";
@@ -3615,11 +3648,13 @@
 				84703F3C24F6ECD300FE01CA /* NatFonts+TextStyle.swift in Sources */,
 				BEDF93372593D28400F54C50 /* NatCheckboxControl.swift in Sources */,
 				7D31C11A2615162300EED32A /* NatRating+Alignment.swift in Sources */,
+				FFE797482C1D89D800D241BF /* GaYaAvatar+Type.swift in Sources */,
 				7D277B68269E43A1005075EF /* DialogBodyView.swift in Sources */,
 				845D099A250119AF00B05760 /* UIView+CenterBounds.swift in Sources */,
 				7DE2B12C26000BA600C5CBC0 /* UIImageView+Clickable.swift in Sources */,
 				BBCC40A29117B4CB675FE57C3B0130E4 /* AssetsHelper.swift in Sources */,
 				844A1E2324AE117400E93AD9 /* NatShortcut.swift in Sources */,
+				FFE797462C1D89CA00D241BF /* GaYaAvatar+Size.swift in Sources */,
 				265B17EB24AFA12900FD0407 /* NatBadge.swift in Sources */,
 				E67E4E4B29F714CB00FF7515 /* ConsultoriaDeBelezaDarkTheme.swift in Sources */,
 				84BC901624AA17C0007DF09D /* NatDialogCustomBodyConfigurable.swift in Sources */,
@@ -3646,6 +3681,7 @@
 				7D31C1152614C87F00EED32A /* NatRating+Size.swift in Sources */,
 				98C6EB095DD059D51DD9883B943AF889 /* ButtonOutlineStyle.swift in Sources */,
 				7D43162225ED9477004AE34F /* TextField+Size.swift in Sources */,
+				FFE797342C1D86D400D241BF /* GaYaChip.swift in Sources */,
 				E67E4E4A29F714CB00FF7515 /* AvonLightTheme.swift in Sources */,
 				14016A20C7BF7046BAFCD2AE53673EB0 /* ButtonStyle.swift in Sources */,
 				FF38AEA32BA0935400F0F10B /* Naturav3LightTheme.swift in Sources */,
@@ -3667,6 +3703,7 @@
 				84BC901C24AB7445007DF09D /* NatDialogDismissableConfigurable.swift in Sources */,
 				FF50B6422A040D3600FA824A /* NatChipFilter.swift in Sources */,
 				AB9CCFDF8B930FD49AFAEAE1BB5CA718 /* DesignSystem.swift in Sources */,
+				FFE7973E2C1D873D00D241BF /* GaYaChipFilter+Color.swift in Sources */,
 				E67E4E4729F714CB00FF7515 /* NatdsTestDarkTheme.swift in Sources */,
 				FF38AEA42BA0935400F0F10B /* Naturav3DarkTheme.swift in Sources */,
 				E67E4E5629F714CB00FF7515 /* AesopLightTheme.swift in Sources */,
@@ -3675,6 +3712,7 @@
 				8F808FFBB4549BC4F3895B8CBB23ADB3 /* Divider.swift in Sources */,
 				7D86C195266533F600FC4C53 /* NatLogo.swift in Sources */,
 				84703F3F24F83EEC00FE01CA /* NatIconButton.swift in Sources */,
+				FFE797362C1D86E800D241BF /* GaYaChip+Color.swift in Sources */,
 				7D19998925756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift in Sources */,
 				E67E4E5929F714CB00FF7515 /* NaturaDarkTheme.swift in Sources */,
 				7D43165925F2A16F004AE34F /* UIImageView+URL.swift in Sources */,
@@ -3720,6 +3758,7 @@
 				798CD29C25FFCC4A00F49768 /* NatRadioButton.swift in Sources */,
 				4838BBC57B1464D82D59DE861726268A /* NatColors.swift in Sources */,
 				FF4BFAAD2A17080200D7E28F /* Avonv2LightTheme.swift in Sources */,
+				FFE797442C1D89B400D241BF /* GaYaAvatar.swift in Sources */,
 				E67E4E5129F714CB00FF7515 /* ThemeProtocol.swift in Sources */,
 				84BC900224AA15C3007DF09D /* NotificationCenterPostable.swift in Sources */,
 				797E615E255464D1002A59E0 /* NatButton+Icon.swift in Sources */,
@@ -3745,6 +3784,7 @@
 				7D5349DE26C6A32700F88EA7 /* NatImage+Type.swift in Sources */,
 				79B6AC6C25AC8BF90027F7D6 /* AssetsPath.swift in Sources */,
 				1E1CA75D4F2464DBEA0DD722294FFDEB /* NatSpacing.swift in Sources */,
+				FFE797382C1D870000D241BF /* GaYaChip+Position.swift in Sources */,
 				84BC901724AA17C0007DF09D /* NatDialogTitleConfigurable.swift in Sources */,
 				84BF066224B4A62400462AC5 /* NatShortcut+Style.swift in Sources */,
 				79D4C8E925F2B5100027E74E /* NatCheckbox.swift in Sources */,
@@ -3759,6 +3799,7 @@
 				8C1AE05A28A682ED000F9D88 /* NatAlert+Style.swift in Sources */,
 				84F709FF1D1DFC32BA4E9CB1803A6E30 /* NavigationDrawer.swift in Sources */,
 				798CD2F02605151B00F49768 /* NatTag+Size.swift in Sources */,
+				FFE797422C1D875800D241BF /* GaYaChipFilter+Size.swift in Sources */,
 				79FC59C125D45DAE001CCB56 /* NatProgressIndicatorCircular+Constants.swift in Sources */,
 				7DB17C332739B6E000CCC734 /* String+Attributed.swift in Sources */,
 				7D277B5026976900005075EF /* AppBarContentType.swift in Sources */,
@@ -3775,6 +3816,7 @@
 				ECA4CB7769FB08CB62C5F8CD79EE6521 /* ReusableView.swift in Sources */,
 				7D8FD15526FB742700B0912A /* GetUIColorFromComponent.swift in Sources */,
 				7D31C1102614BC1700EED32A /* NatRating+Style.swift in Sources */,
+				FFE797402C1D874C00D241BF /* GaYaChipFilter+Position.swift in Sources */,
 				FF5439DD2BD2B3A400FAE2C4 /* GaYaButton+Color.swift in Sources */,
 				84EB6B8324EEEA6200C6A792 /* GetUIColorFromTokens.swift in Sources */,
 				79EA0C962614B39A00742C0A /* NatBadge+Animation.swift in Sources */,
@@ -3783,6 +3825,7 @@
 				509D46F287D25DAEB7A71BF2665EF894 /* SearchBar.swift in Sources */,
 				10953079D3A781AA63E2E03A93F222C4 /* String+Icon.swift in Sources */,
 				604835F2975D92A9D2EF46132C17C0A5 /* Tab.swift in Sources */,
+				FFE7973C2C1D872C00D241BF /* GaYaChipFilter.swift in Sources */,
 				AAA3820978AE27C3A6ED940916227C9D /* TabItemView.swift in Sources */,
 				79FC59DD25DAB0BE001CCB56 /* NatImage.swift in Sources */,
 				FF50B6442A040D5600FA824A /* NatChipFilter+Color.swift in Sources */,
@@ -3809,6 +3852,7 @@
 				93B1D8CFBB1420174B310CC4906AA2EF /* UIView+Frame.swift in Sources */,
 				77C55B339CA403354D76ABF05E283D5A /* ValueTextHighlight.swift in Sources */,
 				7DAF750E25E5AF830094F865 /* String+Initials.swift in Sources */,
+				FFE7973A2C1D870F00D241BF /* GaYaChip+Size.swift in Sources */,
 				840B6A754236624B9738CBC3D5CFE895 /* ViewAnimatingWrapper.swift in Sources */,
 				7D86C1A426654D0700FC4C53 /* NatLogo+Size.swift in Sources */,
 				FF4BFAAC2A17080200D7E28F /* Avonv2DarkTheme.swift in Sources */,
