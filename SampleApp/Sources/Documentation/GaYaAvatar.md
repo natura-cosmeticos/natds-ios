@@ -22,7 +22,7 @@ Para acompanhar a evolução deste e de outros componentes acesse: https://githu
 Para começar a usar o `GaYaAvatar`, siga as instruções abaixo para configurar os diferentes estilos e funcionalidades.
 
 <p align="center">
-  <img alt="1" src="./images/gayaavatar.png" width="40%"> 
+  <img alt="1" src="./images/gayaavatar.png" width="30%"> 
 </p>
 
 ## Estilos
@@ -30,7 +30,7 @@ Para começar a usar o `GaYaAvatar`, siga as instruções abaixo para configurar
 **1. Icon**
 
 <p align="center">
-  <img alt="1" src="./images/gayaavatar_icon.png" width="40%"> 
+  <img alt="1" src="./images/gayaavatar_icon.png" width="10%"> 
 </p>
 
    - **Descrição**: Utilize um ícone disponível na biblioteca de ícones  
@@ -43,7 +43,7 @@ Para começar a usar o `GaYaAvatar`, siga as instruções abaixo para configurar
 **2. Label**
 
 <p align="center">
-  <img alt="1" src="./images/gayaavatar_label.png" width="40%"> 
+  <img alt="1" src="./images/gayaavatar_label.png" width="10%"> 
 </p>
 
    - **Descrição**: Exibe a sigla correspondente a string
@@ -56,7 +56,7 @@ Para começar a usar o `GaYaAvatar`, siga as instruções abaixo para configurar
 **3. Image**
 
 <p align="center">
-  <img alt="1" src="./images/gayaavatar_image.png" width="40%"> 
+  <img alt="1" src="./images/gayaavatar_image.png" width="10%"> 
 </p>
 
    - **Descrição**: Coloque seus próprios resources no formato avatar
@@ -71,7 +71,7 @@ Para começar a usar o `GaYaAvatar`, siga as instruções abaixo para configurar
 **Tamanhos Disponíveis**
 
 <p align="center">
-  <img alt="1" src="./images/gayaavatar_label.png" width="40%"> 
+  <img alt="1" src="./images/gayaavatar_label.png" width="10%"> 
 </p>
 
    - **Standard, Semi, Semix, Medium, Large**
