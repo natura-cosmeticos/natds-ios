@@ -35,7 +35,7 @@ enum GaYaButtonTonalStyle {
                 case .inverse:
                     button.backgroundColor = getUIColorFromTokens(\.colorNeutral600)
                 case .neutral:
-                    button.backgroundColor = getUIColorFromTokens(\.colorNeutral50)
+                    button.backgroundColor = getUIColorFromTokens(\.colorNeutral100)
                 }
     
                 button.layer.borderColor = getUIColorFromComponentAttributes(\.buttonContainedColorEnableBorder).cgColor
@@ -132,7 +132,7 @@ enum GaYaButtonTonalStyle {
             case .neutral:
                 switch button.state {
                 case .normal:
-                    button.backgroundColor = hexStringToUIColor(hex: theme.newInstance.tokens.colorNeutral50)
+                    button.backgroundColor = hexStringToUIColor(hex: theme.newInstance.tokens.colorNeutral100)
                     button.layer.borderColor = hexStringToUIColor(hex: theme.newInstance.tokens.colorSurfaceDark).cgColor
                     
                     NatElevation.apply(on: button, elevation: .none)
