@@ -177,6 +177,10 @@
 		FFE7974D2C1D924B00D241BF /* GaYaAvatarItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE7974C2C1D924B00D241BF /* GaYaAvatarItemViewController.swift */; };
 		FFE7974F2C1D926A00D241BF /* GaYaChipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE7974E2C1D926A00D241BF /* GaYaChipViewController.swift */; };
 		FFE797512C1D928500D241BF /* GaYaChipFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE797502C1D928500D241BF /* GaYaChipFilterViewController.swift */; };
+		FFE797552C21F39500D241BF /* GaYaChip.md in Resources */ = {isa = PBXBuildFile; fileRef = FFE797522C21F39500D241BF /* GaYaChip.md */; };
+		FFE797562C21F39500D241BF /* GaYaAvatar.md in Resources */ = {isa = PBXBuildFile; fileRef = FFE797532C21F39500D241BF /* GaYaAvatar.md */; };
+		FFE797572C21F39500D241BF /* GaYaButton.md in Resources */ = {isa = PBXBuildFile; fileRef = FFE797542C21F39500D241BF /* GaYaButton.md */; };
+		FFE797592C22332800D241BF /* icons-map.txt in Resources */ = {isa = PBXBuildFile; fileRef = FFE797582C22332800D241BF /* icons-map.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -368,6 +372,10 @@
 		FFE7974C2C1D924B00D241BF /* GaYaAvatarItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaAvatarItemViewController.swift; sourceTree = "<group>"; };
 		FFE7974E2C1D926A00D241BF /* GaYaChipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaChipViewController.swift; sourceTree = "<group>"; };
 		FFE797502C1D928500D241BF /* GaYaChipFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaChipFilterViewController.swift; sourceTree = "<group>"; };
+		FFE797522C21F39500D241BF /* GaYaChip.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = GaYaChip.md; sourceTree = "<group>"; };
+		FFE797532C21F39500D241BF /* GaYaAvatar.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = GaYaAvatar.md; sourceTree = "<group>"; };
+		FFE797542C21F39500D241BF /* GaYaButton.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = GaYaButton.md; sourceTree = "<group>"; };
+		FFE797582C22332800D241BF /* icons-map.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "icons-map.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -928,6 +936,10 @@
 		FFCA199A2ABAD52000F03EAA /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
+				FFE797582C22332800D241BF /* icons-map.txt */,
+				FFE797532C21F39500D241BF /* GaYaAvatar.md */,
+				FFE797542C21F39500D241BF /* GaYaButton.md */,
+				FFE797522C21F39500D241BF /* GaYaChip.md */,
 				FFD9EB062AFD8DE800EBE815 /* alert.md */,
 				FFD9EB022AFD8DE800EBE815 /* app-bar.md */,
 				FFD9EB142AFD8DE900EBE815 /* avatar.md */,
@@ -1154,8 +1166,10 @@
 				FFD9EAF32AFD856900EBE815 /* dialog_4.png in Resources */,
 				FFD9EAE62AFD856900EBE815 /* textfield2.png in Resources */,
 				FFCA19A82ABAF86500F03EAA /* button_variants.png in Resources */,
+				FFE797572C21F39500D241BF /* GaYaButton.md in Resources */,
 				FFD9EB372AFD8DE900EBE815 /* switch.md in Resources */,
 				FFD9EAE42AFD856900EBE815 /* appbar_14.png in Resources */,
+				FFE797592C22332800D241BF /* icons-map.txt in Resources */,
 				FFCA19A12ABAD56100F03EAA /* button_theme.png in Resources */,
 				FFCA19A22ABAD56100F03EAA /* button_size.png in Resources */,
 				FFD9EAF02AFD856900EBE815 /* divider.png in Resources */,
@@ -1198,12 +1212,14 @@
 				FFD9EAE22AFD856900EBE815 /* select2.png in Resources */,
 				FFD9EB282AFD8DE900EBE815 /* counter.md in Resources */,
 				FFD9EB292AFD8DE900EBE815 /* badge.md in Resources */,
+				FFE797562C21F39500D241BF /* GaYaAvatar.md in Resources */,
 				FFD9EAF22AFD856900EBE815 /* navigationdrawer2.png in Resources */,
 				FFD9EB342AFD8DE900EBE815 /* progress-indicator.md in Resources */,
 				FFD9EAF72AFD856900EBE815 /* dialog_8.png in Resources */,
 				FFD9EB212AFD8DE900EBE815 /* dialog.md in Resources */,
 				FFD9EB362AFD8DE900EBE815 /* checkbox.md in Resources */,
 				FFD9EAD12AFD856900EBE815 /* appbar_5.png in Resources */,
+				FFE797552C21F39500D241BF /* GaYaChip.md in Resources */,
 				FFD9EAFF2AFD856900EBE815 /* appbar_7.png in Resources */,
 				FFD9EADA2AFD856900EBE815 /* avatar.png in Resources */,
 				FFD9EADD2AFD856900EBE815 /* logo2.png in Resources */,
