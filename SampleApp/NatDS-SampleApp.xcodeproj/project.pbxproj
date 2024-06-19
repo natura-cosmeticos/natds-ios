@@ -181,6 +181,7 @@
 		FFE797562C21F39500D241BF /* GaYaAvatar.md in Resources */ = {isa = PBXBuildFile; fileRef = FFE797532C21F39500D241BF /* GaYaAvatar.md */; };
 		FFE797572C21F39500D241BF /* GaYaButton.md in Resources */ = {isa = PBXBuildFile; fileRef = FFE797542C21F39500D241BF /* GaYaButton.md */; };
 		FFE797592C22332800D241BF /* icons-map.txt in Resources */ = {isa = PBXBuildFile; fileRef = FFE797582C22332800D241BF /* icons-map.txt */; };
+		FFE7975B2C224B5600D241BF /* GaYaChipFilter.md in Resources */ = {isa = PBXBuildFile; fileRef = FFE7975A2C224B5600D241BF /* GaYaChipFilter.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -376,6 +377,7 @@
 		FFE797532C21F39500D241BF /* GaYaAvatar.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = GaYaAvatar.md; sourceTree = "<group>"; };
 		FFE797542C21F39500D241BF /* GaYaButton.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = GaYaButton.md; sourceTree = "<group>"; };
 		FFE797582C22332800D241BF /* icons-map.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "icons-map.txt"; sourceTree = "<group>"; };
+		FFE7975A2C224B5600D241BF /* GaYaChipFilter.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = GaYaChipFilter.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -936,6 +938,7 @@
 		FFCA199A2ABAD52000F03EAA /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
+				FFE7975A2C224B5600D241BF /* GaYaChipFilter.md */,
 				FFE797582C22332800D241BF /* icons-map.txt */,
 				FFE797532C21F39500D241BF /* GaYaAvatar.md */,
 				FFE797542C21F39500D241BF /* GaYaButton.md */,
@@ -1198,6 +1201,7 @@
 				FFCA19B52AC6A9F700F03EAA /* iconbutton_color.png in Resources */,
 				FFD9EB262AFD8DE900EBE815 /* chipfilter.md in Resources */,
 				FFD9EAE02AFD856900EBE815 /* alert_2.png in Resources */,
+				FFE7975B2C224B5600D241BF /* GaYaChipFilter.md in Resources */,
 				FFD9EAE92AFD856900EBE815 /* tag.png in Resources */,
 				FFD9EB1C2AFD8DE900EBE815 /* icon-button.md in Resources */,
 				FFD9EAF42AFD856900EBE815 /* switch.png in Resources */,
