@@ -106,13 +106,13 @@ Para começar a usar o `GaYaButton`, siga as instruções abaixo para configurar
      button.configure(color: .onSecondary)
      ```
 
-**4. Inverse**
+**5. Inverse**
    - **Código**:
      ```swift
      button.configure(color: .inverse)
      ```
 
-**4. Neutral**
+**6. Neutral**
    - **Código**:
      ```swift
      button.configure(color: .neutral)
