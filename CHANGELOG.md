@@ -4,9 +4,22 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [8.2.1](https://github.com/natura-cosmeticos/natds-ios/compare/8.2.0...8.2.1) (2024-06-18)
 
+* Fixing color neutral background for GaYaButton variant Tonal
+
 ## [8.2.0](https://github.com/natura-cosmeticos/natds-ios/compare/8.1.2...8.2.0) (2024-06-18)
 
+* New component GaYaChip
+* New component GaYaChipFilter
+* New component GaYaAvatar
+
 ### [8.1.2](https://github.com/natura-cosmeticos/natds-ios/compare/8.1.1...8.1.2) (2024-06-10)
+
+##### Adding new icons
+- filled_finance_bag
+- filled_finance_bagcheck
+- filled_product_nailpolish
+- outlined_finance_bagcheck
+- outlined_product_nailpolish
 
 ### [8.1.1](https://github.com/natura-cosmeticos/natds-ios/compare/8.1.0...8.1.1) (2024-05-22)
 - Fixing icon resource for icons filledNavigationArrowCtrlRegularLeft and filledNavigationArrowCtrlRegularRight
