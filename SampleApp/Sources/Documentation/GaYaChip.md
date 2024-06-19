@@ -35,42 +35,37 @@ Para começar a usar o `GaYaChip`, siga as instruções abaixo para configurar o
   <img alt="1" src="./images/gayachip_colors.png" width="40%"> 
 </p>
 
-**1. Primary**
-   - **Código**:
-     ```swift
-     let chip = GaYaChip(color: .primary)
-     ```
+**Primary**
 
-**2. OnPrimary**
-   - **Código**:
-     ```swift
-     let chip = GaYaChip(color: .onPrimary)
-     ```
+  ```swift
+  let chip = GaYaChip(color: .primary)
+  ```
 
-**3. Secondary**
-   - **Código**:
-     ```swift
-     let chip = GaYaChip(color: .secondary)
-     ```
+**OnPrimary**
+
+  ```swift
+  let chip = GaYaChip(color: .onPrimary)
+  ```
+
+**Secondary**
+  ```swift
+  let chip = GaYaChip(color: .secondary)
+  ```
      
-**4. OnSecondary**
-   - **Código**:
-     ```swift
-     let chip = GaYaChip(color: .onSecondary)
-     ```
+**OnSecondary**
+  ```swift
+  let chip = GaYaChip(color: .onSecondary)
+  ```
 
-**4. Inverse**
-   - **Código**:
-     ```swift
-     let chip = GaYaChip(color: .inverse)
-     ```
+**Inverse**
+  ```swift
+  let chip = GaYaChip(color: .inverse)
+  ```
 
-**4. Neutral**
-   - **Código**:
-     ```swift
-     let chip = GaYaChip(color: .neutral)
-     ```
-
+**Neutral**
+  ```swift
+  let chip = GaYaChip(color: .neutral)
+  ```
 
 ## Tamanho, Ativação e Estado
 
@@ -80,45 +75,40 @@ Para começar a usar o `GaYaChip`, siga as instruções abaixo para configurar o
   <img alt="1" src="./images/gayachip_sizes.png" width="40%"> 
 </p>
 
-   - **Small, Medium, Large**
-     - Ajuste o tamanho para adequar-se ao contexto de uso.
+ 
+ - **Semi, Semix e Medium**
      
      ```swift
-        let chip = GaYaChip(size: .semi, color: .primary)
+     let chip = GaYaChip(size: .semi, color: .primary)
 
-        let chip = GaYaChip(size: .semiX, color: .primary)
-             
-        let chip = GaYaChip(size: .medium, color: .primary)
-                     
+     let chip = GaYaChip(size: .semiX, color: .primary)
+
+     let chip = GaYaChip(size: .medium, color: .primary)
      ```
 
 **Ativação**
 
-<p align="center">
-  <img alt="1" src="./images/gayachip_disabled.png" width="40%"> 
+<p align="left">
+  <img alt="1" src="./images/gayachip_disabled.png" width="10%"> 
 </p>
 
-   - **Habilitar/Desabilitar Chip**:
-     - Gerencie se o chip pode ser interagido pelo usuário.
+   - **Habilitar/Desabilitar Chip**
      
      ```swift
-     
-        let chip = GaYaChip(color: .primary)
-        chip.configure(state: .disabled)
-        
+     let chip = GaYaChip(color: .primary)
+     chip.configure(state: .disabled)
      ```
 
 **Estado**
 
-    - **Normal, Selected**:
+- **Normal, Selected**
      
      ```swift
-        let chip = GaYaChip(color: .primary)
-        chip.configure(state: .normal)
+     let chip = GaYaChip(color: .primary)
+     chip.configure(state: .normal)
         
-        let chip = GaYaChip(color: .primary)
-        chip.configure(state: .selected)
-        
+     let chip = GaYaChip(color: .primary)
+     chip.configure(state: .selected)
      ```
      
 ## Helpers
@@ -131,17 +121,17 @@ Para começar a usar o `GaYaChip`, siga as instruções abaixo para configurar o
 
    - **À Direita**:
      ```swift
-        let icon = getIcon(.outlinedDefaultMockup)
-        let chip = GaYaChip()
-        chip.configure(icon: icon, position: .right)
+     let icon = getIcon(.outlinedDefaultMockup)
+     let chip = GaYaChip()
+     chip.configure(icon: icon, position: .right)
      ```
    - **À Esquerda**:
      ```swift
-        let icon = getIcon(.outlinedDefaultMockup)
-        let chip = GaYaChip()
-        chip.configure(icon: icon, position: .left)
+     let icon = getIcon(.outlinedDefaultMockup)
+     let chip = GaYaChip()
+     chip.configure(icon: icon, position: .left)
      ```
-     
+
 **Avatar**
 
 <p align="center">
@@ -150,24 +140,23 @@ Para começar a usar o `GaYaChip`, siga as instruções abaixo para configurar o
 
    - **À Direita**:
      ```swift
-        let avatar = GaYaAvatar(size: .standard, type: .label)
-        avatar.configure(name: "Design System")
-        let chip = GaYaChip()
-        chip.configure(avatar: avatar, position: .right)
+     let avatar = GaYaAvatar(size: .standard, type: .label)
+     avatar.configure(name: "Design System")
+     let chip = GaYaChip()
+     chip.configure(avatar: avatar, position: .right)
      ```
    - **À Esquerda**:
      ```swift
-        let avatar = GaYaAvatar(size: .standard, type: .label)
-        avatar.configure(name: "Design System")
-        let chip = GaYaChip()
-        chip.configure(avatar: avatar, position: .left)
+     let avatar = GaYaAvatar(size: .standard, type: .label)
+     avatar.configure(name: "Design System")
+     let chip = GaYaChip()
+     chip.configure(avatar: avatar, position: .left)
      ```
 
 ## Temas
 
 **Aplicando Temas**
    - **Descrição**: Customize o tema do chip para corresponder ao flavor visual do seu app.
-   - **Exemplo**:
      ```swift
-        let chip = GaYaChip(color: .primary, theme: .avonv2Light)
+     let chip = GaYaChip(color: .primary, theme: .avonv2Light)
      ```
