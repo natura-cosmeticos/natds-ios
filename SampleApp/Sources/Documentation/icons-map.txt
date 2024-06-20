@@ -135,7 +135,6 @@ outlined-action-favorite
 outlined-action-filter
 outlined-action-frame
 outlined-action-gridsquare
-outlined-action-halfrating
 outlined-action-half-rating
 outlined-action-help
 outlined-action-history

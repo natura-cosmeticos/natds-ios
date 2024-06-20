@@ -136,7 +136,6 @@ public enum Icon: String, CaseIterable {
     case outlinedActionFilter = "outlined-action-filter"
     case outlinedActionFrame = "outlined-action-frame"
     case outlinedActionGridsquare = "outlined-action-gridsquare"
-    case outlinedActionHalfrating = "outlined-action-halfrating"
     case outlinedActionHalfRating = "outlined-action-half-rating"
     case outlinedActionHelp = "outlined-action-help"
     case outlinedActionHistory = "outlined-action-history"
