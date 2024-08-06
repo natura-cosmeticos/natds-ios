@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "filled-content-soap.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

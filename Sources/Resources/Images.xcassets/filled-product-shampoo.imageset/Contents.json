@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "filled-product-shampoo.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

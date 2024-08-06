@@ -26,16 +26,16 @@ final class ChooseBrandViewController: UIViewController {
     }()
 
     private let brands = [
-        "brand_selection/aesop",
         "brand_selection/avon",
         "brand_selection/natura",
-        "brand_selection/natura&co",
         "brand_selection/the_body_shop",
         "brand_selection/consultoria_de_beleza",
         "brand_selection/casa_e_estilo",
+        "brand_selection/casa_e_estilov2",
         "brand_selection/avonv2",
         "brand_selection/naturav2",
-        "brand_selection/naturav3"
+        "brand_selection/naturav3",
+        "brand_selection/forca_de_vendas"
     ]
 
     // MARK: - Life cycle
@@ -100,16 +100,16 @@ extension ChooseBrandViewController: UITableViewDelegate {
         let brandThemes: BrandThemes
 
         switch indexPath.row {
-        case 0: brandThemes = .init(light: .aesopLight, dark: .aesopDark)
-        case 1: brandThemes = .init(light: .avonLight, dark: .avonDark)
-        case 2: brandThemes = .init(light: .naturaLight, dark: .naturaDark)
-        case 3: return
-        case 4: brandThemes = .init(light: .theBodyShopLight, dark: .theBodyShopDark)
-        case 5: brandThemes = .init(light: .consultoriaDeBelezaLight, dark: .consultoriaDeBelezaDark)
-        case 6: brandThemes = .init(light: .casaeestiloLight, dark: .casaeestiloDark)
-        case 7: brandThemes = .init(light: .avonv2Light, dark: .avonv2Dark)
-        case 8: brandThemes = .init(light: .naturav2Light, dark: .naturav2Dark)
-        case 9: brandThemes = .init(light: .naturav3Light, dark: .naturav3Dark)
+        case 0: brandThemes = .init(light: .avonLight, dark: .avonDark)
+        case 1: brandThemes = .init(light: .naturaLight, dark: .naturaDark)
+        case 2: brandThemes = .init(light: .theBodyShopLight, dark: .theBodyShopDark)
+        case 3: brandThemes = .init(light: .consultoriaDeBelezaLight, dark: .consultoriaDeBelezaDark)
+        case 4: brandThemes = .init(light: .casaeestiloLight, dark: .casaeestiloDark)
+        case 5: brandThemes = .init(light: .casaeestilov2Light, dark: .casaeestilov2Dark)
+        case 6: brandThemes = .init(light: .avonv2Light, dark: .avonv2Dark)
+        case 7: brandThemes = .init(light: .naturav2Light, dark: .naturav2Dark)
+        case 8: brandThemes = .init(light: .naturav3Light, dark: .naturav3Dark)
+        case 9: brandThemes = .init(light: .forcaDeVendasLight, dark: .forcaDeVendasDark)
         default: fatalError("not implemented")
         }
 

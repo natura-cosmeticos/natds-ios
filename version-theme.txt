@@ -1,1 +1,1 @@
-natds-themes@0.71.0
+natds-themes@0.78.2

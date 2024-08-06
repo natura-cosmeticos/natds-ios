@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "filled-product-hairgel.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
