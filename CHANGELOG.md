@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [8.2.2](https://github.com/natura-cosmeticos/natds-ios/compare/8.2.1...8.2.2) (2024-08-06)
+
 ### [8.2.1](https://github.com/natura-cosmeticos/natds-ios/compare/8.2.0...8.2.1) (2024-06-18)
 
 * Fixing color neutral background for GaYaButton variant Tonal
