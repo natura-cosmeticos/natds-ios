@@ -409,9 +409,7 @@ struct CasaEestilov2DarkComponents: Components {
   let checkboxLabelFallbackFontFamily = "San Francisco"
   let checkboxLabelFallbackFontWeight: UIFont.Weight = .regular
   let checkboxBorderRadius: CGFloat = 2
-  let checkboxColorSelected = "#D1D1D1"
-  let switchColorSelected = "#D1D1D1"
-  let fieldColorSelected = "#D1D1D1"
+  let colorInputComponent = "#D1D1D1"
   let counterLabelPrimaryFontFamily = "San Francisco"
   let counterLabelPrimaryFontWeight: UIFont.Weight = .medium
   let counterLabelFallbackFontFamily = "San Francisco"

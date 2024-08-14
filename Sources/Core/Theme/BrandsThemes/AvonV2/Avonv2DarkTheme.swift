@@ -406,9 +406,7 @@ struct Avonv2DarkComponents: Components {
   let checkboxLabelFallbackFontFamily = "San Francisco"
   let checkboxLabelFallbackFontWeight: UIFont.Weight = .regular
   let checkboxBorderRadius: CGFloat = 2
-  let checkboxColorSelected = "#FF6388"
-  let switchColorSelected = "#FF6388"
-  let fieldColorSelected = "#FF6388"
+  let colorInputComponent = "#FF6388"
   let counterLabelPrimaryFontFamily = "San Francisco"
   let counterLabelPrimaryFontWeight: UIFont.Weight = .medium
   let counterLabelFallbackFontFamily = "San Francisco"

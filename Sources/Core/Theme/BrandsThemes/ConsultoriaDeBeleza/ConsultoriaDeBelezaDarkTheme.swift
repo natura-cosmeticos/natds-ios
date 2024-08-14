@@ -415,9 +415,7 @@ struct ConsultoriaDeBelezaDarkComponents: Components {
   let checkboxLabelFallbackFontFamily = "San Francisco"
   let checkboxLabelFallbackFontWeight: UIFont.Weight = .regular
   let checkboxBorderRadius: CGFloat = 2
-  let checkboxColorSelected = "#FFFB85"
-  let switchColorSelected = "#FFFB85"
-  let fieldColorSelected = "#FFFB85"
+  let colorInputComponent = "#FFFB85"
   let counterLabelPrimaryFontFamily = "San Francisco"
   let counterLabelPrimaryFontWeight: UIFont.Weight = .medium
   let counterLabelFallbackFontFamily = "San Francisco"

@@ -406,9 +406,7 @@ struct NaturaDarkComponents: Components {
   let checkboxLabelFallbackFontFamily = "San Francisco"
   let checkboxLabelFallbackFontWeight: UIFont.Weight = .regular
   let checkboxBorderRadius: CGFloat = 2
-  let checkboxColorSelected = "#F4AB34"
-  let switchColorSelected = "#F4AB34"
-  let fieldColorSelected = "#F4AB34"
+  let colorInputComponent = "#F4AB34"
   let counterLabelPrimaryFontFamily = "San Francisco"
   let counterLabelPrimaryFontWeight: UIFont.Weight = .medium
   let counterLabelFallbackFontFamily = "San Francisco"

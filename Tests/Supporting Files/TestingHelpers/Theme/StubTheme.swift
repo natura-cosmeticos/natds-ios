@@ -340,9 +340,7 @@ private struct StubComponents: Components {
     let checkboxLabelFallbackFontFamily = "San Francisco"
     let checkboxLabelFallbackFontWeight: UIFont.Weight = .regular
     let checkboxBorderRadius: CGFloat = 2
-    let checkboxColorSelected = "#7F28C4"
-    let switchColorSelected = "#7F28C4"
-    let fieldColorSelected = "#7F28C4"
+    let colorInputComponent = "#7F28C4"
     let counterLabelPrimaryFontFamily = "San Francisco"
     let counterLabelPrimaryFontWeight: UIFont.Weight = .medium
     let counterLabelFallbackFontFamily = "San Francisco"

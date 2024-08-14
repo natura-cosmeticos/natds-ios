@@ -416,9 +416,7 @@ struct ForcaDeVendasLightComponents: Components {
   let checkboxLabelFallbackFontFamily = "San Francisco"
   let checkboxLabelFallbackFontWeight: UIFont.Weight = .regular
   let checkboxBorderRadius: CGFloat = 2
-  let checkboxColorSelected = "#D73F3C"
-  let switchColorSelected = "#D73F3C"
-  let fieldColorSelected = "#D73F3C"
+  let colorInputComponent = "#D73F3C"
   let counterLabelPrimaryFontFamily = "San Francisco"
   let counterLabelPrimaryFontWeight: UIFont.Weight = .medium
   let counterLabelFallbackFontFamily = "San Francisco"

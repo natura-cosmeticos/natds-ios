@@ -406,9 +406,7 @@ struct NatdsTestLightComponents: Components {
   let checkboxLabelFallbackFontFamily = "San Francisco"
   let checkboxLabelFallbackFontWeight: UIFont.Weight = .regular
   let checkboxBorderRadius: CGFloat = 2
-  let checkboxColorSelected = "#6221BD"
-  let switchColorSelected = "#6221BD"
-  let fieldColorSelected = "#6221BD"
+  let colorInputComponent = "#6221BD"
   let counterLabelPrimaryFontFamily = "San Francisco"
   let counterLabelPrimaryFontWeight: UIFont.Weight = .medium
   let counterLabelFallbackFontFamily = "San Francisco"
