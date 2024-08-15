@@ -3,6 +3,7 @@
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 ### [8.2.3](https://github.com/natura-cosmeticos/natds-ios/compare/8.2.2...8.2.3) (2024-08-15)
+* Color fixes for input components in naturav3 theme
 
 ### [8.2.2](https://github.com/natura-cosmeticos/natds-ios/compare/8.2.1...8.2.2) (2024-08-06)
 * New theme Força de Vendas
