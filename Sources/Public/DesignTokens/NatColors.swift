@@ -30,6 +30,7 @@
             DesignSystem().configure(with: AvailableTheme)
 */
 
+@available(*, deprecated, message: "Please use GaYaColors instead.")
 public struct NatColors {
 
     // MARK: - Inits

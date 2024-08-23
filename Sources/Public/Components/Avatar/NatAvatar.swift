@@ -31,6 +31,7 @@
         DesignSystem().configure(with: AvailableTheme)
  */
 
+@available(*, deprecated, message: "Please use GaYaAvatar instead.")
 public final class NatAvatar: UIView {
 
     // MARK: - Private properties

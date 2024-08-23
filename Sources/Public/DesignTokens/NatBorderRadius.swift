@@ -16,6 +16,7 @@
             DesignSystem().configure(with: AvailableTheme)
 */
 
+@available(*, deprecated, message: "Please use GaYaSizes instead.")
 public enum NatBorderRadius {
     public static var small: CGFloat { getTokenFromTheme(\.borderRadiusSmall) }
     public static var medium: CGFloat { getTokenFromTheme(\.borderRadiusMedium) }

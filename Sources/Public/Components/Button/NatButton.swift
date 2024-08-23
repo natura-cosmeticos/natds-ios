@@ -45,6 +45,7 @@
         DesignSystem().configure(with: AvailableTheme)
  */
 
+@available(*, deprecated, message: "Please use GaYaButton instead.")
 public final class NatButton: UIButton, Pulsable {
 
     // MARK: - Private properties

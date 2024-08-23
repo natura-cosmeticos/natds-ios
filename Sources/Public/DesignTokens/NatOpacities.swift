@@ -16,6 +16,7 @@
             DesignSystem().configure(with: AvailableTheme)
 */
 
+@available(*, deprecated, message: "Please use GaYaOpacity instead.")
 public enum NatOpacities {
     public static var transparent: CGFloat { getTokenFromTheme(\.opacityTransparent) }
     public static var lower: CGFloat { getTokenFromTheme(\.opacityLower) }

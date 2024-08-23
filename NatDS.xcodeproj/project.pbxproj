@@ -486,6 +486,10 @@
 		FFE797612C56C36800D241BF /* ForcaDeVendasLightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE7975F2C56C36800D241BF /* ForcaDeVendasLightTheme.swift */; };
 		FFE797642C56C37900D241BF /* CasaEestilov2DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE797622C56C37900D241BF /* CasaEestilov2DarkTheme.swift */; };
 		FFE797652C56C37900D241BF /* CasaEestilov2LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE797632C56C37900D241BF /* CasaEestilov2LightTheme.swift */; };
+		FFE797692C791FCD00D241BF /* GaYaColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE797682C791FCD00D241BF /* GaYaColors.swift */; };
+		FFE7976B2C79215700D241BF /* GaYaSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE7976A2C79215700D241BF /* GaYaSizes.swift */; };
+		FFE7976D2C79216900D241BF /* GaYaDimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE7976C2C79216900D241BF /* GaYaDimensions.swift */; };
+		FFE7976F2C7922E400D241BF /* GaYaOpacity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE7976E2C7922E400D241BF /* GaYaOpacity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -987,6 +991,10 @@
 		FFE7975F2C56C36800D241BF /* ForcaDeVendasLightTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForcaDeVendasLightTheme.swift; sourceTree = "<group>"; };
 		FFE797622C56C37900D241BF /* CasaEestilov2DarkTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CasaEestilov2DarkTheme.swift; sourceTree = "<group>"; };
 		FFE797632C56C37900D241BF /* CasaEestilov2LightTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CasaEestilov2LightTheme.swift; sourceTree = "<group>"; };
+		FFE797682C791FCD00D241BF /* GaYaColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaColors.swift; sourceTree = "<group>"; };
+		FFE7976A2C79215700D241BF /* GaYaSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaSizes.swift; sourceTree = "<group>"; };
+		FFE7976C2C79216900D241BF /* GaYaDimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaDimensions.swift; sourceTree = "<group>"; };
+		FFE7976E2C7922E400D241BF /* GaYaOpacity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaOpacity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2829,6 +2837,10 @@
 				A54E76AA6120032EE8B86EB90B51BFD8 /* NatOpacities.swift */,
 				FB7FB96016F7D02CB5976F54C383CCD6 /* NatSizes.swift */,
 				0268F8E94DAA2428259644D88E375D32 /* NatSpacing.swift */,
+				FFE797682C791FCD00D241BF /* GaYaColors.swift */,
+				FFE7976A2C79215700D241BF /* GaYaSizes.swift */,
+				FFE7976C2C79216900D241BF /* GaYaDimensions.swift */,
+				FFE7976E2C7922E400D241BF /* GaYaOpacity.swift */,
 			);
 			path = DesignTokens;
 			sourceTree = "<group>";
@@ -3693,6 +3705,7 @@
 				84BC901524AA17C0007DF09D /* NatDialogBodyConfigurable.swift in Sources */,
 				7D5F149A25A782AB007986EE /* IconsSource.swift in Sources */,
 				7D8F3E6A258A81C1003A7DEB /* ShortcutView.swift in Sources */,
+				FFE7976F2C7922E400D241BF /* GaYaOpacity.swift in Sources */,
 				8409854C24F030930095D6AD /* NotificationCenterObservable.swift in Sources */,
 				FF5439DA2BD2B3A400FAE2C4 /* GaYaButton.swift in Sources */,
 				79FC594425BF58E4001CCB56 /* NatRadioButtonContainer.swift in Sources */,
@@ -3714,6 +3727,7 @@
 				E67E4E4A29F714CB00FF7515 /* AvonLightTheme.swift in Sources */,
 				14016A20C7BF7046BAFCD2AE53673EB0 /* ButtonStyle.swift in Sources */,
 				FFE797602C56C36800D241BF /* ForcaDeVendasDarkTheme.swift in Sources */,
+				FFE797692C791FCD00D241BF /* GaYaColors.swift in Sources */,
 				FF38AEA32BA0935400F0F10B /* Naturav3LightTheme.swift in Sources */,
 				E67E4E4929F714CB00FF7515 /* AvonDarkTheme.swift in Sources */,
 				FF49B7262AA1A00C001478A5 /* NatSnackbar.swift in Sources */,
@@ -3769,6 +3783,7 @@
 				FF5439DC2BD2B3A400FAE2C4 /* GaYaButton+Style.swift in Sources */,
 				269C886224C23B0100A507BE /* UINavigationController+Configure.swift in Sources */,
 				7D5349E826C6A33800F88EA7 /* NatImage+Fade.swift in Sources */,
+				FFE7976D2C79216900D241BF /* GaYaDimensions.swift in Sources */,
 				DCDEE935281C6B53005B7747 /* NatRadioButtonGroup.swift in Sources */,
 				F01F3CA72313B3C97F42498878234A82 /* FontStyle.swift in Sources */,
 				E67E4E4E29F714CB00FF7515 /* TheBodyShopLightTheme.swift in Sources */,
@@ -3853,6 +3868,7 @@
 				79EA0C962614B39A00742C0A /* NatBadge+Animation.swift in Sources */,
 				DC1FF6E32885F54200AC659C /* NatChip+Position.swift in Sources */,
 				7D5349ED26C6BA7200F88EA7 /* NatGradientImageView.swift in Sources */,
+				FFE7976B2C79215700D241BF /* GaYaSizes.swift in Sources */,
 				509D46F287D25DAEB7A71BF2665EF894 /* SearchBar.swift in Sources */,
 				10953079D3A781AA63E2E03A93F222C4 /* String+Icon.swift in Sources */,
 				604835F2975D92A9D2EF46132C17C0A5 /* Tab.swift in Sources */,

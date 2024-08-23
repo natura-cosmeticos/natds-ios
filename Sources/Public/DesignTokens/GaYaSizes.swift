@@ -1,23 +1,20 @@
-/**
-  NatSizes is a enum that has access to size properties from the Design System.
-  This properties are used with constraints to handle view size of view objects.
-  According with the current Brand in the Design System this properties can change.
+//
+//  GaYaSizes.swift
+//  NatDS
+//
+//  Created by Hayna.Cardoso on 23/08/24.
+//  Copyright © 2024 Natura. All rights reserved.
+//
 
-    All properties returns a CGFloat.
+import Foundation
 
-    Example of usage:
-
-        containerView.widthAnchor.constraint(equalToConstant: NatSizes.large)
-        containerView.heightAncor.constraint(equalToConstant: NatSizes.tiny)
-
- - Requires:
-        It's necessary to configure the Design System with a theme or fatalError will be raised.
-
-            DesignSystem().configure(with: AvailableTheme)
-*/
-
-@available(*, deprecated, message: "Please use GaYaSizes instead.")
-public enum NatSizes {
+public struct GaYaSizes {
+    
+    // MARK: - Init
+    
+    private init() {}
+    
+    public static var none: CGFloat { getTokenFromTheme(\.sizeNone) }
     public static var micro: CGFloat { getTokenFromTheme(\.sizeMicro) }
     public static var tiny: CGFloat { getTokenFromTheme(\.sizeTiny) }
     public static var small: CGFloat { getTokenFromTheme(\.sizeSmall) }
@@ -35,4 +32,16 @@ public enum NatSizes {
     public static var hugeXX: CGFloat { getTokenFromTheme(\.sizeHugeXX) }
     public static var hugeXXX: CGFloat { getTokenFromTheme(\.sizeHugeXXX) }
     public static var veryHuge: CGFloat { getTokenFromTheme(\.sizeVeryHuge) }
+
+    // Bordas (border radius)
+    public static var borderRadiusNone: CGFloat { getTokenFromTheme(\.borderRadiusNone) }
+    public static var borderRadiusSmall: CGFloat { getTokenFromTheme(\.borderRadiusSmall) }
+    public static var borderRadiusMedium: CGFloat { getTokenFromTheme(\.borderRadiusMedium) }
+    public static var borderRadiusLarge: CGFloat { getTokenFromTheme(\.borderRadiusLarge) }
+
+    // Método para calcular o raio de borda para um círculo
+    public static func radiusCircle(viewHeight: CGFloat) -> CGFloat {
+        return viewHeight / 2
+    }
+
 }

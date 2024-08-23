@@ -17,6 +17,7 @@
             DesignSystem().configure(with: AvailableTheme)
 */
 
+@available(*, deprecated, message: "Please use GaYaDimensions instead.")
 public enum NatSpacing {
     public static var none: CGFloat { getTokenFromTheme(\.spacingNone) }
     public static var micro: CGFloat { getTokenFromTheme(\.spacingMicro) }

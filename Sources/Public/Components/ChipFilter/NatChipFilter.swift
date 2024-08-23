@@ -26,6 +26,7 @@
         DesignSystem().configure(with: AvailableTheme)
  */
 
+@available(*, deprecated, message: "Please use GaYaChipFilter instead.")
 public final class NatChipFilter: UIView {
     
     // MARK: - Private properties
