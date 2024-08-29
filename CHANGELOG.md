@@ -3,6 +3,7 @@
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 ### [8.2.4](https://github.com/natura-cosmeticos/natds-ios/compare/8.2.3...8.2.4) (2024-08-23)
+* Extern theme tokens for team components use
 
 ### [8.2.3](https://github.com/natura-cosmeticos/natds-ios/compare/8.2.2...8.2.3) (2024-08-15)
 * Color fixes for input components in naturav3 theme
