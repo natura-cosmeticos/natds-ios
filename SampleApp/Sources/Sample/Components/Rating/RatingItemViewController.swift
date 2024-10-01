@@ -108,6 +108,10 @@ class RatingItemViewController: UIViewController, SampleItem {
         containerView.addSubview(stackView)
 
         setup()
+        
+        inputRatingWithHint.configure { newValue in
+            print("O valor selecionado é: \(newValue)")
+        }
     }
 
     private func setup() {
