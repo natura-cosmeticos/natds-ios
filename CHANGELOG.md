@@ -3,8 +3,75 @@
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 ### [8.2.6](https://github.com/natura-cosmeticos/natds-ios/compare/8.2.5...8.2.6) (2024-10-14)
+##### Adding new icons
+- filled-content-christmasstocking
+- filled-content-christmastree
+- filled-content-daynight
+- filled-content-energy
+- filled-content-farmrows
+- filled-content-teddybear
+- filled-content-wetwipe
+- filled-makeup-antiacne
+- filled-makeup-hairdamaged
+- filled-makeup-hairdandruff
+- filled-makeup-hairreconstruction
+- filled-product-shampooconditioner
+- filled-social-pregnant
+- filled-social-userlock
+- outlined-content-christmasstocking
+- outlined-content-christmastree
+- outlined-content-daynight
+- outlined-content-energy
+- outlined-content-farmrows
+- outlined-content-teddybear
+- outlined-content-wetwipe
+- outlined-makeup-antiacne
+- outlined-makeup-hairdamaged
+- outlined-makeup-hairdandruff
+- outlined-makeup-hairreconstruction
+- outlined-product-shampooconditioner
+- outlined-social-pregnant
+- outlined-social-userlock
 
 ### [8.2.5](https://github.com/natura-cosmeticos/natds-ios/compare/8.2.4...8.2.5) (2024-10-01)
+##### Adding new icons
+- filled-content-crueltyfreebunny
+- filled-content-exfoliator
+- filled-content-giftpricefair
+- filled-content-giftpricegreat
+- filled-content-giftpricehigh
+- filled-content-giftpricespecial
+- filled-content-plasticfree
+- filled-content-snorkelmask
+- filled-product-eyeshadow
+- filled-product-hairdetox
+- filled-product-organicalcohol
+- filled-product-recyclablepackaging
+- filled-product-refill
+- outlined-content-crueltyfreebunny
+- outlined-content-exfoliator
+- outlined-content-giftpricefair
+- outlined-content-giftpricegreat
+- outlined-content-giftpricehigh
+- outlined-content-giftpricespecial
+- outlined-content-plasticfree
+- outlined-content-snorkelmask
+- outlined-product-eyeshadow
+- outlined-product-hairdetox
+- outlined-product-organicalcohol
+- outlined-product-recyclablepackaging
+- outlined-product-refill
+##### Fixing icons
+- filled-media-play
+- filled-navigation-arrowctrlregulartop
+- filled-navigation-arrowctrlregularright
+- filled-navigation-arrowctrlregularleft
+- filled-navigation-arrowctrlregularbottom
+- outlined-media-play
+- outlined-navigation-arrowctrlregulartop
+- outlined-navigation-arrowctrlregularright
+- outlined-navigation-arrowctrlregularleft
+- outlined-navigation-arrowctrlregularbottom
 
 ### [8.2.4](https://github.com/natura-cosmeticos/natds-ios/compare/8.2.3...8.2.4) (2024-08-23)
 * Extern theme tokens for team components use
