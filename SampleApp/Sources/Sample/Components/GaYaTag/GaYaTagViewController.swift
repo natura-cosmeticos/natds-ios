@@ -66,25 +66,14 @@ class GaYaTagViewController: UIViewController, SampleItem {
 
     private var tagRightWarning: GaYaTag = {
         let tag = GaYaTag(style: .rightAlert, icon: getIcon(.filledActionCheck), iconPosition: .right)
-        tag.configure(text: "Right Secondary Darkest - IR")
+        tag.configure(text: "Right Info - IR")
         tag.configure(color: .info)
         tag.configure(size: .medium)
         tag.translatesAutoresizingMaskIntoConstraints = false
 
         return tag
     }()
-    /*
-    private var tagRightLink: NatTag = {
-        let tag = NatTag(style: .rightAlert)
-        tag.configure(text: "Right Link Standard")
-        tag.configure(color: .link)
-        tag.configure(size: .standard)
-        tag.translatesAutoresizingMaskIntoConstraints = false
 
-        return tag
-    }()
-
-*/
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -100,11 +89,8 @@ class GaYaTagViewController: UIViewController, SampleItem {
         stackView.addArrangedSubview(tagDefaultSecondary)
         stackView.addArrangedSubview(tagLeftSuccess)
         stackView.addArrangedSubview(tagLeftAlert)
-    
         stackView.addArrangedSubview(tagRightWarning)
-        /*
-        stackView.addArrangedSubview(tagRightLink)
-*/
+
         let constraints = [
             stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor)

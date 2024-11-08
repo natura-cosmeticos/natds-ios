@@ -16,9 +16,9 @@ extension GaYaTag {
      - alert
      - alertLightest
      - alertDarkest
-     - `warning
-     - `warningLightest
-     - `warningDarkest
+     - `warning`
+     - `warningLightest`
+     - `warningDarkest`
      - info
      - infoLightest
      - infoDarkest

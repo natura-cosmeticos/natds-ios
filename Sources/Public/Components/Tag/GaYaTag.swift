@@ -1,10 +1,54 @@
-//
-//  GaYaTag.swift
-//  NatDS
-//
-//  Created by Henrique Alves Batochi on 04/11/24.
-//  Copyright © 2024 Natura. All rights reserved.
-//
+/**
+ - NOTE:
+ This component is available in the following variants:
+ - ✅ Standard
+
+ With the following attribute status:
+ - Position:
+    - ✅ `Center`
+    - ✅ `Left`
+    - ✅ `Right`
+ - Color:
+    - ✅ `Primary`
+    - ✅ `Primary Lightest`
+    - ✅ `Primary Darkest`
+    - ✅ `Secondary`
+    - ✅ `Secondary Lightest`
+    - ✅ `Secondary Darkest`
+    - ✅ `Success`
+    - ✅ `Success Lightest`
+    - ✅ `Success Darkest`
+    - ✅ `Alert`
+    - ✅ `Alert Lightest`
+    - ✅ `Alert Darkest`
+    - ✅ `Warning`
+    - ✅ `Warning Lightest`
+    - ✅ `Warning Darkest`
+    - ✅ `Info`
+    - ✅ `Info Lightest`
+    - ✅ `Info Darkest`
+
+ - Size:
+    - ✅ `Small`
+    - ✅ `Medium`
+ 
+ NatTag is a class that represents the tag component from the design system.
+ The tag colors change according to the current theme configured.
+ 
+ These all the available styles for a NatTag:
+ - defaultAlert
+ - leftAlert
+ - rightAlert
+ 
+ Example of usage:
+ 
+        let tag = GaYaTag(style: .defaultAlert)
+ 
+ - Requires:
+ It's necessary to configure the Design System with a theme or fatalError will be raised.
+ 
+        DesignSystem().configure(with: AvailableTheme)
+ */
 
 public final class GaYaTag: UIView {
     typealias DrawPath = (_ size: CGSize) -> Void
