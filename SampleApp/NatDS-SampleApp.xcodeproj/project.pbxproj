@@ -27,6 +27,7 @@
 		542BBE6C15A7E0C25DD69346A43430B0 /* ColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C4E23EBB1B07DF334BBA42C272EBB /* ColorsViewController.swift */; };
 		5A95C641E43BCD63CA21359C8EAFBA25 /* ValueTextHighlightItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECE4EA4030547C9B71419A660386C4A /* ValueTextHighlightItemViewController.swift */; };
 		5C015C21B5CCA24BFE6643ABE6AEF850 /* NatDS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBC24456A172162B3538C51FBFE2BA6 /* NatDS.framework */; };
+		5C078C5C2CE44816005871DE /* GaYaShortcutItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C078C5B2CE44816005871DE /* GaYaShortcutItemViewController.swift */; };
 		6566B8AD366FC73D95DA1F35979D488C /* NavigationDrawerItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D4B7F03E632BFE339DA40C2269B9D9 /* NavigationDrawerItemViewController.swift */; };
 		6B065E9FA8AEAD33D6341DB8C671D74C /* DialogItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF6AF03A3D6B2368E721CAB74F2424A /* DialogItemViewController.swift */; };
 		79ACDAE5255C343500660E68 /* ProgressIndicatorItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79ACDAE4255C343500660E68 /* ProgressIndicatorItemViewController.swift */; };
@@ -215,6 +216,7 @@
 		4CBBBC99CEDEAD9957C2FDFCDCF340E4 /* ElevationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevationCell.swift; sourceTree = "<group>"; };
 		4F3D5DE37D2013D4BADC0F54FAEDE3F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A620BF5125BD5A9285A07613BD28359 /* TypographyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypographyCell.swift; sourceTree = "<group>"; };
+		5C078C5B2CE44816005871DE /* GaYaShortcutItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaShortcutItemViewController.swift; sourceTree = "<group>"; };
 		5DF7BFDAFFA13841520A52D2EDE5400D /* ColorsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsHeaderView.swift; sourceTree = "<group>"; };
 		62B703332C6994E56C229AEDFFD1B5EB /* ComponentsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentsSection.swift; sourceTree = "<group>"; };
 		6CCE6B3ED45C1E81094E9B4DDAB9D1EC /* SizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeViewController.swift; sourceTree = "<group>"; };
@@ -497,6 +499,14 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
+		5C078C5A2CE447EB005871DE /* GaYaShortcut */ = {
+			isa = PBXGroup;
+			children = (
+				5C078C5B2CE44816005871DE /* GaYaShortcutItemViewController.swift */,
+			);
+			path = GaYaShortcut;
+			sourceTree = "<group>";
+		};
 		60BA3889843FAC643954B470CDCD738E /* Colors */ = {
 			isa = PBXGroup;
 			children = (
@@ -666,6 +676,7 @@
 				7DC81CBA261227CA006BE689 /* Rating */,
 				DC309FC42844C4F2008F7146 /* Select */,
 				844A1E2424AE2B7600E93AD9 /* Shortcut */,
+				5C078C5A2CE447EB005871DE /* GaYaShortcut */,
 				DC724B78282C87BF00C8F090 /* Switch */,
 				C420063DEF581D12DAA6D31645B6B382 /* Tab */,
 				2600C21C25127D500040C4C4 /* Tag */,
@@ -1273,6 +1284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D5349F726C6EBD800F88EA7 /* ImageCell.swift in Sources */,
+				5C078C5C2CE44816005871DE /* GaYaShortcutItemViewController.swift in Sources */,
 				FF28A3E02BDBEBC40007B262 /* GaYaButtonViewController.swift in Sources */,
 				BAD502BF80890F0D5ADA1B7671F5E4D1 /* AppSearchBarViewController.swift in Sources */,
 				FA821AD3D36171DBAF4790CAD9C46CC8 /* AppDelegate.swift in Sources */,

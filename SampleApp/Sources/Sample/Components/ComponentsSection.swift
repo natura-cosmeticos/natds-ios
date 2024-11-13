@@ -31,6 +31,7 @@ class ComponentsSection: SampleSection {
         RatingItemViewController.self,
         NatSelectItemViewController.self,
         ShortcutItemViewController.self,
+        GaYaShortcutItemViewController.self,
         SwitchViewController.self,
         TabItemViewController.self,
         TagViewController.self,
