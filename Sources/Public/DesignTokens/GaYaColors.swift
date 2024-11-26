@@ -15,6 +15,7 @@ public struct GaYaColors {
     
     private init() {}
     
+    public static var background: UIColor { getUIColorFromTokens(\.colorBackground) }
     public static var neutral0: UIColor { getUIColorFromTokens(\.colorNeutral0) }
     public static var neutral50: UIColor { getUIColorFromTokens(\.colorNeutral50) }
     public static var neutral100: UIColor { getUIColorFromTokens(\.colorNeutral100) }

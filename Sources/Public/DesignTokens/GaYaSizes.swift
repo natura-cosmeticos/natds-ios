@@ -43,5 +43,4 @@ public struct GaYaSizes {
     public static func radiusCircle(viewHeight: CGFloat) -> CGFloat {
         return viewHeight / 2
     }
-
 }
