@@ -115,6 +115,14 @@ public final class NatIconButton: UIView {
     @objc func tapHandler(_ sender: UIGestureRecognizer) {
         guard currentState == .enabled else { return }
         self.action?()
+        let opacity = getTokenFromTheme(\.opacityDisabledLow)
+        let color = getUIColorFromTokens(\.colorHighlight).withAlphaComponent(opacity)
+        addPulseLayerAnimated(
+            at: centerBounds,
+            in: layer,
+            withColor: color,
+            removeAfterAnimation: true
+        )
         removePulseLayer(layer: layer)
     }
 
@@ -130,22 +138,10 @@ public final class NatIconButton: UIView {
         super.touchesBegan(touches, with: event)
 
         guard currentState == .enabled else { return }
-
-        let opacity = getTokenFromTheme(\.opacityDisabledLow)
-        let color = getUIColorFromTokens(\.colorHighlight).withAlphaComponent(opacity)
-
-        addPulseLayerAnimated(
-            at: centerBounds,
-            in: layer,
-            withColor: color,
-            removeAfterAnimation: true
-        )
     }
 
     public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
-
-        removePulseLayer(layer: layer)
     }
 }
 
