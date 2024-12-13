@@ -34,13 +34,6 @@ enum GaYaButtonGhostStyle {
         
         if theme == .none {
             switch color {
-            case .colorDefault:
-                GaYaButtonStyle.applyStyleForTitle(
-                    title,
-                    colorForNormal: getUIColorFromTokens(\.colorHighEmphasis),
-                    colorForDisabled: getUIColorFromTokens(\.colorOnSurfaceDisabled),
-                    on: button
-                )
             case .primary:
                 GaYaButtonStyle.applyStyleForTitle(
                     title,
@@ -87,13 +80,6 @@ enum GaYaButtonGhostStyle {
         }
         else {
             switch color {
-            case .colorDefault:
-                GaYaButtonStyle.applyStyleForTitle(
-                    title,
-                    colorForNormal: hexStringToUIColor(hex: theme.newInstance.tokens.colorHighEmphasis),
-                    colorForDisabled: hexStringToUIColor(hex: theme.newInstance.tokens.colorOnSurfaceDisabled),
-                    on: button
-                )
             case .primary:
                 GaYaButtonStyle.applyStyleForTitle(
                     title,

@@ -183,6 +183,8 @@
 		FFE797572C21F39500D241BF /* GaYaButton.md in Resources */ = {isa = PBXBuildFile; fileRef = FFE797542C21F39500D241BF /* GaYaButton.md */; };
 		FFE797592C22332800D241BF /* icons-map.txt in Resources */ = {isa = PBXBuildFile; fileRef = FFE797582C22332800D241BF /* icons-map.txt */; };
 		FFE7975B2C224B5600D241BF /* GaYaChipFilter.md in Resources */ = {isa = PBXBuildFile; fileRef = FFE7975A2C224B5600D241BF /* GaYaChipFilter.md */; };
+		FFF60D742D02300B005CD77D /* GaYaTag.md in Resources */ = {isa = PBXBuildFile; fileRef = FFF60D732D02300A005CD77D /* GaYaTag.md */; };
+		FFF60D812D0C2F10005CD77D /* GaYaIconButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60D802D0C2F0F005CD77D /* GaYaIconButtonViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -380,6 +382,8 @@
 		FFE797542C21F39500D241BF /* GaYaButton.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = GaYaButton.md; sourceTree = "<group>"; };
 		FFE797582C22332800D241BF /* icons-map.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "icons-map.txt"; sourceTree = "<group>"; };
 		FFE7975A2C224B5600D241BF /* GaYaChipFilter.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = GaYaChipFilter.md; sourceTree = "<group>"; };
+		FFF60D732D02300A005CD77D /* GaYaTag.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = GaYaTag.md; sourceTree = "<group>"; };
+		FFF60D802D0C2F0F005CD77D /* GaYaIconButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaIconButtonViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -637,10 +641,6 @@
 		86D88A8EB08915984C5FB6D277F7A6FA /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				FF35F73B2CF41DBE001F13AA /* GaYaTag */,
-				FFE7974B2C1D922300D241BF /* GaYaChipFilter */,
-				FFE7974A2C1D921700D241BF /* GaYaChip */,
-				FFE797492C1D920B00D241BF /* GaYaAvatar */,
 				8C1AE06128A684D0000F9D88 /* Alert */,
 				0E3F579024B90E79004B2F9E /* AppBar */,
 				7D75A45825DB0B940050ACA9 /* Avatar */,
@@ -657,7 +657,12 @@
 				D2D202BFFC95DC39B94A26A5FB172483 /* Divider */,
 				DFD5C58E6C019591057F6663EFBBA044 /* ExpansionPanel */,
 				FE7854E68C30109D4B2988E1E01AE179 /* Field */,
+				FFE797492C1D920B00D241BF /* GaYaAvatar */,
 				FF28A3DE2BDBEB950007B262 /* GaYaButton */,
+				FFE7974A2C1D921700D241BF /* GaYaChip */,
+				FFE7974B2C1D922300D241BF /* GaYaChipFilter */,
+				FFF60D7F2D0C2EFA005CD77D /* GaYaIconButton */,
+				FF35F73B2CF41DBE001F13AA /* GaYaTag */,
 				8402F4E424F932570018149C /* IconButton */,
 				CDF47F683C800E8289A0310CD7EA0F0C /* Iconography */,
 				79FC59E425DAB592001CCB56 /* Image */,
@@ -949,15 +954,11 @@
 		FFCA199A2ABAD52000F03EAA /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
-				FFE7975A2C224B5600D241BF /* GaYaChipFilter.md */,
-				FFE797582C22332800D241BF /* icons-map.txt */,
-				FFE797532C21F39500D241BF /* GaYaAvatar.md */,
-				FFE797542C21F39500D241BF /* GaYaButton.md */,
-				FFE797522C21F39500D241BF /* GaYaChip.md */,
 				FFD9EB062AFD8DE800EBE815 /* alert.md */,
 				FFD9EB022AFD8DE800EBE815 /* app-bar.md */,
 				FFD9EB142AFD8DE900EBE815 /* avatar.md */,
 				FFD9EB0D2AFD8DE800EBE815 /* badge.md */,
+				FFCA19A62ABAD6EC00F03EAA /* button.md */,
 				FFD9EB122AFD8DE900EBE815 /* card.md */,
 				FFD9EB1A2AFD8DE900EBE815 /* checkbox.md */,
 				FFD9EB112AFD8DE900EBE815 /* chip.md */,
@@ -966,8 +967,15 @@
 				FFD9EB052AFD8DE800EBE815 /* dialog.md */,
 				FFD9EB162AFD8DE900EBE815 /* divider.md */,
 				FFD9EB082AFD8DE800EBE815 /* expansion-panel.md */,
+				FFE797532C21F39500D241BF /* GaYaAvatar.md */,
+				FFE797542C21F39500D241BF /* GaYaButton.md */,
+				FFE797522C21F39500D241BF /* GaYaChip.md */,
+				FFE7975A2C224B5600D241BF /* GaYaChipFilter.md */,
+				FFF60D732D02300A005CD77D /* GaYaTag.md */,
 				FFD9EB002AFD8DE800EBE815 /* icon-button.md */,
+				FFE797582C22332800D241BF /* icons-map.txt */,
 				FFD9EB032AFD8DE800EBE815 /* image.md */,
+				FFCA19A52ABAD6AB00F03EAA /* images */,
 				FFD9EB0B2AFD8DE800EBE815 /* list-item.md */,
 				FFD9EB072AFD8DE800EBE815 /* logo.md */,
 				FFD9EB042AFD8DE800EBE815 /* navigation-drawer.md */,
@@ -982,8 +990,6 @@
 				FFD9EB012AFD8DE800EBE815 /* tag.md */,
 				FFD9EB152AFD8DE900EBE815 /* textfield.md */,
 				FFD9EB132AFD8DE900EBE815 /* value-text-highlight.md */,
-				FFCA19A52ABAD6AB00F03EAA /* images */,
-				FFCA19A62ABAD6EC00F03EAA /* button.md */,
 			);
 			path = Documentation;
 			sourceTree = "<group>";
@@ -1084,6 +1090,14 @@
 				FFE797502C1D928500D241BF /* GaYaChipFilterViewController.swift */,
 			);
 			path = GaYaChipFilter;
+			sourceTree = "<group>";
+		};
+		FFF60D7F2D0C2EFA005CD77D /* GaYaIconButton */ = {
+			isa = PBXGroup;
+			children = (
+				FFF60D802D0C2F0F005CD77D /* GaYaIconButtonViewController.swift */,
+			);
+			path = GaYaIconButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1195,6 +1209,7 @@
 				FFD9EAFE2AFD856900EBE815 /* image1.png in Resources */,
 				FFCA19A02ABAD56100F03EAA /* button_status.png in Resources */,
 				FFCA19A32ABAD56100F03EAA /* button_icon.png in Resources */,
+				FFF60D742D02300B005CD77D /* GaYaTag.md in Resources */,
 				FFD9EAF12AFD856900EBE815 /* textfield1.png in Resources */,
 				FFD9EAF82AFD856900EBE815 /* appbar_4.png in Resources */,
 				FFD9EADC2AFD856900EBE815 /* dialog_3.png in Resources */,
@@ -1346,6 +1361,7 @@
 				FD3C1A6EDAD5F31BC9E4984E981C28A8 /* TabItemViewController.swift in Sources */,
 				B5D960A174519D837D9855D4B0A6711B /* TextFieldItemViewController.swift in Sources */,
 				79FC59E625DAB5A7001CCB56 /* ImageViewController.swift in Sources */,
+				FFF60D812D0C2F10005CD77D /* GaYaIconButtonViewController.swift in Sources */,
 				7D75A45A25DB0BA50050ACA9 /* AvatarItemViewController.swift in Sources */,
 				FF50B64B2A040FCC00FA824A /* ChipFilterViewController.swift in Sources */,
 				D2874BA3C6A03754EC9895DC95D6DFE5 /* TypographyCell.swift in Sources */,

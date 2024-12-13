@@ -5,7 +5,7 @@ enum GaYaButtonStyle {
         let family = getComponentAttributeFromTheme(\.buttonLabelPrimaryFontFamily)
         button.titleLabel?.font = NatFonts.font(ofSize: size, withWeight: weight, withFamily: family)
         button.titleLabel?.lineBreakMode = .byTruncatingTail
-        button.contentEdgeInsets = NatButton.EdgeInsets.medium
+        button.contentEdgeInsets = GaYaButton.EdgeInsets.medium
     }
 
     static func applyStyleForTitle(_ title: String,

@@ -1,49 +1,10 @@
-/**
- - NOTE:
- This component is available in the following variants:
- - ✅ Filled
- - ✅ Outlined
- - ✅ Text
-
- With the following attribute status:
- - ✅ Disabled
- - ✅ Display (available in a different way)
- - Size:
-    - ✅ `Semi` (small)
-    - ✅ `SemiX` (medium)
-    - ✅ `Medium` (large)
- - Icon:
-    - ✅ `Left`
-    - ✅ `Right`
- - Interaction state:
-    - ✅ `Enabled`
-    - ✅ `Focus`
-    - ✅ `Press `
-    - ❌ `Hover` (not applicable)
-
- GaYaButton is a class that represents  button  component from the design system.
- The button colors changes according with the current theme configured in the Design system.
- 
- This button has 3 styles:
- - Filled
- - Outlined
- - Text
- 
- Example of usage:
- 
-        let filledButton = GaYaButton(style: .filled)
-        let outlinedButton = GaYaButton(style: .outlined)
-        let textButton = GaYaButton(style: .text)
- 
- This button has predefined height values with enum `GaYaButton.Height`:
- 
-        button.heightAnchor.constraint(equalToConstant: GaYaButton.Height.medium)
- 
- - Requires:
- It's necessary to configure the Design System with a theme or fatalError will be raised.
-        
-        DesignSystem().configure(with: AvailableTheme)
- */
+//
+//  GaYaButton.swift
+//  NatDS
+//
+//  Created by Hayna.Cardoso on 28/04/24.
+//  Copyright © 2024 Natura. All rights reserved.
+//
 
 public final class GaYaButton: UIButton, Pulsable {
 
@@ -68,11 +29,11 @@ public final class GaYaButton: UIButton, Pulsable {
 
     // MARK: - Inits
 
-    public convenience init(style: Style, size: GayaButtonHeight = .semix, theme: AvailableTheme = .none, color: GaYaButtonColor = .colorDefault) {
+    public convenience init(style: Style, size: GayaButtonHeight = .semix, theme: AvailableTheme = .none, color: GaYaButtonColor = .primary) {
         self.init(style: style, notificationCenter: NotificationCenter.default, size: size, theme: theme, color: color)
     }
 
-    init(style: Style, notificationCenter: NotificationCenterObservable, size: GayaButtonHeight = .semix, theme: AvailableTheme = .none, color: GaYaButtonColor = .colorDefault) {
+    init(style: Style, notificationCenter: NotificationCenterObservable, size: GayaButtonHeight = .semix, theme: AvailableTheme = .none, color: GaYaButtonColor = .primary) {
         self.style = style
         self.notificationCenter = notificationCenter
         self.theme = theme
@@ -198,7 +159,7 @@ extension GaYaButton {
 
 extension GaYaButton {
     private func createIconView(icon: String?) -> IconView {
-        let iconView = IconView(fontSize: NatSizes.standard)
+        let iconView = IconView(fontSize: GaYaSizes.standard)
         iconView.translatesAutoresizingMaskIntoConstraints = false
         iconView.iconText = icon
         iconView.tintColor = titleLabel?.textColor
@@ -214,21 +175,21 @@ extension GaYaButton {
         switch position {
         case .left:
             iconView.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor,
-                                              constant: NatSizes.micro).isActive = true
+                                              constant: GaYaSizes.micro).isActive = true
             iconView.trailingAnchor.constraint(equalTo: title.leadingAnchor,
-                                               constant: -NatSizes.micro).isActive = true
+                                               constant: -GaYaSizes.micro).isActive = true
 
         case .right:
             iconView.leadingAnchor.constraint(equalTo: title.trailingAnchor,
-                                              constant: NatSizes.micro).isActive = true
+                                              constant: GaYaSizes.micro).isActive = true
             iconView.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor,
-                                               constant: -NatSizes.micro).isActive = true
+                                               constant: -GaYaSizes.micro).isActive = true
         }
     }
 
     private func createTitleEdgeInsets(_ position: GaYaButton.Position) -> UIEdgeInsets {
-        let spaceBetweenIconAndTitle = NatSizes.micro
-        let iconSize = NatSizes.standard
+        let spaceBetweenIconAndTitle = GaYaSizes.micro
+        let iconSize = GaYaSizes.standard
         let padding = iconSize + spaceBetweenIconAndTitle
 
         switch position {

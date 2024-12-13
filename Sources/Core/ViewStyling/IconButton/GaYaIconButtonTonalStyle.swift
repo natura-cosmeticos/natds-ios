@@ -1,20 +1,21 @@
 //
-//  GaYaButtonTonalStyle.swift
+//  GaYaIconButtonTonalStyle.swift
 //  NatDS
 //
-//  Created by Hayna.Cardoso on 25/04/24.
+//  Created by Hayna.Cardoso on 13/12/24.
 //  Copyright © 2024 Natura. All rights reserved.
 //
 
 import Foundation
 
-enum GaYaButtonTonalStyle {
-    static func applyStyle(_ theme:AvailableTheme, _ color:GaYaButtonColor, on button: UIButton) {
-        GaYaButtonStyle.applyStyle(on: button)
+enum GaYaIconButtonTonalStyle {
+    static func applyStyle(_ theme:AvailableTheme, _ color:GaYaIconButtonColor, on button: UIButton) {
+        GaYaIconButtonStyle.applyStyle(on: button)
         applyStyleForStates(theme: theme, color: color, on: button)
+        applyStyleForIcon(theme: theme, color: color, on: button)
     }
-
-    static func applyStyleForStates(theme:AvailableTheme, color:GaYaButtonColor, on button: UIButton) {
+    
+    static func applyStyleForStates(theme:AvailableTheme, color:GaYaIconButtonColor, on button: UIButton) {
         
         if theme == .none {
             
@@ -35,7 +36,7 @@ enum GaYaButtonTonalStyle {
                 case .neutral:
                     button.backgroundColor = getUIColorFromTokens(\.colorNeutral100)
                 }
-    
+                
                 button.layer.borderColor = getUIColorFromComponentAttributes(\.buttonContainedColorEnableBorder).cgColor
                 NatElevation.apply(on: button, elevation: .none)
                 
@@ -130,120 +131,57 @@ enum GaYaButtonTonalStyle {
             }
         }
     }
-
-    static func applyStyleForTitle(_ title: String, theme:AvailableTheme, color:GaYaButtonColor, on button: UIButton) {
+    
+    static func applyStyleForIcon(theme: AvailableTheme, color: GaYaIconButtonColor, on button: UIButton) {
+        
+        let colorForNormal: UIColor
+        let colorForDisabled: UIColor
         
         if theme == .none {
-            
             switch color {
             case .primary:
-                GaYaButtonStyle.applyStyleForTitle(
-                    title,
-                    colorForNormal:
-                        getUIColorFromTokens(\.colorOnPrimaryLightest),
-                    colorForDisabled: getUIColorFromTokens(\.colorOnSurfaceDisabled),
-                    on: button
-                )
+                colorForNormal = getUIColorFromTokens(\.colorOnPrimaryLightest)
+                colorForDisabled = getUIColorFromTokens(\.colorOnSurfaceDisabled)
             case .onPrimary:
-                GaYaButtonStyle.applyStyleForTitle(
-                    title,
-                    colorForNormal:
-                        getUIColorFromTokens(\.colorOnPrimaryLight),
-                    colorForDisabled: getUIColorFromTokens(\.colorOnSurfaceDisabled),
-                    on: button
-                )
+                colorForNormal = getUIColorFromTokens(\.colorOnPrimaryLight)
+                colorForDisabled = getUIColorFromTokens(\.colorOnSurfaceDisabled)
             case .secondary:
-                GaYaButtonStyle.applyStyleForTitle(
-                    title,
-                    colorForNormal:
-                        getUIColorFromTokens(\.colorOnSecondaryLightest),
-                    colorForDisabled: getUIColorFromTokens(\.colorOnSurfaceDisabled),
-                    on: button
-                )
+                colorForNormal = getUIColorFromTokens(\.colorOnSecondaryLightest)
+                colorForDisabled = getUIColorFromTokens(\.colorOnSurfaceDisabled)
             case .onSecondary:
-                GaYaButtonStyle.applyStyleForTitle(
-                    title,
-                    colorForNormal:
-                        getUIColorFromTokens(\.colorOnSecondaryLight),
-                    colorForDisabled: getUIColorFromTokens(\.colorOnSurfaceDisabled),
-                    on: button
-                )
+                colorForNormal = getUIColorFromTokens(\.colorOnSecondaryLight)
+                colorForDisabled = getUIColorFromTokens(\.colorOnSurfaceDisabled)
             case .inverse:
-                GaYaButtonStyle.applyStyleForTitle(
-                    title,
-                    colorForNormal:
-                        getUIColorFromTokens(\.colorNeutral0),
-                    colorForDisabled: getUIColorFromTokens(\.colorOnSurfaceDisabled),
-                    on: button
-                )
+                colorForNormal = getUIColorFromTokens(\.colorNeutral0)
+                colorForDisabled = getUIColorFromTokens(\.colorOnSurfaceDisabled)
             case .neutral:
-                GaYaButtonStyle.applyStyleForTitle(
-                    title,
-                    colorForNormal:
-                        getUIColorFromTokens(\.colorContentHighEmphasis),
-                    colorForDisabled: getUIColorFromTokens(\.colorSurfaceDark),
-                    on: button
-                )
+                colorForNormal = getUIColorFromTokens(\.colorContentHighEmphasis)
+                colorForDisabled = getUIColorFromTokens(\.colorSurfaceDark)
             }
-        }
-        else {
-            
+        } else {
             switch color {
             case .primary:
-                GaYaButtonStyle.applyStyleForTitle(
-                    title,
-                    colorForNormal:
-                        hexStringToUIColor(hex: theme.newInstance.tokens.colorOnPrimaryLightest),
-                    colorForDisabled:
-                        hexStringToUIColor(hex: theme.newInstance.tokens.colorOnSurfaceDisabled),
-                    on: button
-                )
+                colorForNormal = hexStringToUIColor(hex: theme.newInstance.tokens.colorOnPrimaryLightest)
+                colorForDisabled = hexStringToUIColor(hex: theme.newInstance.tokens.colorOnSurfaceDisabled)
             case .onPrimary:
-                GaYaButtonStyle.applyStyleForTitle(
-                    title,
-                    colorForNormal:
-                        hexStringToUIColor(hex: theme.newInstance.tokens.colorOnPrimaryLight),
-                    colorForDisabled:
-                        hexStringToUIColor(hex: theme.newInstance.tokens.colorOnSurfaceDisabled),
-                    on: button
-                )
+                colorForNormal = hexStringToUIColor(hex: theme.newInstance.tokens.colorOnPrimaryLight)
+                colorForDisabled = hexStringToUIColor(hex: theme.newInstance.tokens.colorOnSurfaceDisabled)
             case .secondary:
-                GaYaButtonStyle.applyStyleForTitle(
-                    title,
-                    colorForNormal:
-                        hexStringToUIColor(hex: theme.newInstance.tokens.colorOnSecondaryLightest),
-                    colorForDisabled:
-                        hexStringToUIColor(hex: theme.newInstance.tokens.colorOnSurfaceDisabled),
-                    on: button
-                )
+                colorForNormal = hexStringToUIColor(hex: theme.newInstance.tokens.colorOnSecondaryLightest)
+                colorForDisabled = hexStringToUIColor(hex: theme.newInstance.tokens.colorOnSurfaceDisabled)
             case .onSecondary:
-                GaYaButtonStyle.applyStyleForTitle(
-                    title,
-                    colorForNormal:
-                        hexStringToUIColor(hex: theme.newInstance.tokens.colorOnSecondaryLight),
-                    colorForDisabled:
-                        hexStringToUIColor(hex: theme.newInstance.tokens.colorOnSurfaceDisabled),
-                    on: button
-                )
+                colorForNormal = hexStringToUIColor(hex: theme.newInstance.tokens.colorOnSecondaryLight)
+                colorForDisabled = hexStringToUIColor(hex: theme.newInstance.tokens.colorOnSurfaceDisabled)
             case .inverse:
-                GaYaButtonStyle.applyStyleForTitle(
-                    title,
-                    colorForNormal:
-                        hexStringToUIColor(hex: theme.newInstance.tokens.colorNeutral0),
-                    colorForDisabled:
-                        hexStringToUIColor(hex: theme.newInstance.tokens.colorOnSurfaceDisabled),
-                    on: button
-                )
+                colorForNormal = hexStringToUIColor(hex: theme.newInstance.tokens.colorNeutral0)
+                colorForDisabled = hexStringToUIColor(hex: theme.newInstance.tokens.colorOnSurfaceDisabled)
             case .neutral:
-                GaYaButtonStyle.applyStyleForTitle(
-                    title,
-                    colorForNormal:
-                        hexStringToUIColor(hex: theme.newInstance.tokens.colorContentHighEmphasis),
-                    colorForDisabled:
-                        hexStringToUIColor(hex: theme.newInstance.tokens.colorOnSurfaceDisabled),
-                    on: button
-                )
+                colorForNormal = hexStringToUIColor(hex: theme.newInstance.tokens.colorContentHighEmphasis)
+                colorForDisabled = hexStringToUIColor(hex: theme.newInstance.tokens.colorOnSurfaceDisabled)
             }
         }
+        
+        button.tintColor = button.isEnabled ? colorForNormal : colorForDisabled
     }
+    
 }

@@ -20,7 +20,7 @@ final class IconButtonItemViewController: UIViewController, SampleItem {
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.spacing = NatSpacing.small
+        stackView.spacing = GaYaDimensions.spacingSmall
         stackView.distribution = .fillProportionally
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
@@ -82,7 +82,6 @@ final class IconButtonItemViewController: UIViewController, SampleItem {
     private let iconButtonFloatBackground: NatIconButton = {
         let iconButton = NatIconButton(style: .standardDefault)
         iconButton.translatesAutoresizingMaskIntoConstraints = false
-        iconButton.configure(icon: getIcon(.outlinedDefaultMockup))
         iconButton.configure(background: .float)
         return iconButton
     }()
@@ -90,7 +89,6 @@ final class IconButtonItemViewController: UIViewController, SampleItem {
     private let iconButtonFloatBackgroundDisabled: NatIconButton = {
         let iconButton = NatIconButton(style: .standardDefault)
         iconButton.translatesAutoresizingMaskIntoConstraints = false
-        iconButton.configure(icon: getIcon(.outlinedDefaultMockup))
         iconButton.configure(background: .float)
         iconButton.configure(state: .disabled)
         return iconButton
@@ -147,7 +145,7 @@ final class IconButtonItemViewController: UIViewController, SampleItem {
 
     private func setup() {
         title = Self.name
-        view.backgroundColor = NatColors.background
+        view.backgroundColor = GaYaColors.background
         view.addSubview(scrollView)
 
         scrollView.addSubview(containerView)
@@ -203,16 +201,16 @@ final class IconButtonItemViewController: UIViewController, SampleItem {
             scrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
 
             containerView.topAnchor.constraint(equalTo: scrollView.topAnchor),
-            containerView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -NatSpacing.small),
+            containerView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -GaYaDimensions.spacingSmall),
             containerView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
-            containerView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: NatSpacing.small),
+            containerView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: GaYaDimensions.spacingSmall),
             containerView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
             containerHeightConstraint,
 
-            stackView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: NatSpacing.small),
+            stackView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: GaYaDimensions.spacingSmall),
             stackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
             stackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
-            stackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -NatSpacing.small)
+            stackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -GaYaDimensions.spacingSmall)
         ]
 
         NSLayoutConstraint.activate(constraints)
@@ -226,7 +224,7 @@ final class IconButtonItemViewController: UIViewController, SampleItem {
         iconButton.centerXAnchor.constraint(equalTo: view.leadingAnchor, constant: 24).isActive = true
 
         let label = UILabel()
-        label.textColor = NatColors.highEmphasis
+        label.textColor = GaYaColors.highEmphasis
         label.text = text
         label.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(label)

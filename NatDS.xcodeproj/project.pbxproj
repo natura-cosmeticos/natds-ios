@@ -451,6 +451,10 @@
 		FF35F7362CE3D77C001F13AA /* GaYaTag+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF35F7352CE3D77C001F13AA /* GaYaTag+Size.swift */; };
 		FF35F7382CE3D7CA001F13AA /* GaYaTag+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF35F7372CE3D7CA001F13AA /* GaYaTag+Color.swift */; };
 		FF35F73A2CE3D7ED001F13AA /* GaYaTag+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF35F7392CE3D7ED001F13AA /* GaYaTag+Style.swift */; };
+		FF35F73F2CF59D92001F13AA /* GaYaIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF35F73E2CF59D92001F13AA /* GaYaIconButton.swift */; };
+		FF35F7412CF59DA4001F13AA /* GaYaIconButton+Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF35F7402CF59DA4001F13AA /* GaYaIconButton+Sizes.swift */; };
+		FF35F7432CF59DB3001F13AA /* GaYaIconButton+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF35F7422CF59DB3001F13AA /* GaYaIconButton+Styles.swift */; };
+		FF35F7472CF5A022001F13AA /* GaYaIconButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF35F7462CF5A022001F13AA /* GaYaIconButtonStyle.swift */; };
 		FF38AE932B6B5E3100F0F10B /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38AE912B6B5E3100F0F10B /* Icon.swift */; };
 		FF38AE962B6B5FF000F0F10B /* NatDSIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF38AE952B6B5FF000F0F10B /* NatDSIcons.swift */; };
 		FF38AE9E2B90472500F0F10B /* natds-icons-ios.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF38AE9D2B90472500F0F10B /* natds-icons-ios.ttf */; };
@@ -494,6 +498,11 @@
 		FFE7976B2C79215700D241BF /* GaYaSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE7976A2C79215700D241BF /* GaYaSizes.swift */; };
 		FFE7976D2C79216900D241BF /* GaYaDimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE7976C2C79216900D241BF /* GaYaDimensions.swift */; };
 		FFE7976F2C7922E400D241BF /* GaYaOpacity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE7976E2C7922E400D241BF /* GaYaOpacity.swift */; };
+		FFF60D762D0C1C3D005CD77D /* GaYaIconButtonFilledStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60D752D0C1C3D005CD77D /* GaYaIconButtonFilledStyle.swift */; };
+		FFF60D782D0C1C53005CD77D /* GaYaIconButtonOutlinedStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60D772D0C1C53005CD77D /* GaYaIconButtonOutlinedStyle.swift */; };
+		FFF60D7A2D0C1C69005CD77D /* GaYaIconButtonGhostStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60D792D0C1C69005CD77D /* GaYaIconButtonGhostStyle.swift */; };
+		FFF60D7C2D0C1C89005CD77D /* GaYaIconButtonTonalStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60D7B2D0C1C89005CD77D /* GaYaIconButtonTonalStyle.swift */; };
+		FFF60D7E2D0C1D9E005CD77D /* GaYaIconButton+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60D7D2D0C1D9E005CD77D /* GaYaIconButton+Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -960,6 +969,10 @@
 		FF35F7352CE3D77C001F13AA /* GaYaTag+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GaYaTag+Size.swift"; sourceTree = "<group>"; };
 		FF35F7372CE3D7CA001F13AA /* GaYaTag+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GaYaTag+Color.swift"; sourceTree = "<group>"; };
 		FF35F7392CE3D7ED001F13AA /* GaYaTag+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GaYaTag+Style.swift"; sourceTree = "<group>"; };
+		FF35F73E2CF59D92001F13AA /* GaYaIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaIconButton.swift; sourceTree = "<group>"; };
+		FF35F7402CF59DA4001F13AA /* GaYaIconButton+Sizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GaYaIconButton+Sizes.swift"; sourceTree = "<group>"; };
+		FF35F7422CF59DB3001F13AA /* GaYaIconButton+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GaYaIconButton+Styles.swift"; sourceTree = "<group>"; };
+		FF35F7462CF5A022001F13AA /* GaYaIconButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaIconButtonStyle.swift; sourceTree = "<group>"; };
 		FF38AE912B6B5E3100F0F10B /* Icon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
 		FF38AE952B6B5FF000F0F10B /* NatDSIcons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NatDSIcons.swift; sourceTree = "<group>"; };
 		FF38AE9D2B90472500F0F10B /* natds-icons-ios.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "natds-icons-ios.ttf"; sourceTree = "<group>"; };
@@ -1003,6 +1016,11 @@
 		FFE7976A2C79215700D241BF /* GaYaSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaSizes.swift; sourceTree = "<group>"; };
 		FFE7976C2C79216900D241BF /* GaYaDimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaDimensions.swift; sourceTree = "<group>"; };
 		FFE7976E2C7922E400D241BF /* GaYaOpacity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaOpacity.swift; sourceTree = "<group>"; };
+		FFF60D752D0C1C3D005CD77D /* GaYaIconButtonFilledStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaIconButtonFilledStyle.swift; sourceTree = "<group>"; };
+		FFF60D772D0C1C53005CD77D /* GaYaIconButtonOutlinedStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaIconButtonOutlinedStyle.swift; sourceTree = "<group>"; };
+		FFF60D792D0C1C69005CD77D /* GaYaIconButtonGhostStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaIconButtonGhostStyle.swift; sourceTree = "<group>"; };
+		FFF60D7B2D0C1C89005CD77D /* GaYaIconButtonTonalStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaIconButtonTonalStyle.swift; sourceTree = "<group>"; };
+		FFF60D7D2D0C1D9E005CD77D /* GaYaIconButton+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GaYaIconButton+Color.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1058,14 +1076,14 @@
 		012C47A3F04D83B715DD934E2E86BD5C /* Button */ = {
 			isa = PBXGroup;
 			children = (
-				FF5439E12BD6A5B900FAE2C4 /* GaYaButtonFilledStyle.swift */,
-				FF5439E22BD6A5BA00FAE2C4 /* GaYaButtonOutlineStyle.swift */,
-				FF5439DF2BD6A5B900FAE2C4 /* GaYaButtonStyle.swift */,
-				FF5439E02BD6A5B900FAE2C4 /* GaYaButtonGhostStyle.swift */,
 				6921E739399DFDC850A3FD044E812EEE /* ButtonContainedStyle.swift */,
 				30E333A0723F6532721CE638F6819154 /* ButtonOutlineStyle.swift */,
 				B949EB43F40A2086C7BA7CFE2358A9DA /* ButtonStyle.swift */,
 				113F306054D9B7B4EDC1D13B97C6481F /* ButtonTextStyle.swift */,
+				FF5439E12BD6A5B900FAE2C4 /* GaYaButtonFilledStyle.swift */,
+				FF5439E02BD6A5B900FAE2C4 /* GaYaButtonGhostStyle.swift */,
+				FF5439E22BD6A5BA00FAE2C4 /* GaYaButtonOutlineStyle.swift */,
+				FF5439DF2BD6A5B900FAE2C4 /* GaYaButtonStyle.swift */,
 				FF28A3DC2BDAA5220007B262 /* GaYaButtonTonalStyle.swift */,
 			);
 			path = Button;
@@ -2196,6 +2214,11 @@
 		845D09962501195A00B05760 /* IconButton */ = {
 			isa = PBXGroup;
 			children = (
+				FFF60D752D0C1C3D005CD77D /* GaYaIconButtonFilledStyle.swift */,
+				FFF60D792D0C1C69005CD77D /* GaYaIconButtonGhostStyle.swift */,
+				FFF60D772D0C1C53005CD77D /* GaYaIconButtonOutlinedStyle.swift */,
+				FF35F7462CF5A022001F13AA /* GaYaIconButtonStyle.swift */,
+				FFF60D7B2D0C1C89005CD77D /* GaYaIconButtonTonalStyle.swift */,
 				845D09972501196D00B05760 /* IconButtonStandardStyle.swift */,
 			);
 			path = IconButton;
@@ -2260,6 +2283,10 @@
 				845D09942501193500B05760 /* NatIconButton+Sizes.swift */,
 				848831BD25018340004C3FA8 /* NatIconButton+Styles.swift */,
 				7D60A442260914DE00A23C1A /* NatIconButton+Backgrounds.swift */,
+				FF35F73E2CF59D92001F13AA /* GaYaIconButton.swift */,
+				FF35F7402CF59DA4001F13AA /* GaYaIconButton+Sizes.swift */,
+				FF35F7422CF59DB3001F13AA /* GaYaIconButton+Styles.swift */,
+				FFF60D7D2D0C1D9E005CD77D /* GaYaIconButton+Color.swift */,
 			);
 			path = IconButton;
 			sourceTree = "<group>";
@@ -3717,6 +3744,7 @@
 				84BC901524AA17C0007DF09D /* NatDialogBodyConfigurable.swift in Sources */,
 				7D5F149A25A782AB007986EE /* IconsSource.swift in Sources */,
 				7D8F3E6A258A81C1003A7DEB /* ShortcutView.swift in Sources */,
+				FF35F7472CF5A022001F13AA /* GaYaIconButtonStyle.swift in Sources */,
 				FFE7976F2C7922E400D241BF /* GaYaOpacity.swift in Sources */,
 				8409854C24F030930095D6AD /* NotificationCenterObservable.swift in Sources */,
 				FF5439DA2BD2B3A400FAE2C4 /* GaYaButton.swift in Sources */,
@@ -3729,6 +3757,7 @@
 				26BB817924B944D100617EFC /* Badgeable.swift in Sources */,
 				FFD9EB3B2B185D7000EBE815 /* NatButton+Color.swift in Sources */,
 				84EB6B7524EBFEC000C6A792 /* GetThemeValidated.swift in Sources */,
+				FF35F7412CF59DA4001F13AA /* GaYaIconButton+Sizes.swift in Sources */,
 				1F40DBA4B8A3C9B0558AD83B5B2884D6 /* ButtonContainedStyle.swift in Sources */,
 				DC1FF6E52885F57500AC659C /* NatChip+Color.swift in Sources */,
 				FF5439DE2BD2B3A400FAE2C4 /* GaYaButton+Icon.swift in Sources */,
@@ -3736,11 +3765,13 @@
 				7D31C1152614C87F00EED32A /* NatRating+Size.swift in Sources */,
 				98C6EB095DD059D51DD9883B943AF889 /* ButtonOutlineStyle.swift in Sources */,
 				7D43162225ED9477004AE34F /* TextField+Size.swift in Sources */,
+				FFF60D7C2D0C1C89005CD77D /* GaYaIconButtonTonalStyle.swift in Sources */,
 				FFE797342C1D86D400D241BF /* GaYaChip.swift in Sources */,
 				E67E4E4A29F714CB00FF7515 /* AvonLightTheme.swift in Sources */,
 				14016A20C7BF7046BAFCD2AE53673EB0 /* ButtonStyle.swift in Sources */,
 				FFE797602C56C36800D241BF /* ForcaDeVendasDarkTheme.swift in Sources */,
 				FFE797692C791FCD00D241BF /* GaYaColors.swift in Sources */,
+				FFF60D782D0C1C53005CD77D /* GaYaIconButtonOutlinedStyle.swift in Sources */,
 				FF38AEA32BA0935400F0F10B /* Naturav3LightTheme.swift in Sources */,
 				E67E4E4929F714CB00FF7515 /* AvonDarkTheme.swift in Sources */,
 				FF49B7262AA1A00C001478A5 /* NatSnackbar.swift in Sources */,
@@ -3788,6 +3819,7 @@
 				7D60A4A0260E208E00A23C1A /* NatListItem+Feedback.swift in Sources */,
 				84BF066524B4A8BD00462AC5 /* ShortcutOutlinedStyle.swift in Sources */,
 				4612CED8B9691035EFA62E01E2B30FD6 /* NatField.swift in Sources */,
+				FFF60D762D0C1C3D005CD77D /* GaYaIconButtonFilledStyle.swift in Sources */,
 				84BC900824AA1678007DF09D /* NatDialogController+AlertStyleBuilder.swift in Sources */,
 				DCBF1B43287F2E480024041E /* NatChip.swift in Sources */,
 				84BF066724B4A8DA00462AC5 /* ShortcutContainedStyle.swift in Sources */,
@@ -3825,6 +3857,7 @@
 				84BC900224AA15C3007DF09D /* NotificationCenterPostable.swift in Sources */,
 				797E615E255464D1002A59E0 /* NatButton+Icon.swift in Sources */,
 				DCBF1B45287F360B0024041E /* NatChip+Size.swift in Sources */,
+				FF35F73F2CF59D92001F13AA /* GaYaIconButton.swift in Sources */,
 				BEDF932A2593BE8000F54C50 /* NatSelectionControl+State.swift in Sources */,
 				BEAFF23D259517DC00B9C9B5 /* NatCheckboxContainer.swift in Sources */,
 				0FB003017C3A179872BC65E6E321FD13 /* NatDialogController+StandardStyleBuilder.swift in Sources */,
@@ -3858,7 +3891,9 @@
 				13070104FE3F89CB14F76D621EF9A7F1 /* NavigationDrawer+IndexMenu.swift in Sources */,
 				7D75A43925DB00130050ACA9 /* NatAvatar.swift in Sources */,
 				79EA0C18260A30DA00742C0A /* NatCounter.swift in Sources */,
+				FF35F7432CF59DB3001F13AA /* GaYaIconButton+Styles.swift in Sources */,
 				8C1AE05A28A682ED000F9D88 /* NatAlert+Style.swift in Sources */,
+				FFF60D7E2D0C1D9E005CD77D /* GaYaIconButton+Color.swift in Sources */,
 				84F709FF1D1DFC32BA4E9CB1803A6E30 /* NavigationDrawer.swift in Sources */,
 				798CD2F02605151B00F49768 /* NatTag+Size.swift in Sources */,
 				FFE797422C1D875800D241BF /* GaYaChipFilter+Size.swift in Sources */,
@@ -3868,6 +3903,7 @@
 				841FEABA24C5C1A100C50AFF /* NatLogoImages.swift in Sources */,
 				79FC59C925D45E7D001CCB56 /* NatProgressIndicatorCircular+Animation.swift in Sources */,
 				B16B10A0AA533EF36343B6B8A4AE4DA0 /* NavigationDrawerItemCell.swift in Sources */,
+				FFF60D7A2D0C1C69005CD77D /* GaYaIconButtonGhostStyle.swift in Sources */,
 				7D86C19A26654CF100FC4C53 /* NatLogo+Color.swift in Sources */,
 				A096BCFF55DBEF25B29C30C1537210D5 /* NavigationDrawerSubitemCell.swift in Sources */,
 				848831BE25018340004C3FA8 /* NatIconButton+Styles.swift in Sources */,

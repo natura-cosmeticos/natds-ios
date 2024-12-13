@@ -9,7 +9,6 @@
 import Foundation
 
 public enum GaYaButtonColor {
-    case colorDefault
     case primary
     case onPrimary
     case secondary

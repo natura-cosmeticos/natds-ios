@@ -21,6 +21,7 @@ class ComponentsSection: SampleSection {
         DividerViewController.self,
         ExpansionPanelViewController.self,
         IconButtonItemViewController.self,
+        GaYaIconButtonViewController.self,
         IconographyItemViewController.self,
         ImageViewController.self,
         ListItemViewController.self,
