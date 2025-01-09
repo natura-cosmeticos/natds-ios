@@ -27,3 +27,8 @@ target 'NatDS-SampleApp' do
 project 'SampleApp/NatDS-SampleApp.xcodeproj'
   use_frameworks!
 end
+
+target 'GaYa-SampleApp' do
+project 'GaYa-SampleApp/GaYa-SampleApp.xcodeproj'
+  use_frameworks!
+end

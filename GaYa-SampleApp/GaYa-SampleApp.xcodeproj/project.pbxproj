@@ -1,0 +1,510 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		23FDFCCA3F9CD9D3C7CE0EBF /* Pods_GaYa_SampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B735A74A0023E3E501AD4885 /* Pods_GaYa_SampleApp.framework */; };
+		FFF60DBC2D2D6478005CD77D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFF60DBB2D2D6478005CD77D /* Assets.xcassets */; };
+		FFF60E062D2D6B1B005CD77D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60E052D2D6B1B005CD77D /* AppDelegate.swift */; };
+		FFF60E082D2D6B42005CD77D /* MainDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60E072D2D6B42005CD77D /* MainDataSource.swift */; };
+		FFF60E0A2D2D6B5B005CD77D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60E092D2D6B5B005CD77D /* MainViewController.swift */; };
+		FFF60E102D2D6BEF005CD77D /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60E0F2D2D6BEF005CD77D /* ThemeManager.swift */; };
+		FFF60E122D2D6BFD005CD77D /* BrandThemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60E112D2D6BFD005CD77D /* BrandThemes.swift */; };
+		FFF60E142D2D6CD9005CD77D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FFF60E132D2D6CD9005CD77D /* Info.plist */; };
+		FFF60E172D2D6D05005CD77D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFF60E152D2D6D05005CD77D /* LaunchScreen.storyboard */; };
+		FFF60E192D2D6D4C005CD77D /* CustomSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60E182D2D6D4C005CD77D /* CustomSplashViewController.swift */; };
+		FFF60E1B2D2D6D64005CD77D /* CustomSplashViewController+GradientBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60E1A2D2D6D64005CD77D /* CustomSplashViewController+GradientBackgroundView.swift */; };
+		FFF60E1F2D2D6E4B005CD77D /* ChooseBrandHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60E1C2D2D6E4B005CD77D /* ChooseBrandHeader.swift */; };
+		FFF60E202D2D6E4B005CD77D /* ChooseBrandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60E1D2D2D6E4B005CD77D /* ChooseBrandViewController.swift */; };
+		FFF60E212D2D6E4B005CD77D /* ChooseBrandCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60E1E2D2D6E4B005CD77D /* ChooseBrandCell.swift */; };
+		FFF60E232D2D6EF3005CD77D /* NatDS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFF60E222D2D6EF3005CD77D /* NatDS.framework */; };
+		FFF60E242D2D6EF3005CD77D /* NatDS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FFF60E222D2D6EF3005CD77D /* NatDS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FFF60E252D2D6EF3005CD77D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FFF60E242D2D6EF3005CD77D /* NatDS.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A1233736FF265FC52DC6A782 /* Pods-GaYa-SampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GaYa-SampleApp.debug.xcconfig"; path = "Target Support Files/Pods-GaYa-SampleApp/Pods-GaYa-SampleApp.debug.xcconfig"; sourceTree = "<group>"; };
+		B735A74A0023E3E501AD4885 /* Pods_GaYa_SampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GaYa_SampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA06FFD5A0CDF50843925868 /* Pods-GaYa-SampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GaYa-SampleApp.release.xcconfig"; path = "Target Support Files/Pods-GaYa-SampleApp/Pods-GaYa-SampleApp.release.xcconfig"; sourceTree = "<group>"; };
+		FFF60DB42D2D6471005CD77D /* GaYa-SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GaYa-SampleApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFF60DBB2D2D6478005CD77D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FFF60E052D2D6B1B005CD77D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FFF60E072D2D6B42005CD77D /* MainDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDataSource.swift; sourceTree = "<group>"; };
+		FFF60E092D2D6B5B005CD77D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		FFF60E0F2D2D6BEF005CD77D /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		FFF60E112D2D6BFD005CD77D /* BrandThemes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandThemes.swift; sourceTree = "<group>"; };
+		FFF60E132D2D6CD9005CD77D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFF60E162D2D6D05005CD77D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FFF60E182D2D6D4C005CD77D /* CustomSplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSplashViewController.swift; sourceTree = "<group>"; };
+		FFF60E1A2D2D6D64005CD77D /* CustomSplashViewController+GradientBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomSplashViewController+GradientBackgroundView.swift"; sourceTree = "<group>"; };
+		FFF60E1C2D2D6E4B005CD77D /* ChooseBrandHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseBrandHeader.swift; sourceTree = "<group>"; };
+		FFF60E1D2D2D6E4B005CD77D /* ChooseBrandViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseBrandViewController.swift; sourceTree = "<group>"; };
+		FFF60E1E2D2D6E4B005CD77D /* ChooseBrandCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseBrandCell.swift; sourceTree = "<group>"; };
+		FFF60E222D2D6EF3005CD77D /* NatDS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NatDS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FFF60DB12D2D6471005CD77D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23FDFCCA3F9CD9D3C7CE0EBF /* Pods_GaYa_SampleApp.framework in Frameworks */,
+				FFF60E232D2D6EF3005CD77D /* NatDS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1923B6458E417AA87F5A6F76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FFF60E222D2D6EF3005CD77D /* NatDS.framework */,
+				B735A74A0023E3E501AD4885 /* Pods_GaYa_SampleApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6040F485A1263D760B612542 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A1233736FF265FC52DC6A782 /* Pods-GaYa-SampleApp.debug.xcconfig */,
+				EA06FFD5A0CDF50843925868 /* Pods-GaYa-SampleApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
+			sourceTree = "<group>";
+		};
+		FFF60DAB2D2D6471005CD77D = {
+			isa = PBXGroup;
+			children = (
+				1923B6458E417AA87F5A6F76 /* Frameworks */,
+				6040F485A1263D760B612542 /* Pods */,
+				FFF60DB52D2D6471005CD77D /* Products */,
+				FFF60E032D2D6707005CD77D /* Sources */,
+			);
+			sourceTree = "<group>";
+		};
+		FFF60DB52D2D6471005CD77D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FFF60DB42D2D6471005CD77D /* GaYa-SampleApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FFF60E032D2D6707005CD77D /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				FFF60E052D2D6B1B005CD77D /* AppDelegate.swift */,
+				FFF60E0B2D2D6B81005CD77D /* ChooseBrand */,
+				FFF60E0C2D2D6B95005CD77D /* CustomSplash */,
+				FFF60E072D2D6B42005CD77D /* MainDataSource.swift */,
+				FFF60E092D2D6B5B005CD77D /* MainViewController.swift */,
+				FFF60E0D2D2D6BA5005CD77D /* SupportingFiles */,
+				FFF60E0E2D2D6BB7005CD77D /* ThemeManager */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		FFF60E0B2D2D6B81005CD77D /* ChooseBrand */ = {
+			isa = PBXGroup;
+			children = (
+				FFF60E1E2D2D6E4B005CD77D /* ChooseBrandCell.swift */,
+				FFF60E1C2D2D6E4B005CD77D /* ChooseBrandHeader.swift */,
+				FFF60E1D2D2D6E4B005CD77D /* ChooseBrandViewController.swift */,
+			);
+			path = ChooseBrand;
+			sourceTree = "<group>";
+		};
+		FFF60E0C2D2D6B95005CD77D /* CustomSplash */ = {
+			isa = PBXGroup;
+			children = (
+				FFF60E182D2D6D4C005CD77D /* CustomSplashViewController.swift */,
+				FFF60E1A2D2D6D64005CD77D /* CustomSplashViewController+GradientBackgroundView.swift */,
+			);
+			path = CustomSplash;
+			sourceTree = "<group>";
+		};
+		FFF60E0D2D2D6BA5005CD77D /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				FFF60E152D2D6D05005CD77D /* LaunchScreen.storyboard */,
+				FFF60E132D2D6CD9005CD77D /* Info.plist */,
+				FFF60DBB2D2D6478005CD77D /* Assets.xcassets */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		FFF60E0E2D2D6BB7005CD77D /* ThemeManager */ = {
+			isa = PBXGroup;
+			children = (
+				FFF60E0F2D2D6BEF005CD77D /* ThemeManager.swift */,
+				FFF60E112D2D6BFD005CD77D /* BrandThemes.swift */,
+			);
+			path = ThemeManager;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FFF60DB32D2D6471005CD77D /* GaYa-SampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFF60DD92D2D6479005CD77D /* Build configuration list for PBXNativeTarget "GaYa-SampleApp" */;
+			buildPhases = (
+				58DFAE2A1B652F5484FD14B2 /* [CP] Check Pods Manifest.lock */,
+				FFF60DB02D2D6471005CD77D /* Sources */,
+				FFF60DB12D2D6471005CD77D /* Frameworks */,
+				FFF60DB22D2D6471005CD77D /* Resources */,
+				FFF60E252D2D6EF3005CD77D /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GaYa-SampleApp";
+			productName = "GaYa-SampleApp";
+			productReference = FFF60DB42D2D6471005CD77D /* GaYa-SampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FFF60DAC2D2D6471005CD77D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					FFF60DB32D2D6471005CD77D = {
+						CreatedOnToolsVersion = 15.3;
+						LastSwiftMigration = 1530;
+					};
+				};
+			};
+			buildConfigurationList = FFF60DAF2D2D6471005CD77D /* Build configuration list for PBXProject "GaYa-SampleApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FFF60DAB2D2D6471005CD77D;
+			productRefGroup = FFF60DB52D2D6471005CD77D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FFF60DB32D2D6471005CD77D /* GaYa-SampleApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FFF60DB22D2D6471005CD77D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFF60E172D2D6D05005CD77D /* LaunchScreen.storyboard in Resources */,
+				FFF60E142D2D6CD9005CD77D /* Info.plist in Resources */,
+				FFF60DBC2D2D6478005CD77D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		58DFAE2A1B652F5484FD14B2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GaYa-SampleApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FFF60DB02D2D6471005CD77D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFF60E202D2D6E4B005CD77D /* ChooseBrandViewController.swift in Sources */,
+				FFF60E0A2D2D6B5B005CD77D /* MainViewController.swift in Sources */,
+				FFF60E062D2D6B1B005CD77D /* AppDelegate.swift in Sources */,
+				FFF60E082D2D6B42005CD77D /* MainDataSource.swift in Sources */,
+				FFF60E1F2D2D6E4B005CD77D /* ChooseBrandHeader.swift in Sources */,
+				FFF60E1B2D2D6D64005CD77D /* CustomSplashViewController+GradientBackgroundView.swift in Sources */,
+				FFF60E212D2D6E4B005CD77D /* ChooseBrandCell.swift in Sources */,
+				FFF60E102D2D6BEF005CD77D /* ThemeManager.swift in Sources */,
+				FFF60E192D2D6D4C005CD77D /* CustomSplashViewController.swift in Sources */,
+				FFF60E122D2D6BFD005CD77D /* BrandThemes.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FFF60E152D2D6D05005CD77D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FFF60E162D2D6D05005CD77D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FFF60DD72D2D6479005CD77D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FFF60DD82D2D6479005CD77D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		FFF60DDA2D2D6479005CD77D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1233736FF265FC52DC6A782 /* Pods-GaYa-SampleApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "GaYa-SampleApp/GaYa_SampleApp.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GaYa-SampleApp/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 11;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "natura.GaYa-SampleApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Sources/GaYa-SampleApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FFF60DDB2D2D6479005CD77D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA06FFD5A0CDF50843925868 /* Pods-GaYa-SampleApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "GaYa-SampleApp/GaYa_SampleApp.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GaYa-SampleApp/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 11;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "natura.GaYa-SampleApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Sources/GaYa-SampleApp-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FFF60DAF2D2D6471005CD77D /* Build configuration list for PBXProject "GaYa-SampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFF60DD72D2D6479005CD77D /* Debug */,
+				FFF60DD82D2D6479005CD77D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFF60DD92D2D6479005CD77D /* Build configuration list for PBXNativeTarget "GaYa-SampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFF60DDA2D2D6479005CD77D /* Debug */,
+				FFF60DDB2D2D6479005CD77D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FFF60DAC2D2D6471005CD77D /* Project object */;
+}

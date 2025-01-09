@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "consultoria_de_beleza.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
