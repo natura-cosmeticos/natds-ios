@@ -64,7 +64,7 @@ public final class NatCounter: UIView, UITextFieldDelegate {
         stackView.spacing = 0
         stackView.distribution = .fill
         stackView.alignment = .fill
-        stackView.layer.borderColor = NatColors.highEmphasis.cgColor
+        stackView.layer.borderColor = GaYaColors.highEmphasis.cgColor
         stackView.layer.borderWidth = 0.5
         stackView.layer.cornerRadius = getTokenFromTheme(\.borderRadiusMedium)
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -74,8 +74,8 @@ public final class NatCounter: UIView, UITextFieldDelegate {
 
     let numCounterLabelView: UIView = {
         let view = UIView()
-        view.addBorder(with: NatColors.highEmphasis, andWidth: 0.5, atTop: true)
-        view.addBorder(with: NatColors.highEmphasis, andWidth: 0.5, atTop: false)
+        view.addBorder(with: GaYaColors.highEmphasis, andWidth: 0.5, atTop: true)
+        view.addBorder(with: GaYaColors.highEmphasis, andWidth: 0.5, atTop: false)
         view.translatesAutoresizingMaskIntoConstraints = false
 
         return view
@@ -95,7 +95,7 @@ public final class NatCounter: UIView, UITextFieldDelegate {
         let toolbar = UIToolbar()
                 toolbar.sizeToFit()
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let doneButton = UIBarButtonItem(title: "OK", style: .done, target: self, action: #selector(doneButtonAction))
+        let doneButton = UIBarButtonItem(title: "OK", style: .done, target: NatCounter.self, action: #selector(doneButtonAction))
         toolbar.items = [flexibleSpace, doneButton]
         
         textField.inputAccessoryView = toolbar

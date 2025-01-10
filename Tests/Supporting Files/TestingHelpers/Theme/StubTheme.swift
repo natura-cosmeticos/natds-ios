@@ -17,17 +17,9 @@ private struct StubTokens: Tokens {
     let assetFontFileBodyRegular = "montserrat_regular"
     let assetFontFileBodyBold = "montserrat_bold"
     let assetBrandNeutralAFile = "avon-a-official"
-    let assetBrandNeutralAWidth: CGFloat = 256
-    let assetBrandNeutralAHeight: CGFloat = 58
     let assetBrandNeutralBFile = "avon-a-official"
-    let assetBrandNeutralBWidth: CGFloat = 256
-    let assetBrandNeutralBHeight: CGFloat = 58
     let assetBrandCustomAFile = "avon-a-custom"
-    let assetBrandCustomAWidth: CGFloat = 256
-    let assetBrandCustomAHeight: CGFloat = 58
     let assetBrandCustomBFile = "avon-a-custom"
-    let assetBrandCustomBWidth: CGFloat = 256
-    let assetBrandCustomBHeight: CGFloat = 58
     let assetBrandNeutralAPtFile = "avon-b-custom"
     let assetBrandNeutralBPtFile = "avon-b-custom"
     let assetBrandCustomAPtFile = "avon-b-custom"

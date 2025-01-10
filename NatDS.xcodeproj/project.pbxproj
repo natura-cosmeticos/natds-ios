@@ -416,23 +416,17 @@
 		DF58B3DD08824CC1C80C886321CEA0F4 /* NatElevations+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A9D6B3184A3081BD0CDE0B1A351C8F /* NatElevations+Spec.swift */; };
 		E07925C3535D79164EBC061C7D6A6CE4 /* TextFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437B78D88ACFB47EEADED96CDC94C7C5 /* TextFieldType.swift */; };
 		E4B171E23C40B91B211DB2F64357778D /* ViewStyle+Spec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAE325876E14C91105C5CF9D2E7F1EF /* ViewStyle+Spec.swift */; };
-		E67E4E4729F714CB00FF7515 /* NatdsTestDarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67E4E2C29F714CB00FF7515 /* NatdsTestDarkTheme.swift */; };
-		E67E4E4829F714CB00FF7515 /* NatdsTestLightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67E4E2D29F714CB00FF7515 /* NatdsTestLightTheme.swift */; };
 		E67E4E4929F714CB00FF7515 /* AvonDarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67E4E2F29F714CB00FF7515 /* AvonDarkTheme.swift */; };
 		E67E4E4A29F714CB00FF7515 /* AvonLightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67E4E3029F714CB00FF7515 /* AvonLightTheme.swift */; };
 		E67E4E4B29F714CB00FF7515 /* ConsultoriaDeBelezaDarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67E4E3229F714CB00FF7515 /* ConsultoriaDeBelezaDarkTheme.swift */; };
 		E67E4E4C29F714CB00FF7515 /* ConsultoriaDeBelezaLightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67E4E3329F714CB00FF7515 /* ConsultoriaDeBelezaLightTheme.swift */; };
 		E67E4E4D29F714CB00FF7515 /* TheBodyShopDarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67E4E3529F714CB00FF7515 /* TheBodyShopDarkTheme.swift */; };
 		E67E4E4E29F714CB00FF7515 /* TheBodyShopLightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67E4E3629F714CB00FF7515 /* TheBodyShopLightTheme.swift */; };
-		E67E4E4F29F714CB00FF7515 /* BiomeLightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67E4E3829F714CB00FF7515 /* BiomeLightTheme.swift */; };
-		E67E4E5029F714CB00FF7515 /* BiomeDarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67E4E3929F714CB00FF7515 /* BiomeDarkTheme.swift */; };
 		E67E4E5129F714CB00FF7515 /* ThemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67E4E3A29F714CB00FF7515 /* ThemeProtocol.swift */; };
 		E67E4E5229F714CB00FF7515 /* Naturav2DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67E4E3C29F714CB00FF7515 /* Naturav2DarkTheme.swift */; };
 		E67E4E5329F714CB00FF7515 /* Naturav2LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67E4E3D29F714CB00FF7515 /* Naturav2LightTheme.swift */; };
 		E67E4E5429F714CB00FF7515 /* CasaEestiloDarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67E4E3F29F714CB00FF7515 /* CasaEestiloDarkTheme.swift */; };
 		E67E4E5529F714CB00FF7515 /* CasaEestiloLightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67E4E4029F714CB00FF7515 /* CasaEestiloLightTheme.swift */; };
-		E67E4E5629F714CB00FF7515 /* AesopLightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67E4E4229F714CB00FF7515 /* AesopLightTheme.swift */; };
-		E67E4E5729F714CB00FF7515 /* AesopDarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67E4E4329F714CB00FF7515 /* AesopDarkTheme.swift */; };
 		E67E4E5829F714CB00FF7515 /* NaturaLightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67E4E4529F714CB00FF7515 /* NaturaLightTheme.swift */; };
 		E67E4E5929F714CB00FF7515 /* NaturaDarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67E4E4629F714CB00FF7515 /* NaturaDarkTheme.swift */; };
 		E70EF1AC4BB7A93A80A500786C1A6497 /* NatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCF632B4501044E5062C574CCBBF74E /* NatButton.swift */; };
@@ -503,6 +497,8 @@
 		FFF60D7A2D0C1C69005CD77D /* GaYaIconButtonGhostStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60D792D0C1C69005CD77D /* GaYaIconButtonGhostStyle.swift */; };
 		FFF60D7C2D0C1C89005CD77D /* GaYaIconButtonTonalStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60D7B2D0C1C89005CD77D /* GaYaIconButtonTonalStyle.swift */; };
 		FFF60D7E2D0C1D9E005CD77D /* GaYaIconButton+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60D7D2D0C1D9E005CD77D /* GaYaIconButton+Color.swift */; };
+		FFF60E292D309EB3005CD77D /* ConsultoriaDeBelezaV2DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60E262D309EB3005CD77D /* ConsultoriaDeBelezaV2DarkTheme.swift */; };
+		FFF60E2A2D309EB3005CD77D /* ConsultoriaDeBelezaV2LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60E272D309EB3005CD77D /* ConsultoriaDeBelezaV2LightTheme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -932,23 +928,17 @@
 		DD7122400C6AAB36772A6E365FBD263D /* String+Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Icon.swift"; sourceTree = "<group>"; };
 		E2274F3C7AE245CDA327DD2C /* Pods-NatDSSnapShotTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NatDSSnapShotTests.debug.xcconfig"; path = "Target Support Files/Pods-NatDSSnapShotTests/Pods-NatDSSnapShotTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E46448E79883A4EB8A9416823A01531F /* NatOpacities+Spec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatOpacities+Spec.swift"; sourceTree = "<group>"; };
-		E67E4E2C29F714CB00FF7515 /* NatdsTestDarkTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NatdsTestDarkTheme.swift; sourceTree = "<group>"; };
-		E67E4E2D29F714CB00FF7515 /* NatdsTestLightTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NatdsTestLightTheme.swift; sourceTree = "<group>"; };
 		E67E4E2F29F714CB00FF7515 /* AvonDarkTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvonDarkTheme.swift; sourceTree = "<group>"; };
 		E67E4E3029F714CB00FF7515 /* AvonLightTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvonLightTheme.swift; sourceTree = "<group>"; };
 		E67E4E3229F714CB00FF7515 /* ConsultoriaDeBelezaDarkTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsultoriaDeBelezaDarkTheme.swift; sourceTree = "<group>"; };
 		E67E4E3329F714CB00FF7515 /* ConsultoriaDeBelezaLightTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsultoriaDeBelezaLightTheme.swift; sourceTree = "<group>"; };
 		E67E4E3529F714CB00FF7515 /* TheBodyShopDarkTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheBodyShopDarkTheme.swift; sourceTree = "<group>"; };
 		E67E4E3629F714CB00FF7515 /* TheBodyShopLightTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheBodyShopLightTheme.swift; sourceTree = "<group>"; };
-		E67E4E3829F714CB00FF7515 /* BiomeLightTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiomeLightTheme.swift; sourceTree = "<group>"; };
-		E67E4E3929F714CB00FF7515 /* BiomeDarkTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiomeDarkTheme.swift; sourceTree = "<group>"; };
 		E67E4E3A29F714CB00FF7515 /* ThemeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeProtocol.swift; sourceTree = "<group>"; };
 		E67E4E3C29F714CB00FF7515 /* Naturav2DarkTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Naturav2DarkTheme.swift; sourceTree = "<group>"; };
 		E67E4E3D29F714CB00FF7515 /* Naturav2LightTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Naturav2LightTheme.swift; sourceTree = "<group>"; };
 		E67E4E3F29F714CB00FF7515 /* CasaEestiloDarkTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CasaEestiloDarkTheme.swift; sourceTree = "<group>"; };
 		E67E4E4029F714CB00FF7515 /* CasaEestiloLightTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CasaEestiloLightTheme.swift; sourceTree = "<group>"; };
-		E67E4E4229F714CB00FF7515 /* AesopLightTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AesopLightTheme.swift; sourceTree = "<group>"; };
-		E67E4E4329F714CB00FF7515 /* AesopDarkTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AesopDarkTheme.swift; sourceTree = "<group>"; };
 		E67E4E4529F714CB00FF7515 /* NaturaLightTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NaturaLightTheme.swift; sourceTree = "<group>"; };
 		E67E4E4629F714CB00FF7515 /* NaturaDarkTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NaturaDarkTheme.swift; sourceTree = "<group>"; };
 		E7C1EA361FCA3C4EFEC4858AA4E04143 /* NatFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatFonts.swift; sourceTree = "<group>"; };
@@ -1021,6 +1011,8 @@
 		FFF60D792D0C1C69005CD77D /* GaYaIconButtonGhostStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaIconButtonGhostStyle.swift; sourceTree = "<group>"; };
 		FFF60D7B2D0C1C89005CD77D /* GaYaIconButtonTonalStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaIconButtonTonalStyle.swift; sourceTree = "<group>"; };
 		FFF60D7D2D0C1D9E005CD77D /* GaYaIconButton+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GaYaIconButton+Color.swift"; sourceTree = "<group>"; };
+		FFF60E262D309EB3005CD77D /* ConsultoriaDeBelezaV2DarkTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsultoriaDeBelezaV2DarkTheme.swift; sourceTree = "<group>"; };
+		FFF60E272D309EB3005CD77D /* ConsultoriaDeBelezaV2LightTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsultoriaDeBelezaV2LightTheme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -3031,15 +3023,13 @@
 		E67E4E2A29F714CB00FF7515 /* BrandsThemes */ = {
 			isa = PBXGroup;
 			children = (
-				E67E4E4129F714CB00FF7515 /* Aesop */,
 				E67E4E2E29F714CB00FF7515 /* Avon */,
 				FF4BFAA92A17065700D7E28F /* AvonV2 */,
-				E67E4E3729F714CB00FF7515 /* Biome */,
 				E67E4E3E29F714CB00FF7515 /* CasaEestilo */,
 				FFE7975C2C56C2E900D241BF /* CasaEestiloV2 */,
 				E67E4E3129F714CB00FF7515 /* ConsultoriaDeBeleza */,
+				FFF60E282D309EB3005CD77D /* ConsultoriaDeBelezaV2 */,
 				FFE7975D2C56C2F600D241BF /* ForcaDeVendas */,
-				E67E4E2B29F714CB00FF7515 /* NatdsTest */,
 				E67E4E4429F714CB00FF7515 /* Natura */,
 				E67E4E3B29F714CB00FF7515 /* NaturaV2 */,
 				FF38AEA02BA0935400F0F10B /* NaturaV3 */,
@@ -3047,15 +3037,6 @@
 				E67E4E3A29F714CB00FF7515 /* ThemeProtocol.swift */,
 			);
 			path = BrandsThemes;
-			sourceTree = "<group>";
-		};
-		E67E4E2B29F714CB00FF7515 /* NatdsTest */ = {
-			isa = PBXGroup;
-			children = (
-				E67E4E2C29F714CB00FF7515 /* NatdsTestDarkTheme.swift */,
-				E67E4E2D29F714CB00FF7515 /* NatdsTestLightTheme.swift */,
-			);
-			path = NatdsTest;
 			sourceTree = "<group>";
 		};
 		E67E4E2E29F714CB00FF7515 /* Avon */ = {
@@ -3085,15 +3066,6 @@
 			path = TheBodyShop;
 			sourceTree = "<group>";
 		};
-		E67E4E3729F714CB00FF7515 /* Biome */ = {
-			isa = PBXGroup;
-			children = (
-				E67E4E3829F714CB00FF7515 /* BiomeLightTheme.swift */,
-				E67E4E3929F714CB00FF7515 /* BiomeDarkTheme.swift */,
-			);
-			path = Biome;
-			sourceTree = "<group>";
-		};
 		E67E4E3B29F714CB00FF7515 /* NaturaV2 */ = {
 			isa = PBXGroup;
 			children = (
@@ -3110,15 +3082,6 @@
 				E67E4E4029F714CB00FF7515 /* CasaEestiloLightTheme.swift */,
 			);
 			path = CasaEestilo;
-			sourceTree = "<group>";
-		};
-		E67E4E4129F714CB00FF7515 /* Aesop */ = {
-			isa = PBXGroup;
-			children = (
-				E67E4E4229F714CB00FF7515 /* AesopLightTheme.swift */,
-				E67E4E4329F714CB00FF7515 /* AesopDarkTheme.swift */,
-			);
-			path = Aesop;
 			sourceTree = "<group>";
 		};
 		E67E4E4429F714CB00FF7515 /* Natura */ = {
@@ -3259,6 +3222,15 @@
 				FFE7975F2C56C36800D241BF /* ForcaDeVendasLightTheme.swift */,
 			);
 			path = ForcaDeVendas;
+			sourceTree = "<group>";
+		};
+		FFF60E282D309EB3005CD77D /* ConsultoriaDeBelezaV2 */ = {
+			isa = PBXGroup;
+			children = (
+				FFF60E262D309EB3005CD77D /* ConsultoriaDeBelezaV2DarkTheme.swift */,
+				FFF60E272D309EB3005CD77D /* ConsultoriaDeBelezaV2LightTheme.swift */,
+			);
+			path = ConsultoriaDeBelezaV2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -3729,6 +3701,7 @@
 				7D31C11A2615162300EED32A /* NatRating+Alignment.swift in Sources */,
 				FFE797482C1D89D800D241BF /* GaYaAvatar+Type.swift in Sources */,
 				7D277B68269E43A1005075EF /* DialogBodyView.swift in Sources */,
+				FFF60E2A2D309EB3005CD77D /* ConsultoriaDeBelezaV2LightTheme.swift in Sources */,
 				FFE797652C56C37900D241BF /* CasaEestilov2LightTheme.swift in Sources */,
 				845D099A250119AF00B05760 /* UIView+CenterBounds.swift in Sources */,
 				7DE2B12C26000BA600C5CBC0 /* UIImageView+Clickable.swift in Sources */,
@@ -3776,7 +3749,6 @@
 				E67E4E4929F714CB00FF7515 /* AvonDarkTheme.swift in Sources */,
 				FF49B7262AA1A00C001478A5 /* NatSnackbar.swift in Sources */,
 				84EB6B8524EEEA8E00C6A792 /* GetOrCreatedCachedColor.swift in Sources */,
-				E67E4E4F29F714CB00FF7515 /* BiomeLightTheme.swift in Sources */,
 				798CD2F5260519C000F49768 /* NatTag+Color.swift in Sources */,
 				7D43162D25EE8944004AE34F /* TextField+FeedbackState.swift in Sources */,
 				000598F48ADE170D305737C11E3F2D99 /* ButtonTextStyle.swift in Sources */,
@@ -3792,9 +3764,7 @@
 				FF50B6422A040D3600FA824A /* NatChipFilter.swift in Sources */,
 				AB9CCFDF8B930FD49AFAEAE1BB5CA718 /* DesignSystem.swift in Sources */,
 				FFE7973E2C1D873D00D241BF /* GaYaChipFilter+Color.swift in Sources */,
-				E67E4E4729F714CB00FF7515 /* NatdsTestDarkTheme.swift in Sources */,
 				FF38AEA42BA0935400F0F10B /* Naturav3DarkTheme.swift in Sources */,
-				E67E4E5629F714CB00FF7515 /* AesopLightTheme.swift in Sources */,
 				FFE797642C56C37900D241BF /* CasaEestilov2DarkTheme.swift in Sources */,
 				7CA6BAC353B73AF5D31F09CAF0268EE5 /* DesignSystemFatalError.swift in Sources */,
 				FF5439D92BD2B3A400FAE2C4 /* GaYaButton+Height.swift in Sources */,
@@ -3834,13 +3804,13 @@
 				F01F3CA72313B3C97F42498878234A82 /* FontStyle.swift in Sources */,
 				E67E4E4E29F714CB00FF7515 /* TheBodyShopLightTheme.swift in Sources */,
 				84EB6B6F24EB197000C6A792 /* GetTokensFromTheme.swift in Sources */,
+				FFF60E292D309EB3005CD77D /* ConsultoriaDeBelezaV2DarkTheme.swift in Sources */,
 				845D09982501196D00B05760 /* IconButtonStandardStyle.swift in Sources */,
 				84BC900624AA163A007DF09D /* DialogStyle.swift in Sources */,
 				FF35F73A2CE3D7ED001F13AA /* GaYaTag+Style.swift in Sources */,
 				7D86C19F26654CFB00FC4C53 /* NatLogo+Model.swift in Sources */,
 				F72BEF338B46182BC440C92CCF3D02B0 /* IconView.swift in Sources */,
 				1908219397D007DC35BC0F99D5DEDE80 /* NSMutableAttributedString+Builder.swift in Sources */,
-				E67E4E5029F714CB00FF7515 /* BiomeDarkTheme.swift in Sources */,
 				FF38AE932B6B5E3100F0F10B /* Icon.swift in Sources */,
 				CF14752D6F385AD399A59F275DEB1ED7 /* NatBorderRadius.swift in Sources */,
 				FF28A3DD2BDAA5220007B262 /* GaYaButtonTonalStyle.swift in Sources */,
@@ -3933,7 +3903,6 @@
 				FF50B6462A040D6B00FA824A /* NatChipFilter+Position.swift in Sources */,
 				5C0716F242EFC1AF6A61CBE257DA7CFE /* TextField.swift in Sources */,
 				E67E4E4C29F714CB00FF7515 /* ConsultoriaDeBelezaLightTheme.swift in Sources */,
-				E67E4E4829F714CB00FF7515 /* NatdsTestLightTheme.swift in Sources */,
 				79EA0C20260A85DE00742C0A /* NatCounterButton.swift in Sources */,
 				7D456155273C167C0006B440 /* NatDialogCompletionHandlerConfigurable.swift in Sources */,
 				8C1AE05828A682E0000F9D88 /* NatAlert.swift in Sources */,
@@ -3947,7 +3916,6 @@
 				6C6CB092994DB60C83AC24F93B0F4E49 /* UITableView+Reusable.swift in Sources */,
 				7D394CD42674083700582030 /* AppBarColor.swift in Sources */,
 				269C886624C2480800A507BE /* UIViewController+Configure.swift in Sources */,
-				E67E4E5729F714CB00FF7515 /* AesopDarkTheme.swift in Sources */,
 				93B1D8CFBB1420174B310CC4906AA2EF /* UIView+Frame.swift in Sources */,
 				77C55B339CA403354D76ABF05E283D5A /* ValueTextHighlight.swift in Sources */,
 				7DAF750E25E5AF830094F865 /* String+Initials.swift in Sources */,

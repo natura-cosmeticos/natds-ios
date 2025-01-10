@@ -8,7 +8,7 @@ final class ChooseBrandCell: UITableViewCell {
     private let cardView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
-        view.layer.cornerRadius = NatBorderRadius.medium
+        view.layer.cornerRadius = 16
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -58,17 +58,17 @@ extension ChooseBrandCell {
 
     private func addConstraints() {
         NSLayoutConstraint.activate([
-            cardView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: NatSpacing.tiny),
-            cardView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -NatSpacing.small),
-            cardView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -NatSpacing.tiny),
-            cardView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: NatSpacing.small),
+            cardView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: GaYaDimensions.spacingTiny),
+            cardView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -GaYaDimensions.spacingSmall),
+            cardView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -GaYaDimensions.spacingTiny),
+            cardView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: GaYaDimensions.spacingSmall),
 
             brandImageView.centerXAnchor.constraint(equalTo: cardView.centerXAnchor),
             brandImageView.centerYAnchor.constraint(equalTo: cardView.centerYAnchor),
-            brandImageView.topAnchor.constraint(equalTo: cardView.topAnchor, constant: NatSpacing.tiny),
+            brandImageView.topAnchor.constraint(equalTo: cardView.topAnchor, constant: GaYaDimensions.spacingTiny),
             brandImageView.leadingAnchor.constraint(equalTo: cardView.leadingAnchor),
             brandImageView.trailingAnchor.constraint(equalTo: cardView.trailingAnchor),
-            brandImageView.bottomAnchor.constraint(equalTo: cardView.bottomAnchor, constant: -NatSpacing.tiny)
+            brandImageView.bottomAnchor.constraint(equalTo: cardView.bottomAnchor, constant: -GaYaDimensions.spacingTiny)
 
         ])
     }

@@ -35,7 +35,8 @@ final class ChooseBrandViewController: UIViewController {
         "brand_selection/avonv2",
         "brand_selection/naturav2",
         "brand_selection/naturav3",
-        "brand_selection/forca_de_vendas"
+        "brand_selection/forca_de_vendas",
+        "brand_selection/consultoria_de_belezav2",
     ]
 
     // MARK: - Life cycle
@@ -110,6 +111,7 @@ extension ChooseBrandViewController: UITableViewDelegate {
         case 7: brandThemes = .init(light: .naturav2Light, dark: .naturav2Dark)
         case 8: brandThemes = .init(light: .naturav3Light, dark: .naturav3Dark)
         case 9: brandThemes = .init(light: .forcaDeVendasLight, dark: .forcaDeVendasDark)
+        case 10: brandThemes = .init(light: .consultoriaDeBelezav2Light, dark: .consultoriaDeBelezav2Dark)
         default: fatalError("not implemented")
         }
 
@@ -122,18 +124,18 @@ extension ChooseBrandViewController: UITableViewDelegate {
             let navigationBarAppearance = UINavigationBarAppearance()
             navigationBarAppearance.configureWithDefaultBackground()
             navigationBarAppearance.configureWithOpaqueBackground()
-            navigationBarAppearance.backgroundColor = NatColors.primary
+            navigationBarAppearance.backgroundColor = GaYaColors.primary
             navigationBarAppearance.titleTextAttributes = [
-                NSAttributedString.Key.foregroundColor: NatColors.onPrimary
+                NSAttributedString.Key.foregroundColor: GaYaColors.onPrimary
             ]
-            navigationController?.navigationBar.tintColor = NatColors.onPrimary
+            navigationController?.navigationBar.tintColor = GaYaColors.onPrimary
             navigationController?.navigationBar.standardAppearance = navigationBarAppearance
             navigationController?.navigationBar.scrollEdgeAppearance = navigationBarAppearance
         } else {
-            navigationController?.navigationBar.barTintColor = NatColors.primary
-            navigationController?.navigationBar.tintColor = NatColors.onPrimary
+            navigationController?.navigationBar.barTintColor = GaYaColors.primary
+            navigationController?.navigationBar.tintColor = GaYaColors.onPrimary
             navigationController?.navigationBar.titleTextAttributes = [
-                NSAttributedString.Key.foregroundColor: NatColors.onPrimary
+                NSAttributedString.Key.foregroundColor: GaYaColors.onPrimary
             ]
         }
         navigationController?.pushViewController(viewController, animated: true)

@@ -60,7 +60,7 @@ final class ChooseBrandHeader: UITableViewHeaderFooterView {
     }
 
     func setup() {
-        contentView.backgroundColor = NatColors.background
+        contentView.backgroundColor = GaYaColors.background
 
         contentView.addSubview(backgroundImageView)
         contentView.addSubview(overlayView)
@@ -82,11 +82,11 @@ final class ChooseBrandHeader: UITableViewHeaderFooterView {
             titleLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             titleLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
 
-            versionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: NatSpacing.tiny),
+            versionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: GaYaDimensions.spacingTiny),
             versionLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
 
-            subTitleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: NatSpacing.small),
-            subTitleLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -NatSpacing.tiny)
+            subTitleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: GaYaDimensions.spacingSmall),
+            subTitleLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -GaYaDimensions.spacingTiny)
         ])
     }
 

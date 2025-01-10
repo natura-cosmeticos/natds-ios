@@ -14,9 +14,9 @@ final class MainViewController: UITableViewController {
         tableView.register(UITableViewCell.self)
         tableView.showsVerticalScrollIndicator = false
         tableView.separatorStyle = .none
-        tableView.backgroundColor = NatColors.background
+        tableView.backgroundColor = GaYaColors.background
 
-        view.backgroundColor = NatColors.background
+        view.backgroundColor = GaYaColors.background
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -36,9 +36,9 @@ final class MainViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(for: indexPath, cellType: UITableViewCell.self)
         cell.textLabel?.text = item.name
-        cell.textLabel?.textColor = NatColors.onBackground
+        cell.textLabel?.textColor = GaYaColors.onSurface
         cell.selectionStyle = .none
-        cell.backgroundColor = NatColors.background
+        cell.backgroundColor = GaYaColors.background
         return cell
     }
 

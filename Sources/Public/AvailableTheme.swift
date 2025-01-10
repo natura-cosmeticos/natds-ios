@@ -48,6 +48,8 @@ public enum AvailableTheme {
     case naturav3Light
     case forcaDeVendasDark
     case forcaDeVendasLight
+    case consultoriaDeBelezav2Dark
+    case consultoriaDeBelezav2Light
     case none
 
     init?(theme: Theme) {
@@ -72,7 +74,8 @@ public enum AvailableTheme {
         case is Naturav3LightTheme: self = .naturav3Light
         case is ForcaDeVendasDarkTheme: self = .forcaDeVendasDark
         case is ForcaDeVendasLightTheme: self = .forcaDeVendasLight
-        case is BiomeLightTheme: self = .none
+        case is ConsultoriaDeBelezav2DarkTheme: self = .consultoriaDeBelezav2Dark
+        case is ConsultoriaDeBelezav2LightTheme: self = .consultoriaDeBelezav2Light
         default: return nil
         }
     }
@@ -100,7 +103,9 @@ public enum AvailableTheme {
         case .naturav3Light: instance = Naturav3LightTheme()
         case .forcaDeVendasDark: instance = ForcaDeVendasDarkTheme()
         case .forcaDeVendasLight: instance = ForcaDeVendasLightTheme()
-        case .none: instance = BiomeLightTheme()
+        case .consultoriaDeBelezav2Dark: instance = ConsultoriaDeBelezav2DarkTheme()
+        case .consultoriaDeBelezav2Light: instance = ConsultoriaDeBelezav2LightTheme()
+        case .none: instance = NaturaLightTheme()
         }
         return instance
     }

@@ -5,20 +5,7 @@
 
     Example of usage:
 
-            DesignSystem().configure(brand: .avonLight)
-            //or
-            DesignSystem().configure(brand: .theBodyShopLight)
-            //or
-            DesignSystem().configure(brand: .theBodyShopDark)
-            //or
-            DesignSystem().configure(brand: .aesopDark)
-
- - Note:
-    Current Supported Brands:
-        - Aesop
-        - Avon
-        - Natura
-        - The Body Shop
+            DesignSystem().configure(brand: .naturaLight)
 
  - Note:
         It's necessary to configure the Design System with a theme or fatalError will be raised.
