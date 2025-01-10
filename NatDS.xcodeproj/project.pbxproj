@@ -499,6 +499,8 @@
 		FFF60D7E2D0C1D9E005CD77D /* GaYaIconButton+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60D7D2D0C1D9E005CD77D /* GaYaIconButton+Color.swift */; };
 		FFF60E292D309EB3005CD77D /* ConsultoriaDeBelezaV2DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60E262D309EB3005CD77D /* ConsultoriaDeBelezaV2DarkTheme.swift */; };
 		FFF60E2A2D309EB3005CD77D /* ConsultoriaDeBelezaV2LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60E272D309EB3005CD77D /* ConsultoriaDeBelezaV2LightTheme.swift */; };
+		FFF60E2E2D30FFB3005CD77D /* ForcaDeVendasV2DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60E2B2D30FFB3005CD77D /* ForcaDeVendasV2DarkTheme.swift */; };
+		FFF60E2F2D30FFB3005CD77D /* ForcaDeVendasV2LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60E2C2D30FFB3005CD77D /* ForcaDeVendasV2LightTheme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1013,6 +1015,8 @@
 		FFF60D7D2D0C1D9E005CD77D /* GaYaIconButton+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GaYaIconButton+Color.swift"; sourceTree = "<group>"; };
 		FFF60E262D309EB3005CD77D /* ConsultoriaDeBelezaV2DarkTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsultoriaDeBelezaV2DarkTheme.swift; sourceTree = "<group>"; };
 		FFF60E272D309EB3005CD77D /* ConsultoriaDeBelezaV2LightTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsultoriaDeBelezaV2LightTheme.swift; sourceTree = "<group>"; };
+		FFF60E2B2D30FFB3005CD77D /* ForcaDeVendasV2DarkTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForcaDeVendasV2DarkTheme.swift; sourceTree = "<group>"; };
+		FFF60E2C2D30FFB3005CD77D /* ForcaDeVendasV2LightTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForcaDeVendasV2LightTheme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -3030,6 +3034,7 @@
 				E67E4E3129F714CB00FF7515 /* ConsultoriaDeBeleza */,
 				FFF60E282D309EB3005CD77D /* ConsultoriaDeBelezaV2 */,
 				FFE7975D2C56C2F600D241BF /* ForcaDeVendas */,
+				FFF60E2D2D30FFB3005CD77D /* ForcaDeVendasV2 */,
 				E67E4E4429F714CB00FF7515 /* Natura */,
 				E67E4E3B29F714CB00FF7515 /* NaturaV2 */,
 				FF38AEA02BA0935400F0F10B /* NaturaV3 */,
@@ -3231,6 +3236,15 @@
 				FFF60E272D309EB3005CD77D /* ConsultoriaDeBelezaV2LightTheme.swift */,
 			);
 			path = ConsultoriaDeBelezaV2;
+			sourceTree = "<group>";
+		};
+		FFF60E2D2D30FFB3005CD77D /* ForcaDeVendasV2 */ = {
+			isa = PBXGroup;
+			children = (
+				FFF60E2B2D30FFB3005CD77D /* ForcaDeVendasV2DarkTheme.swift */,
+				FFF60E2C2D30FFB3005CD77D /* ForcaDeVendasV2LightTheme.swift */,
+			);
+			path = ForcaDeVendasV2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -3702,6 +3716,7 @@
 				FFE797482C1D89D800D241BF /* GaYaAvatar+Type.swift in Sources */,
 				7D277B68269E43A1005075EF /* DialogBodyView.swift in Sources */,
 				FFF60E2A2D309EB3005CD77D /* ConsultoriaDeBelezaV2LightTheme.swift in Sources */,
+				FFF60E2E2D30FFB3005CD77D /* ForcaDeVendasV2DarkTheme.swift in Sources */,
 				FFE797652C56C37900D241BF /* CasaEestilov2LightTheme.swift in Sources */,
 				845D099A250119AF00B05760 /* UIView+CenterBounds.swift in Sources */,
 				7DE2B12C26000BA600C5CBC0 /* UIImageView+Clickable.swift in Sources */,
@@ -3925,6 +3940,7 @@
 				FFE797612C56C36800D241BF /* ForcaDeVendasLightTheme.swift in Sources */,
 				FF4BFAAC2A17080200D7E28F /* Avonv2DarkTheme.swift in Sources */,
 				EE1E7A9F49A18BCD194E0C03FB2F0074 /* ViewStyle.swift in Sources */,
+				FFF60E2F2D30FFB3005CD77D /* ForcaDeVendasV2LightTheme.swift in Sources */,
 				79EA0C3E260B861400742C0A /* NatCounter+Size.swift in Sources */,
 				79FC593F25BF58C7001CCB56 /* NatRadioButtonControl+Style.swift in Sources */,
 				FF5439DB2BD2B3A400FAE2C4 /* GaYaButton+EdgeInsets.swift in Sources */,

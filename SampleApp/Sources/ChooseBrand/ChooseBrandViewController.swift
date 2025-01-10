@@ -37,6 +37,7 @@ final class ChooseBrandViewController: UIViewController {
         "brand_selection/naturav3",
         "brand_selection/forca_de_vendas",
         "brand_selection/consultoria_de_belezav2",
+        "brand_selection/forca_de_vendasv2",
     ]
 
     // MARK: - Life cycle
@@ -112,6 +113,7 @@ extension ChooseBrandViewController: UITableViewDelegate {
         case 8: brandThemes = .init(light: .naturav3Light, dark: .naturav3Dark)
         case 9: brandThemes = .init(light: .forcaDeVendasLight, dark: .forcaDeVendasDark)
         case 10: brandThemes = .init(light: .consultoriaDeBelezav2Light, dark: .consultoriaDeBelezav2Dark)
+        case 11: brandThemes = .init(light: .forcaDeVendasv2Light, dark: .forcaDeVendasv2Dark)
         default: fatalError("not implemented")
         }
 
