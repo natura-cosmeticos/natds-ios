@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.3.0](https://github.com/natura-cosmeticos/natds-ios/compare/8.2.6...8.3.0) (2025-01-23)
+
 ### [8.2.6](https://github.com/natura-cosmeticos/natds-ios/compare/8.2.5...8.2.6) (2024-10-14)
 ##### Adding new icons
 - filled-content-christmasstocking
