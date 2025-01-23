@@ -3,6 +3,8 @@
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 ## [8.3.0](https://github.com/natura-cosmeticos/natds-ios/compare/8.2.6...8.3.0) (2025-01-23)
+* New theme Consultoria de Beleza v2 (with new logotype)
+* New theme Força de Vendas v2
 
 ### [8.2.6](https://github.com/natura-cosmeticos/natds-ios/compare/8.2.5...8.2.6) (2024-10-14)
 ##### Adding new icons
