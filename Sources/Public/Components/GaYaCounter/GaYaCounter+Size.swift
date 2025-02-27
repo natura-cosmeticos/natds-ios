@@ -39,17 +39,13 @@ extension GaYaCounter.Size {
     var borderRadius: CGFloat {
         switch self {
         case .semi:
-            return if getComponentAttributeFromTheme(\.isInputRounded) {
-                getTokenFromTheme(\.sizeSemiX) / 2
-            } else {
-                getComponentAttributeFromTheme(\.counterBorderRadius)
-            }
+            return getComponentAttributeFromTheme(\.isInputRounded)
+                ? getTokenFromTheme(\.sizeSemiX) / 2
+                : getComponentAttributeFromTheme(\.counterBorderRadius)
         case .medium:
-            return if getComponentAttributeFromTheme(\.isInputRounded) {
-                getTokenFromTheme(\.sizeMedium) / 2
-            } else {
-                getComponentAttributeFromTheme(\.counterBorderRadius)
-            }
+            return getComponentAttributeFromTheme(\.isInputRounded)
+                ? getTokenFromTheme(\.sizeMedium) / 2
+                : getComponentAttributeFromTheme(\.counterBorderRadius)
         }
     }
 
