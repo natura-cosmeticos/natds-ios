@@ -370,6 +370,8 @@ struct ConsultoriaDeBelezav2LightComponents: Components {
   let badgeColorSuccessBackground = "#2F833E"
   let badgeColorAlertLabel = "#111111"
   let badgeColorAlertBackground = "#DE3529"
+  let badgeColorInverseLabel = "#363636"
+  let badgeColorInverseBackground = "#FFFFFF"
   let buttonLabelFontSize: CGFloat = 14
   let buttonLabelLetterSpacing: CGFloat = 0.44
   let buttonLabelLineHeight: CGFloat = 1.5
@@ -379,6 +381,7 @@ struct ConsultoriaDeBelezav2LightComponents: Components {
   let buttonLabelFallbackFontWeight: UIFont.Weight = .medium
   let buttonBorderRadius: CGFloat = 999
   let isButtonRounded: Bool = true
+  let isInputRounded:Bool = false
   let buttonTextTransform: String = "lowercased"
   let buttonElevation = "none"
   let buttonPaddingX: CGFloat = 8
@@ -426,7 +429,7 @@ struct ConsultoriaDeBelezav2LightComponents: Components {
   let counterContentFontSize: CGFloat = 16
   let counterContentLetterSpacing: CGFloat = 0.32
   let counterContentLineHeight: CGFloat = 1.25
-  let counterBorderRadius: CGFloat = 4
+  let counterBorderRadius: CGFloat = 16
   let dialogTitleFontSize: CGFloat = 20
   let dialogTitleLetterSpacing: CGFloat = 0.12
   let dialogTitleLineHeight: CGFloat = 1.25

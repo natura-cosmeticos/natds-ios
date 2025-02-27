@@ -366,6 +366,8 @@ protocol Components {
   var badgeColorSuccessBackground: String { get }
   var badgeColorAlertLabel: String { get }
   var badgeColorAlertBackground: String { get }
+  var badgeColorInverseLabel: String { get }
+  var badgeColorInverseBackground: String { get }
   var buttonLabelFontSize: CGFloat { get }
   var buttonLabelLetterSpacing: CGFloat { get }
   var buttonLabelLineHeight: CGFloat { get }
@@ -375,6 +377,7 @@ protocol Components {
   var buttonLabelFallbackFontWeight: UIFont.Weight { get }
   var buttonBorderRadius: CGFloat { get }
   var isButtonRounded: Bool { get }
+  var isInputRounded: Bool { get }
   var buttonElevation: String { get }
   var buttonPaddingX: CGFloat { get }
   var buttonTextTransform: String { get }

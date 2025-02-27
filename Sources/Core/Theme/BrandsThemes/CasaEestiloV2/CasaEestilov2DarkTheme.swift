@@ -363,6 +363,8 @@ struct CasaEestilov2DarkComponents: Components {
   let badgeColorSuccessBackground = "#92D492"
   let badgeColorAlertLabel = "#111111"
   let badgeColorAlertBackground = "#FFA392"
+  let badgeColorInverseLabel = "#363636"
+  let badgeColorInverseBackground = "#FFFFFF"
   let buttonLabelFontSize: CGFloat = 14
   let buttonLabelLetterSpacing: CGFloat = 0.44
   let buttonLabelLineHeight: CGFloat = 1.5
@@ -372,9 +374,10 @@ struct CasaEestilov2DarkComponents: Components {
   let buttonLabelFallbackFontWeight: UIFont.Weight = .medium
   let buttonBorderRadius: CGFloat = 4
   let isButtonRounded: Bool = false
+  let isInputRounded:Bool = false
   let buttonElevation = "none"
   let buttonPaddingX: CGFloat = 8
-  let buttonTextTransform = "capitalize"
+  let buttonTextTransform = "capitalized"
   let buttonContainedColorEnableBackground = "#D1D1D1"
   let buttonContainedColorEnableBorder = "#FFFFFF00"
   let buttonContainedColorEnableLabel = "#000000"

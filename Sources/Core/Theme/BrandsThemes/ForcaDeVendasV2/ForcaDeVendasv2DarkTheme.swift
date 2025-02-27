@@ -18,36 +18,36 @@
  *                                                              
  */
 
-struct ConsultoriaDeBelezav2DarkTheme: Theme {
-  let tokens: Tokens = ConsultoriaDeBelezav2DarkTokens()
-  let components: Components = ConsultoriaDeBelezav2DarkComponents()
+struct ForcaDeVendasv2DarkTheme: Theme {
+  let tokens: Tokens = ForcaDeVendasv2DarkTokens()
+  let components: Components = ForcaDeVendasv2DarkComponents()
 }
 
-struct ConsultoriaDeBelezav2DarkTokens: Tokens {
+struct ForcaDeVendasv2DarkTokens: Tokens {
   let assetFontFileDisplay = "roboto_regular"
   let assetFontFileHeadline = "roboto_regular"
   let assetFontFileBodyRegular = "roboto_regular"
   let assetFontFileBodyBold = "roboto_medium"
-  let assetBrandNeutralAFile = "consultoriadebelezav2-a-official-dark-pt-br"
-  let assetBrandNeutralAEs = "consultoriadebelezav2-a-official-dark-es"
-  let assetBrandNeutralAPt = "consultoriadebelezav2-a-official-dark-pt-br"
-  let assetBrandNeutralBFile = "consultoriadebelezav2-b-official-dark-pt-br"
-  let assetBrandNeutralBEs = "consultoriadebelezav2-b-official-dark-es"
-  let assetBrandNeutralBPt = "consultoriadebelezav2-b-official-dark-pt-br"
-  let assetBrandCustomAFile = "consultoriadebelezav2-a-custom-pt-br"
-  let assetBrandCustomAEs = "consultoriadebelezav2-a-custom-es"
-  let assetBrandCustomAPt = "consultoriadebelezav2-a-custom-pt-br"
-  let assetBrandCustomBFile = "consultoriadebelezav2-b-custom-pt-br"
-  let assetBrandCustomBEs = "consultoriadebelezav2-b-custom-es"
-  let assetBrandCustomBPt = "consultoriadebelezav2-b-custom-pt-br"
-  let assetBrandNeutralAPtFile = "consultoriadebelezav2-a-official-dark-pt-br"
-  let assetBrandNeutralAEsFile = "consultoriadebelezav2-a-official-dark-es"
-  let assetBrandCustomAPtFile = "consultoriadebelezav2-a-custom-pt-br"
-  let assetBrandCustomAEsFile = "consultoriadebelezav2-a-custom-es"
-  let assetBrandNeutralBPtFile = "consultoriadebelezav2-b-official-dark-pt-br"
-  let assetBrandNeutralBEsFile = "consultoriadebelezav2-b-official-dark-es"
-  let assetBrandCustomBPtFile = "consultoriadebelezav2-b-custom-pt-br"
-  let assetBrandCustomBEsFile = "consultoriadebelezav2-a-custom-es"
+  let assetBrandNeutralAFile = "forcadevendas-b-official-dark"
+  let assetBrandNeutralAEs = "forcadevendas-a-official-dark"
+  let assetBrandNeutralAPt = "forcadevendas-b-official-dark"
+  let assetBrandNeutralBFile = "forcadevendas-b-official-dark"
+  let assetBrandNeutralBEs = "forcadevendas-a-official-dark"
+  let assetBrandNeutralBPt = "forcadevendas-b-official-dark"
+  let assetBrandCustomAFile = "forcadevendas-b-custom"
+  let assetBrandCustomAEs = "forcadevendas-a-custom"
+  let assetBrandCustomAPt = "forcadevendas-b-custom"
+  let assetBrandCustomBFile = "forcadevendas-a-custom"
+  let assetBrandCustomBEs = "forcadevendas-a-custom"
+  let assetBrandCustomBPt = "forcadevendas-b-custom"
+  let assetBrandNeutralAPtFile = "forcadevendas-b-official-dark"
+  let assetBrandNeutralAEsFile = "forcadevendas-a-official-dark"
+  let assetBrandCustomAPtFile = "forcadevendas-b-custom"
+  let assetBrandCustomAEsFile = "forcadevendas-a-custom"
+  let assetBrandNeutralBPtFile = "forcadevendas-b-official-dark"
+  let assetBrandNeutralBEsFile = "forcadevendas-a-official-dark"
+  let assetBrandCustomBPtFile = "forcadevendas-b-custom"
+  let assetBrandCustomBEsFile = "forcadevendas-a-custom"
   let borderRadiusNone: CGFloat = 0
   let borderRadiusSmall: CGFloat = 2
   let borderRadiusMedium: CGFloat = 4
@@ -302,7 +302,7 @@ struct ConsultoriaDeBelezav2DarkTokens: Tokens {
   let typographyFallbackFontFamily = "San Francisco"
   let typographyFallbackFontWeight: UIFont.Weight = .regular
 }
-struct ConsultoriaDeBelezav2DarkComponents: Components {
+struct ForcaDeVendasv2DarkComponents: Components {
   let alertTitleFontSize: CGFloat = 20
   let alertTitleLetterSpacing: CGFloat = 0.12
   let alertTitleLineHeight: CGFloat = 1.5
@@ -370,6 +370,8 @@ struct ConsultoriaDeBelezav2DarkComponents: Components {
   let badgeColorSuccessBackground = "#92D492"
   let badgeColorAlertLabel = "#111111"
   let badgeColorAlertBackground = "#FFA392"
+  let badgeColorInverseLabel = "#363636"
+  let badgeColorInverseBackground = "#FFFFFF"
   let buttonLabelFontSize: CGFloat = 14
   let buttonLabelLetterSpacing: CGFloat = 0.44
   let buttonLabelLineHeight: CGFloat = 1.5
@@ -379,9 +381,10 @@ struct ConsultoriaDeBelezav2DarkComponents: Components {
   let buttonLabelFallbackFontWeight: UIFont.Weight = .medium
   let buttonBorderRadius: CGFloat = 999
   let isButtonRounded: Bool = true
-  let buttonTextTransform: String = "lowercased"
+  let isInputRounded:Bool = false
   let buttonElevation = "none"
-  let buttonPaddingX: CGFloat = 8
+  let buttonPaddingX: CGFloat = 24
+  let buttonTextTransform = "lowercased"
   let buttonContainedColorEnableBackground = "#B71C3D"
   let buttonContainedColorEnableBorder = "#FFFFFF00"
   let buttonContainedColorEnableLabel = "#FFFFFF"
@@ -426,7 +429,7 @@ struct ConsultoriaDeBelezav2DarkComponents: Components {
   let counterContentFontSize: CGFloat = 16
   let counterContentLetterSpacing: CGFloat = 0.32
   let counterContentLineHeight: CGFloat = 1.25
-  let counterBorderRadius: CGFloat = 4
+  let counterBorderRadius: CGFloat = 16
   let dialogTitleFontSize: CGFloat = 20
   let dialogTitleLetterSpacing: CGFloat = 0.12
   let dialogTitleLineHeight: CGFloat = 1.25

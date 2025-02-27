@@ -362,6 +362,8 @@ struct Naturav3LightComponents: Components {
   let badgeColorSuccessBackground = "#2F833E"
   let badgeColorAlertLabel = "#111111"
   let badgeColorAlertBackground = "#DE3529"
+  let badgeColorInverseLabel = "#363636"
+  let badgeColorInverseBackground = "#FFFFFF"
   let buttonLabelFontSize: CGFloat = 14
   let buttonLabelLetterSpacing: CGFloat = 0.44
   let buttonLabelLineHeight: CGFloat = 1.5
@@ -371,7 +373,8 @@ struct Naturav3LightComponents: Components {
   let buttonLabelFallbackFontWeight: UIFont.Weight = .medium
   let buttonBorderRadius: CGFloat = 999
   let isButtonRounded: Bool = true
-  let buttonTextTransform: String = "lowercased"
+  let isInputRounded:Bool = true
+  let buttonTextTransform: String = "none"
   let buttonElevation = "none"
   let buttonPaddingX: CGFloat = 24
   let buttonContainedColorEnableBackground = "#F48646"

@@ -8,10 +8,12 @@ class ComponentsSection: SampleSection {
         AvatarItemViewController.self,
         GaYaAvatarItemViewController.self,
         BadgeViewController.self,
+        GaYaBadgeViewController.self,
         ButtonsItemViewController.self,
         GaYaButtonViewController.self,
         CardViewController.self,
         CounterViewController.self,
+        GaYaCounterViewController.self,
         CheckboxViewController.self,
         ChipViewController.self,
         ChipFilterViewController.self,
@@ -31,12 +33,14 @@ class ComponentsSection: SampleSection {
         RadioButtonViewController.self,
         RatingItemViewController.self,
         NatSelectItemViewController.self,
+        GaYaSelectItemViewController.self,
         ShortcutItemViewController.self,
         SwitchViewController.self,
         TabItemViewController.self,
         TagViewController.self,
         GaYaTagViewController.self,
         TextFieldItemViewController.self,
+        GaYaTextFieldItemViewController.self,
         ValueTextHighlightItemViewController.self
     ]
 }

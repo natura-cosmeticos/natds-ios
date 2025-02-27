@@ -370,6 +370,8 @@ struct ConsultoriaDeBelezaDarkComponents: Components {
   let badgeColorSuccessBackground = "#92D492"
   let badgeColorAlertLabel = "#111111"
   let badgeColorAlertBackground = "#FFA392"
+  let badgeColorInverseLabel = "#363636"
+  let badgeColorInverseBackground = "#FFFFFF"
   let buttonLabelFontSize: CGFloat = 14
   let buttonLabelLetterSpacing: CGFloat = 0.44
   let buttonLabelLineHeight: CGFloat = 1.5
@@ -379,6 +381,7 @@ struct ConsultoriaDeBelezaDarkComponents: Components {
   let buttonLabelFallbackFontWeight: UIFont.Weight = .medium
   let buttonBorderRadius: CGFloat = 4
   let isButtonRounded: Bool = false
+  let isInputRounded:Bool = false
   let buttonTextTransform: String = "capitalized"
   let buttonElevation = "none"
   let buttonPaddingX: CGFloat = 8

@@ -23,19 +23,18 @@ enum GaYaButtonStyle {
     }
 
     static private func createTextForTitle(text: String, withColor color: UIColor) -> NSAttributedString {
-        var attributedString = NSMutableAttributedString(string: text.uppercased())
-        
-        var buttonTextStyle = getComponentAttributeFromTheme(\.buttonTextTransform)
-        if (buttonTextStyle == "lowercased") {
+        var attributedString = NSMutableAttributedString(string: text)
+
+        let buttonTextStyle = getComponentAttributeFromTheme(\.buttonTextTransform)
+
+        if buttonTextStyle == "lowercased" {
             attributedString = NSMutableAttributedString(string: text.lowercased())
-        }
-        else if (buttonTextStyle == "capitalized") {
+        } else if buttonTextStyle == "capitalized" {
             attributedString = NSMutableAttributedString(string: text.capitalized)
-        }
-        else {
+        } else if buttonTextStyle == "uppercased" {
             attributedString = NSMutableAttributedString(string: text.uppercased())
         }
-        
+
         attributedString.apply(foregroundColor: color)
 
         let value = getComponentAttributeFromTheme(\.buttonLabelLetterSpacing)
@@ -43,4 +42,5 @@ enum GaYaButtonStyle {
 
         return attributedString
     }
+
 }

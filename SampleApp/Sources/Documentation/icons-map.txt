@@ -1,9 +1,11 @@
 filled-action-add
+filled-action-addproduct
 filled-action-cancel
 filled-action-check
 filled-action-clock
 filled-action-delete
 filled-action-dislike
+filled-action-filepdf
 filled-action-halfrating
 filled-action-half-rating
 filled-action-increase
@@ -46,6 +48,7 @@ filled-brand-youtube
 filled-communication-digital-service
 filled-communication-noconnection
 filled-content-bathtub
+filled-content-carbondioxide
 filled-content-channel
 filled-content-childfriendly
 filled-content-christmasstocking
@@ -67,7 +70,9 @@ filled-content-gymdumbbell
 filled-content-hairbeard
 filled-content-handsoap
 filled-content-handwater
+filled-content-healthy
 filled-content-house
+filled-content-maintenance
 filled-content-microscope
 filled-content-moonstars
 filled-content-mortar
@@ -82,6 +87,9 @@ filled-content-snorkelmask
 filled-content-soap
 filled-content-soapbubble
 filled-content-teddybear
+filled-content-ticketdiscount
+filled-content-ticketstar
+filled-content-trophystar
 filled-content-violence
 filled-content-wetwipe
 filled-content-wifi
@@ -144,14 +152,18 @@ filled-navigation-maximize
 filled-navigation-menu
 filled-navigation-minimize
 filled-navigation-more
+filled-navigation-opennew
 filled-navigation-setbottom
 filled-navigation-setleft
 filled-navigation-setright
 filled-navigation-settop
+filled-navigation-shuffle
 filled-place-local
+filled-place-rocket
 filled-place-target
 filled-place-truck
 filled-product-ambientspray
+filled-product-backpack
 filled-product-blush
 filled-product-bodycream
 filled-product-bodysplash
@@ -180,6 +192,7 @@ filled-product-refill
 filled-product-shampoo
 filled-product-shampooconditioner
 filled-product-soapliquid
+filled-product-spray
 filled-social-fireworks
 filled-social-myprofile
 filled-social-nightlife
@@ -206,6 +219,7 @@ outlined-action-done
 outlined-action-download
 outlined-action-edit
 outlined-action-favorite
+outlined-action-filepdf
 outlined-action-filter
 outlined-action-frame
 outlined-action-gridsquare
@@ -286,6 +300,7 @@ outlined-content-bathtub
 outlined-content-bellringing
 outlined-content-book
 outlined-content-brightness
+outlined-content-carbondioxide
 outlined-content-changeview
 outlined-content-channel
 outlined-content-childfriendly
@@ -361,6 +376,9 @@ outlined-content-sun
 outlined-content-sunandcloud
 outlined-content-unavailable
 outlined-content-teddybear
+outlined-content-ticketdiscount
+outlined-content-ticketstar
+outlined-content-trophystar
 outlined-content-violence
 outlined-content-virtualmirror
 outlined-content-wellness
@@ -456,6 +474,8 @@ outlined-navigation-home
 outlined-navigation-maximize
 outlined-navigation-menu
 outlined-navigation-minimize
+outlined-navigation-opennew
+outlined-navigation-shuffle
 outlined-place-bus
 outlined-place-forklift
 outlined-place-gps
@@ -468,6 +488,7 @@ outlined-place-waze
 outlined-product-abandonedbag
 outlined-product-accessories
 outlined-product-ambientspray
+outlined-product-backpack
 outlined-product-bagproduct
 outlined-product-beard
 outlined-product-blush
@@ -520,6 +541,7 @@ outlined-product-scent
 outlined-product-shampoo
 outlined-product-shampooconditioner
 outlined-product-soapliquid
+outlined-product-spray
 outlined-product-vegan
 outlined-social-addcontact
 outlined-social-birthday
@@ -536,3 +558,8 @@ outlined-social-person
 outlined-social-pregnant
 outlined-social-sparks
 outlined-social-userlock
+
+    //outlined-action-addproduct
+    //outlined-content-healthy
+    //outlined-content-maintenance
+    //outlined-place-rocket

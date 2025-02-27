@@ -363,6 +363,8 @@ struct Avonv2LightComponents: Components {
   let badgeColorSuccessBackground = "#2F833E"
   let badgeColorAlertLabel = "#111111"
   let badgeColorAlertBackground = "#DE3529"
+  let badgeColorInverseLabel = "#363636"
+  let badgeColorInverseBackground = "#FFFFFF"
   let buttonLabelFontSize: CGFloat = 14
   let buttonLabelLetterSpacing: CGFloat = 0.44
   let buttonLabelLineHeight: CGFloat = 1.5
@@ -372,6 +374,7 @@ struct Avonv2LightComponents: Components {
   let buttonLabelFallbackFontWeight: UIFont.Weight = .medium
   let buttonBorderRadius: CGFloat = 4
   let isButtonRounded: Bool = false
+  let isInputRounded:Bool = false
   let buttonTextTransform: String = "uppercased"
   let buttonElevation = "none"
   let buttonPaddingX: CGFloat = 8

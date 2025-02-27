@@ -159,10 +159,16 @@ extension GaYaButton {
 
 extension GaYaButton {
     private func createIconView(icon: String?) -> IconView {
-        let iconView = IconView(fontSize: GaYaSizes.standard)
+        let iconSize: CGFloat = (self.size == .semi) ? GaYaSizes.small : GaYaSizes.standard
+        let iconView = IconView(fontSize: iconSize)
         iconView.translatesAutoresizingMaskIntoConstraints = false
         iconView.iconText = icon
         iconView.tintColor = titleLabel?.textColor
+        
+        NSLayoutConstraint.activate([
+                iconView.widthAnchor.constraint(equalToConstant: iconSize),
+                iconView.heightAnchor.constraint(equalToConstant: iconSize)
+            ])
 
         return iconView
     }
@@ -175,26 +181,26 @@ extension GaYaButton {
         switch position {
         case .left:
             iconView.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor,
-                                              constant: GaYaSizes.micro).isActive = true
+                                              constant: 6).isActive = true
             iconView.trailingAnchor.constraint(equalTo: title.leadingAnchor,
-                                               constant: -GaYaSizes.micro).isActive = true
+                                               constant: -6).isActive = true
 
         case .right:
             iconView.leadingAnchor.constraint(equalTo: title.trailingAnchor,
-                                              constant: GaYaSizes.micro).isActive = true
+                                              constant: 6).isActive = true
             iconView.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor,
-                                               constant: -GaYaSizes.micro).isActive = true
+                                               constant: -6).isActive = true
         }
     }
 
     private func createTitleEdgeInsets(_ position: GaYaButton.Position) -> UIEdgeInsets {
         let spaceBetweenIconAndTitle = GaYaSizes.micro
-        let iconSize = GaYaSizes.standard
+        let iconSize: CGFloat = (self.size == .semi) ? GaYaSizes.small : GaYaSizes.standard
         let padding = iconSize + spaceBetweenIconAndTitle
 
         switch position {
-        case .left: return .init(top: 0, left: padding, bottom: 0, right: 0)
-        case .right: return .init(top: 0, left: 0, bottom: 0, right: padding)
+        case .left: return .init(top: 0, left: 20, bottom: 0, right: 0)
+        case .right: return .init(top: 0, left: 0, bottom: 0, right: 20)
         }
     }
 }

@@ -370,6 +370,8 @@ struct ForcaDeVendasDarkComponents: Components {
   let badgeColorSuccessBackground = "#92D492"
   let badgeColorAlertLabel = "#111111"
   let badgeColorAlertBackground = "#FFA392"
+  let badgeColorInverseLabel = "#363636"
+  let badgeColorInverseBackground = "#FFFFFF"
   let buttonLabelFontSize: CGFloat = 14
   let buttonLabelLetterSpacing: CGFloat = 0.44
   let buttonLabelLineHeight: CGFloat = 1.5
@@ -379,6 +381,7 @@ struct ForcaDeVendasDarkComponents: Components {
   let buttonLabelFallbackFontWeight: UIFont.Weight = .medium
   let buttonBorderRadius: CGFloat = 999
   let isButtonRounded: Bool = true
+  let isInputRounded:Bool = true
   let buttonElevation = "none"
   let buttonPaddingX: CGFloat = 24
   let buttonTextTransform = "lowercased"

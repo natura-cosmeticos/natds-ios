@@ -31,16 +31,17 @@ final class GaYaButtonViewController: UIViewController, SampleItem {
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.spacing = NatSpacing.small
+        stackView.spacing = GaYaDimensions.spacingSmall
         stackView.distribution = .fillProportionally
         stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.isLayoutMarginsRelativeArrangement = true
         return stackView
     }()
     
     private let labelFilled: UILabel = {
         let label = UILabel()
         label.text = " Filled"
-        label.textColor = NatColors.highEmphasis
+        label.textColor = GaYaColors.highEmphasis
         label.font = NatFonts.font(ofSize: .heading5, withWeight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
 
@@ -50,7 +51,7 @@ final class GaYaButtonViewController: UIViewController, SampleItem {
     private let labelOutlined: UILabel = {
         let label = UILabel()
         label.text = " Outlined"
-        label.textColor = NatColors.highEmphasis
+        label.textColor = GaYaColors.highEmphasis
         label.font = NatFonts.font(ofSize: .heading5, withWeight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
 
@@ -60,7 +61,7 @@ final class GaYaButtonViewController: UIViewController, SampleItem {
     private let labelGhost: UILabel = {
         let label = UILabel()
         label.text = " Ghost"
-        label.textColor = NatColors.highEmphasis
+        label.textColor = GaYaColors.highEmphasis
         label.font = NatFonts.font(ofSize: .heading5, withWeight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
 
@@ -70,7 +71,7 @@ final class GaYaButtonViewController: UIViewController, SampleItem {
     private let labelTonal: UILabel = {
         let label = UILabel()
         label.text = " Tonal"
-        label.textColor = NatColors.highEmphasis
+        label.textColor = GaYaColors.highEmphasis
         label.font = NatFonts.font(ofSize: .heading5, withWeight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
 
@@ -80,7 +81,7 @@ final class GaYaButtonViewController: UIViewController, SampleItem {
     private let labelDisabled: UILabel = {
         let label = UILabel()
         label.text = " Disabled"
-        label.textColor = NatColors.highEmphasis
+        label.textColor = GaYaColors.highEmphasis
         label.font = NatFonts.font(ofSize: .heading5, withWeight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
 
@@ -90,7 +91,7 @@ final class GaYaButtonViewController: UIViewController, SampleItem {
     private let labelDisplay: UILabel = {
         let label = UILabel()
         label.text = " Display - implemented by dev"
-        label.textColor = NatColors.highEmphasis
+        label.textColor = GaYaColors.highEmphasis
         label.font = NatFonts.font(ofSize: .heading5, withWeight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
 
@@ -100,7 +101,7 @@ final class GaYaButtonViewController: UIViewController, SampleItem {
     private let labelIcons: UILabel = {
         let label = UILabel()
         label.text = " Icons"
-        label.textColor = NatColors.highEmphasis
+        label.textColor = GaYaColors.highEmphasis
         label.font = NatFonts.font(ofSize: .heading5, withWeight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
 
@@ -110,7 +111,7 @@ final class GaYaButtonViewController: UIViewController, SampleItem {
     private let labelSizes: UILabel = {
         let label = UILabel()
         label.text = " Sizes"
-        label.textColor = NatColors.highEmphasis
+        label.textColor = GaYaColors.highEmphasis
         label.font = NatFonts.font(ofSize: .heading5, withWeight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
 
@@ -312,19 +313,20 @@ final class GaYaButtonViewController: UIViewController, SampleItem {
     private let filledStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
-        stackView.spacing = NatSpacing.tiny
-        stackView.distribution = .fillEqually
+        stackView.spacing = GaYaDimensions.spacingTiny
+        stackView.distribution = .fillProportionally
         stackView.translatesAutoresizingMaskIntoConstraints = false
-
+        stackView.isLayoutMarginsRelativeArrangement = true
         return stackView
     }()
     
     private let filledStackView2: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
-        stackView.spacing = NatSpacing.tiny
-        stackView.distribution = .fillEqually
+        stackView.spacing = GaYaDimensions.spacingTiny
+        stackView.distribution = .fillProportionally
         stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.isLayoutMarginsRelativeArrangement = true
 
         return stackView
     }()
@@ -332,9 +334,10 @@ final class GaYaButtonViewController: UIViewController, SampleItem {
     private let outlinedStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
-        stackView.spacing = NatSpacing.tiny
-        stackView.distribution = .fillEqually
+        stackView.spacing = GaYaDimensions.spacingTiny
+        stackView.distribution = .fillProportionally
         stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.isLayoutMarginsRelativeArrangement = true
 
         return stackView
     }()
@@ -342,9 +345,10 @@ final class GaYaButtonViewController: UIViewController, SampleItem {
     private let outlinedStackView2: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
-        stackView.spacing = NatSpacing.tiny
-        stackView.distribution = .fillEqually
+        stackView.spacing = GaYaDimensions.spacingTiny
+        stackView.distribution = .fillProportionally
         stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.isLayoutMarginsRelativeArrangement = true
 
         return stackView
     }()
@@ -352,9 +356,10 @@ final class GaYaButtonViewController: UIViewController, SampleItem {
     private let ghostStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
-        stackView.spacing = NatSpacing.tiny
-        stackView.distribution = .fillEqually
+        stackView.spacing = GaYaDimensions.spacingTiny
+        stackView.distribution = .fillProportionally
         stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.isLayoutMarginsRelativeArrangement = true
 
         return stackView
     }()
@@ -362,9 +367,10 @@ final class GaYaButtonViewController: UIViewController, SampleItem {
     private let ghostStackView2: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
-        stackView.spacing = NatSpacing.tiny
-        stackView.distribution = .fillEqually
+        stackView.spacing = GaYaDimensions.spacingTiny
+        stackView.distribution = .fillProportionally
         stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.isLayoutMarginsRelativeArrangement = true
 
         return stackView
     }()
@@ -372,9 +378,10 @@ final class GaYaButtonViewController: UIViewController, SampleItem {
     private let tonalStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
-        stackView.spacing = NatSpacing.tiny
-        stackView.distribution = .fillEqually
+        stackView.spacing = GaYaDimensions.spacingTiny
+        stackView.distribution = .fillProportionally
         stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.isLayoutMarginsRelativeArrangement = true
 
         return stackView
     }()
@@ -382,28 +389,21 @@ final class GaYaButtonViewController: UIViewController, SampleItem {
     private let tonalStackView2: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
-        stackView.spacing = NatSpacing.tiny
-        stackView.distribution = .fillEqually
+        stackView.spacing = GaYaDimensions.spacingTiny
+        stackView.distribution = .fillProportionally
         stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.isLayoutMarginsRelativeArrangement = true
 
         return stackView
     }()
-    
-    @objc func buttonClicked() {
-        let snackbar = NatSnackbar(color: .inverse)
-        snackbar.configure(duration: .long)
-        snackbar.configure(position: .bottom)
-        snackbar.configure(icon: getIcon(.outlinedAlertCheck))
-        snackbar.configure(title: "This is my title")
-        snackbar.show()
-    }
 
     private let disabledStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
-        stackView.spacing = NatSpacing.tiny
-        stackView.distribution = .fillEqually
+        stackView.spacing = GaYaDimensions.spacingTiny
+        stackView.distribution = .fillProportionally
         stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.isLayoutMarginsRelativeArrangement = true
 
         return stackView
     }()
@@ -447,8 +447,9 @@ final class GaYaButtonViewController: UIViewController, SampleItem {
     private let fullStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.spacing = NatSpacing.tiny
+        stackView.spacing = GaYaDimensions.spacingTiny
         stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.isLayoutMarginsRelativeArrangement = true
 
         return stackView
     }()
@@ -456,6 +457,7 @@ final class GaYaButtonViewController: UIViewController, SampleItem {
     private let containedFullMediumButton: GaYaButton = {
         let button = GaYaButton(style: .filled, size: .medium)
         button.configure(title: "Filled - Medium")
+        button.configure(icon: getIcon(.outlinedPlaceRocket), position: .right)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -463,6 +465,7 @@ final class GaYaButtonViewController: UIViewController, SampleItem {
     private let disableContainedFullSemixButton: GaYaButton = {
         let button = GaYaButton(style: .filled, size: .semix)
         button.configure(title: "Filled - Semix")
+        button.configure(icon: getIcon(.outlinedPlaceRocket), position: .right)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -470,6 +473,7 @@ final class GaYaButtonViewController: UIViewController, SampleItem {
     private let outlinedFullSemiButton: GaYaButton = {
         let button = GaYaButton(style: .filled, size: .semi)
         button.configure(title: "Filled - Semi")
+        button.configure(icon: getIcon(.outlinedPlaceRocket), position: .right)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -507,9 +511,10 @@ final class GaYaButtonViewController: UIViewController, SampleItem {
     private let containedIconStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
-        stackView.spacing = NatSpacing.tiny
-        stackView.distribution = .fillEqually
+        stackView.spacing = GaYaDimensions.spacingTiny
+        stackView.distribution = .fillProportionally
         stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.isLayoutMarginsRelativeArrangement = true
 
         return stackView
     }()
@@ -517,9 +522,10 @@ final class GaYaButtonViewController: UIViewController, SampleItem {
     private let outlinedIconStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
-        stackView.spacing = NatSpacing.tiny
-        stackView.distribution = .fillEqually
+        stackView.spacing = GaYaDimensions.spacingTiny
+        stackView.distribution = .fillProportionally
         stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.isLayoutMarginsRelativeArrangement = true
 
         return stackView
     }()
@@ -536,7 +542,7 @@ final class GaYaButtonViewController: UIViewController, SampleItem {
     private let containedIconLeftButton: GaYaButton = {
         let button = GaYaButton(style: .outlined)
         button.configure(title: "outlined")
-        button.configure(icon: nil, position: .left)
+        button.configure(icon: getIcon(.outlinedAlertNotification), position: .left)
         button.translatesAutoresizingMaskIntoConstraints = false
 
         return button
@@ -570,27 +576,6 @@ final class GaYaButtonViewController: UIViewController, SampleItem {
 
     // MARK: - Private methods
     
-    func hexStringToUIColor (hex:String) -> UIColor {
-        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
-
-        if (cString.hasPrefix("#")) {
-            cString.remove(at: cString.startIndex)
-        }
-
-        if ((cString.count) != 6) {
-            return UIColor.gray
-        }
-
-        var rgbValue:UInt64 = 0
-        Scanner(string: cString).scanHexInt64(&rgbValue)
-
-        return UIColor(
-            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
-            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
-            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
-            alpha: CGFloat(1.0)
-        )
-    }
 
     private func setup() {
         title = Self.name
@@ -623,8 +608,8 @@ final class GaYaButtonViewController: UIViewController, SampleItem {
         stackView.addArrangedSubview(outlinedIconStackView)
         stackView.addArrangedSubview(labelSizes)
         stackView.addArrangedSubview(containedFullMediumButton)
-        stackView.addArrangedSubview(outlinedFullSemiButton)
         stackView.addArrangedSubview(disableContainedFullSemixButton)
+        stackView.addArrangedSubview(outlinedFullSemiButton)
 
         filledStackView.addArrangedSubview(filled1)
         filledStackView.addArrangedSubview(filled2)
@@ -691,16 +676,16 @@ final class GaYaButtonViewController: UIViewController, SampleItem {
             scrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
 
             containerView.topAnchor.constraint(equalTo: scrollView.topAnchor),
-            containerView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -NatSpacing.small),
+            containerView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -GaYaDimensions.spacingSmall),
             containerView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
-            containerView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: NatSpacing.small),
+            containerView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: GaYaDimensions.spacingSmall),
             containerView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
             containerHeightConstraint,
 
-            stackView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: NatSpacing.small),
+            stackView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: GaYaDimensions.spacingSmall),
             stackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
             stackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
-            stackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -NatSpacing.small)
+            stackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -GaYaDimensions.spacingSmall)
         ])
         
         viewDidLayoutSubviews()

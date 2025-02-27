@@ -473,6 +473,26 @@
 		FF5439E52BD6A5BA00FAE2C4 /* GaYaButtonFilledStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5439E12BD6A5B900FAE2C4 /* GaYaButtonFilledStyle.swift */; };
 		FF5439E62BD6A5BA00FAE2C4 /* GaYaButtonOutlineStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5439E22BD6A5BA00FAE2C4 /* GaYaButtonOutlineStyle.swift */; };
 		FFD9EB3B2B185D7000EBE815 /* NatButton+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9EB3A2B185D7000EBE815 /* NatButton+Color.swift */; };
+		FFE3F9882D5C54C300314F87 /* GaYaSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE3F9872D5C54C300314F87 /* GaYaSelect.swift */; };
+		FFE3F98A2D5C54DC00314F87 /* GaYaCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE3F9892D5C54DC00314F87 /* GaYaCounter.swift */; };
+		FFE3F98C2D5C54EC00314F87 /* GaYaCounterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE3F98B2D5C54EC00314F87 /* GaYaCounterButton.swift */; };
+		FFE3F98E2D5C550100314F87 /* GaYaCounter+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE3F98D2D5C550100314F87 /* GaYaCounter+Size.swift */; };
+		FFE3F9902D5C551600314F87 /* GaYaCounter+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE3F98F2D5C551600314F87 /* GaYaCounter+State.swift */; };
+		FFE3F9922D5C553100314F87 /* GaYaCounter+CounterButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE3F9912D5C553100314F87 /* GaYaCounter+CounterButtonType.swift */; };
+		FFE3F9972D5C7BF500314F87 /* GaYaTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE3F9962D5C7BF500314F87 /* GaYaTextField.swift */; };
+		FFE3F99C2D5C7E7200314F87 /* GaYaTextField+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE3F9982D5C7E7200314F87 /* GaYaTextField+Size.swift */; };
+		FFE3F99D2D5C7E7200314F87 /* GaYaTextFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE3F9992D5C7E7200314F87 /* GaYaTextFieldType.swift */; };
+		FFE3F99E2D5C7E7200314F87 /* GaYaTextField+InteractionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE3F99A2D5C7E7200314F87 /* GaYaTextField+InteractionState.swift */; };
+		FFE3F99F2D5C7E7200314F87 /* GaYaTextField+FeedbackState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE3F99B2D5C7E7200314F87 /* GaYaTextField+FeedbackState.swift */; };
+		FFE3F9A12D5C828600314F87 /* GaYaField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE3F9A02D5C828600314F87 /* GaYaField.swift */; };
+		FFE3F9AA2D5D71AC00314F87 /* Avonv3DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE3F9A92D5D71AC00314F87 /* Avonv3DarkTheme.swift */; };
+		FFE3F9AC2D5D71C200314F87 /* Avonv3LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE3F9AB2D5D71C200314F87 /* Avonv3LightTheme.swift */; };
+		FFE3F9B02D5DB15A00314F87 /* GaYaBadgeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE3F9AF2D5DB15A00314F87 /* GaYaBadgeable.swift */; };
+		FFE3F9B22D5DB17A00314F87 /* GaYaBadge+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE3F9B12D5DB17A00314F87 /* GaYaBadge+Animation.swift */; };
+		FFE3F9B42D5DB18F00314F87 /* GaYaBadge+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE3F9B32D5DB18F00314F87 /* GaYaBadge+Color.swift */; };
+		FFE3F9B62D5DB1A800314F87 /* GaYaBadge+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE3F9B52D5DB1A800314F87 /* GaYaBadge+Style.swift */; };
+		FFE3F9B82D5DB1BF00314F87 /* GaYaBadge+Limit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE3F9B72D5DB1BF00314F87 /* GaYaBadge+Limit.swift */; };
+		FFE3F9BA2D5DB1CB00314F87 /* GaYaBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE3F9B92D5DB1CB00314F87 /* GaYaBadge.swift */; };
 		FFE797342C1D86D400D241BF /* GaYaChip.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE797332C1D86D400D241BF /* GaYaChip.swift */; };
 		FFE797362C1D86E800D241BF /* GaYaChip+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE797352C1D86E800D241BF /* GaYaChip+Color.swift */; };
 		FFE797382C1D870000D241BF /* GaYaChip+Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE797372C1D870000D241BF /* GaYaChip+Position.swift */; };
@@ -497,10 +517,10 @@
 		FFF60D7A2D0C1C69005CD77D /* GaYaIconButtonGhostStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60D792D0C1C69005CD77D /* GaYaIconButtonGhostStyle.swift */; };
 		FFF60D7C2D0C1C89005CD77D /* GaYaIconButtonTonalStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60D7B2D0C1C89005CD77D /* GaYaIconButtonTonalStyle.swift */; };
 		FFF60D7E2D0C1D9E005CD77D /* GaYaIconButton+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60D7D2D0C1D9E005CD77D /* GaYaIconButton+Color.swift */; };
-		FFF60E292D309EB3005CD77D /* ConsultoriaDeBelezaV2DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60E262D309EB3005CD77D /* ConsultoriaDeBelezaV2DarkTheme.swift */; };
-		FFF60E2A2D309EB3005CD77D /* ConsultoriaDeBelezaV2LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60E272D309EB3005CD77D /* ConsultoriaDeBelezaV2LightTheme.swift */; };
-		FFF60E2E2D30FFB3005CD77D /* ForcaDeVendasV2DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60E2B2D30FFB3005CD77D /* ForcaDeVendasV2DarkTheme.swift */; };
-		FFF60E2F2D30FFB3005CD77D /* ForcaDeVendasV2LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60E2C2D30FFB3005CD77D /* ForcaDeVendasV2LightTheme.swift */; };
+		FFF60E292D309EB3005CD77D /* ConsultoriaDeBelezav2DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60E262D309EB3005CD77D /* ConsultoriaDeBelezav2DarkTheme.swift */; };
+		FFF60E2A2D309EB3005CD77D /* ConsultoriaDeBelezav2LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60E272D309EB3005CD77D /* ConsultoriaDeBelezav2LightTheme.swift */; };
+		FFF60E2E2D30FFB3005CD77D /* ForcaDeVendasv2DarkTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60E2B2D30FFB3005CD77D /* ForcaDeVendasv2DarkTheme.swift */; };
+		FFF60E2F2D30FFB3005CD77D /* ForcaDeVendasv2LightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60E2C2D30FFB3005CD77D /* ForcaDeVendasv2LightTheme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -989,6 +1009,26 @@
 		FF5439E22BD6A5BA00FAE2C4 /* GaYaButtonOutlineStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaYaButtonOutlineStyle.swift; sourceTree = "<group>"; };
 		FF60BC58D83695B3AC61ABB7BBE49B9C /* UIView+FrameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+FrameTests.swift"; sourceTree = "<group>"; };
 		FFD9EB3A2B185D7000EBE815 /* NatButton+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NatButton+Color.swift"; sourceTree = "<group>"; };
+		FFE3F9872D5C54C300314F87 /* GaYaSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaSelect.swift; sourceTree = "<group>"; };
+		FFE3F9892D5C54DC00314F87 /* GaYaCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaCounter.swift; sourceTree = "<group>"; };
+		FFE3F98B2D5C54EC00314F87 /* GaYaCounterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaCounterButton.swift; sourceTree = "<group>"; };
+		FFE3F98D2D5C550100314F87 /* GaYaCounter+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GaYaCounter+Size.swift"; sourceTree = "<group>"; };
+		FFE3F98F2D5C551600314F87 /* GaYaCounter+State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GaYaCounter+State.swift"; sourceTree = "<group>"; };
+		FFE3F9912D5C553100314F87 /* GaYaCounter+CounterButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GaYaCounter+CounterButtonType.swift"; sourceTree = "<group>"; };
+		FFE3F9962D5C7BF500314F87 /* GaYaTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaTextField.swift; sourceTree = "<group>"; };
+		FFE3F9982D5C7E7200314F87 /* GaYaTextField+Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GaYaTextField+Size.swift"; sourceTree = "<group>"; };
+		FFE3F9992D5C7E7200314F87 /* GaYaTextFieldType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaYaTextFieldType.swift; sourceTree = "<group>"; };
+		FFE3F99A2D5C7E7200314F87 /* GaYaTextField+InteractionState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GaYaTextField+InteractionState.swift"; sourceTree = "<group>"; };
+		FFE3F99B2D5C7E7200314F87 /* GaYaTextField+FeedbackState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GaYaTextField+FeedbackState.swift"; sourceTree = "<group>"; };
+		FFE3F9A02D5C828600314F87 /* GaYaField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaField.swift; sourceTree = "<group>"; };
+		FFE3F9A92D5D71AC00314F87 /* Avonv3DarkTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avonv3DarkTheme.swift; sourceTree = "<group>"; };
+		FFE3F9AB2D5D71C200314F87 /* Avonv3LightTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avonv3LightTheme.swift; sourceTree = "<group>"; };
+		FFE3F9AF2D5DB15A00314F87 /* GaYaBadgeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaBadgeable.swift; sourceTree = "<group>"; };
+		FFE3F9B12D5DB17A00314F87 /* GaYaBadge+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GaYaBadge+Animation.swift"; sourceTree = "<group>"; };
+		FFE3F9B32D5DB18F00314F87 /* GaYaBadge+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GaYaBadge+Color.swift"; sourceTree = "<group>"; };
+		FFE3F9B52D5DB1A800314F87 /* GaYaBadge+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GaYaBadge+Style.swift"; sourceTree = "<group>"; };
+		FFE3F9B72D5DB1BF00314F87 /* GaYaBadge+Limit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GaYaBadge+Limit.swift"; sourceTree = "<group>"; };
+		FFE3F9B92D5DB1CB00314F87 /* GaYaBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaBadge.swift; sourceTree = "<group>"; };
 		FFE797332C1D86D400D241BF /* GaYaChip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaChip.swift; sourceTree = "<group>"; };
 		FFE797352C1D86E800D241BF /* GaYaChip+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GaYaChip+Color.swift"; sourceTree = "<group>"; };
 		FFE797372C1D870000D241BF /* GaYaChip+Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GaYaChip+Position.swift"; sourceTree = "<group>"; };
@@ -1013,10 +1053,10 @@
 		FFF60D792D0C1C69005CD77D /* GaYaIconButtonGhostStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaIconButtonGhostStyle.swift; sourceTree = "<group>"; };
 		FFF60D7B2D0C1C89005CD77D /* GaYaIconButtonTonalStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaIconButtonTonalStyle.swift; sourceTree = "<group>"; };
 		FFF60D7D2D0C1D9E005CD77D /* GaYaIconButton+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GaYaIconButton+Color.swift"; sourceTree = "<group>"; };
-		FFF60E262D309EB3005CD77D /* ConsultoriaDeBelezaV2DarkTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsultoriaDeBelezaV2DarkTheme.swift; sourceTree = "<group>"; };
-		FFF60E272D309EB3005CD77D /* ConsultoriaDeBelezaV2LightTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsultoriaDeBelezaV2LightTheme.swift; sourceTree = "<group>"; };
-		FFF60E2B2D30FFB3005CD77D /* ForcaDeVendasV2DarkTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForcaDeVendasV2DarkTheme.swift; sourceTree = "<group>"; };
-		FFF60E2C2D30FFB3005CD77D /* ForcaDeVendasV2LightTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForcaDeVendasV2LightTheme.swift; sourceTree = "<group>"; };
+		FFF60E262D309EB3005CD77D /* ConsultoriaDeBelezav2DarkTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsultoriaDeBelezav2DarkTheme.swift; sourceTree = "<group>"; };
+		FFF60E272D309EB3005CD77D /* ConsultoriaDeBelezav2LightTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsultoriaDeBelezav2LightTheme.swift; sourceTree = "<group>"; };
+		FFF60E2B2D30FFB3005CD77D /* ForcaDeVendasv2DarkTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForcaDeVendasv2DarkTheme.swift; sourceTree = "<group>"; };
+		FFF60E2C2D30FFB3005CD77D /* ForcaDeVendasv2LightTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForcaDeVendasv2LightTheme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1197,12 +1237,12 @@
 		265B17E924AFA0DA00FD0407 /* Badge */ = {
 			isa = PBXGroup;
 			children = (
-				26BB817A24B94CD900617EFC /* Protocol */,
 				265B17EA24AFA12900FD0407 /* NatBadge.swift */,
-				79EA0CA7261B4A8700742C0A /* NatBadge+Limit.swift */,
-				26740A4824B3A60C00419526 /* NatBadge+Style.swift */,
 				79EA0C952614B39A00742C0A /* NatBadge+Animation.swift */,
 				26740A4A24B3A62F00419526 /* NatBadge+Color.swift */,
+				79EA0CA7261B4A8700742C0A /* NatBadge+Limit.swift */,
+				26740A4824B3A60C00419526 /* NatBadge+Style.swift */,
+				26BB817A24B94CD900617EFC /* Protocol */,
 			);
 			path = Badge;
 			sourceTree = "<group>";
@@ -2657,8 +2697,6 @@
 		8F17D4DBF2804B57A4C0A71661E479AF /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				FF38AE912B6B5E3100F0F10B /* Icon.swift */,
-				FF49B7242AA19B2D001478A5 /* Snackbar */,
 				8C1AE05628A682CC000F9D88 /* Alert */,
 				0E3F578D24B8E9C8004B2F9E /* AppBar */,
 				7D75A43725DAFF3F0050ACA9 /* Avatar */,
@@ -2673,6 +2711,11 @@
 				B765E7CB5E163C38B6106556601A6CCA /* Divider */,
 				9A95973E20D8800C2A72454FF93AEC3F /* ExpansionPanel */,
 				EA99DA7A49950566847F2CD983BBD1EA /* Field */,
+				FFE3F9AD2D5DB12800314F87 /* GaYaBadge */,
+				FFE3F9842D5C546E00314F87 /* GaYaCounter */,
+				FFE3F9862D5C54A800314F87 /* GaYaSelect */,
+				FFE3F9852D5C548000314F87 /* GaYaTextField */,
+				FF38AE912B6B5E3100F0F10B /* Icon.swift */,
 				84703F3D24F83AB900FE01CA /* IconButton */,
 				FBCFD36466E6B86E32075C92503882F7 /* Icons */,
 				79FC59DB25DAB0A6001CCB56 /* Image */,
@@ -2684,6 +2727,7 @@
 				DC2A136A2844B27300485682 /* Select */,
 				BEDF931B2593815900F54C50 /* SelectionControl */,
 				844A1E2124AE111D00E93AD9 /* Shortcut */,
+				FF49B7242AA19B2D001478A5 /* Snackbar */,
 				DCDEE9362825880D005B7747 /* Switch */,
 				1C64E7FC7AE243CD11623B12CB2E59B4 /* Tab */,
 				26BFBAD525125195006C22E2 /* Tag */,
@@ -3027,6 +3071,7 @@
 		E67E4E2A29F714CB00FF7515 /* BrandsThemes */ = {
 			isa = PBXGroup;
 			children = (
+				FFE3F9A82D5D718000314F87 /* AvonV3 */,
 				E67E4E2E29F714CB00FF7515 /* Avon */,
 				FF4BFAA92A17065700D7E28F /* AvonV2 */,
 				E67E4E3E29F714CB00FF7515 /* CasaEestilo */,
@@ -3121,10 +3166,10 @@
 			children = (
 				8BEE0086E453EC48CFDC60DBA3C5C989 /* NatField.swift */,
 				674EEA4A2112FC3EF3AE40AA3776A35A /* TextField.swift */,
-				437B78D88ACFB47EEADED96CDC94C7C5 /* TextFieldType.swift */,
-				7D5120CF25ED7CE200557E21 /* TextField+InteractionState.swift */,
 				7D43162C25EE8944004AE34F /* TextField+FeedbackState.swift */,
+				7D5120CF25ED7CE200557E21 /* TextField+InteractionState.swift */,
 				7D43162125ED9477004AE34F /* TextField+Size.swift */,
+				437B78D88ACFB47EEADED96CDC94C7C5 /* TextFieldType.swift */,
 			);
 			path = Field;
 			sourceTree = "<group>";
@@ -3211,6 +3256,69 @@
 			path = ChipFilter;
 			sourceTree = "<group>";
 		};
+		FFE3F9842D5C546E00314F87 /* GaYaCounter */ = {
+			isa = PBXGroup;
+			children = (
+				FFE3F9892D5C54DC00314F87 /* GaYaCounter.swift */,
+				FFE3F98B2D5C54EC00314F87 /* GaYaCounterButton.swift */,
+				FFE3F98D2D5C550100314F87 /* GaYaCounter+Size.swift */,
+				FFE3F98F2D5C551600314F87 /* GaYaCounter+State.swift */,
+				FFE3F9912D5C553100314F87 /* GaYaCounter+CounterButtonType.swift */,
+			);
+			path = GaYaCounter;
+			sourceTree = "<group>";
+		};
+		FFE3F9852D5C548000314F87 /* GaYaTextField */ = {
+			isa = PBXGroup;
+			children = (
+				FFE3F9A02D5C828600314F87 /* GaYaField.swift */,
+				FFE3F9962D5C7BF500314F87 /* GaYaTextField.swift */,
+				FFE3F99B2D5C7E7200314F87 /* GaYaTextField+FeedbackState.swift */,
+				FFE3F99A2D5C7E7200314F87 /* GaYaTextField+InteractionState.swift */,
+				FFE3F9982D5C7E7200314F87 /* GaYaTextField+Size.swift */,
+				FFE3F9992D5C7E7200314F87 /* GaYaTextFieldType.swift */,
+			);
+			path = GaYaTextField;
+			sourceTree = "<group>";
+		};
+		FFE3F9862D5C54A800314F87 /* GaYaSelect */ = {
+			isa = PBXGroup;
+			children = (
+				FFE3F9872D5C54C300314F87 /* GaYaSelect.swift */,
+			);
+			path = GaYaSelect;
+			sourceTree = "<group>";
+		};
+		FFE3F9A82D5D718000314F87 /* AvonV3 */ = {
+			isa = PBXGroup;
+			children = (
+				FFE3F9A92D5D71AC00314F87 /* Avonv3DarkTheme.swift */,
+				FFE3F9AB2D5D71C200314F87 /* Avonv3LightTheme.swift */,
+			);
+			path = AvonV3;
+			sourceTree = "<group>";
+		};
+		FFE3F9AD2D5DB12800314F87 /* GaYaBadge */ = {
+			isa = PBXGroup;
+			children = (
+				FFE3F9B92D5DB1CB00314F87 /* GaYaBadge.swift */,
+				FFE3F9B12D5DB17A00314F87 /* GaYaBadge+Animation.swift */,
+				FFE3F9B32D5DB18F00314F87 /* GaYaBadge+Color.swift */,
+				FFE3F9B72D5DB1BF00314F87 /* GaYaBadge+Limit.swift */,
+				FFE3F9B52D5DB1A800314F87 /* GaYaBadge+Style.swift */,
+				FFE3F9AE2D5DB13F00314F87 /* Protocol */,
+			);
+			path = GaYaBadge;
+			sourceTree = "<group>";
+		};
+		FFE3F9AE2D5DB13F00314F87 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				FFE3F9AF2D5DB15A00314F87 /* GaYaBadgeable.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		FFE7975C2C56C2E900D241BF /* CasaEestiloV2 */ = {
 			isa = PBXGroup;
 			children = (
@@ -3232,8 +3340,8 @@
 		FFF60E282D309EB3005CD77D /* ConsultoriaDeBelezaV2 */ = {
 			isa = PBXGroup;
 			children = (
-				FFF60E262D309EB3005CD77D /* ConsultoriaDeBelezaV2DarkTheme.swift */,
-				FFF60E272D309EB3005CD77D /* ConsultoriaDeBelezaV2LightTheme.swift */,
+				FFF60E262D309EB3005CD77D /* ConsultoriaDeBelezav2DarkTheme.swift */,
+				FFF60E272D309EB3005CD77D /* ConsultoriaDeBelezav2LightTheme.swift */,
 			);
 			path = ConsultoriaDeBelezaV2;
 			sourceTree = "<group>";
@@ -3241,8 +3349,8 @@
 		FFF60E2D2D30FFB3005CD77D /* ForcaDeVendasV2 */ = {
 			isa = PBXGroup;
 			children = (
-				FFF60E2B2D30FFB3005CD77D /* ForcaDeVendasV2DarkTheme.swift */,
-				FFF60E2C2D30FFB3005CD77D /* ForcaDeVendasV2LightTheme.swift */,
+				FFF60E2B2D30FFB3005CD77D /* ForcaDeVendasv2DarkTheme.swift */,
+				FFF60E2C2D30FFB3005CD77D /* ForcaDeVendasv2LightTheme.swift */,
 			);
 			path = ForcaDeVendasV2;
 			sourceTree = "<group>";
@@ -3715,8 +3823,8 @@
 				7D31C11A2615162300EED32A /* NatRating+Alignment.swift in Sources */,
 				FFE797482C1D89D800D241BF /* GaYaAvatar+Type.swift in Sources */,
 				7D277B68269E43A1005075EF /* DialogBodyView.swift in Sources */,
-				FFF60E2A2D309EB3005CD77D /* ConsultoriaDeBelezaV2LightTheme.swift in Sources */,
-				FFF60E2E2D30FFB3005CD77D /* ForcaDeVendasV2DarkTheme.swift in Sources */,
+				FFF60E2A2D309EB3005CD77D /* ConsultoriaDeBelezav2LightTheme.swift in Sources */,
+				FFF60E2E2D30FFB3005CD77D /* ForcaDeVendasv2DarkTheme.swift in Sources */,
 				FFE797652C56C37900D241BF /* CasaEestilov2LightTheme.swift in Sources */,
 				845D099A250119AF00B05760 /* UIView+CenterBounds.swift in Sources */,
 				7DE2B12C26000BA600C5CBC0 /* UIImageView+Clickable.swift in Sources */,
@@ -3730,6 +3838,7 @@
 				BEDF93202593B4FF00F54C50 /* NatSelectionControl.swift in Sources */,
 				7DC81CB126121EAC006BE689 /* NatRating.swift in Sources */,
 				84BC901524AA17C0007DF09D /* NatDialogBodyConfigurable.swift in Sources */,
+				FFE3F9B42D5DB18F00314F87 /* GaYaBadge+Color.swift in Sources */,
 				7D5F149A25A782AB007986EE /* IconsSource.swift in Sources */,
 				7D8F3E6A258A81C1003A7DEB /* ShortcutView.swift in Sources */,
 				FF35F7472CF5A022001F13AA /* GaYaIconButtonStyle.swift in Sources */,
@@ -3755,11 +3864,13 @@
 				7D43162225ED9477004AE34F /* TextField+Size.swift in Sources */,
 				FFF60D7C2D0C1C89005CD77D /* GaYaIconButtonTonalStyle.swift in Sources */,
 				FFE797342C1D86D400D241BF /* GaYaChip.swift in Sources */,
+				FFE3F9B22D5DB17A00314F87 /* GaYaBadge+Animation.swift in Sources */,
 				E67E4E4A29F714CB00FF7515 /* AvonLightTheme.swift in Sources */,
 				14016A20C7BF7046BAFCD2AE53673EB0 /* ButtonStyle.swift in Sources */,
 				FFE797602C56C36800D241BF /* ForcaDeVendasDarkTheme.swift in Sources */,
 				FFE797692C791FCD00D241BF /* GaYaColors.swift in Sources */,
 				FFF60D782D0C1C53005CD77D /* GaYaIconButtonOutlinedStyle.swift in Sources */,
+				FFE3F9B02D5DB15A00314F87 /* GaYaBadgeable.swift in Sources */,
 				FF38AEA32BA0935400F0F10B /* Naturav3LightTheme.swift in Sources */,
 				E67E4E4929F714CB00FF7515 /* AvonDarkTheme.swift in Sources */,
 				FF49B7262AA1A00C001478A5 /* NatSnackbar.swift in Sources */,
@@ -3773,6 +3884,8 @@
 				7D277B63269E2551005075EF /* DialogHeaderView.swift in Sources */,
 				7D968E1726AF12E600DE9A78 /* NatSelectorProtocol.swift in Sources */,
 				40B14F67117654B7854317119E5B3509 /* ConfigurationStorage.swift in Sources */,
+				FFE3F98E2D5C550100314F87 /* GaYaCounter+Size.swift in Sources */,
+				FFE3F99D2D5C7E7200314F87 /* GaYaTextFieldType.swift in Sources */,
 				79FC593A25BF5894001CCB56 /* NatRadioButtonControl.swift in Sources */,
 				7D9838BD25F8F70300A99628 /* NatListItem.swift in Sources */,
 				84BC901C24AB7445007DF09D /* NatDialogDismissableConfigurable.swift in Sources */,
@@ -3812,6 +3925,7 @@
 				FF5439E42BD6A5BA00FAE2C4 /* GaYaButtonGhostStyle.swift in Sources */,
 				7DC81CB6261223CC006BE689 /* UIImage+UIColor.swift in Sources */,
 				FF5439DC2BD2B3A400FAE2C4 /* GaYaButton+Style.swift in Sources */,
+				FFE3F9922D5C553100314F87 /* GaYaCounter+CounterButtonType.swift in Sources */,
 				269C886224C23B0100A507BE /* UINavigationController+Configure.swift in Sources */,
 				7D5349E826C6A33800F88EA7 /* NatImage+Fade.swift in Sources */,
 				FFE7976D2C79216900D241BF /* GaYaDimensions.swift in Sources */,
@@ -3819,15 +3933,19 @@
 				F01F3CA72313B3C97F42498878234A82 /* FontStyle.swift in Sources */,
 				E67E4E4E29F714CB00FF7515 /* TheBodyShopLightTheme.swift in Sources */,
 				84EB6B6F24EB197000C6A792 /* GetTokensFromTheme.swift in Sources */,
-				FFF60E292D309EB3005CD77D /* ConsultoriaDeBelezaV2DarkTheme.swift in Sources */,
+				FFF60E292D309EB3005CD77D /* ConsultoriaDeBelezav2DarkTheme.swift in Sources */,
 				845D09982501196D00B05760 /* IconButtonStandardStyle.swift in Sources */,
 				84BC900624AA163A007DF09D /* DialogStyle.swift in Sources */,
 				FF35F73A2CE3D7ED001F13AA /* GaYaTag+Style.swift in Sources */,
 				7D86C19F26654CFB00FC4C53 /* NatLogo+Model.swift in Sources */,
 				F72BEF338B46182BC440C92CCF3D02B0 /* IconView.swift in Sources */,
+				FFE3F99E2D5C7E7200314F87 /* GaYaTextField+InteractionState.swift in Sources */,
+				FFE3F99F2D5C7E7200314F87 /* GaYaTextField+FeedbackState.swift in Sources */,
+				FFE3F98C2D5C54EC00314F87 /* GaYaCounterButton.swift in Sources */,
 				1908219397D007DC35BC0F99D5DEDE80 /* NSMutableAttributedString+Builder.swift in Sources */,
 				FF38AE932B6B5E3100F0F10B /* Icon.swift in Sources */,
 				CF14752D6F385AD399A59F275DEB1ED7 /* NatBorderRadius.swift in Sources */,
+				FFE3F9882D5C54C300314F87 /* GaYaSelect.swift in Sources */,
 				FF28A3DD2BDAA5220007B262 /* GaYaButtonTonalStyle.swift in Sources */,
 				F6B6FF5891E1F871748A9D598EA14AFE /* NatButton+EdgeInsets.swift in Sources */,
 				C0F15375EEFCBC922341EBD9DED5A29B /* NatButton+Height.swift in Sources */,
@@ -3835,6 +3953,7 @@
 				E70EF1AC4BB7A93A80A500786C1A6497 /* NatButton.swift in Sources */,
 				798CD29C25FFCC4A00F49768 /* NatRadioButton.swift in Sources */,
 				4838BBC57B1464D82D59DE861726268A /* NatColors.swift in Sources */,
+				FFE3F98A2D5C54DC00314F87 /* GaYaCounter.swift in Sources */,
 				FF35F7342CE3D763001F13AA /* GaYaTag.swift in Sources */,
 				FF4BFAAD2A17080200D7E28F /* Avonv2LightTheme.swift in Sources */,
 				FFE797442C1D89B400D241BF /* GaYaAvatar.swift in Sources */,
@@ -3851,6 +3970,7 @@
 				E67E4E5829F714CB00FF7515 /* NaturaLightTheme.swift in Sources */,
 				26BFBAD725125246006C22E2 /* NatTag.swift in Sources */,
 				FF5439E52BD6A5BA00FAE2C4 /* GaYaButtonFilledStyle.swift in Sources */,
+				FFE3F9BA2D5DB1CB00314F87 /* GaYaBadge.swift in Sources */,
 				7D9038CA261B9F57005A3D0A /* NatRating+State.swift in Sources */,
 				69C11E581C612BD00EC0590B5FE51930 /* NatDialogController.swift in Sources */,
 				7DFC9EC626F3EC5200052C54 /* IconFontStyle.swift in Sources */,
@@ -3869,6 +3989,7 @@
 				84BF066224B4A62400462AC5 /* NatShortcut+Style.swift in Sources */,
 				79D4C8E925F2B5100027E74E /* NatCheckbox.swift in Sources */,
 				BE7C39B5259CC77200E82405 /* NatCheckboxControl+Style.swift in Sources */,
+				FFE3F9972D5C7BF500314F87 /* GaYaTextField.swift in Sources */,
 				84BC900C24AA169B007DF09D /* DialogButtonConfiguration.swift in Sources */,
 				7D3D59152593D1B600C9197B /* UIImageView+UIColor.swift in Sources */,
 				E67E4E5229F714CB00FF7515 /* Naturav2DarkTheme.swift in Sources */,
@@ -3880,6 +4001,7 @@
 				8C1AE05A28A682ED000F9D88 /* NatAlert+Style.swift in Sources */,
 				FFF60D7E2D0C1D9E005CD77D /* GaYaIconButton+Color.swift in Sources */,
 				84F709FF1D1DFC32BA4E9CB1803A6E30 /* NavigationDrawer.swift in Sources */,
+				FFE3F9A12D5C828600314F87 /* GaYaField.swift in Sources */,
 				798CD2F02605151B00F49768 /* NatTag+Size.swift in Sources */,
 				FFE797422C1D875800D241BF /* GaYaChipFilter+Size.swift in Sources */,
 				79FC59C125D45DAE001CCB56 /* NatProgressIndicatorCircular+Constants.swift in Sources */,
@@ -3907,6 +4029,8 @@
 				7D5349ED26C6BA7200F88EA7 /* NatGradientImageView.swift in Sources */,
 				FFE7976B2C79215700D241BF /* GaYaSizes.swift in Sources */,
 				509D46F287D25DAEB7A71BF2665EF894 /* SearchBar.swift in Sources */,
+				FFE3F99C2D5C7E7200314F87 /* GaYaTextField+Size.swift in Sources */,
+				FFE3F9AC2D5D71C200314F87 /* Avonv3LightTheme.swift in Sources */,
 				10953079D3A781AA63E2E03A93F222C4 /* String+Icon.swift in Sources */,
 				604835F2975D92A9D2EF46132C17C0A5 /* Tab.swift in Sources */,
 				FFE7973C2C1D872C00D241BF /* GaYaChipFilter.swift in Sources */,
@@ -3919,9 +4043,11 @@
 				5C0716F242EFC1AF6A61CBE257DA7CFE /* TextField.swift in Sources */,
 				E67E4E4C29F714CB00FF7515 /* ConsultoriaDeBelezaLightTheme.swift in Sources */,
 				79EA0C20260A85DE00742C0A /* NatCounterButton.swift in Sources */,
+				FFE3F9902D5C551600314F87 /* GaYaCounter+State.swift in Sources */,
 				7D456155273C167C0006B440 /* NatDialogCompletionHandlerConfigurable.swift in Sources */,
 				8C1AE05828A682E0000F9D88 /* NatAlert.swift in Sources */,
 				E07925C3535D79164EBC061C7D6A6CE4 /* TextFieldType.swift in Sources */,
+				FFE3F9B62D5DB1A800314F87 /* GaYaBadge+Style.swift in Sources */,
 				FF38AE962B6B5FF000F0F10B /* NatDSIcons.swift in Sources */,
 				7D23B35D26D97B0900FB5DA9 /* CustomFontStyle.swift in Sources */,
 				84932F1324EAB9270052265F /* AvailableTheme.swift in Sources */,
@@ -3931,6 +4057,7 @@
 				6C6CB092994DB60C83AC24F93B0F4E49 /* UITableView+Reusable.swift in Sources */,
 				7D394CD42674083700582030 /* AppBarColor.swift in Sources */,
 				269C886624C2480800A507BE /* UIViewController+Configure.swift in Sources */,
+				FFE3F9B82D5DB1BF00314F87 /* GaYaBadge+Limit.swift in Sources */,
 				93B1D8CFBB1420174B310CC4906AA2EF /* UIView+Frame.swift in Sources */,
 				77C55B339CA403354D76ABF05E283D5A /* ValueTextHighlight.swift in Sources */,
 				7DAF750E25E5AF830094F865 /* String+Initials.swift in Sources */,
@@ -3940,9 +4067,10 @@
 				FFE797612C56C36800D241BF /* ForcaDeVendasLightTheme.swift in Sources */,
 				FF4BFAAC2A17080200D7E28F /* Avonv2DarkTheme.swift in Sources */,
 				EE1E7A9F49A18BCD194E0C03FB2F0074 /* ViewStyle.swift in Sources */,
-				FFF60E2F2D30FFB3005CD77D /* ForcaDeVendasV2LightTheme.swift in Sources */,
+				FFF60E2F2D30FFB3005CD77D /* ForcaDeVendasv2LightTheme.swift in Sources */,
 				79EA0C3E260B861400742C0A /* NatCounter+Size.swift in Sources */,
 				79FC593F25BF58C7001CCB56 /* NatRadioButtonControl+Style.swift in Sources */,
+				FFE3F9AA2D5D71AC00314F87 /* Avonv3DarkTheme.swift in Sources */,
 				FF5439DB2BD2B3A400FAE2C4 /* GaYaButton+EdgeInsets.swift in Sources */,
 				FF50B6482A040D9700FA824A /* NatChipFilter+Size.swift in Sources */,
 				7D5120D025ED7CE200557E21 /* TextField+InteractionState.swift in Sources */,
