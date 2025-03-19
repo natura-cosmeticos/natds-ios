@@ -512,6 +512,11 @@
 		FFE7976B2C79215700D241BF /* GaYaSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE7976A2C79215700D241BF /* GaYaSizes.swift */; };
 		FFE7976D2C79216900D241BF /* GaYaDimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE7976C2C79216900D241BF /* GaYaDimensions.swift */; };
 		FFE7976F2C7922E400D241BF /* GaYaOpacity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE7976E2C7922E400D241BF /* GaYaOpacity.swift */; };
+		FFEC606C2D8A9DC9007B764A /* GaYaFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEC606B2D8A9DC9007B764A /* GaYaFonts.swift */; };
+		FFEC606E2D8A9DE2007B764A /* GaYaFonts+TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEC606D2D8A9DE2007B764A /* GaYaFonts+TextStyle.swift */; };
+		FFEC60712D8AA354007B764A /* GaYaElevation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEC60702D8AA354007B764A /* GaYaElevation.swift */; };
+		FFEC60732D8AA40C007B764A /* GaYaElevation+ElevationAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEC60722D8AA40C007B764A /* GaYaElevation+ElevationAttributes.swift */; };
+		FFEC60752D8AAAEB007B764A /* FontLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEC60742D8AAAEB007B764A /* FontLoader.swift */; };
 		FFF60D762D0C1C3D005CD77D /* GaYaIconButtonFilledStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60D752D0C1C3D005CD77D /* GaYaIconButtonFilledStyle.swift */; };
 		FFF60D782D0C1C53005CD77D /* GaYaIconButtonOutlinedStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60D772D0C1C53005CD77D /* GaYaIconButtonOutlinedStyle.swift */; };
 		FFF60D7A2D0C1C69005CD77D /* GaYaIconButtonGhostStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60D792D0C1C69005CD77D /* GaYaIconButtonGhostStyle.swift */; };
@@ -1048,6 +1053,11 @@
 		FFE7976A2C79215700D241BF /* GaYaSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaSizes.swift; sourceTree = "<group>"; };
 		FFE7976C2C79216900D241BF /* GaYaDimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaDimensions.swift; sourceTree = "<group>"; };
 		FFE7976E2C7922E400D241BF /* GaYaOpacity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaOpacity.swift; sourceTree = "<group>"; };
+		FFEC606B2D8A9DC9007B764A /* GaYaFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaFonts.swift; sourceTree = "<group>"; };
+		FFEC606D2D8A9DE2007B764A /* GaYaFonts+TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GaYaFonts+TextStyle.swift"; sourceTree = "<group>"; };
+		FFEC60702D8AA354007B764A /* GaYaElevation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaElevation.swift; sourceTree = "<group>"; };
+		FFEC60722D8AA40C007B764A /* GaYaElevation+ElevationAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GaYaElevation+ElevationAttributes.swift"; sourceTree = "<group>"; };
+		FFEC60742D8AAAEB007B764A /* FontLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontLoader.swift; sourceTree = "<group>"; };
 		FFF60D752D0C1C3D005CD77D /* GaYaIconButtonFilledStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaIconButtonFilledStyle.swift; sourceTree = "<group>"; };
 		FFF60D772D0C1C53005CD77D /* GaYaIconButtonOutlinedStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaIconButtonOutlinedStyle.swift; sourceTree = "<group>"; };
 		FFF60D792D0C1C69005CD77D /* GaYaIconButtonGhostStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaIconButtonGhostStyle.swift; sourceTree = "<group>"; };
@@ -2883,6 +2893,7 @@
 				93C1C3FD73F0E5F31735966CB48D7B16 /* FontStyle.swift */,
 				7D23B35C26D97B0900FB5DA9 /* CustomFontStyle.swift */,
 				7DFC9EC526F3EC5200052C54 /* IconFontStyle.swift */,
+				FFEC60742D8AAAEB007B764A /* FontLoader.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -2909,6 +2920,12 @@
 		D0A81AF824CDF9690E19EF12D5D38297 /* DesignTokens */ = {
 			isa = PBXGroup;
 			children = (
+				FFEC606F2D8AA334007B764A /* GaYaElevation */,
+				FFE797682C791FCD00D241BF /* GaYaColors.swift */,
+				FFE7976C2C79216900D241BF /* GaYaDimensions.swift */,
+				FFEC606A2D8A9517007B764A /* GaYaFonts */,
+				FFE7976E2C7922E400D241BF /* GaYaOpacity.swift */,
+				FFE7976A2C79215700D241BF /* GaYaSizes.swift */,
 				A59A74845475F2B53E1C0242E26F6DD1 /* NatBorderRadius.swift */,
 				546EF920207BAF8470E811B146A05C0F /* NatColors.swift */,
 				840265BB2514E04500A08EBE /* NatElevation */,
@@ -2916,10 +2933,6 @@
 				A54E76AA6120032EE8B86EB90B51BFD8 /* NatOpacities.swift */,
 				FB7FB96016F7D02CB5976F54C383CCD6 /* NatSizes.swift */,
 				0268F8E94DAA2428259644D88E375D32 /* NatSpacing.swift */,
-				FFE797682C791FCD00D241BF /* GaYaColors.swift */,
-				FFE7976A2C79215700D241BF /* GaYaSizes.swift */,
-				FFE7976C2C79216900D241BF /* GaYaDimensions.swift */,
-				FFE7976E2C7922E400D241BF /* GaYaOpacity.swift */,
 			);
 			path = DesignTokens;
 			sourceTree = "<group>";
@@ -3335,6 +3348,24 @@
 				FFE7975F2C56C36800D241BF /* ForcaDeVendasLightTheme.swift */,
 			);
 			path = ForcaDeVendas;
+			sourceTree = "<group>";
+		};
+		FFEC606A2D8A9517007B764A /* GaYaFonts */ = {
+			isa = PBXGroup;
+			children = (
+				FFEC606B2D8A9DC9007B764A /* GaYaFonts.swift */,
+				FFEC606D2D8A9DE2007B764A /* GaYaFonts+TextStyle.swift */,
+			);
+			path = GaYaFonts;
+			sourceTree = "<group>";
+		};
+		FFEC606F2D8AA334007B764A /* GaYaElevation */ = {
+			isa = PBXGroup;
+			children = (
+				FFEC60702D8AA354007B764A /* GaYaElevation.swift */,
+				FFEC60722D8AA40C007B764A /* GaYaElevation+ElevationAttributes.swift */,
+			);
+			path = GaYaElevation;
 			sourceTree = "<group>";
 		};
 		FFF60E282D309EB3005CD77D /* ConsultoriaDeBelezaV2 */ = {
@@ -3819,6 +3850,7 @@
 				79EA0C46260CD7DC00742C0A /* NatCounter+CounterButtonType.swift in Sources */,
 				E67E4E5529F714CB00FF7515 /* CasaEestiloLightTheme.swift in Sources */,
 				84703F3C24F6ECD300FE01CA /* NatFonts+TextStyle.swift in Sources */,
+				FFEC606C2D8A9DC9007B764A /* GaYaFonts.swift in Sources */,
 				BEDF93372593D28400F54C50 /* NatCheckboxControl.swift in Sources */,
 				7D31C11A2615162300EED32A /* NatRating+Alignment.swift in Sources */,
 				FFE797482C1D89D800D241BF /* GaYaAvatar+Type.swift in Sources */,
@@ -3898,12 +3930,14 @@
 				FF5439D92BD2B3A400FAE2C4 /* GaYaButton+Height.swift in Sources */,
 				8F808FFBB4549BC4F3895B8CBB23ADB3 /* Divider.swift in Sources */,
 				7D86C195266533F600FC4C53 /* NatLogo.swift in Sources */,
+				FFEC606E2D8A9DE2007B764A /* GaYaFonts+TextStyle.swift in Sources */,
 				84703F3F24F83EEC00FE01CA /* NatIconButton.swift in Sources */,
 				FFE797362C1D86E800D241BF /* GaYaChip+Color.swift in Sources */,
 				7D19998925756FFC00F939BF /* NatProgressIndicatorCircular+Size.swift in Sources */,
 				E67E4E5929F714CB00FF7515 /* NaturaDarkTheme.swift in Sources */,
 				7D43165925F2A16F004AE34F /* UIImageView+URL.swift in Sources */,
 				FF35F7362CE3D77C001F13AA /* GaYaTag+Size.swift in Sources */,
+				FFEC60752D8AAAEB007B764A /* FontLoader.swift in Sources */,
 				84BC900524AA163A007DF09D /* DialogFooterView.swift in Sources */,
 				FF5439E32BD6A5BA00FAE2C4 /* GaYaButtonStyle.swift in Sources */,
 				269C886824C2483600A507BE /* UIBarButtonItem+Icon.swift in Sources */,
@@ -3986,6 +4020,7 @@
 				1E1CA75D4F2464DBEA0DD722294FFDEB /* NatSpacing.swift in Sources */,
 				FFE797382C1D870000D241BF /* GaYaChip+Position.swift in Sources */,
 				84BC901724AA17C0007DF09D /* NatDialogTitleConfigurable.swift in Sources */,
+				FFEC60712D8AA354007B764A /* GaYaElevation.swift in Sources */,
 				84BF066224B4A62400462AC5 /* NatShortcut+Style.swift in Sources */,
 				79D4C8E925F2B5100027E74E /* NatCheckbox.swift in Sources */,
 				BE7C39B5259CC77200E82405 /* NatCheckboxControl+Style.swift in Sources */,
@@ -4055,6 +4090,7 @@
 				37953EE81D12EA2376E8C56E16BC4A29 /* UIColor+Hex.swift in Sources */,
 				56B51E3D524A0D2900D7DD3E6CC761E7 /* UIFont+Icon.swift in Sources */,
 				6C6CB092994DB60C83AC24F93B0F4E49 /* UITableView+Reusable.swift in Sources */,
+				FFEC60732D8AA40C007B764A /* GaYaElevation+ElevationAttributes.swift in Sources */,
 				7D394CD42674083700582030 /* AppBarColor.swift in Sources */,
 				269C886624C2480800A507BE /* UIViewController+Configure.swift in Sources */,
 				FFE3F9B82D5DB1BF00314F87 /* GaYaBadge+Limit.swift in Sources */,
@@ -4161,7 +4197,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Sources/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -4379,7 +4415,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Sources/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -1,6 +1,6 @@
 //
 //  GaYaTagViewController.swift
-//  NatDS-SampleApp
+//  GaYa DS-SampleApp
 //
 //  Created by Hayna.Cardoso on 24/11/24.
 //  Copyright © 2024 Natura. All rights reserved.

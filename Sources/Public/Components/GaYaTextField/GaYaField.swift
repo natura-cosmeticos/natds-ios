@@ -1,6 +1,6 @@
 //
 //  GaYaField.swift
-//  NatDS
+//  GaYa DS
 //
 //  Created by Hayna.Cardoso on 12/02/25.
 //  Copyright © 2025 Natura. All rights reserved.
@@ -8,7 +8,7 @@
 
 public final class GaYaField: UITextField {
 
-    let contentFont: UIFont = NatFonts.font(ofSize: getComponentAttributeFromTheme(\.textFieldContentFontSize),
+    let contentFont: UIFont = GaYaFonts.font(ofSize: getComponentAttributeFromTheme(\.textFieldContentFontSize),
                                             withWeight: getComponentAttributeFromTheme(\.textFieldContentPrimaryFontWeight),
                                             withFamily: getComponentAttributeFromTheme(\.textFieldContentPrimaryFontFamily))
     let contentLetterSpacing = getComponentAttributeFromTheme(\.textFieldContentLetterSpacing)

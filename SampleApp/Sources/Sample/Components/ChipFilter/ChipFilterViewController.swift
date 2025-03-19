@@ -1,6 +1,6 @@
 //
 //  ChipFilterViewController.swift
-//  NatDS-SampleApp
+//  GaYa DS-SampleApp
 //
 //  Created by Hayna.Cardoso on 04/05/23.
 //  Copyright © 2023 Natura. All rights reserved.

@@ -1,6 +1,6 @@
 //
 //  GaYaAvatarItemViewController.swift
-//  NatDS-SampleApp
+//  GaYa DS-SampleApp
 //
 //  Created by Hayna.Cardoso on 15/06/24.
 //  Copyright © 2024 Natura. All rights reserved.

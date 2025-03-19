@@ -1,6 +1,6 @@
 //
 //  GaYaAvatar+Size.swift
-//  NatDS
+//  GaYa DS
 //
 //  Created by Hayna.Cardoso on 15/06/24.
 //  Copyright © 2024 Natura. All rights reserved.
@@ -41,23 +41,23 @@ extension GaYaAvatar.Size {
 
         switch self {
         case .standard:
-            return NatFonts.font(ofSize: getComponentAttributeFromTheme(\.avatarStandardFontSize),
+          return GaYaFonts.font(ofSize: getComponentAttributeFromTheme(\.avatarStandardFontSize),
                                  withWeight: fontWeight,
                                  withFamily: fontFamily)
         case .semi:
-            return NatFonts.font(ofSize: getComponentAttributeFromTheme(\.avatarSemiFontSize),
+            return GaYaFonts.font(ofSize: getComponentAttributeFromTheme(\.avatarSemiFontSize),
                                  withWeight: fontWeight,
                                  withFamily: fontFamily)
         case .semiX:
-            return NatFonts.font(ofSize: getComponentAttributeFromTheme(\.avatarSemiXFontSize),
+            return GaYaFonts.font(ofSize: getComponentAttributeFromTheme(\.avatarSemiXFontSize),
                                  withWeight: fontWeight,
                                  withFamily: fontFamily)
         case .medium:
-            return NatFonts.font(ofSize: getComponentAttributeFromTheme(\.avatarMediumFontSize),
+            return GaYaFonts.font(ofSize: getComponentAttributeFromTheme(\.avatarMediumFontSize),
                                  withWeight: fontWeight,
                                  withFamily: fontFamily)
         case .largeXXX:
-            return NatFonts.font(ofSize: getComponentAttributeFromTheme(\.avatarLargeXXXFontSize),
+            return GaYaFonts.font(ofSize: getComponentAttributeFromTheme(\.avatarLargeXXXFontSize),
                                  withWeight: fontWeight,
                                  withFamily: fontFamily)
         }

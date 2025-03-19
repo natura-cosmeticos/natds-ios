@@ -19,7 +19,7 @@ import UIKit
         DesignSystem().configure(with: AvailableTheme)
  */
 
-@available(*, deprecated, message: "Please use GaYaChip instead.")
+@available(*, deprecated, message: "⚠️ GaYa DS: Por favor, use GaYaChip em vez disso.", renamed: "GaYaChip")
 public final class NatChip: UIView {
 
     // MARK: - Private properties

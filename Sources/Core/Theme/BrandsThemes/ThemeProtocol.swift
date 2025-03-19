@@ -277,11 +277,11 @@ protocol Tokens {
   var typographyLineHeightSmall: CGFloat { get }
   var typographyLineHeightMedium: CGFloat { get }
   var typographyLineHeightLarge: CGFloat { get }
-  @available(*, deprecated, message: "replace with Headline, Display or Body")
+  @available(*, deprecated, message: "GaYa: substitua por Headline, Display ou Body")
   var typographyFontFamilyPrimary: String { get }
-  @available(*, deprecated, message: "replace with Headline, Display or Body")
+  @available(*, deprecated, message: "GaYa: substitua por Headline, Display ou Body")
   var typographyFontFamilySecondary: String { get }
-  @available(*, deprecated, message: "replace with Headline, Display or Body")
+  @available(*, deprecated, message: "GaYa: substitua por Headline, Display ou Body")
   var typographyFontFamilyBranding: String { get }
   var typographyFontFamilyCode: String { get }
   var typographyFontWeightRegular: UIFont.Weight { get }

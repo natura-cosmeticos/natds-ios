@@ -1,6 +1,6 @@
 //
 //  GaYaButton.swift
-//  NatDS
+//  GaYa DS
 //
 //  Created by Hayna.Cardoso on 28/04/24.
 //  Copyright © 2024 Natura. All rights reserved.

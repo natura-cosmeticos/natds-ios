@@ -3,7 +3,7 @@ enum GaYaButtonStyle {
         let size = getComponentAttributeFromTheme(\.buttonLabelFontSize)
         let weight = getComponentAttributeFromTheme(\.buttonLabelPrimaryFontWeight)
         let family = getComponentAttributeFromTheme(\.buttonLabelPrimaryFontFamily)
-        button.titleLabel?.font = NatFonts.font(ofSize: size, withWeight: weight, withFamily: family)
+        button.titleLabel?.font = GaYaFonts.font(ofSize: size, withWeight: weight, withFamily: family)
         button.titleLabel?.lineBreakMode = .byTruncatingTail
         button.contentEdgeInsets = GaYaButton.EdgeInsets.medium
     }

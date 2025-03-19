@@ -90,7 +90,7 @@ public final class GaYaCounter: UIView, UITextFieldDelegate {
     let numCounterTextField: UITextField = {
         let textField = UITextField()
         
-        textField.font = NatFonts.font(ofSize: getComponentAttributeFromTheme(\.counterContentFontSize),
+        textField.font = GaYaFonts.font(ofSize: getComponentAttributeFromTheme(\.counterContentFontSize),
                                        withWeight: getComponentAttributeFromTheme(\.counterContentPrimaryFontWeight),
                                        withFamily: getComponentAttributeFromTheme(\.counterContentPrimaryFontFamily))
         textField.textColor = getUIColorFromTokens(\.colorHighEmphasis)
@@ -150,7 +150,7 @@ public final class GaYaCounter: UIView, UITextFieldDelegate {
 
     var label: UILabel = {
         let label = UILabel()
-        label.font = NatFonts.font(ofSize: getComponentAttributeFromTheme(\.counterLabelFontSize),
+        label.font = GaYaFonts.font(ofSize: getComponentAttributeFromTheme(\.counterLabelFontSize),
                                    withWeight: getComponentAttributeFromTheme(\.counterLabelPrimaryFontWeight),
                                    withFamily: getComponentAttributeFromTheme(\.counterLabelPrimaryFontFamily))
         label.textColor = getUIColorFromTokens(\.colorMediumEmphasis)

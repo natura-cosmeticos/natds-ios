@@ -1,6 +1,6 @@
 //
 //  GaYaTag.swift
-//  NatDS
+//  GaYa DS
 //
 //  Created by Hayna.Cardoso on 12/11/24.
 //  Copyright © 2024 Natura. All rights reserved.
@@ -32,7 +32,7 @@ public final class GaYaTag: UIView {
         let fontWeight = getComponentAttributeFromTheme(\.tagLabelPrimaryFontWeight)
         let fontFamily = getComponentAttributeFromTheme(\.tagLabelPrimaryFontFamily)
 
-        label.font = NatFonts.font(ofSize: fontSize,
+        label.font = GaYaFonts.font(ofSize: fontSize,
                                    withWeight: fontWeight,
                                    withFamily: fontFamily)
 

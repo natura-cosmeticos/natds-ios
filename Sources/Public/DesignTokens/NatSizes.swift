@@ -16,7 +16,7 @@
             DesignSystem().configure(with: AvailableTheme)
 */
 
-@available(*, deprecated, message: "Please use GaYaSizes instead.")
+@available(*, deprecated, message: "⚠️ GaYa DS: Por favor, use GaYaSizes em vez disso.", renamed: "GaYaSizes")
 public enum NatSizes {
     public static var micro: CGFloat { getTokenFromTheme(\.sizeMicro) }
     public static var tiny: CGFloat { getTokenFromTheme(\.sizeTiny) }

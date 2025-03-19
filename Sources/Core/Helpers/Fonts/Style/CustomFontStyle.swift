@@ -15,12 +15,10 @@ public enum CustomFontStyle: FontStyle {
     }
 
     var name: String {
-        switch self {
-        case .display: return getTokenFromTheme(\.assetFontFileDisplay)
-        case .headline: return getTokenFromTheme(\.assetFontFileHeadline)
-        case .bodyRegular: return getTokenFromTheme(\.assetFontFileBodyRegular)
-        case .bodyBold: return getTokenFromTheme(\.assetFontFileBodyBold)
-        }
+          let tokenFontName = filename
+          let systemFontName = fontNameMapping[tokenFontName] ?? tokenFontName
+          FontLoader.loadFontIfNeeded(named: systemFontName)
+          return systemFontName
     }
 
     var familyName: String {
@@ -41,3 +39,15 @@ public enum CustomFontStyle: FontStyle {
         }
     }
 }
+
+public let fontNameMapping: [String: String] = [
+  "montserrat_bold": "Montserrat-Bold",
+  "montserrat_regular": "Montserrat-Regular",
+  "montserrat_semibold": "Montserrat-SemiBold",
+  "suisseintl_regular": "SuisseIntl-Regular",
+  "zapfhumanist_roman": "ZapfHumanist601BT-Roman",
+  "worksans_bold": "WorkSans-Bold",
+  "worksans_regular": "WorkSans-Regular",
+  "drukcy_bold": "DrukCy-Bold",
+  "recoleta_semibold": "Recoleta-SemiBold"
+]

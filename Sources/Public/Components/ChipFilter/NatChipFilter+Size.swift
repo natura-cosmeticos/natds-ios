@@ -1,6 +1,6 @@
 //
 //  NatChipFilter+Size.swift
-//  NatDS
+//  GaYa DS
 //
 //  Created by Hayna.Cardoso on 04/05/23.
 //  Copyright © 2023 Natura. All rights reserved.

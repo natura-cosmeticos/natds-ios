@@ -1,6 +1,6 @@
 //
 //  NatChipFilter.swift
-//  NatDS
+//  GaYa DS
 //
 //  Created by Hayna.Cardoso on 04/05/23.
 //  Copyright © 2023 Natura. All rights reserved.
@@ -26,7 +26,7 @@
         DesignSystem().configure(with: AvailableTheme)
  */
 
-@available(*, deprecated, message: "Please use GaYaChipFilter instead.")
+@available(*, deprecated, message: "⚠️ GaYa DS: Por favor, use GaYaChipFilter em vez disso.", renamed: "GaYaChipFilter")
 public final class NatChipFilter: UIView {
     
     // MARK: - Private properties
@@ -53,7 +53,7 @@ public final class NatChipFilter: UIView {
     
     private let label: UILabel = {
         let label = UILabel()
-        label.font = NatFonts.font(ofSize: .body2)
+        label.font = GaYaFonts.font(ofSize: .body2)
         label.textColor = NatColors.highEmphasis
         label.translatesAutoresizingMaskIntoConstraints = false
         return label

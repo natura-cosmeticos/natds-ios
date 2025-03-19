@@ -12,6 +12,7 @@
             DesignSystem().configure(with: AvailableTheme)
 */
 
+@available(*, deprecated, message: "Por favor, use GaYaFonts em vez disso.", renamed: "GaYaFonts")
 public struct NatFonts {
     public static func font(ofSize size: Size, withWeight weight: Weight) -> UIFont {
         .systemFont(

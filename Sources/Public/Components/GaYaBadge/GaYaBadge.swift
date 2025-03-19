@@ -66,7 +66,7 @@ public final class GaYaBadge: UIView {
   
   private lazy var label: UILabel = {
     let label = UILabel()
-    label.font = NatFonts.font(ofSize: getComponentAttributeFromTheme(\.badgeLabelFontSize),
+    label.font = GaYaFonts.font(ofSize: getComponentAttributeFromTheme(\.badgeLabelFontSize),
                                withWeight: getComponentAttributeFromTheme(\.badgeLabelPrimaryFontWeight),
                                withFamily: getComponentAttributeFromTheme(\.badgeLabelPrimaryFontFamily))
     label.textColor = {

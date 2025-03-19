@@ -1,6 +1,6 @@
 //
 //  GaYaSizes.swift
-//  NatDS
+//  GaYa DS
 //
 //  Created by Hayna.Cardoso on 23/08/24.
 //  Copyright © 2024 Natura. All rights reserved.

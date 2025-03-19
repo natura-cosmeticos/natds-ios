@@ -6,4 +6,12 @@ enum ViewStyle {
         view.layer.shadowOpacity = attributes.shadowOpacity
         view.layer.masksToBounds = false
     }
+  
+    static func applyGaYaElevation(on view: UIView, with attributes: GaYaElevation.ElevationAttributes) {
+        view.layer.shadowColor = attributes.shadowColor
+        view.layer.shadowOffset = attributes.shadowOffSet
+        view.layer.shadowRadius = attributes.shadowRadius
+        view.layer.shadowOpacity = attributes.shadowOpacity
+        view.layer.masksToBounds = false
+    }
 }

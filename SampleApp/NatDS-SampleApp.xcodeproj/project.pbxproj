@@ -1445,6 +1445,8 @@
 				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Sources/Supporting Files/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = GaYa;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1582,6 +1584,8 @@
 				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = XUT82JX72R;
 				INFOPLIST_FILE = "Sources/Supporting Files/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = GaYa;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

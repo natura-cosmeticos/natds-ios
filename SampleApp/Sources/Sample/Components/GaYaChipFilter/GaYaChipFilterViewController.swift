@@ -1,6 +1,6 @@
 //
 //  GaYaChipFilterViewController.swift
-//  NatDS-SampleApp
+//  GaYa DS-SampleApp
 //
 //  Created by Hayna.Cardoso on 15/06/24.
 //  Copyright © 2024 Natura. All rights reserved.
@@ -36,8 +36,8 @@ class GaYaChipFilterViewController: UIViewController, SampleItem {
     private let colorsLabel: UILabel = {
         let label = UILabel()
         label.text = " Colors"
-        label.textColor = NatColors.highEmphasis
-        label.font = NatFonts.font(ofSize: .heading5, withWeight: .medium)
+        label.textColor = GaYaColors.highEmphasis
+        label.font = GaYaFonts.font(ofSize: .heading5, withWeight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label
@@ -46,8 +46,8 @@ class GaYaChipFilterViewController: UIViewController, SampleItem {
     private let sizesLabel: UILabel = {
         let label = UILabel()
         label.text = " Sizes"
-        label.textColor = NatColors.highEmphasis
-        label.font = NatFonts.font(ofSize: .heading5, withWeight: .medium)
+        label.textColor = GaYaColors.highEmphasis
+        label.font = GaYaFonts.font(ofSize: .heading5, withWeight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label
@@ -56,8 +56,8 @@ class GaYaChipFilterViewController: UIViewController, SampleItem {
     private let iconLabel: UILabel = {
         let label = UILabel()
         label.text = " Icon"
-        label.textColor = NatColors.highEmphasis
-        label.font = NatFonts.font(ofSize: .heading5, withWeight: .medium)
+        label.textColor = GaYaColors.highEmphasis
+        label.font = GaYaFonts.font(ofSize: .heading5, withWeight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label
@@ -66,8 +66,8 @@ class GaYaChipFilterViewController: UIViewController, SampleItem {
     private let avatarLabel: UILabel = {
         let label = UILabel()
         label.text = " Avatar"
-        label.textColor = NatColors.highEmphasis
-        label.font = NatFonts.font(ofSize: .heading5, withWeight: .medium)
+        label.textColor = GaYaColors.highEmphasis
+        label.font = GaYaFonts.font(ofSize: .heading5, withWeight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label
@@ -76,8 +76,8 @@ class GaYaChipFilterViewController: UIViewController, SampleItem {
     private let disabledLabel: UILabel = {
         let label = UILabel()
         label.text = " Disabled, Theme and Action"
-        label.textColor = NatColors.highEmphasis
-        label.font = NatFonts.font(ofSize: .heading6, withWeight: .medium)
+        label.textColor = GaYaColors.highEmphasis
+        label.font = GaYaFonts.font(ofSize: .heading6, withWeight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label

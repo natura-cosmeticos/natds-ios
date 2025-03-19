@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:NewSampleApp/GaYa-NewSample/GaYa-NewSample.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:NatDS.xcodeproj">
    </FileRef>
    <FileRef

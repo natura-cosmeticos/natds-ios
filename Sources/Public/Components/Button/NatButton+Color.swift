@@ -1,6 +1,6 @@
 //
 //  NatButton+Color.swift
-//  NatDS
+//  GaYa DS
 //
 //  Created by Hayna.Cardoso on 28/11/23.
 //  Copyright © 2023 Natura. All rights reserved.

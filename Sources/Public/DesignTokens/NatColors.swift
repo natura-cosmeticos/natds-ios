@@ -30,7 +30,7 @@
             DesignSystem().configure(with: AvailableTheme)
 */
 
-@available(*, deprecated, message: "Please use GaYaColors instead.")
+@available(*, deprecated, message: "⚠️ GaYa DS: Por favor, use GaYaColors em vez disso.", renamed: "GaYaColors")
 public struct NatColors {
 
     // MARK: - Inits

@@ -224,7 +224,7 @@ public class GaYaTextField: UIView {
         let fontWeight = getComponentAttributeFromTheme(\.textFieldLabelPrimaryFontWeight)
         let fontFamily = getComponentAttributeFromTheme(\.textFieldLabelPrimaryFontFamily)
 
-        label.font = NatFonts.font(ofSize: fontSize,
+        label.font = GaYaFonts.font(ofSize: fontSize,
                                    withWeight: fontWeight,
                                    withFamily: fontFamily)
         label.numberOfLines = 2
@@ -254,7 +254,7 @@ public class GaYaTextField: UIView {
         let fontWeight = getComponentAttributeFromTheme(\.textFieldHelperTextPrimaryFontWeight)
         let fontFamily = getComponentAttributeFromTheme(\.textFieldHelperTextPrimaryFontFamily)
 
-        label.font = NatFonts.font(ofSize: fontSize,
+        label.font = GaYaFonts.font(ofSize: fontSize,
                                    withWeight: fontWeight,
                                    withFamily: fontFamily)
         return label

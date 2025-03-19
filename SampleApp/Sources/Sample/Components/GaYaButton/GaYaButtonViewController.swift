@@ -1,6 +1,6 @@
 //
 //  GaYaButtonViewController.swift
-//  NatDS-SampleApp
+//  GaYa DS-SampleApp
 //
 //  Created by Hayna.Cardoso on 26/04/24.
 //  Copyright © 2024 Natura. All rights reserved.
@@ -42,7 +42,7 @@ final class GaYaButtonViewController: UIViewController, SampleItem {
         let label = UILabel()
         label.text = " Filled"
         label.textColor = GaYaColors.highEmphasis
-        label.font = NatFonts.font(ofSize: .heading5, withWeight: .medium)
+        label.font = GaYaFonts.font(ofSize: .heading5, withWeight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label
@@ -52,7 +52,7 @@ final class GaYaButtonViewController: UIViewController, SampleItem {
         let label = UILabel()
         label.text = " Outlined"
         label.textColor = GaYaColors.highEmphasis
-        label.font = NatFonts.font(ofSize: .heading5, withWeight: .medium)
+        label.font = GaYaFonts.font(ofSize: .heading5, withWeight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label
@@ -62,7 +62,7 @@ final class GaYaButtonViewController: UIViewController, SampleItem {
         let label = UILabel()
         label.text = " Ghost"
         label.textColor = GaYaColors.highEmphasis
-        label.font = NatFonts.font(ofSize: .heading5, withWeight: .medium)
+        label.font = GaYaFonts.font(ofSize: .heading5, withWeight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label
@@ -72,7 +72,7 @@ final class GaYaButtonViewController: UIViewController, SampleItem {
         let label = UILabel()
         label.text = " Tonal"
         label.textColor = GaYaColors.highEmphasis
-        label.font = NatFonts.font(ofSize: .heading5, withWeight: .medium)
+        label.font = GaYaFonts.font(ofSize: .heading5, withWeight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label
@@ -82,7 +82,7 @@ final class GaYaButtonViewController: UIViewController, SampleItem {
         let label = UILabel()
         label.text = " Disabled"
         label.textColor = GaYaColors.highEmphasis
-        label.font = NatFonts.font(ofSize: .heading5, withWeight: .medium)
+        label.font = GaYaFonts.font(ofSize: .heading5, withWeight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label
@@ -92,7 +92,7 @@ final class GaYaButtonViewController: UIViewController, SampleItem {
         let label = UILabel()
         label.text = " Display - implemented by dev"
         label.textColor = GaYaColors.highEmphasis
-        label.font = NatFonts.font(ofSize: .heading5, withWeight: .medium)
+        label.font = GaYaFonts.font(ofSize: .heading5, withWeight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label
@@ -102,7 +102,7 @@ final class GaYaButtonViewController: UIViewController, SampleItem {
         let label = UILabel()
         label.text = " Icons"
         label.textColor = GaYaColors.highEmphasis
-        label.font = NatFonts.font(ofSize: .heading5, withWeight: .medium)
+        label.font = GaYaFonts.font(ofSize: .heading5, withWeight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label
@@ -112,7 +112,7 @@ final class GaYaButtonViewController: UIViewController, SampleItem {
         let label = UILabel()
         label.text = " Sizes"
         label.textColor = GaYaColors.highEmphasis
-        label.font = NatFonts.font(ofSize: .heading5, withWeight: .medium)
+        label.font = GaYaFonts.font(ofSize: .heading5, withWeight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label

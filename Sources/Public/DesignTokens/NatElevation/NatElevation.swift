@@ -13,6 +13,7 @@
             DesignSystem().configure(with: AvailableTheme)
 */
 
+@available(*, deprecated, message: "⚠️ GaYa DS: Por favor, use GaYaElevation em vez disso.", renamed: "GaYaElevation")
 public struct NatElevation {
     public static func apply(on view: UIView, elevation: Elevation) {
         let attributes = elevation.relatedElevation

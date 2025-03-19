@@ -1,6 +1,6 @@
 //
 //  GaYaChipFilter.swift
-//  NatDS
+//  GaYa DS
 //
 //  Created by Hayna.Cardoso on 15/06/24.
 //  Copyright © 2024 Natura. All rights reserved.
@@ -27,25 +27,25 @@ public final class GaYaChipFilter: UIView {
     private let stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
-        stackView.spacing = NatSpacing.micro
+        stackView.spacing = GaYaDimensions.spacingMicro
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
     
     private let label: UILabel = {
         let label = UILabel()
-        label.font = NatFonts.font(ofSize: .body2)
-        label.textColor = NatColors.highEmphasis
+        label.font = GaYaFonts.font(ofSize: .body2)
+        label.textColor = GaYaColors.highEmphasis
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     private let circleView: UIView = {
         let view = UIView()
-        view.heightAnchor.constraint(equalToConstant: NatSizes.standard).isActive = true
-        view.widthAnchor.constraint(equalToConstant: NatSizes.standard).isActive = true
-        view.layer.cornerRadius = NatSizes.standard/2
-        view.backgroundColor = NatColors.highEmphasis.withAlphaComponent(NatOpacities.low)
+        view.heightAnchor.constraint(equalToConstant: GaYaSizes.standard).isActive = true
+        view.widthAnchor.constraint(equalToConstant: GaYaSizes.standard).isActive = true
+        view.layer.cornerRadius = GaYaSizes.standard/2
+        view.backgroundColor = GaYaColors.highEmphasis.withAlphaComponent(GaYaOpacity.low)
         view.isHidden = true
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -116,7 +116,7 @@ public final class GaYaChipFilter: UIView {
         
         stackView.leadingAnchor.constraint(equalTo: backgroundView.leadingAnchor,
                                            constant: size == .medium ? NatSpacing.small :
-                                            NatSpacing.tiny).isActive = true
+                                            GaYaDimensions.spacingTiny).isActive = true
         stackView.trailingAnchor.constraint(equalTo: backgroundView.trailingAnchor,
                                             constant: size == .medium ? -NatSpacing.small :
                                                 -NatSpacing.tiny).isActive = true
@@ -158,7 +158,7 @@ public final class GaYaChipFilter: UIView {
                 }
             }
         case .focused:
-            backgroundView.backgroundColor = backgroundView.backgroundColor?.withAlphaComponent(NatOpacities.low)
+            backgroundView.backgroundColor = backgroundView.backgroundColor?.withAlphaComponent(GaYaOpacity.low)
         case .selected:
             backgroundView.layer.borderColor = color.selectedColor.cgColor
             backgroundView.backgroundColor = color.selectedColor
@@ -176,7 +176,7 @@ public final class GaYaChipFilter: UIView {
     }
     
     private func createIconView(icon: String?) -> IconView {
-        let iconView = IconView(fontSize: NatSizes.standard)
+        let iconView = IconView(fontSize: GaYaSizes.standard)
         iconView.translatesAutoresizingMaskIntoConstraints = false
         iconView.iconText = icon
         iconView.tintColor = label.textColor
