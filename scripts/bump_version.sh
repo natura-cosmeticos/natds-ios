@@ -40,4 +40,4 @@ git commit -m "chore: updates version on Info.plist files"
 git push --follow-tags origin HEAD
 
 # Faz o upload da nova versão para o Cocoapods
-VERSION_NUMBER=$VERSION pod trunk push NatDS.podspec --allow-warnings
+VERSION_NUMBER=$VERSION pod trunk push NatDS.podspec --allow-warnings --verbose
