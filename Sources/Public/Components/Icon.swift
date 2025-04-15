@@ -561,6 +561,27 @@ public enum Icon: String, CaseIterable {
     case outlinedNavigationShuffle = "outlined-navigation-shuffle"
     case outlinedProductBackpack = "outlined-product-backpack"
     case outlinedProductSpray = "outlined-product-spray"
+    // publish for january-2025
+    case filledContentGenerativeai = "filled-content-generativeai"
+    case filledFinanceBagshied = "filled-finance-bagshield"
+    case filledFinanceCashback = "filled-finance-cashback"
+    case outlinedContentGenerativeai = "outlined-content-generativeai"
+    case outlinedFinanceBagshied = "outlined-finance-bagshield"
+    case outlinedFinanceCashback = "outlined-finance-cashback"
+    case filledGrowthplanFlowertulip = "filled-growthplan-flowertulip"
+    case filledGrowthplanGraphic = "filled-growthplan-graphic"
+    case filledGrowthplanLaurelwreath = "filled-growthplan-laurelwreath"
+    case filledGrowthplanTrophy = "filled-growthplan-trophy"
+    case filledGrowthplanTrophyaward = "filled-growthplan-trophyaward"
+    case filledGrowthplanTrophydiamond = "filled-growthplan-trophydiamond"
+    case filledGrowthplanTrophysapphire = "filled-growthplan-trophysapphire"
+    case outlinedGrowthplanFlowertulip = "outlined-growthplan-flowertulip"
+    case outlinedGrowthplanGraphic = "outlined-growthplan-graphic"
+    case outlinedGrowthplanLaurelwreath = "outlined-growthplan-laurelwreath"
+    case outlinedGrowthplanTrophy = "outlined-growthplan-trophy"
+    case outlinedGrowthplanTrophyaward = "outlined-growthplan-trophyaward"
+    case outlinedGrowthplanTrophydiamond = "outlined-growthplan-trophydiamond"
+    case outlinedGrowthplanTrophysapphire = "outlined-growthplan-trophysapphire"
     
     var image: UIImage? {
             return UIImage(named: self.rawValue)

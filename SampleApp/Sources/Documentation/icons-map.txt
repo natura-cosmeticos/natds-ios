@@ -62,6 +62,7 @@ filled-content-energy
 filled-content-exfoliator
 filled-content-farmrows
 filled-content-gauge
+filled-content-generativeai
 filled-content-giftpricefair
 filled-content-giftpricegreat
 filled-content-giftpricehigh
@@ -97,6 +98,8 @@ filled-content-world
 filled-default-mockup
 filled-finance-bag
 filled-finance-bagcheck
+filled-finance-bagshield
+filled-finance-cashback
 filled-finance-charging
 filled-finance-intensityhigh
 filled-finance-intensitylow
@@ -109,6 +112,13 @@ filled-finance-pix
 filled-finance-shield
 filled-finance-shieldcheck
 filled-finance-shieldplus
+filled-growthplan-flowertulip
+filled-growthplan-graphic
+filled-growthplan-laurelwreath
+filled-growthplan-trophy
+filled-growthplan-trophyaward
+filled-growthplan-trophydiamond
+filled-growthplan-trophysapphire
 filled-makeup-antiacne
 filled-makeup-haircoily
 filled-makeup-haircurly
@@ -324,6 +334,7 @@ outlined-content-flower
 outlined-content-fragrance
 outlined-content-gallery
 outlined-content-gauge
+outlined-content-generativeai
 outlined-content-gift
 outlined-content-giftpricefair
 outlined-content-giftpricegreat
@@ -389,6 +400,8 @@ outlined-default-mockup
 outlined-finance-addbag
 outlined-finance-bag
 outlined-finance-bagcheck
+outlined-finance-bagshield
+outlined-finance-cashback
 outlined-finance-bank
 outlined-finance-cards
 outlined-finance-charging
@@ -418,6 +431,13 @@ outlined-finance-shoppingcartproduct
 outlined-finance-suitcase
 outlined-finance-tagdiscount
 outlined-finance-transfermoney
+outlined-growthplan-flowertulip
+outlined-growthplan-graphic
+outlined-growthplan-laurelwreath
+outlined-growthplan-trophy
+outlined-growthplan-trophyaward
+outlined-growthplan-trophydiamond
+outlined-growthplan-trophysapphire
 outlined-makeup-age
 outlined-makeup-antiacne
 outlined-makeup-eyebrow
@@ -559,7 +579,3 @@ outlined-social-pregnant
 outlined-social-sparks
 outlined-social-userlock
 
-    //outlined-action-addproduct
-    //outlined-content-healthy
-    //outlined-content-maintenance
-    //outlined-place-rocket
