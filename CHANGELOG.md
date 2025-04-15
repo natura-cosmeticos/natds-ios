@@ -3,14 +3,50 @@
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 ### [8.5.1](https://github.com/natura-cosmeticos/natds-ios/compare/8.5.0...8.5.1) (2025-04-15)
+* Logo for theme Consultoria de Beleza v1
+* Logo for theme Natura v3
+* Logo for theme Força de Vendas v2
+* New component: GaYaTab
+* Colors for GrowthPlan
+* Fix for colors onAlert and onSuccess
+##### Adding new icons
+- filled-content-generativeai
+- filled-finance-bagshield
+- filled-finance-cashback
+- filled-growthplan-flowertulip
+- filled-growthplan-graphic
+- filled-growthplan-laurelwreath
+- filled-growthplan-trophy
+- filled-growthplan-trophyaward
+- filled-growthplan-trophydiamond
+- filled-growthplan-trophysapphire
+- outlined-content-generativeai
+- outlined-finance-bagshield
+- outlined-finance-cashback
+- outlined-growthplan-flowertulip
+- outlined-growthplan-graphic
+- outlined-growthplan-laurelwreath
+- outlined-growthplan-trophy
+- outlined-growthplan-trophyaward
+- outlined-growthplan-trophydiamond
+- outlined-growthplan-trophysapphire
 
-## [8.5.0](https://github.com/natura-cosmeticos/natds-ios/compare/8.4.2...8.5.0) (2025-04-15)
-
+  
 ### [8.4.2](https://github.com/natura-cosmeticos/natds-ios/compare/8.4.1...8.4.2) (2025-03-21)
+* Fixing target minimum 10 to 12
 
 ### [8.4.1](https://github.com/natura-cosmeticos/natds-ios/compare/8.4.0...8.4.1) (2025-03-21)
+* Adding GaYaFonts
+* Fixes for Avon v3 fonts
+* GaYaElevation
 
 ## [8.4.0](https://github.com/natura-cosmeticos/natds-ios/compare/8.3.0...8.4.0) (2025-02-27)
+* New theme Avon v3
+* GaYaBadge
+* GaYaTextfield
+* GaYaSelect
+* GaYaCounter
+* Fixes GaYaButton for text-transform
 
 ## [8.3.0](https://github.com/natura-cosmeticos/natds-ios/compare/8.2.6...8.3.0) (2025-01-23)
 * New theme Consultoria de Beleza v2 (with new logotype)
