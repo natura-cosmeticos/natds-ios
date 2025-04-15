@@ -39,6 +39,29 @@ All notable changes to this project will be documented in this file. See [standa
 * Adding GaYaFonts
 * Fixes for Avon v3 fonts
 * GaYaElevation
+##### Adding new icons
+- filled-action-addproduct
+- filled-action-filepdf
+- filled-content-carbondioxide
+- filled-content-healthy
+- filled-content-maintenance
+- filled-content-ticketdiscount
+- filled-content-ticketstar
+- filled-content-trophystar
+- filled-navigation-opennew
+- filled-navigation-shuffle
+- filled-place-rocket
+- filled-product-backpack
+- filled-product-spray
+- outlined-action-filepdf
+- outlined-content-carbondioxide
+- outlined-content-ticketdiscount
+- outlined-content-ticketstar
+- outlined-content-trophystar
+- outlined-navigation-opennew
+- outlined-navigation-shuffle
+- outlined-product-backpack
+- outlined-product-spray
 
 ## [8.4.0](https://github.com/natura-cosmeticos/natds-ios/compare/8.3.0...8.4.0) (2025-02-27)
 * New theme Avon v3
