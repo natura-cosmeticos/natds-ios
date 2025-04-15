@@ -74,5 +74,5 @@ GaYaGrowthPlan.onSeedDarkest
 
 <br/> <br/> 
 
-##### Made with 💚 by Design System GaYa Team
+##### Made with 🧡 by Design System GaYa Team
 
