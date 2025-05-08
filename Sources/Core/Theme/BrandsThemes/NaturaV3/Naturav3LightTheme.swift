@@ -373,7 +373,7 @@ struct Naturav3LightComponents: Components {
   let buttonLabelFallbackFontWeight: UIFont.Weight = .medium
   let buttonBorderRadius: CGFloat = 999
   let isButtonRounded: Bool = true
-  let isInputRounded:Bool = true
+  let isInputRounded:Bool = false
   let buttonTextTransform: String = "none"
   let buttonElevation = "none"
   let buttonPaddingX: CGFloat = 24
@@ -421,7 +421,7 @@ struct Naturav3LightComponents: Components {
   let counterContentFontSize: CGFloat = 16
   let counterContentLetterSpacing: CGFloat = 0.32
   let counterContentLineHeight: CGFloat = 1.25
-  let counterBorderRadius: CGFloat = 4
+  let counterBorderRadius: CGFloat = 16
   let dialogTitleFontSize: CGFloat = 20
   let dialogTitleLetterSpacing: CGFloat = 0.12
   let dialogTitleLineHeight: CGFloat = 1.25
@@ -651,7 +651,7 @@ struct Naturav3LightComponents: Components {
   let textFieldHelperTextFontSize: CGFloat = 12
   let textFieldHelperTextLetterSpacing: CGFloat = 0.16
   let textFieldHelperTextLineHeight: CGFloat = 1.25
-  let textFieldBorderRadius: CGFloat = 4
+  let textFieldBorderRadius: CGFloat = 16
   let heading1FontSize: CGFloat = 96
   let heading1FontWeight: UIFont.Weight = .regular
   let heading1LineHeight: CGFloat = 1.5
