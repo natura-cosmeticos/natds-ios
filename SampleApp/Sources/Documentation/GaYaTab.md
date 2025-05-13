@@ -10,12 +10,12 @@ O componente `GaYaTab` é essencial para organizar diferentes telas no aplicativ
 
 | Prop Figma       | Prop Swift       | Valores                    | Status            |
 | -------------- | -------------- | ------------------------- | ----------------- |
-| Position          | Style          | Fixed, Scrollable | ✅  Disponível       |
-| Icon          | Color          | Leading Icon, Top Icon, Icon | ✅  Disponível       |
-| Interaction State           | Enabled, Press           | Right, Left         | ✅  Disponível       |
-| Disabled          | Size           | True, False      | ✅  Disponível       |
-| Elevation          | IsEnabled      | True, False               | ✅  Disponível       |
-| Color          | -        | True, False               | ✅  Available  |
+| Position          | position          | fixed, scrollable | ✅  Disponível       |
+| Icon          | style          | .iconLeft, .iconTop, iconOnly | ✅  Disponível       |
+| Interaction State           | -           | -         | ✅  Disponível       |
+| Disabled          | -           | -      | ❌ Não aplicável       |
+| Elevation          | Elevation      | true, false               | ✅  Disponível       |
+| Color          | -        | -               | ❌ Não aplicável |
 | -          | Theme          | Todos os temas disponíveis      | ✅  Disponível       |
 
 ### Changelog
