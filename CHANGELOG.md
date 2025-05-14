@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.6.0](https://github.com/natura-cosmeticos/natds-ios/compare/8.5.1...8.6.0) (2025-05-14)
+
 ### [8.5.1](https://github.com/natura-cosmeticos/natds-ios/compare/8.5.0...8.5.1) (2025-04-15)
 * Logo for theme Consultoria de Beleza v1
 * Logo for theme Natura v3
