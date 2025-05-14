@@ -64,7 +64,7 @@ class GaYaTabViewController: UIViewController, SampleItem {
     scrollableTabWithoutElevation.insertTab(title: "THE BODY SHOP")
     scrollableTabWithoutElevation.configure(position: .scrollable)
     
-    // Icon Tabs (exemplos com ícone à esquerda, em cima e sozinho)
+    // Icon Tabs
     addTab(tab: iconTabs)
     iconTabs.delegate = self
     iconTabs.insertTab(title: "AVON", style: .iconLeft(icon: getIcon(.outlinedProductHair)))
