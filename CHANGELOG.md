@@ -3,6 +3,8 @@
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 ## [8.6.0](https://github.com/natura-cosmeticos/natds-ios/compare/8.5.1...8.6.0) (2025-05-14)
+* Fixes logos CB1
+* Natura v3: refactor corner radius inputs
 
 ### [8.5.1](https://github.com/natura-cosmeticos/natds-ios/compare/8.5.0...8.5.1) (2025-04-15)
 * Logo for theme Consultoria de Beleza v1
@@ -33,7 +35,6 @@ All notable changes to this project will be documented in this file. See [standa
 - outlined-growthplan-trophydiamond
 - outlined-growthplan-trophysapphire
 
-  
 ### [8.4.2](https://github.com/natura-cosmeticos/natds-ios/compare/8.4.1...8.4.2) (2025-03-21)
 * Fixing target minimum 10 to 12
 
