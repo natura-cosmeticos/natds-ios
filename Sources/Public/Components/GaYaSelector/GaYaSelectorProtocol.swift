@@ -1,6 +1,14 @@
-/// Alias for the callback of a selection method
+//
+//  GaYaSelectorProtocol.swift
+//  NatDS
+//
+//  Created by Hayna.Cardoso on 02/06/25.
+//  Copyright © 2025 Natura. All rights reserved.
+//
 
-protocol NatSelector: UIControl, Pulsable {
+public typealias SelectionHandler = (Bool) -> Void
+
+protocol GaYaSelector: UIControl, Pulsable {
     var isHapticFeedbackEnabled: Bool { get set }
     var isIndeterminate: Bool { get set }
     var labelComponent: String? { get set }

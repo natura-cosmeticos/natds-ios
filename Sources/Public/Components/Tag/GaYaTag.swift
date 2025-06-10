@@ -60,6 +60,7 @@ public final class GaYaTag: UIView {
     public var color: ThemeColor {
         didSet {
             style.applyStyle(self)
+            setNeedsDisplay()
         }
     }
 
