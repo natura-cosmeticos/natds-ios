@@ -192,6 +192,10 @@
 		FFF60D812D0C2F10005CD77D /* GaYaIconButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF60D802D0C2F0F005CD77D /* GaYaIconButtonViewController.swift */; };
 		FFFE711F2DF2EEC7002092D0 /* GaYaCheckboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFE711E2DF2EEB1002092D0 /* GaYaCheckboxViewController.swift */; };
 		FFFE71212DF2EEE3002092D0 /* GaYaRadioButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFE71202DF2EECD002092D0 /* GaYaRadioButtonViewController.swift */; };
+		FFFE71262DFC4F71002092D0 /* GaYaTab.md in Resources */ = {isa = PBXBuildFile; fileRef = FFFE71252DFC4F71002092D0 /* GaYaTab.md */; };
+		FFFE71272DFC4F71002092D0 /* GaYaGrowthPlan.md in Resources */ = {isa = PBXBuildFile; fileRef = FFFE71232DFC4F71002092D0 /* GaYaGrowthPlan.md */; };
+		FFFE71282DFC4F71002092D0 /* GaYaCheckbox.md in Resources */ = {isa = PBXBuildFile; fileRef = FFFE71222DFC4F71002092D0 /* GaYaCheckbox.md */; };
+		FFFE71292DFC4F71002092D0 /* GaYaRadioButton.md in Resources */ = {isa = PBXBuildFile; fileRef = FFFE71242DFC4F71002092D0 /* GaYaRadioButton.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -398,6 +402,10 @@
 		FFF60D802D0C2F0F005CD77D /* GaYaIconButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaIconButtonViewController.swift; sourceTree = "<group>"; };
 		FFFE711E2DF2EEB1002092D0 /* GaYaCheckboxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaCheckboxViewController.swift; sourceTree = "<group>"; };
 		FFFE71202DF2EECD002092D0 /* GaYaRadioButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaYaRadioButtonViewController.swift; sourceTree = "<group>"; };
+		FFFE71222DFC4F71002092D0 /* GaYaCheckbox.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = GaYaCheckbox.md; sourceTree = "<group>"; };
+		FFFE71232DFC4F71002092D0 /* GaYaGrowthPlan.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = GaYaGrowthPlan.md; sourceTree = "<group>"; };
+		FFFE71242DFC4F71002092D0 /* GaYaRadioButton.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = GaYaRadioButton.md; sourceTree = "<group>"; };
+		FFFE71252DFC4F71002092D0 /* GaYaTab.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = GaYaTab.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -991,6 +999,10 @@
 		FFCA199A2ABAD52000F03EAA /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
+				FFFE71222DFC4F71002092D0 /* GaYaCheckbox.md */,
+				FFFE71232DFC4F71002092D0 /* GaYaGrowthPlan.md */,
+				FFFE71242DFC4F71002092D0 /* GaYaRadioButton.md */,
+				FFFE71252DFC4F71002092D0 /* GaYaTab.md */,
 				FFD9EB062AFD8DE800EBE815 /* alert.md */,
 				FFD9EB022AFD8DE800EBE815 /* app-bar.md */,
 				FFD9EB142AFD8DE900EBE815 /* avatar.md */,
@@ -1340,6 +1352,10 @@
 				FFD9EAFA2AFD856900EBE815 /* counter.png in Resources */,
 				FFD9EAF92AFD856900EBE815 /* image2.png in Resources */,
 				FFD9EB1F2AFD8DE900EBE815 /* image.md in Resources */,
+				FFFE71262DFC4F71002092D0 /* GaYaTab.md in Resources */,
+				FFFE71272DFC4F71002092D0 /* GaYaGrowthPlan.md in Resources */,
+				FFFE71282DFC4F71002092D0 /* GaYaCheckbox.md in Resources */,
+				FFFE71292DFC4F71002092D0 /* GaYaRadioButton.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
