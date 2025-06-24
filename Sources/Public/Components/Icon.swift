@@ -582,7 +582,14 @@ public enum Icon: String, CaseIterable {
     case outlinedGrowthplanTrophyaward = "outlined-growthplan-trophyaward"
     case outlinedGrowthplanTrophydiamond = "outlined-growthplan-trophydiamond"
     case outlinedGrowthplanTrophysapphire = "outlined-growthplan-trophysapphire"
-    
+    //publish for june-2026
+    case filledContentStrawberry = "filled-content-strawberry"
+    case filledProductMirrorwoman = "filled-product-mirrorwoman"
+    case filledProductShoewoman = "filled-product-shoewoman"
+    case outlinedContentStrawberry = "outlined-content-strawberry"
+    case outlinedProductMirrorwoman = "outlined-product-mirrorwoman"
+    case outlinedProductShoewoman = "outlined-product-shoewoman"
+  
     var image: UIImage? {
             return UIImage(named: self.rawValue)
     }

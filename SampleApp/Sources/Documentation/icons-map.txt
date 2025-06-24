@@ -578,4 +578,9 @@ outlined-social-person
 outlined-social-pregnant
 outlined-social-sparks
 outlined-social-userlock
-
+filled-content-strawberry
+filled-product-mirrorwoman
+filled-product-shoewoman
+outlined-content-strawberry
+outlined-product-mirrorwoman
+outlined-product-shoewoman
