@@ -95,7 +95,7 @@ public final class NatCounter: UIView, UITextFieldDelegate {
         let toolbar = UIToolbar()
                 toolbar.sizeToFit()
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let doneButton = UIBarButtonItem(title: "OK", style: .done, target: NatCounter.self, action: #selector(doneButtonAction))
+        let doneButton = UIBarButtonItem(title: "OK", style: .done, target: self, action: #selector(doneButtonAction))
         toolbar.items = [flexibleSpace, doneButton]
         
         textField.inputAccessoryView = toolbar
