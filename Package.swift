@@ -14,15 +14,10 @@ let package = Package(
     targets: [
         .target(
             name: "NatDS",
-            dependencies: ["NatDSResources"],
-            path: "Sources"
-        ),
-        .target(
-            name: "NatDSResources",
-            path: "Sources/Resources",
+            path: "Sources/NatDS",
             resources: [
-                .process("Images.xcassets"),
-                .copy("Fonts")
+                .process("Resources/Images.xcassets"),
+                .process("Resources/Fonts")
             ]
         )
     ]
