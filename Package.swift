@@ -15,7 +15,7 @@ let package = Package(
         .target(
             name: "NatDS",
             dependencies: ["NatDSResources"],
-            path: "Sources/NatDS"
+            path: "Sources"
         ),
         .target(
             name: "NatDSResources",
