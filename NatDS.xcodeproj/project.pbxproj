@@ -1199,6 +1199,7 @@
 				AB858EEAF58ED77E8AD12908C12E22EA /* Extensions */,
 				AC44AC684E1D6DB6F7BF21E7660666AD /* DesignSystem.swift */,
 				84932F1224EAB9270052265F /* AvailableTheme.swift */,
+				FF38AE952B6B5FF000F0F10B /* NatDSIcons.swift */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -3079,7 +3080,6 @@
 		DD20EF61A300C3292AE0EBCF255B5BD6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				FF38AE952B6B5FF000F0F10B /* NatDSIcons.swift */,
 				7D23B34826D7DDD900FB5DA9 /* Fonts */,
 				438A5C92460A2D83E14DF108D8CD8988 /* Images.xcassets */,
 			);
