@@ -2812,9 +2812,9 @@
 		A25310B672B899E9AD3D68186E4A1AFA /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				FFFE71492E299069002092D0 /* NatDS */,
 				E74646D307AC8F3E9AEF5359DB2AC89F /* Core */,
 				120E744C293B89D044FF042E87692C6C /* Public */,
-				DD20EF61A300C3292AE0EBCF255B5BD6 /* Resources */,
 				D3E8F1BA23D456169591330D33273A7C /* Supporting Files */,
 			);
 			path = Sources;
@@ -3464,6 +3464,14 @@
 				FFFE71142DEDC6C3002092D0 /* GaYaSelectorProtocol.swift */,
 			);
 			path = GaYaSelector;
+			sourceTree = "<group>";
+		};
+		FFFE71492E299069002092D0 /* NatDS */ = {
+			isa = PBXGroup;
+			children = (
+				DD20EF61A300C3292AE0EBCF255B5BD6 /* Resources */,
+			);
+			path = NatDS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -30,9 +30,9 @@ class AssetsHelper {
         var error: Unmanaged<CFError>?
       
         #if SWIFT_PACKAGE
-          var fontBundle = Bundle.module
+          let fontBundle = Bundle.module
         #else
-          var fontBundle: Bundle? = Bundle(for: self)
+          let fontBundle: Bundle? = Bundle(for: self)
         #endif
         
         guard let bundle = fontBundle else { return }
