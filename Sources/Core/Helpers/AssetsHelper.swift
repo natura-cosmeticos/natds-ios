@@ -29,14 +29,15 @@ class AssetsHelper {
     private static func registerFont(_ name: String, _ type: FontType) {
         var error: Unmanaged<CFError>?
       
+        let fontBundle: Bundle
+      
         #if SWIFT_PACKAGE
-          let fontBundle = Bundle.module
+          fontBundle = Bundle.module
         #else
-          let fontBundle: Bundle? = Bundle(for: self)
+          fontBundle = Bundle(for: self)
         #endif
         
-        guard let bundle = fontBundle else { return }
-        guard let pathForResource = bundle.url(forResource: name, withExtension: "ttf") else { return }
+        guard let pathForResource = fontBundle.url(forResource: name, withExtension: "ttf") else { return }
         
         if !CTFontManagerRegisterFontsForURL(pathForResource as CFURL, CTFontManagerScope.process, &error) {
             print(error as Any)
